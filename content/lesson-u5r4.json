@@ -1,0 +1,767 @@
+{
+  "lesson_id": "u5r4",
+  "practice_end": 24,
+  "home_subtitle": "第四课 · 我的交流日记",
+  "part1_desc": "第 1–24 步：跟站长学用现在完成时写交流日记。",
+  "part2_desc": "第 25–36 步：独立看日记范文，写好自己的经历句。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：用现在完成时写作、never/already、and/but/because。Unit 5 Educational exchanges 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-story-01",
+      "title": "交流墙日记",
+      "teach_html": "<p>交流特别节目快做完了。站长说：咱们在广播站门口办一面<strong>交流墙</strong>，请同学们写<strong>交流日记 (diary)</strong>，讲讲自己的经历。</p><p>这期不讲新语法，咱们学<strong>用现在完成时写经历</strong>。写得好的日记，站长要在节目里读出来！</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t01",
+      "title": "日记三部分",
+      "teach_html": "<p>一篇交流日记有三部分：</p><p>1. <strong>开头</strong>：说时间地点。This week I joined the exchange program.（这周我参加了交流活动。）</p><p>2. <strong>经历</strong>：用现在完成时写做过的事。I <strong>have visited</strong> the museum.（我参观过博物馆。）</p><p>3. <strong>感受</strong>：说想法。It was great.（很好。）</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t02",
+      "title": "用完成时写经历",
+      "teach_html": "<p>写经历时，每件事用 <strong>have/has + 过去分词</strong>：</p><p>I have <strong>met</strong> new friends.（我认识了新朋友。）</p><p>She has <strong>tried</strong> Chinese food.（她尝过中国菜。）</p><p>记住：<strong>一件经历一句话，一个 have/has</strong>。</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t03",
+      "title": "用 never 写“还没”",
+      "teach_html": "<p>想写“还没做过的事”，用 <strong>have never + 过去分词</strong>：</p><p>I have <strong>never</strong> seen snow.（我从没见过雪。）</p><p>这样写，读者一下就知道你的“第一次”心愿单。</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t04",
+      "title": "用 already 写“已经”",
+      "teach_html": "<p>想写“已经做过的事”，用 <strong>have already + 过去分词</strong>：</p><p>I have <strong>already</strong> learned to use chopsticks.（我已经学会用筷子了。）</p><p>already 让句子有种“小骄傲”的感觉。</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t05",
+      "title": "连接词",
+      "teach_html": "<p>句子之间用连接词串起来，文章更顺：</p><p><strong>and</strong>（和）：I have visited the museum <strong>and</strong> tried dumplings.</p><p><strong>but</strong>（但是）：I have been to Beijing, <strong>but</strong> I have never seen snow.</p><p><strong>because</strong>（因为）：I like it <strong>because</strong> it is fun.</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t06",
+      "title": "范文",
+      "teach_html": "<p>看一篇范文：</p><p><em>My Exchange Week<br>I have <strong>met</strong> three new friends this week. I have <strong>already</strong> visited the school library. I have <strong>never</strong> tried Chinese noodles, <strong>but</strong> I want to try them <strong>because</strong> they look yummy.</em></p><p>三句话，三个完成时：met、already visited、never tried。清楚又漂亮。</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t07",
+      "title": "写作检查清单",
+      "teach_html": "<p>写完对照检查：</p><p>1. 每句经历都用了 <strong>have/has + 过去分词</strong>吗？</p><p>2. he/she 开头用了 <strong>has</strong> 吗？</p><p>3. 过去分词写对了吗？（不规则的要留心）</p><p>4. 用了 and/but/because 连句子吗？</p>"
+    },
+    {
+      "step": 9,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r4-t08",
+      "title": "小结",
+      "teach_html": "<p>小结：日记 = 开头 + 经历（have/has + 过去分词）+ 感受；never 写“还没”，already 写“已经”，and/but/because 连句。</p><p>下面站长带着你练写。资料卡在上面，做题时对照着看。</p>"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u5r4-prac-01",
+      "title": "先看范文",
+      "teach_html": "<p>这是范文。做题时对照着看：认识了两个朋友—已逛过公园—没吃过火锅但想尝因为闻着香。</p><p>下面练写日记的句子。</p>",
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q01",
+      "title": "认识了朋友",
+      "scene": "我想写“认识了两个朋友”。",
+      "stem": "I have ______ two friends.",
+      "options": [
+        "meet",
+        "meets",
+        "meeting",
+        "met"
+      ],
+      "answer": "D",
+      "help": "meet 的过去分词是？",
+      "explain": "I have met two friends.",
+      "wrong_feedback": {
+        "A": "meet 是原形，用过去分词 met。",
+        "B": "meets 是三单现在时，不对。",
+        "C": "meeting 是现在分词，不对。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q02",
+      "title": "已经逛过",
+      "scene": "我想写“已经逛过公园”。",
+      "stem": "I have ______ visited the park.",
+      "options": [
+        "yet",
+        "already",
+        "never",
+        "ever"
+      ],
+      "answer": "B",
+      "help": "肯定句里“已经”用什么？",
+      "explain": "I have already visited the park.",
+      "wrong_feedback": {
+        "A": "yet 不放肯定句中间，用 already。",
+        "C": "never 是“从不”，意思不对。",
+        "D": "ever 是“曾经”，这里“已经”用 already。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q03",
+      "title": "没吃过",
+      "scene": "我想写“没吃过火锅”。",
+      "stem": "I have ______ eaten hotpot.",
+      "options": [
+        "never",
+        "ever",
+        "already",
+        "just"
+      ],
+      "answer": "A",
+      "help": "“从没”用什么？",
+      "explain": "I have never eaten hotpot.",
+      "wrong_feedback": {
+        "B": "ever 是“曾经”，这里“从没”用 never。",
+        "C": "already 是“已经”，意思相反。",
+        "D": "just 是“刚刚”，这里用 never。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q04",
+      "title": "连接",
+      "scene": "我想连两句：逛过公园，也吃过饺子。",
+      "stem": "I have visited the park ______ tried dumplings.",
+      "options": [
+        "but",
+        "because",
+        "and",
+        "or"
+      ],
+      "answer": "C",
+      "help": "并列两件事用什么连？",
+      "explain": "I have visited the park and tried dumplings.",
+      "wrong_feedback": {
+        "A": "but 表转折，这里是并列，用 and。",
+        "B": "because 表原因，这里不用。",
+        "D": "or 表选择，这里不用。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q05",
+      "title": "她尝过",
+      "scene": "写“她尝过中国菜”。",
+      "stem": "She ______ tried Chinese food.",
+      "options": [
+        "have",
+        "is",
+        "are",
+        "has"
+      ],
+      "answer": "D",
+      "help": "she 用哪个？",
+      "explain": "She has tried Chinese food.",
+      "wrong_feedback": {
+        "A": "have 用于 I/you/we/they。she 用 has。",
+        "B": "is 是 be 动词，不对。",
+        "C": "are 是 be 动词复数，不对。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q06",
+      "title": "想尝因为",
+      "scene": "我想尝因为闻着香。",
+      "stem": "I want to try it ______ it smells nice.",
+      "options": [
+        "because",
+        "and",
+        "but",
+        "or"
+      ],
+      "answer": "A",
+      "help": "表原因用什么？",
+      "explain": "I want to try it because it smells nice.",
+      "wrong_feedback": {
+        "B": "and 表并列，这里表原因用 because。",
+        "C": "but 表转折，这里不用。",
+        "D": "or 表选择，这里不用。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q07",
+      "title": "转折",
+      "scene": "去过北京，但没见过雪。",
+      "stem": "I have been to Beijing, ______ I have never seen snow.",
+      "options": [
+        "and",
+        "but",
+        "because",
+        "or"
+      ],
+      "answer": "B",
+      "help": "前后转折用什么？",
+      "explain": "I have been to Beijing, but I have never seen snow.",
+      "wrong_feedback": {
+        "A": "and 表并列，这里转折用 but。",
+        "C": "because 表原因，这里不用。",
+        "D": "or 表选择，这里不用。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r4-q08",
+      "title": "刚到",
+      "scene": "我刚认识新朋友。",
+      "stem": "I have ______ met new friends.",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "never"
+      ],
+      "answer": "C",
+      "help": "“刚刚”用什么？",
+      "explain": "I have just met new friends.",
+      "wrong_feedback": {
+        "A": "already 是“已经”，这里“刚刚”用 just。",
+        "B": "yet 不放这里，用 just。",
+        "D": "never 是“从不”，意思不对。"
+      },
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r4-q09",
+      "title": "写出过去分词：try",
+      "scene": "把 try 变成过去分词。",
+      "stem": "写出 try 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "tried",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "tried"
+          ],
+          "cn": [
+            "尝试（过去分词）"
+          ]
+        }
+      ],
+      "help": "规则：y 变 i 加 ed。",
+      "explain": "try → tried（y 变 i 再加 ed）。",
+      "common_errors": [
+        {
+          "when": "写了 tryed",
+          "say": "try 结尾是辅音+y，变 i 再加 ed：tried。"
+        }
+      ],
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r4-q10",
+      "title": "have 还是 has",
+      "scene": "我们已经吃过了。",
+      "stem": "We have ___ eaten.",
+      "task": "补全 already。",
+      "answer_text": "already",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "already"
+          ],
+          "cn": [
+            "（已经）"
+          ]
+        }
+      ],
+      "help": "肯定句“已经”用什么？",
+      "explain": "We have already eaten.",
+      "common_errors": [
+        {
+          "when": "写了 yet",
+          "say": "肯定句中间用 already。"
+        }
+      ],
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r4-q11",
+      "title": "写出过去分词：swim",
+      "scene": "把 swim 变成过去分词。",
+      "stem": "写出 swim 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "swum",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "swum"
+          ],
+          "cn": [
+            "游泳（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "swim → swum。",
+      "common_errors": [
+        {
+          "when": "写了 swimmed",
+          "say": "swim 不规则，过去分词是 swum。"
+        }
+      ],
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r4-q12",
+      "title": "连词",
+      "scene": "我想吃火锅，因为很香。",
+      "stem": "I want hotpot ___ it smells nice.",
+      "task": "只写一个英文单词。",
+      "answer_text": "because",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "because"
+          ],
+          "cn": [
+            "（因为）"
+          ]
+        }
+      ],
+      "help": "表原因用什么？",
+      "explain": "I want hotpot because it smells nice.",
+      "common_errors": [
+        {
+          "when": "写了 and",
+          "say": "这里表原因，用 because。"
+        }
+      ],
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r4-q13",
+      "title": "写出过去分词：ride",
+      "scene": "把 ride 变成过去分词。",
+      "stem": "写出 ride 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "ridden",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "ridden"
+          ],
+          "cn": [
+            "骑（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "ride → ridden。",
+      "common_errors": [
+        {
+          "when": "写了 rided",
+          "say": "ride 不规则，过去分词是 ridden。"
+        }
+      ],
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 24,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r4-q14",
+      "title": "never 还是 ever",
+      "scene": "我从没去过。",
+      "stem": "I have ___ been there.",
+      "task": "只写 never 或 ever。",
+      "answer_text": "never",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "never"
+          ],
+          "cn": [
+            "（从不）"
+          ]
+        }
+      ],
+      "help": "“从没”用什么？",
+      "explain": "I have never been there.",
+      "common_errors": [
+        {
+          "when": "写了 ever",
+          "say": "这里“从没”，用 never。"
+        }
+      ],
+      "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r4-v-intro",
+      "title": "新任务：独立写",
+      "teach_html": "<p>新任务：这是<strong>我的日记</strong>范文——加入了俱乐部—已学会唱歌—没上台跳过舞但想试因为看着好玩。</p><p>资料在上面。这次你自己看、自己写，站长不提示了。</p><p>记住：<strong>have/has + 过去分词</strong>写经历；never 写“还没”，already 写“已经”；and/but/because 连句。</p>",
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r4-v01",
+      "title": "加入了",
+      "scene": "我加入了俱乐部。",
+      "stem": "I have ______ the club.",
+      "options": [
+        "joined",
+        "join",
+        "joins",
+        "joining"
+      ],
+      "answer": "A",
+      "help": "过去分词。",
+      "explain": "I have joined the club.",
+      "wrong_feedback": {
+        "B": "再想想词形。",
+        "C": "再想想单复数。",
+        "D": "再想想词形。"
+      },
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r4-v02",
+      "title": "已经学会",
+      "scene": "我已经学会唱歌。",
+      "stem": "I have ______ learned to sing.",
+      "options": [
+        "yet",
+        "never",
+        "already",
+        "ever"
+      ],
+      "answer": "C",
+      "help": "肯定句“已经”。",
+      "explain": "I have already learned to sing.",
+      "wrong_feedback": {
+        "A": "再想想位置。",
+        "B": "再想想意思。",
+        "D": "再想想意思。"
+      },
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r4-v03",
+      "title": "没跳过",
+      "scene": "我没在舞台上跳过舞。",
+      "stem": "I have never ______ on stage.",
+      "options": [
+        "dance",
+        "dances",
+        "dancing",
+        "danced"
+      ],
+      "answer": "D",
+      "help": "never 后面跟什么？",
+      "explain": "I have never danced on stage.",
+      "wrong_feedback": {
+        "A": "再想想词形。",
+        "B": "再想想词形。",
+        "C": "再想想词形。"
+      },
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r4-v04",
+      "title": "想试因为",
+      "scene": "想试因为看着好玩。",
+      "stem": "I want to try ______ it looks fun.",
+      "options": [
+        "and",
+        "because",
+        "but",
+        "or"
+      ],
+      "answer": "B",
+      "help": "表原因。",
+      "explain": "I want to try because it looks fun.",
+      "wrong_feedback": {
+        "A": "再想想连词。",
+        "C": "再想想连词。",
+        "D": "再想想连词。"
+      },
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r4-v05",
+      "title": "她加入",
+      "scene": "她加入了俱乐部。",
+      "stem": "She ______ joined the club.",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "are"
+      ],
+      "answer": "A",
+      "help": "三单。",
+      "explain": "She has joined the club.",
+      "wrong_feedback": {
+        "B": "再想想主语。",
+        "C": "再想想动词。",
+        "D": "再想想动词。"
+      },
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r4-v06",
+      "title": "刚学会",
+      "scene": "我刚学会唱歌。",
+      "stem": "I have ______ learned to sing.",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "never"
+      ],
+      "answer": "C",
+      "help": "“刚刚”。",
+      "explain": "I have just learned to sing.",
+      "wrong_feedback": {
+        "A": "再想想意思。",
+        "B": "再想想位置。",
+        "D": "再想想意思。"
+      },
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r4-v07",
+      "title": "写出过去分词：sing",
+      "scene": "把 sing 变成过去分词。",
+      "stem": "写出 sing 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "sung",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "sung"
+          ],
+          "cn": [
+            "唱（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "sing → sung。",
+      "common_errors": [
+        {
+          "when": "写了 singed",
+          "say": "sing 不规则，过去分词是 sung。"
+        }
+      ],
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r4-v08",
+      "title": "连词",
+      "scene": "去过，但没见过。",
+      "stem": "Been there, ___ never seen.",
+      "task": "只写 but 或 and。",
+      "answer_text": "but",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "but"
+          ],
+          "cn": [
+            "（但是）"
+          ]
+        }
+      ],
+      "help": "转折用什么？",
+      "explain": "Been there, but never seen.",
+      "common_errors": [
+        {
+          "when": "写了 and",
+          "say": "这里转折，用 but。"
+        }
+      ],
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r4-v09",
+      "title": "写出过去分词：dance",
+      "scene": "把 dance 变成过去分词。",
+      "stem": "写出 dance 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "danced",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "danced"
+          ],
+          "cn": [
+            "跳舞（过去分词）"
+          ]
+        }
+      ],
+      "help": "规则加 ed。",
+      "explain": "dance → danced（e 结尾直接加 d）。",
+      "common_errors": [
+        {
+          "when": "写了 danceed",
+          "say": "dance 结尾有 e，直接加 d：danced。"
+        }
+      ],
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r4-v10",
+      "title": "have 还是 has",
+      "scene": "他已经唱过了。",
+      "stem": "He has ___ sung.",
+      "task": "补全 already。",
+      "answer_text": "already",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "already"
+          ],
+          "cn": [
+            "（已经）"
+          ]
+        }
+      ],
+      "help": "肯定句“已经”。",
+      "explain": "He has already sung.",
+      "common_errors": [
+        {
+          "when": "写了 yet",
+          "say": "肯定句中间用 already。"
+        }
+      ],
+      "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r4-ending",
+      "title": "节目预告",
+      "teach_html": "<p>日记都写好了。站长说：交流墙贴满了，节目里要读几篇。</p><p>下一期是<strong>交流大直播</strong>——quiz 问答，把这单元全复习一遍。</p>"
+    }
+  ],
+  "title": "写一写：我的交流日记",
+  "unit": "Unit 5 Educational exchanges",
+  "version": 1
+}
