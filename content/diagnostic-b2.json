@@ -1,0 +1,146 @@
+{
+ "form": "B",
+ "section": 2,
+ "title": "新人能力检测（二）：阅读·听力",
+ "desc": "阅读3-4级、听力，约15-20分钟",
+ "steps": [
+  {
+   "kind": "teach",
+   "step": 1,
+   "title": "新人能力检测（二）",
+   "scene": "广播站",
+   "teach_html": "<p>欢迎加入<b>小禾广播站</b>！</p><p>在正式上岗前，我们想了解一下你现在的英语水平，好给你安排合适的任务。</p><p>这不是考试，没有分数。每一题答完，我们只会说“收到”，然后出下一题。</p><p>如果某题完全不会，点<b>“这个我不会”</b>跳过就好，不用猜。</p><p>第二部分：阅读和听力，大约15-20分钟。</p>",
+   "phase": "diagnostic"
+  },
+  {
+   "kind": "teach",
+   "step": 2,
+   "title": "阅读材料",
+   "scene": "广播站",
+   "teach_html": "<div class='reading-pane'><pre>【广播站通知】\nThe basketball game is on Saturday, October 17.\nTime: 9:00 a.m. - 11:00 a.m.\nPlace: the playground.\nPlease wear sports shoes.</pre></div>",
+   "phase": "diagnostic"
+  },
+  {
+   "kind": "mcq",
+   "step": 3,
+   "title": "阅读-1",
+   "scene": "检测",
+   "category": "阅读",
+   "knowledge_point": "reading-l1",
+   "level": 1,
+   "stem": "篮球赛在星期几？",
+   "options": [
+    "A. Friday",
+    "B. Saturday",
+    "C. Sunday",
+    "D. Monday"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 4,
+   "title": "阅读-2",
+   "scene": "检测",
+   "category": "阅读",
+   "knowledge_point": "reading-l2",
+   "level": 2,
+   "stem": "篮球赛几点开始？",
+   "options": [
+    "A. 9:00 a.m.",
+    "B. 11:00 a.m.",
+    "C. 2:00 p.m.",
+    "D. 9:00 p.m."
+   ],
+   "answer": "A",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 5,
+   "title": "阅读-3",
+   "scene": "检测",
+   "category": "阅读",
+   "knowledge_point": "reading-l3",
+   "level": 3,
+   "stem": "要穿什么？",
+   "options": [
+    "A. sports shoes",
+    "B. school uniform",
+    "C. raincoat",
+    "D. anything"
+   ],
+   "answer": "A",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 6,
+   "title": "阅读-4",
+   "scene": "检测",
+   "category": "阅读",
+   "knowledge_point": "reading-l4",
+   "level": 4,
+   "stem": "篮球赛在哪里？",
+   "options": [
+    "A. the hall",
+    "B. the gym",
+    "C. the playground",
+    "D. the classroom"
+   ],
+   "answer": "C",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 7,
+   "title": "听力-1",
+   "scene": "检测",
+   "category": "听力",
+   "knowledge_point": "listening-1",
+   "level": 1,
+   "stem": "听到：\"The class begins at eight.\" 课几点开始？",
+   "options": [
+    "A. 7:00",
+    "B. 8:00",
+    "C. 9:00",
+    "D. 10:00"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 8,
+   "title": "听力-2",
+   "scene": "检测",
+   "category": "听力",
+   "knowledge_point": "listening-2",
+   "level": 2,
+   "stem": "听到：\"He plays football on Sundays.\" 他周日做什么？",
+   "options": [
+    "A. basketball",
+    "B. football",
+    "C. tennis",
+    "D. nothing"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "teach",
+   "step": 9,
+   "title": "第二部分完成",
+   "scene": "广播站",
+   "teach_html": "<p>收到！第二部分做完了。</p><p>最后一部分是写句子和朗读，加油！</p>",
+   "phase": "diagnostic"
+  }
+ ]
+}
