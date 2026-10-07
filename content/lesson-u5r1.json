@@ -1,0 +1,735 @@
+{
+  "lesson_id": "u5r1",
+  "practice_end": 22,
+  "home_subtitle": "第一课 · 交流初体验",
+  "part1_desc": "第 1–22 步：跟站长认识现在完成时，学会 have/has + 过去分词。",
+  "part2_desc": "第 23–34 步：独立判断交换生资料，用现在完成时说一说。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时肯定句、have/has 与过去分词、ever/never。Unit 5 Educational exchanges 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-story-01",
+      "title": "交换生来了",
+      "teach_html": "<p>广播站上次的发明节目播完，听众说涨知识了。站长说：这期咱们做<strong>交流特别节目</strong>！</p><p>这学期学校来了几位<strong>交换生 (exchange students)</strong>——从别的国家来咱们学校学习生活的同学。站长让你去采访他们，问问他们的经历。</p><p>节目里要说“我去过北京”“她吃过饺子”。英文里这种“曾经做过某事”的说法，叫<strong>现在完成时</strong>。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-story-02",
+      "title": "什么是现在完成时",
+      "teach_html": "<p><strong>现在完成时</strong>表示“已经……了”“曾经……过”，说的是过去发生的事，但和现在有联系。</p><p>结构很简单：<strong>have / has + 过去分词</strong>。</p><p>比如：I <strong>have visited</strong> Beijing.（我去过北京。）She <strong>has eaten</strong> dumplings.（她吃过饺子。）</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-t01",
+      "title": "have 还是 has",
+      "teach_html": "<p>记住：<strong>I / you / we / they</strong> 后面用 <strong>have</strong>；<strong>he / she / it</strong> 后面用 <strong>has</strong>。</p><p>I <strong>have</strong> been to Shanghai.（我去过上海。）He <strong>has</strong> been to Shanghai.（他去过上海。）</p><p>口诀：<strong>三单用 has，其余用 have</strong>。</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-t02",
+      "title": "规则过去分词",
+      "teach_html": "<p><strong>过去分词</strong>长得像过去式。规则动词直接加 <strong>ed</strong>：</p><p>visit → <strong>visited</strong>（参观过）；live → <strong>lived</strong>（住过）；learn → <strong>learned</strong>（学过）。</p><p>I have <strong>visited</strong> the Great Wall.（我参观过长城。）</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-t03",
+      "title": "不规则过去分词",
+      "teach_html": "<p>有些动词的过去分词不规则，要<strong>单独记</strong>：</p><p>be → <strong>been</strong>；go → <strong>gone</strong>；see → <strong>seen</strong>（见过）；eat → <strong>eaten</strong>（吃过）。</p><p>She has <strong>seen</strong> the pandas.（她见过大熊猫。）</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-t04",
+      "title": "ever：曾经",
+      "teach_html": "<p><strong>ever</strong> 表示“曾经”，放在 have/has 和过去分词之间，常用于<strong>疑问句</strong>。</p><p>Have you <strong>ever</strong> been to Beijing?（你曾经去过北京吗？）</p><p>记住位置：<strong>have + ever + 过去分词</strong>。</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-t05",
+      "title": "never：从不",
+      "teach_html": "<p><strong>never</strong> 表示“从不、从来没有”，放在 have/has 后面。句子是肯定形式，但意思是否定的。</p><p>I have <strong>never</strong> been abroad.（我从没出过国。）</p><p>注意：never 本身就有否定意思，<strong>不再加 not</strong>。</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r1-t06",
+      "title": "小结",
+      "teach_html": "<p>小结一下：<strong>have/has + 过去分词</strong>；三单用 has；ever 放中间问“曾经”；never 表“从不”。</p><p>下面站长带着你练。资料卡在上面，做题时对照着看。</p>"
+    },
+    {
+      "step": 9,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u5r1-prac-01",
+      "title": "先看资料",
+      "teach_html": "<p>这是两张资料卡。做题时对照着看：李明—中国—去过北京上海—没出过国；安娜—英国—来过中国—见过长城—吃过饺子。</p><p>下面站长带着你练现在完成时。</p>",
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q01",
+      "title": "I 用哪个",
+      "scene": "李明说他去过北京。",
+      "stem": "I ______ been to Beijing.",
+      "options": [
+        "has",
+        "have",
+        "am",
+        "is"
+      ],
+      "answer": "B",
+      "help": "I 后面用什么？",
+      "explain": "I have been to Beijing.",
+      "wrong_feedback": {
+        "A": "has 用于 he/she/it。I 后面用 have。",
+        "C": "am 是 be 动词，这里要用 have。",
+        "D": "is 是 be 动词三单，这里要用 have。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q02",
+      "title": "she 用哪个",
+      "scene": "安娜吃过饺子。",
+      "stem": "She ______ eaten dumplings.",
+      "options": [
+        "have",
+        "had",
+        "having",
+        "has"
+      ],
+      "answer": "D",
+      "help": "she 是第三人称单数。",
+      "explain": "She has eaten dumplings.",
+      "wrong_feedback": {
+        "A": "have 用于 I/you/we/they。she 用 has。",
+        "B": "had 是过去式，现在完成时用 has。",
+        "C": "having 是动名词，不能这样用。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q03",
+      "title": "过去分词",
+      "scene": "他们参观过博物馆。",
+      "stem": "They have ______ the museum.",
+      "options": [
+        "visited",
+        "visit",
+        "visiting",
+        "visits"
+      ],
+      "answer": "A",
+      "help": "have 后面跟过去分词。",
+      "explain": "They have visited the museum.",
+      "wrong_feedback": {
+        "B": "visit 是原形，have 后面要用过去分词 visited。",
+        "C": "visiting 是现在分词，不对。",
+        "D": "visits 是三单现在时，不对。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q04",
+      "title": "been",
+      "scene": "他去过上海。",
+      "stem": "He has ______ to Shanghai.",
+      "options": [
+        "be",
+        "is",
+        "been",
+        "being"
+      ],
+      "answer": "C",
+      "help": "be 的过去分词是？",
+      "explain": "He has been to Shanghai.",
+      "wrong_feedback": {
+        "A": "be 是原形，要用过去分词 been。",
+        "B": "is 是现在时，不对。",
+        "D": "being 是现在分词，不对。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q05",
+      "title": "ever",
+      "scene": "问她见过长城吗。",
+      "stem": "Have you ______ seen the Great Wall?",
+      "options": [
+        "never",
+        "ever",
+        "already",
+        "just"
+      ],
+      "answer": "B",
+      "help": "疑问句里问“曾经”，用什么？",
+      "explain": "Have you ever seen the Great Wall?",
+      "wrong_feedback": {
+        "A": "never 是“从不”，问“曾经”用 ever。",
+        "C": "already 是“已经”，这里问“曾经”，用 ever。",
+        "D": "just 是“刚刚”，这里问“曾经去过”，用 ever。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q06",
+      "title": "never",
+      "scene": "李明从没出过国。",
+      "stem": "Li Ming has ______ been abroad.",
+      "options": [
+        "never",
+        "ever",
+        "yet",
+        "already"
+      ],
+      "answer": "A",
+      "help": "“从没出过国”，否定意思用什么？",
+      "explain": "Li Ming has never been abroad.",
+      "wrong_feedback": {
+        "B": "ever 是“曾经”，这里要“从没”，用 never。",
+        "C": "yet 一般放句末，这里用 never。",
+        "D": "already 是“已经”，和“从没”意思相反。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q07",
+      "title": "gone",
+      "scene": "安娜去过中国很多城市。",
+      "stem": "Anna has ______ to many cities in China.",
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "answer": "D",
+      "help": "go 的过去分词是？",
+      "explain": "Anna has gone to many cities in China.",
+      "wrong_feedback": {
+        "A": "go 是原形，要用过去分词 gone。",
+        "B": "goes 是三单现在时，不对。",
+        "C": "going 是现在分词，不对。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r1-q08",
+      "title": "eaten",
+      "scene": "他们吃过中国菜。",
+      "stem": "They have ______ Chinese food.",
+      "options": [
+        "eat",
+        "ate",
+        "eaten",
+        "eating"
+      ],
+      "answer": "C",
+      "help": "eat 的过去分词是？",
+      "explain": "They have eaten Chinese food.",
+      "wrong_feedback": {
+        "A": "eat 是原形，用过去分词 eaten。",
+        "B": "ate 是过去式，现在完成时用 eaten。",
+        "D": "eating 是现在分词，不对。"
+      },
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r1-q09",
+      "title": "写出过去分词：visit",
+      "scene": "把 visit 变成过去分词。",
+      "stem": "写出 visit 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "visited",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "visited"
+          ],
+          "cn": [
+            "参观（过去分词）"
+          ]
+        }
+      ],
+      "help": "规则动词加 ed。",
+      "explain": "visit → visited。",
+      "common_errors": [
+        {
+          "when": "写了 visiting",
+          "say": "visiting 是现在分词。要的是过去分词 visited。"
+        },
+        {
+          "when": "写了 visit",
+          "say": "visit 是原形，过去分词要加 ed：visited。"
+        }
+      ],
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r1-q10",
+      "title": "写出过去分词：see",
+      "scene": "把 see 变成过去分词。",
+      "stem": "写出 see 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "seen",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "seen"
+          ],
+          "cn": [
+            "看见（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则，要单独记。",
+      "explain": "see → seen。",
+      "common_errors": [
+        {
+          "when": "写了 seed",
+          "say": "seed 是“种子”。see 的过去分词是 seen。"
+        },
+        {
+          "when": "写了 saw",
+          "say": "saw 是过去式，过去分词是 seen。"
+        }
+      ],
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r1-q11",
+      "title": "have 还是 has",
+      "scene": "他在这里住了两年。",
+      "stem": "He ___ lived here for two years.",
+      "task": "只写 have 或 has。",
+      "answer_text": "has",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "has"
+          ],
+          "cn": [
+            "（三单用 has）"
+          ]
+        }
+      ],
+      "help": "he 是第三人称单数。",
+      "explain": "He has lived here for two years.",
+      "common_errors": [
+        {
+          "when": "写了 have",
+          "say": "he 是三单，要用 has，不用 have。"
+        }
+      ],
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r1-q12",
+      "title": "have 还是 has",
+      "scene": "她从没见过雪。",
+      "stem": "She ___ never seen snow.",
+      "task": "只写 have 或 has。",
+      "answer_text": "has",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "has"
+          ],
+          "cn": [
+            "（三单用 has）"
+          ]
+        }
+      ],
+      "help": "she 是第三人称单数。",
+      "explain": "She has never seen snow.",
+      "common_errors": [
+        {
+          "when": "写了 have",
+          "say": "she 是三单，用 has。"
+        }
+      ],
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r1-q13",
+      "title": "写出过去分词：go",
+      "scene": "把 go 变成过去分词。",
+      "stem": "写出 go 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "gone",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "gone"
+          ],
+          "cn": [
+            "去（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则，要单独记。",
+      "explain": "go → gone。",
+      "common_errors": [
+        {
+          "when": "写了 went",
+          "say": "went 是过去式，过去分词是 gone。"
+        }
+      ],
+      "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
+    },
+    {
+      "step": 23,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r1-v-intro",
+      "title": "新任务：独立判断",
+      "teach_html": "<p>新任务来了：这次是<strong>汤姆 (Tom)</strong> 和<strong>小梅 (Mei)</strong> 的资料。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>have/has + 过去分词</strong>；三单用 has；ever 问“曾经”，never 表“从不”。</p>",
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 24,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r1-v01",
+      "title": "汤姆去过中国",
+      "scene": "汤姆去过中国两次。",
+      "stem": "Tom ______ been to China twice.",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "are"
+      ],
+      "answer": "A",
+      "help": "三单。",
+      "explain": "Tom has been to China twice.",
+      "wrong_feedback": {
+        "B": "再想想三单用什么。",
+        "C": "再想想时态。",
+        "D": "再想想单复数。"
+      },
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r1-v02",
+      "title": "学了三年英语",
+      "scene": "小梅学了三年英语。",
+      "stem": "Mei has ______ English for three years.",
+      "options": [
+        "learn",
+        "learned",
+        "learning",
+        "learns"
+      ],
+      "answer": "B",
+      "help": "过去分词。",
+      "explain": "Mei has learned English for three years.",
+      "wrong_feedback": {
+        "A": "再想想过去分词。",
+        "C": "再想想词形。",
+        "D": "再想想时态。"
+      },
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r1-v03",
+      "title": "吃过饺子吗",
+      "scene": "问汤姆吃过饺子吗。",
+      "stem": "Has Tom ______ dumplings?",
+      "options": [
+        "eat",
+        "ate",
+        "eaten",
+        "eating"
+      ],
+      "answer": "C",
+      "help": "助动词后跟过去分词。",
+      "explain": "Has Tom eaten dumplings?",
+      "wrong_feedback": {
+        "A": "再想想词形。",
+        "B": "再想想过去分词。",
+        "D": "再想想词形。"
+      },
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r1-v04",
+      "title": "参观过长城",
+      "scene": "他们参观过长城两次。",
+      "stem": "They have ______ the Great Wall twice.",
+      "options": [
+        "visit",
+        "visits",
+        "visiting",
+        "visited"
+      ],
+      "answer": "D",
+      "help": "have 后面跟什么？",
+      "explain": "They have visited the Great Wall twice.",
+      "wrong_feedback": {
+        "A": "再想想词形。",
+        "B": "再想想单复数。",
+        "C": "再想想词形。"
+      },
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r1-v05",
+      "title": "你曾经",
+      "scene": "你曾经去过美国吗？",
+      "stem": "______ you ever been to the USA?",
+      "options": [
+        "Have",
+        "Has",
+        "Do",
+        "Does"
+      ],
+      "answer": "A",
+      "help": "you 用哪个助动词？",
+      "explain": "Have you ever been to the USA?",
+      "wrong_feedback": {
+        "B": "再想想主语。",
+        "C": "再想想时态。",
+        "D": "再想想主语。"
+      },
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r1-v06",
+      "title": "从没见过雪",
+      "scene": "汤姆从没见过雪。",
+      "stem": "Tom has ______ seen snow.",
+      "options": [
+        "ever",
+        "never",
+        "yet",
+        "just"
+      ],
+      "answer": "B",
+      "help": "“从没”用什么？",
+      "explain": "Tom has never seen snow.",
+      "wrong_feedback": {
+        "A": "再想想意思。",
+        "C": "再想想位置。",
+        "D": "再想想意思。"
+      },
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r1-v07",
+      "title": "写出过去分词：eat",
+      "scene": "把 eat 变成过去分词。",
+      "stem": "写出 eat 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "eaten",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "eaten"
+          ],
+          "cn": [
+            "吃（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "eat → eaten。",
+      "common_errors": [
+        {
+          "when": "写了 ate",
+          "say": "ate 是过去式，过去分词是 eaten。"
+        }
+      ],
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r1-v08",
+      "title": "写出过去分词：meet",
+      "scene": "把 meet 变成过去分词。",
+      "stem": "写出 meet 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "met",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "met"
+          ],
+          "cn": [
+            "遇见（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "meet → met。",
+      "common_errors": [
+        {
+          "when": "写了 meeted",
+          "say": "meet 是不规则的，过去分词是 met，不是 meeted。"
+        }
+      ],
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r1-v09",
+      "title": "have 还是 has",
+      "scene": "我看过这部电影。",
+      "stem": "I ___ seen the film.",
+      "task": "只写 have 或 has。",
+      "answer_text": "have",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "have"
+          ],
+          "cn": [
+            "（I 用 have）"
+          ]
+        }
+      ],
+      "help": "I 用哪个？",
+      "explain": "I have seen the film.",
+      "common_errors": [
+        {
+          "when": "写了 has",
+          "say": "I 后面用 have，不用 has。"
+        }
+      ],
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r1-v10",
+      "title": "have 还是 has",
+      "scene": "他已经回家了。",
+      "stem": "He ___ gone home.",
+      "task": "只写 have 或 has。",
+      "answer_text": "has",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "has"
+          ],
+          "cn": [
+            "（三单用 has）"
+          ]
+        }
+      ],
+      "help": "he 是三单。",
+      "explain": "He has gone home.",
+      "common_errors": [
+        {
+          "when": "写了 have",
+          "say": "he 是三单，用 has。"
+        }
+      ],
+      "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r1-ending",
+      "title": "节目预告",
+      "teach_html": "<p>今天的采访做得不错。站长说：交换生的经历都问清楚了。</p><p>下一期，站长要教你<strong>提问和回答</strong>——“你去过北京吗？”“去过。”“没去过。”英文该怎么问、怎么答。</p>"
+    }
+  ],
+  "title": "交流初体验：现在完成时入门",
+  "unit": "Unit 5 Educational exchanges",
+  "version": 1
+}
