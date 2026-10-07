@@ -33,6 +33,7 @@
   .sec-btn { font-size:20px; padding:12px 24px; border-radius:12px; border:2px solid var(--line); background:#fff; cursor:pointer; }
   .sec-btn.active { border-color:var(--blue); color:var(--blue); font-weight:700; }
   .sec-btn.done { background:#e8f5e9; border-color:#1e8e3e; }
+  details.reading-follow summary { font-size:20px; font-weight:700; cursor:pointer; padding:4px 0 12px; }
 </style>
 </head>
 <body>
@@ -52,6 +53,7 @@ let SECTION = parseInt(qs.get('section') || '1', 10);
 let SESSION_ID = null;
 let STEPS = [];
 let IDX = 0;
+let CACHED_READING = null; // 最近一次见到的阅读材料（teach 步里的 reading-pane），做题时跟随显示
 
 async function api(path, opts) {
   const r = await fetch(path, { ...opts, headers: { 'Content-Type': 'application/json', ...((opts && opts.headers) || {}) } });
@@ -64,6 +66,7 @@ async function loadSection(form, section) {
   if (!d.ok) { document.getElementById('content').innerHTML = '<div class="card">加载失败：' + d.error + '</div>'; return; }
   SESSION_ID = d.session_id;
   STEPS = d.steps;
+  CACHED_READING = null; // 切段时清空，避免上个 section 的材料串过来
   renderNav();
   renderStep();
 }
@@ -97,19 +100,28 @@ function renderStep() {
   }
   const s = STEPS[IDX];
   document.getElementById('stepind').textContent = `第 ${IDX+1} / ${STEPS.length} 题`;
+  // 记住最近一次的阅读材料，后面做题时跟随显示（材料同屏可见）
+  if (s.kind === 'teach' && s.teach_html && s.teach_html.indexOf('reading-pane') !== -1) {
+    CACHED_READING = s.teach_html;
+  }
+  // 做题步：如果有缓存的阅读材料，在题目上方以可收起卡片形式跟随显示
+  let readingHtml = '';
+  if ((s.kind === 'mcq' || s.kind === 'short') && CACHED_READING) {
+    readingHtml = '<details class="card reading-follow" open><summary>📖 阅读材料（点击收起／展开）</summary>' + CACHED_READING + '</details>';
+  }
   let html = '<div class="card">';
   if (s.kind === 'teach') {
     html += `<div class="kicker">广播站</div><h2 class="stem">${esc(s.title)}</h2><div class="teachtext">${s.teach_html}</div>`;
     html += `<button class="btn btn-primary" onclick="next()">继续</button>`;
   } else if (s.kind === 'mcq') {
-    html += `<div class="kicker">检测</div><h2 class="stem">${escStem(s.stem)}</h2>`;
+    html += `<div class="kicker">检测</div><h2 class="stem">${esc(s.stem)}</h2>`;
     s.options.forEach((o, i) => {
       const letter = String.fromCharCode(65 + i);
       html += `<button class="opt" data-a="${letter}" onclick="submitMcq('${letter}', this)">${esc(o)}</button>`;
     });
     html += `<div style="margin-top:16px"><button class="btn btn-giveup" onclick="giveUp()">这个我不会</button></div>`;
   } else if (s.kind === 'short') {
-    html += `<div class="kicker">检测</div><h2 class="stem">${escStem(s.stem)}</h2>`;
+    html += `<div class="kicker">检测</div><h2 class="stem">${esc(s.stem)}</h2>`;
     if (s.task) html += `<div class="teachtext"><p>${esc(s.task)}</p></div>`;
     html += `<input id="answer-input" placeholder="在这里写下你的答案">`;
     html += `<div><button class="btn btn-primary" onclick="submitShort()">提交</button>`;
@@ -122,12 +134,10 @@ function renderStep() {
     setTimeout(checkMic, 100);
   }
   html += '</div>';
-  c.innerHTML = html;
+  c.innerHTML = readingHtml + html;
 }
 
 function esc(t) { return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-// 题干允许 <u> 下划线标签（用于标音题）
-function escStem(t) { return esc(t).replace(/&lt;u&gt;/g,'<u>').replace(/&lt;\/u&gt;/g,'</u>'); }
 
 async function submitMcq(letter, btn) {
   document.querySelectorAll('.opt').forEach(b => b.disabled = true);
