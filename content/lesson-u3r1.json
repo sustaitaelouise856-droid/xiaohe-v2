@@ -1,698 +1,698 @@
 {
- "lesson_id": "u3r1",
- "practice_end": 22,
- "home_subtitle": "第一课 · 电脑初体验",
- "part1_desc": "第 1–22 步：跟站长学会比较级，对比两台电脑。",
- "part2_desc": "第 23–34 步：自己对比另一组电脑，写出广播词。",
- "note": "本课阅读材料为教研自编，非课本原文。考查能力：比较级构成与 than 句型。Unit 3 Computers 主题。",
- "steps": [
-  {
-   "step": 1,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-story-01",
-   "title": "科技特别节目",
-   "teach_html": "<p>广播站要做一期<strong>科技特别节目</strong>，讲讲电脑。</p><p>站长说：现在每家都有电脑，可同学们真的了解它吗？这期节目，我们就来聊聊怎么选电脑。</p><p>台里正好有两台电脑，一台旧的，一台新的。站长让你先对比看看，节目里要讲给同学们听。</p>"
-  },
-  {
-   "step": 2,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-story-02",
-   "title": "两台电脑",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "teach_html": "<p>看上面这两台电脑的资料：</p><ul><li><strong>Computer A</strong>：旧的（old）、慢（slow）、便宜（cheap，2000元）、小屏幕（small screen）</li><li><strong>Computer B</strong>：新的（new）、快（fast）、贵（expensive，5000元）、大屏幕（big screen）</li></ul><p>节目里要说“这台比那台快”“这台比那台便宜”，英文里这种“比……”的说法，叫<strong>比较级</strong>。</p>"
-  },
-  {
-   "step": 3,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-teach-01",
-   "title": "什么是比较级",
-   "teach_html": "<p><strong>比较级</strong>就是“更……”的意思，用来比较两个人或两样东西。</p><p>比如：这台电脑<strong>更快</strong>（faster），那台<strong>更便宜</strong>（cheaper）。</p><p>记住一句话：<strong>比较级后面常常跟 than（比）</strong>。Computer B is faster <strong>than</strong> Computer A（B电脑比A电脑快）。</p>"
-  },
-  {
-   "step": 4,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-teach-02",
-   "title": "短单词：直接加 er",
-   "teach_html": "<p>短的形容词，变比较级很简单：<strong>直接在后面加 er</strong>。</p><ul><li>cheap（便宜的）→ <strong>cheaper</strong>（更便宜的）</li><li>fast（快的）→ <strong>faster</strong>（更快的）</li><li>slow（慢的）→ <strong>slower</strong>（更慢的）</li><li>small（小的）→ <strong>smaller</strong>（更小的）</li></ul><p>例句：This computer is <strong>cheaper</strong> than that one.（这台电脑比那台便宜。）</p>"
-  },
-  {
-   "step": 5,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-teach-03",
-   "title": "加 er 的拼写小规矩",
-   "teach_html": "<p>加 er 有两个小规矩，记住就行：</p><ul><li>单词结尾是 <strong>e</strong> 的，只加 <strong>r</strong>：nice → nicer（更好的，更好的）</li><li>短单词“一个元音+一个辅音”结尾的，<strong>双写最后一个字母再加 er</strong>：big → <strong>bigger</strong>（更大的），hot → hotter</li><li>结尾是“辅音+y”的，<strong>y 变 i 再加 er</strong>：heavy（重的）→ <strong>heavier</strong>（更重的），easy → easier</li></ul><p>这几个在电脑节目里常用：big screen（大屏幕）、heavy（重）。</p>"
-  },
-  {
-   "step": 6,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-teach-04",
-   "title": "长单词：用 more",
-   "teach_html": "<p>长的形容词（一般是两个音节以上的），不能加 er，要在前面加 <strong>more</strong>。</p><ul><li>interesting（有趣的）→ <strong>more interesting</strong>（更有趣的）</li><li>expensive（贵的）→ <strong>more expensive</strong>（更贵的）</li><li>beautiful（漂亮的）→ <strong>more beautiful</strong>（更漂亮的）</li><li>useful（有用的）→ <strong>more useful</strong>（更有用的）</li></ul><p>例句：Computer B is <strong>more expensive</strong> than Computer A.（B电脑比A电脑贵。）</p>"
-  },
-  {
-   "step": 7,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-teach-05",
-   "title": "than 的句子怎么说",
-   "teach_html": "<p>比较级的完整句子长这样：</p><p><strong>A is + 比较级 + than + B</strong></p><ul><li>Computer B is <strong>faster than</strong> Computer A.（B比A快。）</li><li>Computer A is <strong>cheaper than</strong> Computer B.（A比B便宜。）</li><li>This game is <strong>more interesting than</strong> that one.（这个游戏比那个更有趣。）</li></ul><p>注意：than 后面跟被比的那个，顺序别反了。</p>"
-  },
-  {
-   "step": 8,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r1-teach-06",
-   "title": "两个特殊的",
-   "teach_html": "<p>有两个单词的比较级很特殊，要单独记：</p><ul><li>good（好的）→ <strong>better</strong>（更好的），不是 gooder</li><li>bad（坏的）→ <strong>worse</strong>（更坏的），不是 bader</li></ul><p>例句：Computer B is <strong>better than</strong> Computer A.（B电脑比A电脑好。）</p><p>下面开始练习。先对比这两台电脑，站长在旁边看着。</p>"
-  },
-  {
-   "step": 9,
-   "phase": "practice",
-   "kind": "teach",
-   "audio_id": "u3r1-prac-01",
-   "title": "先看资料",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "teach_html": "<p>这是两台电脑的资料。做题时对照着看：A 旧、慢、便宜、小屏幕；B 新、快、贵、大屏幕。</p><p>下面站长带着你练比较级。</p>"
-  },
-  {
-   "step": 10,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q01",
-   "title": "更便宜的",
-   "scene": "站长问：哪台电脑更便宜？用比较级说。",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer A is ______ than Computer B.",
-   "options": [
-    "cheaper",
-    "more cheap",
-    "cheapest",
-    "cheap"
-   ],
-   "answer": "A",
-   "help": "cheap 是短单词，直接加 er。",
-   "explain": "cheap 是短形容词，比较级是 cheaper。",
-   "wrong_feedback": {
-    "B": "more cheap 不对。cheap 是短单词，直接加 er 变成 cheaper，不用 more。",
-    "C": "cheapest 是最高级（最便宜的），这里是两台电脑比，用比较级 cheaper。",
-    "D": "cheap 是原级，没有“更”的意思。要选比较级 cheaper。"
-   }
-  },
-  {
-   "step": 11,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q02",
-   "title": "更快的",
-   "scene": "哪台运行更快？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer B is ______ than Computer A.",
-   "options": [
-    "more fast",
-    "fastest",
-    "faster",
-    "fast"
-   ],
-   "answer": "C",
-   "help": "fast 是短单词，加 er。",
-   "explain": "fast 的比较级是 faster。",
-   "wrong_feedback": {
-    "A": "more fast 不对。fast 是短单词，直接加 er，不用 more。",
-    "B": "fastest 是最高级，这里是两台比，用比较级 faster。",
-    "D": "fast 是原级，要选比较级 faster 才有“更快”的意思。"
-   }
-  },
-  {
-   "step": 12,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q03",
-   "title": "更贵的",
-   "scene": "价格上，哪台更贵？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer B is ______ than Computer A.",
-   "options": [
-    "expensiver",
-    "more expensive",
-    "most expensive",
-    "expensive"
-   ],
-   "answer": "B",
-   "help": "expensive 是长单词，前面加 more。",
-   "explain": "expensive 是长形容词，比较级是 more expensive。",
-   "wrong_feedback": {
-    "A": "expensiver 不对。长单词不能加 er，要在前面加 more。",
-    "C": "most expensive 是最高级，这里两台比，用比较级 more expensive。",
-    "D": "expensive 是原级，要选 more expensive 才有“更贵”的意思。"
-   }
-  },
-  {
-   "step": 13,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q04",
-   "title": "更有趣的",
-   "scene": "站长说 B 电脑的游戏更有趣，怎么说？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "The games on Computer B are ______ than those on Computer A.",
-   "options": [
-    "interestinger",
-    "most interesting",
-    "interesting",
-    "more interesting"
-   ],
-   "answer": "D",
-   "help": "interesting 是长单词，用 more。",
-   "explain": "interesting 比较级是 more interesting。",
-   "wrong_feedback": {
-    "A": "interestinger 不对，长单词不能加 er，用 more interesting。",
-    "B": "most interesting 是最高级，这里是两者比，用 more interesting。",
-    "C": "interesting 是原级，要 more interesting 才有“更有趣”的意思。"
-   }
-  },
-  {
-   "step": 14,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q05",
-   "title": "更大的屏幕",
-   "scene": "屏幕大小怎么比？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer B has a ______ screen than Computer A.",
-   "options": [
-    "big",
-    "biger",
-    "bigger",
-    "more big"
-   ],
-   "answer": "C",
-   "help": "big 是短单词，但要双写 g 再加 er。",
-   "explain": "big→bigger，注意双写 g。",
-   "wrong_feedback": {
-    "A": "big 是原级，要比较级 bigger 才有“更大”的意思。",
-    "B": "拼写错了。big 加 er 要双写 g：bigger，不是 biger。",
-    "D": "more big 不对，短单词直接加 er，不用 more。"
-   }
-  },
-  {
-   "step": 15,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q06",
-   "title": "更好的",
-   "scene": "总体上，B 比 A 好，怎么说？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer B is ______ than Computer A.",
-   "options": [
-    "gooder",
-    "more good",
-    "best",
-    "better"
-   ],
-   "answer": "D",
-   "help": "good 的比较级是特殊记的。",
-   "explain": "good→better，特殊变化要记住。",
-   "wrong_feedback": {
-    "A": "gooder 不对。good 的比较级是特殊的：better，记住它。",
-    "B": "more good 不对。good 的比较级就是 better，不用 more。",
-    "C": "best 是最高级（最好的），这里两者比，用 better。"
-   }
-  },
-  {
-   "step": 16,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q07",
-   "title": "更慢的",
-   "scene": "反过来，A 比 B 慢怎么说？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer A is ______ than Computer B.",
-   "options": [
-    "slower",
-    "more slow",
-    "slowest",
-    "slow"
-   ],
-   "answer": "A",
-   "help": "slow 是短单词，加 er。",
-   "explain": "slow 的比较级是 slower。",
-   "wrong_feedback": {
-    "B": "more slow 不对，短单词直接加 er：slower。",
-    "C": "slowest 是最高级，两者比用 slower。",
-    "D": "slow 是原级，要 slower 才有“更慢”的意思。"
-   }
-  },
-  {
-   "step": 17,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q08",
-   "title": "更重的",
-   "scene": "B 电脑更重吗？",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer B is ______ than Computer A.",
-   "options": [
-    "more heavy",
-    "heavyer",
-    "heavier",
-    "heavy"
-   ],
-   "answer": "C",
-   "help": "heavy 结尾是辅音+y，y 变 i 加 er。",
-   "explain": "heavy→heavier，y 变 i 再加 er。",
-   "wrong_feedback": {
-    "A": "more heavy 不对。heavy 虽然两音节，但它是 y 结尾的特殊情况，用 heavier。",
-    "B": "拼写错了：y 要变成 i，是 heavier 不是 heavyer。",
-    "D": "heavy 是原级，要 heavier 才有“更重”的意思。"
-   }
-  },
-  {
-   "step": 18,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r1-q09",
-   "title": "写出比较级：small",
-   "scene": "把 small 变成比较级。",
-   "stem": "写出 small 的比较级形式。",
-   "task": "只写一个英文单词。",
-   "answer_text": "smaller",
-   "expects": [
+  "lesson_id": "u3r1",
+  "practice_end": 22,
+  "home_subtitle": "第一课 · 电脑初体验",
+  "part1_desc": "第 1–22 步：跟站长学会比较级，对比两台电脑。",
+  "part2_desc": "第 23–34 步：自己对比另一组电脑，写出广播词。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：比较级构成与 than 句型。Unit 3 Computers 主题。",
+  "steps": [
     {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "smaller"
-     ],
-     "cn": [
-      "更小的"
-     ]
-    }
-   ],
-   "help": "small 是短单词，加 er。",
-   "explain": "small→smaller。",
-   "common_errors": [
-    {
-     "when": "写了 more small",
-     "say": "small 是短单词，直接加 er，不用 more。"
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-story-01",
+      "title": "科技特别节目",
+      "teach_html": "<p>广播站要做一期<strong>科技特别节目</strong>，讲讲电脑。</p><p>站长说：现在每家都有电脑，可同学们真的了解它吗？这期节目，我们就来聊聊怎么选电脑。</p><p>台里正好有两台电脑，一台旧的，一台新的。站长让你先对比看看，节目里要讲给同学们听。</p>"
     },
     {
-     "when": "写了 smallest",
-     "say": "smallest 是最高级，要的是比较级 smaller。"
-    }
-   ]
-  },
-  {
-   "step": 19,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r1-q10",
-   "title": "写出比较级：useful",
-   "scene": "把 useful 变成比较级。",
-   "stem": "写出 useful 的比较级形式。",
-   "task": "写英文。",
-   "answer_text": "more useful",
-   "expects": [
-    {
-     "id": "w2",
-     "type": "word",
-     "answers": [
-      "more useful"
-     ],
-     "cn": [
-      "更有用的"
-     ]
-    }
-   ],
-   "help": "useful 是长单词，前面加 more。",
-   "explain": "useful→more useful。",
-   "common_errors": [
-    {
-     "when": "写了 usefuller",
-     "say": "长单词不能加 er，用 more useful。"
-    }
-   ]
-  },
-  {
-   "step": 20,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r1-q11",
-   "title": "连词成句",
-   "scene": "把下面几个词连成一句话。",
-   "stem": "computer / faster / is / B / than / A（注意大小写）",
-   "task": "连成一个完整句子，写英文。",
-   "answer_text": "B is faster than A.",
-   "expects": [
-    {
-     "id": "s1",
-     "type": "word",
-     "answers": [
-      "b is faster than a"
-     ],
-     "cn": [
-      "B比A快"
-     ]
-    }
-   ],
-   "help": "按 A is + 比较级 + than + B 的顺序。",
-   "explain": "B is faster than A.（B比A快。）",
-   "common_errors": [
-    {
-     "when": "than 后面跟了 B is",
-     "say": "than 后面直接跟 A 就行，不用再加 is。"
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-story-02",
+      "title": "两台电脑",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "teach_html": "<p>看上面这两台电脑的资料：</p><ul><li><strong>Computer A</strong>：旧的（old）、慢（slow）、便宜（cheap，2000元）、小屏幕（small screen）</li><li><strong>Computer B</strong>：新的（new）、快（fast）、贵（expensive，5000元）、大屏幕（big screen）</li></ul><p>节目里要说“这台比那台快”“这台比那台便宜”，英文里这种“比……”的说法，叫<strong>比较级</strong>。</p>"
     },
     {
-     "when": "faster 写成 more fast",
-     "say": "fast 是短单词，用 faster。"
-    }
-   ]
-  },
-  {
-   "step": 21,
-   "phase": "practice",
-   "kind": "teach",
-   "audio_id": "u3r1-prac-02",
-   "title": "小结一下",
-   "teach_html": "<p>比较级小结：</p><ul><li>短单词：<strong>加 er</strong>（cheap→cheaper，big→bigger，heavy→heavier）</li><li>长单词：<strong>加 more</strong>（expensive→more expensive）</li><li>特殊：good→<strong>better</strong></li><li>句子：<strong>A is + 比较级 + than + B</strong></li></ul><p>下面站长不在旁边，你自己来对比另一组电脑。</p>"
-  },
-  {
-   "step": 22,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r1-q12",
-   "title": "更小的",
-   "scene": "最后一道带练：",
-   "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
-   "stem": "Computer A has a ______ screen than Computer B.",
-   "options": [
-    "more small",
-    "smallest",
-    "smaller",
-    "small"
-   ],
-   "answer": "C",
-   "help": "small 加 er。",
-   "explain": "small→smaller。",
-   "wrong_feedback": {
-    "A": "more small 不对，短单词直接加 er。",
-    "B": "smallest 是最高级，两者比用 smaller。",
-    "D": "small 是原级，要 smaller。"
-   }
-  },
-  {
-   "step": 23,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u3r1-story-03",
-   "title": "新任务：独立对比",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "teach_html": "<p>听众来信了：有两台二手电脑，C 和 D，想听听你的对比。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：比较级 + than；短单词加 er，长单词加 more。</p>"
-  },
-  {
-   "step": 24,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r1-v01",
-   "title": "更快的",
-   "scene": "哪台运行更快？",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "stem": "Computer C is ______ than Computer D.",
-   "options": [
-    "more fast",
-    "faster",
-    "fastest",
-    "fast"
-   ],
-   "answer": "B",
-   "help": "看资料，C 快。fast 怎么变比较级？",
-   "explain": "fast→faster。",
-   "wrong_feedback": {
-    "A": "fast 是短单词，直接加 er，不用 more。再想想。",
-    "C": "这是最高级的形式，这里是两台比。再想想。",
-    "D": "这是原级，没有“更”的意思。再想想。"
-   }
-  },
-  {
-   "step": 25,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r1-v02",
-   "title": "更轻的",
-   "scene": "重量怎么比？",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "stem": "Computer C is ______ than Computer D.",
-   "options": [
-    "lighter",
-    "more light",
-    "lightest",
-    "light"
-   ],
-   "answer": "A",
-   "help": "light 是短单词。",
-   "explain": "light→lighter。",
-   "wrong_feedback": {
-    "B": "light 是短单词，加 er 就行。再想想。",
-    "C": "这是最高级。再想想两台比用什么。",
-    "D": "这是原级。再想想。"
-   }
-  },
-  {
-   "step": 26,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r1-v03",
-   "title": "更贵的",
-   "scene": "价格上呢？",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "stem": "Computer C is ______ than Computer D.",
-   "options": [
-    "expensiver",
-    "more expensive",
-    "most expensive",
-    "expensive"
-   ],
-   "answer": "B",
-   "help": "expensive 是长单词。",
-   "explain": "expensive→more expensive。",
-   "wrong_feedback": {
-    "A": "长单词不能加 er。再想想长单词用什么。",
-    "C": "这是最高级。再想想。",
-    "D": "这是原级。再想想。"
-   }
-  },
-  {
-   "step": 27,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r1-v04",
-   "title": "更重的",
-   "scene": "反过来说 D 呢？",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "stem": "Computer D is ______ than Computer C.",
-   "options": [
-    "heavier",
-    "more heavy",
-    "heaviest",
-    "heavy"
-   ],
-   "answer": "A",
-   "help": "heavy 的变化有什么特别？",
-   "explain": "heavy→heavier。",
-   "wrong_feedback": {
-    "B": "heavy 是 y 结尾的特殊情况。再想想 y 要怎么变。",
-    "C": "这是最高级。再想想。",
-    "D": "这是原级。再想想。"
-   }
-  },
-  {
-   "step": 28,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r1-v05",
-   "title": "写出比较级：new",
-   "scene": "写出 new 的比较级。",
-   "stem": "写出 new 的比较级形式。",
-   "task": "只写一个英文单词。",
-   "answer_text": "newer",
-   "expects": [
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-teach-01",
+      "title": "什么是比较级",
+      "teach_html": "<p><strong>比较级</strong>就是“更……”的意思，用来比较两个人或两样东西。</p><p>比如：这台电脑<strong>更快</strong>（faster），那台<strong>更便宜</strong>（cheaper）。</p><p>记住一句话：<strong>比较级后面常常跟 than（比）</strong>。Computer B is faster <strong>than</strong> Computer A（B电脑比A电脑快）。</p>"
+    },
     {
-     "id": "w3",
-     "type": "word",
-     "answers": [
-      "newer"
-     ],
-     "cn": [
-      "更新的"
-     ]
-    }
-   ],
-   "help": "new 是短单词。",
-   "explain": "new→newer。",
-   "common_errors": [
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-teach-02",
+      "title": "短单词：直接加 er",
+      "teach_html": "<p>短的形容词，变比较级很简单：<strong>直接在后面加 er</strong>。</p><ul><li>cheap（便宜的）→ <strong>cheaper</strong>（更便宜的）</li><li>fast（快的）→ <strong>faster</strong>（更快的）</li><li>slow（慢的）→ <strong>slower</strong>（更慢的）</li><li>small（小的）→ <strong>smaller</strong>（更小的）</li></ul><p>例句：This computer is <strong>cheaper</strong> than that one.（这台电脑比那台便宜。）</p>"
+    },
     {
-     "when": "写了 more new",
-     "say": "new 是短单词，直接加 er。"
-    }
-   ]
-  },
-  {
-   "step": 29,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r1-v06",
-   "title": "写出比较级：powerful",
-   "scene": "写出 powerful 的比较级。",
-   "stem": "写出 powerful（强大的）的比较级形式。",
-   "task": "写英文。",
-   "answer_text": "more powerful",
-   "expects": [
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-teach-03",
+      "title": "加 er 的拼写小规矩",
+      "teach_html": "<p>加 er 有两个小规矩，记住就行：</p><ul><li>单词结尾是 <strong>e</strong> 的，只加 <strong>r</strong>：nice（好的）→ nicer（更好的）</li><li>短单词“一个元音+一个辅音”结尾的，<strong>双写最后一个字母再加 er</strong>：big → <strong>bigger</strong>（更大的），hot → hotter</li><li>结尾是“辅音+y”的，<strong>y 变 i 再加 er</strong>：heavy（重的）→ <strong>heavier</strong>（更重的），easy → easier</li></ul><p>这几个在电脑节目里常用：big screen（大屏幕）、heavy（重）。</p>"
+    },
     {
-     "id": "w4",
-     "type": "word",
-     "answers": [
-      "more powerful"
-     ],
-     "cn": [
-      "更强大的"
-     ]
-    }
-   ],
-   "help": "powerful 是长单词。",
-   "explain": "powerful→more powerful。",
-   "common_errors": [
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-teach-04",
+      "title": "长单词：用 more",
+      "teach_html": "<p>长的形容词（一般是两个音节以上的），不能加 er，要在前面加 <strong>more</strong>。</p><ul><li>interesting（有趣的）→ <strong>more interesting</strong>（更有趣的）</li><li>expensive（贵的）→ <strong>more expensive</strong>（更贵的）</li><li>beautiful（漂亮的）→ <strong>more beautiful</strong>（更漂亮的）</li><li>useful（有用的）→ <strong>more useful</strong>（更有用的）</li></ul><p>例句：Computer B is <strong>more expensive</strong> than Computer A.（B电脑比A电脑贵。）</p>"
+    },
     {
-     "when": "写了 powerfuller",
-     "say": "长单词前面加 more，不加 er。"
-    }
-   ]
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r1-v07",
-   "title": "更好的",
-   "scene": "C 比 D 好，怎么说？",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "stem": "Computer C is ______ than Computer D.",
-   "options": [
-    "gooder",
-    "best",
-    "more good",
-    "better"
-   ],
-   "answer": "D",
-   "help": "good 的变化是特殊的。",
-   "explain": "good→better。",
-   "wrong_feedback": {
-    "A": "good 没有 gooder 这种说法。再想想特殊变化是什么。",
-    "B": "这是最高级。再想想。",
-    "C": "good 不用 more，直接变 better。再想想。"
-   }
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r1-v08",
-   "title": "更慢的",
-   "scene": "D 比 C 慢，怎么说？",
-   "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
-   "stem": "Computer D is ______ than Computer C.",
-   "options": [
-    "slow",
-    "slower",
-    "slowest",
-    "more slow"
-   ],
-   "answer": "B",
-   "help": "slow 怎么变？",
-   "explain": "slow→slower。",
-   "wrong_feedback": {
-    "A": "这是原级。再想想。",
-    "C": "这是最高级。再想想。",
-    "D": "短单词不用 more。再想想。"
-   }
-  },
-  {
-   "step": 32,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r1-v09",
-   "title": "连词成句",
-   "scene": "连成一句话。",
-   "stem": "C / lighter / is / than / D",
-   "task": "连成完整句子，写英文。",
-   "answer_text": "C is lighter than D.",
-   "expects": [
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-teach-05",
+      "title": "than 的句子怎么说",
+      "teach_html": "<p>比较级的完整句子长这样：</p><p><strong>A is + 比较级 + than + B</strong></p><ul><li>Computer B is <strong>faster than</strong> Computer A.（B比A快。）</li><li>Computer A is <strong>cheaper than</strong> Computer B.（A比B便宜。）</li><li>This game is <strong>more interesting than</strong> that one.（这个游戏比那个更有趣。）</li></ul><p>注意：than 后面跟被比的那个，顺序别反了。</p>"
+    },
     {
-     "id": "s2",
-     "type": "word",
-     "answers": [
-      "c is lighter than d"
-     ],
-     "cn": [
-      "C比D轻"
-     ]
-    }
-   ],
-   "help": "按主语 + is + 比较级 + than + 对比对象的顺序。",
-   "explain": "C is lighter than D.",
-   "common_errors": [
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r1-teach-06",
+      "title": "两个特殊的",
+      "teach_html": "<p>有两个单词的比较级很特殊，要单独记：</p><ul><li>good（好的）→ <strong>better</strong>（更好的），不是 gooder</li><li>bad（坏的）→ <strong>worse</strong>（更坏的），不是 bader</li></ul><p>例句：Computer B is <strong>better than</strong> Computer A.（B电脑比A电脑好。）</p><p>下面开始练习。先对比这两台电脑，站长在旁边看着。</p>"
+    },
     {
-     "when": "顺序反了",
-     "say": "C 在前，D 在后：C is lighter than D。"
-    }
-   ]
-  },
-  {
-   "step": 33,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r1-v10",
-   "title": "写广播词",
-   "scene": "写一句广播词介绍。",
-   "stem": "用比较级写一句话：C 电脑比 D 电脑贵。",
-   "task": "写英文完整句子。",
-   "answer_text": "Computer C is more expensive than Computer D.",
-   "expects": [
+      "step": 9,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u3r1-prac-01",
+      "title": "先看资料",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "teach_html": "<p>这是两台电脑的资料。做题时对照着看：A 旧、慢、便宜、小屏幕；B 新、快、贵、大屏幕。</p><p>下面站长带着你练比较级。</p>"
+    },
     {
-     "id": "s3",
-     "type": "word",
-     "answers": [
-      "computer c is more expensive than computer d",
-      "c is more expensive than d"
-     ],
-     "cn": [
-      "C电脑比D电脑贵"
-     ]
-    }
-   ],
-   "help": "expensive 用 more，句子结构是 A is + 比较级 + than + B。",
-   "explain": "Computer C is more expensive than Computer D.",
-   "common_errors": [
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q01",
+      "title": "更便宜的",
+      "scene": "站长问：哪台电脑更便宜？用比较级说。",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer A is ______ than Computer B.",
+      "options": [
+        "cheaper",
+        "more cheap",
+        "cheapest",
+        "cheap"
+      ],
+      "answer": "A",
+      "help": "cheap 是短单词，直接加 er。",
+      "explain": "cheap 是短形容词，比较级是 cheaper。",
+      "wrong_feedback": {
+        "B": "more cheap 不对。cheap 是短单词，直接加 er 变成 cheaper，不用 more。",
+        "C": "cheapest 是最高级（最便宜的），这里是两台电脑比，用比较级 cheaper。",
+        "D": "cheap 是原级，没有“更”的意思。要选比较级 cheaper。"
+      }
+    },
     {
-     "when": "用了 expensiver",
-     "say": "expensive 是长单词，用 more expensive。"
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q02",
+      "title": "更快的",
+      "scene": "哪台运行更快？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer B is ______ than Computer A.",
+      "options": [
+        "more fast",
+        "fastest",
+        "faster",
+        "fast"
+      ],
+      "answer": "C",
+      "help": "fast 是短单词，加 er。",
+      "explain": "fast 的比较级是 faster。",
+      "wrong_feedback": {
+        "A": "more fast 不对。fast 是短单词，直接加 er，不用 more。",
+        "B": "fastest 是最高级，这里是两台比，用比较级 faster。",
+        "D": "fast 是原级，要选比较级 faster 才有“更快”的意思。"
+      }
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q03",
+      "title": "更贵的",
+      "scene": "价格上，哪台更贵？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer B is ______ than Computer A.",
+      "options": [
+        "expensiver",
+        "more expensive",
+        "most expensive",
+        "expensive"
+      ],
+      "answer": "B",
+      "help": "expensive 是长单词，前面加 more。",
+      "explain": "expensive 是长形容词，比较级是 more expensive。",
+      "wrong_feedback": {
+        "A": "expensiver 不对。长单词不能加 er，要在前面加 more。",
+        "C": "most expensive 是最高级，这里两台比，用比较级 more expensive。",
+        "D": "expensive 是原级，要选 more expensive 才有“更贵”的意思。"
+      }
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q04",
+      "title": "更有趣的",
+      "scene": "站长说 B 电脑的游戏更有趣，怎么说？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "The games on Computer B are ______ than those on Computer A.",
+      "options": [
+        "interestinger",
+        "most interesting",
+        "interesting",
+        "more interesting"
+      ],
+      "answer": "D",
+      "help": "interesting 是长单词，用 more。",
+      "explain": "interesting 比较级是 more interesting。",
+      "wrong_feedback": {
+        "A": "interestinger 不对，长单词不能加 er，用 more interesting。",
+        "B": "most interesting 是最高级，这里是两者比，用 more interesting。",
+        "C": "interesting 是原级，要 more interesting 才有“更有趣”的意思。"
+      }
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q05",
+      "title": "更大的屏幕",
+      "scene": "屏幕大小怎么比？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer B has a ______ screen than Computer A.",
+      "options": [
+        "big",
+        "biger",
+        "bigger",
+        "more big"
+      ],
+      "answer": "C",
+      "help": "big 是短单词，但要双写 g 再加 er。",
+      "explain": "big→bigger，注意双写 g。",
+      "wrong_feedback": {
+        "A": "big 是原级，要比较级 bigger 才有“更大”的意思。",
+        "B": "拼写错了。big 加 er 要双写 g：bigger，不是 biger。",
+        "D": "more big 不对，短单词直接加 er，不用 more。"
+      }
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q06",
+      "title": "更好的",
+      "scene": "总体上，B 比 A 好，怎么说？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer B is ______ than Computer A.",
+      "options": [
+        "gooder",
+        "more good",
+        "best",
+        "better"
+      ],
+      "answer": "D",
+      "help": "good 的比较级是特殊记的。",
+      "explain": "good→better，特殊变化要记住。",
+      "wrong_feedback": {
+        "A": "gooder 不对。good 的比较级是特殊的：better，记住它。",
+        "B": "more good 不对。good 的比较级就是 better，不用 more。",
+        "C": "best 是最高级（最好的），这里两者比，用 better。"
+      }
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q07",
+      "title": "更慢的",
+      "scene": "反过来，A 比 B 慢怎么说？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer A is ______ than Computer B.",
+      "options": [
+        "slower",
+        "more slow",
+        "slowest",
+        "slow"
+      ],
+      "answer": "A",
+      "help": "slow 是短单词，加 er。",
+      "explain": "slow 的比较级是 slower。",
+      "wrong_feedback": {
+        "B": "more slow 不对，短单词直接加 er：slower。",
+        "C": "slowest 是最高级，两者比用 slower。",
+        "D": "slow 是原级，要 slower 才有“更慢”的意思。"
+      }
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q08",
+      "title": "更重的",
+      "scene": "B 电脑更重吗？",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer B is ______ than Computer A.",
+      "options": [
+        "more heavy",
+        "heavyer",
+        "heavier",
+        "heavy"
+      ],
+      "answer": "C",
+      "help": "heavy 结尾是辅音+y，y 变 i 加 er。",
+      "explain": "heavy→heavier，y 变 i 再加 er。",
+      "wrong_feedback": {
+        "A": "more heavy 不对。heavy 虽然两音节，但它是 y 结尾的特殊情况，用 heavier。",
+        "B": "拼写错了：y 要变成 i，是 heavier 不是 heavyer。",
+        "D": "heavy 是原级，要 heavier 才有“更重”的意思。"
+      }
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r1-q09",
+      "title": "写出比较级：small",
+      "scene": "把 small 变成比较级。",
+      "stem": "写出 small 的比较级形式。",
+      "task": "只写一个英文单词。",
+      "answer_text": "smaller",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "smaller"
+          ],
+          "cn": [
+            "更小的"
+          ]
+        }
+      ],
+      "help": "small 是短单词，加 er。",
+      "explain": "small→smaller。",
+      "common_errors": [
+        {
+          "when": "写了 more small",
+          "say": "small 是短单词，直接加 er，不用 more。"
+        },
+        {
+          "when": "写了 smallest",
+          "say": "smallest 是最高级，要的是比较级 smaller。"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r1-q10",
+      "title": "写出比较级：useful",
+      "scene": "把 useful 变成比较级。",
+      "stem": "写出 useful 的比较级形式。",
+      "task": "写英文。",
+      "answer_text": "more useful",
+      "expects": [
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "more useful"
+          ],
+          "cn": [
+            "更有用的"
+          ]
+        }
+      ],
+      "help": "useful 是长单词，前面加 more。",
+      "explain": "useful→more useful。",
+      "common_errors": [
+        {
+          "when": "写了 usefuller",
+          "say": "长单词不能加 er，用 more useful。"
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r1-q11",
+      "title": "连词成句",
+      "scene": "把下面几个词连成一句话。",
+      "stem": "computer / faster / is / B / than / A（注意大小写）",
+      "task": "连成一个完整句子，写英文。",
+      "answer_text": "B is faster than A.",
+      "expects": [
+        {
+          "id": "s1",
+          "type": "word",
+          "answers": [
+            "b is faster than a"
+          ],
+          "cn": [
+            "B比A快"
+          ]
+        }
+      ],
+      "help": "按 A is + 比较级 + than + B 的顺序。",
+      "explain": "B is faster than A.（B比A快。）",
+      "common_errors": [
+        {
+          "when": "than 后面跟了 B is",
+          "say": "than 后面直接跟 A 就行，不用再加 is。"
+        },
+        {
+          "when": "faster 写成 more fast",
+          "say": "fast 是短单词，用 faster。"
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u3r1-prac-02",
+      "title": "小结一下",
+      "teach_html": "<p>比较级小结：</p><ul><li>短单词：<strong>加 er</strong>（cheap→cheaper，big→bigger，heavy→heavier）</li><li>长单词：<strong>加 more</strong>（expensive→more expensive）</li><li>特殊：good→<strong>better</strong></li><li>句子：<strong>A is + 比较级 + than + B</strong></li></ul><p>下面站长不在旁边，你自己来对比另一组电脑。</p>"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r1-q12",
+      "title": "更小的",
+      "scene": "最后一道带练：",
+      "reading": "Computer A: old, slow, cheap (2000 yuan), small screen\nComputer B: new, fast, expensive (5000 yuan), big screen",
+      "stem": "Computer A has a ______ screen than Computer B.",
+      "options": [
+        "more small",
+        "smallest",
+        "smaller",
+        "small"
+      ],
+      "answer": "C",
+      "help": "small 加 er。",
+      "explain": "small→smaller。",
+      "wrong_feedback": {
+        "A": "more small 不对，短单词直接加 er。",
+        "B": "smallest 是最高级，两者比用 smaller。",
+        "D": "small 是原级，要 smaller。"
+      }
+    },
+    {
+      "step": 23,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u3r1-story-03",
+      "title": "新任务：独立对比",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "teach_html": "<p>听众来信了：有两台二手电脑，C 和 D，想听听你的对比。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：比较级 + than；短单词加 er，长单词加 more。</p>"
+    },
+    {
+      "step": 24,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r1-v01",
+      "title": "更快的",
+      "scene": "哪台运行更快？",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "stem": "Computer C is ______ than Computer D.",
+      "options": [
+        "more fast",
+        "faster",
+        "fastest",
+        "fast"
+      ],
+      "answer": "B",
+      "help": "看资料，C 快。fast 怎么变比较级？",
+      "explain": "fast→faster。",
+      "wrong_feedback": {
+        "A": "fast 是短单词，直接加 er，不用 more。再想想。",
+        "C": "这是最高级的形式，这里是两台比。再想想。",
+        "D": "这是原级，没有“更”的意思。再想想。"
+      }
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r1-v02",
+      "title": "更轻的",
+      "scene": "重量怎么比？",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "stem": "Computer C is ______ than Computer D.",
+      "options": [
+        "lighter",
+        "more light",
+        "lightest",
+        "light"
+      ],
+      "answer": "A",
+      "help": "light 是短单词。",
+      "explain": "light→lighter。",
+      "wrong_feedback": {
+        "B": "light 是短单词，加 er 就行。再想想。",
+        "C": "这是最高级。再想想两台比用什么。",
+        "D": "这是原级。再想想。"
+      }
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r1-v03",
+      "title": "更贵的",
+      "scene": "价格上呢？",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "stem": "Computer C is ______ than Computer D.",
+      "options": [
+        "expensiver",
+        "more expensive",
+        "most expensive",
+        "expensive"
+      ],
+      "answer": "B",
+      "help": "expensive 是长单词。",
+      "explain": "expensive→more expensive。",
+      "wrong_feedback": {
+        "A": "长单词不能加 er。再想想长单词用什么。",
+        "C": "这是最高级。再想想。",
+        "D": "这是原级。再想想。"
+      }
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r1-v04",
+      "title": "更重的",
+      "scene": "反过来说 D 呢？",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "stem": "Computer D is ______ than Computer C.",
+      "options": [
+        "heavier",
+        "more heavy",
+        "heaviest",
+        "heavy"
+      ],
+      "answer": "A",
+      "help": "heavy 的变化有什么特别？",
+      "explain": "heavy→heavier。",
+      "wrong_feedback": {
+        "B": "heavy 是 y 结尾的特殊情况。再想想 y 要怎么变。",
+        "C": "这是最高级。再想想。",
+        "D": "这是原级。再想想。"
+      }
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r1-v05",
+      "title": "写出比较级：new",
+      "scene": "写出 new 的比较级。",
+      "stem": "写出 new 的比较级形式。",
+      "task": "只写一个英文单词。",
+      "answer_text": "newer",
+      "expects": [
+        {
+          "id": "w3",
+          "type": "word",
+          "answers": [
+            "newer"
+          ],
+          "cn": [
+            "更新的"
+          ]
+        }
+      ],
+      "help": "new 是短单词。",
+      "explain": "new→newer。",
+      "common_errors": [
+        {
+          "when": "写了 more new",
+          "say": "new 是短单词，直接加 er。"
+        }
+      ]
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r1-v06",
+      "title": "写出比较级：powerful",
+      "scene": "写出 powerful 的比较级。",
+      "stem": "写出 powerful（强大的）的比较级形式。",
+      "task": "写英文。",
+      "answer_text": "more powerful",
+      "expects": [
+        {
+          "id": "w4",
+          "type": "word",
+          "answers": [
+            "more powerful"
+          ],
+          "cn": [
+            "更强大的"
+          ]
+        }
+      ],
+      "help": "powerful 是长单词。",
+      "explain": "powerful→more powerful。",
+      "common_errors": [
+        {
+          "when": "写了 powerfuller",
+          "say": "长单词前面加 more，不加 er。"
+        }
+      ]
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r1-v07",
+      "title": "更好的",
+      "scene": "C 比 D 好，怎么说？",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "stem": "Computer C is ______ than Computer D.",
+      "options": [
+        "gooder",
+        "best",
+        "more good",
+        "better"
+      ],
+      "answer": "D",
+      "help": "good 的变化是特殊的。",
+      "explain": "good→better。",
+      "wrong_feedback": {
+        "A": "good 没有 gooder 这种说法。再想想特殊变化是什么。",
+        "B": "这是最高级。再想想。",
+        "C": "good 不用 more，直接变 better。再想想。"
+      }
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r1-v08",
+      "title": "更慢的",
+      "scene": "D 比 C 慢，怎么说？",
+      "reading": "Computer C: new, fast (runs games well), light (2 kg), 6000 yuan\nComputer D: old, slow, heavy (5 kg), 3000 yuan",
+      "stem": "Computer D is ______ than Computer C.",
+      "options": [
+        "slow",
+        "slower",
+        "slowest",
+        "more slow"
+      ],
+      "answer": "B",
+      "help": "slow 怎么变？",
+      "explain": "slow→slower。",
+      "wrong_feedback": {
+        "A": "这是原级。再想想。",
+        "C": "这是最高级。再想想。",
+        "D": "短单词不用 more。再想想。"
+      }
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r1-v09",
+      "title": "连词成句",
+      "scene": "连成一句话。",
+      "stem": "C / lighter / is / than / D",
+      "task": "连成完整句子，写英文。",
+      "answer_text": "C is lighter than D.",
+      "expects": [
+        {
+          "id": "s2",
+          "type": "word",
+          "answers": [
+            "c is lighter than d"
+          ],
+          "cn": [
+            "C比D轻"
+          ]
+        }
+      ],
+      "help": "按主语 + is + 比较级 + than + 对比对象的顺序。",
+      "explain": "C is lighter than D.",
+      "common_errors": [
+        {
+          "when": "顺序反了",
+          "say": "C 在前，D 在后：C is lighter than D。"
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r1-v10",
+      "title": "写广播词",
+      "scene": "写一句广播词介绍。",
+      "stem": "用比较级写一句话：C 电脑比 D 电脑贵。",
+      "task": "写英文完整句子。",
+      "answer_text": "Computer C is more expensive than Computer D.",
+      "expects": [
+        {
+          "id": "s3",
+          "type": "word",
+          "answers": [
+            "computer c is more expensive than computer d",
+            "c is more expensive than d"
+          ],
+          "cn": [
+            "C电脑比D电脑贵"
+          ]
+        }
+      ],
+      "help": "expensive 用 more，句子结构是 A is + 比较级 + than + B。",
+      "explain": "Computer C is more expensive than Computer D.",
+      "common_errors": [
+        {
+          "when": "用了 expensiver",
+          "say": "expensive 是长单词，用 more expensive。"
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u3r1-ending",
+      "title": "节目预告",
+      "teach_html": "<p>今天的对比播得很清楚。站长说：听众来信夸你讲得明白。</p><p>下一期，站长要教你“最高级”——三台电脑里选<strong>最好</strong>的那台。节目预告：怎么从三台里挑出第一名？</p>"
     }
-   ]
-  },
-  {
-   "step": 34,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u3r1-ending",
-   "title": "节目预告",
-   "teach_html": "<p>今天的对比播得很清楚。站长说：听众来信夸你讲得明白。</p><p>下一期，站长要教你“最高级”——三台电脑里选<strong>最好</strong>的那台。节目预告：怎么从三台里挑出第一名？</p>"
-  }
- ],
- "title": "电脑初体验：比较级入门",
- "unit": "Unit 3 Computers",
- "version": 1
+  ],
+  "title": "电脑初体验：比较级入门",
+  "unit": "Unit 3 Computers",
+  "version": 1
 }
