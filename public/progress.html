@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="/client-error.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小禾英语 · 我的进步</title>
+<style>
+  :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa; }
+  * { box-sizing:border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); font-size:22px; line-height:1.7; margin:0; }
+  #topbar { background:#fff; border-bottom:1px solid var(--line); padding:12px 20px; font-weight:700; font-size:24px; }
+  #wrap { max-width:900px; margin:0 auto; padding:24px 20px 80px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; margin-bottom:20px; }
+  h2 { font-size:26px; margin:0 0 8px; }
+  .subtitle { color:var(--muted); font-size:20px; margin-bottom:16px; }
+  .kp { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); }
+  .kp:last-child { border-bottom:0; }
+  .badge { font-size:18px; padding:4px 14px; border-radius:20px; color:#fff; white-space:nowrap; }
+  .badge.没学 { background:#9aa0a6; } .badge.学过 { background:var(--orange); }
+  .badge.会了 { background:var(--blue); } .badge.牢固 { background:var(--green); }
+  .kp-name { flex:1; }
+  /* 真人老师风格错题本 */
+  .focus-item { background:#fff8e1; border-left:4px solid var(--orange); border-radius:0 12px 12px 0; padding:14px 18px; margin:12px 0; }
+  .focus-item .t { font-weight:700; font-size:23px; }
+  .focus-item .enc { color:#7a4d00; font-size:20px; margin-top:4px; }
+  .done-item { background:#e8f5e9; border-left:4px solid var(--green); border-radius:0 12px 12px 0; padding:14px 18px; margin:12px 0; }
+  .done-item .t { font-weight:700; font-size:23px; }
+  .done-item .enc { color:#1b5e20; font-size:20px; margin-top:4px; }
+  .fold { margin-top:16px; }
+  .fold summary { cursor:pointer; color:var(--muted); font-size:20px; padding:8px 0; }
+  .fold-item { padding:8px 0 8px 16px; color:var(--muted); font-size:20px; border-bottom:1px solid var(--line); }
+  .empty { color:var(--muted); text-align:center; padding:20px; }
+  .tabs { display:flex; gap:12px; margin-bottom:20px; }
+  .tab { font-size:20px; padding:10px 24px; border-radius:12px; border:2px solid var(--line); background:#fff; cursor:pointer; }
+  .tab.active { border-color:var(--blue); color:var(--blue); font-weight:700; }
+</style>
+</head>
+<body>
+<div id="topbar">我的进步</div>
+<div id="wrap">
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('mastery')">掌握情况</button>
+    <button class="tab" onclick="showTab('mistakes')">错题本</button>
+  </div>
+  <div id="tab-mastery">
+    <div class="card">
+      <h2>知识点掌握</h2>
+      <div class="subtitle">做完新人能力检测后，这里会显示你的强项和待加强项。</div>
+      <div id="mastery-list"><div class="empty">加载中…</div></div>
+    </div>
+  </div>
+  <div id="tab-mistakes" style="display:none">
+    <div class="card">
+      <h2>正在攻克</h2>
+      <div class="subtitle">这几个知识点正在练习中，换一道同类型的题独立做对，就真正拿下了。</div>
+      <div id="focus-list"><div class="empty">加载中…</div></div>
+    </div>
+    <div class="card">
+      <h2>最近拿下</h2>
+      <div class="subtitle">这些是你最近真正掌握的，继续保持。</div>
+      <div id="done-list"><div class="empty">还没有，做了练习后会显示在这里。</div></div>
+    </div>
+    <div class="card fold">
+      <details>
+        <summary id="fold-summary">查看全部（已折叠）</summary>
+        <div id="fold-list"></div>
+      </details>
+    </div>
+  </div>
+</div>
+<script>
+// 知识点中文名映射（不出现内部编号）
+const KP_NAMES = {
+  'vocab-l1':'基础单词','vocab-l2':'常用单词','vocab-l3':'进阶单词',
+  'phonics-1':'拼读（一）','phonics-2':'拼读（二）',
+  'grammar-3sg':'三单形式','grammar-therebe':'there be 句型',
+  'grammar-since':'since 引导的时间','grammar-for':'for 引导的时间段',
+  'reading-l1':'阅读理解（一）','reading-l2':'阅读理解（二）',
+  'reading-l3':'阅读理解（三）','reading-l4':'阅读理解（四）',
+  'listening-1':'听力（一）','listening-2':'听力（二）',
+  'writing-1':'写句子（一）','writing-2':'写句子（二）',
+  'readaloud-1':'朗读',
+};
+function kpName(kp) { return KP_NAMES[kp] || '英语练习'; }
+function esc(t) { return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+async function api(p) { const r = await fetch(p); return r.json(); }
+
+async function loadMastery() {
+  const d = await api('/api/mastery');
+  const el = document.getElementById('mastery-list');
+  if (!d.ok || !d.items.length) { el.innerHTML = '<div class="empty">还没有数据，做完新人能力检测后会显示在这里。</div>'; return; }
+  el.innerHTML = d.items.map(k =>
+    `<div class="kp"><span class="badge ${esc(k.status)}">${esc(k.status)}</span><span class="kp-name">${esc(kpName(k.knowledge_point))}</span></div>`
+  ).join('');
+}
+
+async function loadMistakes() {
+  const d = await api('/api/retest/pending');
+  const focusEl = document.getElementById('focus-list');
+  const foldEl = document.getElementById('fold-list');
+  const foldSummary = document.getElementById('fold-summary');
+  if (!d.ok || !d.pending.length) {
+    focusEl.innerHTML = '<div class="empty">现在没有正在攻克的，继续保持！</div>';
+    foldEl.innerHTML = '';
+    foldSummary.style.display = 'none';
+    return;
+  }
+  // 真人老师风格：只突出前3-5个，其他折叠
+  const items = d.pending;
+  const focus = items.slice(0, 5);
+  const rest = items.slice(5);
+  const encouragements = [
+    '多练一次，就离拿下更近一步。',
+    '这个类型练熟了，考试就不怕了。',
+    '换一道题再试一次，你可以的。',
+    '慢慢来，把思路理清楚。',
+    '已经比上次进步了，继续。',
+  ];
+  focusEl.innerHTML = focus.map((m, i) =>
+    `<div class="focus-item"><div class="t">${esc(kpName(m.knowledge_point))}</div><div class="enc">${encouragements[i % encouragements.length]}</div></div>`
+  ).join('');
+  if (rest.length) {
+    foldSummary.textContent = `查看其他 ${rest.length} 个（已折叠）`;
+    foldSummary.style.display = '';
+    foldEl.innerHTML = rest.map(m =>
+      `<div class="fold-item">${esc(kpName(m.knowledge_point))}</div>`
+    ).join('');
+  } else {
+    foldSummary.style.display = 'none';
+  }
+}
+
+function showTab(t) {
+  document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab-mastery').style.display = t === 'mastery' ? '' : 'none';
+  document.getElementById('tab-mistakes').style.display = t === 'mistakes' ? '' : 'none';
+  if (t === 'mistakes') loadMistakes();
+}
+
+try { loadMastery(); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
+</script>
+</body>
+</html>

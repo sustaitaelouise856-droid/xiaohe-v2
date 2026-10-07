@@ -1,0 +1,1094 @@
+{
+  "lesson_id": "u2r2",
+  "unit": "Unit 2",
+  "version": 3,
+  "title": "Unit 2 第2课：昨天的广播有没有出问题",
+  "practice_end": 25,
+  "home_subtitle": "第二课 · 昨天的广播有没有出问题",
+  "part1_desc": "第 1–25 步：复盘昨天的错因，追踪旧书义卖的三张通知。",
+  "part2_desc": "第 26–36 步：自己追踪合唱比赛的三张通知，写出广播稿。",
+  "note": "v1（2026-09-29）：Claude 二审通过版。步骤 1 开场由服务端按第 1 课第二部分真实 attempts 动态生成；步骤 3–5 复盘题按错因自动挑 2–3 题。 v3（2026-10-02）：原第 19 步拆成 19/20/21 三步（听语音选地点→看第二份通知选时间→句子框写完整句），原 20–34 步顺延为 22–36 步；反馈术语改孩子语言（不用“漏项/作废”）。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "站长复盘",
+      "dynamic_opening": true,
+      "teach_html": "<p>新的一天，广播站开门。</p><p>今天先复盘三个小地方——上节课最容易错的类型，换新题考你；然后练个新的：通知连着改两次，怎么追踪。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-intro-review",
+      "title": "复盘引入",
+      "teach_html": "<p>站长：播之前咱们复盘三个小地方——都是昨天最容易错的类型，今天换新题考你。</p>"
+    },
+    {
+      "step": 3,
+      "phase": "practice",
+      "kind": "mcq",
+      "review_weakness": "old_info",
+      "title": "复盘：最终时间地点",
+      "help_line": "新通知“周五下午 4 点，102 教室”",
+      "scene": "站长考你：招新通知更新了，别被旧通知带跑。",
+      "stem": "招新通知更新了——旧通知“周五下午 3 点，101 教室”；新通知“周五下午 4 点，102 教室”。最终时间地点是？",
+      "options": [
+        "周五下午 3 点，101 教室",
+        "周五下午 3 点，102 教室",
+        "周五下午 4 点，102 教室",
+        "周五下午 4 点，101 教室"
+      ],
+      "answer": "C",
+      "explain": "只认最新通知：周五下午 4 点，102 教室。",
+      "help": "旧通知整张不算数了，只看新通知。",
+      "wrong_feedback": {
+        "A": "这是旧通知上的，已经不算数了。",
+        "B": "时间用了旧的、地点用了新的，拼错了。",
+        "D": "时间用了新的、地点用了旧的，拼错了。"
+      }
+    },
+    {
+      "step": 4,
+      "phase": "practice",
+      "kind": "short",
+      "review_weakness": "spelling",
+      "title": "复盘：拼写",
+      "scene": "把这个词拼写出来。",
+      "stem": "把“更新的”这个英文单词写出来（第 1 课讲过）。",
+      "task": "写英文单词。",
+      "answer_text": "updated",
+      "expects": [
+        {
+          "id": "word",
+          "type": "word",
+          "answers": [
+            "updated"
+          ],
+          "cn": [
+            "更新的"
+          ]
+        }
+      ],
+      "explain": "updated：update 加 d，表示“更新的”。",
+      "help": "update 后面加个字母。",
+      "common_errors": [
+        {
+          "when": "写成 update",
+          "say": "少了个 d，形容词别漏了 d。"
+        }
+      ],
+      "predicted_errors": [
+        {
+          "wrong": "updateing",
+          "cause": "不会这个知识",
+          "say": "不是加 ing，是加 d：update 后面加个 d。"
+        },
+        {
+          "wrong": "new",
+          "cause": "不会这个知识",
+          "say": "new 是“新的”，题目要的是“更新的”，第 1 课讲过的那个词。"
+        },
+        {
+          "wrong": "old",
+          "cause": "不会这个知识",
+          "say": "old 是“旧的”，题目要的是“更新的”，第 1 课讲过的那个词。"
+        }
+      ],
+      "dim_help": {
+        "word": {
+          "label": "单词",
+          "ask": "第 1 课讲过的“更新的”，英文怎么拼？"
+        }
+      }
+    },
+    {
+      "step": 5,
+      "phase": "practice",
+      "kind": "short",
+      "review_weakness": "omission",
+      "title": "复盘：还缺什么",
+      "scene": "这张通知缺了一项关键信息。",
+      "stem": "乒乓球赛通知只写了“下周三，体育馆”，还缺哪一项关键信息？用英文回答。",
+      "task": "用英文写出缺的信息类别。",
+      "answer_text": "time",
+      "expects": [
+        {
+          "id": "missing",
+          "type": "word",
+          "answers": [
+            "time"
+          ],
+          "cn": [
+            "时间"
+          ]
+        }
+      ],
+      "explain": "还缺时间：时间、地点、事项三项缺一不可。",
+      "help": "时间、地点、事项——缺了哪一个？",
+      "common_errors": [
+        {
+          "when": "只写了中文",
+          "say": "意思对了，请用英文写一遍：time。"
+        }
+      ],
+      "predicted_errors": [
+        {
+          "wrong": "place",
+          "cause": "没看到材料",
+          "say": "体育馆已经写在通知里了，缺的是另一项。"
+        },
+        {
+          "wrong": "clock",
+          "cause": "不会这个知识",
+          "say": "clock 是“钟”这个东西，题目问的是缺哪一类信息。"
+        },
+        {
+          "wrong": "Wednesday",
+          "cause": "没看到材料",
+          "say": "下周三已经写在通知里了，缺的是另一项。"
+        },
+        {
+          "wrong": "sport",
+          "cause": "不会这个知识",
+          "say": "题目问的是通知缺了哪一类信息：时间、地点、事项里缺了哪个？"
+        }
+      ],
+      "dim_help": {
+        "missing": {
+          "label": "缺的信息",
+          "ask": "通知里有了日子和地点，还缺哪一样？用英文说。"
+        }
+      }
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "新任务：旧书义卖",
+      "teach_html": "<p>站长交代新任务：学校要办旧书义卖（book sale），一天之内连发三张通知、更新两次。</p><p>今天的新本领：<strong>时间线追踪</strong>——通知越改越新，要一直盯着最新的一张。</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-timeline-teach",
+      "title": "只认最后一次更新",
+      "teach_html": "<p>记住：<strong>只认最后一次更新</strong>。</p><p>旧书义卖的通知会从第一份通知变成第二份通知再变成站长的语音。每出一次新通知，旧的整张就不算数了——不管它之前说得多清楚。</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "关键词预习",
+      "teach_html": "<p>先认几个词：</p><ul><li><strong>price tag</strong>：价格牌</li><li><strong>go down</strong>：下降</li><li><strong>hall</strong>：大厅</li></ul>"
+    },
+    {
+      "step": 9,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-booksale-v1",
+      "title": "第一份通知",
+      "teach_html": "<p>第一张通知来了，仔细看：</p>",
+      "reading": "NOTICE\nBook Sale\nTime: Saturday, 9:00 a.m.\nPlace: the playground\nPrice: 5 yuan for one book"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u2r2-booksale-v1",
+      "title": "第一份通知：时间",
+      "scene": "站长考你：第一张通知上，义卖是星期几、几点？",
+      "help_line": "Time: Saturday, 9:00 a.m.",
+      "stem": "旧书义卖的时间是？",
+      "options": [
+        "Saturday, 9:00 a.m.",
+        "Sunday, 9:00 a.m.",
+        "Saturday, 10:00 a.m.",
+        "Sunday, 10:00 a.m."
+      ],
+      "answer": "A",
+      "explain": "第一份通知写的是 Saturday, 9:00 a.m.。",
+      "help": "看 Time 一行。",
+      "wrong_feedback": {
+        "B": "再对照一下第一份通知，看看它到底写的是周几。",
+        "C": "再对照一下第一份通知里的时间。",
+        "D": "再对照一下第一份通知，一个字一个字看。"
+      },
+      "reading": "NOTICE\nBook Sale\nTime: Saturday, 9:00 a.m.\nPlace: the playground\nPrice: 5 yuan for one book"
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u2r2-booksale-v1",
+      "title": "第一份通知：价格",
+      "help_line": "Price: 5 yuan for one book",
+      "scene": "旧书多少钱一本？",
+      "stem": "旧书多少钱一本？用英文写完整句子。",
+      "task": "写英文完整句子。",
+      "answer_text": "5 yuan",
+      "expects": [
+        {
+          "id": "price",
+          "type": "word",
+          "answers": [
+            "5 yuan",
+            "five yuan"
+          ],
+          "cn": [
+            "5元",
+            "五元",
+            "5块",
+            "五块"
+          ]
+        }
+      ],
+      "explain": "5 yuan for one book.",
+      "help": "数字加单位：__ yuan。",
+      "common_errors": [
+        {
+          "when": "只写了 5",
+          "say": "漏了单位，完整的说法是 5 yuan。"
+        }
+      ],
+      "reading": "NOTICE\nBook Sale\nTime: Saturday, 9:00 a.m.\nPlace: the playground\nPrice: 5 yuan for one book",
+      "predicted_errors": [
+        {
+          "wrong": "5",
+          "cause": "粗心",
+          "say": "数字对了，单位别漏：5 后面加 yuan。"
+        },
+        {
+          "wrong": "5 yuanes",
+          "cause": "不会这个知识",
+          "say": "yuan 不加 s，直接写 5 yuan。"
+        },
+        {
+          "wrong": "5 dollar",
+          "cause": "不会这个知识",
+          "say": "dollar 是美元，人民币的“元”英文不是这个词，想想通知里价格后面的单位。"
+        },
+        {
+          "wrong": "The price is 5.",
+          "cause": "粗心",
+          "say": "价格对了，单位 yuan 别漏。"
+        },
+        {
+          "wrong": "five",
+          "cause": "粗心",
+          "say": "five 对了，后面加上 yuan 才完整。"
+        }
+      ],
+      "dim_help": {
+        "price": {
+          "label": "价格",
+          "ask": "旧书多少钱一本？数字加单位，一起说。"
+        }
+      }
+    },
+    {
+      "step": 12,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-booksale-v2",
+      "title": "第二份通知（更新通知）",
+      "teach_html": "<p>更新通知来了！<strong>第一份通知整张不算数了</strong>，只看新的：</p>",
+      "reading": "UPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book"
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u2r2-booksale-v2",
+      "title": "第二份通知：地点",
+      "help_line": "Place: the library gate",
+      "scene": "更新后，地点是哪里？",
+      "stem": "更新后，义卖地点是？",
+      "options": [
+        "on the playground",
+        "in the classroom",
+        "at the library",
+        "at the library gate"
+      ],
+      "answer": "D",
+      "explain": "第二份通知写的是 at the library gate（图书馆门口）。",
+      "help": "看 Place 一行，注意差一个词。",
+      "wrong_feedback": {
+        "A": "这是第一份通知上的旧地点，已经换掉了。",
+        "B": "通知里没提过这个地点。",
+        "C": "差一个词，再对照一下第二份通知里地点的写法。"
+      },
+      "reading": "UPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book"
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "第二份通知：最新信息",
+      "help_line": "Time: Sunday, 10:00 a.m.\nPlace: the library gate",
+      "scene": "哪项是目前最新的信息？",
+      "stem": "以下哪项是目前最新的信息？",
+      "options": [
+        "Saturday, 9:00 a.m., on the playground",
+        "Sunday, 10:00 a.m., at the library gate",
+        "Sunday, 9:00 a.m., at the library gate",
+        "Saturday, 10:00 a.m., on the playground"
+      ],
+      "answer": "B",
+      "explain": "最新信息：Sunday, 10:00 a.m., at the library gate。",
+      "help": "第一份通知整张不算数了，只看第二份通知。",
+      "wrong_feedback": {
+        "A": "整条都是第一份通知的旧信息。",
+        "C": "时间混进了第一份通知的 9 点。",
+        "D": "新旧混搭。"
+      },
+      "reading": "UPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book"
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "short",
+      "title": "第二份通知：更新了哪两项",
+      "help_line": "Time: Sunday, 10:00 a.m.\nPlace: the library gate",
+      "scene": "第二份通知相对第一份通知，更新了哪两项？",
+      "stem": "第二份通知相对第一份通知，更新了哪两项？用英文关键词写出。",
+      "task": "写英文关键词。",
+      "answer_text": "time, place",
+      "expects": [
+        {
+          "id": "u1",
+          "type": "word",
+          "answers": [
+            "time",
+            "day",
+            "sunday",
+            "10:00",
+            "10"
+          ],
+          "cn": [
+            "时间",
+            "日期"
+          ]
+        },
+        {
+          "id": "u2",
+          "type": "word",
+          "answers": [
+            "place",
+            "library gate",
+            "library"
+          ],
+          "cn": [
+            "地点"
+          ]
+        }
+      ],
+      "explain": "两项更新：时间改到 Sunday 10:00 a.m.，地点改到 library gate。",
+      "help": "第一份和第二份通知对照看，哪两行不一样？",
+      "common_errors": [
+        {
+          "when": "只写了一项",
+          "say": "还少了一样。第二份通知一共改了两处，再对照看看，写全了再交。"
+        }
+      ],
+      "reading": "NOTICE\nBook Sale\nTime: Saturday, 9:00 a.m.\nPlace: the playground\nPrice: 5 yuan for one book\n\nUPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book",
+      "predicted_errors": [
+        {
+          "wrong": "time",
+          "cause": "粗心",
+          "say": "时间这处找对了，再对照两张通知找另一处变化。"
+        },
+        {
+          "wrong": "Sunday, 10:00 a.m.",
+          "cause": "粗心",
+          "say": "时间写全了，再找地点方面的那处变化。"
+        },
+        {
+          "wrong": "Saturday",
+          "cause": "没看到材料",
+          "say": "Saturday 是第一份通知上的旧日子，看第二份通知改成了哪天。"
+        },
+        {
+          "wrong": "playground",
+          "cause": "没看到材料",
+          "say": "playground 是第一份通知上的旧地点，第二份通知改成了哪儿？"
+        },
+        {
+          "wrong": "Sunday",
+          "cause": "粗心",
+          "say": "星期日这处对了，还有一处变化，再对照看看。"
+        }
+      ],
+      "dim_help": {
+        "u1": {
+          "label": "时间",
+          "ask": "先看时间：两张通知的日子和钟点，哪里不一样？"
+        },
+        "u2": {
+          "label": "地点",
+          "ask": "再看地点：两张通知的地方，哪里不一样？"
+        }
+      }
+    },
+    {
+      "step": 16,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "站长的语音消息",
+      "teach_html": "<p>站长：刚接到电话，又有变化！我发语音消息给你——<strong>先听，听懂再答题</strong>，文字版一会儿再给。</p>"
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u2r2-booksale-v3-voice",
+      "title": "听：地点又改到哪",
+      "help_line": "The book sale will move to the teaching building hall.",
+      "scene": "听站长的语音消息，地点又改到了哪里？",
+      "stem": "（听语音）地点又改到了哪里？",
+      "options": [
+        "at the library gate",
+        "in the teaching building hall",
+        "on the playground",
+        "in the school hall"
+      ],
+      "answer": "B",
+      "explain": "地点搬到 teaching building hall。",
+      "help": "仔细听 move to 后面是哪里。",
+      "wrong_feedback": {
+        "A": "这是第二份通知的地点，语音里说改了。",
+        "C": "这是第一份通知的旧地点。",
+        "D": "语音里没提过这个地方。"
+      }
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u2r2-booksale-v3-voice",
+      "title": "听：价格变化",
+      "help_line": "the price goes down to 3 yuan a book.",
+      "scene": "价格有什么变化？",
+      "stem": "（听语音）价格有什么变化？",
+      "options": [
+        "还是 5 yuan 一本",
+        "从 3 yuan 涨到 5 yuan",
+        "从 5 yuan 降到 3 yuan",
+        "免费了"
+      ],
+      "answer": "C",
+      "explain": "语音里说：the price goes down to 3 yuan a book.",
+      "help": "听 good news 后面那句，go down 还是 go up？",
+      "wrong_feedback": {
+        "A": "语音里说了 good news，再听听。",
+        "B": "方向反了，是 go down。",
+        "D": "语音里没说免费。"
+      }
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u2r2-booksale-v3-voice",
+      "title": "听：最后定在哪儿",
+      "scene": "写广播稿之前，先把地点定下来：听站长的语音，义卖最后在哪里举行？",
+      "stem": "（听语音）义卖最后在哪里举行？",
+      "options": [
+        "on the playground",
+        "in the teaching building hall",
+        "at the library gate",
+        "in the school hall next to the library"
+      ],
+      "answer": "B",
+      "explain": "语音说搬到 teaching building hall。",
+      "help": "仔细听 move to 后面说的是哪里。",
+      "help_line": "The book sale will move to the teaching building hall.",
+      "wrong_feedback": {
+        "A": "这是第一份通知上的地点，后来已经改掉了。",
+        "C": "这是第二份通知上的地点。站长的语音说图书馆门口周日太忙，义卖要搬走。",
+        "D": "站长的语音里没说这个地方。再听一遍 move to 后面。"
+      }
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "看通知：时间是几点",
+      "scene": "地点定了。再看同屏的第二份通知，把时间也定下来。",
+      "stem": "（看第二份通知）义卖的时间是？",
+      "reading": "UPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book",
+      "material_label": "第二份通知",
+      "options": [
+        "Sunday, 10:00 a.m.",
+        "Sunday, 9:00 a.m.",
+        "Saturday, 10:00 a.m.",
+        "Saturday, 9:00 a.m."
+      ],
+      "answer": "A",
+      "explain": "第二份通知的 Time 一行写着：Sunday, 10:00 a.m.",
+      "help": "只看第二份通知的 Time 一行，第一份通知上的时间已经换掉了。",
+      "help_line": "Time: Sunday, 10:00 a.m.",
+      "wrong_feedback": {
+        "B": "星期天对了，可 9 点是第一份通知上的旧时间。再看第二份通知的 Time 一行写的是几点。",
+        "C": "10 点对了，可星期六是第一份通知上的旧日子，已经换成星期天了。",
+        "D": "星期六和 9 点都是第一份通知上的，已经换过了。只看第二份通知的 Time 一行。"
+      }
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "title": "写完整句：时间和地点",
+      "scene": "地点和时间都定好了。现在照着这个句子，把完整的广播词填出来。",
+      "stem": "填一填：The book sale is on ____, at ____, in the ____.",
+      "task": "在三个空里填英文，拼出一句完整的话。",
+      "answer_text": "The book sale is on Sunday, at 10:00 a.m., in the teaching building hall.",
+      "expects": [
+        {
+          "id": "day",
+          "type": "word",
+          "answers": [
+            "sunday"
+          ],
+          "olds": [
+            "saturday"
+          ],
+          "cn": [
+            "周日",
+            "星期日"
+          ],
+          "cn_old": [
+            "周六",
+            "星期六"
+          ]
+        },
+        {
+          "id": "time",
+          "type": "time",
+          "hour": 10,
+          "minute": 0,
+          "meridiem": "am",
+          "old": {
+            "hour": 9,
+            "minute": 0,
+            "meridiem": "am"
+          },
+          "cn": [
+            "10点",
+            "上午10点",
+            "十点"
+          ],
+          "cn_old": [
+            "9点",
+            "上午9点",
+            "九点"
+          ]
+        },
+        {
+          "id": "place",
+          "type": "word",
+          "answers": [
+            "hall"
+          ],
+          "olds": [
+            "library gate",
+            "playground"
+          ],
+          "cn": [
+            "大厅",
+            "礼堂"
+          ],
+          "cn_old": [
+            "图书馆门口",
+            "操场"
+          ]
+        }
+      ],
+      "explain": "整句：The book sale is on Sunday, at 10:00 a.m., in the teaching building hall。",
+      "help": "三空：星期、时间看第二份通知；地点听语音。",
+      "help_line": "Time: Sunday, 10:00 a.m.",
+      "reading": "UPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book",
+      "material_label": "第二份通知",
+      "common_errors": [
+        {
+          "when": "写了 library gate",
+          "say": "图书馆门口是第二份通知上的地点。站长的语音说，图书馆门口周日太忙，义卖要搬到教学楼大厅。"
+        },
+        {
+          "when": "只写了 Sunday",
+          "say": "还差两个空：几点、在哪儿。把这句话填完整再交。"
+        },
+        {
+          "when": "时间写错",
+          "say": "时间看同屏第二份通知的 Time 一行，是 Sunday, 10:00 a.m.，照着填。"
+        },
+        {
+          "when": "漏了时间",
+          "say": "时间的空还空着，看同屏第二份通知的 Time 一行，照着填。"
+        }
+      ],
+      "predicted_errors": [
+        {
+          "wrong": "Sunday",
+          "cause": "粗心",
+          "say": "星期填对了，后面两个空还没填：几点、在哪儿。"
+        },
+        {
+          "wrong": "Saturday, at 10:00 a.m., in the teaching building hall",
+          "cause": "没看到材料",
+          "say": "星期写的是第一份通知上的旧日子，第二份通知改成了哪天？"
+        },
+        {
+          "wrong": "Sunday, at 10:00 a.m., in the library gate",
+          "cause": "没看到材料",
+          "say": "地点写的是第二份通知上的旧地方，站长的语音说搬去了哪儿？"
+        },
+        {
+          "wrong": "Sunday, at 9:00 a.m., in the teaching building hall",
+          "cause": "没看到材料",
+          "say": "9 点是第一份通知上的旧时间，第二份通知写的是几点？"
+        },
+        {
+          "wrong": "Sunday, at 10:00 p.m., in the teaching building hall",
+          "cause": "不会这个知识",
+          "say": "你写的是晚上 10 点，通知里说的是上午，再看看是 a.m. 还是 p.m.。"
+        }
+      ],
+      "dim_help": {
+        "day": {
+          "label": "星期",
+          "ask": "第一个空：星期几？"
+        },
+        "time": {
+          "label": "时间",
+          "ask": "第二个空：几点？"
+        },
+        "place": {
+          "label": "地点",
+          "ask": "第三个空：在哪儿？"
+        }
+      }
+    },
+    {
+      "step": 22,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-same-teach",
+      "title": "核对 + 没说的就是没变",
+      "teach_html": "<p>看文字版，对照核对一遍：</p><p>The library gate is busy on Sunday. The book sale will move to the <strong>teaching building hall</strong>. The time is the same. The price goes <strong>down</strong> to <strong>3 yuan</strong> a book.</p><p>记住一句话：<strong>没说的就是没变</strong>。站长的语音只说了地点和价格变化，没提日期——日期还是周日。通知没说的，就是没变，别自己脑补。</p>",
+      "reading": "VOICE MESSAGE\nHi, this is the station manager. The library gate is busy on Sunday. The book sale will move to the teaching building hall. The time is the same. Good news — the price goes down to 3 yuan a book. Please check the new price tag and write it down."
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "练：没说的就是没变",
+      "see_also": {
+        "label": "再看第二份通知",
+        "text": "UPDATED NOTICE\nBook Sale\nTime: Sunday, 10:00 a.m.\nPlace: the library gate\nPrice: 5 yuan for one book"
+      },
+      "scene": "站长的语音没提日期，日期是？",
+      "stem": "站长的语音里没有提日期。义卖日期是？",
+      "options": [
+        "Sunday",
+        "Saturday",
+        "不确定",
+        "Monday"
+      ],
+      "answer": "A",
+      "explain": "站长的语音没提日期，沿用第二份通知的 Sunday。没说的就是没变。",
+      "help": "站长的语音没说的，去第二份通知找。",
+      "wrong_feedback": {
+        "B": "周六是第一份通知上的旧日期，已经换成周日了。",
+        "C": "没说的就是没变，第二份通知说了周日。",
+        "D": "通知里从没出现过周一。"
+      },
+      "reading": "VOICE MESSAGE\nHi, this is the station manager. The library gate is busy on Sunday. The book sale will move to the teaching building hall. The time is the same. Good news — the price goes down to 3 yuan a book. Please check the new price tag and write it down."
+    },
+    {
+      "step": 24,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "时间线小结",
+      "teach_html": "<p>时间线小结：</p><ul><li>第一份通知：周六 9 点 · 操场 · 5 元</li><li>第二份通知：周日 10 点 · 图书馆门口</li><li>站长的语音：周日 10 点 · 教学楼大厅 · 3 元</li></ul><p><strong>只认站长的语音</strong>。</p>"
+    },
+    {
+      "step": 25,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "第一部分完成",
+      "teach_html": "<p>第一部分的练习完成了。</p><p>接下来是验证阶段：新的三张通知，靠你自己追踪。</p>"
+    },
+    {
+      "step": 26,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-transition-24",
+      "title": "第二天：合唱比赛",
+      "teach_html": "<p>昨天你学会了：通知可能会连着改好几次，<strong>只认最后一次</strong>。</p><p>今天站长出门了，合唱比赛（choir，合唱比赛）的通知也改了好几次，一张一张看，广播之前，我要看到最终信息。</p><p>第一张通知：</p>",
+      "reading": "NOTICE\nChoir Contest\nTime: Friday, 7:00 p.m.\nPlace: the school hall"
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u2r2-choir-v1",
+      "title": "第一份通知：时间",
+      "scene": "第一张通知上，合唱比赛是星期几、几点？",
+      "stem": "第一份通知的时间是？",
+      "options": [
+        "Saturday, 7:00 p.m.",
+        "Friday, 8:00 p.m.",
+        "Sunday, 7:00 p.m.",
+        "Friday, 7:00 p.m."
+      ],
+      "answer": "D",
+      "explain": "第一份通知写的是 Friday, 7:00 p.m.。",
+      "help": "看 Time 一行。",
+      "wrong_feedback": {
+        "A": "再对照一下第一份通知，看看它到底写的是周几。",
+        "B": "8 点没出现过。",
+        "C": "周日是 book sale 的日子，别串了。"
+      },
+      "reading": "NOTICE\nChoir Contest\nTime: Friday, 7:00 p.m.\nPlace: the school hall"
+    },
+    {
+      "step": 28,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-choir-v2",
+      "title": "第二份通知（更新通知）",
+      "teach_html": "<p>更新通知来了！<strong>第一份通知整张不算数了</strong>，只看这份新的：</p>",
+      "reading": "UPDATED NOTICE\nChoir Contest\nTime: Saturday, 7:00 p.m.\nPlace: the school hall"
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "第二份通知：更新了什么",
+      "scene": "第二份通知相对第一份通知更新了什么？",
+      "stem": "第二份通知相对第一份通知更新了什么？",
+      "options": [
+        "时间：周五 → 周六",
+        "地点：school hall → library",
+        "时间和地点都改了",
+        "什么都没变"
+      ],
+      "answer": "A",
+      "explain": "第二份通知只改了时间：Friday → Saturday。",
+      "help": "两张通知对照，哪一行不一样？",
+      "wrong_feedback": {
+        "B": "第二份通知只改了时间，地点还没变，再对照一下这张更新通知。",
+        "C": "第二份通知只改了时间。",
+        "D": "更新通知一定有变化。"
+      },
+      "reading": "NOTICE\nChoir Contest\nTime: Friday, 7:00 p.m.\nPlace: the school hall\n\nUPDATED NOTICE\nChoir Contest\nTime: Saturday, 7:00 p.m.\nPlace: the school hall"
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u2r2-choir-v3-voice",
+      "title": "听：地点改到哪",
+      "scene": "听站长的语音消息。",
+      "stem": "（听语音）比赛地点改到了哪里？",
+      "options": [
+        "in the school hall",
+        "at the library gate",
+        "on the playground",
+        "in the teaching building hall"
+      ],
+      "answer": "C",
+      "explain": "语音里说：The choir contest moves to the playground.",
+      "help": "仔细听 moves to 后面是哪里。",
+      "wrong_feedback": {
+        "A": "这是第二份通知的地点，语音里说改了。",
+        "B": "那是 book sale 的地点，别串了。",
+        "D": "那是 book sale 的地点，别串了。"
+      }
+    },
+    {
+      "step": 31,
+      "phase": "teach",
+      "kind": "teach",
+      "title": "核对",
+      "teach_html": "<p>看文字版，对照核对一遍：</p><p>Good news! The weather will be fine. The choir contest moves to the <strong>playground</strong>.</p>",
+      "reading": "VOICE MESSAGE\nGood news! The weather will be fine. The choir contest moves to the playground."
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "以哪张为准",
+      "scene": "三张通知都看了，广播时以哪张为准？",
+      "stem": "三张通知都看了，广播时以哪张为准？",
+      "options": [
+        "第一张",
+        "第三张",
+        "第二张",
+        "三张各取一部分拼起来"
+      ],
+      "answer": "B",
+      "explain": "只认最后一次更新：第三张（站长的语音）。",
+      "help": "第一份、第二份通知都被后来的更新换掉了，只认最后一次更新。",
+      "wrong_feedback": {
+        "A": "第一份通知已经被第二份通知换掉了，不能再照着它答。",
+        "C": "再想想：第二份通知之后还出现过更新吗。",
+        "D": "新旧混搭是大忌。"
+      }
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u2r2-choir-v3-voice",
+      "title": "没提时间，几点？",
+      "see_also": {
+        "label": "再看通知",
+        "text": "UPDATED NOTICE\nChoir Contest\nTime: Saturday, 7:00 p.m.\nPlace: the school hall"
+      },
+      "scene": "站长的语音没说几点，你从哪张通知知道的？",
+      "stem": "站长的语音里没有说几点开始。合唱比赛到底几点开始？你是从哪一张通知知道的？",
+      "task": "写英文：时间和第几张通知。",
+      "answer_text": "7:00 p.m., the second notice",
+      "expects": [
+        {
+          "id": "time",
+          "type": "time",
+          "hour": 7,
+          "minute": 0,
+          "meridiem": "pm",
+          "old": {
+            "hour": 8,
+            "minute": 0,
+            "meridiem": "pm"
+          },
+          "cn": [
+            "7点",
+            "晚上7点",
+            "七点"
+          ],
+          "cn_old": [
+            "8点"
+          ]
+        },
+        {
+          "id": "src",
+          "type": "word",
+          "answers": [
+            "second",
+            "v2",
+            "2"
+          ],
+          "cn": [
+            "第二张"
+          ]
+        }
+      ],
+      "explain": "站长的语音没提时间——没说的就是没变，时间去第二份通知找：7:00 p.m.。",
+      "help": "站长的语音没改时间，时间是第几张通知说的？",
+      "common_errors": [],
+      "predicted_errors": [
+        {
+          "wrong": "I don't know",
+          "cause": "没看到材料",
+          "say": "语音里没说就是没变，去第二份通知上找时间。"
+        },
+        {
+          "wrong": "Friday",
+          "cause": "没看到材料",
+          "say": "Friday 是第一份通知上的旧日子，时间要去第二份通知上找。"
+        },
+        {
+          "wrong": "7:00 a.m.",
+          "cause": "不会这个知识",
+          "say": "你写的是早上 7 点，通知里说的是晚上，再看看是 a.m. 还是 p.m.。"
+        },
+        {
+          "wrong": "8:00 p.m.",
+          "cause": "没看到材料",
+          "say": "通知里没有 8 点这个时间，去第二份通知上找。"
+        },
+        {
+          "wrong": "the first notice",
+          "cause": "没看到材料",
+          "say": "第一张通知的时间已经换掉了，语音没改时间，去第二份通知上找。"
+        }
+      ],
+      "dim_help": {
+        "time": {
+          "label": "时间",
+          "ask": "合唱比赛到底几点开始？只说时间。"
+        },
+        "src": {
+          "label": "第几张通知",
+          "ask": "这个时间是从第几张通知上看到的？"
+        }
+      }
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "哪个已作废",
+      "see_also": [
+        {
+          "label": "再看第一份通知",
+          "text": "NOTICE\nChoir Contest\nTime: Friday, 7:00 p.m.\nPlace: the school hall"
+        },
+        {
+          "label": "再看站长的语音（文字版）",
+          "text": "VOICE MESSAGE\nGood news! The weather will be fine. The choir contest moves to the playground."
+        }
+      ],
+      "scene": "哪个信息已经作废、不能广播？",
+      "stem": "以下哪个信息已经作废、不能广播？",
+      "options": [
+        "Saturday",
+        "7:00 p.m.",
+        "on the playground",
+        "Friday"
+      ],
+      "answer": "D",
+      "explain": "Friday 是第一份通知上的旧时间，已经不算数了。",
+      "help": "第一份通知整张不算数了。找一找：第一份通知里有、站长的语音里没有提到的是哪一样？",
+      "wrong_feedback": {
+        "A": "再对照一下站长的语音确认过的信息。",
+        "B": "站长的语音里没提时间，想想时间应该去哪张通知找。",
+        "C": "再对照一下站长的语音确认过的信息。"
+      }
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "title": "写出广播稿",
+      "see_also": [
+        {
+          "label": "再看第二份通知",
+          "text": "UPDATED NOTICE\nChoir Contest\nTime: Saturday, 7:00 p.m.\nPlace: the school hall"
+        },
+        {
+          "label": "再看站长的语音（文字版）",
+          "text": "VOICE MESSAGE\nGood news! The weather will be fine. The choir contest moves to the playground."
+        }
+      ],
+      "scene": "写出合唱比赛最终广播稿。",
+      "stem": "用英文写出合唱比赛最终广播稿（一句话，含时间地点）。",
+      "task": "一句话，含时间地点，写英文。",
+      "answer_text": "The choir contest is on Saturday at 7:00 p.m. on the playground.",
+      "expects": [
+        {
+          "id": "day",
+          "type": "word",
+          "answers": [
+            "saturday"
+          ],
+          "olds": [
+            "friday"
+          ],
+          "cn": [
+            "周六",
+            "星期六"
+          ],
+          "cn_old": [
+            "周五",
+            "星期五"
+          ]
+        },
+        {
+          "id": "time",
+          "type": "time",
+          "hour": 7,
+          "minute": 0,
+          "meridiem": "pm",
+          "cn": [
+            "7点",
+            "晚上7点",
+            "七点"
+          ]
+        },
+        {
+          "id": "place",
+          "type": "word",
+          "answers": [
+            "playground"
+          ],
+          "olds": [
+            "school hall"
+          ],
+          "cn": [
+            "操场"
+          ],
+          "cn_old": [
+            "学校礼堂",
+            "礼堂"
+          ]
+        }
+      ],
+      "explain": "最终信息：Saturday, 7:00 p.m., on the playground。",
+      "help": "时间地点都要有，只认站长的语音。",
+      "common_errors": [
+        {
+          "when": "混入旧信息",
+          "say": "里面有旧信息，只留站长的语音确认的。"
+        },
+        {
+          "when": "漏项",
+          "say": "还有空没填完，补上再交。"
+        }
+      ],
+      "predicted_errors": [
+        {
+          "wrong": "The choir contest is on Friday at 7:00 p.m. on the playground.",
+          "cause": "没看到材料",
+          "say": "Friday 是第一份通知上的旧日子，最后定的是周六。"
+        },
+        {
+          "wrong": "The choir contest is on Saturday at 7:00 p.m. in the school hall.",
+          "cause": "没看到材料",
+          "say": "school hall 是第二份通知上的旧地点，站长的语音说改到了操场。"
+        },
+        {
+          "wrong": "The choir contest is on Saturday on the playground.",
+          "cause": "粗心",
+          "say": "地点对了，时间还没写：几点开始？"
+        },
+        {
+          "wrong": "The choir contest is on Saturday at 7:00 a.m. on the playground.",
+          "cause": "不会这个知识",
+          "say": "你写的是早上 7 点，比赛在晚上，再看看是 a.m. 还是 p.m.。"
+        },
+        {
+          "wrong": "The choir contest is on Saturday at 7:00 p.m.",
+          "cause": "粗心",
+          "say": "时间对了，地点还没写：在哪儿办？"
+        }
+      ],
+      "dim_help": {
+        "day": {
+          "label": "星期",
+          "ask": "比赛在星期几？"
+        },
+        "time": {
+          "label": "时间",
+          "ask": "比赛几点开始？"
+        },
+        "place": {
+          "label": "地点",
+          "ask": "比赛在哪儿办？"
+        }
+      }
+    },
+    {
+      "step": 36,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r2-ending-34",
+      "title": "结束",
+      "teach_html": "<p>两天的课都上完了，辛苦了。</p><p>第 3 课《数据播报》，到时候见。</p>"
+    }
+  ]
+}

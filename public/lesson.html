@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="/client-error.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小禾英语 · 第一课</title>
+<script src="/choice-step.js"></script>
+<style>
+  :root {
+    --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa;
+    /* ===== 字号总开关：只改这一个数字，整页字号一起放大/缩小（1=默认，1.15=放大15%） ===== */
+    --fs: 1;
+    --fs-body: calc(22px * var(--fs));
+    --fs-stem: calc(26px * var(--fs));
+    --fs-opt: calc(22px * var(--fs));
+    --fs-reading: calc(21px * var(--fs));
+    --fs-btn: calc(22px * var(--fs));
+    --fs-small: calc(18px * var(--fs));
+    --fs-scene: calc(19px * var(--fs));
+    --fs-task: calc(20px * var(--fs));
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body { font-family: "PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); font-size:var(--fs-body); line-height:1.7; }
+  /* 顶栏 */
+  #topbar { position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--line);
+    display:flex; align-items:center; gap:16px; padding:8px 20px; min-height:64px; }
+  #brand { font-size:calc(24px * var(--fs)); font-weight:700; white-space:nowrap; }
+  #brand small { display:block; font-size:calc(15px * var(--fs)); color:var(--muted); font-weight:400; }
+  #player { display:flex; align-items:center; gap:10px; flex:1; min-width:0; }
+  #btnPlay { width:52px; height:52px; border-radius:50%; border:0; background:var(--blue); color:#fff;
+    font-size:var(--fs-btn); cursor:pointer; flex:none; }
+  #btnPlay.paused::after { content:"▶"; } #btnPlay.playing::after { content:"❚❚"; }
+  #track { flex:1; height:12px; background:#e8eaed; border-radius:6px; overflow:hidden; min-width:60px; }
+  #fill { height:100%; width:0%; background:var(--blue); }
+  #time { font-size:calc(16px * var(--fs)); color:var(--muted); white-space:nowrap; }
+  #btnSlow { flex:none; font-size:var(--fs-scene); padding:12px 18px; border-radius:12px; border:2px solid var(--blue);
+    background:#fff; color:var(--blue); cursor:pointer; }
+  #stepind { font-size:var(--fs-small); color:var(--muted); white-space:nowrap; }
+  /* 主体 */
+  #wrap { max-width:1280px; margin:0 auto; padding:20px 28px 120px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px 24px; margin-bottom:20px; }
+  .kicker { display:inline-block; font-size:calc(17px * var(--fs)); color:#fff; background:#5f6368; border-radius:8px; padding:4px 14px; margin-bottom:8px; }
+  .kicker.story { background:#8e24aa; } .kicker.teach { background:#1a73e8; }
+  .kicker.q { background:var(--orange); }
+  h2.stem { font-size:var(--fs-stem); margin:4px 0 10px; line-height:1.5; }
+  .scene { font-size:var(--fs-scene); color:var(--muted); margin-bottom:6px; }
+  .task { font-size:var(--fs-task); background:#e8f0fe; border-radius:12px; padding:10px 16px; margin:10px 0; }
+  .teachtext p { margin:0 0 10px; font-size:var(--fs-body); }
+  .teachtext .vocab { color:var(--blue); font-weight:700; }
+  /* 横屏两栏：左原文常显，右题目 */
+  .qcols { display:flex; gap:20px; align-items:flex-start; }
+  .reading-pane { flex:0 0 42%; position:sticky; top:84px; max-height:calc(100vh - 120px); overflow:auto; }
+  .q-pane { flex:1; min-width:0; }
+  /* 通知原文（一直显示，不收起） */
+  .notice { background:#fffdf5; border:2px dashed #f9ab00; border-radius:12px; padding:14px 18px; margin:0 0 12px; }
+  .notice .nh { font-weight:700; font-size:var(--fs-task); margin-bottom:8px; color:#7a4d00; }
+  .notice pre { font-family:Georgia,"Times New Roman",serif; font-size:var(--fs-reading); line-height:1.8; margin:0; white-space:pre-wrap; }
+  /* 选项 */
+  .opt { display:flex; align-items:center; gap:14px; width:100%; text-align:left; font-size:var(--fs-opt);
+    padding:11px 18px; margin:8px 0; border:3px solid var(--line); border-radius:14px; background:#fff; cursor:pointer; }
+  .opt .k { flex:none; width:44px; height:44px; border-radius:50%; background:#e8eaed; color:var(--ink);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:var(--fs-reading); }
+  .opt.sel { border-color:var(--blue); background:#e8f0fe; }
+  .opt.sel .k { background:var(--blue); color:#fff; }
+  .opt:disabled { cursor:default; }
+  /* 输入 */
+  #answerInput { width:100%; font-size:calc(24px * var(--fs)); padding:12px 16px; border:3px solid var(--line); border-radius:14px; margin:8px 0; }
+  #answerInput:focus { border-color:var(--blue); outline:none; }
+  /* 按钮 */
+  .btnrow { display:flex; gap:16px; margin-top:12px; flex-wrap:wrap; }
+  button.big { font-size:var(--fs-btn); padding:14px 36px; border-radius:14px; border:0; background:var(--blue); color:#fff; cursor:pointer; }
+  button.big:disabled { background:#bdc1c6; cursor:default; }
+  button.ghost { font-size:var(--fs-reading); padding:14px 28px; border-radius:12px; border:2px solid var(--muted); background:#fff; color:var(--muted); cursor:pointer; }
+  button.ghost:disabled { opacity:.5; cursor:default; }
+  /* 提示与反馈 */
+  .helpbox { background:#fef7e0; border:1px solid #f9ab00; border-radius:12px; padding:12px 16px; margin:10px 0; font-size:var(--fs-task); display:none; }
+  /* 三级提示 L2 的高亮（2026-10-02）：background 已在页面各处使用 */
+  .hl { background:#fff3b0; border-radius:6px; padding:0 4px; }
+  .fb { border-radius:12px; padding:12px 18px; margin:12px 0; font-size:var(--fs-reading); display:none; white-space:pre-wrap; }
+  .fb.ok { display:block; background:#e6f4ea; border:2px solid var(--green); }
+  .fb.no { display:block; background:#fef7e0; border:2px solid var(--orange); }
+  .fb.info { display:block; background:#e8f0fe; border:2px solid var(--blue); }
+  .tag { display:inline-block; font-size:calc(17px * var(--fs)); background:#e8eaed; border-radius:8px; padding:2px 12px; margin-left:10px; color:var(--muted); }
+  .nudge { color:var(--muted); font-size:var(--fs-scene); }
+  /* 首页 */
+  .partcard { background:#fff; border:2px solid var(--line); border-radius:16px; padding:28px; margin:18px 0; }
+  .partcard h3 { margin:0 0 8px; font-size:calc(28px * var(--fs)); }
+  .partcard p { margin:6px 0 16px; color:var(--muted); font-size:var(--fs-reading); }
+  .partcard.locked { opacity:.65; }
+  .done-line { color:var(--green); font-weight:700; }
+  #homeHead { text-align:center; padding:36px 0 8px; }
+  #homeHead h1 { font-size:calc(40px * var(--fs)); margin:0 0 6px; }
+  #homeHead p { color:var(--muted); font-size:var(--fs-body); margin:0; }
+  .stats { display:flex; gap:24px; margin:14px 0; }
+  .stat { flex:1; background:var(--bg); border-radius:12px; padding:14px; text-align:center; }
+  .stat b { font-size:calc(38px * var(--fs)); display:block; }
+  .stat span { font-size:var(--fs-small); color:var(--muted); }
+  /* 大播放遮罩（自动播放被拦时） */
+  #bigplay { position:fixed; inset:0; background:rgba(32,33,36,.55); display:none; z-index:50;
+    align-items:center; justify-content:center; }
+  #bigplay.show { display:flex; }
+  #bigplay button { font-size:calc(30px * var(--fs)); padding:26px 70px; border-radius:20px; border:0; background:var(--blue); color:#fff; cursor:pointer; }
+  #err { color:#c5221f; font-size:var(--fs-task); min-height:1.6em; }
+  /* 带着做（guided）与保底抄写（g 版 2026-10-02） */
+  .guided .g-t { font-weight:700; margin-bottom:8px; }
+  .guided .g-hl { background:#fffdf5; border:2px dashed #f9ab00; border-radius:12px; padding:10px 14px; margin:8px 0; }
+  .guided .g-ask { font-size:var(--fs-stem); margin:8px 0; line-height:1.5; }
+  #gInput, #copyInput { width:100%; font-size:calc(24px * var(--fs)); padding:12px 16px; border:3px solid var(--line); border-radius:14px; margin:8px 0; }
+  .gfb { margin-top:8px; }
+  .sabox { background:#fff; border:2px solid var(--blue); border-radius:12px; padding:14px 18px; margin-top:12px; }
+  .sabox .nudge { margin:8px 0; }
+  @media (max-width:760px){
+    .qcols { display:block; }
+    .reading-pane { position:static; max-height:none; margin-bottom:4px; }
+    #wrap{padding:18px 14px 100px;}
+  }
+</style>
+</head>
+<body>
+<div id="topbar" style="display:none">
+  <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
+  <div id="player">
+    <button id="btnPlay" class="paused" aria-label="播放"></button>
+    <div id="track"><div id="fill"></div></div>
+    <span id="time">0:00 / 0:00</span>
+    <button id="btnSlow">慢速再听</button>
+  </div>
+  <div id="stepind"></div>
+</div>
+<div id="wrap"></div>
+<div id="bigplay"><button id="btnBig">▶ 听一听</button></div>
+
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const wrap = $('wrap'), topbar = $('topbar');
+const au = new Audio();
+// 不带 ?lesson= 直接打开一律回首页（首页会跳到当前进行中的课），防止默认进错课
+const LESSON_PARAM = new URLSearchParams(location.search).get('lesson');
+if (!LESSON_PARAM) { location.replace('/'); throw new Error('redirecting'); }
+const LID = LESSON_PARAM; // ?lesson=u2r2
+let LESSON = null;
+let PART = 1, POS = 0;            // 当前部分与下标
+let sawFb = {};                   // item_id -> 看过反馈/帮助
+let wrongCt = {};                 // item_id -> 本次上课连错次数（练习连错 2 次自动给二级提示用）
+let fastStreak = { key: '', n: 0 }; // 连对又快的连续计数（key=部分:题型）
+let autoHelp = null;              // wireQuestion 赋值：程序触发"老师教我"的入口（自动升级用）
+let guidedState = null;           // 带着做状态：{item_id, steps:[{dim,label,ask,highlight}], idx, session}（g 版）
+let doneSet = {};                 // item_id -> 本页会话内已终局的题（答对/抄写过/用尽重试）；后退回看时只读，不可重答
+let doneSetSid = '';              // doneSet 所属会话标识（part:sid），换新会话时清空
+const FAST_MS = 15000;            // "又快"阈值：校准实测平均约 22–23 秒，15 秒内答对明显是已掌握
+let qT0 = 0;                      // 本题计时起点（题目出现/反馈出现的时间）
+const store = {
+  // 第一课沿用旧 key（不断孩子已有的进度），新课用新 key
+  key() { return LID === 'u2r1' ? 'xh2u2r1' : 'xh2-' + LID; },
+  load() { try { return JSON.parse(localStorage.getItem(this.key()) || '{}') || {}; } catch { return {}; } },
+  save(s) { localStorage.setItem(this.key(), JSON.stringify(s)); }
+};
+let ST = store.load();
+if (!ST.p1) ST.p1 = { sid: '', pos: 0, done: false };
+if (!ST.p2) ST.p2 = { sid: '', pos: 0, done: false };
+/* ---------- 续课进度（h 版）：按题目ID记录，落盘服务端 ---------- */
+// 每一步的稳定ID：有题的用 item_id，其他用 lesson-v版本-t步号；动态插入的复习题不影响已存ID
+function progressId(s) {
+  if (!s) return '';
+  return s.item_id || (LID + '-v' + (LESSON && LESSON.version) + '-t' + s.step);
+}
+let PROG = { p1: null, p2: null }; // 服务端进度 {p1: item_id, p2: item_id}
+async function loadProg() {
+  try {
+    const r = await fetch('/api/progress?lesson=' + encodeURIComponent(LID));
+    if (r.ok) { const b = await r.json(); if (b && b.progress) PROG = b.progress; }
+  } catch {}
+}
+function postProg(part, itemId) {
+  if (!itemId) return;
+  PROG['p' + part] = itemId;
+  fetch('/api/progress', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ lesson: LID, part, item_id: itemId }) }).catch(() => {});
+}
+// 旧版迁移：u2r2 v1（34步）→ v3（36步），按语义对齐；pos 是旧版该部分的下标
+// v1 p1 共23步 → v3: [1..18, 19, 22,23,24,25]；v1 p2 共11步 → v3: [26..36]
+const U2R2_MIGRATE = {
+  1: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,22,23,24,25],
+  2: [26,27,28,29,30,31,32,33,34,35,36],
+};
+function migrateOldPos(part) {
+  const st = ST['p' + part];
+  if (!st || st.done || !(st.pos > 0)) return null;
+  // 旧下标 → 新版 item_id（直接按ID匹配；served 步骤号可能因动态插入复习题而后移，不能按号找）
+  const arr = stepsOf(part);
+  if (LID === 'u2r2' && U2R2_MIGRATE[part] && st.pos < U2R2_MIGRATE[part].length) {
+    const v3step = U2R2_MIGRATE[part][st.pos];
+    const s = arr.find(x => x.item_id === (LID + '-v' + (LESSON && LESSON.version) + '-s' + v3step));
+    // teach 步没有 item_id：按原始 step 号经 item_step 还原
+    const t = s || arr.find(x => (x.item_step || x.step) === v3step);
+    return t ? progressId(t) : null;
+  }
+  // 没换过版本的课：按当前步骤下标直接取ID
+  const s2 = arr[Math.min(st.pos, arr.length - 1)];
+  return s2 ? progressId(s2) : null;
+}
+// 续课目标ID：服务端优先，没有则迁移旧版 localStorage（只迁一次，迁完写服务端）
+function resumeId(part) {
+  if (PROG['p' + part]) return PROG['p' + part];
+  const mid = migrateOldPos(part);
+  if (mid) postProg(part, mid);
+  return mid;
+}
+function posOfId(part, id) {
+  if (!id) return -1;
+  const arr = stepsOf(part);
+  for (let i = 0; i < arr.length; i++) if (progressId(arr[i]) === id) return i;
+  return -1;
+}
+const uuid = () => ((typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : 's' + Date.now() + Math.random().toString(16).slice(2));
+
+const stepsOf = part => { const pe = (LESSON && LESSON.practice_end) || 22; return LESSON.steps.filter(s => part === 1 ? s.step <= pe : s.step > pe); };
+
+/* ---------- 音频 ---------- */
+const btnPlay = $('btnPlay'), fill = $('fill'), timeEl = $('time');
+function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+// 慢速再听（2026-10-02 补充条款红线）：正常 1.0 倍、慢速 0.75 倍；切换步骤复位 1.0。
+// playbackRate 是 C10 清单外的新 DOM 属性（待练习场真机验证）：设倍速失败一律静默回退
+// 到正常速度播放，绝不能因为这个按钮挡住上课。
+function setRate(r) { try { au.playbackRate = r; } catch (e) {} }
+function setAudio(audioId) {
+  au.pause();
+  setRate(1);
+  if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
+  $('player').style.display = '';
+  au.src = '/audio/' + LID + '/' + audioId + '.mp3';
+  btnPlay.className = 'paused';
+  au.play().then(() => { btnPlay.className = 'playing'; $('bigplay').classList.remove('show'); })
+    .catch(() => { $('bigplay').classList.add('show'); }); // 被拦截：显示大播放按钮
+}
+btnPlay.onclick = () => { if (au.paused) { setRate(1); au.play().catch(() => {}); } else au.pause(); };
+$('btnBig').onclick = () => { $('bigplay').classList.remove('show'); setRate(1); au.play().catch(() => {}); };
+$('btnSlow').onclick = () => { setRate(0.75); try { au.currentTime = 0; } catch (e) {} au.play().catch(() => {}); };
+au.addEventListener('play', () => btnPlay.className = 'playing');
+au.addEventListener('pause', () => btnPlay.className = 'paused');
+au.addEventListener('timeupdate', () => {
+  if (au.duration) fill.style.width = (au.currentTime / au.duration * 100) + '%';
+  timeEl.textContent = fmtT(au.currentTime) + ' / ' + fmtT(au.duration);
+});
+au.addEventListener('ended', () => btnPlay.className = 'paused');
+
+/* ---------- 首页（进度以服务端为准，防重做） ---------- */
+function posLabel(n) {
+  const arr = stepsOf(n);
+  const idx = posOfId(n, PROG['p' + n]);
+  if (idx >= 0) return arr[idx].step;
+  const st = ST['p' + n];
+  const s = arr[Math.min(st.pos, arr.length - 1)];
+  return s ? s.step : '';
+}
+function hasResume(n) {
+  if (PROG['p' + n]) return true;
+  const st = ST['p' + n];
+  return !!(st && st.pos > 0 && !st.done);
+}
+function partCard(n, title, desc, state) {
+  const st = ST['p' + n];
+  let action, locked = false;
+  if (n === 1) {
+    if (state.p1_done) action = `<p class="done-line">已完成</p>`;
+    else if (hasResume(1)) action = `<button class="big" data-go="1">继续：第 ${posLabel(1)} 步</button>`;
+    else action = `<button class="big" data-go="1">开始上课</button>`;
+  } else {
+    if (state.p2_done) action = `<p class="done-line">已完成</p>`;
+    else if (!state.p2_open) { locked = true; action = `<p>🔒 ${escapeHtml(state.p2_note || '完成第一部分后，就可以学第二部分')}</p>`; }
+    else if (hasResume(2)) action = `<button class="big" data-go="2">继续：第 ${posLabel(2)} 步</button>`;
+    else action = `<button class="big" data-go="2">开始第二部分</button>`;
+  }
+  return `<div class="partcard${locked ? ' locked' : ''}"><h3>${title}</h3><p>${desc}</p>${action}</div>`;
+}
+// 学习小结按课向服务器查（2026-10-02）：不再用浏览器 localStorage 里的 session_id，
+// 存储丢了/换浏览器也查得对（曾出现完成页统计全是 0）
+async function summary(lid) {
+  try {
+    const r = await fetch('/api/summary?lesson=' + encodeURIComponent(lid || LID));
+    return await r.json();
+  } catch { return { independent: 0, helped: 0, weaknesses: [] }; }
+}
+// 家长一句话报告（2026-10-02）：课末服务端按整课作答生成，孩子把完成页给家长看即可
+async function parentReport(lid) {
+  try {
+    const r = await fetch('/api/parent-report?lesson=' + encodeURIComponent(lid || LID));
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+async function renderHome() {
+  topbar.style.display = 'none'; au.pause();
+  let state = { p1_done: false, p2_done: false, p2_open: false, p2_note: '完成第一部分后，就可以学第二部分' };
+  try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
+  const bothDone = state.p1_done && state.p2_done;
+  const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
+  let html = `<div id="homeHead"><h1>小禾英语</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
+  if (isReview) {
+    // 练习模式（2026-10-02 总任务书）：学完新课自动接着练；练完一遍可以再练一遍
+    if (state.p1_done) {
+      const sum = await summary(LID);
+      html += `<div class="card"><h2 class="stem">这一组练习练完了一遍</h2>
+        <div class="stats">
+          <div class="stat"><b>${sum.independent}</b><span>独立完成（题）</span></div>
+          <div class="stat"><b>${sum.helped}</b><span>有帮助完成（题）</span></div>
+        </div>
+        <p class="scene">练习可以反复练，练到熟为止。</p>
+        <div class="btnrow"><button class="big" id="btnAgain">再练一遍</button></div></div>`;
+    } else {
+      html += partCard(1, LESSON.title || '练习', LESSON.part1_desc || '', state);
+    }
+    wrap.innerHTML = html;
+    wrap.querySelectorAll('[data-go]').forEach(b => b.onclick = () => startPart(+b.dataset.go));
+    const ag = $('btnAgain');
+    if (ag) ag.onclick = () => {
+      ST.p1 = { sid: uuid(), pos: 0, done: false, skipped: [] };
+      store.save(ST);
+      startPart(1);
+    };
+    return;
+  }
+  if (bothDone) {
+    const sum = await summary(LID);
+    const ind = sum.independent, helped = sum.helped;
+    const weak = [...new Set(sum.weaknesses || [])];
+    const pr = await parentReport(LID);
+    html += `<div class="card"><h2 class="stem">两部分都完成了</h2>
+      <div class="stats">
+        <div class="stat"><b>${ind}</b><span>独立完成（题）</span></div>
+        <div class="stat"><b>${helped}</b><span>有帮助完成（题）</span></div>
+      </div>
+      <p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>
+      ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
+      ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
+      <p class="scene">做完的课程不能重做。下一课见。</p></div>`;
+  } else {
+    html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
+    html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
+  }
+  wrap.innerHTML = html;
+  wrap.querySelectorAll('[data-go]').forEach(b => b.onclick = () => startPart(+b.dataset.go));
+}
+
+/* ---------- 上课 ---------- */
+async function startPart(n) {
+  PART = n; const st = ST['p' + n];
+  if (!st.sid) { st.sid = uuid(); store.save(ST); }
+  const sessKey = n + ':' + st.sid;
+  if (doneSetSid !== sessKey) { doneSet = {}; doneSetSid = sessKey; } // 新一轮作答（如练习课"再练一遍"）：清空终局记录
+  try {
+    await fetch('/api/start', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ part: n, lesson: LID }) });
+  } catch {}
+  // 按题目ID续课（服务端落盘）；找不到ID（如题目已删）则从头开始
+  const rid = resumeId(n);
+  const idx = posOfId(n, rid);
+  POS = idx >= 0 ? idx : 0;
+  st.pos = POS; store.save(ST);
+  renderStep();
+}
+function cur() { return stepsOf(PART)[POS]; }
+function savePos() {
+  ST['p' + PART].pos = POS; store.save(ST);
+  const s = stepsOf(PART)[POS];
+  if (s) postProg(PART, progressId(s)); // 服务端按题目ID落盘
+}
+// 跳过同类题（连对又快出口）：被跳过的题不写任何作答记录，只是本题不再出现
+function isSkipped(s) {
+  const sk = ST['p' + PART].skipped || [];
+  return !!(s && s.item_id && sk.indexOf(s.item_id) >= 0);
+}
+function markSkipped(itemId) {
+  const st = ST['p' + PART];
+  if (!st.skipped) st.skipped = [];
+  if (st.skipped.indexOf(itemId) < 0) st.skipped.push(itemId);
+  store.save(ST);
+}
+function noticeHtml(reading) {
+  if (!reading) return '';
+  // 新旧两份通知分开展示，标清旧/新
+  const blocks = String(reading).split(/\n{2,}/).map(b => b.trim()).filter(Boolean);
+  return blocks.map(b => {
+    let h = '通知原文';
+    if (/^UPDATED NOTICE/i.test(b)) h = '更新通知';
+    else if (/^NOTICE/i.test(b) && blocks.length > 1) h = '旧通知';
+    return `<div class="notice"><div class="nh">${h}</div><pre>${escapeHtml(b)}</pre></div>`;
+  }).join('');
+}
+function escapeHtml(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+function renderStep() {
+  const s = cur(), arr = stepsOf(PART);
+  if (isSkipped(s)) { advance(); return; } // 被"跳过同类题"跳过的题直接略过
+  const reviewed = !!(s && s.item_id && doneSet[s.item_id]); // 后退回看已终局的题：只读回顾，不可重答
+  topbar.style.display = 'flex';
+  $('stepind').textContent = `第 ${s.step} 步 / 共 ${arr[arr.length - 1].step} 步`;
+  setAudio(s.audio_id);
+  let html = '';
+  if (s.kind === 'teach') {
+    const isStory = /story/.test(s.audio_id || '');
+    html = `<div class="card"><span class="kicker ${isStory ? 'story' : 'teach'}">${isStory ? '广播站故事' : '站长讲解'}</span>
+      <div class="teachtext">${s.teach_html}</div>${noticeHtml(s.reading)}
+      <div class="btnrow">${POS > 0 ? '<button class="ghost btnBack">回去看看</button>' : ''}<button class="big" id="btnNext">${POS + 1 >= arr.length ? '完成本部分' : '知道了，下一步'}</button></div></div>`;
+  } else if (s.kind === 'choice') {
+    // 故事选择（2026-10-02）：选项只有标签无答案，点选即存档进下一步，不记作答不判分
+    html = choiceStepHtml(s);
+  } else {
+    const qk = s.review ? '复习题' : (s.kind === 'mcq' ? '选择' : '作答');
+    const taskHtml = s.task ? `<div class="task">${escapeHtml(s.task)}</div>` : '';
+    // 引用前面材料的按钮（2026-10-02 硬规则）：点开看原文，再点收起；see_also 可能是单个对象或数组
+    const saList = s.see_also ? (Array.isArray(s.see_also) ? s.see_also : [s.see_also]) : [];
+    const saHtml = saList.length
+      ? `<div class="btnrow">${saList.map((x, i) => `<button class="ghost" data-sa="${i}">${escapeHtml(x.label || '再看材料')}</button>`).join('')}</div><div class="sadiv" id="sadiv" style="display:none"></div>`
+      : '';
+    html = `<div class="qcols">
+      <div class="reading-pane">${noticeHtml(s.reading)}</div>
+      <div class="q-pane"><div class="card"><span class="kicker q">${qk}题</span>
+      ${s.scene ? `<div class="scene">${escapeHtml(s.scene)}</div>` : ''}
+      <h2 class="stem">${escapeHtml(s.stem)}</h2>
+      ${taskHtml}
+      ${saHtml}
+      <div class="helpbox" id="helpbox"></div><div id="err"></div>`;
+    const backBtnHtml = POS > 0 ? '<button class="ghost btnBack">回去看看</button>' : '';
+    if (s.kind === 'mcq') {
+      html += s.options.map((o, i) =>
+        `<button class="opt" data-k="${'ABCD'[i]}"><span class="k">${'ABCD'[i]}</span><span>${escapeHtml(o)}</span></button>`).join('');
+      html += `<div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
+        <button class="big" id="btnSub" disabled>回答</button></div><div class="fb" id="fb"></div>
+        <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
+    } else {
+      html += `<input id="answerInput" placeholder="在这里写英文答案" autocomplete="off">
+        <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
+        <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
+        <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
+    }
+    html += `</div></div></div>`;
+  }
+  wrap.innerHTML = html;
+  wrap.querySelectorAll('.btnBack').forEach(b => { b.onclick = goBack; }); // 回去看看：各处统一接 goBack
+  if (s.kind === 'teach') { $('btnNext').onclick = () => advance(); window.scrollTo(0, 0); return; }
+  if (s.kind === 'choice') {
+    wireChoiceStep(wrap, s, { fetchFn: fetch, lesson: LID,
+      onDone: function () { advance(); },
+      onError: function (m) { var e = $('err'); if (e) e.textContent = m; } });
+    // 故事选择步骤也允许后退（不记作答不判分，重选只进下一步）
+    if (POS > 0) {
+      const cr = wrap.querySelector('#choicerow');
+      if (cr) {
+        const bb = document.createElement('button');
+        bb.className = 'ghost btnBack'; bb.textContent = '回去看看'; bb.onclick = goBack;
+        cr.appendChild(bb);
+      }
+    }
+    window.scrollTo(0, 0); return;
+  }
+  if (reviewed) {
+    // 已终局的题只读回顾：禁用一切作答入口，只留"下一步"；成绩以服务端首次记录为准，不重判分
+    wrap.querySelectorAll('.opt').forEach(x => { x.disabled = true; });
+    const ai = $('answerInput'); if (ai) ai.disabled = true;
+    const bh = $('btnHelp'); if (bh) bh.style.display = 'none';
+    const bs = $('btnSub'); if (bs) bs.style.display = 'none';
+    const fb = $('fb');
+    fb.className = 'fb info';
+    fb.innerHTML = '这题已经做过了，回去看看可以，不用再做一遍，成绩不会变。';
+    const nr = $('nextrow');
+    if (nr) {
+      nr.style.display = 'flex';
+      $('btnNext').onclick = () => advance();
+      const sk = $('btnSkip'); if (sk) sk.style.display = 'none';
+    }
+    window.scrollTo(0, 0); return;
+  }
+  qT0 = Date.now(); // 开始计时：题目出现
+  wireQuestion(s);
+  window.scrollTo(0, 0);
+}
+async function advance() {
+  const arr = stepsOf(PART);
+  if (POS + 1 >= arr.length) {
+    try {
+      await fetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ part: PART, lesson: LID }) });
+    } catch {}
+    ST['p' + PART].done = true; ST['p' + PART].pos = arr.length; store.save(ST); renderHome();
+  }
+  else { POS++; savePos(); renderStep(); }
+}
+// 回去看看（2026-10-05，Elouise 批准）：只后退重看，不改变任何已记录成绩。
+// 已终局的题以后退只读模式呈现（renderStep 内按 doneSet 判定），不允许重答刷分。
+function goBack() {
+  if (POS <= 0) return;
+  const arr = stepsOf(PART);
+  let p = POS - 1;
+  while (p > 0 && isSkipped(arr[p])) p--; // 越过被"跳过同类题"跳过的题
+  POS = p; savePos(); renderStep(); window.scrollTo(0, 0);
+}
+
+function showInView(el) {
+  try {
+    var r = el.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    if (r.top < 0 || r.bottom > vh) { window.scrollBy(0, r.top - 80); }
+  } catch (e) {
+    try { el.scrollIntoView(true); } catch (e2) {}
+  }
+}
+
+function wireQuestion(s) {
+  const err = $('err');
+  let given = '';
+  if (s.kind === 'mcq') {
+    const opts = [...wrap.querySelectorAll('.opt')];
+    opts.forEach(b => b.onclick = () => {
+      if ($('nextrow').style.display !== 'none') return;
+      opts.forEach(x => x.classList.remove('sel')); b.classList.add('sel');
+      given = b.dataset.k; $('btnSub').disabled = false;
+    });
+  }
+  // 三级提示，永不卡死（2026-10-02）：练习阶段按点击次数 L1→L2→L3，验证阶段只 L1
+  var helpLv = wireQuestion.helpLv || (wireQuestion.helpLv = {});
+  // "再看材料"按钮：点开看原文，再点收起
+  (function () {
+    var saBtns = wrap.querySelectorAll('[data-sa]');
+    for (var i = 0; i < saBtns.length; i++) { (function (btn) {
+      btn.onclick = function () {
+        var div = $('sadiv');
+        var idx = Number(btn.getAttribute('data-sa'));
+        var item = saList[idx] || {};
+        if (div.style.display !== 'none' && div.getAttribute('data-open') === String(idx)) {
+          div.style.display = 'none'; div.setAttribute('data-open', '');
+        } else {
+          div.innerHTML = '<div class="notice"><div class="nh">' + escapeHtml(item.label || '材料原文') +
+            '</div><pre>' + escapeHtml(item.text || '') + '</pre></div>';
+          div.style.display = 'block'; div.setAttribute('data-open', String(idx));
+          showInView(div);
+        }
+      };
+    })(saBtns[i]); }
+  })();
+  // 触发一次"老师教我"：按钮点击和自动升级（练习连错 2 次自动给二级）共用。
+  // 成功才升级（helpLv 记请求等级），失败不消耗次数；已给到更高等级时不重复低等级请求。
+  function triggerHelp(lvl) {
+    var btn = $('btnHelp');
+    var hb = $('helpbox');
+    if (!btn || btn.disabled) return;
+    var isPractice = (s.phase || 'practice') === 'practice';
+    if (!isPractice) lvl = 1;
+    lvl = Math.min(Math.max(lvl || 1, 1), 3);
+    if (lvl > 1 && lvl <= (helpLv[s.item_id] || 0)) return;
+    btn.disabled = true;
+    err.textContent = '';
+    hb.style.display = 'block';
+    hb.textContent = '老师正在想提示……';
+    showInView(hb);
+    var timer = null;
+    var timeout = new Promise(function (resolve, reject) {
+      timer = setTimeout(function () { reject(new Error('timeout')); }, 10000);
+    });
+    var req = fetch('/api/help', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: s.item_id, session_id: ST['p' + PART].sid, level: lvl })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (b) {
+        if (!r.ok || !b || b.ok !== true) throw new Error((b && b.error) || ('http_' + r.status));
+        return b;
+      });
+    });
+    Promise.race([req, timeout]).then(function (b) {
+      clearTimeout(timer);
+      helpLv[s.item_id] = lvl; // 成功才升级，失败不消耗次数
+      sawFb[s.item_id] = true; // 照着提示答对记有帮助完成（现有 helped 机制）
+      var got = b.level || 1;
+      if (got >= 3 && b.answer) {
+        hb.innerHTML = '老师给答案：' + escapeHtml(b.answer) +
+          (b.explain ? '<br>讲解：' + escapeHtml(b.explain) : '') +
+          '<br>照着写，提交就能继续。';
+        btn.textContent = '老师教我';
+      } else if (got >= 2 && b.help_line) {
+        // L2：优先在同屏材料块里高亮该行；材料不在屏上时在帮助面板内高亮
+        var shown = highlightHelpLine(b.help_line);
+        if (shown) {
+          hb.innerHTML = '在上面的材料里，我把关键的一行标出来了：<span class="hl">' + escapeHtml(b.help_line) + '</span>';
+        } else {
+          hb.innerHTML = '在材料里找到这一行：<br><span class="hl">' + escapeHtml(b.help_line) + '</span>';
+        }
+        btn.textContent = '直接告诉我答案';
+      } else {
+        hb.textContent = '老师提示：' + (b.help || '再读一遍通知。');
+        btn.textContent = isPractice ? '再提示一次' : '老师教我';
+      }
+      btn.disabled = false;
+      showInView(hb);
+    }).catch(function (e) {
+      clearTimeout(timer);
+      hb.style.display = 'none';
+      var code = (e && e.message) ? e.message : 'unknown';
+      err.textContent = (code === 'timeout')
+        ? '老师提示加载太慢了，再点一次试试。（timeout）'
+        : '老师提示没加载出来，再点一次试试。（' + code + '）';
+      btn.disabled = false;
+    });
+  }
+  autoHelp = triggerHelp; // handleVerdict 自动升级时调用
+  $('btnHelp').onclick = function () {
+    var isPractice = (s.phase || 'practice') === 'practice';
+    var lvl = isPractice ? Math.min((helpLv[s.item_id] || 0) + 1, 3) : 1;
+    triggerHelp(lvl);
+  };
+  // L2 高亮：同屏材料块（.reading-pane pre）里的 help_line 原句；找不到返回 false
+  function highlightHelpLine(line) {
+    var pres = wrap.querySelectorAll('.reading-pane pre');
+    var found = false;
+    for (var i = 0; i < pres.length; i++) {
+      var txt = pres[i].textContent || '';
+      var at = txt.indexOf(line);
+      if (at >= 0) {
+        pres[i].innerHTML = escapeHtml(txt.slice(0, at)) +
+          '<span class="hl">' + escapeHtml(line) + '</span>' +
+          escapeHtml(txt.slice(at + line.length));
+        found = true;
+      }
+    }
+    return found;
+  }
+  $('btnSub').onclick = async () => {
+    if (s.kind === 'short') given = $('answerInput').value;
+    if (!String(given).trim()) { err.textContent = '先写出答案再提交。'; return; }
+    err.textContent = ''; $('btnSub').disabled = true;
+    const elapsed_ms = Date.now() - qT0;
+    let r, b;
+    try {
+      r = await fetch('/api/attempt', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ item_id: s.item_id, answer: given,
+          session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms }) });
+    } catch { err.textContent = '网络有点慢，再点一次试试。'; $('btnSub').disabled = false; return; }
+    // h 版：先读响应体再按 error 分流，不能只看 HTTP 状态码——
+    // 403 有两种：retry_exhausted（留本页看答案抄写）和 part_done（真做完，回首页）
+    try { b = await r.json(); } catch { b = null; }
+    const errCode = b && b.error;
+    if (errCode === 'retry_exhausted') {
+      // 验证阶段永不卡死：答错两次后服务端不再接受作答，
+      // 先看答案、抄一遍、继续往下，保证任何一步都有出口
+      err.textContent = '';
+      if (s.item_id) doneSet[s.item_id] = true; // 终局（用尽重试）：后退回看时只读
+      var fb0 = $('fb');
+      fb0.className = 'fb no';
+      fb0.innerHTML = '这道题就到这里。先看答案，抄一遍，我们继续往下。';
+      if (b.show_answer) { renderShowAnswerBtn(s, b.show_answer); return; }
+      setTimeout(advance, 1800); return;
+    }
+    if (r.status === 403 || errCode === 'part_done') {
+      err.textContent = '这部分已经完成了，不能重做。';
+      setTimeout(renderHome, 1500); return;
+    }
+    // 2026-09-30 二审三9：提交失败显示错误码（如 no_item），方便定位；
+    // "老师教我"按钮的错误码已在现场修复中加上（等 Elouise 发 diff 后合并确认）。
+    if (!b || !b.ok) {
+      const code = errCode ? `（${errCode}）` : (r ? `（http${r.status}）` : '');
+      err.textContent = `提交没成功${code}，再点一次试试。`;
+      $('btnSub').disabled = false; return;
+    }
+    handleVerdict(s, b, elapsed_ms);
+  };
+}
+
+// 跳过后面同类练习题：只跳同题型、练习阶段的题；讲解步照常过，不写任何作答记录
+function doSkip(s) {
+  const arr = stepsOf(PART);
+  for (let i = POS + 1; i < arr.length; i++) {
+    const x = arr[i];
+    if (x.kind === s.kind && (x.phase || 'practice') === 'practice' && x.item_id) markSkipped(x.item_id);
+  }
+  advance();
+}
+
+function handleVerdict(s, b, elapsedMs) {
+  const fb = $('fb'), nextrow = $('nextrow');
+  const v = b.verdict;
+  const good = (v === 'correct' || v === 'correct_retry');
+  const isPractice = (s.phase || 'practice') === 'practice';
+  const nudgeHtml = b.nudge ? `<div class="nudge">${escapeHtml(b.nudge)}</div>` : '';
+  if (good) {
+    sawFb[s.item_id] = true;
+    if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
+    fb.className = 'fb ok';
+    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml;
+    nextrow.style.display = 'flex';
+    $('btnNext').onclick = () => advance();
+    if (s.kind === 'mcq') wrap.querySelectorAll('.opt').forEach(x => x.disabled = true);
+    else $('answerInput').disabled = true;
+    $('btnHelp').disabled = true; $('btnSub').style.display = 'none';
+    // 连对又快 3 题（2026-10-02 规范第 4 条）：练习阶段、没用帮助、15 秒内连对同题型，
+    // 说明这类题已经会了，给出"跳过后面同类练习题"的出口
+    if (isPractice && !b.helped && elapsedMs != null && elapsedMs <= FAST_MS) {
+      const key = PART + ':' + s.kind;
+      if (fastStreak.key === key) fastStreak.n++;
+      else { fastStreak.key = key; fastStreak.n = 1; }
+    } else {
+      fastStreak.n = 0;
+    }
+    if (isPractice && fastStreak.n >= 3) {
+      const left = stepsOf(PART).slice(POS + 1)
+        .filter(x => x.kind === s.kind && (x.phase || 'practice') === 'practice' && x.item_id && !isSkipped(x));
+      const sk = $('btnSkip');
+      if (left.length && sk) { sk.style.display = ''; sk.onclick = () => doSkip(s); }
+    }
+  } else if (v === 'typo' || v === 'chinese') {
+    fastStreak.n = 0;
+    sawFb[s.item_id] = true;
+    fb.className = 'fb info';
+    fb.innerHTML = escapeHtml(b.feedback || ((b.detail && b.detail.note) || '')) + nudgeHtml;
+    if (v === 'chinese') fb.innerHTML += `<div class="nudge">内容理解记一次独立完成，英文书写我们下节课多练。</div>`;
+    $('btnSub').disabled = false;
+    $('btnSub').textContent = v === 'typo' ? '改好提交' : '用英文重写提交';
+  } else {
+    // wrong / wrong_retry：反馈只针对她实际写的内容，允许重答
+    fastStreak.n = 0;
+    sawFb[s.item_id] = true;
+    fb.className = 'fb no';
+    fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
+    $('btnSub').disabled = false;
+    // 带着做（g 版）：服务端判定连错 2 次/同一错答案两次 → 进入小步模式，不再走自动二级提示
+    if (isPractice && s.kind === 'short' && b.guided && b.guided.steps && b.guided.steps.length) {
+      startGuided(s, b.guided);
+    } else {
+      // 自动升级（2026-10-02 规范第 5 条）：练习阶段同一题连错 2 次，不用等孩子点，
+      // 直接给二级提示（高亮原材料那一行）；再点第 3 次帮助就是三级给答案
+      if (isPractice) {
+        wrongCt[s.item_id] = (wrongCt[s.item_id] || 0) + 1;
+        if (wrongCt[s.item_id] === 2 && autoHelp) autoHelp(2);
+      }
+    }
+    // 保底出口（g 版）：练习阶段第 3 次 wrong 显示"先看答案，继续往下"
+    if (b.show_answer) renderShowAnswerBtn(s, b.show_answer);
+  }
+  qT0 = Date.now(); // 重新计时：反馈出现后到下一次提交
+  // 反馈出现在首屏外时自动滚入视野（C10 横屏 800px 高下选项区较长）
+  try { fb.scrollIntoView({ block: 'nearest' }); } catch (e) {}
+}
+
+/* ---------- 带着做（guided）+ 保底（先看答案/抄写），g 版 2026-10-02 ---------- */
+// 带着做：把复合题按失败维度拆成小步，高亮原文对应行，一次只问一件事
+function startGuided(s, guided) {
+  guidedState = { item_id: s.item_id, steps: guided.steps, idx: 0,
+    session: ST['p' + PART].sid, isMcq: s.kind === 'mcq' };
+  var ai = $('answerInput'); if (ai) ai.disabled = true;
+  var bs = $('btnSub'); if (bs) bs.style.display = 'none';
+  var bh = $('btnHelp'); if (bh) bh.disabled = true;
+  renderGuidedStep();
+}
+function renderGuidedStep() {
+  var st = guidedState; if (!st) return;
+  var d = st.steps[st.idx];
+  var hl = d.highlight
+    ? '<div class="g-hl">先看材料里这一行：<span class="hl">' + escapeHtml(d.highlight) + '</span></div>'
+    : '';
+  var fb = $('fb');
+  fb.className = 'fb info';
+  fb.innerHTML = '<div class="guided"><div class="g-t">我们一步一步来，一次只做一件事。</div>'
+    + hl
+    + '<div class="g-ask">' + escapeHtml(d.ask) + '</div>'
+    + '<input id="gInput" placeholder="只写这一项" autocomplete="off">'
+    + '<div class="btnrow"><button class="big" id="gSub">检查</button></div>'
+    + '<div class="gfb" id="gfb"></div></div>';
+  $('gSub').onclick = submitGuidedMicro;
+  showInView(fb);
+}
+async function submitGuidedMicro() {
+  var st = guidedState; if (!st) return;
+  var d = st.steps[st.idx];
+  var v = $('gInput').value;
+  if (!String(v).trim()) { $('gfb').textContent = '先写出来再检查。'; return; }
+  $('gSub').disabled = true;
+  var b = null;
+  try {
+    var r = await fetch('/api/guided-check', { method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: st.item_id, session_id: st.session, dim: d.dim, answer: v }) });
+    b = await r.json();
+  } catch (e) { b = null; }
+  $('gSub').disabled = false;
+  if (!b) { $('gfb').textContent = '网络有点慢，再点一次检查试试。'; return; }
+  if (b.ok) {
+    st.idx++;
+    if (st.idx >= st.steps.length) endGuidedToFull();
+    else renderGuidedStep();
+  } else {
+    var html = escapeHtml(b.hint || '这一项还没写对，再想想。');
+    if (b.reveal) html += '<br>这一项的答案是：<b>' + escapeHtml(b.reveal) + '</b>，记住它，照着写一遍再点检查。';
+    $('gfb').innerHTML = html;
+  }
+}
+function endGuidedToFull() {
+  guidedState = null;
+  var fb = $('fb');
+  fb.className = 'fb info';
+  fb.innerHTML = '<div class="nudge">好，现在把整题答案写出来。</div>';
+  var ai = $('answerInput'); if (ai) { ai.disabled = false; ai.value = ''; }
+  var bs = $('btnSub'); if (bs) { bs.style.display = ''; bs.disabled = false; bs.textContent = '提交'; }
+  var bh = $('btnHelp'); if (bh) bh.disabled = false;
+  showInView(fb);
+}
+// 保底：显示"先看答案，继续往下"按钮；点后展示答案+原因，进入抄写模式
+function renderShowAnswerBtn(s, sa) {
+  var fb = $('fb');
+  fb.innerHTML = fb.innerHTML
+    + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div>';
+  $('btnShowAns').onclick = function () { showAnswerCopy(s, sa); };
+  showInView($('btnShowAns'));
+}
+function showAnswerCopy(s, sa) {
+  var box = $('saBox'); if (!box) return;
+  var isMcq = s.kind === 'mcq';
+  var html = '<div class="sabox"><div>正确答案是：<b>' + escapeHtml(sa.answer) + '</b></div>'
+    + (sa.reason ? '<div>原因：' + escapeHtml(sa.reason) + '</div>' : '')
+    + '<div class="nudge">照着写一遍，提交就能继续。</div>';
+  if (isMcq) {
+    html += '<div class="btnrow">' + s.options.map(function (o, i) {
+      return '<button class="opt" data-k="' + 'ABCD'[i] + '"><span class="k">' + 'ABCD'[i]
+        + '</span><span>' + escapeHtml(o) + '</span></button>';
+    }).join('') + '</div><div class="nudge">点一下正确的选项。</div>';
+  } else {
+    html += '<input id="copyInput" placeholder="照着写一遍" autocomplete="off">'
+      + '<div class="btnrow"><button class="big" id="btnCopySub">提交</button></div>';
+  }
+  html += '</div>';
+  box.innerHTML = html;
+  var btn = $('btnShowAns'); if (btn) btn.style.display = 'none';
+  if (guidedState) guidedState = null; // 退出带着做小步，转抄写
+  if (isMcq) {
+    var opts = box.querySelectorAll('.opt');
+    opts.forEach(function (b2) {
+      b2.onclick = function () { submitCopy(s, b2.getAttribute('data-k')); };
+    });
+  } else {
+    $('btnCopySub').onclick = function () { submitCopy(s, $('copyInput').value); };
+  }
+  showInView(box);
+}
+async function submitCopy(s, answer) {
+  if (!String(answer).trim()) { return; }
+  var box = $('saBox');
+  var b = null;
+  try {
+    var r = await fetch('/api/attempt', { method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: s.item_id, answer: answer,
+        session_id: ST['p' + PART].sid, saw_feedback: 1, elapsed_ms: 0, copied: 1 }) });
+    b = await r.json();
+  } catch (e) { b = null; }
+  if (!b || !b.ok) {
+    if (box) box.innerHTML = box.innerHTML + '<div class="gfb">提交没成功，再点一次试试。</div>';
+    return;
+  }
+  if (b.verdict === 'copied') {
+    if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
+    var fb = $('fb');
+    fb.className = 'fb ok';
+    fb.innerHTML = escapeHtml(b.feedback || '好的，记为有帮助完成。');
+    setTimeout(advance, 1500);
+  } else {
+    // 抄写还写错：走正常 wrong 路径（反馈、保底按钮都在）
+    handleVerdict(s, b, 0);
+  }
+}
+
+/* ---------- 启动 ---------- */
+(async function init() {
+  try {
+    // k包：C10 兼容检查，关键 API 缺失时直接显示重载按钮
+    if (window.__checkCompat && !window.__checkCompat()) {
+      window.__reportInitFailure('关键浏览器功能缺失');
+      return;
+    }
+    const r = await fetch('/api/lesson?lesson=' + encodeURIComponent(LID));
+    if (r.status === 401) { location.href = '/verify.html'; return; }
+    LESSON = await r.json();
+    await loadProg(); // 续课进度（服务端，按题目ID）
+    document.title = '小禾英语 · ' + (LESSON.home_subtitle || LESSON.title || '');
+    const brandSmall = document.querySelector('#brand small');
+    if (brandSmall) brandSmall.textContent = LESSON.home_subtitle || LESSON.title || '';
+    renderHome();
+  } catch (e) {
+    // k包：初始化失败显示"重新加载本题"按钮，不是一个点不动的空壳
+    if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e));
+    else wrap.innerHTML = `<div class="card"><h2 class="stem">打不开了</h2>
+      <p class="scene">检查一下网络，再刷新试试。</p>
+      <button class="btn btn-primary" onclick="location.reload()">重新加载本题</button></div>`;
+  }
+})();
+</script>
+</body>
+</html>

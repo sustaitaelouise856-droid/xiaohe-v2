@@ -1,0 +1,1265 @@
+{
+  "home_subtitle": "第三课 · 数据播报",
+  "lesson_id": "u2r3",
+  "note": "v1（2026-10-02）：按逐题清单 v2 成课。总任务书取消两天制：原清单的晨间复盘两步改为第二部分开场复习（步 21–22，固定新题面，复现 percent 与 go up/go down）；全课不出现相对日期说法。步 3–5 为复盘热身（第 2 课技能换新题面）。",
+  "part1_desc": "前半程：复盘通知追踪，学 percent 和涨跌，播图书馆借书数据。",
+  "part2_desc": "后半程：先热热身，再自己播一期运动会数字新闻。",
+  "practice_end": 19,
+  "steps": [
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 1,
+      "teach_html": "<p>新的一天，广播站开门。</p><p>上次练的是追踪通知：一张接一张改，只认最新的一张。今天换个新活：<strong>播数字</strong>——借书量、比分、经费，数字有涨有跌，播错了全校都会听错。</p><p>先复盘热身，再学新本领。</p>",
+      "title": "站长开场"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 2,
+      "teach_html": "<p>先热身。上次的通知追踪，换三道新题考你：两份通知摆一起，只认新的；再练一个词的拼写。</p>",
+      "title": "复盘热身"
+    },
+    {
+      "answer": "A",
+      "explain": "只认第二份通知：周四下午 3 点，美术室。第一份通知已经不算数了。",
+      "help": "两份通知只看第二份，第一份整张不用了。",
+      "help_line": "第二份通知“周四下午 3 点，美术室”",
+      "kind": "mcq",
+      "options": [
+        "周四下午 3 点，美术室",
+        "周三下午 3 点，美术室",
+        "周四下午 4 点，美术室",
+        "周三下午 4 点，美术室"
+      ],
+      "phase": "practice",
+      "review_weakness": "old_info",
+      "scene": "读书角的通知改了一次。只认第二份通知。",
+      "stem": "第一份通知“周三下午 3 点，美术室”；第二份通知“周四下午 3 点，美术室”。读书角最后什么时候开放？",
+      "step": 3,
+      "title": "复盘：只认第二份通知",
+      "wrong_feedback": {
+        "B": "这是第一份通知上的，已经不算数了，只看第二份。",
+        "C": "日子对了。钟点两份通知写的都是 3 点，没有 4 点。",
+        "D": "日子和钟点都拿了第一份通知的旧说法。只看第二份通知。"
+      }
+    },
+    {
+      "answer_text": "notice",
+      "common_errors": [
+        {
+          "say": "最后一个音是 -ce，不是 -se：notice。",
+          "when": "写成 notise"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "notice"
+          ],
+          "cn": [
+            "通知"
+          ],
+          "id": "word",
+          "type": "word"
+        }
+      ],
+      "explain": "notice：通知。n-o-t-i-c-e。",
+      "help": "这个词在每份通知的第一行都出现过，想想它是怎么拼的。",
+      "kind": "short",
+      "phase": "practice",
+      "review_weakness": "spelling",
+      "scene": "把这个词拼写出来。",
+      "stem": "把“通知”这个英文单词写出来。",
+      "step": 4,
+      "task": "写英文单词。",
+      "title": "复盘：拼写",
+      "predicted_errors": [
+        {
+          "wrong": "news",
+          "cause": "不会这个知识",
+          "say": "news 是“新闻”没错，但题目要的是“通知”，第 1 课讲过的那个词，想想怎么拼。"
+        },
+        {
+          "wrong": "message",
+          "cause": "不会这个知识",
+          "say": "message 是“消息”没错，但题目要的是“通知”，不是消息。"
+        },
+        {
+          "wrong": "poster",
+          "cause": "不会这个知识",
+          "say": "poster 是“海报”，题目要的是“通知”。"
+        },
+        {
+          "wrong": "letter",
+          "cause": "不会这个知识",
+          "say": "letter 是“信”没错，但题目要的是“通知”。"
+        }
+      ],
+      "dim_help": {
+        "word": {
+          "label": "单词",
+          "ask": "“通知”这个英文单词，怎么拼？"
+        }
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "只认新通知：下午 4 点到 5 点。",
+      "help": "旧通知整张不算数了，只看新通知写的时间。",
+      "kind": "mcq",
+      "options": [
+        "中午 12 点到 1 点",
+        "下午 5 点到 6 点",
+        "下午 4 点到 5 点",
+        "上午 8 点到 9 点"
+      ],
+      "phase": "practice",
+      "review_weakness": "old_info",
+      "scene": "借书处的开放时间也改过一次。只认新的一份。",
+      "stem": "旧通知“周一到周五，中午 12 点到 1 点”；新通知“周一到周五，下午 4 点到 5 点”。现在借书处什么时候开？",
+      "step": 5,
+      "title": "复盘：新通知说了算",
+      "wrong_feedback": {
+        "A": "这是旧通知上的，已经不算数了。",
+        "B": "新通知写的是 4 点到 5 点，再对照一下。",
+        "D": "新通知里没写这个时间，再看看。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 6,
+      "teach_html": "<p>站长交代新任务：今天广播站要播一期<strong>校园数字新闻</strong>——图书馆借书量、运动会比分、广播站经费。</p><p>数字播错了，全校都会听错。所以先看懂，再开口播。</p>",
+      "title": "新任务：播数字"
+    },
+    {
+      "audio_id": "u2r3-demo-percent",
+      "kind": "teach",
+      "phase": "teach",
+      "step": 7,
+      "teach_html": "<p>今天只学两个新本领。</p><p><strong>第一个：percent（百分之……）</strong>。看到 %，就想“每一百个里有几个”。25% 读 twenty-five percent，50% 读 fifty percent。点开声音，先听站长读一句：Grade Seven went up 5 percent。</p><p><strong>第二个：go up / go down</strong>。数字变大是 go up，变小是 go down。比如 Books went up 5%（书变多了），The price went down（价格降了）。</p>",
+      "title": "新本领：百分比和涨跌"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 8,
+      "teach_html": "<p>播数字之前，先学会看数据表，只看三样：</p><ul><li>① 哪一行是谁——哪个年级、哪个班、哪一项；</li><li>② 数字是多少——数字里的逗号是千位分隔，1,250 就是一千二百五十，看懂就行，不用会拼；</li><li>③ 和以前比，是涨（up）还是跌（down）。</li></ul><p>谁是第一名，不用背：去材料里找 the most、first place 这样的字样就行。</p>",
+      "title": "看数据表的方法"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "reading": "Library News — October\nGrade Seven borrowed 850 books. Grade Eight borrowed 1,250 books — the most. Grade Nine borrowed 640 books.\n\nBooks in October / From September\nGrade Seven: 850 / went up 5%\nGrade Eight: 1,250 / went up 20%\nGrade Nine: 640 / went down 10%\n\nStory books are the children's favourite.",
+      "step": 9,
+      "teach_html": "<p>第一份材料来了：图书馆 10 月的借书数据。仔细看，播的时候要照着它说。</p>",
+      "title": "图书馆借书数据"
+    },
+    {
+      "answer": "C",
+      "explain": "Grade Eight 借了 1,250 本，是三个年级里最多的。",
+      "help": "看每个年级后面的数字，谁的数字最大。",
+      "help_line": "Grade Eight borrowed 1,250 books — the most.",
+      "kind": "mcq",
+      "material_label": "图书馆借书数据",
+      "options": [
+        "Grade Seven",
+        "Grade Nine",
+        "Grade Eight",
+        "三个年级一样多"
+      ],
+      "phase": "practice",
+      "reading": "Library News — October\nGrade Seven borrowed 850 books. Grade Eight borrowed 1,250 books — the most. Grade Nine borrowed 640 books.\n\nBooks in October / From September\nGrade Seven: 850 / went up 5%\nGrade Eight: 1,250 / went up 20%\nGrade Nine: 640 / went down 10%\n\nStory books are the children's favourite.",
+      "scene": "照着图书馆借书数据，先找一找数。",
+      "stem": "10 月哪个年级借书最多？",
+      "step": 10,
+      "title": "借书最多的是哪个年级",
+      "wrong_feedback": {
+        "A": "Grade Seven 是 850 本。再看看数据里谁的数字最大。",
+        "B": "Grade Nine 是 640 本，是最少的。再比一比三个数字。",
+        "D": "三个数字不一样大：850、1,250、640。再比一比。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "Grade Nine 那一行写着 went down 10%：比 9 月少了。",
+      "help": "找 Grade Nine 那一行，看最后一栏写的是 up 还是 down。",
+      "help_line": "Grade Nine: 640 / went down 10%",
+      "kind": "mcq",
+      "material_label": "图书馆借书数据",
+      "options": [
+        "went down 10%",
+        "went up 10%",
+        "went up 5%",
+        "没有变化"
+      ],
+      "phase": "practice",
+      "reading": "Library News — October\nGrade Seven borrowed 850 books. Grade Eight borrowed 1,250 books — the most. Grade Nine borrowed 640 books.\n\nBooks in October / From September\nGrade Seven: 850 / went up 5%\nGrade Eight: 1,250 / went up 20%\nGrade Nine: 640 / went down 10%\n\nStory books are the children's favourite.",
+      "scene": "看 Grade Nine 那一行。",
+      "stem": "九年级的借书量和 9 月比，有什么变化？",
+      "step": 11,
+      "title": "九年级是涨还是跌",
+      "wrong_feedback": {
+        "B": "方向反了。Grade Nine 那一行写的是 down，不是 up。",
+        "C": "5% 是七年级的，别串行。看准 Grade Nine 那一行。",
+        "D": "最后一栏写了变化，不是没变。再看 Grade Nine 那一行。"
+      }
+    },
+    {
+      "answer": "D",
+      "audio_id": "u2r3-a1-fifty",
+      "explain": "fifty (50)：Grade Seven got fifty new books。",
+      "help": "先听整句再选。-teen 的尾巴拖得长一点，-ty 短一点。",
+      "help_line": "This week, Grade Seven got fifty new books.",
+      "kind": "mcq",
+      "options": [
+        "fifteen (15)",
+        "thirteen (13)",
+        "thirty (30)",
+        "fifty (50)"
+      ],
+      "phase": "practice",
+      "scene": "听站长读一句，先听，选你听到的数字。",
+      "stem": "（先听）这周新到的书是多少本？",
+      "step": 12,
+      "title": "听数字：fifty",
+      "wrong_feedback": {
+        "A": "fifteen 的尾巴 -teen 会拖长一点。站长读的尾巴短，是 -ty。再听一遍。",
+        "B": "thirteen 也是 -teen 结尾，尾巴长。站长读的尾巴短。再听一遍。",
+        "C": "thirty 和 fifty 尾巴都短，区别在开头。再听一遍开头那个音。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 13,
+      "teach_html": "<p>站长：图书馆刚发来一段播报，我读，你记数字。听完要填三个数，<strong>填阿拉伯数字就行</strong>，不用拼英文。</p><p>可以重听，听不清就再听一遍。</p>",
+      "title": "听播报，记数字"
+    },
+    {
+      "answer_text": "2740 books in all, up 8%, Grade Eight borrowed 1250 books.",
+      "audio_id": "u2r3-a2-library",
+      "common_errors": [
+        {
+          "say": "哪个数不对就重听哪一段：总数听 in all 前面，百分比听 up 后面。",
+          "when": "数字写错"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "2 740",
+            "2740",
+            "two thousand seven hundred and forty"
+          ],
+          "cn": [
+            "2,740",
+            "2740",
+            "两千七百四十"
+          ],
+          "id": "total",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "8",
+            "eight"
+          ],
+          "cn": [
+            "8%",
+            "百分之八"
+          ],
+          "id": "pct",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "1 250",
+            "1250",
+            "one thousand two hundred and fifty"
+          ],
+          "cn": [
+            "1,250",
+            "1250",
+            "一千二百五十"
+          ],
+          "id": "most",
+          "type": "word"
+        }
+      ],
+      "explain": "2,740 本，涨 8%，Grade Eight 借最多：1,250 本。",
+      "help": "听不清就重听。一共多少本，听 in all 前面那个大数字。",
+      "help_line": "students borrowed two thousand, seven hundred and forty books in all",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "听播报，把三个数字填上。",
+      "stem": "听完填三个数：① 10 月一共借了多少本书；② 比 9 月涨了百分之几；③ 借得最多的年级借了多少本。",
+      "step": 14,
+      "task": "填三个数字，用逗号分开。",
+      "title": "听播报填数字",
+      "predicted_errors": [
+        {
+          "wrong": "2740, 18%, 1250",
+          "cause": "不会这个知识",
+          "say": "百分之几听错了，再听一遍 up 后面那个数，注意尾巴是长还是短。"
+        },
+        {
+          "wrong": "2740, 1250",
+          "cause": "粗心",
+          "say": "少写了一个数：比 9 月涨了百分之几？"
+        },
+        {
+          "wrong": "2740, 8%, 850",
+          "cause": "没看到材料",
+          "say": "850 是七年级的，再听一遍借得最多的是哪个年级。"
+        },
+        {
+          "wrong": "2740",
+          "cause": "粗心",
+          "say": "只写了第一个数，后面两个数接着听写下来。"
+        },
+        {
+          "wrong": "2740, 8%, 640",
+          "cause": "没看到材料",
+          "say": "640 是九年级的，借得最多的是哪个年级？"
+        }
+      ],
+      "dim_help": {
+        "total": {
+          "label": "总数",
+          "ask": "10 月一共借了多少本书？只说这个数。"
+        },
+        "pct": {
+          "label": "百分比",
+          "ask": "比 9 月涨了百分之几？只说这个数。"
+        },
+        "most": {
+          "label": "最多的数",
+          "ask": "借得最多的年级借了多少本？只说这个数。"
+        }
+      }
+    },
+    {
+      "answer": "B",
+      "audio_id": "u2r3-a2-library",
+      "explain": "up eight percent from September：2,740 本，涨 8%。",
+      "help": "听方向词：是 up 还是 down；再听 up 后面的数字。",
+      "help_line": "That is up eight percent from September.",
+      "kind": "mcq",
+      "options": [
+        "went down 8%",
+        "went up 8%",
+        "went up 18%",
+        "没有变化"
+      ],
+      "phase": "practice",
+      "scene": "还是刚才那段播报。",
+      "stem": "刚才的播报里，10 月借书总量和 9 月比？",
+      "step": 15,
+      "title": "听后选择：涨了多少",
+      "wrong_feedback": {
+        "A": "方向听反了，播报里说的是 up。再听一遍方向词。",
+        "C": "是 8，不是 18。再听听 up 后面那个数字。",
+        "D": "播报里说了变化。再听一遍。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "第 ② 句错了：Grade Nine 是 640 本，稿子里写成了 680。",
+      "help": "一句一句对：每句的数字去数据里找，对不上的就是它。",
+      "help_line": "Grade Nine: 640 / went down 10%",
+      "kind": "mcq",
+      "material_label": "图书馆借书数据",
+      "options": [
+        "第 ① 句",
+        "第 ② 句",
+        "第 ③ 句",
+        "三句都对"
+      ],
+      "phase": "practice",
+      "reading": "Library News — October\nGrade Seven borrowed 850 books. Grade Eight borrowed 1,250 books — the most. Grade Nine borrowed 640 books.\n\nBooks in October / From September\nGrade Seven: 850 / went up 5%\nGrade Eight: 1,250 / went up 20%\nGrade Nine: 640 / went down 10%\n\nStory books are the children's favourite.",
+      "scene": "站长写了一份播报稿，有一句的数字和图书馆借书数据对不上。对照着同屏的数据找。",
+      "stem": "播报稿：① Grade Seven borrowed 850 books in October. ② Grade Nine borrowed 680 books in October. ③ Grade Eight borrowed 1,250 books, the most in October. 哪一句的数字错了？",
+      "step": 16,
+      "title": "核对播报稿：哪句错了",
+      "wrong_feedback": {
+        "A": "第 ① 句的 850 和数据对得上。再核对下一句。",
+        "C": "第 ③ 句的 1,250 和 the most 都对得上。再看看第 ② 句。",
+        "D": "有一句对不上。一句一句对数据，找数字不一样的那句。"
+      }
+    },
+    {
+      "answer_text": "Grade Nine borrowed 640 books in October.",
+      "common_errors": [
+        {
+          "say": "680 是稿子里的错数字。回数据看 Grade Nine 那一行，是 640。",
+          "when": "写了 680"
+        },
+        {
+          "say": "850 是七年级的。看准 Grade Nine 那一行再改。",
+          "when": "写了 850"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "640",
+            "six hundred and forty"
+          ],
+          "cn": [
+            "640",
+            "六百四十"
+          ],
+          "cn_old": [
+            "680"
+          ],
+          "id": "num",
+          "olds": [
+            "680"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "改对了：Grade Nine borrowed 640 books in October.",
+      "help": "回数据看 Grade Nine 那一行，数字是多少，照着填进句子框。",
+      "help_line": "Grade Nine: 640 / went down 10%",
+      "kind": "short",
+      "material_label": "图书馆借书数据",
+      "phase": "practice",
+      "reading": "Library News — October\nGrade Seven borrowed 850 books. Grade Eight borrowed 1,250 books — the most. Grade Nine borrowed 640 books.\n\nBooks in October / From September\nGrade Seven: 850 / went up 5%\nGrade Eight: 1,250 / went up 20%\nGrade Nine: 640 / went down 10%\n\nStory books are the children's favourite.",
+      "scene": "把播报稿里写错的那句改对。",
+      "see_also": {
+        "label": "再看站长的播报稿",
+        "text": "① Grade Seven borrowed 850 books in October.\n② Grade Nine borrowed 680 books in October.\n③ Grade Eight borrowed 1,250 books, the most in October."
+      },
+      "stem": "第 ② 句里 Grade Nine 的借书量写错了。照着这个句子框，把整句改对：Grade Nine borrowed ___ books in October.",
+      "step": 17,
+      "task": "写完整的句子。",
+      "title": "把错句改对",
+      "predicted_errors": [
+        {
+          "wrong": "Grade Nine borrowed 680 books in October.",
+          "cause": "粗心",
+          "say": "680 就是稿子里写错的那个数，照着数据改过来。"
+        },
+        {
+          "wrong": "Grade Nine borrowed 850 books in October.",
+          "cause": "没看到材料",
+          "say": "850 是七年级的，看准 Grade Nine 那一行。"
+        },
+        {
+          "wrong": "Grade Nine borrowed 460 books in October.",
+          "cause": "粗心",
+          "say": "数字看错了，再看一遍 Grade Nine 那一行的数。"
+        },
+        {
+          "wrong": "Grade Nine borrowed 604 books in October.",
+          "cause": "粗心",
+          "say": "两个数字写反了，再看一遍 Grade Nine 那一行的数。"
+        }
+      ],
+      "dim_help": {
+        "num": {
+          "label": "数字",
+          "ask": "Grade Nine 那一行，借书量到底是多少？只说数字。"
+        }
+      }
+    },
+    {
+      "answer_text": "Grade Eight borrowed 1,250 books in October. It went up 20% from September.",
+      "common_errors": [
+        {
+          "say": "数字对了，方向回数据那一行看：写的是 up 还是 down。",
+          "when": "方向写反"
+        },
+        {
+          "say": "还要写第二句：涨了还是跌了，百分之几。",
+          "when": "只写了一句"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "seven borrowed 850",
+            "eight borrowed 1250",
+            "nine borrowed 640",
+            "7 borrowed 850",
+            "8 borrowed 1250",
+            "9 borrowed 640",
+            "7 borrow 850",
+            "8 borrow 1250",
+            "9 borrow 640",
+            "seven borrowed eight hundred and fifty",
+            "eight borrowed one thousand two hundred and fifty",
+            "nine borrowed six hundred and forty",
+            "8 borrowed one thousand two hundred and fifty",
+            "eight borrowed 1 250",
+            "8 borrowed 1 250"
+          ],
+          "cn": [
+            "借了850本",
+            "借了1250本",
+            "借了640本",
+            "借了八百五十本",
+            "借了一千二百五十本",
+            "借了六百四十本"
+          ],
+          "id": "pair",
+          "olds": [
+            "seven borrowed 1250",
+            "seven borrowed 1 250",
+            "eight borrowed 850",
+            "eight borrowed 640",
+            "nine borrowed 850",
+            "nine borrowed 1250",
+            "nine borrowed 1 250",
+            "seven borrowed 640",
+            "8 borrowed 850",
+            "8 borrowed 640"
+          ],
+          "type": "word"
+        },
+        {
+          "answers": [
+            "up 5",
+            "up 20",
+            "down 10",
+            "up five",
+            "up twenty",
+            "down ten"
+          ],
+          "cn": [
+            "涨了5%",
+            "涨了20%",
+            "跌了10%",
+            "上升5%",
+            "上升20%",
+            "下降10%"
+          ],
+          "cn_old": [
+            "跌了5%",
+            "跌了20%",
+            "涨了10%",
+            "下降20%",
+            "上升10%"
+          ],
+          "id": "dirpct",
+          "olds": [
+            "down 5",
+            "down 20",
+            "up 10",
+            "down five",
+            "down twenty",
+            "up ten"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "范文：Grade Eight borrowed 1,250 books in October. It went up 20% from September。",
+      "help": "先在数据里选一行：哪个年级、多少本、涨还是跌、百分之几，照着句子框填。",
+      "help_line": "Grade Eight: 1,250 / went up 20%",
+      "kind": "short",
+      "material_label": "图书馆借书数据",
+      "phase": "practice",
+      "reading": "Library News — October\nGrade Seven borrowed 850 books. Grade Eight borrowed 1,250 books — the most. Grade Nine borrowed 640 books.\n\nBooks in October / From September\nGrade Seven: 850 / went up 5%\nGrade Eight: 1,250 / went up 20%\nGrade Nine: 640 / went down 10%\n\nStory books are the children's favourite.",
+      "scene": "轮到你播了：用图书馆借书数据，自己写两句。",
+      "stem": "选一个年级，照着句子框写 2 句：① Grade ___ borrowed ___ books in October. ② It went ___ ___% from September. 可以用词：Grade Seven / Grade Eight / Grade Nine、borrowed、went up、went down。",
+      "step": 18,
+      "task": "写 2 句英文。",
+      "title": "自己写两句播报",
+      "predicted_errors": [
+        {
+          "wrong": "Grade Eight borrowed 1,250 books in October.",
+          "cause": "粗心",
+          "say": "第一句对了，第二句还没写：涨了还是跌了，百分之几？"
+        },
+        {
+          "wrong": "Grade Eight borrowed 1,250 books in October. It went down 20% from September.",
+          "cause": "粗心",
+          "say": "方向写反了，对照数据看 1,250 比原来多还是少，再定是 up 还是 down。"
+        },
+        {
+          "wrong": "Grade Seven borrowed 1,250 books in October. It went up 20% from September.",
+          "cause": "没看到材料",
+          "say": "1,250 不是七年级的，数字和年级对不上，回去对一下数据。"
+        },
+        {
+          "wrong": "Grade Eight borrowed 1,250 books in October. It went up 10% from September.",
+          "cause": "没看到材料",
+          "say": "百分之几不对，回数据里看 Grade Eight 那一行写的是百分之几。"
+        },
+        {
+          "wrong": "Grade Eight borrowed books in October. It went up from September.",
+          "cause": "粗心",
+          "say": "两句的框架都有了，数字还没填：多少本、百分之几？"
+        }
+      ],
+      "dim_help": {
+        "pair": {
+          "label": "年级和数字",
+          "ask": "先定年级：你选的是哪个年级？"
+        },
+        "dirpct": {
+          "label": "涨跌和百分比",
+          "ask": "比 9 月，这个数是涨了还是跌了？"
+        }
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 19,
+      "teach_html": "<p>今天练了读数字、听数字、核对稿子，两个新本领也上手了：percent 和 go up / go down。</p><p>下一部分换一份新材料——运动会数据，站长不在，你自己播一期。</p>",
+      "title": "小结"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 20,
+      "teach_html": "<p>站长出门了。这一期数字新闻你自己播——正式播之前，先热热身。</p>",
+      "title": "自己播一期"
+    },
+    {
+      "answer": "A",
+      "explain": "400 瓶到 500 瓶，多了 100 瓶，是原来的 25%：went up 25%。",
+      "help": "先比大小：500 比 400 多。再算多出来的占原来多少。",
+      "help_line": "Last term, the shop sold 400 bottles of milk. This term, it sold 500 bottles.",
+      "kind": "mcq",
+      "material_label": "小卖部数据",
+      "options": [
+        "went up 25%",
+        "went down 25%",
+        "went up 20%",
+        "没有变化"
+      ],
+      "phase": "validate",
+      "reading": "School Shop News\nLast term, the shop sold 400 bottles of milk. This term, it sold 500 bottles.",
+      "scene": "先热热身：这份小卖部数据是新的，看看百分比和涨跌还稳不稳。",
+      "stem": "牛奶销量和上学期比，有什么变化？",
+      "step": 21,
+      "title": "开场复习：小卖部数据",
+      "wrong_feedback": {
+        "B": "再比一比 400 和 500 哪个大，方向先定下来。",
+        "C": "方向对了，百分之几再算一算：多出来的除以原来的。",
+        "D": "400 到 500 变了。再看数据里两个数字。"
+      }
+    },
+    {
+      "answer_text": "The milk went up 25% from last term.",
+      "common_errors": [
+        {
+          "say": "400 到 500 是变多了还是变少了？先定方向。",
+          "when": "方向写反"
+        },
+        {
+          "say": "多出来的 100 瓶，占原来的 400 的多少，算一算。",
+          "when": "百分比写错"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "up 25",
+            "up twenty five",
+            "up twenty-five"
+          ],
+          "cn": [
+            "涨了25%",
+            "上升25%"
+          ],
+          "cn_old": [
+            "跌",
+            "下降"
+          ],
+          "id": "dirpct",
+          "olds": [
+            "down 25",
+            "down",
+            "up 20"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The milk went up 25% from last term.",
+      "help": "回到小卖部数据：400 到 500，是涨还是跌，百分之几。",
+      "help_line": "Last term, the shop sold 400 bottles of milk. This term, it sold 500 bottles.",
+      "kind": "short",
+      "material_label": "小卖部数据",
+      "phase": "validate",
+      "reading": "School Shop News\nLast term, the shop sold 400 bottles of milk. This term, it sold 500 bottles.",
+      "scene": "热热身第二题：把刚才的变化写成一句播报。",
+      "stem": "照着句子框写一句：The milk went ___ ___% from last term.",
+      "step": 22,
+      "task": "写一句英文。",
+      "title": "开场复习：写一句播报",
+      "predicted_errors": [
+        {
+          "wrong": "The milk went down 25% from last term.",
+          "cause": "粗心",
+          "say": "方向反了：400 到 500 是变多了还是变少了？"
+        },
+        {
+          "wrong": "The milk went up 20% from last term.",
+          "cause": "粗心",
+          "say": "方向对了，百分之几再算：多出来的 100 瓶占 400 瓶的多少？"
+        },
+        {
+          "wrong": "The milk went up from last term.",
+          "cause": "粗心",
+          "say": "涨跌写对了，百分之几还没写，补上。"
+        },
+        {
+          "wrong": "The milk went up 125% from last term.",
+          "cause": "不会这个知识",
+          "say": "125% 是涨完之后一共的，“涨了”百分之几只算多出来的那部分。"
+        }
+      ],
+      "dim_help": {
+        "dirpct": {
+          "label": "涨跌和百分比",
+          "ask": "400 到 500，牛奶是变多了还是变少了？"
+        }
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points",
+      "step": 23,
+      "teach_html": "<p>新材料来了：今年运动会的数据。播之前先仔细看。</p>",
+      "title": "运动会数据"
+    },
+    {
+      "answer": "D",
+      "explain": "材料里写着：the points went up 15% from last year。",
+      "help": "找 from last year 那一句，看方向和数字。",
+      "help_line": "This year, the points went up 15% from last year.",
+      "kind": "mcq",
+      "material_label": "运动会数据",
+      "options": [
+        "went down 15%",
+        "went up 5%",
+        "没有变化",
+        "went up 15%"
+      ],
+      "phase": "validate",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points",
+      "scene": "照着运动会数据答。",
+      "stem": "今年的总分和去年比，有什么变化？",
+      "step": 24,
+      "title": "总分是涨还是跌",
+      "wrong_feedback": {
+        "A": "再对照材料里 from last year 那句看方向。",
+        "B": "数字不对，再看看材料里写的百分之几。",
+        "C": "材料里写了变化，再找一找那句。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "Class Two 92 分，won first place。",
+      "help": "看哪个班的分数最高，或者找 first place 字样。",
+      "help_line": "Class Two got 92 points and won first place.",
+      "kind": "mcq",
+      "material_label": "运动会数据",
+      "options": [
+        "Class Two",
+        "Class One",
+        "Class Three",
+        "Class Four"
+      ],
+      "phase": "validate",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points",
+      "scene": "照着运动会数据答。",
+      "stem": "哪个班得了第一名？",
+      "step": 25,
+      "title": "哪个班第一名",
+      "wrong_feedback": {
+        "B": "再看看数据里谁的分数最高。",
+        "C": "再看看数据里谁的分数最高。",
+        "D": "材料里只有三个班，没有 Class Four。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "Class One：86 分。",
+      "help": "看准 Class One 那一行。",
+      "help_line": "Class One got 86 points.",
+      "kind": "mcq",
+      "material_label": "运动会数据",
+      "options": [
+        "92 分",
+        "78 分",
+        "86 分",
+        "68 分"
+      ],
+      "phase": "validate",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points",
+      "scene": "照着运动会数据答。",
+      "stem": "Class One 得了多少分？",
+      "step": 26,
+      "title": "Class One 多少分",
+      "wrong_feedback": {
+        "A": "那是别的班的分数，看准 Class One 那一行。",
+        "B": "那是别的班的分数，看准 Class One 那一行。",
+        "D": "材料里没有这个数，再对一下 Class One 那一行。"
+      }
+    },
+    {
+      "answer": "B",
+      "audio_id": "u2r3-b1-thirteen",
+      "explain": "thirteen (13)：Class Three got thirteen points。",
+      "help": "再听一遍，听数字的尾巴是拖长还是短促，别急着选。",
+      "help_line": "In the first game, Class Three got thirteen points.",
+      "kind": "mcq",
+      "options": [
+        "thirty (30)",
+        "thirteen (13)",
+        "fourteen (14)",
+        "forty (40)"
+      ],
+      "phase": "validate",
+      "scene": "听站长读一句，先听，选你听到的数字。",
+      "stem": "（先听）第一场比赛 Class Three 得了多少分？",
+      "step": 27,
+      "title": "听数字：thirteen",
+      "wrong_feedback": {
+        "A": "再听一遍，听尾巴是拖长还是短促。",
+        "C": "再听一遍，thirteen 和 fourteen 就差一个音，听准。",
+        "D": "再听一遍，尾巴拖长的是 -teen。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 28,
+      "teach_html": "<p>下面一段运动会播报，听完填数字，填阿拉伯数字就行。可以重听。</p>",
+      "title": "听播报，填数字"
+    },
+    {
+      "answer_text": "240 students joined, up 20%, Class Two got 92 points.",
+      "audio_id": "u2r3-b2-sports",
+      "common_errors": [
+        {
+          "say": "哪个数不对就重听哪一段，别急。",
+          "when": "数字写错"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "240",
+            "two hundred and forty"
+          ],
+          "cn": [
+            "240",
+            "二百四十"
+          ],
+          "id": "total",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "20",
+            "twenty"
+          ],
+          "cn": [
+            "20%",
+            "百分之二十"
+          ],
+          "id": "pct",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "92",
+            "ninety two"
+          ],
+          "cn": [
+            "92",
+            "九十二"
+          ],
+          "id": "score",
+          "type": "word"
+        }
+      ],
+      "explain": "播报里说：240 名学生参加，比去年涨了 20%，Class Two 得分最多，92 分。",
+      "help": "听不清就重听：人数听 joined 前面，百分比听 up 后面，分数听 got 后面。",
+      "help_line": "Class Two got the most points — ninety-two points.",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "听播报，把三个数字填上。",
+      "stem": "听完填三个数：① 今年参加运动会的学生有多少人；② 比去年涨了百分之几；③ 得第一名的班得了多少分。",
+      "step": 29,
+      "task": "填三个数字，用逗号分开。",
+      "title": "听播报填数字",
+      "predicted_errors": [
+        {
+          "wrong": "240, 12%, 92",
+          "cause": "粗心",
+          "say": "百分之几听错了，再听一遍 up 后面那个数，仔细听尾巴。"
+        },
+        {
+          "wrong": "240, 92",
+          "cause": "粗心",
+          "say": "少了一个数：比去年涨了百分之几？"
+        },
+        {
+          "wrong": "240, 20%, 29",
+          "cause": "粗心",
+          "say": "这个数听错了，再听一遍 Class Two 的分数，仔细听。"
+        },
+        {
+          "wrong": "240, 20%, 86",
+          "cause": "没看到材料",
+          "say": "86 是 Class One 的，得第一的是哪个班？"
+        },
+        {
+          "wrong": "240",
+          "cause": "粗心",
+          "say": "只写了第一个数，后面两个接着听。"
+        }
+      ],
+      "dim_help": {
+        "total": {
+          "label": "人数",
+          "ask": "今年参加运动会的学生有多少人？只说这个数。"
+        },
+        "pct": {
+          "label": "百分比",
+          "ask": "比去年涨了百分之几？只说这个数。"
+        },
+        "score": {
+          "label": "分数",
+          "ask": "得第一名的班得了多少分？只说这个数。"
+        }
+      }
+    },
+    {
+      "answer": "D",
+      "audio_id": "u2r3-b2-sports",
+      "explain": "up twenty percent from last year：240 人参加，涨 20%。",
+      "help": "再听一遍方向词和它后面的数字。",
+      "help_line": "That is up twenty percent from last year.",
+      "kind": "mcq",
+      "options": [
+        "went down 20%",
+        "went up 2%",
+        "没有变化",
+        "went up 20%"
+      ],
+      "phase": "validate",
+      "scene": "还是刚才那段播报。",
+      "stem": "刚才的播报里，今年参加的人数和去年比？",
+      "step": 30,
+      "title": "听后选择：涨了多少",
+      "wrong_feedback": {
+        "A": "再听一遍方向词。",
+        "B": "数字再听一遍，不是 2。",
+        "C": "播报里说了变化，再听一听。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "reading": "Radio Station Money\nNew books: Last term 500 yuan / This term 650 yuan\nHeadphones: Last term 300 yuan / This term 300 yuan\nPaper: Last term 200 yuan / This term 160 yuan",
+      "step": 31,
+      "teach_html": "<p>最后一份材料：广播站这学期的经费表。播报稿要照着它写。</p>",
+      "title": "广播站经费表"
+    },
+    {
+      "answer": "A",
+      "explain": "New books 从 500 yuan 涨到 650 yuan。",
+      "help": "一项一项比：这学期的数字比上学期大，就是涨了。",
+      "help_line": "New books: Last term 500 yuan / This term 650 yuan",
+      "kind": "mcq",
+      "material_label": "广播站经费表",
+      "options": [
+        "New books",
+        "Headphones",
+        "Paper",
+        "都没涨"
+      ],
+      "phase": "validate",
+      "reading": "Radio Station Money\nNew books: Last term 500 yuan / This term 650 yuan\nHeadphones: Last term 300 yuan / This term 300 yuan\nPaper: Last term 200 yuan / This term 160 yuan",
+      "scene": "照着经费表，一项一项比。",
+      "stem": "经费表里，哪一项这学期涨了？",
+      "step": 32,
+      "title": "哪一项涨了",
+      "wrong_feedback": {
+        "B": "Headphones 两学期都是 300 yuan，没变。再比比别项。",
+        "C": "Paper 从 200 yuan 到 160 yuan，是少了。涨了的是哪项，再对一下表。",
+        "D": "有一项涨了。一项一项对两个数字。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "第 ③ 句错了：材料里是 went up 15%，稿子写成了 down。",
+      "help": "一句一句对运动会数据：分数对不对，方向对不对。",
+      "help_line": "This year, the points went up 15% from last year.",
+      "kind": "mcq",
+      "material_label": "运动会数据",
+      "options": [
+        "第 ① 句",
+        "第 ② 句",
+        "第 ③ 句",
+        "三句都对"
+      ],
+      "phase": "validate",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points",
+      "scene": "要播的稿子写好了，有一句和运动会数据对不上。对照着同屏的数据找。",
+      "stem": "播报稿：① Class Two won first place with 92 points. ② Class Three got 78 points. ③ The points went down 15% from last year. 哪一句错了？",
+      "step": 33,
+      "title": "核对播报稿：哪句错了",
+      "wrong_feedback": {
+        "A": "第 ① 句的 92 分和 first place 都对得上。再看下一句。",
+        "B": "第 ② 句的 78 分对得上。再看看方向那句。",
+        "D": "有一句和材料对不上。一句一句核对，特别看方向。"
+      }
+    },
+    {
+      "answer_text": "The points went up 15% from last year.",
+      "common_errors": [
+        {
+          "say": "回运动会数据看 from last year 那句，方向是涨还是跌，再改。",
+          "when": "写了 down"
+        },
+        {
+          "say": "句子框里的 15% 要带上，整句写完整。",
+          "when": "没写 15"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "went up",
+            "up"
+          ],
+          "cn": [
+            "涨",
+            "上升"
+          ],
+          "cn_old": [
+            "跌",
+            "下降"
+          ],
+          "id": "dir",
+          "olds": [
+            "went down",
+            "down"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "改对了：The points went up 15% from last year。",
+      "help": "回运动会数据看 from last year 那句：方向是涨还是跌。",
+      "help_line": "This year, the points went up 15% from last year.",
+      "kind": "short",
+      "material_label": "运动会数据",
+      "phase": "validate",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points",
+      "scene": "把播报稿里写错的那句改对。",
+      "see_also": {
+        "label": "再看要播的稿子",
+        "text": "① Class Two won first place with 92 points.\n② Class Three got 78 points.\n③ The points went down 15% from last year."
+      },
+      "stem": "第 ③ 句的涨跌方向写反了。照着句子框，把整句改对：The points went ___ 15% from last year.",
+      "step": 34,
+      "task": "写完整的句子。",
+      "title": "把错句改对",
+      "predicted_errors": [
+        {
+          "wrong": "The points went down 15% from last year.",
+          "cause": "粗心",
+          "say": "down 就是稿子里写错的那个词，改成反方向的词。"
+        },
+        {
+          "wrong": "The points went ups 15% from last year.",
+          "cause": "粗心",
+          "say": "up 不加 s，直接写 up。"
+        },
+        {
+          "wrong": "The points went upper 15% from last year.",
+          "cause": "不会这个知识",
+          "say": "upper 是“更高的”的意思，这里直接用 up。"
+        },
+        {
+          "wrong": "The points went rise 15% from last year.",
+          "cause": "不会这个知识",
+          "say": "rise 也是“涨”的意思，但这道题考的是 go up，用 up。"
+        }
+      ],
+      "dim_help": {
+        "dir": {
+          "label": "方向",
+          "ask": "第 ③ 句的方向写反了：应该是涨（up）还是跌（down）？"
+        }
+      }
+    },
+    {
+      "answer_text": "Class Two got 92 points. The points went up 15% from last year. We will spend 650 yuan on new books this term.",
+      "common_errors": [
+        {
+          "say": "第 ② 句再对照运动会数据 from last year 那句，方向是涨还是跌。",
+          "when": "方向写反"
+        },
+        {
+          "say": "哪句的数字不对，就回那份材料看准了再改。",
+          "when": "数字对不上"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "one got 86",
+            "two got 92",
+            "three got 78",
+            "1 got 86",
+            "2 got 92",
+            "3 got 78",
+            "one got eighty six",
+            "two got ninety two",
+            "three got seventy eight",
+            "one get 86",
+            "two get 92",
+            "three get 78",
+            "class one got 86",
+            "class two got 92",
+            "class three got 78"
+          ],
+          "cn": [
+            "86分",
+            "92分",
+            "78分"
+          ],
+          "id": "score",
+          "olds": [
+            "one got 92",
+            "two got 86",
+            "one got 78",
+            "three got 92",
+            "two got 78",
+            "three got 86",
+            "1 got 92",
+            "2 got 86",
+            "1 got 78",
+            "3 got 92"
+          ],
+          "type": "word"
+        },
+        {
+          "answers": [
+            "up 15",
+            "up fifteen"
+          ],
+          "cn": [
+            "涨了15%",
+            "上升15%"
+          ],
+          "cn_old": [
+            "跌了15%",
+            "下降15%"
+          ],
+          "id": "dirpct",
+          "olds": [
+            "down 15",
+            "down fifteen"
+          ],
+          "type": "word"
+        },
+        {
+          "answers": [
+            "650 yuan on new books",
+            "300 yuan on headphones",
+            "160 yuan on paper",
+            "six hundred and fifty yuan on new books",
+            "three hundred yuan on headphones",
+            "one hundred and sixty yuan on paper"
+          ],
+          "cn": [
+            "650元",
+            "300元",
+            "160元"
+          ],
+          "cn_old": [
+            "500元"
+          ],
+          "id": "money",
+          "olds": [
+            "500 yuan on new books",
+            "500 yuan",
+            "650 yuan on paper",
+            "650 yuan on headphones",
+            "300 yuan on paper",
+            "160 yuan on headphones",
+            "160 yuan on new books"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "范文：Class Two got 92 points. The points went up 15% from last year. We will spend 650 yuan on new books this term。",
+      "help": "①选班，②看 from last year，③选经费表数字。",
+      "help_line": "Class Two got 92 points and won first place.",
+      "kind": "short",
+      "material_label": "运动会数据和经费表",
+      "phase": "validate",
+      "reading": "Sports Day News\nClass One got 86 points. Class Two got 92 points and won first place. Class Three got 78 points.\nThis year, the points went up 15% from last year. 240 students joined the games.\n\nClass One: 86 points\nClass Two: 92 points (first place)\nClass Three: 78 points\n\nRadio Station Money\nNew books: Last term 500 yuan / This term 650 yuan\nHeadphones: Last term 300 yuan / This term 300 yuan\nPaper: Last term 200 yuan / This term 160 yuan",
+      "scene": "最后由你播：用今天的材料，写 3 句数字新闻。",
+      "stem": "照着句子框写 3 句：① Class ___ got ___ points. ② The points went ___ ___% from last year. ③ We will spend ___ yuan on ___ this term.（第 ③ 句从经费表里选一项）可以用词：got、points、went up、went down、percent、spend、yuan、new books / headphones / paper。",
+      "step": 35,
+      "task": "写 3 句英文。",
+      "title": "自己写三句播报",
+      "predicted_errors": [
+        {
+          "wrong": "Class Two got 92 points. The points went up 15% from last year.",
+          "cause": "粗心",
+          "say": "还少一句：第 ③ 句去经费表里选一项写。"
+        },
+        {
+          "wrong": "Class Two got 92 points. The points went down 15% from last year. We will spend 650 yuan on new books this term.",
+          "cause": "粗心",
+          "say": "第 ② 句方向反了：from last year 那句写的是 up 还是 down？"
+        },
+        {
+          "wrong": "Class One got 92 points. The points went up 15% from last year. We will spend 650 yuan on new books this term.",
+          "cause": "没看到材料",
+          "say": "92 分不是 Class One 的，得第一的是哪个班？"
+        },
+        {
+          "wrong": "Class Two got 92 points. The points went up 15% from last year. We will spend 500 yuan on new books this term.",
+          "cause": "没看到材料",
+          "say": "500 是上学期的旧数字，经费表里这学期写的是多少？"
+        },
+        {
+          "wrong": "Class Two got 92 points. The points went up 15% from last year. We will spend 650 yuan on paper this term.",
+          "cause": "没看到材料",
+          "say": "650 元对应的是经费表里的哪一项，再对一下。"
+        }
+      ],
+      "dim_help": {
+        "score": {
+          "label": "比分",
+          "ask": "第 ① 句：哪个班得了多少分？"
+        },
+        "dirpct": {
+          "label": "涨跌和百分比",
+          "ask": "第 ② 句：总分比去年是涨还是跌？"
+        },
+        "money": {
+          "label": "经费",
+          "ask": "第 ③ 句：你选了经费表里的哪一项？"
+        }
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 36,
+      "teach_html": "<p>这期数字新闻播完了。</p><p>下一课《来信点播》：有人给广播站写信了，到时候见。</p>",
+      "title": "播完了"
+    }
+  ],
+  "title": "Unit 2 第3课：数据播报",
+  "unit": "Unit 2",
+  "version": 1
+}

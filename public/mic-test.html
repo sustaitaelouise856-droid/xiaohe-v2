@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- 录音能力测试页（内部工具）：供 Codex 在学习机真机上运行，判断听说模块能不能用录音、
+还是必须用文本降级。不挂任何学生入口，学生正常流程到不了这一页。
+写法约束：只用 c10-syntax-list.md「已验证」区的 JS/CSS 写法。 -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>录音测试（内部）</title>
+<style>
+:root { --blue:#1a73e8; --green:#1e8e3e; --red:#c5221f; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa;}
+body { font-family: "PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink);
+font-size:22px; line-height:1.7; margin:0; padding:24px;}
+#wrap { max-width:900px; margin:0 auto;}
+h1 { font-size:32px; margin:0 0 16px;}
+.card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px 24px; margin-bottom:20px;}
+.row { display:flex; gap:16px; margin:12px 0; flex-wrap:wrap;}
+button.big { font-size:22px; padding:14px 36px; border-radius:14px; border:0; background:var(--blue); color:#fff; cursor:pointer;}
+button.big:disabled { background:#bdc1c6; cursor:default;}
+.ok { color:var(--green); font-weight:700;}.no { color:var(--red); font-weight:700;}
+#status { background:#fef7e0; border:1px solid #f9ab00; border-radius:12px; padding:12px 16px; margin:12px 0; display:none;}
+#recinfo li { margin-bottom:4px;}
+#player { width:100%; margin-top:12px;}
+#report { width:100%; font-size:18px; border:2px solid var(--line); border-radius:12px; padding:12px;
+font-family: "PingFang SC","Microsoft YaHei",sans-serif;}
+.hint { color:var(--muted); font-size:18px;}
+</style>
+</head>
+<body>
+<div id="wrap">
+<h1>录音能力测试（内部工具）</h1>
+<p class="hint">给测试人员看的页面：先点 1 检查设备，再点 2 试录 5 秒，最后点 3 生成报告发回。学生用不到。</p>
+<div class="card">
+<div class="row"><button class="big" id="btnCheck">1. 检查设备支持</button></div>
+<div id="caps"><span class="hint">还没检查，点上面的按钮。</span></div>
+</div>
+<div class="card">
+<div class="row"><button class="big" id="btnRec" disabled>2. 开始试录 5 秒</button></div>
+<div id="status"></div>
+<div id="recinfo"></div>
+<audio id="player" controls style="display:none"></audio>
+</div>
+<div class="card">
+<div class="row"><button class="big" id="btnReport">3. 复制报告</button></div>
+<textarea id="report" rows="12" readonly placeholder="点上面的按钮生成文本报告，报告会自动选中，长按选择“复制”发回。"></textarea>
+</div>
+</div>
+<script>
+(function () {
+'use strict';
+var btnCheck = document.getElementById('btnCheck');
+var btnRec = document.getElementById('btnRec');
+var btnReport = document.getElementById('btnReport');
+var caps = document.getElementById('caps');
+var status = document.getElementById('status');
+var recinfo = document.getElementById('recinfo');
+var player = document.getElementById('player');
+var reportBox = document.getElementById('report');
+
+var gumOk = false, mrOk = false;
+var support = { 'audio/webm': false, 'audio/mp4': false, 'audio/ogg': false};
+var lastMime = '', lastSize = 0, lastType = '', lastErr = '';
+
+function esc(s) {
+return String(s == null? '': s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function say(html) { status.style.display = 'block'; status.innerHTML = html;}
+function mark(ok) { return ok? '<span class="ok">支持</span>': '<span class="no">不支持</span>';}
+function stopStream(stream) {
+try { stream.getTracks().forEach(function (t) { t.stop();});} catch (e) {}
+}
+
+// 1. 能力检查：只读探测，不申请麦克风
+btnCheck.addEventListener('click', function () {
+gumOk =!!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+mrOk = (typeof window.MediaRecorder!== 'undefined');
+var types = ['audio/webm', 'audio/mp4', 'audio/ogg'];
+var html = '<p>浏览器：' + esc(navigator.userAgent) + '</p><ul>' +
+'<li>麦克风接口 getUserMedia：' + mark(gumOk) + '</li>' +
+'<li>录音器 MediaRecorder：' + mark(mrOk) + '</li>';
+for (var i = 0; i < types.length; i++) {
+var t = types[i], sup = false;
+if (mrOk) { try { sup = window.MediaRecorder.isTypeSupported(t);} catch (e) { sup = false;}}
+support[t] = sup;
+html += '<li>' + esc(t) + '：' + mark(sup) + '</li>';
+}
+html += '</ul>';
+if (!gumOk ||!mrOk) {
+html += '<p class="no">这台设备不支持录音，听说模块请用文本方式，不用再试录音了。</p>';
+}
+caps.innerHTML = html;
+btnRec.disabled =!(gumOk && mrOk);
+});
+
+// 2. 试录 5 秒
+btnRec.addEventListener('click', function () {
+btnRec.disabled = true;
+recinfo.innerHTML = '';
+player.style.display = 'none';
+say('正在请求麦克风权限…（浏览器可能会弹授权框，点“允许”）');
+navigator.mediaDevices.getUserMedia({ audio: true}).then(function (stream) {
+var mime = '', types = ['audio/webm', 'audio/mp4', 'audio/ogg'];
+for (var i = 0; i < types.length; i++) {
+if (support[types[i]]) { mime = types[i]; break;}
+}
+var rec;
+try {
+rec = mime? new window.MediaRecorder(stream, { mimeType: mime})
+: new window.MediaRecorder(stream);
+} catch (e) {
+stopStream(stream);
+lastErr = 'MediaRecorder 建不起来';
+say('<span class="no">这台设备建不起录音器，听说模块请用文本方式。</span>');
+btnRec.disabled = false;
+return;
+}
+var chunks = [];
+rec.ondataavailable = function (ev) { if (ev.data && ev.data.size > 0) chunks.push(ev.data);};
+rec.onstop = function () {
+var t = '';
+try { t = rec.mimeType || '';} catch (e) {}
+if (!t && chunks.length > 0) t = chunks[0].type || '';
+var blob = new Blob(chunks, { type: t});
+lastMime = t; lastSize = blob.size; lastType = blob.type; lastErr = '';
+player.src = URL.createObjectURL(blob);
+player.style.display = 'block';
+recinfo.innerHTML = '<p>录好了，点播放听一下，能听清就说明录音可用。</p><ul>' +
+'<li>大小：' + blob.size + ' 字节（约 ' + Math.round(blob.size / 1024) + ' KB）</li>' +
+'<li>类型：' + esc(t || '（浏览器没告诉类型）') + '</li></ul>';
+say('录音完成。');
+stopStream(stream);
+btnRec.disabled = false;
+btnRec.textContent = '再录一次（5 秒）';
+};
+rec.onerror = function () {
+stopStream(stream);
+lastErr = '录音中出错';
+say('<span class="no">录到一半出错了，听说模块请用文本方式。</span>');
+btnRec.disabled = false;
+};
+try { rec.start();}
+catch (e) {
+stopStream(stream);
+lastErr = '录音启动失败';
+say('<span class="no">录音启动失败，听说模块请用文本方式。</span>');
+btnRec.disabled = false;
+return;
+}
+say('正在录音…对着麦克风说句话，5 秒后自动停。');
+setTimeout(function () { try { rec.stop();} catch (e) {}}, 5000);
+}).catch(function (e) {
+var n = (e && e.name)? String(e.name): '';
+var msg;
+if (n === 'NotAllowedError' || n === 'SecurityError') msg = '麦克风权限被拒绝了：在浏览器设置里允许使用麦克风后再试，或听说模块用文本方式。';
+else if (n === 'NotFoundError' || n === 'OverconstrainedError') msg = '没找到麦克风：检查设备有没有麦克风，听说模块请用文本方式。';
+else if (n === 'NotReadableError') msg = '麦克风正被别的程序占用：关掉占用它的程序再试。';
+else msg = '麦克风打不开（' + n + '），听说模块请用文本方式。';
+lastErr = n || 'getUserMedia 失败';
+say('<span class="no">' + esc(msg) + '</span>');
+btnRec.disabled = false;
+});
+});
+
+// 3. 生成文本报告（选中后手动复制）
+btnReport.addEventListener('click', function () {
+var conclusion = '请用文本降级';
+if (gumOk && mrOk) conclusion = lastSize > 0? '可用录音': '支持但未试录';
+var lines = [
+'',
+'UA: ' + navigator.userAgent,
+'getUserMedia: ' + (gumOk? '支持': '不支持'),
+'MediaRecorder: ' + (mrOk? '支持': '不支持'),
+'audio/webm: ' + (support['audio/webm']? '支持': '不支持'),
+'audio/mp4: ' + (support['audio/mp4']? '支持': '不支持'),
+'audio/ogg: ' + (support['audio/ogg']? '支持': '不支持'),
+'试录 mimeType: ' + (lastMime || '未试录'),
+'试录大小: ' + lastSize + ' 字节',
+'试录类型: ' + (lastType || '未试录'),
+];
+if (lastErr) lines.push('出错: ' + lastErr);
+lines.push('结论: ' + conclusion);
+reportBox.value = lines.join('\n');
+try { reportBox.select();} catch (e) {}
+say('报告已生成并选中，长按选择“复制”发回。');
+});
+})();
+</script>
+</body>
+</html>

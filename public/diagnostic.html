@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="/client-error.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小禾英语 · 新人能力检测</title>
+<style>
+  :root { --blue:#1a73e8; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa; }
+  * { box-sizing:border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); font-size:22px; line-height:1.7; margin:0; }
+  #topbar { position:sticky; top:0; background:#fff; border-bottom:1px solid var(--line); padding:12px 20px; display:flex; align-items:center; gap:16px; }
+  #brand { font-weight:700; font-size:24px; }
+  #stepind { color:var(--muted); font-size:18px; margin-left:auto; }
+  #wrap { max-width:900px; margin:0 auto; padding:24px 20px 120px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; margin-bottom:20px; }
+  .kicker { display:inline-block; font-size:17px; color:#fff; background:#8e24aa; border-radius:8px; padding:4px 14px; margin-bottom:8px; }
+  h2.stem { font-size:26px; margin:4px 0 16px; }
+  .teachtext p { margin:0 0 10px; }
+  .opt { display:block; width:100%; text-align:left; font-size:22px; padding:14px 18px; margin:8px 0;
+         border:2px solid var(--line); border-radius:12px; background:#fff; cursor:pointer; }
+  .opt:hover { border-color:var(--blue); }
+  .opt:disabled { opacity:0.6; cursor:default; }
+  #answer-input { width:100%; font-size:22px; padding:14px; border:2px solid var(--line); border-radius:12px; margin:10px 0; }
+  .btn { font-size:22px; padding:14px 32px; border-radius:12px; border:0; cursor:pointer; margin:6px 8px 6px 0; }
+  .btn-primary { background:var(--blue); color:#fff; }
+  .btn-giveup { background:#fff; color:var(--muted); border:2px solid var(--line); }
+  .btn:disabled { opacity:0.5; }
+  #ack { display:none; background:#e8f5e9; border-radius:12px; padding:16px 20px; margin:16px 0; font-size:22px; }
+  .reading-pane pre { font-family:Georgia,serif; font-size:21px; line-height:1.8; white-space:pre-wrap;
+                      background:#fffdf5; border:2px dashed #f9ab00; border-radius:12px; padding:14px 18px; }
+  #section-nav { display:flex; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+  .sec-btn { font-size:20px; padding:12px 24px; border-radius:12px; border:2px solid var(--line); background:#fff; cursor:pointer; }
+  .sec-btn.active { border-color:var(--blue); color:var(--blue); font-weight:700; }
+  .sec-btn.done { background:#e8f5e9; border-color:#1e8e3e; }
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div id="brand">小禾广播站 <small style="font-size:15px;color:var(--muted)">新人能力检测</small></div>
+  <div id="stepind"></div>
+</div>
+<div id="wrap">
+  <div id="section-nav"></div>
+  <div id="content"></div>
+  <div id="ack">收到，下一题。</div>
+</div>
+<script>
+const qs = new URLSearchParams(location.search);
+let FORM = (qs.get('form') || 'A').toUpperCase();
+let SECTION = parseInt(qs.get('section') || '1', 10);
+let SESSION_ID = null;
+let STEPS = [];
+let IDX = 0;
+
+async function api(path, opts) {
+  const r = await fetch(path, { ...opts, headers: { 'Content-Type': 'application/json', ...((opts && opts.headers) || {}) } });
+  return r.json();
+}
+
+async function loadSection(form, section) {
+  FORM = form; SECTION = section; IDX = 0;
+  const d = await api(`/api/diagnostic?form=${form}&section=${section}`);
+  if (!d.ok) { document.getElementById('content').innerHTML = '<div class="card">加载失败：' + d.error + '</div>'; return; }
+  SESSION_ID = d.session_id;
+  STEPS = d.steps;
+  renderNav();
+  renderStep();
+}
+
+function renderNav() {
+  const nav = document.getElementById('section-nav');
+  nav.innerHTML = '';
+  const names = {1:'一：单词·语音·语法', 2:'二：阅读·听力', 3:'三：写句子·朗读'};
+  for (let s = 1; s <= 3; s++) {
+    const b = document.createElement('button');
+    b.className = 'sec-btn' + (s === SECTION ? ' active' : '');
+    b.textContent = names[s];
+    b.onclick = () => loadSection(FORM, s);
+    nav.appendChild(b);
+  }
+  // A/B 卷切换
+  const fb = document.createElement('button');
+  fb.className = 'sec-btn';
+  fb.textContent = '切换' + (FORM === 'A' ? 'B卷' : 'A卷');
+  fb.onclick = () => loadSection(FORM === 'A' ? 'B' : 'A', 1);
+  nav.appendChild(fb);
+}
+
+function renderStep() {
+  document.getElementById('ack').style.display = 'none';
+  const c = document.getElementById('content');
+  if (IDX >= STEPS.length) {
+    c.innerHTML = '<div class="card"><div class="kicker">完成</div><h2 class="stem">这一部分做完了！</h2><div class="teachtext"><p>收到！休息一下，准备好了再做下一部分。</p></div><button class="btn btn-primary" onclick="nextSection()">下一部分</button></div>';
+    document.getElementById('stepind').textContent = '';
+    return;
+  }
+  const s = STEPS[IDX];
+  document.getElementById('stepind').textContent = `第 ${IDX+1} / ${STEPS.length} 题`;
+  let html = '<div class="card">';
+  if (s.kind === 'teach') {
+    html += `<div class="kicker">广播站</div><h2 class="stem">${esc(s.title)}</h2><div class="teachtext">${s.teach_html}</div>`;
+    html += `<button class="btn btn-primary" onclick="next()">继续</button>`;
+  } else if (s.kind === 'mcq') {
+    html += `<div class="kicker">检测</div><h2 class="stem">${esc(s.stem)}</h2>`;
+    s.options.forEach((o, i) => {
+      const letter = String.fromCharCode(65 + i);
+      html += `<button class="opt" data-a="${letter}" onclick="submitMcq('${letter}', this)">${esc(o)}</button>`;
+    });
+    html += `<div style="margin-top:16px"><button class="btn btn-giveup" onclick="giveUp()">这个我不会</button></div>`;
+  } else if (s.kind === 'short') {
+    html += `<div class="kicker">检测</div><h2 class="stem">${esc(s.stem)}</h2>`;
+    if (s.task) html += `<div class="teachtext"><p>${esc(s.task)}</p></div>`;
+    html += `<input id="answer-input" placeholder="在这里写下你的答案">`;
+    html += `<div><button class="btn btn-primary" onclick="submitShort()">提交</button>`;
+    html += `<button class="btn btn-giveup" onclick="giveUp()">这个我不会</button></div>`;
+  } else if (s.kind === 'read_aloud') {
+    html += `<div class="kicker">朗读</div><h2 class="stem">请朗读下面的句子</h2>`;
+    html += `<div class="teachtext"><p style="font-size:24px">${esc(s.text)}</p><p style="color:var(--muted)">如果麦克风不可用，会自动跳过，不影响其他部分。</p></div>`;
+    html += `<div id="mic-status" style="color:var(--muted);margin:10px 0">正在检查麦克风…</div>`;
+    html += `<button class="btn btn-primary" id="btn-skip-read" onclick="skipReadAloud()">跳过</button>`;
+    setTimeout(checkMic, 100);
+  }
+  html += '</div>';
+  c.innerHTML = html;
+}
+
+function esc(t) { return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+async function submitMcq(letter, btn) {
+  document.querySelectorAll('.opt').forEach(b => b.disabled = true);
+  await api('/api/diagnostic/answer', {
+    method: 'POST',
+    body: JSON.stringify({ session_id: SESSION_ID, step: STEPS[IDX].step, answer: letter })
+  });
+  showAck();
+}
+
+async function submitShort() {
+  const v = document.getElementById('answer-input').value;
+  document.querySelectorAll('.btn').forEach(b => b.disabled = true);
+  await api('/api/diagnostic/answer', {
+    method: 'POST',
+    body: JSON.stringify({ session_id: SESSION_ID, step: STEPS[IDX].step, answer: v })
+  });
+  showAck();
+}
+
+async function giveUp() {
+  document.querySelectorAll('.btn,.opt').forEach(b => b.disabled = true);
+  await api('/api/diagnostic/answer', {
+    method: 'POST',
+    body: JSON.stringify({ session_id: SESSION_ID, step: STEPS[IDX].step, gave_up: true })
+  });
+  showAck();
+}
+
+function showAck() {
+  // 诊断规则：不显示对错，只说"收到，下一题"
+  document.getElementById('ack').style.display = 'block';
+  setTimeout(() => { IDX++; renderStep(); }, 1200);
+}
+
+// 朗读容错（总指挥2026-10-03）：麦克风不可用或失败时自动跳过，标"没测到"，绝不卡住
+async function checkMic() {
+  const st = document.getElementById('mic-status');
+  try {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw new Error('no mic api');
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    stream.getTracks().forEach(t => t.stop());
+    if (st) st.textContent = '麦克风可用。读完后点"跳过"继续。';
+  } catch (e) {
+    // 麦克风不可用：自动跳过，标为没测到
+    if (st) st.textContent = '麦克风不可用，已自动跳过。';
+    setTimeout(() => skipReadAloud(true), 800);
+  }
+}
+
+async function skipReadAloud(auto) {
+  await api('/api/diagnostic/answer', {
+    method: 'POST',
+    body: JSON.stringify({ session_id: SESSION_ID, step: STEPS[IDX].step, not_tested: true })
+  });
+  IDX++; renderStep();
+}
+
+function next() { IDX++; renderStep(); }
+function nextSection() {
+  // 标记本段完成，然后直接进课程（总指挥2026-10-03：做完诊断直接接着上课）
+  api('/api/diagnostic/complete', {
+    method: 'POST',
+    body: JSON.stringify({ session_id: SESSION_ID })
+  }).then(() => {
+    location.href = '/';
+  });
+}
+
+try { loadSection(FORM, SECTION); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
+</script>
+</body>
+</html>
