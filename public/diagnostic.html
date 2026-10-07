@@ -102,14 +102,14 @@ function renderStep() {
     html += `<div class="kicker">广播站</div><h2 class="stem">${esc(s.title)}</h2><div class="teachtext">${s.teach_html}</div>`;
     html += `<button class="btn btn-primary" onclick="next()">继续</button>`;
   } else if (s.kind === 'mcq') {
-    html += `<div class="kicker">检测</div><h2 class="stem">${esc(s.stem)}</h2>`;
+    html += `<div class="kicker">检测</div><h2 class="stem">${escStem(s.stem)}</h2>`;
     s.options.forEach((o, i) => {
       const letter = String.fromCharCode(65 + i);
       html += `<button class="opt" data-a="${letter}" onclick="submitMcq('${letter}', this)">${esc(o)}</button>`;
     });
     html += `<div style="margin-top:16px"><button class="btn btn-giveup" onclick="giveUp()">这个我不会</button></div>`;
   } else if (s.kind === 'short') {
-    html += `<div class="kicker">检测</div><h2 class="stem">${esc(s.stem)}</h2>`;
+    html += `<div class="kicker">检测</div><h2 class="stem">${escStem(s.stem)}</h2>`;
     if (s.task) html += `<div class="teachtext"><p>${esc(s.task)}</p></div>`;
     html += `<input id="answer-input" placeholder="在这里写下你的答案">`;
     html += `<div><button class="btn btn-primary" onclick="submitShort()">提交</button>`;
@@ -126,6 +126,8 @@ function renderStep() {
 }
 
 function esc(t) { return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+// 题干允许 <u> 下划线标签（用于标音题）
+function escStem(t) { return esc(t).replace(/&lt;u&gt;/g,'<u>').replace(/&lt;\/u&gt;/g,'</u>'); }
 
 async function submitMcq(letter, btn) {
   document.querySelectorAll('.opt').forEach(b => b.disabled = true);
