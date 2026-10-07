@@ -120,6 +120,7 @@
 </head>
 <body>
 <div id="topbar" style="display:none">
+  <button id="btnBack" onclick="location.href='/'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">← 课程</button>
   <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
   <div id="player">
     <button id="btnPlay" class="paused" aria-label="播放"></button>
@@ -226,6 +227,19 @@ function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60
 // playbackRate 是 C10 清单外的新 DOM 属性（待练习场真机验证）：设倍速失败一律静默回退
 // 到正常速度播放，绝不能因为这个按钮挡住上课。
 function setRate(r) { try { au.playbackRate = r; } catch (e) {} }
+// TTS 兜底：音频文件不存在时用浏览器朗读
+let currentTtsText = '';
+function speakTts(text) {
+  try {
+    if (!('speechSynthesis' in window)) return false;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'zh-CN';
+    u.rate = 0.9;
+    speechSynthesis.speak(u);
+    return true;
+  } catch (e) { return false; }
+}
 function setAudio(audioId) {
   au.pause();
   setRate(1);
@@ -233,8 +247,15 @@ function setAudio(audioId) {
   $('player').style.display = '';
   au.src = '/audio/' + LID + '/' + audioId + '.mp3';
   btnPlay.className = 'paused';
+  // 音频加载失败时尝试 TTS
+  au.onerror = () => { if (currentTtsText) speakTts(currentTtsText); };
   au.play().then(() => { btnPlay.className = 'playing'; $('bigplay').classList.remove('show'); })
-    .catch(() => { $('bigplay').classList.add('show'); }); // 被拦截：显示大播放按钮
+    .catch(() => { 
+      // 播放被拦截或失败：先试 TTS，再显示大播放按钮
+      if (currentTtsText && !speakTts(currentTtsText)) {
+        $('bigplay').classList.add('show');
+      }
+    });
 }
 btnPlay.onclick = () => { if (au.paused) { setRate(1); au.play().catch(() => {}); } else au.pause(); };
 $('btnBig').onclick = () => { $('bigplay').classList.remove('show'); setRate(1); au.play().catch(() => {}); };
@@ -398,6 +419,13 @@ function renderStep() {
   const reviewed = !!(s && s.item_id && doneSet[s.item_id]); // 后退回看已终局的题：只读回顾，不可重答
   topbar.style.display = 'flex';
   $('stepind').textContent = `第 ${s.step} 步 / 共 ${arr[arr.length - 1].step} 步`;
+  // 提取纯文本供 TTS 兜底用
+  try {
+    const rawHtml = s.teach_html || s.stem || s.title || '';
+    const div = document.createElement('div');
+    div.innerHTML = rawHtml;
+    currentTtsText = (div.textContent || div.innerText || '').trim().slice(0, 500);
+  } catch (e) { currentTtsText = ''; }
   setAudio(s.audio_id);
   let html = '';
   if (s.kind === 'teach') {
