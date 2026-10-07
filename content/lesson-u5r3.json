@@ -1,0 +1,759 @@
+{
+  "lesson_id": "u5r3",
+  "practice_end": 24,
+  "home_subtitle": "第三课 · 刚做完",
+  "part1_desc": "第 1–24 步：跟站长学 just、already、yet，分清完成时和过去时。",
+  "part2_desc": "第 25–36 步：独立看第二周记录，用 just/already/yet 和时态判断。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：just/already/yet、现在完成时与一般过去时的区别、for/since。Unit 5 Educational exchanges 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-story-01",
+      "title": "交换生第一周",
+      "teach_html": "<p>交换生来了一周了。站长说：这期咱们聊聊他们<strong>第一周</strong>都干了啥。</p><p>小林说：“我<strong>刚</strong>参观完学校。”安娜说：“我<strong>已经</strong>交到新朋友了。”汤姆说：“我<strong>还没</strong>吃过饺子。”</p><p>“刚刚”“已经”“还没”，英文里有三个小词：<strong>just、already、yet</strong>。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t01",
+      "title": "just：刚刚",
+      "teach_html": "<p><strong>just</strong> 表示“刚刚”，放在 have/has 和过去分词之间：</p><p>I have <strong>just</strong> arrived.（我刚到。）</p><p>记住位置：<strong>have + just + 过去分词</strong>。</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t02",
+      "title": "already：已经",
+      "teach_html": "<p><strong>already</strong> 表示“已经”，用在<strong>肯定句</strong>里，位置和 just 一样：</p><p>She has <strong>already</strong> finished.（她已经做完了。）</p><p>记住：<strong>have + already + 过去分词</strong>。</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t03",
+      "title": "yet：还没",
+      "teach_html": "<p><strong>yet</strong> 用在<strong>否定句末尾</strong>，表示“还没”：</p><p>I <strong>haven't</strong> finished <strong>yet</strong>.（我还没做完。）</p><p>记住：<strong>haven't + 过去分词 + yet</strong>，yet 放最后。</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t04",
+      "title": "yet：已经（疑问）",
+      "teach_html": "<p><strong>yet</strong> 用在<strong>疑问句末尾</strong>，表示“已经……了吗”：</p><p><strong>Have</strong> you finished <strong>yet</strong>?（你做完了吗？）</p><p>对比：否定句 yet = 还没；疑问句 yet = 已经了吗。看句子来定。</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t05",
+      "title": "完成时 vs 过去时",
+      "teach_html": "<p>注意区分：<strong>现在完成时</strong>说经历，不说具体时间；<strong>一般过去时</strong>说具体过去时间的事。</p><p>I <strong>have been</strong> to Beijing.（我去过北京——经历）</p><p>I <strong>went</strong> to Beijing <strong>last year</strong>.（我去年去了北京——具体时间）</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t06",
+      "title": "时间标志词",
+      "teach_html": "<p>看到这些词，用<strong>现在完成时</strong>：already、yet、just、ever、never。</p><p>看到这些词，用<strong>一般过去时</strong>：yesterday、last week、in 2020（具体过去时间）。</p><p>比如：I <strong>went</strong> there <strong>yesterday</strong>.（昨天去的，用过去时。）</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t07",
+      "title": "for 和 since",
+      "teach_html": "<p>说“持续多久”，用 <strong>for + 一段时间</strong>：for two years（两年了）。</p><p>说“从何时起”，用 <strong>since + 过去时间点</strong>：since 2020（从2020年起）。</p><p>I have learned English <strong>for</strong> three years. / <strong>since</strong> 2021.</p>"
+    },
+    {
+      "step": 9,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r3-t08",
+      "title": "小结",
+      "teach_html": "<p>小结：<strong>just/already</strong> 放 have 后面；<strong>yet</strong> 放否定句末（还没）或疑问句末（了吗）；有具体过去时间用过去时。</p><p>下面站长带着你练。资料卡在上面，做题时对照着看。</p>"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u5r3-prac-01",
+      "title": "先看资料",
+      "teach_html": "<p>这是第一周记录。做题时对照着看：李明—刚到学校—已经认识安娜；安娜—已参观图书馆—还没吃饺子；汤姆—昨天去了公园。</p><p>下面练 just/already/yet。</p>",
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q01",
+      "title": "刚到",
+      "scene": "李明刚到学校。",
+      "stem": "Li Ming has ______ arrived at school.",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "ever"
+      ],
+      "answer": "C",
+      "help": "“刚刚”用什么？",
+      "explain": "Li Ming has just arrived at school.",
+      "wrong_feedback": {
+        "A": "already 是“已经”，这里“刚刚”用 just。",
+        "B": "yet 放句末，这里用 just。",
+        "D": "ever 是“曾经”，这里用 just。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q02",
+      "title": "已经认识",
+      "scene": "李明已经认识安娜了。",
+      "stem": "Li Ming has ______ met Anna.",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "never"
+      ],
+      "answer": "A",
+      "help": "肯定句里“已经”用什么？",
+      "explain": "Li Ming has already met Anna.",
+      "wrong_feedback": {
+        "B": "yet 一般不放肯定句中间，这里用 already。",
+        "C": "just 是“刚刚”，这里“已经”用 already。",
+        "D": "never 是“从不”，意思不对。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q03",
+      "title": "还没吃",
+      "scene": "安娜还没吃饺子。",
+      "stem": "Anna hasn't eaten dumplings ______.",
+      "options": [
+        "already",
+        "just",
+        "ever",
+        "yet"
+      ],
+      "answer": "D",
+      "help": "否定句末尾“还没”用什么？",
+      "explain": "Anna hasn't eaten dumplings yet.",
+      "wrong_feedback": {
+        "A": "already 不放否定句末，这里用 yet。",
+        "B": "just 放 have 后面，这里句末用 yet。",
+        "C": "ever 是“曾经”，这里用 yet。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q04",
+      "title": "参观完了吗",
+      "scene": "问她参观完图书馆了吗。",
+      "stem": "Has she visited the library ______?",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "never"
+      ],
+      "answer": "B",
+      "help": "疑问句末尾“了吗”用什么？",
+      "explain": "Has she visited the library yet?",
+      "wrong_feedback": {
+        "A": "already 不放疑问句末，这里用 yet。",
+        "C": "just 放 have 后面，这里句末用 yet。",
+        "D": "never 是“从不”，意思不对。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q05",
+      "title": "昨天去了",
+      "scene": "汤姆昨天去了公园。",
+      "stem": "Tom ______ to the park yesterday.",
+      "options": [
+        "has gone",
+        "have gone",
+        "went",
+        "goes"
+      ],
+      "answer": "C",
+      "help": "yesterday 用什么时态？",
+      "explain": "Tom went to the park yesterday.",
+      "wrong_feedback": {
+        "A": "yesterday 是具体过去时间，用过去时 went，不用完成时。",
+        "B": "同上，用过去时；而且主语是 Tom，不用 have。",
+        "D": "goes 是现在时，不对。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q06",
+      "title": "去过",
+      "scene": "他去过北京。（无具体时间）",
+      "stem": "He ______ been to Beijing.",
+      "options": [
+        "goes",
+        "went",
+        "going",
+        "has gone"
+      ],
+      "answer": "D",
+      "help": "说经历，不说具体时间，用什么？",
+      "explain": "He has been to Beijing.",
+      "wrong_feedback": {
+        "A": "goes 是现在时，不对。",
+        "B": "went 是过去时，这里说经历用完成时。",
+        "C": "going 是现在分词，不对。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q07",
+      "title": "三年了",
+      "scene": "他学英语三年了。",
+      "stem": "He has learned English ______ three years.",
+      "options": [
+        "for",
+        "since",
+        "in",
+        "at"
+      ],
+      "answer": "A",
+      "help": "“一段时间”用什么？",
+      "explain": "He has learned English for three years.",
+      "wrong_feedback": {
+        "B": "since 后面跟过去时间点，这里“三年”是段时间，用 for。",
+        "C": "in 不这样用。",
+        "D": "at 不这样用。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q08",
+      "title": "从2020年起",
+      "scene": "他从2020年起住这儿。",
+      "stem": "He has lived here ______ 2020.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "answer": "B",
+      "help": "“过去时间点”用什么？",
+      "explain": "He has lived here since 2020.",
+      "wrong_feedback": {
+        "A": "for 后面跟一段时间，这里 2020 是时间点，用 since。",
+        "C": "from 不和完成时这样搭配。",
+        "D": "in 2020 是“在2020年”，不表“从……起”。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r3-q09",
+      "title": "刚吃完",
+      "scene": "我刚吃完饭。",
+      "stem": "I have ______ eaten lunch.",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "ever"
+      ],
+      "answer": "C",
+      "help": "“刚刚”用什么？",
+      "explain": "I have just eaten lunch.",
+      "wrong_feedback": {
+        "A": "already 是“已经”，这里“刚刚”用 just。",
+        "B": "yet 放句末，这里用 just。",
+        "D": "ever 是“曾经”，这里用 just。"
+      },
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r3-q10",
+      "title": "写出过去分词：finish",
+      "scene": "把 finish 变成过去分词。",
+      "stem": "写出 finish 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "finished",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "finished"
+          ],
+          "cn": [
+            "完成（过去分词）"
+          ]
+        }
+      ],
+      "help": "规则加 ed。",
+      "explain": "finish → finished。",
+      "common_errors": [
+        {
+          "when": "写了 finishing",
+          "say": "finishing 是现在分词，过去分词是 finished。"
+        }
+      ],
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r3-q11",
+      "title": "just 还是 yet",
+      "scene": "我还没做完。",
+      "stem": "I haven't finished ___.",
+      "task": "只写一个英文单词。",
+      "answer_text": "yet",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "yet"
+          ],
+          "cn": [
+            "（还没）"
+          ]
+        }
+      ],
+      "help": "否定句末尾用什么？",
+      "explain": "I haven't finished yet.",
+      "common_errors": [
+        {
+          "when": "写了 already",
+          "say": "already 不放否定句末，用 yet。"
+        }
+      ],
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r3-q12",
+      "title": "just 还是 already",
+      "scene": "我已经做完了。",
+      "stem": "I have ___ finished.",
+      "task": "只写一个英文单词。",
+      "answer_text": "already",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "already"
+          ],
+          "cn": [
+            "（已经）"
+          ]
+        }
+      ],
+      "help": "肯定句里“已经”用什么？",
+      "explain": "I have already finished.",
+      "common_errors": [
+        {
+          "when": "写了 yet",
+          "say": "yet 不放肯定句中间，用 already。"
+        }
+      ],
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r3-q13",
+      "title": "写出过去分词：write",
+      "scene": "把 write 变成过去分词。",
+      "stem": "写出 write 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "written",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "written"
+          ],
+          "cn": [
+            "写（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "write → written。",
+      "common_errors": [
+        {
+          "when": "写了 wrote",
+          "say": "wrote 是过去式，过去分词是 written。"
+        }
+      ],
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 24,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r3-q14",
+      "title": "过去时",
+      "scene": "他昨天去了上海。",
+      "stem": "He ___ to Shanghai yesterday.",
+      "task": "只写一个英文单词。",
+      "answer_text": "went",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "went"
+          ],
+          "cn": [
+            "（过去式）"
+          ]
+        }
+      ],
+      "help": "yesterday 用什么时态？",
+      "explain": "He went to Shanghai yesterday.",
+      "common_errors": [
+        {
+          "when": "写了 has gone",
+          "say": "yesterday 是具体过去时间，用过去时 went。"
+        }
+      ],
+      "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r3-v-intro",
+      "title": "新任务：独立判断",
+      "teach_html": "<p>新任务：这是<strong>第二周</strong>的记录——小梅、杰克、莉莉。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>just/already</strong> 放 have 后面；<strong>yet</strong> 放否定句末或疑问句末；具体过去时间用过去时。</p>",
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r3-v01",
+      "title": "刚加入",
+      "scene": "小梅刚加入俱乐部。",
+      "stem": "Mei has ______ joined the club.",
+      "options": [
+        "already",
+        "just",
+        "yet",
+        "ever"
+      ],
+      "answer": "B",
+      "help": "“刚刚”。",
+      "explain": "Mei has just joined the club.",
+      "wrong_feedback": {
+        "A": "再想想意思。",
+        "C": "再想想位置。",
+        "D": "再想想意思。"
+      },
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r3-v02",
+      "title": "已经交朋友",
+      "scene": "小梅已经交到朋友了。",
+      "stem": "Mei has ______ made friends.",
+      "options": [
+        "yet",
+        "just",
+        "never",
+        "already"
+      ],
+      "answer": "D",
+      "help": "肯定句“已经”。",
+      "explain": "Mei has already made friends.",
+      "wrong_feedback": {
+        "A": "再想想位置。",
+        "B": "再想想意思。",
+        "C": "再想想意思。"
+      },
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r3-v03",
+      "title": "还没尝",
+      "scene": "杰克还没尝过面条。",
+      "stem": "Jack hasn't tried noodles ______.",
+      "options": [
+        "yet",
+        "already",
+        "just",
+        "ever"
+      ],
+      "answer": "A",
+      "help": "否定句末尾。",
+      "explain": "Jack hasn't tried noodles yet.",
+      "wrong_feedback": {
+        "B": "再想想位置。",
+        "C": "再想想位置。",
+        "D": "再想想意思。"
+      },
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r3-v04",
+      "title": "上周日去了",
+      "scene": "杰克上周日去了博物馆。",
+      "stem": "Jack ______ to the museum last Sunday.",
+      "options": [
+        "has gone",
+        "have gone",
+        "went",
+        "goes"
+      ],
+      "answer": "C",
+      "help": "具体过去时间。",
+      "explain": "Jack went to the museum last Sunday.",
+      "wrong_feedback": {
+        "A": "再想想时态。",
+        "B": "再想想时态和主语。",
+        "D": "再想想时态。"
+      },
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r3-v05",
+      "title": "跳了两年",
+      "scene": "莉莉跳舞两年了。",
+      "stem": "Lily has danced ______ two years.",
+      "options": [
+        "since",
+        "for",
+        "in",
+        "at"
+      ],
+      "answer": "B",
+      "help": "一段时间。",
+      "explain": "Lily has danced for two years.",
+      "wrong_feedback": {
+        "A": "再想想 for 和 since。",
+        "C": "再想想搭配。",
+        "D": "再想想搭配。"
+      },
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r3-v06",
+      "title": "从2023年起",
+      "scene": "莉莉从2023年起跳舞。",
+      "stem": "Lily has danced ______ 2023.",
+      "options": [
+        "for",
+        "from",
+        "in",
+        "since"
+      ],
+      "answer": "D",
+      "help": "过去时间点。",
+      "explain": "Lily has danced since 2023.",
+      "wrong_feedback": {
+        "A": "再想想 for 和 since。",
+        "B": "再想想搭配。",
+        "C": "再想想意思。"
+      },
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r3-v07",
+      "title": "写出过去分词：speak",
+      "scene": "把 speak 变成过去分词。",
+      "stem": "写出 speak 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "spoken",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "spoken"
+          ],
+          "cn": [
+            "说（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "speak → spoken。",
+      "common_errors": [
+        {
+          "when": "写了 spoke",
+          "say": "spoke 是过去式，过去分词是 spoken。"
+        }
+      ],
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r3-v08",
+      "title": "yet 还是 already",
+      "scene": "你做完作业了吗？",
+      "stem": "Have you finished ___?",
+      "task": "只写一个英文单词。",
+      "answer_text": "yet",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "yet"
+          ],
+          "cn": [
+            "（了吗）"
+          ]
+        }
+      ],
+      "help": "疑问句末尾。",
+      "explain": "Have you finished yet?",
+      "common_errors": [
+        {
+          "when": "写了 already",
+          "say": "疑问句末尾用 yet。"
+        }
+      ],
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r3-v09",
+      "title": "写出过去分词：break",
+      "scene": "把 break 变成过去分词。",
+      "stem": "写出 break 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "broken",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "broken"
+          ],
+          "cn": [
+            "打破（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "break → broken。",
+      "common_errors": [
+        {
+          "when": "写了 breaked",
+          "say": "break 不规则，过去分词是 broken。"
+        }
+      ],
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r3-v10",
+      "title": "过去时",
+      "scene": "她上周去了北京。",
+      "stem": "She ___ to Beijing last week.",
+      "task": "只写一个英文单词。",
+      "answer_text": "went",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "went"
+          ],
+          "cn": [
+            "（过去式）"
+          ]
+        }
+      ],
+      "help": "具体过去时间。",
+      "explain": "She went to Beijing last week.",
+      "common_errors": [
+        {
+          "when": "写了 has gone",
+          "say": "last week 用过去时 went。"
+        }
+      ],
+      "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r3-ending",
+      "title": "节目预告",
+      "teach_html": "<p>第一周、第二周都讲清楚了。站长说：just、already、yet 都会用了。</p><p>下一期，站长教你<strong>写交流日记</strong>——用现在完成时写下自己的经历。</p>"
+    }
+  ],
+  "title": "刚做完：just、already、yet",
+  "unit": "Unit 5 Educational exchanges",
+  "version": 1
+}
