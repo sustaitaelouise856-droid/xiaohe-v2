@@ -1,0 +1,87 @@
+{
+ "form": "A",
+ "section": 3,
+ "title": "新人能力检测（三）：写句子·朗读",
+ "desc": "写句子、朗读，约15分钟",
+ "steps": [
+  {
+   "kind": "teach",
+   "step": 1,
+   "title": "新人能力检测（三）",
+   "scene": "广播站",
+   "teach_html": "<p>欢迎加入<b>小禾广播站</b>！</p><p>在正式上岗前，我们想了解一下你现在的英语水平，好给你安排合适的任务。</p><p>这不是考试，没有分数。每一题答完，我们只会说“收到”，然后出下一题。</p><p>如果某题完全不会，点<b>“这个我不会”</b>跳过就好，不用猜。</p><p>第三部分：写句子和朗读，大约15分钟。</p><p>朗读部分可以录音，也可以跳过，不影响其他部分。</p>",
+   "phase": "diagnostic"
+  },
+  {
+   "kind": "short",
+   "step": 2,
+   "title": "写句子-1",
+   "scene": "检测",
+   "category": "写作",
+   "knowledge_point": "writing-1",
+   "level": 1,
+   "stem": "用 I like 写一句话。",
+   "task": "写一句话。",
+   "answer_text": "I like apples.",
+   "expects": [
+    {
+     "id": "like",
+     "type": "word",
+     "answers": [
+      "like"
+     ],
+     "cn": [
+      "喜欢"
+     ]
+    }
+   ],
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "short",
+   "step": 3,
+   "title": "写句子-2",
+   "scene": "检测",
+   "category": "写作",
+   "knowledge_point": "writing-2",
+   "level": 2,
+   "stem": "用 There is 写一句话。",
+   "task": "写一句话。",
+   "answer_text": "There is a book on the desk.",
+   "expects": [
+    {
+     "id": "there",
+     "type": "word",
+     "answers": [
+      "there is"
+     ],
+     "cn": [
+      "有"
+     ]
+    }
+   ],
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "read_aloud",
+   "step": 4,
+   "title": "朗读-1",
+   "scene": "检测",
+   "category": "朗读",
+   "knowledge_point": "readaloud-1",
+   "level": 1,
+   "text": "I like reading English books in the library.",
+   "note": "讯飞结果仅供参考，不卡关"
+  },
+  {
+   "kind": "teach",
+   "step": 5,
+   "title": "检测完成",
+   "scene": "广播站",
+   "teach_html": "<p>全部做完啦！感谢参与新人能力检测。</p><p>站长正在整理你的能力报告，稍后可以在“我的报告”里查看。</p>",
+   "phase": "diagnostic"
+  }
+ ]
+}
