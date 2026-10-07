@@ -1,0 +1,711 @@
+{
+ "lesson_id": "u4r1",
+ "practice_end": 22,
+ "home_subtitle": "第一课 · 发明初接触",
+ "part1_desc": "第 1–22 步：跟站长认识被动语态，学会 was/were + 过去分词。",
+ "part2_desc": "第 23–34 步：独立判断发明小知识，用被动语态说一说。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：被动语态肯定句、was/were 与过去分词。Unit 4 Inventions 主题。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-story-01",
+   "title": "发明特别节目",
+   "teach_html": "<p>广播站上次的电脑节目播完，听众反响很好。站长说：趁热打铁，咱们做一期<strong>发明特别节目</strong>！</p><p>第一站，先讲讲咱们中国的古代发明。你知道吗？纸、印刷术，都是中国人发明的。</p><p>节目里要说“纸是在中国被发明的”。英文里这种“被……”的说法，叫<strong>被动语态</strong>。</p>"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-story-02",
+   "title": "两张资料卡",
+   "teach_html": "<p>看这两张资料卡：</p><ul><li><strong>纸 (paper)</strong>：在中国被发明（invented in China），发明人是蔡伦（by Cai Lun），大约2000年前（about 2000 years ago）</li><li><strong>印刷术 (printing)</strong>：在古代中国被发明（invented in ancient China）</li></ul><p>先记四个词：<strong>invent</strong>（动词，发明），<strong>invention</strong>（名词，发明物），<strong>ancient</strong>（古代的），<strong>ago</strong>（以前）。</p><p>下面站长教你“被动语态”怎么说。</p>",
+   "reading": "Paper: invented in China, by Cai Lun, about 2000 years ago\nPrinting: invented in China, in ancient time"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-teach-01",
+   "title": "什么是被动语态",
+   "teach_html": "<p><strong>被动语态</strong>就是“被……”的意思。主语是动作的<strong>承受者</strong>，不是做动作的人。</p><ul><li>主动：Cai Lun <strong>invented</strong> paper.（蔡伦<strong>发明了</strong>纸。）——主语蔡伦是做动作的人</li><li>被动：Paper <strong>was invented</strong> in China.（纸<strong>在</strong>中国<strong>被发明</strong>。）——主语纸是被发明的东西</li></ul><p>讲发明的时候，我们关心的是<strong>发明物</strong>，所以多用被动语态。</p>"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-teach-02",
+   "title": "was/were + 过去分词",
+   "teach_html": "<p>过去的被动语态，公式是：<strong>was / were + 过去分词</strong></p><ul><li>主语是单数，用 <strong>was</strong>：Paper <strong>was invented</strong> in China.（纸是在中国被发明的。）</li><li>主语是复数，用 <strong>were</strong>：Cars <strong>were made</strong> in Germany.（汽车是在德国被制造的。）</li></ul><p>记住一句话：<strong>单数 was，复数 were</strong>。</p>"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-teach-03",
+   "title": "过去分词：规则变化",
+   "teach_html": "<p><strong>过去分词</strong>长什么样？规则动词的过去分词和过去式一样，就是原形加 <strong>ed</strong>：</p><ul><li>invent（发明）→ <strong>invented</strong></li><li>discover（发现）→ <strong>discovered</strong></li><li>create（创造）→ <strong>created</strong></li><li>develop（发展；研发）→ <strong>developed</strong></li><li>call（称呼）→ <strong>called</strong>（双写 l 再加 ed）</li><li>use（使用）→ <strong>used</strong></li></ul><p>所以：Paper <strong>was invented</strong> in China.</p>"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-teach-04",
+   "title": "不规则变化（一）",
+   "teach_html": "<p>有些动词的过去分词不规则，要单独记。先记两个：</p><ul><li>make（制造）→ <strong>made</strong>（不是 maked）</li><li>build（建造）→ <strong>built</strong>（不是 builded）</li></ul><p>例句：Cars <strong>were made</strong> in Germany.（汽车在德国被制造。）/ The bridge <strong>was built</strong> in 1900.（这座桥建于1900年。）</p>"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-teach-05",
+   "title": "不规则变化（二）",
+   "teach_html": "<p>再记四个常用的：</p><ul><li>write（写）→ <strong>written</strong></li><li>speak（说）→ <strong>spoken</strong></li><li>do（做）→ <strong>done</strong></li><li>find（找到）→ <strong>found</strong></li></ul><p>例句：The book <strong>was written</strong> by Lu Xun.（这本书是鲁迅写的。）/ The letter <strong>was written</strong> yesterday.（这封信是昨天写的。）</p>"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r1-teach-06",
+   "title": "说出发明人：by",
+   "teach_html": "<p>想说出是谁发明的，在句尾加 <strong>by + 人</strong>：</p><ul><li>Paper <strong>was invented by Cai Lun</strong>.（纸是蔡伦发明的。）</li><li>The telephone <strong>was invented by Bell</strong> in 1876.（电话是贝尔在1876年发明的。）</li></ul><p>不想说是谁，就不加 by，句子也完整：Paper was invented in China.</p><p>下面站长带着你练。</p>"
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u4r1-prac-01",
+   "title": "先看资料",
+   "teach_html": "<p>这是两张资料卡。做题时对照着看：纸—中国—蔡伦—约2000年前；印刷术—古代中国。</p><p>下面站长带着你练被动语态。</p>",
+   "reading": "Paper: invented in China, by Cai Lun, about 2000 years ago\nPrinting: invented in China, in ancient time"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q01",
+   "title": "纸的发明",
+   "scene": "纸是在哪被发明的？",
+   "stem": "Paper ______ invented in China.",
+   "options": [
+    "is",
+    "was",
+    "were",
+    "are"
+   ],
+   "answer": "B",
+   "help": "这是过去的事，主语 Paper 是单数。",
+   "explain": "过去的被动语态，单数主语用 was：Paper was invented in China.",
+   "wrong_feedback": {
+    "A": "is 是现在时。这里说的是过去发明的事，用 was。",
+    "C": "were 用于复数主语。Paper 是单数，用 was。",
+    "D": "are 是现在时复数。这里过去 + 单数，用 was。"
+   },
+   "reading": "Paper: invented in China, by Cai Lun, about 2000 years ago\nPrinting: invented in China, in ancient time"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q02",
+   "title": "印刷术",
+   "scene": "印刷术也是中国古代的发明。",
+   "stem": "Printing ______ invented in ancient China.",
+   "options": [
+    "were",
+    "are",
+    "was",
+    "is"
+   ],
+   "answer": "C",
+   "help": "Printing 是单数，过去的事。",
+   "explain": "Printing was invented in ancient China.",
+   "wrong_feedback": {
+    "A": "were 用于复数主语。Printing 是单数，用 was。",
+    "B": "are 是现在时。这里说过去，用 was。",
+    "D": "is 是现在时。这里说过去的事，用 was。"
+   },
+   "reading": "Paper: invented in China, by Cai Lun, about 2000 years ago\nPrinting: invented in China, in ancient time"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q03",
+   "title": "invent 的过去分词",
+   "scene": "写出正确的过去分词形式。",
+   "stem": "The past participle of \"invent\" is ______.",
+   "options": [
+    "invented",
+    "inventing",
+    "invent",
+    "invents"
+   ],
+   "answer": "A",
+   "help": "规则动词加 ed。",
+   "explain": "invent → invented。",
+   "wrong_feedback": {
+    "B": "inventing 是现在分词，不是过去分词。",
+    "C": "invent 是原形。过去分词要加 ed：invented。",
+    "D": "invents 是第三人称单数。过去分词是 invented。"
+   }
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q04",
+   "title": "make 的过去分词",
+   "scene": "不规则变化要记牢。",
+   "stem": "The past participle of \"make\" is ______.",
+   "options": [
+    "maked",
+    "makes",
+    "making",
+    "made"
+   ],
+   "answer": "D",
+   "help": "make 是不规则的，不是加 ed。",
+   "explain": "make → made。",
+   "wrong_feedback": {
+    "A": "maked 不对。make 是不规则动词，过去分词是 made。",
+    "B": "makes 是第三人称单数。要的是过去分词 made。",
+    "C": "making 是现在分词。要的是过去分词 made。"
+   }
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q05",
+   "title": "谁发明的",
+   "scene": "说出发明人蔡伦。",
+   "stem": "Paper was invented ______ Cai Lun.",
+   "options": [
+    "by",
+    "of",
+    "for",
+    "with"
+   ],
+   "answer": "A",
+   "help": "表示“由谁”用哪个介词？",
+   "explain": "by + 人，表示动作是谁做的：was invented by Cai Lun。",
+   "wrong_feedback": {
+    "B": "of 表示“……的”。这里“由蔡伦发明”用 by。",
+    "C": "for 表示“为了”。表示“由谁”用 by。",
+    "D": "with 表示“用……”。表示“由谁”用 by。"
+   },
+   "reading": "Paper: invented in China, by Cai Lun, about 2000 years ago\nPrinting: invented in China, in ancient time"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q06",
+   "title": "复数主语",
+   "scene": "纸和印刷术都是中国发明的。",
+   "stem": "Paper and printing ______ invented in China.",
+   "options": [
+    "was",
+    "is",
+    "are",
+    "were"
+   ],
+   "answer": "D",
+   "help": "主语是两者，复数；过去的事。",
+   "explain": "复数主语 + 过去，用 were。",
+   "wrong_feedback": {
+    "A": "was 用于单数。这里主语是 paper and printing，复数，用 were。",
+    "B": "is 是现在时单数。这里过去 + 复数，用 were。",
+    "C": "are 是现在时。这里说过去的事，用 were。"
+   }
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q07",
+   "title": "write 的过去分词",
+   "scene": "再记一个不规则的。",
+   "stem": "The past participle of \"write\" is ______.",
+   "options": [
+    "writed",
+    "wrote",
+    "written",
+    "writing"
+   ],
+   "answer": "C",
+   "help": "write 是不规则的。",
+   "explain": "write → written。",
+   "wrong_feedback": {
+    "A": "writed 不对。write 是不规则动词，过去分词是 written。",
+    "B": "wrote 是过去式，不是过去分词。要 written。",
+    "D": "writing 是现在分词。要的是过去分词 written。"
+   }
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r1-q08",
+   "title": "电话的发明",
+   "scene": "电话是贝尔发明的。",
+   "stem": "The telephone ______ invented by Bell in 1876.",
+   "options": [
+    "is",
+    "was",
+    "were",
+    "are"
+   ],
+   "answer": "B",
+   "help": "1876 年是过去，主语 telephone 单数。",
+   "explain": "The telephone was invented by Bell in 1876.",
+   "wrong_feedback": {
+    "A": "is 是现在时。1876 年是过去，用 was。",
+    "C": "were 用于复数。telephone 是单数，用 was。",
+    "D": "are 是现在时复数。这里过去单数，用 was。"
+   }
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r1-q09",
+   "title": "写出过去分词：invent",
+   "scene": "把 invent 变成过去分词。",
+   "stem": "写出 invent 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "invented",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "invented"
+     ],
+     "cn": [
+      "发明（过去分词）"
+     ]
+    }
+   ],
+   "help": "规则动词加 ed。",
+   "explain": "invent → invented。",
+   "common_errors": [
+    {
+     "when": "写了 inventing",
+     "say": "inventing 是现在分词。要的是过去分词 invented。"
+    }
+   ]
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r1-q10",
+   "title": "写出过去分词：discover",
+   "scene": "把 discover 变成过去分词。",
+   "stem": "写出 discover 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "discovered",
+   "expects": [
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "discovered"
+     ],
+     "cn": [
+      "发现（过去分词）"
+     ]
+    }
+   ],
+   "help": "规则动词，结尾加 ed。",
+   "explain": "discover → discovered。",
+   "common_errors": [
+    {
+     "when": "写了 discovering",
+     "say": "要的是过去分词 discovered，不是现在分词。"
+    }
+   ]
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r1-q11",
+   "title": "写出过去分词：make",
+   "scene": "不规则的要记牢。",
+   "stem": "写出 make 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "made",
+   "expects": [
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "made"
+     ],
+     "cn": [
+      "制造（过去分词）"
+     ]
+    }
+   ],
+   "help": "make 是不规则的。",
+   "explain": "make → made。",
+   "common_errors": [
+    {
+     "when": "写了 maked",
+     "say": "make 是不规则动词，没有 maked 这种说法，记住是 made。"
+    }
+   ]
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r1-q12",
+   "title": "填 was/were",
+   "scene": "单数还是复数？",
+   "stem": "填空：Paper ___ invented in China.",
+   "task": "只写 was 或 were。",
+   "answer_text": "was",
+   "expects": [
+    {
+     "id": "s1",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "（单数用 was）"
+     ]
+    }
+   ],
+   "help": "Paper 是单数。",
+   "explain": "单数主语用 was。",
+   "common_errors": [
+    {
+     "when": "写了 were",
+     "say": "were 用于复数主语。Paper 是单数，用 was。"
+    }
+   ]
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r1-q13",
+   "title": "填 was/were",
+   "scene": "它们是很久以前被发明的。",
+   "stem": "填空：They ___ invented long ago.",
+   "task": "只写 was 或 were。",
+   "answer_text": "were",
+   "expects": [
+    {
+     "id": "s2",
+     "type": "word",
+     "answers": [
+      "were"
+     ],
+     "cn": [
+      "（复数用 were）"
+     ]
+    }
+   ],
+   "help": "They 是复数。",
+   "explain": "复数主语用 were。",
+   "common_errors": [
+    {
+     "when": "写了 was",
+     "say": "was 用于单数。They 是复数，用 were。"
+    }
+   ]
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u4r1-v-intro",
+   "title": "新任务：独立判断",
+   "teach_html": "<p>新任务来了：这次讲<strong>指南针 (compass)</strong> 和<strong>火药 (gunpowder)</strong>，也是中国古代的发明。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>was / were + 过去分词</strong>；单数 was，复数 were。</p>",
+   "reading": "Compass: invented in China, ancient time, used for finding directions\nGunpowder: invented in China, ancient time, made by alchemists"
+  },
+  {
+   "step": 24,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r1-v01",
+   "title": "指南针",
+   "scene": "指南针是在古代中国被发明的。",
+   "stem": "The compass ______ invented in ancient China.",
+   "options": [
+    "is",
+    "are",
+    "were",
+    "was"
+   ],
+   "answer": "D",
+   "help": "过去 + 单数。",
+   "explain": "The compass was invented in ancient China.",
+   "wrong_feedback": {
+    "A": "再想想时态。",
+    "C": "再想想单复数。",
+    "D": "再想想。"
+   },
+   "reading": "Compass: invented in China, ancient time, used for finding directions\nGunpowder: invented in China, ancient time, made by alchemists"
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r1-v02",
+   "title": "火药",
+   "scene": "火药也是古代中国的发明。",
+   "stem": "Gunpowder ______ invented in ancient China.",
+   "options": [
+    "was",
+    "were",
+    "is",
+    "are"
+   ],
+   "answer": "A",
+   "help": "过去 + 单数。",
+   "explain": "Gunpowder was invented in ancient China.",
+   "wrong_feedback": {
+    "A": "再想想。",
+    "B": "再想想时态。",
+    "C": "再想想时态。"
+   },
+   "reading": "Compass: invented in China, ancient time, used for finding directions\nGunpowder: invented in China, ancient time, made by alchemists"
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r1-v03",
+   "title": "build 的过去分词",
+   "scene": "不规则变化。",
+   "stem": "The past participle of \"build\" is ______.",
+   "options": [
+    "builded",
+    "building",
+    "built",
+    "builds"
+   ],
+   "answer": "C",
+   "help": "build 是不规则的。",
+   "explain": "build → built。",
+   "wrong_feedback": {
+    "A": "再想想。",
+    "C": "再想想。",
+    "D": "再想想。"
+   }
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r1-v04",
+   "title": "find 的过去分词",
+   "scene": "不规则变化。",
+   "stem": "The past participle of \"find\" is ______.",
+   "options": [
+    "finded",
+    "found",
+    "finding",
+    "finds"
+   ],
+   "answer": "B",
+   "help": "find 是不规则的。",
+   "explain": "find → found。",
+   "wrong_feedback": {
+    "A": "再想想。",
+    "C": "再想想。",
+    "D": "再想想。"
+   }
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r1-v05",
+   "title": "复数主语",
+   "scene": "指南针和火药都是古代发明。",
+   "stem": "The compass and gunpowder ______ invented in ancient China.",
+   "options": [
+    "was",
+    "is",
+    "are",
+    "were"
+   ],
+   "answer": "D",
+   "help": "主语是两者。",
+   "explain": "复数 + 过去，用 were。",
+   "wrong_feedback": {
+    "A": "再想想单复数。",
+    "C": "再想想时态。",
+    "D": "再想想。"
+   },
+   "reading": "Compass: invented in China, ancient time, used for finding directions\nGunpowder: invented in China, ancient time, made by alchemists"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r1-v06",
+   "title": "do 的过去分词",
+   "scene": "不规则变化。",
+   "stem": "The past participle of \"do\" is ______.",
+   "options": [
+    "done",
+    "doed",
+    "doing",
+    "does"
+   ],
+   "answer": "A",
+   "help": "do 是不规则的。",
+   "explain": "do → done。",
+   "wrong_feedback": {
+    "A": "再想想。",
+    "C": "再想想。",
+    "D": "再想想。"
+   }
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r1-v07",
+   "title": "写出过去分词：speak",
+   "scene": "不规则的。",
+   "stem": "写出 speak 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "spoken",
+   "expects": [
+    {
+     "id": "w4",
+     "type": "word",
+     "answers": [
+      "spoken"
+     ],
+     "cn": [
+      "说（过去分词）"
+     ]
+    }
+   ],
+   "help": "speak 是不规则的。",
+   "explain": "speak → spoken。",
+   "common_errors": [
+    {
+     "when": "写了 speaked",
+     "say": "没有 speaked 这种说法，记住是 spoken。"
+    }
+   ]
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r1-v08",
+   "title": "写出过去分词：create",
+   "scene": "规则变化。",
+   "stem": "写出 create 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "created",
+   "expects": [
+    {
+     "id": "w5",
+     "type": "word",
+     "answers": [
+      "created"
+     ],
+     "cn": [
+      "创造（过去分词）"
+     ]
+    }
+   ],
+   "help": "规则动词加 ed。",
+   "explain": "create → created。",
+   "common_errors": [
+    {
+     "when": "写了 creating",
+     "say": "要的是过去分词 created。"
+    }
+   ]
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r1-v09",
+   "title": "填 was/were",
+   "scene": "火药是单数还是复数？",
+   "stem": "填空：Gunpowder ___ invented in China.",
+   "task": "只写 was 或 were。",
+   "answer_text": "was",
+   "expects": [
+    {
+     "id": "s3",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "（单数用 was）"
+     ]
+    }
+   ],
+   "help": "Gunpowder 是单数。",
+   "explain": "单数用 was。",
+   "common_errors": [
+    {
+     "when": "写了 were",
+     "say": "Gunpowder 看作单数，用 was。"
+    }
+   ]
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r1-v10",
+   "title": "连词成句",
+   "scene": "连成一句话。",
+   "stem": "was / invented / The compass / in China",
+   "task": "连成完整句子，写英文。",
+   "answer_text": "The compass was invented in China.",
+   "expects": [
+    {
+     "id": "s4",
+     "type": "word",
+     "answers": [
+      "the compass was invented in china"
+     ],
+     "cn": [
+      "指南针是在中国被发明的"
+     ]
+    }
+   ],
+   "help": "按主语 + was + 过去分词 + 地点的顺序。",
+   "explain": "The compass was invented in China.",
+   "common_errors": [
+    {
+     "when": "顺序反了",
+     "say": "The compass 在前：The compass was invented in China。"
+    }
+   ]
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u4r1-ending",
+   "title": "节目预告",
+   "teach_html": "<p>今天的发明讲得很清楚。站长说：纸和印刷术这两张牌打得不错。</p><p>下一期，有听众来信问：“这些说法都是真的吗？”站长要教你<strong>否定句</strong>和<strong>疑问句</strong>——“纸不是在美国发明的”“电话是贝尔发明的吗？”该怎么说。</p>"
+  }
+ ],
+ "title": "发明初接触：被动语态入门",
+ "unit": "Unit 4 Inventions",
+ "version": 1
+}
