@@ -1,0 +1,569 @@
+{
+ "home_subtitle": "加练 · 数字播报复习",
+ "lesson_id": "review1",
+ "note": "练习题库（2026-10-02）：Unit 2 复习练习（percent、go up/go down、日期时间地点提取、新旧通知对比），题目与材料与第 2、3 课不重复；全部练习阶段、可重复练。程序侧在正课完成后自动进入本课。",
+ "part1_desc": "正课之外多练一轮：换新材料，再练读数字、听数字、核对稿子。",
+ "part2_desc": "",
+ "practice_end": 22,
+ "steps": [
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 1,
+   "teach_html": "<p>广播站加练时间。</p><p>正课里学的 percent、go up / go down、看通知找信息，这里换几份<strong>新材料</strong>再练一遍。做错没关系，一步一步来，提示一直都在。</p>",
+   "title": "加练开始"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 2,
+   "teach_html": "<p>先想起来两个本领：</p><p>① percent：百分之……，看到 % 就想“每一百个里有几个”。</p><p>② go up / go down：数字变大是 go up，变小是 go down。</p><p>示范一句：The price went down 10 percent.（价格降了百分之十。）</p>",
+   "title": "先想起来"
+  },
+  {
+   "answer": "C",
+   "explain": "45% 读 forty-five percent。",
+   "help": "看到 %，读 percent。",
+   "kind": "mcq",
+   "options": [
+    "forty-five yuan",
+    "forty-five books",
+    "forty-five percent",
+    "forty-five points"
+   ],
+   "phase": "practice",
+   "scene": "百分之几，读对了才能播对。",
+   "stem": "45% 读作哪一句？",
+   "step": 3,
+   "title": "读百分比",
+   "wrong_feedback": {
+    "A": "% 不是 yuan，看到 % 就读 percent。",
+    "B": "books 是“书”。% 读 percent。",
+    "D": "points 是“分”。% 读 percent。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "reading": "NOTICE\nDrama Club Show\nTime: Friday, 6:30 p.m.\nPlace: the music room\nTickets: 10 yuan",
+   "step": 4,
+   "teach_html": "<p>加练第一份材料：话剧社演出的第一份通知，仔细看。</p>",
+   "title": "第一份通知"
+  },
+  {
+   "answer": "C",
+   "explain": "第一份通知写的是 Friday, 6:30 p.m., the music room。",
+   "help": "看通知上的 Time 和 Place 两行。",
+   "help_line": "Time: Friday, 6:30 p.m.\nPlace: the music room",
+   "kind": "mcq",
+   "material_label": "第一份通知",
+   "options": [
+    "Saturday, 6:30 p.m., the music room",
+    "Friday, 7:30 p.m., the music room",
+    "Friday, 6:30 p.m., the music room",
+    "Friday, 6:30 p.m., the school hall"
+   ],
+   "phase": "practice",
+   "reading": "NOTICE\nDrama Club Show\nTime: Friday, 6:30 p.m.\nPlace: the music room\nTickets: 10 yuan",
+   "scene": "照着第一份通知答。",
+   "stem": "第一份通知：演出是星期几、几点、在哪儿？",
+   "step": 5,
+   "title": "第一份通知说了什么",
+   "wrong_feedback": {
+    "A": "星期几看 Time 一行写的是哪天，再对照一下。",
+    "B": "钟点写的是 6:30，不是 7:30。再看 Time 一行。",
+    "D": "地点是 the music room。再看 Place 一行。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "reading": "UPDATED NOTICE\nDrama Club Show\nTime: Saturday, 6:30 p.m.\nPlace: the school hall\nTickets: 10 yuan",
+   "step": 6,
+   "teach_html": "<p>更新通知来了！<strong>第一份通知整张不算数了</strong>，只看这份新的：</p>",
+   "title": "第二份通知（更新通知）"
+  },
+  {
+   "answer": "A",
+   "explain": "只认最新的一份：第二份通知。",
+   "help": "新通知一出，旧的整张就不算数了。",
+   "kind": "mcq",
+   "options": [
+    "第二份通知",
+    "第一份通知",
+    "两份拼起来用",
+    "哪份都行"
+   ],
+   "phase": "practice",
+   "reading": "NOTICE\nDrama Club Show\nTime: Friday, 6:30 p.m.\nPlace: the music room\nTickets: 10 yuan\n\nUPDATED NOTICE\nDrama Club Show\nTime: Saturday, 6:30 p.m.\nPlace: the school hall\nTickets: 10 yuan",
+   "scene": "两份通知都看过了。",
+   "stem": "现在广播，按哪一份播？",
+   "step": 7,
+   "title": "按哪一份播",
+   "wrong_feedback": {
+    "B": "第一份通知已经被换掉了，不能再照着它答。",
+    "C": "新旧拼起来是大忌，只认最新的。",
+    "D": "两份不一样，必须选最新的那份。"
+   }
+  },
+  {
+   "answer": "D",
+   "explain": "第二份通知的最新信息：Saturday, 6:30 p.m., the school hall。",
+   "help": "第一份通知整张不算数了，只看第二份通知的 Time 和 Place。",
+   "help_line": "Time: Saturday, 6:30 p.m.\nPlace: the school hall",
+   "kind": "mcq",
+   "material_label": "第二份通知",
+   "options": [
+    "Friday, 6:30 p.m., the music room",
+    "Saturday, 6:30 p.m., the music room",
+    "Friday, 6:30 p.m., the school hall",
+    "Saturday, 6:30 p.m., the school hall"
+   ],
+   "phase": "practice",
+   "reading": "UPDATED NOTICE\nDrama Club Show\nTime: Saturday, 6:30 p.m.\nPlace: the school hall\nTickets: 10 yuan",
+   "scene": "按第二份通知答。",
+   "stem": "演出最后的时间和地点是？",
+   "step": 8,
+   "title": "最后的时间地点",
+   "wrong_feedback": {
+    "A": "整条都是第一份通知的旧信息。",
+    "B": "地点还是第一份通知的旧地点，第二份通知换了。",
+    "C": "星期几用了第一份通知的旧日子。"
+   }
+  },
+  {
+   "answer_text": "The drama club show is on Saturday, at 6:30 p.m., in the school hall.",
+   "common_errors": [
+    {
+     "say": "日子用了第一份通知的旧日子。只认第二份通知。",
+     "when": "写了 Friday"
+    },
+    {
+     "say": "还少了一样：星期几、几点、在哪儿，都要写全。",
+     "when": "只写了一部分"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "saturday"
+     ],
+     "cn": [
+      "周六",
+      "星期六"
+     ],
+     "cn_old": [
+      "周五",
+      "星期五"
+     ],
+     "id": "day",
+     "olds": [
+      "friday"
+     ],
+     "type": "word"
+    },
+    {
+     "hour": 6,
+     "id": "time",
+     "meridiem": "pm",
+     "minute": 30,
+     "type": "time"
+    },
+    {
+     "answers": [
+      "school hall",
+      "hall"
+     ],
+     "cn": [
+      "学校礼堂",
+      "礼堂"
+     ],
+     "cn_old": [
+      "音乐室"
+     ],
+     "id": "place",
+     "olds": [
+      "music room"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "整句是：The drama club show is on Saturday, at 6:30 p.m., in the school hall。",
+   "help": "三样都看第二份通知：星期几、几点、在哪儿。",
+   "help_line": "Time: Saturday, 6:30 p.m.\nPlace: the school hall",
+   "kind": "short",
+   "material_label": "第二份通知",
+   "phase": "practice",
+   "reading": "UPDATED NOTICE\nDrama Club Show\nTime: Saturday, 6:30 p.m.\nPlace: the school hall\nTickets: 10 yuan",
+   "scene": "把演出最后的时间地点写成一句话。",
+   "stem": "用英文写一句话，说清演出最后的时间和地点。句子框：The drama club show is on ____, at ____, in the ____.",
+   "step": 9,
+   "task": "写一句话，含星期几、几点和地点。",
+   "title": "写出最后的时间地点"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "step": 10,
+   "teach_html": "<p>换一份材料：读书角两个月的读书数据。先看数据，看完播。</p>",
+   "title": "读书角数据"
+  },
+  {
+   "answer": "B",
+   "explain": "故事书从 300 本到 360 本，材料里写着 went up 20%。",
+   "help": "找 Story books 那部分，看写的 up 还是 down、百分之几。",
+   "help_line": "Story books went up 20%.",
+   "kind": "mcq",
+   "material_label": "读书角数据",
+   "options": [
+    "went down 20%",
+    "went up 20%",
+    "went up 5%",
+    "没有变化"
+   ],
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "照着读书角数据答。",
+   "stem": "故事书从 9 月到 10 月有什么变化？",
+   "step": 11,
+   "title": "故事书是涨还是跌",
+   "wrong_feedback": {
+    "A": "方向反了。300 到 360 是变多了，材料里写的是 up。",
+    "C": "5% 是漫画的，别串行。看准故事书那部分。",
+    "D": "300 到 360 变了。材料里写了变化。"
+   }
+  },
+  {
+   "answer": "B",
+   "explain": "10 月读了 360 本故事书。",
+   "help": "看 Story books 那部分，October 后面的数字。",
+   "help_line": "In October, they read 360 story books.",
+   "kind": "mcq",
+   "material_label": "读书角数据",
+   "options": [
+    "300 本",
+    "360 本",
+    "200 本",
+    "190 本"
+   ],
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "照着读书角数据答。",
+   "stem": "10 月学生读了多少本故事书？",
+   "step": 12,
+   "title": "读了多少本",
+   "wrong_feedback": {
+    "A": "300 是 9 月的。看 October 那个数字。",
+    "C": "200 是漫画 9 月的。看准故事书 10 月的数字。",
+    "D": "190 是漫画的。看准故事书那部分。"
+   }
+  },
+  {
+   "answer_text": "Story books went up 20% from September.",
+   "common_errors": [
+    {
+     "say": "300 到 360 是变多了，方向先定下来。",
+     "when": "方向写反"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "up 20",
+      "went up 20",
+      "up twenty"
+     ],
+     "cn": [
+      "涨了20%",
+      "上升20%"
+     ],
+     "cn_old": [
+      "跌",
+      "下降"
+     ],
+     "id": "dirpct",
+     "olds": [
+      "down 20",
+      "down"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "Story books went up 20% from September.",
+   "help": "回读书角数据看故事书那部分：涨还是跌，百分之几，照着填。",
+   "help_line": "Story books went up 20%.",
+   "kind": "short",
+   "material_label": "读书角数据",
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "把故事书的变化写成一句播报。",
+   "stem": "照着句子框写一句：Story books went ___ ___% from September.",
+   "step": 13,
+   "task": "写一句英文。",
+   "title": "写一句播报"
+  },
+  {
+   "answer": "A",
+   "explain": "漫画从 200 本到 190 本，材料里写着 went down 5%。",
+   "help": "找 Comics 那部分，看写的 up 还是 down、百分之几。",
+   "help_line": "Comics went down 5%.",
+   "kind": "mcq",
+   "material_label": "读书角数据",
+   "options": [
+    "went down 5%",
+    "went up 5%",
+    "went down 20%",
+    "没有变化"
+   ],
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "照着读书角数据答。",
+   "stem": "漫画从 9 月到 10 月有什么变化？",
+   "step": 14,
+   "title": "漫画是涨还是跌",
+   "wrong_feedback": {
+    "B": "方向反了。200 到 190 是变少了，材料里写的是 down。",
+    "C": "20% 是故事书的，别串行。看准漫画那部分。",
+    "D": "200 到 190 变了。材料里写了变化。"
+   }
+  },
+  {
+   "answer_text": "Comics went down 5% from September.",
+   "common_errors": [
+    {
+     "say": "200 到 190 是变少了，方向先定下来。",
+     "when": "方向写反"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "down 5",
+      "went down 5",
+      "down five"
+     ],
+     "cn": [
+      "跌了5%",
+      "下降5%"
+     ],
+     "cn_old": [
+      "涨",
+      "上升"
+     ],
+     "id": "dirpct",
+     "olds": [
+      "up 5",
+      "up"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "Comics went down 5% from September.",
+   "help": "回读书角数据看漫画那部分：涨还是跌，百分之几，照着填。",
+   "help_line": "Comics went down 5%.",
+   "kind": "short",
+   "material_label": "读书角数据",
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "再写一句漫画的播报。",
+   "stem": "照着句子框写一句：Comics went ___ ___% from September.",
+   "step": 15,
+   "task": "写一句英文。",
+   "title": "再写一句播报"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 16,
+   "teach_html": "<p>食堂发来一段播报，听完填两个数字。填阿拉伯数字就行，可以重听。</p>",
+   "title": "听播报，填数字"
+  },
+  {
+   "answer_text": "120 students, down 10%.",
+   "audio_id": "review1-listen-01",
+   "common_errors": [
+    {
+     "say": "哪个数不对就重听哪一段：人数听 students 前面，百分比听 down 后面。",
+     "when": "数字写错"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "120",
+      "one hundred and twenty"
+     ],
+     "cn": [
+      "120",
+      "一百二十"
+     ],
+     "id": "people",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "10",
+      "ten"
+     ],
+     "cn": [
+      "10%",
+      "百分之十"
+     ],
+     "id": "pct",
+     "type": "word"
+    }
+   ],
+   "explain": "播报里说：周一有 120 名学生在学校吃午饭，比上周一降了 10%。",
+   "help": "听不清就重听。人数听 had lunch 前面那个数字。",
+   "help_line": "one hundred and twenty students had lunch at school",
+   "kind": "short",
+   "phase": "practice",
+   "scene": "听播报，把两个数字填上。",
+   "stem": "听完填两个数：① 周一在学校吃午饭的学生有多少人；② 比上周一降了百分之几。",
+   "step": 17,
+   "task": "填两个数字，用逗号分开。",
+   "title": "听播报填数字"
+  },
+  {
+   "answer": "D",
+   "audio_id": "review1-listen-01",
+   "explain": "播报里说 That is down ten percent from last Monday。播报原文：周一有 120 名学生在学校吃午饭，比上周一降了 10%。",
+   "help": "再听一遍方向词和它后面的数字。",
+   "help_line": "That is down ten percent from last Monday.",
+   "kind": "mcq",
+   "options": [
+    "went up 10%",
+    "went up 20%",
+    "没有变化",
+    "went down 10%"
+   ],
+   "phase": "practice",
+   "scene": "还是刚才那段播报。",
+   "stem": "刚才的播报里，在学校吃午饭的人数和上周一比？",
+   "step": 18,
+   "title": "听后选择：降了多少",
+   "wrong_feedback": {
+    "A": "方向听反了，播报里说的是 down。再听一遍方向词。",
+    "B": "方向和数字都再听一遍：down 后面是 ten。",
+    "C": "播报里说了变化。再听一听。"
+   }
+  },
+  {
+   "answer": "A",
+   "explain": "第 ② 句错了：材料里是 went up 20%，稿子写成了 down。",
+   "help": "一句一句对读书角数据：数字对不对，方向对不对。",
+   "help_line": "Story books went up 20%.",
+   "kind": "mcq",
+   "material_label": "读书角数据",
+   "options": [
+    "第 ② 句",
+    "第 ① 句",
+    "第 ③ 句",
+    "三句都对"
+   ],
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "站长写了读书角的播报稿，有一句和读书角数据对不上。对照着同屏的数据找。",
+   "stem": "播报稿：① Students read 360 story books in October. ② Story books went down 20%. ③ Comics are 190 in October. 哪一句错了？",
+   "step": 19,
+   "title": "核对播报稿：哪句错了",
+   "wrong_feedback": {
+    "B": "第 ① 句的 360 和数据对得上。再核对下一句。",
+    "C": "第 ③ 句的 190 对得上。再看看方向那句。",
+    "D": "有一句对不上。一句一句核对，特别看方向。"
+   }
+  },
+  {
+   "answer_text": "Story books went up 20% from September.",
+   "common_errors": [
+    {
+     "say": "回读书角数据看故事书那部分，方向是涨还是跌，再改。",
+     "when": "方向写反"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "went up",
+      "up"
+     ],
+     "cn": [
+      "涨",
+      "上升"
+     ],
+     "cn_old": [
+      "跌",
+      "下降"
+     ],
+     "id": "dir",
+     "olds": [
+      "went down",
+      "down"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "改对了：Story books went up 20% from September。",
+   "help": "回读书角数据看故事书那句：方向是涨还是跌。",
+   "help_line": "Story books went up 20%.",
+   "kind": "short",
+   "material_label": "读书角数据",
+   "phase": "practice",
+   "reading": "Book Corner News\nIn September, students read 300 story books. In October, they read 360 story books.\nStory books went up 20%. Comics went down 5%.\n\nStory books: September 300 / October 360 (went up 20%)\nComics: September 200 / October 190 (went down 5%)",
+   "scene": "把播报稿里写错的那句改对。",
+   "see_also": {
+    "label": "再看站长的播报稿",
+    "text": "① Students read 360 story books in October.\n② Story books went down 20%.\n③ Comics are 190 in October."
+   },
+   "stem": "第 ② 句的方向写反了。照着句子框改对：Story books went ___ 20% from September.",
+   "step": 20,
+   "task": "写完整的句子。",
+   "title": "把错句改对"
+  },
+  {
+   "answer_text": "16 chairs.",
+   "audio_id": "review1-listen-02",
+   "common_errors": [
+    {
+     "say": "再听一遍：尾巴拖长的是 -teen，这个数是 sixteen。",
+     "when": "写成 60"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "16",
+      "sixteen"
+     ],
+     "cn": [
+      "16",
+      "十六"
+     ],
+     "id": "num",
+     "type": "word"
+    }
+   ],
+   "explain": "站长读的是 sixteen (16)：The art room got sixteen new chairs this week.",
+   "help": "再听一遍，听数字的尾巴是拖长还是短促。",
+   "help_line": "The art room got sixteen new chairs this week.",
+   "kind": "short",
+   "phase": "practice",
+   "scene": "再听一句，填数字。",
+   "stem": "（先听）美术室这周新到了多少把椅子？填数字。",
+   "step": 21,
+   "task": "填数字。",
+   "title": "听数字：sixteen"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 22,
+   "teach_html": "<p>加练做完了。percent、go up / go down、新旧通知只认新的——这几样又练了一遍。</p><p>想再练，随时回来，这一页可以反复做。</p>",
+   "title": "加练完了"
+  }
+ ],
+ "title": "加练：数字播报复习",
+ "unit": "Unit 2",
+ "version": 1
+}
