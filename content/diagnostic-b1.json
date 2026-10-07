@@ -20,7 +20,7 @@
       "category": "单词量",
       "knowledge_point": "vocab-l1",
       "level": 1,
-      "stem": "\"钢笔\"的英文是哪个？",
+      "stem": "\"钢笔\"的英文是什么？请选择。",
       "options": [
         "A. pencil",
         "B. pen",
@@ -39,7 +39,7 @@
       "category": "单词量",
       "knowledge_point": "vocab-l2",
       "level": 2,
-      "stem": "\"体育场\"的英文是哪个？",
+      "stem": "\"体育场\"的英文是什么？请选择。",
       "options": [
         "A. shop",
         "B. stadium",
@@ -58,7 +58,7 @@
       "category": "单词量",
       "knowledge_point": "vocab-l3",
       "level": 3,
-      "stem": "\"承诺\"的英文是哪个？",
+      "stem": "\"承诺\"的英文是什么？请选择。",
       "options": [
         "A. gift",
         "B. promise",
@@ -77,7 +77,7 @@
       "category": "拼读",
       "knowledge_point": "phonics-1",
       "level": 1,
-      "stem": "哪个单词划线部分发音不同？pig / bike / fish",
+      "stem": "哪个单词划线部分发音不同？p<u>i</u>g / b<u>i</u>ke / f<u>i</u>sh",
       "options": [
         "A. 第一个",
         "B. 第二个",
@@ -96,7 +96,7 @@
       "category": "拼读",
       "knowledge_point": "phonics-2",
       "level": 2,
-      "stem": "哪个单词划线部分发音不同？cup / bus / tube",
+      "stem": "哪个单词划线部分发音不同？c<u>u</u>p / b<u>u</u>s / t<u>u</u>be",
       "options": [
         "A. 第一个",
         "B. 第二个",
