@@ -39,12 +39,12 @@
       "category": "单词量",
       "knowledge_point": "vocab-l2",
       "level": 2,
-      "stem": "“图书馆”的意思是“图书馆”？请选择英文。",
+      "stem": "\"图书馆\"的英文是什么？请选择。",
       "options": [
-        "A. 商店",
+        "A. shop",
         "B. library",
-        "C. 学校",
-        "D. 公园"
+        "C. school",
+        "D. park"
       ],
       "answer": "B",
       "explain": "",
@@ -58,12 +58,12 @@
       "category": "单词量",
       "knowledge_point": "vocab-l3",
       "level": 3,
-      "stem": "“日程表”的意思是“日程表”？请选择英文。",
+      "stem": "\"日程表\"的英文是什么？请选择。",
       "options": [
-        "A. 时刻表",
+        "A. timetable",
         "B. schedule",
-        "C. 地图",
-        "D. 菜单"
+        "C. map",
+        "D. menu"
       ],
       "answer": "B",
       "explain": "",
