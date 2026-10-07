@@ -1,0 +1,264 @@
+{
+  "lesson_id": "review2",
+  "version": 1,
+  "title": "加练：Unit 2 综合复习",
+  "home_subtitle": "加练：Unit 2 综合复习",
+  "part1_desc": "第 1–15 步：通知、数据、来信综合练习（可反复练）。",
+  "part2_desc": "",
+  "practice_end": 15,
+  "steps": [
+    {
+      "kind": "teach",
+      "title": "Unit 2 综合练习",
+      "teach_html": "<p>站长：Unit 2 学完了，来一组综合练习，查漏补缺。</p><p>通知、数据、来信，都会考到。</p>",
+      "scene": "复习",
+      "step": 1,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "通知复习",
+      "teach_html": "<div class='reading-pane'><pre>【通知一】Meeting: Monday, 3:00 p.m., classroom\n【通知二】Meeting: Tuesday, 4:00 p.m., classroom\n【语音】moves to the library</pre></div>",
+      "scene": "看通知",
+      "step": 2,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "会议时间",
+      "stem": "会议最终时间是？",
+      "options": [
+        "A. Monday, 3:00 p.m.",
+        "B. Tuesday, 3:00 p.m.",
+        "C. Tuesday, 4:00 p.m.",
+        "D. Monday, 4:00 p.m."
+      ],
+      "answer": "C",
+      "explain": "通知二更新：Tuesday, 4:00 p.m.。",
+      "help": "看第二张。",
+      "predicted_errors": [],
+      "scene": "核对",
+      "step": 3,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "会议地点",
+      "stem": "会议地点最终是哪里？",
+      "options": [
+        "A. the classroom",
+        "B. the library",
+        "C. the gym",
+        "D. the hall"
+      ],
+      "answer": "B",
+      "explain": "语音：library。",
+      "help": "听语音。",
+      "predicted_errors": [],
+      "scene": "核对",
+      "step": 4,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "数据复习",
+      "teach_html": "<div class='reading-pane'><pre>【数据】\nVisitors: 800 (up 25% from last month)\nSales: 1,500 yuan (up 10%)</pre></div>",
+      "scene": "看数据",
+      "step": 5,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "访客涨幅",
+      "stem": "访客比上月涨了多少？",
+      "options": [
+        "A. 10%",
+        "B. 20%",
+        "C. 25%",
+        "D. 30%"
+      ],
+      "answer": "C",
+      "explain": "up 25%。",
+      "help": "看 Visitors 行。",
+      "predicted_errors": [],
+      "scene": "读数",
+      "step": 6,
+      "phase": "practice"
+    },
+    {
+      "kind": "short",
+      "title": "写出销售额",
+      "stem": "写出销售额和涨幅。",
+      "task": "写数字。",
+      "answer_text": "1,500 yuan, up 10%",
+      "expects": [
+        {
+          "id": "num",
+          "type": "word",
+          "answers": [
+            "1 500",
+            "1500"
+          ],
+          "cn": [
+            "1500"
+          ]
+        },
+        {
+          "id": "pct",
+          "type": "word",
+          "answers": [
+            "10",
+            "ten"
+          ],
+          "cn": [
+            "10%"
+          ]
+        }
+      ],
+      "explain": "1,500 yuan, up 10%。",
+      "help": "数字 1,500，涨幅 10%。",
+      "predicted_errors": [],
+      "scene": "写数",
+      "step": 7,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "来信复习",
+      "teach_html": "<div class='reading-pane'><pre>【来信】\nDear, can you play \"Star\" for my sister? She loves dancing.</pre></div>",
+      "scene": "读信",
+      "step": 8,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "来信请求",
+      "stem": "请求是什么？",
+      "options": [
+        "A. Play \"Star\"",
+        "B. Dance",
+        "C. Write",
+        "D. Sing"
+      ],
+      "answer": "A",
+      "explain": "点歌：Play \"Star\"。",
+      "help": "找请求。",
+      "predicted_errors": [],
+      "scene": "抓请求",
+      "step": 9,
+      "phase": "practice"
+    },
+    {
+      "kind": "short",
+      "title": "回复来信",
+      "stem": "承诺播放 \"Star\"。",
+      "task": "写承诺。",
+      "answer_text": "I promise to play \"Star\" for your sister.",
+      "expects": [
+        {
+          "id": "p",
+          "type": "word",
+          "answers": [
+            "promise"
+          ],
+          "cn": [
+            "保证"
+          ]
+        }
+      ],
+      "explain": "I promise to play \"Star\" for your sister.",
+      "help": "I promise 开头。",
+      "predicted_errors": [],
+      "scene": "写回复",
+      "step": 10,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "综合核对",
+      "teach_html": "<p>三类信息都会了。最后综合检查。</p>",
+      "scene": "核对",
+      "step": 11,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "综合判断",
+      "stem": "以下哪个是旧信息？",
+      "options": [
+        "A. Tuesday, 4:00 p.m.",
+        "B. Monday, 3:00 p.m.",
+        "C. the library",
+        "D. up 25%"
+      ],
+      "answer": "B",
+      "explain": "Monday 是旧时间。",
+      "help": "找被更新的。",
+      "predicted_errors": [],
+      "scene": "综合",
+      "step": 12,
+      "phase": "practice"
+    },
+    {
+      "kind": "short",
+      "title": "综合输出",
+      "stem": "写一句：会议时间地点。",
+      "task": "写句子。",
+      "answer_text": "The meeting is on Tuesday at 4:00 p.m. in the library.",
+      "expects": [
+        {
+          "id": "t",
+          "type": "time",
+          "hour": 4,
+          "minute": 0,
+          "meridiem": "pm",
+          "cn": [
+            "4点"
+          ]
+        },
+        {
+          "id": "p",
+          "type": "word",
+          "answers": [
+            "library"
+          ],
+          "cn": [
+            "图书馆"
+          ]
+        }
+      ],
+      "explain": "The meeting is on Tuesday at 4:00 p.m. in the library.",
+      "help": "时间地点都要。",
+      "predicted_errors": [],
+      "scene": "输出",
+      "step": 13,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "数字应用",
+      "stem": "800 访客，涨 25%，上月多少人？（估算）",
+      "options": [
+        "A. 600",
+        "B. 640",
+        "C. 700",
+        "D. 750"
+      ],
+      "answer": "B",
+      "explain": "800/1.25=640。",
+      "help": "倒推。",
+      "predicted_errors": [],
+      "scene": "算数",
+      "step": 14,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "练习完成",
+      "teach_html": "<p>综合练习完成！Unit 2 知识点都过了一遍。</p>",
+      "scene": "结束",
+      "step": 15,
+      "phase": "practice"
+    }
+  ]
+}
