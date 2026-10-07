@@ -1,0 +1,838 @@
+{
+  "lesson_id": "u4r5",
+  "practice_end": 22,
+  "home_subtitle": "第五课 · 发明大直播",
+  "part1_desc": "第 1–22 步：复习 Unit 4 全部被动语态知识，直播上半场答题。",
+  "part2_desc": "第 23–36 步：直播下半场独立答题，庆祝学完 Unit 4。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：被动语态综合运用（was/were/is/are、过去分词、by/ago、特殊疑问句）。Unit 4 Inventions 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r5-story-01",
+      "title": "发明大直播",
+      "teach_html": "<p>今晚是<strong>发明大直播</strong>！广播站把 Unit 4 的发明知识做成直播，听众打电话进来问问题，你来当主播。</p><p>过去被动、现在被动、过去分词、by 和 ago，今天全部上阵。先快速复习一遍。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r5-rev-01",
+      "title": "复习：过去被动",
+      "teach_html": "<p><strong>过去被动</strong>：<strong>was / were + 过去分词</strong>，说过去发生的事：</p><ul><li>Paper（纸） <strong>was invented</strong>（发明） in China.（纸在中国被发明。）</li><li>These houses <strong>were built</strong>（建造） long ago（以前）。（这些房子是很久以前建造的。）</li><li>单数 was，复数 were；否定 wasn't / weren't。</li></ul>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r5-rev-02",
+      "title": "复习：现在被动",
+      "teach_html": "<p><strong>现在被动</strong>：<strong>is / are + 过去分词</strong>，说现在的情况：</p><ul><li>Paper <strong>is used</strong>（使用） every day.（纸每天被使用。）</li><li>Light bulbs（电灯泡） <strong>are made</strong>（制造） in factories（工厂）。（电灯泡在工厂被制造。）</li><li>单数 is，复数 are；否定 isn't / aren't。</li></ul>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r5-rev-03",
+      "title": "复习：过去分词",
+      "teach_html": "<p>12 个过去分词，一个都不能错：</p><ul><li>规则的：invented（发明）, discovered（发现）, created（创造）, developed（发展/研发）, called（叫做）, used（使用）</li><li>不规则的：made（制造）, built（建造）, written（写）, spoken（说）, done（做）, found（找到）</li></ul><p>小窍门：made、built、written、spoken、done、found 长得不像原形，单独记。</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r5-rev-04",
+      "title": "复习：by 和 ago",
+      "teach_html": "<p><strong>by</strong>（由……）和 <strong>ago</strong>（以前）：</p><ul><li>The telephone（电话） was invented <strong>by</strong> Bell.（电话由贝尔发明。）</li><li>Paper was invented long <strong>ago</strong>.（纸是很久以前发明的。）</li><li>特殊疑问句：<strong>When / Where / Who + was / were + 主语 + 过去分词</strong>：When was it invented?（它什么时候被发明的？）</li></ul>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r5-rev-05",
+      "title": "复习小结",
+      "teach_html": "<p>复习完毕，直播开始！记住三句口诀：</p><ul><li>过去的事 was / were，现在的事 is / are。</li><li>单数 is / was，复数 are / were。</li><li>被动后面永远跟<strong>过去分词</strong>。</li></ul><p>听众来电了，问题一个接一个，上吧！</p>"
+    },
+    {
+      "step": 7,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u4r5-story-02",
+      "title": "上半场",
+      "reading": "Live Show: Great Inventions\nPaper was invented in China long ago. It is used in schools every day.\nThe compass was invented in ancient China. It is used on ships today.\nThe telephone was invented by Bell in 1876. Modern phones are made in factories.",
+      "teach_html": "<p>上半场资料在上面：纸、指南针（compass）、电话，过去和现在都讲到了。</p><p>听众的问题都从这份资料里来，站长陪你一起答。</p>"
+    },
+    {
+      "step": 8,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q01",
+      "title": "纸的发明",
+      "scene": "听众问：纸是什么时候、在哪被发明的？",
+      "reading": "Live Show: Great Inventions\nPaper was invented in China long ago. It is used in schools every day.\nThe compass was invented in ancient China. It is used on ships today.\nThe telephone was invented by Bell in 1876. Modern phones are made in factories.",
+      "stem": "Paper ______ invented in China long ago.",
+      "options": [
+        "is",
+        "was",
+        "are",
+        "were"
+      ],
+      "answer": "B",
+      "help": "不对。long ago，过去，单数。",
+      "explain": "long ago 是过去，Paper 单数，用 was。",
+      "wrong_feedback": {
+        "A": "long ago 是过去，不能用 is。",
+        "C": "Paper 是单数，过去用 was。",
+        "D": "were 给复数用。"
+      }
+    },
+    {
+      "step": 9,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q02",
+      "title": "纸的使用",
+      "scene": "听众问：纸现在还用吗？",
+      "reading": "Live Show: Great Inventions\nPaper was invented in China long ago. It is used in schools every day.\nThe compass was invented in ancient China. It is used on ships today.\nThe telephone was invented by Bell in 1876. Modern phones are made in factories.",
+      "stem": "It ______ used in schools every day.",
+      "options": [
+        "are",
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "D",
+      "help": "不对。It 单数，every day 现在。",
+      "explain": "It is used ... 单数现在用 is。",
+      "wrong_feedback": {
+        "A": "It 是单数，不能用 are。",
+        "B": "every day 是现在，不能用 was。",
+        "C": "It 是单数，过去也不用 were。"
+      }
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q03",
+      "title": "指南针",
+      "scene": "听众问：指南针是古代中国的发明吗？",
+      "reading": "Live Show: Great Inventions\nPaper was invented in China long ago. It is used in schools every day.\nThe compass was invented in ancient China. It is used on ships today.\nThe telephone was invented by Bell in 1876. Modern phones are made in factories.",
+      "stem": "The compass ______ invented in ancient China.",
+      "options": [
+        "was",
+        "is",
+        "are",
+        "were"
+      ],
+      "answer": "A",
+      "help": "不对。古代（ancient）的事。",
+      "explain": "古代的事用 was。",
+      "wrong_feedback": {
+        "B": "古代的事，不能用 is。",
+        "C": "compass 单数，过去用 was。",
+        "D": "were 给复数用。"
+      }
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q04",
+      "title": "现代手机",
+      "scene": "听众问：现代手机在哪里生产？",
+      "reading": "Live Show: Great Inventions\nPaper was invented in China long ago. It is used in schools every day.\nThe compass was invented in ancient China. It is used on ships today.\nThe telephone was invented by Bell in 1876. Modern phones are made in factories.",
+      "stem": "Modern phones ______ made in factories.",
+      "options": [
+        "is",
+        "was",
+        "are",
+        "were"
+      ],
+      "answer": "C",
+      "help": "不对。phones 复数，现在。",
+      "explain": "phones 复数 + 现在 = are。",
+      "wrong_feedback": {
+        "A": "phones 是复数，不能用 is。",
+        "B": "这是现在的情况，不能用 was。",
+        "D": "were 是过去，这里说现在。"
+      }
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q05",
+      "title": "由谁发明",
+      "scene": "听众问：电话由谁发明？",
+      "stem": "The telephone was invented ______ Bell in 1876.",
+      "options": [
+        "by",
+        "with",
+        "from",
+        "of"
+      ],
+      "answer": "A",
+      "help": "不对。表示“由谁”。",
+      "explain": "by Bell，由贝尔发明。",
+      "wrong_feedback": {
+        "B": "with 是“用”，这里表示“由谁”，用 by。",
+        "C": "from 是“从”，不表示发明者。",
+        "D": "of 是“……的”，不表示发明者。"
+      }
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q06",
+      "title": "何时发明",
+      "scene": "听众问：电话什么时候被发明？",
+      "stem": "______ was the telephone invented?",
+      "options": [
+        "Who",
+        "Where",
+        "What",
+        "When"
+      ],
+      "answer": "D",
+      "help": "不对。问的是时间 1876。",
+      "explain": "问时间用 When。",
+      "wrong_feedback": {
+        "A": "问的是时间 1876，不是谁。",
+        "B": "问的是时间，不问地点。",
+        "C": "What 问什么，这里问时间。"
+      }
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q07",
+      "title": "选正确句子",
+      "scene": "站长考你：哪句是对的？",
+      "stem": "选出正确的一句。",
+      "options": [
+        "Paper is invented in China long ago.",
+        "Paper was invented in China long ago.",
+        "Paper was invent in China long ago.",
+        "Paper were invented in China long ago."
+      ],
+      "answer": "B",
+      "help": "不对。检查时态、主语、过去分词。",
+      "explain": "Paper was invented in China long ago. 全对。",
+      "wrong_feedback": {
+        "A": "long ago 是过去，不能用 is。",
+        "C": "invent 是原形，要用 invented。",
+        "D": "Paper 单数，用 was。"
+      }
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r5-q08",
+      "title": "指南针今天",
+      "scene": "听众问：指南针今天还用吗？",
+      "stem": "Where ______ compasses used today?",
+      "options": [
+        "is",
+        "was",
+        "are",
+        "were"
+      ],
+      "answer": "C",
+      "help": "不对。compasses 复数，today 现在。",
+      "explain": "Where are compasses used today? 复数现在用 are。",
+      "wrong_feedback": {
+        "A": "compasses 是复数，不能用 is。",
+        "B": "today 是现在，不能用 was。",
+        "D": "were 是过去，这里说现在。"
+      }
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q09",
+      "title": "填 was/were",
+      "scene": "快速填空。",
+      "stem": "填空：Paper ___ invented in China long ago.",
+      "task": "只写一个英文单词。",
+      "answer_text": "was",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "cn": [
+            "是（过去）"
+          ]
+        }
+      ],
+      "help": "不对。long ago，过去，单数。",
+      "explain": "Paper was invented in China long ago.",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "long ago 是过去，用 was。"
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q10",
+      "title": "填 is/are",
+      "scene": "快速填空。",
+      "stem": "填空：Phones ___ made in factories.",
+      "task": "只写一个英文单词。",
+      "answer_text": "are",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "are"
+          ],
+          "cn": [
+            "是"
+          ]
+        }
+      ],
+      "help": "不对。复数，现在。",
+      "explain": "Phones are made in factories.",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "Phones 是复数，用 are。"
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q11",
+      "title": "写过去分词",
+      "scene": "快速写。",
+      "stem": "写出 discover（发现）的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "discovered",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "discovered"
+          ],
+          "cn": [
+            "发现（过去分词）"
+          ]
+        }
+      ],
+      "help": "不对。规则变化。",
+      "explain": "discovered。",
+      "common_errors": [
+        {
+          "when": "写了 discover",
+          "say": "discover 是原形，规则变化加 ed：discovered。"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q12",
+      "title": "写过去分词",
+      "scene": "快速写。",
+      "stem": "写出 find 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "found",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "found"
+          ],
+          "cn": [
+            "找到（过去分词）"
+          ]
+        }
+      ],
+      "help": "不对。不规则的。",
+      "explain": "found。",
+      "common_errors": [
+        {
+          "when": "写了 finded",
+          "say": "find 是不规则的：found。"
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q13",
+      "title": "填 by",
+      "scene": "快速填空。",
+      "stem": "填空：The telephone was invented ___ Bell.",
+      "task": "只写一个英文单词。",
+      "answer_text": "by",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "by"
+          ],
+          "cn": [
+            "由"
+          ]
+        }
+      ],
+      "help": "不对。表示“由谁”。",
+      "explain": "by Bell，由贝尔发明。",
+      "common_errors": [
+        {
+          "when": "写了 with",
+          "say": "表示“由谁发明”，用 by。"
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q14",
+      "title": "补全问句",
+      "scene": "补全听众的问题。",
+      "stem": "补全：___ was the compass invented?（指南针是什么时候被发明的？）",
+      "task": "只写一个英文单词。",
+      "answer_text": "when",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "when"
+          ],
+          "cn": [
+            "何时"
+          ]
+        }
+      ],
+      "help": "不对。问时间。",
+      "explain": "When was the compass invented?",
+      "common_errors": [
+        {
+          "when": "写了 where",
+          "say": "问时间用 when。"
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r5-q15",
+      "title": "补全句子",
+      "scene": "补全广播词。",
+      "stem": "补全：They ___ ___ every day.（它们每天都被使用。）",
+      "task": "写两个英文单词。",
+      "answer_text": "are used",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "are"
+          ],
+          "cn": [
+            "是"
+          ]
+        },
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "used"
+          ],
+          "cn": [
+            "使用（过去分词）"
+          ]
+        }
+      ],
+      "help": "不对。They 复数。",
+      "explain": "They are used every day.",
+      "common_errors": [
+        {
+          "when": "写了 is used",
+          "say": "They 是复数，用 are。"
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u4r5-story-03",
+      "title": "下半场",
+      "reading": "Live Show Part 2: More Inventions\nPrinting was invented in China long ago. Books are printed in factories today.\nThe light bulb was invented by Edison in 1879. Light bulbs are used every night.\nGunpowder was discovered in ancient China. It was used long ago.",
+      "teach_html": "<p>下半场换资料：印刷（printing）、电灯泡、火药（gunpowder），资料在上面。</p><p>这次全靠你自己，站长不说话了。加油，主播！</p>"
+    },
+    {
+      "step": 24,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r5-v01",
+      "title": "印刷术",
+      "scene": "下半场：听众问印刷术。",
+      "reading": "Live Show Part 2: More Inventions\nPrinting was invented in China long ago. Books are printed in factories today.\nThe light bulb was invented by Edison in 1879. Light bulbs are used every night.\nGunpowder was discovered in ancient China. It was used long ago.",
+      "stem": "Printing ______ invented in China long ago.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "was"
+      ],
+      "answer": "D",
+      "help": "long ago，过去，单数。",
+      "explain": "was。",
+      "wrong_feedback": {
+        "A": "long ago 是过去。再想想。",
+        "B": "Printing 是单数。再想想。",
+        "C": "were 给复数用。再想想。"
+      }
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r5-v02",
+      "title": "书的印刷",
+      "scene": "下半场：书今天在哪里印？",
+      "reading": "Live Show Part 2: More Inventions\nPrinting was invented in China long ago. Books are printed in factories today.\nThe light bulb was invented by Edison in 1879. Light bulbs are used every night.\nGunpowder was discovered in ancient China. It was used long ago.",
+      "stem": "Books ______ printed in factories today.",
+      "options": [
+        "are",
+        "is",
+        "was",
+        "were"
+      ],
+      "answer": "A",
+      "help": "Books 复数，today 现在。",
+      "explain": "are。",
+      "wrong_feedback": {
+        "B": "Books 是复数。再想想。",
+        "C": "today 是现在。再想想。",
+        "D": "were 是过去。再想想。"
+      }
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r5-v03",
+      "title": "由谁发明",
+      "scene": "下半场：电灯泡由谁发明？",
+      "stem": "The light bulb was invented ______ Edison in 1879.",
+      "options": [
+        "with",
+        "from",
+        "by",
+        "of"
+      ],
+      "answer": "C",
+      "help": "表示“由谁”。",
+      "explain": "by。",
+      "wrong_feedback": {
+        "A": "表示“由谁”用 by。再想想。",
+        "B": "from 是“从”。再想想。",
+        "D": "of 是“……的”。再想想。"
+      }
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r5-v04",
+      "title": "电灯泡的使用",
+      "scene": "下半场：电灯泡每晚都用。",
+      "stem": "Light bulbs ______ used every night.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "were"
+      ],
+      "answer": "B",
+      "help": "bulbs 复数，现在。",
+      "explain": "are。",
+      "wrong_feedback": {
+        "A": "bulbs 是复数。再想想。",
+        "C": "every night 是现在。再想想。",
+        "D": "were 是过去。再想想。"
+      }
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r5-v05",
+      "title": "火药",
+      "scene": "下半场：火药的发现。",
+      "stem": "Gunpowder ______ discovered in ancient China.",
+      "options": [
+        "was",
+        "is",
+        "are",
+        "were"
+      ],
+      "answer": "A",
+      "help": "古代的事。",
+      "explain": "was。",
+      "wrong_feedback": {
+        "B": "古代的事用 was。再想想。",
+        "C": "Gunpowder 是单数。再想想。",
+        "D": "were 给复数用。再想想。"
+      }
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r5-v06",
+      "title": "选正确句子",
+      "scene": "最后一个问题：选正确的一句。",
+      "stem": "选出正确的一句。",
+      "options": [
+        "Light bulbs is used every night.",
+        "Light bulbs was used every night.",
+        "Light bulbs are use every night.",
+        "Light bulbs are used every night."
+      ],
+      "answer": "D",
+      "help": "检查主语、时态、过去分词。",
+      "explain": "are used。",
+      "wrong_feedback": {
+        "A": "bulbs 是复数，不能用 is。再想想。",
+        "B": "every night 是现在，不能用 was。再想想。",
+        "C": "要用过去分词 used。再想想。"
+      }
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r5-v07",
+      "title": "填 was/were",
+      "scene": "快速填空。",
+      "stem": "填空：Printing ___ invented in China long ago.",
+      "task": "只写一个英文单词。",
+      "answer_text": "was",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "cn": [
+            "是（过去）"
+          ]
+        }
+      ],
+      "help": "long ago，过去。",
+      "explain": "was。",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "long ago 是过去。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r5-v08",
+      "title": "填 is/are",
+      "scene": "快速填空。",
+      "stem": "填空：Light bulbs ___ used every night.",
+      "task": "只写一个英文单词。",
+      "answer_text": "are",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "are"
+          ],
+          "cn": [
+            "是"
+          ]
+        }
+      ],
+      "help": "bulbs 复数。",
+      "explain": "are。",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "bulbs 是复数。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r5-v09",
+      "title": "写过去分词",
+      "scene": "快速写。",
+      "stem": "写出 build（建造）的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "built",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "built"
+          ],
+          "cn": [
+            "建造（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则的。",
+      "explain": "built。",
+      "common_errors": [
+        {
+          "when": "写了 builded",
+          "say": "不规则：built。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r5-v10",
+      "title": "写过去分词",
+      "scene": "快速写。",
+      "stem": "写出 speak 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "spoken",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "spoken"
+          ],
+          "cn": [
+            "说（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则的。",
+      "explain": "spoken。",
+      "common_errors": [
+        {
+          "when": "写了 speaked",
+          "say": "不规则：spoken。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r5-v11",
+      "title": "补全问句",
+      "scene": "补全听众的问题。",
+      "stem": "补全：___ was printing invented?（印刷术是什么时候被发明的？）",
+      "task": "只写一个英文单词。",
+      "answer_text": "when",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "when"
+          ],
+          "cn": [
+            "何时"
+          ]
+        }
+      ],
+      "help": "问时间。",
+      "explain": "when。",
+      "common_errors": [
+        {
+          "when": "写了 where",
+          "say": "问时间用 when。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r5-v12",
+      "title": "补全句子",
+      "scene": "补全广播词。",
+      "stem": "补全：It ___ ___ by Edison in 1879.（它在 1879 年由爱迪生发明。）",
+      "task": "写两个英文单词。",
+      "answer_text": "was invented",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "cn": [
+            "是（过去）"
+          ]
+        },
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "invented"
+          ],
+          "cn": [
+            "发明（过去分词）"
+          ]
+        }
+      ],
+      "help": "1879 年，过去。",
+      "explain": "was invented。",
+      "common_errors": [
+        {
+          "when": "写了 is invented",
+          "say": "1879 年是过去。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u4r5-ending",
+      "title": "直播结束",
+      "teach_html": "<p>直播结束！今晚你答对了听众的所有问题：过去被动、现在被动、过去分词、by 和 ago，全过关。</p><p>站长说：Unit 4 学完了！从“纸是中国发明的”到“我自己的发明”，你都掌握了。给自己鼓鼓掌，继续加油！</p>"
+    }
+  ],
+  "title": "发明大直播：综合复习",
+  "unit": "Unit 4 Inventions",
+  "version": 1
+}
