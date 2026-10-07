@@ -1,0 +1,19 @@
+{
+  "name": "xiaohe-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --test tests/smoke.test.js tests/auth.test.js tests/grade.test.js tests/attempt.test.js tests/content.test.js tests/lesson-api.test.js tests/review.test.js tests/backup-online.test.js tests/fresh-install.test.js tests/seed-no-overwrite.test.js tests/homepage-gate.test.js tests/watchdog-flag.test.js tests/writing-grade.test.js tests/cookie-persist.test.js tests/practice-mode.test.js tests/daily-report.test.js tests/slow-replay.test.js tests/story-choice.test.js tests/mic-test-page.test.js tests/writing-grade-u2r4.test.js tests/guided-never-stuck.test.js tests/progress.test.js tests/retest-loop.test.js tests/diagnostic.test.js tests/k-version-isolation.test.js tests/k-client-error.test.js",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
