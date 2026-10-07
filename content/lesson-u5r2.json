@@ -1,0 +1,761 @@
+{
+  "lesson_id": "u5r2",
+  "practice_end": 24,
+  "home_subtitle": "第二课 · 你去过吗",
+  "part1_desc": "第 1–24 步：跟站长学提问 Have you ever…? 和回答 Yes, I have. / No, I haven't.。",
+  "part2_desc": "第 25–36 步：独立做新调查，问答交换生的经历。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时疑问句、肯定/否定回答、特殊疑问词。Unit 5 Educational exchanges 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-story-01",
+      "title": "经历大调查",
+      "teach_html": "<p>上期节目播完，有听众留言：我也想知道交换生都去过哪儿！站长说：那咱们做一期<strong>经历大调查</strong>。</p><p>这期你要学会<strong>提问</strong>：“你去过北京吗？”还要学会<strong>回答</strong>：“去过。”“没去过。”</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t01",
+      "title": "Have you ever…?",
+      "teach_html": "<p>问“你曾经……吗”，把 <strong>have</strong> 放到主语前面：</p><p><strong>Have you ever been</strong> to Beijing?（你曾经去过北京吗？）</p><p>结构：<strong>Have + 主语 + ever + 过去分词</strong>。</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t02",
+      "title": "肯定回答",
+      "teach_html": "<p>回答“去过”：<strong>Yes, I have.</strong></p><p>比如：— Have you ever been to Beijing? — <strong>Yes, I have.</strong>（去过。）</p><p>记住：回答里 <strong>have 后面不再加动词</strong>，说 Yes, I have. 就够了。</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t03",
+      "title": "否定回答",
+      "teach_html": "<p>回答“没去过”：<strong>No, I haven't.</strong>（haven't = have not）</p><p>— Have you ever been to Beijing? — <strong>No, I haven't.</strong>（没去过。）</p><p>也可以说：<strong>No, never.</strong>（没有，从没去过。）</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t04",
+      "title": "问 he/she",
+      "teach_html": "<p>问“他/她”时，用 <strong>Has</strong> 开头：</p><p><strong>Has he ever</strong> eaten dumplings?（他曾经吃过饺子吗？）</p><p>回答：<strong>Yes, he has.</strong> / <strong>No, he hasn't.</strong></p><p>口诀：<strong>问句开头看主语，三单用 Has</strong>。</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t05",
+      "title": "特殊疑问词",
+      "teach_html": "<p>想问“去过哪儿”“做过什么”，把特殊疑问词放最前面：</p><p><strong>Where</strong> have you <strong>been</strong>?（你去过哪儿？）</p><p><strong>What</strong> have you <strong>done</strong>?（你做过什么？）</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t06",
+      "title": "Who 提问",
+      "teach_html": "<p>问“谁”，用 <strong>Who has…?</strong>：</p><p><strong>Who has been</strong> to Shanghai?（谁去过上海？）</p><p>回答：Li Ming <strong>has</strong>.（李明去过。）</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t07",
+      "title": "yet：用于疑问句",
+      "teach_html": "<p><strong>yet</strong> 还可以放在<strong>疑问句末尾</strong>，表示“已经……了吗”：</p><p>Have you finished <strong>yet</strong>?（你做完了吗？）</p><p>注意：yet 在疑问句里是“已经”，在否定句里是“还没”，看句子来定。</p>"
+    },
+    {
+      "step": 9,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r2-t08",
+      "title": "小结",
+      "teach_html": "<p>小结：<strong>Have/Has + 主语 + ever + 过去分词</strong>提问；回答 <strong>Yes, I have. / No, I haven't.</strong></p><p>下面站长带着你练。资料卡在上面，做题时对照着看。</p>"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u5r2-prac-01",
+      "title": "先看资料",
+      "teach_html": "<p>这是调查表。做题时对照着看：李明—去过北京—没出过国；安娜—去过上海—吃过饺子；汤姆—见过长城—没去过上海。</p><p>下面练提问和回答。</p>",
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q01",
+      "title": "你去过北京吗",
+      "scene": "问李明去过北京吗。",
+      "stem": "______ you ever been to Beijing?",
+      "options": [
+        "Have",
+        "Has",
+        "Do",
+        "Are"
+      ],
+      "answer": "A",
+      "help": "you 开头用什么？",
+      "explain": "Have you ever been to Beijing?",
+      "wrong_feedback": {
+        "B": "Has 用于 he/she/it。you 用 Have。",
+        "C": "Do 是一般现在时，这里是现在完成时，用 Have。",
+        "D": "Are 是 be 动词，不对。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q02",
+      "title": "他吃过饺子吗",
+      "scene": "问安娜吃过饺子吗。",
+      "stem": "______ Anna ever eaten dumplings?",
+      "options": [
+        "Have",
+        "Do",
+        "Has",
+        "Does"
+      ],
+      "answer": "C",
+      "help": "Anna 是三单。",
+      "explain": "Has Anna ever eaten dumplings?",
+      "wrong_feedback": {
+        "A": "Have 用于 I/you/we/they。Anna 是三单，用 Has。",
+        "B": "Do 是一般现在时，不对。",
+        "D": "Does 是一般现在时三单，不对。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q03",
+      "title": "肯定回答",
+      "scene": "李明去过北京，他怎么答？",
+      "stem": "— Have you ever been to Beijing? — Yes, ______.",
+      "options": [
+        "I do",
+        "I have",
+        "I am",
+        "me too"
+      ],
+      "answer": "B",
+      "help": "肯定回答用什么？",
+      "explain": "Yes, I have.",
+      "wrong_feedback": {
+        "A": "I do 是一般现在时的回答，这里用 I have。",
+        "C": "I am 是 be 动词，不对。",
+        "D": "me too 是“我也是”，不是回答“去过”。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q04",
+      "title": "否定回答",
+      "scene": "汤姆没去过上海，他怎么答？",
+      "stem": "— Have you ever been to Shanghai? — No, ______.",
+      "options": [
+        "I don't",
+        "I am not",
+        "I no",
+        "I haven't"
+      ],
+      "answer": "D",
+      "help": "否定回答用哪个？",
+      "explain": "No, I haven't.",
+      "wrong_feedback": {
+        "A": "I don't 是一般现在时否定，这里用 I haven't。",
+        "B": "I am not 是 be 动词否定，不对。",
+        "C": "I no 不是完整回答。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q05",
+      "title": "去过哪儿",
+      "scene": "问安娜去过哪儿。",
+      "stem": "______ has Anna been?",
+      "options": [
+        "Where",
+        "When",
+        "What",
+        "Who"
+      ],
+      "answer": "A",
+      "help": "问地点用什么？",
+      "explain": "Where has Anna been?",
+      "wrong_feedback": {
+        "B": "When 问时间，这里问地点。",
+        "C": "What 问什么，这里问“哪儿”。",
+        "D": "Who 问谁，这里问地点。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q06",
+      "title": "谁去过",
+      "scene": "问谁见过长城。",
+      "stem": "______ has seen the Great Wall?",
+      "options": [
+        "Where",
+        "What",
+        "Who",
+        "When"
+      ],
+      "answer": "C",
+      "help": "问“谁”用什么？",
+      "explain": "Who has seen the Great Wall?",
+      "wrong_feedback": {
+        "A": "Where 问地点，这里问谁。",
+        "B": "What 问什么，这里问谁。",
+        "D": "When 问时间，这里问谁。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q07",
+      "title": "做完了吗",
+      "scene": "问他做完作业了吗。",
+      "stem": "Have you finished your homework ______?",
+      "options": [
+        "already",
+        "ever",
+        "never",
+        "yet"
+      ],
+      "answer": "D",
+      "help": "疑问句末尾表示“已经……了吗”，用什么？",
+      "explain": "Have you finished your homework yet?",
+      "wrong_feedback": {
+        "A": "already 一般不放疑问句末，这里用 yet。",
+        "B": "ever 是“曾经”，这里问“做完了吗”，用 yet。",
+        "C": "never 是“从不”，意思不对。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q08",
+      "title": "她去过吗",
+      "scene": "她去过上海吗？去过。",
+      "stem": "— Has she ever been to Shanghai? — ______.",
+      "options": [
+        "Yes, she has",
+        "Yes, she have",
+        "Yes, she does",
+        "Yes, she is"
+      ],
+      "answer": "B",
+      "help": "三单的肯定回答？",
+      "explain": "Yes, she has.",
+      "wrong_feedback": {
+        "A": "she 是三单，回答用 has，不用 have。",
+        "C": "does 是一般现在时，不对。",
+        "D": "is 是 be 动词，不对。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r2-q09",
+      "title": "没去过",
+      "scene": "他没去过北京。",
+      "stem": "He has ______ been to Beijing.",
+      "options": [
+        "never",
+        "ever",
+        "yet",
+        "already"
+      ],
+      "answer": "A",
+      "help": "“从没去过”用什么？",
+      "explain": "He has never been to Beijing.",
+      "wrong_feedback": {
+        "B": "ever 是“曾经”，这里要“从没”，用 never。",
+        "C": "yet 放句末，这里用 never。",
+        "D": "already 是“已经”，意思相反。"
+      },
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r2-q10",
+      "title": "写出过去分词：do",
+      "scene": "把 do 变成过去分词。",
+      "stem": "写出 do 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "done",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "done"
+          ],
+          "cn": [
+            "做（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "do → done。",
+      "common_errors": [
+        {
+          "when": "写了 did",
+          "say": "did 是过去式，过去分词是 done。"
+        }
+      ],
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r2-q11",
+      "title": "have 还是 has",
+      "scene": "你曾经去过吗？",
+      "stem": "___ you ever been there?",
+      "task": "只写 Have 或 Has。",
+      "answer_text": "Have",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "Have"
+          ],
+          "cn": [
+            "（you 用 Have）"
+          ]
+        }
+      ],
+      "help": "you 开头提问用什么？",
+      "explain": "Have you ever been there?",
+      "common_errors": [
+        {
+          "when": "写了 Has",
+          "say": "you 用 Have，不用 Has。"
+        }
+      ],
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r2-q12",
+      "title": "have 还是 has",
+      "scene": "他曾经去过吗？",
+      "stem": "___ he ever been there?",
+      "task": "只写 Has 或 Have。",
+      "answer_text": "Has",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "Has"
+          ],
+          "cn": [
+            "（三单用 Has）"
+          ]
+        }
+      ],
+      "help": "he 开头提问用什么？",
+      "explain": "Has he ever been there?",
+      "common_errors": [
+        {
+          "when": "写了 Have",
+          "say": "he 是三单，用 Has。"
+        }
+      ],
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r2-q13",
+      "title": "否定缩写",
+      "scene": "写出 have not 的缩写。",
+      "stem": "写出 have not 的缩写形式。",
+      "task": "只写一个英文单词。",
+      "answer_text": "haven't",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "haven't",
+            "havent"
+          ],
+          "cn": [
+            "（否定缩写）"
+          ]
+        }
+      ],
+      "help": "have + n't。",
+      "explain": "have not → haven't。",
+      "common_errors": [
+        {
+          "when": "写了 havent（没撇号）",
+          "say": "别忘了撇号：haven't。"
+        }
+      ],
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 24,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r2-q14",
+      "title": "写出过去分词：be",
+      "scene": "把 be 变成过去分词。",
+      "stem": "写出 be 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "been",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "been"
+          ],
+          "cn": [
+            "是/去过（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "be → been。",
+      "common_errors": [
+        {
+          "when": "写了 was",
+          "say": "was 是过去式，过去分词是 been。"
+        }
+      ],
+      "reading": "Survey: Li Ming has been to Beijing, has never been abroad; Anna has been to Shanghai, has eaten dumplings; Tom has seen the Great Wall, hasn't been to Shanghai"
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r2-v-intro",
+      "title": "新任务：独立调查",
+      "teach_html": "<p>新任务：这次是<strong>小梅 (Mei)</strong>、<strong>杰克 (Jack)</strong>、<strong>莉莉 (Lily)</strong> 的新调查表。</p><p>资料在上面。这次你自己问、自己答，站长不提示了。</p><p>记住：<strong>Have/Has + 主语 + ever + 过去分词</strong>提问；<strong>Yes, I have. / No, I haven't.</strong> 回答。</p>",
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r2-v01",
+      "title": "她去过杭州吗",
+      "scene": "问小梅去过杭州吗。",
+      "stem": "______ Mei ever been to Hangzhou?",
+      "options": [
+        "Have",
+        "Do",
+        "Does",
+        "Has"
+      ],
+      "answer": "D",
+      "help": "Mei 是三单。",
+      "explain": "Has Mei ever been to Hangzhou?",
+      "wrong_feedback": {
+        "A": "再想想主语。",
+        "B": "再想想时态。",
+        "C": "再想想时态。"
+      },
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r2-v02",
+      "title": "他吃过面条吗",
+      "scene": "杰克吃过面条，他怎么答？",
+      "stem": "— Has he ever eaten noodles? — Yes, ______.",
+      "options": [
+        "he do",
+        "he has",
+        "he is",
+        "he does"
+      ],
+      "answer": "B",
+      "help": "三单肯定回答。",
+      "explain": "Yes, he has.",
+      "wrong_feedback": {
+        "A": "再想想回答。",
+        "C": "再想想动词。",
+        "D": "再想想时态。"
+      },
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r2-v03",
+      "title": "她没出过国",
+      "scene": "小梅没出过国，她怎么答？",
+      "stem": "— Have you ever been abroad? — No, ______.",
+      "options": [
+        "I don't",
+        "I am not",
+        "I haven't",
+        "I no"
+      ],
+      "answer": "C",
+      "help": "否定回答。",
+      "explain": "No, I haven't.",
+      "wrong_feedback": {
+        "A": "再想想时态。",
+        "B": "再想想动词。",
+        "D": "再想想回答。"
+      },
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r2-v04",
+      "title": "她学过什么",
+      "scene": "问莉莉学过什么。",
+      "stem": "______ has Lily learned?",
+      "options": [
+        "What",
+        "Where",
+        "Who",
+        "When"
+      ],
+      "answer": "A",
+      "help": "问“什么”。",
+      "explain": "What has Lily learned?",
+      "wrong_feedback": {
+        "B": "再想想疑问词。",
+        "C": "再想想疑问词。",
+        "D": "再想想疑问词。"
+      },
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r2-v05",
+      "title": "做完作业了吗",
+      "scene": "问他做完作业了吗。",
+      "stem": "Has he finished his homework ______?",
+      "options": [
+        "already",
+        "ever",
+        "never",
+        "yet"
+      ],
+      "answer": "D",
+      "help": "疑问句末尾。",
+      "explain": "Has he finished his homework yet?",
+      "wrong_feedback": {
+        "A": "再想想位置。",
+        "B": "再想想意思。",
+        "C": "再想想意思。"
+      },
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r2-v06",
+      "title": "谁没见过雪",
+      "scene": "问谁没见过雪。",
+      "stem": "______ has never seen snow?",
+      "options": [
+        "Where",
+        "Who",
+        "What",
+        "When"
+      ],
+      "answer": "B",
+      "help": "问“谁”。",
+      "explain": "Who has never seen snow?",
+      "wrong_feedback": {
+        "A": "再想想疑问词。",
+        "C": "再想想疑问词。",
+        "D": "再想想疑问词。"
+      },
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r2-v07",
+      "title": "写出过去分词：make",
+      "scene": "把 make 变成过去分词。",
+      "stem": "写出 make 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "made",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "made"
+          ],
+          "cn": [
+            "制作（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "make → made。",
+      "common_errors": [
+        {
+          "when": "写了 maked",
+          "say": "make 不规则，过去分词是 made。"
+        }
+      ],
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r2-v08",
+      "title": "has not 的缩写",
+      "scene": "写出 has not 的缩写。",
+      "stem": "写出 has not 的缩写形式。",
+      "task": "只写一个英文单词。",
+      "answer_text": "hasn't",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "hasn't",
+            "hasnt"
+          ],
+          "cn": [
+            "（否定缩写）"
+          ]
+        }
+      ],
+      "help": "has + n't。",
+      "explain": "has not → hasn't。",
+      "common_errors": [
+        {
+          "when": "写了 hasnt（没撇号）",
+          "say": "别忘了撇号：hasn't。"
+        }
+      ],
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r2-v09",
+      "title": "have 还是 has",
+      "scene": "他们曾经去过吗？",
+      "stem": "___ they ever been there?",
+      "task": "只写 Have 或 Has。",
+      "answer_text": "Have",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "Have"
+          ],
+          "cn": [
+            "（they 用 Have）"
+          ]
+        }
+      ],
+      "help": "they 用哪个？",
+      "explain": "Have they ever been there?",
+      "common_errors": [
+        {
+          "when": "写了 Has",
+          "say": "they 用 Have。"
+        }
+      ],
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r2-v10",
+      "title": "写出过去分词：take",
+      "scene": "把 take 变成过去分词。",
+      "stem": "写出 take 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "taken",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "taken"
+          ],
+          "cn": [
+            "拿走（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "take → taken。",
+      "common_errors": [
+        {
+          "when": "写了 taked",
+          "say": "take 不规则，过去分词是 taken。"
+        }
+      ],
+      "reading": "New survey: Mei has been to Hangzhou, hasn't been abroad; Jack has eaten noodles, has never seen snow; Lily has learned dancing for two years"
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r2-ending",
+      "title": "节目预告",
+      "teach_html": "<p>调查做得很清楚。站长说：提问回答都会了。</p><p>下一期，站长要讲<strong>just、already、yet</strong>——“我刚到”“我已经吃过了”“我还没做完”，英文怎么说。</p>"
+    }
+  ],
+  "title": "你去过吗：疑问句和回答",
+  "unit": "Unit 5 Educational exchanges",
+  "version": 1
+}
