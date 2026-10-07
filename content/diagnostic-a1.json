@@ -20,12 +20,12 @@
       "category": "单词量",
       "knowledge_point": "vocab-l1",
       "level": 1,
-      "stem": "“书”的意思是“书”？请选择英文。",
+      "stem": "\"书\"的英文是哪个？",
       "options": [
         "A. book",
-        "B. 本子",
-        "C. 笔",
-        "D. 纸"
+        "B. pen",
+        "C. ruler",
+        "D. eraser"
       ],
       "answer": "A",
       "explain": "",
@@ -39,12 +39,12 @@
       "category": "单词量",
       "knowledge_point": "vocab-l2",
       "level": 2,
-      "stem": "“图书馆”的意思是“图书馆”？请选择英文。",
+      "stem": "\"图书馆\"的英文是哪个？",
       "options": [
-        "A. 商店",
+        "A. shop",
         "B. library",
-        "C. 学校",
-        "D. 公园"
+        "C. school",
+        "D. park"
       ],
       "answer": "B",
       "explain": "",
@@ -58,12 +58,12 @@
       "category": "单词量",
       "knowledge_point": "vocab-l3",
       "level": 3,
-      "stem": "“日程表”的意思是“日程表”？请选择英文。",
+      "stem": "\"日程表\"的英文是哪个？",
       "options": [
-        "A. 时刻表",
+        "A. menu",
         "B. schedule",
-        "C. 地图",
-        "D. 菜单"
+        "C. map",
+        "D. ticket"
       ],
       "answer": "B",
       "explain": "",
@@ -77,7 +77,7 @@
       "category": "拼读",
       "knowledge_point": "phonics-1",
       "level": 1,
-      "stem": "哪个单词划线部分发音不同？c<u>a</u>t / c<u>a</u>ke / m<u>a</u>p",
+      "stem": "哪个单词划线部分发音不同？cat / cake / map",
       "options": [
         "A. 第一个",
         "B. 第二个",
@@ -96,7 +96,7 @@
       "category": "拼读",
       "knowledge_point": "phonics-2",
       "level": 2,
-      "stem": "哪个单词划线部分发音不同？b<u>e</u>d / p<u>e</u>n / m<u>e</u>",
+      "stem": "哪个单词划线部分发音不同？bed / pen / me",
       "options": [
         "A. 第一个",
         "B. 第二个",
