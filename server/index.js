@@ -1113,6 +1113,11 @@ for (const r of seedReport) {
   else if (r.seeded) console.log(`[seed] ${r.lesson_id} 自动入库 ${r.seeded} 道题`);
 }
 if (require.main === module) {
+  // Render/云部署：允许用环境变量 ACCESS_CODE 直接设置访问码（免一次性口令流程）
+  if (process.env.ACCESS_CODE && !auth.isSetupDone()) {
+    auth.trySetupDirect(String(process.env.ACCESS_CODE));
+    console.log('已用环境变量 ACCESS_CODE 设置访问码。');
+  }
   const token = auth.ensureSetupToken();
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`xiaohe-v2 listening on 0.0.0.0:${PORT}`);
