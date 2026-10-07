@@ -1,0 +1,176 @@
+{
+ "form": "B",
+ "section": 1,
+ "title": "新人能力检测（一）：单词·语音·语法",
+ "desc": "单词量分级、拼读、基础语法，约15分钟",
+ "steps": [
+  {
+   "kind": "teach",
+   "step": 1,
+   "title": "新人能力检测（一）",
+   "scene": "广播站",
+   "teach_html": "<p>欢迎加入<b>小禾广播站</b>！</p><p>在正式上岗前，我们想了解一下你现在的英语水平，好给你安排合适的任务。</p><p>这不是考试，没有分数。每一题答完，我们只会说“收到”，然后出下一题。</p><p>如果某题完全不会，点<b>“这个我不会”</b>跳过就好，不用猜。</p><p>第一部分：单词、语音、语法，大约15分钟。可以中途休息，进度会自动保存。</p>",
+   "phase": "diagnostic"
+  },
+  {
+   "kind": "mcq",
+   "step": 2,
+   "title": "单词-1级",
+   "scene": "检测",
+   "category": "单词量",
+   "knowledge_point": "vocab-l1",
+   "level": 1,
+   "stem": "“钢笔”的意思是“钢笔”？请选择英文。",
+   "options": [
+    "A. 铅笔",
+    "B. pen",
+    "C. 尺子",
+    "D. 橡皮"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 3,
+   "title": "单词-2级",
+   "scene": "检测",
+   "category": "单词量",
+   "knowledge_point": "vocab-l2",
+   "level": 2,
+   "stem": "“体育场”的意思是“体育场”？请选择英文。",
+   "options": [
+    "A. 商店",
+    "B. stadium",
+    "C. 车站",
+    "D. 公园"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 4,
+   "title": "单词-3级",
+   "scene": "检测",
+   "category": "单词量",
+   "knowledge_point": "vocab-l3",
+   "level": 3,
+   "stem": "“承诺”的意思是“承诺”？请选择英文。",
+   "options": [
+    "A. 礼物",
+    "B. promise",
+    "C. 问题",
+    "D. 答案"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 5,
+   "title": "拼读-1",
+   "scene": "检测",
+   "category": "拼读",
+   "knowledge_point": "phonics-1",
+   "level": 1,
+   "stem": "哪个单词划线部分发音不同？pig / bike / fish",
+   "options": [
+    "A. 第一个",
+    "B. 第二个",
+    "C. 第三个",
+    "D. 都一样"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 6,
+   "title": "拼读-2",
+   "scene": "检测",
+   "category": "拼读",
+   "knowledge_point": "phonics-2",
+   "level": 2,
+   "stem": "哪个单词划线部分发音不同？cup / bus / tube",
+   "options": [
+    "A. 第一个",
+    "B. 第二个",
+    "C. 第三个",
+    "D. 都一样"
+   ],
+   "answer": "C",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 7,
+   "title": "语法-1",
+   "scene": "检测",
+   "category": "语法",
+   "knowledge_point": "grammar-3sg",
+   "level": 1,
+   "stem": "He ___ TV every evening.",
+   "options": [
+    "A. watch",
+    "B. watches",
+    "C. watching",
+    "D. watched"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 8,
+   "title": "语法-2",
+   "scene": "检测",
+   "category": "语法",
+   "knowledge_point": "grammar-therebe",
+   "level": 2,
+   "stem": "There ___ many books on the desk.",
+   "options": [
+    "A. is",
+    "B. are",
+    "C. be",
+    "D. has"
+   ],
+   "answer": "B",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "mcq",
+   "step": 9,
+   "title": "语法-3",
+   "scene": "检测",
+   "category": "语法",
+   "knowledge_point": "grammar-for",
+   "level": 3,
+   "stem": "She has studied English ___ three years.",
+   "options": [
+    "A. for",
+    "B. since",
+    "C. from",
+    "D. at"
+   ],
+   "answer": "A",
+   "explain": "",
+   "help": ""
+  },
+  {
+   "kind": "teach",
+   "step": 10,
+   "title": "第一部分完成",
+   "scene": "广播站",
+   "teach_html": "<p>收到！第一部分做完了，休息一下吧。</p><p>第二部分是阅读和听力，准备好了再来。</p>",
+   "phase": "diagnostic"
+  }
+ ]
+}
