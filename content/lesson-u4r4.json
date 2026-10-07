@@ -1,0 +1,755 @@
+{
+  "lesson_id": "u4r4",
+  "practice_end": 24,
+  "home_subtitle": "第四课 · 我的发明",
+  "part1_desc": "第 1–24 步：学三段式写作，帮小听众改《我的发明》作文。",
+  "part2_desc": "第 25–36 步：独立改作文、独立写三句话，预告发明大直播。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：被动语态书面表达（My invention 三段式写作）。Unit 4 Inventions 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-story-01",
+      "title": "发明故事专栏",
+      "teach_html": "<p>发明展结束了，广播站要开一个新专栏：<strong>《我的发明》</strong>，把小听众自己的发明故事播出来。</p><p>站长请你写一篇范文，给大家打个样。今天不学新语法，只学<strong>怎么写</strong>。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-story-02",
+      "title": "三段式结构",
+      "teach_html": "<p>“My invention”用<strong>三段式</strong>来写，一段只讲一件事：</p><ul><li><strong>开头</strong>：它是什么 + 谁发明的</li><li><strong>中间</strong>：它怎么做出来的 / 怎么用</li><li><strong>结尾</strong>：我为什么喜欢它</li></ul><p>每段 1–2 句，全篇 4–5 句就够了。</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-01",
+      "title": "范文",
+      "teach_html": "<p>站长和你一起写的范文，5 句话：</p><p><strong>My invention is a small robot. It was invented by me last year. It is made of old boxes. It is used to clean my room. I like it because it saves time.</strong></p><p>中文意思：我的发明是一个小机器人。它是去年由我发明的。它由旧盒子做成。它用来打扫我的房间。我喜欢它，因为它省时间。</p><p>数一数：开头 2 句，中间 2 句，结尾 1 句。</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-02",
+      "title": "开头怎么写",
+      "teach_html": "<p><strong>开头</strong>：先说它是什么，再说谁发明的（用过去被动）：</p><ul><li>My invention <strong>is</strong> a small robot.（我的发明是一个小机器人。）</li><li>It <strong>was invented by</strong> me last year.（它去年由我发明。invent，发明，动词）</li><li>It <strong>was made</strong> in my home.（它在我家做出来的。）</li></ul><p>公式：<strong>It was + 过去分词 + by（由……） + 人</strong>。</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-03",
+      "title": "中间怎么写",
+      "teach_html": "<p><strong>中间</strong>：说它怎么做、怎么用（用现在被动）：</p><ul><li>It <strong>is made of</strong> old boxes.（它由旧盒子做成。make，制造）</li><li>It <strong>is used to</strong> clean my room.（它用来打扫房间。use，使用）</li><li>They <strong>are used</strong> every day.（它们每天都被用。）</li></ul><p>记住两个搭配：<strong>be made of</strong>（由……制成），<strong>be used to</strong>（被用来做……）。</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-04",
+      "title": "结尾怎么写",
+      "teach_html": "<p><strong>结尾</strong>：说我为什么喜欢它：</p><ul><li>I like it <strong>because</strong>（因为） it saves time.（我喜欢它，因为它省时间。）</li><li>It is <strong>useful</strong>.（它很有用。）</li></ul><p>because 后面跟原因，一句话就够了。</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-05",
+      "title": "主动改被动",
+      "teach_html": "<p>写作小技巧：<strong>主动改被动</strong>，句子更像范文：</p><ul><li>My father <strong>invented</strong> it. → It <strong>was invented by</strong> my father.</li><li>Factories <strong>make</strong> light bulbs（电灯泡）. → Light bulbs <strong>are made</strong> in factories.</li></ul><p>三步走：宾语提前 → be 动词 + 过去分词 → 原来的主语放 by 后面。</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-06",
+      "title": "检查清单",
+      "teach_html": "<p>写完用这个清单检查：</p><ul><li>三段都有了吗？（开头 / 中间 / 结尾）</li><li>过去的事用了 was / were 吗？现在的事用了 is / are 吗？</li><li>每句话都有动词吗？</li><li>单词都拼对了吗？</li></ul><p>缺一段，就补一段；错一处，就改一处。</p>"
+    },
+    {
+      "step": 9,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-07",
+      "title": "小结",
+      "teach_html": "<p>小结：</p><ul><li>三段式：开头（是什么 + 谁发明）→ 中间（怎么做 + 怎么用）→ 结尾（为什么喜欢）。</li><li>开头多用 <strong>was invented by</strong>，中间多用 <strong>is made of / is used to</strong>，结尾用 <strong>because</strong>。</li></ul><p>下面帮小听众改作文，练写作！</p>"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u4r4-teach-08",
+      "title": "新任务：改作文",
+      "reading": "My invention is a water cleaner. It invented by my brother last year. It is make of plastic bottles. It is used to clean water. I like it because it help many people.",
+      "teach_html": "<p>新任务：小听众豆豆写了篇《我的发明》，有 3 处小毛病，资料在上面。</p><p>你来当小老师：找出毛病，改成范文的样子。站长陪你一起改。</p>"
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q01",
+      "title": "哪句做开头",
+      "scene": "豆豆问：开头第一句写什么？",
+      "reading": "My invention is a water cleaner. It invented by my brother last year. It is make of plastic bottles. It is used to clean water. I like it because it help many people.",
+      "stem": "哪句适合做《我的发明》的开头？",
+      "options": [
+        "I like it because it is fun.",
+        "It is made of plastic bottles.",
+        "My invention is a water cleaner. It was invented by my brother.",
+        "It is used to clean water."
+      ],
+      "answer": "C",
+      "help": "不对。开头要先介绍它是什么、谁发明的。",
+      "explain": "开头：是什么 + 谁发明的。",
+      "wrong_feedback": {
+        "A": "这是结尾的句子，开头要先介绍它是什么。",
+        "B": "这是中间段的内容，开头先说它是什么、谁发明的。",
+        "D": "这是中间段的用法介绍，不是开头。"
+      }
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q02",
+      "title": "改第一处",
+      "scene": "第一处毛病：It invented by my brother.",
+      "reading": "My invention is a water cleaner. It invented by my brother last year. It is make of plastic bottles. It is used to clean water. I like it because it help many people.",
+      "stem": "豆豆写了 “It invented by my brother.”，怎么改？",
+      "options": [
+        "It was invented by my brother.",
+        "It is invented by my brother.",
+        "It invents by my brother.",
+        "Invented it by my brother."
+      ],
+      "answer": "A",
+      "help": "不对。去年发明的，过去的事。",
+      "explain": "last year 是过去，用 was invented。",
+      "wrong_feedback": {
+        "B": "last year 是过去，不能用 is。",
+        "C": "invents 是主动，意思反了，还缺被动结构。",
+        "D": "句子缺主语，语序也乱了。"
+      }
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q03",
+      "title": "改第二处",
+      "scene": "第二处毛病：It is make of plastic bottles.",
+      "reading": "My invention is a water cleaner. It invented by my brother last year. It is make of plastic bottles. It is used to clean water. I like it because it help many people.",
+      "stem": "“It is make of plastic bottles.” 怎么改？",
+      "options": [
+        "It is making of plastic bottles.",
+        "It makes of plastic bottles.",
+        "It made of plastic bottles.",
+        "It is made of plastic bottles."
+      ],
+      "answer": "D",
+      "help": "不对。be made of 是固定搭配。",
+      "explain": "be made of（由……制成）是固定搭配。",
+      "wrong_feedback": {
+        "A": "making 是进行时，be made of 才是固定搭配。",
+        "B": "makes of 不是固定搭配，要用 be made of。",
+        "C": "少了 is，句子不完整。"
+      }
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q04",
+      "title": "改第三处",
+      "scene": "第三处毛病：it help many people.",
+      "stem": "“I like it because it help many people.” 怎么改？",
+      "options": [
+        "I like it because it help many people.",
+        "I like it because it helps many people.",
+        "I like it because it helping many people.",
+        "I like it because it helped many people."
+      ],
+      "answer": "B",
+      "help": "不对。it 是第三人称单数。",
+      "explain": "it 后面动词加 s：helps。",
+      "wrong_feedback": {
+        "A": "it 后面动词要加 s，help 要变成 helps。",
+        "C": "helping 是进行时，这里用 helps。",
+        "D": "helped 是过去，现在喜欢、现在有用，用 helps。"
+      }
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q05",
+      "title": "主动改被动",
+      "scene": "写作技巧练习：主动改被动。",
+      "stem": "主动改被动：“My brother invented it last year.” 选出正确的被动句。",
+      "options": [
+        "It was invented by my brother last year.",
+        "It is invented by my brother last year.",
+        "It invented by my brother last year.",
+        "It was invent by my brother last year."
+      ],
+      "answer": "A",
+      "help": "不对。宾语提前，be + 过去分词。",
+      "explain": "It was invented by my brother last year.",
+      "wrong_feedback": {
+        "B": "last year 是过去，用 was 不用 is。",
+        "C": "少了 was，invented 前面要有 be 动词。",
+        "D": "invent 是原形，被动要用过去分词 invented。"
+      }
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q06",
+      "title": "哪句放中间",
+      "scene": "豆豆问：中间段写什么？",
+      "reading": "My invention is a water cleaner. It invented by my brother last year. It is make of plastic bottles. It is used to clean water. I like it because it help many people.",
+      "stem": "哪句适合放在中间段？",
+      "options": [
+        "I like it because it is useful.",
+        "My invention is a water cleaner.",
+        "It was invented by my brother.",
+        "It is used to clean dirty water."
+      ],
+      "answer": "D",
+      "help": "不对。中间段讲怎么做、怎么用。",
+      "explain": "中间段：怎么做 / 怎么用。",
+      "wrong_feedback": {
+        "A": "这是结尾的句子。",
+        "B": "这是开头的介绍。",
+        "C": "这是开头的发明者介绍。"
+      }
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q07",
+      "title": "补全中间段",
+      "scene": "补全中间段的句子。",
+      "stem": "补全中间段：“It ___ made of plastic bottles.”",
+      "options": [
+        "are",
+        "was",
+        "is",
+        "were"
+      ],
+      "answer": "C",
+      "help": "不对。It 单数，说现在。",
+      "explain": "It is made of ... 单数现在用 is。",
+      "wrong_feedback": {
+        "A": "It 是单数，不能用 are。",
+        "B": "这是说现在的材料，用 is 不用 was。",
+        "D": "were 给复数用。"
+      }
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q08",
+      "title": "哪句不能放",
+      "scene": "站长考眼力：哪句是多余的？",
+      "stem": "哪句不能放进《我的发明》？",
+      "options": [
+        "It is used to clean water.",
+        "I had noodles for lunch.",
+        "It was invented by my brother.",
+        "I like it because it helps people."
+      ],
+      "answer": "B",
+      "help": "不对。哪句跟发明没关系？",
+      "explain": "吃午饭跟发明无关，不能放。",
+      "wrong_feedback": {
+        "A": "这是讲用法的，可以放。",
+        "C": "这是讲发明者的，可以放。",
+        "D": "这是结尾，可以放。"
+      }
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u4r4-q09",
+      "title": "选正确句子",
+      "scene": "最后一练：选完全正确的一句。",
+      "stem": "选出完全正确的一句。",
+      "options": [
+        "It was invent by my brother.",
+        "It is made from plastic bottles yesterday.",
+        "It are used to clean water.",
+        "It was invented by my brother last year."
+      ],
+      "answer": "D",
+      "help": "不对。一句一句检查时态和主语。",
+      "explain": "It was invented by my brother last year. 全对。",
+      "wrong_feedback": {
+        "A": "invent 是原形，要用 invented。",
+        "B": "yesterday 是过去，不能用 is。",
+        "C": "It 是单数，不能用 are。"
+      }
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r4-q10",
+      "title": "写开头",
+      "scene": "帮豆豆写开头。",
+      "stem": "填空：My invention ___ a flying bike.（我的发明是一辆会飞的自行车。）",
+      "task": "只写一个英文单词。",
+      "answer_text": "is",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "is"
+          ],
+          "cn": [
+            "是"
+          ]
+        }
+      ],
+      "help": "不对。单数主语。",
+      "explain": "My invention is a flying bike.",
+      "common_errors": [
+        {
+          "when": "写了 are",
+          "say": "invention 是单数，用 is。"
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r4-q11",
+      "title": "写发明者",
+      "scene": "帮豆豆写发明者。",
+      "stem": "填空：It ___ invented by me last year.",
+      "task": "只写一个英文单词。",
+      "answer_text": "was",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "cn": [
+            "是（过去）"
+          ]
+        }
+      ],
+      "help": "不对。last year，过去。",
+      "explain": "It was invented by me last year.",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "last year 是过去，用 was。"
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r4-q12",
+      "title": "写材料",
+      "scene": "帮豆豆写材料。",
+      "stem": "填空：It is ___ of old paper.（它由旧纸做成。）",
+      "task": "只写一个英文单词。",
+      "answer_text": "made",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "made"
+          ],
+          "cn": [
+            "制造（过去分词）"
+          ]
+        }
+      ],
+      "help": "不对。be made of 固定搭配。",
+      "explain": "It is made of old paper.",
+      "common_errors": [
+        {
+          "when": "写了 make",
+          "say": "be made of 是固定搭配，用 made。"
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r4-q13",
+      "title": "写原因",
+      "scene": "帮豆豆写结尾。",
+      "stem": "填空：I like it ___ it saves time.（我喜欢它，因为它省时间。）",
+      "task": "只写一个英文单词。",
+      "answer_text": "because",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "because"
+          ],
+          "cn": [
+            "因为"
+          ]
+        }
+      ],
+      "help": "不对。表示原因。",
+      "explain": "I like it because it saves time.",
+      "common_errors": [
+        {
+          "when": "写了 and",
+          "say": "这里表示原因，用 because（因为）。"
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u4r4-q14",
+      "title": "主动改被动",
+      "scene": "改写句子。",
+      "stem": "主动改被动填空：Edison invented the light bulb. → The light bulb ___ invented by Edison.",
+      "task": "只写一个英文单词。",
+      "answer_text": "was",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "cn": [
+            "是（过去）"
+          ]
+        }
+      ],
+      "help": "不对。过去的人物，过去的事。",
+      "explain": "The light bulb was invented by Edison.",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "爱迪生是过去的人物发明，用 was。"
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u4r4-story-03",
+      "title": "新任务：独立写作",
+      "reading": "My invention is a smart schoolbag. It was invent by my sister. It is made of cloth. It are used to carry books. I like it because it is light and it help me.",
+      "teach_html": "<p>新任务：另一个小听众也写了《我的发明》，资料在上面，也有 3 处小毛病。</p><p>这次全靠你自己：找出毛病，改对，再自己写三句话。站长不说话了。</p>"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r4-v01",
+      "title": "哪句做开头",
+      "scene": "新作文：开头怎么写？",
+      "reading": "My invention is a smart schoolbag. It was invent by my sister. It is made of cloth. It are used to carry books. I like it because it is light and it help me.",
+      "stem": "哪句适合做这篇的开头？",
+      "options": [
+        "I like it because it is light.",
+        "My invention is a smart schoolbag. It was invented by my sister.",
+        "It is used to carry books.",
+        "It is made of cloth."
+      ],
+      "answer": "B",
+      "help": "开头：是什么 + 谁发明。",
+      "explain": "开头。",
+      "wrong_feedback": {
+        "A": "这是结尾。再想想。",
+        "C": "这是中间段。再想想。",
+        "D": "这是中间段。再想想。"
+      }
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r4-v02",
+      "title": "改第一处",
+      "scene": "第一处毛病：It was invent by my sister.",
+      "reading": "My invention is a smart schoolbag. It was invent by my sister. It is made of cloth. It are used to carry books. I like it because it is light and it help me.",
+      "stem": "“It was invent by my sister.” 怎么改？",
+      "options": [
+        "It was invented by my sister.",
+        "It is invented by my sister.",
+        "It was inventing by my sister.",
+        "Invented by my sister."
+      ],
+      "answer": "A",
+      "help": "被动用过去分词。",
+      "explain": "invented。",
+      "wrong_feedback": {
+        "B": "过去的事用 was。再想想。",
+        "C": "inventing 是进行时。再想想。",
+        "D": "句子缺主语。再想想。"
+      }
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r4-v03",
+      "title": "改第二处",
+      "scene": "第二处毛病：It are used to carry books.",
+      "reading": "My invention is a smart schoolbag. It was invent by my sister. It is made of cloth. It are used to carry books. I like it because it is light and it help me.",
+      "stem": "“It are used to carry books.” 怎么改？",
+      "options": [
+        "It is use to carry books.",
+        "They are used to carry books.",
+        "It is used to carry books.",
+        "It used to carry books."
+      ],
+      "answer": "C",
+      "help": "It 单数，现在。",
+      "explain": "is used。",
+      "wrong_feedback": {
+        "A": "use 是原形，要用 used。再想想。",
+        "B": "主语是 It，不能换成 They。再想想。",
+        "D": "少了 is。再想想。"
+      }
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r4-v04",
+      "title": "改第三处",
+      "scene": "第三处毛病：it help me。",
+      "stem": "“it help me” 应改成？",
+      "options": [
+        "it help me",
+        "it helping me",
+        "it helped me",
+        "it helps me"
+      ],
+      "answer": "D",
+      "help": "it 后面动词加 s。",
+      "explain": "helps。",
+      "wrong_feedback": {
+        "A": "it 后面动词要加 s。再想想。",
+        "B": "helping 是进行时。再想想。",
+        "C": "这里是现在，用 helps。再想想。"
+      }
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r4-v05",
+      "title": "主动改被动",
+      "scene": "改写句子。",
+      "reading": "My invention is a smart schoolbag. It was invent by my sister. It is made of cloth. It are used to carry books. I like it because it is light and it help me.",
+      "stem": "主动改被动：“My sister invented it.” 选出正确的被动句。",
+      "options": [
+        "It was invented by my sister.",
+        "It is invented by my sister.",
+        "It invented by my sister.",
+        "It was invent by my sister."
+      ],
+      "answer": "A",
+      "help": "过去的事。",
+      "explain": "was invented。",
+      "wrong_feedback": {
+        "B": "过去的事用 was。再想想。",
+        "C": "少了 was。再想想。",
+        "D": "要用 invented。再想想。"
+      }
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u4r4-v06",
+      "title": "哪句做结尾",
+      "scene": "新作文：结尾怎么写？",
+      "stem": "哪句适合做这篇的结尾？",
+      "options": [
+        "It is made of cloth.",
+        "I like it because it is light and it helps me.",
+        "It was invented by my sister.",
+        "My invention is a smart schoolbag."
+      ],
+      "answer": "B",
+      "help": "结尾：为什么喜欢。",
+      "explain": "结尾。",
+      "wrong_feedback": {
+        "A": "这是中间段。再想想。",
+        "C": "这是开头。再想想。",
+        "D": "这是开头。再想想。"
+      }
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r4-v07",
+      "title": "自己写开头",
+      "scene": "独立写：开头句。",
+      "stem": "写出你的发明开头句（从三个里选一个写）：My invention is a robot. / My invention is a lamp. / My invention is a bike.",
+      "task": "写一整句英文，用小写。",
+      "answer_text": "my invention is a robot",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "my invention is a robot",
+            "my invention is a lamp",
+            "my invention is a bike"
+          ],
+          "cn": [
+            "我的发明是一个机器人",
+            "我的发明是一盏灯",
+            "我的发明是一辆自行车"
+          ]
+        }
+      ],
+      "help": "开头：它是什么。",
+      "explain": "My invention is ... 是开头的好句子。",
+      "common_errors": [
+        {
+          "when": "只写了 robot",
+          "say": "要写完整的一句：My invention is a robot。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r4-v08",
+      "title": "自己写中间",
+      "scene": "独立写：中间句。",
+      "stem": "写出中间句（从三个里选一个写）：It is used to clean the room. / It is used to carry books. / It is used to tell time.",
+      "task": "写一整句英文，用小写。",
+      "answer_text": "it is used to clean the room",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "it is used to clean the room",
+            "it is used to carry books",
+            "it is used to tell time"
+          ],
+          "cn": [
+            "它用来打扫房间",
+            "它用来装书",
+            "它用来报时"
+          ]
+        }
+      ],
+      "help": "中间：它怎么用。",
+      "explain": "It is used to ... 是中间的好句子。",
+      "common_errors": [
+        {
+          "when": "写了 it is use to",
+          "say": "要用过去分词 used。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r4-v09",
+      "title": "自己写结尾",
+      "scene": "独立写：结尾句。",
+      "stem": "写出结尾句（从三个里选一个写）：I like it because it is useful. / I like it because it helps me. / I like it because it saves time.",
+      "task": "写一整句英文，用小写。",
+      "answer_text": "i like it because it is useful",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "i like it because it is useful",
+            "i like it because it helps me",
+            "i like it because it saves time"
+          ],
+          "cn": [
+            "我喜欢它因为它有用",
+            "我喜欢它因为它帮我",
+            "我喜欢它因为它省时间"
+          ]
+        }
+      ],
+      "help": "结尾：为什么喜欢。",
+      "explain": "I like it because ... 是结尾的好句子。",
+      "common_errors": [
+        {
+          "when": "写了 i like it",
+          "say": "再加 because 说原因。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u4r4-v10",
+      "title": "主动改被动",
+      "scene": "改写句子。",
+      "stem": "主动改被动填空：I made it last year. → It ___ made by me last year.",
+      "task": "只写一个英文单词。",
+      "answer_text": "was",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "cn": [
+            "是（过去）"
+          ]
+        }
+      ],
+      "help": "last year，过去。",
+      "explain": "was。",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "last year 是过去。再想想。"
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u4r4-ending",
+      "title": "专栏开张",
+      "teach_html": "<p>专栏开张！你的《我的发明》三段式已经很熟了：开头讲是什么、谁发明的，中间讲怎么做、怎么用，结尾讲为什么喜欢。</p><p>站长说：下一课是<strong>发明大直播</strong>，Unit 4 的知识大集合。你来当主播，准备好了吗？</p>"
+    }
+  ],
+  "title": "写一写：我的发明",
+  "unit": "Unit 4 Inventions",
+  "version": 1
+}
