@@ -115,7 +115,12 @@
     .qcols { display:block; }
     .reading-pane { position:static; max-height:none; margin-bottom:4px; }
     #wrap{padding:18px 14px 100px;}
+    /* 手机端悬浮"看原文"按钮 */
+    #btnSeeReading { display:block !important; }
   }
+  #btnSeeReading { display:none; position:fixed; bottom:24px; right:16px; z-index:50;
+    background:var(--blue); color:#fff; border:0; border-radius:24px;
+    padding:12px 20px; font-size:16px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer; }
 </style>
 </head>
 <body>
@@ -131,6 +136,7 @@
   <div id="stepind"></div>
 </div>
 <div id="wrap"></div>
+<button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
 <div id="bigplay"><button id="btnBig">▶ 听一听</button></div>
 
 <script>
