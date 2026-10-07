@@ -1,0 +1,780 @@
+{
+ "lesson_id": "u3r4",
+ "practice_end": 24,
+ "home_subtitle": "第四课 · 写邮件",
+ "part1_desc": "第 1–24 步：跟站长学写对比邮件。",
+ "part2_desc": "第 25–36 步：自己给新供应商写邮件。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：邮件结构、比较级/最高级书面表达。Unit 3 Computers 主题。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-story-01",
+   "title": "供应商的邮件",
+   "teach_html": "<p>站长收到供应商的邮件：有三款显示器（monitor，显示器），问广播站想订哪款。</p><p>站长让你<strong>回一封邮件</strong>，对比三款显示器，推荐一款。写邮件和打电话不一样：<strong>要把比较级、最高级写清楚</strong>，对方看不见你的表情，只能看文字。</p><p>今天学写邮件里的比较和推荐。</p>"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-teach-01",
+   "title": "显示器词汇",
+   "reading": "Monitor A: 21 inches, 800 yuan, clear picture\nMonitor B: 24 inches, 1200 yuan, clearest picture\nMonitor C: 19 inches, 500 yuan, not clear",
+   "teach_html": "<p>先看三款显示器的资料，生词：</p><ul><li><strong>monitor</strong>（显示器）：电脑的屏幕</li><li><strong>inch</strong>（英寸）：屏幕大小单位，数字越大屏幕越大</li><li><strong>clear</strong>（清晰的）：画面清楚</li></ul><p>A：21英寸，800元，清晰；B：24英寸，1200元，<strong>最清晰</strong>；C：19英寸，500元，不清晰。</p>"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-teach-02",
+   "title": "邮件开头",
+   "teach_html": "<p>写邮件先写开头：</p><ul><li><strong>Dear Mr. Wang,</strong>（亲爱的王先生，）</li><li><strong>Thank you for your email.</strong>（谢谢您的邮件。）</li></ul><p>然后说正事：<strong>I want to compare the three monitors.</strong>（我想对比三款显示器。）</p>"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-teach-03",
+   "title": "邮件里写比较",
+   "teach_html": "<p>邮件里对比，用比较级 + than：</p><ul><li>Monitor B is <strong>bigger than</strong> Monitor A.（B比A大。）</li><li>Monitor B is <strong>more expensive than</strong> Monitor C.（B比C贵。）</li></ul><p>写清楚<strong>谁比谁</strong>，than 后面跟被比的那个。</p>"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-teach-04",
+   "title": "邮件里写推荐",
+   "teach_html": "<p>推荐用最高级 + <strong>I recommend</strong>（我推荐）：</p><ul><li>Monitor B has <strong>the clearest</strong> picture.（B的画面最清晰。）</li><li><strong>I recommend</strong> Monitor B.（我推荐B。）</li></ul><p><strong>recommend</strong>（推荐）是邮件里的关键词，看到它就知道是推荐。</p>"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-teach-05",
+   "title": "邮件结尾",
+   "teach_html": "<p>邮件结尾：</p><ul><li><strong>Please reply soon.</strong>（请尽快回复。）</li><li><strong>Best wishes,</strong>（祝好，）</li><li>你的名字</li></ul><p><strong>reply</strong>（回复）这个词 Unit 2 学过，这里再用一次。</p>"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-mail-01",
+   "title": "看范文",
+   "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "teach_html": "<p>上面是一封范文。从头到尾看一遍，找：</p><ul><li>比较级：<strong>bigger than</strong>、<strong>more expensive than</strong></li><li>最高级：<strong>the clearest</strong></li><li>推荐：<strong>I recommend</strong></li></ul><p>写邮件时照着这个结构：开头 → 对比 → 推荐 → 结尾。</p>"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r4-teach-06",
+   "title": "准备写邮件",
+   "teach_html": "<p>记住邮件四部分：</p><ol><li><strong>开头</strong>：Dear…，Thank you for your email.</li><li><strong>对比</strong>：A is bigger than B.（比较级+than）</li><li><strong>推荐</strong>：the clearest… I recommend…（最高级+推荐）</li><li><strong>结尾</strong>：Please reply soon. Best wishes.</li></ol><p>下面站长带着你写。</p>"
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u3r4-prac-01",
+   "title": "范文在手",
+   "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "teach_html": "<p>范文在上面。对照着做题。</p>"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q01",
+   "title": "bigger 的原级",
+   "scene": "看范文第一句对比。",
+   "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "\"bigger than\" 里，bigger 的原级是？",
+   "options": [
+    "big",
+    "biger",
+    "more big",
+    "biggest"
+   ],
+   "answer": "A",
+   "help": "去 er，注意双写。",
+   "explain": "big→bigger。",
+   "wrong_feedback": {
+    "B": "拼写错了，原级是 big，不是 biger。",
+    "C": "more big 不对，big 是短单词。",
+    "D": "biggest 是最高级，要的是原级。"
+   }
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q02",
+   "title": "the clearest",
+   "scene": "找最高级。",
+   "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "范文里 \"the clearest picture\" 是什么意思？",
+   "options": [
+    "更清晰的画面",
+    "清晰的画面",
+    "不清晰的画面",
+    "最清晰的画面"
+   ],
+   "answer": "D",
+   "help": "the + est 是什么？",
+   "explain": "the clearest = 最清晰的。",
+   "wrong_feedback": {
+    "A": "更清晰是 clearer，the clearest 是最高级。再想想。",
+    "B": "clear 才是清晰的，the clearest 是最高级。",
+    "C": "不清晰是 not clear。再想想。"
+   }
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q03",
+   "title": "recommend 的意思",
+   "scene": "关键词。",
+   "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "\"I recommend Monitor B\" 里，recommend 是什么意思？",
+   "options": [
+    "退货",
+    "推荐",
+    "修理",
+    "比较"
+   ],
+   "answer": "B",
+   "help": "第 5 步学过。",
+   "explain": "recommend（推荐）。",
+   "wrong_feedback": {
+    "A": "退货是 return。再想想第 5 步。",
+    "C": "修理是 repair。再想想。",
+    "D": "比较是 compare。recommend 是推荐。"
+   }
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q04",
+   "title": "邮件结构",
+   "scene": "看结构。",
+   "stem": "范文里，对比部分在第几段？",
+   "options": [
+    "第一段",
+    "第三段",
+    "第二段",
+    "第四段"
+   ],
+   "answer": "C",
+   "help": "数段落：开头、对比、推荐、结尾。",
+   "explain": "第二段是对比（bigger than…）。",
+   "wrong_feedback": {
+    "A": "第一段是开头（Dear…）。再数一遍。",
+    "B": "第三段是推荐。再数一遍。",
+    "D": "第四段是结尾。再数一遍。"
+   }
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q05",
+   "title": "than 后面",
+   "scene": "看句子结构。",
+   "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "\"Monitor B is bigger than Monitor A\" 里，than 后面是？",
+   "options": [
+    "被比的（A）",
+    "比较的（B）",
+    "都可以",
+    "没有规律"
+   ],
+   "answer": "A",
+   "help": "A is … than B，than 后面是谁？",
+   "explain": "than 后面跟被比的 B（这里是 A）。",
+   "wrong_feedback": {
+    "B": "B 是主语（比较的那个），than 后面是被比的。再想想。",
+    "C": "有规律：than 后面跟被比的。再想想。",
+    "D": "有规律的。再想想第 4 步。"
+   }
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q06",
+   "title": "inch 的意思",
+   "scene": "生词。",
+   "stem": "inch 是什么意思？",
+   "options": [
+    "英里",
+    "分钟",
+    "小时",
+    "英寸"
+   ],
+   "answer": "D",
+   "help": "第 2 步学过，屏幕大小单位。",
+   "explain": "inch（英寸）。",
+   "wrong_feedback": {
+    "A": "英里是 mile。再想想第 2 步。",
+    "B": "分钟是 minute。再想想。",
+    "C": "小时是 hour。再想想。"
+   }
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q07",
+   "title": "补全对比句",
+   "scene": "照范文写。",
+   "stem": "Monitor A is ______ than Monitor C.（更大）",
+   "task": "填一个英文单词。",
+   "answer_text": "bigger",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "bigger"
+     ],
+     "cn": [
+      "更大"
+     ]
+    }
+   ],
+   "help": "big 的比较级。",
+   "explain": "bigger than。",
+   "common_errors": [
+    {
+     "when": "写了 more big",
+     "say": "big 是短单词，用 bigger。"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q08",
+   "title": "补全推荐句",
+   "scene": "照范文写。",
+   "stem": "I ______ Monitor B.（推荐）",
+   "task": "填一个英文单词。",
+   "answer_text": "recommend",
+   "expects": [
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "recommend"
+     ],
+     "cn": [
+      "推荐"
+     ]
+    }
+   ],
+   "help": "第 5 步的关键词。",
+   "explain": "I recommend Monitor B.",
+   "common_errors": [
+    {
+     "when": "拼写错了",
+     "say": "r-e-c-o-m-m-e-n-d，注意双 m。"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q09",
+   "title": "写最高级",
+   "scene": "写 B 的优点。",
+   "stem": "Monitor B has ______ picture.（最清晰的）",
+   "task": "填空。",
+   "answer_text": "the clearest",
+   "expects": [
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "the clearest"
+     ],
+     "cn": [
+      "最清晰的"
+     ]
+    }
+   ],
+   "help": "clear 的最高级，前面加 the。",
+   "explain": "the clearest picture。",
+   "common_errors": [
+    {
+     "when": "漏了 the",
+     "say": "the clearest，the 不能少。"
+    }
+   ]
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q10",
+   "title": "写开头",
+   "scene": "写邮件开头。",
+   "stem": "写出邮件开头的称呼：亲爱的王先生，",
+   "task": "写英文。",
+   "answer_text": "Dear Mr. Wang,",
+   "expects": [
+    {
+     "id": "w4",
+     "type": "word",
+     "answers": [
+      "dear mr. wang,",
+      "dear mr wang"
+     ],
+     "cn": [
+      "亲爱的王先生"
+     ]
+    }
+   ],
+   "help": "Dear + Mr. Wang + 逗号。",
+   "explain": "Dear Mr. Wang,",
+   "common_errors": [
+    {
+     "when": "Mr 写成 mr 没大写",
+     "say": "Mr 的 M 要大写。"
+    }
+   ]
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q11",
+   "title": "写结尾",
+   "scene": "写邮件结尾。",
+   "stem": "写出：请尽快回复。",
+   "task": "写英文。",
+   "answer_text": "Please reply soon.",
+   "expects": [
+    {
+     "id": "w5",
+     "type": "word",
+     "answers": [
+      "please reply soon"
+     ],
+     "cn": [
+      "请尽快回复"
+     ]
+    }
+   ],
+   "help": "Please + reply + soon。",
+   "explain": "Please reply soon.",
+   "common_errors": [
+    {
+     "when": "reply 拼错",
+     "say": "r-e-p-l-y，注意是 reply 不是 replay。"
+    }
+   ]
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u3r4-prac-02",
+   "title": "小结一下",
+   "teach_html": "<p>邮件小结：</p><ul><li><strong>开头</strong>：Dear Mr. Wang, / Thank you for your email.</li><li><strong>对比</strong>：bigger than / more expensive than</li><li><strong>推荐</strong>：the clearest / I recommend</li><li><strong>结尾</strong>：Please reply soon. / Best wishes,</li></ul><p>下面新的供应商，你自己写邮件。</p>"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q12",
+   "title": "连词成句",
+   "scene": "连成对比句。",
+   "stem": "A / cheaper / is / than / C",
+   "task": "连成完整句子。",
+   "answer_text": "A is cheaper than C.",
+   "expects": [
+    {
+     "id": "s1",
+     "type": "word",
+     "answers": [
+      "a is cheaper than c"
+     ],
+     "cn": [
+      "A比C便宜"
+     ]
+    }
+   ],
+   "help": "A is + cheaper + than + C。",
+   "explain": "A is cheaper than C.",
+   "common_errors": [
+    {
+     "when": "顺序错了",
+     "say": "A 在前，C 在后。"
+    }
+   ]
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r4-q13",
+   "title": "选推荐句",
+   "scene": "挑一句推荐的话。",
+   "stem": "下面哪句适合写在推荐部分？",
+   "options": [
+    "Monitor B is bigger than A.",
+    "I recommend Monitor B.",
+    "Thank you for your email.",
+    "Please reply soon."
+   ],
+   "answer": "B",
+   "help": "推荐部分的关键词是什么？",
+   "explain": "I recommend 是推荐。",
+   "wrong_feedback": {
+    "A": "这是对比句，放对比部分。再想想。",
+    "C": "这是开头。再想想。",
+    "D": "这是结尾。再想想。"
+   }
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r4-q14",
+   "title": "写完整对比",
+   "scene": "写两个对比。",
+   "stem": "写一句话：B 比 A 大，也比 C 贵。",
+   "task": "写英文完整句子。",
+   "answer_text": "Monitor B is bigger than Monitor A and more expensive than Monitor C.",
+   "expects": [
+    {
+     "id": "s2",
+     "type": "word",
+     "answers": [
+      "monitor b is bigger than monitor a and more expensive than monitor c",
+      "b is bigger than a and more expensive than c"
+     ],
+     "cn": [
+      "B比A大，也比C贵"
+     ]
+    }
+   ],
+   "help": "bigger than … and more expensive than …",
+   "explain": "Monitor B is bigger than Monitor A and more expensive than Monitor C.",
+   "common_errors": [
+    {
+     "when": "只写了一半",
+     "say": "两个对比都要写：bigger than 和 more expensive than。"
+    }
+   ]
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u3r4-story-03",
+   "title": "新的邮件任务",
+   "reading": "Dear Ms. Li,\nThank you for your email. Here are two keyboards:\nKeyboard X: 200 yuan, quiet, comfortable\nKeyboard Y: 350 yuan, quieter, most comfortable\nKeyboard Y is quieter than Keyboard X. It is the most comfortable.\nI recommend Keyboard Y.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "teach_html": "<p>新供应商李女士发来两款键盘（keyboard，键盘）。资料和范文都在上面。</p><p>这次你自己写回信，站长不帮忙。记住四部分：开头、对比、推荐、结尾。</p><p>生词：<strong>quiet</strong>（安静的）、<strong>comfortable</strong>（舒服的）。</p>"
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r4-v01",
+   "title": "quieter 的原级",
+   "scene": "看范文。",
+   "reading": "Dear Ms. Li,\nThank you for your email. Here are two keyboards:\nKeyboard X: 200 yuan, quiet, comfortable\nKeyboard Y: 350 yuan, quieter, most comfortable\nKeyboard Y is quieter than Keyboard X. It is the most comfortable.\nI recommend Keyboard Y.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "\"quieter\" 的原级是？",
+   "options": [
+    "quite",
+    "more quiet",
+    "quiet",
+    "quietest"
+   ],
+   "answer": "C",
+   "help": "去 er。",
+   "explain": "quiet→quieter。",
+   "wrong_feedback": {
+    "A": "quite 是“相当”，不是原级。再想想。",
+    "B": "more quiet 不对，quiet 是短单词。",
+    "D": "quietest 是最高级，要原级。"
+   }
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r4-v02",
+   "title": "most comfortable",
+   "scene": "找最高级。",
+   "reading": "Dear Ms. Li,\nThank you for your email. Here are two keyboards:\nKeyboard X: 200 yuan, quiet, comfortable\nKeyboard Y: 350 yuan, quieter, most comfortable\nKeyboard Y is quieter than Keyboard X. It is the most comfortable.\nI recommend Keyboard Y.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "\"the most comfortable\" 是什么意思？",
+   "options": [
+    "最舒服的",
+    "更舒服的",
+    "舒服的",
+    "不舒服的"
+   ],
+   "answer": "A",
+   "help": "the most 是什么？",
+   "explain": "最舒服的。",
+   "wrong_feedback": {
+    "B": "更舒服是 more comfortable。再想想。",
+    "C": "comfortable 才是舒服的，the most comfortable 是最高级。",
+    "D": "uncomfortable 才是不舒服的。再想想。"
+   }
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r4-v03",
+   "title": "推荐哪款",
+   "scene": "看范文推荐。",
+   "reading": "Dear Ms. Li,\nThank you for your email. Here are two keyboards:\nKeyboard X: 200 yuan, quiet, comfortable\nKeyboard Y: 350 yuan, quieter, most comfortable\nKeyboard Y is quieter than Keyboard X. It is the most comfortable.\nI recommend Keyboard Y.\nPlease reply soon.\nBest wishes,\nXiao He",
+   "stem": "范文推荐的是哪款？",
+   "options": [
+    "Keyboard X",
+    "Keyboard Z",
+    "都没推荐",
+    "Keyboard Y"
+   ],
+   "answer": "D",
+   "help": "找 I recommend。",
+   "explain": "I recommend Keyboard Y。",
+   "wrong_feedback": {
+    "A": "范文说 I recommend Keyboard Y。再找一遍。",
+    "B": "Z 没出现过。再找一遍。",
+    "C": "推荐了。再找一遍。"
+   }
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r4-v04",
+   "title": "keyboard 的意思",
+   "scene": "生词。",
+   "stem": "keyboard 是什么意思？",
+   "options": [
+    "显示器",
+    "键盘",
+    "鼠标",
+    "电脑"
+   ],
+   "answer": "B",
+   "help": "第 25 步学过。",
+   "explain": "keyboard（键盘）。",
+   "wrong_feedback": {
+    "A": "显示器是 monitor。再想想。",
+    "C": "鼠标是 mouse。再想想。",
+    "D": "电脑是 computer。再想想。"
+   }
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r4-v05",
+   "title": "写对比句",
+   "scene": "写 Y 和 X 的对比。",
+   "stem": "Keyboard Y is ______ than Keyboard X.（更安静）",
+   "task": "填空。",
+   "answer_text": "quieter",
+   "expects": [
+    {
+     "id": "w6",
+     "type": "word",
+     "answers": [
+      "quieter"
+     ],
+     "cn": [
+      "更安静"
+     ]
+    }
+   ],
+   "help": "quiet 的比较级。",
+   "explain": "quieter than。",
+   "common_errors": [
+    {
+     "when": "写了 more quiet",
+     "say": "quiet 是短单词，用 quieter。"
+    }
+   ]
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r4-v06",
+   "title": "写推荐",
+   "scene": "写推荐句。",
+   "stem": "I ______ Keyboard Y.（推荐）",
+   "task": "填空。",
+   "answer_text": "recommend",
+   "expects": [
+    {
+     "id": "w7",
+     "type": "word",
+     "answers": [
+      "recommend"
+     ],
+     "cn": [
+      "推荐"
+     ]
+    }
+   ],
+   "help": "推荐的英文。",
+   "explain": "I recommend Keyboard Y.",
+   "common_errors": [
+    {
+     "when": "拼写错",
+     "say": "recommend，注意双 m。"
+    }
+   ]
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r4-v07",
+   "title": "写开头",
+   "scene": "写邮件开头。",
+   "stem": "写出：亲爱的李女士，",
+   "task": "写英文。",
+   "answer_text": "Dear Ms. Li,",
+   "expects": [
+    {
+     "id": "w8",
+     "type": "word",
+     "answers": [
+      "dear ms. li,",
+      "dear ms li"
+     ],
+     "cn": [
+      "亲爱的李女士"
+     ]
+    }
+   ],
+   "help": "Dear + Ms. Li + 逗号。女士用 Ms.。",
+   "explain": "Dear Ms. Li,",
+   "common_errors": [
+    {
+     "when": "用了 Mr.",
+     "say": "李女士用 Ms.，不是 Mr.。"
+    }
+   ]
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r4-v08",
+   "title": "写完整邮件",
+   "scene": "写出对比+推荐。",
+   "stem": "写两句话：Y 比 X 安静。Y 是最舒服的。",
+   "task": "写英文。",
+   "answer_text": "Keyboard Y is quieter than Keyboard X. It is the most comfortable.",
+   "expects": [
+    {
+     "id": "s3",
+     "type": "word",
+     "answers": [
+      "keyboard y is quieter than keyboard x. it is the most comfortable",
+      "y is quieter than x. it is the most comfortable"
+     ],
+     "cn": [
+      "Y比X安静。Y是最舒服的"
+     ]
+    }
+   ],
+   "help": "quieter than… / the most comfortable。",
+   "explain": "Keyboard Y is quieter than Keyboard X. It is the most comfortable.",
+   "common_errors": [
+    {
+     "when": "只写了一句",
+     "say": "两句都要写。"
+    }
+   ]
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r4-v09",
+   "title": "写结尾",
+   "scene": "写邮件结尾。",
+   "stem": "写出：祝好，",
+   "task": "写英文。",
+   "answer_text": "Best wishes,",
+   "expects": [
+    {
+     "id": "w9",
+     "type": "word",
+     "answers": [
+      "best wishes,"
+     ],
+     "cn": [
+      "祝好"
+     ]
+    }
+   ],
+   "help": "Best wishes + 逗号。",
+   "explain": "Best wishes,",
+   "common_errors": [
+    {
+     "when": "wish 没加 s",
+     "say": "wishes 有 s。"
+    }
+   ]
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r4-v10",
+   "title": "写全文",
+   "scene": "最后一练：写完整邮件。",
+   "stem": "用四部分写一封完整邮件：给李女士回信，推荐 Y 键盘。",
+   "task": "写英文，包含开头、对比、推荐、结尾。",
+   "answer_text": "Dear Ms. Li, Thank you for your email. Keyboard Y is quieter than Keyboard X. It is the most comfortable. I recommend Keyboard Y. Please reply soon. Best wishes,",
+   "expects": [
+    {
+     "id": "s4",
+     "type": "word",
+     "answers": [
+      "dear"
+     ],
+     "cn": [
+      "邮件"
+     ]
+    }
+   ],
+   "help": "开头 Dear…，对比 quieter than…，推荐 I recommend…，结尾 Best wishes。",
+   "explain": "参考范文结构，四部分都要有。",
+   "common_errors": [
+    {
+     "when": "缺了某部分",
+     "say": "四部分：开头、对比、推荐、结尾，检查缺了哪个。"
+    }
+   ]
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u3r4-ending",
+   "title": "节目预告",
+   "teach_html": "<p>邮件发出去了，供应商很快回复说就订 Y 键盘。站长说：你写的邮件清楚、专业。</p><p>下期是科技大直播，Unit 3 的内容来个总复习。比较级、最高级、电话、邮件，全部上阵。好好准备！</p>"
+  }
+ ],
+ "title": "写邮件：推荐显示器",
+ "unit": "Unit 3 Computers",
+ "version": 1
+}
