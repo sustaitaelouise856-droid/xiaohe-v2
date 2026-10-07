@@ -363,7 +363,8 @@ async function renderHome() {
       <p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>
       ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
-      <p class="scene">做完的课程不能重做。下一课见。</p></div>`;
+      <p class="scene">做完的课程不能重做。下一课见。</p>
+      <button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">下一课 →</button></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
@@ -888,7 +889,7 @@ async function submitCopy(s, answer) {
     b = await r.json();
   } catch (e) { b = null; }
   if (!b || !b.ok) {
-    if (box) box.innerHTML = box.innerHTML + '<div class="gfb">提交没成功，再点一次试试。</div>';
+    if (box) box.insertAdjacentHTML('beforeend', '<div class="gfb">提交没成功，再点一次试试。</div>');
     return;
   }
   if (b.verdict === 'copied') {
