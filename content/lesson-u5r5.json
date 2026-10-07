@@ -1,0 +1,832 @@
+{
+  "lesson_id": "u5r5",
+  "practice_end": 22,
+  "home_subtitle": "第五课 · 交流大直播",
+  "part1_desc": "第 1–22 步：快速回顾现在完成时全部要点，站长带热身。",
+  "part2_desc": "第 23–36 步：直播决赛，独立闯关。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时综合运用。Unit 5 Educational exchanges 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r5-story-01",
+      "title": "交流大直播",
+      "teach_html": "<p>交流特别节目做到最后一期了。站长说：来一场<strong>交流大直播</strong>！现场 quiz 问答，把这单元学的全考一遍。</p><p>这期不讲新语法，咱们<strong>复习</strong>：现在完成时、ever/never、just/already/yet、提问回答。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r5-t01",
+      "title": "回顾：结构",
+      "teach_html": "<p>先回顾结构：<strong>have/has + 过去分词</strong>。</p><p>I <strong>have been</strong> to Beijing.（我去过北京。）</p><p>She <strong>has eaten</strong> dumplings.（她吃过饺子。）</p><p>三单用 has，其余用 have。</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r5-t02",
+      "title": "回顾：ever/never",
+      "teach_html": "<p><strong>ever</strong>（曾经）放中间问：Have you <strong>ever</strong> been there?</p><p><strong>never</strong>（从不）表否定：I have <strong>never</strong> been there.</p><p>never 本身否定，不再加 not。</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r5-t03",
+      "title": "回顾：just/already/yet",
+      "teach_html": "<p><strong>just</strong>（刚刚）、<strong>already</strong>（已经）放 have 后面：I have <strong>just</strong> arrived.</p><p><strong>yet</strong> 放否定句末（还没）：I haven't finished <strong>yet</strong>；放疑问句末（了吗）：Have you finished <strong>yet</strong>?</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r5-t04",
+      "title": "回顾：提问回答",
+      "teach_html": "<p>提问：<strong>Have/Has + 主语 + ever + 过去分词</strong>？</p><p>回答：<strong>Yes, I have.</strong> / <strong>No, I haven't.</strong></p><p>特殊疑问：<strong>Where/What/Who</strong> + have/has + 主语 + 过去分词？</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u5r5-t05",
+      "title": "回顾：完成时 vs 过去时",
+      "teach_html": "<p>最后回顾：说经历用<strong>现在完成时</strong>（I have been to Beijing）；说具体过去时间用<strong>过去时</strong>（I went there last year）。</p><p>看到 yesterday/last week/in 2020，用过去时。</p><p>准备好了吗？直播 quiz 开始！</p>"
+    },
+    {
+      "step": 7,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u5r5-prac-01",
+      "title": "题库",
+      "teach_html": "<p>这是 quiz 题库要点。做题时对照着想：结构、助动词、过去分词、小词位置。</p><p>站长带着热身。</p>",
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 8,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q01",
+      "title": "热身1",
+      "scene": "我去过上海。",
+      "stem": "I ______ been to Shanghai.",
+      "options": [
+        "has",
+        "have",
+        "am",
+        "is"
+      ],
+      "answer": "B",
+      "help": "I 用哪个？",
+      "explain": "I have been to Shanghai.",
+      "wrong_feedback": {
+        "A": "has 用于三单，I 用 have。",
+        "C": "am 是 be 动词，不对。",
+        "D": "is 是 be 动词，不对。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 9,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q02",
+      "title": "热身2",
+      "scene": "她见过大熊猫。",
+      "stem": "She has ______ the pandas.",
+      "options": [
+        "seen",
+        "see",
+        "saw",
+        "seeing"
+      ],
+      "answer": "A",
+      "help": "see 的过去分词？",
+      "explain": "She has seen the pandas.",
+      "wrong_feedback": {
+        "B": "see 是原形，用 seen。",
+        "C": "saw 是过去式，用 seen。",
+        "D": "seeing 是现在分词，不对。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q03",
+      "title": "热身3",
+      "scene": "你曾经去过吗？",
+      "stem": "Have you ______ been there?",
+      "options": [
+        "never",
+        "just",
+        "already",
+        "ever"
+      ],
+      "answer": "D",
+      "help": "疑问句“曾经”？",
+      "explain": "Have you ever been there?",
+      "wrong_feedback": {
+        "A": "never 是“从不”，疑问句用 ever。",
+        "B": "just 是“刚刚”，这里用 ever。",
+        "C": "already 是“已经”，这里用 ever。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q04",
+      "title": "热身4",
+      "scene": "他从没去过。",
+      "stem": "He has ______ been there.",
+      "options": [
+        "ever",
+        "just",
+        "never",
+        "already"
+      ],
+      "answer": "C",
+      "help": "“从没”？",
+      "explain": "He has never been there.",
+      "wrong_feedback": {
+        "A": "ever 是“曾经”，这里用 never。",
+        "B": "just 是“刚刚”，这里用 never。",
+        "D": "already 是“已经”，意思相反。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q05",
+      "title": "热身5",
+      "scene": "我刚吃完。",
+      "stem": "I have ______ eaten.",
+      "options": [
+        "just",
+        "already",
+        "yet",
+        "never"
+      ],
+      "answer": "A",
+      "help": "“刚刚”？",
+      "explain": "I have just eaten.",
+      "wrong_feedback": {
+        "B": "already 是“已经”，这里“刚刚”用 just。",
+        "C": "yet 放句末，这里用 just。",
+        "D": "never 是“从不”，意思不对。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q06",
+      "title": "热身6",
+      "scene": "她已经做完了。",
+      "stem": "She has ______ finished.",
+      "options": [
+        "yet",
+        "already",
+        "never",
+        "ever"
+      ],
+      "answer": "B",
+      "help": "肯定句“已经”？",
+      "explain": "She has already finished.",
+      "wrong_feedback": {
+        "A": "yet 不放肯定句中间，用 already。",
+        "C": "never 是“从不”，意思不对。",
+        "D": "ever 是“曾经”，这里用 already。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q07",
+      "title": "热身7",
+      "scene": "我还没做完。",
+      "stem": "I haven't finished ______.",
+      "options": [
+        "already",
+        "just",
+        "ever",
+        "yet"
+      ],
+      "answer": "D",
+      "help": "否定句末尾？",
+      "explain": "I haven't finished yet.",
+      "wrong_feedback": {
+        "A": "already 不放否定句末，用 yet。",
+        "B": "just 放 have 后面，这里句末用 yet。",
+        "C": "ever 是“曾经”，这里用 yet。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q08",
+      "title": "热身8",
+      "scene": "他昨天去了。",
+      "stem": "He ______ there yesterday.",
+      "options": [
+        "went",
+        "has gone",
+        "have gone",
+        "goes"
+      ],
+      "answer": "A",
+      "help": "yesterday 用什么？",
+      "explain": "He went there yesterday.",
+      "wrong_feedback": {
+        "B": "yesterday 用过去时，不用完成时。",
+        "C": "同上；主语也不对。",
+        "D": "goes 是现在时，不对。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u5r5-q09",
+      "title": "热身9",
+      "scene": "谁去过？",
+      "stem": "______ has been to Beijing?",
+      "options": [
+        "Where",
+        "What",
+        "Who",
+        "When"
+      ],
+      "answer": "C",
+      "help": "问“谁”？",
+      "explain": "Who has been to Beijing?",
+      "wrong_feedback": {
+        "A": "Where 问地点，这里问谁。",
+        "B": "What 问什么，这里问谁。",
+        "D": "When 问时间，这里问谁。"
+      },
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r5-q10",
+      "title": "写出过去分词：fly",
+      "scene": "把 fly 变成过去分词。",
+      "stem": "写出 fly 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "flown",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "flown"
+          ],
+          "cn": [
+            "飞（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "fly → flown。",
+      "common_errors": [
+        {
+          "when": "写了 flied",
+          "say": "fly 不规则，过去分词是 flown。"
+        }
+      ],
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r5-q11",
+      "title": "have 还是 has",
+      "scene": "他们去过。",
+      "stem": "They ___ been there.",
+      "task": "只写 have 或 has。",
+      "answer_text": "have",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "have"
+          ],
+          "cn": [
+            "（they 用 have）"
+          ]
+        }
+      ],
+      "help": "they 用哪个？",
+      "explain": "They have been there.",
+      "common_errors": [
+        {
+          "when": "写了 has",
+          "say": "they 用 have。"
+        }
+      ],
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r5-q12",
+      "title": "写出过去分词：forget",
+      "scene": "把 forget 变成过去分词。",
+      "stem": "写出 forget 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "forgotten",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "forgotten"
+          ],
+          "cn": [
+            "忘记（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "forget → forgotten。",
+      "common_errors": [
+        {
+          "when": "写了 forgeted",
+          "say": "forget 不规则，过去分词是 forgotten。"
+        }
+      ],
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r5-q13",
+      "title": "yet 还是 already",
+      "scene": "我已经知道了。",
+      "stem": "I have ___ known.",
+      "task": "只写 already 或 yet。",
+      "answer_text": "already",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "already"
+          ],
+          "cn": [
+            "（已经）"
+          ]
+        }
+      ],
+      "help": "肯定句“已经”？",
+      "explain": "I have already known.",
+      "common_errors": [
+        {
+          "when": "写了 yet",
+          "say": "肯定句中间用 already。"
+        }
+      ],
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r5-q14",
+      "title": "写出过去分词：choose",
+      "scene": "把 choose 变成过去分词。",
+      "stem": "写出 choose 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "chosen",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "chosen"
+          ],
+          "cn": [
+            "选择（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "choose → chosen。",
+      "common_errors": [
+        {
+          "when": "写了 choosed",
+          "say": "choose 不规则，过去分词是 chosen。"
+        }
+      ],
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u5r5-q15",
+      "title": "否定回答",
+      "scene": "没去过，怎么答？",
+      "stem": "No, I ___.",
+      "task": "补全 haven't。",
+      "answer_text": "haven't",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "haven't",
+            "havent"
+          ],
+          "cn": [
+            "（没有）"
+          ]
+        }
+      ],
+      "help": "No, I…？",
+      "explain": "No, I haven't.",
+      "common_errors": [
+        {
+          "when": "写了 don't",
+          "say": "这里用 haven't，不用 don't。"
+        }
+      ],
+      "reading": "Quiz bank: have/has + 过去分词；ever/never/just/already/yet；Have you ever…?/Yes, I have./No, I haven't.；过去分词：been/gone/seen/eaten/done/met/taken/visited/learned"
+    },
+    {
+      "step": 23,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r5-v-intro",
+      "title": "决赛：独立闯关",
+      "teach_html": "<p>热身结束，进入<strong>决赛</strong>！这次全是独立题，站长不提示了。</p><p>把这单元学的都拿出来：have/has、过去分词、ever/never、just/already/yet、提问回答、完成时 vs 过去时。</p><p>加油，直播间的同学们都在看！</p>",
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 24,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r5-v01",
+      "title": "决赛1",
+      "scene": "他们去过长城。",
+      "stem": "They have ______ the Great Wall.",
+      "options": [
+        "visit",
+        "visits",
+        "visited",
+        "visiting"
+      ],
+      "answer": "C",
+      "help": "过去分词。",
+      "explain": "They have visited the Great Wall.",
+      "wrong_feedback": {
+        "A": "再想想词形。",
+        "B": "再想想词形。",
+        "D": "再想想词形。"
+      },
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r5-v02",
+      "title": "决赛2",
+      "scene": "她从没吃过。",
+      "stem": "She has ______ eaten it.",
+      "options": [
+        "ever",
+        "just",
+        "already",
+        "never"
+      ],
+      "answer": "D",
+      "help": "“从没”。",
+      "explain": "She has never eaten it.",
+      "wrong_feedback": {
+        "A": "再想想意思。",
+        "B": "再想想意思。",
+        "C": "再想想意思。"
+      },
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r5-v03",
+      "title": "决赛3",
+      "scene": "你做完作业了吗？",
+      "stem": "Have you finished ______?",
+      "options": [
+        "already",
+        "yet",
+        "just",
+        "never"
+      ],
+      "answer": "B",
+      "help": "疑问句末尾。",
+      "explain": "Have you finished yet?",
+      "wrong_feedback": {
+        "A": "再想想位置。",
+        "C": "再想想位置。",
+        "D": "再想想意思。"
+      },
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r5-v04",
+      "title": "决赛4",
+      "scene": "他去年去了。",
+      "stem": "He ______ there last year.",
+      "options": [
+        "went",
+        "has gone",
+        "have gone",
+        "goes"
+      ],
+      "answer": "A",
+      "help": "具体过去时间。",
+      "explain": "He went there last year.",
+      "wrong_feedback": {
+        "B": "再想想时态。",
+        "C": "再想想时态。",
+        "D": "再想想时态。"
+      },
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r5-v05",
+      "title": "决赛5",
+      "scene": "我刚见过他。",
+      "stem": "I have ______ seen him.",
+      "options": [
+        "already",
+        "yet",
+        "never",
+        "just"
+      ],
+      "answer": "D",
+      "help": "“刚刚”。",
+      "explain": "I have just seen him.",
+      "wrong_feedback": {
+        "A": "再想想意思。",
+        "B": "再想想位置。",
+        "C": "再想想意思。"
+      },
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u5r5-v06",
+      "title": "决赛6",
+      "scene": "谁吃过饺子？",
+      "stem": "______ has eaten dumplings?",
+      "options": [
+        "Where",
+        "Who",
+        "What",
+        "When"
+      ],
+      "answer": "B",
+      "help": "问“谁”。",
+      "explain": "Who has eaten dumplings?",
+      "wrong_feedback": {
+        "A": "再想想疑问词。",
+        "C": "再想想疑问词。",
+        "D": "再想想疑问词。"
+      },
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r5-v07",
+      "title": "写出过去分词：drink",
+      "scene": "把 drink 变成过去分词。",
+      "stem": "写出 drink 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "drunk",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "drunk"
+          ],
+          "cn": [
+            "喝（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "drink → drunk。",
+      "common_errors": [
+        {
+          "when": "写了 drank",
+          "say": "drank 是过去式，过去分词是 drunk。"
+        }
+      ],
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r5-v08",
+      "title": "have 还是 has",
+      "scene": "它吃过了。",
+      "stem": "It ___ eaten.",
+      "task": "只写 has 或 have。",
+      "answer_text": "has",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "has"
+          ],
+          "cn": [
+            "（三单用 has）"
+          ]
+        }
+      ],
+      "help": "it 是三单。",
+      "explain": "It has eaten.",
+      "common_errors": [
+        {
+          "when": "写了 have",
+          "say": "it 是三单，用 has。"
+        }
+      ],
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r5-v09",
+      "title": "写出过去分词：drive",
+      "scene": "把 drive 变成过去分词。",
+      "stem": "写出 drive 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "driven",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "driven"
+          ],
+          "cn": [
+            "开车（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "drive → driven。",
+      "common_errors": [
+        {
+          "when": "写了 drived",
+          "say": "drive 不规则，过去分词是 driven。"
+        }
+      ],
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r5-v10",
+      "title": "already 还是 yet",
+      "scene": "他已经知道了。",
+      "stem": "He has ___ known.",
+      "task": "只写 already 或 yet。",
+      "answer_text": "already",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "already"
+          ],
+          "cn": [
+            "（已经）"
+          ]
+        }
+      ],
+      "help": "肯定句。",
+      "explain": "He has already known.",
+      "common_errors": [
+        {
+          "when": "写了 yet",
+          "say": "肯定句中间用 already。"
+        }
+      ],
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r5-v11",
+      "title": "写出过去分词：wake",
+      "scene": "把 wake 变成过去分词。",
+      "stem": "写出 wake 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "woken",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "woken"
+          ],
+          "cn": [
+            "醒来（过去分词）"
+          ]
+        }
+      ],
+      "help": "不规则。",
+      "explain": "wake → woken。",
+      "common_errors": [
+        {
+          "when": "写了 waked",
+          "say": "wake 不规则，过去分词是 woken。"
+        }
+      ],
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u5r5-v12",
+      "title": "过去时",
+      "scene": "我们上周见面了。",
+      "stem": "We ___ last week.",
+      "task": "只写 met。",
+      "answer_text": "met",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "met"
+          ],
+          "cn": [
+            "（过去式）"
+          ]
+        }
+      ],
+      "help": "具体过去时间。",
+      "explain": "We met last week.",
+      "common_errors": [
+        {
+          "when": "写了 have met",
+          "say": "last week 用过去时 met。"
+        }
+      ],
+      "reading": "Final bank: 现在完成时全部要点；过去分词表：be-been, go-gone, see-seen, eat-eaten, do-done, meet-met, take-taken, write-written, speak-spoken, break-broken, swim-swum, ride-ridden, sing-sung, fly-flown, forget-forgotten, choose-chosen, make-made, try-tried"
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u5r5-ending",
+      "title": "直播结束",
+      "teach_html": "<p>直播结束！站长说：这单元的<strong>现在完成时</strong>全过关了。</p><p>从“交换生来了”到“交流大直播”，have/has + 过去分词、ever/never、just/already/yet，你都会用了。</p><p>下一单元，咱们聊点新话题，站长已经在准备了，敬请期待！</p>"
+    }
+  ],
+  "title": "交流大直播：综合复习",
+  "unit": "Unit 5 Educational exchanges",
+  "version": 1
+}
