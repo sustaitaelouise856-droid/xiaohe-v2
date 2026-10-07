@@ -1,0 +1,819 @@
+{
+ "lesson_id": "u3r5",
+ "practice_end": 22,
+ "home_subtitle": "第五课 · 科技大直播",
+ "part1_desc": "第 1–22 步：复习比较级最高级，直播上半场。",
+ "part2_desc": "第 23–36 步：直播下半场，综合运用。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：Unit 3 综合运用（比较级/最高级/电话/邮件）。Unit 3 Computers 主题，无新语法。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r5-story-01",
+   "title": "科技大直播",
+   "teach_html": "<p>今晚是<strong>科技大直播</strong>！广播站把 Unit 3 的内容做成直播，听众可以打电话进来问问题。</p><p>站长说：比较级、最高级、电话、邮件，今天全部上阵。你是主播，准备好了吗？</p><p>先快速复习一遍，再开始直播。</p>"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r5-rev-01",
+   "title": "复习：比较级",
+   "teach_html": "<p><strong>比较级</strong>（两者比）：</p><ul><li>短单词 <strong>加 er</strong>：cheap→<strong>cheaper</strong>，big→<strong>bigger</strong>，heavy→<strong>heavier</strong></li><li>长单词 <strong>加 more</strong>：expensive→<strong>more expensive</strong></li><li>特殊：good→<strong>better</strong></li><li>句子：A is <strong>比较级</strong> + <strong>than</strong> + B</li></ul>"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r5-rev-02",
+   "title": "复习：最高级",
+   "teach_html": "<p><strong>最高级</strong>（三者以上挑第一）：</p><ul><li>短单词 <strong>the + est</strong>：<strong>the cheapest</strong>，<strong>the biggest</strong></li><li>长单词 <strong>the most + 单词</strong>：<strong>the most expensive</strong></li><li>特殊：<strong>the best</strong>，<strong>the worst</strong></li><li><strong>of</strong> 后面跟数量，<strong>in</strong> 后面跟地方</li></ul>"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r5-rev-03",
+   "title": "复习：电话和邮件",
+   "teach_html": "<p><strong>电话</strong>：听关键词（faster、the cheapest），<strong>one</strong> = 那台。</p><p><strong>邮件</strong>四部分：</p><ul><li>开头：Dear… / Thank you for your email.</li><li>对比：bigger than…</li><li>推荐：I recommend… / the best…</li><li>结尾：Please reply soon. / Best wishes,</li></ul>"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r5-rev-04",
+   "title": "快速判断",
+   "teach_html": "<p>看到这些词，快速反应：</p><ul><li><strong>than</strong> → 比较级</li><li><strong>the + 最高级</strong> → 最高级</li><li><strong>两者</strong> → 比较级</li><li><strong>三者以上挑第一</strong> → 最高级</li></ul><p>直播开始！听众电话进来了。</p>"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u3r5-story-02",
+   "title": "直播开始",
+   "reading": "Tonight's products:\nLaptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "teach_html": "<p>今晚的三款笔记本：A（3500元，快，3kg）、B（5000元，<strong>更快</strong>，2kg）、C（2800元，慢，4kg）。</p><p>听众会问对比、推荐、订购、邮件，什么都有。资料在上面，开始接招。</p>"
+  },
+  {
+   "step": 7,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q01",
+   "title": "哪台更快",
+   "scene": "听众问：B 和 A 比？",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "stem": "Laptop B is ______ than Laptop A.",
+   "options": [
+    "fast",
+    "the fastest",
+    "fastest",
+    "faster"
+   ],
+   "answer": "D",
+   "help": "不对。两台比，用什么？",
+   "explain": "faster。",
+   "wrong_feedback": {
+    "A": "这是原级。再想想两台比用什么。",
+    "B": "这是最高级，两台比用比较级。",
+    "C": "the fastest 是最高级，两台比用 faster。"
+   }
+  },
+  {
+   "step": 8,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q02",
+   "title": "哪台最便宜",
+   "scene": "听众问最低价。",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "stem": "______ is the cheapest.",
+   "options": [
+    "Laptop A",
+    "Laptop C",
+    "Laptop B",
+    "都一样"
+   ],
+   "answer": "B",
+   "help": "不对。比价格，哪个数字最小？",
+   "explain": "Laptop C 最便宜（2800）。",
+   "wrong_feedback": {
+    "A": "A 是 3500，不是最低。再比比数字。",
+    "C": "B 是 5000，最贵。",
+    "D": "价格都不一样。再比比。"
+   }
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q03",
+   "title": "更轻的",
+   "scene": "重量对比。",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "stem": "Laptop B is ______ than Laptop C.",
+   "options": [
+    "lighter",
+    "more light",
+    "lightest",
+    "light"
+   ],
+   "answer": "A",
+   "help": "light 的比较级。",
+   "explain": "lighter。",
+   "wrong_feedback": {
+    "B": "light 是短单词，直接加 er。",
+    "C": "这是最高级，两台比用比较级。",
+    "D": "这是原级。"
+   }
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q04",
+   "title": "最重的",
+   "scene": "挑第一。",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "stem": "Laptop C is ______.",
+   "options": [
+    "heavier",
+    "more heavy",
+    "the heaviest",
+    "heavy"
+   ],
+   "answer": "C",
+   "help": "三台里最重，最高级。",
+   "explain": "the heaviest。",
+   "wrong_feedback": {
+    "A": "这是比较级，三台挑第一用最高级。",
+    "B": "heavy 不用 more。",
+    "D": "这是原级。"
+   }
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q05",
+   "title": "更好的",
+   "scene": "总体评价。",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "stem": "Laptop B is ______ than Laptop C.",
+   "options": [
+    "gooder",
+    "best",
+    "better",
+    "more good"
+   ],
+   "answer": "C",
+   "help": "good 的比较级是特殊的。",
+   "explain": "better。",
+   "wrong_feedback": {
+    "A": "gooder 不对，记住 better。",
+    "B": "这是最高级，两者比用 better。",
+    "D": "good 不用 more。"
+   }
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q06",
+   "title": "最贵的",
+   "scene": "价格最高。",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "stem": "Laptop B is ______.",
+   "options": [
+    "more expensive",
+    "expensiver",
+    "expensive",
+    "the most expensive"
+   ],
+   "answer": "D",
+   "help": "不对。三台里最贵，最高级。",
+   "explain": "the most expensive。",
+   "wrong_feedback": {
+    "A": "这是比较级。再想想。",
+    "B": "长单词不能加 er。",
+    "C": "这是原级。再想想。"
+   }
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q07",
+   "title": "听众订购",
+   "scene": "电话来了。",
+   "stem": "听众说：\"I'd like the cheapest one.\" 他要哪台？",
+   "options": [
+    "Laptop A",
+    "Laptop B",
+    "Laptop C",
+    "没说"
+   ],
+   "answer": "C",
+   "help": "cheapest 是哪台？",
+   "explain": "Laptop C（2800，最便宜）。",
+   "wrong_feedback": {
+    "A": "A 是 3500，不是 cheapest。",
+    "B": "B 是 5000，最贵。",
+    "D": "说得很清楚：the cheapest。"
+   }
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q08",
+   "title": "邮件推荐",
+   "scene": "写推荐。",
+   "stem": "下面哪句适合写在邮件推荐部分？",
+   "options": [
+    "Laptop B is faster than A.",
+    "Dear Sir,",
+    "Please reply soon.",
+    "I recommend Laptop B."
+   ],
+   "answer": "D",
+   "help": "不对。推荐的关键词是什么？",
+   "explain": "I recommend…",
+   "wrong_feedback": {
+    "A": "这是对比句，放对比部分。再想想。",
+    "B": "这是开头。",
+    "C": "这是结尾。"
+   }
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r5-q09",
+   "title": "写比较级",
+   "scene": "快速写。",
+   "stem": "写出 fast 的比较级。",
+   "task": "写英文。",
+   "answer_text": "faster",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "faster"
+     ],
+     "cn": [
+      "更快"
+     ]
+    }
+   ],
+   "help": "加 er。",
+   "explain": "faster。",
+   "common_errors": [
+    {
+     "when": "写了 more fast",
+     "say": "短单词直接加 er。"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r5-q10",
+   "title": "写最高级",
+   "scene": "快速写。",
+   "stem": "写出 cheap 的最高级（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the cheapest",
+   "expects": [
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "the cheapest",
+      "cheapest"
+     ],
+     "cn": [
+      "最便宜的"
+     ]
+    }
+   ],
+   "help": "the + est。",
+   "explain": "the cheapest。",
+   "common_errors": [
+    {
+     "when": "漏了 the",
+     "say": "the 不能少。"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r5-q11",
+   "title": "连词成句",
+   "scene": "连起来。",
+   "stem": "B / faster / is / than / C",
+   "task": "连成句子。",
+   "answer_text": "B is faster than C.",
+   "expects": [
+    {
+     "id": "s1",
+     "type": "word",
+     "answers": [
+      "b is faster than c"
+     ],
+     "cn": [
+      "B比C快"
+     ]
+    }
+   ],
+   "help": "B is + faster + than + C。",
+   "explain": "B is faster than C。",
+   "common_errors": [
+    {
+     "when": "顺序反了",
+     "say": "B 在前，C 在后。"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u3r5-prac-01",
+   "title": "中场休息",
+   "teach_html": "<p>直播进行一半，导播说收视率不错。</p><p>站长小声说：后半场听众问题更综合，有对比、有邮件、有电话，认真听。</p>"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r5-q12",
+   "title": "写邮件句",
+   "scene": "写推荐。",
+   "stem": "用最高级写：B 是最快的。",
+   "task": "写英文完整句子。",
+   "answer_text": "Laptop B is the fastest.",
+   "expects": [
+    {
+     "id": "s2",
+     "type": "word",
+     "answers": [
+      "laptop b is the fastest",
+      "b is the fastest"
+     ],
+     "cn": [
+      "B最快"
+     ]
+    }
+   ],
+   "help": "B is + the fastest。",
+   "explain": "Laptop B is the fastest。",
+   "common_errors": [
+    {
+     "when": "用了 faster",
+     "say": "最快用最高级 the fastest。"
+    }
+   ]
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3r5-q13",
+   "title": "综合判断",
+   "scene": "听众连问。",
+   "stem": "听众问：三台里哪台性价比最高？（又快又相对便宜）你推荐？",
+   "reading": "Laptop A: 3500 yuan, fast, 3 kg\nLaptop B: 5000 yuan, faster, 2 kg\nLaptop C: 2800 yuan, slow, 4 kg",
+   "options": [
+    "Laptop A，又快又相对便宜",
+    "Laptop B，又快又轻",
+    "Laptop C，最便宜",
+    "都不推荐"
+   ],
+   "answer": "A",
+   "help": "又快（fast）又相对便宜（3500），是哪台？",
+   "explain": "Laptop A：快，3500 比 5000 便宜。",
+   "wrong_feedback": {
+    "B": "B 是快，但 5000 最贵。性价比看又快又相对便宜。",
+    "C": "C 最便宜但 slow，不快。",
+    "D": "A 不错，推荐它。"
+   }
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r5-q14",
+   "title": "写电话回复",
+   "scene": "接电话。",
+   "stem": "听众问：Is B better than A? 你回答：Yes, it's ______ than A.（更好）",
+   "task": "填空。",
+   "answer_text": "better",
+   "expects": [
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "cn": [
+      "更好"
+     ]
+    }
+   ],
+   "help": "good 的比较级。",
+   "explain": "better than。",
+   "common_errors": [
+    {
+     "when": "写了 gooder",
+     "say": "better，特殊记。"
+    }
+   ]
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3r5-q15",
+   "title": "写完整邮件句",
+   "scene": "写邮件。",
+   "stem": "写一句话：A 比 C 贵，但比 B 便宜。",
+   "task": "写英文。",
+   "answer_text": "A is more expensive than C but cheaper than B.",
+   "expects": [
+    {
+     "id": "s3",
+     "type": "word",
+     "answers": [
+      "a is more expensive than c but cheaper than b"
+     ],
+     "cn": [
+      "A比C贵，但比B便宜"
+     ]
+    }
+   ],
+   "help": "more expensive than … but cheaper than …",
+   "explain": "A is more expensive than C but cheaper than B.",
+   "common_errors": [
+    {
+     "when": "只写了一半",
+     "say": "两个对比都要：more expensive than 和 cheaper than。"
+    }
+   ]
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u3r5-story-03",
+   "title": "下半场",
+   "reading": "New products:\nTablet P: 2000 yuan, light (1 kg), small screen\nTablet Q: 3200 yuan, lighter (0.8 kg), bigger screen\nTablet R: 4500 yuan, lightest (0.5 kg), biggest screen, most expensive",
+   "teach_html": "<p>下半场换产品：三款平板（tablet，平板电脑）。资料在上面。</p><p>P（2000元，1kg，小屏）、Q（3200元，0.8kg，大屏）、R（4500元，0.5kg，<strong>最大屏</strong>，<strong>最贵</strong>）。</p><p>这次全靠你自己，站长不说话了。</p>"
+  },
+  {
+   "step": 24,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r5-v01",
+   "title": "更轻的",
+   "scene": "对比 P 和 Q。",
+   "reading": "Tablet P: 2000 yuan, light (1 kg), small screen\nTablet Q: 3200 yuan, lighter (0.8 kg), bigger screen\nTablet R: 4500 yuan, lightest (0.5 kg), biggest screen, most expensive",
+   "stem": "Tablet Q is ______ than Tablet P.",
+   "options": [
+    "lighter",
+    "more light",
+    "lightest",
+    "light"
+   ],
+   "answer": "A",
+   "help": "light 的比较级。",
+   "explain": "lighter。",
+   "wrong_feedback": {
+    "B": "短单词直接加 er。再想想。",
+    "C": "这是最高级。再想想。",
+    "D": "这是原级。再想想。"
+   }
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r5-v02",
+   "title": "最大的屏幕",
+   "scene": "挑第一。",
+   "reading": "Tablet P: 2000 yuan, light (1 kg), small screen\nTablet Q: 3200 yuan, lighter (0.8 kg), bigger screen\nTablet R: 4500 yuan, lightest (0.5 kg), biggest screen, most expensive",
+   "stem": "Tablet R has ______ screen.",
+   "options": [
+    "bigger",
+    "biggest",
+    "the biggest",
+    "more big"
+   ],
+   "answer": "C",
+   "help": "三台里最大，最高级。",
+   "explain": "the biggest。",
+   "wrong_feedback": {
+    "A": "这是比较级。再想想。",
+    "B": "前面少了 the。再想想。",
+    "D": "短单词不用 more。再想想。"
+   }
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r5-v03",
+   "title": "最贵的",
+   "scene": "价格。",
+   "reading": "Tablet P: 2000 yuan, light (1 kg), small screen\nTablet Q: 3200 yuan, lighter (0.8 kg), bigger screen\nTablet R: 4500 yuan, lightest (0.5 kg), biggest screen, most expensive",
+   "stem": "Tablet R is ______.",
+   "options": [
+    "more expensive",
+    "the most expensive",
+    "expensiver",
+    "expensive"
+   ],
+   "answer": "B",
+   "help": "三台里最贵。",
+   "explain": "the most expensive。",
+   "wrong_feedback": {
+    "A": "这是比较级。再想想。",
+    "C": "长单词不能加 er。再想想。",
+    "D": "这是原级。再想想。"
+   }
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r5-v04",
+   "title": "听众要最轻的",
+   "scene": "电话。",
+   "reading": "Tablet P: 2000 yuan, light (1 kg), small screen\nTablet Q: 3200 yuan, lighter (0.8 kg), bigger screen\nTablet R: 4500 yuan, lightest (0.5 kg), biggest screen, most expensive",
+   "stem": "听众说 \"the lightest one\"，是哪款？",
+   "options": [
+    "P",
+    "Q",
+    "没说",
+    "R"
+   ],
+   "answer": "D",
+   "help": "不对。lightest 是哪款的特征？",
+   "explain": "Tablet R 是 the lightest（0.5kg）。",
+   "wrong_feedback": {
+    "A": "P 是 1kg，不是 lightest。再看一遍。",
+    "B": "Q 是 lighter（比较级），不是 lightest。再看一遍。",
+    "C": "说得很清楚：the lightest。再看一遍。"
+   }
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r5-v05",
+   "title": "写比较级",
+   "scene": "快速写。",
+   "stem": "写出 heavy 的比较级。",
+   "task": "写英文。",
+   "answer_text": "heavier",
+   "expects": [
+    {
+     "id": "w4",
+     "type": "word",
+     "answers": [
+      "heavier"
+     ],
+     "cn": [
+      "更重"
+     ]
+    }
+   ],
+   "help": "y 变 i 加 er。",
+   "explain": "heavier。",
+   "common_errors": [
+    {
+     "when": "写了 heavyer",
+     "say": "y 变成 i：heavier。"
+    }
+   ]
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r5-v06",
+   "title": "写最高级",
+   "scene": "快速写。",
+   "stem": "写出 good 的最高级（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the best",
+   "expects": [
+    {
+     "id": "w5",
+     "type": "word",
+     "answers": [
+      "the best",
+      "best"
+     ],
+     "cn": [
+      "最好的"
+     ]
+    }
+   ],
+   "help": "特殊的。",
+   "explain": "the best。",
+   "common_errors": [
+    {
+     "when": "写了 the goodest",
+     "say": "the best，特殊记。"
+    }
+   ]
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r5-v07",
+   "title": "连词成句",
+   "scene": "连起来。",
+   "stem": "R / the lightest / is",
+   "task": "连成句子。",
+   "answer_text": "R is the lightest.",
+   "expects": [
+    {
+     "id": "s4",
+     "type": "word",
+     "answers": [
+      "r is the lightest"
+     ],
+     "cn": [
+      "R最轻"
+     ]
+    }
+   ],
+   "help": "R is + the lightest。",
+   "explain": "R is the lightest。",
+   "common_errors": [
+    {
+     "when": "漏了 the",
+     "say": "the 不能少。"
+    }
+   ]
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r5-v08",
+   "title": "写邮件推荐",
+   "scene": "写推荐句。",
+   "stem": "用最高级写：R 的屏幕最大。",
+   "task": "写英文完整句子。",
+   "answer_text": "Tablet R has the biggest screen.",
+   "expects": [
+    {
+     "id": "s5",
+     "type": "word",
+     "answers": [
+      "tablet r has the biggest screen",
+      "r has the biggest screen"
+     ],
+     "cn": [
+      "R的屏幕最大"
+     ]
+    }
+   ],
+   "help": "R has + the biggest screen。",
+   "explain": "Tablet R has the biggest screen。",
+   "common_errors": [
+    {
+     "when": "用了 bigger",
+     "say": "最大用最高级 the biggest。"
+    }
+   ]
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r5-v09",
+   "title": "综合",
+   "scene": "最后一问。",
+   "stem": "下面哪句同时用了比较级和最高级？",
+   "options": [
+    "R is the lightest.",
+    "Q is lighter than P and R is the lightest.",
+    "R is light.",
+    "Q is light."
+   ],
+   "answer": "B",
+   "help": "找 than（比较级）和 the + 最高级。",
+   "explain": "lighter than（比较级）+ the lightest（最高级）。",
+   "wrong_feedback": {
+    "A": "只有最高级，没有比较级。再找找。",
+    "C": "这是原级。再找找。",
+    "D": "这是原级。再找找。"
+   }
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r5-v09b",
+   "title": "写电话回复",
+   "scene": "接电话。",
+   "stem": "听众问：Which is the best one for students? 你推荐 Q，写：I ______ Tablet Q.（推荐）",
+   "task": "填空。",
+   "answer_text": "recommend",
+   "expects": [
+    {
+     "id": "w6",
+     "type": "word",
+     "answers": [
+      "recommend"
+     ],
+     "cn": [
+      "推荐"
+     ]
+    }
+   ],
+   "help": "推荐的英文。",
+   "explain": "I recommend Tablet Q。",
+   "common_errors": [
+    {
+     "when": "拼写错",
+     "say": "recommend，双 m。"
+    }
+   ]
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u3r5-v10",
+   "title": "写完整对比",
+   "scene": "写两句。",
+   "stem": "写：Q 比 P 轻。R 最轻。",
+   "task": "写英文。",
+   "answer_text": "Q is lighter than P. R is the lightest.",
+   "expects": [
+    {
+     "id": "s6",
+     "type": "word",
+     "answers": [
+      "q is lighter than p. r is the lightest"
+     ],
+     "cn": [
+      "Q比P轻。R最轻"
+     ]
+    }
+   ],
+   "help": "lighter than… / the lightest。",
+   "explain": "Q is lighter than P. R is the lightest.",
+   "common_errors": [
+    {
+     "when": "混淆比较级最高级",
+     "say": "第一句比较级 lighter than，第二句最高级 the lightest。"
+    }
+   ]
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u3r5-v11",
+   "title": "than 还是 the",
+   "scene": "终极判断。",
+   "stem": "看句子选：There are 4 tablets. This is ______ best one.",
+   "options": [
+    "a",
+    "the",
+    "than",
+    "more"
+   ],
+   "answer": "B",
+   "help": "最高级前面加什么？",
+   "explain": "the best。",
+   "wrong_feedback": {
+    "A": "a 不用在最高级前面。再想想。",
+    "C": "than 是比较级的标志，这里是最高级。",
+    "D": "more 是比较级标志，这里用 the。"
+   }
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u3r5-ending",
+   "title": "直播结束",
+   "teach_html": "<p>直播结束！今晚你答对了听众的所有问题，比较级、最高级、电话、邮件全过关。</p><p>站长说：Unit 3 学完了。从“更……”到“最……”，从听到写，你都掌握了。下一单元，我们换个新主题，继续加油！</p>"
+  }
+ ],
+ "title": "科技大直播：综合复习",
+ "unit": "Unit 3 Computers",
+ "version": 1
+}
