@@ -115,32 +115,11 @@
     .qcols { display:block; }
     .reading-pane { position:static; max-height:none; margin-bottom:4px; }
     #wrap{padding:18px 14px 100px;}
-    /* 手机端悬浮"看原文"按钮 */
-    #btnSeeReading { display:block !important; }
   }
-  #btnSeeReading { display:none; position:fixed; bottom:24px; right:16px; z-index:50;
-    background:var(--blue); color:#fff; border:0; border-radius:24px;
-    padding:12px 20px; font-size:16px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer; }
-  /* 点词查词：阅读材料里的英文单词可点 */
-  .reading-pane pre .w { cursor:pointer; border-bottom:1px dotted var(--blue); }
-  .reading-pane pre .w:active { background:#e8f0fe; }
-  #wordPop { display:none; position:fixed; z-index:100; background:#fff; border:2px solid var(--blue);
-    border-radius:14px; padding:14px 16px; max-width:280px; box-shadow:0 6px 20px rgba(0,0,0,0.25); }
-  #wordPop .wp-word { font-size:20px; font-weight:700; }
-  #wordPop .wp-ph { color:var(--muted); font-size:14px; margin:2px 0; }
-  #wordPop .wp-zh { font-size:16px; margin:6px 0 10px; }
-  #wordPop .wp-row { display:flex; gap:8px; }
-  #wordPop .wp-row button { flex:1; padding:10px; font-size:15px; border-radius:10px; border:0; cursor:pointer; }
-  #wordPop .wp-say { background:var(--blue); color:#fff; }
-  #wordPop .wp-add { background:#e8f5e9; color:#2e7d32; }
-  #wordPop .wp-close { position:absolute; top:4px; right:10px; border:0; background:none; font-size:18px; color:var(--muted); cursor:pointer; }
 </style>
-<script src="/dict.min.js"></script>
 </head>
 <body>
 <div id="topbar" style="display:none">
-  <button id="btnBack" onclick="location.href='/'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">← 课程</button>
-  <button onclick="location.href='/vocab.html'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">📖 生词本</button>
   <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
   <div id="player">
     <button id="btnPlay" class="paused" aria-label="播放"></button>
@@ -151,17 +130,6 @@
   <div id="stepind"></div>
 </div>
 <div id="wrap"></div>
-<button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
-<div id="wordPop">
-  <button class="wp-close" onclick="document.getElementById('wordPop').style.display='none'">×</button>
-  <div class="wp-word" id="wpWord"></div>
-  <div class="wp-ph" id="wpPh"></div>
-  <div class="wp-zh" id="wpZh"></div>
-  <div class="wp-row">
-    <button class="wp-say" id="wpSay">🔊 读一下</button>
-    <button class="wp-add" id="wpAdd">➕ 生词本</button>
-  </div>
-</div>
 <div id="bigplay"><button id="btnBig">▶ 听一听</button></div>
 
 <script>
@@ -258,19 +226,6 @@ function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60
 // playbackRate 是 C10 清单外的新 DOM 属性（待练习场真机验证）：设倍速失败一律静默回退
 // 到正常速度播放，绝不能因为这个按钮挡住上课。
 function setRate(r) { try { au.playbackRate = r; } catch (e) {} }
-// TTS 兜底：音频文件不存在时用浏览器朗读
-let currentTtsText = '';
-function speakTts(text) {
-  try {
-    if (!('speechSynthesis' in window)) return false;
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'zh-CN';
-    u.rate = 0.9;
-    speechSynthesis.speak(u);
-    return true;
-  } catch (e) { return false; }
-}
 function setAudio(audioId) {
   au.pause();
   setRate(1);
@@ -278,15 +233,8 @@ function setAudio(audioId) {
   $('player').style.display = '';
   au.src = '/audio/' + LID + '/' + audioId + '.mp3';
   btnPlay.className = 'paused';
-  // 音频加载失败时尝试 TTS
-  au.onerror = () => { if (currentTtsText) speakTts(currentTtsText); };
   au.play().then(() => { btnPlay.className = 'playing'; $('bigplay').classList.remove('show'); })
-    .catch(() => { 
-      // 播放被拦截或失败：先试 TTS，再显示大播放按钮
-      if (currentTtsText && !speakTts(currentTtsText)) {
-        $('bigplay').classList.add('show');
-      }
-    });
+    .catch(() => { $('bigplay').classList.add('show'); }); // 被拦截：显示大播放按钮
 }
 btnPlay.onclick = () => { if (au.paused) { setRate(1); au.play().catch(() => {}); } else au.pause(); };
 $('btnBig').onclick = () => { $('bigplay').classList.remove('show'); setRate(1); au.play().catch(() => {}); };
@@ -350,7 +298,7 @@ async function renderHome() {
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
   const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
-  let html = `<div id="homeHead"><h1>小禾英语</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
+  let html = `<div id="homeHead"><h1>${escapeHtml(LESSON.brand || '小禾英语')}</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
   if (isReview) {
     // 练习模式（2026-10-02 总任务书）：学完新课自动接着练；练完一遍可以再练一遍
     if (state.p1_done) {
@@ -388,14 +336,62 @@ async function renderHome() {
       <p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>
       ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
-      <p class="scene">做完的课程不能重做。下一课见。</p>
-      <button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">下一课 →</button></div>`;
+      <p class="scene">做完的课程不能重做。下一课见。</p></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
   }
   wrap.innerHTML = html;
   wrap.querySelectorAll('[data-go]').forEach(b => b.onclick = () => startPart(+b.dataset.go));
+}
+
+/* ---------- 数学公式渲染（KaTeX 自托管，仅数学课按需加载） ---------- */
+let katexPromise = null;
+function ensureKatex() {
+  if (katexPromise) return katexPromise;
+  katexPromise = new Promise((res, rej) => {
+    if (window.katex) return res();
+    const link = document.createElement('link');
+    link.rel = 'stylesheet'; link.href = '/vendor/katex/katex.min.css';
+    document.head.appendChild(link);
+    const sc = document.createElement('script');
+    sc.src = '/vendor/katex/katex.min.js';
+    sc.onload = () => res(); sc.onerror = () => rej(new Error('katex load fail'));
+    document.head.appendChild(sc);
+  });
+  return katexPromise;
+}
+// 把文本节点里的 \(...\)（行内）和 $$...$$（行间）渲染成公式。
+// 用 TreeWalker 只替换文本节点，不重写 innerHTML，不破坏已绑定的事件监听；
+// 已渲染过的公式内部跳过，重复调用是安全的。
+function renderMathIn(root) {
+  if (!window.katex || !root || !root.querySelector) return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  const re = /\\\((.+?)\\\)|\$\$(.+?)\$\$/g;
+  for (const tn of nodes) {
+    const text = tn.nodeValue;
+    if (text.indexOf('\\(') < 0 && text.indexOf('$$') < 0) continue;
+    if (tn.parentElement && tn.parentElement.closest('.katex')) continue;
+    const frag = document.createDocumentFragment();
+    let last = 0, m, hit = false;
+    re.lastIndex = 0;
+    while ((m = re.exec(text))) {
+      hit = true;
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      const dm = m[1] === undefined;
+      const tex = dm ? m[2] : m[1];
+      const span = document.createElement(dm ? 'div' : 'span');
+      try { window.katex.render(tex, span, { displayMode: dm, throwOnError: false }); }
+      catch (e) { span.textContent = m[0]; }
+      frag.appendChild(span);
+      last = m.index + m[0].length;
+    }
+    if (!hit) continue;
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    tn.parentNode.replaceChild(frag, tn);
+  }
 }
 
 /* ---------- 上课 ---------- */
@@ -451,18 +447,13 @@ function renderStep() {
   const reviewed = !!(s && s.item_id && doneSet[s.item_id]); // 后退回看已终局的题：只读回顾，不可重答
   topbar.style.display = 'flex';
   $('stepind').textContent = `第 ${s.step} 步 / 共 ${arr[arr.length - 1].step} 步`;
-  // 提取纯文本供 TTS 兜底用
-  try {
-    const rawHtml = s.teach_html || s.stem || s.title || '';
-    const div = document.createElement('div');
-    div.innerHTML = rawHtml;
-    currentTtsText = (div.textContent || div.innerText || '').trim().slice(0, 500);
-  } catch (e) { currentTtsText = ''; }
   setAudio(s.audio_id);
   let html = '';
   if (s.kind === 'teach') {
     const isStory = /story/.test(s.audio_id || '');
-    html = `<div class="card"><span class="kicker ${isStory ? 'story' : 'teach'}">${isStory ? '广播站故事' : '站长讲解'}</span>
+    const kickerStory = LESSON.kicker_story || '广播站故事';
+    const kickerTeach = LESSON.kicker_teach || '站长讲解';
+    html = `<div class="card"><span class="kicker ${isStory ? 'story' : 'teach'}">${isStory ? kickerStory : kickerTeach}</span>
       <div class="teachtext">${s.teach_html}</div>${noticeHtml(s.reading)}
       <div class="btnrow">${POS > 0 ? '<button class="ghost btnBack">回去看看</button>' : ''}<button class="big" id="btnNext">${POS + 1 >= arr.length ? '完成本部分' : '知道了，下一步'}</button></div></div>`;
   } else if (s.kind === 'choice') {
@@ -492,7 +483,7 @@ function renderStep() {
         <button class="big" id="btnSub" disabled>回答</button></div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else {
-      html += `<input id="answerInput" placeholder="在这里写英文答案" autocomplete="off">
+      html += `<input id="answerInput" placeholder="${escapeHtml(LESSON.answer_placeholder || '在这里写英文答案')}" autocomplete="off">
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
         <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
@@ -500,6 +491,7 @@ function renderStep() {
     html += `</div></div></div>`;
   }
   wrap.innerHTML = html;
+  if (LESSON.math && window.katex) renderMathIn(wrap); // 数学课：渲染公式（不破坏按钮监听）
   wrap.querySelectorAll('.btnBack').forEach(b => { b.onclick = goBack; }); // 回去看看：各处统一接 goBack
   if (s.kind === 'teach') { $('btnNext').onclick = () => advance(); window.scrollTo(0, 0); return; }
   if (s.kind === 'choice') {
@@ -536,96 +528,8 @@ function renderStep() {
   }
   qT0 = Date.now(); // 开始计时：题目出现
   wireQuestion(s);
-  makeWordsTappable();
   window.scrollTo(0, 0);
 }
-// ---- 点词查词 + 生词本（2026-10-08） ----
-function lookupWord(w) {
-  const D = window.XH_DICT || {};
-  w = String(w || '').toLowerCase().replace(/^[^a-z]+|[^a-z]+$/g, '');
-  if (!w) return null;
-  if (D[w]) return { word: w, hit: D[w] };
-  // 简单还原：复数/过去式/进行时
-  const cands = [];
-  if (/ies$/.test(w)) cands.push(w.replace(/ies$/, 'y'));
-  if (/es$/.test(w)) cands.push(w.slice(0, -2));
-  if (/s$/.test(w)) cands.push(w.slice(0, -1));
-  if (/ied$/.test(w)) cands.push(w.replace(/ied$/, 'y'));
-  if (/ed$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
-  if (/ing$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -3) + 'e');
-  if (/er$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
-  if (/est$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -2));
-  if (/ly$/.test(w)) cands.push(w.slice(0, -2));
-  for (const c of cands) if (D[c]) return { word: c, hit: D[c], orig: w };
-  return { word: w, hit: null };
-}
-function makeWordsTappable() {
-  document.querySelectorAll('.reading-pane pre').forEach(pre => {
-    if (pre.dataset.tapped) return;
-    pre.dataset.tapped = '1';
-    const frag = document.createDocumentFragment();
-    pre.textContent.split(/([A-Za-z]+(?:'[a-z]+)?)/g).forEach(part => {
-      if (/^[A-Za-z]+(?:'[a-z]+)?$/.test(part) && part.length >= 2) {
-        const sp = document.createElement('span');
-        sp.className = 'w'; sp.textContent = part;
-        sp.onclick = e => { e.stopPropagation(); showWordPop(part, e.clientX, e.clientY); };
-        frag.appendChild(sp);
-      } else frag.appendChild(document.createTextNode(part));
-    });
-    pre.textContent = ''; pre.appendChild(frag);
-  });
-}
-let curWord = null;
-function showWordPop(raw, x, y) {
-  const r = lookupWord(raw);
-  if (!r) return;
-  curWord = r;
-  document.getElementById('wpWord').textContent = r.orig || r.word;
-  let ph = '', zh = '（词典里没有这个词的意思）';
-  if (r.hit) { const p = r.hit.split('|'); ph = p[0] ? '/' + p[0] + '/' : ''; zh = p[1] || zh; }
-  document.getElementById('wpPh').textContent = ph;
-  document.getElementById('wpZh').textContent = zh;
-  document.getElementById('wpAdd').textContent = isInVocab(r.word) ? '✓ 已在生词本' : '➕ 生词本';
-  const pop = document.getElementById('wordPop');
-  pop.style.display = 'block';
-  const pw = 280, ph2 = 180;
-  pop.style.left = Math.max(8, Math.min(window.innerWidth - pw - 8, x - pw / 2)) + 'px';
-  pop.style.top = Math.max(8, Math.min(window.innerHeight - ph2 - 8, y + 12)) + 'px';
-}
-document.getElementById('wpSay').onclick = () => {
-  if (!curWord) return;
-  try {
-    const u = new SpeechSynthesisUtterance(curWord.word);
-    u.lang = 'en-US'; u.rate = 0.85;
-    speechSynthesis.cancel(); speechSynthesis.speak(u);
-  } catch (e) {}
-};
-document.getElementById('wpAdd').onclick = () => {
-  if (!curWord) return;
-  addToVocab(curWord);
-  document.getElementById('wpAdd').textContent = '✓ 已在生词本';
-};
-// 生词本：localStorage 为主（本机不丢），服务端尽力同步
-function getVocab() {
-  try { return JSON.parse(localStorage.getItem('xh_vocab_v1') || '{}'); } catch (e) { return {}; }
-}
-function isInVocab(w) { return !!getVocab()[w]; }
-function addToVocab(r) {
-  const v = getVocab();
-  let ph = '', zh = '';
-  if (r.hit) { const p = r.hit.split('|'); ph = p[0] || ''; zh = p[1] || ''; }
-  if (!v[r.word]) v[r.word] = { zh, ph, added: Date.now(), reviews: 0, ok: 0 };
-  try { localStorage.setItem('xh_vocab_v1', JSON.stringify(v)); } catch (e) {}
-  // 服务端尽力同步（失败不影响）
-  try {
-    fetch('/api/vocab/add', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ word: r.word, zh, ph }) }).catch(() => {});
-  } catch (e) {}
-}
-document.addEventListener('click', e => {
-  const pop = document.getElementById('wordPop');
-  if (pop && pop.style.display === 'block' && !pop.contains(e.target)) pop.style.display = 'none';
-});
 async function advance() {
   const arr = stepsOf(PART);
   if (POS + 1 >= arr.length) {
@@ -1002,7 +906,7 @@ async function submitCopy(s, answer) {
     b = await r.json();
   } catch (e) { b = null; }
   if (!b || !b.ok) {
-    if (box) box.insertAdjacentHTML('beforeend', '<div class="gfb">提交没成功，再点一次试试。</div>');
+    if (box) box.innerHTML = box.innerHTML + '<div class="gfb">提交没成功，再点一次试试。</div>';
     return;
   }
   if (b.verdict === 'copied') {
@@ -1028,8 +932,9 @@ async function submitCopy(s, answer) {
     const r = await fetch('/api/lesson?lesson=' + encodeURIComponent(LID));
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
+    if (LESSON.math) ensureKatex().then(() => renderMathIn(wrap)).catch(() => {}); // 数学课：预加载公式渲染
     await loadProg(); // 续课进度（服务端，按题目ID）
-    document.title = '小禾英语 · ' + (LESSON.home_subtitle || LESSON.title || '');
+    document.title = (LESSON.brand || '小禾英语') + ' · ' + (LESSON.home_subtitle || LESSON.title || '');
     const brandSmall = document.querySelector('#brand small');
     if (brandSmall) brandSmall.textContent = LESSON.home_subtitle || LESSON.title || '';
     renderHome();
