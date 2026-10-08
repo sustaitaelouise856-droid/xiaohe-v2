@@ -48,7 +48,12 @@
         }
       ],
       "scene": "核对时间",
-      "step": 3
+      "step": 3,
+      "wrong_feedback": {
+        "A": "这是第一张通知的旧时间，已经更新了。",
+        "B": "星期五对了，但时间是旧的。看第二张更新。",
+        "D": "时间 7:00 p.m. 对了，但星期是 Saturday，不是 Sunday。"
+      }
     },
     {
       "kind": "mcq",
@@ -71,7 +76,12 @@
         }
       ],
       "scene": "核对地点",
-      "step": 4
+      "step": 4,
+      "wrong_feedback": {
+        "A": "这是书义卖的旧地点，不是演出的。",
+        "B": "图书馆是别的事的地点，演出不在这。",
+        "C": "语音里没提过 gym，再听一遍。"
+      }
     },
     {
       "kind": "teach",
@@ -102,7 +112,12 @@
         }
       ],
       "scene": "读数据",
-      "step": 6
+      "step": 6,
+      "wrong_feedback": {
+        "A": "15% 是借书的涨幅，不是人数的。",
+        "C": "播报里没说过 25%，再听一遍 up 后面的数字。",
+        "D": "10% 太小了，播报说的是 up 20%。"
+      }
     },
     {
       "kind": "short",
@@ -187,7 +202,12 @@
         }
       ],
       "scene": "抓请求",
-      "step": 9
+      "step": 9,
+      "wrong_feedback": {
+        "B": "吃面条是闲聊，不是请求。",
+        "C": "信里没说要写信，再听一遍。",
+        "D": "煮面条是闲聊，真正的请求是点歌。"
+      }
     },
     {
       "kind": "mcq",
@@ -210,7 +230,12 @@
         }
       ],
       "scene": "抓请求",
-      "step": 10
+      "step": 10,
+      "wrong_feedback": {
+        "A": "信里没问午饭时间，问的是 English Corner。",
+        "C": "信里没提狗，别脑补。",
+        "D": "问的不是歌名，是时间。"
+      }
     },
     {
       "kind": "short",
@@ -273,7 +298,12 @@
         }
       ],
       "scene": "读数据",
-      "step": 13
+      "step": 13,
+      "wrong_feedback": {
+        "A": "10% 太小了，播报说 up 15%。",
+        "B": "20% 是人数的涨幅，借书是 15%。",
+        "C": "播报里没说过 25%。"
+      }
     },
     {
       "kind": "mcq",
@@ -291,7 +321,12 @@
       "help": "数一数。",
       "predicted_errors": [],
       "scene": "数信",
-      "step": 14
+      "step": 14,
+      "wrong_feedback": {
+        "A": "漏了一封，有来信一和来信二两封。",
+        "B": "只有两封，哪来的第三封？",
+        "C": "数多了，只有两封信。"
+      }
     },
     {
       "kind": "teach",
@@ -317,7 +352,12 @@
       "help": "找被更新掉的旧信息。",
       "predicted_errors": [],
       "scene": "找作废",
-      "step": 16
+      "step": 16,
+      "wrong_feedback": {
+        "A": "Saturday, 7:00 p.m. 是最新的，对的。",
+        "B": "school hall 是最新的地点，对的。",
+        "D": "up 20% 是最新数据，对的。"
+      }
     },
     {
       "kind": "short",
@@ -428,7 +468,12 @@
         }
       ],
       "scene": "听时间",
-      "step": 22
+      "step": 22,
+      "wrong_feedback": {
+        "A": "Friday 是旧通知的时间，语音说的是 Saturday。",
+        "C": "星期对了，但语音说的是 7:00 p.m.，不是 6:00。",
+        "D": "语音里没提 Sunday。"
+      }
     },
     {
       "kind": "short",
@@ -486,7 +531,12 @@
         }
       ],
       "scene": "比数据",
-      "step": 25
+      "step": 25,
+      "wrong_feedback": {
+        "B": "Books up 15%，比 20% 小。",
+        "C": "Students 是 up 20%，不是 15%。",
+        "D": "Books 是 up 15%，不是 20%。"
+      }
     },
     {
       "kind": "short",
@@ -565,7 +615,12 @@
         }
       ],
       "scene": "抓请求",
-      "step": 28
+      "step": 28,
+      "wrong_feedback": {
+        "B": "喂猫是闲聊，不是请求。",
+        "C": "信里没说每天听。",
+        "D": "信里没说写信，请求是点歌。"
+      }
     },
     {
       "kind": "short",
@@ -723,7 +778,12 @@
       "help": "找错误的那项。",
       "predicted_errors": [],
       "scene": "检查",
-      "step": 35
+      "step": 35,
+      "wrong_feedback": {
+        "A": "Saturday 7pm 是对的，检查通过。",
+        "B": "school hall 是对的，检查通过。",
+        "D": "up 20% 是对的，检查通过。"
+      }
     },
     {
       "kind": "teach",
