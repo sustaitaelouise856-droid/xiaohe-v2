@@ -1,752 +1,752 @@
 {
- "lesson_id": "u3r3",
- "practice_end": 24,
- "home_subtitle": "第三课 · 电话订购",
- "part1_desc": "第 1–24 步：跟站长学接订购电话，听懂规格。",
- "part2_desc": "第 25–36 步：自己接新的电话，记下订单。",
- "note": "本课阅读材料为教研自编，非课本原文。考查能力：听懂比较级/最高级关键词、理解电话用语。Unit 3 Computers 主题。",
- "steps": [
-  {
-   "step": 1,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-story-01",
-   "title": "订购热线",
-   "teach_html": "<p>科技特别节目火了！很多听众打电话来订购节目里介绍的电脑。</p><p>站长开了条<strong>订购热线</strong>，让你来接电话。你的任务：<strong>听懂</strong>客人要哪台电脑，记下规格（配置），别记错了。</p><p>电话里客人会说“要<strong>更快</strong>的那台”“<strong>最便宜</strong>的那台”，比较级和最高级都会出现，耳朵要竖起来。</p>"
-  },
-  {
-   "step": 2,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-teach-01",
-   "title": "规格词",
-   "teach_html": "<p>先学生词，电话里会听到：</p><ul><li><strong>memory</strong>（内存）：电脑记东西的能力，越大越好</li><li><strong>screen size</strong>（屏幕尺寸）：屏幕多大</li><li><strong>order</strong>（订购）：我要买</li><li><strong>delivery</strong>（送货）：送到家里</li></ul><p>例句：I want to <strong>order</strong> the computer with bigger <strong>memory</strong>.（我想订内存更大的那台电脑。）</p>"
-  },
-  {
-   "step": 3,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-teach-02",
-   "title": "听电话的三步",
-   "teach_html": "<p>接电话记住三步：</p><ul><li><strong>第一步：听关键词</strong>——客人说 faster（更快）、cheapest（最便宜），抓住这些词。</li><li><strong>第二步：对资料</strong>——把听到的词和电脑资料对上，是哪一台。</li><li><strong>第三步：再确认</strong>——复述一遍：“您要的是……对吗？”</li></ul><p>电话里听不清很正常，关键是抓住<strong>比较级/最高级</strong>那个词。</p>"
-  },
-  {
-   "step": 4,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-teach-03",
-   "title": "电话用语",
-   "teach_html": "<p>电话里常用的句子：</p><ul><li><strong>I'd like the cheaper one.</strong>（我想要便宜的那台。）</li><li><strong>Which one is the fastest?</strong>（哪台最快？）</li><li><strong>Is this one better than that one?</strong>（这台比那台好吗？）</li></ul><p><strong>one</strong> 在这里指“那台（电脑）”，避免重复说 computer。</p>"
-  },
-  {
-   "step": 5,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-call-01",
-   "title": "听第一通电话",
-   "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
-   "teach_html": "<p>上面是第一通电话的记录。跟着读一遍，注意这两个地方：</p><ul><li>客人说 <strong>the faster one</strong>（更快的那台）→ 要的是 <strong>Model F</strong></li><li>你回答 <strong>more expensive than</strong>（比……更贵）→ 比较级 + than</li></ul><p>关键词 faster 决定了客人要哪台。</p>"
-  },
-  {
-   "step": 6,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-teach-04",
-   "title": "the one 指哪个",
-   "teach_html": "<p><strong>the faster one</strong> = 更快的那台电脑，<strong>the cheapest one</strong> = 最便宜的那台电脑。</p><p><strong>one</strong> 代替前面说过的 computer，说话更简短。</p><ul><li>I'd like <strong>the cheaper one</strong>.（我想要便宜的那台。）</li><li>Which is <strong>the best one</strong>?（哪台是最好的？）</li></ul>"
-  },
-  {
-   "step": 7,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-call-02",
-   "title": "听第二通电话",
-   "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
-   "teach_html": "<p>第二通电话：客人问 <strong>the cheapest</strong>（最便宜的）→ 要的是 <strong>Model S</strong>。</p><p>客人还确认：<strong>Is it slower than Model F?</strong>（它比 F 慢吗？）你回答 <strong>slower</strong>（更慢）。</p><p>听电话时，<strong>the cheapest</strong> 这种最高级一出来，就知道客人要哪台了。</p>"
-  },
-  {
-   "step": 8,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r3-teach-05",
-   "title": "准备接电话",
-   "teach_html": "<p>复习一下电话里要听的：</p><ul><li><strong>the faster one</strong> / <strong>the cheaper one</strong>（更快/便宜的那台）</li><li><strong>the cheapest</strong> / <strong>the fastest</strong>（最便宜/最快的）</li><li><strong>more expensive than</strong>（比……更贵）</li><li><strong>one</strong> = 那台（电脑）</li></ul><p>下面站长放电话录音（看文字记录），你来接。</p>"
-  },
-  {
-   "step": 9,
-   "phase": "practice",
-   "kind": "teach",
-   "audio_id": "u3r3-prac-01",
-   "title": "电话记录",
-   "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
-   "teach_html": "<p>第一通电话的记录在上面。客人要的是哪台？对照着答题。</p>"
-  },
-  {
-   "step": 10,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q01",
-   "title": "客人要哪台",
-   "scene": "听客人说的关键词。",
-   "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
-   "stem": "客人说 \"the faster one\"，他要的是哪台？",
-   "options": [
-    "Model S",
-    "Model F",
-    "Model X",
-    "Model Z"
-   ],
-   "answer": "B",
-   "help": "faster 是哪台的特征？看资料。",
-   "explain": "Model F 是 faster 的那台。",
-   "wrong_feedback": {
-    "A": "Model S 是 slow 的那台。客人说的是 faster，再看一遍。",
-    "C": "Model X 没在这通电话里出现。再看一遍。",
-    "D": "Model Z 没在这通电话里出现。再看一遍。"
-   }
-  },
-  {
-   "step": 11,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q02",
-   "title": "贵多少",
-   "scene": "价格对比。",
-   "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
-   "stem": "Model F 和 Model S 比，哪个说法对？",
-   "options": [
-    "Model F is cheaper than Model S.",
-    "Model S is more expensive than Model F.",
-    "Model F is more expensive than Model S.",
-    "They are the same price."
-   ],
-   "answer": "C",
-   "help": "电话里你是怎么回答的？",
-   "explain": "Model F is more expensive than Model S.",
-   "wrong_feedback": {
-    "A": "电话里客人问 Is it more expensive，你回答 Yes。再看一遍。",
-    "B": "主语反了，是 F 比 S 贵，不是 S 比 F 贵。",
-    "D": "价格不一样：4500 和 3000。再看一遍。"
-   }
-  },
-  {
-   "step": 12,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q03",
-   "title": "第二通电话",
-   "scene": "听最高级。",
-   "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
-   "stem": "客人问 \"the cheapest\"，他要的是哪台？",
-   "options": [
-    "Model F",
-    "两台都要",
-    "没说清楚",
-    "Model S"
-   ],
-   "answer": "D",
-   "help": "cheapest 是哪台？",
-   "explain": "Model S 是 the cheapest。",
-   "wrong_feedback": {
-    "A": "Model F 是 4500 元，不是 cheapest。再看一遍。",
-    "B": "客人只要一台。再看一遍。",
-    "C": "客人问得很清楚：the cheapest。再看一遍。"
-   }
-  },
-  {
-   "step": 13,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q04",
-   "title": "slower 的意思",
-   "scene": "理解回答。",
-   "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
-   "stem": "你说 Model S \"slower\"，意思是？",
-   "options": [
-    "更快",
-    "更慢",
-    "最慢",
-    "一样快"
-   ],
-   "answer": "B",
-   "help": "slow 的比较级是什么意思？",
-   "explain": "slower = 更慢。",
-   "wrong_feedback": {
-    "A": "faster 才是更快。slower 是 slow 的比较级，再想想。",
-    "C": "slowest 才是最慢。这里是 slower，再想想。",
-    "D": "slower 是比较，有快慢之分。再想想。"
-   }
-  },
-  {
-   "step": 14,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q05",
-   "title": "one 指什么",
-   "scene": "理解代词。",
-   "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
-   "stem": "\"the faster one\" 里，one 指什么？",
-   "options": [
-    "电话",
-    "人",
-    "电脑",
-    "钱"
-   ],
-   "answer": "C",
-   "help": "不对。上下文在说买什么？",
-   "explain": "one = 那台电脑。",
-   "wrong_feedback": {
-    "A": "电话是 phone，one 指的是要买的东西。再想想。",
-    "B": "one 不是指人。再想想上下文。",
-    "D": "one 不是指钱。再想想。"
-   }
-  },
-  {
-   "step": 15,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q06",
-   "title": "delivery 的意思",
-   "scene": "理解生词。",
-   "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
-   "stem": "\"Please deliver it tomorrow\" 里，deliver 是什么意思？",
-   "options": [
-    "修理",
-    "退货",
-    "看看",
-    "送货"
-   ],
-   "answer": "D",
-   "help": "第 2 步学过这个词。",
-   "explain": "delivery（送货）。",
-   "wrong_feedback": {
-    "A": "修理是 repair。deliver 是第 2 步学的词，再想想。",
-    "B": "退货是 return。deliver 不是这个意思。",
-    "C": "看看是 look。deliver 是送货。"
-   }
-  },
-  {
-   "step": 16,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q07",
-   "title": "客人确认什么",
-   "scene": "听懂问句。",
-   "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
-   "stem": "客人问 \"Is it slower than Model F?\"，他在确认什么？",
-   "options": [
-    "S 比 F 慢吗",
-    "S 比 F 快吗",
-    "S 和 F 一样吗",
-    "F 多少钱"
-   ],
-   "answer": "A",
-   "help": "slower than 是什么意思？",
-   "explain": "确认 S 是不是比 F 慢。",
-   "wrong_feedback": {
-    "B": "slower 是更慢，不是更快。再看一遍问句。",
-    "C": "问句里有 slower than，是比快慢，不是问一样。",
-    "D": "问句没问价格，问的是慢不慢。"
-   }
-  },
-  {
-   "step": 17,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q08",
-   "title": "综合理解",
-   "scene": "两通电话对比。",
-   "stem": "两通电话里，客人都买了电脑。第一通买的是更快的，第二通买的是最便宜的。说法对吗？",
-   "options": [
-    "对",
-    "错，第一通买的是最便宜的",
-    "错，第二通买的是更快的",
-    "两通都没买"
-   ],
-   "answer": "A",
-   "help": "第一通 faster→F，第二通 cheapest→S。",
-   "explain": "说法正确。",
-   "wrong_feedback": {
-    "B": "第一通客人说 the faster one，是 F。再看第一通记录。",
-    "C": "第二通客人说 the cheapest one，是 S。再看第二通记录。",
-    "D": "两通最后都说 I'll take。再看结尾。"
-   }
-  },
-  {
-   "step": 18,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r3-q09",
-   "title": "写出 faster 的原级",
-   "scene": "反推原级。",
-   "stem": "faster 是比较级，它的原级是什么？",
-   "task": "写一个英文单词。",
-   "answer_text": "fast",
-   "expects": [
+  "lesson_id": "u3r3",
+  "practice_end": 24,
+  "home_subtitle": "第三课 · 电话订购",
+  "part1_desc": "第 1–24 步：跟站长学接订购电话，听懂规格。",
+  "part2_desc": "第 25–36 步：自己接新的电话，记下订单。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：听懂比较级/最高级关键词、理解电话用语。Unit 3 Computers 主题。",
+  "steps": [
     {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "fast"
-     ],
-     "cn": [
-      "快的"
-     ]
-    }
-   ],
-   "help": "去 er。",
-   "explain": "fast→faster。",
-   "common_errors": [
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-story-01",
+      "title": "订购热线",
+      "teach_html": "<p>【承上启下】前两天学了比较级和最高级。今天去电脑店实战：听客人打电话，帮他选电脑。</p><p>科技特别节目火了！很多听众打电话来订购节目里介绍的电脑。</p><p>站长开了条<strong>订购热线</strong>，让你来接电话。你的任务：<strong>听懂</strong>客人要哪台电脑，记下规格（配置），别记错了。</p><p>电话里客人会说“要<strong>更快</strong>的那台”“<strong>最便宜</strong>的那台”，比较级和最高级都会出现，耳朵要竖起来。</p>"
+    },
     {
-     "when": "写了 more fast",
-     "say": "要的是原级，就是 fast。"
-    }
-   ]
-  },
-  {
-   "step": 19,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r3-q10",
-   "title": "写出 cheapest 的原级",
-   "scene": "反推原级。",
-   "stem": "cheapest 是最高级，它的原级是什么？",
-   "task": "写一个英文单词。",
-   "answer_text": "cheap",
-   "expects": [
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-teach-01",
+      "title": "规格词",
+      "teach_html": "<p>先学生词，电话里会听到：</p><ul><li><strong>memory</strong>（内存）：电脑记东西的能力，越大越好</li><li><strong>screen size</strong>（屏幕尺寸）：屏幕多大</li><li><strong>order</strong>（订购）：我要买</li><li><strong>delivery</strong>（送货）：送到家里</li></ul><p>例句：I want to <strong>order</strong> the computer with bigger <strong>memory</strong>.（我想订内存更大的那台电脑。）</p>"
+    },
     {
-     "id": "w2",
-     "type": "word",
-     "answers": [
-      "cheap"
-     ],
-     "cn": [
-      "便宜的"
-     ]
-    }
-   ],
-   "help": "去 est。",
-   "explain": "cheap→cheapest。",
-   "common_errors": [
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-teach-02",
+      "title": "听电话的三步",
+      "teach_html": "<p>接电话记住三步：</p><ul><li><strong>第一步：听关键词</strong>——客人说 faster（更快）、cheapest（最便宜），抓住这些词。</li><li><strong>第二步：对资料</strong>——把听到的词和电脑资料对上，是哪一台。</li><li><strong>第三步：再确认</strong>——复述一遍：“您要的是……对吗？”</li></ul><p>电话里听不清很正常，关键是抓住<strong>比较级/最高级</strong>那个词。</p>"
+    },
     {
-     "when": "写了 cheaper",
-     "say": "要的是原级 cheap，不是比较级。"
-    }
-   ]
-  },
-  {
-   "step": 20,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r3-q11",
-   "title": "补全句子",
-   "scene": "你是接线员，复述确认。",
-   "stem": "客人要 Model F，你复述：You want ______ one.（更快的那台）",
-   "task": "填一个英文单词。",
-   "answer_text": "the faster",
-   "expects": [
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-teach-03",
+      "title": "电话用语",
+      "teach_html": "<p>电话里常用的句子：</p><ul><li><strong>I'd like the cheaper one.</strong>（我想要便宜的那台。）</li><li><strong>Which one is the fastest?</strong>（哪台最快？）</li><li><strong>Is this one better than that one?</strong>（这台比那台好吗？）</li></ul><p><strong>one</strong> 在这里指“那台（电脑）”，避免重复说 computer。</p>"
+    },
     {
-     "id": "w3",
-     "type": "word",
-     "answers": [
-      "the faster"
-     ],
-     "cn": [
-      "更快的那台"
-     ]
-    }
-   ],
-   "help": "the + 比较级 + one。",
-   "explain": "the faster one。",
-   "common_errors": [
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-call-01",
+      "title": "听第一通电话",
+      "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
+      "teach_html": "<p>上面是第一通电话的记录。跟着读一遍，注意这两个地方：</p><ul><li>客人说 <strong>the faster one</strong>（更快的那台）→ 要的是 <strong>Model F</strong></li><li>你回答 <strong>more expensive than</strong>（比……更贵）→ 比较级 + than</li></ul><p>关键词 faster 决定了客人要哪台。</p>"
+    },
     {
-     "when": "漏了 the",
-     "say": "the faster one，the 不能少。"
-    }
-   ]
-  },
-  {
-   "step": 21,
-   "phase": "practice",
-   "kind": "teach",
-   "audio_id": "u3r3-prac-02",
-   "title": "小结一下",
-   "teach_html": "<p>电话小结：</p><ul><li>听<strong>关键词</strong>：faster、cheapest、more expensive</li><li><strong>one</strong> = 那台（电脑）</li><li><strong>the faster one</strong>（更快的那台）、<strong>the cheapest one</strong>（最便宜的那台）</li><li>复述确认：You want <strong>the faster one</strong>, right?</li></ul><p>下面新的电话，你自己接。</p>"
-  },
-  {
-   "step": 22,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r3-q12",
-   "title": "memory 的意思",
-   "scene": "生词回顾。",
-   "stem": "memory 在电脑语境里是什么意思？",
-   "options": [
-    "记忆力",
-    "屏幕",
-    "内存",
-    "键盘"
-   ],
-   "answer": "C",
-   "help": "第 2 步学过。",
-   "explain": "memory（内存）。",
-   "wrong_feedback": {
-    "A": "记忆力是人的，电脑的 memory 是内存。再想想第 2 步。",
-    "B": "屏幕是 screen。再想想。",
-    "D": "键盘是 keyboard。再想想。"
-   }
-  },
-  {
-   "step": 23,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r3-q13",
-   "title": "写确认句",
-   "scene": "复述确认。",
-   "stem": "客人要最便宜的那台，你复述：You want ______ one.",
-   "task": "填空，写英文。",
-   "answer_text": "the cheapest",
-   "expects": [
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-teach-04",
+      "title": "the one 指哪个",
+      "teach_html": "<p><strong>the faster one</strong> = 更快的那台电脑，<strong>the cheapest one</strong> = 最便宜的那台电脑。</p><p><strong>one</strong> 代替前面说过的 computer，说话更简短。</p><ul><li>I'd like <strong>the cheaper one</strong>.（我想要便宜的那台。）</li><li>Which is <strong>the best one</strong>?（哪台是最好的？）</li></ul>"
+    },
     {
-     "id": "w4",
-     "type": "word",
-     "answers": [
-      "the cheapest"
-     ],
-     "cn": [
-      "最便宜的那台"
-     ]
-    }
-   ],
-   "help": "the + 最高级。",
-   "explain": "the cheapest one。",
-   "common_errors": [
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-call-02",
+      "title": "听第二通电话",
+      "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
+      "teach_html": "<p>第二通电话：客人问 <strong>the cheapest</strong>（最便宜的）→ 要的是 <strong>Model S</strong>。</p><p>客人还确认：<strong>Is it slower than Model F?</strong>（它比 F 慢吗？）你回答 <strong>slower</strong>（更慢）。</p><p>听电话时，<strong>the cheapest</strong> 这种最高级一出来，就知道客人要哪台了。</p>"
+    },
     {
-     "when": "写了 cheaper",
-     "say": "最便宜用最高级 the cheapest。"
-    }
-   ]
-  },
-  {
-   "step": 24,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r3-q14",
-   "title": "写比较句",
-   "scene": "回答客人提问。",
-   "stem": "客人问：Is Model F better? 你回答：Yes, it's ______ than Model S.（更好）",
-   "task": "填空，写英文。",
-   "answer_text": "better",
-   "expects": [
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r3-teach-05",
+      "title": "准备接电话",
+      "teach_html": "<p>复习一下电话里要听的：</p><ul><li><strong>the faster one</strong> / <strong>the cheaper one</strong>（更快/便宜的那台）</li><li><strong>the cheapest</strong> / <strong>the fastest</strong>（最便宜/最快的）</li><li><strong>more expensive than</strong>（比……更贵）</li><li><strong>one</strong> = 那台（电脑）</li></ul><p>下面站长放电话录音（看文字记录），你来接。</p>"
+    },
     {
-     "id": "w5",
-     "type": "word",
-     "answers": [
-      "better"
-     ],
-     "cn": [
-      "更好"
-     ]
-    }
-   ],
-   "help": "good 的比较级。",
-   "explain": "better than。",
-   "common_errors": [
+      "step": 9,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u3r3-prac-01",
+      "title": "电话记录",
+      "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
+      "teach_html": "<p>第一通电话的记录在上面。客人要的是哪台？对照着答题。</p>"
+    },
     {
-     "when": "写了 gooder",
-     "say": "good 的比较级是 better，特殊记。"
-    }
-   ]
-  },
-  {
-   "step": 25,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u3r3-story-03",
-   "title": "新的电话",
-   "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.\n\nPhone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
-   "teach_html": "<p>又有两通电话（上面）。这次你自己听、自己记，站长不帮忙。</p><p>抓住关键词：the lightest、more expensive、the best one、the fastest。</p>"
-  },
-  {
-   "step": 26,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r3-v01",
-   "title": "第三通：要哪台",
-   "scene": "听关键词。",
-   "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
-   "stem": "客人说 \"the lightest one\"，他要的是？",
-   "options": [
-    "Model H",
-    "两台都要",
-    "没说",
-    "Model L"
-   ],
-   "answer": "D",
-   "help": "lightest 是哪台的特征？",
-   "explain": "Model L 是 the lightest。",
-   "wrong_feedback": {
-    "A": "Model H 没说是最轻的。再看一遍。",
-    "B": "客人只要一台。再看一遍。",
-    "C": "客人说得很清楚。再看一遍。"
-   }
-  },
-  {
-   "step": 27,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r3-v02",
-   "title": "第三通：贵不贵",
-   "scene": "听懂回答。",
-   "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
-   "stem": "Model L 和 Model H 比，哪个说法对？",
-   "options": [
-    "Model L is cheaper than Model H.",
-    "Model H is more expensive than Model L.",
-    "Model L is more expensive than Model H.",
-    "They cost the same."
-   ],
-   "answer": "C",
-   "help": "你是怎么回答客人的？",
-   "explain": "Model L is more expensive than Model H.",
-   "wrong_feedback": {
-    "A": "你回答的是 Yes, it's more expensive。再看一遍。",
-    "B": "主语反了，是 L 比 H 贵。",
-    "D": "价格不一样。再看一遍。"
-   }
-  },
-  {
-   "step": 28,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r3-v03",
-   "title": "第四通：要哪台",
-   "scene": "听关键词。",
-   "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
-   "stem": "客人说 \"the best one\"，他要的是？",
-   "options": [
-    "Model G",
-    "别的型号",
-    "没说",
-    "最便宜的"
-   ],
-   "answer": "A",
-   "help": "best one 是哪台？",
-   "explain": "Model G 是 the best one。",
-   "wrong_feedback": {
-    "B": "你明确说了 Model G is the best one。再看一遍。",
-    "C": "说得很清楚。再看一遍。",
-    "D": "客人要的是 best，不是 cheapest。再看一遍。"
-   }
-  },
-  {
-   "step": 29,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r3-v04",
-   "title": "第四通：最贵吗",
-   "scene": "听懂确认。",
-   "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
-   "stem": "客人问 \"Is it the most expensive?\"，你的回答是？",
-   "options": [
-    "No",
-    "Yes",
-    "没回答",
-    "问价格"
-   ],
-   "answer": "B",
-   "help": "你是怎么回答的？",
-   "explain": "你回答 Yes。",
-   "wrong_feedback": {
-    "A": "你回答的是 Yes。再看一遍。",
-    "C": "你回答了。再看一遍。",
-    "D": "你直接回答了 Yes。再看一遍。"
-   }
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r3-v05",
-   "title": "写出 lightest 的原级",
-   "scene": "反推。",
-   "stem": "lightest 的原级是什么？",
-   "task": "写一个英文单词。",
-   "answer_text": "light",
-   "expects": [
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q01",
+      "title": "客人要哪台",
+      "scene": "听客人说的关键词。",
+      "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
+      "stem": "客人说 \"the faster one\"，他要的是哪台？",
+      "options": [
+        "Model S",
+        "Model F",
+        "Model X",
+        "Model Z"
+      ],
+      "answer": "B",
+      "help": "faster 是哪台的特征？看资料。",
+      "explain": "Model F 是 faster 的那台。",
+      "wrong_feedback": {
+        "A": "Model S 是 slow 的那台。客人说的是 faster，再看一遍。",
+        "C": "Model X 没在这通电话里出现。再看一遍。",
+        "D": "Model Z 没在这通电话里出现。再看一遍。"
+      }
+    },
     {
-     "id": "w6",
-     "type": "word",
-     "answers": [
-      "light"
-     ],
-     "cn": [
-      "轻的"
-     ]
-    }
-   ],
-   "help": "去 est。",
-   "explain": "light→lightest。",
-   "common_errors": [
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q02",
+      "title": "贵多少",
+      "scene": "价格对比。",
+      "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
+      "stem": "Model F 和 Model S 比，哪个说法对？",
+      "options": [
+        "Model F is cheaper than Model S.",
+        "Model S is more expensive than Model F.",
+        "Model F is more expensive than Model S.",
+        "They are the same price."
+      ],
+      "answer": "C",
+      "help": "电话里你是怎么回答的？",
+      "explain": "Model F is more expensive than Model S.",
+      "wrong_feedback": {
+        "A": "电话里客人问 Is it more expensive，你回答 Yes。再看一遍。",
+        "B": "主语反了，是 F 比 S 贵，不是 S 比 F 贵。",
+        "D": "价格不一样：4500 和 3000。再看一遍。"
+      }
+    },
     {
-     "when": "写了 lighter",
-     "say": "要原级 light，不是比较级。"
-    }
-   ]
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r3-v06",
-   "title": "补全问句",
-   "scene": "客人问哪台最轻。",
-   "stem": "Which laptop is ______?（最轻的）",
-   "task": "填空，写英文。",
-   "answer_text": "the lightest",
-   "expects": [
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q03",
+      "title": "第二通电话",
+      "scene": "听最高级。",
+      "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
+      "stem": "客人问 \"the cheapest\"，他要的是哪台？",
+      "options": [
+        "Model F",
+        "两台都要",
+        "没说清楚",
+        "Model S"
+      ],
+      "answer": "D",
+      "help": "cheapest 是哪台？",
+      "explain": "Model S 是 the cheapest。",
+      "wrong_feedback": {
+        "A": "Model F 是 4500 元，不是 cheapest。再看一遍。",
+        "B": "客人只要一台。再看一遍。",
+        "C": "客人问得很清楚：the cheapest。再看一遍。"
+      }
+    },
     {
-     "id": "w7",
-     "type": "word",
-     "answers": [
-      "the lightest"
-     ],
-     "cn": [
-      "最轻的"
-     ]
-    }
-   ],
-   "help": "the + 最高级。",
-   "explain": "the lightest。",
-   "common_errors": [
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q04",
+      "title": "slower 的意思",
+      "scene": "理解回答。",
+      "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
+      "stem": "你说 Model S \"slower\"，意思是？",
+      "options": [
+        "更快",
+        "更慢",
+        "最慢",
+        "一样快"
+      ],
+      "answer": "B",
+      "help": "slow 的比较级是什么意思？",
+      "explain": "slower = 更慢。",
+      "wrong_feedback": {
+        "A": "faster 才是更快。slower 是 slow 的比较级，再想想。",
+        "C": "slowest 才是最慢。这里是 slower，再想想。",
+        "D": "slower 是比较，有快慢之分。再想想。"
+      }
+    },
     {
-     "when": "漏了 the",
-     "say": "最高级前面加 the。"
-    }
-   ]
-  },
-  {
-   "step": 32,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r3-v07",
-   "title": "写回答",
-   "scene": "回答贵不贵。",
-   "stem": "Is Model L more expensive? 回答：Yes, it's ______ than Model H.（更贵）",
-   "task": "填空。",
-   "answer_text": "more expensive",
-   "expects": [
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q05",
+      "title": "one 指什么",
+      "scene": "理解代词。",
+      "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
+      "stem": "\"the faster one\" 里，one 指什么？",
+      "options": [
+        "电话",
+        "人",
+        "电脑",
+        "钱"
+      ],
+      "answer": "C",
+      "help": "不对。上下文在说买什么？",
+      "explain": "one = 那台电脑。",
+      "wrong_feedback": {
+        "A": "电话是 phone，one 指的是要买的东西。再想想。",
+        "B": "one 不是指人。再想想上下文。",
+        "D": "one 不是指钱。再想想。"
+      }
+    },
     {
-     "id": "w8",
-     "type": "word",
-     "answers": [
-      "more expensive"
-     ],
-     "cn": [
-      "更贵"
-     ]
-    }
-   ],
-   "help": "expensive 用 more。",
-   "explain": "more expensive than。",
-   "common_errors": [
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q06",
+      "title": "delivery 的意思",
+      "scene": "理解生词。",
+      "reading": "Phone call 1:\nCustomer: Hello! I'd like to order a computer.\nYou: Sure! We have two: Model S (slow, 3000 yuan) and Model F (faster, 4500 yuan).\nCustomer: I want the faster one. Is it more expensive?\nYou: Yes, it's more expensive than Model S.\nCustomer: OK, I'll take the faster one. Please deliver it tomorrow.",
+      "stem": "\"Please deliver it tomorrow\" 里，deliver 是什么意思？",
+      "options": [
+        "修理",
+        "退货",
+        "看看",
+        "送货"
+      ],
+      "answer": "D",
+      "help": "第 2 步学过这个词。",
+      "explain": "delivery（送货）。",
+      "wrong_feedback": {
+        "A": "修理是 repair。deliver 是第 2 步学的词，再想想。",
+        "B": "退货是 return。deliver 不是这个意思。",
+        "C": "看看是 look。deliver 是送货。"
+      }
+    },
     {
-     "when": "写了 expensiver",
-     "say": "长单词用 more expensive。"
-    }
-   ]
-  },
-  {
-   "step": 33,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r3-v08",
-   "title": "写推荐",
-   "scene": "推荐游戏电脑。",
-   "stem": "用最高级写：G 是打游戏最好的电脑。",
-   "task": "写英文完整句子。",
-   "answer_text": "Model G is the best one for games.",
-   "expects": [
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q07",
+      "title": "客人确认什么",
+      "scene": "听懂问句。",
+      "reading": "Phone call 2:\nCustomer: Which computer is the cheapest?\nYou: Model S is the cheapest. It's 3000 yuan.\nCustomer: Is it slower than Model F?\nYou: Yes, it's slower, but it's good for homework.\nCustomer: Great, I'll take the cheapest one.",
+      "stem": "客人问 \"Is it slower than Model F?\"，他在确认什么？",
+      "options": [
+        "S 比 F 慢吗",
+        "S 比 F 快吗",
+        "S 和 F 一样吗",
+        "F 多少钱"
+      ],
+      "answer": "A",
+      "help": "slower than 是什么意思？",
+      "explain": "确认 S 是不是比 F 慢。",
+      "wrong_feedback": {
+        "B": "slower 是更慢，不是更快。再看一遍问句。",
+        "C": "问句里有 slower than，是比快慢，不是问一样。",
+        "D": "问句没问价格，问的是慢不慢。"
+      }
+    },
     {
-     "id": "s5",
-     "type": "word",
-     "answers": [
-      "model g is the best one for games",
-      "g is the best one for games",
-      "model g is the best for games"
-     ],
-     "cn": [
-      "G是打游戏最好的电脑"
-     ]
-    }
-   ],
-   "help": "G is + the best one + for games。",
-   "explain": "Model G is the best one for games.",
-   "common_errors": [
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q08",
+      "title": "综合理解",
+      "scene": "两通电话对比。",
+      "stem": "两通电话里，客人都买了电脑。第一通买的是更快的，第二通买的是最便宜的。说法对吗？",
+      "options": [
+        "对",
+        "错，第一通买的是最便宜的",
+        "错，第二通买的是更快的",
+        "两通都没买"
+      ],
+      "answer": "A",
+      "help": "第一通 faster→F，第二通 cheapest→S。",
+      "explain": "说法正确。",
+      "wrong_feedback": {
+        "B": "第一通客人说 the faster one，是 F。再看第一通记录。",
+        "C": "第二通客人说 the cheapest one，是 S。再看第二通记录。",
+        "D": "两通最后都说 I'll take。再看结尾。"
+      }
+    },
     {
-     "when": "用了 better",
-     "say": "最好用最高级 the best。"
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r3-q09",
+      "title": "写出 faster 的原级",
+      "scene": "反推原级。",
+      "stem": "faster 是比较级，它的原级是什么？",
+      "task": "写一个英文单词。",
+      "answer_text": "fast",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "fast"
+          ],
+          "cn": [
+            "快的"
+          ]
+        }
+      ],
+      "help": "去 er。",
+      "explain": "fast→faster。",
+      "common_errors": [
+        {
+          "when": "写了 more fast",
+          "say": "要的是原级，就是 fast。"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r3-q10",
+      "title": "写出 cheapest 的原级",
+      "scene": "反推原级。",
+      "stem": "cheapest 是最高级，它的原级是什么？",
+      "task": "写一个英文单词。",
+      "answer_text": "cheap",
+      "expects": [
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "cheap"
+          ],
+          "cn": [
+            "便宜的"
+          ]
+        }
+      ],
+      "help": "去 est。",
+      "explain": "cheap→cheapest。",
+      "common_errors": [
+        {
+          "when": "写了 cheaper",
+          "say": "要的是原级 cheap，不是比较级。"
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r3-q11",
+      "title": "补全句子",
+      "scene": "你是接线员，复述确认。",
+      "stem": "客人要 Model F，你复述：You want ______ one.（更快的那台）",
+      "task": "填一个英文单词。",
+      "answer_text": "the faster",
+      "expects": [
+        {
+          "id": "w3",
+          "type": "word",
+          "answers": [
+            "the faster"
+          ],
+          "cn": [
+            "更快的那台"
+          ]
+        }
+      ],
+      "help": "the + 比较级 + one。",
+      "explain": "the faster one。",
+      "common_errors": [
+        {
+          "when": "漏了 the",
+          "say": "the faster one，the 不能少。"
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u3r3-prac-02",
+      "title": "小结一下",
+      "teach_html": "<p>电话小结：</p><ul><li>听<strong>关键词</strong>：faster、cheapest、more expensive</li><li><strong>one</strong> = 那台（电脑）</li><li><strong>the faster one</strong>（更快的那台）、<strong>the cheapest one</strong>（最便宜的那台）</li><li>复述确认：You want <strong>the faster one</strong>, right?</li></ul><p>下面新的电话，你自己接。</p>"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r3-q12",
+      "title": "memory 的意思",
+      "scene": "生词回顾。",
+      "stem": "memory 在电脑语境里是什么意思？",
+      "options": [
+        "记忆力",
+        "屏幕",
+        "内存",
+        "键盘"
+      ],
+      "answer": "C",
+      "help": "第 2 步学过。",
+      "explain": "memory（内存）。",
+      "wrong_feedback": {
+        "A": "记忆力是人的，电脑的 memory 是内存。再想想第 2 步。",
+        "B": "屏幕是 screen。再想想。",
+        "D": "键盘是 keyboard。再想想。"
+      }
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r3-q13",
+      "title": "写确认句",
+      "scene": "复述确认。",
+      "stem": "客人要最便宜的那台，你复述：You want ______ one.",
+      "task": "填空，写英文。",
+      "answer_text": "the cheapest",
+      "expects": [
+        {
+          "id": "w4",
+          "type": "word",
+          "answers": [
+            "the cheapest"
+          ],
+          "cn": [
+            "最便宜的那台"
+          ]
+        }
+      ],
+      "help": "the + 最高级。",
+      "explain": "the cheapest one。",
+      "common_errors": [
+        {
+          "when": "写了 cheaper",
+          "say": "最便宜用最高级 the cheapest。"
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r3-q14",
+      "title": "写比较句",
+      "scene": "回答客人提问。",
+      "stem": "客人问：Is Model F better? 你回答：Yes, it's ______ than Model S.（更好）",
+      "task": "填空，写英文。",
+      "answer_text": "better",
+      "expects": [
+        {
+          "id": "w5",
+          "type": "word",
+          "answers": [
+            "better"
+          ],
+          "cn": [
+            "更好"
+          ]
+        }
+      ],
+      "help": "good 的比较级。",
+      "explain": "better than。",
+      "common_errors": [
+        {
+          "when": "写了 gooder",
+          "say": "good 的比较级是 better，特殊记。"
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u3r3-story-03",
+      "title": "新的电话",
+      "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.\n\nPhone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
+      "teach_html": "<p>又有两通电话（上面）。这次你自己听、自己记，站长不帮忙。</p><p>抓住关键词：the lightest、more expensive、the best one、the fastest。</p>"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r3-v01",
+      "title": "第三通：要哪台",
+      "scene": "听关键词。",
+      "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
+      "stem": "客人说 \"the lightest one\"，他要的是？",
+      "options": [
+        "Model H",
+        "两台都要",
+        "没说",
+        "Model L"
+      ],
+      "answer": "D",
+      "help": "lightest 是哪台的特征？",
+      "explain": "Model L 是 the lightest。",
+      "wrong_feedback": {
+        "A": "Model H 没说是最轻的。再看一遍。",
+        "B": "客人只要一台。再看一遍。",
+        "C": "客人说得很清楚。再看一遍。"
+      }
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r3-v02",
+      "title": "第三通：贵不贵",
+      "scene": "听懂回答。",
+      "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
+      "stem": "Model L 和 Model H 比，哪个说法对？",
+      "options": [
+        "Model L is cheaper than Model H.",
+        "Model H is more expensive than Model L.",
+        "Model L is more expensive than Model H.",
+        "They cost the same."
+      ],
+      "answer": "C",
+      "help": "你是怎么回答客人的？",
+      "explain": "Model L is more expensive than Model H.",
+      "wrong_feedback": {
+        "A": "你回答的是 Yes, it's more expensive。再看一遍。",
+        "B": "主语反了，是 L 比 H 贵。",
+        "D": "价格不一样。再看一遍。"
+      }
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r3-v03",
+      "title": "第四通：要哪台",
+      "scene": "听关键词。",
+      "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
+      "stem": "客人说 \"the best one\"，他要的是？",
+      "options": [
+        "Model G",
+        "别的型号",
+        "没说",
+        "最便宜的"
+      ],
+      "answer": "A",
+      "help": "best one 是哪台？",
+      "explain": "Model G 是 the best one。",
+      "wrong_feedback": {
+        "B": "你明确说了 Model G is the best one。再看一遍。",
+        "C": "说得很清楚。再看一遍。",
+        "D": "客人要的是 best，不是 cheapest。再看一遍。"
+      }
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r3-v04",
+      "title": "第四通：最贵吗",
+      "scene": "听懂确认。",
+      "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
+      "stem": "客人问 \"Is it the most expensive?\"，你的回答是？",
+      "options": [
+        "No",
+        "Yes",
+        "没回答",
+        "问价格"
+      ],
+      "answer": "B",
+      "help": "你是怎么回答的？",
+      "explain": "你回答 Yes。",
+      "wrong_feedback": {
+        "A": "你回答的是 Yes。再看一遍。",
+        "C": "你回答了。再看一遍。",
+        "D": "你直接回答了 Yes。再看一遍。"
+      }
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r3-v05",
+      "title": "写出 lightest 的原级",
+      "scene": "反推。",
+      "stem": "lightest 的原级是什么？",
+      "task": "写一个英文单词。",
+      "answer_text": "light",
+      "expects": [
+        {
+          "id": "w6",
+          "type": "word",
+          "answers": [
+            "light"
+          ],
+          "cn": [
+            "轻的"
+          ]
+        }
+      ],
+      "help": "去 est。",
+      "explain": "light→lightest。",
+      "common_errors": [
+        {
+          "when": "写了 lighter",
+          "say": "要原级 light，不是比较级。"
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r3-v06",
+      "title": "补全问句",
+      "scene": "客人问哪台最轻。",
+      "stem": "Which laptop is ______?（最轻的）",
+      "task": "填空，写英文。",
+      "answer_text": "the lightest",
+      "expects": [
+        {
+          "id": "w7",
+          "type": "word",
+          "answers": [
+            "the lightest"
+          ],
+          "cn": [
+            "最轻的"
+          ]
+        }
+      ],
+      "help": "the + 最高级。",
+      "explain": "the lightest。",
+      "common_errors": [
+        {
+          "when": "漏了 the",
+          "say": "最高级前面加 the。"
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r3-v07",
+      "title": "写回答",
+      "scene": "回答贵不贵。",
+      "stem": "Is Model L more expensive? 回答：Yes, it's ______ than Model H.（更贵）",
+      "task": "填空。",
+      "answer_text": "more expensive",
+      "expects": [
+        {
+          "id": "w8",
+          "type": "word",
+          "answers": [
+            "more expensive"
+          ],
+          "cn": [
+            "更贵"
+          ]
+        }
+      ],
+      "help": "expensive 用 more。",
+      "explain": "more expensive than。",
+      "common_errors": [
+        {
+          "when": "写了 expensiver",
+          "say": "长单词用 more expensive。"
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r3-v08",
+      "title": "写推荐",
+      "scene": "推荐游戏电脑。",
+      "stem": "用最高级写：G 是打游戏最好的电脑。",
+      "task": "写英文完整句子。",
+      "answer_text": "Model G is the best one for games.",
+      "expects": [
+        {
+          "id": "s5",
+          "type": "word",
+          "answers": [
+            "model g is the best one for games",
+            "g is the best one for games",
+            "model g is the best for games"
+          ],
+          "cn": [
+            "G是打游戏最好的电脑"
+          ]
+        }
+      ],
+      "help": "G is + the best one + for games。",
+      "explain": "Model G is the best one for games.",
+      "common_errors": [
+        {
+          "when": "用了 better",
+          "say": "最好用最高级 the best。"
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r3-v09",
+      "title": "bigger memory",
+      "scene": "理解电话里的说法。",
+      "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
+      "stem": "\"it has bigger memory\" 是什么意思？",
+      "options": [
+        "内存更大",
+        "内存更小",
+        "内存一样",
+        "没有内存"
+      ],
+      "answer": "A",
+      "help": "big 的比较级。",
+      "explain": "bigger memory = 更大的内存。",
+      "wrong_feedback": {
+        "B": "bigger 是更大，不是更小。再想想。",
+        "C": "bigger 是比较，有大小之分。再想想。",
+        "D": "has 是有。再想想。"
+      }
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r3-v10",
+      "title": "worth it 的意思",
+      "scene": "理解生词。",
+      "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
+      "stem": "\"it's worth it\" 大概是什么意思？",
+      "options": [
+        "不值得",
+        "值得的",
+        "太贵了",
+        "没货了"
+      ],
+      "answer": "B",
+      "help": "客人最后买了，说明觉得？",
+      "explain": "worth it = 值得的。",
+      "wrong_feedback": {
+        "A": "客人最后说 Fine, I'll take，说明觉得值得。再想想。",
+        "C": "贵不贵和值不值是两回事。再想想。",
+        "D": "没货不会买。再想想。"
+      }
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u3r3-ending",
+      "title": "节目预告",
+      "teach_html": "<p>订购热线今天接到好几单，都没记错。站长夸你耳朵灵。</p><p>下期：站长要给供应商写邮件，对比几款显示器。写邮件和打电话不一样，要把比较级<strong>写</strong>清楚。准备一下。</p>"
     }
-   ]
-  },
-  {
-   "step": 34,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r3-v09",
-   "title": "bigger memory",
-   "scene": "理解电话里的说法。",
-   "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
-   "stem": "\"it has bigger memory\" 是什么意思？",
-   "options": [
-    "内存更大",
-    "内存更小",
-    "内存一样",
-    "没有内存"
-   ],
-   "answer": "A",
-   "help": "big 的比较级。",
-   "explain": "bigger memory = 更大的内存。",
-   "wrong_feedback": {
-    "B": "bigger 是更大，不是更小。再想想。",
-    "C": "bigger 是比较，有大小之分。再想想。",
-    "D": "has 是有。再想想。"
-   }
-  },
-  {
-   "step": 35,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r3-v10",
-   "title": "worth it 的意思",
-   "scene": "理解生词。",
-   "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
-   "stem": "\"it's worth it\" 大概是什么意思？",
-   "options": [
-    "不值得",
-    "值得的",
-    "太贵了",
-    "没货了"
-   ],
-   "answer": "B",
-   "help": "客人最后买了，说明觉得？",
-   "explain": "worth it = 值得的。",
-   "wrong_feedback": {
-    "A": "客人最后说 Fine, I'll take，说明觉得值得。再想想。",
-    "C": "贵不贵和值不值是两回事。再想想。",
-    "D": "没货不会买。再想想。"
-   }
-  },
-  {
-   "step": 36,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u3r3-ending",
-   "title": "节目预告",
-   "teach_html": "<p>订购热线今天接到好几单，都没记错。站长夸你耳朵灵。</p><p>下期：站长要给供应商写邮件，对比几款显示器。写邮件和打电话不一样，要把比较级<strong>写</strong>清楚。准备一下。</p>"
-  }
- ],
- "title": "电话订购：听懂规格",
- "unit": "Unit 3 Computers",
- "version": 1
+  ],
+  "title": "电话订购：听懂规格",
+  "unit": "Unit 3 Computers",
+  "version": 1
 }
