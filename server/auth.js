@@ -131,18 +131,6 @@ function trySetup(setupToken, accessCode) {
 
 function isSetupDone() { return getState('setup_done') === '1'; }
 
-// 环境变量直接设置（云部署用）：跳过一次性口令，仅在未设置过时可用
-function trySetupDirect(accessCode) {
-  if (isSetupDone()) return { ok: false, reason: 'already_setup' };
-  if (!accessCode || String(accessCode).length < CODE_MIN_LEN) {
-    return { ok: false, reason: 'weak_code' };
-  }
-  setState('access_code_hash', hashAccessCode(String(accessCode)));
-  setState('setup_done', '1');
-  delState('setup_token_hash');
-  return { ok: true };
-}
-
 function checkVerifyCode(accessCode) {
   const stored = getState('access_code_hash');
   if (!stored || !accessCode) return false;
@@ -151,7 +139,8 @@ function checkVerifyCode(accessCode) {
 
 // ---- 校验接口限速：防暴力猜 ----
 const attempts = new Map(); // ip -> {count, resetAt}
-function verifyRateLimited(ip) {
+// 只在验证失败时调用：输错才计数，输对永远不限流
+function recordVerifyFail(ip) {
   const now = Date.now();
   const e = attempts.get(ip);
   if (!e || now > e.resetAt) {
@@ -192,12 +181,12 @@ function issueAuthCookie(res) {
 module.exports = {
   ensureSetupToken,
   trySetup,
-  trySetupDirect,
   isSetupDone,
   checkVerifyCode,
   changeAccessCode,
   rotateCookieSecret,
-  verifyRateLimited,
+  recordVerifyFail,
+  verifyRateLimited: recordVerifyFail,
   verifyRateReset,
   requireAuth,
   issueAuthCookie,
