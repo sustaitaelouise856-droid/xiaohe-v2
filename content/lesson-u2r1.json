@@ -1,887 +1,887 @@
 {
- "lesson_id": "u2r1",
- "practice_end": 22,
- "home_subtitle": "第一课 · 新播音员上岗",
- "part1_desc": "第 1–22 步：跟站长学会看通知，核对运动会的新旧通知。",
- "part2_desc": "第 23–34 步：自己核对英语角的通知，写出今晚的广播稿。",
- "note": "本课阅读材料为教研自编，非课本原文。考查能力：读懂信息、区分旧通知与更新通知、提取最终信息。v5 修订：修正第 31/33 题判分日期（10月15日）；材料 B 更新通知改为老师消息体（无 New 标签）；验证阶段反馈只指方向不给答案，重答不计独立完成；恢复新旧互换干扰项（Q10/Q11/Q24）。v4：广播站剧情外壳＋36 条错因反馈。v3：词汇校准。v2：删重复题、答案打散、判分引擎。",
- "steps": [
-  {
-   "step": 1,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u2r1-story-01",
-   "title": "广播站报道",
-   "teach_html": "<p>你是学校广播站的新播音员，今天第一天上岗。</p><p>广播站每天会收到各种通知：运动会、英语角、讲座……有些通知后来会被更新。</p><p>你的任务：在广播前核对清楚，播出最终的正确信息。播错了，全校都会听错。</p>"
-  },
-  {
-   "step": 2,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u2r1-story-02",
-   "title": "站长交代任务",
-   "teach_html": "<p>站长把一张通知递给你：今天先广播运动会的消息。</p><p>站长交代：通知可能会更新。记住三件事——先找关键信息，再对比找不同，最后以更新版为准。</p><p>下面站长先教你看通知的方法。</p>"
-  },
-  {
-   "audio_id": "u2r1-teach-01",
-   "kind": "teach",
-   "phase": "teach",
-   "step": 3,
-   "teach_html": "<p>站长说：先学会看通知，再去核对。</p><p>通知（notice）就是告诉大家一件事的短文。</p><p>通知里常常有这三样东西：</p><ul><li><strong>时间</strong>：什么时候（星期几、几月几号、几点）</li><li><strong>地点</strong>：在哪里</li><li><strong>数字</strong>：多少人、多少钱、多少支队伍</li></ul><p>读通知时，先把这三样找出来。</p>",
-   "title": "通知里有什么"
-  },
-  {
-   "audio_id": "u2r1-teach-02",
-   "kind": "teach",
-   "phase": "teach",
-   "reading": "NOTICE\nBook Sale\nTime: Friday, 3:00 p.m.\nPlace: the school library",
-   "step": 4,
-   "teach_html": "<p>看上面这张小通知。找关键信息：</p><ul><li>时间：<strong>Friday, 3:00 p.m.</strong>（星期五下午3点）</li><li>地点：<strong>the school library</strong>（学校图书馆）</li></ul><p>先找时间、地点、数字，再往下读，就不会乱。</p>",
-   "title": "先找关键信息"
-  },
-  {
-   "audio_id": "u2r1-teach-03",
-   "kind": "teach",
-   "phase": "teach",
-   "step": 5,
-   "teach_html": "<p>有时候事情变了，会再发一张<strong>更新通知</strong>。看到这些词，就说明信息变了：</p><ul><li><strong>updated / new</strong>：更新的、新的</li><li><strong>instead of</strong>：代替（以前的）</li><li><strong>changed to</strong>：改成</li><li><strong>postponed to</strong>：推迟到</li></ul><p>记住：<strong>旧的信息作废，用新的为准。</strong></p>",
-   "title": "更新通知长什么样"
-  },
-  {
-   "audio_id": "u2r1-teach-04",
-   "kind": "teach",
-   "phase": "teach",
-   "step": 6,
-   "teach_html": "<p>遇到“旧通知 + 更新通知”，用三步法：</p><ul><li><strong>第一步：找关键信息</strong>——两张通知的时间、地点、数字分别是什么。</li><li><strong>第二步：对比找不同</strong>——哪几样变了，哪几样没变。</li><li><strong>第三步：以更新版为准</strong>——回答问题只用新通知的信息。</li></ul>",
-   "title": "三步法"
-  },
-  {
-   "audio_id": "u2r1-teach-05",
-   "kind": "teach",
-   "phase": "teach",
-   "reading": "OLD NOTICE: Class meeting at 3:00 p.m. on Monday.\nUPDATED NOTICE: The class meeting is changed to 4:00 p.m. on Monday.",
-   "step": 7,
-   "teach_html": "<p>旧通知：班会星期一下午3点。</p><p>更新通知：<strong>changed to 4:00 p.m.</strong>（改成下午4点）。</p><p>对比发现：时间变了，星期没变。最终答案：<strong>星期一下午4点</strong>。旧的3点作废。</p>",
-   "title": "看一个小例子"
-  },
-  {
-   "audio_id": "u2r1-teach-06",
-   "kind": "teach",
-   "phase": "teach",
-   "step": 8,
-   "teach_html": "<p>遇到“写出最终信息”这样的题目：</p><ul><li>只写<strong>更新后</strong>的信息，不要写旧的，也不要新旧一起写。</li><li>题目问什么就写什么，时间就写时间，地点就写地点。</li><li><strong>写英文</strong>，不用写整句话，写出关键词就行。</li><li>时间有好几种写法（9:00、9 a.m.、nine o'clock），都算对；大小写和标点不影响。</li><li>如果有个小拼写错误，老师会提醒你改，不算不会。</li><li>遇到不会的，可以点<strong>“老师教我”</strong>看提示，用了帮助会记下来。</li></ul><p>下面我们开始练习。先看第一对通知。</p>",
-   "title": "简答题怎么写"
-  },
-  {
-   "audio_id": "u2r1-notice-a-old",
-   "kind": "teach",
-   "phase": "practice",
-   "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
-   "step": 9,
-   "teach_html": "<p>这是运动会的<strong>旧通知</strong>。用三步法的第一步，找出：时间、地点、队伍数、票价。</p><p>找好之后，往下做题。</p>",
-   "title": "先读旧通知"
-  },
-  {
-   "answer": "A",
-   "audio_id": "u2r1-notice-a-old",
-   "explain": "旧通知写的是 Saturday（星期六）。",
-   "help": "看 Time 一行，星期几写在最前面。",
-   "kind": "mcq",
-   "options": [
-    "Saturday",
-    "Wednesday",
-    "Friday",
-    "Sunday"
-   ],
-   "phase": "practice",
-   "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
-   "stem": "旧通知里，运动会在星期几举行？",
-   "step": 10,
-   "task": "",
-   "title": "旧通知：星期几",
-   "scene": "站长考你：旧通知上，运动会是星期几？",
-   "wrong_feedback": {
-    "B": "旧通知的 Time 一行写的是 Saturday（星期六），不是 Wednesday。再看一遍。",
-    "C": "旧通知写的是 Saturday，Friday 是星期五，对不上。",
-    "D": "Sunday 是更新后的日子，这道题问的是旧通知。"
-   }
-  },
-  {
-   "answer": "D",
-   "audio_id": "u2r1-notice-a-old",
-   "explain": "旧通知是 8:30 a.m.，早上8点半。",
-   "help": "看 Time 一行，找几点几分。",
-   "kind": "mcq",
-   "options": [
-    "7:30 a.m.",
-    "8:00 a.m.",
-    "9:00 a.m.",
-    "8:30 a.m."
-   ],
-   "phase": "practice",
-   "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
-   "stem": "旧通知里，运动会几点开始？",
-   "step": 11,
-   "task": "",
-   "title": "旧通知：几点开始",
-   "scene": "再确认一下旧通知上的时间。",
-   "wrong_feedback": {
-    "A": "旧通知写的是 8:30，不是 7:30。8 和 7 看清楚。",
-    "B": "旧通知是 8:30 a.m.，:30 不能丢，不是整点 8:00。",
-    "C": "9:00 是更新后的时间，这道题问的是旧通知。"
-   }
-  },
-  {
-   "answer_text": "the school playground",
-   "audio_id": "u2r1-notice-a-old",
-   "expects": [
+  "lesson_id": "u2r1",
+  "practice_end": 22,
+  "home_subtitle": "第一课 · 新播音员上岗",
+  "part1_desc": "第 1–22 步：跟站长学会看通知，核对运动会的新旧通知。",
+  "part2_desc": "第 23–34 步：自己核对英语角的通知，写出今晚的广播稿。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：读懂信息、区分旧通知与更新通知、提取最终信息。v5 修订：修正第 31/33 题判分日期（10月15日）；材料 B 更新通知改为老师消息体（无 New 标签）；验证阶段反馈只指方向不给答案，重答不计独立完成；恢复新旧互换干扰项（Q10/Q11/Q24）。v4：广播站剧情外壳＋36 条错因反馈。v3：词汇校准。v2：删重复题、答案打散、判分引擎。",
+  "steps": [
     {
-     "answers": [
-      "playground"
-     ],
-     "cn": [
-      "操场"
-     ],
-     "id": "place",
-     "type": "word"
-    }
-   ],
-   "explain": "旧通知的地点是 the school playground（学校操场）。",
-   "help": "看 Place 一行。",
-   "kind": "short",
-   "phase": "practice",
-   "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
-   "stem": "旧通知里，运动会在哪里举行？",
-   "step": 12,
-   "task": "写英文。",
-   "title": "旧通知：地点",
-   "scene": "旧通知的地点，也确认一下。",
-   "common_errors": [
-    {
-     "when": "写了 stadium",
-     "say": "stadium 是更新后的地点。这道题问的是旧通知，写 playground。"
-    }
-   ]
-  },
-  {
-   "audio_id": "u2r1-notice-a-new",
-   "kind": "teach",
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "step": 13,
-   "teach_html": "<p>这是<strong>更新通知</strong>。注意看变了的地方：时间、地点、队伍数、票价。</p><p>两个新词：<strong>schedule</strong>（日程安排）、<strong>stadium</strong>（体育场）。</p><p>用三步法：对比两张通知，找出不同，再以新的为准。</p>",
-   "title": "再读更新通知"
-  },
-  {
-   "answer": "B",
-   "audio_id": "u2r1-notice-a-new",
-   "explain": "更新通知改成 Sunday（星期天），旧的 Saturday 不算数。",
-   "help": "看 New time 一行。不要看旧通知。",
-   "kind": "mcq",
-   "options": [
-    "Saturday",
-    "Sunday",
-    "Friday",
-    "Monday"
-   ],
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "更新后，运动会改到星期几？",
-   "step": 14,
-   "task": "",
-   "title": "更新后：星期几",
-   "scene": "更新后，运动会改到星期几？这是广播里最重要的信息之一。",
-   "wrong_feedback": {
-    "A": "Saturday 是旧通知的时间，已经不算数了。更新后是 Sunday。",
-    "C": "更新通知的 New time 一行写的是 Sunday，不是 Friday。",
-    "D": "Monday 是小例子里的时间。这张写的是 Sunday。"
-   }
-  },
-  {
-   "answer": "C",
-   "audio_id": "u2r1-notice-a-new",
-   "explain": "更新后是 9:00 a.m.，括号里的 8:30 a.m. 是旧时间，已经不算数。",
-   "help": "看 New time 一行。括号里写的是旧时间，不要选它。",
-   "kind": "mcq",
-   "options": [
-    "8:30 a.m.",
-    "9:30 a.m.",
-    "9:00 a.m.",
-    "10:00 a.m."
-   ],
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "更新后，运动会几点开始？",
-   "step": 15,
-   "task": "",
-   "title": "更新后：几点",
-   "scene": "时间也变了，确认一下几点开始。",
-   "wrong_feedback": {
-    "A": "8:30 a.m. 是旧时间，就是括号里那个，已经不算数了。看括号外面的 9:00。",
-    "B": "更新后是 9:00，不是 9:30。:00 和 :30 分清。",
-    "D": "更新后是 9:00 a.m.，不是 10:00。"
-   }
-  },
-  {
-   "answer_text": "the city stadium",
-   "audio_id": "u2r1-notice-a-new",
-   "expects": [
-    {
-     "answers": [
-      "stadium"
-     ],
-     "cn": [
-      "体育场"
-     ],
-     "cn_old": [
-      "操场"
-     ],
-     "id": "place",
-     "olds": [
-      "playground"
-     ],
-     "type": "word"
-    }
-   ],
-   "explain": "更新后是 the city stadium（城市体育场）。",
-   "help": "看 New place 一行。",
-   "kind": "short",
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "更新后，运动会在哪里举行？",
-   "step": 16,
-   "task": "写英文。",
-   "title": "更新后：地点",
-   "scene": "地点呢？看更新通知。",
-   "common_errors": [
-    {
-     "when": "写了 playground",
-     "say": "playground 是旧的，已经不算数。写更新后的 stadium。"
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r1-story-01",
+      "title": "广播站报道",
+      "teach_html": "<p>【承上启下】欢迎来到小禾广播站！今天是你第一天上岗。站长会教你看通知找关键信息——时间、地点、数字，一个都不能错。</p><p>你是学校广播站的新播音员，今天第一天上岗。</p><p>广播站每天会收到各种通知：运动会、英语角、讲座……有些通知后来会被更新。</p><p>你的任务：在广播前核对清楚，播出最终的正确信息。播错了，全校都会听错。</p>"
     },
     {
-     "when": "新旧一起写",
-     "say": "只写新的地点，不要把旧的也写上。"
-    }
-   ]
-  },
-  {
-   "answer": "A",
-   "audio_id": "u2r1-notice-a-new",
-   "explain": "更新后是 24 teams，20 teams 是旧数字。",
-   "help": "看 Teams 一行。注意 now（现在是）和 not（不是）的区别。",
-   "kind": "mcq",
-   "options": [
-    "24 teams",
-    "20 teams",
-    "22 teams",
-    "25 teams"
-   ],
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "更新后，有多少支队伍参加？",
-   "step": 17,
-   "task": "",
-   "title": "更新后：多少支队伍",
-   "scene": "队伍数量变了，站长让你把数字念准。",
-   "wrong_feedback": {
-    "B": "20 teams 是旧数字，后面写着 not 20 teams。更新后是 24。",
-    "C": "通知里没有 22 这个数字，是 24 teams。",
-    "D": "通知里没有 25 这个数字，是 24 teams。"
-   }
-  },
-  {
-   "answer": "B",
-   "audio_id": "u2r1-notice-a-new",
-   "explain": "更新后是 8 yuan，旧的 5 yuan 不算数。",
-   "help": "看 Tickets 一行。",
-   "kind": "mcq",
-   "options": [
-    "5 yuan",
-    "8 yuan",
-    "10 yuan",
-    "6 yuan"
-   ],
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "更新后，一张票多少钱？",
-   "step": 18,
-   "task": "",
-   "title": "更新后：票价",
-   "scene": "票价也要广播，确认一下。",
-   "wrong_feedback": {
-    "A": "5 yuan 是旧票价，写着 not 5 yuan。更新后是 8 yuan。",
-    "C": "通知里没有 10 yuan，是 8 yuan。",
-    "D": "通知里没有 6 yuan，是 8 yuan。"
-   }
-  },
-  {
-   "answer_text": "October 11",
-   "audio_id": "u2r1-notice-a-new",
-   "expects": [
-    {
-     "cn": [
-      "10月11日",
-      "十月十一日",
-      "10月11号"
-     ],
-     "cn_old": [
-      "10月10日"
-     ],
-     "day": 11,
-     "id": "date",
-     "month": 10,
-     "old": {
-      "day": 10,
-      "month": 10
-     },
-     "type": "date"
-    }
-   ],
-   "explain": "更新后是 October 11（10月11日），旧的 October 10 不算数。",
-   "help": "看 New time 一行，找几月几号。日期写英文。",
-   "kind": "short",
-   "phase": "practice",
-   "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "更新后，运动会是几月几号？",
-   "step": 19,
-   "task": "写英文。",
-   "title": "更新后：几月几号",
-   "scene": "日期是几月几号？广播里不能说错。",
-   "common_errors": [
-    {
-     "when": "写了 October 10",
-     "say": "October 10 是旧日期，已经不算数。更新后是 October 11。"
-    }
-   ]
-  },
-  {
-   "answer_text": "Sunday, October 11, 9:00 a.m.",
-   "audio_id": "u2r1-notice-a-new",
-   "expects": [
-    {
-     "answers": [
-      "sunday"
-     ],
-     "cn": [
-      "星期天",
-      "周日"
-     ],
-     "cn_old": [
-      "星期六"
-     ],
-     "id": "day",
-     "olds": [
-      "saturday"
-     ],
-     "type": "word"
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u2r1-story-02",
+      "title": "站长交代任务",
+      "teach_html": "<p>站长把一张通知递给你：今天先广播运动会的消息。</p><p>站长交代：通知可能会更新。记住三件事——先找关键信息，再对比找不同，最后以更新版为准。</p><p>下面站长先教你看通知的方法。</p>"
     },
     {
-     "cn": [
-      "10月11日",
-      "十月十一日"
-     ],
-     "cn_old": [
-      "10月10日"
-     ],
-     "day": 11,
-     "id": "date",
-     "month": 10,
-     "old": {
-      "day": 10,
-      "month": 10
-     },
-     "type": "date"
+      "audio_id": "u2r1-teach-01",
+      "kind": "teach",
+      "phase": "teach",
+      "step": 3,
+      "teach_html": "<p>站长说：先学会看通知，再去核对。</p><p>通知（notice）就是告诉大家一件事的短文。</p><p>通知里常常有这三样东西：</p><ul><li><strong>时间</strong>：什么时候（星期几、几月几号、几点）</li><li><strong>地点</strong>：在哪里</li><li><strong>数字</strong>：多少人、多少钱、多少支队伍</li></ul><p>读通知时，先把这三样找出来。</p>",
+      "title": "通知里有什么"
     },
     {
-     "cn": [
-      "上午9点",
-      "早上9点",
-      "9点"
-     ],
-     "cn_old": [
-      "8点半",
-      "上午8点半"
-     ],
-     "hour": 9,
-     "id": "time",
-     "meridiem": "am",
-     "minute": 0,
-     "old": {
-      "hour": 8,
-      "meridiem": "am",
-      "minute": 30
-     },
-     "type": "time"
-    }
-   ],
-   "explain": "最终时间是 Sunday, October 11, 9:00 a.m.（10月11日星期天上午9点）。",
-   "help": "最终的时间以更新通知为准。三个都要写。",
-   "kind": "short",
-   "phase": "practice",
-   "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket\n\nUPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "写出运动会最终的时间。",
-   "step": 20,
-   "task": "包含星期几、几月几号、几点，写英文。",
-   "title": "写出最终时间",
-   "scene": "把最终的时间连起来说一遍，站长听听找全没有。",
-   "common_errors": [
-    {
-     "when": "漏写了一项",
-     "say": "三项都要写：星期几、几月几号、几点。对照一下你漏了哪项。"
+      "audio_id": "u2r1-teach-02",
+      "kind": "teach",
+      "phase": "teach",
+      "reading": "NOTICE\nBook Sale\nTime: Friday, 3:00 p.m.\nPlace: the school library",
+      "step": 4,
+      "teach_html": "<p>看上面这张小通知。找关键信息：</p><ul><li>时间：<strong>Friday, 3:00 p.m.</strong>（星期五下午3点）</li><li>地点：<strong>the school library</strong>（学校图书馆）</li></ul><p>先找时间、地点、数字，再往下读，就不会乱。</p>",
+      "title": "先找关键信息"
     },
     {
-     "when": "混入旧信息",
-     "say": "答案里有旧信息。只写更新后的，旧的不要写。"
-    }
-   ]
-  },
-  {
-   "answer": "D",
-   "audio_id": "u2r1-notice-a-new",
-   "explain": "更新通知说新地点是城市体育场，时间改到星期天，所以 D 对。C 错在改到的不是星期五。",
-   "help": "时间、地点都要和更新通知一致，才算对。",
-   "kind": "mcq",
-   "options": [
-    "运动会还在学校操场开。",
-    "运动会取消了。",
-    "运动会改到星期五开。",
-    "运动会改到城市体育场。"
-   ],
-   "phase": "practice",
-   "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket\n\nUPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
-   "stem": "下面哪句话是对的？",
-   "step": 21,
-   "task": "一句一句对照通知检查。",
-   "title": "哪句话是对的",
-   "scene": "站长写了四句话，你来判断哪句能播出。",
-   "wrong_feedback": {
-    "A": "地点已经改到城市体育场了，学校操场是旧的。",
-    "B": "通知没说取消。开头是 Good news，只是时间地点变了。",
-    "C": "改到的是星期天（Sunday），不是星期五。"
-   }
-  },
-  {
-   "audio_id": "u2r1-teach-07",
-   "kind": "teach",
-   "phase": "practice",
-   "step": 22,
-   "teach_html": "<p>把两张通知放在一起看：</p><ul><li>时间：<strong>Saturday, October 10, 8:30 a.m.</strong> → <strong>Sunday, October 11, 9:00 a.m.</strong></li><li>地点：<strong>the school playground</strong> → <strong>the city stadium</strong></li><li>队伍：<strong>20 teams</strong> → <strong>24 teams</strong></li><li>票价：<strong>5 yuan</strong> → <strong>8 yuan</strong></li></ul><p>箭头左边是旧的（作废），右边是新的（用这个）。</p><p>看数字的变化：队伍从 20 <strong>go up</strong>（上升）到 24；票价（<strong>price tag</strong>，价格标签）从 5 yuan <strong>go up</strong> 到 8 yuan。</p>",
-   "title": "对比小结"
-  },
-  {
-   "step": 23,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u2r1-story-03",
-   "title": "新的通知，独立核对",
-   "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free",
-   "teach_html": "<p>昨天你学会了站长的三步法：先看旧通知，再找出更新了什么，最后只认最新的。</p><p>今天，英语角的通知也更新了——这次换你自己来核对。广播之前，我要看到今晚的最终信息。</p>"
-  },
-  {
-   "answer": "D",
-   "audio_id": "u2r1-notice-b-old",
-   "explain": "旧通知是 Friday（星期五）。",
-   "help": "看旧通知的 Time 一行。",
-   "kind": "mcq",
-   "options": [
-    "Thursday",
-    "Saturday",
-    "Wednesday",
-    "Friday"
-   ],
-   "phase": "validate",
-   "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free",
-   "stem": "旧通知里，英语角在星期几？",
-   "step": 24,
-   "task": "",
-   "title": "旧通知：星期几",
-   "scene": "自己看旧通知：英语角原来是星期几？",
-   "wrong_feedback": {
-    "A": "这是新消息里的时间，这道题问的是旧通知，再看一遍旧通知。",
-    "B": "Saturday 是运动会那张旧通知的，这张再看一遍。",
-    "C": "不是 Wednesday，再看一遍旧通知的 Time。"
-   }
-  },
-  {
-   "answer_text": "Classroom 302",
-   "audio_id": "u2r1-notice-b-old",
-   "expects": [
-    {
-     "answers": [
-      "302"
-     ],
-     "cn": [
-      "302教室",
-      "302"
-     ],
-     "id": "place",
-     "type": "word"
-    }
-   ],
-   "explain": "旧通知的地点是 Classroom 302。",
-   "help": "看旧通知的 Place 一行。",
-   "kind": "short",
-   "phase": "validate",
-   "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free",
-   "stem": "旧通知里，英语角在哪里？",
-   "step": 25,
-   "task": "写英文。",
-   "title": "旧通知：地点",
-   "scene": "旧通知的地点是哪里？",
-   "common_errors": [
-    {
-     "when": "写了 library",
-     "say": "这是新的地点，这道题问的是旧的，再看一遍旧通知。"
-    }
-   ]
-  },
-  {
-   "audio_id": "u2r1-notice-b-new",
-   "kind": "teach",
-   "phase": "validate",
-   "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "step": 26,
-   "teach_html": "<p>这是老师发给全班的<strong>消息</strong>，英语角有变化。</p><p>没有 New 标签了，自己读句子，找出新的时间、地点、人数。</p><p>记住：回答下面的题，只用消息里的新信息。</p>",
-   "title": "读更新通知"
-  },
-  {
-   "answer": "C",
-   "audio_id": "u2r1-notice-b-new",
-   "explain": "更新后是 Thursday（星期四）。",
-   "help": "读老师的消息，找 this week 的时间。",
-   "kind": "mcq",
-   "options": [
-    "Friday",
-    "Wednesday",
-    "Thursday",
-    "Tuesday"
-   ],
-   "phase": "validate",
-   "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "stem": "更新后，英语角改到星期几？",
-   "step": 27,
-   "task": "",
-   "title": "更新后：星期几",
-   "scene": "更新后，英语角改到星期几？",
-   "wrong_feedback": {
-    "A": "这是旧通知的时间，再读一遍老师的消息。",
-    "B": "消息里没有 Wednesday，再读一遍。",
-    "D": "Tuesday 不对，再读一遍老师的消息。"
-   }
-  },
-  {
-   "answer": "B",
-   "audio_id": "u2r1-notice-b-new",
-   "explain": "更新后是 4:30 p.m.，4:00 p.m. 是旧通知的时间。",
-   "help": "读老师的消息，找 at 后面的时间。",
-   "kind": "mcq",
-   "options": [
-    "4:00 p.m.",
-    "4:30 p.m.",
-    "3:30 p.m.",
-    "5:00 p.m."
-   ],
-   "phase": "validate",
-   "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "stem": "更新后，英语角几点开始？",
-   "step": 28,
-   "task": "",
-   "title": "更新后：几点",
-   "scene": "几点开始？",
-   "wrong_feedback": {
-    "A": "这是旧时间，再读一遍消息里 at 后面的时间。",
-    "C": "消息里没有这个时间，再读一遍。",
-    "D": "消息里没有这个时间，再读一遍。"
-   }
-  },
-  {
-   "answer_text": "the school library",
-   "audio_id": "u2r1-notice-b-new",
-   "expects": [
-    {
-     "answers": [
-      "library"
-     ],
-     "cn": [
-      "图书馆"
-     ],
-     "cn_old": [
-      "302教室"
-     ],
-     "id": "place",
-     "olds": [
-      "302"
-     ],
-     "type": "word"
-    }
-   ],
-   "explain": "更新后是 the school library（学校图书馆）。",
-   "help": "读老师的消息，找 meet 的地点。",
-   "kind": "short",
-   "phase": "validate",
-   "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "stem": "更新后，英语角在哪里？",
-   "step": 29,
-   "task": "写英文。",
-   "title": "更新后：地点",
-   "scene": "地点是哪里？",
-   "common_errors": [
-    {
-     "when": "写了 302",
-     "say": "这是旧地点，再读一遍消息里 meet 的那句。"
-    }
-   ]
-  },
-  {
-   "answer": "C",
-   "audio_id": "u2r1-notice-b-new",
-   "explain": "更新后是 40 students，旧的 30 students 不算数。",
-   "help": "读老师的消息，找 can join 的数字。",
-   "kind": "mcq",
-   "options": [
-    "30 students",
-    "35 students",
-    "40 students",
-    "45 students"
-   ],
-   "phase": "validate",
-   "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "stem": "更新后，有多少学生能参加？",
-   "step": 30,
-   "task": "",
-   "title": "更新后：多少人",
-   "scene": "多少学生能参加？",
-   "wrong_feedback": {
-    "A": "这是旧数字，再读一遍消息里 can join 的那句。",
-    "B": "消息里没有这个数字，再读一遍。",
-    "D": "消息里没有这个数字，再读一遍。"
-   }
-  },
-  {
-   "answer_text": "Thursday, October 15, 4:30 p.m., the school library",
-   "audio_id": "u2r1-notice-b-new",
-   "expects": [
-    {
-     "answers": [
-      "thursday"
-     ],
-     "cn": [
-      "星期四",
-      "周四"
-     ],
-     "cn_old": [
-      "星期五"
-     ],
-     "id": "day",
-     "olds": [
-      "friday"
-     ],
-     "type": "word"
+      "audio_id": "u2r1-teach-03",
+      "kind": "teach",
+      "phase": "teach",
+      "step": 5,
+      "teach_html": "<p>有时候事情变了，会再发一张<strong>更新通知</strong>。看到这些词，就说明信息变了：</p><ul><li><strong>updated / new</strong>：更新的、新的</li><li><strong>instead of</strong>：代替（以前的）</li><li><strong>changed to</strong>：改成</li><li><strong>postponed to</strong>：推迟到</li></ul><p>记住：<strong>旧的信息作废，用新的为准。</strong></p>",
+      "title": "更新通知长什么样"
     },
     {
-     "cn": [
-      "10月15日",
-      "十月十五日"
-     ],
-     "cn_old": [
-      "10月16日"
-     ],
-     "day": 15,
-     "id": "date",
-     "month": 10,
-     "old": {
-      "day": 16,
-      "month": 10
-     },
-     "type": "date"
+      "audio_id": "u2r1-teach-04",
+      "kind": "teach",
+      "phase": "teach",
+      "step": 6,
+      "teach_html": "<p>遇到“旧通知 + 更新通知”，用三步法：</p><ul><li><strong>第一步：找关键信息</strong>——两张通知的时间、地点、数字分别是什么。</li><li><strong>第二步：对比找不同</strong>——哪几样变了，哪几样没变。</li><li><strong>第三步：以更新版为准</strong>——回答问题只用新通知的信息。</li></ul>",
+      "title": "三步法"
     },
     {
-     "cn": [
-      "下午4点半",
-      "4点半"
-     ],
-     "cn_old": [
-      "下午4点"
-     ],
-     "hour": 4,
-     "id": "time",
-     "meridiem": "pm",
-     "minute": 30,
-     "old": {
-      "hour": 4,
-      "meridiem": "pm",
-      "minute": 0
-     },
-     "type": "time"
+      "audio_id": "u2r1-teach-05",
+      "kind": "teach",
+      "phase": "teach",
+      "reading": "OLD NOTICE: Class meeting at 3:00 p.m. on Monday.\nUPDATED NOTICE: The class meeting is changed to 4:00 p.m. on Monday.",
+      "step": 7,
+      "teach_html": "<p>旧通知：班会星期一下午3点。</p><p>更新通知：<strong>changed to 4:00 p.m.</strong>（改成下午4点）。</p><p>对比发现：时间变了，星期没变。最终答案：<strong>星期一下午4点</strong>。旧的3点作废。</p>",
+      "title": "看一个小例子"
     },
     {
-     "answers": [
-      "library"
-     ],
-     "cn": [
-      "图书馆"
-     ],
-     "cn_old": [
-      "302教室"
-     ],
-     "id": "place",
-     "olds": [
-      "302"
-     ],
-     "type": "word"
+      "audio_id": "u2r1-teach-06",
+      "kind": "teach",
+      "phase": "teach",
+      "step": 8,
+      "teach_html": "<p>遇到“写出最终信息”这样的题目：</p><ul><li>只写<strong>更新后</strong>的信息，不要写旧的，也不要新旧一起写。</li><li>题目问什么就写什么，时间就写时间，地点就写地点。</li><li><strong>写英文</strong>，不用写整句话，写出关键词就行。</li><li>时间有好几种写法（9:00、9 a.m.、nine o'clock），都算对；大小写和标点不影响。</li><li>如果有个小拼写错误，老师会提醒你改，不算不会。</li><li>遇到不会的，可以点<strong>“老师教我”</strong>看提示，用了帮助会记下来。</li></ul><p>下面我们开始练习。先看第一对通知。</p>",
+      "title": "简答题怎么写"
+    },
+    {
+      "audio_id": "u2r1-notice-a-old",
+      "kind": "teach",
+      "phase": "practice",
+      "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
+      "step": 9,
+      "teach_html": "<p>这是运动会的<strong>旧通知</strong>。用三步法的第一步，找出：时间、地点、队伍数、票价。</p><p>找好之后，往下做题。</p>",
+      "title": "先读旧通知"
+    },
+    {
+      "answer": "A",
+      "audio_id": "u2r1-notice-a-old",
+      "explain": "旧通知写的是 Saturday（星期六）。",
+      "help": "看 Time 一行，星期几写在最前面。",
+      "kind": "mcq",
+      "options": [
+        "Saturday",
+        "Wednesday",
+        "Friday",
+        "Sunday"
+      ],
+      "phase": "practice",
+      "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
+      "stem": "旧通知里，运动会在星期几举行？",
+      "step": 10,
+      "task": "",
+      "title": "旧通知：星期几",
+      "scene": "站长考你：旧通知上，运动会是星期几？",
+      "wrong_feedback": {
+        "B": "旧通知的 Time 一行写的是 Saturday（星期六），不是 Wednesday。再看一遍。",
+        "C": "旧通知写的是 Saturday，Friday 是星期五，对不上。",
+        "D": "Sunday 是更新后的日子，这道题问的是旧通知。"
+      }
+    },
+    {
+      "answer": "D",
+      "audio_id": "u2r1-notice-a-old",
+      "explain": "旧通知是 8:30 a.m.，早上8点半。",
+      "help": "看 Time 一行，找几点几分。",
+      "kind": "mcq",
+      "options": [
+        "7:30 a.m.",
+        "8:00 a.m.",
+        "9:00 a.m.",
+        "8:30 a.m."
+      ],
+      "phase": "practice",
+      "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
+      "stem": "旧通知里，运动会几点开始？",
+      "step": 11,
+      "task": "",
+      "title": "旧通知：几点开始",
+      "scene": "再确认一下旧通知上的时间。",
+      "wrong_feedback": {
+        "A": "旧通知写的是 8:30，不是 7:30。8 和 7 看清楚。",
+        "B": "旧通知是 8:30 a.m.，:30 不能丢，不是整点 8:00。",
+        "C": "9:00 是更新后的时间，这道题问的是旧通知。"
+      }
+    },
+    {
+      "answer_text": "the school playground",
+      "audio_id": "u2r1-notice-a-old",
+      "expects": [
+        {
+          "answers": [
+            "playground"
+          ],
+          "cn": [
+            "操场"
+          ],
+          "id": "place",
+          "type": "word"
+        }
+      ],
+      "explain": "旧通知的地点是 the school playground（学校操场）。",
+      "help": "看 Place 一行。",
+      "kind": "short",
+      "phase": "practice",
+      "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket",
+      "stem": "旧通知里，运动会在哪里举行？",
+      "step": 12,
+      "task": "写英文。",
+      "title": "旧通知：地点",
+      "scene": "旧通知的地点，也确认一下。",
+      "common_errors": [
+        {
+          "when": "写了 stadium",
+          "say": "stadium 是更新后的地点。这道题问的是旧通知，写 playground。"
+        }
+      ]
+    },
+    {
+      "audio_id": "u2r1-notice-a-new",
+      "kind": "teach",
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "step": 13,
+      "teach_html": "<p>这是<strong>更新通知</strong>。注意看变了的地方：时间、地点、队伍数、票价。</p><p>两个新词：<strong>schedule</strong>（日程安排）、<strong>stadium</strong>（体育场）。</p><p>用三步法：对比两张通知，找出不同，再以新的为准。</p>",
+      "title": "再读更新通知"
+    },
+    {
+      "answer": "B",
+      "audio_id": "u2r1-notice-a-new",
+      "explain": "更新通知改成 Sunday（星期天），旧的 Saturday 不算数。",
+      "help": "看 New time 一行。不要看旧通知。",
+      "kind": "mcq",
+      "options": [
+        "Saturday",
+        "Sunday",
+        "Friday",
+        "Monday"
+      ],
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "更新后，运动会改到星期几？",
+      "step": 14,
+      "task": "",
+      "title": "更新后：星期几",
+      "scene": "更新后，运动会改到星期几？这是广播里最重要的信息之一。",
+      "wrong_feedback": {
+        "A": "Saturday 是旧通知的时间，已经不算数了。更新后是 Sunday。",
+        "C": "更新通知的 New time 一行写的是 Sunday，不是 Friday。",
+        "D": "Monday 是小例子里的时间。这张写的是 Sunday。"
+      }
+    },
+    {
+      "answer": "C",
+      "audio_id": "u2r1-notice-a-new",
+      "explain": "更新后是 9:00 a.m.，括号里的 8:30 a.m. 是旧时间，已经不算数。",
+      "help": "看 New time 一行。括号里写的是旧时间，不要选它。",
+      "kind": "mcq",
+      "options": [
+        "8:30 a.m.",
+        "9:30 a.m.",
+        "9:00 a.m.",
+        "10:00 a.m."
+      ],
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "更新后，运动会几点开始？",
+      "step": 15,
+      "task": "",
+      "title": "更新后：几点",
+      "scene": "时间也变了，确认一下几点开始。",
+      "wrong_feedback": {
+        "A": "8:30 a.m. 是旧时间，就是括号里那个，已经不算数了。看括号外面的 9:00。",
+        "B": "更新后是 9:00，不是 9:30。:00 和 :30 分清。",
+        "D": "更新后是 9:00 a.m.，不是 10:00。"
+      }
+    },
+    {
+      "answer_text": "the city stadium",
+      "audio_id": "u2r1-notice-a-new",
+      "expects": [
+        {
+          "answers": [
+            "stadium"
+          ],
+          "cn": [
+            "体育场"
+          ],
+          "cn_old": [
+            "操场"
+          ],
+          "id": "place",
+          "olds": [
+            "playground"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "更新后是 the city stadium（城市体育场）。",
+      "help": "看 New place 一行。",
+      "kind": "short",
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "更新后，运动会在哪里举行？",
+      "step": 16,
+      "task": "写英文。",
+      "title": "更新后：地点",
+      "scene": "地点呢？看更新通知。",
+      "common_errors": [
+        {
+          "when": "写了 playground",
+          "say": "playground 是旧的，已经不算数。写更新后的 stadium。"
+        },
+        {
+          "when": "新旧一起写",
+          "say": "只写新的地点，不要把旧的也写上。"
+        }
+      ]
+    },
+    {
+      "answer": "A",
+      "audio_id": "u2r1-notice-a-new",
+      "explain": "更新后是 24 teams，20 teams 是旧数字。",
+      "help": "看 Teams 一行。注意 now（现在是）和 not（不是）的区别。",
+      "kind": "mcq",
+      "options": [
+        "24 teams",
+        "20 teams",
+        "22 teams",
+        "25 teams"
+      ],
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "更新后，有多少支队伍参加？",
+      "step": 17,
+      "task": "",
+      "title": "更新后：多少支队伍",
+      "scene": "队伍数量变了，站长让你把数字念准。",
+      "wrong_feedback": {
+        "B": "20 teams 是旧数字，后面写着 not 20 teams。更新后是 24。",
+        "C": "通知里没有 22 这个数字，是 24 teams。",
+        "D": "通知里没有 25 这个数字，是 24 teams。"
+      }
+    },
+    {
+      "answer": "B",
+      "audio_id": "u2r1-notice-a-new",
+      "explain": "更新后是 8 yuan，旧的 5 yuan 不算数。",
+      "help": "看 Tickets 一行。",
+      "kind": "mcq",
+      "options": [
+        "5 yuan",
+        "8 yuan",
+        "10 yuan",
+        "6 yuan"
+      ],
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "更新后，一张票多少钱？",
+      "step": 18,
+      "task": "",
+      "title": "更新后：票价",
+      "scene": "票价也要广播，确认一下。",
+      "wrong_feedback": {
+        "A": "5 yuan 是旧票价，写着 not 5 yuan。更新后是 8 yuan。",
+        "C": "通知里没有 10 yuan，是 8 yuan。",
+        "D": "通知里没有 6 yuan，是 8 yuan。"
+      }
+    },
+    {
+      "answer_text": "October 11",
+      "audio_id": "u2r1-notice-a-new",
+      "expects": [
+        {
+          "cn": [
+            "10月11日",
+            "十月十一日",
+            "10月11号"
+          ],
+          "cn_old": [
+            "10月10日"
+          ],
+          "day": 11,
+          "id": "date",
+          "month": 10,
+          "old": {
+            "day": 10,
+            "month": 10
+          },
+          "type": "date"
+        }
+      ],
+      "explain": "更新后是 October 11（10月11日），旧的 October 10 不算数。",
+      "help": "看 New time 一行，找几月几号。日期写英文。",
+      "kind": "short",
+      "phase": "practice",
+      "reading": "UPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "更新后，运动会是几月几号？",
+      "step": 19,
+      "task": "写英文。",
+      "title": "更新后：几月几号",
+      "scene": "日期是几月几号？广播里不能说错。",
+      "common_errors": [
+        {
+          "when": "写了 October 10",
+          "say": "October 10 是旧日期，已经不算数。更新后是 October 11。"
+        }
+      ]
+    },
+    {
+      "answer_text": "Sunday, October 11, 9:00 a.m.",
+      "audio_id": "u2r1-notice-a-new",
+      "expects": [
+        {
+          "answers": [
+            "sunday"
+          ],
+          "cn": [
+            "星期天",
+            "周日"
+          ],
+          "cn_old": [
+            "星期六"
+          ],
+          "id": "day",
+          "olds": [
+            "saturday"
+          ],
+          "type": "word"
+        },
+        {
+          "cn": [
+            "10月11日",
+            "十月十一日"
+          ],
+          "cn_old": [
+            "10月10日"
+          ],
+          "day": 11,
+          "id": "date",
+          "month": 10,
+          "old": {
+            "day": 10,
+            "month": 10
+          },
+          "type": "date"
+        },
+        {
+          "cn": [
+            "上午9点",
+            "早上9点",
+            "9点"
+          ],
+          "cn_old": [
+            "8点半",
+            "上午8点半"
+          ],
+          "hour": 9,
+          "id": "time",
+          "meridiem": "am",
+          "minute": 0,
+          "old": {
+            "hour": 8,
+            "meridiem": "am",
+            "minute": 30
+          },
+          "type": "time"
+        }
+      ],
+      "explain": "最终时间是 Sunday, October 11, 9:00 a.m.（10月11日星期天上午9点）。",
+      "help": "最终的时间以更新通知为准。三个都要写。",
+      "kind": "short",
+      "phase": "practice",
+      "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket\n\nUPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "写出运动会最终的时间。",
+      "step": 20,
+      "task": "包含星期几、几月几号、几点，写英文。",
+      "title": "写出最终时间",
+      "scene": "把最终的时间连起来说一遍，站长听听找全没有。",
+      "common_errors": [
+        {
+          "when": "漏写了一项",
+          "say": "三项都要写：星期几、几月几号、几点。对照一下你漏了哪项。"
+        },
+        {
+          "when": "混入旧信息",
+          "say": "答案里有旧信息。只写更新后的，旧的不要写。"
+        }
+      ]
+    },
+    {
+      "answer": "D",
+      "audio_id": "u2r1-notice-a-new",
+      "explain": "更新通知说新地点是城市体育场，时间改到星期天，所以 D 对。C 错在改到的不是星期五。",
+      "help": "时间、地点都要和更新通知一致，才算对。",
+      "kind": "mcq",
+      "options": [
+        "运动会还在学校操场开。",
+        "运动会取消了。",
+        "运动会改到星期五开。",
+        "运动会改到城市体育场。"
+      ],
+      "phase": "practice",
+      "reading": "NOTICE\nSchool Sports Day\nTime: Saturday, October 10, 8:30 a.m.\nPlace: the school playground\nTeams: 20 teams from our school\nTickets: 5 yuan for one ticket\n\nUPDATED NOTICE\nSchool Sports Day\nGood news! Some things are different now.\nHere is the new schedule.\nNew time: Sunday, October 11, 9:00 a.m. (instead of 8:30 a.m. on Saturday)\nNew place: the city stadium (instead of the school playground)\nTeams: 24 teams now (not 20 teams)\nTickets: 8 yuan for one ticket (not 5 yuan)",
+      "stem": "下面哪句话是对的？",
+      "step": 21,
+      "task": "一句一句对照通知检查。",
+      "title": "哪句话是对的",
+      "scene": "站长写了四句话，你来判断哪句能播出。",
+      "wrong_feedback": {
+        "A": "地点已经改到城市体育场了，学校操场是旧的。",
+        "B": "通知没说取消。开头是 Good news，只是时间地点变了。",
+        "C": "改到的是星期天（Sunday），不是星期五。"
+      }
+    },
+    {
+      "audio_id": "u2r1-teach-07",
+      "kind": "teach",
+      "phase": "practice",
+      "step": 22,
+      "teach_html": "<p>把两张通知放在一起看：</p><ul><li>时间：<strong>Saturday, October 10, 8:30 a.m.</strong> → <strong>Sunday, October 11, 9:00 a.m.</strong></li><li>地点：<strong>the school playground</strong> → <strong>the city stadium</strong></li><li>队伍：<strong>20 teams</strong> → <strong>24 teams</strong></li><li>票价：<strong>5 yuan</strong> → <strong>8 yuan</strong></li></ul><p>箭头左边是旧的（作废），右边是新的（用这个）。</p><p>看数字的变化：队伍从 20 <strong>go up</strong>（上升）到 24；票价（<strong>price tag</strong>，价格标签）从 5 yuan <strong>go up</strong> 到 8 yuan。</p>",
+      "title": "对比小结"
+    },
+    {
+      "step": 23,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u2r1-story-03",
+      "title": "新的通知，独立核对",
+      "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free",
+      "teach_html": "<p>昨天你学会了站长的三步法：先看旧通知，再找出更新了什么，最后只认最新的。</p><p>今天，英语角的通知也更新了——这次换你自己来核对。广播之前，我要看到今晚的最终信息。</p>"
+    },
+    {
+      "answer": "D",
+      "audio_id": "u2r1-notice-b-old",
+      "explain": "旧通知是 Friday（星期五）。",
+      "help": "看旧通知的 Time 一行。",
+      "kind": "mcq",
+      "options": [
+        "Thursday",
+        "Saturday",
+        "Wednesday",
+        "Friday"
+      ],
+      "phase": "validate",
+      "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free",
+      "stem": "旧通知里，英语角在星期几？",
+      "step": 24,
+      "task": "",
+      "title": "旧通知：星期几",
+      "scene": "自己看旧通知：英语角原来是星期几？",
+      "wrong_feedback": {
+        "A": "这是新消息里的时间，这道题问的是旧通知，再看一遍旧通知。",
+        "B": "Saturday 是运动会那张旧通知的，这张再看一遍。",
+        "C": "不是 Wednesday，再看一遍旧通知的 Time。"
+      }
+    },
+    {
+      "answer_text": "Classroom 302",
+      "audio_id": "u2r1-notice-b-old",
+      "expects": [
+        {
+          "answers": [
+            "302"
+          ],
+          "cn": [
+            "302教室",
+            "302"
+          ],
+          "id": "place",
+          "type": "word"
+        }
+      ],
+      "explain": "旧通知的地点是 Classroom 302。",
+      "help": "看旧通知的 Place 一行。",
+      "kind": "short",
+      "phase": "validate",
+      "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free",
+      "stem": "旧通知里，英语角在哪里？",
+      "step": 25,
+      "task": "写英文。",
+      "title": "旧通知：地点",
+      "scene": "旧通知的地点是哪里？",
+      "common_errors": [
+        {
+          "when": "写了 library",
+          "say": "这是新的地点，这道题问的是旧的，再看一遍旧通知。"
+        }
+      ]
+    },
+    {
+      "audio_id": "u2r1-notice-b-new",
+      "kind": "teach",
+      "phase": "validate",
+      "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "step": 26,
+      "teach_html": "<p>这是老师发给全班的<strong>消息</strong>，英语角有变化。</p><p>没有 New 标签了，自己读句子，找出新的时间、地点、人数。</p><p>记住：回答下面的题，只用消息里的新信息。</p>",
+      "title": "读更新通知"
+    },
+    {
+      "answer": "C",
+      "audio_id": "u2r1-notice-b-new",
+      "explain": "更新后是 Thursday（星期四）。",
+      "help": "读老师的消息，找 this week 的时间。",
+      "kind": "mcq",
+      "options": [
+        "Friday",
+        "Wednesday",
+        "Thursday",
+        "Tuesday"
+      ],
+      "phase": "validate",
+      "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "stem": "更新后，英语角改到星期几？",
+      "step": 27,
+      "task": "",
+      "title": "更新后：星期几",
+      "scene": "更新后，英语角改到星期几？",
+      "wrong_feedback": {
+        "A": "这是旧通知的时间，再读一遍老师的消息。",
+        "B": "消息里没有 Wednesday，再读一遍。",
+        "D": "Tuesday 不对，再读一遍老师的消息。"
+      }
+    },
+    {
+      "answer": "B",
+      "audio_id": "u2r1-notice-b-new",
+      "explain": "更新后是 4:30 p.m.，4:00 p.m. 是旧通知的时间。",
+      "help": "读老师的消息，找 at 后面的时间。",
+      "kind": "mcq",
+      "options": [
+        "4:00 p.m.",
+        "4:30 p.m.",
+        "3:30 p.m.",
+        "5:00 p.m."
+      ],
+      "phase": "validate",
+      "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "stem": "更新后，英语角几点开始？",
+      "step": 28,
+      "task": "",
+      "title": "更新后：几点",
+      "scene": "几点开始？",
+      "wrong_feedback": {
+        "A": "这是旧时间，再读一遍消息里 at 后面的时间。",
+        "C": "消息里没有这个时间，再读一遍。",
+        "D": "消息里没有这个时间，再读一遍。"
+      }
+    },
+    {
+      "answer_text": "the school library",
+      "audio_id": "u2r1-notice-b-new",
+      "expects": [
+        {
+          "answers": [
+            "library"
+          ],
+          "cn": [
+            "图书馆"
+          ],
+          "cn_old": [
+            "302教室"
+          ],
+          "id": "place",
+          "olds": [
+            "302"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "更新后是 the school library（学校图书馆）。",
+      "help": "读老师的消息，找 meet 的地点。",
+      "kind": "short",
+      "phase": "validate",
+      "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "stem": "更新后，英语角在哪里？",
+      "step": 29,
+      "task": "写英文。",
+      "title": "更新后：地点",
+      "scene": "地点是哪里？",
+      "common_errors": [
+        {
+          "when": "写了 302",
+          "say": "这是旧地点，再读一遍消息里 meet 的那句。"
+        }
+      ]
+    },
+    {
+      "answer": "C",
+      "audio_id": "u2r1-notice-b-new",
+      "explain": "更新后是 40 students，旧的 30 students 不算数。",
+      "help": "读老师的消息，找 can join 的数字。",
+      "kind": "mcq",
+      "options": [
+        "30 students",
+        "35 students",
+        "40 students",
+        "45 students"
+      ],
+      "phase": "validate",
+      "reading": "Dear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "stem": "更新后，有多少学生能参加？",
+      "step": 30,
+      "task": "",
+      "title": "更新后：多少人",
+      "scene": "多少学生能参加？",
+      "wrong_feedback": {
+        "A": "这是旧数字，再读一遍消息里 can join 的那句。",
+        "B": "消息里没有这个数字，再读一遍。",
+        "D": "消息里没有这个数字，再读一遍。"
+      }
+    },
+    {
+      "answer_text": "Thursday, October 15, 4:30 p.m., the school library",
+      "audio_id": "u2r1-notice-b-new",
+      "expects": [
+        {
+          "answers": [
+            "thursday"
+          ],
+          "cn": [
+            "星期四",
+            "周四"
+          ],
+          "cn_old": [
+            "星期五"
+          ],
+          "id": "day",
+          "olds": [
+            "friday"
+          ],
+          "type": "word"
+        },
+        {
+          "cn": [
+            "10月15日",
+            "十月十五日"
+          ],
+          "cn_old": [
+            "10月16日"
+          ],
+          "day": 15,
+          "id": "date",
+          "month": 10,
+          "old": {
+            "day": 16,
+            "month": 10
+          },
+          "type": "date"
+        },
+        {
+          "cn": [
+            "下午4点半",
+            "4点半"
+          ],
+          "cn_old": [
+            "下午4点"
+          ],
+          "hour": 4,
+          "id": "time",
+          "meridiem": "pm",
+          "minute": 30,
+          "old": {
+            "hour": 4,
+            "meridiem": "pm",
+            "minute": 0
+          },
+          "type": "time"
+        },
+        {
+          "answers": [
+            "library"
+          ],
+          "cn": [
+            "图书馆"
+          ],
+          "cn_old": [
+            "302教室"
+          ],
+          "id": "place",
+          "olds": [
+            "302"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "最终是 Thursday, October 15, 4:30 p.m.，在 the school library。",
+      "help": "以老师的消息为准。四个信息都要有，连成一句话。",
+      "kind": "short",
+      "phase": "validate",
+      "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free\n\nDear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "stem": "写出英语角最终的时间和地点。",
+      "step": 31,
+      "task": "包含星期几、几月几号、几点和地点，写英文。",
+      "title": "写出最终时间和地点",
+      "scene": "把英语角的最终时间和地点写出来，四个信息都要有。",
+      "common_errors": [
+        {
+          "when": "漏写了一项",
+          "say": "还差几项，再读一遍消息，找齐四个信息。"
+        },
+        {
+          "when": "混入旧信息",
+          "say": "里面有旧信息，再读一遍消息，只留新的。"
+        }
+      ]
+    },
+    {
+      "answer": "A",
+      "audio_id": "u2r1-notice-b-new",
+      "explain": "更新通知的时间是星期四下午4点半，地点是学校图书馆，所以第一项对。",
+      "help": "时间、地点都要和老师的消息一致，才算对。",
+      "kind": "mcq",
+      "options": [
+        "星期四下午4点半，学校图书馆",
+        "星期五下午4点，302教室",
+        "星期五下午4点半，学校图书馆",
+        "星期四下午4点，302教室"
+      ],
+      "phase": "validate",
+      "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free\n\nDear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
+      "stem": "下面哪一项是最终确定的信息？",
+      "step": 32,
+      "task": "对照老师的消息检查一遍。",
+      "title": "哪项是最终信息",
+      "scene": "最后一项检查：下面哪项能直接拿去播？",
+      "wrong_feedback": {
+        "B": "时间和地点里至少有一个是旧的，再读一遍消息。",
+        "C": "有一项还是旧的，再读一遍消息。",
+        "D": "有一项还是旧的，再读一遍消息。"
+      }
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u2r1-broadcast",
+      "title": "写出广播稿",
+      "stem": "写出今晚要广播的那句话。",
+      "task": "用英文写一个简单句，包含星期几、几月几号、几点、地点。",
+      "help": "以老师的消息为准。四个信息都要有，连成一句话。",
+      "scene": "广播时间到！把最终信息写成一句话（英文），准备播出。",
+      "answer_text": "The English Corner is on Thursday, October 15 at 4:30 p.m. in the school library.",
+      "expects": [
+        {
+          "id": "day",
+          "type": "word",
+          "answers": [
+            "thursday"
+          ],
+          "olds": [
+            "friday"
+          ],
+          "cn": [
+            "星期四",
+            "周四"
+          ],
+          "cn_old": [
+            "星期五"
+          ]
+        },
+        {
+          "id": "date",
+          "type": "date",
+          "month": 10,
+          "day": 15,
+          "old": {
+            "month": 10,
+            "day": 16
+          },
+          "cn": [
+            "10月15日",
+            "十月十五日"
+          ],
+          "cn_old": [
+            "10月16日"
+          ]
+        },
+        {
+          "id": "time",
+          "type": "time",
+          "hour": 4,
+          "minute": 30,
+          "meridiem": "pm",
+          "old": {
+            "hour": 4,
+            "minute": 0,
+            "meridiem": "pm"
+          },
+          "cn": [
+            "下午4点半",
+            "4点半"
+          ],
+          "cn_old": [
+            "下午4点"
+          ]
+        },
+        {
+          "id": "place",
+          "type": "word",
+          "answers": [
+            "library"
+          ],
+          "olds": [
+            "302"
+          ],
+          "cn": [
+            "图书馆"
+          ],
+          "cn_old": [
+            "302教室"
+          ]
+        }
+      ],
+      "common_errors": [
+        {
+          "when": "漏写了一项",
+          "say": "还差几项，再读一遍消息，找齐四个信息。"
+        },
+        {
+          "when": "混入旧信息",
+          "say": "里面有旧信息，再读一遍消息，只留新的。"
+        }
+      ],
+      "explain": "参考：The English Corner is on Thursday, October 15 at 4:30 p.m. in the school library.（四个信息都有，连成了一句话。）",
+      "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free\n\nDear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join."
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u2r1-ending",
+      "title": "广播播出",
+      "teach_html": "<p>广播播出。今晚的英语角信息，你核对准确了。</p><p>站长说：明天我会告诉你，今天的广播有没有出问题。</p><p>下一课，广播站还会收到新的通知，有新的考验等着你。</p>"
     }
-   ],
-   "explain": "最终是 Thursday, October 15, 4:30 p.m.，在 the school library。",
-   "help": "以老师的消息为准。四个信息都要有，连成一句话。",
-   "kind": "short",
-   "phase": "validate",
-   "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free\n\nDear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "stem": "写出英语角最终的时间和地点。",
-   "step": 31,
-   "task": "包含星期几、几月几号、几点和地点，写英文。",
-   "title": "写出最终时间和地点",
-   "scene": "把英语角的最终时间和地点写出来，四个信息都要有。",
-   "common_errors": [
-    {
-     "when": "漏写了一项",
-     "say": "还差几项，再读一遍消息，找齐四个信息。"
-    },
-    {
-     "when": "混入旧信息",
-     "say": "里面有旧信息，再读一遍消息，只留新的。"
-    }
-   ]
-  },
-  {
-   "answer": "A",
-   "audio_id": "u2r1-notice-b-new",
-   "explain": "更新通知的时间是星期四下午4点半，地点是学校图书馆，所以第一项对。",
-   "help": "时间、地点都要和老师的消息一致，才算对。",
-   "kind": "mcq",
-   "options": [
-    "星期四下午4点半，学校图书馆",
-    "星期五下午4点，302教室",
-    "星期五下午4点半，学校图书馆",
-    "星期四下午4点，302教室"
-   ],
-   "phase": "validate",
-   "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free\n\nDear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join.",
-   "stem": "下面哪一项是最终确定的信息？",
-   "step": 32,
-   "task": "对照老师的消息检查一遍。",
-   "title": "哪项是最终信息",
-   "scene": "最后一项检查：下面哪项能直接拿去播？",
-   "wrong_feedback": {
-    "B": "时间和地点里至少有一个是旧的，再读一遍消息。",
-    "C": "有一项还是旧的，再读一遍消息。",
-    "D": "有一项还是旧的，再读一遍消息。"
-   }
-  },
-  {
-   "step": 33,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u2r1-broadcast",
-   "title": "写出广播稿",
-   "stem": "写出今晚要广播的那句话。",
-   "task": "用英文写一个简单句，包含星期几、几月几号、几点、地点。",
-   "help": "以老师的消息为准。四个信息都要有，连成一句话。",
-   "scene": "广播时间到！把最终信息写成一句话（英文），准备播出。",
-   "answer_text": "The English Corner is on Thursday, October 15 at 4:30 p.m. in the school library.",
-   "expects": [
-    {
-     "id": "day",
-     "type": "word",
-     "answers": [
-      "thursday"
-     ],
-     "olds": [
-      "friday"
-     ],
-     "cn": [
-      "星期四",
-      "周四"
-     ],
-     "cn_old": [
-      "星期五"
-     ]
-    },
-    {
-     "id": "date",
-     "type": "date",
-     "month": 10,
-     "day": 15,
-     "old": {
-      "month": 10,
-      "day": 16
-     },
-     "cn": [
-      "10月15日",
-      "十月十五日"
-     ],
-     "cn_old": [
-      "10月16日"
-     ]
-    },
-    {
-     "id": "time",
-     "type": "time",
-     "hour": 4,
-     "minute": 30,
-     "meridiem": "pm",
-     "old": {
-      "hour": 4,
-      "minute": 0,
-      "meridiem": "pm"
-     },
-     "cn": [
-      "下午4点半",
-      "4点半"
-     ],
-     "cn_old": [
-      "下午4点"
-     ]
-    },
-    {
-     "id": "place",
-     "type": "word",
-     "answers": [
-      "library"
-     ],
-     "olds": [
-      "302"
-     ],
-     "cn": [
-      "图书馆"
-     ],
-     "cn_old": [
-      "302教室"
-     ]
-    }
-   ],
-   "common_errors": [
-    {
-     "when": "漏写了一项",
-     "say": "还差几项，再读一遍消息，找齐四个信息。"
-    },
-    {
-     "when": "混入旧信息",
-     "say": "里面有旧信息，再读一遍消息，只留新的。"
-    }
-   ],
-   "explain": "参考：The English Corner is on Thursday, October 15 at 4:30 p.m. in the school library.（四个信息都有，连成了一句话。）",
-   "reading": "NOTICE\nEnglish Corner\nTime: Friday, October 16, 4:00 p.m.\nPlace: Classroom 302\nStudents: 30 students can join\nPrice: free\n\nDear students, the English Corner is not on Friday this week. It will be on Thursday, October 15, at 4:30 p.m. We will meet in the school library, not in Classroom 302. Now 40 students can join, and drinks are 2 yuan. Please reply to your teacher if you want to join."
-  },
-  {
-   "step": 34,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u2r1-ending",
-   "title": "广播播出",
-   "teach_html": "<p>广播播出。今晚的英语角信息，你核对准确了。</p><p>站长说：明天我会告诉你，今天的广播有没有出问题。</p><p>下一课，广播站还会收到新的通知，有新的考验等着你。</p>"
-  }
- ],
- "title": "读懂通知：找出更新后的最终信息",
- "unit": "Unit 2 Amazing numbers",
- "version": 5
+  ],
+  "title": "读懂通知：找出更新后的最终信息",
+  "unit": "Unit 2 Amazing numbers",
+  "version": 5
 }
