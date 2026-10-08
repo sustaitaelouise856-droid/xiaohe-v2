@@ -1,0 +1,786 @@
+{
+  "lesson_id": "u6r2",
+  "practice_end": 23,
+  "home_subtitle": "第二课 · 问多久",
+  "part1_desc": "第 1–23 步：跟站长学 How long 提问，学会问“持续了多久”。",
+  "part2_desc": "第 24–36 步：独立判断造纸术资料，用 How long 提问和回答。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：How long 提问句型、for/since 回答。Unit 6 Ancient stories 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-story-01",
+      "title": "端午节的故事",
+      "teach_html": "<p>上期长城的故事播完，听众问：端午节过了多少年？站长说：这期讲<strong>端午节 (the Dragon Boat Festival)</strong> 的故事！</p><p>要问“持续了多久”，英文用 <strong>How long</strong> 开头提问。</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t01",
+      "title": "How long 提问",
+      "teach_html": "<p><strong>How long</strong> 意思是“多久”，问的是<strong>一段时间</strong>。</p><p>结构：<strong>How long + have/has + 主语 + 过去分词？</strong></p><p>How long <strong>have you lived</strong> here?（你在这里住了多久？）</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t02",
+      "title": "用 for 回答",
+      "teach_html": "<p>问多久，经常用 <strong>for + 时间段</strong> 回答：</p><p>—How long have you learned English?（你学英语多久了？）<br>—<strong>For three years.</strong>（三年。）</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t03",
+      "title": "用 since 回答",
+      "teach_html": "<p>也可以用 <strong>since + 时间点</strong> 回答：</p><p>—How long has he lived here?（他在这里住了多久？）<br>—<strong>Since 2020.</strong>（从2020年起。）</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t04",
+      "title": "屈原与端午节",
+      "teach_html": "<p><strong>Qu Yuan</strong>（屈原）是中国古代的诗人。人们赛龙舟纪念他。</p><p><strong>remember</strong> 是“记得、纪念”。People have <strong>celebrated</strong> the Dragon Boat Festival <strong>for</strong> over 2,000 years.（人们庆祝端午节已经2000多年了。）</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t05",
+      "title": "龙舟赛",
+      "teach_html": "<p>They have <strong>dragon boat races</strong> <strong>since</strong> ancient times.（自古以来人们就赛龙舟。）</p><p><strong>dragon boat race</strong> 是“龙舟赛”。注意：since + 时间点 ancient times。</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t06",
+      "title": "How long 和 When",
+      "teach_html": "<p>别弄混：<strong>How long</strong> 问“多久”（一段时间），<strong>When</strong> 问“何时”（时间点）。</p><p>When did you come?（你何时来的？）—Yesterday.（昨天。）<br>How long have you stayed?（你待了多久？）—For a week.（一周。）</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r2-t07",
+      "title": "小结",
+      "teach_html": "<p>小结：<strong>How long + have/has + 主语 + 过去分词？</strong>问多久；回答用 <strong>for + 时间段</strong> 或 <strong>since + 时间点</strong>。</p><p>下面站长带着你练。资料卡在上面，做题时对照着看。</p>"
+    },
+    {
+      "step": 9,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u6r2-prac-01",
+      "title": "先看资料",
+      "teach_html": "<p>这是端午节的资料卡。做题时对照着看：端午节在六月，人们纪念屈原，有龙舟赛，人们庆祝它已经2000多年了。</p><p>下面站长带着你练 How long 提问。</p>",
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q01",
+      "title": "问住了多久",
+      "scene": "问“你在这里住了多久”。",
+      "stem": "___ long have you lived here?",
+      "options": [
+        "How",
+        "What",
+        "When",
+        "Where"
+      ],
+      "answer": "A",
+      "help": "“多久”用哪个疑问词？",
+      "explain": "How long have you lived here?",
+      "wrong_feedback": {
+        "B": "What 问“什么”，问“多久”用 How long。",
+        "C": "When 问“何时”，问“多久”用 How long。",
+        "D": "Where 问“哪里”，问“多久”用 How long。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q02",
+      "title": "学了三年",
+      "scene": "问学英语多久，回答三年。",
+      "stem": "—___ have you learned English? —For three years.",
+      "options": [
+        "How",
+        "What",
+        "When",
+        "How long"
+      ],
+      "answer": "D",
+      "help": "问“多久”要两个词。",
+      "explain": "—How long have you learned English? —For three years.",
+      "wrong_feedback": {
+        "A": "How 一个词不够，问“多久”用 How long。",
+        "B": "What 问“什么”，不对。",
+        "C": "When 问“何时”，这里问“多久”。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q03",
+      "title": "从2020年",
+      "scene": "他从2020年起住在这里。",
+      "stem": "—How long has he stayed? —___ 2020.",
+      "options": [
+        "For",
+        "Since",
+        "From",
+        "In"
+      ],
+      "answer": "B",
+      "help": "2020 是时间点。",
+      "explain": "—How long has he stayed? —Since 2020.",
+      "wrong_feedback": {
+        "A": "2020 是时间点，时间点用 since，不用 for。",
+        "C": "from 是“从”，回答“自从”用 since。",
+        "D": "in 2020 是“在2020年”，这里用 since。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q04",
+      "title": "两千多年",
+      "scene": "人们赛龙舟两千多年了。",
+      "stem": "They have had dragon boat races ___ over 2,000 years.",
+      "options": [
+        "since",
+        "from",
+        "for",
+        "in"
+      ],
+      "answer": "C",
+      "help": "“两千多年”是时间段。",
+      "explain": "They have had dragon boat races for over 2,000 years.",
+      "wrong_feedback": {
+        "A": "since 后面跟时间点，“两千多年”是时间段，用 for。",
+        "B": "from 是“从”，这里用 for。",
+        "D": "in 不能表示“持续”，用 for。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q05",
+      "title": "remember 的意思",
+      "scene": "remember 在课里是“纪念”。",
+      "stem": "The word \"remember\" means ___.",
+      "options": [
+        "记得",
+        "忘记",
+        "离开",
+        "到达"
+      ],
+      "answer": "A",
+      "help": "人们 remember 屈原，是什么意思？",
+      "explain": "remember 意思是“记得”，这里指“纪念”。",
+      "wrong_feedback": {
+        "B": "忘记是 forget。remember 是“记得”。",
+        "C": "离开是 leave，不是 remember。",
+        "D": "到达是 arrive，不是 remember。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q06",
+      "title": "问何时",
+      "scene": "问“你何时来的”。",
+      "stem": "___ did you come here?",
+      "options": [
+        "How long",
+        "How",
+        "What",
+        "When"
+      ],
+      "answer": "D",
+      "help": "“何时”用哪个疑问词？",
+      "explain": "When did you come here?",
+      "wrong_feedback": {
+        "A": "How long 问“多久”，问“何时”用 When。",
+        "B": "How 问“怎样”，问“何时”用 When。",
+        "C": "What 问“什么”，问“何时”用 When。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q07",
+      "title": "自古以来",
+      "scene": "自古以来人们庆祝端午节。",
+      "stem": "People have celebrated it ___ ancient times.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "at"
+      ],
+      "answer": "B",
+      "help": "“自古以来”是时间点。",
+      "explain": "People have celebrated it since ancient times.",
+      "wrong_feedback": {
+        "A": "for 后面跟时间段，“自古以来”是时间点，用 since。",
+        "C": "from 是“从”，“自从”用 since。",
+        "D": "at 后面跟时刻，不对。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q08",
+      "title": "从小时候",
+      "scene": "他们从小时候就认识。",
+      "stem": "—How long have they known each other? —___ they were children.",
+      "options": [
+        "For",
+        "From",
+        "Since",
+        "In"
+      ],
+      "answer": "C",
+      "help": "since 可跟句子。",
+      "explain": "—How long have they known each other? —Since they were children.",
+      "wrong_feedback": {
+        "A": "for 后面跟时间段，这里“自从小时候”用 since。",
+        "B": "from 是“从”，“自从”用 since。",
+        "D": "in 后面跟年份月份，这里用 since。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r2-q09",
+      "title": "工作五年",
+      "scene": "她在这里工作五年了。",
+      "stem": "She has worked here ___ five years.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "answer": "A",
+      "help": "“五年”是时间段。",
+      "explain": "She has worked here for five years.",
+      "wrong_feedback": {
+        "B": "since 后面跟时间点，“五年”是时间段，用 for。",
+        "C": "from 是“从”，这里用 for。",
+        "D": "in 不能表示“持续”，用 for。"
+      },
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r2-q10",
+      "title": "问多久",
+      "scene": "问“他在这里住了多久”。",
+      "stem": "___ long has he lived here?",
+      "task": "只写 How、What、When 中的一个。",
+      "answer_text": "How",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "How",
+            "how"
+          ],
+          "cn": [
+            "多久"
+          ]
+        }
+      ],
+      "help": "“多久”用 How long。",
+      "explain": "How long has he lived here?",
+      "common_errors": [
+        {
+          "when": "写了 When",
+          "say": "When 问“何时”，问“多久”用 How。"
+        },
+        {
+          "when": "写了 What",
+          "say": "What 问“什么”，问“多久”用 How。"
+        }
+      ],
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r2-q11",
+      "title": "等了两小时",
+      "scene": "问等了多久，回答两小时。",
+      "stem": "—How long have you waited? —___ two hours.",
+      "task": "只写 since 或 for。",
+      "answer_text": "For",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "for",
+            "For"
+          ],
+          "cn": [
+            "持续（时间段）"
+          ]
+        }
+      ],
+      "help": "两小时是时间段。",
+      "explain": "—How long have you waited? —For two hours.",
+      "common_errors": [
+        {
+          "when": "写了 since",
+          "say": "两小时是时间段，用 for。"
+        }
+      ],
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r2-q12",
+      "title": "remember 的中文",
+      "scene": "写出 remember 的中文。",
+      "stem": "写出 remember 的中文意思。",
+      "task": "写中文。",
+      "answer_text": "记得",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "记得"
+          ],
+          "cn": [
+            "记得；纪念"
+          ]
+        }
+      ],
+      "help": "人们 remember 屈原。",
+      "explain": "remember 的中文是“记得”。",
+      "common_errors": [
+        {
+          "when": "写了“忘记”",
+          "say": "“忘记”是 forget。remember 是“记得”。"
+        }
+      ],
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r2-q13",
+      "title": "从周一",
+      "scene": "他从周一起在这里。",
+      "stem": "He has been here ___ Monday.",
+      "task": "只写 since 或 for。",
+      "answer_text": "since",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "since",
+            "Since"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ]
+        }
+      ],
+      "help": "周一是时间点。",
+      "explain": "He has been here since Monday.",
+      "common_errors": [
+        {
+          "when": "写了 for",
+          "say": "周一是时间点，用 since。"
+        }
+      ],
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r2-q14",
+      "title": "待了多久",
+      "scene": "问“他们待了多久”。",
+      "stem": "___ long have they stayed?",
+      "task": "只写 How、What、When 中的一个。",
+      "answer_text": "How",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "How",
+            "how"
+          ],
+          "cn": [
+            "多久"
+          ]
+        }
+      ],
+      "help": "“多久”用 How long。",
+      "explain": "How long have they stayed?",
+      "common_errors": [
+        {
+          "when": "写了 When",
+          "say": "When 问“何时”，这里问“多久”，用 How。"
+        }
+      ],
+      "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+    },
+    {
+      "step": 24,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u6r2-v-intro",
+      "title": "新任务：独立判断",
+      "teach_html": "<p>新任务来了：这次是<strong>造纸术 (paper-making)</strong> 的资料。中国人很早发明了纸，呼应咱们之前发明单元讲过的内容。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>How long</strong> 问多久；<strong>for + 时间段</strong>，<strong>since + 时间点</strong>。</p>",
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v01",
+      "title": "用纸两千年",
+      "scene": "人们用纸两千多年了。",
+      "stem": "People have used paper ___ over 2,000 years.",
+      "options": [
+        "since",
+        "from",
+        "in",
+        "for"
+      ],
+      "answer": "D",
+      "help": "时间段。",
+      "explain": "People have used paper for over 2,000 years.",
+      "wrong_feedback": {
+        "A": "再想想时间点和时间段。",
+        "B": "再想想时间点和时间段。",
+        "C": "再想想时间点和时间段。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v02",
+      "title": "用纸多久",
+      "scene": "问“人们用纸多久了”。",
+      "stem": "___ long have people used paper?",
+      "options": [
+        "How",
+        "What",
+        "When",
+        "Where"
+      ],
+      "answer": "A",
+      "help": "问多久。",
+      "explain": "How long have people used paper?",
+      "wrong_feedback": {
+        "B": "再想想疑问词。",
+        "C": "再想想疑问词。",
+        "D": "再想想疑问词。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v03",
+      "title": "自古以来",
+      "scene": "自古以来人们造纸。",
+      "stem": "They have made paper ___ ancient times.",
+      "options": [
+        "for",
+        "from",
+        "since",
+        "at"
+      ],
+      "answer": "C",
+      "help": "时间点。",
+      "explain": "They have made paper since ancient times.",
+      "wrong_feedback": {
+        "A": "再想想时间点和时间段。",
+        "B": "再想想时间点和时间段。",
+        "D": "再想想时间点和时间段。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v04",
+      "title": "invent 的意思",
+      "scene": "invent 意思是？",
+      "stem": "The word \"invent\" means ___.",
+      "options": [
+        "发明",
+        "发现",
+        "参观",
+        "庆祝"
+      ],
+      "answer": "A",
+      "help": "中国人 invent 了纸。",
+      "explain": "invent 意思是“发明”。",
+      "wrong_feedback": {
+        "B": "再想想。",
+        "C": "再想想。",
+        "D": "再想想。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v05",
+      "title": "存了十年",
+      "scene": "她这本旧书存了十年了。",
+      "stem": "She has kept the old book ___ ten years.",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "in"
+      ],
+      "answer": "B",
+      "help": "时间段。",
+      "explain": "She has kept the old book for ten years.",
+      "wrong_feedback": {
+        "A": "再想想时间点和时间段。",
+        "C": "再想想时间点和时间段。",
+        "D": "再想想时间点和时间段。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v06",
+      "title": "从八岁",
+      "scene": "他从八岁起集邮。",
+      "stem": "He has collected stamps ___ he was eight.",
+      "options": [
+        "for",
+        "from",
+        "in",
+        "since"
+      ],
+      "answer": "D",
+      "help": "since 可跟句子。",
+      "explain": "He has collected stamps since he was eight.",
+      "wrong_feedback": {
+        "A": "再想想时间点和时间段。",
+        "B": "再想想时间点和时间段。",
+        "C": "再想想时间点和时间段。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r2-v07",
+      "title": "存了很多年",
+      "scene": "图书馆存旧书很多年了。",
+      "stem": "The library has kept old books ___ many years.",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "in"
+      ],
+      "answer": "B",
+      "help": "时间段。",
+      "explain": "The library has kept old books for many years.",
+      "wrong_feedback": {
+        "A": "再想想时间点和时间段。",
+        "C": "再想想时间点和时间段。",
+        "D": "再想想时间点和时间段。"
+      },
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r2-v08",
+      "title": "自古以来",
+      "scene": "自古以来人们用纸。",
+      "stem": "People have used paper ___ ancient times.",
+      "task": "只写 since 或 for。",
+      "answer_text": "since",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "since",
+            "Since"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ]
+        }
+      ],
+      "help": "时间点。",
+      "explain": "People have used paper since ancient times.",
+      "common_errors": [
+        {
+          "when": "写了 for",
+          "say": "再想想时间点和时间段。"
+        }
+      ],
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r2-v09",
+      "title": "问多久",
+      "scene": "问“她存了多久”。",
+      "stem": "___ long has she kept it?",
+      "task": "只写 How、What、When 中的一个。",
+      "answer_text": "How",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "How",
+            "how"
+          ],
+          "cn": [
+            "多久"
+          ]
+        }
+      ],
+      "help": "问多久。",
+      "explain": "How long has she kept it?",
+      "common_errors": [
+        {
+          "when": "写了 When",
+          "say": "再想想疑问词。"
+        }
+      ],
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r2-v10",
+      "title": "invent 的中文",
+      "scene": "写出 invent 的中文。",
+      "stem": "写出 invent 的中文意思。",
+      "task": "写中文。",
+      "answer_text": "发明",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "发明"
+          ],
+          "cn": [
+            "发明"
+          ]
+        }
+      ],
+      "help": "中国人 invent 了纸。",
+      "explain": "invent 的中文是“发明”。",
+      "common_errors": [
+        {
+          "when": "写了“发现”",
+          "say": "“发现”是 find。invent 是“发明”。"
+        }
+      ],
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r2-v11",
+      "title": "两千年",
+      "scene": "人们造纸两千多年了。",
+      "stem": "They have made paper ___ 2,000 years.",
+      "task": "只写 since 或 for。",
+      "answer_text": "for",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "for",
+            "For"
+          ],
+          "cn": [
+            "持续（时间段）"
+          ]
+        }
+      ],
+      "help": "时间段。",
+      "explain": "They have made paper for 2,000 years.",
+      "common_errors": [
+        {
+          "when": "写了 since",
+          "say": "再想想时间点和时间段。"
+        }
+      ],
+      "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u6r2-ending",
+      "title": "节目预告",
+      "teach_html": "<p>端午节和造纸术的故事讲完了。How long 问“多久”，你学会了！</p><p>下一期是关键：<strong>完成时 vs 过去时</strong>——“我住过北京”和“我2020年住在北京”，到底有什么不同？</p>"
+    }
+  ],
+  "title": "多久了：How long 提问",
+  "unit": "Unit 6 Ancient stories",
+  "version": 1
+}
