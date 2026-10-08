@@ -5,11 +5,17 @@
 ## P0（本期必须）
 
 1. [x] 语文总纲 v1（docs/YUWEN-MASTER.md）——2026-10-08 Elouise 确认开工
-2. [ ] 3 节示范课验证全流程：文言文 1 篇 + 阅读理解 1 篇 + 字词 1 节（开工中）
-   - 弧线：字词「已/己/巳」→ 文言《记承天寺夜游》→ 记叙文阅读套路（字→句→篇）
-   - 每课走七步链路 + 爆笑风格 + 三级 HELP + 承上启下 + 剧情「小禾文史馆」
-   - 推送前跑 scripts/pre-deploy-check.py
-3. [x] 中文 TTS 流程验证（2026-10-08 通过）：复用数学窗口已验证流程（tts 中文 + Warm Pebble 音色 + ffmpeg loudnorm -20 LUFS）；《记承天寺夜游》全文朗读正常速 26.1s + 慢速跟读版 32.7s，机械核验通过（非静音、响度达标），发音未经过人耳验证、标 UNVERIFIED。脚本 scripts/gen-audio-yw1.py，音频 audio/yw-wenyan1/。
+2. [x] 3 节示范课验证全流程（2026-10-08 完成，总指挥独立评审通过）
+   - 弧线：字词「已/己/巳」→ 文言《记承天寺夜游》→ 记叙文阅读定位法（字→句→篇）
+   - content/lesson-yw1-zici.json（30步）/ lesson-yw2-wenyan.json（30步）/ lesson-yw3-yuedu.json（28步）
+   - 检查单红线全过；答案分布均衡、最长连续≤2；wrong_feedback 100%；禁用语零命中
+   - 评审修了2处：yw3 第1步补【承上启下】标记、yw2 补9个 teach 的 audio_id
+   - 注：content/ 另有 lesson-yw-word1/wenyan1/read1.json 三文件来自并行会话，待 Elouise 定夺去留（未动）
+3. [x] 中文 TTS 流程验证（2026-10-08 完成）
+   - 流程打通：tts CLI + --language zh → 有效 MP3，ffmpeg loudnorm -20 LUFS。
+   - 音色结论（总指挥实测）：Warm Pebble（avocado_v2:chip）中文不可懂——《记承天寺夜游》片段 ASR 回转写为英文乱码；avocado_v2:MAI_01 短句回转写基本正确（"月色入户，欣然起行"→"月色入戶，新人起行"），定为语文统一音色。
+   - audio/yw-wenyan1/ 的 2 段（Warm Pebble）机械核验仅覆盖非静音+响度、未验证可懂度，建议用 MAI_01 重生成。
+   - 3 节示范课 71 段音频已生成（audio/yuwen/，MAI_01，-20 LUFS），发音未经人耳验证标 UNVERIFIED。脚本 scripts/gen-audio-yw.py。
 4. [ ] 语文新人诊断（字词/文言/阅读/作文分项摸底）
 
 ## P1（随后）
