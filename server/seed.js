@@ -126,6 +126,11 @@ function seedLesson(lid, lesson, status) {
 // 返回 [{ lesson_id, seeded, error? }]。失败只记录，不抛（不能因此起不来服务；
 // 健康检查 /api/health 会标出失败状态，见 2026-09-30 二审三10）。
 function autoSeed() {
+  // 2026-10-08：清理已下架的旧版语文课（只删课程记录，不删文件）
+  try {
+    const db = require('./db.js').db;
+    db.prepare("DELETE FROM lessons WHERE lesson_id IN ('yw1-zici','yw2-wenyan','yw3-yuedu')").run();
+  } catch {}
   const dir = contentDir();
   let files = [];
   try { files = fs.readdirSync(dir); } catch { return []; }
@@ -137,6 +142,8 @@ function autoSeed() {
     const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw\d*-[a-z0-9]+|deep\d+|moon\d+)\.json$/.exec(f);
     if (!m) continue;
     const lid = m[1];
+    // 2026-10-08：旧版语文示范课下架（文件保留，只是不入库不显示）
+    if (['yw1-zici', 'yw2-wenyan', 'yw3-yuedu'].includes(lid)) continue;
     try {
       const lesson = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
       const expected = gradableSteps(lesson).length;
