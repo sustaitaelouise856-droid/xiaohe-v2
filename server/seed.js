@@ -75,7 +75,10 @@ function fingerprint(f) {
 
 // 入库一课。返回 { n, version }，n 为本次新增的题数。
 // 已存在的题内容不一致时抛错（改题必须升版本号），不覆盖。
-function seedLesson(lid, lesson) {
+// status: 数学课（sx*）、语文课（yw-*）用 'draft'——可直接访问（白名单只查 lessons 表），
+//   但不进入英语首页的"当前进行中的课"序列（orderedLessons 只取 status != 'draft'）。
+//   多学科独立入口（P1）落地后再给数学/语文课正式排期。
+function seedLesson(lid, lesson, status) {
   if (!lesson) {
     lesson = JSON.parse(
       fs.readFileSync(path.join(contentDir(), `lesson-${lid}.json`), 'utf-8')
@@ -84,7 +87,7 @@ function seedLesson(lid, lesson) {
   db.prepare(
     `INSERT INTO lessons(lesson_id, title, status) VALUES(?,?,?)
      ON CONFLICT(lesson_id) DO UPDATE SET title=excluded.title, status=excluded.status`
-  ).run(lid, lesson.title, 'pilot');
+  ).run(lid, lesson.title, status || 'pilot');
 
   const ins = db.prepare(
     `INSERT INTO items(item_id, lesson_id, version, step_no, kind, prompt, options_json,
@@ -128,8 +131,10 @@ function autoSeed() {
   try { files = fs.readdirSync(dir); } catch { return []; }
   const out = [];
   for (const f of files) {
-    // 正文课 u2r<数字>/u3r<数字>/u4r<数字>/u5r<数字>/u6r<数字> + 练习课 review<数字>（2026-10-02 总任务书：学完新课自动接着练）
-    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+)\.json$/.exec(f);
+    // 正文课 u2r<数字> + 练习课 review<数字>（2026-10-02 总任务书：学完新课自动接着练）
+    // + 数学课 sx<数字>（2026-10-08：以 draft 状态入库，不进英语首页序列，经直接链接访问）
+    // + 语文课 yw-xxx（2026-10-08：同数学，draft 状态直接链接访问）
+    const m = /^lesson-(u2r\d+|review\d+|sx\d+|yw-[a-z0-9]+)\.json$/.exec(f);
     if (!m) continue;
     const lid = m[1];
     try {
@@ -138,7 +143,7 @@ function autoSeed() {
       const row = db.prepare('SELECT lesson_id FROM lessons WHERE lesson_id=?').get(lid);
       const have = db.prepare('SELECT COUNT(*) c FROM items WHERE lesson_id=?').get(lid).c;
       if (!row || have !== expected) {
-        const { n, version } = seedLesson(lid, lesson);
+        const { n, version } = seedLesson(lid, lesson, (/^sx\d+$/.test(lid) || /^yw-/.test(lid)) ? 'draft' : 'pilot');
         out.push({ lesson_id: lid, seeded: n, version });
       } else {
         // 数量对上时也要验内容指纹：防止有人绕过版本号改了题面
