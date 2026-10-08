@@ -134,7 +134,7 @@ function autoSeed() {
     // 正文课 u2r<数字> + 练习课 review<数字>（2026-10-02 总任务书：学完新课自动接着练）
     // + 数学课 sx<数字>（2026-10-08：以 draft 状态入库，不进英语首页序列，经直接链接访问）
     // + 语文课 yw-xxx（2026-10-08：同数学，draft 状态直接链接访问）
-    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw-[a-z0-9]+|deep\d+|moon\d+)\.json$/.exec(f);
+    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw\d*-[a-z0-9]+|deep\d+|moon\d+)\.json$/.exec(f);
     if (!m) continue;
     const lid = m[1];
     try {
