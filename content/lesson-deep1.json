@@ -7,7 +7,6 @@
   "practice_end": 15,
   "steps": [
     {
-      "audio_id": "deep1-intro",
       "kind": "teach",
       "phase": "teach",
       "step": 1,
@@ -15,7 +14,6 @@
       "title": "深夜的信号"
     },
     {
-      "audio_id": "deep1-story-02",
       "kind": "teach",
       "phase": "teach",
       "step": 2,
