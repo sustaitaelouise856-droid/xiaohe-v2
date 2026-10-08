@@ -1,2 +1,336 @@
-{"home_subtitle": "深海科考站 · 第三课", "lesson_id": "deep3", "note": "CLIL 跨学科示范课：英语 + 海洋生物。比较级 + 深海生物知识 + 谜团揭晓。", "part1_desc": "深海生物与比较级", "part2_desc": "真相与验证", "practice_end": 20, "steps": [{"kind": "teach", "phase": "teach", "step": 1, "teach_html": "<p>上一课我们读了任务日志：怪光 → 巨响 → 失联。今天调查组派潜水器下潜，终于看到了真相——</p><p>探照灯照过去，海底有一群发光的生物！原来\"怪光\"是它们发出的，\"巨响\"是鲸鱼的叫声。\"海燕\"号只是缆绳缠住了，不是坏了。</p><p><b>本课还学了</b>：海洋生物——深海发光生物。</p>", "title": "真相大白"}, {"kind": "teach", "phase": "teach", "step": 2, "teach_html": "<p>站长给你看三种深海生物的资料卡：</p><p>CARD 1: Anglerfish（鮟鱇鱼）— 1 meter long, lives at 2,000 meters<br>CARD 2: Giant squid（大王乌贼）— 10 meters long, lives at 1,000 meters<br>CARD 3: Whale（鲸鱼）— 20 meters long, lives near the surface</p><p>要比较它们，就要用比较级。</p>", "title": "三种生物"}, {"kind": "teach", "phase": "teach", "step": 3, "teach_html": "<p>比较\"更……\"，短单词加 <b>-er</b>：</p><ul><li>long → <b>longer</b>（更长）</li><li>deep → <b>deeper</b>（更深）</li><li>big → <b>bigger</b>（更大）</li></ul><p>例句：The squid is <b>longer</b> than the anglerfish.（乌贼比鮟鱇鱼更长）</p>", "title": "比较级规则"}, {"kind": "teach", "phase": "teach", "step": 4, "teach_html": "<p>对比一下：</p><p>Anglerfish: 1 meter<br>Giant squid: 10 meters<br>The giant squid is <b>longer than</b> the anglerfish.</p><p><b>一句话规则</b>：A is + 形容词-er + than B = A 比 B 更……</p>", "title": "对比与规则"}, {"answer": "B", "explain": "longer than 表示\"比……更长\"。", "help": "比较\"更长\"，long 要加什么？后面跟 than。", "kind": "mcq", "options": ["long that", "longer than", "more long", "longest"], "phase": "practice", "reading": "Anglerfish: 1 meter long. Giant squid: 10 meters long.", "scene": "比较乌贼和鮟鱇鱼的长度。", "stem": "The giant squid is ____ the anglerfish.", "step": 5, "title": "谁更长", "wrong_feedback": {"A": "long 没有加 -er，不是比较级。", "C": "more long 不对，短单词直接加 -er。", "D": "longest 是最高级，这里是两者比较，用比较级。"}}, {"answer": "C", "explain": "deeper than 表示\"比……更深\"。", "help": "deep 加 -er 变成什么？", "kind": "mcq", "options": ["deep that", "more deep", "deeper than", "deepest"], "phase": "practice", "reading": "Anglerfish lives at 2,000 meters. Giant squid lives at 1,000 meters.", "scene": "比较它们住的深度。", "stem": "The anglerfish lives ____ the giant squid.", "step": 6, "title": "谁住得更深", "wrong_feedback": {"A": "deep 没有变形，不是比较级。", "B": "more deep 不对，短单词直接加 -er。", "D": "deepest 是最高级，两者比较用比较级。"}}, {"answer": "A", "explain": "bigger than 表示\"比……更大\"。", "help": "big 比较级要双写 g 再加 -er，是什么？", "kind": "mcq", "options": ["bigger than", "big than", "more big", "biggest"], "phase": "practice", "reading": "Whale: 20 meters. Giant squid: 10 meters.", "scene": "比较鲸鱼和乌贼。", "stem": "The whale is ____ the giant squid.", "step": 7, "title": "谁更大", "wrong_feedback": {"B": "big 没有加 -er，不是比较级。", "C": "more big 不对，big 是短单词。", "D": "biggest 是最高级，两者比较用比较级。"}}, {"kind": "teach", "phase": "teach", "step": 8, "teach_html": "<p>为什么深海生物会发光？</p><ul><li>深海里没有阳光，生物自己发光来找食物、找同伴</li><li>这种现象叫<b>生物发光</b>（bioluminescence）</li><li>鮟鱇鱼头顶的\"灯笼\"就是用来诱捕小鱼的</li><li>很多深海生物都会发光，这是它们在黑暗中的生存智慧</li></ul><p>所以\"怪光\"不是外星人，是深海生物的灯！</p><p><b>本课还学了</b>：海洋生物——生物发光。</p>", "title": "为什么会发光"}, {"answer": "B", "explain": "生物发光叫 bioluminescence。", "help": "深海生物自己发光，这种现象叫什么？看上面的英文。", "kind": "mcq", "options": ["sunlight", "bioluminescence", "electricity", "rainbow"], "phase": "practice", "scene": "站长考你：发光现象叫什么？", "stem": "深海生物自己发光的现象叫什么？", "step": 9, "title": "发光叫什么", "wrong_feedback": {"A": "sunlight 是阳光，深海里没有阳光。", "C": "electricity 是电，不是发光现象的名称。", "D": "rainbow 是彩虹，不对。"}}, {"answer": "D", "explain": "to find food 表示\"为了找食物\"。", "help": "生物发光是为了干什么？找食物、找同伴。", "kind": "mcq", "options": ["to sleep", "to swim", "to hide", "to find food"], "phase": "practice", "scene": "生物为什么发光？", "stem": "深海生物发光主要是为了什么？", "step": 10, "title": "为什么发光", "wrong_feedback": {"A": "发光不是为了睡觉。", "B": "游泳不需要发光。", "C": "发光反而更容易被发现，不是为了躲藏。"}}, {"answer": "C", "explain": "taller than，tall 加 -er。", "help": "tall 的比较级是什么？", "kind": "mcq", "options": ["tall than", "more tall", "taller than", "tallest"], "phase": "practice", "scene": "换材料：比较身高。", "stem": "My brother is ____ me.", "step": 11, "title": "换材料：更高", "wrong_feedback": {"A": "tall 没有变形。", "B": "more tall 不对，短单词加 -er。", "D": "tallest 是最高级。"}}, {"answer": "A", "explain": "faster than，fast 加 -er。", "help": "fast 的比较级是什么？", "kind": "mcq", "options": ["faster than", "fast than", "more fast", "fastest"], "phase": "practice", "scene": "换材料：比较速度。", "stem": "The new probe is ____ the old one.", "step": 12, "title": "换材料：更快", "wrong_feedback": {"B": "fast 没有变形。", "C": "more fast 不对。", "D": "fastest 是最高级。"}}, {"answer": "B", "explain": "colder than，cold 加 -er。", "help": "cold 的比较级是什么？", "kind": "mcq", "options": ["cold than", "colder than", "more cold", "coldest"], "phase": "practice", "scene": "换材料：深海更冷。", "stem": "The deep sea is ____ the surface.", "step": 13, "title": "换材料：更冷", "wrong_feedback": {"A": "cold 没有变形。", "C": "more cold 不对。", "D": "coldest 是最高级。"}}, {"kind": "teach", "phase": "teach", "step": 14, "teach_html": "<p></p><p>\"海燕\"号失联真相：</p><ul><li>怪光 = 深海生物的生物发光（bioluminescence）</li><li>巨响 = 鲸鱼的叫声</li><li>失联 = 缆绳缠住了，不是设备坏了</li></ul><p>调查员，你破案了！科学调查就是这样：先观察、再假设、最后验证。</p>", "title": "结案报告"}, {"kind": "teach", "phase": "teach", "step": 15, "teach_html": "<p>三课小结：</p><ul><li>第 1 课：方位介词 in / on / under / near / at + 海洋深度分区</li><li>第 2 课：不规则过去式 + 深海探测器工作原理</li><li>第 3 课：比较级 -er + than + 深海生物发光</li></ul><p>你现在知道了：海洋分层、探测器工作、深海生物——这些都是课本里没有的！</p><p>方位介词、过去时、比较级——都是中考必考。</p>", "title": "单元小结"}, {"answer": "A", "explain": "shorter than，short 加 -er。", "help": "short 的比较级是什么？", "kind": "mcq", "options": ["shorter than", "short than", "more short", "shortest"], "phase": "verify", "scene": "验证：缆绳长度。", "stem": "This rope is ____ that one.", "step": 16, "title": "验证：更短", "wrong_feedback": {"B": "short 没有变形。", "C": "more short 不对。", "D": "shortest 是最高级。"}}, {"answer": "D", "explain": "darker than，dark 加 -er。", "help": "dark 的比较级是什么？", "kind": "mcq", "options": ["dark than", "more dark", "darker than", "darkest"], "phase": "verify", "scene": "验证：深海更黑。", "stem": "The deep zone is ____ the sunlight zone.", "step": 17, "title": "验证：更黑", "wrong_feedback": {"A": "dark 没有变形。", "B": "more dark 不对。", "C": "darkest 是最高级。"}}, {"answer": "B", "explain": "went 是 go 的过去式（第 2 课内容）。", "help": "还记得第 2 课吗？go 的过去式是什么？", "kind": "mcq", "options": ["go", "went", "goes", "going"], "phase": "verify", "scene": "跨课验证：还记得吗？", "stem": "The probe ____ down yesterday.", "step": 18, "title": "跨课：过去式", "wrong_feedback": {"A": "go 是原形，yesterday 是过去。", "C": "goes 是现在时。", "D": "going 是进行时。"}}, {"answer": "C", "explain": "under the sea，在海面下（第 1 课内容）。", "help": "还记得第 1 课吗？在海面下用哪个介词？", "kind": "mcq", "options": ["on the sea", "in the sky", "under the sea", "near the sea"], "phase": "verify", "scene": "跨课验证：还记得吗？", "stem": "The probe is 2,000 meters ____.", "step": 19, "title": "跨课：方位", "wrong_feedback": {"A": "on the sea 是在海面上。", "B": "in the sky 是在天上。", "D": "near the sea 只说在附近。"}}, {"kind": "teach", "phase": "teach", "step": 20, "teach_html": "<p>深海单元完成！</p><p>你是合格的调查员了。记住：英语不只是课本，世界上的新知识都可以用英语来学。</p><p>下一个 CLIL 单元预告：<b>嫦娥七号登月计划</b>——我们上天！</p>", "title": "下课"}] ,
-"title": "深海失联 3：真相大白", "unit": "deep-sea", "version": 1}
+{
+  "home_subtitle": "深海科考站 · 第三课",
+  "lesson_id": "deep3",
+  "note": "CLIL 跨学科示范课：英语 + 海洋生物。比较级 + 深海生物知识 + 谜团揭晓。",
+  "part1_desc": "深海生物与比较级",
+  "part2_desc": "真相与验证",
+  "practice_end": 13,
+  "steps": [
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 1,
+      "teach_html": "<p>上一课我们读了任务日志：怪光 → 巨响 → 失联。今天调查组派潜水器下潜，终于看到了真相——</p><p>探照灯照过去，海底有一群发光的生物！原来\"怪光\"是它们发出的，\"巨响\"是鲸鱼的叫声。\"海燕\"号只是缆绳缠住了，不是坏了。</p><p><b>本课还学了</b>：海洋生物——深海发光生物。</p>",
+      "title": "真相大白"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 2,
+      "teach_html": "<p>站长给你看三种深海生物的资料卡：</p><p>CARD 1: Anglerfish（鮟鱇鱼）— 1 meter long, lives at 2,000 meters<br>CARD 2: Giant squid（大王乌贼）— 10 meters long, lives at 1,000 meters<br>CARD 3: Whale（鲸鱼）— 20 meters long, lives near the surface</p><p>要比较它们，就要用比较级。</p>",
+      "title": "三种生物"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 3,
+      "teach_html": "<p>比较\"更……\"，短单词加 <b>-er</b>：</p><ul><li>long → <b>longer</b>（更长）</li><li>deep → <b>deeper</b>（更深）</li><li>big → <b>bigger</b>（更大）</li></ul><p>例句：The squid is <b>longer</b> than the anglerfish.（乌贼比鮟鱇鱼更长）</p>",
+      "title": "比较级规则"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 4,
+      "teach_html": "<p>对比一下：</p><p>Anglerfish: 1 meter<br>Giant squid: 10 meters<br>The giant squid is <b>longer than</b> the anglerfish.</p><p><b>一句话规则</b>：A is + 形容词-er + than B = A 比 B 更……</p>",
+      "title": "对比与规则"
+    },
+    {
+      "answer": "B",
+      "explain": "longer than 表示\"比……更长\"。",
+      "help": "比较\"更长\"，long 要加什么？后面跟 than。",
+      "kind": "mcq",
+      "options": [
+        "long that",
+        "longer than",
+        "more long",
+        "longest"
+      ],
+      "phase": "practice",
+      "reading": "Anglerfish: 1 meter long. Giant squid: 10 meters long.",
+      "scene": "比较乌贼和鮟鱇鱼的长度。",
+      "stem": "The giant squid is ____ the anglerfish.",
+      "step": 5,
+      "title": "谁更长",
+      "wrong_feedback": {
+        "A": "long 没有加 -er，不是比较级。",
+        "C": "more long 不对，短单词直接加 -er。",
+        "D": "longest 是最高级，这里是两者比较，用比较级。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "deeper than 表示\"比……更深\"。",
+      "help": "deep 加 -er 变成什么？",
+      "kind": "mcq",
+      "options": [
+        "deep that",
+        "more deep",
+        "deeper than",
+        "deepest"
+      ],
+      "phase": "practice",
+      "reading": "Anglerfish lives at 2,000 meters. Giant squid lives at 1,000 meters.",
+      "scene": "比较它们住的深度。",
+      "stem": "The anglerfish lives ____ the giant squid.",
+      "step": 6,
+      "title": "谁住得更深",
+      "wrong_feedback": {
+        "A": "deep 没有变形，不是比较级。",
+        "B": "more deep 不对，短单词直接加 -er。",
+        "D": "deepest 是最高级，两者比较用比较级。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "bigger than 表示\"比……更大\"。",
+      "help": "big 比较级要双写 g 再加 -er，是什么？",
+      "kind": "mcq",
+      "options": [
+        "bigger than",
+        "big than",
+        "more big",
+        "biggest"
+      ],
+      "phase": "practice",
+      "reading": "Whale: 20 meters. Giant squid: 10 meters.",
+      "scene": "比较鲸鱼和乌贼。",
+      "stem": "The whale is ____ the giant squid.",
+      "step": 7,
+      "title": "谁更大",
+      "wrong_feedback": {
+        "B": "big 没有加 -er，不是比较级。",
+        "C": "more big 不对，big 是短单词。",
+        "D": "biggest 是最高级，两者比较用比较级。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 8,
+      "teach_html": "<p>为什么深海生物会发光？</p><ul><li>深海里没有阳光，生物自己发光来找食物、找同伴</li><li>这种现象叫<b>生物发光</b>（bioluminescence）</li><li>鮟鱇鱼头顶的\"灯笼\"就是用来诱捕小鱼的</li><li>很多深海生物都会发光，这是它们在黑暗中的生存智慧</li></ul><p>所以\"怪光\"不是外星人，是深海生物的灯！</p><p><b>本课还学了</b>：海洋生物——生物发光。</p>",
+      "title": "为什么会发光"
+    },
+    {
+      "answer": "B",
+      "explain": "生物发光叫 bioluminescence。",
+      "help": "深海生物自己发光，这种现象叫什么？看上面的英文。",
+      "kind": "mcq",
+      "options": [
+        "sunlight",
+        "bioluminescence",
+        "electricity",
+        "rainbow"
+      ],
+      "phase": "practice",
+      "scene": "站长考你：发光现象叫什么？",
+      "stem": "深海生物自己发光的现象叫什么？",
+      "step": 9,
+      "title": "发光叫什么",
+      "wrong_feedback": {
+        "A": "sunlight 是阳光，深海里没有阳光。",
+        "C": "electricity 是电，不是发光现象的名称。",
+        "D": "rainbow 是彩虹，不对。"
+      }
+    },
+    {
+      "answer": "D",
+      "explain": "to find food 表示\"为了找食物\"。",
+      "help": "生物发光是为了干什么？找食物、找同伴。",
+      "kind": "mcq",
+      "options": [
+        "to sleep",
+        "to swim",
+        "to hide",
+        "to find food"
+      ],
+      "phase": "practice",
+      "scene": "生物为什么发光？",
+      "stem": "深海生物发光主要是为了什么？",
+      "step": 10,
+      "title": "为什么发光",
+      "wrong_feedback": {
+        "A": "发光不是为了睡觉。",
+        "B": "游泳不需要发光。",
+        "C": "发光反而更容易被发现，不是为了躲藏。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "taller than，tall 加 -er。",
+      "help": "tall 的比较级是什么？",
+      "kind": "mcq",
+      "options": [
+        "tall than",
+        "more tall",
+        "taller than",
+        "tallest"
+      ],
+      "phase": "practice",
+      "scene": "换材料：比较身高。",
+      "stem": "My brother is ____ me.",
+      "step": 11,
+      "title": "换材料：更高",
+      "wrong_feedback": {
+        "A": "tall 没有变形。",
+        "B": "more tall 不对，短单词加 -er。",
+        "D": "tallest 是最高级。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "faster than，fast 加 -er。",
+      "help": "fast 的比较级是什么？",
+      "kind": "mcq",
+      "options": [
+        "faster than",
+        "fast than",
+        "more fast",
+        "fastest"
+      ],
+      "phase": "practice",
+      "scene": "换材料：比较速度。",
+      "stem": "The new probe is ____ the old one.",
+      "step": 12,
+      "title": "换材料：更快",
+      "wrong_feedback": {
+        "B": "fast 没有变形。",
+        "C": "more fast 不对。",
+        "D": "fastest 是最高级。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "colder than，cold 加 -er。",
+      "help": "cold 的比较级是什么？",
+      "kind": "mcq",
+      "options": [
+        "cold than",
+        "colder than",
+        "more cold",
+        "coldest"
+      ],
+      "phase": "practice",
+      "scene": "换材料：深海更冷。",
+      "stem": "The deep sea is ____ the surface.",
+      "step": 13,
+      "title": "换材料：更冷",
+      "wrong_feedback": {
+        "A": "cold 没有变形。",
+        "C": "more cold 不对。",
+        "D": "coldest 是最高级。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 14,
+      "teach_html": "<p></p><p>\"海燕\"号失联真相：</p><ul><li>怪光 = 深海生物的生物发光（bioluminescence）</li><li>巨响 = 鲸鱼的叫声</li><li>失联 = 缆绳缠住了，不是设备坏了</li></ul><p>调查员，你破案了！科学调查就是这样：先观察、再假设、最后验证。</p>",
+      "title": "结案报告"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 15,
+      "teach_html": "<p>三课小结：</p><ul><li>第 1 课：方位介词 in / on / under / near / at + 海洋深度分区</li><li>第 2 课：不规则过去式 + 深海探测器工作原理</li><li>第 3 课：比较级 -er + than + 深海生物发光</li></ul><p>你现在知道了：海洋分层、探测器工作、深海生物——这些都是课本里没有的！</p><p>方位介词、过去时、比较级——都是中考必考。</p>",
+      "title": "单元小结"
+    },
+    {
+      "answer": "A",
+      "explain": "shorter than，short 加 -er。",
+      "help": "short 的比较级是什么？",
+      "kind": "mcq",
+      "options": [
+        "shorter than",
+        "short than",
+        "more short",
+        "shortest"
+      ],
+      "phase": "validate",
+      "scene": "验证：缆绳长度。",
+      "stem": "This rope is ____ that one.",
+      "step": 16,
+      "title": "验证：更短",
+      "wrong_feedback": {
+        "B": "short 没有变形。",
+        "C": "more short 不对。",
+        "D": "shortest 是最高级。"
+      }
+    },
+    {
+      "answer": "D",
+      "explain": "darker than，dark 加 -er。",
+      "help": "dark 的比较级是什么？",
+      "kind": "mcq",
+      "options": [
+        "dark than",
+        "more dark",
+        "darker than",
+        "darkest"
+      ],
+      "phase": "validate",
+      "scene": "验证：深海更黑。",
+      "stem": "The deep zone is ____ the sunlight zone.",
+      "step": 17,
+      "title": "验证：更黑",
+      "wrong_feedback": {
+        "A": "dark 没有变形。",
+        "B": "more dark 不对。",
+        "C": "darkest 是最高级。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "went 是 go 的过去式（第 2 课内容）。",
+      "help": "还记得第 2 课吗？go 的过去式是什么？",
+      "kind": "mcq",
+      "options": [
+        "go",
+        "went",
+        "goes",
+        "going"
+      ],
+      "phase": "validate",
+      "scene": "跨课验证：还记得吗？",
+      "stem": "The probe ____ down yesterday.",
+      "step": 18,
+      "title": "跨课：过去式",
+      "wrong_feedback": {
+        "A": "go 是原形，yesterday 是过去。",
+        "C": "goes 是现在时。",
+        "D": "going 是进行时。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "under the sea，在海面下（第 1 课内容）。",
+      "help": "还记得第 1 课吗？在海面下用哪个介词？",
+      "kind": "mcq",
+      "options": [
+        "on the sea",
+        "in the sky",
+        "under the sea",
+        "near the sea"
+      ],
+      "phase": "validate",
+      "scene": "跨课验证：还记得吗？",
+      "stem": "The probe is 2,000 meters ____.",
+      "step": 19,
+      "title": "跨课：方位",
+      "wrong_feedback": {
+        "A": "on the sea 是在海面上。",
+        "B": "in the sky 是在天上。",
+        "D": "near the sea 只说在附近。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 20,
+      "teach_html": "<p>深海单元完成！</p><p>你是合格的调查员了。记住：英语不只是课本，世界上的新知识都可以用英语来学。</p><p>下一个 CLIL 单元预告：<b>嫦娥七号登月计划</b>——我们上天！</p>",
+      "title": "下课"
+    }
+  ],
+  "title": "深海失联 3：真相大白",
+  "unit": "deep-sea",
+  "version": 1
+}
