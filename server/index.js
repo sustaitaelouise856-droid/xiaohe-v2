@@ -485,6 +485,25 @@ app.get('/api/diagnostic/status', auth.requireAuth, (req, res) => {
   res.json({ ok: true, sessions: rows });
 });
 
+// 生词本（2026-10-08）：localStorage 为主，服务端尽力同步（Render 免费版重启可能丢数据）
+app.post('/api/vocab/add', auth.requireAuth, (req, res) => {
+  const { word, zh, ph } = req.body || {};
+  const w = String(word || '').toLowerCase().trim();
+  if (!w) return res.json({ ok: false });
+  db.prepare(`INSERT OR IGNORE INTO vocab_words(word, zh, ph) VALUES(?,?,?)`)
+    .run(w, String(zh || ''), String(ph || ''));
+  res.json({ ok: true });
+});
+app.post('/api/vocab/del', auth.requireAuth, (req, res) => {
+  const w = String((req.body || {}).word || '').toLowerCase().trim();
+  if (w) db.prepare('DELETE FROM vocab_words WHERE word=?').run(w);
+  res.json({ ok: true });
+});
+app.get('/api/vocab/list', auth.requireAuth, (req, res) => {
+  const rows = db.prepare('SELECT word, zh, ph FROM vocab_words ORDER BY added_at DESC').all();
+  res.json({ ok: true, words: rows });
+});
+
 // 诊断报告：知识点状态 + 家长一页报告
 app.get('/api/diagnostic/report', auth.requireAuth, (req, res) => {
   const { form } = req.query;
