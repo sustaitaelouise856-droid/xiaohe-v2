@@ -68,13 +68,14 @@ function loadChoices(lid) {
 const NUDGE_MS = 5000;
 
 // ---- 课程内容：按 lesson_id 加载（content/lesson-{id}.json），常驻内存 ----
-// lesson_id 只允许 u2r<数字>（正课）或 review<数字>（练习课），防止路径穿越
+// lesson_id 只允许 u2r<数字>（英语正课）、review<数字>（练习课）、sx<数字>（数学课）、
+// yw-xxx（语文课），防止路径穿越
 const LESSON_CACHE = {};
 // 练习课（练习模式）：正课全部学完后开放，可反复练（豁免防重做）
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u2r\d+|review\d+)$/.test(lid)) return null;
+  if (!/^(?:u2r\d+|review\d+|sx\d+|yw-[a-z0-9]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -365,6 +366,13 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     lesson_id: lid, version: L.lesson.version, title: L.lesson.title,
     practice_end: L.lesson.practice_end || 22,
     home_subtitle: L.lesson.home_subtitle || '',
+    // 数学课标记（前端按需加载 KaTeX）+ 多学科品牌/kicker 数据驱动
+    math: !!L.lesson.math,
+    brand: L.lesson.brand || '',
+    kicker_story: L.lesson.kicker_story || '',
+    kicker_teach: L.lesson.kicker_teach || '',
+    answer_placeholder: L.lesson.answer_placeholder || '',
+
     part1_desc: L.lesson.part1_desc || '',
     part2_desc: L.lesson.part2_desc || '',
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
