@@ -1,758 +1,758 @@
 {
- "lesson_id": "u3r2",
- "practice_end": 24,
- "home_subtitle": "第二课 · 选购指南",
- "part1_desc": "第 1–24 步：跟站长学会最高级，帮听众挑电脑。",
- "part2_desc": "第 25–36 步：自己判断新的三台电脑，写出推荐词。",
- "note": "本课阅读材料为教研自编，非课本原文。考查能力：最高级构成、the/of/in 用法、比较级与最高级区分。Unit 3 Computers 主题。",
- "steps": [
-  {
-   "step": 1,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-story-01",
-   "title": "听众来信",
-   "teach_html": "<p>上期节目播出后，有听众写信来问：我想买台电脑，三台里面哪台<strong>最好</strong>？</p><p>站长把三台电脑的资料给了你：选出<strong>最便宜</strong>的、<strong>最快</strong>的、<strong>最好</strong>的，节目里给大家一个选购指南。</p><p>三个里面挑第一名，英文里这种“最……”的说法，叫<strong>最高级</strong>。</p>"
-  },
-  {
-   "step": 2,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-story-02",
-   "title": "三台电脑",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "teach_html": "<p>看三台电脑的资料：</p><ul><li><strong>X</strong>：3000元，快（fast），大屏幕（big screen）</li><li><strong>Y</strong>：5000元，<strong>最快</strong>（fastest），<strong>最大</strong>屏幕（biggest screen）</li><li><strong>Z</strong>：2000元，<strong>最便宜</strong>（cheapest），慢，小屏幕</li></ul><p>注意：Y 是三台里最快的，Z 是三台里最便宜的。最高级前面常常有个 <strong>the</strong>。</p>"
-  },
-  {
-   "step": 3,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-teach-01",
-   "title": "什么是最高级",
-   "teach_html": "<p><strong>最高级</strong>是“最……”的意思，用在<strong>三个或更多</strong>里面挑第一名。</p><p>比较级是两者比（A比B快），最高级是多者比（A是<strong>最快</strong>的）。</p><p>记住：<strong>最高级前面一般加 the</strong>。the fastest（最快的），the cheapest（最便宜的）。</p>"
-  },
-  {
-   "step": 4,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-teach-02",
-   "title": "短单词：加 est",
-   "teach_html": "<p>短形容词变最高级：<strong>加 est</strong>，前面加 <strong>the</strong>。</p><ul><li>cheap → <strong>the cheapest</strong>（最便宜的）</li><li>fast → <strong>the fastest</strong>（最快的）</li><li>small → <strong>the smallest</strong>（最小的）</li></ul><p>拼写规矩和比较级一样：big → <strong>the biggest</strong>（双写 g），heavy → <strong>the heaviest</strong>（y 变 i）。</p><p>例句：Computer Z is <strong>the cheapest</strong>.（Z电脑最便宜。）</p>"
-  },
-  {
-   "step": 5,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-teach-03",
-   "title": "长单词：the most",
-   "teach_html": "<p>长形容词变最高级：<strong>前面加 the most</strong>。</p><ul><li>interesting → <strong>the most interesting</strong>（最有趣的）</li><li>expensive → <strong>the most expensive</strong>（最贵的）</li><li>useful → <strong>the most useful</strong>（最有用的）</li></ul><p>例句：Computer Y is <strong>the most expensive</strong>.（Y电脑最贵。）</p><p>对比一下：比较级是 more expensive（更贵），最高级是 the most expensive（最贵）。</p>"
-  },
-  {
-   "step": 6,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-teach-04",
-   "title": "两个特殊的",
-   "teach_html": "<p>good 和 bad 的最高级也是特殊的：</p><ul><li>good → <strong>the best</strong>（最好的）</li><li>bad → <strong>the worst</strong>（最坏的）</li></ul><p>连起来记：good → better → <strong>the best</strong>；bad → worse → <strong>the worst</strong>。</p><p>例句：Computer Y is <strong>the best</strong>.（Y电脑最好。）</p>"
-  },
-  {
-   "step": 7,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-teach-05",
-   "title": "in 和 of",
-   "teach_html": "<p>说“在……里最……”时，常用 <strong>in</strong> 或 <strong>of</strong>：</p><ul><li>Computer Y is the fastest <strong>of the three</strong>.（Y是三台里最快的。）</li><li>It is the cheapest <strong>in the shop</strong>.（它是店里最便宜的。）</li></ul><p>简单记：<strong>of</strong> 后面跟数量（三台里），<strong>in</strong> 后面跟地方（店里）。</p>"
-  },
-  {
-   "step": 8,
-   "phase": "teach",
-   "kind": "teach",
-   "audio_id": "u3r2-teach-06",
-   "title": "比较级 vs 最高级",
-   "teach_html": "<p>最后分清这两个：</p><ul><li><strong>比较级</strong>：两者比，后面跟 <strong>than</strong>。Y is faster <strong>than</strong> X.（Y比X快。）</li><li><strong>最高级</strong>：三者或更多比，前面加 <strong>the</strong>。Y is <strong>the</strong> fastest.（Y最快。）</li></ul><p>看到 than，用比较级；看到 the + 最高级，一般是挑第一名。</p><p>下面站长带着你练，先看三台电脑的资料。</p>"
-  },
-  {
-   "step": 9,
-   "phase": "practice",
-   "kind": "teach",
-   "audio_id": "u3r2-prac-01",
-   "title": "先看资料",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "teach_html": "<p>三台电脑：X（3000元，快，大屏）、Y（5000元，最快，最大屏）、Z（2000元，慢，小屏）。</p><p>记住：Y 最快、屏幕最大；Z 最便宜。</p>"
-  },
-  {
-   "step": 10,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q01",
-   "title": "最便宜的",
-   "scene": "哪台最便宜？",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Z is ______.",
-   "options": [
-    "cheaper",
-    "the cheapest",
-    "cheapest",
-    "more cheap"
-   ],
-   "answer": "B",
-   "help": "最高级前面加 the，短单词加 est。",
-   "explain": "the cheapest（最便宜的）。",
-   "wrong_feedback": {
-    "A": "cheaper 是比较级（更便宜），这里是三台里挑第一，要最高级。",
-    "C": "cheapest 前面少了 the。最高级前面一般加 the。",
-    "D": "more cheap 不对，cheap 是短单词，直接加 est。"
-   }
-  },
-  {
-   "step": 11,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q02",
-   "title": "最快的",
-   "scene": "哪台最快？",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Y is ______.",
-   "options": [
-    "faster",
-    "more fast",
-    "fast",
-    "the fastest"
-   ],
-   "answer": "D",
-   "help": "fast 加 est，前面加 the。",
-   "explain": "the fastest（最快的）。",
-   "wrong_feedback": {
-    "A": "faster 是比较级，这里挑第一名，用最高级。",
-    "B": "more fast 不对，短单词直接加 est。",
-    "C": "fast 是原级，要 the fastest。"
-   }
-  },
-  {
-   "step": 12,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q03",
-   "title": "最大的屏幕",
-   "scene": "哪台屏幕最大？",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Y has ______ screen.",
-   "options": [
-    "the biggest",
-    "bigger",
-    "biggest",
-    "more big"
-   ],
-   "answer": "A",
-   "help": "big 的最高级注意双写 g，前面加 the。",
-   "explain": "the biggest（最大的）。",
-   "wrong_feedback": {
-    "B": "bigger 是比较级，这里是最高级。",
-    "C": "biggest 前面少了 the。",
-    "D": "more big 不对，短单词用 biggest。"
-   }
-  },
-  {
-   "step": 13,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q04",
-   "title": "最贵的",
-   "scene": "哪台最贵？",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Y is ______.",
-   "options": [
-    "expensivest",
-    "more expensive",
-    "the most expensive",
-    "most expensive"
-   ],
-   "answer": "C",
-   "help": "expensive 是长单词，用 the most。",
-   "explain": "the most expensive（最贵的）。",
-   "wrong_feedback": {
-    "A": "expensivest 不对，长单词不能加 est，用 the most expensive。",
-    "B": "more expensive 是比较级，这里挑第一，用最高级。",
-    "D": "most expensive 前面少了 the。"
-   }
-  },
-  {
-   "step": 14,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q05",
-   "title": "最好的",
-   "scene": "总体哪台最好？",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Y is ______.",
-   "options": [
-    "the best",
-    "better",
-    "best",
-    "more good"
-   ],
-   "answer": "A",
-   "help": "good 的最高级是特殊的。",
-   "explain": "the best（最好的）。",
-   "wrong_feedback": {
-    "B": "better 是比较级，这里用最高级。",
-    "C": "best 前面少了 the。",
-    "D": "more good 不对，good 的最高级就是 the best。"
-   }
-  },
-  {
-   "step": 15,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q06",
-   "title": "三台里最快",
-   "scene": "用 of 说完整。",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Y is the fastest ______ the three.",
-   "options": [
-    "in",
-    "of",
-    "at",
-    "on"
-   ],
-   "answer": "B",
-   "help": "of 后面跟数量，in 后面跟地方。",
-   "explain": "of the three（三台里面）。",
-   "wrong_feedback": {
-    "A": "in 后面一般跟地方，这里是“三台”，用 of。",
-    "C": "at 不用在这里。",
-    "D": "on 不用在这里。"
-   }
-  },
-  {
-   "step": 16,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q07",
-   "title": "店里最便宜",
-   "scene": "用 in 说完整。",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Z is the cheapest ______ the shop.",
-   "options": [
-    "of",
-    "on",
-    "at",
-    "in"
-   ],
-   "answer": "D",
-   "help": "in 后面跟地方。",
-   "explain": "in the shop（在店里）。",
-   "wrong_feedback": {
-    "A": "of 后面跟数量，这里是地点，用 in。",
-    "B": "on 不用在这里。",
-    "C": "at 不如 in 常用，这里用 in the shop。"
-   }
-  },
-  {
-   "step": 17,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q08",
-   "title": "比较级还是最高级",
-   "scene": "判断用哪种。",
-   "stem": "There are two computers. A is ______ than B.（只有两台）",
-   "options": [
-    "the fastest",
-    "fastest",
-    "faster",
-    "the most fast"
-   ],
-   "answer": "C",
-   "help": "两台比，用比较级，后面有 than。",
-   "explain": "两台比用比较级 faster，than 是标志。",
-   "wrong_feedback": {
-    "A": "the fastest 是最高级，两台比不用最高级，看后面的 than。",
-    "B": "fastest 是最高级，两台比用比较级 faster。",
-    "D": "the most fast 不对，fast 是短单词。"
-   }
-  },
-  {
-   "step": 18,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r2-q09",
-   "title": "写出最高级：cheap",
-   "scene": "写出 cheap 的最高级。",
-   "stem": "写出 cheap 的最高级形式（含 the）。",
-   "task": "写英文。",
-   "answer_text": "the cheapest",
-   "expects": [
+  "lesson_id": "u3r2",
+  "practice_end": 24,
+  "home_subtitle": "第二课 · 选购指南",
+  "part1_desc": "第 1–24 步：跟站长学会最高级，帮听众挑电脑。",
+  "part2_desc": "第 25–36 步：自己判断新的三台电脑，写出推荐词。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：最高级构成、the/of/in 用法、比较级与最高级区分。Unit 3 Computers 主题。",
+  "steps": [
     {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "the cheapest",
-      "cheapest"
-     ],
-     "cn": [
-      "最便宜的"
-     ]
-    }
-   ],
-   "help": "短单词加 est，前面加 the。",
-   "explain": "the cheapest。",
-   "common_errors": [
-    {
-     "when": "写了 cheaper",
-     "say": "cheaper 是比较级，要最高级 the cheapest。"
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-story-01",
+      "title": "听众来信",
+      "teach_html": "<p>【承上启下】昨天学了比较级（-er）。今天学最高级（-est）：怎么说'最快的、最便宜的'。</p><p>上期节目播出后，有听众写信来问：我想买台电脑，三台里面哪台<strong>最好</strong>？</p><p>站长把三台电脑的资料给了你：选出<strong>最便宜</strong>的、<strong>最快</strong>的、<strong>最好</strong>的，节目里给大家一个选购指南。</p><p>三个里面挑第一名，英文里这种“最……”的说法，叫<strong>最高级</strong>。</p>"
     },
     {
-     "when": "漏了 the",
-     "say": "最高级前面一般加 the。"
-    }
-   ]
-  },
-  {
-   "step": 19,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r2-q10",
-   "title": "写出最高级：interesting",
-   "scene": "写出 interesting 的最高级。",
-   "stem": "写出 interesting 的最高级形式。",
-   "task": "写英文。",
-   "answer_text": "the most interesting",
-   "expects": [
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-story-02",
+      "title": "三台电脑",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "teach_html": "<p>看三台电脑的资料：</p><ul><li><strong>X</strong>：3000元，快（fast），大屏幕（big screen）</li><li><strong>Y</strong>：5000元，<strong>最快</strong>（fastest），<strong>最大</strong>屏幕（biggest screen）</li><li><strong>Z</strong>：2000元，<strong>最便宜</strong>（cheapest），慢，小屏幕</li></ul><p>注意：Y 是三台里最快的，Z 是三台里最便宜的。最高级前面常常有个 <strong>the</strong>。</p>"
+    },
     {
-     "id": "w2",
-     "type": "word",
-     "answers": [
-      "the most interesting"
-     ],
-     "cn": [
-      "最有趣的"
-     ]
-    }
-   ],
-   "help": "长单词用 the most。",
-   "explain": "the most interesting。",
-   "common_errors": [
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-teach-01",
+      "title": "什么是最高级",
+      "teach_html": "<p><strong>最高级</strong>是“最……”的意思，用在<strong>三个或更多</strong>里面挑第一名。</p><p>比较级是两者比（A比B快），最高级是多者比（A是<strong>最快</strong>的）。</p><p>记住：<strong>最高级前面一般加 the</strong>。the fastest（最快的），the cheapest（最便宜的）。</p>"
+    },
     {
-     "when": "写了 interestinger",
-     "say": "长单词不能加 er，用 the most interesting。"
-    }
-   ]
-  },
-  {
-   "step": 20,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r2-q11",
-   "title": "写出最高级：bad",
-   "scene": "写出 bad 的最高级。",
-   "stem": "写出 bad 的最高级形式。",
-   "task": "写英文。",
-   "answer_text": "the worst",
-   "expects": [
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-teach-02",
+      "title": "短单词：加 est",
+      "teach_html": "<p>短形容词变最高级：<strong>加 est</strong>，前面加 <strong>the</strong>。</p><ul><li>cheap → <strong>the cheapest</strong>（最便宜的）</li><li>fast → <strong>the fastest</strong>（最快的）</li><li>small → <strong>the smallest</strong>（最小的）</li></ul><p>拼写规矩和比较级一样：big → <strong>the biggest</strong>（双写 g），heavy → <strong>the heaviest</strong>（y 变 i）。</p><p>例句：Computer Z is <strong>the cheapest</strong>.（Z电脑最便宜。）</p>"
+    },
     {
-     "id": "w3",
-     "type": "word",
-     "answers": [
-      "the worst",
-      "worst"
-     ],
-     "cn": [
-      "最坏的"
-     ]
-    }
-   ],
-   "help": "bad 的变化是特殊的。",
-   "explain": "bad→the worst。",
-   "common_errors": [
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-teach-03",
+      "title": "长单词：the most",
+      "teach_html": "<p>长形容词变最高级：<strong>前面加 the most</strong>。</p><ul><li>interesting → <strong>the most interesting</strong>（最有趣的）</li><li>expensive → <strong>the most expensive</strong>（最贵的）</li><li>useful → <strong>the most useful</strong>（最有用的）</li></ul><p>例句：Computer Y is <strong>the most expensive</strong>.（Y电脑最贵。）</p><p>对比一下：比较级是 more expensive（更贵），最高级是 the most expensive（最贵）。</p>"
+    },
     {
-     "when": "写了 the baddest",
-     "say": "bad 的最高级是特殊的：the worst。"
-    }
-   ]
-  },
-  {
-   "step": 21,
-   "phase": "practice",
-   "kind": "teach",
-   "audio_id": "u3r2-prac-02",
-   "title": "小结一下",
-   "teach_html": "<p>最高级小结：</p><ul><li>短单词：<strong>the + est</strong>（the cheapest，the biggest）</li><li>长单词：<strong>the most + 单词</strong>（the most expensive）</li><li>特殊：the <strong>best</strong>，the <strong>worst</strong></li><li><strong>of</strong> 后面跟数量，<strong>in</strong> 后面跟地方</li><li>两者比用比较级（than），三者以上挑第一用最高级（the）</li></ul><p>下面你自己来，新的三台电脑。</p>"
-  },
-  {
-   "step": 22,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u3r2-q12",
-   "title": "最小的",
-   "scene": "最后一道带练。",
-   "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
-   "stem": "Computer Z has ______ screen.",
-   "options": [
-    "the smallest",
-    "smaller",
-    "smallest",
-    "more small"
-   ],
-   "answer": "A",
-   "help": "small 的最高级。",
-   "explain": "the smallest（最小的）。",
-   "wrong_feedback": {
-    "B": "smaller 是比较级，这里挑第一，用最高级。",
-    "C": "smallest 前面少了 the。",
-    "D": "more small 不对。"
-   }
-  },
-  {
-   "step": 23,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r2-q13",
-   "title": "连词成句",
-   "scene": "连成一句话。",
-   "stem": "Y / the fastest / is / computer",
-   "task": "连成完整句子，写英文。",
-   "answer_text": "Y is the fastest computer.",
-   "expects": [
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-teach-04",
+      "title": "两个特殊的",
+      "teach_html": "<p>good 和 bad 的最高级也是特殊的：</p><ul><li>good → <strong>the best</strong>（最好的）</li><li>bad → <strong>the worst</strong>（最坏的）</li></ul><p>连起来记：good → better → <strong>the best</strong>；bad → worse → <strong>the worst</strong>。</p><p>例句：Computer Y is <strong>the best</strong>.（Y电脑最好。）</p>"
+    },
     {
-     "id": "s1",
-     "type": "word",
-     "answers": [
-      "y is the fastest computer"
-     ],
-     "cn": [
-      "Y是最快的电脑"
-     ]
-    }
-   ],
-   "help": "Y is + the fastest + computer。",
-   "explain": "Y is the fastest computer.",
-   "common_errors": [
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-teach-05",
+      "title": "in 和 of",
+      "teach_html": "<p>说“在……里最……”时，常用 <strong>in</strong> 或 <strong>of</strong>：</p><ul><li>Computer Y is the fastest <strong>of the three</strong>.（Y是三台里最快的。）</li><li>It is the cheapest <strong>in the shop</strong>.（它是店里最便宜的。）</li></ul><p>简单记：<strong>of</strong> 后面跟数量（三台里），<strong>in</strong> 后面跟地方（店里）。</p>"
+    },
     {
-     "when": "漏了 the",
-     "say": "最高级前面加 the。"
-    }
-   ]
-  },
-  {
-   "step": 24,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u3r2-q14",
-   "title": "写广播词",
-   "scene": "写一句推荐词。",
-   "stem": "用最高级写一句话：Z 电脑最便宜。",
-   "task": "写英文完整句子。",
-   "answer_text": "Computer Z is the cheapest.",
-   "expects": [
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u3r2-teach-06",
+      "title": "比较级 vs 最高级",
+      "teach_html": "<p>最后分清这两个：</p><ul><li><strong>比较级</strong>：两者比，后面跟 <strong>than</strong>。Y is faster <strong>than</strong> X.（Y比X快。）</li><li><strong>最高级</strong>：三者或更多比，前面加 <strong>the</strong>。Y is <strong>the</strong> fastest.（Y最快。）</li></ul><p>看到 than，用比较级；看到 the + 最高级，一般是挑第一名。</p><p>下面站长带着你练，先看三台电脑的资料。</p>"
+    },
     {
-     "id": "s2",
-     "type": "word",
-     "answers": [
-      "computer z is the cheapest",
-      "z is the cheapest"
-     ],
-     "cn": [
-      "Z电脑最便宜"
-     ]
-    }
-   ],
-   "help": "Z is + the cheapest。",
-   "explain": "Computer Z is the cheapest.",
-   "common_errors": [
+      "step": 9,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u3r2-prac-01",
+      "title": "先看资料",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "teach_html": "<p>三台电脑：X（3000元，快，大屏）、Y（5000元，最快，最大屏）、Z（2000元，慢，小屏）。</p><p>记住：Y 最快、屏幕最大；Z 最便宜。</p>"
+    },
     {
-     "when": "用了 cheaper",
-     "say": "这是最高级，用 the cheapest。"
-    }
-   ]
-  },
-  {
-   "step": 25,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u3r2-story-03",
-   "title": "新任务：独立选购",
-   "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
-   "teach_html": "<p>又有听众问：P、Q、R 三台，哪台<strong>最轻</strong>？哪台<strong>最有用</strong>？哪台<strong>最贵</strong>？</p><p>资料在上面。这次你自己判断，站长不提示了。</p><p>记住：短单词 the+est，长单词 the most+单词，good→the best。</p>"
-  },
-  {
-   "step": 26,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r2-v01",
-   "title": "最轻的",
-   "scene": "哪台最轻？",
-   "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
-   "stem": "Computer Q is ______.",
-   "options": [
-    "the lightest",
-    "lighter",
-    "lightest",
-    "more light"
-   ],
-   "answer": "A",
-   "help": "light 的最高级，注意拼写。",
-   "explain": "the lightest（最轻的）。",
-   "wrong_feedback": {
-    "B": "这是比较级。再想想挑第一用什么。",
-    "C": "前面少了 the。再想想。",
-    "D": "light 是短单词。再想想。"
-   }
-  },
-  {
-   "step": 27,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r2-v02",
-   "title": "最有用的",
-   "scene": "哪台程序最有用？",
-   "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
-   "stem": "Computer R has ______ programs.",
-   "options": [
-    "more useful",
-    "usefullest",
-    "the most useful",
-    "most useful"
-   ],
-   "answer": "C",
-   "help": "useful 是长单词。",
-   "explain": "the most useful（最有用的）。",
-   "wrong_feedback": {
-    "A": "这是比较级。再想想。",
-    "B": "长单词不能加 est。再想想。",
-    "D": "前面少了 the。再想想。"
-   }
-  },
-  {
-   "step": 28,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r2-v03",
-   "title": "最贵的",
-   "scene": "哪台最贵？",
-   "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
-   "stem": "Computer R is ______.",
-   "options": [
-    "more expensive",
-    "expensivest",
-    "expensive",
-    "the most expensive"
-   ],
-   "answer": "D",
-   "help": "expensive 用什么形式？",
-   "explain": "the most expensive。",
-   "wrong_feedback": {
-    "A": "这是比较级。再想想。",
-    "B": "长单词不能加 est。再想想。",
-    "C": "这是原级。再想想。"
-   }
-  },
-  {
-   "step": 29,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r2-v04",
-   "title": "最重的",
-   "scene": "哪台最重？",
-   "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
-   "stem": "Computer R is ______.",
-   "options": [
-    "heavier",
-    "the heaviest",
-    "heaviest",
-    "more heavy"
-   ],
-   "answer": "B",
-   "help": "heavy 的最高级，y 怎么变？",
-   "explain": "the heaviest（最重的）。",
-   "wrong_feedback": {
-    "A": "这是比较级。再想想。",
-    "C": "前面少了 the。再想想。",
-    "D": "heavy 不用 more。再想想。"
-   }
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r2-v05",
-   "title": "写出最高级：big",
-   "scene": "写出 big 的最高级。",
-   "stem": "写出 big 的最高级形式（含 the）。",
-   "task": "写英文。",
-   "answer_text": "the biggest",
-   "expects": [
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q01",
+      "title": "最便宜的",
+      "scene": "哪台最便宜？",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Z is ______.",
+      "options": [
+        "cheaper",
+        "the cheapest",
+        "cheapest",
+        "more cheap"
+      ],
+      "answer": "B",
+      "help": "最高级前面加 the，短单词加 est。",
+      "explain": "the cheapest（最便宜的）。",
+      "wrong_feedback": {
+        "A": "cheaper 是比较级（更便宜），这里是三台里挑第一，要最高级。",
+        "C": "cheapest 前面少了 the。最高级前面一般加 the。",
+        "D": "more cheap 不对，cheap 是短单词，直接加 est。"
+      }
+    },
     {
-     "id": "w4",
-     "type": "word",
-     "answers": [
-      "the biggest",
-      "biggest"
-     ],
-     "cn": [
-      "最大的"
-     ]
-    }
-   ],
-   "help": "big 的最高级注意双写。",
-   "explain": "the biggest。",
-   "common_errors": [
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q02",
+      "title": "最快的",
+      "scene": "哪台最快？",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Y is ______.",
+      "options": [
+        "faster",
+        "more fast",
+        "fast",
+        "the fastest"
+      ],
+      "answer": "D",
+      "help": "fast 加 est，前面加 the。",
+      "explain": "the fastest（最快的）。",
+      "wrong_feedback": {
+        "A": "faster 是比较级，这里挑第一名，用最高级。",
+        "B": "more fast 不对，短单词直接加 est。",
+        "C": "fast 是原级，要 the fastest。"
+      }
+    },
     {
-     "when": "写了 the bigest",
-     "say": "双写 g：the biggest。"
-    }
-   ]
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r2-v06",
-   "title": "写出最高级：good",
-   "scene": "写出 good 的最高级。",
-   "stem": "写出 good 的最高级形式。",
-   "task": "写英文。",
-   "answer_text": "the best",
-   "expects": [
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q03",
+      "title": "最大的屏幕",
+      "scene": "哪台屏幕最大？",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Y has ______ screen.",
+      "options": [
+        "the biggest",
+        "bigger",
+        "biggest",
+        "more big"
+      ],
+      "answer": "A",
+      "help": "big 的最高级注意双写 g，前面加 the。",
+      "explain": "the biggest（最大的）。",
+      "wrong_feedback": {
+        "B": "bigger 是比较级，这里是最高级。",
+        "C": "biggest 前面少了 the。",
+        "D": "more big 不对，短单词用 biggest。"
+      }
+    },
     {
-     "id": "w5",
-     "type": "word",
-     "answers": [
-      "the best",
-      "best"
-     ],
-     "cn": [
-      "最好的"
-     ]
-    }
-   ],
-   "help": "good 的变化是特殊的。",
-   "explain": "the best。",
-   "common_errors": [
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q04",
+      "title": "最贵的",
+      "scene": "哪台最贵？",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Y is ______.",
+      "options": [
+        "expensivest",
+        "more expensive",
+        "the most expensive",
+        "most expensive"
+      ],
+      "answer": "C",
+      "help": "expensive 是长单词，用 the most。",
+      "explain": "the most expensive（最贵的）。",
+      "wrong_feedback": {
+        "A": "expensivest 不对，长单词不能加 est，用 the most expensive。",
+        "B": "more expensive 是比较级，这里挑第一，用最高级。",
+        "D": "most expensive 前面少了 the。"
+      }
+    },
     {
-     "when": "写了 the goodest",
-     "say": "good 的最高级是 the best，特殊记。"
-    }
-   ]
-  },
-  {
-   "step": 32,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r2-v07",
-   "title": "连词成句",
-   "scene": "连成一句话。",
-   "stem": "R / the most expensive / is",
-   "task": "连成完整句子，写英文。",
-   "answer_text": "R is the most expensive.",
-   "expects": [
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q05",
+      "title": "最好的",
+      "scene": "总体哪台最好？",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Y is ______.",
+      "options": [
+        "the best",
+        "better",
+        "best",
+        "more good"
+      ],
+      "answer": "A",
+      "help": "good 的最高级是特殊的。",
+      "explain": "the best（最好的）。",
+      "wrong_feedback": {
+        "B": "better 是比较级，这里用最高级。",
+        "C": "best 前面少了 the。",
+        "D": "more good 不对，good 的最高级就是 the best。"
+      }
+    },
     {
-     "id": "s3",
-     "type": "word",
-     "answers": [
-      "r is the most expensive"
-     ],
-     "cn": [
-      "R最贵"
-     ]
-    }
-   ],
-   "help": "R is + the most expensive。",
-   "explain": "R is the most expensive.",
-   "common_errors": [
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q06",
+      "title": "三台里最快",
+      "scene": "用 of 说完整。",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Y is the fastest ______ the three.",
+      "options": [
+        "in",
+        "of",
+        "at",
+        "on"
+      ],
+      "answer": "B",
+      "help": "of 后面跟数量，in 后面跟地方。",
+      "explain": "of the three（三台里面）。",
+      "wrong_feedback": {
+        "A": "in 后面一般跟地方，这里是“三台”，用 of。",
+        "C": "at 不用在这里。",
+        "D": "on 不用在这里。"
+      }
+    },
     {
-     "when": "漏了 the",
-     "say": "the most expensive，the 不能少。"
-    }
-   ]
-  },
-  {
-   "step": 33,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u3r2-v08",
-   "title": "写推荐词",
-   "scene": "写一句推荐。",
-   "stem": "用最高级写一句话：Q 电脑最轻。",
-   "task": "写英文完整句子。",
-   "answer_text": "Computer Q is the lightest.",
-   "expects": [
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q07",
+      "title": "店里最便宜",
+      "scene": "用 in 说完整。",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Z is the cheapest ______ the shop.",
+      "options": [
+        "of",
+        "on",
+        "at",
+        "in"
+      ],
+      "answer": "D",
+      "help": "in 后面跟地方。",
+      "explain": "in the shop（在店里）。",
+      "wrong_feedback": {
+        "A": "of 后面跟数量，这里是地点，用 in。",
+        "B": "on 不用在这里。",
+        "C": "at 不如 in 常用，这里用 in the shop。"
+      }
+    },
     {
-     "id": "s4",
-     "type": "word",
-     "answers": [
-      "computer q is the lightest",
-      "q is the lightest"
-     ],
-     "cn": [
-      "Q电脑最轻"
-     ]
-    }
-   ],
-   "help": "Q is + the lightest。",
-   "explain": "Computer Q is the lightest.",
-   "common_errors": [
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q08",
+      "title": "比较级还是最高级",
+      "scene": "判断用哪种。",
+      "stem": "There are two computers. A is ______ than B.（只有两台）",
+      "options": [
+        "the fastest",
+        "fastest",
+        "faster",
+        "the most fast"
+      ],
+      "answer": "C",
+      "help": "两台比，用比较级，后面有 than。",
+      "explain": "两台比用比较级 faster，than 是标志。",
+      "wrong_feedback": {
+        "A": "the fastest 是最高级，两台比不用最高级，看后面的 than。",
+        "B": "fastest 是最高级，两台比用比较级 faster。",
+        "D": "the most fast 不对，fast 是短单词。"
+      }
+    },
     {
-     "when": "用了 lighter",
-     "say": "这是最高级，用 the lightest。"
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r2-q09",
+      "title": "写出最高级：cheap",
+      "scene": "写出 cheap 的最高级。",
+      "stem": "写出 cheap 的最高级形式（含 the）。",
+      "task": "写英文。",
+      "answer_text": "the cheapest",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "the cheapest",
+            "cheapest"
+          ],
+          "cn": [
+            "最便宜的"
+          ]
+        }
+      ],
+      "help": "短单词加 est，前面加 the。",
+      "explain": "the cheapest。",
+      "common_errors": [
+        {
+          "when": "写了 cheaper",
+          "say": "cheaper 是比较级，要最高级 the cheapest。"
+        },
+        {
+          "when": "漏了 the",
+          "say": "最高级前面一般加 the。"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r2-q10",
+      "title": "写出最高级：interesting",
+      "scene": "写出 interesting 的最高级。",
+      "stem": "写出 interesting 的最高级形式。",
+      "task": "写英文。",
+      "answer_text": "the most interesting",
+      "expects": [
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "the most interesting"
+          ],
+          "cn": [
+            "最有趣的"
+          ]
+        }
+      ],
+      "help": "长单词用 the most。",
+      "explain": "the most interesting。",
+      "common_errors": [
+        {
+          "when": "写了 interestinger",
+          "say": "长单词不能加 er，用 the most interesting。"
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r2-q11",
+      "title": "写出最高级：bad",
+      "scene": "写出 bad 的最高级。",
+      "stem": "写出 bad 的最高级形式。",
+      "task": "写英文。",
+      "answer_text": "the worst",
+      "expects": [
+        {
+          "id": "w3",
+          "type": "word",
+          "answers": [
+            "the worst",
+            "worst"
+          ],
+          "cn": [
+            "最坏的"
+          ]
+        }
+      ],
+      "help": "bad 的变化是特殊的。",
+      "explain": "bad→the worst。",
+      "common_errors": [
+        {
+          "when": "写了 the baddest",
+          "say": "bad 的最高级是特殊的：the worst。"
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u3r2-prac-02",
+      "title": "小结一下",
+      "teach_html": "<p>最高级小结：</p><ul><li>短单词：<strong>the + est</strong>（the cheapest，the biggest）</li><li>长单词：<strong>the most + 单词</strong>（the most expensive）</li><li>特殊：the <strong>best</strong>，the <strong>worst</strong></li><li><strong>of</strong> 后面跟数量，<strong>in</strong> 后面跟地方</li><li>两者比用比较级（than），三者以上挑第一用最高级（the）</li></ul><p>下面你自己来，新的三台电脑。</p>"
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u3r2-q12",
+      "title": "最小的",
+      "scene": "最后一道带练。",
+      "reading": "Computer X: 3000 yuan, fast, big screen\nComputer Y: 5000 yuan, fastest, biggest screen\nComputer Z: 2000 yuan, slow, small screen",
+      "stem": "Computer Z has ______ screen.",
+      "options": [
+        "the smallest",
+        "smaller",
+        "smallest",
+        "more small"
+      ],
+      "answer": "A",
+      "help": "small 的最高级。",
+      "explain": "the smallest（最小的）。",
+      "wrong_feedback": {
+        "B": "smaller 是比较级，这里挑第一，用最高级。",
+        "C": "smallest 前面少了 the。",
+        "D": "more small 不对。"
+      }
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r2-q13",
+      "title": "连词成句",
+      "scene": "连成一句话。",
+      "stem": "Y / the fastest / is / computer",
+      "task": "连成完整句子，写英文。",
+      "answer_text": "Y is the fastest computer.",
+      "expects": [
+        {
+          "id": "s1",
+          "type": "word",
+          "answers": [
+            "y is the fastest computer"
+          ],
+          "cn": [
+            "Y是最快的电脑"
+          ]
+        }
+      ],
+      "help": "Y is + the fastest + computer。",
+      "explain": "Y is the fastest computer.",
+      "common_errors": [
+        {
+          "when": "漏了 the",
+          "say": "最高级前面加 the。"
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3r2-q14",
+      "title": "写广播词",
+      "scene": "写一句推荐词。",
+      "stem": "用最高级写一句话：Z 电脑最便宜。",
+      "task": "写英文完整句子。",
+      "answer_text": "Computer Z is the cheapest.",
+      "expects": [
+        {
+          "id": "s2",
+          "type": "word",
+          "answers": [
+            "computer z is the cheapest",
+            "z is the cheapest"
+          ],
+          "cn": [
+            "Z电脑最便宜"
+          ]
+        }
+      ],
+      "help": "Z is + the cheapest。",
+      "explain": "Computer Z is the cheapest.",
+      "common_errors": [
+        {
+          "when": "用了 cheaper",
+          "say": "这是最高级，用 the cheapest。"
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u3r2-story-03",
+      "title": "新任务：独立选购",
+      "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
+      "teach_html": "<p>又有听众问：P、Q、R 三台，哪台<strong>最轻</strong>？哪台<strong>最有用</strong>？哪台<strong>最贵</strong>？</p><p>资料在上面。这次你自己判断，站长不提示了。</p><p>记住：短单词 the+est，长单词 the most+单词，good→the best。</p>"
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r2-v01",
+      "title": "最轻的",
+      "scene": "哪台最轻？",
+      "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
+      "stem": "Computer Q is ______.",
+      "options": [
+        "the lightest",
+        "lighter",
+        "lightest",
+        "more light"
+      ],
+      "answer": "A",
+      "help": "light 的最高级，注意拼写。",
+      "explain": "the lightest（最轻的）。",
+      "wrong_feedback": {
+        "B": "这是比较级。再想想挑第一用什么。",
+        "C": "前面少了 the。再想想。",
+        "D": "light 是短单词。再想想。"
+      }
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r2-v02",
+      "title": "最有用的",
+      "scene": "哪台程序最有用？",
+      "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
+      "stem": "Computer R has ______ programs.",
+      "options": [
+        "more useful",
+        "usefullest",
+        "the most useful",
+        "most useful"
+      ],
+      "answer": "C",
+      "help": "useful 是长单词。",
+      "explain": "the most useful（最有用的）。",
+      "wrong_feedback": {
+        "A": "这是比较级。再想想。",
+        "B": "长单词不能加 est。再想想。",
+        "D": "前面少了 the。再想想。"
+      }
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r2-v03",
+      "title": "最贵的",
+      "scene": "哪台最贵？",
+      "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
+      "stem": "Computer R is ______.",
+      "options": [
+        "more expensive",
+        "expensivest",
+        "expensive",
+        "the most expensive"
+      ],
+      "answer": "D",
+      "help": "expensive 用什么形式？",
+      "explain": "the most expensive。",
+      "wrong_feedback": {
+        "A": "这是比较级。再想想。",
+        "B": "长单词不能加 est。再想想。",
+        "C": "这是原级。再想想。"
+      }
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r2-v04",
+      "title": "最重的",
+      "scene": "哪台最重？",
+      "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
+      "stem": "Computer R is ______.",
+      "options": [
+        "heavier",
+        "the heaviest",
+        "heaviest",
+        "more heavy"
+      ],
+      "answer": "B",
+      "help": "heavy 的最高级，y 怎么变？",
+      "explain": "the heaviest（最重的）。",
+      "wrong_feedback": {
+        "A": "这是比较级。再想想。",
+        "C": "前面少了 the。再想想。",
+        "D": "heavy 不用 more。再想想。"
+      }
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r2-v05",
+      "title": "写出最高级：big",
+      "scene": "写出 big 的最高级。",
+      "stem": "写出 big 的最高级形式（含 the）。",
+      "task": "写英文。",
+      "answer_text": "the biggest",
+      "expects": [
+        {
+          "id": "w4",
+          "type": "word",
+          "answers": [
+            "the biggest",
+            "biggest"
+          ],
+          "cn": [
+            "最大的"
+          ]
+        }
+      ],
+      "help": "big 的最高级注意双写。",
+      "explain": "the biggest。",
+      "common_errors": [
+        {
+          "when": "写了 the bigest",
+          "say": "双写 g：the biggest。"
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r2-v06",
+      "title": "写出最高级：good",
+      "scene": "写出 good 的最高级。",
+      "stem": "写出 good 的最高级形式。",
+      "task": "写英文。",
+      "answer_text": "the best",
+      "expects": [
+        {
+          "id": "w5",
+          "type": "word",
+          "answers": [
+            "the best",
+            "best"
+          ],
+          "cn": [
+            "最好的"
+          ]
+        }
+      ],
+      "help": "good 的变化是特殊的。",
+      "explain": "the best。",
+      "common_errors": [
+        {
+          "when": "写了 the goodest",
+          "say": "good 的最高级是 the best，特殊记。"
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r2-v07",
+      "title": "连词成句",
+      "scene": "连成一句话。",
+      "stem": "R / the most expensive / is",
+      "task": "连成完整句子，写英文。",
+      "answer_text": "R is the most expensive.",
+      "expects": [
+        {
+          "id": "s3",
+          "type": "word",
+          "answers": [
+            "r is the most expensive"
+          ],
+          "cn": [
+            "R最贵"
+          ]
+        }
+      ],
+      "help": "R is + the most expensive。",
+      "explain": "R is the most expensive.",
+      "common_errors": [
+        {
+          "when": "漏了 the",
+          "say": "the most expensive，the 不能少。"
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3r2-v08",
+      "title": "写推荐词",
+      "scene": "写一句推荐。",
+      "stem": "用最高级写一句话：Q 电脑最轻。",
+      "task": "写英文完整句子。",
+      "answer_text": "Computer Q is the lightest.",
+      "expects": [
+        {
+          "id": "s4",
+          "type": "word",
+          "answers": [
+            "computer q is the lightest",
+            "q is the lightest"
+          ],
+          "cn": [
+            "Q电脑最轻"
+          ]
+        }
+      ],
+      "help": "Q is + the lightest。",
+      "explain": "Computer Q is the lightest.",
+      "common_errors": [
+        {
+          "when": "用了 lighter",
+          "say": "这是最高级，用 the lightest。"
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r2-v09",
+      "title": "比较还是最高",
+      "scene": "最后判断。",
+      "stem": "There are five computers. This one is _______.（五台里挑第一）",
+      "options": [
+        "cheaper",
+        "the cheapest",
+        "more cheap",
+        "cheaper than"
+      ],
+      "answer": "B",
+      "help": "五台挑第一，用什么？",
+      "explain": "the cheapest。",
+      "wrong_feedback": {
+        "A": "这是比较级，五台挑第一用最高级。再想想。",
+        "C": "cheap 不用 more。再想想。",
+        "D": "than 是比较级的标志，这里没有比的对象。再想想。"
+      }
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u3r2-v10",
+      "title": "than 的标志",
+      "scene": "看到 than 用什么？",
+      "stem": "My computer is newer _______ yours.（than 是标志）",
+      "options": [
+        "that",
+        "the",
+        "than",
+        "then"
+      ],
+      "answer": "C",
+      "help": "比较级后面跟哪个词？",
+      "explain": "than（比）。",
+      "wrong_feedback": {
+        "A": "that 是“那个”，不是“比”。再想想。",
+        "B": "the 是最高级的标志，不是这里的。再想想。",
+        "D": "then 是“然后”，拼写多了一个 h。再想想。"
+      }
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u3r2-ending",
+      "title": "节目预告",
+      "teach_html": "<p>选购指南播完了，听众说终于知道怎么挑电脑了。</p><p>站长说：下期是电话订购专线，你要接听众电话，听懂他们说的电脑规格。比较级会在电话里出现，注意听。</p>"
     }
-   ]
-  },
-  {
-   "step": 34,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r2-v09",
-   "title": "比较还是最高",
-   "scene": "最后判断。",
-   "stem": "There are five computers. This one is _______.（五台里挑第一）",
-   "options": [
-    "cheaper",
-    "the cheapest",
-    "more cheap",
-    "cheaper than"
-   ],
-   "answer": "B",
-   "help": "五台挑第一，用什么？",
-   "explain": "the cheapest。",
-   "wrong_feedback": {
-    "A": "这是比较级，五台挑第一用最高级。再想想。",
-    "C": "cheap 不用 more。再想想。",
-    "D": "than 是比较级的标志，这里没有比的对象。再想想。"
-   }
-  },
-  {
-   "step": 35,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u3r2-v10",
-   "title": "than 的标志",
-   "scene": "看到 than 用什么？",
-   "stem": "My computer is newer _______ yours.（than 是标志）",
-   "options": [
-    "that",
-    "the",
-    "than",
-    "then"
-   ],
-   "answer": "C",
-   "help": "比较级后面跟哪个词？",
-   "explain": "than（比）。",
-   "wrong_feedback": {
-    "A": "that 是“那个”，不是“比”。再想想。",
-    "B": "the 是最高级的标志，不是这里的。再想想。",
-    "D": "then 是“然后”，拼写多了一个 h。再想想。"
-   }
-  },
-  {
-   "step": 36,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u3r2-ending",
-   "title": "节目预告",
-   "teach_html": "<p>选购指南播完了，听众说终于知道怎么挑电脑了。</p><p>站长说：下期是电话订购专线，你要接听众电话，听懂他们说的电脑规格。比较级会在电话里出现，注意听。</p>"
-  }
- ],
- "title": "选购指南：最高级",
- "unit": "Unit 3 Computers",
- "version": 1
+  ],
+  "title": "选购指南：最高级",
+  "unit": "Unit 3 Computers",
+  "version": 1
 }
