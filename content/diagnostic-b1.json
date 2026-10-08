@@ -20,12 +20,12 @@
       "category": "单词量",
       "knowledge_point": "vocab-l1",
       "level": 1,
-      "stem": "\"钢笔\"的英文是什么？请选择。",
+      "stem": "\"钢笔\"的英文是哪个？",
       "options": [
-        "A. pencil",
+        "D. eraser",
         "B. pen",
         "C. ruler",
-        "D. eraser"
+        "A. pencil"
       ],
       "answer": "B",
       "explain": "",
@@ -39,14 +39,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l2",
       "level": 2,
-      "stem": "\"体育场\"的英文是什么？请选择。",
+      "stem": "\"体育场\"的英文是哪个？",
       "options": [
-        "A. shop",
-        "B. stadium",
+        "D. park",
         "C. station",
-        "D. park"
+        "A. shop",
+        "B. stadium"
       ],
-      "answer": "B",
+      "answer": "D",
       "explain": "",
       "help": ""
     },
@@ -58,14 +58,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l3",
       "level": 3,
-      "stem": "\"承诺\"的英文是什么？请选择。",
+      "stem": "\"承诺\"的英文是哪个？",
       "options": [
-        "A. gift",
         "B. promise",
+        "D. answer",
         "C. question",
-        "D. answer"
+        "A. gift"
       ],
-      "answer": "B",
+      "answer": "A",
       "explain": "",
       "help": ""
     },
@@ -77,14 +77,14 @@
       "category": "拼读",
       "knowledge_point": "phonics-1",
       "level": 1,
-      "stem": "哪个单词划线部分发音不同？p<u>i</u>g / b<u>i</u>ke / f<u>i</u>sh",
+      "stem": "哪个单词划线部分发音不同？pig / bike / fish",
       "options": [
         "A. 第一个",
-        "B. 第二个",
         "C. 第三个",
+        "B. 第二个",
         "D. 都一样"
       ],
-      "answer": "B",
+      "answer": "C",
       "explain": "",
       "help": ""
     },
@@ -96,14 +96,14 @@
       "category": "拼读",
       "knowledge_point": "phonics-2",
       "level": 2,
-      "stem": "哪个单词划线部分发音不同？c<u>u</u>p / b<u>u</u>s / t<u>u</u>be",
+      "stem": "哪个单词划线部分发音不同？cup / bus / tube",
       "options": [
-        "A. 第一个",
+        "D. 都一样",
         "B. 第二个",
-        "C. 第三个",
-        "D. 都一样"
+        "A. 第一个",
+        "C. 第三个"
       ],
-      "answer": "C",
+      "answer": "D",
       "explain": "",
       "help": ""
     },
@@ -117,10 +117,10 @@
       "level": 1,
       "stem": "He ___ TV every evening.",
       "options": [
-        "A. watch",
+        "D. watched",
         "B. watches",
         "C. watching",
-        "D. watched"
+        "A. watch"
       ],
       "answer": "B",
       "explain": "",
@@ -136,12 +136,12 @@
       "level": 2,
       "stem": "There ___ many books on the desk.",
       "options": [
-        "A. is",
         "B. are",
         "C. be",
-        "D. has"
+        "D. has",
+        "A. is"
       ],
-      "answer": "B",
+      "answer": "A",
       "explain": "",
       "help": ""
     },
@@ -155,12 +155,12 @@
       "level": 3,
       "stem": "She has studied English ___ three years.",
       "options": [
-        "A. for",
         "B. since",
         "C. from",
+        "A. for",
         "D. at"
       ],
-      "answer": "A",
+      "answer": "C",
       "explain": "",
       "help": ""
     },
