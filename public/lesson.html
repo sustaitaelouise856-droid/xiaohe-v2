@@ -231,6 +231,8 @@ function setAudio(audioId) {
   setRate(1);
   if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
   $('player').style.display = '';
+  // 文件缺失（404）时隐藏播放器，不显示坏掉的按钮
+  au.onerror = () => { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); };
   au.src = '/audio/' + LID + '/' + audioId + '.mp3';
   btnPlay.className = 'paused';
   au.play().then(() => { btnPlay.className = 'playing'; $('bigplay').classList.remove('show'); })
