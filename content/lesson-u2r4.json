@@ -23,7 +23,7 @@
     {
       "answer": "A",
       "explain": "200 元到 160 元，变少了：went down。",
-      "help": "先比大小：160 比 200 小。再想想变小是 up 还是 down。",
+      "help": "先比大小：160 比 200 小。变小对应的是 up 还是 down。",
       "kind": "mcq",
       "options": [
         "went down",
