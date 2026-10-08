@@ -75,7 +75,7 @@ const LESSON_CACHE = {};
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw-[a-z0-9]+|deep\d+|moon\d+)$/.test(lid)) return null;
+  if (!/^(?:u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw\d*-[a-z0-9]+|deep\d+|moon\d+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
