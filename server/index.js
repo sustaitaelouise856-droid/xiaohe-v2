@@ -206,6 +206,18 @@ app.post('/api/verify', (req, res) => {
   res.json({ ok: true });
 });
 
+// 魔法链接：/go/<token> 直接登录，不用输码
+// token = sha256('xh-magic:' + ACCESS_CODE)，不可猜，换平板书签打开就行
+app.get('/go/:token', (req, res) => {
+  const crypto = require('crypto');
+  const envCode = process.env.ACCESS_CODE;
+  if (!envCode) return res.status(404).send('not found');
+  const expect = crypto.createHash('sha256').update('xh-magic:' + envCode).digest('hex').slice(0, 32);
+  if (req.params.token !== expect) return res.status(404).send('not found');
+  auth.issueAuthCookie(res);
+  res.redirect('/');
+});
+
 // 需验证
 app.get('/api/me', auth.requireAuth, (req, res) => res.json({ ok: true }));
 app.get('/api/lessons', auth.requireAuth, (req, res) => {
