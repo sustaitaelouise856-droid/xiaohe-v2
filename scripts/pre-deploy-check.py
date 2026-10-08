@@ -81,7 +81,7 @@ for fn, d in lessons:
     _walk(steps)
     for aid in sorted(audio_ids):
         found = _glob.glob(f'audio/**/{aid}.mp3', recursive=True)
-        check('音频文件', len(found) > 0, f"{fn} audio_id={aid} 无对应mp3文件", is_error=False)  # 临时警告：音频后台生成中
+        check('音频文件', len(found) > 0, f"{fn} audio_id={aid} 无对应mp3文件")  # 红线：缺音频禁止推送
 
 print(f"\n检查 {len(lessons)} 个文件")
 if warnings:
