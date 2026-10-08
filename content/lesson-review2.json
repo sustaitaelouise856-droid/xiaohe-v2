@@ -39,7 +39,12 @@
       "predicted_errors": [],
       "scene": "核对",
       "step": 3,
-      "phase": "practice"
+      "phase": "practice",
+      "wrong_feedback": {
+        "A": "这是第一张通知的旧时间。",
+        "B": "星期二对了，但时间更新到 4:00 p.m. 了。",
+        "D": "星期和时间都对不上，看第二张通知。"
+      }
     },
     {
       "kind": "mcq",
@@ -57,7 +62,12 @@
       "predicted_errors": [],
       "scene": "核对",
       "step": 4,
-      "phase": "practice"
+      "phase": "practice",
+      "wrong_feedback": {
+        "A": "教室是旧地点，语音说搬到 library 了。",
+        "C": "语音里没提 gym。",
+        "D": "hall 是别的事的地点，不是开会的。"
+      }
     },
     {
       "kind": "teach",
@@ -83,7 +93,12 @@
       "predicted_errors": [],
       "scene": "读数",
       "step": 6,
-      "phase": "practice"
+      "phase": "practice",
+      "wrong_feedback": {
+        "A": "10% 太小了。",
+        "B": "20% 是别的数据，这个是 up 25%。",
+        "D": "30% 太大了，播报说的是 25%。"
+      }
     },
     {
       "kind": "short",
@@ -146,7 +161,12 @@
       "predicted_errors": [],
       "scene": "抓请求",
       "step": 9,
-      "phase": "practice"
+      "phase": "practice",
+      "wrong_feedback": {
+        "B": "信里没说跳舞。",
+        "C": "信里没说写字。",
+        "D": "唱歌太笼统，具体的请求是点歌 Star。"
+      }
     },
     {
       "kind": "short",
@@ -197,7 +217,13 @@
       "predicted_errors": [],
       "scene": "综合",
       "step": 12,
-      "phase": "practice"
+      "phase": "practice",
+      "wrong_feedback": {
+        "A": "Tuesday, 4:00 p.m. 是最新的，对的。",
+        "B": "Monday 是旧时间。",
+        "C": "library 是最新地点，对的。",
+        "D": "up 25% 是最新数据，对的。"
+      }
     },
     {
       "kind": "short",
@@ -250,7 +276,12 @@
       "predicted_errors": [],
       "scene": "算数",
       "step": 14,
-      "phase": "practice"
+      "phase": "practice",
+      "wrong_feedback": {
+        "A": "600 是直接减 200，不是除以 1.25。",
+        "C": "700 太大了，800 涨 25% 之前不到 700。",
+        "D": "750 是 800-50，不是涨 25% 的算法。"
+      }
     },
     {
       "kind": "teach",
