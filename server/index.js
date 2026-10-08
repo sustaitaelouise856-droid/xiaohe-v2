@@ -1004,8 +1004,13 @@ function orderedLessons() {
     ).all();
     if (rows.length) {
       // 正课在前（按课号），练习课在后：练习课不参与正课之间的开放门禁
+      // 2026-10-08：主线英语课(u2r-u6r)优先，deep/moon为补充不阻塞主线
       const ids = rows.map(r => r.lesson_id);
-      return [...ids.filter(id => !isReviewLesson(id)), ...ids.filter(id => isReviewLesson(id))];
+      const main = ids.filter(id => /^u\dr\d+$/.test(id)).sort();
+      const supp = ids.filter(id => /^(deep|moon)\d+$/.test(id)).sort();
+      const other = ids.filter(id => !/^u\dr\d+$/.test(id) && !/^(deep|moon)\d+$/.test(id) && !isReviewLesson(id)).sort();
+      const reviews = ids.filter(id => isReviewLesson(id)).sort();
+      return [...main, ...supp, ...other, ...reviews];
     }
   } catch { /* 查不到就用默认 */ }
   return ['u2r1'];
