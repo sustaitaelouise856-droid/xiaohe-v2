@@ -132,9 +132,14 @@ function trySetup(setupToken, accessCode) {
 function isSetupDone() { return getState('setup_done') === '1'; }
 
 function checkVerifyCode(accessCode) {
+  if (!accessCode) return false;
+  // 优先查数据库里的哈希
   const stored = getState('access_code_hash');
-  if (!stored || !accessCode) return false;
-  return checkAccessCode(String(accessCode), stored);
+  if (stored && checkAccessCode(String(accessCode), stored)) return true;
+  // 兜底：环境变量 ACCESS_CODE（灾难恢复，保证管理员总能进）
+  const envCode = process.env.ACCESS_CODE;
+  if (envCode && String(accessCode) === String(envCode)) return true;
+  return false;
 }
 
 // ---- 校验接口限速：防暴力猜 ----
