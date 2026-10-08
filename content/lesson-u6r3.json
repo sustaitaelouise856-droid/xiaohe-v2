@@ -1,0 +1,790 @@
+{
+  "lesson_id": "u6r3",
+  "practice_end": 23,
+  "home_subtitle": "第三课 · 古今对比",
+  "part1_desc": "第 1–23 步：跟站长分清完成时和过去时，一个还继续、一个结束了。",
+  "part2_desc": "第 24–36 步：独立判断指南针资料，用对两种时态。",
+  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时与一般过去时的区分、时态标志词。Unit 6 Ancient stories 主题。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-story-01",
+      "title": "愚公移山",
+      "teach_html": "<p>古代故事第三期：<strong>愚公移山 (Yu Gong Moves the Mountains)</strong>！</p><p><strong>move</strong> 是“移动”。愚公带着家人移走了大山。人们讲这个故事讲了几千年：People have <strong>told</strong> this story <strong>for</strong> thousands of years.</p><p>这期有个关键问题：“我住过北京”和“我2020年住在北京”，英文到底有什么不同？</p>"
+    },
+    {
+      "step": 2,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t01",
+      "title": "过去时：结束了",
+      "teach_html": "<p><strong>一般过去时</strong>：过去发生、<strong>已经结束</strong>的事。</p><p>I <strong>visited</strong> Beijing <strong>last year</strong>.（去年我参观了北京——事情结束了。）</p>"
+    },
+    {
+      "step": 3,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t02",
+      "title": "完成时：还继续",
+      "teach_html": "<p><strong>现在完成时</strong>：过去开始、<strong>一直持续到现在</strong>。</p><p>I <strong>have visited</strong> Beijing.（我参观过北京——这是我的经历，和现在有关。）<br>I <strong>have lived</strong> here <strong>since 2020</strong>.（从2020年起我住在这里——现在还住。）</p>"
+    },
+    {
+      "step": 4,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t03",
+      "title": "关键对比",
+      "teach_html": "<p>看这一对：</p><p>I <strong>lived</strong> in Beijing <strong>in 2020</strong>.（2020年我住在北京——现在不住那里了。）<br>I <strong>have lived</strong> in Beijing <strong>since 2020</strong>.（从2020年起我住在北京——现在还住。）</p><p>一个结束了，一个还继续。这就是最大的区别。</p>"
+    },
+    {
+      "step": 5,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t04",
+      "title": "过去时的标志词",
+      "teach_html": "<p>看到这些词，用<strong>过去时</strong>：</p><p><strong>yesterday</strong>（昨天）；<strong>last week</strong>（上周）；<strong>in 2020</strong>（在2020年）；<strong>two days ago</strong>（两天前）。</p><p>它们都表示“过去的某个时间”，事情结束了。</p>"
+    },
+    {
+      "step": 6,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t05",
+      "title": "完成时的标志词",
+      "teach_html": "<p>看到这些词，用<strong>完成时</strong>：</p><p><strong>since</strong>（自从）；<strong>for</strong>（持续）；<strong>ever</strong>（曾经）；<strong>never</strong>（从不）；<strong>already</strong>（已经）；<strong>yet</strong>（还）；<strong>just</strong>（刚刚）。</p><p>它们都和“现在”有联系。</p>"
+    },
+    {
+      "step": 7,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t06",
+      "title": "愚公的例子",
+      "teach_html": "<p>Yu Gong <strong>moved</strong> the mountains.（愚公移走了山——故事里发生的事，过去时。）</p><p>People <strong>have told</strong> his story <strong>for</strong> thousands of years.（人们讲他的故事讲了几千年——一直讲到现在，完成时。）</p><p><strong>thousand</strong> 是“千”。</p>"
+    },
+    {
+      "step": 8,
+      "phase": "teach",
+      "kind": "teach",
+      "audio_id": "u6r3-t07",
+      "title": "小结",
+      "teach_html": "<p>小结：<strong>过去时 = 结束了</strong>（yesterday, last year, in 2020）；<strong>完成时 = 还继续/和现在有关</strong>（since, for, ever, never）。</p><p>下面站长带着你练。资料卡在上面，做题时对照着看。</p>"
+    },
+    {
+      "step": 9,
+      "phase": "practice",
+      "kind": "teach",
+      "audio_id": "u6r3-prac-01",
+      "title": "先看资料",
+      "teach_html": "<p>这是愚公移山的资料卡。做题时对照着看：愚公是位老人，住在大山边，带着家人移走了山，人们讲这个故事讲了几千年。</p><p>下面站长带着你练完成时和过去时。</p>",
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q01",
+      "title": "去年",
+      "scene": "去年我参观了北京。",
+      "stem": "I visited Beijing ___ year.",
+      "options": [
+        "since",
+        "for",
+        "ever",
+        "last"
+      ],
+      "answer": "D",
+      "help": "“去年”是过去的时间。",
+      "explain": "I visited Beijing last year.",
+      "wrong_feedback": {
+        "A": "since 是完成时标志，这里 last year 用过去时。",
+        "B": "for 是完成时标志，这里用过去时。",
+        "C": "ever 是完成时标志，这里用过去时。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 11,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q02",
+      "title": "从2020年",
+      "scene": "从2020年起我住在这里。",
+      "stem": "I have lived here ___ 2020.",
+      "options": [
+        "in",
+        "for",
+        "since",
+        "last"
+      ],
+      "answer": "C",
+      "help": "“从2020年起”还继续，用完成时。",
+      "explain": "I have lived here since 2020.",
+      "wrong_feedback": {
+        "A": "in 2020 是“在2020年”，这里“自从”用 since。",
+        "B": "2020 是时间点，用 since，不用 for。",
+        "D": "last 是过去时标志，这里用完成时。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 12,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q03",
+      "title": "昨天去了",
+      "scene": "她昨天去了上海。",
+      "stem": "She ___ to Shanghai yesterday.",
+      "options": [
+        "has gone",
+        "went",
+        "goes",
+        "go"
+      ],
+      "answer": "B",
+      "help": "yesterday 是过去时标志。",
+      "explain": "She went to Shanghai yesterday.",
+      "wrong_feedback": {
+        "A": "has gone 是完成时，yesterday 用过去时 went。",
+        "C": "goes 是现在时，不对。",
+        "D": "go 是原形，过去时用 went。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 13,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q04",
+      "title": "认识十年",
+      "scene": "他们认识十年了。",
+      "stem": "They have known him ___ ten years.",
+      "options": [
+        "for",
+        "since",
+        "last",
+        "ago"
+      ],
+      "answer": "A",
+      "help": "“十年”是时间段，还继续。",
+      "explain": "They have known him for ten years.",
+      "wrong_feedback": {
+        "B": "十年是时间段，用 for，不用 since。",
+        "C": "last 是过去时标志，这里用完成时。",
+        "D": "ago 是过去时标志，这里用完成时。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 14,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q05",
+      "title": "move 的意思",
+      "scene": "move 在课里是“移动”。",
+      "stem": "The word \"move\" means ___.",
+      "options": [
+        "建造",
+        "移动",
+        "庆祝",
+        "参观"
+      ],
+      "answer": "B",
+      "help": "愚公 move 大山，是什么意思？",
+      "explain": "move 意思是“移动”。",
+      "wrong_feedback": {
+        "A": "建造是 build，不是 move。",
+        "C": "庆祝是 celebrate，不是 move。",
+        "D": "参观是 visit，不是 move。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 15,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q06",
+      "title": "昨晚看了",
+      "scene": "我们昨晚看了这部电影。",
+      "stem": "We ___ the film last night.",
+      "options": [
+        "have seen",
+        "saw",
+        "see",
+        "seen"
+      ],
+      "answer": "B",
+      "help": "last night 是过去时标志。",
+      "explain": "We saw the film last night.",
+      "wrong_feedback": {
+        "A": "have seen 是完成时，last night 用过去时 saw。",
+        "C": "see 是原形，过去时用 saw。",
+        "D": "seen 是过去分词，不能单独用。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 16,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q07",
+      "title": "从2019年",
+      "scene": "他从2019年起在这里工作。",
+      "stem": "He has worked here ___ 2019.",
+      "options": [
+        "for",
+        "last",
+        "ago",
+        "since"
+      ],
+      "answer": "D",
+      "help": "2019 是时间点，还继续。",
+      "explain": "He has worked here since 2019.",
+      "wrong_feedback": {
+        "A": "2019 是时间点，用 since，不用 for。",
+        "B": "last 是过去时标志，这里用完成时。",
+        "C": "ago 是过去时标志，这里用完成时。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 17,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q08",
+      "title": "thousand 的意思",
+      "scene": "thousand 意思是？",
+      "stem": "The word \"thousand\" means ___.",
+      "options": [
+        "千",
+        "百",
+        "万",
+        "十"
+      ],
+      "answer": "A",
+      "help": "几千 (thousands) 是多少？",
+      "explain": "thousand 意思是“千”。",
+      "wrong_feedback": {
+        "B": "百是 hundred，不是 thousand。",
+        "C": "万是 ten thousand。thousand 是“千”。",
+        "D": "十是 ten，不是 thousand。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "mcq",
+      "audio_id": "u6r3-q09",
+      "title": "讲了几千年",
+      "scene": "人们讲这个故事几千年了。",
+      "stem": "People have told this story ___ thousands of years.",
+      "options": [
+        "since",
+        "last",
+        "for",
+        "ago"
+      ],
+      "answer": "C",
+      "help": "“几千年”是时间段。",
+      "explain": "People have told this story for thousands of years.",
+      "wrong_feedback": {
+        "A": "几千年是时间段，用 for，不用 since。",
+        "B": "last 是过去时标志，这里用完成时。",
+        "D": "ago 是过去时标志，这里用完成时。"
+      },
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r3-q10",
+      "title": "去年去了",
+      "scene": "她去年去了北京。",
+      "stem": "She ___ (go) to Beijing last year.",
+      "task": "写过去式。",
+      "answer_text": "went",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "went"
+          ],
+          "cn": [
+            "去（过去式）"
+          ]
+        }
+      ],
+      "help": "last year 是过去时标志。",
+      "explain": "She went to Beijing last year.",
+      "common_errors": [
+        {
+          "when": "写了 gone",
+          "say": "gone 是过去分词。last year 用过去时 went。"
+        },
+        {
+          "when": "写了 has gone",
+          "say": "last year 是过去时标志，用 went，不用完成时。"
+        }
+      ],
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 20,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r3-q11",
+      "title": "从2019年",
+      "scene": "从2019年起我住在这里。",
+      "stem": "I have lived here ___ 2019.",
+      "task": "只写 since 或 for。",
+      "answer_text": "since",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "since",
+            "Since"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ]
+        }
+      ],
+      "help": "2019 是时间点，还继续。",
+      "explain": "I have lived here since 2019.",
+      "common_errors": [
+        {
+          "when": "写了 for",
+          "say": "2019 是时间点，用 since。"
+        },
+        {
+          "when": "写了 in",
+          "say": "in 2019 是“在2019年”，这里“自从”用 since。"
+        }
+      ],
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 21,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r3-q12",
+      "title": "move 的中文",
+      "scene": "写出 move 的中文。",
+      "stem": "写出 move 的中文意思。",
+      "task": "写中文。",
+      "answer_text": "移动",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "移动"
+          ],
+          "cn": [
+            "移动"
+          ]
+        }
+      ],
+      "help": "愚公 move 大山。",
+      "explain": "move 的中文是“移动”。",
+      "common_errors": [
+        {
+          "when": "写了“建造”",
+          "say": "“建造”是 build。move 是“移动”。"
+        }
+      ],
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 22,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r3-q13",
+      "title": "昨天参观",
+      "scene": "他们昨天参观了长城。",
+      "stem": "They ___ (visit) the wall yesterday.",
+      "task": "写过去式。",
+      "answer_text": "visited",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "visited"
+          ],
+          "cn": [
+            "参观（过去式）"
+          ]
+        }
+      ],
+      "help": "yesterday 是过去时标志。",
+      "explain": "They visited the wall yesterday.",
+      "common_errors": [
+        {
+          "when": "写了 have visited",
+          "say": "yesterday 用过去时 visited，不用完成时。"
+        }
+      ],
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 23,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u6r3-q14",
+      "title": "讲了很多年",
+      "scene": "我们讲这个故事很多年了。",
+      "stem": "We have told the story ___ many years.",
+      "task": "只写 since 或 for。",
+      "answer_text": "for",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "for",
+            "For"
+          ],
+          "cn": [
+            "持续（时间段）"
+          ]
+        }
+      ],
+      "help": "很多年是时间段。",
+      "explain": "We have told the story for many years.",
+      "common_errors": [
+        {
+          "when": "写了 since",
+          "say": "很多年是时间段，用 for。"
+        }
+      ],
+      "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
+    },
+    {
+      "step": 24,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u6r3-v-intro",
+      "title": "新任务：独立判断",
+      "teach_html": "<p>新任务来了：这次是<strong>指南针 (the compass)</strong> 的资料。中国人很早发明了指南针。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>过去时 = 结束了</strong>；<strong>完成时 = 还继续</strong>。</p>",
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 25,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v01",
+      "title": "水手找路",
+      "scene": "过去水手用它找路。",
+      "stem": "Sailors ___ it to find their way.",
+      "options": [
+        "use",
+        "used",
+        "have used",
+        "uses"
+      ],
+      "answer": "B",
+      "help": "过去的事。",
+      "explain": "Sailors used it to find their way.",
+      "wrong_feedback": {
+        "A": "再想想时态。",
+        "C": "再想想时态。",
+        "D": "再想想时态。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 26,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v02",
+      "title": "用了几百年",
+      "scene": "人们用指南针几百年了。",
+      "stem": "People have used the compass ___ hundreds of years.",
+      "options": [
+        "since",
+        "last",
+        "for",
+        "ago"
+      ],
+      "answer": "C",
+      "help": "时间段。",
+      "explain": "People have used the compass for hundreds of years.",
+      "wrong_feedback": {
+        "A": "再想想时间点和时间段。",
+        "B": "再想想时态标志。",
+        "D": "再想想时态标志。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 27,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v03",
+      "title": "发明指南针",
+      "scene": "中国人很早发明了指南针。",
+      "stem": "Chinese people ___ the compass long ago.",
+      "options": [
+        "invent",
+        "invents",
+        "have invented",
+        "invented"
+      ],
+      "answer": "D",
+      "help": "过去的事。",
+      "explain": "Chinese people invented the compass long ago.",
+      "wrong_feedback": {
+        "A": "再想想时态。",
+        "B": "再想想时态。",
+        "C": "再想想时态。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 28,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v04",
+      "title": "sailor 的意思",
+      "scene": "sailor 意思是？",
+      "stem": "The word \"sailor\" means ___.",
+      "options": [
+        "水手",
+        "农民",
+        "老师",
+        "医生"
+      ],
+      "answer": "A",
+      "help": "谁用指南针找路？",
+      "explain": "sailor 意思是“水手”。",
+      "wrong_feedback": {
+        "B": "再想想。",
+        "C": "再想想。",
+        "D": "再想想。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 29,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v05",
+      "title": "2019年住",
+      "scene": "他2019年住在西安。",
+      "stem": "He ___ in Xi'an in 2019.",
+      "options": [
+        "has lived",
+        "lived",
+        "lives",
+        "live"
+      ],
+      "answer": "B",
+      "help": "过去的时间。",
+      "explain": "He lived in Xi'an in 2019.",
+      "wrong_feedback": {
+        "A": "再想想时态。",
+        "C": "再想想时态。",
+        "D": "再想想时态。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 30,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v06",
+      "title": "way 的意思",
+      "scene": "way 意思是？",
+      "stem": "The word \"way\" means ___.",
+      "options": [
+        "路",
+        "墙",
+        "山",
+        "河"
+      ],
+      "answer": "A",
+      "help": "find their way 是找到什么？",
+      "explain": "way 意思是“路”，这里指“方向、路线”。",
+      "wrong_feedback": {
+        "B": "再想想。",
+        "C": "再想想。",
+        "D": "再想想。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 31,
+      "phase": "validate",
+      "kind": "mcq",
+      "audio_id": "u6r3-v07",
+      "title": "昨天参观",
+      "scene": "他们昨天参观了博物馆。",
+      "stem": "They ___ the museum yesterday.",
+      "options": [
+        "visited",
+        "have visited",
+        "visit",
+        "visits"
+      ],
+      "answer": "A",
+      "help": "过去的时间。",
+      "explain": "They visited the museum yesterday.",
+      "wrong_feedback": {
+        "B": "再想想时态。",
+        "C": "再想想时态。",
+        "D": "再想想时态。"
+      },
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 32,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r3-v08",
+      "title": "很早用了",
+      "scene": "水手很早用过它。",
+      "stem": "Sailors ___ (use) it long ago.",
+      "task": "写过去式。",
+      "answer_text": "used",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "used"
+          ],
+          "cn": [
+            "用（过去式）"
+          ]
+        }
+      ],
+      "help": "过去的事。",
+      "explain": "Sailors used it long ago.",
+      "common_errors": [
+        {
+          "when": "写了 have used",
+          "say": "再想想时态。"
+        }
+      ],
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 33,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r3-v09",
+      "title": "几百年",
+      "scene": "人们用它几百年了。",
+      "stem": "People have used it ___ hundreds of years.",
+      "task": "只写 since 或 for。",
+      "answer_text": "for",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "for",
+            "For"
+          ],
+          "cn": [
+            "持续（时间段）"
+          ]
+        }
+      ],
+      "help": "时间段。",
+      "explain": "People have used it for hundreds of years.",
+      "common_errors": [
+        {
+          "when": "写了 since",
+          "say": "再想想时间点和时间段。"
+        }
+      ],
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 34,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r3-v10",
+      "title": "sailor 的中文",
+      "scene": "写出 sailor 的中文。",
+      "stem": "写出 sailor 的中文意思。",
+      "task": "写中文。",
+      "answer_text": "水手",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "水手"
+          ],
+          "cn": [
+            "水手"
+          ]
+        }
+      ],
+      "help": "谁用指南针？",
+      "explain": "sailor 的中文是“水手”。",
+      "common_errors": [
+        {
+          "when": "写了“农民”",
+          "say": "“农民”是 farmer。sailor 是“水手”。"
+        }
+      ],
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u6r3-v11",
+      "title": "去年见过",
+      "scene": "她去年见过兵马俑。",
+      "stem": "She ___ (see) the warriors last year.",
+      "task": "写过去式。",
+      "answer_text": "saw",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "saw"
+          ],
+          "cn": [
+            "看见（过去式）"
+          ]
+        }
+      ],
+      "help": "过去的时间。",
+      "explain": "She saw the warriors last year.",
+      "common_errors": [
+        {
+          "when": "写了 seen",
+          "say": "seen 是过去分词。last year 用过去式 saw。"
+        },
+        {
+          "when": "写了 has seen",
+          "say": "last year 用过去时 saw。"
+        }
+      ],
+      "reading": "Chinese people invented the compass long ago. Sailors used it to find their way. People have used the compass for hundreds of years."
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "teach",
+      "audio_id": "u6r3-ending",
+      "title": "节目预告",
+      "teach_html": "<p>愚公移山和指南针的故事讲完了。过去时和完成时，你分得清了！</p><p>下一期是写作课：<strong>我的家乡故事</strong>——用 since 和 for，写一写你自己的故事。</p>"
+    }
+  ],
+  "title": "古今对比：完成时 vs 过去时",
+  "unit": "Unit 6 Ancient stories",
+  "version": 1
+}
