@@ -1120,6 +1120,25 @@ for (const r of seedReport) {
   else if (r.seeded) console.log(`[seed] ${r.lesson_id} 自动入库 ${r.seeded} 道题`);
 }
 if (require.main === module) {
+  // 灾难恢复：如果数据库被清空（setup_done丢失），用环境变量ACCESS_CODE自动重建
+  // 保证重部署后访问码永远可用，不卡死用户
+  try {
+    const db = require('./db.js').db;
+    const row = db.prepare("SELECT value FROM app_state WHERE key='setup_done'").get();
+    if (!row && process.env.ACCESS_CODE && process.env.ACCESS_CODE.length >= 6) {
+      // 用 auth.js 的 setState/hashAccessCode，保证格式一致
+      // 注意：auth.js 顶部会 require db.js，但 db.js 不依赖 auth.js，无循环引用
+      const authMod = require('./auth.js');
+      // 直接调内部函数：通过 trySetup 的逻辑太绕，这里手动做
+      const crypto = require('crypto');
+      const salt = crypto.randomBytes(16).toString('hex');
+      const h = crypto.scryptSync(String(process.env.ACCESS_CODE), salt, 32).toString('hex');
+      const hashStr = `salt:${salt}:hash:${h}`;
+      db.prepare("INSERT INTO app_state(key,value) VALUES('access_code_hash',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value").run(hashStr);
+      db.prepare("INSERT INTO app_state(key,value) VALUES('setup_done','1') ON CONFLICT(key) DO UPDATE SET value=excluded.value").run();
+      console.log('[auth] 数据库被清空，已用环境变量自动重建访问码');
+    }
+  } catch (e) { console.log('[auth] 自动重建跳过:', e.message); }
   const token = auth.ensureSetupToken();
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`xiaohe-v2 listening on 0.0.0.0:${PORT}`);
