@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>我的生词本 · 小禾英语</title>
+<style>
+  :root { --blue:#1a73e8; --muted:#5f6368; --line:#dadce0; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; margin:0; background:#f8f9fa; color:#202124; }
+  #topbar { position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--line); padding:12px 16px; display:flex; align-items:center; gap:12px; }
+  #topbar b { font-size:18px; }
+  #topbar .back { border:0; background:none; font-size:18px; color:var(--blue); cursor:pointer; padding:6px; }
+  #topbar .count { margin-left:auto; color:var(--muted); font-size:14px; }
+  #wrap { max-width:720px; margin:0 auto; padding:16px 14px 120px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin-bottom:12px; }
+  .wrow { display:flex; align-items:center; gap:10px; }
+  .wrow .ww { font-size:20px; font-weight:700; }
+  .wrow .wp { color:var(--muted); font-size:13px; }
+  .wrow .wz { font-size:15px; color:#333; margin-top:2px; }
+  .wrow .ops { margin-left:auto; display:flex; gap:6px; }
+  .wrow .ops button { border:1px solid var(--line); background:#fff; border-radius:8px; padding:8px 10px; font-size:14px; cursor:pointer; }
+  .empty { text-align:center; color:var(--muted); padding:60px 20px; font-size:16px; line-height:2; }
+  #reviewBar { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--line); padding:12px 16px; display:flex; gap:10px; z-index:20; }
+  #reviewBar button { flex:1; padding:14px; font-size:17px; border-radius:12px; border:0; cursor:pointer; }
+  #btnReview { background:var(--blue); color:#fff; }
+  /* 复习卡片 */
+  #revOverlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:50; align-items:center; justify-content:center; padding:20px; }
+  #revCard { background:#fff; border-radius:18px; padding:32px 24px; max-width:420px; width:100%; text-align:center; }
+  #revCard .rw { font-size:34px; font-weight:800; margin-bottom:6px; }
+  #revCard .rp { color:var(--muted); font-size:15px; margin-bottom:12px; }
+  #revCard .rz { font-size:19px; min-height:60px; color:#333; }
+  #revCard .rz.hidden { color:#ccc; }
+  #revCard .rrow { display:flex; gap:10px; margin-top:20px; }
+  #revCard .rrow button { flex:1; padding:14px; font-size:16px; border-radius:12px; border:0; cursor:pointer; }
+  #revFlip { background:#e8f0fe; color:var(--blue); width:100%; margin-top:8px; }
+  #revNo { background:#fce8e6; color:#c5221f; }
+  #revYes { background:#e6f4ea; color:#137333; }
+  #revProg { color:var(--muted); font-size:14px; margin-bottom:12px; }
+  #revDone { display:none; }
+</style>
+</head>
+<body>
+<div id="topbar">
+  <button class="back" onclick="location.href='/'">← 课程</button>
+  <b>我的生词本</b>
+  <span class="count" id="count"></span>
+</div>
+<div id="wrap"><div id="list"></div></div>
+<div id="reviewBar"><button id="btnReview">📖 开始复习</button></div>
+
+<div id="revOverlay">
+  <div id="revCard">
+    <div id="revProg"></div>
+    <div class="rw" id="revWord"></div>
+    <div class="rp" id="revPh"></div>
+    <div class="rz hidden" id="revZh">点"看意思"显示</div>
+    <button id="revFlip">看意思</button>
+    <div class="rrow" id="revBtns" style="display:none">
+      <button id="revNo">还不认识</button>
+      <button id="revYes">认识了</button>
+    </div>
+    <div id="revDone">
+      <div style="font-size:20px;margin:10px 0">复习完啦</div>
+      <button id="revClose" style="padding:12px 32px;font-size:16px;border-radius:12px;border:0;background:var(--blue);color:#fff;cursor:pointer">回去</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function getVocab() {
+  try { return JSON.parse(localStorage.getItem('xh_vocab_v1') || '{}'); } catch (e) { return {}; }
+}
+function saveVocab(v) {
+  try { localStorage.setItem('xh_vocab_v1', JSON.stringify(v)); } catch (e) {}
+}
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function speak(w) {
+  try {
+    const u = new SpeechSynthesisUtterance(w);
+    u.lang = 'en-US'; u.rate = 0.85;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch (e) {}
+}
+function render() {
+  const v = getVocab();
+  const words = Object.keys(v).sort((a,b) => v[b].added - v[a].added);
+  document.getElementById('count').textContent = words.length ? `共 ${words.length} 个` : '';
+  const list = document.getElementById('list');
+  if (!words.length) {
+    list.innerHTML = `<div class="empty">生词本还是空的<br>在课程的阅读材料里<b>点一下</b>不认识的单词<br>就能查意思、听发音、加进来</div>`;
+    return;
+  }
+  list.innerHTML = words.map(w => {
+    const e = v[w];
+    return `<div class="card"><div class="wrow">
+      <div><div class="ww">${esc(w)}</div>
+      ${e.ph ? `<div class="wp">/${esc(e.ph)}/</div>` : ''}
+      <div class="wz">${esc(e.zh || '')}</div></div>
+      <div class="ops">
+        <button onclick="speak('${esc(w)}')">🔊</button>
+        <button onclick="delWord('${esc(w)}')">删除</button>
+      </div>
+    </div></div>`;
+  }).join('');
+}
+function delWord(w) {
+  const v = getVocab(); delete v[w]; saveVocab(v); render();
+  try { fetch('/api/vocab/del', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({word:w}) }).catch(()=>{}); } catch(e) {}
+}
+// ---- 简单复习：不认识的优先 ----
+let queue = [], qi = 0;
+document.getElementById('btnReview').onclick = () => {
+  const v = getVocab();
+  const words = Object.keys(v);
+  if (!words.length) return;
+  // ok<2 的优先，不认识的多出现
+  queue = words.sort((a,b) => (v[a].ok||0) - (v[b].ok||0));
+  qi = 0;
+  document.getElementById('revOverlay').style.display = 'flex';
+  showRev();
+};
+function showRev() {
+  const v = getVocab();
+  if (qi >= queue.length) {
+    document.getElementById('revProg').textContent = '';
+    document.getElementById('revWord').textContent = '';
+    document.getElementById('revPh').textContent = '';
+    document.getElementById('revZh').style.display = 'none';
+    document.getElementById('revFlip').style.display = 'none';
+    document.getElementById('revBtns').style.display = 'none';
+    document.getElementById('revDone').style.display = 'block';
+    return;
+  }
+  const w = queue[qi], e = v[w] || {};
+  document.getElementById('revDone').style.display = 'none';
+  document.getElementById('revZh').style.display = '';
+  document.getElementById('revFlip').style.display = '';
+  document.getElementById('revProg').textContent = `${qi+1} / ${queue.length}`;
+  document.getElementById('revWord').textContent = w;
+  document.getElementById('revPh').textContent = e.ph ? '/' + e.ph + '/' : '';
+  const zh = document.getElementById('revZh');
+  zh.textContent = '点"看意思"显示'; zh.classList.add('hidden');
+  document.getElementById('revBtns').style.display = 'none';
+  document.getElementById('revFlip').style.display = '';
+  speak(w);
+}
+document.getElementById('revFlip').onclick = () => {
+  const v = getVocab(), w = queue[qi], e = v[w] || {};
+  const zh = document.getElementById('revZh');
+  zh.textContent = e.zh || '（暂无中文意思）'; zh.classList.remove('hidden');
+  document.getElementById('revFlip').style.display = 'none';
+  document.getElementById('revBtns').style.display = 'flex';
+};
+function revMark(known) {
+  const v = getVocab(), w = queue[qi];
+  if (v[w]) { v[w].reviews = (v[w].reviews||0)+1; if (known) v[w].ok = (v[w].ok||0)+1; else v[w].ok = 0; saveVocab(v); }
+  qi++; showRev();
+}
+document.getElementById('revNo').onclick = () => revMark(false);
+document.getElementById('revYes').onclick = () => revMark(true);
+document.getElementById('revClose').onclick = () => {
+  document.getElementById('revOverlay').style.display = 'none'; render();
+};
+render();
+</script>
+</body>
+</html>
