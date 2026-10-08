@@ -121,11 +121,26 @@
   #btnSeeReading { display:none; position:fixed; bottom:24px; right:16px; z-index:50;
     background:var(--blue); color:#fff; border:0; border-radius:24px;
     padding:12px 20px; font-size:16px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer; }
+  /* 点词查词：阅读材料里的英文单词可点 */
+  .reading-pane pre .w { cursor:pointer; border-bottom:1px dotted var(--blue); }
+  .reading-pane pre .w:active { background:#e8f0fe; }
+  #wordPop { display:none; position:fixed; z-index:100; background:#fff; border:2px solid var(--blue);
+    border-radius:14px; padding:14px 16px; max-width:280px; box-shadow:0 6px 20px rgba(0,0,0,0.25); }
+  #wordPop .wp-word { font-size:20px; font-weight:700; }
+  #wordPop .wp-ph { color:var(--muted); font-size:14px; margin:2px 0; }
+  #wordPop .wp-zh { font-size:16px; margin:6px 0 10px; }
+  #wordPop .wp-row { display:flex; gap:8px; }
+  #wordPop .wp-row button { flex:1; padding:10px; font-size:15px; border-radius:10px; border:0; cursor:pointer; }
+  #wordPop .wp-say { background:var(--blue); color:#fff; }
+  #wordPop .wp-add { background:#e8f5e9; color:#2e7d32; }
+  #wordPop .wp-close { position:absolute; top:4px; right:10px; border:0; background:none; font-size:18px; color:var(--muted); cursor:pointer; }
 </style>
+<script src="/dict.min.js"></script>
 </head>
 <body>
 <div id="topbar" style="display:none">
   <button id="btnBack" onclick="location.href='/'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">← 课程</button>
+  <button onclick="location.href='/vocab.html'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">📖 生词本</button>
   <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
   <div id="player">
     <button id="btnPlay" class="paused" aria-label="播放"></button>
@@ -137,6 +152,16 @@
 </div>
 <div id="wrap"></div>
 <button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
+<div id="wordPop">
+  <button class="wp-close" onclick="document.getElementById('wordPop').style.display='none'">×</button>
+  <div class="wp-word" id="wpWord"></div>
+  <div class="wp-ph" id="wpPh"></div>
+  <div class="wp-zh" id="wpZh"></div>
+  <div class="wp-row">
+    <button class="wp-say" id="wpSay">🔊 读一下</button>
+    <button class="wp-add" id="wpAdd">➕ 生词本</button>
+  </div>
+</div>
 <div id="bigplay"><button id="btnBig">▶ 听一听</button></div>
 
 <script>
@@ -511,8 +536,96 @@ function renderStep() {
   }
   qT0 = Date.now(); // 开始计时：题目出现
   wireQuestion(s);
+  makeWordsTappable();
   window.scrollTo(0, 0);
 }
+// ---- 点词查词 + 生词本（2026-10-08） ----
+function lookupWord(w) {
+  const D = window.XH_DICT || {};
+  w = String(w || '').toLowerCase().replace(/^[^a-z]+|[^a-z]+$/g, '');
+  if (!w) return null;
+  if (D[w]) return { word: w, hit: D[w] };
+  // 简单还原：复数/过去式/进行时
+  const cands = [];
+  if (/ies$/.test(w)) cands.push(w.replace(/ies$/, 'y'));
+  if (/es$/.test(w)) cands.push(w.slice(0, -2));
+  if (/s$/.test(w)) cands.push(w.slice(0, -1));
+  if (/ied$/.test(w)) cands.push(w.replace(/ied$/, 'y'));
+  if (/ed$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
+  if (/ing$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -3) + 'e');
+  if (/er$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
+  if (/est$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -2));
+  if (/ly$/.test(w)) cands.push(w.slice(0, -2));
+  for (const c of cands) if (D[c]) return { word: c, hit: D[c], orig: w };
+  return { word: w, hit: null };
+}
+function makeWordsTappable() {
+  document.querySelectorAll('.reading-pane pre').forEach(pre => {
+    if (pre.dataset.tapped) return;
+    pre.dataset.tapped = '1';
+    const frag = document.createDocumentFragment();
+    pre.textContent.split(/([A-Za-z]+(?:'[a-z]+)?)/g).forEach(part => {
+      if (/^[A-Za-z]+(?:'[a-z]+)?$/.test(part) && part.length >= 2) {
+        const sp = document.createElement('span');
+        sp.className = 'w'; sp.textContent = part;
+        sp.onclick = e => { e.stopPropagation(); showWordPop(part, e.clientX, e.clientY); };
+        frag.appendChild(sp);
+      } else frag.appendChild(document.createTextNode(part));
+    });
+    pre.textContent = ''; pre.appendChild(frag);
+  });
+}
+let curWord = null;
+function showWordPop(raw, x, y) {
+  const r = lookupWord(raw);
+  if (!r) return;
+  curWord = r;
+  document.getElementById('wpWord').textContent = r.orig || r.word;
+  let ph = '', zh = '（词典里没有这个词的意思）';
+  if (r.hit) { const p = r.hit.split('|'); ph = p[0] ? '/' + p[0] + '/' : ''; zh = p[1] || zh; }
+  document.getElementById('wpPh').textContent = ph;
+  document.getElementById('wpZh').textContent = zh;
+  document.getElementById('wpAdd').textContent = isInVocab(r.word) ? '✓ 已在生词本' : '➕ 生词本';
+  const pop = document.getElementById('wordPop');
+  pop.style.display = 'block';
+  const pw = 280, ph2 = 180;
+  pop.style.left = Math.max(8, Math.min(window.innerWidth - pw - 8, x - pw / 2)) + 'px';
+  pop.style.top = Math.max(8, Math.min(window.innerHeight - ph2 - 8, y + 12)) + 'px';
+}
+document.getElementById('wpSay').onclick = () => {
+  if (!curWord) return;
+  try {
+    const u = new SpeechSynthesisUtterance(curWord.word);
+    u.lang = 'en-US'; u.rate = 0.85;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch (e) {}
+};
+document.getElementById('wpAdd').onclick = () => {
+  if (!curWord) return;
+  addToVocab(curWord);
+  document.getElementById('wpAdd').textContent = '✓ 已在生词本';
+};
+// 生词本：localStorage 为主（本机不丢），服务端尽力同步
+function getVocab() {
+  try { return JSON.parse(localStorage.getItem('xh_vocab_v1') || '{}'); } catch (e) { return {}; }
+}
+function isInVocab(w) { return !!getVocab()[w]; }
+function addToVocab(r) {
+  const v = getVocab();
+  let ph = '', zh = '';
+  if (r.hit) { const p = r.hit.split('|'); ph = p[0] || ''; zh = p[1] || ''; }
+  if (!v[r.word]) v[r.word] = { zh, ph, added: Date.now(), reviews: 0, ok: 0 };
+  try { localStorage.setItem('xh_vocab_v1', JSON.stringify(v)); } catch (e) {}
+  // 服务端尽力同步（失败不影响）
+  try {
+    fetch('/api/vocab/add', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ word: r.word, zh, ph }) }).catch(() => {});
+  } catch (e) {}
+}
+document.addEventListener('click', e => {
+  const pop = document.getElementById('wordPop');
+  if (pop && pop.style.display === 'block' && !pop.contains(e.target)) pop.style.display = 'none';
+});
 async function advance() {
   const arr = stepsOf(PART);
   if (POS + 1 >= arr.length) {
