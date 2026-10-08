@@ -191,14 +191,14 @@ app.post('/api/setup', (req, res) => {
 // 公开：访问码校验（限速）
 app.post('/api/verify', (req, res) => {
   const ip = req.ip || req.socket.remoteAddress || 'unknown';
-  if (auth.verifyRateLimited(ip)) {
-    return res.status(429).json({ ok: false, error: 'too_many_attempts' });
-  }
   const { access_code } = req.body || {};
   if (!auth.isSetupDone()) {
     return res.status(400).json({ ok: false, error: 'not_setup' });
   }
   if (!auth.checkVerifyCode(access_code)) {
+    if (auth.recordVerifyFail(ip)) {
+      return res.status(429).json({ ok: false, error: 'too_many_attempts' });
+    }
     return res.status(401).json({ ok: false, error: 'bad_code' });
   }
   auth.verifyRateReset(ip);
