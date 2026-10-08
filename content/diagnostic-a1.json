@@ -20,14 +20,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l1",
       "level": 1,
-      "stem": "“书”的英文是什么？请选择。",
+      "stem": "\"书\"的英文是哪个？",
       "options": [
+        "B. pen",
+        "D. eraser",
         "A. book",
-        "B. notebook",
-        "C. pen",
-        "D. paper"
+        "C. ruler"
       ],
-      "answer": "A",
+      "answer": "C",
       "explain": "",
       "help": ""
     },
@@ -39,14 +39,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l2",
       "level": 2,
-      "stem": "\"图书馆\"的英文是什么？请选择。",
+      "stem": "\"图书馆\"的英文是哪个？",
       "options": [
-        "A. shop",
         "B. library",
-        "C. school",
-        "D. park"
+        "D. park",
+        "A. shop",
+        "C. school"
       ],
-      "answer": "B",
+      "answer": "A",
       "explain": "",
       "help": ""
     },
@@ -58,14 +58,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l3",
       "level": 3,
-      "stem": "\"日程表\"的英文是什么？请选择。",
+      "stem": "\"日程表\"的英文是哪个？",
       "options": [
-        "A. timetable",
-        "B. schedule",
+        "A. menu",
         "C. map",
-        "D. menu"
+        "D. ticket",
+        "B. schedule"
       ],
-      "answer": "B",
+      "answer": "D",
       "explain": "",
       "help": ""
     },
@@ -77,11 +77,11 @@
       "category": "拼读",
       "knowledge_point": "phonics-1",
       "level": 1,
-      "stem": "哪个单词划线部分发音不同？c<u>a</u>t / c<u>a</u>ke / m<u>a</u>p",
+      "stem": "哪个单词划线部分发音不同？cat / cake / map",
       "options": [
-        "A. 第一个",
-        "B. 第二个",
         "C. 第三个",
+        "B. 第二个",
+        "A. 第一个",
         "D. 都一样"
       ],
       "answer": "B",
@@ -96,14 +96,14 @@
       "category": "拼读",
       "knowledge_point": "phonics-2",
       "level": 2,
-      "stem": "哪个单词划线部分发音不同？b<u>e</u>d / p<u>e</u>n / m<u>e</u>",
+      "stem": "哪个单词划线部分发音不同？bed / pen / me",
       "options": [
-        "A. 第一个",
-        "B. 第二个",
         "C. 第三个",
-        "D. 都一样"
+        "A. 第一个",
+        "D. 都一样",
+        "B. 第二个"
       ],
-      "answer": "C",
+      "answer": "A",
       "explain": "",
       "help": ""
     },
@@ -117,12 +117,12 @@
       "level": 1,
       "stem": "She ___ to school every day.",
       "options": [
+        "D. gone",
         "A. go",
         "B. goes",
-        "C. going",
-        "D. gone"
+        "C. going"
       ],
-      "answer": "B",
+      "answer": "C",
       "explain": "",
       "help": ""
     },
@@ -136,12 +136,12 @@
       "level": 2,
       "stem": "There ___ some water in the glass.",
       "options": [
-        "A. is",
         "B. are",
-        "C. be",
-        "D. have"
+        "A. is",
+        "D. have",
+        "C. be"
       ],
-      "answer": "A",
+      "answer": "B",
       "explain": "",
       "help": ""
     },
@@ -155,12 +155,12 @@
       "level": 3,
       "stem": "I have lived here ___ 2020.",
       "options": [
-        "A. for",
-        "B. since",
+        "D. at",
         "C. from",
-        "D. at"
+        "A. for",
+        "B. since"
       ],
-      "answer": "B",
+      "answer": "D",
       "explain": "",
       "help": ""
     },
