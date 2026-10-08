@@ -11,7 +11,7 @@
       "kind": "teach",
       "phase": "practice",
       "title": "大直播前夜",
-      "teach_html": "<p>站长：明天就是<b>校庆大直播</b>了！三张通知、校园数据、听众来信，全都要核对一遍，写成一期完整的广播稿。</p><p>今晚我们先彩排，你来当主播。</p>",
+      "teach_html": "<p>【承上启下】昨天你学会了写回信。今天是综合演练：听通知、记数据、回听众，一次搞定。</p><p>站长：明天就是<b>校庆大直播</b>了！三张通知、校园数据、听众来信，全都要核对一遍，写成一期完整的广播稿。</p><p>今晚我们先彩排，你来当主播。</p>",
       "scene": "广播站",
       "step": 1
     },
@@ -36,7 +36,7 @@
       ],
       "answer": "C",
       "explain": "第二张更新：Saturday, 7:00 p.m.。",
-      "help": "只认最后一次更新，看第二张。",
+      "help": "只认最后一次更新。第一张说 Friday，第二张说 Saturday，以第二张为准。",
       "predicted_errors": [
         {
           "match": "A",
@@ -68,7 +68,7 @@
       ],
       "answer": "D",
       "explain": "语音：搬到 school hall。",
-      "help": "听站长的语音，地点搬了。",
+      "help": "听站长的语音留言，地点搬到哪里了？注意不是第一张通知的旧地点。",
       "predicted_errors": [
         {
           "match": "A",
@@ -104,7 +104,7 @@
       ],
       "answer": "B",
       "explain": "up 20% from last year。",
-      "help": "看 Students 那行，up 多少？",
+      "help": "听播报里 up 后面的数字。注意区分：人数涨 20%，借书涨 15%，别混。",
       "predicted_errors": [
         {
           "match": "A",
@@ -194,7 +194,7 @@
       ],
       "answer": "A",
       "explain": "请求是点歌：Play \"Sunshine\"。",
-      "help": "请求是让广播站做的事。",
+      "help": "听第一封信，找真正的请求。闲聊（比如吃面条）不算请求，点歌才算。",
       "predicted_errors": [
         {
           "match": "B",
@@ -222,7 +222,7 @@
       ],
       "answer": "B",
       "explain": "问 English Corner 的时间。",
-      "help": "找问句。",
+      "help": "听第二封信，他想问什么？注意问的是时间还是地点。",
       "predicted_errors": [
         {
           "match": "C",
@@ -290,7 +290,7 @@
       ],
       "answer": "D",
       "explain": "up 15% from November。",
-      "help": "看 Books 那行。",
+      "help": "听 12 月借书的播报，up 后面跟的是哪个数字？别和人数的 20% 搞混。",
       "predicted_errors": [
         {
           "match": "B",
@@ -318,7 +318,7 @@
       ],
       "answer": "D",
       "explain": "两封：来信一和来信二。",
-      "help": "数一数。",
+      "help": "数一数有几封信。来信一、来信二，一共几封？",
       "predicted_errors": [],
       "scene": "数信",
       "step": 14,
@@ -349,7 +349,7 @@
       ],
       "answer": "C",
       "explain": "Friday, 6:00 p.m. 是第一张的旧时间，已更新。",
-      "help": "找被更新掉的旧信息。",
+      "help": "哪张通知是最新的？旧通知的信息不用播，找出那个旧的。",
       "predicted_errors": [],
       "scene": "找作废",
       "step": 16,
@@ -460,7 +460,7 @@
       ],
       "answer": "B",
       "explain": "Saturday, 7:00 p.m.",
-      "help": "仔细听时间。",
+      "help": "语音里说的演出时间是周几、几点？和通知对比一下。",
       "predicted_errors": [
         {
           "match": "A",
@@ -523,7 +523,7 @@
       ],
       "answer": "A",
       "explain": "Students up 20%，最大。",
-      "help": "比较两个百分比。",
+      "help": "比较两个涨幅：人数 up 20%，借书 up 15%，哪个大？",
       "predicted_errors": [
         {
           "match": "B",
@@ -607,7 +607,7 @@
       ],
       "answer": "A",
       "explain": "请求是点歌：Play \"Rainbow\"。",
-      "help": "找让广播站做的事。",
+      "help": "听这封信，真正的请求是什么？闲聊不算，找那个要你做事的句子。",
       "predicted_errors": [
         {
           "match": "B",
@@ -775,7 +775,7 @@
       ],
       "answer": "C",
       "explain": "Friday 6pm 是旧时间，不用了。",
-      "help": "找错误的那项。",
+      "help": "逐项检查：时间、地点、数据，哪一项和最新通知对不上？",
       "predicted_errors": [],
       "scene": "检查",
       "step": 35,
