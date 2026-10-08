@@ -1,2 +1,297 @@
-{"home_subtitle": "登月计划 · 第三课", "lesson_id": "moon3", "note": "CLIL 跨学科：英语 + 数学物理。数字表达 + 地月距离计算 + 单元总结。", "part1_desc": "数字与距离", "part2_desc": "总结与验证", "practice_end": 20, "steps": [{"kind": "teach", "phase": "teach", "step": 1, "teach_html": "<p>上一课我们学了 there be，知道各国 2026 年都在探月。今天我们来算一算：去月球到底要多久？</p><p>地球到月球：约 384,000 公里。嫦娥七号要飞好几天，Artemis 2 绕月要 10 天。</p><p>学英语里的数字表达，顺便练练数学！</p><p><b>本课还学了</b>：数学——大数字读法。</p>", "title": "多远"}, {"kind": "teach", "phase": "teach", "step": 2, "teach_html": "<p>英语数字读法：</p><ul><li>384,000 = three hundred <b>eighty-four thousand</b></li><li>1,000 = one <b>thousand</b></li><li>1,000,000 = one <b>million</b></li></ul><p>记住：thousand（千）、million（百万）。中文\"万\"在英语里没有直接对应，要换算！</p>", "title": "数字读法"}, {"kind": "teach", "phase": "teach", "step": 3, "teach_html": "<p>对比中文和英文：</p><p>中文：38 <b>万</b>公里<br>英文：384 <b>thousand</b> kilometers（38.4 万 = 384 千）</p><p><b>一句话规则</b>：英文没有\"万\"，38 万要说成 384 thousand。</p>", "title": "万怎么说"}, {"answer": "B", "explain": "384 thousand = 384,000。", "help": "38.4 万 = 多少 thousand？", "kind": "mcq", "options": ["38 thousand", "384 thousand", "38 million", "384 million"], "phase": "practice", "scene": "地月距离。", "stem": "384,000 kilometers = ____ kilometers.", "step": 4, "title": "384000", "wrong_feedback": {"A": "38 thousand 是 38,000，少了个零。", "C": "38 million 是 38,000,000，太大了。", "D": "384 million 是 384,000,000，太大了。"}}, {"answer": "C", "explain": "10 days，10 天。", "help": "Artemis 2 绕月飞行多少天？看第 2 课的内容。", "kind": "mcq", "options": ["4 days", "8 days", "10 days", "20 days"], "phase": "practice", "scene": "Artemis 2 飞行时间。", "stem": "Artemis 2 will fly around the Moon for ____.", "step": 5, "title": "飞几天", "wrong_feedback": {"A": "4 是宇航员人数，不是天数。", "B": "8 是发射月份，不是天数。", "D": "20 太多了，是 10 天。"}}, {"answer": "A", "explain": "4 名宇航员。", "help": "Artemis 2 有几名宇航员？", "kind": "mcq", "options": ["4", "2", "6", "10"], "phase": "practice", "scene": "宇航员人数。", "stem": "How many astronauts are on Artemis 2?", "step": 6, "title": "几个人", "wrong_feedback": {"B": "2 太少了。", "C": "6 太多了。", "D": "10 是天数，不是人数。"}}, {"kind": "teach", "phase": "teach", "step": 7, "teach_html": "<p>去月球要多久？</p><ul><li>阿波罗 11 号（1969）：飞了 <b>4 天</b>到月球</li><li>嫦娥七号：也要飞<b>好几天</b></li><li>光从月球到地球：只要 <b>1.3 秒</b>！</li><li>走路去月球：要走 <b>9 年</b>（不停地走）</li></ul><p>所以 1969 年人类登月是多么了不起！</p><p><b>本课还学了</b>：物理——地月距离与速度。</p>", "title": "飞多久"}, {"answer": "B", "explain": "光速最快，1.3 秒就到。", "help": "光、飞船、走路，哪个最快？", "kind": "mcq", "options": ["by ship", "by light", "on foot", "by car"], "phase": "practice", "scene": "比速度。", "stem": "从月球到地球，最快的方式是什么？", "step": 8, "title": "最快", "wrong_feedback": {"A": "飞船要飞好几天。", "C": "走路要 9 年。", "D": "汽车上不了天。"}}, {"answer": "D", "explain": "1969 年，阿波罗 11 号。", "help": "人类第一次登月是哪一年？", "kind": "mcq", "options": ["1959", "1979", "1989", "1969"], "phase": "practice", "scene": "历史时刻。", "stem": "人类第一次登月是在哪一年？", "step": 9, "title": "哪一年", "wrong_feedback": {"A": "1959 年还没登月。", "B": "1979 年太晚了。", "C": "1989 年太晚了。"}}, {"answer": "B", "explain": "2 million = 2,000,000。", "help": "1 million = 1,000,000，那 2 million 是多少？", "kind": "mcq", "options": ["200,000", "2,000,000", "20,000,000", "2,000"], "phase": "practice", "scene": "换材料：大数字。", "stem": "2 million = ____.", "step": 10, "title": "换材料：百万", "wrong_feedback": {"A": "200,000 是 200 thousand。", "C": "20,000,000 是 20 million。", "D": "2,000 是 2 thousand。"}}, {"answer": "A", "explain": "5 thousand = 5,000。", "help": "1 thousand = 1,000。", "kind": "mcq", "options": ["5,000", "50,000", "500,000", "500"], "phase": "practice", "scene": "换材料：千。", "stem": "5 thousand = ____.", "step": 11, "title": "换材料：千", "wrong_feedback": {"B": "50,000 是 50 thousand。", "C": "500,000 是 500 thousand。", "D": "500 是 five hundred。"}}, {"kind": "teach", "phase": "teach", "step": 12, "teach_html": "<p>登月计划 3 课：</p><ul><li>第 1 课：will 将来时 + 嫦娥七号任务</li><li>第 2 课：there be 句型 + 各国深空计划</li><li>第 3 课：数字读法 + 地月距离</li></ul><p>将来时、there be、大数字——中考必考。</p><p>你现在比很多大人都懂 2026 年的航天大事！</p>", "title": "单元总结"}, {"answer": "C", "explain": "there are + 复数 craters。", "help": "还记得第 2 课吗？craters 是复数。", "kind": "mcq", "options": ["There is", "There was", "There are", "There will"], "phase": "verify", "scene": "跨课验证：there be。", "stem": "____ many craters on the Moon.", "step": 13, "title": "跨课：there be", "wrong_feedback": {"A": "craters 是复数。", "B": "这里不是过去。", "D": "这里不是将来。"}}, {"answer": "A", "explain": "will find，将来时（第 1 课内容）。", "help": "还记得第 1 课吗？将要用 will。", "kind": "mcq", "options": ["will find", "finds", "found", "finding"], "phase": "verify", "scene": "跨课验证：将来时。", "stem": "It ____ water ice on the Moon.", "step": 14, "title": "跨课：将来时", "wrong_feedback": {"B": "finds 是现在时。", "C": "found 是过去式。", "D": "finding 是进行时。"}}, {"answer": "B", "explain": "under the sea（深海单元第 1 课）。", "help": "还记得深海单元吗？在海面下用什么？", "kind": "mcq", "options": ["on the sea", "under the sea", "in the sky", "near the sea"], "phase": "verify", "scene": "跨单元验证：深海。", "stem": "The probe is 2,000 meters ____.", "step": 15, "title": "跨单元：深海", "wrong_feedback": {"A": "on the sea 是在海面上。", "C": "in the sky 是在天上。", "D": "near the sea 只说在附近。"}}, {"answer": "D", "explain": "saw 是 see 的过去式（深海单元第 2 课）。", "help": "还记得吗？see 的过去式是什么？", "kind": "mcq", "options": ["see", "sees", "seen", "saw"], "phase": "verify", "scene": "跨单元验证：过去式。", "stem": "It ____ some strange lights.", "step": 16, "title": "跨单元：过去式", "wrong_feedback": {"A": "see 是原形。", "B": "sees 是现在时。", "C": "seen 要和 have 连用。"}}, {"kind": "teach", "phase": "teach", "step": 17, "teach_html": "<p>登月单元完成！</p><p>6 课 CLIL（深海 3 + 登月 3）全部学完，你已经：</p><ul><li>学会：方位介词、过去时、比较级、将来时、there be、数字</li><li>知道：海洋分区、探测器、生物发光、嫦娥七号、各国航天计划</li></ul><p>英语 + 科学，一举两得！</p><p>下一个 CLIL 单元预告：<b>AI 科学家</b>——采访一个 AI！</p>", "title": "下课"}] ,
-"title": "登月计划 3：算算多远", "unit": "moon", "version": 1}
+{
+  "home_subtitle": "登月计划 · 第三课",
+  "lesson_id": "moon3",
+  "note": "CLIL 跨学科：英语 + 数学物理。数字表达 + 地月距离计算 + 单元总结。",
+  "part1_desc": "数字与距离",
+  "part2_desc": "总结与验证",
+  "practice_end": 11,
+  "steps": [
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 1,
+      "teach_html": "<p>上一课我们学了 there be，知道各国 2026 年都在探月。今天我们来算一算：去月球到底要多久？</p><p>地球到月球：约 384,000 公里。嫦娥七号要飞好几天，Artemis 2 绕月要 10 天。</p><p>学英语里的数字表达，顺便练练数学！</p><p><b>本课还学了</b>：数学——大数字读法。</p>",
+      "title": "多远"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 2,
+      "teach_html": "<p>英语数字读法：</p><ul><li>384,000 = three hundred <b>eighty-four thousand</b></li><li>1,000 = one <b>thousand</b></li><li>1,000,000 = one <b>million</b></li></ul><p>记住：thousand（千）、million（百万）。中文\"万\"在英语里没有直接对应，要换算！</p>",
+      "title": "数字读法"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 3,
+      "teach_html": "<p>对比中文和英文：</p><p>中文：38 <b>万</b>公里<br>英文：384 <b>thousand</b> kilometers（38.4 万 = 384 千）</p><p><b>一句话规则</b>：英文没有\"万\"，38 万要说成 384 thousand。</p>",
+      "title": "万怎么说"
+    },
+    {
+      "answer": "B",
+      "explain": "384 thousand = 384,000。",
+      "help": "38.4 万 = 多少 thousand？",
+      "kind": "mcq",
+      "options": [
+        "38 thousand",
+        "384 thousand",
+        "38 million",
+        "384 million"
+      ],
+      "phase": "practice",
+      "scene": "地月距离。",
+      "stem": "384,000 kilometers = ____ kilometers.",
+      "step": 4,
+      "title": "384000",
+      "wrong_feedback": {
+        "A": "38 thousand 是 38,000，少了个零。",
+        "C": "38 million 是 38,000,000，太大了。",
+        "D": "384 million 是 384,000,000，太大了。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "10 days，10 天。",
+      "help": "Artemis 2 绕月飞行多少天？看第 2 课的内容。",
+      "kind": "mcq",
+      "options": [
+        "4 days",
+        "8 days",
+        "10 days",
+        "20 days"
+      ],
+      "phase": "practice",
+      "scene": "Artemis 2 飞行时间。",
+      "stem": "Artemis 2 will fly around the Moon for ____.",
+      "step": 5,
+      "title": "飞几天",
+      "wrong_feedback": {
+        "A": "4 是宇航员人数，不是天数。",
+        "B": "8 是发射月份，不是天数。",
+        "D": "20 太多了，是 10 天。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "4 名宇航员。",
+      "help": "Artemis 2 有几名宇航员？",
+      "kind": "mcq",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "10"
+      ],
+      "phase": "practice",
+      "scene": "宇航员人数。",
+      "stem": "How many astronauts are on Artemis 2?",
+      "step": 6,
+      "title": "几个人",
+      "wrong_feedback": {
+        "B": "2 太少了。",
+        "C": "6 太多了。",
+        "D": "10 是天数，不是人数。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 7,
+      "teach_html": "<p>去月球要多久？</p><ul><li>阿波罗 11 号（1969）：飞了 <b>4 天</b>到月球</li><li>嫦娥七号：也要飞<b>好几天</b></li><li>光从月球到地球：只要 <b>1.3 秒</b>！</li><li>走路去月球：要走 <b>9 年</b>（不停地走）</li></ul><p>所以 1969 年人类登月是多么了不起！</p><p><b>本课还学了</b>：物理——地月距离与速度。</p>",
+      "title": "飞多久"
+    },
+    {
+      "answer": "B",
+      "explain": "光速最快，1.3 秒就到。",
+      "help": "光、飞船、走路，哪个最快？",
+      "kind": "mcq",
+      "options": [
+        "by ship",
+        "by light",
+        "on foot",
+        "by car"
+      ],
+      "phase": "practice",
+      "scene": "比速度。",
+      "stem": "从月球到地球，最快的方式是什么？",
+      "step": 8,
+      "title": "最快",
+      "wrong_feedback": {
+        "A": "飞船要飞好几天。",
+        "C": "走路要 9 年。",
+        "D": "汽车上不了天。"
+      }
+    },
+    {
+      "answer": "D",
+      "explain": "1969 年，阿波罗 11 号。",
+      "help": "人类第一次登月是哪一年？",
+      "kind": "mcq",
+      "options": [
+        "1959",
+        "1979",
+        "1989",
+        "1969"
+      ],
+      "phase": "practice",
+      "scene": "历史时刻。",
+      "stem": "人类第一次登月是在哪一年？",
+      "step": 9,
+      "title": "哪一年",
+      "wrong_feedback": {
+        "A": "1959 年还没登月。",
+        "B": "1979 年太晚了。",
+        "C": "1989 年太晚了。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "2 million = 2,000,000。",
+      "help": "1 million = 1,000,000，那 2 million 是多少？",
+      "kind": "mcq",
+      "options": [
+        "200,000",
+        "2,000,000",
+        "20,000,000",
+        "2,000"
+      ],
+      "phase": "practice",
+      "scene": "换材料：大数字。",
+      "stem": "2 million = ____.",
+      "step": 10,
+      "title": "换材料：百万",
+      "wrong_feedback": {
+        "A": "200,000 是 200 thousand。",
+        "C": "20,000,000 是 20 million。",
+        "D": "2,000 是 2 thousand。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "5 thousand = 5,000。",
+      "help": "1 thousand = 1,000。",
+      "kind": "mcq",
+      "options": [
+        "5,000",
+        "50,000",
+        "500,000",
+        "500"
+      ],
+      "phase": "practice",
+      "scene": "换材料：千。",
+      "stem": "5 thousand = ____.",
+      "step": 11,
+      "title": "换材料：千",
+      "wrong_feedback": {
+        "B": "50,000 是 50 thousand。",
+        "C": "500,000 是 500 thousand。",
+        "D": "500 是 five hundred。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 12,
+      "teach_html": "<p>登月计划 3 课：</p><ul><li>第 1 课：will 将来时 + 嫦娥七号任务</li><li>第 2 课：there be 句型 + 各国深空计划</li><li>第 3 课：数字读法 + 地月距离</li></ul><p>将来时、there be、大数字——中考必考。</p><p>你现在比很多大人都懂 2026 年的航天大事！</p>",
+      "title": "单元总结"
+    },
+    {
+      "answer": "C",
+      "explain": "there are + 复数 craters。",
+      "help": "还记得第 2 课吗？craters 是复数。",
+      "kind": "mcq",
+      "options": [
+        "There is",
+        "There was",
+        "There are",
+        "There will"
+      ],
+      "phase": "validate",
+      "scene": "跨课验证：there be。",
+      "stem": "____ many craters on the Moon.",
+      "step": 13,
+      "title": "跨课：there be",
+      "wrong_feedback": {
+        "A": "craters 是复数。",
+        "B": "这里不是过去。",
+        "D": "这里不是将来。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "will find，将来时（第 1 课内容）。",
+      "help": "还记得第 1 课吗？将要用 will。",
+      "kind": "mcq",
+      "options": [
+        "will find",
+        "finds",
+        "found",
+        "finding"
+      ],
+      "phase": "validate",
+      "scene": "跨课验证：将来时。",
+      "stem": "It ____ water ice on the Moon.",
+      "step": 14,
+      "title": "跨课：将来时",
+      "wrong_feedback": {
+        "B": "finds 是现在时。",
+        "C": "found 是过去式。",
+        "D": "finding 是进行时。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "under the sea（深海单元第 1 课）。",
+      "help": "还记得深海单元吗？在海面下用什么？",
+      "kind": "mcq",
+      "options": [
+        "on the sea",
+        "under the sea",
+        "in the sky",
+        "near the sea"
+      ],
+      "phase": "validate",
+      "scene": "跨单元验证：深海。",
+      "stem": "The probe is 2,000 meters ____.",
+      "step": 15,
+      "title": "跨单元：深海",
+      "wrong_feedback": {
+        "A": "on the sea 是在海面上。",
+        "C": "in the sky 是在天上。",
+        "D": "near the sea 只说在附近。"
+      }
+    },
+    {
+      "answer": "D",
+      "explain": "saw 是 see 的过去式（深海单元第 2 课）。",
+      "help": "还记得吗？see 的过去式是什么？",
+      "kind": "mcq",
+      "options": [
+        "see",
+        "sees",
+        "seen",
+        "saw"
+      ],
+      "phase": "validate",
+      "scene": "跨单元验证：过去式。",
+      "stem": "It ____ some strange lights.",
+      "step": 16,
+      "title": "跨单元：过去式",
+      "wrong_feedback": {
+        "A": "see 是原形。",
+        "B": "sees 是现在时。",
+        "C": "seen 要和 have 连用。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 17,
+      "teach_html": "<p>登月单元完成！</p><p>6 课 CLIL（深海 3 + 登月 3）全部学完，你已经：</p><ul><li>学会：方位介词、过去时、比较级、将来时、there be、数字</li><li>知道：海洋分区、探测器、生物发光、嫦娥七号、各国航天计划</li></ul><p>英语 + 科学，一举两得！</p><p>下一个 CLIL 单元预告：<b>AI 科学家</b>——采访一个 AI！</p>",
+      "title": "下课"
+    }
+  ],
+  "title": "登月计划 3：算算多远",
+  "unit": "moon",
+  "version": 1
+}
