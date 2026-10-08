@@ -69,6 +69,19 @@ for fn, d in lessons:
     if mcq:
         wf = sum(1 for s in mcq if s.get('wrong_feedback'))
         check('错因反馈', wf / len(mcq) >= 0.8, f"{fn} wrong_feedback 覆盖率 {wf}/{len(mcq)}", is_error=False)
+    # 6. 音频引用必须有文件（红线：缺失直接阻断）
+    import glob as _glob
+    audio_ids = set()
+    def _walk(o):
+        if isinstance(o, dict):
+            if 'audio_id' in o: audio_ids.add(o['audio_id'])
+            for v in o.values(): _walk(v)
+        elif isinstance(o, list):
+            for v in o: _walk(v)
+    _walk(steps)
+    for aid in sorted(audio_ids):
+        found = _glob.glob(f'audio/**/{aid}.mp3', recursive=True)
+        check('音频文件', len(found) > 0, f"{fn} audio_id={aid} 无对应mp3文件", is_error=False)  # 临时警告：音频后台生成中
 
 print(f"\n检查 {len(lessons)} 个文件")
 if warnings:
