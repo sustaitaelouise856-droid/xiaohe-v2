@@ -1,2 +1,326 @@
-{"home_subtitle": "登月计划 · 第二课", "lesson_id": "moon2", "note": "CLIL 跨学科：英语 + 航天科学。there be 句型 + 中美登月对比。", "part1_desc": "Artemis 计划与 there be", "part2_desc": "练习与验证", "practice_end": 20, "steps": [{"kind": "teach", "phase": "teach", "step": 1, "teach_html": "<p>上一课我们学了 will 将来时，知道嫦娥七号 2026 年 8 月去月球南极。今天看看美国的计划——</p><p>2026 年，美国 Artemis 2 号将送 4 名宇航员绕月飞行 10 天。这是 1970 年代以来第一次载人月球任务！</p><p>中美都在 2026 年去月球，这一年被称为\"月球交通繁忙年\"。</p><p><b>本课还学了</b>：航天科学——Artemis 计划。</p>", "title": "美国也要去"}, {"kind": "teach", "phase": "teach", "step": 2, "teach_html": "<p>介绍一个地方有什么，用 <b>there be</b>：</p><ul><li><b>There is</b> a space station.（有一个空间站）— 单数</li><li><b>There are</b> four astronauts.（有四名宇航员）— 复数</li></ul><p>说月球南极有什么：<br><b>There are</b> many craters near the south pole.（南极附近有很多陨石坑）</p>", "title": "there be 句型"}, {"kind": "teach", "phase": "teach", "step": 3, "teach_html": "<p>对比：</p><p>单数：There <b>is</b> water ice in the crater.（陨石坑里有水冰）<br>复数：There <b>are</b> many craters on the Moon.（月球上有很多陨石坑）</p><p><b>一句话规则</b>：一个用 is，多个用 are。</p>", "title": "对比与规则"}, {"answer": "A", "explain": "craters 是复数，用 there are。", "help": "craters 是单数还是复数？一个用 is，多个用什么？", "kind": "mcq", "options": ["There are", "There is", "There will", "There was"], "phase": "practice", "scene": "介绍月球上的陨石坑。", "stem": "____ many craters on the Moon.", "step": 4, "title": "很多陨石坑", "wrong_feedback": {"B": "craters 是复数，不能用 is。", "C": "这里不是将来时。", "D": "这里不是过去时。"}}, {"answer": "B", "explain": "water ice 不可数，算单数，用 there is。", "help": "water ice 是可数还是不可数？不可数按单数处理。", "kind": "mcq", "options": ["There are", "There is", "There will", "There was"], "phase": "practice", "scene": "介绍陨石坑里的水冰。", "stem": "____ water ice in the crater.", "step": 5, "title": "有水冰", "wrong_feedback": {"A": "water ice 不可数，不能用 are。", "C": "这里不是将来时。", "D": "这里不是过去时。"}}, {"answer": "A", "explain": "astronauts 复数，用 there are。", "help": "astronauts 有 s，是复数。", "kind": "mcq", "options": ["There are", "There is", "There will be", "There was"], "phase": "practice", "scene": "Artemis 2 号有 4 名宇航员。", "stem": "____ four astronauts on Artemis 2.", "step": 6, "title": "四名宇航员", "wrong_feedback": {"B": "astronauts 是复数。", "C": "这里说的是现在的计划事实，不用将来时。", "D": "这里不是过去时。"}}, {"kind": "teach", "phase": "teach", "step": 7, "teach_html": "<p>中美登月对比：</p><ul><li>中国嫦娥七号：<b>无人</b>探测器，去南极找水冰，为建基地准备</li><li>美国 Artemis 2：<b>载人</b>绕月飞行，4 名宇航员，10 天，为重返月球铺路</li><li>日本 MMX：去<b>火星的卫星</b>取样，2031 年返回地球</li><li>欧洲 PLATO：找\"另一个地球\"，监测 20 万颗恒星</li></ul><p>2026 年，全世界都在往天上看！</p><p><b>本课还学了</b>：航天科学——各国深空计划。</p>", "title": "各国都在上天"}, {"answer": "C", "explain": "嫦娥七号是无人探测器，Artemis 2 是载人飞行。", "help": "嫦娥七号上面有没有宇航员？", "kind": "mcq", "options": ["Artemis 2", "MMX", "Chang'e-7", "PLATO"], "phase": "practice", "scene": "站长考你：哪个是无人的？", "stem": "哪个任务是无人探测器？", "step": 8, "title": "无人任务", "wrong_feedback": {"A": "Artemis 2 有 4 名宇航员，是载人的。", "B": "MMX 是去火星卫星取样，不是嫦娥七号。", "D": "PLATO 是望远镜，找系外行星的。"}}, {"answer": "B", "explain": "Artemis 2 有 4 名宇航员绕月飞行。", "help": "哪个任务有 4 名宇航员？", "kind": "mcq", "options": ["Chang'e-7", "Artemis 2", "MMX", "PLATO"], "phase": "practice", "scene": "哪个是载人的？", "stem": "哪个任务将送 4 名宇航员绕月飞行？", "step": 9, "title": "载人任务", "wrong_feedback": {"A": "嫦娥七号是无人的。", "C": "MMX 是无人取样任务。", "D": "PLATO 是太空望远镜。"}}, {"answer": "D", "explain": "books 复数，用 there are。", "help": "books 有 s，是复数。", "kind": "mcq", "options": ["There is", "There was", "There will", "There are"], "phase": "practice", "scene": "换材料：书架。", "stem": "____ many books on the shelf.", "step": 10, "title": "换材料：书", "wrong_feedback": {"A": "books 是复数。", "B": "这里不是过去时。", "C": "这里不是将来时。"}}, {"answer": "A", "explain": "a dog 单数，用 there is。", "help": "a dog 是一个，单数用什么？", "kind": "mcq", "options": ["There is", "There are", "There will", "There was"], "phase": "practice", "scene": "换材料：狗。", "stem": "____ a dog near the station.", "step": 11, "title": "换材料：狗", "wrong_feedback": {"B": "a dog 是单数。", "C": "这里不是将来时。", "D": "这里不是过去时。"}}, {"kind": "teach", "phase": "teach", "step": 12, "teach_html": "<p>否定句：there is not（isn't）/ there are not（aren't）</p><p><b>There isn't</b> air on the Moon.（月球上没有空气）<br><b>There aren't</b> many people in space.（太空里没多少人）</p><p>疑问句：Is there…? / Are there…?<br><b>Is there</b> water on Mars?（火星上有水吗？）</p>", "title": "否定和疑问"}, {"answer": "B", "explain": "air 不可数，用 there isn't。", "help": "air 是不可数，按单数处理，否定用什么？", "kind": "mcq", "options": ["There aren't", "There isn't", "There wasn't", "There won't"], "phase": "practice", "scene": "月球上没有空气。", "stem": "____ air on the Moon.", "step": 13, "title": "没有空气", "wrong_feedback": {"A": "air 不可数，不能用 aren't。", "C": "这里不是过去时。", "D": "这里不是将来时。"}}, {"answer": "A", "explain": "Is there…? 单数疑问句。", "help": "问\"有水吗\"，water 不可数，疑问句怎么开头？", "kind": "mcq", "options": ["Is there", "Are there", "Will there", "Was there"], "phase": "practice", "scene": "问火星上有没有水。", "stem": "____ water on Mars?", "step": 14, "title": "火星有水吗", "wrong_feedback": {"B": "water 不可数，不能用 Are。", "C": "这里不是问将来。", "D": "这里不是问过去。"}}, {"kind": "teach", "phase": "teach", "step": 15, "teach_html": "<p>第二课小结：</p><ul><li>肯定：There is（单数）/ There are（复数）</li><li>否定：There isn't / There aren't</li><li>疑问：Is there…? / Are there…?</li></ul><p>2026 各国深空计划：嫦娥七号、Artemis 2、MMX、PLATO。</p><p>下一课：我们算一算——去月球要多久？</p>", "title": "本课小结"}, {"answer": "C", "explain": "students 复数，用 there are。", "help": "students 是复数。", "kind": "mcq", "options": ["There is", "There was", "There are", "There will"], "phase": "verify", "scene": "验证：教室里。", "stem": "____ 30 students in the classroom.", "step": 16, "title": "验证：学生", "wrong_feedback": {"A": "students 是复数。", "B": "这里不是过去。", "D": "这里不是将来。"}}, {"answer": "B", "explain": "a library 单数，用 there is。", "help": "a library 是一个。", "kind": "mcq", "options": ["There are", "There is", "There will", "There was"], "phase": "verify", "scene": "验证：图书馆。", "stem": "____ a library near our school.", "step": 17, "title": "验证：图书馆", "wrong_feedback": {"A": "a library 是单数。", "C": "这里不是将来。", "D": "这里不是过去。"}}, {"answer": "A", "explain": "will land，将来时（第 1 课内容）。", "help": "还记得第 1 课吗？将要用 will。", "kind": "mcq", "options": ["will land", "lands", "landed", "landing"], "phase": "verify", "scene": "跨课验证：还记得吗？", "stem": "The probe ____ on the Moon in 2026.", "step": 18, "title": "跨课：将来时", "wrong_feedback": {"B": "lands 是现在时。", "C": "landed 是过去式。", "D": "landing 是进行时。"}}, {"kind": "teach", "phase": "teach", "step": 19, "teach_html": "<p>第二课完成！</p><p>你学会了 there be 句型：有……（单数 is / 复数 are）。</p><p>你还知道了：2026 年中美欧日都在搞深空探测。</p><p>下一课：地月距离 38 万公里——算算要飞多久？</p>", "title": "下课"}] ,
-"title": "登月计划 2：各国竞赛", "unit": "moon", "version": 1}
+{
+  "home_subtitle": "登月计划 · 第二课",
+  "lesson_id": "moon2",
+  "note": "CLIL 跨学科：英语 + 航天科学。there be 句型 + 中美登月对比。",
+  "part1_desc": "Artemis 计划与 there be",
+  "part2_desc": "练习与验证",
+  "practice_end": 14,
+  "steps": [
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 1,
+      "teach_html": "<p>上一课我们学了 will 将来时，知道嫦娥七号 2026 年 8 月去月球南极。今天看看美国的计划——</p><p>2026 年，美国 Artemis 2 号将送 4 名宇航员绕月飞行 10 天。这是 1970 年代以来第一次载人月球任务！</p><p>中美都在 2026 年去月球，这一年被称为\"月球交通繁忙年\"。</p><p><b>本课还学了</b>：航天科学——Artemis 计划。</p>",
+      "title": "美国也要去"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 2,
+      "teach_html": "<p>介绍一个地方有什么，用 <b>there be</b>：</p><ul><li><b>There is</b> a space station.（有一个空间站）— 单数</li><li><b>There are</b> four astronauts.（有四名宇航员）— 复数</li></ul><p>说月球南极有什么：<br><b>There are</b> many craters near the south pole.（南极附近有很多陨石坑）</p>",
+      "title": "there be 句型"
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 3,
+      "teach_html": "<p>对比：</p><p>单数：There <b>is</b> water ice in the crater.（陨石坑里有水冰）<br>复数：There <b>are</b> many craters on the Moon.（月球上有很多陨石坑）</p><p><b>一句话规则</b>：一个用 is，多个用 are。</p>",
+      "title": "对比与规则"
+    },
+    {
+      "answer": "A",
+      "explain": "craters 是复数，用 there are。",
+      "help": "craters 是单数还是复数？一个用 is，多个用什么？",
+      "kind": "mcq",
+      "options": [
+        "There are",
+        "There is",
+        "There will",
+        "There was"
+      ],
+      "phase": "practice",
+      "scene": "介绍月球上的陨石坑。",
+      "stem": "____ many craters on the Moon.",
+      "step": 4,
+      "title": "很多陨石坑",
+      "wrong_feedback": {
+        "B": "craters 是复数，不能用 is。",
+        "C": "这里不是将来时。",
+        "D": "这里不是过去时。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "water ice 不可数，算单数，用 there is。",
+      "help": "water ice 是可数还是不可数？不可数按单数处理。",
+      "kind": "mcq",
+      "options": [
+        "There are",
+        "There is",
+        "There will",
+        "There was"
+      ],
+      "phase": "practice",
+      "scene": "介绍陨石坑里的水冰。",
+      "stem": "____ water ice in the crater.",
+      "step": 5,
+      "title": "有水冰",
+      "wrong_feedback": {
+        "A": "water ice 不可数，不能用 are。",
+        "C": "这里不是将来时。",
+        "D": "这里不是过去时。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "astronauts 复数，用 there are。",
+      "help": "astronauts 有 s，是复数。",
+      "kind": "mcq",
+      "options": [
+        "There are",
+        "There is",
+        "There will be",
+        "There was"
+      ],
+      "phase": "practice",
+      "scene": "Artemis 2 号有 4 名宇航员。",
+      "stem": "____ four astronauts on Artemis 2.",
+      "step": 6,
+      "title": "四名宇航员",
+      "wrong_feedback": {
+        "B": "astronauts 是复数。",
+        "C": "这里说的是现在的计划事实，不用将来时。",
+        "D": "这里不是过去时。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 7,
+      "teach_html": "<p>中美登月对比：</p><ul><li>中国嫦娥七号：<b>无人</b>探测器，去南极找水冰，为建基地准备</li><li>美国 Artemis 2：<b>载人</b>绕月飞行，4 名宇航员，10 天，为重返月球铺路</li><li>日本 MMX：去<b>火星的卫星</b>取样，2031 年返回地球</li><li>欧洲 PLATO：找\"另一个地球\"，监测 20 万颗恒星</li></ul><p>2026 年，全世界都在往天上看！</p><p><b>本课还学了</b>：航天科学——各国深空计划。</p>",
+      "title": "各国都在上天"
+    },
+    {
+      "answer": "C",
+      "explain": "嫦娥七号是无人探测器，Artemis 2 是载人飞行。",
+      "help": "嫦娥七号上面有没有宇航员？",
+      "kind": "mcq",
+      "options": [
+        "Artemis 2",
+        "MMX",
+        "Chang'e-7",
+        "PLATO"
+      ],
+      "phase": "practice",
+      "scene": "站长考你：哪个是无人的？",
+      "stem": "哪个任务是无人探测器？",
+      "step": 8,
+      "title": "无人任务",
+      "wrong_feedback": {
+        "A": "Artemis 2 有 4 名宇航员，是载人的。",
+        "B": "MMX 是去火星卫星取样，不是嫦娥七号。",
+        "D": "PLATO 是望远镜，找系外行星的。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "Artemis 2 有 4 名宇航员绕月飞行。",
+      "help": "哪个任务有 4 名宇航员？",
+      "kind": "mcq",
+      "options": [
+        "Chang'e-7",
+        "Artemis 2",
+        "MMX",
+        "PLATO"
+      ],
+      "phase": "practice",
+      "scene": "哪个是载人的？",
+      "stem": "哪个任务将送 4 名宇航员绕月飞行？",
+      "step": 9,
+      "title": "载人任务",
+      "wrong_feedback": {
+        "A": "嫦娥七号是无人的。",
+        "C": "MMX 是无人取样任务。",
+        "D": "PLATO 是太空望远镜。"
+      }
+    },
+    {
+      "answer": "D",
+      "explain": "books 复数，用 there are。",
+      "help": "books 有 s，是复数。",
+      "kind": "mcq",
+      "options": [
+        "There is",
+        "There was",
+        "There will",
+        "There are"
+      ],
+      "phase": "practice",
+      "scene": "换材料：书架。",
+      "stem": "____ many books on the shelf.",
+      "step": 10,
+      "title": "换材料：书",
+      "wrong_feedback": {
+        "A": "books 是复数。",
+        "B": "这里不是过去时。",
+        "C": "这里不是将来时。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "a dog 单数，用 there is。",
+      "help": "a dog 是一个，单数用什么？",
+      "kind": "mcq",
+      "options": [
+        "There is",
+        "There are",
+        "There will",
+        "There was"
+      ],
+      "phase": "practice",
+      "scene": "换材料：狗。",
+      "stem": "____ a dog near the station.",
+      "step": 11,
+      "title": "换材料：狗",
+      "wrong_feedback": {
+        "B": "a dog 是单数。",
+        "C": "这里不是将来时。",
+        "D": "这里不是过去时。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 12,
+      "teach_html": "<p>否定句：there is not（isn't）/ there are not（aren't）</p><p><b>There isn't</b> air on the Moon.（月球上没有空气）<br><b>There aren't</b> many people in space.（太空里没多少人）</p><p>疑问句：Is there…? / Are there…?<br><b>Is there</b> water on Mars?（火星上有水吗？）</p>",
+      "title": "否定和疑问"
+    },
+    {
+      "answer": "B",
+      "explain": "air 不可数，用 there isn't。",
+      "help": "air 是不可数，按单数处理，否定用什么？",
+      "kind": "mcq",
+      "options": [
+        "There aren't",
+        "There isn't",
+        "There wasn't",
+        "There won't"
+      ],
+      "phase": "practice",
+      "scene": "月球上没有空气。",
+      "stem": "____ air on the Moon.",
+      "step": 13,
+      "title": "没有空气",
+      "wrong_feedback": {
+        "A": "air 不可数，不能用 aren't。",
+        "C": "这里不是过去时。",
+        "D": "这里不是将来时。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "Is there…? 单数疑问句。",
+      "help": "问\"有水吗\"，water 不可数，疑问句怎么开头？",
+      "kind": "mcq",
+      "options": [
+        "Is there",
+        "Are there",
+        "Will there",
+        "Was there"
+      ],
+      "phase": "practice",
+      "scene": "问火星上有没有水。",
+      "stem": "____ water on Mars?",
+      "step": 14,
+      "title": "火星有水吗",
+      "wrong_feedback": {
+        "B": "water 不可数，不能用 Are。",
+        "C": "这里不是问将来。",
+        "D": "这里不是问过去。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 15,
+      "teach_html": "<p>第二课小结：</p><ul><li>肯定：There is（单数）/ There are（复数）</li><li>否定：There isn't / There aren't</li><li>疑问：Is there…? / Are there…?</li></ul><p>2026 各国深空计划：嫦娥七号、Artemis 2、MMX、PLATO。</p><p>下一课：我们算一算——去月球要多久？</p>",
+      "title": "本课小结"
+    },
+    {
+      "answer": "C",
+      "explain": "students 复数，用 there are。",
+      "help": "students 是复数。",
+      "kind": "mcq",
+      "options": [
+        "There is",
+        "There was",
+        "There are",
+        "There will"
+      ],
+      "phase": "validate",
+      "scene": "验证：教室里。",
+      "stem": "____ 30 students in the classroom.",
+      "step": 16,
+      "title": "验证：学生",
+      "wrong_feedback": {
+        "A": "students 是复数。",
+        "B": "这里不是过去。",
+        "D": "这里不是将来。"
+      }
+    },
+    {
+      "answer": "B",
+      "explain": "a library 单数，用 there is。",
+      "help": "a library 是一个。",
+      "kind": "mcq",
+      "options": [
+        "There are",
+        "There is",
+        "There will",
+        "There was"
+      ],
+      "phase": "validate",
+      "scene": "验证：图书馆。",
+      "stem": "____ a library near our school.",
+      "step": 17,
+      "title": "验证：图书馆",
+      "wrong_feedback": {
+        "A": "a library 是单数。",
+        "C": "这里不是将来。",
+        "D": "这里不是过去。"
+      }
+    },
+    {
+      "answer": "A",
+      "explain": "will land，将来时（第 1 课内容）。",
+      "help": "还记得第 1 课吗？将要用 will。",
+      "kind": "mcq",
+      "options": [
+        "will land",
+        "lands",
+        "landed",
+        "landing"
+      ],
+      "phase": "validate",
+      "scene": "跨课验证：还记得吗？",
+      "stem": "The probe ____ on the Moon in 2026.",
+      "step": 18,
+      "title": "跨课：将来时",
+      "wrong_feedback": {
+        "B": "lands 是现在时。",
+        "C": "landed 是过去式。",
+        "D": "landing 是进行时。"
+      }
+    },
+    {
+      "kind": "teach",
+      "phase": "teach",
+      "step": 19,
+      "teach_html": "<p>第二课完成！</p><p>你学会了 there be 句型：有……（单数 is / 复数 are）。</p><p>你还知道了：2026 年中美欧日都在搞深空探测。</p><p>下一课：地月距离 38 万公里——算算要飞多久？</p>",
+      "title": "下课"
+    }
+  ],
+  "title": "登月计划 2：各国竞赛",
+  "unit": "moon",
+  "version": 1
+}
