@@ -128,8 +128,8 @@ function autoSeed() {
   try { files = fs.readdirSync(dir); } catch { return []; }
   const out = [];
   for (const f of files) {
-    // 正文课 u2r<数字>/u3r<数字>/u4r<数字>/u5r<数字> + 练习课 review<数字>（2026-10-02 总任务书：学完新课自动接着练）
-    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|review\d+)\.json$/.exec(f);
+    // 正文课 u2r<数字>/u3r<数字>/u4r<数字>/u5r<数字>/u6r<数字> + 练习课 review<数字>（2026-10-02 总任务书：学完新课自动接着练）
+    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+)\.json$/.exec(f);
     if (!m) continue;
     const lid = m[1];
     try {
