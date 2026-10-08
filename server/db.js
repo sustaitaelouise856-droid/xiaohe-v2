@@ -64,6 +64,14 @@ CREATE TABLE IF NOT EXISTS app_state (
 );
 `);
 
+// 生词本（2026-10-08）：阅读时点词收藏，localStorage 为主、服务端尽力同步
+db.exec(`
+CREATE TABLE IF NOT EXISTS vocab_words (
+  word       TEXT PRIMARY KEY,
+  zh         TEXT NOT NULL DEFAULT '',
+  ph         TEXT NOT NULL DEFAULT '',
+  added_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
 module.exports = db;
 
 // ---- 轻量迁移（试点期，可直接补列） ----
