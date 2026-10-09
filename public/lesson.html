@@ -463,6 +463,7 @@ function renderStep() {
     const kickerStory = LESSON.kicker_story || '广播站故事';
     const kickerTeach = LESSON.kicker_teach || '站长讲解';
     html = `<div class="card"><span class="kicker ${isStory ? 'story' : 'teach'}">${isStory ? kickerStory : kickerTeach}</span>
+      ${s.image ? `<div style="text-align:center;margin:12px 0;"><img src="/images/${s.image}" style="max-width:100%;border-radius:12px;" alt="讲解配图" onerror="this.style.display='none'"></div>` : ''}
       <div class="teachtext">${s.teach_html}</div>${noticeHtml(s.reading)}
       <div class="btnrow">${POS > 0 ? '<button class="ghost btnBack">回去看看</button>' : ''}<button class="big" id="btnNext">${POS + 1 >= arr.length ? '完成本部分' : '知道了，下一步'}</button></div></div>`;
   } else if (s.kind === 'choice') {
