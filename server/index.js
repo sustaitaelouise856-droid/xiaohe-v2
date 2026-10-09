@@ -1,6 +1,10 @@
 'use strict';
 // 小禾英语 V2 试点服务(本阶段:本机运行,不对外开放)
 //
+// Google Drive 恢复（必须在 require('./db') 之前）
+//
+require('./gdrive-restore');
+//
 // 进程守护（2026-09-30）：stop.ps1 主动停服务时会写 data/.stop-intent 标记；
 // 服务每次成功启动都删掉这个标记。看门狗（scripts/watchdog.js）只在
 // "3101 无监听且无标记"时才拉起服务，避免和主动停服打架。
@@ -1053,6 +1057,23 @@ function lessonOpen(lid) {
   }
   return true;
 }
+// 管理员备份接口：下载 SQLite 数据库文件（用于 Google Drive 自动备份）
+// 需要 BACKUP_TOKEN 环境变量验证
+app.get('/api/admin/backup', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  const dataDir = process.env.XH_DATA_DIR || path.join(__dirname, '..', 'data');
+  const dbFile = process.env.XH_DB_FILE || 'xiaohe.sqlite';
+  const dbPath = path.join(dataDir, dbFile);
+  if (!fs.existsSync(dbPath)) {
+    return res.status(404).json({ ok: false, error: 'no_db' });
+  }
+  res.download(dbPath, dbFile);
+});
+
+// 启动时从 Google Drive 恢复数据库（如果本地库是空的）
 app.get('/', (req, res) => {
   if (!auth.verifyCookie(auth.getCookieValue(req))) {
     return res.redirect('/verify.html');
