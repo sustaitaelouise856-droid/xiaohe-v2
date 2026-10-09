@@ -129,23 +129,34 @@ function trySetup(setupToken, accessCode) {
   return { ok: true };
 }
 
-function isSetupDone() { return getState('setup_done') === '1'; }
+function isSetupDone() {
+  if (getState('setup_done') === '1') return true;
+  // 兜底：环境变量 ACCESS_CODE 存在即视为已设置（数据库被清空时不挡登录）
+  if (process.env.ACCESS_CODE) return true;
+  return false;
+}
+
+// 环境变量直接设置（云部署用）：跳过一次性口令，仅在未设置过时可用
+function trySetupDirect(accessCode) {
+  if (isSetupDone()) return { ok: false, reason: 'already_setup' };
+  if (!accessCode || String(accessCode).length < CODE_MIN_LEN) {
+    return { ok: false, reason: 'weak_code' };
+  }
+  setState('access_code_hash', hashAccessCode(String(accessCode)));
+  setState('setup_done', '1');
+  delState('setup_token_hash');
+  return { ok: true };
+}
 
 function checkVerifyCode(accessCode) {
-  if (!accessCode) return false;
-  // 优先查数据库里的哈希
   const stored = getState('access_code_hash');
-  if (stored && checkAccessCode(String(accessCode), stored)) return true;
-  // 兜底：环境变量 ACCESS_CODE（灾难恢复，保证管理员总能进）
-  const envCode = process.env.ACCESS_CODE;
-  if (envCode && String(accessCode) === String(envCode)) return true;
-  return false;
+  if (!stored || !accessCode) return false;
+  return checkAccessCode(String(accessCode), stored);
 }
 
 // ---- 校验接口限速：防暴力猜 ----
 const attempts = new Map(); // ip -> {count, resetAt}
-// 只在验证失败时调用：输错才计数，输对永远不限流
-function recordVerifyFail(ip) {
+function verifyRateLimited(ip) {
   const now = Date.now();
   const e = attempts.get(ip);
   if (!e || now > e.resetAt) {
@@ -186,12 +197,12 @@ function issueAuthCookie(res) {
 module.exports = {
   ensureSetupToken,
   trySetup,
+  trySetupDirect,
   isSetupDone,
   checkVerifyCode,
   changeAccessCode,
   rotateCookieSecret,
-  recordVerifyFail,
-  verifyRateLimited: recordVerifyFail,
+  verifyRateLimited,
   verifyRateReset,
   requireAuth,
   issueAuthCookie,
