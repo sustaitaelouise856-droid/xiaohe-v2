@@ -119,6 +119,11 @@
 </style>
 </head>
 <body>
+<div id="subjbar" style="display:none;background:#f8f6f0;border-bottom:1px solid var(--line);padding:8px 12px;text-align:center;font-size:15px;">
+  <a href="/lesson?lesson=u2r1" style="margin:0 12px;text-decoration:none;">📚 英语</a>
+  <a href="/lesson?lesson=sx1" style="margin:0 12px;text-decoration:none;">🔢 数学</a>
+  <a href="/lesson?lesson=yw-word1" style="margin:0 12px;text-decoration:none;">📖 语文</a>
+</div>
 <div id="topbar" style="display:none">
   <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
   <div id="player">
@@ -448,6 +453,8 @@ function renderStep() {
   if (isSkipped(s)) { advance(); return; } // 被"跳过同类题"跳过的题直接略过
   const reviewed = !!(s && s.item_id && doneSet[s.item_id]); // 后退回看已终局的题：只读回顾，不可重答
   topbar.style.display = 'flex';
+  const sb = document.getElementById('subjbar');
+  if (sb) sb.style.display = 'block';
   $('stepind').textContent = `第 ${s.step} 步 / 共 ${arr[arr.length - 1].step} 步`;
   setAudio(s.audio_id);
   let html = '';
