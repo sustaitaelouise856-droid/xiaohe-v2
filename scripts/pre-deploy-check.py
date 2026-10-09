@@ -83,6 +83,15 @@ for fn, d in lessons:
         found = _glob.glob(f'audio/**/{aid}.mp3', recursive=True)
         check('音频文件', len(found) > 0, f"{fn} audio_id={aid} 无对应mp3文件")  # 红线：缺音频禁止推送
 
+# 学生模拟器：发版前自动走查所有课程（2026-10-09）
+import subprocess as _sp
+sim = _sp.run([sys.executable, os.path.join(os.path.dirname(__file__), 'student-simulator.py')],
+              capture_output=True, text=True)
+print(sim.stdout[-500:] if len(sim.stdout) > 500 else sim.stdout)
+if sim.returncode != 0:
+    errors.append("学生模拟器未通过，禁止推送")
+    print(sim.stderr[:500])
+
 print(f"\n检查 {len(lessons)} 个文件")
 if warnings:
     print(f"\n⚠️ 警告 {len(warnings)} 项（可推送）：")
