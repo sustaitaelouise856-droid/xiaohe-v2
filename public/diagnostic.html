@@ -206,9 +206,15 @@ function nextSection() {
   // 标记本段完成，然后直接进课程（总指挥2026-10-03：做完诊断直接接着上课）
   api('/api/diagnostic/complete', {
     method: 'POST',
-    body: JSON.stringify({ session_id: SESSION_ID })
-  }).then(() => {
-    location.href = '/';
+    body: JSON.stringify({ session_id: SESSION_ID, form: FORM, section: SECTION })
+  }).then((d) => {
+    if (d && d.ok) {
+      location.href = '/';
+    } else {
+      alert('保存失败：' + ((d && d.error) || '未知错误') + '，请重试');
+    }
+  }).catch((e) => {
+    alert('网络错误，请重试');
   });
 }
 
