@@ -20,14 +20,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l1",
       "level": 1,
-      "stem": "\"书\"的英文是哪个？",
+      "stem": "“书”的英文是什么？请选择。",
       "options": [
-        "B. pen",
-        "D. eraser",
         "A. book",
-        "C. ruler"
+        "B. notebook",
+        "C. pen",
+        "D. paper"
       ],
-      "answer": "C",
+      "answer": "A",
       "explain": "",
       "help": ""
     },
@@ -39,14 +39,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l2",
       "level": 2,
-      "stem": "\"图书馆\"的英文是哪个？",
+      "stem": "\"图书馆\"的英文是什么？请选择。",
       "options": [
-        "B. library",
-        "D. park",
         "A. shop",
-        "C. school"
+        "B. library",
+        "C. school",
+        "D. park"
       ],
-      "answer": "A",
+      "answer": "B",
       "explain": "",
       "help": ""
     },
@@ -58,14 +58,14 @@
       "category": "单词量",
       "knowledge_point": "vocab-l3",
       "level": 3,
-      "stem": "\"日程表\"的英文是哪个？",
+      "stem": "\"日程表\"的英文是什么？请选择。",
       "options": [
-        "A. menu",
+        "A. timetable",
+        "B. schedule",
         "C. map",
-        "D. ticket",
-        "B. schedule"
+        "D. menu"
       ],
-      "answer": "D",
+      "answer": "B",
       "explain": "",
       "help": ""
     },
@@ -79,9 +79,9 @@
       "level": 1,
       "stem": "哪个单词划线部分发音不同？c<u>a</u>t / c<u>a</u>ke / m<u>a</u>p",
       "options": [
-        "C. 第三个",
-        "B. 第二个",
         "A. 第一个",
+        "B. 第二个",
+        "C. 第三个",
         "D. 都一样"
       ],
       "answer": "B",
@@ -98,12 +98,12 @@
       "level": 2,
       "stem": "哪个单词划线部分发音不同？b<u>e</u>d / p<u>e</u>n / m<u>e</u>",
       "options": [
-        "C. 第三个",
         "A. 第一个",
-        "D. 都一样",
-        "B. 第二个"
+        "B. 第二个",
+        "C. 第三个",
+        "D. 都一样"
       ],
-      "answer": "A",
+      "answer": "C",
       "explain": "",
       "help": ""
     },
@@ -117,12 +117,12 @@
       "level": 1,
       "stem": "She ___ to school every day.",
       "options": [
-        "D. gone",
         "A. go",
         "B. goes",
-        "C. going"
+        "C. going",
+        "D. gone"
       ],
-      "answer": "C",
+      "answer": "B",
       "explain": "",
       "help": ""
     },
@@ -136,12 +136,12 @@
       "level": 2,
       "stem": "There ___ some water in the glass.",
       "options": [
-        "B. are",
         "A. is",
-        "D. have",
-        "C. be"
+        "B. are",
+        "C. be",
+        "D. have"
       ],
-      "answer": "B",
+      "answer": "A",
       "explain": "",
       "help": ""
     },
@@ -155,12 +155,12 @@
       "level": 3,
       "stem": "I have lived here ___ 2020.",
       "options": [
-        "D. at",
-        "C. from",
         "A. for",
-        "B. since"
+        "B. since",
+        "C. from",
+        "D. at"
       ],
-      "answer": "D",
+      "answer": "B",
       "explain": "",
       "help": ""
     },
