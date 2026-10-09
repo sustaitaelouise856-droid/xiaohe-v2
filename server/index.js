@@ -143,6 +143,7 @@ function publicStep(s, lessonId, version, choices) {
     title: substituteChoices(s.title, C), scene: substituteChoices(s.scene, C),
     stem: substituteChoices(s.stem, C), task: s.task,
     teach_html: substituteChoices(s.teach_html, C), reading: s.reading, audio_id: s.audio_id,
+    image: s.image || null,
   };
   if (s.kind === 'mcq' || s.kind === 'short') o.item_id = `${lessonId}-v${version}-s${s.item_step || s.step}`;
   if (s.kind === 'mcq') o.options = s.options;
@@ -1030,6 +1031,8 @@ function currentLesson() {
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
+  // 2026-10-08：补充故事课（deep/moon）永远开放——它们是今晚加餐，不被主线进度卡住
+  if (/^(deep|moon)\d+$/.test(lid)) return true;
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   const regular = ids.filter(id => !isReviewLesson(id));
@@ -1124,6 +1127,7 @@ app.get('/progress-page', (req, res, next) => {
 
 // 音频：需验证后才能听
 app.use('/audio', auth.requireAuth, express.static(path.join(__dirname, '..', 'audio')));
+app.use('/images', auth.requireAuth, express.static(path.join(__dirname, '..', 'content', 'images')));
 
 // 静态资源：验证页等公开；课程页走上面的鉴权路由
 app.use(express.static(path.join(__dirname, '..', 'public'), { index: false }));
