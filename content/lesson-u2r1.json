@@ -28,8 +28,8 @@
       "step": 3,
       "teach_html": "<p>站长说：先学会看通知，再去核对。不然你广播出去，全校都跑错地方，站长得被校长请去喝茶。</p><p>通知（notice）就是一张\"寻人启事\"——只不过找的不是人，是<strong>时间、地点、数字</strong>这三个家伙。</p><p>想象你是侦探，通知就是案发现场：<br>🕐 <strong>时间</strong>：什么时候？（星期几、几月几号、几点）——相当于\"作案时间\"<br>📍 <strong>地点</strong>：在哪里？——相当于\"作案地点\"<br>🔢 <strong>数字</strong>：多少人、多少钱、多少支队伍？——相当于\"涉案金额\"</p><p>记住这个侦探口诀：<strong>先找时间地点数，再往下读不迷路</strong>。漏掉一个，就像侦探漏了指纹——白忙活。</p>",
       "title": "通知里有什么",
-      "_old_audio_id": "u2r1-teach-01",
-      "image": "u2r1/u2r1-step3-detective.webp"
+      "image": "u2r1/u2r1-step3-detective.webp",
+      "audio_id": "u2r1-teach-01"
     },
     {
       "audio_id": "u2r1-teach-02",
@@ -46,8 +46,8 @@
       "step": 5,
       "teach_html": "<p>有时候事情变了，会再发一张<strong>更新通知</strong>。看到下面这些词，就像看到\"前方高能\"——说明信息变了：</p><p>📝 <strong>updated / new</strong>：更新的、新的（相当于\"补丁已发布\"）<br>🔄 <strong>instead of</strong>：代替（以前的）——\"旧的不去，新的不来\"<br>✏️ <strong>changed to</strong>：改成……</p><p>记住：看到这些词，眼睛要瞪大——<strong>旧信息作废，新信息上位</strong>，别播出过期消息，不然全校陪你跑错地方。</p>",
       "title": "更新通知长什么样",
-      "_old_audio_id": "u2r1-teach-03",
-      "image": "u2r1/u2r1-step5-update.webp"
+      "image": "u2r1/u2r1-step5-update.webp",
+      "audio_id": "u2r1-teach-03"
     },
     {
       "kind": "teach",
@@ -55,8 +55,8 @@
       "step": 6,
       "teach_html": "<p>遇到\"旧通知 + 更新通知\"，别慌，用<strong>站长三步法</strong>——就像吃火锅三步走：</p><p>🥇 <strong>第一步：找关键信息</strong>——两张通知的时间、地点、数字分别是什么？（先把菜摆上桌）<br>🥈 <strong>第二步：对比找不同</strong>——哪几样变了，哪几样没变？（看看哪盘菜被换了）<br>🥉 <strong>第三步：以更新版为准</strong>——只认最新的，旧的进垃圾桶。（只吃新上的菜）</p><p>口诀：<strong>一找二比三认新</strong>。考试就考这个，学会了闭眼都能做。</p>",
       "title": "三步法",
-      "_old_audio_id": "u2r1-teach-04",
-      "image": "u2r1/u2r1-step6-hotpot.webp"
+      "image": "u2r1/u2r1-step6-hotpot.webp",
+      "audio_id": "u2r1-teach-04"
     },
     {
       "audio_id": "u2r1-teach-05",
@@ -73,8 +73,8 @@
       "step": 8,
       "teach_html": "<p>遇到\"写出最终信息\"这样的题目，记住<strong>渣男原则</strong>：只认新欢，不认旧爱。</p><p>✅ 只写<strong>更新后</strong>的信息<br>❌ 不要写旧的，也不要新旧一起写（脚踏两条船，必错）<br>🎯 题目问什么就写什么：问时间就写时间，问地点就写地点，别加戏</p><p>写英文，不用写整句话，<strong>写出关键词就行</strong>——判分只看关键信息，拼写小错不扣分。</p>",
       "title": "简答题怎么写",
-      "_old_audio_id": "u2r1-teach-06",
-      "image": "u2r1/u2r1-step8-newonly.webp"
+      "image": "u2r1/u2r1-step8-newonly.webp",
+      "audio_id": "u2r1-teach-06"
     },
     {
       "audio_id": "u2r1-notice-a-old",
