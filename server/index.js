@@ -68,14 +68,13 @@ function loadChoices(lid) {
 const NUDGE_MS = 5000;
 
 // ---- 课程内容：按 lesson_id 加载（content/lesson-{id}.json），常驻内存 ----
-// lesson_id 只允许 u<数字>r<数字>（英语正课）、review<数字>（练习课）、sx<数字>（数学课）、
-// yw-xxx（语文课）、deep<数字>/moon<数字>（CLIL 跨学科课），防止路径穿越
+// lesson_id 只允许 u2r<数字>（正课）或 review<数字>（练习课），防止路径穿越
 const LESSON_CACHE = {};
 // 练习课（练习模式）：正课全部学完后开放，可反复练（豁免防重做）
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw\d*-[a-z0-9]+|deep\d+|moon\d+)$/.test(lid)) return null;
+  if (!/^(?:u2r\d+|review\d+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -143,7 +142,6 @@ function publicStep(s, lessonId, version, choices) {
     title: substituteChoices(s.title, C), scene: substituteChoices(s.scene, C),
     stem: substituteChoices(s.stem, C), task: s.task,
     teach_html: substituteChoices(s.teach_html, C), reading: s.reading, audio_id: s.audio_id,
-    image: s.image || null,
   };
   if (s.kind === 'mcq' || s.kind === 'short') o.item_id = `${lessonId}-v${version}-s${s.item_step || s.step}`;
   if (s.kind === 'mcq') o.options = s.options;
@@ -192,31 +190,19 @@ app.post('/api/setup', (req, res) => {
 // 公开：访问码校验（限速）
 app.post('/api/verify', (req, res) => {
   const ip = req.ip || req.socket.remoteAddress || 'unknown';
+  if (auth.verifyRateLimited(ip)) {
+    return res.status(429).json({ ok: false, error: 'too_many_attempts' });
+  }
   const { access_code } = req.body || {};
   if (!auth.isSetupDone()) {
     return res.status(400).json({ ok: false, error: 'not_setup' });
   }
   if (!auth.checkVerifyCode(access_code)) {
-    if (auth.recordVerifyFail(ip)) {
-      return res.status(429).json({ ok: false, error: 'too_many_attempts' });
-    }
     return res.status(401).json({ ok: false, error: 'bad_code' });
   }
   auth.verifyRateReset(ip);
   auth.issueAuthCookie(res);
   res.json({ ok: true });
-});
-
-// 魔法链接：/go/<token> 直接登录，不用输码
-// token = sha256('xh-magic:' + ACCESS_CODE)，不可猜，换平板书签打开就行
-app.get('/go/:token', (req, res) => {
-  const crypto = require('crypto');
-  const envCode = process.env.ACCESS_CODE;
-  if (!envCode) return res.status(404).send('not found');
-  const expect = crypto.createHash('sha256').update('xh-magic:' + envCode).digest('hex').slice(0, 32);
-  if (req.params.token !== expect) return res.status(404).send('not found');
-  auth.issueAuthCookie(res);
-  res.redirect('/');
 });
 
 // 需验证
@@ -381,12 +367,6 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     home_subtitle: L.lesson.home_subtitle || '',
     part1_desc: L.lesson.part1_desc || '',
     part2_desc: L.lesson.part2_desc || '',
-    // 数学课标记（前端按需加载 KaTeX）+ 多学科品牌/kicker 数据驱动
-    math: !!L.lesson.math,
-    brand: L.lesson.brand || '',
-    kicker_story: L.lesson.kicker_story || '',
-    kicker_teach: L.lesson.kicker_teach || '',
-    answer_placeholder: L.lesson.answer_placeholder || '',
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
   });
 });
@@ -492,8 +472,20 @@ app.post('/api/diagnostic/answer', auth.requireAuth, (req, res) => {
 app.post('/api/diagnostic/complete', auth.requireAuth, (req, res) => {
   const { session_id } = req.body || {};
   if (!session_id) return res.status(400).json({ ok: false, error: 'no_session_id' });
-  db.prepare("UPDATE diagnostic_sessions SET status='completed', completed_at=datetime('now') WHERE id=?")
+  const r = db.prepare("UPDATE diagnostic_sessions SET status='completed', completed_at=datetime('now') WHERE id=?")
     .run(session_id);
+  // 兜底：session 不存在（数据库被清空过），按 form/section 直接标记完成
+  if (r.changes === 0) {
+    const { form, section } = req.body || {};
+    if (form && section) {
+      db.prepare(`INSERT OR IGNORE INTO diagnostic_sessions(id, form, section, status, completed_at)
+        VALUES(?, ?, ?, 'completed', datetime('now'))`)
+        .run(session_id, String(form).toUpperCase(), Number(section));
+      db.prepare(`UPDATE diagnostic_sessions SET status='completed', completed_at=datetime('now')
+        WHERE form=? AND section=?`)
+        .run(String(form).toUpperCase(), Number(section));
+    }
+  }
   res.json({ ok: true });
 });
 
@@ -503,6 +495,25 @@ app.get('/api/diagnostic/status', auth.requireAuth, (req, res) => {
     'SELECT form, section, status FROM diagnostic_sessions ORDER BY form, section'
   ).all();
   res.json({ ok: true, sessions: rows });
+});
+
+// 生词本（2026-10-08）：localStorage 为主，服务端尽力同步（Render 免费版重启可能丢数据）
+app.post('/api/vocab/add', auth.requireAuth, (req, res) => {
+  const { word, zh, ph } = req.body || {};
+  const w = String(word || '').toLowerCase().trim();
+  if (!w) return res.json({ ok: false });
+  db.prepare(`INSERT OR IGNORE INTO vocab_words(word, zh, ph) VALUES(?,?,?)`)
+    .run(w, String(zh || ''), String(ph || ''));
+  res.json({ ok: true });
+});
+app.post('/api/vocab/del', auth.requireAuth, (req, res) => {
+  const w = String((req.body || {}).word || '').toLowerCase().trim();
+  if (w) db.prepare('DELETE FROM vocab_words WHERE word=?').run(w);
+  res.json({ ok: true });
+});
+app.get('/api/vocab/list', auth.requireAuth, (req, res) => {
+  const rows = db.prepare('SELECT word, zh, ph FROM vocab_words ORDER BY added_at DESC').all();
+  res.json({ ok: true, words: rows });
 });
 
 // 诊断报告：知识点状态 + 家长一页报告
@@ -1005,13 +1016,8 @@ function orderedLessons() {
     ).all();
     if (rows.length) {
       // 正课在前（按课号），练习课在后：练习课不参与正课之间的开放门禁
-      // 2026-10-08：主线英语课(u2r-u6r)优先，deep/moon为补充不阻塞主线
       const ids = rows.map(r => r.lesson_id);
-      const main = ids.filter(id => /^u\dr\d+$/.test(id)).sort();
-      const supp = ids.filter(id => /^(deep|moon)\d+$/.test(id)).sort();
-      const other = ids.filter(id => !/^u\dr\d+$/.test(id) && !/^(deep|moon)\d+$/.test(id) && !isReviewLesson(id)).sort();
-      const reviews = ids.filter(id => isReviewLesson(id)).sort();
-      return [...main, ...supp, ...other, ...reviews];
+      return [...ids.filter(id => !isReviewLesson(id)), ...ids.filter(id => isReviewLesson(id))];
     }
   } catch { /* 查不到就用默认 */ }
   return ['u2r1'];
@@ -1031,8 +1037,6 @@ function currentLesson() {
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
-  // 2026-10-08：补充故事课（deep/moon）永远开放——它们是今晚加餐，不被主线进度卡住
-  if (/^(deep|moon)\d+$/.test(lid)) return true;
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   const regular = ids.filter(id => !isReviewLesson(id));
@@ -1127,7 +1131,6 @@ app.get('/progress-page', (req, res, next) => {
 
 // 音频：需验证后才能听
 app.use('/audio', auth.requireAuth, express.static(path.join(__dirname, '..', 'audio')));
-app.use('/images', auth.requireAuth, express.static(path.join(__dirname, '..', 'content', 'images')));
 
 // 静态资源：验证页等公开；课程页走上面的鉴权路由
 app.use(express.static(path.join(__dirname, '..', 'public'), { index: false }));
@@ -1141,25 +1144,11 @@ for (const r of seedReport) {
   else if (r.seeded) console.log(`[seed] ${r.lesson_id} 自动入库 ${r.seeded} 道题`);
 }
 if (require.main === module) {
-  // 灾难恢复：如果数据库被清空（setup_done丢失），用环境变量ACCESS_CODE自动重建
-  // 保证重部署后访问码永远可用，不卡死用户
-  try {
-    const db = require('./db.js').db;
-    const row = db.prepare("SELECT value FROM app_state WHERE key='setup_done'").get();
-    if (!row && process.env.ACCESS_CODE && process.env.ACCESS_CODE.length >= 6) {
-      // 用 auth.js 的 setState/hashAccessCode，保证格式一致
-      // 注意：auth.js 顶部会 require db.js，但 db.js 不依赖 auth.js，无循环引用
-      const authMod = require('./auth.js');
-      // 直接调内部函数：通过 trySetup 的逻辑太绕，这里手动做
-      const crypto = require('crypto');
-      const salt = crypto.randomBytes(16).toString('hex');
-      const h = crypto.scryptSync(String(process.env.ACCESS_CODE), salt, 32).toString('hex');
-      const hashStr = `salt:${salt}:hash:${h}`;
-      db.prepare("INSERT INTO app_state(key,value) VALUES('access_code_hash',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value").run(hashStr);
-      db.prepare("INSERT INTO app_state(key,value) VALUES('setup_done','1') ON CONFLICT(key) DO UPDATE SET value=excluded.value").run();
-      console.log('[auth] 数据库被清空，已用环境变量自动重建访问码');
-    }
-  } catch (e) { console.log('[auth] 自动重建跳过:', e.message); }
+  // Render/云部署：允许用环境变量 ACCESS_CODE 直接设置访问码（免一次性口令流程）
+  if (process.env.ACCESS_CODE && !auth.isSetupDone()) {
+    auth.trySetupDirect(String(process.env.ACCESS_CODE));
+    console.log('已用环境变量 ACCESS_CODE 设置访问码。');
+  }
   const token = auth.ensureSetupToken();
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`xiaohe-v2 listening on 0.0.0.0:${PORT}`);
