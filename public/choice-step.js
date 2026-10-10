@@ -44,8 +44,12 @@ function wireChoiceStep(root, s, deps) {
         if (j && j.ok) deps.onDone();
         else deps.onError('没选上，再点一次试试。');
       }).catch(function () {
-        btns.forEach(function (x) { x.disabled = false; });
-        deps.onError('网络有点慢，再点一次试试。');
+        // 兜底：网络失败也让学生继续，选项存 localStorage，下次同步
+        try {
+          var lsKey = 'xiaohe_choice_' + deps.lesson + '_' + b.getAttribute('data-ck');
+          localStorage.setItem(lsKey, b.getAttribute('data-v'));
+        } catch (e) {}
+        deps.onDone();
       });
     });
   });
