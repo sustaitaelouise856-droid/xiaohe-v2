@@ -7,7 +7,6 @@
   "practice_end": 19,
   "steps": [
     {
-      "audio_id": "yw-wenyan1-story-01",
       "kind": "teach",
       "phase": "teach",
       "step": 1,
@@ -15,7 +14,6 @@
       "title": "小馆长上岗"
     },
     {
-      "audio_id": "yw-wenyan1-story-02",
       "kind": "teach",
       "phase": "teach",
       "step": 2,
@@ -23,7 +21,6 @@
       "title": "发现古籍"
     },
     {
-      "audio_id": "yw-wenyan1-story-03",
       "kind": "teach",
       "phase": "teach",
       "reading": "记承天寺夜游\n苏轼\n元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。",
@@ -32,7 +29,6 @@
       "title": "先通读全文"
     },
     {
-      "audio_id": "yw-wenyan1-teach-01",
       "kind": "teach",
       "phase": "teach",
       "reading": "元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。",
@@ -41,7 +37,6 @@
       "title": "串讲一：月光照醒"
     },
     {
-      "audio_id": "yw-wenyan1-teach-02",
       "kind": "teach",
       "phase": "teach",
       "reading": "念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。",
@@ -50,7 +45,6 @@
       "title": "串讲二：拉朋友下水"
     },
     {
-      "audio_id": "yw-wenyan1-teach-03",
       "kind": "teach",
       "phase": "teach",
       "reading": "庭下如积水空明，水中藻荇交横，盖竹柏影也。",
@@ -59,7 +53,6 @@
       "title": "串讲三：月下庭院"
     },
     {
-      "audio_id": "yw-wenyan1-teach-04",
       "kind": "teach",
       "phase": "teach",
       "reading": "何夜无月？何处无竹柏？但少闲人如吾两人者耳。",
@@ -68,7 +61,6 @@
       "title": "串讲四：千古名句"
     },
     {
-      "audio_id": "yw-wenyan1-teach-05",
       "kind": "teach",
       "phase": "teach",
       "step": 8,
@@ -76,7 +68,6 @@
       "title": "对比：文言 vs 白话"
     },
     {
-      "audio_id": "yw-wenyan1-teach-06",
       "kind": "teach",
       "phase": "teach",
       "step": 9,
@@ -84,7 +75,6 @@
       "title": "一句话规则：实词靠本义迁移"
     },
     {
-      "audio_id": "yw-wenyan1-practice-01",
       "kind": "teach",
       "phase": "practice",
       "step": 10,
@@ -93,7 +83,6 @@
     },
     {
       "answer": "A",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“解”本义是解开，“解衣”就是把衣服解开 → 脱掉。",
       "help": "想想“解开衣服”这个动作，是把衣服怎么样？",
       "kind": "mcq",
@@ -117,7 +106,6 @@
     },
     {
       "answer": "C",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“欣然”是愉快的样子。月光太美，睡意全无，高高兴兴起来走走。",
       "help": "月光照进来，他是高兴还是不高兴？",
       "kind": "mcq",
@@ -141,7 +129,6 @@
     },
     {
       "answer": "B",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“遂”是“于是、就”。想到没人一起赏月，于是就去找张怀民，动作干脆。",
       "help": "他是“想到就去”，还是“经历波折才去”？",
       "kind": "mcq",
@@ -165,7 +152,6 @@
     },
     {
       "answer": "D",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“寻”是寻找。半夜去承天寺，是亲自去找张怀民。",
       "help": "他是去“找”张怀民，还是去“问”张怀民？",
       "kind": "mcq",
@@ -189,7 +175,6 @@
     },
     {
       "answer": "C",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“相”是互相，“与”是参与，合起来是“共同、一起”。两人在院子里一起散步。",
       "help": "把“相”和“与”拆开想：互相 + 参与 = ？",
       "kind": "mcq",
@@ -213,7 +198,6 @@
     },
     {
       "answer": "B",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“但”是“只、仅仅”。“但少闲人” = 只缺少闲人。",
       "help": "这里是“只缺少”，还是“转折”？",
       "kind": "mcq",
@@ -237,7 +221,6 @@
     },
     {
       "answer": "A",
-      "audio_id": "yw-wenyan1-practice-01",
       "explain": "“闲人”是苏轼的自称：有闲情雅致、半夜赏月的人，带着自得，不是贬义。",
       "help": "苏轼说自己是“闲人”，是夸自己还是骂自己？",
       "kind": "mcq",
@@ -260,7 +243,6 @@
       }
     },
     {
-      "audio_id": "yw-wenyan1-teach-07",
       "kind": "teach",
       "phase": "practice",
       "step": 18,
@@ -269,7 +251,6 @@
     },
     {
       "answer": "C",
-      "audio_id": "yw-wenyan1-teach-07",
       "explain": "“竹柏之影” = “竹柏的影子”，“之”是“的”。",
       "help": "“竹柏__影”，中间填哪个字最顺？",
       "kind": "mcq",
@@ -292,7 +273,6 @@
       }
     },
     {
-      "audio_id": "yw-wenyan1-validate-01",
       "kind": "teach",
       "phase": "validate",
       "step": 20,
@@ -301,7 +281,6 @@
     },
     {
       "answer": "A",
-      "audio_id": "yw-wenyan1-validate-01",
       "explain": "“庭下如积水”是把庭院比作积水，“如”是“像”。",
       "help": "“如”后面跟的是什么——是在打比方，还是在假设？",
       "kind": "mcq",
@@ -325,7 +304,6 @@
     },
     {
       "answer": "B",
-      "audio_id": "yw-wenyan1-validate-01",
       "explain": "“交”是交叉，“横”是横着，合起来是“纵横交错”，形容水草的样子。",
       "help": "“交”是交叉，“横”是横着——两个字合起来，形容水草的样子。",
       "kind": "mcq",
@@ -349,7 +327,6 @@
     },
     {
       "answer": "D",
-      "audio_id": "yw-wenyan1-validate-01",
       "explain": "“闲人”是自得的自称：月夜这么美，只有我们俩懂得欣赏。这是一种豁达。",
       "help": "想想“闲人”在这里是贬义还是自得，再看前面的月夜写得美不美。",
       "kind": "mcq",
@@ -417,7 +394,6 @@
       "title": "背诵填空"
     },
     {
-      "audio_id": "yw-wenyan1-ending",
       "kind": "teach",
       "phase": "validate",
       "step": 26,

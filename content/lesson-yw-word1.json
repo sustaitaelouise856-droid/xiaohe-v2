@@ -7,7 +7,6 @@
   "practice_end": 14,
   "steps": [
     {
-      "audio_id": "yw-word1-teach-01",
       "kind": "teach",
       "phase": "teach",
       "step": 1,
@@ -15,7 +14,6 @@
       "title": "练字房报道"
     },
     {
-      "audio_id": "yw-word1-teach-02",
       "kind": "teach",
       "phase": "teach",
       "step": 2,
@@ -23,7 +21,6 @@
       "title": "三兄弟登场"
     },
     {
-      "audio_id": "yw-word1-teach-03",
       "kind": "teach",
       "phase": "teach",
       "step": 3,
@@ -31,7 +28,6 @@
       "title": "看封口：三兄弟长相"
     },
     {
-      "audio_id": "yw-word1-teach-04",
       "kind": "teach",
       "phase": "teach",
       "step": 4,
@@ -39,7 +35,6 @@
       "title": "三兄弟的读音"
     },
     {
-      "audio_id": "yw-word1-teach-05",
       "kind": "teach",
       "phase": "teach",
       "step": 5,
@@ -47,7 +42,6 @@
       "title": "三兄弟的意思"
     },
     {
-      "audio_id": "yw-word1-teach-06",
       "kind": "teach",
       "phase": "teach",
       "step": 6,
@@ -56,7 +50,6 @@
     },
     {
       "answer": "A",
-      "audio_id": "yw-word1-q01",
       "explain": "“自己”读 zì jǐ，“己”是第三声 jǐ。",
       "help": "老大己是话痨，嘴巴张得最大，读“几”的音，第三声。",
       "kind": "mcq",
@@ -80,7 +73,6 @@
     },
     {
       "answer": "C",
-      "audio_id": "yw-word1-q02",
       "explain": "己是全开口的（老大张大嘴）；已是半开口；巳是全闭口。",
       "help": "老大己是话痨，嘴巴张得最大。",
       "kind": "mcq",
@@ -104,7 +96,6 @@
     },
     {
       "answer_text": "己",
-      "audio_id": "yw-word1-q03",
       "common_errors": [
         {
           "say": "“已”读 yǐ，是“已经”的已。这里要读 jǐ 的己，全开口的那个。",
@@ -139,7 +130,6 @@
     },
     {
       "answer": "A",
-      "audio_id": "yw-word1-q04",
       "explain": "“已经”表示事情完成了，用半开口的“已”。",
       "help": "“已经”表示事情完成了。想想老二已。",
       "kind": "mcq",
@@ -163,7 +153,6 @@
     },
     {
       "answer": "D",
-      "audio_id": "yw-word1-q05",
       "explain": "巳时是上午 9 点到 11 点。",
       "help": "老三巳管时间：上午 9 点到 11 点。",
       "kind": "mcq",
@@ -187,7 +176,6 @@
     },
     {
       "answer_text": "自己",
-      "audio_id": "yw-word1-q06",
       "common_errors": [
         {
           "say": "你写的还是错的那个。“自己”的己是全开口的，嘴巴张大。",
@@ -222,7 +210,6 @@
     },
     {
       "answer": "B",
-      "audio_id": "yw-word1-q07",
       "explain": "“自己动手，丰衣足食”三个字都用对了。",
       "help": "一个一个看封口：A 的“自已”、C 和 D 的“巳经”，哪个对得上意思？",
       "kind": "mcq",
@@ -245,7 +232,6 @@
       }
     },
     {
-      "audio_id": "yw-word1-teach-07",
       "kind": "teach",
       "phase": "practice",
       "step": 14,
@@ -253,7 +239,6 @@
       "title": "对比小结"
     },
     {
-      "audio_id": "yw-word1-teach-08",
       "kind": "teach",
       "phase": "validate",
       "step": 15,
@@ -262,7 +247,6 @@
     },
     {
       "answer": "C",
-      "audio_id": "yw-word1-q08",
       "explain": "“已经”表示事情发生了，用半开口的“已”。",
       "help": "想想“已经”的意思，再看看哪个字是半开口。",
       "kind": "mcq",
@@ -286,7 +270,6 @@
     },
     {
       "answer": "A",
-      "audio_id": "yw-word1-q09",
       "explain": "“自己”用全开口的“己”，不能写成“自已”。",
       "help": "看看每个选项第二个字的封口，哪个是全开口？",
       "kind": "mcq",
@@ -310,7 +293,6 @@
     },
     {
       "answer": "D",
-      "audio_id": "yw-word1-q10",
       "explain": "“巳经”用错了，应为“已经”——“已经”用半开口的“已”。",
       "help": "一个字一个字看封口：哪个字的封口跟它的意思对不上？",
       "kind": "mcq",
@@ -334,7 +316,6 @@
     },
     {
       "answer_text": "已经",
-      "audio_id": "yw-word1-q11",
       "common_errors": [
         {
           "say": "你组的是“己”（读 jǐ）的词。这道题要用“已”（读 yǐ）组词。",
@@ -374,7 +355,6 @@
     },
     {
       "answer": "B",
-      "audio_id": "yw-word1-q12",
       "explain": "“己”读 jǐ（第三声），“巳”读 sì（第四声）。",
       "help": "老大己张大嘴读“几”，老三巳闭着嘴，读音最特别。",
       "kind": "mcq",
@@ -397,7 +377,6 @@
       }
     },
     {
-      "audio_id": "yw-word1-teach-09",
       "kind": "teach",
       "phase": "validate",
       "step": 21,

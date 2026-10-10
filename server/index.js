@@ -78,7 +78,7 @@ const LESSON_CACHE = {};
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u2r\d+|review\d+)$/.test(lid)) return null;
+  if (!/^(?:u[2-6]r\d+|review\d+|deep\d+|moon\d+|sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -1041,6 +1041,8 @@ function currentLesson() {
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
+  // 深海/登月加餐课永远开放（补充课不阻塞主线）
+  if (/^(deep|moon)\d+$/.test(lid)) return true;
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   const regular = ids.filter(id => !isReviewLesson(id));
