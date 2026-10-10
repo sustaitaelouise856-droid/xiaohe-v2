@@ -1119,7 +1119,15 @@ app.get('/', (req, res) => {
   }
   // 优先回到最后一次学习的课（有作答记录才算），没有才用 currentLesson()
   const last = lastStudiedLesson();
-  return res.redirect('/lesson?lesson=' + encodeURIComponent(last || currentLesson()));
+  let target = currentLesson();
+  if (last) {
+    // 上次那课没学完才回去继续；学完了就去 currentLesson（下一门）
+    const st = lessonState(last);
+    if (!(st && st.p2_done === 1)) {
+      target = last;
+    }
+  }
+  return res.redirect('/lesson?lesson=' + encodeURIComponent(target));
 });
 
 // 下一段未完成的诊断（1/2/3），全部完成返回 null
