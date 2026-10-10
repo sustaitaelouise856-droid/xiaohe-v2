@@ -1070,6 +1070,12 @@ app.get('/api/admin/backup', (req, res) => {
   if (!fs.existsSync(dbPath)) {
     return res.status(404).json({ ok: false, error: 'no_db' });
   }
+  // 关键修复：WAL 模式下，先把 WAL 合并到主库，否则备份会丢最近的数据
+  try {
+    db.exec('PRAGMA wal_checkpoint(TRUNCATE)');
+  } catch (e) {
+    console.error('[backup] WAL checkpoint 失败:', e.message);
+  }
   res.download(dbPath, dbFile);
 });
 
