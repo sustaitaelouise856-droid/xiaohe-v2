@@ -149,6 +149,10 @@
     <button id="btnSlow">慢速再听</button>
   </div>
   <div id="stepind"></div>
+  <div id="stepnav" style="display:flex;gap:6px;align-items:center;">
+    <button id="btnPrevStep" onclick="goBack()" title="看上一题" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;">‹ 上一题</button>
+    <button id="btnNextStep" onclick="goNextStep()" title="看下一题" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;">下一题 ›</button>
+  </div>
 </div>
 <div id="wrap"></div>
 <button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
@@ -182,6 +186,7 @@ let autoHelp = null;              // wireQuestion 赋值：程序触发"老师�
 let guidedState = null;           // 带着做状态：{item_id, steps:[{dim,label,ask,highlight}], idx, session}（g 版）
 let doneSet = {};                 // item_id -> 本页会话内已终局的题（答对/抄写过/用尽重试）；后退回看时只读，不可重答
 let doneSetSid = '';              // doneSet 所属会话标识（part:sid），换新会话时清空
+let reviewData = {};              // item_id -> {answer, feedback, correct}；后退回看时显示之前的答案和反馈（2026-10-10）
 const FAST_MS = 15000;            // "又快"阈值：校准实测平均约 22–23 秒，15 秒内答对明显是已掌握
 let qT0 = 0;                      // 本题计时起点（题目出现/反馈出现的时间）
 const store = {
@@ -418,8 +423,22 @@ async function startPart(n) {
 function cur() { return stepsOf(PART)[POS]; }
 function savePos() {
   ST['p' + PART].pos = POS; store.save(ST);
+  // 记录本部分到达过的最远位置（2026-10-10）："下一题"翻看不许超过它，防止剧透未做的题
+  if (!ST['p' + PART].maxPos || POS > ST['p' + PART].maxPos) {
+    ST['p' + PART].maxPos = POS; store.save(ST);
+  }
   const s = stepsOf(PART)[POS];
   if (s) postProg(PART, progressId(s)); // 服务端按题目ID落盘
+}
+// "下一题"翻看：只能看到已到达过的位置，不能跳过去看没做的题
+function goNextStep() {
+  const arr = stepsOf(PART);
+  const maxPos = ST['p' + PART].maxPos || 0;
+  if (POS >= maxPos) return; // 已经在最远处，不许再往前
+  let p = POS + 1;
+  while (p <= maxPos && p < arr.length && isSkipped(arr[p])) p++;
+  if (p > maxPos || p >= arr.length) return;
+  POS = p; savePos(); renderStep(); window.scrollTo(0, 0);
 }
 // 跳过同类题（连对又快出口）：被跳过的题不写任何作答记录，只是本题不再出现
 function isSkipped(s) {
@@ -451,6 +470,12 @@ function renderStep() {
   const reviewed = !!(s && s.item_id && doneSet[s.item_id]); // 后退回看已终局的题：只读回顾，不可重答
   topbar.style.display = 'flex';
   $('stepind').textContent = `第 ${s.step} 步 / 共 ${arr[arr.length - 1].step} 步`;
+  // 上一题/下一题按钮状态（2026-10-10）：上一题在第一步时禁用；下一题不许超过已到达的最远位置（防剧透）
+  try {
+    const bp = $('btnPrevStep'), bn = $('btnNextStep');
+    if (bp) bp.disabled = (POS <= 0);
+    if (bn) bn.disabled = (POS >= (ST['p' + PART].maxPos || 0));
+  } catch {}
   // 提取纯文本供 TTS 兜底用
   try {
     const rawHtml = s.teach_html || s.stem || s.title || '';
@@ -519,13 +544,26 @@ function renderStep() {
   }
   if (reviewed) {
     // 已终局的题只读回顾：禁用一切作答入口，只留"下一步"；成绩以服务端首次记录为准，不重判分
+    // 2026-10-10：显示当时答的答案和反馈，方便学生翻看复习
     wrap.querySelectorAll('.opt').forEach(x => { x.disabled = true; });
     const ai = $('answerInput'); if (ai) ai.disabled = true;
     const bh = $('btnHelp'); if (bh) bh.style.display = 'none';
     const bs = $('btnSub'); if (bs) bs.style.display = 'none';
     const fb = $('fb');
-    fb.className = 'fb info';
-    fb.innerHTML = '这题已经做过了，回去看看可以，不用再做一遍，成绩不会变。';
+    const rd = (s && s.item_id && reviewData[s.item_id]) || null;
+    if (rd && rd.answer) {
+      // 高亮当时选的/写的答案
+      if (s.kind === 'mcq') {
+        wrap.querySelectorAll('.opt').forEach(x => {
+          if (x.dataset.k === rd.answer) { x.classList.add('sel'); }
+        });
+      } else if (ai) { ai.value = rd.answer; }
+      fb.className = 'fb ' + (rd.correct ? 'ok' : 'info');
+      fb.innerHTML = `<div style="margin-bottom:6px;color:var(--muted);font-size:14px;">当时你的答案：<b>${escapeHtml(rd.answer)}</b>${rd.helped ? '（用了提示）' : ''}</div>` + escapeHtml(rd.feedback || '');
+    } else {
+      fb.className = 'fb info';
+      fb.innerHTML = '这题已经做过了，回去看看可以，不用再做一遍，成绩不会变。';
+    }
     const nr = $('nextrow');
     if (nr) {
       nr.style.display = 'flex';
@@ -812,7 +850,7 @@ function wireQuestion(s) {
       err.textContent = `提交没成功${code}，再点一次试试。`;
       $('btnSub').disabled = false; return;
     }
-    handleVerdict(s, b, elapsed_ms);
+    handleVerdict(s, b, elapsed_ms, given);
   };
 }
 
@@ -826,7 +864,7 @@ function doSkip(s) {
   advance();
 }
 
-function handleVerdict(s, b, elapsedMs) {
+function handleVerdict(s, b, elapsedMs, givenAnswer) {
   const fb = $('fb'), nextrow = $('nextrow');
   const v = b.verdict;
   const good = (v === 'correct' || v === 'correct_retry');
@@ -835,6 +873,8 @@ function handleVerdict(s, b, elapsedMs) {
   if (good) {
     sawFb[s.item_id] = true;
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
+    // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）
+    if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。'), correct: true, helped: !!b.helped };
     fb.className = 'fb ok';
     fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml;
     nextrow.style.display = 'flex';
@@ -1007,13 +1047,14 @@ async function submitCopy(s, answer) {
   }
   if (b.verdict === 'copied') {
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
+    if (s.item_id) reviewData[s.item_id] = { answer: String(answer || ''), feedback: String(b.feedback || '好的，记为有帮助完成。'), correct: true, helped: true };
     var fb = $('fb');
     fb.className = 'fb ok';
     fb.innerHTML = escapeHtml(b.feedback || '好的，记为有帮助完成。');
     setTimeout(advance, 1500);
   } else {
     // 抄写还写错：走正常 wrong 路径（反馈、保底按钮都在）
-    handleVerdict(s, b, 0);
+    handleVerdict(s, b, 0, answer);
   }
 }
 
