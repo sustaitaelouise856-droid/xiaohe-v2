@@ -1043,9 +1043,13 @@ function currentLesson() {
 function lessonOpen(lid) {
   // 深海/登月加餐课永远开放（补充课不阻塞主线）
   if (/^(deep|moon)\d+$/.test(lid)) return true;
+  // 数学/语文课独立，不参与英语主线解锁
+  if (/^(sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return true;
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
-  const regular = ids.filter(id => !isReviewLesson(id));
+  // 主线只算 u2r-u6r（排除 review、deep、moon、sx、yw）
+  const isMainline = id => /^(u[2-6]r\d+|review\d+)$/.test(id);
+  const regular = ids.filter(id => isMainline(id) && !isReviewLesson(id));
   const allRegularDone = regular.every(id => {
     const st = lessonState(id);
     return st && st.p2_done === 1;
