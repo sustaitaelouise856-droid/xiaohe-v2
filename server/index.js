@@ -1016,12 +1016,23 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
 function orderedLessons() {
   try {
     const rows = db.prepare(
-      "SELECT lesson_id FROM lessons WHERE status != 'draft' ORDER BY lesson_id"
+      "SELECT lesson_id FROM lessons WHERE status != 'draft'"
     ).all();
     if (rows.length) {
-      // 正课在前（按课号），练习课在后：练习课不参与正课之间的开放门禁
       const ids = rows.map(r => r.lesson_id);
-      return [...ids.filter(id => !isReviewLesson(id)), ...ids.filter(id => isReviewLesson(id))];
+      // 主线：u2r1-u6r5 按教学顺序（2026-10-10 修复：原按 lesson_id 字母排序，deep1 会排到 u2r1 前面）
+      const mainOrder = [];
+      for (let u = 2; u <= 6; u++) {
+        for (let r = 1; r <= 5; r++) {
+          const lid = `u${u}r${r}`;
+          if (ids.includes(lid)) mainOrder.push(lid);
+        }
+      }
+      // 加餐/学科课（deep/moon/sx/yw）：不参与英语主线，排在主线后面
+      const extras = ids.filter(id => /^(deep|moon)\d+$/.test(id) || /^(sx\d+|yw)/.test(id));
+      // 练习课最后（保持现有逻辑）
+      const reviews = ids.filter(id => isReviewLesson(id));
+      return [...mainOrder, ...extras, ...reviews];
     }
   } catch { /* 查不到就用默认 */ }
   return ['u2r1'];
