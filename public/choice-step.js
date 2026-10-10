@@ -13,8 +13,11 @@ function esc(s) {
 function choiceStepHtml(s) {
   const opts = Array.isArray(s.options) ? s.options : [];
   const btns = opts.map(function (o) {
-    return '<button class="big choicebtn" data-ck="' + esc(s.choice_key) + '" data-v="' + esc(o.value) + '">' +
-      esc(o.label) + '</button>';
+    // 兼容字符串选项（["心愿点播", ...]）和对象选项（[{label, value}, ...]）
+    const label = (o && typeof o === 'object') ? o.label : o;
+    const value = (o && typeof o === 'object') ? o.value : o;
+    return '<button class="big choicebtn" data-ck="' + esc(s.choice_key) + '" data-v="' + esc(value) + '">' +
+      esc(label) + '</button>';
   }).join('');
   return '<div class="card"><span class="kicker story">选你的故事</span>' +
     (s.scene ? '<div class="scene">' + esc(s.scene) + '</div>' : '') +
