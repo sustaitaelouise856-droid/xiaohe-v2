@@ -1026,6 +1026,16 @@ function orderedLessons() {
   } catch { /* 查不到就用默认 */ }
   return ['u2r1'];
 }
+// 最后一次学习的课：按 progress 表的最新更新时间（2026-10-10，Elouise 要求首页回到上次位置）
+function lastStudiedLesson() {
+  try {
+    const row = db.prepare(
+      "SELECT lesson_id FROM progress ORDER BY updated_at DESC LIMIT 1"
+    ).get();
+    if (row && row.lesson_id && validLesson(row.lesson_id)) return row.lesson_id;
+  } catch { /* 表不存在或查询失败就回退到 currentLesson */ }
+  return null;
+}
 // 当前进行中的课：第一门没学完的正课；正课全学完则落第一门练习课（没有练习课则回最后一门正课）
 function currentLesson() {
   const ids = orderedLessons();
@@ -1096,7 +1106,9 @@ app.get('/', (req, res) => {
   if (diagNext) {
     return res.redirect('/diagnostic?form=A&section=' + diagNext);
   }
-  return res.redirect('/lesson?lesson=' + encodeURIComponent(currentLesson()));
+  // 优先回到最后一次学习的课（有作答记录才算），没有才用 currentLesson()
+  const last = lastStudiedLesson();
+  return res.redirect('/lesson?lesson=' + encodeURIComponent(last || currentLesson()));
 });
 
 // 下一段未完成的诊断（1/2/3），全部完成返回 null
