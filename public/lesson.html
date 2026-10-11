@@ -383,7 +383,7 @@ async function renderHome() {
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
   const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
-  let html = `<div id="homeHead"><h1>小禾英语</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
+  let html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>小禾英语</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
   if (isReview) {
     // 练习模式（2026-10-02 总任务书）：学完新课自动接着练；练完一遍可以再练一遍
     if (state.p1_done) {
@@ -422,7 +422,7 @@ async function renderHome() {
       ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
       <p class="scene">做完的课程不能重做。下一课见。</p>
-      <button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">下一课 →</button></div>`;
+      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">下一课 →</button></div></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
