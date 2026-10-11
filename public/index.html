@@ -93,8 +93,9 @@
     box-shadow: 0 0 0 3px rgba(26,115,232,.2), 0 2px 8px rgba(0,0,0,.08);
   }
   .node.current .icon { color: var(--blue); }
-  .node.locked { opacity: .55; cursor: default; background: #f8f9fa; }
-  .node.locked .icon { color: #9aa0a6; }
+  .node.available { opacity: 1; cursor: pointer; background: #fff; border: 2px solid #dadce0; }
+  .node.available:hover { border-color: #1a73e8; transform: translateY(-2px); }
+  .node.available .icon { color: #9aa0a6; }
   /* 底部导航 */
   .tabbar {
     position: fixed; bottom: 0; left: 0; right: 0;
@@ -220,7 +221,7 @@ UNITS.forEach(unit => {
     const idx = ORDER.findIndex(o => o.id === l.id);
     const done = isDone(l.id);
     if (done) doneN++;
-    let cls = "locked", icon = "🔒";
+    let cls = "available", icon = "📖";
     if (done) { cls = "done"; icon = "✅"; }
     else if (idx === currentIdx) { cls = "current"; icon = "📍"; }
     else if (idx < currentIdx) { cls = "done"; icon = "✅"; } // 前面的没标记也算可回看
