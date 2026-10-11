@@ -38,6 +38,8 @@
   html[data-theme="dark"] .bottomnav a { color:#999; }
   html[data-theme="dark"] .bottomnav a.on { color:#7ab8ff; }
 </style>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
 </head>
 <body>
 <div class="top">
@@ -145,7 +147,7 @@ function setFontSize(v) {
   applyFontSize();
 }
 function applyFontSize() {
-  document.documentElement.style.setProperty('--fs', getFontSize());
+  // 由 theme.js 统一用 zoom 处理，这里只更新显示
 }
 document.getElementById('fontRange').addEventListener('input', e => {
   setFontSize(parseFloat(e.target.value));
