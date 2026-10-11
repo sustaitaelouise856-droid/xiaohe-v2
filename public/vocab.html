@@ -38,6 +38,21 @@
   #revYes { background:#e6f4ea; color:#137333; }
   #revProg { color:var(--muted); font-size:14px; margin-bottom:12px; }
   #revDone { display:none; }
+
+  .tabbar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #fff; border-top: 1px solid #e8eaed;
+    display: flex; padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+    z-index: 50;
+  }
+  .tabbar a {
+    flex: 1; text-align: center; text-decoration: none;
+    color: #5f6368; font-size: 11px;
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .tabbar a .ticon { font-size: 22px; }
+  .tabbar a.active { color: #1a73e8; font-weight: 700; }
+  body { padding-bottom: 76px; }
 </style>
 </head>
 <body>
@@ -164,5 +179,11 @@ document.getElementById('revClose').onclick = () => {
 };
 render();
 </script>
+
+<div class="tabbar">
+  <a href="/"><span class="ticon">🗺️</span>学习地图</a>
+  <a href="/vocab.html" class="active"><span class="ticon">📖</span>生词本</a>
+  <a href="/progress.html"><span class="ticon">📊</span>学习报告</a>
+</div>
 </body>
 </html>
