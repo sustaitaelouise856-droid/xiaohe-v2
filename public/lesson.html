@@ -132,8 +132,7 @@
     .qcols { display:block; }
     .reading-pane { position:static; max-height:none; margin-bottom:4px; }
     #wrap{padding:18px 14px 100px;}
-    /* 手机端悬浮"看原文"按钮 */
-    #btnSeeReading { display:block !important; }
+    /* 手机端悬浮"看原文"按钮：仅在做题页有材料时由JS显示 */
     /* 窄屏顶栏不再挤：导航放第一行，播放器独占第二行，步骤指示不收缩、不与按钮重叠 */
     #topbar { flex-wrap:wrap; gap:8px; padding:8px 12px; }
     #topbar > button { padding:8px 10px; font-size:14px; }
@@ -379,6 +378,7 @@ async function parentReport(lid) {
 }
 async function renderHome() {
   topbar.style.display = 'none'; au.pause();
+  try { $('btnSeeReading').style.display = 'none'; } catch {}
   let state = { p1_done: false, p2_done: false, p2_open: false, p2_note: '完成第一部分后，就可以学第二部分' };
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
@@ -422,7 +422,7 @@ async function renderHome() {
       ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
       <p class="scene">做完的课程不能重做。下一课见。</p>
-      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">下一课 →</button></div></div>`;
+      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">返回首页 →</button></div></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
@@ -553,6 +553,12 @@ function renderStep() {
     html += `</div></div></div>`;
   }
   wrap.innerHTML = html;
+  // 悬浮"看原文"按钮：仅手机端且本步有材料时显示（2026-10-11 修：入口页死按钮）
+  try {
+    const hasReading = !!((s.reading || '').trim() || (s.teach_html || '').includes('reading-pane'));
+    const isMobile = window.matchMedia('(max-width:760px)').matches;
+    $('btnSeeReading').style.display = (hasReading && isMobile) ? 'block' : 'none';
+  } catch {}
   wrap.querySelectorAll('.btnBack').forEach(b => { b.onclick = goBack; }); // 回去看看：各处统一接 goBack
   if (s.kind === 'teach') { $('btnNext').onclick = () => advance(); window.scrollTo(0, 0); return; }
   if (s.kind === 'choice') {
