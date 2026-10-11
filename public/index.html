@@ -373,23 +373,42 @@ UNITS.forEach(unit => {
     n.className = "node " + cls;
     n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
     // 所有课程都可点击进入（2026-10-11：本地解锁状态与服务器进度对不上，取消锁定）
-    // 长按（600ms）设为当前学习课程，"继续学习"按钮会跳到它（2026-10-11 加）
-    let pressTimer = null, longPressed = false;
+    // 长按设为当前学习课程（2026-10-11 加，14:55 修：长按后不重建DOM，避免误触进入）
+    let pressTimer = null;
     n.addEventListener('pointerdown', () => {
-      longPressed = false;
       pressTimer = setTimeout(() => {
-        longPressed = true;
-        try { localStorage.setItem('manual_current', l.id); } catch {}
-        currentIdx = ORDER.findIndex(o => o.id === l.id);
-        renderMap(); // 重渲染：更新📍标记和"继续学习"按钮
+        pressTimer = 'fired';
+        n.style.transform = 'scale(.96)';
+        n.style.boxShadow = '0 0 0 3px #1a73e8';
       }, 600);
     });
-    const cancelPress = () => { if (pressTimer) clearTimeout(pressTimer); pressTimer = null; };
+    const cancelPress = () => {
+      if (pressTimer === 'fired') {
+        // 长按生效：设为当前，不进入课程
+        try { localStorage.setItem('manual_current', l.id); } catch {}
+        currentIdx = ORDER.findIndex(o => o.id === l.id);
+        // 最小化更新UI：移动📍标记，更新继续按钮（不重建DOM）
+        document.querySelectorAll('.node.current').forEach(x => {
+          x.classList.remove('current'); x.classList.add('available');
+          const ic = x.querySelector('.icon'); if (ic) ic.textContent = '📖';
+        });
+        n.classList.remove('available'); n.classList.add('current');
+        const nic = n.querySelector('.icon'); if (nic) nic.textContent = '📍';
+        const sub = document.getElementById('continueSub');
+        if (sub) sub.textContent = '下一课：' + l.name + '（' + l.label + '）';
+        const bc = document.getElementById('btnContinue');
+        if (bc) bc.onclick = () => { location.href = '/lesson?lesson=' + l.id; };
+        window._suppressClickUntil = Date.now() + 1200;
+      }
+      if (pressTimer && pressTimer !== 'fired') clearTimeout(pressTimer);
+      pressTimer = null;
+      n.style.transform = ''; n.style.boxShadow = '';
+    };
     n.addEventListener('pointerup', cancelPress);
-    n.addEventListener('pointerleave', cancelPress);
+    n.addEventListener('pointerleave', () => { if (pressTimer && pressTimer !== 'fired') clearTimeout(pressTimer); pressTimer = null; n.style.transform = ''; n.style.boxShadow = ''; });
     n.addEventListener('pointercancel', cancelPress);
     n.onclick = () => {
-      if (longPressed) { longPressed = false; return; } // 长按后不触发点击进入
+      if (Date.now() < (window._suppressClickUntil || 0)) return; // 长按后的点击不进入
       location.href = "/lesson?lesson=" + l.id;
     };
     nodes.appendChild(n);
