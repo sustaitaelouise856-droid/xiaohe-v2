@@ -194,6 +194,11 @@
 </div>
 
 <script>
+// 应用设置页的主题（2026-10-11 加）
+try {
+  const th = localStorage.getItem('xh_theme');
+  if (th) document.documentElement.setAttribute('data-theme', th);
+} catch {}
 // 课程结构
 const UNITS = [
   { name: "Unit 2 · 广播站", lessons: [
