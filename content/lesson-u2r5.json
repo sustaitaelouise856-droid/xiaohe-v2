@@ -11,7 +11,7 @@
       "kind": "teach",
       "phase": "practice",
       "title": "大直播前夜",
-      "teach_html": "<p>【承上启下】昨天你学会了写回信。今天是综合演练：听通知、记数据、回听众，一次搞定。</p><p>站长：明天就是<b>校庆大直播</b>了！三张通知、校园数据、听众来信，全都要核对一遍，写成一期完整的广播稿。</p><p>今晚我们先彩排，你来当主播。</p>",
+      "teach_html": "<p>站长：明天就是<b>校庆大直播</b>了！三张通知、校园数据、听众来信，全都要核对一遍，写成一期完整的广播稿。</p><p>今晚我们先彩排，你来当主播。</p>",
       "scene": "广播站",
       "step": 1
     },
@@ -19,9 +19,10 @@
       "kind": "teach",
       "phase": "practice",
       "title": "三张通知",
-      "teach_html": "<p>先看演出通知。一共三张，只认最后一次更新。</p><div class='reading-pane'><pre>【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.</pre></div>",
+      "teach_html": "<p>先看演出通知。一共三张，只认最后一次更新。</p>",
       "scene": "看通知",
-      "step": 2
+      "step": 2,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "mcq",
@@ -36,7 +37,7 @@
       ],
       "answer": "C",
       "explain": "第二张更新：Saturday, 7:00 p.m.。",
-      "help": "只认最后一次更新。第一张说 Friday，第二张说 Saturday，以第二张为准。",
+      "help": "只认最后一次更新，看第二张。",
       "predicted_errors": [
         {
           "match": "A",
@@ -48,12 +49,7 @@
         }
       ],
       "scene": "核对时间",
-      "step": 3,
-      "wrong_feedback": {
-        "A": "这是第一张通知的旧时间，已经更新了。",
-        "B": "星期五对了，但时间是旧的。看第二张更新。",
-        "D": "时间 7:00 p.m. 对了，但星期是 Saturday，不是 Sunday。"
-      }
+      "step": 3
     },
     {
       "kind": "mcq",
@@ -68,7 +64,7 @@
       ],
       "answer": "D",
       "explain": "语音：搬到 school hall。",
-      "help": "听站长的语音留言，地点搬到哪里了？注意不是第一张通知的旧地点。",
+      "help": "听站长的语音，地点搬了。",
       "predicted_errors": [
         {
           "match": "A",
@@ -76,20 +72,16 @@
         }
       ],
       "scene": "核对地点",
-      "step": 4,
-      "wrong_feedback": {
-        "A": "这是书义卖的旧地点，不是演出的。",
-        "B": "图书馆是别的事的地点，演出不在这。",
-        "C": "语音里没提过 gym，再听一遍。"
-      }
+      "step": 4
     },
     {
       "kind": "teach",
       "phase": "practice",
       "title": "校园数据",
-      "teach_html": "<p>再看校园数据。校庆参加人数和借书量都涨了。</p><div class='reading-pane'><pre>【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)</pre></div>",
+      "teach_html": "<p>再看校园数据。校庆参加人数和借书量都涨了。</p>",
       "scene": "看数据",
-      "step": 5
+      "step": 5,
+      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "mcq",
@@ -104,7 +96,7 @@
       ],
       "answer": "B",
       "explain": "up 20% from last year。",
-      "help": "听播报里 up 后面的数字。注意区分：人数涨 20%，借书涨 15%，别混。",
+      "help": "看 Students 那行，up 多少？",
       "predicted_errors": [
         {
           "match": "A",
@@ -112,12 +104,7 @@
         }
       ],
       "scene": "读数据",
-      "step": 6,
-      "wrong_feedback": {
-        "A": "15% 是借书的涨幅，不是人数的。",
-        "C": "播报里没说过 25%，再听一遍 up 后面的数字。",
-        "D": "10% 太小了，播报说的是 up 20%。"
-      }
+      "step": 6
     },
     {
       "kind": "short",
@@ -177,9 +164,10 @@
       "kind": "teach",
       "phase": "practice",
       "title": "听众来信",
-      "teach_html": "<p>有两封听众来信。分清哪句是请求，哪句是闲聊。</p><div class='reading-pane'><pre>【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute.</pre></div>",
+      "teach_html": "<p>有两封听众来信。分清哪句是请求，哪句是闲聊。</p>",
       "scene": "读信",
-      "step": 8
+      "step": 8,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "mcq",
@@ -194,7 +182,7 @@
       ],
       "answer": "A",
       "explain": "请求是点歌：Play \"Sunshine\"。",
-      "help": "听第一封信，找真正的请求。闲聊（比如吃面条）不算请求，点歌才算。",
+      "help": "请求是让广播站做的事。",
       "predicted_errors": [
         {
           "match": "B",
@@ -202,12 +190,7 @@
         }
       ],
       "scene": "抓请求",
-      "step": 9,
-      "wrong_feedback": {
-        "B": "吃面条是闲聊，不是请求。",
-        "C": "信里没说要写信，再听一遍。",
-        "D": "煮面条是闲聊，真正的请求是点歌。"
-      }
+      "step": 9
     },
     {
       "kind": "mcq",
@@ -222,7 +205,7 @@
       ],
       "answer": "B",
       "explain": "问 English Corner 的时间。",
-      "help": "听第二封信，他想问什么？注意问的是时间还是地点。",
+      "help": "找问句。",
       "predicted_errors": [
         {
           "match": "C",
@@ -230,12 +213,7 @@
         }
       ],
       "scene": "抓请求",
-      "step": 10,
-      "wrong_feedback": {
-        "A": "信里没问午饭时间，问的是 English Corner。",
-        "C": "信里没提狗，别脑补。",
-        "D": "问的不是歌名，是时间。"
-      }
+      "step": 10
     },
     {
       "kind": "short",
@@ -290,7 +268,7 @@
       ],
       "answer": "D",
       "explain": "up 15% from November。",
-      "help": "听 12 月借书的播报，up 后面跟的是哪个数字？别和人数的 20% 搞混。",
+      "help": "看 Books 那行。",
       "predicted_errors": [
         {
           "match": "B",
@@ -298,12 +276,7 @@
         }
       ],
       "scene": "读数据",
-      "step": 13,
-      "wrong_feedback": {
-        "A": "10% 太小了，播报说 up 15%。",
-        "B": "20% 是人数的涨幅，借书是 15%。",
-        "C": "播报里没说过 25%。"
-      }
+      "step": 13
     },
     {
       "kind": "mcq",
@@ -318,15 +291,10 @@
       ],
       "answer": "D",
       "explain": "两封：来信一和来信二。",
-      "help": "数一数有几封信。来信一、来信二，一共几封？",
+      "help": "数一数。",
       "predicted_errors": [],
       "scene": "数信",
-      "step": 14,
-      "wrong_feedback": {
-        "A": "漏了一封，有来信一和来信二两封。",
-        "B": "只有两封，哪来的第三封？",
-        "C": "数多了，只有两封信。"
-      }
+      "step": 14
     },
     {
       "kind": "teach",
@@ -349,15 +317,10 @@
       ],
       "answer": "C",
       "explain": "Friday, 6:00 p.m. 是第一张的旧时间，已更新。",
-      "help": "哪张通知是最新的？旧通知的信息不用播，找出那个旧的。",
+      "help": "找被更新掉的旧信息。",
       "predicted_errors": [],
       "scene": "找作废",
-      "step": 16,
-      "wrong_feedback": {
-        "A": "Saturday, 7:00 p.m. 是最新的，对的。",
-        "B": "school hall 是最新的地点，对的。",
-        "D": "up 20% 是最新数据，对的。"
-      }
+      "step": 16
     },
     {
       "kind": "short",
@@ -442,10 +405,11 @@
       "kind": "teach",
       "phase": "validate",
       "title": "听：演出通知",
-      "teach_html": "<p>听站长的语音留言，记下最终时间地点。</p><div class='reading-pane'><pre>【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!</pre></div>",
+      "teach_html": "<p>听站长的语音留言，记下最终时间地点。</p>",
       "scene": "听通知",
       "step": 21,
-      "audio_id": "u2r5-announce"
+      "audio_id": "u2r5-announce",
+      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!"
     },
     {
       "kind": "mcq",
@@ -460,7 +424,7 @@
       ],
       "answer": "B",
       "explain": "Saturday, 7:00 p.m.",
-      "help": "语音里说的演出时间是周几、几点？和通知对比一下。",
+      "help": "仔细听时间。",
       "predicted_errors": [
         {
           "match": "A",
@@ -468,12 +432,7 @@
         }
       ],
       "scene": "听时间",
-      "step": 22,
-      "wrong_feedback": {
-        "A": "Friday 是旧通知的时间，语音说的是 Saturday。",
-        "C": "星期对了，但语音说的是 7:00 p.m.，不是 6:00。",
-        "D": "语音里没提 Sunday。"
-      }
+      "step": 22
     },
     {
       "kind": "short",
@@ -505,10 +464,11 @@
       "kind": "teach",
       "phase": "validate",
       "title": "听：数据播报",
-      "teach_html": "<p>听数据播报，记下关键数字。</p><div class='reading-pane'><pre>【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%.</pre></div>",
+      "teach_html": "<p>听数据播报，记下关键数字。</p>",
       "scene": "听数据",
       "step": 24,
-      "audio_id": "u2r5-data"
+      "audio_id": "u2r5-data",
+      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
     },
     {
       "kind": "mcq",
@@ -523,7 +483,7 @@
       ],
       "answer": "A",
       "explain": "Students up 20%，最大。",
-      "help": "比较两个涨幅：人数 up 20%，借书 up 15%，哪个大？",
+      "help": "比较两个百分比。",
       "predicted_errors": [
         {
           "match": "B",
@@ -531,12 +491,7 @@
         }
       ],
       "scene": "比数据",
-      "step": 25,
-      "wrong_feedback": {
-        "B": "Books up 15%，比 20% 小。",
-        "C": "Students 是 up 20%，不是 15%。",
-        "D": "Books 是 up 15%，不是 20%。"
-      }
+      "step": 25
     },
     {
       "kind": "short",
@@ -590,9 +545,10 @@
       "kind": "teach",
       "phase": "validate",
       "title": "读：来信",
-      "teach_html": "<p>读听众来信，抓住请求。</p><div class='reading-pane'><pre>【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white.</pre></div>",
+      "teach_html": "<p>读听众来信，抓住请求。</p>",
       "scene": "读信",
-      "step": 27
+      "step": 27,
+      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
     },
     {
       "kind": "mcq",
@@ -607,7 +563,7 @@
       ],
       "answer": "A",
       "explain": "请求是点歌：Play \"Rainbow\"。",
-      "help": "听这封信，真正的请求是什么？闲聊不算，找那个要你做事的句子。",
+      "help": "找让广播站做的事。",
       "predicted_errors": [
         {
           "match": "B",
@@ -615,12 +571,7 @@
         }
       ],
       "scene": "抓请求",
-      "step": 28,
-      "wrong_feedback": {
-        "B": "喂猫是闲聊，不是请求。",
-        "C": "信里没说每天听。",
-        "D": "信里没说写信，请求是点歌。"
-      }
+      "step": 28
     },
     {
       "kind": "short",
@@ -775,15 +726,10 @@
       ],
       "answer": "C",
       "explain": "Friday 6pm 是旧时间，不用了。",
-      "help": "逐项检查：时间、地点、数据，哪一项和最新通知对不上？",
+      "help": "找错误的那项。",
       "predicted_errors": [],
       "scene": "检查",
-      "step": 35,
-      "wrong_feedback": {
-        "A": "Saturday 7pm 是对的，检查通过。",
-        "B": "school hall 是对的，检查通过。",
-        "D": "up 20% 是对的，检查通过。"
-      }
+      "step": 35
     },
     {
       "kind": "teach",
