@@ -73,7 +73,7 @@
   .opt:disabled:hover { transform:none; box-shadow:0 1px 4px rgba(60,64,67,.05); border-color:#e7eaf0; }
   .opt.sel:disabled:hover { border-color:var(--blue); box-shadow:0 4px 14px rgba(26,115,232,.18); }
   /* 输入 */
-  #answerInput { width:100%; font-size:calc(24px * var(--fs)); padding:14px 18px; border:2px solid #dfe3ec; border-radius:16px; margin:10px 0; background:#fbfcfe; transition:border-color .15s, box-shadow .15s; }
+  #answerInput { width:100%; font-size:calc(24px * var(--fs)); padding:14px 18px; border:2px solid #dfe3ec; border-radius:16px; margin:10px 0; background:#fbfcfe; transition:border-color .15s, box-shadow .15s; min-height:64px; resize:none; overflow-y:hidden; line-height:1.5; font-family:inherit; }
   #answerInput:focus { border-color:var(--blue); outline:none; background:#fff; box-shadow:0 0 0 4px rgba(26,115,232,.14); }
   /* 按钮 */
   .btnrow { display:flex; gap:16px; margin-top:12px; flex-wrap:wrap; }
@@ -571,7 +571,7 @@ function renderStep() {
         <button class="big" id="btnSub" disabled>回答</button></div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else {
-      html += `<input id="answerInput" placeholder="在这里写英文答案" autocomplete="off">
+      html += `<textarea id="answerInput" placeholder="在这里写英文答案" autocomplete="off" rows="2"></textarea>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
         <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
@@ -876,6 +876,15 @@ function wireQuestion(s) {
     }
     return found;
   }
+  // 答题框自动增高：内容多就变高，不用在框里滑动（2026-10-11 加）
+  try {
+    const ai = $('answerInput');
+    if (ai && ai.tagName === 'TEXTAREA') {
+      const grow = () => { ai.style.height = 'auto'; ai.style.height = Math.min(ai.scrollHeight, 300) + 'px'; };
+      ai.addEventListener('input', grow);
+      grow();
+    }
+  } catch {}
   $('btnSub').onclick = async () => {
     if (s.kind === 'short') given = $('answerInput').value;
     if (!String(given).trim()) { err.textContent = '先写出答案再提交。'; return; }
