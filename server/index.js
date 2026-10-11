@@ -211,14 +211,47 @@ app.post('/api/verify', (req, res) => {
 
 // 需验证
 app.get('/api/me', auth.requireAuth, (req, res) => res.json({ ok: true }));
-// 学习地图用：返回有作答记录的课程（真实学习进度，不依赖浏览器本地）
+// 学习地图用：返回服务器真实进度（lesson_state 表为准）
+// completed: 两部分都完成的课；started: 学过但没学完的课（含作答时间）；
+// current: 最近在学的那门课。2026-10-11 修复：attempts 表没有 lesson_id 列，
+// 旧写法 SELECT DISTINCT lesson_id FROM attempts 直接报错被吞，永远返回 ok:false。
 app.get('/api/done-lessons', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    const rows = db.prepare('SELECT DISTINCT lesson_id FROM attempts ORDER BY lesson_id').all();
-    res.json({ ok: true, lessons: rows.map(r => r.lesson_id) });
+    const rows = db.prepare(
+      'SELECT lesson_id, p1_done, p2_done, p1_started_day, updated_at FROM lesson_state'
+    ).all();
+    const seen = new Set();
+    const completed = [], started = [];
+    let current = null, latestT = '';
+    const touch = (id, t) => { if (id && t >= latestT) { latestT = t; current = id; } };
+    for (const r of rows) {
+      if (!r || !r.lesson_id || seen.has(r.lesson_id)) continue;
+      seen.add(r.lesson_id);
+      const done = r.p1_done === 1 && r.p2_done === 1;
+      const active = r.p1_started_day || r.p1_done === 1 || r.p2_done === 1;
+      const t = r.updated_at || '';
+      if (done) { completed.push(r.lesson_id); }
+      else if (active) { started.push({ id: r.lesson_id, updated_at: t }); touch(r.lesson_id, t); }
+    }
+    // 兜底：attempts 里有作答、但 lesson_state 没行的旧数据，也算 started
+    try {
+      const arows = db.prepare(
+        "SELECT substr(item_id, 1, instr(item_id, '-') - 1) AS lid, MAX(created_at) AS mx " +
+        "FROM attempts WHERE item_id LIKE '%-%' GROUP BY lid"
+      ).all();
+      for (const a of arows) {
+        if (!a.lid || seen.has(a.lid)) continue;
+        seen.add(a.lid);
+        started.push({ id: a.lid, updated_at: a.mx || '' });
+        touch(a.lid, a.mx || '');
+      }
+    } catch (e2) { console.error('[done-lessons] attempts 兜底失败:', e2.message); }
+    completed.sort(); started.sort((a, b) => (a.updated_at < b.updated_at ? -1 : 1));
+    res.json({ ok: true, completed, started, current, lessons: completed });
   } catch (e) {
-    res.json({ ok: false, lessons: [] });
+    console.error('[done-lessons]', e.message);
+    res.json({ ok: false, error: 'db_error', completed: [], started: [], current: null, lessons: [] });
   }
 });
 app.get('/api/lessons', auth.requireAuth, (req, res) => {
