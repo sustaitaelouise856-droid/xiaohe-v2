@@ -197,13 +197,20 @@ const UNITS = [
 const ORDER = [];
 UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
 
-// 读完成状态：优先用服务器真实进度（attempts表），本地做兜底
+// 读完成状态：优先用服务器真实进度（lesson_state表），本地做兜底
 let serverDone = new Set();
+let serverCurrent = null;   // 服务器判定的"当前在学"课程 id
+let serverStarted = [];     // [{id, updated_at}] 学过但没学完
 async function loadServerProgress() {
   try {
     const r = await fetch('/api/done-lessons');
     const d = await r.json();
-    if (d.ok && d.lessons) serverDone = new Set(d.lessons);
+    if (d.ok) {
+      const doneList = d.completed || d.lessons || [];
+      serverDone = new Set(doneList);
+      serverCurrent = d.current || null;
+      serverStarted = Array.isArray(d.started) ? d.started : [];
+    }
   } catch {}
 }
 function isDone(id) {
@@ -211,18 +218,42 @@ function isDone(id) {
   return localStorage.getItem("xh_done_" + id) === "1";
 }
 
-// 找当前可学的课（第一门没完成的）
-let currentIdx = ORDER.findIndex(l => !isDone(l.id));
-if (currentIdx === -1) currentIdx = ORDER.length - 1; // 全完成
-// 本地无记录时默认定到 u2r5（2026-10-11 用户确认上次学到第5课）
-const hasAnyDone = ORDER.some(l => isDone(l.id));
-if (!hasAnyDone) {
-  const u2r5Idx = ORDER.findIndex(l => l.id === "u2r5");
-  if (u2r5Idx !== -1) currentIdx = u2r5Idx;
+// 算当前课：必须等服务器进度回来之后再算（2026-10-11 修复：以前在服务器数据回来前
+// 就算好了，导致当前课标记永远按本地空数据走）
+let currentIdx = 0;
+function computeCurrent() {
+  // 1) 服务器直接给的当前课（且在地图里）
+  if (serverCurrent && ORDER.some(l => l.id === serverCurrent)) {
+    return ORDER.findIndex(l => l.id === serverCurrent);
+  }
+  // 2) 服务器 started 里最近学过、还没完成的那门（只看地图里的课）
+  const smap = new Map();
+  for (const s of serverStarted) {
+    const id = typeof s === 'string' ? s : s.id;
+    const t = typeof s === 'string' ? '' : (s.updated_at || '');
+    if (id && ORDER.some(l => l.id === id) && !isDone(id)) smap.set(id, t);
+  }
+  let best = -1, bestT = '';
+  ORDER.forEach((l, i) => {
+    if (smap.has(l.id) && (smap.get(l.id) || '') >= bestT) { bestT = smap.get(l.id) || ''; best = i; }
+  });
+  if (best !== -1) return best;
+  // 3) 第一门没完成的
+  const idx = ORDER.findIndex(l => !isDone(l.id));
+  if (idx !== -1) return idx;
+  return ORDER.length - 1; // 全完成
 }
 
-// 先加载服务器进度再渲染
+// 先加载服务器进度，算好当前课再渲染
 loadServerProgress().then(() => {
+// 没有任何服务器/本地记录时，默认定到 u2r5（2026-10-11 用户确认上次学到第5课）
+const hasAny = ORDER.some(l => isDone(l.id)) || serverStarted.length > 0 || !!serverCurrent;
+if (!hasAny) {
+  const u2r5Idx = ORDER.findIndex(l => l.id === "u2r5");
+  currentIdx = u2r5Idx !== -1 ? u2r5Idx : computeCurrent();
+} else {
+  currentIdx = computeCurrent();
+}
 renderMap();
 });
 function renderMap() {
@@ -244,7 +275,8 @@ UNITS.forEach(unit => {
     let cls = "available", icon = "📖";
     if (done) { cls = "done"; icon = "✅"; }
     else if (idx === currentIdx) { cls = "current"; icon = "📍"; }
-    else if (idx < currentIdx) { cls = "done"; icon = "✅"; } // 前面的没标记也算可回看
+    // 前面的课没标记完成也不画✅，只显示📖可回看（2026-10-11：✅必须只给真正完成的，
+    // 否则跟顶部"已完成"数字对不上）
 
     const n = document.createElement("div");
     n.className = "node " + cls;
