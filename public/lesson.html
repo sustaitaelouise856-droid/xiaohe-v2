@@ -20,13 +20,25 @@
     --fs-scene: calc(19px * var(--fs));
     --fs-task: calc(20px * var(--fs));
   }
-  /* 主题（2026-10-11 加）：护眼/夜间模式 */
+  /* 主题（2026-10-11 加，18:55 全面重写深色模式） */
   html[data-theme="warm"] body { background:#fdf6e3; }
-  html[data-theme="warm"] .card, html[data-theme="warm"] #topbar, html[data-theme="warm"] .reading-pane .notice { background:#fffdf5; }
-  html[data-theme="dark"] body { background:#1a1a1a; color:#e0e0e0; }
-  html[data-theme="dark"] .card, html[data-theme="dark"] #topbar { background:#2d2d2d; border-color:#444; }
-  html[data-theme="dark"] .reading-pane .notice { background:#2d2d2d; border-color:#444; }
-  html[data-theme="dark"] .reading-pane pre { color:#e0e0e0; }
+  html[data-theme="warm"] .card, html[data-theme="warm"] #topbar { background:#fffdf5; }
+  html[data-theme="warm"] .notice { background:#fffdf5; }
+  html[data-theme="dark"] { --ink:#e8e8e8; --muted:#a0a0a0; --line:#444; --bg:#1a1a1a; --blue:#7ab8ff; }
+  html[data-theme="dark"] body { background:#1a1a1a; color:#e8e8e8; }
+  html[data-theme="dark"] #topbar { background:#2d2d2d; border-color:#444; }
+  html[data-theme="dark"] .card { background:#2d2d2d; border-color:#444; color:#e8e8e8; }
+  html[data-theme="dark"] .notice { background:#2d2d2d; border-color:#8a6d1a; }
+  html[data-theme="dark"] .notice .nh { color:#f2b01e; }
+  html[data-theme="dark"] .notice pre, html[data-theme="dark"] .reading-pane pre { background:#2d2d2d; color:#e8e8e8; }
+  html[data-theme="dark"] .reading-pane { background:transparent; }
+  html[data-theme="dark"] .task { background:#1a2a4a; border-color:#7ab8ff; color:#e8e8e8; }
+  html[data-theme="dark"] .teachtext { color:#e8e8e8; }
+  html[data-theme="dark"] .qbtn, html[data-theme="dark"] button.ghost { background:#3d3d3d; border-color:#555; color:#e8e8e8; }
+  html[data-theme="dark"] #answerInput { background:#2d2d2d; border-color:#555; color:#e8e8e8; }
+  html[data-theme="dark"] .fb { background:#2d2d2d; color:#e8e8e8; }
+  html[data-theme="dark"] .opt { background:#2d2d2d; border-color:#555; color:#e8e8e8; }
+  html[data-theme="dark"] #wordPop { background:#2d2d2d; border-color:#555; color:#e8e8e8; }
   * { box-sizing: border-box; }
   html, body { margin:0; padding:0; }
   body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:#eef1f7; color:var(--ink); font-size:var(--fs-body); line-height:1.7; -webkit-font-smoothing:antialiased; }
@@ -174,6 +186,8 @@
   #wordPop .wp-close { position:absolute; top:4px; right:10px; border:0; background:none; font-size:18px; color:var(--muted); cursor:pointer; }
 </style>
 <script src="/dict.min.js"></script>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
 </head>
 <body>
 <div id="topbar" style="display:none">
@@ -435,13 +449,6 @@ async function parentReport(lid) {
   } catch { return null; }
 }
 async function renderHome() {
-  // 应用设置页的字体和主题（2026-10-11 加）
-  try {
-    const fz = parseFloat(localStorage.getItem('xh_font_size'));
-    if (fz >= 0.8 && fz <= 1.4) document.documentElement.style.setProperty('--fs', fz);
-    const th = localStorage.getItem('xh_theme');
-    if (th) document.documentElement.setAttribute('data-theme', th);
-  } catch {}
   topbar.style.display = 'none'; au.pause();
   try { $('btnSeeReading').style.display = 'none'; } catch {}
   let state = { p1_done: false, p2_done: false, p2_open: false, p2_note: '完成第一部分后，就可以学第二部分' };
