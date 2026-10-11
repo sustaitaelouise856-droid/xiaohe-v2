@@ -111,6 +111,11 @@
   .gfb { margin-top:8px; }
   .sabox { background:#fff; border:2px solid var(--blue); border-radius:12px; padding:14px 18px; margin-top:12px; }
   .sabox .nudge { margin:8px 0; }
+  @media (max-width:1024px){
+    .qcols { display:block; }
+    .reading-pane { position:static; max-height:none; margin-bottom:12px; flex:none; width:100%; }
+    .notice pre { white-space:pre-wrap; word-break:break-word; }
+  }
   @media (max-width:760px){
     .qcols { display:block; }
     .reading-pane { position:static; max-height:none; margin-bottom:4px; }
@@ -715,7 +720,10 @@ function wireQuestion(s) {
       btn.onclick = function () {
         var div = $('sadiv');
         var idx = Number(btn.getAttribute('data-sa'));
-        var item = saList[idx] || {};
+        // 2026-10-11 修：saList 只在 renderStep 的 else 块内 const 声明，
+        // 这里直接引用会 ReferenceError；改从本步 s.see_also 取（wireQuestion(s) 作用域内）
+        var _sa = s.see_also ? (Array.isArray(s.see_also) ? s.see_also : [s.see_also]) : [];
+        var item = _sa[idx] || {};
         if (div.style.display !== 'none' && div.getAttribute('data-open') === String(idx)) {
           div.style.display = 'none'; div.setAttribute('data-open', '');
         } else {
