@@ -24,6 +24,19 @@
   .bottomnav { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e5e7eb; display:flex; z-index:10; }
   .bottomnav a { flex:1; text-align:center; padding:10px 0 12px; text-decoration:none; color:#666; font-size:12px; }
   .bottomnav a.on { color:#1a73e8; font-weight:700; }
+  /* 主题（2026-10-11 加） */
+  html[data-theme="warm"] body { background:#fdf6e3; color:#5c4b37; }
+  html[data-theme="warm"] .card, html[data-theme="warm"] .top, html[data-theme="warm"] .bottomnav { background:#fffdf5; border-color:#e8dcc0; }
+  html[data-theme="warm"] .top h1, html[data-theme="warm"] .card h2 { color:#5c4b37; }
+  html[data-theme="dark"] body { background:#1a1a1a; color:#e0e0e0; }
+  html[data-theme="dark"] .card, html[data-theme="dark"] .top, html[data-theme="dark"] .bottomnav { background:#2d2d2d; border-color:#444; }
+  html[data-theme="dark"] .top h1, html[data-theme="dark"] .card h2 { color:#fff; }
+  html[data-theme="dark"] .card p { color:#aaa; }
+  html[data-theme="dark"] .speed-btns button { background:#3d3d3d; border-color:#555; color:#e0e0e0; }
+  html[data-theme="dark"] .speed-btns button.on { background:#1a3a5c; border-color:#1a73e8; color:#7ab8ff; }
+  html[data-theme="dark"] .top button { border-color:#555; color:#e0e0e0; }
+  html[data-theme="dark"] .bottomnav a { color:#999; }
+  html[data-theme="dark"] .bottomnav a.on { color:#7ab8ff; }
 </style>
 </head>
 <body>
@@ -49,6 +62,32 @@
   </div>
   <div class="test-row">
     <button id="btnTest">🔊 试听一下</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🔠 字体大小</h2>
+  <p>调大调小课程里的字。眼睛累了就调大一点。</p>
+  <div class="speed-row">
+    <span style="font-size:14px;color:#888;">小</span>
+    <input type="range" id="fontRange" min="0.8" max="1.4" step="0.1" value="1.0">
+    <span style="font-size:14px;color:#888;">大</span>
+    <div class="speed-val" id="fontVal">1.0x</div>
+  </div>
+  <div class="speed-btns">
+    <button data-fv="0.8">0.8x 小</button>
+    <button data-fv="1.0">1.0x 正常</button>
+    <button data-fv="1.2">1.2x 大</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🎨 外观主题</h2>
+  <p>换个背景颜色，晚上学不刺眼。</p>
+  <div class="speed-btns" id="themeBtns">
+    <button data-tv="light">☀️ 日间</button>
+    <button data-tv="warm">📖 护眼</button>
+    <button data-tv="dark">🌙 夜间</button>
   </div>
 </div>
 
@@ -87,6 +126,55 @@ document.getElementById('btnTest').onclick = () => {
   a.play().catch(() => {});
 };
 setSpeed(getSpeed());
+
+// ---- 字体大小（2026-10-11 加） ----
+function getFontSize() {
+  try {
+    const v = parseFloat(localStorage.getItem('xh_font_size'));
+    return (v >= 0.8 && v <= 1.4) ? v : 1.0;
+  } catch { return 1.0; }
+}
+function setFontSize(v) {
+  v = Math.round(v * 10) / 10;
+  try { localStorage.setItem('xh_font_size', String(v)); } catch {}
+  document.getElementById('fontRange').value = v;
+  document.getElementById('fontVal').textContent = v.toFixed(1) + 'x';
+  document.querySelectorAll('[data-fv]').forEach(b => {
+    b.classList.toggle('on', Math.abs(parseFloat(b.dataset.fv) - v) < 0.05);
+  });
+  applyFontSize();
+}
+function applyFontSize() {
+  document.documentElement.style.setProperty('--fs', getFontSize());
+}
+document.getElementById('fontRange').addEventListener('input', e => {
+  setFontSize(parseFloat(e.target.value));
+});
+document.querySelectorAll('[data-fv]').forEach(b => {
+  b.onclick = () => setFontSize(parseFloat(b.dataset.fv));
+});
+
+// ---- 外观主题（2026-10-11 加） ----
+function getTheme() {
+  try { return localStorage.getItem('xh_theme') || 'light'; } catch { return 'light'; }
+}
+function setTheme(t) {
+  try { localStorage.setItem('xh_theme', t); } catch {}
+  document.querySelectorAll('[data-tv]').forEach(b => {
+    b.classList.toggle('on', b.dataset.tv === t);
+  });
+  applyTheme();
+}
+function applyTheme() {
+  document.documentElement.setAttribute('data-theme', getTheme());
+}
+document.querySelectorAll('[data-tv]').forEach(b => {
+  b.onclick = () => setTheme(b.dataset.tv);
+});
+
+// 初始化
+setFontSize(getFontSize());
+setTheme(getTheme());
 </script>
 </body>
 </html>
