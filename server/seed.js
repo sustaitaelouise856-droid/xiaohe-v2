@@ -75,10 +75,7 @@ function fingerprint(f) {
 
 // 入库一课。返回 { n, version }，n 为本次新增的题数。
 // 已存在的题内容不一致时抛错（改题必须升版本号），不覆盖。
-// status: 数学课（sx*）、语文课（yw-*）用 'draft'——可直接访问（白名单只查 lessons 表），
-//   但不进入英语首页的"当前进行中的课"序列（orderedLessons 只取 status != 'draft'）。
-//   多学科独立入口（P1）落地后再给数学/语文课正式排期。
-function seedLesson(lid, lesson, status) {
+function seedLesson(lid, lesson) {
   if (!lesson) {
     lesson = JSON.parse(
       fs.readFileSync(path.join(contentDir(), `lesson-${lid}.json`), 'utf-8')
@@ -87,7 +84,7 @@ function seedLesson(lid, lesson, status) {
   db.prepare(
     `INSERT INTO lessons(lesson_id, title, status) VALUES(?,?,?)
      ON CONFLICT(lesson_id) DO UPDATE SET title=excluded.title, status=excluded.status`
-  ).run(lid, lesson.title, status || 'pilot');
+  ).run(lid, lesson.title, 'pilot');
 
   const ins = db.prepare(
     `INSERT INTO items(item_id, lesson_id, version, step_no, kind, prompt, options_json,
@@ -126,31 +123,22 @@ function seedLesson(lid, lesson, status) {
 // 返回 [{ lesson_id, seeded, error? }]。失败只记录，不抛（不能因此起不来服务；
 // 健康检查 /api/health 会标出失败状态，见 2026-09-30 二审三10）。
 function autoSeed() {
-  // 2026-10-08：清理已下架的旧版语文课（只删课程记录，不删文件）
-  try {
-    const db = require('./db.js').db;
-    db.prepare("DELETE FROM lessons WHERE lesson_id IN ('yw1-zici','yw2-wenyan','yw3-yuedu')").run();
-  } catch {}
   const dir = contentDir();
   let files = [];
   try { files = fs.readdirSync(dir); } catch { return []; }
   const out = [];
   for (const f of files) {
-    // 正文课 u2r<数字> + 练习课 review<数字>（2026-10-02 总任务书：学完新课自动接着练）
-    // + 数学课 sx<数字>（2026-10-08：以 draft 状态入库，不进英语首页序列，经直接链接访问）
-    // + 语文课 yw-xxx（2026-10-08：同数学，draft 状态直接链接访问）
-    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|sx\d+|yw\d*-[a-z0-9]+|deep\d+|moon\d+)\.json$/.exec(f);
+    // 正文课 u2r<数字>/u3r<数字>/u4r<数字>/u5r<数字>/u6r<数字> + 练习课 review<数字> + 专项巩固课 u3-consolidate（2026-10-11 踩刹车）
+    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|u3-consolidate)\.json$/.exec(f);
     if (!m) continue;
     const lid = m[1];
-    // 2026-10-08：旧版语文示范课下架（文件保留，只是不入库不显示）
-    if (['yw1-zici', 'yw2-wenyan', 'yw3-yuedu'].includes(lid)) continue;
     try {
       const lesson = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
       const expected = gradableSteps(lesson).length;
       const row = db.prepare('SELECT lesson_id FROM lessons WHERE lesson_id=?').get(lid);
       const have = db.prepare('SELECT COUNT(*) c FROM items WHERE lesson_id=?').get(lid).c;
       if (!row || have !== expected) {
-        const { n, version } = seedLesson(lid, lesson, (/^sx\d+$/.test(lid) || /^yw-/.test(lid)) ? 'draft' : 'pilot');
+        const { n, version } = seedLesson(lid, lesson);
         out.push({ lesson_id: lid, seeded: n, version });
       } else {
         // 数量对上时也要验内容指纹：防止有人绕过版本号改了题面
