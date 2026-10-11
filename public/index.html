@@ -228,9 +228,8 @@ UNITS.forEach(unit => {
     const n = document.createElement("div");
     n.className = "node " + cls;
     n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
-    if (cls !== "locked") {
-      n.onclick = () => location.href = "/lesson?lesson=" + l.id;
-    }
+    // 所有课程都可点击进入（2026-10-11：本地解锁状态与服务器进度对不上，取消锁定）
+    n.onclick = () => location.href = "/lesson?lesson=" + l.id;
     nodes.appendChild(n);
   });
   div.appendChild(nodes);
