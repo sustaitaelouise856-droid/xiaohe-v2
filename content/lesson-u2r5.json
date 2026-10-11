@@ -729,7 +729,8 @@
           "ask": "人数和涨幅？"
         }
       },
-      "step": 34
+      "step": 34,
+      "reading": "【演出通知】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!\n\n【数据播报】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%.\n\n【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
     },
     {
       "kind": "mcq",
