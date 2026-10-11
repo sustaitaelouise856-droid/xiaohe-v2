@@ -57,6 +57,34 @@
   }
   .btn-continue:active { transform: scale(.98); }
   .btn-continue small { display: block; font-size: 13px; font-weight: 400; opacity: .9; margin-top: 4px; }
+  /* 每日签到（2026-10-11） */
+  .checkin-card {
+    margin: 16px 20px 0; background: #fff; border-radius: 16px;
+    padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  }
+  .checkin-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .checkin-title { font-size: 16px; font-weight: 700; }
+  .checkin-streak { font-size: 14px; color: var(--muted); margin-top: 4px; }
+  .checkin-streak b { color: #e8710a; font-size: 20px; }
+  .btn-checkin {
+    background: linear-gradient(180deg, #ff9f2e, #e8710a); color: #fff;
+    border: 0; border-radius: 12px; padding: 12px 26px;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(232,113,10,.32); white-space: nowrap;
+  }
+  .btn-checkin:active { transform: scale(.97); }
+  .btn-checkin.done { background: #e8eaed; color: var(--muted); box-shadow: none; }
+  .btn-checkin:disabled { cursor: default; }
+  .checkin-week { display: flex; gap: 6px; margin-top: 12px; }
+  .cday {
+    flex: 1; text-align: center; background: #f4f6f9; border-radius: 10px;
+    padding: 8px 0 6px; font-size: 12px; color: var(--muted);
+  }
+  .cday span { display: block; margin-bottom: 2px; }
+  .cday b { font-size: 16px; font-weight: 400; }
+  .cday.on { background: #fef3e2; }
+  .cday.on b { color: #e8710a; }
+  .cday.today { outline: 2px solid var(--blue); outline-offset: -2px; }
   /* 单元 */
   .units { padding: 8px 16px 100px; max-width: 720px; margin: 0 auto; }
   .unit { margin-top: 20px; }
@@ -132,6 +160,17 @@
     <div class="stat"><b id="pct">0%</b>进度</div>
   </div>
   <div class="progress-bar"><div class="progress-fill" id="pfill" style="width:0%"></div></div>
+</div>
+
+<div class="checkin-card" id="checkinCard">
+  <div class="checkin-top">
+    <div>
+      <div class="checkin-title">📅 每日签到</div>
+      <div class="checkin-streak">🔥 已连续签到 <b id="streakN">0</b> 天</div>
+    </div>
+    <button class="btn-checkin" id="checkinBtn">签到</button>
+  </div>
+  <div class="checkin-week" id="checkinWeek"></div>
 </div>
 
 <div class="continue-wrap">
@@ -217,6 +256,49 @@ function isDone(id) {
   if (serverDone.has(id)) return true;
   return localStorage.getItem("xh_done_" + id) === "1";
 }
+
+// 每日签到（2026-10-11）：服务端记上海自然日，清缓存不丢
+function renderCheckin(d) {
+  document.getElementById("streakN").textContent = d.streak || 0;
+  const w = document.getElementById("checkinWeek");
+  w.innerHTML = "";
+  (d.week || []).forEach(x => {
+    const el = document.createElement("div");
+    el.className = "cday" + (x.checked ? " on" : "") + (x.isToday ? " today" : "");
+    el.innerHTML = "<span>" + x.label + "</span><b>" + (x.checked ? "✅" : "·") + "</b>";
+    w.appendChild(el);
+  });
+  const btn = document.getElementById("checkinBtn");
+  if (d.checked_today) {
+    btn.textContent = "✅ 今日已签到";
+    btn.disabled = true;
+    btn.classList.add("done");
+    btn.onclick = null;
+  } else {
+    btn.textContent = "📅 签到";
+    btn.disabled = false;
+    btn.classList.remove("done");
+    btn.onclick = doCheckin;
+  }
+}
+async function loadCheckin() {
+  try {
+    const r = await fetch("/api/checkin");
+    const d = await r.json();
+    if (d && d.ok) renderCheckin(d);
+  } catch {}
+}
+async function doCheckin() {
+  const btn = document.getElementById("checkinBtn");
+  btn.disabled = true;
+  try {
+    const r = await fetch("/api/checkin", { method: "POST" });
+    const d = await r.json();
+    if (d && d.ok) { renderCheckin(d); return; }
+  } catch {}
+  btn.disabled = false;
+}
+loadCheckin();
 
 // 算当前课：必须等服务器进度回来之后再算（2026-10-11 修复：以前在服务器数据回来前
 // 就算好了，导致当前课标记永远按本地空数据走）
