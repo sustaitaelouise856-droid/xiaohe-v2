@@ -122,6 +122,17 @@
     #wrap{padding:18px 14px 100px;}
     /* 手机端悬浮"看原文"按钮 */
     #btnSeeReading { display:block !important; }
+    /* 窄屏顶栏不再挤：导航放第一行，播放器独占第二行，步骤指示不收缩、不与按钮重叠 */
+    #topbar { flex-wrap:wrap; gap:8px; padding:8px 12px; }
+    #topbar > button { padding:8px 10px; font-size:14px; }
+    #brand { flex:1 1 auto; min-width:0; font-size:calc(20px * var(--fs)); }
+    #brand small { display:none; }
+    #stepind { flex:none; }
+    #stepnav { flex:none; }
+    #stepnav button { padding:8px 10px; font-size:14px; }
+    #player { order:30; flex:1 1 100%; gap:8px; }
+    #btnPlay { width:44px; height:44px; }
+    #btnSlow { padding:10px 14px; font-size:calc(17px * var(--fs)); }
   }
   #btnSeeReading { display:none; position:fixed; bottom:24px; right:16px; z-index:50;
     background:var(--blue); color:#fff; border:0; border-radius:24px;
