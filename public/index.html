@@ -197,8 +197,17 @@ const UNITS = [
 const ORDER = [];
 UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
 
-// 读完成状态
+// 读完成状态：优先用服务器真实进度（attempts表），本地做兜底
+let serverDone = new Set();
+async function loadServerProgress() {
+  try {
+    const r = await fetch('/api/done-lessons');
+    const d = await r.json();
+    if (d.ok && d.lessons) serverDone = new Set(d.lessons);
+  } catch {}
+}
 function isDone(id) {
+  if (serverDone.has(id)) return true;
   return localStorage.getItem("xh_done_" + id) === "1";
 }
 
@@ -212,6 +221,11 @@ if (!hasAnyDone) {
   if (u2r5Idx !== -1) currentIdx = u2r5Idx;
 }
 
+// 先加载服务器进度再渲染
+loadServerProgress().then(() => {
+renderMap();
+});
+function renderMap() {
 // 渲染
 const unitsEl = document.getElementById("units");
 let doneN = 0;
@@ -254,6 +268,7 @@ document.getElementById("continueSub").textContent = "下一课：" + cur.name +
 document.getElementById("btnContinue").onclick = () => {
   location.href = "/lesson?lesson=" + cur.id;
 };
+}
 </script>
 </body>
 </html>
