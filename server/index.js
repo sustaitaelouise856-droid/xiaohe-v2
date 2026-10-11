@@ -78,7 +78,7 @@ const LESSON_CACHE = {};
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u[2-6]r\d+|review\d+|deep\d+|moon\d+|sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
+  if (!/^(?:u[2-6]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -443,8 +443,39 @@ app.post('/api/complete', auth.requireAuth, (req, res) => {
   if (part === 1) db.prepare("UPDATE lesson_state SET p1_done=1, updated_at=datetime('now') WHERE lesson_id=?").run(lid);
   else if (part === 2) db.prepare("UPDATE lesson_state SET p2_done=1, updated_at=datetime('now') WHERE lesson_id=?").run(lid);
   else return res.status(400).json({ ok: false, error: 'bad_part' });
-  res.json({ ok: true });
+  // Unit 3 专项巩固过关检查（2026-10-11 Elouise：零求助、独立手写正确率≥85%才解锁Unit 4）
+  let consolidationPassed = null;
+  if (lid === 'u3-consolidate' && part === 2) {
+    consolidationPassed = checkConsolidationPass();
+    if (consolidationPassed) {
+      db.prepare("INSERT OR REPLACE INTO app_state(key, value) VALUES('u3_consolidation_done', '1')").run();
+    }
+  }
+  res.json({ ok: true, consolidationPassed });
 });
+
+// 检查 Unit 3 专项巩固是否过关：零求助、纯独立手写正确率 ≥ 85%
+function checkConsolidationPass() {
+  try {
+    // 取 u3-consolidate 的所有作答
+    const attempts = db.prepare(
+      "SELECT item_id, correct FROM attempts WHERE item_id LIKE 'u3-consolidate%'"
+    ).all();
+    if (attempts.length === 0) return false;
+    // 检查是否有求助记录
+    const helps = db.prepare(
+      "SELECT COUNT(*) as c FROM help_events WHERE item_id LIKE 'u3-consolidate%'"
+    ).get();
+    if (helps && helps.c > 0) return false; // 用过求助，不算过关
+    // 计算独立正确率（每题取最后一次作答）
+    const lastAttempt = {};
+    for (const a of attempts) lastAttempt[a.item_id] = a.correct;
+    const ids = Object.keys(lastAttempt);
+    const correct = ids.filter(id => lastAttempt[id] === 1).length;
+    const rate = ids.length > 0 ? correct / ids.length : 0;
+    return rate >= 0.85;
+  } catch { return false; }
+}
 
 // 课程步骤（去答案版；需验证）。?lesson=u2r2 取第 2 课；第 2 课的步骤 1 开场与复盘题由服务端动态生成/筛选
 app.get('/api/lesson', auth.requireAuth, (req, res) => {
@@ -1160,6 +1191,18 @@ function lessonOpen(lid) {
   if (/^(deep|moon)\d+$/.test(lid)) return true;
   // review3 是针对性干预复习课（2026-10-11），随时可进，不等主线学完
   if (lid === 'review3') return true;
+  // u3-consolidate 是 Unit 3 专项巩固课（2026-10-11 踩刹车），随时可进
+  if (lid === 'u3-consolidate') return true;
+  // Unit 3 专项巩固课（2026-10-11 Elouise：严禁盲目赶进度），随时可进
+  if (lid === 'u3-consolidate') return true;
+  // Unit 4 锁定（2026-10-11 Elouise：严禁盲目赶进度）
+  // review3 + u3r4 完成后锁死 Unit 4，必须完成 Unit 3 专项巩固且独立正确率≥85% 才解锁
+  if (/^u4r\d+$/.test(lid)) {
+    try {
+      const done = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
+      if (!done || done.value !== '1') return false;
+    } catch { return false; }
+  }
   // 数学/语文课独立，不参与英语主线解锁
   if (/^(sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return true;
   const ids = orderedLessons();
