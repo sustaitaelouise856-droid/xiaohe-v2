@@ -36,8 +36,6 @@
   #track { flex:1; height:16px; background:#e8eaed; border-radius:8px; overflow:hidden; min-width:60px; cursor:pointer; touch-action:none; }
   #fill { height:100%; width:0%; background:var(--blue); pointer-events:none; }
   #time { font-size:calc(16px * var(--fs)); color:var(--muted); white-space:nowrap; }
-  #btnSlow { flex:none; font-size:var(--fs-scene); padding:12px 18px; border-radius:12px; border:2px solid var(--blue);
-    background:#fff; color:var(--blue); cursor:pointer; }
   #stepind { font-size:var(--fs-small); color:var(--muted); white-space:nowrap; margin-left:auto; }
   /* 顶栏收起：只收播放器，省屏幕空间（2026-10-11 加） */
   #topbar.collapsed #player { display:none; }
@@ -147,7 +145,6 @@
     #stepnav button { padding:8px 10px; font-size:14px; }
     #player { gap:8px; }
     #btnPlay { width:44px; height:44px; }
-    #btnSlow { padding:10px 14px; font-size:calc(17px * var(--fs)); }
   }
   #btnSeeReading { display:none; position:fixed; bottom:24px; right:16px; z-index:50;
     background:var(--blue); color:#fff; border:0; border-radius:24px;
@@ -180,7 +177,6 @@
     <button id="btnPlay" class="paused" aria-label="播放"></button>
     <div id="track"><div id="fill"></div></div>
     <span id="time">0:00 / 0:00</span>
-    <button id="btnSlow">慢速再听</button>
   </div>
   <div id="stepind"></div>
   <div id="stepnav" style="display:flex;gap:6px;align-items:center;">
@@ -295,8 +291,13 @@ const stepsOf = part => { const pe = (LESSON && LESSON.practice_end) || 22; retu
 const btnPlay = $('btnPlay'), fill = $('fill'), timeEl = $('time');
 function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
 // 慢速再听（2026-10-02 补充条款红线）：正常 1.0 倍、慢速 0.75 倍；切换步骤复位 1.0。
-// playbackRate 是 C10 清单外的新 DOM 属性（待练习场真机验证）：设倍速失败一律静默回退
-// 到正常速度播放，绝不能因为这个按钮挡住上课。
+// 播放速度：从设置页读取（2026-10-11 加），默认 1.0
+function getPlaySpeed() {
+  try {
+    const v = parseFloat(localStorage.getItem('xh_play_speed'));
+    return (v >= 0.5 && v <= 1.5) ? v : 1.0;
+  } catch { return 1.0; }
+}
 function setRate(r) { try { au.playbackRate = r; } catch (e) {} }
 // TTS 兜底：音频文件不存在时用浏览器朗读
 let currentTtsText = '';
@@ -313,7 +314,7 @@ function speakTts(text) {
 }
 function setAudio(audioId) {
   au.pause();
-  setRate(1);
+  setRate(getPlaySpeed());
   if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
   $('player').style.display = '';
   au.src = '/audio/' + LID + '/' + audioId + '.mp3';
@@ -328,7 +329,7 @@ function setAudio(audioId) {
       }
     });
 }
-btnPlay.onclick = () => { if (au.paused) { setRate(1); au.play().catch(() => {}); } else au.pause(); };
+btnPlay.onclick = () => { if (au.paused) { setRate(getPlaySpeed()); au.play().catch(() => {}); } else au.pause(); };
 // 顶栏收起/展开（2026-10-11 加）：收起播放器省屏幕空间；状态记住
 (function() {
   const tb = $('topbar'), btn = $('btnCollapse');
@@ -345,8 +346,8 @@ btnPlay.onclick = () => { if (au.paused) { setRate(1); au.play().catch(() => {})
   };
   try { if (localStorage.getItem('topbar_collapsed') === '1') apply(true); } catch {}
 })();
-$('btnBig').onclick = () => { $('bigplay').classList.remove('show'); setRate(1); au.play().catch(() => {}); };
-$('btnSlow').onclick = () => { setRate(0.75); try { au.currentTime = 0; } catch (e) {} au.play().catch(() => {}); };
+$('btnBig').onclick = () => { $('bigplay').classList.remove('show'); setRate(getPlaySpeed()); au.play().catch(() => {}); };
+
 au.addEventListener('play', () => btnPlay.className = 'playing');
 au.addEventListener('pause', () => btnPlay.className = 'paused');
 au.addEventListener('timeupdate', () => {
@@ -706,6 +707,10 @@ function speakSentence(text) {
     if (_sentAudio) { _sentAudio.pause(); }
     const h = text.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
     _sentAudio = new Audio('/audio/sent/' + h + '.mp3');
+    try {
+      const v = parseFloat(localStorage.getItem('xh_play_speed'));
+      if (v >= 0.5 && v <= 1.5) _sentAudio.playbackRate = v;
+    } catch {}
     _sentAudio.play().catch(() => {});
   } catch {}
 }
