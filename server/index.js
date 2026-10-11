@@ -254,6 +254,51 @@ app.get('/api/done-lessons', auth.requireAuth, (req, res) => {
     res.json({ ok: false, error: 'db_error', completed: [], started: [], current: null, lessons: [] });
   }
 });
+
+// ---- 每日签到（2026-10-11 Elouise 要加）：上海自然日，一天一行，服务端落盘 ----
+function addDaysStr(dayStr, n) {
+  const parts = String(dayStr).split('-').map(Number);
+  return new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]) + n * 86400000).toISOString().slice(0, 10);
+}
+function weekdayLabel(dayStr) {
+  const wd = new Date(dayStr + 'T12:00:00+08:00').getDay();
+  return ['日', '一', '二', '三', '四', '五', '六'][wd];
+}
+function checkinStatus() {
+  const today = shanghaiDay();
+  const set = new Set();
+  try {
+    for (const r of db.prepare('SELECT day FROM checkins').all()) {
+      if (r && r.day) set.add(r.day);
+    }
+  } catch (e) { console.error('[checkin] read', e.message); }
+  const checked_today = set.has(today);
+  // 连续天数：今天已签就从今天往回数，还没签就从昨天往回数
+  let streak = 0;
+  let cursor = checked_today ? today : addDaysStr(today, -1);
+  let guard = 0;
+  while (set.has(cursor) && guard++ < 3650) { streak++; cursor = addDaysStr(cursor, -1); }
+  // 最近7天（含今天）
+  const week = [];
+  for (let i = 6; i >= 0; i--) {
+    const day = addDaysStr(today, -i);
+    week.push({ day, label: '周' + weekdayLabel(day), checked: set.has(day), isToday: day === today });
+  }
+  return { ok: true, today, checked_today, streak, total: set.size, week };
+}
+app.get('/api/checkin', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(checkinStatus()); }
+  catch (e) { console.error('[checkin]', e.message); res.json({ ok: false }); }
+});
+app.post('/api/checkin', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    db.prepare("INSERT OR IGNORE INTO checkins(day, created_at) VALUES(?, datetime('now'))").run(shanghaiDay());
+  } catch (e) { console.error('[checkin] write', e.message); }
+  try { res.json(checkinStatus()); }
+  catch (e) { console.error('[checkin]', e.message); res.json({ ok: false }); }
+});
 app.get('/api/lessons', auth.requireAuth, (req, res) => {
   // 2026-10-11：课程数据修好后浏览器仍显示旧版（u2r5 事件），动态接口一律禁缓存，
   // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
