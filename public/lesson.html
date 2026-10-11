@@ -39,10 +39,9 @@
   #btnSlow { flex:none; font-size:var(--fs-scene); padding:12px 18px; border-radius:12px; border:2px solid var(--blue);
     background:#fff; color:var(--blue); cursor:pointer; }
   #stepind { font-size:var(--fs-small); color:var(--muted); white-space:nowrap; margin-left:auto; }
-  /* 顶栏收起：只留一行导航，播放器和步骤按钮藏起来（2026-10-11 加） */
-  #topbar.collapsed #player, #topbar.collapsed #stepnav { display:none; }
-  #topbar.collapsed { min-height:0; padding:4px 20px; }
-  #topbar.collapsed #brand small { display:none; }
+  /* 顶栏收起：只收播放器，省屏幕空间（2026-10-11 加） */
+  #topbar.collapsed #player { display:none; }
+  #topbar.collapsed { min-height:0; }
   #btnCollapse { flex:none; }
   /* 主体 */
   #wrap { max-width:1280px; margin:0 auto; padding:20px 28px 120px; }
@@ -185,7 +184,7 @@
     <button id="btnPrevStep" onclick="goBack()" title="看上一题" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;">‹ 上一题</button>
     <button id="btnNextStep" onclick="goNextStep()" title="看下一题" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;">下一题 ›</button>
   </div>
-  <button id="btnCollapse" title="收起顶栏" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;flex:none;">∧</button>
+  <button id="btnCollapse" title="收起播放" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;flex:none;">收起播放</button>
 </div>
 <div id="wrap"></div>
 <button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
@@ -327,14 +326,14 @@ function setAudio(audioId) {
     });
 }
 btnPlay.onclick = () => { if (au.paused) { setRate(1); au.play().catch(() => {}); } else au.pause(); };
-// 顶栏收起/展开（2026-10-11 加）：收起后只留一行，省屏幕空间；状态记住
+// 顶栏收起/展开（2026-10-11 加）：收起播放器省屏幕空间；状态记住
 (function() {
   const tb = $('topbar'), btn = $('btnCollapse');
   if (!tb || !btn) return;
   function apply(collapsed) {
     tb.classList.toggle('collapsed', collapsed);
-    btn.textContent = collapsed ? '∨' : '∧';
-    btn.title = collapsed ? '展开顶栏' : '收起顶栏';
+    btn.textContent = collapsed ? '拉出播放' : '收起播放';
+    btn.title = collapsed ? '拉出播放' : '收起播放';
   }
   btn.onclick = () => {
     const c = !tb.classList.contains('collapsed');
