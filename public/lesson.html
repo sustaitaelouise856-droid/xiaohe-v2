@@ -699,16 +699,14 @@ function makeWordsTappable() {
   });
 }
 let curWord = null;
-// ---- 句子点读（2026-10-11 加）：阅读材料里点🔊读整句 ----
+// ---- 句子点读（2026-10-11 加，18:10 改用预生成真音频文件） ----
+let _sentAudio = null;
 function speakSentence(text) {
   try {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US'; u.rate = 0.9;
-    const vs = speechSynthesis.getVoices() || [];
-    const en = vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang));
-    if (en) u.voice = en;
-    speechSynthesis.speak(u);
+    if (_sentAudio) { _sentAudio.pause(); }
+    const h = text.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
+    _sentAudio = new Audio('/audio/sent/' + h + '.mp3');
+    _sentAudio.play().catch(() => {});
   } catch {}
 }
 function makeSentencesTappable() {
@@ -728,6 +726,10 @@ function makeSentencesTappable() {
     sents.forEach(group => {
       const text = group.map(n => n.textContent).join('').trim();
       if (!/[A-Za-z]/.test(text)) return; // 没有英文的跳过（纯中文/标题）
+      // 2026-10-11 18:05：句子音频后台生成中，生成好才显示🔊按钮，不做假功能
+      const h = text.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
+      // 先只做标记，按钮等音频文件就绪后再显示（由后台任务更新 SENT_AUDIO_READY）
+      if (!window.SENT_AUDIO_READY) return;
       const wrap = document.createElement('span');
       wrap.className = 'sent';
       const btn = document.createElement('button');
