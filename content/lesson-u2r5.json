@@ -49,7 +49,8 @@
         }
       ],
       "scene": "核对时间",
-      "step": 3
+      "step": 3,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "mcq",
@@ -72,7 +73,8 @@
         }
       ],
       "scene": "核对地点",
-      "step": 4
+      "step": 4,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "teach",
@@ -104,7 +106,8 @@
         }
       ],
       "scene": "读数据",
-      "step": 6
+      "step": 6,
+      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "short",
@@ -190,7 +193,8 @@
         }
       ],
       "scene": "抓请求",
-      "step": 9
+      "step": 9,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "mcq",
@@ -213,7 +217,8 @@
         }
       ],
       "scene": "抓请求",
-      "step": 10
+      "step": 10,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "short",
@@ -276,7 +281,8 @@
         }
       ],
       "scene": "读数据",
-      "step": 13
+      "step": 13,
+      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "mcq",
@@ -294,7 +300,8 @@
       "help": "数一数。",
       "predicted_errors": [],
       "scene": "数信",
-      "step": 14
+      "step": 14,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "teach",
@@ -320,7 +327,8 @@
       "help": "找被更新掉的旧信息。",
       "predicted_errors": [],
       "scene": "找作废",
-      "step": 16
+      "step": 16,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "short",
@@ -383,7 +391,8 @@
         "B. 《Morning Song》"
       ],
       "scene": "选歌",
-      "step": 18
+      "step": 18,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "teach",
@@ -432,7 +441,8 @@
         }
       ],
       "scene": "听时间",
-      "step": 22
+      "step": 22,
+      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!"
     },
     {
       "kind": "short",
@@ -491,7 +501,8 @@
         }
       ],
       "scene": "比数据",
-      "step": 25
+      "step": 25,
+      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
     },
     {
       "kind": "short",
@@ -571,7 +582,8 @@
         }
       ],
       "scene": "抓请求",
-      "step": 28
+      "step": 28,
+      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
     },
     {
       "kind": "short",
@@ -729,7 +741,8 @@
       "help": "找错误的那项。",
       "predicted_errors": [],
       "scene": "检查",
-      "step": 35
+      "step": 35,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.\n\n【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "teach",
