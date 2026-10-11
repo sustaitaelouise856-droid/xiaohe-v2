@@ -25,19 +25,20 @@
   body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:#eef1f7; color:var(--ink); font-size:var(--fs-body); line-height:1.7; -webkit-font-smoothing:antialiased; }
   /* 顶栏 */
   #topbar { position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--line);
-    display:flex; align-items:center; gap:16px; padding:8px 20px; min-height:64px; }
+    display:flex; align-items:center; gap:12px 16px; padding:8px 20px; min-height:64px; flex-wrap:wrap; }
   #brand { font-size:calc(24px * var(--fs)); font-weight:700; white-space:nowrap; }
   #brand small { display:block; font-size:calc(15px * var(--fs)); color:var(--muted); font-weight:400; }
-  #player { display:flex; align-items:center; gap:10px; flex:1; min-width:0; }
+  /* 播放器独占第二行，不再与步骤指示挤在一起（2026-10-11 修） */
+  #player { display:flex; align-items:center; gap:10px; flex:1 1 100%; min-width:0; order:10; }
   #btnPlay { width:52px; height:52px; border-radius:50%; border:0; background:var(--blue); color:#fff;
     font-size:var(--fs-btn); cursor:pointer; flex:none; }
   #btnPlay.paused::after { content:"▶"; } #btnPlay.playing::after { content:"❚❚"; }
-  #track { flex:1; height:12px; background:#e8eaed; border-radius:6px; overflow:hidden; min-width:60px; }
-  #fill { height:100%; width:0%; background:var(--blue); }
+  #track { flex:1; height:16px; background:#e8eaed; border-radius:8px; overflow:hidden; min-width:60px; cursor:pointer; touch-action:none; }
+  #fill { height:100%; width:0%; background:var(--blue); pointer-events:none; }
   #time { font-size:calc(16px * var(--fs)); color:var(--muted); white-space:nowrap; }
   #btnSlow { flex:none; font-size:var(--fs-scene); padding:12px 18px; border-radius:12px; border:2px solid var(--blue);
     background:#fff; color:var(--blue); cursor:pointer; }
-  #stepind { font-size:var(--fs-small); color:var(--muted); white-space:nowrap; }
+  #stepind { font-size:var(--fs-small); color:var(--muted); white-space:nowrap; margin-left:auto; }
   /* 主体 */
   #wrap { max-width:1280px; margin:0 auto; padding:20px 28px 120px; }
   @keyframes stepIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
@@ -134,14 +135,13 @@
     #wrap{padding:18px 14px 100px;}
     /* 手机端悬浮"看原文"按钮：仅在做题页有材料时由JS显示 */
     /* 窄屏顶栏不再挤：导航放第一行，播放器独占第二行，步骤指示不收缩、不与按钮重叠 */
-    #topbar { flex-wrap:wrap; gap:8px; padding:8px 12px; }
+    #topbar { gap:8px; padding:8px 12px; }
     #topbar > button { padding:8px 10px; font-size:14px; }
     #brand { flex:1 1 auto; min-width:0; font-size:calc(20px * var(--fs)); }
     #brand small { display:none; }
-    #stepind { flex:none; }
     #stepnav { flex:none; }
     #stepnav button { padding:8px 10px; font-size:14px; }
-    #player { order:30; flex:1 1 100%; gap:8px; }
+    #player { gap:8px; }
     #btnPlay { width:44px; height:44px; }
     #btnSlow { padding:10px 14px; font-size:calc(17px * var(--fs)); }
   }
@@ -330,6 +330,32 @@ au.addEventListener('timeupdate', () => {
   timeEl.textContent = fmtT(au.currentTime) + ' / ' + fmtT(au.duration);
 });
 au.addEventListener('ended', () => btnPlay.className = 'paused');
+// 进度条可点可拖：点哪跳到哪（2026-10-11 加）
+(function() {
+  const track = $('track');
+  if (!track) return;
+  function seekTo(clientX) {
+    try {
+      const r = track.getBoundingClientRect();
+      if (!r.width || !au.duration) return;
+      const ratio = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
+      au.currentTime = ratio * au.duration;
+    } catch (e) {}
+  }
+  track.addEventListener('pointerdown', e => {
+    e.preventDefault();
+    seekTo(e.clientX);
+    const move = ev => seekTo(ev.clientX);
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+      window.removeEventListener('pointercancel', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+    window.addEventListener('pointercancel', up);
+  });
+})();
 
 /* ---------- 首页（进度以服务端为准，防重做） ---------- */
 function posLabel(n) {
