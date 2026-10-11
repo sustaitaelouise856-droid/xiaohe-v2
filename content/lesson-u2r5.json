@@ -19,9 +19,10 @@
       "kind": "teach",
       "phase": "practice",
       "title": "三张通知",
-      "teach_html": "<p>先看演出通知。一共三张，只认最后一次更新。</p><div class='reading-pane'><pre>【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.</pre></div>",
+      "teach_html": "<p>先看演出通知。一共三张，只认最后一次更新。</p>",
       "scene": "看通知",
-      "step": 2
+      "step": 2,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "mcq",
@@ -48,7 +49,8 @@
         }
       ],
       "scene": "核对时间",
-      "step": 3
+      "step": 3,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "mcq",
@@ -71,15 +73,17 @@
         }
       ],
       "scene": "核对地点",
-      "step": 4
+      "step": 4,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "teach",
       "phase": "practice",
       "title": "校园数据",
-      "teach_html": "<p>再看校园数据。校庆参加人数和借书量都涨了。</p><div class='reading-pane'><pre>【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)</pre></div>",
+      "teach_html": "<p>再看校园数据。校庆参加人数和借书量都涨了。</p>",
       "scene": "看数据",
-      "step": 5
+      "step": 5,
+      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "mcq",
@@ -102,7 +106,8 @@
         }
       ],
       "scene": "读数据",
-      "step": 6
+      "step": 6,
+      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "short",
@@ -162,9 +167,10 @@
       "kind": "teach",
       "phase": "practice",
       "title": "听众来信",
-      "teach_html": "<p>有两封听众来信。分清哪句是请求，哪句是闲聊。</p><div class='reading-pane'><pre>【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute.</pre></div>",
+      "teach_html": "<p>有两封听众来信。分清哪句是请求，哪句是闲聊。</p>",
       "scene": "读信",
-      "step": 8
+      "step": 8,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "mcq",
@@ -187,7 +193,8 @@
         }
       ],
       "scene": "抓请求",
-      "step": 9
+      "step": 9,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "mcq",
@@ -210,7 +217,8 @@
         }
       ],
       "scene": "抓请求",
-      "step": 10
+      "step": 10,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "short",
@@ -273,7 +281,8 @@
         }
       ],
       "scene": "读数据",
-      "step": 13
+      "step": 13,
+      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "mcq",
@@ -291,7 +300,8 @@
       "help": "数一数。",
       "predicted_errors": [],
       "scene": "数信",
-      "step": 14
+      "step": 14,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "teach",
@@ -317,7 +327,8 @@
       "help": "找被更新掉的旧信息。",
       "predicted_errors": [],
       "scene": "找作废",
-      "step": 16
+      "step": 16,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
     },
     {
       "kind": "short",
@@ -380,7 +391,8 @@
         "B. 《Morning Song》"
       ],
       "scene": "选歌",
-      "step": 18
+      "step": 18,
+      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "teach",
@@ -402,10 +414,11 @@
       "kind": "teach",
       "phase": "validate",
       "title": "听：演出通知",
-      "teach_html": "<p>听站长的语音留言，记下最终时间地点。</p><div class='reading-pane'><pre>【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!</pre></div>",
+      "teach_html": "<p>听站长的语音留言，记下最终时间地点。</p>",
       "scene": "听通知",
       "step": 21,
-      "audio_id": "u2r5-announce"
+      "audio_id": "u2r5-announce",
+      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!"
     },
     {
       "kind": "mcq",
@@ -429,6 +442,7 @@
       ],
       "scene": "听时间",
       "step": 22,
+      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!",
       "audio_id": "u2r5-announce"
     },
     {
@@ -456,16 +470,18 @@
       "predicted_errors": [],
       "scene": "听地点",
       "step": 23,
+      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!",
       "audio_id": "u2r5-announce"
     },
     {
       "kind": "teach",
       "phase": "validate",
       "title": "听：数据播报",
-      "teach_html": "<p>听数据播报，记下关键数字。</p><div class='reading-pane'><pre>【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%.</pre></div>",
+      "teach_html": "<p>听数据播报，记下关键数字。</p>",
       "scene": "听数据",
       "step": 24,
-      "audio_id": "u2r5-data"
+      "audio_id": "u2r5-data",
+      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
     },
     {
       "kind": "mcq",
@@ -488,7 +504,8 @@
         }
       ],
       "scene": "比数据",
-      "step": 25
+      "step": 25,
+      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
     },
     {
       "kind": "short",
@@ -542,9 +559,10 @@
       "kind": "teach",
       "phase": "validate",
       "title": "读：来信",
-      "teach_html": "<p>读听众来信，抓住请求。</p><div class='reading-pane'><pre>【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white.</pre></div>",
+      "teach_html": "<p>读听众来信，抓住请求。</p>",
       "scene": "读信",
-      "step": 27
+      "step": 27,
+      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
     },
     {
       "kind": "mcq",
@@ -567,7 +585,8 @@
         }
       ],
       "scene": "抓请求",
-      "step": 28
+      "step": 28,
+      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
     },
     {
       "kind": "short",
@@ -725,7 +744,8 @@
       "help": "找错误的那项。",
       "predicted_errors": [],
       "scene": "检查",
-      "step": 35
+      "step": 35,
+      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.\n\n【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
     },
     {
       "kind": "teach",
