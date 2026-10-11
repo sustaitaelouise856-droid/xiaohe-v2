@@ -205,6 +205,12 @@ function isDone(id) {
 // 找当前可学的课（第一门没完成的）
 let currentIdx = ORDER.findIndex(l => !isDone(l.id));
 if (currentIdx === -1) currentIdx = ORDER.length - 1; // 全完成
+// 本地无记录时默认定到 u2r5（2026-10-11 用户确认上次学到第5课）
+const hasAnyDone = ORDER.some(l => isDone(l.id));
+if (!hasAnyDone) {
+  const u2r5Idx = ORDER.findIndex(l => l.id === "u2r5");
+  if (u2r5Idx !== -1) currentIdx = u2r5Idx;
+}
 
 // 渲染
 const unitsEl = document.getElementById("units");
