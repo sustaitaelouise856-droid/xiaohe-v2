@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>设置 - 小禾英语</title>
+<style>
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:#f6f8fb; color:#1a1a1a; padding-bottom:90px; }
+  .top { position:sticky; top:0; background:#fff; border-bottom:1px solid #e5e7eb; padding:12px 20px; display:flex; align-items:center; gap:12px; z-index:10; }
+  .top button { background:none; border:1px solid #dfe3ec; border-radius:8px; padding:8px 12px; font-size:15px; cursor:pointer; }
+  .top h1 { font-size:18px; margin:0; }
+  .card { margin:16px; background:#fff; border-radius:16px; padding:20px; border:1px solid #e5e7eb; }
+  .card h2 { font-size:16px; margin:0 0 8px; }
+  .card p { font-size:14px; color:#666; margin:0 0 16px; line-height:1.6; }
+  .speed-row { display:flex; align-items:center; gap:12px; margin:12px 0; }
+  .speed-row input[type=range] { flex:1; height:6px; }
+  .speed-val { font-size:20px; font-weight:700; color:#1a73e8; min-width:64px; text-align:center; }
+  .speed-btns { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  .speed-btns button { flex:1; min-width:70px; padding:12px 0; border:2px solid #dfe3ec; border-radius:12px; background:#fff; font-size:15px; cursor:pointer; }
+  .speed-btns button.on { border-color:#1a73e8; background:#e8f0fe; color:#1a73e8; font-weight:700; }
+  .test-row { margin-top:16px; text-align:center; }
+  .test-row button { padding:12px 32px; border:none; border-radius:12px; background:#1a73e8; color:#fff; font-size:16px; cursor:pointer; }
+  .bottomnav { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e5e7eb; display:flex; z-index:10; }
+  .bottomnav a { flex:1; text-align:center; padding:10px 0 12px; text-decoration:none; color:#666; font-size:12px; }
+  .bottomnav a.on { color:#1a73e8; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="top">
+  <button onclick="location.href='/'">← 首页</button>
+  <h1>⚙️ 设置</h1>
+</div>
+
+<div class="card">
+  <h2>🔊 阅读材料播放速度</h2>
+  <p>控制课程里阅读材料、句子点读、音标例词的播放速度。调慢一点听得更清楚，调快一点节省时间。</p>
+  <div class="speed-row">
+    <span style="font-size:14px;color:#888;">慢</span>
+    <input type="range" id="speedRange" min="0.5" max="1.5" step="0.1" value="1.0">
+    <span style="font-size:14px;color:#888;">快</span>
+    <div class="speed-val" id="speedVal">1.0x</div>
+  </div>
+  <div class="speed-btns">
+    <button data-v="0.6">0.6x 很慢</button>
+    <button data-v="0.8">0.8x 慢</button>
+    <button data-v="1.0">1.0x 正常</button>
+    <button data-v="1.2">1.2x 快</button>
+  </div>
+  <div class="test-row">
+    <button id="btnTest">🔊 试听一下</button>
+  </div>
+</div>
+
+<div class="bottomnav">
+  <a href="/">🏠<br>首页</a>
+  <a href="/vocab.html">📖<br>生词本</a>
+  <a href="/report.html">📊<br>学习报告</a>
+  <a href="/settings.html" class="on">⚙️<br>设置</a>
+</div>
+
+<script>
+function getSpeed() {
+  try {
+    const v = parseFloat(localStorage.getItem('xh_play_speed'));
+    return (v >= 0.5 && v <= 1.5) ? v : 1.0;
+  } catch { return 1.0; }
+}
+function setSpeed(v) {
+  v = Math.round(v * 10) / 10;
+  try { localStorage.setItem('xh_play_speed', String(v)); } catch {}
+  document.getElementById('speedRange').value = v;
+  document.getElementById('speedVal').textContent = v.toFixed(1) + 'x';
+  document.querySelectorAll('.speed-btns button').forEach(b => {
+    b.classList.toggle('on', Math.abs(parseFloat(b.dataset.v) - v) < 0.05);
+  });
+}
+document.getElementById('speedRange').addEventListener('input', e => {
+  setSpeed(parseFloat(e.target.value));
+});
+document.querySelectorAll('.speed-btns button').forEach(b => {
+  b.onclick = () => setSpeed(parseFloat(b.dataset.v));
+});
+document.getElementById('btnTest').onclick = () => {
+  const a = new Audio('/audio/phonics/cat.mp3');
+  try { a.playbackRate = getSpeed(); } catch {}
+  a.play().catch(() => {});
+};
+setSpeed(getSpeed());
+</script>
+</body>
+</html>
