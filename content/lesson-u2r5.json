@@ -553,7 +553,8 @@
           "ask": "涨了多少？"
         }
       },
-      "step": 26
+      "step": 26,
+      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
     },
     {
       "kind": "teach",
@@ -611,7 +612,8 @@
       "help": "I promise 开头。",
       "predicted_errors": [],
       "scene": "写回复",
-      "step": 29
+      "step": 29,
+      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
     },
     {
       "kind": "teach",
@@ -650,7 +652,8 @@
         }
       },
       "scene": "写回复",
-      "step": 31
+      "step": 31,
+      "reading": "【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
     },
     {
       "kind": "teach",
