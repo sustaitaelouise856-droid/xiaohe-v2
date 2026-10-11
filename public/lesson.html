@@ -155,6 +155,9 @@
   /* 点词查词：阅读材料里的英文单词可点 */
   .reading-pane pre .w { cursor:pointer; border-bottom:1px dotted var(--blue); }
   .reading-pane pre .w:active { background:#e8f0fe; }
+  /* 句子点读（2026-10-11 加） */
+  .reading-pane pre .sent-say { background:none; border:none; cursor:pointer; font-size:0.85em; padding:0 4px 0 0; vertical-align:baseline; }
+  .reading-pane pre .sent-say:active { transform:scale(1.2); }
   #wordPop { display:none; position:fixed; z-index:100; background:#fff; border:2px solid var(--blue);
     border-radius:14px; padding:14px 16px; max-width:280px; box-shadow:0 6px 20px rgba(0,0,0,0.25); }
   #wordPop .wp-word { font-size:20px; font-weight:700; }
@@ -656,6 +659,7 @@ function renderStep() {
   qT0 = Date.now(); // 开始计时：题目出现
   wireQuestion(s);
   makeWordsTappable();
+  makeSentencesTappable(); // 句子点读（2026-10-11 加）：点🔊读整句
   window.scrollTo(0, 0);
 }
 // ---- 点词查词 + 生词本（2026-10-08） ----
@@ -695,6 +699,46 @@ function makeWordsTappable() {
   });
 }
 let curWord = null;
+// ---- 句子点读（2026-10-11 加）：阅读材料里点🔊读整句 ----
+function speakSentence(text) {
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.9;
+    const vs = speechSynthesis.getVoices() || [];
+    const en = vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang));
+    if (en) u.voice = en;
+    speechSynthesis.speak(u);
+  } catch {}
+}
+function makeSentencesTappable() {
+  document.querySelectorAll('.reading-pane pre').forEach(pre => {
+    if (pre.dataset.sented) return;
+    pre.dataset.sented = '1';
+    const nodes = Array.from(pre.childNodes);
+    const sents = []; let cur = [];
+    const isEnd = t => /[.!?。！？]["'”’)\]]?\s*$/.test(t);
+    nodes.forEach(nd => {
+      cur.push(nd);
+      const txt = nd.textContent || '';
+      // 文本节点按句子结束符切分；.w 单词节点不单独切（等它后面的标点）
+      if (nd.nodeType === 3 && isEnd(txt)) { sents.push(cur); cur = []; }
+    });
+    if (cur.length) sents.push(cur);
+    sents.forEach(group => {
+      const text = group.map(n => n.textContent).join('').trim();
+      if (!/[A-Za-z]/.test(text)) return; // 没有英文的跳过（纯中文/标题）
+      const wrap = document.createElement('span');
+      wrap.className = 'sent';
+      const btn = document.createElement('button');
+      btn.className = 'sent-say'; btn.textContent = '🔊'; btn.title = '读这一句';
+      btn.onclick = e => { e.stopPropagation(); speakSentence(text); };
+      wrap.appendChild(btn);
+      pre.insertBefore(wrap, group[0]); // 先占位
+      group.forEach(n => wrap.appendChild(n)); // 再把句子节点搬进 wrap
+    });
+  });
+}
 function showWordPop(raw, x, y) {
   const r = lookupWord(raw);
   if (!r) return;
