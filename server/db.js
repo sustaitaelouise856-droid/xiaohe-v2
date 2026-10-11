@@ -113,6 +113,12 @@ CREATE TABLE IF NOT EXISTS progress (
   updated_at TEXT NOT NULL DEFAULT (datetime('now')),
   PRIMARY KEY (lesson_id, part)
 );`);
+// 每日签到（2026-10-11）：day 为上海自然日 YYYY-MM-DD，一天一行，服务端落盘不清缓存不丢
+db.exec(`
+CREATE TABLE IF NOT EXISTS checkins (
+  day        TEXT PRIMARY KEY,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
 // 弱点事件：如下节课要复习的"英文书写"
 db.exec(`
 CREATE TABLE IF NOT EXISTS weakness_events (
