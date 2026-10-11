@@ -20,6 +20,13 @@
     --fs-scene: calc(19px * var(--fs));
     --fs-task: calc(20px * var(--fs));
   }
+  /* 主题（2026-10-11 加）：护眼/夜间模式 */
+  html[data-theme="warm"] body { background:#fdf6e3; }
+  html[data-theme="warm"] .card, html[data-theme="warm"] #topbar, html[data-theme="warm"] .reading-pane .notice { background:#fffdf5; }
+  html[data-theme="dark"] body { background:#1a1a1a; color:#e0e0e0; }
+  html[data-theme="dark"] .card, html[data-theme="dark"] #topbar { background:#2d2d2d; border-color:#444; }
+  html[data-theme="dark"] .reading-pane .notice { background:#2d2d2d; border-color:#444; }
+  html[data-theme="dark"] .reading-pane pre { color:#e0e0e0; }
   * { box-sizing: border-box; }
   html, body { margin:0; padding:0; }
   body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:#eef1f7; color:var(--ink); font-size:var(--fs-body); line-height:1.7; -webkit-font-smoothing:antialiased; }
@@ -428,6 +435,13 @@ async function parentReport(lid) {
   } catch { return null; }
 }
 async function renderHome() {
+  // 应用设置页的字体和主题（2026-10-11 加）
+  try {
+    const fz = parseFloat(localStorage.getItem('xh_font_size'));
+    if (fz >= 0.8 && fz <= 1.4) document.documentElement.style.setProperty('--fs', fz);
+    const th = localStorage.getItem('xh_theme');
+    if (th) document.documentElement.setAttribute('data-theme', th);
+  } catch {}
   topbar.style.display = 'none'; au.pause();
   try { $('btnSeeReading').style.display = 'none'; } catch {}
   let state = { p1_done: false, p2_done: false, p2_open: false, p2_note: '完成第一部分后，就可以学第二部分' };
