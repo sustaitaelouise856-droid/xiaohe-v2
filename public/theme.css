@@ -1,0 +1,18 @@
+/* 小禾英语全局主题（2026-10-11）：护眼/夜间模式，所有页面共用 */
+html[data-theme="warm"] body { background:#fdf6e3 !important; color:#5c4b37 !important; }
+html[data-theme="warm"] .card, html[data-theme="warm"] .top,
+html[data-theme="warm"] #topbar, html[data-theme="warm"] .tabbar,
+html[data-theme="warm"] .bottomnav { background:#fffdf5 !important; border-color:#e8dcc0 !important; }
+
+html[data-theme="dark"] body { background:#1a1a1a !important; color:#e8e8e8 !important; }
+html[data-theme="dark"] .card, html[data-theme="dark"] .top,
+html[data-theme="dark"] #topbar, html[data-theme="dark"] .tabbar,
+html[data-theme="dark"] .bottomnav { background:#2d2d2d !important; border-color:#444 !important; }
+html[data-theme="dark"] .card h2, html[data-theme="dark"] .top h1 { color:#fff !important; }
+html[data-theme="dark"] .card p { color:#aaa !important; }
+html[data-theme="dark"] button { border-color:#555 !important; }
+html[data-theme="dark"] .tabbar a, html[data-theme="dark"] .bottomnav a { color:#999 !important; }
+html[data-theme="dark"] .tabbar a.active, html[data-theme="dark"] .bottomnav a.on { color:#7ab8ff !important; }
+html[data-theme="dark"] input, html[data-theme="dark"] textarea, html[data-theme="dark"] select {
+  background:#2d2d2d !important; border-color:#555 !important; color:#e8e8e8 !important;
+}
