@@ -1,0 +1,418 @@
+{
+ "lesson_id": "u3-consolidate",
+ "version": 1,
+ "title": "Unit 3 专项巩固",
+ "home_subtitle": "比较级/最高级独立过关",
+ "part1_desc": "把 u3r2、u3r3 做错的 13 道题重新做一遍。要求：不看提示，独立手写，正确率 85% 以上才算过关。",
+ "part2_desc": "",
+ "practice_end": 13,
+ "note": "2026-10-11 Elouise要求踩刹车：零求助、独立手写≥85%才解锁Unit 4。错题回捞自u3r2/u3r3。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q01",
+   "title": "写出最高级：cheap",
+   "scene": "写出 cheap 的最高级。",
+   "stem": "写出 cheap 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the cheapest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the cheapest",
+      "cheapest"
+     ],
+     "cn": [
+      "最便宜的"
+     ]
+    }
+   ],
+   "help": "短单词加 est，前面加 the。",
+   "explain": "the cheapest。",
+   "common_errors": [
+    {
+     "when": "写了 cheaper",
+     "say": "cheaper 是比较级，要最高级 the cheapest。"
+    },
+    {
+     "when": "漏了 the",
+     "say": "最高级前面一般加 the。"
+    }
+   ],
+   "help_line": "cheap 是短单词：cheap → cheaper → the cheapest"
+  },
+  {
+   "step": 2,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q02",
+   "title": "写出最高级：interesting",
+   "scene": "写出 interesting 的最高级。",
+   "stem": "写出 interesting 的最高级形式。",
+   "task": "写英文。",
+   "answer_text": "the most interesting",
+   "expects": [
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "the most interesting"
+     ],
+     "cn": [
+      "最有趣的"
+     ]
+    }
+   ],
+   "help": "长单词用 the most。",
+   "explain": "the most interesting。",
+   "common_errors": [
+    {
+     "when": "写了 interestinger",
+     "say": "长单词不能加 er，用 the most interesting。"
+    }
+   ],
+   "help_line": "interesting 很长很长，长的词不能加 est"
+  },
+  {
+   "step": 3,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q03",
+   "title": "写出最高级：bad",
+   "scene": "写出 bad 的最高级。",
+   "stem": "写出 bad 的最高级形式。",
+   "task": "写英文。",
+   "answer_text": "the worst",
+   "expects": [
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "the worst",
+      "worst"
+     ],
+     "cn": [
+      "最坏的"
+     ]
+    }
+   ],
+   "help": "bad 的变化是特殊的。",
+   "explain": "bad→the worst。",
+   "common_errors": [
+    {
+     "when": "写了 the baddest",
+     "say": "bad 的最高级是特殊的：the worst。"
+    }
+   ],
+   "help_line": "bad → worse → the worst，死记这三个"
+  },
+  {
+   "step": 4,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q04",
+   "title": "写广播词",
+   "scene": "写一句推荐词。",
+   "stem": "用最高级写一句话：Z 电脑最便宜。",
+   "task": "写英文完整句子。",
+   "answer_text": "Computer Z is the cheapest.",
+   "expects": [
+    {
+     "id": "s2",
+     "type": "word",
+     "answers": [
+      "computer z is the cheapest",
+      "z is the cheapest"
+     ],
+     "cn": [
+      "Z电脑最便宜"
+     ]
+    }
+   ],
+   "help": "Z is + the cheapest。",
+   "explain": "Computer Z is the cheapest.",
+   "common_errors": [
+    {
+     "when": "用了 cheaper",
+     "say": "这是最高级，用 the cheapest。"
+    }
+   ],
+   "help_line": "先写 Computer Z is，再加 the cheapest"
+  },
+  {
+   "step": 5,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3-consolidate-q05",
+   "title": "最有用的",
+   "scene": "哪台程序最有用？",
+   "reading": "Computer P: 4000 yuan, heavy (6 kg), useful programs\nComputer Q: 2500 yuan, light (2 kg), fun games\nComputer R: 7000 yuan, heaviest (8 kg), most useful programs, most expensive",
+   "stem": "Computer R has ______ programs.",
+   "options": [
+    "the most useful",
+    "most useful",
+    "more useful",
+    "usefullest"
+   ],
+   "answer": "A",
+   "help": "useful 是长单词。",
+   "explain": "the most useful（最有用的）。",
+   "wrong_feedback": {
+    "B": "前面少了 the。再想想。",
+    "C": "这是比较级。再想想。",
+    "D": "长单词不能加 est。再想想。"
+   },
+   "help_line": "useful 是长单词，长单词的最高级用 the most"
+  },
+  {
+   "step": 6,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q06",
+   "title": "写出最高级：good",
+   "scene": "写出 good 的最高级。",
+   "stem": "写出 good 的最高级形式。",
+   "task": "写英文。",
+   "answer_text": "the best",
+   "expects": [
+    {
+     "id": "w5",
+     "type": "word",
+     "answers": [
+      "the best",
+      "best"
+     ],
+     "cn": [
+      "最好的"
+     ]
+    }
+   ],
+   "help": "good 的变化是特殊的。",
+   "explain": "the best。",
+   "common_errors": [
+    {
+     "when": "写了 the goodest",
+     "say": "good 的最高级是 the best，特殊记。"
+    }
+   ],
+   "help_line": "good → better → the best，死记这三个"
+  },
+  {
+   "step": 7,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q07",
+   "title": "写推荐词",
+   "scene": "写一句推荐。",
+   "stem": "用最高级写一句话：Q 电脑最轻。",
+   "task": "写英文完整句子。",
+   "answer_text": "Computer Q is the lightest.",
+   "expects": [
+    {
+     "id": "s4",
+     "type": "word",
+     "answers": [
+      "computer q is the lightest",
+      "q is the lightest"
+     ],
+     "cn": [
+      "Q电脑最轻"
+     ]
+    }
+   ],
+   "help": "Q is + the lightest。",
+   "explain": "Computer Q is the lightest.",
+   "common_errors": [
+    {
+     "when": "用了 lighter",
+     "say": "这是最高级，用 the lightest。"
+    }
+   ],
+   "help_line": "先写 Computer Q is，再加 the lightest"
+  },
+  {
+   "step": 8,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q08",
+   "title": "补全句子",
+   "scene": "你是接线员，复述确认。",
+   "stem": "客人要 Model F，你复述：You want ______ one.（更快的那台）",
+   "task": "填一个英文单词。",
+   "answer_text": "the faster",
+   "expects": [
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "the faster"
+     ],
+     "cn": [
+      "更快的那台"
+     ]
+    }
+   ],
+   "help": "the + 比较级 + one。",
+   "explain": "the faster one。",
+   "common_errors": [
+    {
+     "when": "漏了 the",
+     "say": "the faster one，the 不能少。"
+    }
+   ],
+   "help_line": "the faster one：the + 比较级 + one"
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3-consolidate-q09",
+   "title": "第三通：贵不贵",
+   "scene": "听懂回答。",
+   "reading": "Phone call 3:\nCustomer: Hello! Which laptop is the lightest?\nYou: Model L is the lightest. It's 2 kg.\nCustomer: Is it more expensive than Model H?\nYou: Yes, it's more expensive, but it has bigger memory.\nCustomer: OK. I'd like the lightest one, please.",
+   "stem": "Model L 和 Model H 比，哪个说法对？",
+   "options": [
+    "Model H is more expensive than Model L.",
+    "They cost the same.",
+    "Model L is cheaper than Model H.",
+    "Model L is more expensive than Model H."
+   ],
+   "answer": "D",
+   "help": "你是怎么回答客人的？",
+   "explain": "Model L is more expensive than Model H.",
+   "wrong_feedback": {
+    "A": "主语反了，是 L 比 H 贵。",
+    "B": "价格不一样。再看一遍。",
+    "C": "你回答的是 Yes, it's more expensive。再看一遍。"
+   },
+   "help_line": "你回答的是 Yes, it's more expensive——谁比谁贵？"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q10",
+   "title": "补全问句",
+   "scene": "客人问哪台最轻。",
+   "stem": "Which laptop is ______?（最轻的）",
+   "task": "填空，写英文。",
+   "answer_text": "the lightest",
+   "expects": [
+    {
+     "id": "w7",
+     "type": "word",
+     "answers": [
+      "the lightest"
+     ],
+     "cn": [
+      "最轻的"
+     ]
+    }
+   ],
+   "help": "the + 最高级。",
+   "explain": "the lightest。",
+   "common_errors": [
+    {
+     "when": "漏了 the",
+     "say": "最高级前面加 the。"
+    }
+   ],
+   "help_line": "light 的最高级是 lightest，前面加 the"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q11",
+   "title": "写回答",
+   "scene": "回答贵不贵。",
+   "stem": "Is Model L more expensive? 回答：Yes, it's ______ than Model H.（更贵）",
+   "task": "填空。",
+   "answer_text": "more expensive",
+   "expects": [
+    {
+     "id": "w8",
+     "type": "word",
+     "answers": [
+      "more expensive"
+     ],
+     "cn": [
+      "更贵"
+     ]
+    }
+   ],
+   "help": "expensive 用 more。",
+   "explain": "more expensive than。",
+   "common_errors": [
+    {
+     "when": "写了 expensiver",
+     "say": "长单词用 more expensive。"
+    }
+   ],
+   "help_line": "expensive 是长单词，比较级用 more expensive"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u3-consolidate-q12",
+   "title": "写推荐",
+   "scene": "推荐游戏电脑。",
+   "stem": "用最高级写：G 是打游戏最好的电脑。",
+   "task": "写英文完整句子。",
+   "answer_text": "Model G is the best one for games.",
+   "expects": [
+    {
+     "id": "s5",
+     "type": "word",
+     "answers": [
+      "model g is the best one for games",
+      "g is the best one for games",
+      "model g is the best for games"
+     ],
+     "cn": [
+      "G是打游戏最好的电脑"
+     ]
+    }
+   ],
+   "help": "G is + the best one + for games。",
+   "explain": "Model G is the best one for games.",
+   "common_errors": [
+    {
+     "when": "用了 better",
+     "say": "最好用最高级 the best。"
+    }
+   ],
+   "help_line": "G 是最好的：the best one for games"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u3-consolidate-q13",
+   "title": "worth it 的意思",
+   "scene": "理解生词。",
+   "reading": "Phone call 4:\nCustomer: I need a computer for games. Which is the best one?\nYou: Model G is the best one for games. It's the fastest.\nCustomer: Is it the most expensive?\nYou: Yes, but it's worth it.\nCustomer: Fine, I'll take the best one.",
+   "stem": "\"it's worth it\" 大概是什么意思？",
+   "options": [
+    "太贵了",
+    "值得的",
+    "没货了",
+    "不值得"
+   ],
+   "answer": "B",
+   "help": "客人最后买了，说明觉得？",
+   "explain": "worth it = 值得的。",
+   "wrong_feedback": {
+    "A": "贵不贵和值不值是两回事。再想想。",
+    "C": "没货不会买。再想想。",
+    "D": "客人最后说 Fine, I'll take，说明觉得值得。再想想。"
+   },
+   "help_line": "客人最后说 Fine, I'll take it——他觉得值不值？"
+  }
+ ]
+}
