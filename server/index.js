@@ -212,6 +212,9 @@ app.post('/api/verify', (req, res) => {
 // 需验证
 app.get('/api/me', auth.requireAuth, (req, res) => res.json({ ok: true }));
 app.get('/api/lessons', auth.requireAuth, (req, res) => {
+  // 2026-10-11：课程数据修好后浏览器仍显示旧版（u2r5 事件），动态接口一律禁缓存，
+  // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
+  res.set('Cache-Control', 'no-store');
   const rows = db.prepare('SELECT lesson_id, title, status FROM lessons ORDER BY created_at').all();
   res.json({ lessons: rows });
 });
@@ -357,6 +360,9 @@ app.post('/api/complete', auth.requireAuth, (req, res) => {
 
 // 课程步骤（去答案版；需验证）。?lesson=u2r2 取第 2 课；第 2 课的步骤 1 开场与复盘题由服务端动态生成/筛选
 app.get('/api/lesson', auth.requireAuth, (req, res) => {
+  // 2026-10-11：课程数据修好后浏览器仍显示旧版（u2r5 事件），禁缓存，
+  // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
+  res.set('Cache-Control', 'no-store');
   if (req.query.lesson && !validLesson(String(req.query.lesson))) return badLesson(res);
   const lid = String(req.query.lesson || 'u2r1');
   const L = loadLesson(lid);
@@ -1117,17 +1123,9 @@ app.get('/', (req, res) => {
   if (diagNext) {
     return res.redirect('/diagnostic?form=A&section=' + diagNext);
   }
-  // 优先回到最后一次学习的课（有作答记录才算），没有才用 currentLesson()
-  const last = lastStudiedLesson();
-  let target = currentLesson();
-  if (last) {
-    // 上次那课没学完才回去继续；学完了就去 currentLesson（下一门）
-    const st = lessonState(last);
-    if (!(st && st.p2_done === 1)) {
-      target = last;
-    }
-  }
-  return res.redirect('/lesson?lesson=' + encodeURIComponent(target));
+  // 学习地图首页（2026-10-11）：显示所有课程节点，孩子点进去上课。
+  // "继续学习"按钮由前端按 localStorage 跳转到当前课。
+  return res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 // 下一段未完成的诊断（1/2/3），全部完成返回 null
