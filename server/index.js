@@ -1158,6 +1158,8 @@ function currentLesson() {
 function lessonOpen(lid) {
   // 深海/登月加餐课永远开放（补充课不阻塞主线）
   if (/^(deep|moon)\d+$/.test(lid)) return true;
+  // review3 是针对性干预复习课（2026-10-11），随时可进，不等主线学完
+  if (lid === 'review3') return true;
   // 数学/语文课独立，不参与英语主线解锁
   if (/^(sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return true;
   const ids = orderedLessons();
