@@ -34,6 +34,21 @@
   .tabs { display:flex; gap:12px; margin-bottom:20px; }
   .tab { font-size:20px; padding:10px 24px; border-radius:12px; border:2px solid var(--line); background:#fff; cursor:pointer; }
   .tab.active { border-color:var(--blue); color:var(--blue); font-weight:700; }
+
+  .tabbar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #fff; border-top: 1px solid #e8eaed;
+    display: flex; padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+    z-index: 50;
+  }
+  .tabbar a {
+    flex: 1; text-align: center; text-decoration: none;
+    color: #5f6368; font-size: 11px;
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .tabbar a .ticon { font-size: 22px; }
+  .tabbar a.active { color: #1a73e8; font-weight: 700; }
+  body { padding-bottom: 76px; }
 </style>
 </head>
 <body>
@@ -142,5 +157,11 @@ function showTab(t) {
 
 try { loadMastery(); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
 </script>
+
+<div class="tabbar">
+  <a href="/"><span class="ticon">🗺️</span>学习地图</a>
+  <a href="/vocab.html"><span class="ticon">📖</span>生词本</a>
+  <a href="/progress.html" class="active"><span class="ticon">📊</span>学习报告</a>
+</div>
 </body>
 </html>
