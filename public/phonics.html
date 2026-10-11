@@ -37,6 +37,7 @@
   <a href="/">🏠<br>首页</a>
   <a href="/vocab.html">📖<br>生词本</a>
   <a href="/report.html">📊<br>学习报告</a>
+  <a href="/settings.html">⚙️<br>设置</a>
 </div>
 <script>
 const DATA = [  { t:"短元音", items:[
@@ -72,10 +73,17 @@ const DATA = [  { t:"短元音", items:[
   ]},
 ];
 let _phAudio = null;
+function getPlaySpeed() {
+  try {
+    const v = parseFloat(localStorage.getItem('xh_play_speed'));
+    return (v >= 0.5 && v <= 1.5) ? v : 1.0;
+  } catch { return 1.0; }
+}
 function speak(text) {
   try {
     if (_phAudio) { _phAudio.pause(); }
     _phAudio = new Audio('/audio/phonics/' + encodeURIComponent(text.toLowerCase()) + '.mp3');
+    try { _phAudio.playbackRate = getPlaySpeed(); } catch {}
     _phAudio.play().catch(() => {});
   } catch {}
 }
