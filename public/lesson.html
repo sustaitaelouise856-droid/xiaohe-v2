@@ -918,22 +918,24 @@ function wireQuestion(s) {
       sawFb[s.item_id] = true; // 照着提示答对记有帮助完成（现有 helped 机制）
       var got = b.level || 1;
       if (got >= 3 && b.answer) {
-        hb.innerHTML = '老师给答案：' + escapeHtml(b.answer) +
-          (b.explain ? '<br>讲解：' + escapeHtml(b.explain) : '') +
-          '<br>照着写，提交就能继续。';
+        // L3：真人老师式讲解（2026-10-11 Elouise：像真人老师一样一步步教）
+        hb.innerHTML = '我们一起来看：<b>' + escapeHtml(b.answer) + '</b>' +
+          (b.explain ? '<br><br>为什么是这个答案？' + escapeHtml(b.explain) : '') +
+          '<br><br>你再自己说一遍答案，然后提交。';
         btn.textContent = '老师教我';
       } else if (got >= 2 && b.help_line) {
         // L2：优先在同屏材料块里高亮该行；材料不在屏上时在帮助面板内高亮
         var shown = highlightHelpLine(b.help_line);
         if (shown) {
-          hb.innerHTML = '在上面的材料里，我把关键的一行标出来了：<span class="hl">' + escapeHtml(b.help_line) + '</span>';
+          hb.innerHTML = '看看我标出来的这一行：<span class="hl">' + escapeHtml(b.help_line) + '</span><br><br>这行告诉了我们什么？想一想，再试一次。';
         } else {
-          hb.innerHTML = '在材料里找到这一行：<br><span class="hl">' + escapeHtml(b.help_line) + '</span>';
+          hb.innerHTML = '在材料里找到这一行：<br><span class="hl">' + escapeHtml(b.help_line) + '</span><br><br>读懂这行，答案就出来了。';
         }
-        btn.textContent = '直接告诉我答案';
+        btn.textContent = '还是不会，直接告诉我';
       } else {
-        hb.textContent = '老师提示：' + (b.help || '再读一遍通知。');
-        btn.textContent = isPractice ? '再提示一次' : '老师教我';
+        // L1：苏格拉底式引导，先问问题，不直接给提示
+        hb.innerHTML = '别急，我们一步步来：<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
+        btn.textContent = isPractice ? '再帮我一点' : '老师教我';
       }
       btn.disabled = false;
       showInView(hb);
@@ -948,6 +950,25 @@ function wireQuestion(s) {
     });
   }
   autoHelp = triggerHelp; // handleVerdict 自动升级时调用
+  // 30秒思考冷静期（2026-10-11 Elouise：杜绝秒点求助刷课）
+  // 题目出现后强制思考30秒，HELP按钮倒计时后才可用
+  (function () {
+    var btn = $('btnHelp');
+    if (!btn) return;
+    var cooldown = 30;
+    btn.disabled = true;
+    btn.textContent = '先自己想 ' + cooldown + ' 秒';
+    var timer = setInterval(function () {
+      cooldown--;
+      if (cooldown <= 0) {
+        clearInterval(timer);
+        btn.disabled = false;
+        btn.textContent = '老师教我';
+      } else {
+        btn.textContent = '先自己想 ' + cooldown + ' 秒';
+      }
+    }, 1000);
+  })();
   $('btnHelp').onclick = function () {
     var isPractice = (s.phase || 'practice') === 'practice';
     var lvl = isPractice ? Math.min((helpLv[s.item_id] || 0) + 1, 3) : 1;
