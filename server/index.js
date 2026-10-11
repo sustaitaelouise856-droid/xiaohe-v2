@@ -211,6 +211,16 @@ app.post('/api/verify', (req, res) => {
 
 // 需验证
 app.get('/api/me', auth.requireAuth, (req, res) => res.json({ ok: true }));
+// 学习地图用：返回有作答记录的课程（真实学习进度，不依赖浏览器本地）
+app.get('/api/done-lessons', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const rows = db.prepare('SELECT DISTINCT lesson_id FROM attempts ORDER BY lesson_id').all();
+    res.json({ ok: true, lessons: rows.map(r => r.lesson_id) });
+  } catch (e) {
+    res.json({ ok: false, lessons: [] });
+  }
+});
 app.get('/api/lessons', auth.requireAuth, (req, res) => {
   // 2026-10-11：课程数据修好后浏览器仍显示旧版（u2r5 事件），动态接口一律禁缓存，
   // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
