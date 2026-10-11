@@ -303,17 +303,26 @@ loadCheckin();
 // 算当前课：必须等服务器进度回来之后再算（2026-10-11 修复：以前在服务器数据回来前
 // 就算好了，导致当前课标记永远按本地空数据走）
 let currentIdx = 0;
+function isReviewId(id) { return /^review\d+$/.test(id); }
 function computeCurrent() {
-  // 1) 服务器直接给的当前课（且在地图里）
-  if (serverCurrent && ORDER.some(l => l.id === serverCurrent)) {
+  // 0) 用户长按手动设置的当前课（优先级最高）
+  try {
+    const manual = localStorage.getItem('manual_current');
+    if (manual && ORDER.some(l => l.id === manual) && !isDone(manual)) {
+      return ORDER.findIndex(l => l.id === manual);
+    }
+    if (manual && isDone(manual)) localStorage.removeItem('manual_current'); // 学完了就清除手动设置
+  } catch {}
+  // 1) 服务器直接给的当前课（且在地图里；复习课不劫持主线）
+  if (serverCurrent && ORDER.some(l => l.id === serverCurrent) && !isReviewId(serverCurrent)) {
     return ORDER.findIndex(l => l.id === serverCurrent);
   }
-  // 2) 服务器 started 里最近学过、还没完成的那门（只看地图里的课）
+  // 2) 服务器 started 里最近学过、还没完成的那门（只看地图里的课；复习课不劫持主线）
   const smap = new Map();
   for (const s of serverStarted) {
     const id = typeof s === 'string' ? s : s.id;
     const t = typeof s === 'string' ? '' : (s.updated_at || '');
-    if (id && ORDER.some(l => l.id === id) && !isDone(id)) smap.set(id, t);
+    if (id && ORDER.some(l => l.id === id) && !isDone(id) && !isReviewId(id)) smap.set(id, t);
   }
   let best = -1, bestT = '';
   ORDER.forEach((l, i) => {
@@ -364,7 +373,25 @@ UNITS.forEach(unit => {
     n.className = "node " + cls;
     n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
     // 所有课程都可点击进入（2026-10-11：本地解锁状态与服务器进度对不上，取消锁定）
-    n.onclick = () => location.href = "/lesson?lesson=" + l.id;
+    // 长按（600ms）设为当前学习课程，"继续学习"按钮会跳到它（2026-10-11 加）
+    let pressTimer = null, longPressed = false;
+    n.addEventListener('pointerdown', () => {
+      longPressed = false;
+      pressTimer = setTimeout(() => {
+        longPressed = true;
+        try { localStorage.setItem('manual_current', l.id); } catch {}
+        currentIdx = ORDER.findIndex(o => o.id === l.id);
+        renderMap(); // 重渲染：更新📍标记和"继续学习"按钮
+      }, 600);
+    });
+    const cancelPress = () => { if (pressTimer) clearTimeout(pressTimer); pressTimer = null; };
+    n.addEventListener('pointerup', cancelPress);
+    n.addEventListener('pointerleave', cancelPress);
+    n.addEventListener('pointercancel', cancelPress);
+    n.onclick = () => {
+      if (longPressed) { longPressed = false; return; } // 长按后不触发点击进入
+      location.href = "/lesson?lesson=" + l.id;
+    };
     nodes.appendChild(n);
   });
   div.appendChild(nodes);
