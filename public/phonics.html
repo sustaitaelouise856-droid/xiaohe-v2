@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>音标表 - 小禾英语</title>
+<style>
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:#f6f8fb; color:#1a1a1a; padding-bottom:90px; }
+  .top { position:sticky; top:0; background:#fff; border-bottom:1px solid #e5e7eb; padding:12px 20px; display:flex; align-items:center; gap:12px; z-index:10; }
+  .top button { background:none; border:1px solid #dfe3ec; border-radius:8px; padding:8px 12px; font-size:15px; cursor:pointer; }
+  .top h1 { font-size:18px; margin:0; }
+  .top small { color:#888; font-size:13px; }
+  .sec { padding:16px 16px 0; }
+  .sec h2 { font-size:16px; margin:4px 4px 10px; color:#1a73e8; }
+  .grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; }
+  @media (min-width:700px) { .grid { grid-template-columns:repeat(6, 1fr); } }
+  .card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:14px 6px; text-align:center; cursor:pointer; transition:transform .1s; }
+  .card:active { transform:scale(.95); background:#e8f0fe; }
+  .ipa { font-size:26px; font-weight:700; color:#1a1a1a; font-family:Georgia, serif; }
+  .ex { font-size:14px; color:#1a73e8; margin-top:6px; }
+  .zh { font-size:12px; color:#888; margin-top:2px; }
+  .tip { margin:16px; padding:12px 16px; background:#fff8e1; border-radius:12px; font-size:14px; color:#795548; }
+  .bottomnav { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e5e7eb; display:flex; z-index:10; }
+  .bottomnav a { flex:1; text-align:center; padding:12px 0 14px; text-decoration:none; color:#666; font-size:13px; }
+  .bottomnav a.on { color:#1a73e8; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="top">
+  <button onclick="location.href='/'">← 首页</button>
+  <h1>🔤 音标表 <small>点一下卡片，听发音</small></h1>
+</div>
+<div class="tip">💡 每个音标配了一个例词，点卡片就读例词。先听准，再跟读。发音由手机/平板自带语音朗读。</div>
+<div id="wrap"></div>
+<div class="bottomnav">
+  <a href="/">🏠<br>首页</a>
+  <a href="/vocab.html">📖<br>生词本</a>
+  <a href="/report.html">📊<br>学习报告</a>
+</div>
+<script>
+const DATA = [
+  { t:"短元音", items:[
+    ["/ɪ/","it","衣（短促）"],["/e/","pen","哎"],["/æ/","cat","啊（嘴张大）"],
+    ["/ʌ/","cup","阿"],["/ɒ/","hot","哦（短）"],["/ʊ/","book","乌（短）"],["/ə/","about","呃（轻声）"],
+  ]},
+  { t:"长元音", items:[
+    ["/iː/","she","衣（拉长）"],["/ɑː/","car","啊（拉长）"],["/ɔː/","door","哦（拉长）"],
+    ["/uː/","blue","乌（拉长）"],["/ɜː/","bird","呃（拉长）"],
+  ]},
+  { t:"双元音", items:[
+    ["/eɪ/","day","哎"],["/aɪ/","my","爱"],["/ɔɪ/","boy","哦衣"],
+    ["/aʊ/","now","奥"],["/əʊ/","go","欧"],["/ɪə/","here","衣尔"],
+    ["/eə/","there","哎尔"],["/ʊə/","tour","乌尔"],
+  ]},
+  { t:"爆破音", items:[
+    ["/p/","pen","泼"],["/b/","book","波"],["/t/","tea","特"],
+    ["/d/","dog","德"],["/k/","cat","克"],["/g/","go","哥"],
+  ]},
+  { t:"摩擦音", items:[
+    ["/f/","fish","福"],["/v/","van","吴"],["/θ/","think","斯（咬舌）"],
+    ["/ð/","this","兹（咬舌）"],["/s/","sun","丝"],["/z/","zoo","兹"],
+    ["/ʃ/","she","西（卷舌）"],["/ʒ/","vision","日"],["/h/","hat","哈"],
+  ]},
+  { t:"破擦音", items:[
+    ["/tʃ/","chair","吃"],["/dʒ/","juice","之"],["/tr/","tree","戳"],
+    ["/dr/","dream","啜"],["/ts/","cats","呲"],["/dz/","beds","吡"],
+  ]},
+  { t:"鼻音·边音·半元音", items:[
+    ["/m/","man","妈"],["/n/","no","呢"],["/ŋ/","sing","嗯（鼻音）"],
+    ["/l/","light","勒"],["/r/","red","若"],["/w/","we","乌"],
+    ["/j/","yes","耶"],
+  ]},
+];
+function speak(text) {
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.85;
+    const vs = speechSynthesis.getVoices() || [];
+    const en = vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang));
+    if (en) u.voice = en;
+    speechSynthesis.speak(u);
+  } catch {}
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+const wrap = document.getElementById('wrap');
+DATA.forEach(sec => {
+  const d = document.createElement('div');
+  d.className = 'sec';
+  d.innerHTML = `<h2>${sec.t}（${sec.items.length}个）</h2>`;
+  const g = document.createElement('div');
+  g.className = 'grid';
+  sec.items.forEach(([ipa, ex, zh]) => {
+    const c = document.createElement('div');
+    c.className = 'card';
+    c.innerHTML = `<div class="ipa">${ipa}</div><div class="ex">${ex} 🔊</div><div class="zh">${zh}</div>`;
+    c.onclick = () => speak(ex);
+    g.appendChild(c);
+  });
+  d.appendChild(g);
+  wrap.appendChild(d);
+});
+</script>
+</body>
+</html>
