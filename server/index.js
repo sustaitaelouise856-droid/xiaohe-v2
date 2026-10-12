@@ -785,6 +785,48 @@ app.get('/api/retest/pending', auth.requireAuth, (req, res) => {
   retest.backfillFromHistory();
   res.json({ ok: true, pending: retest.getPending() });
 });
+// 真正的错题本（2026-10-12）：返回每道错题的原题、孩子答案、正确答案
+app.get('/api/mistakes', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    // 取最近50道答错的题（含看答案过、粘贴等）
+    const rows = db.prepare(`
+      SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
+             i.question_json, i.lesson_id
+      FROM attempts a
+      LEFT JOIN items i ON a.item_id = i.item_id
+      WHERE a.correct = 0
+      ORDER BY a.created_at DESC
+      LIMIT 50
+    `).all();
+    const mistakes = rows.map(r => {
+      let q = null, detail = null;
+      try { q = JSON.parse(r.question_json || '{}'); } catch {}
+      try { detail = JSON.parse(r.detail_json || '{}'); } catch {}
+      // 提取正确答案
+      let correctAnswer = '';
+      if (q && q.answer) correctAnswer = String(q.answer);
+      else if (detail && detail.expected) correctAnswer = String(detail.expected);
+      // 提取题干
+      let question = '';
+      if (q && q.stem) question = String(q.stem);
+      else if (q && q.text) question = String(q.text);
+      return {
+        item_id: r.item_id,
+        lesson_id: r.lesson_id || '',
+        question: question.slice(0, 200),
+        given: String(r.answer_given || '').slice(0, 200),
+        correct: correctAnswer.slice(0, 200),
+        verdict: r.verdict,
+        created_at: r.created_at,
+      };
+    });
+    res.json({ ok: true, mistakes });
+  } catch (e) {
+    console.error('[mistakes]', e.message);
+    res.json({ ok: false, mistakes: [] });
+  }
+});
 app.post('/api/retest/resolve', auth.requireAuth, (req, res) => {
   const { item_id, knowledge_point } = req.body || {};
   if (!item_id) return res.status(400).json({ ok: false, error: 'no_item_id' });
