@@ -57,6 +57,29 @@
   }
   .btn-continue:active { transform: scale(.98); }
   .btn-continue small { display: block; font-size: 13px; font-weight: 400; opacity: .9; margin-top: 4px; }
+  /* 称号系统（2026-10-12 Elouise：mastery-based，不是打卡） */
+  .titles-card {
+    margin: 12px 20px 0; background: #fff; border-radius: 16px;
+    padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  }
+  .titles-head { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+  .titles-grid { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; }
+  .title-badge {
+    flex: 0 0 auto; width: 104px; text-align: center;
+    border-radius: 12px; padding: 10px 6px; font-size: 12px;
+  }
+  .title-badge.earned {
+    background: linear-gradient(180deg, #fff8e6, #ffedb8);
+    border: 2px solid #f2c14e; box-shadow: 0 2px 8px rgba(242,193,78,.35);
+  }
+  .title-badge.locked-t {
+    background: #f4f6f9; border: 2px dashed #d0d5dd; color: #98a2b3;
+  }
+  .title-badge .ticon2 { font-size: 30px; display: block; margin-bottom: 4px; }
+  .title-badge.locked-t .ticon2 { filter: grayscale(1); opacity: .5; }
+  .title-badge .tname { font-weight: 700; font-size: 12px; display: block; }
+  .title-badge.earned .tname { color: #b54708; }
+  .title-badge .tdesc { font-size: 10px; line-height: 1.4; display: block; margin-top: 4px; }
   /* 每日签到（2026-10-11） */
   .checkin-card {
     margin: 16px 20px 0; background: #fff; border-radius: 16px;
@@ -175,6 +198,11 @@
     <button class="btn-checkin" id="checkinBtn">签到</button>
   </div>
   <div class="checkin-week" id="checkinWeek"></div>
+</div>
+
+<div class="titles-card" id="titlesCard">
+  <div class="titles-head">🏆 我的称号</div>
+  <div class="titles-grid" id="titlesGrid"></div>
 </div>
 
 <div class="continue-wrap">
@@ -316,6 +344,22 @@ async function loadCheckin() {
     if (d && d.ok) renderCheckin(d);
   } catch {}
 }
+// 称号展示（2026-10-12）：已获得彩色，未获得灰色+条件
+async function loadTitles() {
+  try {
+    const r = await fetch("/api/titles");
+    const d = await r.json();
+    if (!d || !d.ok) return;
+    const g = document.getElementById("titlesGrid");
+    g.innerHTML = d.titles.map(t =>
+      `<div class="title-badge ${t.earned ? 'earned' : 'locked-t'}">` +
+      `<span class="ticon2">${t.icon}</span>` +
+      `<span class="tname">${t.earned ? t.name : '???'}</span>` +
+      `<span class="tdesc">${t.earned ? '已获得！' : t.desc}</span></div>`
+    ).join('');
+  } catch {}
+}
+loadTitles();
 async function doCheckin() {
   const btn = document.getElementById("checkinBtn");
   btn.disabled = true;
