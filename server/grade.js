@@ -195,87 +195,6 @@ function checkItemChinese(raw, e) {
 
 function escapeReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
-// ---- 数学表达式判分（数学课 type:'math'） ----
-// 等价形式三层处理：
-//  1. 字符归一：全角→半角、去空格、×·→*、²→^2；
-//  2. 纯数字表达式求值比对（1/2 = 0.5）；
-//  3. 纯乘积/纯加和的因子/项排序（3(x+2) = (x+2)*3，x+2 = 2+x）。
-// 减法不参与排序（x-2 ≠ 2-x）；除法不参与排序。超出此范围的等价形式
-// 由出题人在 answers 里显式列出（数据驱动，不在代码里猜）。
-const MATH_FULL2HALF = {
-  '（': '(', '）': ')', '×': '*', '·': '*', '⋅': '*', '＋': '+', '－': '-',
-  '—': '-', '–': '-', '＝': '=', '。': '.', '，': ',', '：': ':', '；': ';', '　': ' ',
-};
-function normalizeMath(s) {
-  return String(s || '')
-    .replace(/[（）×·⋅＋－—–＝。，：；　]/g, ch => MATH_FULL2HALF[ch] || ch)
-    .replace(/[²³]/g, ch => (ch === '²' ? '^2' : '^3'))
-    .replace(/\s+/g, '')
-    .toLowerCase();
-}
-function topLevelHas(t, chars) {
-  let depth = 0;
-  for (const ch of t) {
-    if (ch === '(') depth++;
-    else if (ch === ')') depth--;
-    else if (depth === 0 && chars.includes(ch)) return true;
-  }
-  return false;
-}
-function splitTop(t, op) {
-  const parts = [];
-  let depth = 0, cur = '';
-  for (const ch of t) {
-    if (ch === '(') depth++;
-    else if (ch === ')') depth--;
-    if (ch === op && depth === 0) { parts.push(cur); cur = ''; }
-    else cur += ch;
-  }
-  parts.push(cur);
-  return parts;
-}
-function canonicalMath(s) {
-  let t = normalizeMath(s);
-  if (!t) return t;
-  // 纯数字表达式：求值比对（1/2 = 0.5 = 0.50）
-  if (/^[0-9+\-*/().]+$/.test(t) && /\d/.test(t)) {
-    try {
-      const v = Function('"use strict"; return (' + t + ')')();
-      if (typeof v === 'number' && isFinite(v)) return 'num:' + (Math.round(v * 1e9) / 1e9);
-    } catch (e) { /* 非法表达式，走字符串比对 */ }
-  }
-  // 省略乘号补齐：3(x+2) → 3*(x+2)，a(a-5) → a*(a-5)，(a-5)a → (a-5)*a
-  t = t.replace(/(\d|[a-z]|\))\(/g, '$1*(').replace(/\)(\d|[a-z])/g, ')*$1');
-  // 纯乘积：因子排序（乘法交换律，安全）
-  if (topLevelHas(t, '*') && !topLevelHas(t, '+-/')) {
-    return splitTop(t, '*').sort().join('*');
-  }
-  // 加和（含减号）：按"带符号项"切分再排序（x^2-10x+25 = 25-10x+x^2）。
-  // 符号跟项走，减法不参与裸交换，安全；含顶层 * / 的不进此分支。
-  if ((topLevelHas(t, '+') || topLevelHas(t, '-')) && !topLevelHas(t, '*/')) {
-    const terms = [];
-    let depth = 0, cur = '';
-    for (const ch of t) {
-      if (ch === '(') depth++;
-      else if (ch === ')') depth--;
-      if (depth === 0 && (ch === '+' || ch === '-') && cur !== '') {
-        terms.push(cur);
-        cur = ch;
-      } else cur += ch;
-    }
-    terms.push(cur);
-    return terms.map(x => x.replace(/^\+/, '')).sort().join('+').replace(/\+\-/g, '-');
-  }
-  return t;
-}
-function checkMath(raw, spec) {
-  const c = canonicalMath(raw);
-  if (!c) return { status: 'missing', matched: null };
-  const hit = (spec.answers || []).find(a => canonicalMath(a) === c);
-  if (hit) return { status: 'ok', matched: hit };
-  return { status: 'missing', matched: null };
-}
-
 function lev(a, b) {
   const m = a.length, n = b.length;
   if (!m) return n; if (!n) return m;
@@ -366,17 +285,20 @@ function fuzzyToken(norm, wl) {
 
 // ---- 单项检查（英文路径） ----
 function checkWord(norm, spec) {
-  const hasNew = spec.answers.some(f => new RegExp(`\\b${escapeReg(f.toLowerCase())}\\b`).test(norm));
+  // 2026-10-12修：标准答案也要normalize（去标点），否则"答案带句点、作答句点变空格"永远匹配不上
+  // 曾导致孩子写对"Keyboard Y is quieter..."被连判20次错
+  const normAns = f => normalize(f);
+  const hasNew = spec.answers.some(f => new RegExp(`\\b${escapeReg(normAns(f))}\\b`).test(norm));
   const olds = spec.olds || [];
-  const hasOld = olds.some(f => new RegExp(`\\b${escapeReg(f.toLowerCase())}\\b`).test(norm));
+  const hasOld = olds.some(f => new RegExp(`\\b${escapeReg(normAns(f))}\\b`).test(norm));
   if (hasNew && hasOld) return { status: 'contradiction', matched: null, note: 'new_and_old' };
-  if (hasNew) return { status: 'ok', matched: spec.answers.find(f => new RegExp(`\\b${escapeReg(f.toLowerCase())}\\b`).test(norm)) };
+  if (hasNew) return { status: 'ok', matched: spec.answers.find(f => new RegExp(`\\b${escapeReg(normAns(f))}\\b`).test(norm)) };
   if (hasOld) return { status: 'contradiction', matched: null, note: 'old_only' };
   // 多词答案的拼写容错（如 "Sunny Day" 写成 "Sunny Da"）：每个词都要在作答里出现，
   // 允许个别词一处拼写小错；有容错命中则整项判 typo（算对、记拼写弱点）。
   let multiTypo = null;
   for (const f of spec.answers) {
-    const fl = f.toLowerCase();
+    const fl = normalize(f);
     if (!fl.includes(' ')) continue;
     const words = fl.split(/\s+/).filter(Boolean);
     let typoHit = null;
@@ -394,7 +316,7 @@ function checkWord(norm, spec) {
   // 拼写容错：纯字母、长度≥3 的关键词（3–5 个字母容忍改 1 处，6 个以上容忍改 2 处）
   let best = null;
   for (const f of spec.answers) {
-    const fl = f.toLowerCase();
+    const fl = normalize(f);
     if (!/^[a-z]+$/.test(fl) || fl.length < 3) continue;
     const t = fuzzyToken(norm, fl);
     if (t && (!best || t.d < best.d)) best = { d: t.d, tok: t.tok, want: f };
@@ -445,8 +367,7 @@ function gradeShort(rawAnswer, spec) {
 
   // 中文走结构化检查（时间/星期/数字逐项比对），冲突（上午写成晚上等）直接判 contradiction
   const items = expects.map(e => {
-    // 数学表达式用 raw（英文 normalize 会 strip 掉括号运算符），走数学归一
-    const en = e.type === 'math' ? checkMath(raw, e) : checkItemEnglish(norm, e);
+    const en = checkItemEnglish(norm, e);
     const cnR = hasChinese ? checkItemChinese(raw, e) : { hit: false, oldHit: false, conflict: null };
     let status, conflict = null;
     if (en.status === 'contradiction' || cnR.oldHit) status = 'contradiction';
@@ -474,10 +395,7 @@ function gradeShort(rawAnswer, spec) {
   }
 
   const allOk = items.every(it => it.status === 'ok');
-  // 数学题不走"中文提示英文重写"分支（数学答案无中英文之分；含中文字符的作答
-  // 在 checkMath 里本来就匹配不上，走 wrong）
-  const hasMath = expects.some(e => e.type === 'math');
-  if (hasChinese && allOk && !hasMath) {
+  if (hasChinese && allOk) {
     return {
       verdict: 'chinese',
       items: items.map(it => ({ id: it.id, status: 'ok', matched: it.matched || 'cn' })),
