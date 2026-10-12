@@ -304,7 +304,9 @@ app.get('/api/lessons', auth.requireAuth, (req, res) => {
   // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
   res.set('Cache-Control', 'no-store');
   const rows = db.prepare('SELECT lesson_id, title, status FROM lessons ORDER BY created_at').all();
-  res.json({ lessons: rows });
+  // 2026-10-12：返回每门课是否解锁，前端用于显示🔒和过滤"继续学习"
+  const lessons = rows.map(r => ({ ...r, open: lessonOpen(r.lesson_id) }));
+  res.json({ lessons });
 });
 
 // 学习小结：默认按一次走课（session_id）统计；带 ?lesson= 时按整课聚合（完成页用）
