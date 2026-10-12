@@ -342,7 +342,7 @@ function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60
 function getPlaySpeed() {
   try {
     const v = parseFloat(localStorage.getItem('xh_play_speed'));
-    return (v >= 0.5 && v <= 1.5) ? v : 1.0;
+    return (v >= 0.5 && v <= 2.0) ? v : 1.0;
   } catch { return 1.0; }
 }
 function setRate(r) { try { au.playbackRate = r; } catch (e) {} }
@@ -818,7 +818,7 @@ function speakSentence(text) {
     _sentAudio = new Audio('/audio/sent/' + h + '.mp3');
     try {
       const v = parseFloat(localStorage.getItem('xh_play_speed'));
-      if (v >= 0.5 && v <= 1.5) _sentAudio.playbackRate = v;
+      if (v >= 0.5 && v <= 2.0) _sentAudio.playbackRate = v;
     } catch {}
     _sentAudio.play().catch(() => {});
   } catch {}
