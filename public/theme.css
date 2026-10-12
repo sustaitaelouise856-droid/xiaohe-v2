@@ -1,13 +1,121 @@
-/* 小禾英语全局主题（2026-10-11）：护眼/夜间模式，所有页面共用 */
+/* 小禾英语全局主题（2026-10-12 全面美化版）：清新学园风 */
+/* 设计语言：柔和圆角、轻盈阴影、清新配色、细腻动效 */
+
+:root {
+  --blue: #1a73e8;
+  --blue-dark: #1558b0;
+  --blue-light: #e8f0fe;
+  --purple: #6c3fd4;
+  --green: #1e8e3e;
+  --green-light: #e6f4ea;
+  --orange: #e8710a;
+  --orange-light: #fef0e6;
+  --red: #d93025;
+  --red-light: #fce8e6;
+  --ink: #202124;
+  --muted: #5f6368;
+  --line: #e1e5eb;
+  --bg: #f0f4fa;
+  --card: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(60,64,67,.08), 0 1px 2px rgba(60,64,67,.06);
+  --shadow-md: 0 4px 12px rgba(60,64,67,.10), 0 2px 6px rgba(60,64,67,.08);
+  --shadow-lg: 0 8px 24px rgba(60,64,67,.12), 0 4px 12px rgba(60,64,67,.08);
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+}
+
+/* 基础 */
+* { -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 卡片：更柔和的阴影、更大的圆角 */
+.card {
+  background: var(--card);
+  border: 1px solid rgba(225,229,235,.6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+
+/* 按钮基础：更立体的按压感 */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  user-select: none;
+}
+button:active { transform: scale(.97); }
+
+/* 主按钮：渐变 + 阴影 */
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue) 0%, #4a8ef7 100%);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(26,115,232,.35), inset 0 1px 0 rgba(255,255,255,.2);
+  font-weight: 700;
+}
+.btn-primary:hover { box-shadow: 0 6px 18px rgba(26,115,232,.45), inset 0 1px 0 rgba(255,255,255,.2); }
+
+/* 输入框：更精致的边框和聚焦态 */
+input[type="text"], input[type="search"], textarea {
+  border: 2px solid var(--line);
+  border-radius: var(--radius-sm);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+input[type="text"]:focus, input[type="search"]:focus, textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,115,232,.12);
+}
+
+/* 顶部栏：毛玻璃效果 */
+#topbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.85) !important;
+}
+
+/* 底部导航：更精致 */
+.tabbar, .bottomnav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.92) !important;
+  border-top: 1px solid rgba(225,229,235,.8);
+  box-shadow: 0 -2px 12px rgba(60,64,67,.06);
+}
+
+/* ============ 暖色主题 ============ */
 html[data-theme="warm"] body { background:#fdf6e3 !important; color:#5c4b37 !important; }
 html[data-theme="warm"] .card, html[data-theme="warm"] .top,
 html[data-theme="warm"] #topbar, html[data-theme="warm"] .tabbar,
 html[data-theme="warm"] .bottomnav { background:#fffdf5 !important; border-color:#e8dcc0 !important; }
 
+/* ============ 深色主题 ============ */
+html[data-theme="dark"] {
+  --ink: #e8e8e8;
+  --muted: #a0a0a0;
+  --line: #444;
+  --bg: #1a1a1a;
+  --card: #2d2d2d;
+  --blue: #7ab8ff;
+  --blue-light: #1a3a5c;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.35);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.4);
+}
 html[data-theme="dark"] body { background:#1a1a1a !important; color:#f0f0f0 !important; }
 html[data-theme="dark"] .card, html[data-theme="dark"] .top,
 html[data-theme="dark"] #topbar, html[data-theme="dark"] .tabbar,
 html[data-theme="dark"] .bottomnav { background:#2d2d2d !important; border-color:#555 !important; }
+html[data-theme="dark"] #topbar { background:rgba(45,45,45,.85) !important; }
+html[data-theme="dark"] .tabbar, html[data-theme="dark"] .bottomnav { background:rgba(45,45,45,.92) !important; }
 html[data-theme="dark"] .checkin-card, html[data-theme="dark"] .titles-card,
 html[data-theme="dark"] .node, html[data-theme="dark"] .unit-head,
 html[data-theme="dark"] .title-badge { background:#2d2d2d !important; border-color:#555 !important; color:#f0f0f0 !important; }
@@ -21,11 +129,17 @@ html[data-theme="dark"] button {
   background:#3a3a3a !important;
 }
 html[data-theme="dark"] button:active { background:#4a4a4a !important; }
+html[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, #4a8ef7 0%, #6c3fd4 100%) !important;
+  color: #fff !important;
+  border: 0 !important;
+}
 html[data-theme="dark"] .tabbar a, html[data-theme="dark"] .bottomnav a { color:#bbbbbb !important; }
 html[data-theme="dark"] .tabbar a.active, html[data-theme="dark"] .bottomnav a.on { color:#7ab8ff !important; }
 html[data-theme="dark"] input, html[data-theme="dark"] textarea, html[data-theme="dark"] select {
   background:#2d2d2d !important; border-color:#555 !important; color:#e8e8e8 !important;
 }
+
 /* 2026-10-12深色模式全面修复：浅色字在浅色背景上看不清的问题 */
 /* 课程页 */
 html[data-theme="dark"] .opt .k { background:#4a4a4a !important; color:#f0f0f0 !important; }
