@@ -141,16 +141,36 @@ async function load() {
   } catch (e) {
     document.getElementById('profileCard').innerHTML = '<div class="empty">加载失败，下拉刷新试试</div>';
   }
-  // 称号墙（复用 /api/titles）
+  // 称号墙（复用 /api/titles），点击查看获得要求
   try {
     const t = await (await fetch('/api/titles')).json();
     const list = (t.titles || []);
+    window._titles = list;
     document.getElementById('titleWall').innerHTML = list.length
-      ? list.map(x => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '"><div class="ic">' + (x.earned ? x.icon : '🔒') + '</div><div class="nm">' + esc(x.name) + '</div><div class="cond">' + esc(x.desc || '') + '</div></div>').join('')
+      ? list.map((x, i) => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '" onclick="showTitleDetail(' + i + ')" style="cursor:pointer;"><div class="ic">' + (x.earned ? x.icon : '🔒') + '</div><div class="nm">' + esc(x.name) + '</div><div class="cond">' + (x.earned ? '已获得' : '点击查看要求') + '</div></div>').join('')
       : '<div class="empty">暂无称号数据</div>';
   } catch (e) {
     document.getElementById('titleWall').innerHTML = '<div class="empty">加载失败</div>';
   }
+}
+function showTitleDetail(i) {
+  const x = (window._titles || [])[i];
+  if (!x) return;
+  const old = document.getElementById('titleDetailOv');
+  if (old) old.remove();
+  const ov = document.createElement('div');
+  ov.id = 'titleDetailOv';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99;display:flex;align-items:center;justify-content:center;padding:20px;';
+  ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:320px;width:100%;text-align:center;">'
+    + '<div style="font-size:48px;">' + (x.earned ? x.icon : '🔒') + '</div>'
+    + '<h3 style="margin:12px 0 8px;">' + esc(x.name) + '</h3>'
+    + '<p style="color:#5f6368;font-size:14px;line-height:1.6;">' + esc(x.desc || '暂无说明') + '</p>'
+    + '<div style="margin:12px 0;padding:10px;background:' + (x.earned ? '#e6f4ea' : '#fef7e0') + ';border-radius:10px;font-size:14px;color:' + (x.earned ? '#137333' : '#b06000') + ';">'
+    + (x.earned ? '✅ 已获得' : '⏳ 未获得，加油！') + '</div>'
+    + '<button onclick="document.getElementById(\'titleDetailOv\').remove()" style="padding:10px 32px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;">知道了</button>'
+    + '</div>';
+  ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
+  document.body.appendChild(ov);
 }
 function stat(v, label) {
   return '<div class="stat"><b>' + v + '</b><span>' + label + '</span></div>';
