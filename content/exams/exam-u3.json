@@ -41,7 +41,7 @@
                 "We don't know"
               ],
               "answer": 0,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-1.mp3"
             },
             {
               "num": 2,
@@ -56,7 +56,7 @@
                 "Four kilos"
               ],
               "answer": 2,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-2.mp3"
             },
             {
               "num": 3,
@@ -71,7 +71,7 @@
                 "30 inches"
               ],
               "answer": 1,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-3.mp3"
             },
             {
               "num": 4,
@@ -86,7 +86,7 @@
                 "It's quieter"
               ],
               "answer": 3,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-4.mp3"
             },
             {
               "num": 5,
@@ -101,7 +101,7 @@
                 "We don't know"
               ],
               "answer": 1,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-5.mp3"
             },
             {
               "num": 6,
@@ -116,7 +116,7 @@
                 "The blue one"
               ],
               "answer": 0,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-6.mp3"
             }
           ]
         },
@@ -137,7 +137,7 @@
                 "Yesterday"
               ],
               "answer": 1,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-7.mp3"
             },
             {
               "num": 2,
@@ -151,7 +151,7 @@
                 "We don't know"
               ],
               "answer": 0,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-7.mp3"
             },
             {
               "num": 3,
@@ -165,7 +165,7 @@
                 "Laptop D"
               ],
               "answer": 2,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-7.mp3"
             },
             {
               "num": 4,
@@ -179,7 +179,7 @@
                 "None of them"
               ],
               "answer": 2,
-              "audio": ""
+              "audio": "/audio/exam-u3/listening-7.mp3"
             }
           ]
         },
