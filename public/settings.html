@@ -5,38 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>设置 - 小禾英语</title>
 <style>
+  /* 小禾英语设置页（2026-10-12 美化版）：清新学园风，只改样式不改结构 */
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  body { margin:0; font-family:-apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:#f6f8fb; color:#1a1a1a; padding-bottom:90px; }
-  .top { position:sticky; top:0; background:#fff; border-bottom:1px solid #e5e7eb; padding:12px 20px; display:flex; align-items:center; gap:12px; z-index:10; }
-  .top button { background:none; border:1px solid #dfe3ec; border-radius:8px; padding:8px 12px; font-size:15px; cursor:pointer; }
-  .top h1 { font-size:18px; margin:0; }
-  .card { margin:16px; background:#fff; border-radius:16px; padding:20px; border:1px solid #e5e7eb; }
-  .card h2 { font-size:16px; margin:0 0 8px; }
-  .card p { font-size:14px; color:#666; margin:0 0 16px; line-height:1.6; }
-  .speed-row { display:flex; align-items:center; gap:12px; margin:12px 0; }
-  .speed-row input[type=range] { flex:1; height:6px; }
-  .speed-val { font-size:20px; font-weight:700; color:#1a73e8; min-width:64px; text-align:center; }
-  .speed-btns { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
-  .speed-btns button { flex:1; min-width:70px; padding:12px 0; border:2px solid #dfe3ec; border-radius:12px; background:#fff; font-size:15px; cursor:pointer; }
-  .speed-btns button.on { border-color:#1a73e8; background:#e8f0fe; color:#1a73e8; font-weight:700; }
-  .test-row { margin-top:16px; text-align:center; }
-  .test-row button { padding:12px 32px; border:none; border-radius:12px; background:#1a73e8; color:#fff; font-size:16px; cursor:pointer; }
-  .bottomnav { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e5e7eb; display:flex; z-index:10; }
-  .bottomnav a { flex:1; text-align:center; padding:10px 0 12px; text-decoration:none; color:#666; font-size:12px; }
-  .bottomnav a.on { color:#1a73e8; font-weight:700; }
-  /* 主题（2026-10-11 加） */
+  body { margin:0; font-family:"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif; background:var(--bg); color:var(--ink); padding-bottom:96px; -webkit-font-smoothing:antialiased; }
+
+  /* 顶部栏：轻盈毛玻璃 */
+  .top { position:sticky; top:0; background:rgba(255,255,255,.88); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); padding:14px 20px; display:flex; align-items:center; gap:12px; z-index:10; }
+  .top button { background:var(--card); border:1px solid var(--line); border-radius:var(--radius-sm); padding:8px 14px; font-size:15px; cursor:pointer; color:var(--ink); box-shadow:var(--shadow-sm); transition:transform .15s ease, background .2s ease; }
+  .top button:active { transform:scale(.96); }
+  .top h1 { font-size:19px; margin:0; font-weight:700; letter-spacing:.5px; }
+
+  /* 设置项卡片：清晰分组层级 */
+  .card { margin:20px 16px; background:var(--card); border-radius:var(--radius-lg); padding:24px 22px; border:1px solid rgba(225,229,235,.6); box-shadow:var(--shadow-sm); }
+  .card h2 { font-size:17px; margin:0 0 10px; font-weight:700; letter-spacing:.3px; }
+  .card p { font-size:14px; color:var(--muted); margin:0 0 20px; line-height:1.7; }
+
+  /* 滑杆行 */
+  .speed-row { display:flex; align-items:center; gap:12px; margin:16px 0; }
+  .speed-val { font-size:22px; font-weight:800; color:var(--blue); min-width:70px; text-align:center; font-variant-numeric:tabular-nums; }
+
+  /* 自定义滑杆：圆润轨道 + 立体滑块 */
+  .speed-row input[type=range] {
+    flex:1; -webkit-appearance:none; appearance:none; height:8px; border-radius:99px;
+    background:#e3e8f0;
+    outline:none; cursor:pointer; border:0;
+  }
+  .speed-row input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance:none; width:26px; height:26px; border-radius:50%;
+    background:#fff; border:3px solid var(--blue);
+    box-shadow:0 2px 8px rgba(26,115,232,.35); cursor:pointer;
+    transition:transform .15s ease;
+  }
+  .speed-row input[type=range]::-webkit-slider-thumb:active { transform:scale(1.15); }
+  .speed-row input[type=range]::-moz-range-track { height:8px; border-radius:99px; background:#e3e8f0; }
+  .speed-row input[type=range]::-moz-range-progress { height:8px; border-radius:99px; background:var(--blue); }
+  .speed-row input[type=range]::-moz-range-thumb {
+    width:20px; height:20px; border-radius:50%;
+    background:#fff; border:3px solid var(--blue);
+    box-shadow:0 2px 8px rgba(26,115,232,.35); cursor:pointer;
+  }
+
+  /* 预设/主题切换按钮：更精致的选中态 */
+  .speed-btns { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+  .speed-btns button {
+    flex:1; min-width:72px; padding:13px 6px;
+    border:2px solid var(--line); border-radius:var(--radius-md);
+    background:var(--card); font-size:15px; font-weight:500; color:var(--ink);
+    cursor:pointer; transition:all .2s ease; box-shadow:var(--shadow-sm);
+  }
+  .speed-btns button:active { transform:scale(.96); }
+  .speed-btns button.on {
+    border-color:var(--blue); background:var(--blue-light); color:var(--blue);
+    font-weight:700; box-shadow:0 2px 10px rgba(26,115,232,.25);
+    transform:translateY(-1px);
+  }
+
+  /* 试听按钮：btn-primary 风格（统一主按钮语言） */
+  .test-row { margin-top:20px; text-align:center; }
+  .test-row button {
+    padding:13px 40px; border:0; border-radius:var(--radius-md);
+    background:linear-gradient(135deg, var(--blue) 0%, #4a8ef7 100%);
+    color:#fff; font-size:16px; font-weight:700; cursor:pointer;
+    box-shadow:0 4px 14px rgba(26,115,232,.35), inset 0 1px 0 rgba(255,255,255,.2);
+    transition:transform .15s ease, box-shadow .2s ease;
+  }
+  .test-row button:hover { box-shadow:0 6px 18px rgba(26,115,232,.45), inset 0 1px 0 rgba(255,255,255,.2); }
+  .test-row button:active { transform:scale(.97); }
+
+  /* 底部导航 */
+  .bottomnav { position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top:1px solid rgba(225,229,235,.8); display:flex; z-index:10; box-shadow:0 -2px 12px rgba(60,64,67,.06); }
+  .bottomnav a { flex:1; text-align:center; padding:10px 0 14px; text-decoration:none; color:var(--muted); font-size:12px; }
+  .bottomnav a.on { color:var(--blue); font-weight:700; }
+
+  /* 主题（2026-10-11 加，保留并对齐变量） */
   html[data-theme="warm"] body { background:#fdf6e3; color:#5c4b37; }
   html[data-theme="warm"] .card, html[data-theme="warm"] .top, html[data-theme="warm"] .bottomnav { background:#fffdf5; border-color:#e8dcc0; }
   html[data-theme="warm"] .top h1, html[data-theme="warm"] .card h2 { color:#5c4b37; }
+  html[data-theme="warm"] .speed-btns button.on { background:#fef6e3; border-color:#e8710a; color:#e8710a; }
   html[data-theme="dark"] body { background:#1a1a1a; color:#e0e0e0; }
   html[data-theme="dark"] .card, html[data-theme="dark"] .top, html[data-theme="dark"] .bottomnav { background:#2d2d2d; border-color:#444; }
+  html[data-theme="dark"] .top { background:rgba(45,45,45,.88); }
+  html[data-theme="dark"] .bottomnav { background:rgba(45,45,45,.92); }
   html[data-theme="dark"] .top h1, html[data-theme="dark"] .card h2 { color:#fff; }
   html[data-theme="dark"] .card p { color:#aaa; }
   html[data-theme="dark"] .speed-btns button { background:#3d3d3d; border-color:#555; color:#e0e0e0; }
-  html[data-theme="dark"] .speed-btns button.on { background:#1a3a5c; border-color:#1a73e8; color:#7ab8ff; }
-  html[data-theme="dark"] .top button { border-color:#555; color:#e0e0e0; }
+  html[data-theme="dark"] .speed-btns button.on { background:#1a3a5c; border-color:#7ab8ff; color:#7ab8ff; }
+  html[data-theme="dark"] .top button { border-color:#555; color:#e0e0e0; background:#3d3d3d; }
   html[data-theme="dark"] .bottomnav a { color:#999; }
   html[data-theme="dark"] .bottomnav a.on { color:#7ab8ff; }
+  html[data-theme="dark"] .speed-row input[type=range] { background:#444; }
+  html[data-theme="dark"] .speed-row input[type=range]::-webkit-slider-thumb { border-color:#7ab8ff; box-shadow:0 2px 8px rgba(122,184,255,.35); }
+  html[data-theme="dark"] .speed-row input[type=range]::-moz-range-track { background:#444; }
+  html[data-theme="dark"] .speed-row input[type=range]::-moz-range-progress { background:#7ab8ff; }
+  html[data-theme="dark"] .speed-row input[type=range]::-moz-range-thumb { border-color:#7ab8ff; }
 </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
