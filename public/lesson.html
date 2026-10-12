@@ -213,6 +213,7 @@
 <script src="/dict.min.js"></script>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
+<script src="/sent-audio-manifest.js"></script>
 </head>
 <body>
 <div id="topbar" style="display:none">
@@ -816,9 +817,10 @@ function makeSentencesTappable() {
       const text = group.map(n => n.textContent).join('').trim();
       if (!/[A-Za-z]/.test(text)) return; // 没有英文的跳过（纯中文/标题）
       // 2026-10-11 18:05：句子音频后台生成中，生成好才显示🔊按钮，不做假功能
+      // 2026-10-12：改用 manifest 精确匹配，只有清单里有的才显示按钮
       const h = text.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
-      // 先只做标记，按钮等音频文件就绪后再显示（由后台任务更新 SENT_AUDIO_READY）
-      if (!window.SENT_AUDIO_READY) return;
+      if (!window.SENT_AUDIO_READY || !window.SENT_AUDIO_MANIFEST) return;
+      if (!window.SENT_AUDIO_MANIFEST.has(h)) return; // 没音频的不显示按钮
       const wrap = document.createElement('span');
       wrap.className = 'sent';
       const btn = document.createElement('button');
