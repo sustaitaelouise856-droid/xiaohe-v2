@@ -473,6 +473,117 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
   }
 });
 
+// 成长档案（2026-10-12）：给家长看的学生画像+趋势+弱点，大白话
+app.get('/api/growth', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    // --- 弱点清单：按出现次数排序 ---
+    const wrows = db.prepare(
+      `SELECT tag, COUNT(*) as c, MAX(date(created_at)) as last
+       FROM weakness_events GROUP BY tag ORDER BY c DESC`
+    ).all();
+    const weakness_list = wrows.map(r => ({
+      tag: r.tag, count: r.c, last: r.last || '',
+    }));
+
+    // --- 近7天趋势：每天做题数、正确率 ---
+    const trows = db.prepare(
+      `SELECT date(created_at) as d, COUNT(*) as n,
+              ROUND(100.0 * SUM(correct) / COUNT(*)) as rate
+       FROM attempts
+       WHERE date(created_at) >= date('now', '-6 days')
+       GROUP BY d ORDER BY d`
+    ).all();
+    // 补全7天（含0做题的日子），日期显示 MM-DD
+    const trend = [];
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(Date.now() - i * 864e5);
+      const key = d.toISOString().slice(0, 10);
+      const label = key.slice(5); // MM-DD
+      const row = trows.find(r => r.d === key);
+      trend.push({
+        date: label,
+        attempts: row ? row.n : 0,
+        rate: row ? Math.round(row.rate) : null,
+      });
+    }
+
+    // --- 本周（周一起）汇总 ---
+    const wrow = db.prepare(
+      `SELECT COUNT(*) as n,
+              ROUND(100.0 * SUM(correct) / COUNT(*)) as rate
+       FROM attempts
+       WHERE date(created_at) >= date('now', 'weekday 0', '-7 days')`
+    ).get() || { n: 0, rate: null };
+    const lessonsDone = db.prepare(
+      `SELECT COUNT(*) as c FROM lesson_state
+       WHERE p2_done = 1 AND date(updated_at) >= date('now', 'weekday 0', '-7 days')`
+    ).get();
+    const weekly = {
+      minutes: Math.round((wrow.n || 0) * 1.5), // 估算：每题1.5分钟
+      lessons: (lessonsDone && lessonsDone.c) || 0,
+      avg_rate: wrow.rate != null ? Math.round(wrow.rate) : null,
+      attempts: wrow.n || 0,
+    };
+
+    // --- 画像：弱点 top3 + 强项 ---
+    const topWeak = weakness_list.slice(0, 3).map(w => w.tag);
+    // 强项：从已获称号推导；没有称号就看坚持情况
+    const earnedTitles = db.prepare('SELECT title_id FROM titles').all().map(r => r.title_id);
+    const titleToStrength = {
+      comparative_master: '比较级掌握牢固',
+      superlative_slayer: '最高级拿手',
+      spelling_star: '拼写过关',
+      streak_warrior: '学习习惯好',
+      unit3_conqueror: 'Unit 3 已吃透',
+    };
+    const strengths = earnedTitles
+      .map(id => titleToStrength[id])
+      .filter(Boolean);
+    if (strengths.length === 0) {
+      const chk = db.prepare('SELECT COUNT(*) as c FROM checkins').get();
+      if (chk && chk.c >= 3) strengths.push('坚持学习');
+      // 选择题正确率高也算强项
+      const mcq = db.prepare(
+        `SELECT ROUND(100.0*SUM(correct)/COUNT(*)) as r FROM attempts
+         WHERE item_id LIKE '%-t%' AND date(created_at) >= date('now','-14 days')`
+      ).get();
+      if (mcq && mcq.r != null && mcq.r >= 80) strengths.push('选择题识别能力不错');
+    }
+
+    // --- 一句话总结 ---
+    let summary = '还在积累数据，多做几天就能看出画像。';
+    if (topWeak.length > 0) {
+      const weakStr = topWeak.join('、');
+      // 看当前在攻哪块：最近学的课
+      const cur = db.prepare(
+        `SELECT lesson_id FROM lesson_state WHERE p2_done = 0
+         ORDER BY updated_at DESC LIMIT 1`
+      ).get();
+      const lessonName = cur ? cur.lesson_id : '';
+      if (/u3/.test(lessonName)) {
+        summary = `正在巩固 Unit 3（比较级/最高级），${weakStr}是目前的短板。`;
+      } else if (/u4/.test(lessonName)) {
+        summary = `正在学 Unit 4（被动语态），${weakStr}需要多注意。`;
+      } else {
+        summary = `目前${weakStr}是短板，正在针对性加强。`;
+      }
+    } else if (strengths.length > 0) {
+      summary = `学得不错，${strengths.join('、')}，继续保持。`;
+    }
+
+    res.json({
+      ok: true,
+      profile: { summary, weaknesses: topWeak, strengths },
+      trend,
+      weakness_list,
+      weekly,
+    });
+  } catch (e) {
+    res.json({ ok: false, error: String(e && e.message || e) });
+  }
+});
+
 // ---- 称号系统（2026-10-12 Elouise：mastery-based，不是打卡）----
 // 称号必须绑定真实掌握度，孩子看到称号就知道"我真学会了什么"
 const TITLE_DEFS = [
