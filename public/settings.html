@@ -52,7 +52,7 @@
   <p>控制课程里阅读材料、句子点读、音标例词的播放速度。调慢一点听得更清楚，调快一点节省时间。</p>
   <div class="speed-row">
     <span style="font-size:14px;color:#888;">慢</span>
-    <input type="range" id="speedRange" min="0.5" max="1.5" step="0.1" value="1.0">
+    <input type="range" id="speedRange" min="0.5" max="2.0" step="0.1" value="1.0">
     <span style="font-size:14px;color:#888;">快</span>
     <div class="speed-val" id="speedVal">1.0x</div>
   </div>
@@ -72,7 +72,7 @@
   <p>调大调小课程里的字。眼睛累了就调大一点。</p>
   <div class="speed-row">
     <span style="font-size:14px;color:#888;">小</span>
-    <input type="range" id="fontRange" min="0.8" max="1.4" step="0.1" value="1.0">
+    <input type="range" id="fontRange" min="0.8" max="1.5" step="0.1" value="1.0">
     <span style="font-size:14px;color:#888;">大</span>
     <div class="speed-val" id="fontVal">1.0x</div>
   </div>
@@ -105,7 +105,7 @@
 function getSpeed() {
   try {
     const v = parseFloat(localStorage.getItem('xh_play_speed'));
-    return (v >= 0.5 && v <= 1.5) ? v : 1.0;
+    return (v >= 0.5 && v <= 2.0) ? v : 1.0;
   } catch { return 1.0; }
 }
 function setSpeed(v) {
@@ -134,7 +134,7 @@ setSpeed(getSpeed());
 function getFontSize() {
   try {
     const v = parseFloat(localStorage.getItem('xh_font_size'));
-    return (v >= 0.8 && v <= 1.4) ? v : 1.0;
+    return (v >= 0.8 && v <= 1.5) ? v : 1.0;
   } catch { return 1.0; }
 }
 function setFontSize(v) {
