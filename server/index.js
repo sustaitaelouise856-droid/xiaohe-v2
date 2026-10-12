@@ -1338,7 +1338,8 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
   if (step && step.kind === 'short') predicted = matchPredicted(step, body.answer);
   const r = attempts.submitAttempt({ item_id: body.item_id, answer: body.answer,
     session_id: body.session_id, saw_feedback: body.saw_feedback,
-    elapsed_ms: body.elapsed_ms, copied: body.copied ? 1 : 0, predicted });
+    elapsed_ms: body.elapsed_ms, copied: body.copied ? 1 : 0, predicted,
+    pasted: body.pasted ? 1 : 0 });
   if (r.error === 'no_item') return res.status(404).json({ ok: false, error: 'no_item' });
   // h 版（2026-10-03）：验证阶段第 2 次答错 → 403 retry_exhausted + show_answer。
   // 先判分再拦：答对（correct_retry）照常放行，只有"又答错了"才给保底出口。
