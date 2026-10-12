@@ -26,6 +26,14 @@
   #reviewBar button { flex:1; padding:14px; font-size:17px; border-radius:12px; border:0; cursor:pointer; }
   #btnReview { background:var(--blue); color:#fff; }
   #btnSpell { background:#e37400; color:#fff; } /* 拼写模式：橙色 */
+  #btnMatch { background:#7b1fa2; color:#fff; } /* 消消乐：紫色 */
+  /* 消消乐卡片 */
+  .match-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:16px 0; }
+  .match-card { background:#f5f5f5; border:2px solid var(--line); border-radius:12px; padding:16px 8px; text-align:center; font-size:16px; font-weight:600; cursor:pointer; min-height:60px; display:flex; align-items:center; justify-content:center; transition:all .2s; }
+  .match-card.selected { border-color:var(--blue); background:#e8f0fe; transform:scale(1.05); }
+  .match-card.matched { opacity:0; pointer-events:none; transform:scale(0.8); }
+  .match-card.wrong { border-color:#c5221f; background:#fce8e6; animation:shake .3s; }
+  @keyframes shake { 0%,100%{transform:translateX(0);} 25%{transform:translateX(-5px);} 75%{transform:translateX(5px);} }
   /* 复习卡片 */
   #revOverlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:50; align-items:center; justify-content:center; padding:20px; }
   #revCard { background:#fff; border-radius:18px; padding:32px 24px; max-width:420px; width:100%; text-align:center; }
@@ -67,7 +75,7 @@
   <span class="count" id="count"></span>
 </div>
 <div id="wrap"><div id="list"></div></div>
-<div id="reviewBar"><button id="btnReview">📖 开始复习</button><button id="btnSpell">✏️ 拼写模式</button></div>
+<div id="reviewBar"><button id="btnReview">📖 开始复习</button><button id="btnSpell">✏️ 拼写模式</button><button id="btnMatch" style="background:#7b1fa2;color:#fff;">🎮 消消乐</button></div>
 
 <div id="revOverlay">
   <div id="revCard">
@@ -298,6 +306,79 @@ function checkSpell() {
     spellQi++;
     showSpell();
   }, correct ? 600 : 1800);
+}
+// ---- 单词消消乐（2026-10-12加）：英文配中文，连连看 ----
+// 站长剧情：这是"广播站连连看"，把英文和中文配成对消掉
+let matchFirst = null, matchDone = 0, matchTotal = 0;
+document.getElementById('btnMatch').onclick = () => {
+  const v = getVocab();
+  let words = Object.keys(v).filter(w => v[w].zh);
+  if (words.length < 2) { alert('生词太少，先去课程里加点词吧'); return; }
+  words = words.sort(() => Math.random() - 0.5).slice(0, 6);
+  matchTotal = words.length; matchDone = 0; matchFirst = null;
+  const cards = [];
+  words.forEach(w => {
+    cards.push({ word: w, text: w, type: 'en' });
+    cards.push({ word: w, text: v[w].zh, type: 'zh' });
+  });
+  cards.sort(() => Math.random() - 0.5);
+  document.getElementById('revProg').textContent = `🎮 消消乐：配对 ${matchDone}/${matchTotal}`;
+  document.getElementById('revWord').textContent = '';
+  document.getElementById('revPh').textContent = '';
+  document.getElementById('revZh').style.display = 'none';
+  document.getElementById('revFlip').style.display = 'none';
+  document.getElementById('revBtns').style.display = 'none';
+  document.getElementById('revDone').style.display = 'none';
+  const si = document.getElementById('spellInput'); if (si) si.style.display = 'none';
+  const sb = document.getElementById('spellCheckBtn'); if (sb) sb.style.display = 'none';
+  let grid = document.getElementById('matchGrid');
+  if (!grid) {
+    grid = document.createElement('div');
+    grid.id = 'matchGrid';
+    grid.className = 'match-grid';
+    document.getElementById('revCard').insertBefore(grid, document.getElementById('revFlip'));
+  }
+  grid.style.display = 'grid';
+  grid.innerHTML = cards.map((c, i) =>
+    `<div class="match-card" data-word="${c.word.replace(/"/g,'&quot;')}" data-idx="${i}">${esc(c.text)}</div>`
+  ).join('');
+  grid.querySelectorAll('.match-card').forEach(card => {
+    card.onclick = () => matchClick(card);
+  });
+  document.getElementById('revOverlay').style.display = 'flex';
+};
+function matchClick(card) {
+  if (card.classList.contains('matched') || card.classList.contains('selected')) return;
+  card.classList.add('selected');
+  try { speak(card.dataset.word); } catch(e) {}
+  if (!matchFirst) { matchFirst = card; return; }
+  if (matchFirst.dataset.word === card.dataset.word && matchFirst !== card) {
+    const f = matchFirst; matchFirst = null;
+    setTimeout(() => {
+      f.classList.add('matched'); card.classList.add('matched');
+      f.classList.remove('selected'); card.classList.remove('selected');
+      matchDone++;
+      document.getElementById('revProg').textContent = `🎮 消消乐：配对 ${matchDone}/${matchTotal}`;
+      if (matchDone >= matchTotal) {
+        setTimeout(() => {
+          document.getElementById('matchGrid').style.display = 'none';
+          document.getElementById('revProg').textContent = '🎉 全部配对成功！';
+          document.getElementById('revWord').textContent = `✅ ${matchTotal}组全对`;
+          const done = document.getElementById('revDone');
+          done.style.display = 'block';
+          done.innerHTML = `太棒了！${matchTotal}组单词全部配对<br><button onclick="document.getElementById('revOverlay').style.display='none'" style="margin-top:12px;padding:10px 24px;border-radius:10px;border:0;background:#7b1fa2;color:#fff;font-size:16px;">再来一局</button>`;
+        }, 400);
+      }
+    }, 300);
+  } else {
+    const f = matchFirst; matchFirst = null;
+    setTimeout(() => {
+      f.classList.add('wrong'); card.classList.add('wrong');
+      setTimeout(() => {
+        f.classList.remove('selected','wrong'); card.classList.remove('selected','wrong');
+      }, 500);
+    }, 200);
+  }
 }
 render();
 </script>
