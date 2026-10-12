@@ -6,18 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>小禾英语 · 成长档案</title>
 <style>
-  :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --red:#d93025; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa; }
+  :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --red:#d93025; --ink:#202124; --muted:#5f6368; --line:#e1e5eb; --bg:#f0f4fa; --gold:#f2c14e; }
   * { box-sizing:border-box; }
-  body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); font-size:22px; line-height:1.7; margin:0; padding-bottom:90px; }
-  #topbar { background:#fff; border-bottom:1px solid var(--line); padding:14px 20px; font-weight:700; font-size:26px; }
-  #wrap { max-width:900px; margin:0 auto; padding:20px 16px 40px; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; margin-bottom:18px; }
-  .card h2 { font-size:25px; margin:0 0 12px; }
-  .summary { font-size:23px; line-height:1.8; }
-  .tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
-  .tag { font-size:20px; padding:6px 18px; border-radius:20px; }
-  .tag.weak { background:#fce8e6; color:#a50e0e; border:1px solid #f5c6c0; }
-  .tag.strong { background:#e6f4ea; color:#137333; border:1px solid #b7e0c3; }
+  body { font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif; background:linear-gradient(180deg,#f0f4fa 0%,#f9fbfd 60%,#f0f4fa 100%); color:var(--ink); font-size:22px; line-height:1.7; margin:0; padding-bottom:90px; -webkit-font-smoothing:antialiased; }
+  #topbar { background:rgba(255,255,255,.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); padding:16px 20px; font-weight:800; font-size:26px; letter-spacing:2px; box-shadow:0 2px 12px rgba(60,64,67,.06); }
+  #wrap { max-width:900px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:#fff; border:1px solid rgba(225,229,235,.7); border-radius:20px; padding:26px; margin-bottom:20px; box-shadow:0 1px 3px rgba(60,64,67,.08),0 1px 2px rgba(60,64,67,.06); transition:box-shadow .3s ease; }
+  .card:hover { box-shadow:0 6px 18px rgba(60,64,67,.10),0 2px 8px rgba(60,64,67,.08); }
+  .card h2 { font-size:24px; margin:0 0 16px; font-weight:800; letter-spacing:.5px; }
+  /* 画像卡片：顶部彩带 + 更有层次的文案 */
+  #profileCard { position:relative; overflow:hidden; }
+  #profileCard::before { content:""; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#1a73e8,#6c3fd4,#e8710a); }
+  #profileCard h2 { margin-top:8px; }
+  .summary { font-size:22px; line-height:1.9; color:#3c4043; }
+  .tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .tag { font-size:19px; font-weight:600; padding:8px 20px; border-radius:24px; box-shadow:0 1px 4px rgba(60,64,67,.10); }
+  .tag.weak { background:linear-gradient(135deg,#fff5f5,#fce8e6); color:#a50e0e; border:1px solid #f5c6c0; }
+  .tag.strong { background:linear-gradient(135deg,#f0faf3,#e6f4ea); color:#137333; border:1px solid #b7e0c3; }
   .stat-row { display:flex; gap:12px; margin-top:8px; }
   .stat { flex:1; text-align:center; background:#f1f3f4; border-radius:12px; padding:14px 6px; }
   .stat b { display:block; font-size:32px; color:var(--blue); }
@@ -27,24 +32,38 @@
   .wtag { font-weight:700; flex:1; }
   .wcount { background:var(--orange); color:#fff; border-radius:12px; padding:2px 14px; font-size:19px; }
   .wlast { color:var(--muted); font-size:18px; }
-  .title-wall { display:flex; flex-wrap:wrap; gap:12px; }
-  .title-item { width:30%; min-width:100px; text-align:center; padding:14px 6px; border-radius:14px; border:2px solid var(--line); }
-  .title-item .ic { font-size:38px; }
-  .title-item .nm { font-size:18px; margin-top:6px; line-height:1.4; }
-  .title-item.earned { border-color:#f2c14e; background:#fffbe6; }
-  .title-item.locked { opacity:.45; filter:grayscale(.8); }
+  .title-wall { display:flex; flex-wrap:wrap; gap:14px; }
+  .title-item { width:30%; min-width:100px; text-align:center; padding:18px 8px 16px; border-radius:18px; border:2px solid var(--line); background:linear-gradient(180deg,#ffffff,#f8fafd); box-shadow:0 2px 8px rgba(60,64,67,.08); transition:transform .18s ease, box-shadow .25s ease; }
+  .title-item:active { transform:scale(.96); }
+  .title-item .ic { font-size:44px; filter:drop-shadow(0 2px 4px rgba(60,64,67,.15)); }
+  .title-item .nm { font-size:19px; font-weight:700; margin-top:8px; line-height:1.4; }
+  .title-item .cond { font-size:15px; color:var(--muted); margin-top:6px; line-height:1.4; }
+  .title-item.earned { border-color:var(--gold); background:linear-gradient(160deg,#fffbe6,#fff3c4); box-shadow:0 4px 14px rgba(242,193,78,.35), inset 0 1px 0 rgba(255,255,255,.6); }
+  .title-item.locked { opacity:.72 !important; background:#f1f3f4; border:2px dashed #c8cdd4; box-shadow:none; }
   /* 签到日历 */
-  .cal-grid .cal-head { text-align:center; font-size:12px; color:var(--muted); padding:4px; }
-  .cal-grid .cal-day { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:14px; border-radius:8px; background:#f5f5f5; }
-  .cal-grid .cal-day.checked { background:#e6f4ea; color:#137333; font-weight:700; }
-  .cal-grid .cal-day.today { border:2px solid #1a73e8; font-weight:700; }
-  .cal-grid .cal-day.future { opacity:.3; }
-  .cal-grid .cal-day.empty { background:transparent; }
-  .title-item .cond { font-size:15px; color:var(--muted); margin-top:4px; line-height:1.4; }
+  .cal-grid { gap:6px !important; }
+  .cal-grid .cal-head { text-align:center; font-size:13px; font-weight:600; color:var(--muted); padding:6px 4px; }
+  .cal-grid .cal-day { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:500; border-radius:12px; background:#f3f5f9; border:1px solid rgba(225,229,235,.6); transition:transform .15s ease; }
+  .cal-grid .cal-day.checked { background:linear-gradient(135deg,#e6f4ea,#cdeed6); color:#137333; font-weight:800; border-color:#b7e0c3; box-shadow:0 2px 6px rgba(30,142,62,.18); }
+  .cal-grid .cal-day.today { border:2px solid var(--blue); font-weight:800; box-shadow:0 0 0 3px rgba(26,115,232,.18); }
+  .cal-grid .cal-day.future { opacity:.35; }
+  .cal-grid .cal-day.empty { background:transparent; border-color:transparent; }
   #chart { width:100%; height:220px; }
   .legend { display:flex; gap:20px; justify-content:center; font-size:18px; color:var(--muted); margin-top:8px; }
   .dot { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:6px; }
-  .empty { color:var(--muted); text-align:center; padding:16px; font-size:20px; }
+  .empty { color:var(--muted); text-align:center; padding:20px 16px; font-size:20px; }
+  /* 签到按钮：渐变主按钮质感（覆盖内联样式） */
+  #checkinBtn { background:linear-gradient(135deg,#1a73e8,#4a8ef7) !important; border-radius:14px !important; box-shadow:0 4px 14px rgba(26,115,232,.35), inset 0 1px 0 rgba(255,255,255,.25) !important; font-weight:700 !important; letter-spacing:1px; }
+  #checkinBtn:disabled { box-shadow:none !important; }
+  #streakN { font-size:22px !important; }
+  /* 复习加练卡片：统一样式质感（覆盖内联样式） */
+  .card a[href^="/lesson?lesson="] { border-radius:16px !important; border:1px solid rgba(225,229,235,.8) !important; box-shadow:0 2px 8px rgba(60,64,67,.08) !important; transition:transform .18s ease, box-shadow .25s ease !important; }
+  .card a[href^="/lesson?lesson="]:active { transform:scale(.96) !important; box-shadow:0 1px 4px rgba(60,64,67,.10) !important; }
+  .card a[href="/lesson?lesson=review1"], .card a[href="/lesson?lesson=review2"], .card a[href="/lesson?lesson=review3"] { background:linear-gradient(135deg,#e8f0fe,#d9e9fd) !important; }
+  .card a[href="/lesson?lesson=u3-consolidate"] { background:linear-gradient(135deg,#fff3e0,#ffe4bd) !important; }
+  /* 播客卡片：更有吸引力（覆盖内联样式） */
+  #podcastList > div { border-radius:18px !important; background:linear-gradient(135deg,#f6ecfa,#ead2f4) !important; border:1px solid rgba(186,104,200,.35) !important; box-shadow:0 4px 14px rgba(123,31,162,.12) !important; transition:transform .18s ease !important; }
+  #podcastList > div:active { transform:scale(.98) !important; }
   .tabbar { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e8eaed; display:flex; padding:8px 0 calc(8px + env(safe-area-inset-bottom)); z-index:50; }
   .tabbar a { flex:1; text-align:center; text-decoration:none; color:#5f6368; font-size:11px; display:flex; flex-direction:column; align-items:center; gap:2px; }
   .tabbar a .ticon { font-size:22px; }
@@ -52,11 +71,17 @@
   /* 深色模式 */
   html[data-theme="dark"] body { background:#1a1a1a; color:#f0f0f0; }
   html[data-theme="dark"] #topbar, html[data-theme="dark"] .card { background:#2d2d2d; border-color:#555; }
-  html[data-theme="dark"] .stat { background:#3a3a3a; }
-  html[data-theme="dark"] .stat span { color:#bbb; }
+  html[data-theme="dark"] #profileCard::before { opacity:.75; }
+  html[data-theme="dark"] .summary { color:#d8d8d8; }
   html[data-theme="dark"] .tag.weak { background:#4a2c2c; color:#ffb4a8; border-color:#7a3a3a; }
   html[data-theme="dark"] .tag.strong { background:#1e3a2a; color:#a8e6b4; border-color:#2e5a3a; }
-  html[data-theme="dark"] .title-item.earned { background:#3a3220; border-color:#a8842e; }
+  html[data-theme="dark"] .title-item { background:#333; border-color:#555; }
+  html[data-theme="dark"] .title-item.earned { background:linear-gradient(160deg,#3a3220,#4a3d22); border-color:#a8842e; }
+  html[data-theme="dark"] .title-item.locked { background:#262626 !important; border-color:#555; }
+  html[data-theme="dark"] .cal-grid .cal-day { background:#333; border-color:#4a4a4a; }
+  html[data-theme="dark"] .cal-grid .cal-day.checked { background:linear-gradient(135deg,#1e3a2a,#24462e); border-color:#2e5a3a; }
+  html[data-theme="dark"] .card a[href^="/lesson?lesson="] { background:#333 !important; border-color:#555 !important; }
+  html[data-theme="dark"] #podcastList > div { background:linear-gradient(135deg,#3a2a4a,#2e2240) !important; border-color:#5a4a6a !important; }
   html[data-theme="dark"] .tabbar { background:#2d2d2d; border-color:#555; }
   html[data-theme="dark"] .tabbar a { color:#bbb; }
   html[data-theme="dark"] .wlast, html[data-theme="dark"] .title-item .cond { color:#999; }
