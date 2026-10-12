@@ -48,8 +48,9 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   let verdict = r.verdict;
   let independent = 0;
   let finalHelped = helped;
-  if (copied && contentOk) {
-    // 抄写（g 版保底）：看过答案后照着写对——记有帮助完成，不计独立完成，记"看答案过"弱点；
+  if (copied) {
+    // 抄写（g 版保底）：看过答案后照着写——直接放行，不卡孩子（2026-10-12修：之前要求完全一致，标点差一个都卡死）
+    // 记有帮助完成，不计独立完成，记"看答案过"弱点；
     // detail 用最近一次 wrong 的明细（items 原样带上，供复盘归因）再加 copied:true
     let d = null;
     try {
