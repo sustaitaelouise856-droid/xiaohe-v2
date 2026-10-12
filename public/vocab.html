@@ -24,6 +24,7 @@
   #reviewBar { position:fixed; bottom:64px; left:0; right:0; background:#fff; border-top:1px solid var(--line); padding:12px 16px; display:flex; gap:10px; z-index:20; }
   #reviewBar button { flex:1; padding:14px; font-size:17px; border-radius:12px; border:0; cursor:pointer; }
   #btnReview { background:var(--blue); color:#fff; }
+  #btnSpell { background:#e37400; color:#fff; } /* 拼写模式：橙色 */
   /* 复习卡片 */
   #revOverlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:50; align-items:center; justify-content:center; padding:20px; }
   #revCard { background:#fff; border-radius:18px; padding:32px 24px; max-width:420px; width:100%; text-align:center; }
@@ -64,7 +65,7 @@
   <span class="count" id="count"></span>
 </div>
 <div id="wrap"><div id="list"></div></div>
-<div id="reviewBar"><button id="btnReview">📖 开始复习</button></div>
+<div id="reviewBar"><button id="btnReview">📖 开始复习</button><button id="btnSpell">✏️ 拼写模式</button></div>
 
 <div id="revOverlay">
   <div id="revCard">
@@ -179,6 +180,102 @@ document.getElementById('revYes').onclick = () => revMark(true);
 document.getElementById('revClose').onclick = () => {
   document.getElementById('revOverlay').style.display = 'none'; render();
 };
+// ---- 拼写模式（2026-10-12加）：听音/看中文，打英文 ----
+// 站长剧情：这是"广播站拼写大赛"，站长报中文，你打出英文
+let spellQueue = [], spellQi = 0, spellScore = 0;
+document.getElementById('btnSpell').onclick = () => {
+  const v = getVocab();
+  const words = Object.keys(v);
+  if (!words.length) return;
+  spellQueue = words.sort(() => Math.random() - 0.5); // 随机顺序
+  spellQi = 0; spellScore = 0;
+  showSpell();
+  document.getElementById('revOverlay').style.display = 'flex';
+};
+function showSpell() {
+  const v = getVocab();
+  // 隐藏复习卡片元素，显示拼写界面
+  document.getElementById('revProg').textContent = '';
+  document.getElementById('revWord').textContent = '';
+  document.getElementById('revPh').textContent = '';
+  document.getElementById('revZh').style.display = 'none';
+  document.getElementById('revFlip').style.display = 'none';
+  document.getElementById('revBtns').style.display = 'none';
+  document.getElementById('revDone').style.display = 'none';
+
+  if (spellQi >= spellQueue.length) {
+    // 完成
+    document.getElementById('revProg').textContent = `完成！`;
+    document.getElementById('revWord').textContent = `✅ ${spellScore} / ${spellQueue.length}`;
+    document.getElementById('revWord').style.fontSize = '28px';
+    const done = document.getElementById('revDone');
+    done.style.display = 'block';
+    done.innerHTML = `拼写得分：${spellScore}/${spellQueue.length}<br><button onclick="document.getElementById('revOverlay').style.display='none'" style="margin-top:12px;padding:10px 24px;border-radius:10px;border:0;background:var(--blue);color:#fff;font-size:16px;">好的</button>`;
+    return;
+  }
+  const w = spellQueue[spellQi], e = v[w] || {};
+  document.getElementById('revProg').textContent = `拼写 ${spellQi+1} / ${spellQueue.length} · 得分 ${spellScore}`;
+  document.getElementById('revWord').textContent = '🔊 听发音';
+  document.getElementById('revWord').style.fontSize = '24px';
+  document.getElementById('revWord').onclick = () => speak(w);
+  document.getElementById('revPh').textContent = e.zh || '';
+  // 输入框
+  let input = document.getElementById('spellInput');
+  if (!input) {
+    input = document.createElement('input');
+    input.id = 'spellInput';
+    input.placeholder = '听发音，打出英文单词';
+    input.autocomplete = 'off';
+    input.style.cssText = 'width:100%;padding:14px;font-size:20px;border:2px solid var(--line);border-radius:12px;margin:16px 0;text-align:center;';
+    document.getElementById('revCard').insertBefore(input, document.getElementById('revFlip'));
+  }
+  input.value = ''; input.style.display = '';
+  input.onkeydown = (ev) => { if (ev.key === 'Enter') checkSpell(); };
+
+  let btn = document.getElementById('spellCheckBtn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'spellCheckBtn';
+    btn.textContent = '提交';
+    btn.style.cssText = 'width:100%;padding:14px;font-size:17px;border-radius:12px;border:0;background:#e37400;color:#fff;cursor:pointer;margin-top:8px;';
+    btn.onclick = checkSpell;
+    document.getElementById('revCard').insertBefore(btn, document.getElementById('revFlip'));
+  }
+  btn.style.display = '';
+  speak(w); // 自动播发音
+  setTimeout(() => input.focus(), 300);
+}
+function checkSpell() {
+  const v = getVocab();
+  const w = spellQueue[spellQi];
+  const input = document.getElementById('spellInput');
+  const given = (input.value || '').trim().toLowerCase();
+  const correct = given === w.toLowerCase();
+  if (correct) {
+    spellScore++;
+    if (v[w]) { v[w].spell_ok = (v[w].spell_ok || 0) + 1; saveVocab(v); }
+    input.style.borderColor = '#137333';
+    input.style.background = '#e6f4ea';
+  } else {
+    if (v[w]) { v[w].spell_ok = 0; saveVocab(v); }
+    input.style.borderColor = '#c5221f';
+    input.style.background = '#fce8e6';
+    // 显示正确答案
+    setTimeout(() => {
+      input.value = w;
+      input.style.borderColor = 'var(--line)';
+      input.style.background = '#fff8e1';
+    }, 800);
+  }
+  setTimeout(() => {
+    input.style.display = 'none';
+    document.getElementById('spellCheckBtn').style.display = 'none';
+    document.getElementById('revWord').onclick = null;
+    document.getElementById('revWord').style.fontSize = '';
+    spellQi++;
+    showSpell();
+  }, correct ? 600 : 1800);
+}
 render();
 </script>
 
