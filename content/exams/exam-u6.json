@@ -1,0 +1,1081 @@
+{
+  "id": "exam-u6",
+  "unit": 6,
+  "title": "Unit 6 单元测验卷",
+  "subtitle": "古代故事 · 现在完成时 (since/for)",
+  "total_score": 140,
+  "sections": [
+    {
+      "id": "listening",
+      "title": "一、听说",
+      "total": 30,
+      "parts": [
+        {
+          "id": "read_aloud",
+          "title": "一、模仿朗读（8分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "speak",
+              "score": 8,
+              "stem": "请朗读下面的短文。",
+              "passage": "The Great Wall is very old. People began to build it more than two thousand years ago. It has stood there for a very long time. Many visitors have come to see it since then. I have wanted to visit the Great Wall since I was a little child. It is one of the greatest wonders in the world.",
+              "speak_hint": "注意 since 和 for 的发音，语速适中，语音语调自然。"
+            }
+          ]
+        },
+        {
+          "id": "listen_choice",
+          "title": "二、听后选择（9分，每小题1.5分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1.5,
+              "stem": "How long has the boy learned English?",
+              "options": [
+                "Since three years ago",
+                "For five years",
+                "Since he was five",
+                "For three years"
+              ],
+              "answer": 3,
+              "audio": "",
+              "script": "W: How long have you learned English, Tom? M: I have learned it for three years. I started in 2023. Q: How long has the boy learned English?"
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1.5,
+              "stem": "When did the girl move to Beijing?",
+              "options": [
+                "Since 2020",
+                "In 2020",
+                "For six years",
+                "Six years ago"
+              ],
+              "answer": 0,
+              "audio": "",
+              "script": "M: Have you lived in Beijing for a long time? W: Yes, I have lived here since 2020. Q: When did the girl move to Beijing?"
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1.5,
+              "stem": "What has the woman done?",
+              "options": [
+                "She has visited the Great Wall",
+                "She has built the Great Wall",
+                "She has lived near the Great Wall",
+                "She has drawn the Great Wall"
+              ],
+              "answer": 0,
+              "audio": "",
+              "script": "M: Have you ever visited the Great Wall? W: Yes, I have visited it twice. It is wonderful. Q: What has the woman done?"
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1.5,
+              "stem": "How long has the Dragon Boat Festival been celebrated?",
+              "options": [
+                "Since two thousand years",
+                "For over two thousand years",
+                "For two thousand years ago",
+                "Since over two thousand years"
+              ],
+              "answer": 1,
+              "audio": "",
+              "script": "W: The Dragon Boat Festival has a long history. People have celebrated it for over two thousand years. Q: How long has the Dragon Boat Festival been celebrated?"
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1.5,
+              "stem": "What does the boy want to know?",
+              "options": [
+                "Where his grandpa keeps the old photos",
+                "Why his grandpa likes old photos",
+                "How long his grandpa has kept the old photos",
+                "When his grandpa took the old photos"
+              ],
+              "answer": 2,
+              "audio": "",
+              "script": "M: Grandpa, how long have you kept these old photos? W: Since I was young. They are fifty years old now. Q: What does the boy want to know?"
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 1.5,
+              "stem": "Which sentence is correct?",
+              "options": [
+                "I have known him for 2019",
+                "I know him since five years",
+                "I have known him since five years",
+                "I have known him since 2019"
+              ],
+              "answer": 3,
+              "audio": "",
+              "script": "W: Which sentence is correct? A: I have known him since 2019. B: I have known him for 2019. Q: Which sentence is correct?"
+            }
+          ]
+        },
+        {
+          "id": "listen_answer",
+          "title": "三、听短文回答问题（4分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "stem": "How long have people told the story of Yu Gong?",
+              "options": [
+                "Since thousands of years",
+                "For thousands of years",
+                "For a thousand years ago",
+                "About one hundred years"
+              ],
+              "answer": 1,
+              "audio": "",
+              "script": "Yu Gong was an old man who lived a very long time ago. He wanted to move two big mountains. People have told this story for thousands of years. It teaches us never to give up. Questions: 1. How long have people told the story of Yu Gong? 2. What did Yu Gong want to do? 3. Where did Yu Gong live? 4. What does the story teach us?"
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "What did Yu Gong want to do?",
+              "options": [
+                "Build a great wall",
+                "Plant many trees",
+                "Dig a long river",
+                "Move two big mountains"
+              ],
+              "answer": 3,
+              "audio": "",
+              "script": "（同上）"
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "When did Yu Gong live?",
+              "options": [
+                "Two thousand years ago",
+                "In 2020",
+                "A very long time ago",
+                "Last year"
+              ],
+              "answer": 2,
+              "audio": "",
+              "script": "（同上）"
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "What does the story teach us?",
+              "options": [
+                "Never give up",
+                "Work alone",
+                "Move mountains",
+                "Tell stories"
+              ],
+              "answer": 0,
+              "audio": "",
+              "script": "（同上）"
+            }
+          ]
+        },
+        {
+          "id": "role_play",
+          "title": "四、角色扮演（9分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "speak",
+              "score": 7,
+              "stem": "情景：你是导游，正在向游客介绍长城。请复述下面的介绍词。",
+              "passage": "Welcome to the Great Wall. It is more than two thousand years old. People have protected it for a very long time. Millions of visitors have come here since it opened to the public. I have worked here for ten years. I hope you will enjoy your visit today.",
+              "speak_hint": "用自己的话复述介绍内容，可适当增减细节，但关键信息（历史、保护、游客、工作时间）不能遗漏。"
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "情景：游客想问长城有多长。下面哪一句问法正确？",
+              "options": [
+                "How long has the Great Wall?",
+                "How far is the Great Wall?",
+                "How old has the Great Wall?",
+                "How long is the Great Wall?"
+              ],
+              "answer": 3,
+              "audio": ""
+            },
+            {
+              "num": 3,
+              "type": "fill",
+              "score": 1,
+              "stem": "游客问：How long have you worked here? 你想回答“十年了”，请补全：I have worked here ______.",
+              "answer": "for ten years",
+              "hint": "用 for + 时间段回答。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "written",
+      "title": "二、笔试",
+      "total": 110,
+      "parts": [
+        {
+          "id": "grammar_choice",
+          "title": "五、语法选择（15分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "stem": "The Great Wall has stood there ______ more than 2,000 years.",
+              "options": [
+                "since",
+                "from",
+                "at",
+                "for"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "I have lived in this village ______ I was born.",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "at"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "—How long have you kept this old book? —______ 2019.",
+              "options": [
+                "For",
+                "From",
+                "Since",
+                "In"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "People have celebrated the Dragon Boat Festival ______ over two thousand years.",
+              "options": [
+                "since",
+                "from",
+                "for",
+                "at"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1,
+              "stem": "She has learned Chinese ______ three years.",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "in"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 1,
+              "stem": "—______ have you known Mr. Li? —Since last year.",
+              "options": [
+                "How often",
+                "How far",
+                "How much",
+                "How long"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 1,
+              "stem": "My grandpa has collected stamps ______ he was young.",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "by"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 1,
+              "stem": "They have built three new schools in our town ______ 2020.",
+              "options": [
+                "for",
+                "from",
+                "since",
+                "at"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 1,
+              "stem": "I ______ my hometown for five years. I miss it very much.",
+              "options": [
+                "left",
+                "leave",
+                "will leave",
+                "have left"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 1,
+              "stem": "—Have you ever ______ Yu Gong's story? —Yes, I have.",
+              "options": [
+                "heard of",
+                "heard from",
+                "listened",
+                "listened to"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 11,
+              "type": "choice",
+              "score": 1,
+              "stem": "He has ______ in Beijing since 2018.",
+              "options": [
+                "lived",
+                "live",
+                "living",
+                "lives"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 12,
+              "type": "choice",
+              "score": 1,
+              "stem": "We have ______ the museum twice this year.",
+              "options": [
+                "visit",
+                "visited",
+                "visiting",
+                "visits"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 13,
+              "type": "choice",
+              "score": 1,
+              "stem": "The old temple ______ for hundreds of years. It is still beautiful.",
+              "options": [
+                "has stood",
+                "stood",
+                "stands",
+                "will stand"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 14,
+              "type": "choice",
+              "score": 1,
+              "stem": "—Where is your father? —He ______ to Shanghai. He will be back tomorrow.",
+              "options": [
+                "has been",
+                "went",
+                "has gone",
+                "goes"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 15,
+              "type": "choice",
+              "score": 1,
+              "stem": "I have wanted to see the Terracotta Warriors ______ I was a little girl.",
+              "options": [
+                "for",
+                "from",
+                "until",
+                "since"
+              ],
+              "answer": 3
+            }
+          ]
+        },
+        {
+          "id": "cloze",
+          "title": "六、语言运用（10分，每小题1分）",
+          "passage": "The Dragon Boat Festival is one of the oldest festivals in China. People have celebrated it __1__ more than two thousand years. It is __2__ memory of Qu Yuan, a great poet. Every year __3__ the festival, people eat zongzi and watch dragon boat races. My family has watched the races __4__ I was a little child. Last year, my brother __5__ part in a race for the first time. He has practised hard __6__ then. This year he wants __7__ again. Many visitors __8__ come to our town since last week. They all want to watch the exciting races. The festival __9__ people together and makes everyone happy. I __10__ never missed it.",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "since",
+                "for",
+                "from",
+                "at"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "at",
+                "on",
+                "of",
+                "in"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "in",
+                "on",
+                "at",
+                "for"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "by"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "took",
+                "takes",
+                "has taken",
+                "take"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "for",
+                "from",
+                "at",
+                "since"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "win",
+                "winning",
+                "to win",
+                "wins"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "has",
+                "had",
+                "having",
+                "have"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "bring",
+                "brought",
+                "brings",
+                "bringing"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 1,
+              "stem": "",
+              "options": [
+                "have",
+                "has",
+                "had",
+                "having"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "reading1",
+          "title": "七、阅读理解一（30分，每小题2分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 2,
+              "stem": "How old is the Great Wall?",
+              "options": [
+                "About 1,000 years old",
+                "About 500 years old",
+                "Less than 100 years old",
+                "More than 2,000 years old"
+              ],
+              "answer": 3,
+              "passage": "The Great Wall is one of the greatest wonders of the world. People began to build it more than two thousand years ago. It is over 21,000 kilometres long. For hundreds of years, it protected China from enemies. Today, millions of visitors have come to see it since it opened to the public. Many of them have walked on the wall and taken photos. The Great Wall has stood there for a very long time, and it will stand there for many more years."
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 2,
+              "stem": "How long is the Great Wall?",
+              "options": [
+                "About 2,000 kilometres",
+                "Over 21,000 kilometres",
+                "About 1,000 kilometres",
+                "Over 12,000 kilometres"
+              ],
+              "answer": 1,
+              "passage": "（同上）"
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 2,
+              "stem": "What was the Great Wall used for in the past?",
+              "options": [
+                "To welcome visitors",
+                "To take photos",
+                "To build houses",
+                "To protect China from enemies"
+              ],
+              "answer": 3,
+              "passage": "（同上）"
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 2,
+              "stem": "The underlined word \"wonders\" means ______.",
+              "options": [
+                "墙壁",
+                "奇迹",
+                "敌人",
+                "照片"
+              ],
+              "answer": 1,
+              "passage": "（同上）"
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 2,
+              "stem": "Which is TRUE about the Great Wall?",
+              "options": [
+                "It was built 500 years ago",
+                "Few people visit it today",
+                "It has stood there for a very long time",
+                "It is less than 1,000 km long"
+              ],
+              "answer": 2,
+              "passage": "（同上）"
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 2,
+              "stem": "What did Yu Gong want to do?",
+              "options": [
+                "Build a wall",
+                "Plant trees",
+                "Move two mountains",
+                "Dig a well"
+              ],
+              "answer": 2,
+              "passage": "Yu Gong was a very old man. He lived in front of two big mountains. The mountains made life difficult for his family. Every day they had to walk a long way around them. One day, Yu Gong said, \"Let's move the mountains!\" His family thought he was joking, but he was serious. They began to dig the mountains with baskets. People have told this story for thousands of years. It teaches us that we should never give up."
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 2,
+              "stem": "Why did Yu Gong want to move the mountains?",
+              "options": [
+                "They made life difficult",
+                "He wanted to build houses",
+                "He liked digging",
+                "He wanted to be famous"
+              ],
+              "answer": 0,
+              "passage": "（同上）"
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 2,
+              "stem": "How did Yu Gong's family move the mountains?",
+              "options": [
+                "With machines",
+                "With baskets",
+                "With trucks",
+                "With horses"
+              ],
+              "answer": 1,
+              "passage": "（同上）"
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 2,
+              "stem": "How long have people told this story?",
+              "options": [
+                "For hundreds of years",
+                "For fifty years",
+                "For thousands of years",
+                "For ten years"
+              ],
+              "answer": 2,
+              "passage": "（同上）"
+            },
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 2,
+              "stem": "What does the story teach us?",
+              "options": [
+                "Move to a new house",
+                "Never give up",
+                "Listen to old people",
+                "Build big mountains"
+              ],
+              "answer": 1,
+              "passage": "（同上）"
+            },
+            {
+              "num": 11,
+              "type": "choice",
+              "score": 2,
+              "stem": "Where has the writer lived since birth?",
+              "options": [
+                "In a small village",
+                "In a big city",
+                "Near the sea",
+                "On a farm"
+              ],
+              "answer": 0,
+              "passage": "I have lived in a small village since I was born. It is my hometown. The village has changed a lot in recent years. New houses have been built. A new school has opened since 2021. My friends and I have planted many trees around the village for three years. Now the village is more beautiful than before. I love my hometown and I have never wanted to leave it."
+            },
+            {
+              "num": 12,
+              "type": "choice",
+              "score": 2,
+              "stem": "When did the new school open?",
+              "options": [
+                "In 2020",
+                "Three years ago",
+                "Last month",
+                "In 2021"
+              ],
+              "answer": 3,
+              "passage": "（同上）"
+            },
+            {
+              "num": 13,
+              "type": "choice",
+              "score": 2,
+              "stem": "What have the writer and friends done for three years?",
+              "options": [
+                "Built new houses",
+                "Opened a school",
+                "Left the village",
+                "Planted many trees"
+              ],
+              "answer": 3,
+              "passage": "（同上）"
+            },
+            {
+              "num": 14,
+              "type": "choice",
+              "score": 2,
+              "stem": "How does the writer feel about the hometown?",
+              "options": [
+                "He loves it",
+                "He dislikes it",
+                "He wants to leave",
+                "He feels bored"
+              ],
+              "answer": 0,
+              "passage": "（同上）"
+            },
+            {
+              "num": 15,
+              "type": "choice",
+              "score": 2,
+              "stem": "Which is TRUE?",
+              "options": [
+                "Nothing has changed in the village",
+                "The writer has left the village",
+                "The village has changed a lot",
+                "The new school opened in 2020"
+              ],
+              "answer": 2,
+              "passage": "（同上）"
+            }
+          ]
+        },
+        {
+          "id": "reading2",
+          "title": "八、阅读理解二（5分，每小题1分）",
+          "passage": "Zongzi is a traditional Chinese food. People have eaten it since the time of Qu Yuan. It is made of rice, meat or beans, and bamboo leaves. Every Dragon Boat Festival, families make zongzi together. My grandma has made zongzi for over forty years. She taught me how to make it last year. Now I can make delicious zongzi by myself.",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "stem": "What is zongzi made of?",
+              "options": [
+                "Only rice",
+                "Only meat",
+                "Rice, meat or beans, and bamboo leaves",
+                "Flour and sugar"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "When do people eat zongzi?",
+              "options": [
+                "On the Dragon Boat Festival",
+                "On the Mid-Autumn Festival",
+                "On the Spring Festival",
+                "Every day"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "How long has the writer's grandma made zongzi?",
+              "options": [
+                "Since forty years",
+                "For forty years ago",
+                "About ten years",
+                "For over forty years"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "Who taught the writer to make zongzi?",
+              "options": [
+                "His/Her mother",
+                "His/Her grandma",
+                "His/Her teacher",
+                "His/Her friend"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1,
+              "stem": "Can the writer make zongzi now?",
+              "options": [
+                "Yes, delicious zongzi",
+                "No, not at all",
+                "Only with help",
+                "Only sweet zongzi"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "rw_choice",
+          "title": "九、读写综合（选择，10分，每小题2分）",
+          "passage": "Dear Li Ming,\n\nHow are you? I have lived in Xi'an for two years. It is an ancient city with a long history. The Terracotta Warriors are here. People have protected them for many years. Have you ever visited Xi'an? I have wanted to show you around since you wrote to me last month. Please come this summer. We can visit the old city wall together. It has stood there for over six hundred years.\n\nYours,\nWang Fang",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 2,
+              "stem": "How long has Wang Fang lived in Xi'an?",
+              "options": [
+                "Since two years",
+                "For two years",
+                "For one year",
+                "Since 2020"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 2,
+              "stem": "What is famous in Xi'an according to the letter?",
+              "options": [
+                "The Great Wall",
+                "The Dragon Boat Festival",
+                "The Terracotta Warriors",
+                "Yu Gong's story"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 2,
+              "stem": "How old is the old city wall?",
+              "options": [
+                "Over two thousand years",
+                "Over six hundred years",
+                "About one hundred years",
+                "About fifty years"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 2,
+              "stem": "What does Wang Fang invite Li Ming to do?",
+              "options": [
+                "Move to Xi'an",
+                "Write a letter",
+                "See the Great Wall",
+                "Visit Xi'an this summer"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 2,
+              "stem": "Which is TRUE?",
+              "options": [
+                "Wang Fang has wanted to show Li Ming around",
+                "Li Ming has visited Xi'an twice",
+                "The letter is from Li Ming",
+                "Xi'an is a new city"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "rw_qa",
+          "title": "十、读写综合（问答，10分，每小题2分）",
+          "passage": "Dear Li Ming,\n\nHow are you? I have lived in Xi'an for two years. It is an ancient city with a long history. The Terracotta Warriors are here. People have protected them for many years. Have you ever visited Xi'an? I have wanted to show you around since you wrote to me last month. Please come this summer. We can visit the old city wall together. It has stood there for over six hundred years.\n\nYours,\nWang Fang",
+          "questions": [
+            {
+              "num": 1,
+              "type": "fill",
+              "score": 2,
+              "stem": "Where has Wang Fang lived for two years?",
+              "answer": "Xi'an",
+              "hint": "用英文回答。"
+            },
+            {
+              "num": 2,
+              "type": "fill",
+              "score": 2,
+              "stem": "What are famous in Xi'an? (写出一样)",
+              "answer": "The Terracotta Warriors",
+              "hint": "用英文回答。"
+            },
+            {
+              "num": 3,
+              "type": "fill",
+              "score": 2,
+              "stem": "How long has the old city wall stood there?",
+              "answer": "Over six hundred years",
+              "hint": "用英文回答。"
+            },
+            {
+              "num": 4,
+              "type": "fill",
+              "score": 2,
+              "stem": "When does Wang Fang want Li Ming to come?",
+              "answer": "This summer",
+              "hint": "用英文回答。"
+            },
+            {
+              "num": 5,
+              "type": "fill",
+              "score": 2,
+              "stem": "Has Li Ming visited Xi'an before? (根据信件内容判断)",
+              "answer": "We don't know",
+              "hint": "用英文回答。"
+            }
+          ]
+        },
+        {
+          "id": "grammar_fill",
+          "title": "十一、语法填空（10分，每小题1分）",
+          "passage": "The Great Wall is a symbol of China. People __1__ (build) it more than two thousand years ago. It __2__ (stand) there for a very long time. Millions of visitors __3__ (come) to see it since then. I __4__ (want) to visit it since I was a child. Last year, I finally __5__ (go) there with my parents. We __6__ (walk) on the wall for three hours. My father __7__ (take) many photos. We __8__ (have) a great time. The Great Wall is really wonderful. I __9__ never __10__ (forget) that day.",
+          "questions": [
+            {
+              "num": 1,
+              "type": "fill",
+              "score": 1,
+              "stem": "1.",
+              "answer": "built",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 2,
+              "type": "fill",
+              "score": 1,
+              "stem": "2.",
+              "answer": "has stood",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 3,
+              "type": "fill",
+              "score": 1,
+              "stem": "3.",
+              "answer": "have come",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 4,
+              "type": "fill",
+              "score": 1,
+              "stem": "4.",
+              "answer": "have wanted",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 5,
+              "type": "fill",
+              "score": 1,
+              "stem": "5.",
+              "answer": "went",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 6,
+              "type": "fill",
+              "score": 1,
+              "stem": "6.",
+              "answer": "walked",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 7,
+              "type": "fill",
+              "score": 1,
+              "stem": "7.",
+              "answer": "took",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 8,
+              "type": "fill",
+              "score": 1,
+              "stem": "8.",
+              "answer": "had",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 9,
+              "type": "fill",
+              "score": 1,
+              "stem": "9.",
+              "answer": "have",
+              "hint": "用所给词的适当形式填空。"
+            },
+            {
+              "num": 10,
+              "type": "fill",
+              "score": 1,
+              "stem": "10.",
+              "answer": "forgotten",
+              "hint": "用所给词的适当形式填空。"
+            }
+          ]
+        },
+        {
+          "id": "writing",
+          "title": "十二、书面表达（20分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "writing",
+              "score": 20,
+              "stem": "请以 \"My Hometown\" 为题，写一篇短文，介绍你的家乡。内容包括：1. 家乡的位置和特点；2. 家乡的变化（可用现在完成时）；3. 你对家乡的感情。不少于80词。",
+              "hint": "注意使用 since/for 和现在完成时，可参考本单元学过的句型。",
+              "min_words": 80
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
