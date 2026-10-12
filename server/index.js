@@ -1551,12 +1551,15 @@ function lessonOpen(lid) {
   if (lid === 'u3-consolidate') return true;
   // Unit 3 专项巩固课（2026-10-11 Elouise：严禁盲目赶进度），随时可进
   if (lid === 'u3-consolidate') return true;
-  // Unit 4 锁定（2026-10-11 Elouise：严禁盲目赶进度）
-  // review3 + u3r4 完成后锁死 Unit 4，必须完成 Unit 3 专项巩固且独立正确率≥85% 才解锁
+  // Unit 4 锁定（2026-10-11 Elouise：严禁盲目赶进度；2026-10-12加：review3也必须学完）
+  // 解锁条件：①u3-consolidate 通过（零求助、独立正确率≥85%）②review3 学完（p1+p2）
+  // 没完成复习就不解锁新的
   if (/^u4r\d+$/.test(lid)) {
     try {
       const done = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
       if (!done || done.value !== '1') return false;
+      const r3 = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
+      if (!r3 || r3.p1_done !== 1 || r3.p2_done !== 1) return false;
     } catch { return false; }
   }
   // 数学/语文课独立，不参与英语主线解锁
