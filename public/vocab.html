@@ -18,6 +18,7 @@
   .wrow .ww { font-size:20px; font-weight:700; }
   .wrow .wp { color:var(--muted); font-size:13px; }
   .wrow .wz { font-size:15px; color:#333; margin-top:2px; }
+  .wrow .wsen { font-size:13px; color:var(--muted); margin-top:6px; line-height:1.6; border-left:3px solid var(--line); padding-left:8px; } /* 生词原句 */
   .wrow .ops { margin-left:auto; display:flex; gap:6px; }
   .wrow .ops button { border:1px solid var(--line); background:#fff; border-radius:8px; padding:8px 10px; font-size:14px; cursor:pointer; }
   .empty { text-align:center; color:var(--muted); padding:60px 20px; font-size:16px; line-height:2; }
@@ -32,6 +33,7 @@
   #revCard .rp { color:var(--muted); font-size:15px; margin-bottom:12px; }
   #revCard .rz { font-size:19px; min-height:60px; color:#333; }
   #revCard .rz.hidden { color:#ccc; }
+  #revCard .rsen { font-size:13px; color:var(--muted); margin:10px 0 4px; line-height:1.7; } /* 复习卡片里的原句 */
   #revCard .rrow { display:flex; gap:10px; margin-top:20px; }
   #revCard .rrow button { flex:1; padding:14px; font-size:16px; border-radius:12px; border:0; cursor:pointer; }
   #revFlip { background:#e8f0fe; color:var(--blue); width:100%; margin-top:8px; }
@@ -72,6 +74,7 @@
     <div id="revProg"></div>
     <div class="rw" id="revWord"></div>
     <div class="rp" id="revPh"></div>
+    <div class="rsen" id="revSen" style="display:none"></div>
     <div class="rz hidden" id="revZh">点"看意思"显示</div>
     <button id="revFlip">看意思</button>
     <div class="rrow" id="revBtns" style="display:none">
@@ -100,6 +103,20 @@ function speak(w) {
     speechSynthesis.cancel(); speechSynthesis.speak(u);
   } catch (e) {}
 }
+// 轻提示（2026-10-12）：按钮点了要有反馈，不能静默无反应
+let _toastTimer = null;
+function toast(msg) {
+  let t = document.getElementById('xhToast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'xhToast';
+    t.style.cssText = 'position:fixed;left:50%;bottom:140px;transform:translateX(-50%);background:rgba(0,0,0,.78);color:#fff;padding:12px 20px;border-radius:12px;font-size:15px;z-index:99;max-width:86%;text-align:center;';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg; t.style.display = 'block';
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => { t.style.display = 'none'; }, 2200);
+}
 function render() {
   const v = getVocab();
   const words = Object.keys(v).sort((a,b) => v[b].added - v[a].added);
@@ -114,7 +131,8 @@ function render() {
     return `<div class="card"><div class="wrow">
       <div><div class="ww">${esc(w)}</div>
       ${e.ph ? `<div class="wp">/${esc(e.ph)}/</div>` : ''}
-      <div class="wz">${esc(e.zh || '')}</div></div>
+      <div class="wz">${esc(e.zh || '')}</div>
+      ${e.sent ? `<div class="wsen">原句：${esc(e.sent)}</div>` : ''}</div>
       <div class="ops">
         <button onclick="speak('${esc(w)}')">🔊</button>
         <button onclick="delWord('${esc(w)}')">删除</button>
@@ -131,7 +149,7 @@ let queue = [], qi = 0;
 document.getElementById('btnReview').onclick = () => {
   const v = getVocab();
   const words = Object.keys(v);
-  if (!words.length) return;
+  if (!words.length) { toast('生词本还是空的，先去课程里点单词加进来吧'); return; }
   // ok<2 的优先，不认识的多出现
   queue = words.sort((a,b) => (v[a].ok||0) - (v[b].ok||0));
   qi = 0;
@@ -144,6 +162,7 @@ function showRev() {
     document.getElementById('revProg').textContent = '';
     document.getElementById('revWord').textContent = '';
     document.getElementById('revPh').textContent = '';
+    document.getElementById('revSen').style.display = 'none';
     document.getElementById('revZh').style.display = 'none';
     document.getElementById('revFlip').style.display = 'none';
     document.getElementById('revBtns').style.display = 'none';
@@ -157,6 +176,9 @@ function showRev() {
   document.getElementById('revProg').textContent = `${qi+1} / ${queue.length}`;
   document.getElementById('revWord').textContent = w;
   document.getElementById('revPh').textContent = e.ph ? '/' + e.ph + '/' : '';
+  const rsen = document.getElementById('revSen'); // 2026-10-12：复习时看到原句，不是孤词
+  if (e.sent) { rsen.textContent = e.sent; rsen.style.display = ''; }
+  else rsen.style.display = 'none';
   const zh = document.getElementById('revZh');
   zh.textContent = '点"看意思"显示'; zh.classList.add('hidden');
   document.getElementById('revBtns').style.display = 'none';
@@ -186,7 +208,7 @@ let spellQueue = [], spellQi = 0, spellScore = 0;
 document.getElementById('btnSpell').onclick = () => {
   const v = getVocab();
   const words = Object.keys(v);
-  if (!words.length) return;
+  if (!words.length) { toast('生词本还是空的，先去课程里点单词加进来吧'); return; }
   spellQueue = words.sort(() => Math.random() - 0.5); // 随机顺序
   spellQi = 0; spellScore = 0;
   showSpell();
@@ -198,6 +220,7 @@ function showSpell() {
   document.getElementById('revProg').textContent = '';
   document.getElementById('revWord').textContent = '';
   document.getElementById('revPh').textContent = '';
+  document.getElementById('revSen').style.display = 'none'; // 拼写时不给原句，会剧透单词
   document.getElementById('revZh').style.display = 'none';
   document.getElementById('revFlip').style.display = 'none';
   document.getElementById('revBtns').style.display = 'none';
