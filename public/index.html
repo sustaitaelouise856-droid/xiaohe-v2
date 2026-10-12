@@ -123,6 +123,8 @@
   .node.current .icon { color: var(--blue); }
   .node.available { opacity: 1; cursor: pointer; background: #fff; border: 2px solid #dadce0; }
   .node.available:hover { border-color: #1a73e8; transform: translateY(-2px); }
+  .node.locked { opacity: .55; cursor: not-allowed; background: #f5f5f5; border: 2px dashed #bdbdbd; }
+  .node.locked .icon { filter: grayscale(1); }
   .node.available .icon { color: #9aa0a6; }
   /* 底部导航 */
   .tabbar {
@@ -254,6 +256,7 @@ UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
 let serverDone = new Set();
 let serverCurrent = null;   // 服务器判定的"当前在学"课程 id
 let serverStarted = [];     // [{id, updated_at}] 学过但没学完
+let lockedSet = new Set();  // 服务端判定的未解锁课程（2026-10-12：Unit 4锁死）
 async function loadServerProgress() {
   try {
     const r = await fetch('/api/done-lessons');
@@ -265,11 +268,22 @@ async function loadServerProgress() {
       serverStarted = Array.isArray(d.started) ? d.started : [];
     }
   } catch {}
+  // 拉取每门课的解锁状态
+  try {
+    const r2 = await fetch('/api/lessons');
+    const d2 = await r2.json();
+    if (d2.lessons) {
+      for (const l of d2.lessons) {
+        if (l.open === false) lockedSet.add(l.lesson_id);
+      }
+    }
+  } catch {}
 }
 function isDone(id) {
   if (serverDone.has(id)) return true;
   return localStorage.getItem("xh_done_" + id) === "1";
 }
+function isLocked(id) { return lockedSet.has(id); }
 
 // 每日签到（2026-10-11）：服务端记上海自然日，清缓存不丢
 function renderCheckin(d) {
@@ -319,32 +333,32 @@ loadCheckin();
 let currentIdx = 0;
 function isReviewId(id) { return /^review\d+$/.test(id); }
 function computeCurrent() {
-  // 0) 用户长按手动设置的当前课（优先级最高）
+  // 0) 用户长按手动设置的当前课（优先级最高；锁定的课不能设）
   try {
     const manual = localStorage.getItem('manual_current');
-    if (manual && ORDER.some(l => l.id === manual) && !isDone(manual)) {
+    if (manual && ORDER.some(l => l.id === manual) && !isDone(manual) && !isLocked(manual)) {
       return ORDER.findIndex(l => l.id === manual);
     }
-    if (manual && isDone(manual)) localStorage.removeItem('manual_current'); // 学完了就清除手动设置
+    if (manual && (isDone(manual) || isLocked(manual))) localStorage.removeItem('manual_current');
   } catch {}
-  // 1) 服务器直接给的当前课（且在地图里；复习课不劫持主线）
-  if (serverCurrent && ORDER.some(l => l.id === serverCurrent) && !isReviewId(serverCurrent)) {
+  // 1) 服务器直接给的当前课（且在地图里；复习课不劫持主线；锁定的跳过）
+  if (serverCurrent && ORDER.some(l => l.id === serverCurrent) && !isReviewId(serverCurrent) && !isLocked(serverCurrent)) {
     return ORDER.findIndex(l => l.id === serverCurrent);
   }
-  // 2) 服务器 started 里最近学过、还没完成的那门（只看地图里的课；复习课不劫持主线）
+  // 2) 服务器 started 里最近学过、还没完成的那门（只看地图里的课；复习课不劫持主线；锁定的跳过）
   const smap = new Map();
   for (const s of serverStarted) {
     const id = typeof s === 'string' ? s : s.id;
     const t = typeof s === 'string' ? '' : (s.updated_at || '');
-    if (id && ORDER.some(l => l.id === id) && !isDone(id) && !isReviewId(id)) smap.set(id, t);
+    if (id && ORDER.some(l => l.id === id) && !isDone(id) && !isReviewId(id) && !isLocked(id)) smap.set(id, t);
   }
   let best = -1, bestT = '';
   ORDER.forEach((l, i) => {
     if (smap.has(l.id) && (smap.get(l.id) || '') >= bestT) { bestT = smap.get(l.id) || ''; best = i; }
   });
   if (best !== -1) return best;
-  // 3) 第一门没完成的
-  const idx = ORDER.findIndex(l => !isDone(l.id));
+  // 3) 第一门没完成且未锁定的
+  const idx = ORDER.findIndex(l => !isDone(l.id) && !isLocked(l.id));
   if (idx !== -1) return idx;
   return ORDER.length - 1; // 全完成
 }
@@ -376,9 +390,11 @@ UNITS.forEach(unit => {
   unit.lessons.forEach(l => {
     const idx = ORDER.findIndex(o => o.id === l.id);
     const done = isDone(l.id);
+    const locked = isLocked(l.id);
     if (done) doneN++;
     let cls = "available", icon = "📖";
     if (done) { cls = "done"; icon = "✅"; }
+    else if (locked) { cls = "locked"; icon = "🔒"; }
     else if (idx === currentIdx) { cls = "current"; icon = "📍"; }
     // 前面的课没标记完成也不画✅，只显示📖可回看（2026-10-11：✅必须只给真正完成的，
     // 否则跟顶部"已完成"数字对不上）
@@ -423,6 +439,10 @@ UNITS.forEach(unit => {
     n.addEventListener('pointercancel', cancelPress);
     n.onclick = () => {
       if (Date.now() < (window._suppressClickUntil || 0)) return; // 长按后的点击不进入
+      if (isLocked(l.id)) {
+        alert('🔒 这门课还没解锁\n\n先完成「Unit 3 专项巩固」，零求助、独立正确率达到85%才能进入 Unit 4。');
+        return;
+      }
       location.href = "/lesson?lesson=" + l.id;
     };
     nodes.appendChild(n);
