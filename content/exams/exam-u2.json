@@ -1,0 +1,1181 @@
+{
+  "id": "exam-u2",
+  "unit": 2,
+  "title": "Unit 2 单元测验卷",
+  "subtitle": "广播站 · Campus Radio",
+  "total_score": 140,
+  "time_limit_minutes": 100,
+  "sections": [
+    {
+      "id": "listening",
+      "title": "听说部分",
+      "score": 30,
+      "parts": [
+        {
+          "id": "read-aloud",
+          "title": "一、模仿朗读（8分）",
+          "instruction": "听录音，模仿朗读下面的节目开场白，注意语音语调。",
+          "questions": [
+            {
+              "id": "u2s1",
+              "type": "speak",
+              "prompt": "请跟读下面的广播站开场白。",
+              "text": "Good morning, everyone! This is Xiaohe Radio Station. I'm your host, Lin Tao. Today is Monday, October twelfth. Here is some good news for you. Our school sports meeting will be held this Friday on the playground. All students are welcome to join us. That's all for today. Thank you for listening, and see you tomorrow!",
+              "score": 8,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "listen-choose",
+          "title": "二、听对话选答案（9分，每题1.5分）",
+          "instruction": "听下面的对话，选出正确答案。",
+          "questions": [
+            {
+              "id": "u2s2",
+              "type": "choice",
+              "stem": "When will the book sale be held?",
+              "options": [
+                "This Saturday morning",
+                "This Sunday morning",
+                "This Saturday afternoon",
+                "Next Saturday morning"
+              ],
+              "answer": 0,
+              "score": 1.5,
+              "audio": "",
+              "dialogue": "W: Excuse me, when will the book sale be held? M: It will be held this Saturday morning in the school library."
+            },
+            {
+              "id": "u2s3",
+              "type": "choice",
+              "stem": "When is the English Corner on?",
+              "options": [
+                "Monday evening",
+                "Tuesday evening",
+                "Wednesday evening",
+                "Friday evening"
+              ],
+              "answer": 2,
+              "score": 1.5,
+              "audio": "",
+              "dialogue": "M: Hi, this is Xiaohe Radio. What's your favourite programme? W: I like the English Corner best. It's on Wednesday evening."
+            },
+            {
+              "id": "u2s4",
+              "type": "choice",
+              "stem": "How many books did Grade Eight borrow in October?",
+              "options": [
+                "850",
+                "1,250",
+                "640",
+                "2,000"
+              ],
+              "answer": 1,
+              "score": 1.5,
+              "audio": "",
+              "dialogue": "W: How many books did Grade Eight borrow in October? M: They borrowed 1,250 books, the most of all the grades."
+            },
+            {
+              "id": "u2s5",
+              "type": "choice",
+              "stem": "What happened to the number of listeners last week?",
+              "options": [
+                "It went down 20%",
+                "It went up 10%",
+                "It stayed the same",
+                "It went up 20%"
+              ],
+              "answer": 3,
+              "score": 1.5,
+              "audio": "",
+              "dialogue": "M: Did the number of listeners go up or down last week? W: It went up 20%. More and more students like our programmes."
+            },
+            {
+              "id": "u2s6",
+              "type": "choice",
+              "stem": "What does Tom want to hear?",
+              "options": [
+                "The news",
+                "A story",
+                "A song",
+                "A joke"
+              ],
+              "answer": 2,
+              "score": 1.5,
+              "audio": "",
+              "dialogue": "W: Tom wrote to us yesterday. He wants to hear the song 'Tomorrow Will Be Better'. M: OK. Let's play it for him after the news."
+            },
+            {
+              "id": "u2s7",
+              "type": "choice",
+              "stem": "Where will the choir contest be held?",
+              "options": [
+                "On the playground",
+                "In the school hall",
+                "In the library",
+                "In the classroom"
+              ],
+              "answer": 1,
+              "score": 1.5,
+              "audio": "",
+              "dialogue": "M: Where will the choir contest be held? W: In the school hall. It starts at 3:00 p.m. on Friday."
+            }
+          ]
+        },
+        {
+          "id": "listen-answer",
+          "title": "三、听短文回答问题（4分，每题1分）",
+          "instruction": "听下面的短文，选出正确答案。",
+          "passage": "Hello, everyone! Welcome to Xiaohe Radio Station. I'm Ann. Let me tell you about our programmes this week. On Monday evening, we have 'News Time'. On Wednesday evening, it's 'English Corner'. You can practise your English with us there. On Friday evening, don't miss 'Music Time'. You can write to us and ask for your favourite songs. Our e-mail address is radio@xiaohe.com. Thank you!",
+          "questions": [
+            {
+              "id": "u2s8",
+              "type": "choice",
+              "stem": "Who is speaking?",
+              "options": [
+                "Lin Tao",
+                "Ann",
+                "Tom",
+                "The headmaster"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2s9",
+              "type": "choice",
+              "stem": "When is 'News Time' on?",
+              "options": [
+                "Monday evening",
+                "Wednesday evening",
+                "Friday evening",
+                "Sunday evening"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2s10",
+              "type": "choice",
+              "stem": "What can you do in 'English Corner'?",
+              "options": [
+                "Listen to music",
+                "Watch films",
+                "Read the news",
+                "Practise English"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2s11",
+              "type": "choice",
+              "stem": "What is the station's e-mail address?",
+              "options": [
+                "ann@xiaohe.com",
+                "music@xiaohe.com",
+                "radio@xiaohe.com",
+                "news@xiaohe.com"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "role-play",
+          "title": "四、角色扮演（9分）",
+          "instruction": "你是广播站的小主播，正在做一期节目。请完成下面的任务。",
+          "questions": [
+            {
+              "id": "u2s12",
+              "type": "speak",
+              "prompt": "任务一：请在60秒内复述下面的节目预告。",
+              "text": "Good evening! This is Xiaohe Radio. Tomorrow is Saturday. Our book sale will start at 9:00 a.m. in the school library. Old books, new friends! Come and join us. See you there!",
+              "score": 7,
+              "audio": ""
+            },
+            {
+              "id": "u2s13",
+              "type": "choice",
+              "stem": "任务二：你想知道点歌节目的播出时间，下面哪个问法是正确的？",
+              "options": [
+                "When is the music programme on?",
+                "Where is the music programme?",
+                "What is the music programme?",
+                "Who is the music host?"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2s14",
+              "type": "fill",
+              "stem": "任务三：主播问你 \"What day is the book sale?\"，请用一个单词回答。",
+              "answer": "Saturday",
+              "score": 1,
+              "accept": [
+                "saturday",
+                "Sat.",
+                "Sat"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "written",
+      "title": "笔试部分",
+      "score": 110,
+      "parts": [
+        {
+          "id": "grammar-choice",
+          "title": "五、语法选择（15分，每题1分）",
+          "instruction": "从A、B、C、D四个选项中选出可以填入空白处的最佳选项。",
+          "questions": [
+            {
+              "id": "u2w1",
+              "type": "choice",
+              "stem": "The sports meeting will be held ___ Friday morning.",
+              "options": [
+                "in",
+                "for",
+                "on",
+                "at"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w2",
+              "type": "choice",
+              "stem": "There ___ a book sale in the school library this Saturday.",
+              "options": [
+                "will have",
+                "will be",
+                "are",
+                "is going to have"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w3",
+              "type": "choice",
+              "stem": "___ you listen to \"Music Time\" yesterday evening?",
+              "options": [
+                "Did",
+                "Do",
+                "Are",
+                "Were"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w4",
+              "type": "choice",
+              "stem": "Our radio station was started three years ___.",
+              "options": [
+                "before",
+                "later",
+                "after",
+                "ago"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w5",
+              "type": "choice",
+              "stem": "The number of listeners ___ up 30% this term.",
+              "options": [
+                "went",
+                "go",
+                "is going",
+                "has gone"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w6",
+              "type": "choice",
+              "stem": "Tom wrote a letter ___ Xiaohe Radio last week.",
+              "options": [
+                "with",
+                "for",
+                "to",
+                "about"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w7",
+              "type": "choice",
+              "stem": "___ books did Grade Eight borrow in October?",
+              "options": [
+                "How many",
+                "How much",
+                "What",
+                "Which"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w8",
+              "type": "choice",
+              "stem": "The choir contest will ___ at 3:00 p.m. on Friday.",
+              "options": [
+                "start",
+                "hold",
+                "beginning",
+                "begun"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w9",
+              "type": "choice",
+              "stem": "Ann tells stories ___ than Lin Tao.",
+              "options": [
+                "good",
+                "well",
+                "best",
+                "better"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w10",
+              "type": "choice",
+              "stem": "We are going to ___ a live show tomorrow evening.",
+              "options": [
+                "has",
+                "have",
+                "having",
+                "had"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w11",
+              "type": "choice",
+              "stem": "The old notice says Monday, ___ the new one says Tuesday.",
+              "options": [
+                "so",
+                "and",
+                "or",
+                "but"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w12",
+              "type": "choice",
+              "stem": "___ programme do you like best, News Time or Music Time?",
+              "options": [
+                "What",
+                "When",
+                "Where",
+                "Which"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w13",
+              "type": "choice",
+              "stem": "Students can ask ___ their favourite songs on \"Music Time\".",
+              "options": [
+                "for",
+                "to",
+                "about",
+                "after"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w14",
+              "type": "choice",
+              "stem": "The library ___ 1,500 books to Grade Eight in November.",
+              "options": [
+                "lends",
+                "lend",
+                "lent",
+                "lending"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w15",
+              "type": "choice",
+              "stem": "___ the old notice ___ the new one mentions the ticket price.",
+              "options": [
+                "Both...and",
+                "Either...or",
+                "Not only...but also",
+                "Neither...nor"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "vocab-use",
+          "title": "六、语言运用（10分，每题1分）",
+          "instruction": "从A、B、C、D四个选项中选出可以填入空白处的最佳选项。",
+          "questions": [
+            {
+              "id": "u2w16",
+              "type": "choice",
+              "stem": "The ___ will begin at 9:00 a.m. Please come on time.",
+              "options": [
+                "book sale",
+                "sports meeting",
+                "concert",
+                "film"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w17",
+              "type": "choice",
+              "stem": "Xiaohe Radio has many ___, like News Time and Music Time.",
+              "options": [
+                "hosts",
+                "programmes",
+                "letters",
+                "songs"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w18",
+              "type": "choice",
+              "stem": "The number of books went ___ 10% last month.",
+              "options": [
+                "down",
+                "up",
+                "down by",
+                "up by"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w19",
+              "type": "choice",
+              "stem": "Please ___ the information before the show starts.",
+              "options": [
+                "check",
+                "choose",
+                "change",
+                "close"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w20",
+              "type": "choice",
+              "stem": "Lin Tao is the ___ of today's live show.",
+              "options": [
+                "listener",
+                "writer",
+                "host",
+                "reader"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w21",
+              "type": "choice",
+              "stem": "We will ___ the song for Tom after the news.",
+              "options": [
+                "sing",
+                "play",
+                "write",
+                "read"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w22",
+              "type": "choice",
+              "stem": "The ___ on the wall says the meeting is on Friday.",
+              "options": [
+                "letter",
+                "notice",
+                "book",
+                "picture"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w23",
+              "type": "choice",
+              "stem": "More and more students ___ listening to our station.",
+              "options": [
+                "hate",
+                "finish",
+                "enjoy",
+                "stop"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w24",
+              "type": "choice",
+              "stem": "Don't ___ the old notice with the new one.",
+              "options": [
+                "mix up",
+                "put up",
+                "take up",
+                "give up"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2w25",
+              "type": "choice",
+              "stem": "The data ___ that Grade Eight borrowed the most books.",
+              "options": [
+                "speaks",
+                "talks",
+                "says",
+                "shows"
+              ],
+              "answer": 3,
+              "score": 1,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "reading-1",
+          "title": "七、阅读理解一（30分，每题2分）",
+          "instruction": "阅读下面的短文，从A、B、C、D四个选项中选出最佳选项。",
+          "passages": [
+            {
+              "id": "u2p1",
+              "title": "A",
+              "text": "NOTICE\nSchool Sports Meeting\n\nThe school sports meeting will be held on Friday, October 16th on the playground. All students must arrive at 8:00 a.m. The opening ceremony starts at 8:30 a.m. There will be running, long jump and ball games. Winners will get prizes. If it rains, the meeting will be put off till next Friday.\n— The Students' Union",
+              "questions": [
+                {
+                  "id": "u2r1",
+                  "type": "choice",
+                  "stem": "When will the sports meeting be held?",
+                  "options": [
+                    "October 15th",
+                    "October 16th",
+                    "October 17th",
+                    "October 18th"
+                  ],
+                  "answer": 1,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r2",
+                  "type": "choice",
+                  "stem": "Where will the sports meeting be held?",
+                  "options": [
+                    "In the library",
+                    "In the school hall",
+                    "On the playground",
+                    "In the classroom"
+                  ],
+                  "answer": 2,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r3",
+                  "type": "choice",
+                  "stem": "What time must students arrive?",
+                  "options": [
+                    "7:30 a.m.",
+                    "8:00 a.m.",
+                    "8:30 a.m.",
+                    "9:00 a.m."
+                  ],
+                  "answer": 1,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r4",
+                  "type": "choice",
+                  "stem": "What will happen if it rains?",
+                  "options": [
+                    "Put it off till next Friday",
+                    "Cancel the meeting",
+                    "Hold it indoors",
+                    "Start one hour late"
+                  ],
+                  "answer": 0,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r5",
+                  "type": "choice",
+                  "stem": "Who wrote the notice?",
+                  "options": [
+                    "The headmaster",
+                    "Lin Tao",
+                    "The Students' Union",
+                    "Ann"
+                  ],
+                  "answer": 2,
+                  "score": 2,
+                  "audio": ""
+                }
+              ]
+            },
+            {
+              "id": "u2p2",
+              "title": "B",
+              "text": "Xiaohe Radio — Library News (November)\n\nIn November, students borrowed 3,200 books in all. Grade Seven borrowed 900 books, up 6% from October. Grade Eight borrowed 1,500 books, up 20% — the most again! Grade Nine borrowed 800 books, down 5%. Story books are still the children's favourite. The library thanks all readers and hopes more students will come.",
+              "questions": [
+                {
+                  "id": "u2r6",
+                  "type": "choice",
+                  "stem": "How many books did students borrow in all in November?",
+                  "options": [
+                    "3,200",
+                    "900",
+                    "1,500",
+                    "800"
+                  ],
+                  "answer": 0,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r7",
+                  "type": "choice",
+                  "stem": "Which grade borrowed the most books?",
+                  "options": [
+                    "Grade Seven",
+                    "Grade Eight",
+                    "Grade Nine",
+                    "Grade Ten"
+                  ],
+                  "answer": 1,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r8",
+                  "type": "choice",
+                  "stem": "What happened to Grade Nine's number?",
+                  "options": [
+                    "It went up 6%",
+                    "It went up 20%",
+                    "It went down 5%",
+                    "It stayed the same"
+                  ],
+                  "answer": 2,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r9",
+                  "type": "choice",
+                  "stem": "What kind of books are the children's favourite?",
+                  "options": [
+                    "Science books",
+                    "History books",
+                    "Art books",
+                    "Story books"
+                  ],
+                  "answer": 3,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r10",
+                  "type": "choice",
+                  "stem": "What does the library hope?",
+                  "options": [
+                    "Fewer readers will come",
+                    "More students will come",
+                    "The library will close early",
+                    "Students will buy new books"
+                  ],
+                  "answer": 1,
+                  "score": 2,
+                  "audio": ""
+                }
+              ]
+            },
+            {
+              "id": "u2p3",
+              "title": "C",
+              "text": "Dear Xiaohe Radio,\n\nI'm Li Mei from Class 2, Grade 8. I love your \"Music Time\" very much. Every Friday evening I listen to it with my parents. Last week you played my favourite song. Thank you! Can you play \"Auld Lang Syne\" for my best friend Wang Fang next Friday? Her birthday is coming. Thank you!\n\nYours,\nLi Mei",
+              "questions": [
+                {
+                  "id": "u2r11",
+                  "type": "choice",
+                  "stem": "Who wrote the letter?",
+                  "options": [
+                    "Wang Fang",
+                    "Li Mei",
+                    "Ann",
+                    "Lin Tao"
+                  ],
+                  "answer": 1,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r12",
+                  "type": "choice",
+                  "stem": "When does Li Mei listen to \"Music Time\"?",
+                  "options": [
+                    "Every Wednesday evening",
+                    "Every morning",
+                    "Every Saturday",
+                    "Every Friday evening"
+                  ],
+                  "answer": 3,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r13",
+                  "type": "choice",
+                  "stem": "Who does she listen with?",
+                  "options": [
+                    "Her friends",
+                    "Her parents",
+                    "Her teachers",
+                    "Nobody"
+                  ],
+                  "answer": 1,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r14",
+                  "type": "choice",
+                  "stem": "What song does she ask the station to play?",
+                  "options": [
+                    "Auld Lang Syne",
+                    "Tomorrow Will Be Better",
+                    "Happy Birthday",
+                    "Jasmine"
+                  ],
+                  "answer": 0,
+                  "score": 2,
+                  "audio": ""
+                },
+                {
+                  "id": "u2r15",
+                  "type": "choice",
+                  "stem": "Why does she ask for the song?",
+                  "options": [
+                    "For herself",
+                    "For the station",
+                    "Wang Fang's birthday is coming",
+                    "For her parents"
+                  ],
+                  "answer": 2,
+                  "score": 2,
+                  "audio": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-2",
+          "title": "八、阅读理解二（5分，每题1分）",
+          "instruction": "阅读下面的节目单，从A、B、C、D四个选项中选出最佳选项。",
+          "passage": "Xiaohe Radio — Programmes This Week\n\nMonday 7:00 p.m. News Time: the school news of the week.\nWednesday 7:00 p.m. English Corner: practise English with fun games.\nFriday 7:00 p.m. Music Time: songs for you and your friends.\nSaturday 9:00 a.m. Story Time: interesting stories for young listeners.\n\nWrite to radio@xiaohe.com to ask for songs or tell us your ideas!",
+          "questions": [
+            {
+              "id": "u2r16",
+              "type": "choice",
+              "stem": "How many programmes are there in a week?",
+              "options": [
+                "4",
+                "3",
+                "5",
+                "6"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2r17",
+              "type": "choice",
+              "stem": "When is \"English Corner\"?",
+              "options": [
+                "Monday 7:00 p.m.",
+                "Wednesday 7:00 p.m.",
+                "Friday 7:00 p.m.",
+                "Saturday 9:00 a.m."
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2r18",
+              "type": "choice",
+              "stem": "What can you do on \"Music Time\"?",
+              "options": [
+                "Read the news",
+                "Tell stories",
+                "Ask for songs",
+                "Play games"
+              ],
+              "answer": 2,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2r19",
+              "type": "choice",
+              "stem": "Who is \"Story Time\" for?",
+              "options": [
+                "Young listeners",
+                "Teachers",
+                "Parents",
+                "Old people"
+              ],
+              "answer": 0,
+              "score": 1,
+              "audio": ""
+            },
+            {
+              "id": "u2r20",
+              "type": "choice",
+              "stem": "How can you tell the station your ideas?",
+              "options": [
+                "Call the station",
+                "Write an e-mail",
+                "Visit the station",
+                "Write a letter"
+              ],
+              "answer": 1,
+              "score": 1,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "rw-choice",
+          "title": "九、读写综合：选词填空（10分，每题2分）",
+          "instruction": "阅读下面的回信，从A、B、C、D四个选项中选出可以填入空白处的最佳选项。",
+          "passage": "Dear Li Mei,\n\nThank you for your letter. We are happy to know you ___1___ our \"Music Time\". We will ___2___ \"Auld Lang Syne\" for Wang Fang next Friday and ___3___ her a happy birthday. We hope more students will ___4___ to us like you. Your ideas make our programmes ___5___. Keep listening!\n\nYours,\nXiaohe Radio",
+          "questions": [
+            {
+              "id": "u2w26",
+              "type": "choice",
+              "stem": "1.",
+              "options": [
+                "enjoy",
+                "watch",
+                "miss",
+                "forget"
+              ],
+              "answer": 0,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2w27",
+              "type": "choice",
+              "stem": "2.",
+              "options": [
+                "sing",
+                "play",
+                "write",
+                "read"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2w28",
+              "type": "choice",
+              "stem": "3.",
+              "options": [
+                "say",
+                "tell",
+                "wish",
+                "ask"
+              ],
+              "answer": 2,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2w29",
+              "type": "choice",
+              "stem": "4.",
+              "options": [
+                "listen",
+                "write",
+                "come",
+                "talk"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2w30",
+              "type": "choice",
+              "stem": "5.",
+              "options": [
+                "worse",
+                "better",
+                "bad",
+                "boring"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "rw-qa",
+          "title": "十、读写综合：问答（10分，每题2分）",
+          "instruction": "阅读下面的通知，用完整的句子回答问题。",
+          "passage": "Book Sale Notice\n\nOur school will hold a book sale this Saturday. Time: 9:00 a.m. – 11:30 a.m. Place: the school library. You can buy old books at very low prices. All the money will go to children in poor areas. Come and help!",
+          "questions": [
+            {
+              "id": "u2w31",
+              "type": "fill",
+              "stem": "What will the school hold this Saturday?",
+              "answer": "A book sale",
+              "score": 2,
+              "accept": [
+                "book sale",
+                "a book sale",
+                "The school will hold a book sale"
+              ]
+            },
+            {
+              "id": "u2w32",
+              "type": "fill",
+              "stem": "How long will the book sale last?",
+              "answer": "Two and a half hours",
+              "score": 2,
+              "accept": [
+                "2.5 hours",
+                "two and a half hours",
+                "2 hours and 30 minutes",
+                "for 2.5 hours"
+              ]
+            },
+            {
+              "id": "u2w33",
+              "type": "fill",
+              "stem": "Where will the book sale be held?",
+              "answer": "In the school library",
+              "score": 2,
+              "accept": [
+                "in the school library",
+                "the school library",
+                "in the library"
+              ]
+            },
+            {
+              "id": "u2w34",
+              "type": "fill",
+              "stem": "Are the books expensive?",
+              "answer": "No",
+              "score": 2,
+              "accept": [
+                "no",
+                "no, they aren't",
+                "no, they are cheap",
+                "no, they are very cheap"
+              ]
+            },
+            {
+              "id": "u2w35",
+              "type": "fill",
+              "stem": "Who will get the money from the book sale?",
+              "answer": "Children in poor areas",
+              "score": 2,
+              "accept": [
+                "children in poor areas",
+                "poor children",
+                "children in need"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grammar-fill",
+          "title": "十一、语法填空（10分，每题1分）",
+          "instruction": "阅读下面的短文，用括号内单词的适当形式填空。",
+          "passage": "Xiaohe Radio Station ___1___ (start) three years ago. At first, only a few students ___2___ (listen) to it. Now it is very popular. Every evening, Lin Tao and Ann ___3___ (host) different programmes. Last Friday, they ___4___ (have) a live show about the book sale. Many students ___5___ (call) in and asked questions. The number of listeners ___6___ (go) up 30% this term. The station also ___7___ (receive) many letters every week. Tom is one of the ___8___ (write). He ___9___ (ask) for songs for his friends every Friday. Next week, the station ___10___ (hold) a special programme for the sports meeting.",
+          "questions": [
+            {
+              "id": "u2w36",
+              "type": "fill",
+              "stem": "1. start →",
+              "answer": "started",
+              "score": 1
+            },
+            {
+              "id": "u2w37",
+              "type": "fill",
+              "stem": "2. listen →",
+              "answer": "listened",
+              "score": 1
+            },
+            {
+              "id": "u2w38",
+              "type": "fill",
+              "stem": "3. host →",
+              "answer": "host",
+              "score": 1
+            },
+            {
+              "id": "u2w39",
+              "type": "fill",
+              "stem": "4. have →",
+              "answer": "had",
+              "score": 1
+            },
+            {
+              "id": "u2w40",
+              "type": "fill",
+              "stem": "5. call →",
+              "answer": "called",
+              "score": 1
+            },
+            {
+              "id": "u2w41",
+              "type": "fill",
+              "stem": "6. go →",
+              "answer": "has gone",
+              "score": 1,
+              "accept": [
+                "went",
+                "has gone up",
+                "went up"
+              ]
+            },
+            {
+              "id": "u2w42",
+              "type": "fill",
+              "stem": "7. receive →",
+              "answer": "receives",
+              "score": 1
+            },
+            {
+              "id": "u2w43",
+              "type": "fill",
+              "stem": "8. write →",
+              "answer": "writers",
+              "score": 1,
+              "accept": [
+                "writers",
+                "writer"
+              ]
+            },
+            {
+              "id": "u2w44",
+              "type": "fill",
+              "stem": "9. ask →",
+              "answer": "asks",
+              "score": 1
+            },
+            {
+              "id": "u2w45",
+              "type": "fill",
+              "stem": "10. hold →",
+              "answer": "will hold",
+              "score": 1,
+              "accept": [
+                "will hold",
+                "is going to hold"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "writing",
+          "title": "十二、书面表达（20分）",
+          "instruction": "请根据要求完成写作。",
+          "questions": [
+            {
+              "id": "u2w46",
+              "type": "writing",
+              "score": 20,
+              "min_words": 80,
+              "prompt": "你是广播站的小主播 Lin Tao。请为下周的 \"Music Time\" 节目写一份英文节目预告，发布在学校公告栏上。",
+              "requirements": [
+                "节目播出时间",
+                "节目主要内容",
+                "听众如何点歌",
+                "表达对听众的期待"
+              ],
+              "tips": "不少于80词。注意时态和拼写，开头已给出，可接着写：Hello, everyone! I'm Lin Tao from Xiaohe Radio ..."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
