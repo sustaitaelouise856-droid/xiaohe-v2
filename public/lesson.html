@@ -696,7 +696,12 @@ function renderStep() {
     $('btnSeeReading').style.display = (hasReading && isMobile) ? 'block' : 'none';
   } catch {}
   wrap.querySelectorAll('.btnBack').forEach(b => { b.onclick = goBack; }); // 回去看看：各处统一接 goBack
-  if (s.kind === 'teach') { $('btnNext').onclick = () => advance(); window.scrollTo(0, 0); return; }
+  if (s.kind === 'teach') {
+    $('btnNext').onclick = () => advance();
+    makeWordsTappable();
+    makeSentencesTappable(); // 2026-10-12修：讲解页也要有点读
+    window.scrollTo(0, 0); return;
+  }
   if (s.kind === 'choice') {
     wireChoiceStep(wrap, s, { fetchFn: fetch, lesson: LID,
       onDone: function () { advance(); },
@@ -740,6 +745,8 @@ function renderStep() {
       $('btnNext').onclick = () => advance();
       const sk = $('btnSkip'); if (sk) sk.style.display = 'none';
     }
+    makeWordsTappable();
+    makeSentencesTappable(); // 2026-10-12修：回看模式也要有点读
     window.scrollTo(0, 0); return;
   }
   qT0 = Date.now(); // 开始计时：题目出现
