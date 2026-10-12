@@ -546,6 +546,104 @@
           "say": "祝好是 Best wishes，不是 Good。"
         }
       ]
+    },
+    {
+      "step": 18,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3-consolidate-q18",
+      "title": "推荐的表达",
+      "scene": "填空：I ______ Keyboard Y.（推荐）",
+      "stem": "填空：I ______ Keyboard Y.（推荐）",
+      "task": "写英文。",
+      "answer_text": "recommend",
+      "expects": [
+        {
+          "id": "w18",
+          "type": "word",
+          "answers": [
+            "recommend"
+          ],
+          "cn": [
+            "推荐"
+          ]
+        }
+      ],
+      "help": "推荐是 recommend，注意拼写：re-com-mend。",
+      "explain": "I recommend Keyboard Y.",
+      "common_errors": [
+        {
+          "when": "拼写错",
+          "say": "recommend 拼写：r-e-c-o-m-m-e-n-d。"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "phase": "practice",
+      "kind": "short",
+      "audio_id": "u3-consolidate-q19",
+      "title": "比较级填空",
+      "scene": "填空：Keyboard Y is ______ than Keyboard X.（更安静）",
+      "stem": "填空：Keyboard Y is ______ than Keyboard X.（更安静）",
+      "task": "写英文。",
+      "answer_text": "quieter",
+      "expects": [
+        {
+          "id": "w19",
+          "type": "word",
+          "answers": [
+            "quieter"
+          ],
+          "cn": [
+            "更安静"
+          ]
+        }
+      ],
+      "help": "quiet（安静的）→ quieter，双写t加er。",
+      "explain": "Keyboard Y is quieter than Keyboard X.",
+      "common_errors": [
+        {
+          "when": "写成more quiet",
+          "say": "quiet是短单词，直接加er：quieter，不用more。"
+        },
+        {
+          "when": "写成quiter",
+          "say": "双写t：quieter。"
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "phase": "validate",
+      "kind": "short",
+      "audio_id": "u3-consolidate-q20",
+      "title": "书信：亲爱的李女士",
+      "scene": "写出：亲爱的李女士，",
+      "stem": "写出：亲爱的李女士，",
+      "task": "写英文。",
+      "answer_text": "Dear Mrs. Li,",
+      "expects": [
+        {
+          "id": "w20",
+          "type": "word",
+          "answers": [
+            "dear mrs li",
+            "dear ms li"
+          ],
+          "cn": [
+            "亲爱的李女士"
+          ]
+        }
+      ],
+      "help": "李女士：Mrs. Li（已婚）或 Ms. Li（通用）。",
+      "explain": "Dear Mrs. Li,",
+      "common_errors": [
+        {
+          "when": "写成Miss",
+          "say": "Miss是未婚小姐，李女士用 Mrs. 或 Ms.。"
+        }
+      ]
     }
   ]
 }
