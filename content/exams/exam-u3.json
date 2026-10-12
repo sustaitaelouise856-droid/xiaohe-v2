@@ -1,0 +1,1093 @@
+{
+  "id": "exam-u3",
+  "unit": 3,
+  "title": "Unit 3 单元测验卷",
+  "subtitle": "Computers · 比较级与最高级",
+  "total_score": 140,
+  "sections": [
+    {
+      "id": "listening",
+      "title": "一、听说",
+      "total": 30,
+      "parts": [
+        {
+          "id": "read_aloud",
+          "title": "一、模仿朗读（8分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "speak",
+              "score": 8,
+              "stem": "请朗读下面的短文。",
+              "passage": "Hello, everyone. Today I want to talk about computers. Computer A is small and cheap, but it is slow. Computer B is bigger and faster than Computer A, but it is more expensive. Computer C is the best of the three. It is the fastest, the lightest and the cheapest. I think Computer C is the best choice for students.",
+              "speak_hint": "注意比较级和最高级的发音，语速适中，语音语调自然。"
+            }
+          ]
+        },
+        {
+          "id": "listen_choice",
+          "title": "二、听后选择（9分，每小题1.5分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1.5,
+              "script": "W: Excuse me, which laptop is cheaper, the black one or the white one? M: The black one is cheaper. It's 3000 yuan. The white one is 4500 yuan. Q: Which laptop is cheaper?",
+              "stem": "Which laptop is cheaper?",
+              "options": [
+                "The black one",
+                "The white one",
+                "They are the same price",
+                "We don't know"
+              ],
+              "answer": 0,
+              "audio": ""
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1.5,
+              "script": "M: This new tablet is much lighter than my old computer. W: Really? How heavy is it? M: Only one kilo. My old computer is three kilos. Q: How heavy is the new tablet?",
+              "stem": "How heavy is the new tablet?",
+              "options": [
+                "Three kilos",
+                "Two kilos",
+                "One kilo",
+                "Four kilos"
+              ],
+              "answer": 2,
+              "audio": ""
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1.5,
+              "script": "W: I think this monitor is the biggest in the shop. M: Yes, it's 27 inches. That one is only 21 inches. Q: How big is the biggest monitor?",
+              "stem": "How big is the biggest monitor?",
+              "options": [
+                "21 inches",
+                "27 inches",
+                "24 inches",
+                "30 inches"
+              ],
+              "answer": 1,
+              "audio": ""
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1.5,
+              "script": "M: Which keyboard do you like better, this one or that one? W: I like that one better. It's quieter. Q: Why does the woman like that keyboard better?",
+              "stem": "Why does the woman like that keyboard better?",
+              "options": [
+                "It's cheaper",
+                "It's bigger",
+                "It's newer",
+                "It's quieter"
+              ],
+              "answer": 3,
+              "audio": ""
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1.5,
+              "script": "W: Is Computer A faster than Computer B? M: No, Computer B is faster. But Computer A is cheaper. Q: Which computer is faster?",
+              "stem": "Which computer is faster?",
+              "options": [
+                "Computer A",
+                "Computer B",
+                "They are the same",
+                "We don't know"
+              ],
+              "answer": 1,
+              "audio": ""
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 1.5,
+              "script": "M: Of all the laptops here, which one is the lightest? W: This silver one. It's the lightest and the thinnest. Q: Which laptop is the lightest?",
+              "stem": "Which laptop is the lightest?",
+              "options": [
+                "The silver one",
+                "The black one",
+                "The white one",
+                "The blue one"
+              ],
+              "answer": 0,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "listen_answer",
+          "title": "三、听短文回答问题（4分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "script": "Last Sunday, Li Ming went to a computer shop with his father. There were many computers in the shop. The shopkeeper showed them three laptops. Laptop A was the cheapest, but it was slow. Laptop B was faster than Laptop A, but it was heavier. Laptop C was the most expensive, but it was the fastest and the lightest. Li Ming's father said, 'We will take Laptop C. It is the best for your studies.' Q1: When did Li Ming go to the computer shop? Q2: Which laptop was the cheapest? Q3: Which laptop was the fastest? Q4: Which laptop did they buy?",
+              "stem": "When did Li Ming go to the computer shop?",
+              "options": [
+                "Last Saturday",
+                "Last Sunday",
+                "Last Monday",
+                "Yesterday"
+              ],
+              "answer": 1,
+              "audio": ""
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "Which laptop was the cheapest?",
+              "options": [
+                "Laptop A",
+                "Laptop B",
+                "Laptop C",
+                "We don't know"
+              ],
+              "answer": 0,
+              "audio": ""
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "Which laptop was the fastest?",
+              "options": [
+                "Laptop A",
+                "Laptop B",
+                "Laptop C",
+                "Laptop D"
+              ],
+              "answer": 2,
+              "audio": ""
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "Which laptop did they buy?",
+              "options": [
+                "Laptop A",
+                "Laptop B",
+                "Laptop C",
+                "None of them"
+              ],
+              "answer": 2,
+              "audio": ""
+            }
+          ]
+        },
+        {
+          "id": "role_play",
+          "title": "四、角色扮演（9分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "speak",
+              "score": 7,
+              "stem": "情景：你在电脑商店，店员向你介绍了三款电脑。请复述店员的话。",
+              "passage": "Welcome to our shop. We have three computers for you. Computer A is cheap and small. Computer B is faster and bigger than Computer A. Computer C is the best. It is the fastest, the biggest and the most expensive. Which one do you like?",
+              "speak_hint": "用自己的话复述店员介绍的三款电脑，可适当增减细节，但关键信息（价格、大小、速度的比较）不能遗漏。"
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "情景：你想问店员哪款电脑最轻。下面哪一句问法正确？",
+              "options": [
+                "Which computer is the lightest?",
+                "Which computer is lighter?",
+                "Which is lightest computer?",
+                "Which computer lightest is?"
+              ],
+              "answer": 0,
+              "audio": ""
+            },
+            {
+              "num": 3,
+              "type": "fill",
+              "score": 1,
+              "stem": "店员问：Which computer do you want? 你想买C款，请补全回答：I want ______.",
+              "answer": "Computer C",
+              "hint": "用英文回答，注意大小写。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "written",
+      "title": "二、笔试",
+      "total": 110,
+      "parts": [
+        {
+          "id": "grammar_choice",
+          "title": "五、语法选择（15分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "stem": "This computer is ______ than that one.",
+              "options": [
+                "cheap",
+                "cheaper",
+                "cheapest",
+                "more cheap"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "Of the three laptops, this one is ______.",
+              "options": [
+                "light",
+                "lighter",
+                "the lightest",
+                "lightest"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "My new monitor is ______ than my old one.",
+              "options": [
+                "biggest",
+                "big",
+                "more big",
+                "bigger"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "This is ______ computer in the shop.",
+              "options": [
+                "the most expensive",
+                "more expensive",
+                "expensiver",
+                "most expensive"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1,
+              "stem": "Li Ming types ______ than Wang Tao.",
+              "options": [
+                "fast",
+                "faster",
+                "fastest",
+                "more fast"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 1,
+              "stem": "Which is ______, the tablet or the laptop?",
+              "options": [
+                "good",
+                "best",
+                "better",
+                "more good"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 1,
+              "stem": "The silver laptop is ______ of all.",
+              "options": [
+                "thin",
+                "thinner",
+                "thinnest",
+                "the thinnest"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 1,
+              "stem": "This keyboard is ______ and ______ than that one.",
+              "options": [
+                "quieter, cheaper",
+                "more quiet, more cheap",
+                "quietest, cheapest",
+                "quiet, cheap"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 1,
+              "stem": "Computer C runs ______ of the three.",
+              "options": [
+                "fast",
+                "the fastest",
+                "faster",
+                "fastest"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 1,
+              "stem": "The new model is ______ useful than the old one.",
+              "options": [
+                "usefuler",
+                "most useful",
+                "more useful",
+                "usefuller"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 11,
+              "type": "choice",
+              "score": 1,
+              "stem": "My computer is broken. His computer is even ______.",
+              "options": [
+                "bad",
+                "more bad",
+                "worst",
+                "worse"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 12,
+              "type": "choice",
+              "score": 1,
+              "stem": "This is ______ day of the year.",
+              "options": [
+                "the hottest",
+                "hot",
+                "hotter",
+                "hottest"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 13,
+              "type": "choice",
+              "score": 1,
+              "stem": "The black laptop is 3 kilos. The white one is 2 kilos. The black one is ______ than the white one.",
+              "options": [
+                "heavy",
+                "heavier",
+                "heaviest",
+                "more heavy"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 14,
+              "type": "choice",
+              "score": 1,
+              "stem": "Which game is ______ interesting of all?",
+              "options": [
+                "more",
+                "most",
+                "the most",
+                "much"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 15,
+              "type": "choice",
+              "score": 1,
+              "stem": "The new keyboard feels ______ than the old one.",
+              "options": [
+                "comfortable",
+                "comfortabler",
+                "most comfortable",
+                "more comfortable"
+              ],
+              "answer": 3
+            }
+          ]
+        },
+        {
+          "id": "cloze",
+          "title": "六、语言运用（10分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "stem": "第1题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "slower",
+                "slowest",
+                "more slow",
+                "slow"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "stem": "第2题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "fast",
+                "faster",
+                "fastest",
+                "more fast"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "stem": "第3题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "good",
+                "better",
+                "best",
+                "well"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "stem": "第4题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "cheaper",
+                "cheap",
+                "cheapest",
+                "more cheap"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1,
+              "stem": "第5题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "small",
+                "smaller",
+                "smallest",
+                "more small"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 1,
+              "stem": "第6题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "big",
+                "bigger",
+                "more big",
+                "biggest"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 1,
+              "stem": "第7题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "good",
+                "better",
+                "best",
+                "well"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 1,
+              "stem": "第8题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "cheaper",
+                "cheap",
+                "cheapest",
+                "more cheap"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 1,
+              "stem": "第9题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "more expensive",
+                "expensive",
+                "most expensive",
+                "expensiver"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 1,
+              "stem": "第10题（见上文短文）",
+              "passage": "Last month, I decided to buy a new computer. I went to three shops. In the first shop, the computers were cheap, but they were very __1__. In the second shop, the computers were __2__ than those in the first shop, but they were too expensive. In the third shop, I found the __3__ computer for me. It was not the cheapest, but it was __4__ than the computers in the second shop. It was also __5__ and lighter. The screen was the __6__ of the three shops. The shopkeeper was very friendly. He said, 'This is one of the __7__ computers in our shop. It is faster and __8__ than most computers. Many students like it because it is easy to use and not __9__. I think it is the __10__ choice for you.' I was very happy and bought it.",
+              "options": [
+                "good",
+                "better",
+                "best",
+                "well"
+              ],
+              "answer": 2
+            }
+          ]
+        },
+        {
+          "id": "reading1",
+          "title": "七、阅读理解一（30分，每小题2分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 2,
+              "passage": "Computer Sale! Three Great Models\n\nModel A — Star 100: Small and light. Only 1.5 kilos. 3000 yuan. Good for homework and the Internet.\n\nModel B — Star 200: Bigger screen and faster than Model A. 2 kilos. 4500 yuan. Good for games and movies.\n\nModel C — Star 300: The best of the three. Biggest screen, fastest speed, only 1.2 kilos. 6000 yuan. Best for designers.\n\nCome and choose yours!",
+              "stem": "How heavy is Model A?",
+              "options": [
+                "1.5 kilos",
+                "2 kilos",
+                "1.2 kilos",
+                "3 kilos"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 2,
+              "passage": "Computer Sale! Three Great Models\n\nModel A — Star 100: Small and light. Only 1.5 kilos. 3000 yuan. Good for homework and the Internet.\n\nModel B — Star 200: Bigger screen and faster than Model A. 2 kilos. 4500 yuan. Good for games and movies.\n\nModel C — Star 300: The best of the three. Biggest screen, fastest speed, only 1.2 kilos. 6000 yuan. Best for designers.\n\nCome and choose yours!",
+              "stem": "Which model is good for games and movies?",
+              "options": [
+                "Model A",
+                "Model B",
+                "Model C",
+                "All of them"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 2,
+              "passage": "Computer Sale! Three Great Models\n\nModel A — Star 100: Small and light. Only 1.5 kilos. 3000 yuan. Good for homework and the Internet.\n\nModel B — Star 200: Bigger screen and faster than Model A. 2 kilos. 4500 yuan. Good for games and movies.\n\nModel C — Star 300: The best of the three. Biggest screen, fastest speed, only 1.2 kilos. 6000 yuan. Best for designers.\n\nCome and choose yours!",
+              "stem": "Which model is the most expensive?",
+              "options": [
+                "Model A",
+                "Model B",
+                "Model C",
+                "They are the same price"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 2,
+              "passage": "Computer Sale! Three Great Models\n\nModel A — Star 100: Small and light. Only 1.5 kilos. 3000 yuan. Good for homework and the Internet.\n\nModel B — Star 200: Bigger screen and faster than Model A. 2 kilos. 4500 yuan. Good for games and movies.\n\nModel C — Star 300: The best of the three. Biggest screen, fastest speed, only 1.2 kilos. 6000 yuan. Best for designers.\n\nCome and choose yours!",
+              "stem": "Which model is the lightest?",
+              "options": [
+                "Model A",
+                "Model B",
+                "Model B and C",
+                "Model C"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 2,
+              "passage": "Computer Sale! Three Great Models\n\nModel A — Star 100: Small and light. Only 1.5 kilos. 3000 yuan. Good for homework and the Internet.\n\nModel B — Star 200: Bigger screen and faster than Model A. 2 kilos. 4500 yuan. Good for games and movies.\n\nModel C — Star 300: The best of the three. Biggest screen, fastest speed, only 1.2 kilos. 6000 yuan. Best for designers.\n\nCome and choose yours!",
+              "stem": "What is the ad about?",
+              "options": [
+                "Selling computers",
+                "Buying books",
+                "Computer games",
+                "School news"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 2,
+              "passage": "Tom's Old Computer\n\nTom's computer was very old. It was slow and noisy. Last week, his father bought him a new one. The new computer is much faster than the old one. It is also quieter and lighter. 'It's the best birthday gift!' Tom said happily. Now Tom does his homework on the new computer every evening. He also talks with his friends on the Internet. His old computer is in his bedroom now. His little sister uses it to draw pictures.",
+              "stem": "What was wrong with the old computer?",
+              "options": [
+                "Fast and quiet",
+                "Big and heavy",
+                "Slow and noisy",
+                "New and expensive"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 2,
+              "passage": "Tom's Old Computer\n\nTom's computer was very old. It was slow and noisy. Last week, his father bought him a new one. The new computer is much faster than the old one. It is also quieter and lighter. 'It's the best birthday gift!' Tom said happily. Now Tom does his homework on the new computer every evening. He also talks with his friends on the Internet. His old computer is in his bedroom now. His little sister uses it to draw pictures.",
+              "stem": "When did Tom get the new computer?",
+              "options": [
+                "Last week",
+                "Yesterday",
+                "Last month",
+                "Last year"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 2,
+              "passage": "Tom's Old Computer\n\nTom's computer was very old. It was slow and noisy. Last week, his father bought him a new one. The new computer is much faster than the old one. It is also quieter and lighter. 'It's the best birthday gift!' Tom said happily. Now Tom does his homework on the new computer every evening. He also talks with his friends on the Internet. His old computer is in his bedroom now. His little sister uses it to draw pictures.",
+              "stem": "The new computer is ______ than the old one.",
+              "options": [
+                "slower",
+                "faster",
+                "noisier",
+                "heavier"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 2,
+              "passage": "Tom's Old Computer\n\nTom's computer was very old. It was slow and noisy. Last week, his father bought him a new one. The new computer is much faster than the old one. It is also quieter and lighter. 'It's the best birthday gift!' Tom said happily. Now Tom does his homework on the new computer every evening. He also talks with his friends on the Internet. His old computer is in his bedroom now. His little sister uses it to draw pictures.",
+              "stem": "Who uses the old computer now?",
+              "options": [
+                "Tom",
+                "His father",
+                "His friend",
+                "His little sister"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 2,
+              "passage": "Tom's Old Computer\n\nTom's computer was very old. It was slow and noisy. Last week, his father bought him a new one. The new computer is much faster than the old one. It is also quieter and lighter. 'It's the best birthday gift!' Tom said happily. Now Tom does his homework on the new computer every evening. He also talks with his friends on the Internet. His old computer is in his bedroom now. His little sister uses it to draw pictures.",
+              "stem": "What does Tom do on the new computer?",
+              "options": [
+                "Plays games all day",
+                "Does homework and talks with friends",
+                "Watches movies",
+                "Draws pictures"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 11,
+              "type": "choice",
+              "score": 2,
+              "passage": "Dear Mike,\n\nI bought a new monitor yesterday. It is bigger and clearer than my old one. The old one was only 19 inches, but the new one is 24 inches. It was not expensive — only 800 yuan. The shopkeeper said it was the best-selling monitor in the shop. Now I can watch movies more comfortably. You should buy one too!\n\nYours,\nLi Lei",
+              "stem": "What did Li Lei buy?",
+              "options": [
+                "A computer",
+                "A monitor",
+                "A keyboard",
+                "A mouse"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 12,
+              "type": "choice",
+              "score": 2,
+              "passage": "Dear Mike,\n\nI bought a new monitor yesterday. It is bigger and clearer than my old one. The old one was only 19 inches, but the new one is 24 inches. It was not expensive — only 800 yuan. The shopkeeper said it was the best-selling monitor in the shop. Now I can watch movies more comfortably. You should buy one too!\n\nYours,\nLi Lei",
+              "stem": "How big is the new monitor?",
+              "options": [
+                "19 inches",
+                "21 inches",
+                "27 inches",
+                "24 inches"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 13,
+              "type": "choice",
+              "score": 2,
+              "passage": "Dear Mike,\n\nI bought a new monitor yesterday. It is bigger and clearer than my old one. The old one was only 19 inches, but the new one is 24 inches. It was not expensive — only 800 yuan. The shopkeeper said it was the best-selling monitor in the shop. Now I can watch movies more comfortably. You should buy one too!\n\nYours,\nLi Lei",
+              "stem": "How much is the new monitor?",
+              "options": [
+                "800 yuan",
+                "600 yuan",
+                "1000 yuan",
+                "1200 yuan"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 14,
+              "type": "choice",
+              "score": 2,
+              "passage": "Dear Mike,\n\nI bought a new monitor yesterday. It is bigger and clearer than my old one. The old one was only 19 inches, but the new one is 24 inches. It was not expensive — only 800 yuan. The shopkeeper said it was the best-selling monitor in the shop. Now I can watch movies more comfortably. You should buy one too!\n\nYours,\nLi Lei",
+              "stem": "The new monitor is ______ than the old one.",
+              "options": [
+                "smaller and darker",
+                "cheaper and slower",
+                "bigger and clearer",
+                "heavier and noisier"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 15,
+              "type": "choice",
+              "score": 2,
+              "passage": "Dear Mike,\n\nI bought a new monitor yesterday. It is bigger and clearer than my old one. The old one was only 19 inches, but the new one is 24 inches. It was not expensive — only 800 yuan. The shopkeeper said it was the best-selling monitor in the shop. Now I can watch movies more comfortably. You should buy one too!\n\nYours,\nLi Lei",
+              "stem": "Why does Li Lei write to Mike?",
+              "options": [
+                "To borrow money",
+                "To advise him to buy a monitor",
+                "To sell his old monitor",
+                "To say goodbye"
+              ],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "id": "reading2",
+          "title": "八、阅读理解二（5分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 1,
+              "passage": "How to Choose a Computer\n\nMany students want a computer, but they don't know how to choose. Here is some advice.\n\nFirst, think about what you need. If you only do homework, a cheap and small one is enough. If you like games, you need a faster one with a bigger screen.\n\nSecond, compare the prices. Don't buy the most expensive one. The best computer is not always the most expensive one.\n\nThird, try it in the shop. Is the keyboard comfortable? Is the screen clear enough?\n\nRemember: the most suitable computer is the best one for you.",
+              "stem": "What is the article about?",
+              "options": [
+                "How to play games",
+                "How to save money",
+                "How to choose a computer",
+                "How to do homework"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 1,
+              "passage": "How to Choose a Computer\n\nMany students want a computer, but they don't know how to choose. Here is some advice.\n\nFirst, think about what you need. If you only do homework, a cheap and small one is enough. If you like games, you need a faster one with a bigger screen.\n\nSecond, compare the prices. Don't buy the most expensive one. The best computer is not always the most expensive one.\n\nThird, try it in the shop. Is the keyboard comfortable? Is the screen clear enough?\n\nRemember: the most suitable computer is the best one for you.",
+              "stem": "If you like games, you need ______.",
+              "options": [
+                "a faster one with a bigger screen",
+                "a cheaper one",
+                "the smallest one",
+                "the oldest one"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 1,
+              "passage": "How to Choose a Computer\n\nMany students want a computer, but they don't know how to choose. Here is some advice.\n\nFirst, think about what you need. If you only do homework, a cheap and small one is enough. If you like games, you need a faster one with a bigger screen.\n\nSecond, compare the prices. Don't buy the most expensive one. The best computer is not always the most expensive one.\n\nThird, try it in the shop. Is the keyboard comfortable? Is the screen clear enough?\n\nRemember: the most suitable computer is the best one for you.",
+              "stem": "Should you buy the most expensive computer?",
+              "options": [
+                "Yes, always",
+                "Only for games",
+                "We don't know",
+                "No"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 1,
+              "passage": "How to Choose a Computer\n\nMany students want a computer, but they don't know how to choose. Here is some advice.\n\nFirst, think about what you need. If you only do homework, a cheap and small one is enough. If you like games, you need a faster one with a bigger screen.\n\nSecond, compare the prices. Don't buy the most expensive one. The best computer is not always the most expensive one.\n\nThird, try it in the shop. Is the keyboard comfortable? Is the screen clear enough?\n\nRemember: the most suitable computer is the best one for you.",
+              "stem": "What should you try in the shop?",
+              "options": [
+                "The price",
+                "The keyboard and the screen",
+                "The color",
+                "The box"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 1,
+              "passage": "How to Choose a Computer\n\nMany students want a computer, but they don't know how to choose. Here is some advice.\n\nFirst, think about what you need. If you only do homework, a cheap and small one is enough. If you like games, you need a faster one with a bigger screen.\n\nSecond, compare the prices. Don't buy the most expensive one. The best computer is not always the most expensive one.\n\nThird, try it in the shop. Is the keyboard comfortable? Is the screen clear enough?\n\nRemember: the most suitable computer is the best one for you.",
+              "stem": "What is the best computer for you?",
+              "options": [
+                "The most suitable one",
+                "The most expensive one",
+                "The biggest one",
+                "The newest one"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "rw_choice",
+          "title": "九、读写综合（选择，10分，每小题2分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "choice",
+              "score": 2,
+              "passage": "COMPUTER SHOP — Big Sale!\n\nTime: October 20-26, 9:00 a.m. — 9:00 p.m.\nPlace: Sunshine Computer Shop, 88 Park Road\n\nLaptop A: 3500 yuan (was 4200 yuan) — the cheapest laptop in our shop\nLaptop B: 5200 yuan — faster and lighter than Laptop A\n\nFree mouse with every laptop!\nThe first 10 buyers get a free computer bag.\n\nCall: 020-88889999",
+              "stem": "When is the sale?",
+              "options": [
+                "October 26-30",
+                "October 20-26",
+                "November 20-26",
+                "Every Sunday"
+              ],
+              "answer": 1
+            },
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 2,
+              "passage": "COMPUTER SHOP — Big Sale!\n\nTime: October 20-26, 9:00 a.m. — 9:00 p.m.\nPlace: Sunshine Computer Shop, 88 Park Road\n\nLaptop A: 3500 yuan (was 4200 yuan) — the cheapest laptop in our shop\nLaptop B: 5200 yuan — faster and lighter than Laptop A\n\nFree mouse with every laptop!\nThe first 10 buyers get a free computer bag.\n\nCall: 020-88889999",
+              "stem": "Where is the shop?",
+              "options": [
+                "88 School Road",
+                "99 Park Road",
+                "66 Park Road",
+                "88 Park Road"
+              ],
+              "answer": 3
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 2,
+              "passage": "COMPUTER SHOP — Big Sale!\n\nTime: October 20-26, 9:00 a.m. — 9:00 p.m.\nPlace: Sunshine Computer Shop, 88 Park Road\n\nLaptop A: 3500 yuan (was 4200 yuan) — the cheapest laptop in our shop\nLaptop B: 5200 yuan — faster and lighter than Laptop A\n\nFree mouse with every laptop!\nThe first 10 buyers get a free computer bag.\n\nCall: 020-88889999",
+              "stem": "How much is Laptop A now?",
+              "options": [
+                "3500 yuan",
+                "4200 yuan",
+                "5200 yuan",
+                "3000 yuan"
+              ],
+              "answer": 0
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 2,
+              "passage": "COMPUTER SHOP — Big Sale!\n\nTime: October 20-26, 9:00 a.m. — 9:00 p.m.\nPlace: Sunshine Computer Shop, 88 Park Road\n\nLaptop A: 3500 yuan (was 4200 yuan) — the cheapest laptop in our shop\nLaptop B: 5200 yuan — faster and lighter than Laptop A\n\nFree mouse with every laptop!\nThe first 10 buyers get a free computer bag.\n\nCall: 020-88889999",
+              "stem": "What do the first 10 buyers get?",
+              "options": [
+                "A free mouse",
+                "A free keyboard",
+                "A free computer bag",
+                "A free monitor"
+              ],
+              "answer": 2
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 2,
+              "passage": "COMPUTER SHOP — Big Sale!\n\nTime: October 20-26, 9:00 a.m. — 9:00 p.m.\nPlace: Sunshine Computer Shop, 88 Park Road\n\nLaptop A: 3500 yuan (was 4200 yuan) — the cheapest laptop in our shop\nLaptop B: 5200 yuan — faster and lighter than Laptop A\n\nFree mouse with every laptop!\nThe first 10 buyers get a free computer bag.\n\nCall: 020-88889999",
+              "stem": "Which of the following is TRUE?",
+              "options": [
+                "Laptop A is faster than Laptop B",
+                "Laptop B is faster and lighter than Laptop A",
+                "Laptop A is 4200 yuan now",
+                "The sale is in November"
+              ],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "id": "rw_qa",
+          "title": "十、读写综合（问答，10分，每小题2分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "fill",
+              "score": 2,
+              "passage": "Hi, I'm Wang Tao. I have two computers at home. The old one is big and heavy. It is also slow. The new one is smaller and lighter than the old one. It is much faster too. I use the new computer to study English every day. My father uses the old computer to read news.",
+              "stem": "How many computers does Wang Tao have?",
+              "answer": "Two"
+            },
+            {
+              "num": 2,
+              "type": "fill",
+              "score": 2,
+              "passage": "Hi, I'm Wang Tao. I have two computers at home. The old one is big and heavy. It is also slow. The new one is smaller and lighter than the old one. It is much faster too. I use the new computer to study English every day. My father uses the old computer to read news.",
+              "stem": "Is the old computer fast? (用Yes或No回答)",
+              "answer": "No"
+            },
+            {
+              "num": 3,
+              "type": "fill",
+              "score": 2,
+              "passage": "Hi, I'm Wang Tao. I have two computers at home. The old one is big and heavy. It is also slow. The new one is smaller and lighter than the old one. It is much faster too. I use the new computer to study English every day. My father uses the old computer to read news.",
+              "stem": "The new computer is ______ and ______ than the old one. (填两个形容词比较级)",
+              "answer": "smaller and lighter"
+            },
+            {
+              "num": 4,
+              "type": "fill",
+              "score": 2,
+              "passage": "Hi, I'm Wang Tao. I have two computers at home. The old one is big and heavy. It is also slow. The new one is smaller and lighter than the old one. It is much faster too. I use the new computer to study English every day. My father uses the old computer to read news.",
+              "stem": "What does Wang Tao use the new computer for?",
+              "answer": "To study English"
+            },
+            {
+              "num": 5,
+              "type": "fill",
+              "score": 2,
+              "passage": "Hi, I'm Wang Tao. I have two computers at home. The old one is big and heavy. It is also slow. The new one is smaller and lighter than the old one. It is much faster too. I use the new computer to study English every day. My father uses the old computer to read news.",
+              "stem": "What does his father use the old computer for?",
+              "answer": "To read news"
+            }
+          ]
+        },
+        {
+          "id": "grammar_fill",
+          "title": "十一、语法填空（10分，每小题1分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第1空 (small)",
+              "answer": "small"
+            },
+            {
+              "num": 2,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第2空 (fast)",
+              "answer": "faster"
+            },
+            {
+              "num": 3,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第3空 (big)",
+              "answer": "bigger"
+            },
+            {
+              "num": 4,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第4空 (expense)",
+              "answer": "expensive"
+            },
+            {
+              "num": 5,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第5空 (expensive)",
+              "answer": "most expensive"
+            },
+            {
+              "num": 6,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第6空 (cheap)",
+              "answer": "cheaper"
+            },
+            {
+              "num": 7,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第7空 (popular)",
+              "answer": "most popular"
+            },
+            {
+              "num": 8,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第8空 (thin)",
+              "answer": "thinner"
+            },
+            {
+              "num": 9,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第9空 (long)",
+              "answer": "longer"
+            },
+            {
+              "num": 10,
+              "type": "fill",
+              "score": 1,
+              "passage": "My dream computer\n\nI want a computer of my own. It should be __1__ (small) and light, so I can take it to school. It should be __2__ (fast) than my father's old computer. The screen should be big and clear — the __3__ (big), the better. I hope it is not __4__ (expense). My mother says a good computer doesn't have to be the __5__ (expensive) one.\n\nLast week, I saw a nice laptop in a shop. It was __6__ (cheap) than I thought. The shopkeeper said it was one of the __7__ (popular) laptops for students. It is __8__ (thin) than most laptops, and the battery lasts __9__ (long) than others. I think it is __10__ (good) than my friend's computer. I really want to buy it!",
+              "stem": "第10空 (good)",
+              "answer": "better"
+            }
+          ]
+        },
+        {
+          "id": "writing",
+          "title": "十二、书面表达（20分）",
+          "questions": [
+            {
+              "num": 1,
+              "type": "writing",
+              "score": 20,
+              "stem": "假如你是李明，你的朋友 Tom 想买一台电脑，向你请教。请你给他写一封电子邮件，推荐一款电脑并说明理由。内容包括：1. 你推荐哪款电脑；2. 它与其他电脑相比有什么优点（至少使用两处比较级和一处最高级）；3. 你的建议。词数80左右。",
+              "min_words": 80,
+              "hint": "注意电子邮件格式（称呼、正文、落款）；多用本单元学过的比较级和最高级；语句通顺，理由充分。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
