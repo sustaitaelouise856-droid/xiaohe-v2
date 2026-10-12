@@ -296,7 +296,8 @@ app.post('/api/checkin', auth.requireAuth, (req, res) => {
   try {
     db.prepare("INSERT OR IGNORE INTO checkins(day, created_at) VALUES(?, datetime('now'))").run(shanghaiDay());
   } catch (e) { console.error('[checkin] write', e.message); }
-  try { res.json(checkinStatus()); }
+  const newTitles = checkTitles(); // 签到可能触发"坚持小勇士"
+  try { res.json({ ...checkinStatus(), newTitles }); }
   catch (e) { console.error('[checkin]', e.message); res.json({ ok: false }); }
 });
 app.get('/api/lessons', auth.requireAuth, (req, res) => {
@@ -453,8 +454,134 @@ app.post('/api/complete', auth.requireAuth, (req, res) => {
       db.prepare("INSERT OR REPLACE INTO app_state(key, value) VALUES('u3_consolidation_done', '1')").run();
     }
   }
-  res.json({ ok: true, consolidationPassed });
+  // 称号检查（2026-10-12）：课程完成时判定 mastery-based 称号
+  const newTitles = checkTitles();
+  res.json({ ok: true, consolidationPassed, newTitles });
 });
+
+// 称号列表：返回全部称号定义 + 已获得状态
+app.get('/api/titles', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const earned = new Set(db.prepare('SELECT title_id FROM titles').all().map(r => r.title_id));
+    res.json({
+      ok: true,
+      titles: TITLE_DEFS.map(t => ({ ...t, earned: earned.has(t.id) })),
+    });
+  } catch (e) {
+    res.json({ ok: false, titles: [] });
+  }
+});
+
+// ---- 称号系统（2026-10-12 Elouise：mastery-based，不是打卡）----
+// 称号必须绑定真实掌握度，孩子看到称号就知道"我真学会了什么"
+const TITLE_DEFS = [
+  {
+    id: 'comparative_master', name: '比较级小达人', icon: '🏅',
+    desc: '完成 Unit 3 专项巩固，零求助、独立正确率≥85%',
+  },
+  {
+    id: 'superlative_slayer', name: '最高级终结者', icon: '⚔️',
+    desc: '完成最高级专项复习（加练3），正确率≥90%',
+  },
+  {
+    id: 'spelling_star', name: '拼写小能手', icon: '✏️',
+    desc: '连续答对20道拼写题（零求助）',
+  },
+  {
+    id: 'streak_warrior', name: '坚持小勇士', icon: '🔥',
+    desc: '连续签到7天',
+  },
+  {
+    id: 'unit3_conqueror', name: 'Unit 3 征服者', icon: '👑',
+    desc: 'u3r1-u3r5全部完成，平均正确率≥80%',
+  },
+];
+
+// 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
+function lessonIndependentRate(lidPrefix) {
+  try {
+    const rows = db.prepare(
+      "SELECT item_id, correct, helped FROM attempts WHERE item_id LIKE ?"
+    ).all(lidPrefix + '%');
+    if (rows.length === 0) return { rate: 0, count: 0, helpedAny: false };
+    const last = {};
+    for (const r of rows) last[r.item_id] = r;
+    const ids = Object.keys(last);
+    const correct = ids.filter(id => last[id].correct === 1).length;
+    const helpedAny = ids.some(id => last[id].helped === 1);
+    // 也查 help_events 表（旧数据可能只记在这里）
+    let he = { c: 0 };
+    try {
+      he = db.prepare("SELECT COUNT(*) c FROM help_events WHERE item_id LIKE ?").get(lidPrefix + '%');
+    } catch {}
+    return { rate: ids.length ? correct / ids.length : 0, count: ids.length, helpedAny: helpedAny || (he.c > 0) };
+  } catch { return { rate: 0, count: 0, helpedAny: false }; }
+}
+
+function lessonDone(lid) {
+  try {
+    const st = db.prepare('SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id=?').get(lid);
+    return st && st.p1_done === 1 && st.p2_done === 1;
+  } catch { return false; }
+}
+
+// 检查并颁发称号，返回新获得的称号 id 列表
+function checkTitles() {
+  const newly = [];
+  let earned = new Set();
+  try {
+    for (const r of db.prepare('SELECT title_id FROM titles').all()) earned.add(r.title_id);
+  } catch {}
+  const grant = (id) => {
+    if (earned.has(id)) return;
+    try {
+      db.prepare('INSERT OR IGNORE INTO titles(title_id) VALUES(?)').run(id);
+      earned.add(id);
+      newly.push(id);
+    } catch {}
+  };
+  // 1. 比较级小达人：u3-consolidate 零求助、独立正确率≥85%
+  try {
+    const s = lessonIndependentRate('u3-consolidate');
+    if (s.count > 0 && !s.helpedAny && s.rate >= 0.85) grant('comparative_master');
+  } catch {}
+  // 2. 最高级终结者：review3 正确率≥90%（允许求助，但正确率高）
+  try {
+    const s = lessonIndependentRate('review3');
+    if (s.count >= 10 && s.rate >= 0.90) grant('superlative_slayer');
+  } catch {}
+  // 3. 拼写小能手：连续20道拼写题全对且零求助（按时间顺序）
+  try {
+    const rows = db.prepare(
+      "SELECT correct, helped FROM attempts ORDER BY id DESC LIMIT 60"
+    ).all();
+    let streak = 0;
+    for (const r of rows) {
+      if (r.correct === 1 && r.helped === 0) streak++;
+      else break;
+    }
+    if (streak >= 20) grant('spelling_star');
+  } catch {}
+  // 4. 坚持小勇士：连续签到7天
+  try {
+    const st = checkinStatus();
+    if (st && st.streak >= 7) grant('streak_warrior');
+  } catch {}
+  // 5. Unit 3 征服者：u3r1-u3r5全完成，平均独立正确率≥80%
+  try {
+    const lids = ['u3r1', 'u3r2', 'u3r3', 'u3r4', 'u3r5'];
+    if (lids.every(lessonDone)) {
+      let sum = 0, n = 0;
+      for (const lid of lids) {
+        const s = lessonIndependentRate(lid);
+        if (s.count > 0) { sum += s.rate; n++; }
+      }
+      if (n > 0 && sum / n >= 0.80) grant('unit3_conqueror');
+    }
+  } catch {}
+  return newly;
+}
 
 // 检查 Unit 3 专项巩固是否过关：零求助、纯独立手写正确率 ≥ 85%
 function checkConsolidationPass() {
