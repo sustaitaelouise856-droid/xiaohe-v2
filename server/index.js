@@ -805,10 +805,13 @@ app.get('/api/exam/:id', auth.requireAuth, (req, res) => {
   res.json(r);
 });
 app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
-  const { exam_id, score, detail } = req.body || {};
-  if (!exam_id || score == null) return res.status(400).json({ ok: false });
-  const ok = exams.saveScore(String(exam_id), Number(score), detail);
-  res.json({ ok });
+  // 2026-10-12改：服务端判分，不再信任前端传来的score
+  const { exam_id, answers } = req.body || {};
+  if (!exam_id) return res.status(400).json({ ok: false, error: 'no_exam_id' });
+  const g = exams.gradeExam(String(exam_id), answers || {});
+  if (!g.ok) return res.status(400).json({ ok: false, error: g.error });
+  const ok = exams.saveScore(String(exam_id), g.score, g.detail, answers || {});
+  res.json({ ok, score: g.score, total_objective: g.total_objective, pending: g.pending, detail: g.detail });
 });
 // 真正的错题本（2026-10-12）：返回每道错题的原题、孩子答案、正确答案
 app.get('/api/mistakes', auth.requireAuth, (req, res) => {
