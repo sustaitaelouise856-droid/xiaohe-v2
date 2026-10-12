@@ -1255,6 +1255,18 @@ async function submitCopy(s, answer) {
     const r = await fetch('/api/lesson?lesson=' + encodeURIComponent(LID));
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
+    // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
+    if (LESSON && LESSON.error === 'lesson_locked') {
+      document.title = '小禾英语 · 课程未解锁';
+      wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
+        <div style="font-size:48px;margin-bottom:16px;">🔒</div>
+        <h2 class="stem">这门课还没解锁</h2>
+        <p class="scene">先完成「Unit 3 专项巩固」，零求助、独立正确率达到85%才能进入 Unit 4。<br><br>加油，把基础打牢！</p>
+        <button class="btn btn-primary" onclick="location.href='/'">返回首页</button>
+        <button class="btn ghost" onclick="location.href='/lesson?lesson=u3-consolidate'" style="margin-left:8px;">去专项巩固</button>
+      </div>`;
+      return;
+    }
     await loadProg(); // 续课进度（服务端，按题目ID）
     document.title = '小禾英语 · ' + (LESSON.home_subtitle || LESSON.title || '');
     const brandSmall = document.querySelector('#brand small');
