@@ -836,7 +836,16 @@ app.get('/api/exam/:id', auth.requireAuth, (req, res) => {
   if (m && !exams.isUnitDone(parseInt(m[1]))) {
     return res.status(403).json({ ok: false, error: 'locked' });
   }
+  // 每日复习门：有待复习项时，测验卷也锁定
+  if (hasPendingReviews()) {
+    return res.status(403).json({ ok: false, error: 'review_pending', pending: getPendingReviews() });
+  }
   res.json(r);
+});
+// 每日待复习项（首页显示）
+app.get('/api/daily-reviews', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json({ ok: true, pending: getPendingReviews() });
 });
 app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
   // 2026-10-12改：服务端判分，不再信任前端传来的score
@@ -1540,6 +1549,44 @@ function currentLesson() {
   if (reviews.length) return reviews[0];
   return regular[regular.length - 1] || ids[ids.length - 1];
 }
+// 每日复习门（2026-10-12 Elouise：没完成复习就不解锁新的）
+// 待复习项：①待复测错题 ②review课未学完 ③专项巩固未通过
+// 有待复习项时：新课、测验卷锁定；复习课、生词本、已开的课保持开放
+function getPendingReviews() {
+  const pending = [];
+  try {
+    // ① 待复测错题
+    const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending'").get();
+    if (rc && rc.c > 0) pending.push({ type: 'retest', count: rc.c, label: `待复测错题 ${rc.c} 道` });
+    // ② review课未学完
+    const reviews = db.prepare(
+      "SELECT lesson_id FROM lesson_state WHERE lesson_id LIKE 'review%' AND (p1_done != 1 OR p2_done != 1)"
+    ).all();
+    // 也查从未开始的review课（lesson_state无记录但课程存在）
+    const allReviews = ['review1', 'review2', 'review3'];
+    const startedSet = new Set(db.prepare("SELECT lesson_id FROM lesson_state WHERE lesson_id LIKE 'review%'").all().map(r => r.lesson_id));
+    for (const rid of allReviews) {
+      if (!startedSet.has(rid)) {
+        // 检查这门review课是否应该出现（前面的正课学完了）
+        pending.push({ type: 'review', lesson_id: rid, label: `${rid} 未学` });
+      }
+    }
+    for (const r of reviews) {
+      if (!pending.some(p => p.lesson_id === r.lesson_id))
+        pending.push({ type: 'review', lesson_id: r.lesson_id, label: `${r.lesson_id} 未学完` });
+    }
+    // ③ u3专项巩固未通过（仅当孩子已进入Unit 3）
+    const u3started = db.prepare("SELECT 1 FROM lesson_state WHERE lesson_id LIKE 'u3r%' LIMIT 1").get();
+    if (u3started) {
+      const cd = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
+      if (!cd || cd.value !== '1')
+        pending.push({ type: 'consolidate', lesson_id: 'u3-consolidate', label: 'Unit 3 专项巩固未通过' });
+    }
+  } catch (e) { console.error('[reviews]', e.message); }
+  return pending;
+}
+function hasPendingReviews() { return getPendingReviews().length > 0; }
+
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
@@ -1564,6 +1611,15 @@ function lessonOpen(lid) {
   }
   // 数学/语文课独立，不参与英语主线解锁
   if (/^(sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return true;
+  // 每日复习门（2026-10-12）：有待复习项时，未开的新正课锁定
+  // 复习课本身、已开的课（学过一半的）不受影响
+  if (/^u[2-6]r\d+$/.test(lid) && !isReviewLesson(lid)) {
+    try {
+      const st = lessonState(lid);
+      const started = st && (st.p1_done === 1 || st.p2_done === 1 || st.p1_started_day);
+      if (!started && hasPendingReviews()) return false;
+    } catch {}
+  }
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   // 主线只算 u2r-u6r（排除 review、deep、moon、sx、yw）
