@@ -278,13 +278,22 @@ function checkinStatus() {
   let cursor = checked_today ? today : addDaysStr(today, -1);
   let guard = 0;
   while (set.has(cursor) && guard++ < 3650) { streak++; cursor = addDaysStr(cursor, -1); }
-  // 最近7天（含今天）
+  // 最近7天（含今天）- 保留兼容
   const week = [];
   for (let i = 6; i >= 0; i--) {
     const day = addDaysStr(today, -i);
     week.push({ day, label: '周' + weekdayLabel(day), checked: set.has(day), isToday: day === today });
   }
-  return { ok: true, today, checked_today, streak, total: set.size, week };
+  // 本月日历（2026-10-12加）：返回本月每天的签到状态
+  const [y, m] = today.split('-').map(Number);
+  const daysInMonth = new Date(y, m, 0).getDate();
+  const firstWeekday = new Date(y, m - 1, 1).getDay(); // 0=周日
+  const month = [];
+  for (let d = 1; d <= daysInMonth; d++) {
+    const dayStr = `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    month.push({ day: d, date: dayStr, checked: set.has(dayStr), isToday: dayStr === today, isFuture: dayStr > today });
+  }
+  return { ok: true, today, checked_today, streak, total: set.size, week, month, monthLabel: `${y}年${m}月`, firstWeekday };
 }
 app.get('/api/checkin', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
