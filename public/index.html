@@ -99,6 +99,14 @@
   .btn-checkin.done { background: #e8eaed; color: var(--muted); box-shadow: none; }
   .btn-checkin:disabled { cursor: default; }
   .checkin-week { display: flex; gap: 6px; margin-top: 12px; }
+  /* 日历模式（2026-10-12） */
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 12px; }
+  .cal-head { text-align: center; font-size: 12px; color: var(--muted); padding: 4px; }
+  .cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 14px; border-radius: 8px; background: #f5f5f5; }
+  .cal-day.checked { background: #e6f4ea; color: #137333; font-weight: 700; }
+  .cal-day.today { border: 2px solid var(--blue); font-weight: 700; }
+  .cal-day.future { opacity: 0.3; }
+  .cal-day.empty { background: transparent; }
   .cday {
     flex: 1; text-align: center; background: #f4f6f9; border-radius: 10px;
     padding: 8px 0 6px; font-size: 12px; color: var(--muted);
@@ -193,16 +201,11 @@
   <div class="checkin-top">
     <div>
       <div class="checkin-title">📅 每日签到</div>
-      <div class="checkin-streak">🔥 已连续签到 <b id="streakN">0</b> 天</div>
+      <div class="checkin-streak">🔥 已连续签到 <b id="streakN">0</b> 天 · <span id="monthLabel"></span></div>
     </div>
     <button class="btn-checkin" id="checkinBtn">签到</button>
   </div>
-  <div class="checkin-week" id="checkinWeek"></div>
-</div>
-
-<div class="titles-card" id="titlesCard">
-  <div class="titles-head">🏆 我的称号</div>
-  <div class="titles-grid" id="titlesGrid"></div>
+  <div class="cal-grid" id="checkinCal"></div>
 </div>
 
 <div class="continue-wrap">
@@ -311,13 +314,28 @@ function isLocked(id) { return lockedSet.has(id); }
 // 每日签到（2026-10-11）：服务端记上海自然日，清缓存不丢
 function renderCheckin(d) {
   document.getElementById("streakN").textContent = d.streak || 0;
-  const w = document.getElementById("checkinWeek");
-  w.innerHTML = "";
-  (d.week || []).forEach(x => {
+  document.getElementById("monthLabel").textContent = d.monthLabel || '';
+  // 日历模式（2026-10-12）：显示本月签到日历
+  const cal = document.getElementById("checkinCal");
+  cal.innerHTML = "";
+  const heads = ['日','一','二','三','四','五','六'];
+  heads.forEach(h => {
     const el = document.createElement("div");
-    el.className = "cday" + (x.checked ? " on" : "") + (x.isToday ? " today" : "");
-    el.innerHTML = "<span>" + x.label + "</span><b>" + (x.checked ? "✅" : "·") + "</b>";
-    w.appendChild(el);
+    el.className = "cal-head"; el.textContent = h;
+    cal.appendChild(el);
+  });
+  // 空白占位
+  for (let i = 0; i < (d.firstWeekday || 0); i++) {
+    const el = document.createElement("div");
+    el.className = "cal-day empty";
+    cal.appendChild(el);
+  }
+  (d.month || []).forEach(x => {
+    const el = document.createElement("div");
+    el.className = "cal-day" + (x.checked ? " checked" : "") + (x.isToday ? " today" : "") + (x.isFuture ? " future" : "");
+    el.textContent = x.checked ? "✅" : x.day;
+    el.title = x.date;
+    cal.appendChild(el);
   });
   const btn = document.getElementById("checkinBtn");
   if (d.checked_today) {
@@ -339,22 +357,6 @@ async function loadCheckin() {
     if (d && d.ok) renderCheckin(d);
   } catch {}
 }
-// 称号展示（2026-10-12）：已获得彩色，未获得灰色+条件
-async function loadTitles() {
-  try {
-    const r = await fetch("/api/titles");
-    const d = await r.json();
-    if (!d || !d.ok) return;
-    const g = document.getElementById("titlesGrid");
-    g.innerHTML = d.titles.map(t =>
-      `<div class="title-badge ${t.earned ? 'earned' : 'locked-t'}">` +
-      `<span class="ticon2">${t.icon}</span>` +
-      `<span class="tname">${t.earned ? t.name : '???'}</span>` +
-      `<span class="tdesc">${t.earned ? '已获得！' : t.desc}</span></div>`
-    ).join('');
-  } catch {}
-}
-loadTitles();
 async function doCheckin() {
   const btn = document.getElementById("checkinBtn");
   btn.disabled = true;
