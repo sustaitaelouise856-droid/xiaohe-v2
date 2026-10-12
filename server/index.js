@@ -23,6 +23,7 @@ const grade = require('./grade');
 const attempts = require('./attempts');
 const review = require('./review');
 const retest = require('./retest');
+const exams = require('./exams');
 const seed = require('./seed');
 const { shanghaiDay } = require('./time');
 
@@ -784,6 +785,30 @@ app.get('/api/retest/pending', auth.requireAuth, (req, res) => {
   // 每次查询时顺带回填历史，确保 h 上线前的"看答案过"记录可被读取
   retest.backfillFromHistory();
   res.json({ ok: true, pending: retest.getPending() });
+});
+// 单元测验卷（2026-10-12）：广州新中考140分制
+exams.setDb(db);
+exams.initTable();
+app.get('/api/exams', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json({ ok: true, exams: exams.getExamList() });
+});
+app.get('/api/exam/:id', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const r = exams.getExam(req.params.id);
+  if (!r.ok) return res.status(404).json(r);
+  // 检查解锁
+  const m = req.params.id.match(/exam-u(\d)/);
+  if (m && !exams.isUnitDone(parseInt(m[1]))) {
+    return res.status(403).json({ ok: false, error: 'locked' });
+  }
+  res.json(r);
+});
+app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
+  const { exam_id, score, detail } = req.body || {};
+  if (!exam_id || score == null) return res.status(400).json({ ok: false });
+  const ok = exams.saveScore(String(exam_id), Number(score), detail);
+  res.json({ ok });
 });
 // 真正的错题本（2026-10-12）：返回每道错题的原题、孩子答案、正确答案
 app.get('/api/mistakes', auth.requireAuth, (req, res) => {
