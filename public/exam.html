@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>单元测验卷</title>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
+<style>
+  :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --red:#d93025; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:#f0f4fa; margin:0; padding:0; }
+  #topbar { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); border-bottom:1px solid #e1e5eb; padding:12px 16px; display:flex; align-items:center; gap:12px; }
+  #topbar .back { font-size:20px; text-decoration:none; color:var(--blue); }
+  #topbar .title { flex:1; font-weight:700; font-size:18px; }
+  #timer { font-weight:700; color:var(--red); font-size:16px; }
+  #wrap { max-width:800px; margin:0 auto; padding:20px 16px 120px; }
+  .section { background:#fff; border-radius:20px; padding:24px; margin-bottom:20px; box-shadow:0 1px 3px rgba(60,64,67,.08); }
+  .section h2 { margin:0 0 6px; font-size:22px; color:var(--blue); }
+  .section .sub { color:#5f6368; font-size:14px; margin-bottom:16px; }
+  .q { border-top:1px solid #f0f0f0; padding:18px 0; }
+  .q:first-of-type { border-top:0; }
+  .q-num { font-weight:700; color:var(--blue); margin-bottom:8px; }
+  .q-stem { font-size:17px; line-height:1.7; margin-bottom:12px; }
+  .opt { display:block; width:100%; text-align:left; background:#f8f9fa; border:2px solid #e1e5eb; border-radius:12px; padding:12px 16px; margin:8px 0; font-size:16px; cursor:pointer; transition:all .15s; }
+  .opt.sel { background:#e8f0fe; border-color:var(--blue); }
+  .opt .k { display:inline-block; width:28px; height:28px; line-height:28px; text-align:center; background:#fff; border-radius:50%; margin-right:10px; font-weight:700; }
+  .opt.sel .k { background:var(--blue); color:#fff; }
+  input[type=text], textarea { width:100%; border:2px solid #e1e5eb; border-radius:12px; padding:12px; font-size:16px; font-family:inherit; }
+  input[type=text]:focus, textarea:focus { outline:none; border-color:var(--blue); }
+  textarea { min-height:120px; resize:vertical; line-height:1.7; }
+  .audio-btn { background:var(--blue); color:#fff; border:0; border-radius:12px; padding:10px 20px; font-size:16px; cursor:pointer; margin:8px 0; }
+  .rec-btn { background:var(--red); color:#fff; border:0; border-radius:12px; padding:10px 20px; font-size:16px; cursor:pointer; margin:8px 4px 8px 0; }
+  .rec-btn.stop { background:#5f6368; }
+  .rec-status { color:var(--red); font-size:14px; margin:8px 0; }
+  #submitBar { position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,.95); backdrop-filter:blur(12px); border-top:1px solid #e1e5eb; padding:12px 16px; display:flex; gap:12px; z-index:30; }
+  #submitBar button { flex:1; padding:14px; border-radius:14px; font-size:17px; font-weight:700; border:0; cursor:pointer; }
+  #btnSubmit { background:linear-gradient(135deg,#1a73e8,#4a8ef7); color:#fff; box-shadow:0 4px 14px rgba(26,115,232,.35); }
+  #result { display:none; }
+  #result.show { display:block; }
+  .score-big { text-align:center; padding:30px 0; }
+  .score-big .num { font-size:64px; font-weight:800; color:var(--blue); }
+  .score-big .total { font-size:20px; color:#5f6368; }
+  .score-bar { height:12px; background:#f0f0f0; border-radius:6px; overflow:hidden; margin:16px 0; }
+  .score-fill { height:100%; background:linear-gradient(90deg,#1a73e8,#6c3fd4); border-radius:6px; transition:width 1s ease; }
+</style>
+</head>
+<body>
+<div id="topbar">
+  <a class="back" href="/">←</a>
+  <div class="title" id="examTitle">单元测验卷</div>
+  <div id="timer">100:00</div>
+</div>
+<div id="wrap">
+  <div id="examBody"><div style="text-align:center;padding:60px;color:#999;">加载中…</div></div>
+  <div id="result"></div>
+</div>
+<div id="submitBar" style="display:none">
+  <button id="btnSubmit" onclick="submitExam()">交卷</button>
+</div>
+<script>
+let EXAM = null;
+let ANSWERS = {};
+let TIME_LEFT = 6000; // 100分钟
+let timerInt = null;
+
+async function load() {
+  const id = new URLSearchParams(location.search).get('exam');
+  if (!id) { document.getElementById('examBody').innerHTML = '缺少试卷ID'; return; }
+  const r = await fetch('/api/exam/' + id);
+  const d = await r.json();
+  if (!d.ok) { document.getElementById('examBody').innerHTML = '试卷加载失败'; return; }
+  EXAM = d.exam;
+  document.getElementById('examTitle').textContent = EXAM.title;
+  render();
+  document.getElementById('submitBar').style.display = 'flex';
+  startTimer();
+}
+
+function render() {
+  let html = '';
+  EXAM.sections.forEach(sec => {
+    html += `<div class="section"><h2>${sec.title}</h2><div class="sub">满分 ${sec.total} 分</div>`;
+    sec.parts.forEach(part => {
+      if (part.title) html += `<h3 style="margin:16px 0 8px;font-size:18px;">${part.title}</h3>`;
+      if (part.passage) html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;">${part.passage}</div>`;
+      part.questions.forEach((q, qi) => {
+        const qid = sec.id + '-' + part.id + '-' + qi;
+        html += `<div class="q"><div class="q-num">${q.num || (qi+1)}. (${q.score}分)</div>`;
+        if (q.audio) html += `<button class="audio-btn" onclick="playAudio('${q.audio}')">🔊 播放</button>`;
+        if (q.stem) html += `<div class="q-stem">${q.stem}</div>`;
+        if (q.type === 'choice') {
+          q.options.forEach((op, oi) => {
+            html += `<button class="opt" data-qid="${qid}" data-oi="${oi}" onclick="selectOpt('${qid}',${oi})"><span class="k">${'ABCD'[oi]}</span>${op}</button>`;
+          });
+        } else if (q.type === 'fill') {
+          html += `<input type="text" data-qid="${qid}" placeholder="请输入答案" oninput="ANSWERS['${qid}']=this.value">`;
+        } else if (q.type === 'writing') {
+          html += `<textarea data-qid="${qid}" placeholder="${q.hint || '请作答'}" oninput="ANSWERS['${qid}']=this.value"></textarea>`;
+          if (q.min_words) html += `<div style="font-size:13px;color:#999;margin-top:6px;">不少于 ${q.min_words} 词</div>`;
+        } else if (q.type === 'speak') {
+          html += `<div style="margin:8px 0;"><button class="rec-btn" onclick="toggleRec('${qid}',this)">🎤 开始录音</button><span class="rec-status" id="st-${qid}"></span></div>`;
+          html += `<div style="font-size:13px;color:#999;">${q.speak_hint || '录音完成后自动得分（参与分）'}</div>`;
+        }
+        html += `</div>`;
+      });
+    });
+    html += `</div>`;
+  });
+  document.getElementById('examBody').innerHTML = html;
+}
+
+function selectOpt(qid, oi) {
+  ANSWERS[qid] = oi;
+  document.querySelectorAll(`[data-qid="${qid}"]`).forEach(b => b.classList.remove('sel'));
+  document.querySelector(`[data-qid="${qid}"][data-oi="${oi}"]`).classList.add('sel');
+}
+
+function playAudio(url) {
+  const a = new Audio(url);
+  a.play().catch(e => alert('音频播放失败'));
+}
+
+let mediaRec = null, recChunks = [];
+async function toggleRec(qid, btn) {
+  const st = document.getElementById('st-' + qid);
+  if (mediaRec && mediaRec.state === 'recording') {
+    mediaRec.stop();
+    btn.textContent = '🎤 开始录音';
+    btn.classList.remove('stop');
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRec = new MediaRecorder(stream);
+    recChunks = [];
+    mediaRec.ondataavailable = e => recChunks.push(e.data);
+    mediaRec.onstop = () => {
+      st.textContent = '✅ 已录音';
+      ANSWERS[qid] = 'recorded'; // 参与分
+      stream.getTracks().forEach(t => t.stop());
+    };
+    mediaRec.start();
+    btn.textContent = '⏹ 停止';
+    btn.classList.add('stop');
+    st.textContent = '🔴 录音中…';
+  } catch (e) {
+    alert('无法访问麦克风');
+  }
+}
+
+function startTimer() {
+  timerInt = setInterval(() => {
+    TIME_LEFT--;
+    const m = Math.floor(TIME_LEFT / 60), s = TIME_LEFT % 60;
+    document.getElementById('timer').textContent = `${m}:${String(s).padStart(2,'0')}`;
+    if (TIME_LEFT <= 0) { clearInterval(timerInt); submitExam(); }
+  }, 1000);
+}
+
+async function submitExam() {
+  if (!confirm('确定交卷吗？')) return;
+  clearInterval(timerInt);
+  document.getElementById('submitBar').style.display = 'none';
+  // 本地评分（客观题）
+  let score = 0, detail = [];
+  EXAM.sections.forEach(sec => {
+    sec.parts.forEach(part => {
+      part.questions.forEach((q, qi) => {
+        const qid = sec.id + '-' + part.id + '-' + qi;
+        const ans = ANSWERS[qid];
+        let got = 0;
+        if (q.type === 'choice' && ans === q.answer) got = q.score;
+        else if (q.type === 'fill' && ans && String(ans).trim().toLowerCase() === String(q.answer).trim().toLowerCase()) got = q.score;
+        else if (q.type === 'speak' && ans === 'recorded') got = q.score; // 参与分
+        // writing 由老师/家长评，暂记0
+        score += got;
+        detail.push({ qid, got, max: q.score });
+      });
+    });
+  });
+  // 保存到服务器
+  const examId = new URLSearchParams(location.search).get('exam');
+  await fetch('/api/exam/submit', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ exam_id: examId, score, detail, answers: ANSWERS })
+  });
+  showResult(score);
+}
+
+function showResult(score) {
+  const total = EXAM.total_score;
+  const pct = Math.round(score / total * 100);
+  document.getElementById('examBody').style.display = 'none';
+  const r = document.getElementById('result');
+  r.className = 'show';
+  r.innerHTML = `<div class="section"><div class="score-big">
+    <div class="num">${score}</div><div class="total">/ ${total} 分</div>
+    <div class="score-bar"><div class="score-fill" style="width:${pct}%"></div></div>
+    <div style="font-size:16px;color:#5f6368;">${pct >= 90 ? '🎉 太棒了！' : pct >= 60 ? '💪 继续加油！' : '📚 还需要努力哦'}</div>
+    <div style="font-size:13px;color:#999;margin-top:12px;">写作题需老师批改，分数暂未计入</div>
+  </div></div>
+  <div class="section" style="text-align:center;"><a href="/" style="color:var(--blue);text-decoration:none;font-size:17px;">← 返回首页</a></div>`;
+  window.scrollTo(0, 0);
+}
+
+load();
+</script>
+</body>
+</html>
