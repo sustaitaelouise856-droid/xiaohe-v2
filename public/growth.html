@@ -81,6 +81,28 @@
     <h2>🏆 称号墙</h2>
     <div class="title-wall" id="titleWall"><div class="empty">正在加载…</div></div>
   </div>
+
+  <!-- 加练区（2026-10-12加）：复习加练+英语播客，随时可做，不受锁课影响 -->
+  <div class="card">
+    <h2>📚 复习加练</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <a href="/lesson?lesson=review1" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练1<br><small style="color:#5f6368;font-weight:400;">数字播报复习</small></a>
+      <a href="/lesson?lesson=review2" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练2<br><small style="color:#5f6368;font-weight:400;">Unit 2 综合复习</small></a>
+      <a href="/lesson?lesson=review3" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练3<br><small style="color:#5f6368;font-weight:400;">最高级专项复习</small></a>
+      <a href="/lesson?lesson=u3-consolidate" style="display:block;background:#fff3e0;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#e37400;font-weight:600;">加练4<br><small style="color:#5f6368;font-weight:400;">Unit 3 专项巩固</small></a>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎙️ 英语播客</h2>
+    <div id="podcastList">
+      <div onclick="playPodcast()" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+        <div style="font-size:32px;">🎙️</div>
+        <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第1期：比较级最高级（幽默版）</div>
+        <div style="color:#5f6368;font-size:13px;">4分39秒 · 点击播放</div>
+        <audio id="growthPodAudio" src="/audio/podcast/ep01-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="tabbar">
   <a href="/"><span class="ticon">🏠</span>首页</a>
@@ -181,6 +203,10 @@ function drawChart(trend) {
   });
 }
 load();
+function playPodcast() {
+  const a = document.getElementById('growthPodAudio');
+  if (a) { try { a.play(); } catch(e) {} }
+}
 </script>
 </body>
 </html>
