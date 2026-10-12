@@ -1580,7 +1580,16 @@ app.get('/progress-page', (req, res, next) => {
 app.use('/audio', auth.requireAuth, express.static(path.join(__dirname, '..', 'audio')));
 
 // 静态资源：验证页等公开；课程页走上面的鉴权路由
-app.use(express.static(path.join(__dirname, '..', 'public'), { index: false }));
+// 2026-10-12：HTML文件禁缓存，确保Elouise打开即看到最新版（不用清缓存）
+app.use(express.static(path.join(__dirname, '..', 'public'), {
+  index: false,
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.set('Cache-Control', 'no-store, no-cache, must-revalidate');
+      res.set('Pragma', 'no-cache');
+    }
+  }
+}));
 
 const PORT = process.env.PORT || 3101;
 // 开机自动入库：空库或缺题时自动 seed，不依赖人工执行
