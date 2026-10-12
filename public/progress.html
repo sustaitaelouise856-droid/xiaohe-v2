@@ -145,39 +145,46 @@ async function loadMastery() {
 }
 
 async function loadMistakes() {
-  const d = await api('/api/retest/pending');
   const focusEl = document.getElementById('focus-list');
-  const foldEl = document.getElementById('fold-list');
-  const foldSummary = document.getElementById('fold-summary');
-  if (!d.ok || !d.pending.length) {
-    focusEl.innerHTML = '<div class="empty">现在没有正在攻克的，继续保持！</div>';
-    foldEl.innerHTML = '';
-    foldSummary.style.display = 'none';
-    return;
-  }
-  // 真人老师风格：只突出前3-5个，其他折叠
-  const items = d.pending;
-  const focus = items.slice(0, 5);
-  const rest = items.slice(5);
-  const encouragements = [
-    '多练一次，就离拿下更近一步。',
-    '这个类型练熟了，考试就不怕了。',
-    '换一道题再试一次，你可以的。',
-    '慢慢来，把思路理清楚。',
-    '已经比上次进步了，继续。',
-  ];
-  focusEl.innerHTML = focus.map((m, i) =>
-    `<div class="focus-item"><div class="t">${esc(kpName(m.knowledge_point))}</div><div class="enc">${encouragements[i % encouragements.length]}</div></div>`
-  ).join('');
-  if (rest.length) {
-    foldSummary.textContent = `查看其他 ${rest.length} 个（已折叠）`;
-    foldSummary.style.display = '';
-    foldEl.innerHTML = rest.map(m =>
-      `<div class="fold-item">${esc(kpName(m.knowledge_point))}</div>`
+  const doneEl = document.getElementById('done-list');
+  // 用新的错题本API
+  try {
+    const d = await (await fetch('/api/mistakes')).json();
+    if (!d.ok || !d.mistakes.length) {
+      focusEl.innerHTML = '<div class="empty">太棒了，一道错题都没有！</div>';
+      return;
+    }
+    window._mistakes = d.mistakes;
+    focusEl.innerHTML = d.mistakes.slice(0, 20).map((m, i) =>
+      `<div class="mistake-item" onclick="showMistake(${i})" style="border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;">`
+      + `<div style="font-weight:600;margin-bottom:6px;">${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
+      + `<div style="font-size:16px;color:#666;">你的答案：<span style="color:#c5221f;">${escHtml((m.given || '（空）').slice(0, 40))}</span></div>`
+      + `<div style="font-size:14px;color:#999;margin-top:4px;">${escHtml(m.created_at || '').slice(0, 16)} · 点击查看详情</div>`
+      + `</div>`
     ).join('');
-  } else {
-    foldSummary.style.display = 'none';
+    doneEl.innerHTML = '<div class="empty">错题都会在这里，点击查看原题和正确答案。</div>';
+  } catch (e) {
+    focusEl.innerHTML = '<div class="empty">加载失败</div>';
   }
+}
+function showMistake(i) {
+  const m = (window._mistakes || [])[i];
+  if (!m) return;
+  const old = document.getElementById('mistakeOv');
+  if (old) old.remove();
+  const ov = document.createElement('div');
+  ov.id = 'mistakeOv';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99;display:flex;align-items:center;justify-content:center;padding:20px;';
+  ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:420px;width:100%;max-height:80vh;overflow-y:auto;">'
+    + '<h3 style="margin:0 0 12px;">📝 错题详情</h3>'
+    + '<div style="margin-bottom:12px;"><b>题目：</b><br>' + escHtml(m.question || '（无）') + '</div>'
+    + '<div style="margin-bottom:12px;"><b>你的答案：</b><br><span style="color:#c5221f;">' + escHtml(m.given || '（空）') + '</span></div>'
+    + '<div style="margin-bottom:12px;"><b>正确答案：</b><br><span style="color:#137333;font-weight:600;">' + escHtml(m.correct || '（无）') + '</span></div>'
+    + '<div style="color:#999;font-size:13px;margin-bottom:16px;">' + escHtml(m.created_at || '') + ' · ' + escHtml(m.lesson_id || '') + '</div>'
+    + '<button onclick="document.getElementById(\'mistakeOv\').remove()" style="width:100%;padding:12px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;">知道了</button>'
+    + '</div>';
+  ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
+  document.body.appendChild(ov);
 }
 
 function showTab(t) {
