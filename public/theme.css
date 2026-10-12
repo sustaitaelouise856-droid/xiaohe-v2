@@ -8,6 +8,10 @@ html[data-theme="dark"] body { background:#1a1a1a !important; color:#f0f0f0 !imp
 html[data-theme="dark"] .card, html[data-theme="dark"] .top,
 html[data-theme="dark"] #topbar, html[data-theme="dark"] .tabbar,
 html[data-theme="dark"] .bottomnav { background:#2d2d2d !important; border-color:#555 !important; }
+html[data-theme="dark"] .checkin-card, html[data-theme="dark"] .titles-card,
+html[data-theme="dark"] .node, html[data-theme="dark"] .unit-head,
+html[data-theme="dark"] .title-badge { background:#2d2d2d !important; border-color:#555 !important; color:#f0f0f0 !important; }
+html[data-theme="dark"] .node.locked { background:#222 !important; border-color:#666 !important; }
 html[data-theme="dark"] .card h2, html[data-theme="dark"] .top h1 { color:#ffffff !important; }
 html[data-theme="dark"] .card p { color:#cccccc !important; }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3 { color:#ffffff !important; }
