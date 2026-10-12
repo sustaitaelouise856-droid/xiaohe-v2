@@ -128,6 +128,12 @@ CREATE TABLE IF NOT EXISTS weakness_events (
   tag        TEXT NOT NULL,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
+// 称号系统（2026-10-12 Elouise：mastery-based，不是打卡）：孩子凭真实掌握度获得
+db.exec(`
+CREATE TABLE IF NOT EXISTS titles (
+  title_id   TEXT PRIMARY KEY,
+  earned_at  TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
 // 复测队列表（2026-10-03）：copied/看答案过 → 待复测 → 下次学习自动出同一知识点换材料复测题
 // 零帮助独立答对才算解决。h 上线前的历史"看答案过"记录从 weakness_events 回填。
 db.exec(`
