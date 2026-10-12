@@ -14,7 +14,7 @@
       // 播放速度：供各页面读取
       window.XH_PLAY_SPEED = (function() {
         var v = parseFloat(localStorage.getItem('xh_play_speed'));
-        return (v >= 0.5 && v <= 1.5) ? v : 1.0;
+        return (v >= 0.5 && v <= 2.0) ? v : 1.0;
       })();
     } catch (e) {}
   }
