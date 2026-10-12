@@ -269,15 +269,6 @@ const UNITS = [
     { id: "u6r4", name: "家乡故事", label: "第4课" },
     { id: "u6r5", name: "故事大直播", label: "第5课" },
   ]},
-  { name: "复习加练", lessons: [
-    { id: "review1", name: "数字播报复习", label: "加练1" },
-    { id: "review2", name: "Unit 2 综合复习", label: "加练2" },
-    { id: "review3", name: "最高级专项复习", label: "加练3" },
-    { id: "u3-consolidate", name: "Unit 3 专项巩固", label: "加练4" },
-  ]},
-  { name: "🎙️ 英语播客", lessons: [
-    { id: "podcast-ep01", name: "比较级最高级（幽默版）", label: "第1期" },
-  ]},
 ];
 
 // 扁平化课程顺序
@@ -491,11 +482,6 @@ UNITS.forEach(unit => {
         alert('🔒 这门课还没解锁\n\n先完成「Unit 3 专项巩固」，零求助、独立正确率达到85%才能进入 Unit 4。');
         return;
       }
-      // 播客：播放器弹窗（2026-10-12修：原来直接播无反馈）
-      if (l.id === 'podcast-ep01') {
-        showPodcastPlayer();
-        return;
-      }
       location.href = "/lesson?lesson=" + l.id;
     };
     nodes.appendChild(n);
@@ -517,33 +503,6 @@ document.getElementById("btnContinue").onclick = () => {
 };
 }
 
-// 播客播放器（2026-10-12）：弹窗+播放/暂停+进度条
-let _podAudio = null;
-function showPodcastPlayer() {
-  // 关掉旧的
-  if (_podAudio) { _podAudio.pause(); _podAudio = null; }
-  const old = document.getElementById('podOverlay');
-  if (old) old.remove();
-  const ov = document.createElement('div');
-  ov.id = 'podOverlay';
-  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;';
-  ov.innerHTML = `<div style="background:#fff;border-radius:16px;padding:24px;max-width:360px;width:100%;text-align:center;">
-    <div style="font-size:40px;">🎙️</div>
-    <h3 style="margin:8px 0;">比较级最高级（幽默版）</h3>
-    <p style="color:#888;font-size:13px;margin:0 0 16px;">第1期 · 4分39秒</p>
-    <audio id="podAudio" src="/audio/podcast/ep01-fun.mp3" style="width:100%;" controls></audio>
-    <button onclick="document.getElementById('podOverlay').remove();if(window._podAudio){window._podAudio.pause();}" style="margin-top:12px;padding:8px 24px;border-radius:20px;border:1px solid #ddd;background:#f5f5f5;">关闭</button>
-  </div>`;
-  document.body.appendChild(ov);
-  ov.onclick = (e) => { if (e.target === ov) { ov.remove(); const a = document.getElementById('podAudio'); if (a) a.pause(); } };
-  _podAudio = document.getElementById('podAudio');
-  window._podAudio = _podAudio;
-  try {
-    const v = parseFloat(localStorage.getItem('xh_play_speed'));
-    if (v >= 0.5 && v <= 1.5) _podAudio.playbackRate = v;
-  } catch {}
-  _podAudio.play().catch(() => {});
-}
 </script>
 </body>
 </html>
