@@ -84,6 +84,7 @@ ensureColumn('attempts', 'detail_json', 'TEXT');              // 逐项判分明
 ensureColumn('attempts', 'session_id', "TEXT DEFAULT ''");     // 同一次走课的会话 id（重答判定用）
 ensureColumn('attempts', 'independent', 'INTEGER DEFAULT 0');  // 1=独立完成（练习：答对且无帮助；验证：首次答对）
 ensureColumn('attempts', 'elapsed_ms', 'INTEGER');             // 本次作答用时（毫秒）：从题目出现到提交
+ensureColumn('attempts', 'pasted', 'INTEGER DEFAULT 0');       // 2026-10-12：1=粘贴作答（不算独立完成）
 ensureColumn('items', 'grading_json', 'TEXT');                // 简答题判分规格
 ensureColumn('items', 'phase', "TEXT DEFAULT 'practice'");     // practice|validate|teach
 db.exec(`
