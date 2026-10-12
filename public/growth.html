@@ -33,6 +33,13 @@
   .title-item .nm { font-size:18px; margin-top:6px; line-height:1.4; }
   .title-item.earned { border-color:#f2c14e; background:#fffbe6; }
   .title-item.locked { opacity:.45; filter:grayscale(.8); }
+  /* 签到日历 */
+  .cal-grid .cal-head { text-align:center; font-size:12px; color:var(--muted); padding:4px; }
+  .cal-grid .cal-day { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:14px; border-radius:8px; background:#f5f5f5; }
+  .cal-grid .cal-day.checked { background:#e6f4ea; color:#137333; font-weight:700; }
+  .cal-grid .cal-day.today { border:2px solid #1a73e8; font-weight:700; }
+  .cal-grid .cal-day.future { opacity:.3; }
+  .cal-grid .cal-day.empty { background:transparent; }
   .title-item .cond { font-size:15px; color:var(--muted); margin-top:4px; line-height:1.4; }
   #chart { width:100%; height:220px; }
   .legend { display:flex; gap:20px; justify-content:center; font-size:18px; color:var(--muted); margin-top:8px; }
@@ -80,6 +87,16 @@
   <div class="card">
     <h2>🏆 称号墙</h2>
     <div class="title-wall" id="titleWall"><div class="empty">正在加载…</div></div>
+  </div>
+
+  <!-- 签到日历（2026-10-12从首页移到这里） -->
+  <div class="card">
+    <h2>📅 每日签到</h2>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+      <div>🔥 已连续签到 <b id="streakN" style="color:#e8710a;font-size:20px;">0</b> 天 · <span id="monthLabel"></span></div>
+      <button id="checkinBtn" style="padding:10px 24px;font-size:16px;border-radius:12px;border:0;background:#1a73e8;color:#fff;cursor:pointer;">签到</button>
+    </div>
+    <div class="cal-grid" id="checkinCal" style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;"></div>
   </div>
 
   <!-- 加练区（2026-10-12加）：复习加练+英语播客，随时可做，不受锁课影响 -->
@@ -232,6 +249,56 @@ function playPodcast() {
   const a = document.getElementById('growthPodAudio');
   if (a) { try { a.play(); } catch(e) {} }
 }
+// 签到日历（2026-10-12从首页移过来）
+async function loadCheckin() {
+  try {
+    const r = await fetch("/api/checkin");
+    const d = await r.json();
+    if (d && d.ok) renderCheckin(d);
+  } catch {}
+}
+function renderCheckin(d) {
+  document.getElementById("streakN").textContent = d.streak || 0;
+  document.getElementById("monthLabel").textContent = d.monthLabel || '';
+  const cal = document.getElementById("checkinCal");
+  cal.innerHTML = "";
+  ['日','一','二','三','四','五','六'].forEach(h => {
+    const el = document.createElement("div");
+    el.className = "cal-head"; el.textContent = h;
+    cal.appendChild(el);
+  });
+  for (let i = 0; i < (d.firstWeekday || 0); i++) {
+    const el = document.createElement("div");
+    el.className = "cal-day empty";
+    cal.appendChild(el);
+  }
+  (d.month || []).forEach(x => {
+    const el = document.createElement("div");
+    el.className = "cal-day" + (x.checked ? " checked" : "") + (x.isToday ? " today" : "") + (x.isFuture ? " future" : "");
+    el.textContent = x.checked ? "✅" : x.day;
+    el.title = x.date;
+    cal.appendChild(el);
+  });
+  const btn = document.getElementById("checkinBtn");
+  if (d.checked_today) {
+    btn.textContent = "✅ 今日已签到"; btn.disabled = true;
+    btn.style.background = "#e8eaed"; btn.style.color = "#5f6368";
+    btn.onclick = null;
+  } else {
+    btn.textContent = "📅 签到"; btn.disabled = false;
+    btn.style.background = "#1a73e8"; btn.style.color = "#fff";
+    btn.onclick = async () => {
+      btn.disabled = true;
+      try {
+        const r = await fetch("/api/checkin", { method: "POST" });
+        const dd = await r.json();
+        if (dd && dd.ok) renderCheckin(dd);
+      } catch {}
+      btn.disabled = false;
+    };
+  }
+}
+loadCheckin();
 </script>
 </body>
 </html>
