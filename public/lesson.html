@@ -753,6 +753,23 @@ function renderStep() {
   wireQuestion(s);
   makeWordsTappable();
   makeSentencesTappable(); // 句子点读（2026-10-11 加）：点🔊读整句
+  // 2026-10-12加：检测粘贴（复制粘贴做题不算独立完成）
+  window._pastedAnswer = false;
+  ['answerInput', 'gInput'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('paste', () => {
+      window._pastedAnswer = true;
+      // 温柔提醒一次
+      if (!window._pasteWarned) {
+        window._pasteWarned = true;
+        const tip = document.createElement('div');
+        tip.style.cssText = 'position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);background:#333;color:#fff;padding:12px 20px;border-radius:12px;font-size:15px;z-index:9999;max-width:80%;text-align:center;';
+        tip.textContent = '自己打一遍记得更牢哦 💪';
+        document.body.appendChild(tip);
+        setTimeout(() => tip.remove(), 2000);
+      }
+    });
+  });
   window.scrollTo(0, 0);
 }
 // ---- 点词查词 + 生词本（2026-10-08） ----
@@ -1085,7 +1102,8 @@ function wireQuestion(s) {
     try {
       r = await fetch('/api/attempt', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ item_id: s.item_id, answer: given,
-          session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms }) });
+          session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms,
+          pasted: window._pastedAnswer ? 1 : 0 }) }); // 2026-10-12：粘贴标记
     } catch { err.textContent = '网络有点慢，再点一次试试。'; $('btnSub').disabled = false; return; }
     // h 版：先读响应体再按 error 分流，不能只看 HTTP 状态码——
     // 403 有两种：retry_exhausted（留本页看答案抄写）和 part_done（真做完，回首页）
