@@ -287,12 +287,18 @@ function fuzzyToken(norm, wl) {
 function checkWord(norm, spec) {
   // 2026-10-12修：标准答案也要normalize（去标点），否则"答案带句点、作答句点变空格"永远匹配不上
   // 曾导致孩子写对"Keyboard Y is quieter..."被连判20次错
+  // 2026-10-12修2：中文答案不用\b词边界（\b对中文无效），直接用包含匹配
   const normAns = f => normalize(f);
-  const hasNew = spec.answers.some(f => new RegExp(`\\b${escapeReg(normAns(f))}\\b`).test(norm));
+  const matchOne = (f) => {
+    const nf = normAns(f);
+    if (/[\u4e00-\u9fff]/.test(nf)) return norm.includes(nf); // 中文：直接包含
+    return new RegExp(`\\b${escapeReg(nf)}\\b`).test(norm); // 英文：词边界
+  };
+  const hasNew = spec.answers.some(matchOne);
   const olds = spec.olds || [];
-  const hasOld = olds.some(f => new RegExp(`\\b${escapeReg(normAns(f))}\\b`).test(norm));
+  const hasOld = olds.some(matchOne);
   if (hasNew && hasOld) return { status: 'contradiction', matched: null, note: 'new_and_old' };
-  if (hasNew) return { status: 'ok', matched: spec.answers.find(f => new RegExp(`\\b${escapeReg(normAns(f))}\\b`).test(norm)) };
+  if (hasNew) return { status: 'ok', matched: spec.answers.find(matchOne) };
   if (hasOld) return { status: 'contradiction', matched: null, note: 'old_only' };
   // 多词答案的拼写容错（如 "Sunny Day" 写成 "Sunny Da"）：每个词都要在作答里出现，
   // 允许个别词一处拼写小错；有容错命中则整项判 typo（算对、记拼写弱点）。
