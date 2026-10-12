@@ -121,11 +121,29 @@
   <div class="card">
     <h2>🎙️ 英语播客</h2>
     <div id="podcastList">
-      <div onclick="playPodcast()" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+      <div onclick="playPodcast('growthPodAudio1')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;margin-bottom:12px;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第1期：比较级最高级（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">4分39秒 · 点击播放</div>
-        <audio id="growthPodAudio" src="/audio/podcast/ep01-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+        <audio id="growthPodAudio1" src="/audio/podcast/ep01-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+      </div>
+      <div onclick="playPodcast('growthPodAudio2')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;margin-bottom:12px;">
+        <div style="font-size:32px;">🎙️</div>
+        <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第2期：不规则变化全家桶（幽默版）</div>
+        <div style="color:#5f6368;font-size:13px;">5分31秒 · 点击播放</div>
+        <audio id="growthPodAudio2" src="/audio/podcast/ep02-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+      </div>
+      <div onclick="playPodcast('growthPodAudio3')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;margin-bottom:12px;">
+        <div style="font-size:32px;">🎙️</div>
+        <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第3期：拼写绝招（幽默版）</div>
+        <div style="color:#5f6368;font-size:13px;">7分12秒 · 点击播放</div>
+        <audio id="growthPodAudio3" src="/audio/podcast/ep03-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+      </div>
+      <div onclick="playPodcast('growthPodAudio4')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+        <div style="font-size:32px;">🎙️</div>
+        <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第4期：写作小技巧（幽默版）</div>
+        <div style="color:#5f6368;font-size:13px;">5分27秒 · 点击播放</div>
+        <audio id="growthPodAudio4" src="/audio/podcast/ep04-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
       </div>
     </div>
   </div>
@@ -195,8 +213,8 @@ function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 load();
-function playPodcast() {
-  const a = document.getElementById('growthPodAudio');
+function playPodcast(id) {
+  const a = document.getElementById(id || 'growthPodAudio1');
   if (a) { try { a.play(); } catch(e) {} }
 }
 // 签到日历（2026-10-12从首页移过来）
