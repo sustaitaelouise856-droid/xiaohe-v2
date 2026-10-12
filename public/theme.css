@@ -26,3 +26,40 @@ html[data-theme="dark"] .tabbar a.active, html[data-theme="dark"] .bottomnav a.o
 html[data-theme="dark"] input, html[data-theme="dark"] textarea, html[data-theme="dark"] select {
   background:#2d2d2d !important; border-color:#555 !important; color:#e8e8e8 !important;
 }
+/* 2026-10-12深色模式全面修复：浅色字在浅色背景上看不清的问题 */
+/* 课程页 */
+html[data-theme="dark"] .opt .k { background:#4a4a4a !important; color:#f0f0f0 !important; }
+html[data-theme="dark"] .partcard { background:#2d2d2d !important; }
+html[data-theme="dark"] .partcard h3 { color:#ffffff !important; }
+html[data-theme="dark"] .helpbox { background:#3a3220 !important; color:#f0f0f0 !important; border-color:#665522 !important; }
+html[data-theme="dark"] .sabox { background:#2d2d2d !important; color:#f0f0f0 !important; border-color:#555 !important; }
+html[data-theme="dark"] .g-hl { background:#3a3220 !important; color:#f0f0f0 !important; }
+/* 生词本 */
+html[data-theme="dark"] .empty { color:#a0a0a0 !important; }
+html[data-theme="dark"] .wz { color:#cccccc !important; }
+html[data-theme="dark"] .wp { color:#a0a0a0 !important; }
+html[data-theme="dark"] #revOverlay { background:#1a1a1a !important; }
+html[data-theme="dark"] #revCard { background:#2d2d2d !important; color:#f0f0f0 !important; }
+html[data-theme="dark"] #revCard .rw { color:#ffffff !important; }
+html[data-theme="dark"] #revCard .rp, html[data-theme="dark"] #revCard .rsen,
+html[data-theme="dark"] #revCard #revProg { color:#a0a0a0 !important; }
+html[data-theme="dark"] .match-card { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
+html[data-theme="dark"] .match-card.selected { background:#1a3a5c !important; border-color:#7ab8ff !important; }
+/* 学习报告 */
+html[data-theme="dark"] .subtitle { color:#a0a0a0 !important; }
+html[data-theme="dark"] .focus-item { background:#3a3220 !important; }
+html[data-theme="dark"] .focus-item .t, html[data-theme="dark"] .done-item .t { color:#f0f0f0 !important; }
+html[data-theme="dark"] .done-item { background:#1a3a2a !important; }
+html[data-theme="dark"] .stat { background:#3a3a3a !important; }
+html[data-theme="dark"] .stat span { color:#a0a0a0 !important; }
+html[data-theme="dark"] .legend { color:#a0a0a0 !important; }
+/* 成长页 */
+html[data-theme="dark"] .cal-day { background:#3a3a3a !important; color:#f0f0f0 !important; }
+html[data-theme="dark"] .cal-day.checked { background:#1a3a2a !important; color:#4ade80 !important; }
+html[data-theme="dark"] .cal-head { color:#a0a0a0 !important; }
+/* 弹窗通用 */
+html[data-theme="dark"] [id$="Ov"] > div, html[data-theme="dark"] #mistakeOv > div,
+html[data-theme="dark"] #titleDetailOv > div { background:#2d2d2d !important; color:#f0f0f0 !important; }
+html[data-theme="dark"] [id$="Ov"] h3 { color:#ffffff !important; }
+/* --muted 全局修正 */
+html[data-theme="dark"] { --muted:#a0a0a0 !important; }
