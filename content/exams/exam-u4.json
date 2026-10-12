@@ -1,0 +1,1086 @@
+{
+ "id": "exam-u4",
+ "unit": 4,
+ "title": "Unit 4 单元测验卷",
+ "subtitle": "Inventions · 被动语态",
+ "total_score": 140,
+ "sections": [
+  {
+   "id": "listening",
+   "title": "一、听说",
+   "total": 30,
+   "parts": [
+    {
+     "id": "read_aloud",
+     "title": "一、模仿朗读（8分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "speak",
+       "score": 8,
+       "stem": "请朗读下面的短文。",
+       "passage": "Paper was invented in China about two thousand years ago. It was made from trees, old cloth and fishing nets. Before paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Today, paper is used all over the world. We write on it, read books made of it, and draw pictures on it.",
+       "speak_hint": "注意被动语态 was/were/is 的发音，语速适中，语音语调自然。"
+      }
+     ]
+    },
+    {
+     "id": "listen_choice",
+     "title": "二、听后选择（9分，每小题1.5分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 1.5,
+       "script": "W: The telephone was invented by Alexander Bell in 1876. Q: Who invented the telephone?",
+       "stem": "Who invented the telephone?",
+       "options": [
+        "Cai Lun",
+        "Alexander Bell",
+        "Thomas Edison",
+        "Bi Sheng"
+       ],
+       "answer": 1,
+       "audio": ""
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 1.5,
+       "script": "M: Paper is made from wood. First, trees are cut down. Then the wood is made into paper. Q: What is paper made from?",
+       "stem": "What is paper made from?",
+       "options": [
+        "Cotton",
+        "Wood",
+        "Plastic",
+        "Glass"
+       ],
+       "answer": 1,
+       "audio": ""
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 1.5,
+       "script": "W: The light bulb was invented in 1879. It is used to give light at night. Q: When was the light bulb invented?",
+       "stem": "When was the light bulb invented?",
+       "options": [
+        "In 1876",
+        "In 1879",
+        "In 1877",
+        "In 1880"
+       ],
+       "answer": 1,
+       "audio": ""
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 1.5,
+       "script": "M: Many books are printed every year. They are sold in bookshops all over the world. Q: Where are the books sold?",
+       "stem": "Where are the books sold?",
+       "options": [
+        "In schools",
+        "In bookshops",
+        "In libraries",
+        "In museums"
+       ],
+       "answer": 1,
+       "audio": ""
+      },
+      {
+       "num": 5,
+       "type": "choice",
+       "score": 1.5,
+       "script": "W: The Great Wall was built more than two thousand years ago. It is visited by millions of people every year. Q: How many people visit the Great Wall every year?",
+       "stem": "How many people visit the Great Wall every year?",
+       "options": [
+        "Thousands",
+        "Hundreds",
+        "Millions",
+        "Dozens"
+       ],
+       "answer": 2,
+       "audio": ""
+      },
+      {
+       "num": 6,
+       "type": "choice",
+       "score": 1.5,
+       "script": "M: English is spoken in many countries. It is taught in schools all over China. Q: Where is English taught?",
+       "stem": "Where is English taught?",
+       "options": [
+        "Only in England",
+        "In schools all over China",
+        "Only in America",
+        "In hospitals"
+       ],
+       "answer": 1,
+       "audio": ""
+      }
+     ]
+    },
+    {
+     "id": "listen_answer",
+     "title": "三、听短文回答问题（4分，每小题1分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 1,
+       "script": "M: Was the compass invented in China? W: Yes, it was. Q: Was the compass invented in China?",
+       "stem": "Was the compass invented in China?",
+       "options": [
+        "Yes, it was.",
+        "No, it wasn't.",
+        "I don't know.",
+        "Maybe."
+       ],
+       "answer": 0,
+       "audio": ""
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 1,
+       "script": "W: Are these watches made in Switzerland? M: No, they are made in China. Q: Where are these watches made?",
+       "stem": "Where are these watches made?",
+       "options": [
+        "In Switzerland",
+        "In China",
+        "In Japan",
+        "In America"
+       ],
+       "answer": 1,
+       "audio": ""
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 1,
+       "script": "M: When was the computer invented? W: It was invented in the 1940s. Q: When was the computer invented?",
+       "stem": "When was the computer invented?",
+       "options": [
+        "In the 1940s",
+        "In the 1950s",
+        "In the 1960s",
+        "In the 1930s"
+       ],
+       "answer": 0,
+       "audio": ""
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 1,
+       "script": "W: Is tea grown in Hangzhou? M: Yes, the famous Longjing tea is grown there. Q: Is tea grown in Hangzhou?",
+       "stem": "Is tea grown in Hangzhou?",
+       "options": [
+        "No, it isn't.",
+        "Yes, it is.",
+        "Not sure.",
+        "No tea there."
+       ],
+       "answer": 1,
+       "audio": ""
+      }
+     ]
+    },
+    {
+     "id": "role_play",
+     "title": "四、角色扮演（9分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "speak",
+       "score": 7,
+       "stem": "情景：你在发明展上，讲解员介绍了自行车。请复述讲解员的话。",
+       "passage": "My favorite invention is the bicycle. It was invented about two hundred years ago. Bikes are used by millions of people every day. They are cheap, and they do not pollute the air. I ride my bike to school every morning.",
+       "speak_hint": "用自己的话复述大意即可，注意被动语态的表达。"
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 1,
+       "stem": "情景：你想问讲解员电话是什么时候发明的。下面哪一句问法正确？",
+       "options": [
+        "When was the telephone invented?",
+        "When did the telephone invented?",
+        "When is the telephone invent?",
+        "When the telephone was invented?"
+       ],
+       "answer": 0,
+       "audio": ""
+      },
+      {
+       "num": 3,
+       "type": "fill",
+       "score": 1,
+       "stem": "讲解员问：Who was the telephone invented by? 请补全回答：It was invented ______.",
+       "answer": "by Alexander Bell",
+       "hint": "用被动语态回答，注意by。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "written",
+   "title": "二、笔试",
+   "total": 110,
+   "parts": [
+    {
+     "id": "grammar_choice",
+     "title": "五、语法选择（15分，每小题1分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 1,
+       "stem": "Paper ______ in China about 2,000 years ago.",
+       "options": [
+        "is invented",
+        "was invented",
+        "invents",
+        "invented"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 1,
+       "stem": "These cars ______ in Germany.",
+       "options": [
+        "are made",
+        "is made",
+        "was made",
+        "make"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 1,
+       "stem": "The Great Wall ______ more than 2,000 years ago.",
+       "options": [
+        "is built",
+        "builds",
+        "was built",
+        "build"
+       ],
+       "answer": 2
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 1,
+       "stem": "English ______ in many countries.",
+       "options": [
+        "is spoken",
+        "speaks",
+        "was speak",
+        "spoken"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 5,
+       "type": "choice",
+       "score": 1,
+       "stem": "The storybook ______ by my sister yesterday.",
+       "options": [
+        "was written",
+        "is written",
+        "writes",
+        "wrote"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 6,
+       "type": "choice",
+       "score": 1,
+       "stem": "Tea ______ in Hangzhou. It tastes good.",
+       "options": [
+        "is grown",
+        "grows",
+        "was grow",
+        "grown"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 7,
+       "type": "choice",
+       "score": 1,
+       "stem": "The windows ______ by the students every day.",
+       "options": [
+        "are cleaned",
+        "is cleaned",
+        "cleans",
+        "cleaned"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 8,
+       "type": "choice",
+       "score": 1,
+       "stem": "The telephone ______ in 1876.",
+       "options": [
+        "invents",
+        "is invented",
+        "was invented",
+        "invented"
+       ],
+       "answer": 2
+      },
+      {
+       "num": 9,
+       "type": "choice",
+       "score": 1,
+       "stem": "This song ______ by a famous singer.",
+       "options": [
+        "is sung",
+        "sings",
+        "was sing",
+        "sung"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 10,
+       "type": "choice",
+       "score": 1,
+       "stem": "The football match ______ on TV last night.",
+       "options": [
+        "is shown",
+        "was shown",
+        "shows",
+        "shown"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 11,
+       "type": "choice",
+       "score": 1,
+       "stem": "______ the bridge ______ in 1990?",
+       "options": [
+        "Is; built",
+        "Was; built",
+        "Does; build",
+        "Did; built"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 12,
+       "type": "choice",
+       "score": 1,
+       "stem": "Rice ______ in the south of China.",
+       "options": [
+        "is grown",
+        "are grown",
+        "was grow",
+        "grow"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 13,
+       "type": "choice",
+       "score": 1,
+       "stem": "The letters ______ yesterday afternoon.",
+       "options": [
+        "were sent",
+        "are sent",
+        "sent",
+        "is sent"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 14,
+       "type": "choice",
+       "score": 1,
+       "stem": "The computer ______ for studying by many students.",
+       "options": [
+        "is used",
+        "uses",
+        "used",
+        "was use"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 15,
+       "type": "choice",
+       "score": 1,
+       "stem": "______ this kind of bike ______ in your country?",
+       "options": [
+        "Is; made",
+        "Does; make",
+        "Was; make",
+        "Are; made"
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "cloze",
+     "title": "六、语言运用（10分，每小题1分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 1,
+       "stem": "The printing was invented by Bi Sheng ______ the 11th century.",
+       "options": [
+        "in",
+        "on",
+        "at",
+        "for"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 1,
+       "stem": "The Eiffel Tower ______ by millions of visitors every year.",
+       "options": [
+        "is visited",
+        "visits",
+        "visited",
+        "is visiting"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 1,
+       "stem": "This watch was ______ in Switzerland.",
+       "options": [
+        "make",
+        "makes",
+        "made",
+        "making"
+       ],
+       "answer": 2
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 1,
+       "stem": "—Was the camera invented by Edison? —______.",
+       "options": [
+        "Yes, it was",
+        "No, it is",
+        "Yes, it is",
+        "No, it does"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 5,
+       "type": "choice",
+       "score": 1,
+       "stem": "These T-shirts are ______ of cotton.",
+       "options": [
+        "made",
+        "make",
+        "making",
+        "makes"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 6,
+       "type": "choice",
+       "score": 1,
+       "stem": "The old bridge was pulled ______ last year.",
+       "options": [
+        "down",
+        "up",
+        "off",
+        "away"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 7,
+       "type": "choice",
+       "score": 1,
+       "stem": "Chopsticks ______ every day in China.",
+       "options": [
+        "are used",
+        "use",
+        "uses",
+        "using"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 8,
+       "type": "choice",
+       "score": 1,
+       "stem": "The movie ______ from a famous novel.",
+       "options": [
+        "is adapted",
+        "adapts",
+        "adapted",
+        "adapting"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 9,
+       "type": "choice",
+       "score": 1,
+       "stem": "When ______ the first railway ______ in China?",
+       "options": [
+        "was; built",
+        "is; built",
+        "did; build",
+        "does; build"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 10,
+       "type": "choice",
+       "score": 1,
+       "stem": "The new library ______ next to our school last year.",
+       "options": [
+        "was built",
+        "is built",
+        "builds",
+        "built"
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "reading1",
+     "title": "七、阅读理解一（30分，每小题2分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 2,
+       "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
+       "stem": "Who invented paper?",
+       "options": [
+        "Bi Sheng",
+        "Cai Lun",
+        "Edison",
+        "Bell"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 2,
+       "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
+       "stem": "What did people write on before paper was invented?",
+       "options": [
+        "On bamboo or silk",
+        "On wood",
+        "On walls",
+        "On leaves"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 2,
+       "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
+       "stem": "What was Cai Lun's paper made from?",
+       "options": [
+        "Plastic",
+        "Trees, old cloth and fishing nets",
+        "Cotton",
+        "Glass"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 2,
+       "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
+       "stem": "Why was Cai Lun's paper popular?",
+       "options": [
+        "Because it was light and cheap",
+        "Because it was colorful",
+        "Because it was heavy",
+        "Because it was expensive"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 5,
+       "type": "choice",
+       "score": 2,
+       "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
+       "stem": "Which of the following is TRUE?",
+       "options": [
+        "Paper was invented in America",
+        "Silk was cheaper than paper",
+        "Paper is used everywhere today",
+        "Cai Lun invented printing"
+       ],
+       "answer": 2
+      },
+      {
+       "num": 6,
+       "type": "choice",
+       "score": 2,
+       "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
+       "stem": "How were books made in the past?",
+       "options": [
+        "By machine",
+        "By hand",
+        "By computer",
+        "By robot"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 7,
+       "type": "choice",
+       "score": 2,
+       "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
+       "stem": "Who invented movable type printing?",
+       "options": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Edison",
+        "Bell"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 8,
+       "type": "choice",
+       "score": 2,
+       "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
+       "stem": "When was movable type printing invented?",
+       "options": [
+        "In the 10th century",
+        "In the 11th century",
+        "In the 12th century",
+        "In the 13th century"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 9,
+       "type": "choice",
+       "score": 2,
+       "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
+       "stem": "Why was printing a great invention?",
+       "options": [
+        "Books became more expensive",
+        "Books could be printed faster and cheaper",
+        "Books became heavier",
+        "Fewer people could read"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 10,
+       "type": "choice",
+       "score": 2,
+       "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
+       "stem": "What does the underlined word \"movable\" mean?",
+       "options": [
+        "固定的",
+        "可移动的",
+        "昂贵的",
+        "沉重的"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 11,
+       "type": "choice",
+       "score": 2,
+       "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
+       "stem": "When was the compass invented?",
+       "options": [
+        "About 800 years ago",
+        "More than 2,000 years ago",
+        "In the 11th century",
+        "In 1876"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 12,
+       "type": "choice",
+       "score": 2,
+       "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
+       "stem": "What was the compass first used for?",
+       "options": [
+        "For travelling",
+        "For building houses",
+        "For cooking",
+        "For fishing"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 13,
+       "type": "choice",
+       "score": 2,
+       "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
+       "stem": "Who used the compass on ships?",
+       "options": [
+        "Farmers",
+        "Sailors",
+        "Teachers",
+        "Doctors"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 14,
+       "type": "choice",
+       "score": 2,
+       "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
+       "stem": "When was the compass brought to Europe?",
+       "options": [
+        "About 800 years ago",
+        "2,000 years ago",
+        "In 1876",
+        "Last year"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 15,
+       "type": "choice",
+       "score": 2,
+       "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
+       "stem": "Which of the following is TRUE?",
+       "options": [
+        "The compass was invented in Europe",
+        "Compasses are not used today",
+        "Phones can also show directions today",
+        "The compass was invented for sailors at first"
+       ],
+       "answer": 2
+      }
+     ]
+    },
+    {
+     "id": "reading2",
+     "title": "八、阅读理解二（5分，每小题1分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 1,
+       "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
+       "stem": "When is the exhibition?",
+       "options": [
+        "Oct. 20-25",
+        "Oct. 25-30",
+        "Nov. 20-25",
+        "Sept. 20-25"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 1,
+       "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
+       "stem": "Where is the exhibition?",
+       "options": [
+        "School library",
+        "City Museum, 2nd Floor",
+        "City Park",
+        "Science Center"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 1,
+       "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
+       "stem": "Who invented the first telephone?",
+       "options": [
+        "Edison",
+        "Bell",
+        "Cai Lun",
+        "Bi Sheng"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 1,
+       "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
+       "stem": "How much is a student ticket?",
+       "options": [
+        "20 yuan",
+        "15 yuan",
+        "10 yuan",
+        "Free"
+       ],
+       "answer": 2
+      },
+      {
+       "num": 5,
+       "type": "choice",
+       "score": 1,
+       "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
+       "stem": "What can you see at the exhibition?",
+       "options": [
+        "Only telephones",
+        "An old printing machine from the Qing Dynasty",
+        "Real cars",
+        "Animals"
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "id": "rw_choice",
+     "title": "九、读写综合（选择，10分，每小题2分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "choice",
+       "score": 2,
+       "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
+       "stem": "第1题",
+       "options": [
+        "was invented",
+        "is invented",
+        "invented",
+        "invents"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 2,
+       "type": "choice",
+       "score": 2,
+       "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
+       "stem": "第2题",
+       "options": [
+        "talk",
+        "talks",
+        "talked",
+        "talking"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 3,
+       "type": "choice",
+       "score": 2,
+       "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
+       "stem": "第3题",
+       "options": [
+        "became",
+        "become",
+        "becomes",
+        "becoming"
+       ],
+       "answer": 0
+      },
+      {
+       "num": 4,
+       "type": "choice",
+       "score": 2,
+       "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
+       "stem": "第4题",
+       "options": [
+        "use",
+        "used",
+        "uses",
+        "using"
+       ],
+       "answer": 1
+      },
+      {
+       "num": 5,
+       "type": "choice",
+       "score": 2,
+       "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
+       "stem": "第5题",
+       "options": [
+        "take",
+        "takes",
+        "taking",
+        "took"
+       ],
+       "answer": 2
+      }
+     ]
+    },
+    {
+     "id": "rw_qa",
+     "title": "十、读写综合（问答，10分，每小题2分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "fill",
+       "score": 2,
+       "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
+       "stem": "Who invented the seismograph?",
+       "answer": "Zhang Heng"
+      },
+      {
+       "num": 2,
+       "type": "fill",
+       "score": 2,
+       "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
+       "stem": "When was the seismograph invented?",
+       "answer": "In 132 AD"
+      },
+      {
+       "num": 3,
+       "type": "fill",
+       "score": 2,
+       "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
+       "stem": "What was the seismograph used for?",
+       "answer": "To tell the direction of earthquakes"
+      },
+      {
+       "num": 4,
+       "type": "fill",
+       "score": 2,
+       "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
+       "stem": "Was it the first instrument of its kind in the world?",
+       "answer": "Yes, it was"
+      },
+      {
+       "num": 5,
+       "type": "fill",
+       "score": 2,
+       "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
+       "stem": "How did people feel about his invention?",
+       "answer": "Surprised"
+      }
+     ]
+    },
+    {
+     "id": "grammar_fill",
+     "title": "十一、语法填空（10分，每小题1分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第1题（见上文短文）",
+       "answer": "was invented"
+      },
+      {
+       "num": 2,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第2题（见上文短文）",
+       "answer": "was made"
+      },
+      {
+       "num": 3,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第3题（见上文短文）",
+       "answer": "are printed"
+      },
+      {
+       "num": 4,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第4题（见上文短文）",
+       "answer": "are sold"
+      },
+      {
+       "num": 5,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第5题（见上文短文）",
+       "answer": "was built"
+      },
+      {
+       "num": 6,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第6题（见上文短文）",
+       "answer": "is visited"
+      },
+      {
+       "num": 7,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第7题（见上文短文）",
+       "answer": "is grown"
+      },
+      {
+       "num": 8,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第8题（见上文短文）",
+       "answer": "is spoken"
+      },
+      {
+       "num": 9,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第9题（见上文短文）",
+       "answer": "were taken"
+      },
+      {
+       "num": 10,
+       "type": "fill",
+       "score": 1,
+       "passage": "Paper __1__ (invent) in China about 2,000 years ago. It __2__ (make) from trees and old cloth. Many books __3__ (print) every year now. They __4__ (sell) in bookshops. The Great Wall __5__ (build) long ago. It __6__ (visit) by millions of people every year. Tea __7__ (grow) in many places in China. English __8__ (speak) in many countries. These photos __9__ (take) by my father last week. The classroom __10__ (clean) by the students every day.",
+       "stem": "第10题（见上文短文）",
+       "answer": "is cleaned"
+      }
+     ]
+    },
+    {
+     "id": "writing",
+     "title": "十二、书面表达（20分）",
+     "questions": [
+      {
+       "num": 1,
+       "type": "writing",
+       "score": 20,
+       "stem": "请以 \"My Favorite Invention\" 为题，写一篇不少于80词的短文。内容包括：1. 你最喜欢的发明是什么；2. 它是什么时候、在哪里被发明的；3. 它给人们的生活带来了什么变化。",
+       "min_words": 80,
+       "hint": "多使用本单元学过的被动语态（如 was invented, is used）；注意时态；语句通顺，结构完整。"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
