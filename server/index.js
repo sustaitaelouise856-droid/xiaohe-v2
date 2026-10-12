@@ -705,18 +705,29 @@ function checkTitles() {
 }
 
 // 检查 Unit 3 专项巩固是否过关：零求助、纯独立手写正确率 ≥ 85%
+// 2026-10-12修：按session统计。孩子重做一次就是新的一轮，只看本轮的求助和正确率，
+// 不再因很久以前用过一次HELP就永远卡死。
+function getConsolidationSessionStart() {
+  try {
+    const r = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_session'").get();
+    return r ? r.value : null;
+  } catch { return null; }
+}
+
 function checkConsolidationPass() {
   try {
-    // 取 u3-consolidate 的所有作答
+    const sessStart = getConsolidationSessionStart();
+    const timeFilter = sessStart ? `AND created_at >= '${sessStart}'` : '';
+    // 取本轮的作答
     const attempts = db.prepare(
-      "SELECT item_id, correct FROM attempts WHERE item_id LIKE 'u3-consolidate%'"
+      `SELECT item_id, correct FROM attempts WHERE item_id LIKE 'u3-consolidate%' ${timeFilter}`
     ).all();
     if (attempts.length === 0) return false;
-    // 检查是否有求助记录
+    // 检查本轮是否有求助记录
     const helps = db.prepare(
-      "SELECT COUNT(*) as c FROM help_events WHERE item_id LIKE 'u3-consolidate%'"
+      `SELECT COUNT(*) as c FROM help_events WHERE item_id LIKE 'u3-consolidate%' ${timeFilter}`
     ).get();
-    if (helps && helps.c > 0) return false; // 用过求助，不算过关
+    if (helps && helps.c > 0) return false; // 本轮用过求助，不算过关
     // 计算独立正确率（每题取最后一次作答）
     const lastAttempt = {};
     for (const a of attempts) lastAttempt[a.item_id] = a.correct;
@@ -725,6 +736,14 @@ function checkConsolidationPass() {
     const rate = ids.length > 0 ? correct / ids.length : 0;
     return rate >= 0.85;
   } catch { return false; }
+}
+
+// 开始新的巩固轮次：记录开始时间
+function startConsolidationSession() {
+  try {
+    const now = new Date().toISOString().slice(0, 19).replace('T', ' ');
+    db.prepare("INSERT OR REPLACE INTO app_state(key, value) VALUES('u3_consolidation_session', ?)").run(now);
+  } catch (e) { console.error('[consolidation] startSession', e.message); }
 }
 
 // 课程步骤（去答案版；需验证）。?lesson=u2r2 取第 2 课；第 2 课的步骤 1 开场与复盘题由服务端动态生成/筛选
@@ -738,6 +757,21 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
   if (!L) return res.status(404).json({ ok: false, error: 'no_lesson' });
   // 二审三1：前面的课没做完，这门课不开放（直接拼 URL 也进不来）
   if (!lessonOpen(lid)) return res.status(403).json({ ok: false, error: 'lesson_locked' });
+  // 2026-10-12：u3-consolidate 新一轮开始时重置session计时
+  // 如果上次已学完（p1+p2都done），这次打开就是新的一轮
+  if (lid === 'u3-consolidate') {
+    try {
+      const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='u3-consolidate'").get();
+      const sess = getConsolidationSessionStart();
+      if (!sess || (st && st.p1_done === 1 && st.p2_done === 1)) {
+        startConsolidationSession();
+        // 重置完成标记，开始新一轮
+        if (st && st.p1_done === 1 && st.p2_done === 1) {
+          db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0 WHERE lesson_id='u3-consolidate'").run();
+        }
+      }
+    } catch (e) { console.error('[consolidation] session', e.message); }
+  }
   const steps = lid === 'u2r2' ? review.serveU2r2(L.lesson) : L.lesson.steps;
   const choices = loadChoices(lid); // 剧情回调：该课学生已做的选择
   res.json({
