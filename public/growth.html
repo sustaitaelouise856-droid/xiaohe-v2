@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="/client-error.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小禾英语 · 成长档案</title>
+<style>
+  :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --red:#d93025; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa; }
+  * { box-sizing:border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); font-size:22px; line-height:1.7; margin:0; padding-bottom:90px; }
+  #topbar { background:#fff; border-bottom:1px solid var(--line); padding:14px 20px; font-weight:700; font-size:26px; }
+  #wrap { max-width:900px; margin:0 auto; padding:20px 16px 40px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; margin-bottom:18px; }
+  .card h2 { font-size:25px; margin:0 0 12px; }
+  .summary { font-size:23px; line-height:1.8; }
+  .tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+  .tag { font-size:20px; padding:6px 18px; border-radius:20px; }
+  .tag.weak { background:#fce8e6; color:#a50e0e; border:1px solid #f5c6c0; }
+  .tag.strong { background:#e6f4ea; color:#137333; border:1px solid #b7e0c3; }
+  .stat-row { display:flex; gap:12px; margin-top:8px; }
+  .stat { flex:1; text-align:center; background:#f1f3f4; border-radius:12px; padding:14px 6px; }
+  .stat b { display:block; font-size:32px; color:var(--blue); }
+  .stat span { font-size:18px; color:var(--muted); }
+  .wrow { display:flex; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid var(--line); font-size:21px; }
+  .wrow:last-child { border-bottom:0; }
+  .wtag { font-weight:700; flex:1; }
+  .wcount { background:var(--orange); color:#fff; border-radius:12px; padding:2px 14px; font-size:19px; }
+  .wlast { color:var(--muted); font-size:18px; }
+  .title-wall { display:flex; flex-wrap:wrap; gap:12px; }
+  .title-item { width:30%; min-width:100px; text-align:center; padding:14px 6px; border-radius:14px; border:2px solid var(--line); }
+  .title-item .ic { font-size:38px; }
+  .title-item .nm { font-size:18px; margin-top:6px; line-height:1.4; }
+  .title-item.earned { border-color:#f2c14e; background:#fffbe6; }
+  .title-item.locked { opacity:.45; filter:grayscale(.8); }
+  .title-item .cond { font-size:15px; color:var(--muted); margin-top:4px; line-height:1.4; }
+  #chart { width:100%; height:220px; }
+  .legend { display:flex; gap:20px; justify-content:center; font-size:18px; color:var(--muted); margin-top:8px; }
+  .dot { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:6px; }
+  .empty { color:var(--muted); text-align:center; padding:16px; font-size:20px; }
+  .tabbar { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e8eaed; display:flex; padding:8px 0 calc(8px + env(safe-area-inset-bottom)); z-index:50; }
+  .tabbar a { flex:1; text-align:center; text-decoration:none; color:#5f6368; font-size:11px; display:flex; flex-direction:column; align-items:center; gap:2px; }
+  .tabbar a .ticon { font-size:22px; }
+  .tabbar a.active { color:#1a73e8; font-weight:700; }
+  /* 深色模式 */
+  html[data-theme="dark"] body { background:#1a1a1a; color:#f0f0f0; }
+  html[data-theme="dark"] #topbar, html[data-theme="dark"] .card { background:#2d2d2d; border-color:#555; }
+  html[data-theme="dark"] .stat { background:#3a3a3a; }
+  html[data-theme="dark"] .stat span { color:#bbb; }
+  html[data-theme="dark"] .tag.weak { background:#4a2c2c; color:#ffb4a8; border-color:#7a3a3a; }
+  html[data-theme="dark"] .tag.strong { background:#1e3a2a; color:#a8e6b4; border-color:#2e5a3a; }
+  html[data-theme="dark"] .title-item.earned { background:#3a3220; border-color:#a8842e; }
+  html[data-theme="dark"] .tabbar { background:#2d2d2d; border-color:#555; }
+  html[data-theme="dark"] .tabbar a { color:#bbb; }
+  html[data-theme="dark"] .wlast, html[data-theme="dark"] .title-item .cond { color:#999; }
+</style>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
+</head>
+<body>
+<div id="topbar">🌱 成长档案</div>
+<div id="wrap">
+  <div class="card" id="profileCard"><div class="empty">正在加载…</div></div>
+  <div class="card">
+    <h2>📈 最近7天学习趋势</h2>
+    <canvas id="chart"></canvas>
+    <div class="legend">
+      <span><span class="dot" style="background:#1a73e8"></span>做题数</span>
+      <span><span class="dot" style="background:#1e8e3e"></span>正确率%</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>📊 本周小结</h2>
+    <div class="stat-row" id="weeklyRow"><div class="empty">正在加载…</div></div>
+  </div>
+  <div class="card">
+    <h2>🎯 弱点清单</h2>
+    <div id="weakList"><div class="empty">正在加载…</div></div>
+  </div>
+  <div class="card">
+    <h2>🏆 称号墙</h2>
+    <div class="title-wall" id="titleWall"><div class="empty">正在加载…</div></div>
+  </div>
+</div>
+<div class="tabbar">
+  <a href="/"><span class="ticon">🏠</span>首页</a>
+  <a href="/vocab.html"><span class="ticon">📖</span>生词本</a>
+  <a href="/progress.html"><span class="ticon">📊</span>学习报告</a>
+  <a href="/growth.html" class="active"><span class="ticon">🌱</span>成长</a>
+  <a href="/settings.html"><span class="ticon">⚙️</span>设置</a>
+</div>
+<script>
+async function load() {
+  try {
+    const g = await (await fetch('/api/growth')).json();
+    if (!g.ok) throw new Error('load failed');
+    // 画像卡
+    const p = g.profile || {};
+    let html = '<h2>👤 学生画像</h2><div class="summary">' + esc(p.summary || '') + '</div>';
+    if ((p.weaknesses||[]).length) {
+      html += '<div class="tags">' + p.weaknesses.map(w => '<span class="tag weak">短板：' + esc(w) + '</span>').join('') + '</div>';
+    }
+    if ((p.strengths||[]).length) {
+      html += '<div class="tags">' + p.strengths.map(s => '<span class="tag strong">👍 ' + esc(s) + '</span>').join('') + '</div>';
+    }
+    document.getElementById('profileCard').innerHTML = html;
+    // 趋势图
+    drawChart(g.trend || []);
+    // 本周
+    const w = g.weekly || {};
+    document.getElementById('weeklyRow').innerHTML =
+      stat(w.minutes, '分钟') + stat(w.attempts, '做题') +
+      stat(w.lessons, '完成课程') + stat(w.avg_rate == null ? '–' : w.avg_rate + '%', '正确率');
+    // 弱点
+    const wl = g.weakness_list || [];
+    document.getElementById('weakList').innerHTML = wl.length
+      ? wl.map(x => '<div class="wrow"><span class="wtag">' + esc(x.tag) + '</span><span class="wcount">' + x.count + '次</span><span class="wlast">' + esc(x.last || '') + '</span></div>').join('')
+      : '<div class="empty">还没发现明显弱点，继续保持！</div>';
+  } catch (e) {
+    document.getElementById('profileCard').innerHTML = '<div class="empty">加载失败，下拉刷新试试</div>';
+  }
+  // 称号墙（复用 /api/titles）
+  try {
+    const t = await (await fetch('/api/titles')).json();
+    const list = (t.titles || []);
+    document.getElementById('titleWall').innerHTML = list.length
+      ? list.map(x => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '"><div class="ic">' + (x.earned ? x.icon : '🔒') + '</div><div class="nm">' + esc(x.name) + '</div><div class="cond">' + esc(x.desc || '') + '</div></div>').join('')
+      : '<div class="empty">暂无称号数据</div>';
+  } catch (e) {
+    document.getElementById('titleWall').innerHTML = '<div class="empty">加载失败</div>';
+  }
+}
+function stat(v, label) {
+  return '<div class="stat"><b>' + v + '</b><span>' + label + '</span></div>';
+}
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function drawChart(trend) {
+  const cv = document.getElementById('chart');
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth, H = 220;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const grid = dark ? '#444' : '#e8eaed', txt = dark ? '#bbb' : '#5f6368';
+  const pad = { l: 36, r: 36, t: 16, b: 30 };
+  const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+  const maxN = Math.max(10, ...trend.map(t => t.attempts || 0));
+  const X = i => pad.l + (trend.length <= 1 ? iw / 2 : iw * i / (trend.length - 1));
+  const Y1 = n => pad.t + ih - ih * n / maxN;          // 做题数（左轴）
+  const Y2 = r => pad.t + ih - ih * (r || 0) / 100;    // 正确率（右轴 0-100）
+  ctx.strokeStyle = grid; ctx.lineWidth = 1;
+  ctx.fillStyle = txt; ctx.font = '12px sans-serif'; ctx.textAlign = 'center';
+  // 横轴日期
+  trend.forEach((t, i) => ctx.fillText(t.date || '', X(i), H - 10));
+  // 左轴 0/max
+  ctx.textAlign = 'right';
+  ctx.fillText('0', pad.l - 6, pad.t + ih);
+  ctx.fillText(String(maxN), pad.l - 6, pad.t + 8);
+  // 做题数折线（蓝）
+  ctx.strokeStyle = '#1a73e8'; ctx.lineWidth = 2.5; ctx.beginPath();
+  trend.forEach((t, i) => { const x = X(i), y = Y1(t.attempts || 0); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+  ctx.stroke();
+  ctx.fillStyle = '#1a73e8';
+  trend.forEach((t, i) => { ctx.beginPath(); ctx.arc(X(i), Y1(t.attempts || 0), 4, 0, 7); ctx.fill(); });
+  // 正确率折线（绿，跳过无数据的天）
+  ctx.strokeStyle = '#1e8e3e'; ctx.lineWidth = 2.5; ctx.beginPath();
+  let started = false;
+  trend.forEach((t, i) => {
+    if (t.rate == null) { started = false; return; }
+    const x = X(i), y = Y2(t.rate);
+    started ? ctx.lineTo(x, y) : ctx.moveTo(x, y); started = true;
+  });
+  ctx.stroke();
+  ctx.fillStyle = '#1e8e3e';
+  trend.forEach((t, i) => {
+    if (t.rate == null) return;
+    ctx.beginPath(); ctx.arc(X(i), Y2(t.rate), 4, 0, 7); ctx.fill();
+    ctx.fillStyle = txt; ctx.fillText(t.rate + '%', X(i), Y2(t.rate) - 10); ctx.fillStyle = '#1e8e3e';
+  });
+}
+load();
+</script>
+</body>
+</html>
