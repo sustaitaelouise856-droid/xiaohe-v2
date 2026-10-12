@@ -18,6 +18,18 @@
   .kp:last-child { border-bottom:0; }
   .badge { font-size:18px; padding:4px 14px; border-radius:20px; color:#fff; white-space:nowrap; }
   .badge.没学 { background:#9aa0a6; } .badge.学过 { background:var(--orange); }
+  /* 学习趋势（从成长页移过来） */
+  .stat-row { display:flex; gap:12px; margin-top:8px; }
+  .stat { flex:1; text-align:center; background:#f1f3f4; border-radius:12px; padding:14px 6px; }
+  .stat b { display:block; font-size:32px; color:var(--blue); }
+  .stat span { font-size:18px; color:var(--muted); }
+  .wrow { display:flex; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid var(--line); font-size:21px; }
+  .wrow:last-child { border-bottom:0; }
+  .wtag { font-weight:700; flex:1; }
+  .wcount { background:var(--orange); color:#fff; border-radius:12px; padding:2px 14px; font-size:19px; }
+  .wlast { color:var(--muted); font-size:18px; }
+  .legend { display:flex; gap:20px; justify-content:center; font-size:18px; color:var(--muted); margin-top:8px; }
+  .dot { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:6px; }
   .badge.会了 { background:var(--blue); } .badge.牢固 { background:var(--green); }
   .kp-name { flex:1; }
   /* 真人老师风格错题本 */
@@ -54,11 +66,30 @@
 <script src="/theme.js"></script>
 </head>
 <body>
-<div id="topbar">我的进步</div>
+<div id="topbar">学习报告</div>
 <div id="wrap">
   <div class="tabs">
     <button class="tab active" onclick="showTab('mastery')">掌握情况</button>
     <button class="tab" onclick="showTab('mistakes')">错题本</button>
+    <button class="tab" onclick="showTab('trend')">学习趋势</button>
+  </div>
+  <div id="tab-trend" style="display:none">
+    <div class="card">
+      <h2>📈 最近7天学习趋势</h2>
+      <canvas id="trendChart" style="width:100%;height:220px;"></canvas>
+      <div class="legend">
+        <span><span class="dot" style="background:#1a73e8"></span>做题数</span>
+        <span><span class="dot" style="background:#1e8e3e"></span>正确率%</span>
+      </div>
+    </div>
+    <div class="card">
+      <h2>📊 本周小结</h2>
+      <div class="stat-row" id="weeklyRow"><div class="empty">正在加载…</div></div>
+    </div>
+    <div class="card">
+      <h2>🎯 弱点清单</h2>
+      <div id="weakList"><div class="empty">正在加载…</div></div>
+    </div>
   </div>
   <div id="tab-mastery">
     <div class="card">
@@ -154,7 +185,76 @@ function showTab(t) {
   event.target.classList.add('active');
   document.getElementById('tab-mastery').style.display = t === 'mastery' ? '' : 'none';
   document.getElementById('tab-mistakes').style.display = t === 'mistakes' ? '' : 'none';
+  document.getElementById('tab-trend').style.display = t === 'trend' ? '' : 'none';
   if (t === 'mistakes') loadMistakes();
+  if (t === 'trend') loadTrend();
+}
+// 学习趋势（从成长页移过来）
+let _trendLoaded = false;
+async function loadTrend() {
+  if (_trendLoaded) return;
+  _trendLoaded = true;
+  try {
+    const g = await (await fetch('/api/growth')).json();
+    if (!g.ok) throw new Error('load failed');
+    // 趋势图
+    drawTrendChart(g.trend || []);
+    // 本周小结
+    const w = g.weekly || {};
+    document.getElementById('weeklyRow').innerHTML =
+      statHtml(w.minutes, '分钟') + statHtml(w.attempts, '做题') +
+      statHtml(w.lessons, '完成课程') + statHtml(w.avg_rate == null ? '–' : w.avg_rate + '%', '正确率');
+    // 弱点清单
+    const wl = g.weakness_list || [];
+    document.getElementById('weakList').innerHTML = wl.length
+      ? wl.map(x => '<div class="wrow"><span class="wtag">' + escHtml(x.tag) + '</span><span class="wcount">' + x.count + '次</span><span class="wlast">' + escHtml(x.last || '') + '</span></div>').join('')
+      : '<div class="empty">还没发现明显弱点，继续保持！</div>';
+  } catch (e) {
+    document.getElementById('weeklyRow').innerHTML = '<div class="empty">加载失败</div>';
+  }
+}
+function statHtml(v, label) {
+  return '<div class="stat"><b>' + v + '</b><span>' + label + '</span></div>';
+}
+function escHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function drawTrendChart(trend) {
+  const cv = document.getElementById('trendChart');
+  if (!cv) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth || 300, H = 220;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  if (!trend.length) {
+    ctx.fillStyle = '#999'; ctx.font = '14px sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('暂无数据', W/2, H/2);
+    return;
+  }
+  const maxN = Math.max(...trend.map(t => t.attempts || 0), 1);
+  const pad = 30;
+  const X = i => pad + i * (W - pad*2) / Math.max(trend.length - 1, 1);
+  const Y1 = n => H - pad - (n / maxN) * (H - pad*2);
+  const Y2 = r => H - pad - (r / 100) * (H - pad*2);
+  // 做题数（蓝线）
+  ctx.strokeStyle = '#1a73e8'; ctx.lineWidth = 2; ctx.beginPath();
+  trend.forEach((t, i) => { const x = X(i), y = Y1(t.attempts || 0); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+  ctx.stroke();
+  // 正确率（绿线）
+  ctx.strokeStyle = '#1e8e3e'; ctx.beginPath();
+  trend.forEach((t, i) => { if (t.rate == null) return; const x = X(i), y = Y2(t.rate); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+  ctx.stroke();
+  ctx.fillStyle = '#1a73e8';
+  trend.forEach((t, i) => {
+    ctx.beginPath(); ctx.arc(X(i), Y1(t.attempts || 0), 4, 0, 7); ctx.fill();
+  });
+  ctx.fillStyle = '#1e8e3e';
+  trend.forEach((t, i) => {
+    if (t.rate == null) return;
+    ctx.beginPath(); ctx.arc(X(i), Y2(t.rate), 4, 0, 7); ctx.fill();
+  });
 }
 
 try { loadMastery(); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
