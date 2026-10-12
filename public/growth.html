@@ -142,12 +142,17 @@ async function load() {
     document.getElementById('profileCard').innerHTML = '<div class="empty">加载失败，下拉刷新试试</div>';
   }
   // 称号墙（复用 /api/titles），点击查看获得要求
+  // 2026-10-12：未获得显示灰色+🔒+???，点击才显示真图标和要求
   try {
     const t = await (await fetch('/api/titles')).json();
     const list = (t.titles || []);
     window._titles = list;
     document.getElementById('titleWall').innerHTML = list.length
-      ? list.map((x, i) => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '" onclick="showTitleDetail(' + i + ')" style="cursor:pointer;"><div class="ic">' + (x.earned ? x.icon : '🔒') + '</div><div class="nm">' + esc(x.name) + '</div><div class="cond">' + (x.earned ? '已获得' : '点击查看要求') + '</div></div>').join('')
+      ? list.map((x, i) => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '" onclick="showTitleDetail(' + i + ')" style="cursor:pointer;'
+        + (x.earned ? '' : 'filter:grayscale(1);opacity:.6;') + '">'
+        + '<div class="ic">' + (x.earned ? x.icon : '🔒') + '</div>'
+        + '<div class="nm">' + (x.earned ? esc(x.name) : '???') + '</div>'
+        + '<div class="cond">' + (x.earned ? '已获得' : '点击查看要求') + '</div></div>').join('')
       : '<div class="empty">暂无称号数据</div>';
   } catch (e) {
     document.getElementById('titleWall').innerHTML = '<div class="empty">加载失败</div>';
