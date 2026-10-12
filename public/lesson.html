@@ -801,7 +801,7 @@ function makeWordsTappable() {
       if (/^[A-Za-z]+(?:'[a-z]+)?$/.test(part) && part.length >= 2) {
         const sp = document.createElement('span');
         sp.className = 'w'; sp.textContent = part;
-        sp.onclick = e => { e.stopPropagation(); showWordPop(part, e.clientX, e.clientY); };
+        sp.onclick = e => { e.stopPropagation(); showWordPop(part, e.clientX, e.clientY, sp); };
         frag.appendChild(sp);
       } else frag.appendChild(document.createTextNode(part));
     });
@@ -847,6 +847,7 @@ function makeSentencesTappable() {
       if (!window.SENT_AUDIO_MANIFEST.has(h)) return; // 没音频的不显示按钮
       const wrap = document.createElement('span');
       wrap.className = 'sent';
+      wrap.dataset.sent = text; // 2026-10-12：生词带原句，点词时可取到所在原句
       const btn = document.createElement('button');
       btn.className = 'sent-say'; btn.textContent = '🔊'; btn.title = '读这一句';
       btn.onclick = e => { e.stopPropagation(); speakSentence(text); };
@@ -856,10 +857,42 @@ function makeSentencesTappable() {
     });
   });
 }
-function showWordPop(raw, x, y) {
+// 取单词所在的原句（2026-10-12：生词带原句）：优先用 .sent 包裹的句子；
+// 没有被包裹（无点读音频的句子）时，按兄弟节点前后找句子边界兜底
+function sentenceOf(el) {
+  try {
+    if (el && el.closest) {
+      const s = el.closest('.sent');
+      if (s && s.dataset && s.dataset.sent) return s.dataset.sent;
+    }
+    if (!el || !el.parentNode) return '';
+    const ENDER = /[.!?。！？]/;
+    let left = '', n = el.previousSibling;
+    while (n) {
+      const t = n.textContent || '';
+      left = t + left;
+      if (ENDER.test(t)) break;
+      n = n.previousSibling;
+    }
+    const li = Math.max(left.lastIndexOf('.'), left.lastIndexOf('!'), left.lastIndexOf('?'),
+      left.lastIndexOf('。'), left.lastIndexOf('！'), left.lastIndexOf('？'));
+    if (li >= 0) left = left.slice(li + 1);
+    let right = '', m = el;
+    while (m) {
+      const t = m.textContent || '';
+      const ei = t.search(ENDER);
+      if (ei >= 0) { right += t.slice(0, ei + 1); break; }
+      right += t;
+      m = m.nextSibling;
+    }
+    return (left + right).replace(/🔊/g, '').trim();
+  } catch (e) { return ''; }
+}
+function showWordPop(raw, x, y, el) {
   const r = lookupWord(raw);
   if (!r) return;
   curWord = r;
+  curWord.sent = sentenceOf(el); // 2026-10-12：生词带原句
   document.getElementById('wpWord').textContent = r.orig || r.word;
   let ph = '', zh = '（词典里没有这个词的意思）';
   if (r.hit) { const p = r.hit.split('|'); ph = p[0] ? '/' + p[0] + '/' : ''; zh = p[1] || zh; }
@@ -894,12 +927,14 @@ function addToVocab(r) {
   const v = getVocab();
   let ph = '', zh = '';
   if (r.hit) { const p = r.hit.split('|'); ph = p[0] || ''; zh = p[1] || ''; }
-  if (!v[r.word]) v[r.word] = { zh, ph, added: Date.now(), reviews: 0, ok: 0 };
+  const sent = r.sent || '';
+  if (!v[r.word]) v[r.word] = { zh, ph, added: Date.now(), reviews: 0, ok: 0, sent };
+  else if (!v[r.word].sent && sent) v[r.word].sent = sent; // 2026-10-12：补原句
   try { localStorage.setItem('xh_vocab_v1', JSON.stringify(v)); } catch (e) {}
   // 服务端尽力同步（失败不影响）
   try {
     fetch('/api/vocab/add', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ word: r.word, zh, ph }) }).catch(() => {});
+      body: JSON.stringify({ word: r.word, zh, ph, sent }) }).catch(() => {});
   } catch (e) {}
 }
 document.addEventListener('click', e => {
