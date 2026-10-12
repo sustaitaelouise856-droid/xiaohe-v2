@@ -162,43 +162,40 @@ async function submitExam() {
   if (!confirm('确定交卷吗？')) return;
   clearInterval(timerInt);
   document.getElementById('submitBar').style.display = 'none';
-  // 本地评分（客观题）
-  let score = 0, detail = [];
-  EXAM.sections.forEach(sec => {
-    sec.parts.forEach(part => {
-      part.questions.forEach((q, qi) => {
-        const qid = sec.id + '-' + part.id + '-' + qi;
-        const ans = ANSWERS[qid];
-        let got = 0;
-        if (q.type === 'choice' && ans === q.answer) got = q.score;
-        else if (q.type === 'fill' && ans && String(ans).trim().toLowerCase() === String(q.answer).trim().toLowerCase()) got = q.score;
-        else if (q.type === 'speak' && ans === 'recorded') got = q.score; // 参与分
-        // writing 由老师/家长评，暂记0
-        score += got;
-        detail.push({ qid, got, max: q.score });
-      });
-    });
-  });
-  // 保存到服务器
+  document.getElementById('examBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">判分中…</div>';
+  // 只传原始答案，分数由服务端判
   const examId = new URLSearchParams(location.search).get('exam');
-  await fetch('/api/exam/submit', {
+  const resp = await fetch('/api/exam/submit', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ exam_id: examId, score, detail, answers: ANSWERS })
+    body: JSON.stringify({ exam_id: examId, answers: ANSWERS })
   });
-  showResult(score);
+  const data = await resp.json();
+  if (!data.ok) {
+    document.getElementById('examBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">提交失败，请重试</div>';
+    return;
+  }
+  showResult(data);
 }
 
-function showResult(score) {
+function showResult(data) {
+  const score = data.score, totalObj = data.total_objective, pending = data.pending || [];
   const total = EXAM.total_score;
-  const pct = Math.round(score / total * 100);
+  const pendingScore = pending.reduce((s, p) => s + p.max, 0);
+  const pct = totalObj > 0 ? Math.round(score / totalObj * 100) : 0;
   document.getElementById('examBody').style.display = 'none';
   const r = document.getElementById('result');
   r.className = 'show';
+  let pendingHtml = '';
+  if (pending.length > 0) {
+    const names = pending.map(p => (p.type === 'speak' ? '口语' : '写作') + p.num + '题(' + p.max + '分)').join('、');
+    pendingHtml = `<div style="font-size:14px;color:#b7791f;margin-top:12px;background:#fff8e1;border-radius:8px;padding:10px;">⏳ ${names}待评分（共${pendingScore}分），请妈妈批改后计入总分</div>`;
+  }
   r.innerHTML = `<div class="section"><div class="score-big">
-    <div class="num">${score}</div><div class="total">/ ${total} 分</div>
+    <div class="num">${score}</div><div class="total">/ ${totalObj} 分（客观题）</div>
     <div class="score-bar"><div class="score-fill" style="width:${pct}%"></div></div>
     <div style="font-size:16px;color:#5f6368;">${pct >= 90 ? '🎉 太棒了！' : pct >= 60 ? '💪 继续加油！' : '📚 还需要努力哦'}</div>
-    <div style="font-size:13px;color:#999;margin-top:12px;">写作题需老师批改，分数暂未计入</div>
+    ${pendingHtml}
+    <div style="font-size:13px;color:#999;margin-top:8px;">全卷满分 ${total} 分</div>
   </div></div>
   <div class="section" style="text-align:center;"><a href="/" style="color:var(--blue);text-decoration:none;font-size:17px;">← 返回首页</a></div>`;
   window.scrollTo(0, 0);
