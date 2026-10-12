@@ -184,6 +184,31 @@
   #wordPop .wp-say { background:var(--blue); color:#fff; }
   #wordPop .wp-add { background:#e8f5e9; color:#2e7d32; }
   #wordPop .wp-close { position:absolute; top:4px; right:10px; border:0; background:none; font-size:18px; color:var(--muted); cursor:pointer; }
+  /* 称号庆祝动画（2026-10-12） */
+  .title-celebrate {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,.55); display: flex;
+    align-items: center; justify-content: center;
+    animation: fadeIn .3s ease;
+  }
+  .title-celebrate .tbox {
+    background: linear-gradient(180deg, #fff8e6, #ffedb8);
+    border: 3px solid #f2c14e; border-radius: 20px;
+    padding: 36px 48px; text-align: center;
+    box-shadow: 0 8px 32px rgba(242,193,78,.5);
+    animation: popIn .5s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  .title-celebrate .tbox .big-icon { font-size: 64px; display: block; margin-bottom: 12px; animation: bounce 1s infinite; }
+  .title-celebrate .tbox h2 { font-size: 24px; color: #b54708; margin: 0 0 8px; }
+  .title-celebrate .tbox p { font-size: 15px; color: #7a4a00; margin: 0 0 20px; }
+  .title-celebrate .tbox button {
+    background: linear-gradient(180deg, #ff9f2e, #e8710a); color: #fff;
+    border: 0; border-radius: 12px; padding: 12px 36px;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+  }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes popIn { from { transform: scale(.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 </style>
 <script src="/dict.min.js"></script>
 <link rel="stylesheet" href="/theme.css">
@@ -501,6 +526,44 @@ async function renderHome() {
   }
   wrap.innerHTML = html;
   wrap.querySelectorAll('[data-go]').forEach(b => b.onclick = () => startPart(+b.dataset.go));
+  // 新称号庆祝（2026-10-12）：advance() 里存的 window._newTitles
+  if (window._newTitles && window._newTitles.length) {
+    const ids = window._newTitles;
+    window._newTitles = null;
+    // 查称号名字（从服务端拿定义）
+    fetch('/api/titles').then(r => r.json()).then(d => {
+      const map = {};
+      (d.titles || []).forEach(t => map[t.id] = t);
+      ids.forEach((tid, i) => {
+        const t = map[tid];
+        if (!t) return;
+        setTimeout(() => {
+          const ov = document.createElement('div');
+          ov.className = 'title-celebrate';
+          ov.innerHTML = `<div class="tbox">
+            <span class="big-icon">${t.icon}</span>
+            <h2>🎉 获得称号！</h2>
+            <p style="font-size:20px;font-weight:700;color:#b54708;">${t.name}</p>
+            <p>${t.desc}</p>
+            <button onclick="this.closest('.title-celebrate').remove()">太棒了！</button>
+          </div>`;
+          document.body.appendChild(ov);
+          // 播放庆祝音效（Web Audio 简单琶音）
+          try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            [523, 659, 784, 1047].forEach((f, j) => {
+              const o = ctx.createOscillator(), g = ctx.createGain();
+              o.connect(g); g.connect(ctx.destination);
+              o.frequency.value = f; o.type = 'sine';
+              g.gain.setValueAtTime(0.25, ctx.currentTime + j * 0.12);
+              g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + j * 0.12 + 0.4);
+              o.start(ctx.currentTime + j * 0.12); o.stop(ctx.currentTime + j * 0.12 + 0.45);
+            });
+          } catch {}
+        }, i * 2500);
+      });
+    }).catch(() => {});
+  }
 }
 
 /* ---------- 上课 ---------- */
@@ -821,8 +884,13 @@ async function advance() {
   const arr = stepsOf(PART);
   if (POS + 1 >= arr.length) {
     try {
-      await fetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      const r = await fetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ part: PART, lesson: LID }) });
+      const d = await r.json().catch(() => ({}));
+      // 称号庆祝（2026-10-12）：新获得称号存下来，renderHome 里弹庆祝
+      if (d && d.newTitles && d.newTitles.length) {
+        window._newTitles = d.newTitles;
+      }
     } catch {}
     ST['p' + PART].done = true; ST['p' + PART].pos = arr.length; store.save(ST); renderHome();
   }
