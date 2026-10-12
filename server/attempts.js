@@ -23,7 +23,7 @@ function contentVerdict(item, answer) {
   return null;
 }
 
-function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, copied, predicted }) {
+function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, copied, predicted, pasted }) {
   const item = db.prepare('SELECT * FROM items WHERE item_id=?').get(String(item_id || ''));
   if (!item) return { error: 'no_item' };
   const sid = String(session_id || '');
@@ -101,7 +101,8 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     independent = 0;
   } else {
     // 练习阶段：看过反馈/帮助后答对 = 有帮助完成；验证阶段首次答对 = 独立完成
-    independent = (contentOk && !helped) ? 1 : 0;
+    // 2026-10-12：粘贴作答不算独立完成
+    independent = (contentOk && !helped && !pasted) ? 1 : 0;
   }
   // 预判错法记入明细（只在判 wrong 时，供反馈首句与复盘归因）
   if (predicted && r.detail && typeof r.detail === 'object'
@@ -110,10 +111,11 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   }
 
   const ms = Number(elapsed_ms);
+  const pastedFlag = pasted ? 1 : 0;
   db.prepare(
-    'INSERT INTO attempts(item_id, session_id, helped, correct, independent, answer_given, verdict, detail_json, elapsed_ms) VALUES(?,?,?,?,?,?,?,?,?)'
+    'INSERT INTO attempts(item_id, session_id, helped, correct, independent, answer_given, verdict, detail_json, elapsed_ms, pasted) VALUES(?,?,?,?,?,?,?,?,?,?)'
   ).run(item.item_id, sid, finalHelped, contentOk, independent, String(answer ?? ''), verdict, JSON.stringify(r.detail),
-    Number.isFinite(ms) && ms >= 0 ? Math.round(ms) : null);
+    Number.isFinite(ms) && ms >= 0 ? Math.round(ms) : null, pastedFlag);
 
   // 复测闭环（2026-10-03）：零帮助独立答对 → 解决待复测
   // verdict=correct 且 independent=1（无帮助）时，清除该题所有 pending 复测
