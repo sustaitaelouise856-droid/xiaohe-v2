@@ -1047,10 +1047,12 @@ function wireQuestion(s) {
   })();
   // 触发一次"老师教我"：按钮点击和自动升级（练习连错 2 次自动给二级）共用。
   // 成功才升级（helpLv 记请求等级），失败不消耗次数；已给到更高等级时不重复低等级请求。
-  function triggerHelp(lvl) {
+  function triggerHelp(lvl, force) {
     var btn = $('btnHelp');
     var hb = $('helpbox');
-    if (!btn || btn.disabled) return;
+    if (!btn) return;
+    // 2026-10-13修：孩子手动点且在冷却中则不响应；系统自动触发（连错2次，force=true）不受冷却限制
+    if (!force && btn.disabled) return;
     var isPractice = (s.phase || 'practice') === 'practice';
     if (!isPractice) lvl = 1;
     lvl = Math.min(Math.max(lvl || 1, 1), 3);
@@ -1084,6 +1086,7 @@ function wireQuestion(s) {
         hb.innerHTML = '我们一起来看：<b>' + escapeHtml(b.answer) + '</b>' +
           (b.explain ? '<br><br>为什么是这个答案？' + escapeHtml(b.explain) : '') +
           '<br><br>你再自己说一遍答案，然后提交。';
+        helpBtnLabel = '';
         btn.textContent = '老师教我';
       } else if (got >= 2 && b.help_line) {
         // L2：优先在同屏材料块里高亮该行；材料不在屏上时在帮助面板内高亮
@@ -1093,13 +1096,16 @@ function wireQuestion(s) {
         } else {
           hb.innerHTML = '在材料里找到这一行：<br><span class="hl">' + escapeHtml(b.help_line) + '</span><br><br>读懂这行，答案就出来了。';
         }
-        btn.textContent = '还是不会，直接告诉我';
+        helpBtnLabel = '还是不会，直接告诉我';
+        btn.textContent = helpBtnLabel;
       } else {
         // L1：苏格拉底式引导，先问问题，不直接给提示
         hb.innerHTML = '别急，我们一步步来：<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
+        helpBtnLabel = isPractice ? '再帮我一点' : '';
         btn.textContent = isPractice ? '再帮我一点' : '老师教我';
       }
-      btn.disabled = false;
+      // 2026-10-13修：冷却还没走完就不提前解禁按钮（系统自动触发的帮助不打破冷却）
+      if (Date.now() >= helpCooldownUntil) btn.disabled = false;
       showInView(hb);
     }).catch(function (e) {
       clearTimeout(timer);
@@ -1108,26 +1114,32 @@ function wireQuestion(s) {
       err.textContent = (code === 'timeout')
         ? '老师提示加载太慢了，再点一次试试。（timeout）'
         : '老师提示没加载出来，再点一次试试。（' + code + '）';
-      btn.disabled = false;
+      if (Date.now() >= helpCooldownUntil) btn.disabled = false;
     });
   }
   autoHelp = triggerHelp; // handleVerdict 自动升级时调用
   // 30秒思考冷静期（2026-10-11 Elouise：杜绝秒点求助刷课）
   // 题目出现后强制思考30秒，HELP按钮倒计时后才可用
+  // 2026-10-13修：①用时间戳算剩余秒数，iOS切后台回来计时器不再停滞；
+  // ②系统自动触发的帮助（连错2次）不受冷却限制，不再被静默吞掉；
+  // ③帮助成功后若冷却未走完，不提前解禁按钮。
+  var helpCooldownUntil = 0;
+  var helpBtnLabel = '';
   (function () {
     var btn = $('btnHelp');
     if (!btn) return;
-    var cooldown = 30;
+    helpCooldownUntil = Date.now() + 30000;
     btn.disabled = true;
-    btn.textContent = '先自己想 ' + cooldown + ' 秒';
+    btn.textContent = '先自己想 30 秒';
     var timer = setInterval(function () {
-      cooldown--;
-      if (cooldown <= 0) {
+      var remain = Math.ceil((helpCooldownUntil - Date.now()) / 1000);
+      if (remain <= 0) {
         clearInterval(timer);
+        helpCooldownUntil = 0;
         btn.disabled = false;
-        btn.textContent = '老师教我';
-      } else {
-        btn.textContent = '先自己想 ' + cooldown + ' 秒';
+        btn.textContent = helpBtnLabel || '老师教我';
+      } else if (!helpBtnLabel) {
+        btn.textContent = '先自己想 ' + remain + ' 秒';
       }
     }, 1000);
   })();
@@ -1267,9 +1279,10 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     } else {
       // 自动升级（2026-10-02 规范第 5 条）：练习阶段同一题连错 2 次，不用等孩子点，
       // 直接给二级提示（高亮原材料那一行）；再点第 3 次帮助就是三级给答案
+      // 2026-10-13修：系统自动触发不受30秒冷却限制（force=true），之前会被静默吞掉
       if (isPractice) {
         wrongCt[s.item_id] = (wrongCt[s.item_id] || 0) + 1;
-        if (wrongCt[s.item_id] === 2 && autoHelp) autoHelp(2);
+        if (wrongCt[s.item_id] === 2 && autoHelp) autoHelp(2, true);
       }
     }
     // 保底出口（g 版）：练习阶段第 3 次 wrong 显示"先看答案，继续往下"
