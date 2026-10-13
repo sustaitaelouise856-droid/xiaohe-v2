@@ -1638,11 +1638,13 @@ function lessonOpen(lid) {
   // 数学/语文课独立，不参与英语主线解锁
   if (/^(sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return true;
   // 每日复习门（2026-10-12）：有待复习项时，未开的新正课锁定
-  // 复习课本身、已开的课（学过一半的）不受影响
+  // 复习课本身、已开的课（有真实进度的）不受影响
+  // 2026-10-13修："已开"只认 p1_done/p2_done=1 的真实进度，单纯点开过（0/0）的
+  // 不算已开，否则 u5/u6 的 0/0 打开记录会绕过门禁。
   if (/^u[2-6]r\d+$/.test(lid) && !isReviewLesson(lid)) {
     try {
       const st = lessonState(lid);
-      const started = st && (st.p1_done === 1 || st.p2_done === 1 || st.p1_started_day);
+      const started = st && (st.p1_done === 1 || st.p2_done === 1);
       if (!started && hasPendingReviews()) return false;
     } catch {}
   }
