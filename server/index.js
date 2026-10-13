@@ -831,14 +831,11 @@ app.get('/api/exam/:id', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   const r = exams.getExam(req.params.id);
   if (!r.ok) return res.status(404).json(r);
-  // 检查解锁
+  // 检查解锁：本单元5节课学完即可考
+  // 2026-10-13 Elouise定：测验卷不再被每日复习门锁定（学完就能考），新课继续锁
   const m = req.params.id.match(/exam-u(\d)/);
   if (m && !exams.isUnitDone(parseInt(m[1]))) {
     return res.status(403).json({ ok: false, error: 'locked' });
-  }
-  // 每日复习门：有待复习项时，测验卷也锁定
-  if (hasPendingReviews()) {
-    return res.status(403).json({ ok: false, error: 'review_pending', pending: getPendingReviews() });
   }
   res.json(r);
 });
