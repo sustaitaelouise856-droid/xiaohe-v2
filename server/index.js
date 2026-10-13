@@ -1582,10 +1582,13 @@ function getPendingReviews() {
   } catch (e) { console.error('[reviews]', e.message); }
   return pending;
 }
-// 当前单元 = 孩子已开始的正课中的最大单元号（2026-10-13：复习门只看当前单元）
+// 当前单元 = 孩子有真实进度的正课中的最大单元号（2026-10-13：复习门只看当前单元）
+// 注意：只看 p1_done/p2_done=1 的课，单纯点开过（0/0）的不算，避免误判
 function currentUnit() {
   try {
-    const rows = db.prepare("SELECT lesson_id FROM lesson_state WHERE lesson_id GLOB 'u[0-9]r[0-9]*'").all();
+    const rows = db.prepare(
+      "SELECT lesson_id FROM lesson_state WHERE lesson_id GLOB 'u[0-9]r[0-9]*' AND (p1_done = 1 OR p2_done = 1)"
+    ).all();
     let m = 0;
     for (const r of rows) {
       const mt = /^u(\d+)r\d+/.exec(r.lesson_id || '');
