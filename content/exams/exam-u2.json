@@ -603,237 +603,217 @@
           "id": "reading-1",
           "title": "七、阅读理解一（30分，每题2分）",
           "instruction": "阅读下面的短文，从A、B、C、D四个选项中选出最佳选项。",
-          "passages": [
+          "passage": "A\nNOTICE\nSchool Sports Meeting\n\nThe school sports meeting will be held on Friday, October 16th on the playground. All students must arrive at 8:00 a.m. The opening ceremony starts at 8:30 a.m. There will be running, long jump and ball games. Winners will get prizes. If it rains, the meeting will be put off till next Friday.\n— The Students' Union\n\nB\nXiaohe Radio — Library News (November)\n\nIn November, students borrowed 3,200 books in all. Grade Seven borrowed 900 books, up 6% from October. Grade Eight borrowed 1,500 books, up 20% — the most again! Grade Nine borrowed 800 books, down 5%. Story books are still the children's favourite. The library thanks all readers and hopes more students will come.\n\nC\nDear Xiaohe Radio,\n\nI'm Li Mei from Class 2, Grade 8. I love your \"Music Time\" very much. Every Friday evening I listen to it with my parents. Last week you played my favourite song. Thank you! Can you play \"Auld Lang Syne\" for my best friend Wang Fang next Friday? Her birthday is coming. Thank you!\n\nYours,\nLi Mei",
+          "questions": [
             {
-              "id": "u2p1",
-              "title": "A",
-              "text": "NOTICE\nSchool Sports Meeting\n\nThe school sports meeting will be held on Friday, October 16th on the playground. All students must arrive at 8:00 a.m. The opening ceremony starts at 8:30 a.m. There will be running, long jump and ball games. Winners will get prizes. If it rains, the meeting will be put off till next Friday.\n— The Students' Union",
-              "questions": [
-                {
-                  "id": "u2r1",
-                  "type": "choice",
-                  "stem": "When will the sports meeting be held?",
-                  "options": [
-                    "October 15th",
-                    "October 16th",
-                    "October 17th",
-                    "October 18th"
-                  ],
-                  "answer": 1,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r2",
-                  "type": "choice",
-                  "stem": "Where will the sports meeting be held?",
-                  "options": [
-                    "In the library",
-                    "In the school hall",
-                    "On the playground",
-                    "In the classroom"
-                  ],
-                  "answer": 2,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r3",
-                  "type": "choice",
-                  "stem": "What time must students arrive?",
-                  "options": [
-                    "7:30 a.m.",
-                    "8:00 a.m.",
-                    "8:30 a.m.",
-                    "9:00 a.m."
-                  ],
-                  "answer": 1,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r4",
-                  "type": "choice",
-                  "stem": "What will happen if it rains?",
-                  "options": [
-                    "Put it off till next Friday",
-                    "Cancel the meeting",
-                    "Hold it indoors",
-                    "Start one hour late"
-                  ],
-                  "answer": 0,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r5",
-                  "type": "choice",
-                  "stem": "Who wrote the notice?",
-                  "options": [
-                    "The headmaster",
-                    "Lin Tao",
-                    "The Students' Union",
-                    "Ann"
-                  ],
-                  "answer": 2,
-                  "score": 2,
-                  "audio": ""
-                }
-              ]
+              "id": "u2r1",
+              "type": "choice",
+              "stem": "When will the sports meeting be held?",
+              "options": [
+                "October 15th",
+                "October 16th",
+                "October 17th",
+                "October 18th"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
             },
             {
-              "id": "u2p2",
-              "title": "B",
-              "text": "Xiaohe Radio — Library News (November)\n\nIn November, students borrowed 3,200 books in all. Grade Seven borrowed 900 books, up 6% from October. Grade Eight borrowed 1,500 books, up 20% — the most again! Grade Nine borrowed 800 books, down 5%. Story books are still the children's favourite. The library thanks all readers and hopes more students will come.",
-              "questions": [
-                {
-                  "id": "u2r6",
-                  "type": "choice",
-                  "stem": "How many books did students borrow in all in November?",
-                  "options": [
-                    "3,200",
-                    "900",
-                    "1,500",
-                    "800"
-                  ],
-                  "answer": 0,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r7",
-                  "type": "choice",
-                  "stem": "Which grade borrowed the most books?",
-                  "options": [
-                    "Grade Seven",
-                    "Grade Eight",
-                    "Grade Nine",
-                    "Grade Ten"
-                  ],
-                  "answer": 1,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r8",
-                  "type": "choice",
-                  "stem": "What happened to Grade Nine's number?",
-                  "options": [
-                    "It went up 6%",
-                    "It went up 20%",
-                    "It went down 5%",
-                    "It stayed the same"
-                  ],
-                  "answer": 2,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r9",
-                  "type": "choice",
-                  "stem": "What kind of books are the children's favourite?",
-                  "options": [
-                    "Science books",
-                    "History books",
-                    "Art books",
-                    "Story books"
-                  ],
-                  "answer": 3,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r10",
-                  "type": "choice",
-                  "stem": "What does the library hope?",
-                  "options": [
-                    "Fewer readers will come",
-                    "More students will come",
-                    "The library will close early",
-                    "Students will buy new books"
-                  ],
-                  "answer": 1,
-                  "score": 2,
-                  "audio": ""
-                }
-              ]
+              "id": "u2r2",
+              "type": "choice",
+              "stem": "Where will the sports meeting be held?",
+              "options": [
+                "In the library",
+                "In the school hall",
+                "On the playground",
+                "In the classroom"
+              ],
+              "answer": 2,
+              "score": 2,
+              "audio": ""
             },
             {
-              "id": "u2p3",
-              "title": "C",
-              "text": "Dear Xiaohe Radio,\n\nI'm Li Mei from Class 2, Grade 8. I love your \"Music Time\" very much. Every Friday evening I listen to it with my parents. Last week you played my favourite song. Thank you! Can you play \"Auld Lang Syne\" for my best friend Wang Fang next Friday? Her birthday is coming. Thank you!\n\nYours,\nLi Mei",
-              "questions": [
-                {
-                  "id": "u2r11",
-                  "type": "choice",
-                  "stem": "Who wrote the letter?",
-                  "options": [
-                    "Wang Fang",
-                    "Li Mei",
-                    "Ann",
-                    "Lin Tao"
-                  ],
-                  "answer": 1,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r12",
-                  "type": "choice",
-                  "stem": "When does Li Mei listen to \"Music Time\"?",
-                  "options": [
-                    "Every Wednesday evening",
-                    "Every morning",
-                    "Every Saturday",
-                    "Every Friday evening"
-                  ],
-                  "answer": 3,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r13",
-                  "type": "choice",
-                  "stem": "Who does she listen with?",
-                  "options": [
-                    "Her friends",
-                    "Her parents",
-                    "Her teachers",
-                    "Nobody"
-                  ],
-                  "answer": 1,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r14",
-                  "type": "choice",
-                  "stem": "What song does she ask the station to play?",
-                  "options": [
-                    "Auld Lang Syne",
-                    "Tomorrow Will Be Better",
-                    "Happy Birthday",
-                    "Jasmine"
-                  ],
-                  "answer": 0,
-                  "score": 2,
-                  "audio": ""
-                },
-                {
-                  "id": "u2r15",
-                  "type": "choice",
-                  "stem": "Why does she ask for the song?",
-                  "options": [
-                    "For herself",
-                    "For the station",
-                    "Wang Fang's birthday is coming",
-                    "For her parents"
-                  ],
-                  "answer": 2,
-                  "score": 2,
-                  "audio": ""
-                }
-              ]
+              "id": "u2r3",
+              "type": "choice",
+              "stem": "What time must students arrive?",
+              "options": [
+                "7:30 a.m.",
+                "8:00 a.m.",
+                "8:30 a.m.",
+                "9:00 a.m."
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r4",
+              "type": "choice",
+              "stem": "What will happen if it rains?",
+              "options": [
+                "Put it off till next Friday",
+                "Cancel the meeting",
+                "Hold it indoors",
+                "Start one hour late"
+              ],
+              "answer": 0,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r5",
+              "type": "choice",
+              "stem": "Who wrote the notice?",
+              "options": [
+                "The headmaster",
+                "Lin Tao",
+                "The Students' Union",
+                "Ann"
+              ],
+              "answer": 2,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r6",
+              "type": "choice",
+              "stem": "How many books did students borrow in all in November?",
+              "options": [
+                "3,200",
+                "900",
+                "1,500",
+                "800"
+              ],
+              "answer": 0,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r7",
+              "type": "choice",
+              "stem": "Which grade borrowed the most books?",
+              "options": [
+                "Grade Seven",
+                "Grade Eight",
+                "Grade Nine",
+                "Grade Ten"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r8",
+              "type": "choice",
+              "stem": "What happened to Grade Nine's number?",
+              "options": [
+                "It went up 6%",
+                "It went up 20%",
+                "It went down 5%",
+                "It stayed the same"
+              ],
+              "answer": 2,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r9",
+              "type": "choice",
+              "stem": "What kind of books are the children's favourite?",
+              "options": [
+                "Science books",
+                "History books",
+                "Art books",
+                "Story books"
+              ],
+              "answer": 3,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r10",
+              "type": "choice",
+              "stem": "What does the library hope?",
+              "options": [
+                "Fewer readers will come",
+                "More students will come",
+                "The library will close early",
+                "Students will buy new books"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r11",
+              "type": "choice",
+              "stem": "Who wrote the letter?",
+              "options": [
+                "Wang Fang",
+                "Li Mei",
+                "Ann",
+                "Lin Tao"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r12",
+              "type": "choice",
+              "stem": "When does Li Mei listen to \"Music Time\"?",
+              "options": [
+                "Every Wednesday evening",
+                "Every morning",
+                "Every Saturday",
+                "Every Friday evening"
+              ],
+              "answer": 3,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r13",
+              "type": "choice",
+              "stem": "Who does she listen with?",
+              "options": [
+                "Her friends",
+                "Her parents",
+                "Her teachers",
+                "Nobody"
+              ],
+              "answer": 1,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r14",
+              "type": "choice",
+              "stem": "What song does she ask the station to play?",
+              "options": [
+                "Auld Lang Syne",
+                "Tomorrow Will Be Better",
+                "Happy Birthday",
+                "Jasmine"
+              ],
+              "answer": 0,
+              "score": 2,
+              "audio": ""
+            },
+            {
+              "id": "u2r15",
+              "type": "choice",
+              "stem": "Why does she ask for the song?",
+              "options": [
+                "For herself",
+                "For the station",
+                "Wang Fang's birthday is coming",
+                "For her parents"
+              ],
+              "answer": 2,
+              "score": 2,
+              "audio": ""
             }
           ]
         },
