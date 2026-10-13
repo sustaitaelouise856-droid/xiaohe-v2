@@ -898,9 +898,10 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     // 取最近50道答错的题（含看答案过、粘贴等）
+    // 2026-10-13修：items表没有question_json列，改用prompt/answer列
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
-             i.question_json, i.lesson_id
+             i.prompt, i.answer, i.lesson_id
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
@@ -908,17 +909,15 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
       LIMIT 50
     `).all();
     const mistakes = rows.map(r => {
-      let q = null, detail = null;
-      try { q = JSON.parse(r.question_json || '{}'); } catch {}
+      let detail = null;
       try { detail = JSON.parse(r.detail_json || '{}'); } catch {}
       // 提取正确答案
       let correctAnswer = '';
-      if (q && q.answer) correctAnswer = String(q.answer);
+      if (r.answer) correctAnswer = String(r.answer);
       else if (detail && detail.expected) correctAnswer = String(detail.expected);
       // 提取题干
       let question = '';
-      if (q && q.stem) question = String(q.stem);
-      else if (q && q.text) question = String(q.text);
+      if (r.prompt) question = String(r.prompt);
       return {
         item_id: r.item_id,
         lesson_id: r.lesson_id || '',
@@ -1706,6 +1705,29 @@ function lessonOpen(lid) {
   }
   return true;
 }
+// 管理员数据修复：补记review3的p2完成（2026-10-13：practice_end bug导致P2为空，孩子16步全做完但p2_done=0）
+// 验证：review3的16个item都有作答记录，才补记
+app.post('/api/admin/fix-review3-p2', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    // 查review3有多少个item
+    const items = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE item_id LIKE 'review3%'").get();
+    const doneItems = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE item_id LIKE 'review3%' AND correct=1").get();
+    // 至少做过10个item才补（防止误操作）
+    if (!items || items.c < 10) {
+      return res.json({ ok: false, error: 'not_enough_attempts', count: items ? items.c : 0 });
+    }
+    db.prepare("UPDATE lesson_state SET p2_done=1, updated_at=datetime('now') WHERE lesson_id='review3'").run();
+    const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
+    console.log('[admin] fix-review3-p2: items=' + items.c + ', correct_items=' + (doneItems ? doneItems.c : 0));
+    res.json({ ok: true, p1_done: st.p1_done, p2_done: st.p2_done, items: items.c });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
 // 管理员备份接口：下载 SQLite 数据库文件（用于 Google Drive 自动备份）
 // 需要 BACKUP_TOKEN 环境变量验证
 app.get('/api/admin/backup', (req, res) => {
