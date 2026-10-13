@@ -1556,6 +1556,9 @@ function getPendingReviews() {
     const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending'").get();
     if (rc && rc.c > 0) pending.push({ type: 'retest', count: rc.c, label: `待复测错题 ${rc.c} 道` });
     // ② review课：只看当前单元（2026-10-13 Elouise定：旧单元的加练课不算，不永久锁课）
+    // 2026-10-13补（Elouise要求）：单元的5节课没学完，它的复习就不算待办。
+    // 孩子连单元都没学完，根本没法做这个复习，不能拿它去锁新课，否则死锁。
+    // 只有"学完了单元、复习还没做"，才算真正的待办。
     const curUnit = currentUnit();
     const reviewUnit = { review1: 2, review2: 2, review3: 3 };
     const allReviews = ['review1', 'review2', 'review3'];
@@ -1563,15 +1566,18 @@ function getPendingReviews() {
     db.prepare("SELECT lesson_id, p1_done, p2_done FROM lesson_state WHERE lesson_id LIKE 'review%'")
       .all().forEach(r => { stateMap[r.lesson_id] = r; });
     for (const rid of allReviews) {
-      if (reviewUnit[rid] !== curUnit) continue; // 非当前单元的review不计入
+      const u = reviewUnit[rid];
+      if (u !== curUnit) continue; // 非当前单元的review不计入
+      if (!unitLessonsDone(u)) continue; // 单元没学完：复习还没到该做的时候，不计入
       const st = stateMap[rid];
       if (!st) pending.push({ type: 'review', lesson_id: rid, label: `${rid} 未学` });
       else if (st.p1_done !== 1 || st.p2_done !== 1)
         pending.push({ type: 'review', lesson_id: rid, label: `${rid} 未学完` });
     }
     // ③ u3专项巩固未通过（仅当孩子已进入Unit 3）
+    // 2026-10-13补：同样，u3r1-u3r5没学完就不算待办，学完了还没过才算。
     const u3started = db.prepare("SELECT 1 FROM lesson_state WHERE lesson_id LIKE 'u3r%' LIMIT 1").get();
-    if (u3started) {
+    if (u3started && unitLessonsDone(3)) {
       const cd = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
       if (!cd || cd.value !== '1')
         pending.push({ type: 'consolidate', lesson_id: 'u3-consolidate', label: 'Unit 3 专项巩固未通过' });
@@ -1593,6 +1599,17 @@ function currentUnit() {
     }
     return m;
   } catch { return 0; }
+}
+// 单元的5节正课是否全部学完（p2_done=1）。用于判断该单元的复习是否"到该做的时候"。
+// 2026-10-13 Elouise要求：单元没学完，它的复习就不算待办，不能锁新课。
+function unitLessonsDone(u) {
+  try {
+    for (let i = 1; i <= 5; i++) {
+      const st = db.prepare("SELECT p2_done FROM lesson_state WHERE lesson_id=?").get(`u${u}r${i}`);
+      if (!st || st.p2_done !== 1) return false;
+    }
+    return true;
+  } catch { return false; }
 }
 function hasPendingReviews() { return getPendingReviews().length > 0; }
 
