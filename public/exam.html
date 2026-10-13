@@ -69,7 +69,24 @@ async function load() {
   if (!id) { document.getElementById('examBody').innerHTML = '缺少试卷ID'; return; }
   const r = await fetch('/api/exam/' + id);
   const d = await r.json();
-  if (!d.ok) { document.getElementById('examBody').innerHTML = '试卷加载失败'; return; }
+  if (!d.ok) {
+    // 2026-10-13修：把"为什么打不开"说清楚，不再统一显示"试卷加载失败"让学生猜
+    const box = document.getElementById('examBody');
+    const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    if (d.error === 'review_pending') {
+      const items = (d.pending || []).map(p => `<li>${esc(p.label)}</li>`).join('');
+      box.innerHTML = `<div style="text-align:center;padding:40px 20px;">
+        <div style="font-size:18px;font-weight:700;margin-bottom:12px;">先完成复习，再来挑战测验卷 📝</div>
+        <div style="color:#666;margin-bottom:16px;">还有以下复习没完成，完成后这张卷子会自动解锁：</div>
+        <ul style="text-align:left;display:inline-block;color:#333;line-height:2;">${items}</ul>
+        <div style="margin-top:16px;"><a href="/" style="color:#1a73e8;">← 回首页做复习</a></div></div>`;
+    } else if (d.error === 'locked') {
+      box.innerHTML = '<div style="text-align:center;padding:60px;color:#666;">学完本单元全部 5 节课后解锁这张测验卷</div>';
+    } else {
+      box.innerHTML = '试卷加载失败，请稍后再试';
+    }
+    return;
+  }
   EXAM = d.exam;
   document.getElementById('examTitle').textContent = EXAM.title;
   render();
