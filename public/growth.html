@@ -61,6 +61,14 @@
   .card a[href^="/lesson?lesson="]:active { transform:scale(.96) !important; box-shadow:0 1px 4px rgba(60,64,67,.10) !important; }
   .card a[href="/lesson?lesson=review1"], .card a[href="/lesson?lesson=review2"], .card a[href="/lesson?lesson=review3"] { background:linear-gradient(135deg,#e8f0fe,#d9e9fd) !important; }
   .card a[href="/lesson?lesson=u3-consolidate"] { background:linear-gradient(135deg,#fff3e0,#ffe4bd) !important; }
+  /* 2026-10-13：待办/非待办状态（Elouise要求：待办蓝、非待办灰），深色模式适配 */
+  #reviewCards a.review-todo { background:linear-gradient(135deg,#1a73e8,#4a8ef7) !important; color:#fff !important; }
+  #reviewCards a.review-todo small { color:rgba(255,255,255,.85) !important; }
+  #reviewCards a.review-idle { background:#f1f3f4 !important; color:#9aa0a6 !important; }
+  #reviewCards a.review-idle small { color:#bdc1c6 !important; }
+  html[data-theme="dark"] #reviewCards a.review-todo { background:linear-gradient(135deg,#3a7de0,#5a9bf7) !important; }
+  html[data-theme="dark"] #reviewCards a.review-idle { background:#2a2a2a !important; color:#777 !important; }
+  html[data-theme="dark"] #reviewCards a.review-idle small { color:#666 !important; }
   /* 播客卡片：更有吸引力（覆盖内联样式） */
   #podcastList > div { border-radius:18px !important; background:linear-gradient(135deg,#f6ecfa,#ead2f4) !important; border:1px solid rgba(186,104,200,.35) !important; box-shadow:0 4px 14px rgba(123,31,162,.12) !important; transition:transform .18s ease !important; }
   #podcastList > div:active { transform:scale(.98) !important; }
@@ -132,53 +140,57 @@
     } catch {}
     document.querySelectorAll('#reviewCards a[data-lesson]').forEach(a => {
       const lid = a.getAttribute('data-lesson');
+      // 清掉旧的内联样式，改用CSS类（主题自适应）
+      a.style.background = ''; a.style.color = '';
+      const sm = a.querySelector('small'); if (sm) sm.style.color = '';
+      const oldBadge = a.querySelector('.todo-badge'); if (oldBadge) oldBadge.remove();
+      a.classList.remove('review-todo', 'review-idle');
       if (pendingIds.has(lid)) {
         // 待办：蓝色高亮
-        a.style.background = 'linear-gradient(135deg,#1a73e8,#4a8ef7)';
-        a.style.color = '#fff';
-        const sm = a.querySelector('small'); if (sm) sm.style.color = 'rgba(255,255,255,.85)';
-        if (!a.querySelector('.todo-badge')) {
-          const b = document.createElement('div');
-          b.className = 'todo-badge';
-          b.textContent = '● 待完成';
-          b.style.cssText = 'font-size:12px;margin-top:6px;font-weight:700;';
-          a.appendChild(b);
-        }
+        a.classList.add('review-todo');
+        const b = document.createElement('div');
+        b.className = 'todo-badge';
+        b.textContent = '● 待完成';
+        b.style.cssText = 'font-size:12px;margin-top:6px;font-weight:700;';
+        a.appendChild(b);
       } else {
         // 非待办：灰色
-        a.style.background = '#f1f3f4';
-        a.style.color = '#9aa0a6';
-        const sm = a.querySelector('small'); if (sm) sm.style.color = '#bdc1c6';
+        a.classList.add('review-idle');
       }
     });
   })();
   </script>
   <div class="card">
     <h2>🎙️ 英语播客</h2>
-    <div id="podcastList">
-      <div onclick="playPodcast('growthPodAudio1')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;margin-bottom:12px;">
+    <!-- 2026-10-13 Elouise要求：横向滑动切换期数 -->
+    <div id="podcastList" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;">
+      <div onclick="playPodcast('growthPodAudio1')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第1期：比较级最高级（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">4分39秒 · 点击播放</div>
-        <audio id="growthPodAudio1" src="/audio/podcast/ep01-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
+        <audio id="growthPodAudio1" src="/audio/podcast/ep01-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
-      <div onclick="playPodcast('growthPodAudio2')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;margin-bottom:12px;">
+      <div onclick="playPodcast('growthPodAudio2')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第2期：不规则变化全家桶（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">5分31秒 · 点击播放</div>
-        <audio id="growthPodAudio2" src="/audio/podcast/ep02-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
+        <audio id="growthPodAudio2" src="/audio/podcast/ep02-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
-      <div onclick="playPodcast('growthPodAudio3')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;margin-bottom:12px;">
+      <div onclick="playPodcast('growthPodAudio3')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第3期：拼写绝招（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">7分12秒 · 点击播放</div>
-        <audio id="growthPodAudio3" src="/audio/podcast/ep03-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
+        <audio id="growthPodAudio3" src="/audio/podcast/ep03-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
-      <div onclick="playPodcast('growthPodAudio4')" style="display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+      <div onclick="playPodcast('growthPodAudio4')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第4期：写作小技巧（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">5分27秒 · 点击播放</div>
-        <audio id="growthPodAudio4" src="/audio/podcast/ep04-fun.mp3" style="width:100%;margin-top:12px;" controls></audio>
+        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
+        <audio id="growthPodAudio4" src="/audio/podcast/ep04-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
     </div>
   </div>
