@@ -1555,25 +1555,22 @@ function currentLesson() {
 function getPendingReviews() {
   const pending = [];
   try {
-    // ① 待复测错题
+    // ① 待复测错题（一直算）
     const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending'").get();
     if (rc && rc.c > 0) pending.push({ type: 'retest', count: rc.c, label: `待复测错题 ${rc.c} 道` });
-    // ② review课未学完
-    const reviews = db.prepare(
-      "SELECT lesson_id FROM lesson_state WHERE lesson_id LIKE 'review%' AND (p1_done != 1 OR p2_done != 1)"
-    ).all();
-    // 也查从未开始的review课（lesson_state无记录但课程存在）
+    // ② review课：只看当前单元（2026-10-13 Elouise定：旧单元的加练课不算，不永久锁课）
+    const curUnit = currentUnit();
+    const reviewUnit = { review1: 2, review2: 2, review3: 3 };
     const allReviews = ['review1', 'review2', 'review3'];
-    const startedSet = new Set(db.prepare("SELECT lesson_id FROM lesson_state WHERE lesson_id LIKE 'review%'").all().map(r => r.lesson_id));
+    const stateMap = {};
+    db.prepare("SELECT lesson_id, p1_done, p2_done FROM lesson_state WHERE lesson_id LIKE 'review%'")
+      .all().forEach(r => { stateMap[r.lesson_id] = r; });
     for (const rid of allReviews) {
-      if (!startedSet.has(rid)) {
-        // 检查这门review课是否应该出现（前面的正课学完了）
-        pending.push({ type: 'review', lesson_id: rid, label: `${rid} 未学` });
-      }
-    }
-    for (const r of reviews) {
-      if (!pending.some(p => p.lesson_id === r.lesson_id))
-        pending.push({ type: 'review', lesson_id: r.lesson_id, label: `${r.lesson_id} 未学完` });
+      if (reviewUnit[rid] !== curUnit) continue; // 非当前单元的review不计入
+      const st = stateMap[rid];
+      if (!st) pending.push({ type: 'review', lesson_id: rid, label: `${rid} 未学` });
+      else if (st.p1_done !== 1 || st.p2_done !== 1)
+        pending.push({ type: 'review', lesson_id: rid, label: `${rid} 未学完` });
     }
     // ③ u3专项巩固未通过（仅当孩子已进入Unit 3）
     const u3started = db.prepare("SELECT 1 FROM lesson_state WHERE lesson_id LIKE 'u3r%' LIMIT 1").get();
@@ -1584,6 +1581,18 @@ function getPendingReviews() {
     }
   } catch (e) { console.error('[reviews]', e.message); }
   return pending;
+}
+// 当前单元 = 孩子已开始的正课中的最大单元号（2026-10-13：复习门只看当前单元）
+function currentUnit() {
+  try {
+    const rows = db.prepare("SELECT lesson_id FROM lesson_state WHERE lesson_id GLOB 'u[0-9]r[0-9]*'").all();
+    let m = 0;
+    for (const r of rows) {
+      const mt = /^u(\d+)r\d+/.exec(r.lesson_id || '');
+      if (mt) m = Math.max(m, parseInt(mt[1], 10));
+    }
+    return m;
+  } catch { return 0; }
 }
 function hasPendingReviews() { return getPendingReviews().length > 0; }
 
