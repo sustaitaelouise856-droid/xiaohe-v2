@@ -176,6 +176,10 @@
       } else {
         // 非待办：灰色
         a.classList.add('review-idle');
+        const b = document.createElement('div');
+        b.textContent = '○ 暂无待办';
+        b.style.cssText = 'font-size:12px;margin-top:6px;font-weight:700;color:#bdc1c6;';
+        a.appendChild(b);
       }
     });
   })();
