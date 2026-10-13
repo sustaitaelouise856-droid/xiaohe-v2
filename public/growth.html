@@ -126,6 +126,26 @@
       <a href="/lesson?lesson=review3" data-lesson="review3" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练3<br><small style="color:#5f6368;font-weight:400;">最高级专项复习</small></a>
       <a href="/lesson?lesson=u3-consolidate" data-lesson="u3-consolidate" style="display:block;background:#fff3e0;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#e37400;font-weight:600;">加练4<br><small style="color:#5f6368;font-weight:400;">Unit 3 专项巩固</small></a>
     </div>
+    <!-- 2026-10-13 Elouise要求：更多按钮，展开看U4/U5/U6加练（占位，即将上线） -->
+    <button id="reviewMoreBtn" style="width:100%;margin-top:10px;padding:12px;border:2px dashed #cfd4dc;border-radius:12px;background:#f8f9fa;color:#5f6368;font-size:14px;font-weight:700;cursor:pointer;">更多加练 ▼</button>
+    <div id="reviewMore" style="display:none;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+      <div style="background:#f1f3f4;border-radius:12px;padding:16px;text-align:center;color:#9aa0a6;">加练5<br><small>Unit 4 综合复习</small><br><small style="color:#bdc1c6;">即将上线</small></div>
+      <div style="background:#f1f3f4;border-radius:12px;padding:16px;text-align:center;color:#9aa0a6;">加练6<br><small>Unit 5 综合复习</small><br><small style="color:#bdc1c6;">即将上线</small></div>
+      <div style="background:#f1f3f4;border-radius:12px;padding:16px;text-align:center;color:#9aa0a6;">加练7<br><small>Unit 6 综合复习</small><br><small style="color:#bdc1c6;">即将上线</small></div>
+    </div>
+    <script>
+    (function() {
+      const btn = document.getElementById('reviewMoreBtn');
+      const more = document.getElementById('reviewMore');
+      if (btn && more) {
+        btn.onclick = () => {
+          const open = more.style.display !== 'none';
+          more.style.display = open ? 'none' : 'grid';
+          btn.textContent = open ? '更多加练 ▼' : '收起 ▲';
+        };
+      }
+    })();
+    </script>
   </div>
   <script>
   // 2026-10-13：复习加练卡片按待办状态着色。算待办→蓝色（要做）；不算待办→灰色。
@@ -162,38 +182,66 @@
   </script>
   <div class="card">
     <h2>🎙️ 英语播客</h2>
-    <!-- 2026-10-13 Elouise要求：横向滑动切换期数 -->
-    <div id="podcastList" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;">
-      <div onclick="playPodcast('growthPodAudio1')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+    <!-- 2026-10-13 Elouise要求：横向滑动切换期数；2026-10-13优化：居中放大、一次一滑 -->
+    <div id="podcastList" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:12px 4px;">
+      <div class="pod-card" onclick="playPodcast('growthPodAudio1')" style="flex:0 0 80%;scroll-snap-align:center;scroll-snap-stop:always;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:transform .25s ease;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第1期：比较级最高级（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">4分39秒 · 点击播放</div>
-        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
         <audio id="growthPodAudio1" src="/audio/podcast/ep01-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
-      <div onclick="playPodcast('growthPodAudio2')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+      <div class="pod-card" onclick="playPodcast('growthPodAudio2')" style="flex:0 0 80%;scroll-snap-align:center;scroll-snap-stop:always;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:transform .25s ease;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第2期：不规则变化全家桶（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">5分31秒 · 点击播放</div>
-        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
         <audio id="growthPodAudio2" src="/audio/podcast/ep02-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
-      <div onclick="playPodcast('growthPodAudio3')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+      <div class="pod-card" onclick="playPodcast('growthPodAudio3')" style="flex:0 0 80%;scroll-snap-align:center;scroll-snap-stop:always;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:transform .25s ease;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第3期：拼写绝招（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">7分12秒 · 点击播放</div>
-        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
         <audio id="growthPodAudio3" src="/audio/podcast/ep03-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
-      <div onclick="playPodcast('growthPodAudio4')" style="flex:0 0 82%;scroll-snap-align:center;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;">
+      <div class="pod-card" onclick="playPodcast('growthPodAudio4')" style="flex:0 0 80%;scroll-snap-align:center;scroll-snap-stop:always;display:block;background:#f3e5f5;border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:transform .25s ease;">
         <div style="font-size:32px;">🎙️</div>
         <div style="font-weight:600;color:#7b1fa2;margin:8px 0;">第4期：写作小技巧（幽默版）</div>
         <div style="color:#5f6368;font-size:13px;">5分27秒 · 点击播放</div>
-        <div style="color:#9aa0a6;font-size:12px;margin-top:6px;">← 左右滑动切换期数 →</div>
         <audio id="growthPodAudio4" src="/audio/podcast/ep04-fun.mp3" style="width:100%;margin-top:12px;" controls onclick="event.stopPropagation()"></audio>
       </div>
     </div>
+    <div style="text-align:center;color:#9aa0a6;font-size:12px;margin-top:4px;">← 左右滑动切换期数 →</div>
   </div>
+  <script>
+  // 2026-10-13：播客居中卡片放大。用IntersectionObserver找最居中的卡片。
+  (function() {
+    const list = document.getElementById('podcastList');
+    if (!list || !('IntersectionObserver' in window)) return;
+    const cards = list.querySelectorAll('.pod-card');
+    const setActive = (active) => {
+      cards.forEach(c => {
+        c.style.transform = (c === active) ? 'scale(1.04)' : 'scale(0.96)';
+        c.style.opacity = (c === active) ? '1' : '0.85';
+      });
+    };
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const lr = list.getBoundingClientRect();
+      const centerX = lr.left + lr.width / 2;
+      let best = null, bestDist = Infinity;
+      cards.forEach(c => {
+        const r = c.getBoundingClientRect();
+        const d = Math.abs((r.left + r.width / 2) - centerX);
+        if (d < bestDist) { bestDist = d; best = c; }
+      });
+      if (best) setActive(best);
+    };
+    list.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  })();
+  </script>
 </div>
 <div class="tabbar">
   <a href="/"><span class="ticon">🏠</span>首页</a>
