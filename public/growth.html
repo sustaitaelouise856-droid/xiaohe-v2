@@ -212,20 +212,19 @@
     <div style="text-align:center;color:#9aa0a6;font-size:12px;margin-top:4px;">← 左右滑动切换期数 →</div>
   </div>
   <script>
-  // 2026-10-13：播客居中卡片放大。用IntersectionObserver找最居中的卡片。
+  // 2026-10-13：播客居中卡片放大。2026-10-13修闪动：滑动过程中不动DOM，
+  // 只在滑动停稳150ms后算一次居中卡片，避免逐帧transform跟scroll-snap打架。
   (function() {
     const list = document.getElementById('podcastList');
-    if (!list || !('IntersectionObserver' in window)) return;
+    if (!list) return;
     const cards = list.querySelectorAll('.pod-card');
     const setActive = (active) => {
       cards.forEach(c => {
-        c.style.transform = (c === active) ? 'scale(1.04)' : 'scale(0.96)';
-        c.style.opacity = (c === active) ? '1' : '0.85';
+        c.style.transform = (c === active) ? 'scale(1.04)' : 'scale(0.97)';
+        c.style.opacity = (c === active) ? '1' : '0.9';
       });
     };
-    let ticking = false;
     const update = () => {
-      ticking = false;
       const lr = list.getBoundingClientRect();
       const centerX = lr.left + lr.width / 2;
       let best = null, bestDist = Infinity;
@@ -236,9 +235,15 @@
       });
       if (best) setActive(best);
     };
+    let timer = null;
     list.addEventListener('scroll', () => {
-      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      clearTimeout(timer);
+      timer = setTimeout(update, 150);
     }, { passive: true });
+    // 优先用 scrollend（更准），不支持则靠上面的debounce
+    if ('onscrollend' in window) {
+      list.addEventListener('scrollend', update);
+    }
     update();
   })();
   </script>
