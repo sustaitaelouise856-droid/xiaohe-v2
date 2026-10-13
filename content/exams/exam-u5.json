@@ -12,7 +12,7 @@
         {
           "id": "read_aloud",
           "title": "A. 模仿朗读（8分）",
-          "items": [
+          "questions": [
             {
               "num": 1,
               "type": "speak",
@@ -26,7 +26,7 @@
         {
           "id": "listen_choice",
           "title": "B. 听后选择（9分）",
-          "items": [
+          "questions": [
             {
               "num": 2,
               "type": "choice",
@@ -122,7 +122,7 @@
         {
           "id": "listen_answer",
           "title": "C. 听后回答（4分）",
-          "items": [
+          "questions": [
             {
               "num": 8,
               "type": "choice",
@@ -188,7 +188,7 @@
         {
           "id": "role_play",
           "title": "D. 角色扮演（9分）",
-          "items": [
+          "questions": [
             {
               "num": 12,
               "type": "speak",
@@ -233,7 +233,7 @@
         {
           "id": "grammar",
           "title": "E. 语法选择（15分）",
-          "items": [
+          "questions": [
             {
               "num": 15,
               "type": "choice",
@@ -464,7 +464,7 @@
         {
           "id": "cloze",
           "title": "F. 语言运用（10分）",
-          "items": [
+          "questions": [
             {
               "num": 30,
               "type": "choice",
@@ -620,7 +620,7 @@
         {
           "id": "reading1",
           "title": "G. 阅读理解一（30分）",
-          "items": [
+          "questions": [
             {
               "num": 40,
               "type": "choice",
@@ -854,7 +854,7 @@
         {
           "id": "reading2",
           "title": "H. 阅读理解二（5分）",
-          "items": [
+          "questions": [
             {
               "num": 55,
               "type": "choice",
@@ -936,7 +936,7 @@
         {
           "id": "rw_choice",
           "title": "I. 读写综合·选择（10分）",
-          "items": [
+          "questions": [
             {
               "num": 60,
               "type": "choice",
@@ -1018,7 +1018,7 @@
         {
           "id": "rw_qa",
           "title": "J. 读写综合·问答（10分）",
-          "items": [
+          "questions": [
             {
               "num": 65,
               "type": "fill",
@@ -1070,7 +1070,7 @@
         {
           "id": "grammar_fill",
           "title": "K. 语法填空（10分）",
-          "items": [
+          "questions": [
             {
               "num": 70,
               "type": "fill",
@@ -1167,7 +1167,7 @@
         {
           "id": "writing",
           "title": "L. 书面表达（20分）",
-          "items": [
+          "questions": [
             {
               "num": 80,
               "type": "writing",
