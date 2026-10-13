@@ -4,13 +4,13 @@
   "note": "练习题库（2026-10-02）：Unit 2 复习练习（percent、go up/go down、日期时间地点提取、新旧通知对比），题目与材料与第 2、3 课不重复；全部练习阶段、可重复练。程序侧在正课完成后自动进入本课。",
   "part1_desc": "正课之外多练一轮：换新材料，再练读数字、听数字、核对稿子。",
   "part2_desc": "",
-  "practice_end": 22,
+  "practice_end": 11,
   "steps": [
     {
       "kind": "teach",
       "phase": "teach",
       "step": 1,
-      "teach_html": "<p>【承上启下】Unit 2 学完了。今天复习：通知、数据、回信，换新题再考一遍。</p><p>广播站加练时间。</p><p>正课里学的 percent、go up / go down、看通知找信息，这里换几份<strong>新材料</strong>再练一遍。做错没关系，一步一步来，提示一直都在。</p>",
+      "teach_html": "<p>广播站加练时间。</p><p>正课里学的 percent、go up / go down、看通知找信息，这里换几份<strong>新材料</strong>再练一遍。做错没关系，一步一步来，提示一直都在。</p>",
       "title": "加练开始"
     },
     {
