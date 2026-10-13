@@ -617,6 +617,27 @@ const TITLE_DEFS = [
     id: 'unit3_conqueror', name: 'Unit 3 征服者', icon: '👑',
     desc: 'u3r1-u3r5全部完成，平均正确率≥80%',
   },
+  // 2026-10-13 Elouise要求：称号墙补到U4/U5/U6
+  {
+    id: 'passive_voice_pro', name: '被动语态达人', icon: '🔧',
+    desc: 'u4r1-u4r5全部完成，平均正确率≥80%',
+  },
+  {
+    id: 'unit4_conqueror', name: 'Unit 4 征服者', icon: '🏭',
+    desc: '完成 Unit 4 全部课程（发明主题）',
+  },
+  {
+    id: 'present_perfect_master', name: '现在完成时高手', icon: '⏳',
+    desc: 'u5r1-u5r5全部完成，平均正确率≥80%',
+  },
+  {
+    id: 'unit5_conqueror', name: 'Unit 5 征服者', icon: '✈️',
+    desc: '完成 Unit 5 全部课程（交流主题）',
+  },
+  {
+    id: 'unit6_conqueror', name: 'Unit 6 征服者', icon: '🏛️',
+    desc: 'u6r1-u6r5全部完成，平均正确率≥80%',
+  },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -701,6 +722,25 @@ function checkTitles() {
       if (n > 0 && sum / n >= 0.80) grant('unit3_conqueror');
     }
   } catch {}
+  // 2026-10-13 Elouise要求：U4/U5/U6称号
+  const unitConqueror = (unit, titleId) => {
+    try {
+      const lids = [1,2,3,4,5].map(i => `u${unit}r${i}`);
+      if (lids.every(lessonDone)) {
+        let sum = 0, n = 0;
+        for (const lid of lids) {
+          const s = lessonIndependentRate(lid);
+          if (s.count > 0) { sum += s.rate; n++; }
+        }
+        if (n > 0 && sum / n >= 0.80) grant(titleId);
+      }
+    } catch {}
+  };
+  unitConqueror(4, 'passive_voice_pro');
+  unitConqueror(4, 'unit4_conqueror');
+  unitConqueror(5, 'present_perfect_master');
+  unitConqueror(5, 'unit5_conqueror');
+  unitConqueror(6, 'unit6_conqueror');
   return newly;
 }
 
