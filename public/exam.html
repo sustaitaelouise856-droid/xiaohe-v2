@@ -106,6 +106,9 @@ function render() {
         html += `<div class="q"><div class="q-num">${q.num || (qi+1)}. (${q.score}分)</div>`;
         if (q.audio) html += `<button class="audio-btn" onclick="playAudio('${q.audio}')">🔊 播放</button>`;
         if (q.stem) html += `<div class="q-stem">${q.stem}</div>`;
+        // 2026-10-13修：u2卷用prompt字段，前端之前只认stem，导致题目不显示
+        if (q.prompt) html += `<div class="q-stem">${q.prompt}</div>`;
+        if (q.requirements) html += `<div style="color:#5f6368;font-size:14px;margin:8px 0;line-height:1.7;">${q.requirements}</div>`;
         if (q.type === 'choice') {
           q.options.forEach((op, oi) => {
             html += `<button class="opt" data-qid="${qid}" data-oi="${oi}" onclick="selectOpt('${qid}',${oi})"><span class="k">${'ABCD'[oi]}</span>${op}</button>`;
@@ -116,6 +119,9 @@ function render() {
           html += `<textarea data-qid="${qid}" placeholder="${q.hint || '请作答'}" oninput="ANSWERS['${qid}']=this.value"></textarea>`;
           if (q.min_words) html += `<div style="font-size:13px;color:#999;margin-top:6px;">不少于 ${q.min_words} 词</div>`;
         } else if (q.type === 'speak') {
+          // 2026-10-13修：显示朗读材料（之前只显示录音按钮，材料看不见）
+          const material = q.text || q.passage;
+          if (material) html += `<div style="background:#f0f7ff;border-radius:12px;padding:16px;margin:12px 0;line-height:1.9;font-size:16px;">${material}</div>`;
           html += `<div style="margin:8px 0;"><button class="rec-btn" onclick="toggleRec('${qid}',this)">🎤 开始录音</button><span class="rec-status" id="st-${qid}"></span></div>`;
           html += `<div style="font-size:13px;color:#999;">${q.speak_hint || '录音完成后自动得分（参与分）'}</div>`;
         }
