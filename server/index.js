@@ -1720,7 +1720,7 @@ app.post('/api/admin/fix-review3-p2', (req, res) => {
     if (!items || items.c < 10) {
       return res.json({ ok: false, error: 'not_enough_attempts', count: items ? items.c : 0 });
     }
-    db.prepare("UPDATE lesson_state SET p2_done=1, updated_at=datetime('now') WHERE lesson_id='review3'").run();
+    db.prepare("UPDATE lesson_state SET p1_done=1, p2_done=1, updated_at=datetime('now') WHERE lesson_id='review3'").run();
     const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
     console.log('[admin] fix-review3-p2: items=' + items.c + ', correct_items=' + (doneItems ? doneItems.c : 0));
     res.json({ ok: true, p1_done: st.p1_done, p2_done: st.p2_done, items: items.c });
