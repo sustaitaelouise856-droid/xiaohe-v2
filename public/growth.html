@@ -109,15 +109,50 @@
   </div>
 
   <!-- 加练区（2026-10-12加）：复习加练+英语播客，随时可做，不受锁课影响 -->
+  <!-- 2026-10-13 Elouise要求：算待办的复习显示蓝色（要做），不算待办的显示灰色 -->
   <div class="card">
     <h2>📚 复习加练</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-      <a href="/lesson?lesson=review1" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练1<br><small style="color:#5f6368;font-weight:400;">数字播报复习</small></a>
-      <a href="/lesson?lesson=review2" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练2<br><small style="color:#5f6368;font-weight:400;">Unit 2 综合复习</small></a>
-      <a href="/lesson?lesson=review3" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练3<br><small style="color:#5f6368;font-weight:400;">最高级专项复习</small></a>
-      <a href="/lesson?lesson=u3-consolidate" style="display:block;background:#fff3e0;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#e37400;font-weight:600;">加练4<br><small style="color:#5f6368;font-weight:400;">Unit 3 专项巩固</small></a>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;" id="reviewCards">
+      <a href="/lesson?lesson=review1" data-lesson="review1" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练1<br><small style="color:#5f6368;font-weight:400;">数字播报复习</small></a>
+      <a href="/lesson?lesson=review2" data-lesson="review2" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练2<br><small style="color:#5f6368;font-weight:400;">Unit 2 综合复习</small></a>
+      <a href="/lesson?lesson=review3" data-lesson="review3" style="display:block;background:#e8f0fe;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#1a73e8;font-weight:600;">加练3<br><small style="color:#5f6368;font-weight:400;">最高级专项复习</small></a>
+      <a href="/lesson?lesson=u3-consolidate" data-lesson="u3-consolidate" style="display:block;background:#fff3e0;border-radius:12px;padding:16px;text-align:center;text-decoration:none;color:#e37400;font-weight:600;">加练4<br><small style="color:#5f6368;font-weight:400;">Unit 3 专项巩固</small></a>
     </div>
   </div>
+  <script>
+  // 2026-10-13：复习加练卡片按待办状态着色。算待办→蓝色（要做）；不算待办→灰色。
+  (async function() {
+    let pendingIds = new Set();
+    try {
+      const r = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
+      const d = await r.json();
+      if (d && d.ok && Array.isArray(d.pending)) {
+        d.pending.forEach(p => { if (p.lesson_id) pendingIds.add(p.lesson_id); });
+      }
+    } catch {}
+    document.querySelectorAll('#reviewCards a[data-lesson]').forEach(a => {
+      const lid = a.getAttribute('data-lesson');
+      if (pendingIds.has(lid)) {
+        // 待办：蓝色高亮
+        a.style.background = 'linear-gradient(135deg,#1a73e8,#4a8ef7)';
+        a.style.color = '#fff';
+        const sm = a.querySelector('small'); if (sm) sm.style.color = 'rgba(255,255,255,.85)';
+        if (!a.querySelector('.todo-badge')) {
+          const b = document.createElement('div');
+          b.className = 'todo-badge';
+          b.textContent = '● 待完成';
+          b.style.cssText = 'font-size:12px;margin-top:6px;font-weight:700;';
+          a.appendChild(b);
+        }
+      } else {
+        // 非待办：灰色
+        a.style.background = '#f1f3f4';
+        a.style.color = '#9aa0a6';
+        const sm = a.querySelector('small'); if (sm) sm.style.color = '#bdc1c6';
+      }
+    });
+  })();
+  </script>
   <div class="card">
     <h2>🎙️ 英语播客</h2>
     <div id="podcastList">
