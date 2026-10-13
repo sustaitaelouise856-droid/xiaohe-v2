@@ -489,7 +489,7 @@ UNITS.forEach(unit => {
     n.onclick = () => {
       if (Date.now() < (window._suppressClickUntil || 0)) return; // 长按后的点击不进入
       if (isLocked(l.id)) {
-        alert('🔒 这门课还没解锁\n\n先完成「Unit 3 专项巩固」，零求助、独立正确率达到85%才能进入 Unit 4。');
+        showLockedDialog(l.id); // 2026-10-13：显示具体哪个复习没做完，带跳转按钮
         return;
       }
       location.href = "/lesson?lesson=" + l.id;
@@ -529,6 +529,49 @@ async function loadExams() {
   } catch {}
 }
 loadExams();
+
+// 2026-10-13 Elouise要求：点锁定的新课，显示具体哪个复习没做完，带跳转按钮
+// 不再用写死的alert，而是拉取真实的待办列表
+async function showLockedDialog(lessonId) {
+  let pending = [];
+  try {
+    const r = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
+    const d = await r.json();
+    if (d && d.ok && Array.isArray(d.pending)) pending = d.pending;
+  } catch {}
+  // 建弹窗（单例）
+  let ov = document.getElementById('lockedOverlay');
+  if (!ov) {
+    ov = document.createElement('div');
+    ov.id = 'lockedOverlay';
+    ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;';
+    ov.innerHTML = '<div id="lockedBox" style="background:#fff;border-radius:16px;max-width:420px;width:100%;padding:24px;box-shadow:0 8px 32px rgba(0,0,0,.2);">'
+      + '<div style="font-size:18px;font-weight:800;margin-bottom:8px;">🔒 这门课还没解锁</div>'
+      + '<div id="lockedList" style="margin:12px 0;"></div>'
+      + '<button id="lockedClose" style="width:100%;padding:12px;border:0;border-radius:12px;background:#f0f0f0;font-size:15px;font-weight:700;cursor:pointer;">知道了</button></div>';
+    document.body.appendChild(ov);
+    ov.addEventListener('click', e => { if (e.target === ov) ov.style.display = 'none'; });
+    document.getElementById('lockedClose').onclick = () => { ov.style.display = 'none'; };
+  }
+  const list = document.getElementById('lockedList');
+  if (!pending.length) {
+    list.innerHTML = '<div style="color:#5f6368;font-size:14px;">先完成前面的课程就能解锁。</div>';
+  } else {
+    list.innerHTML = '<div style="color:#5f6368;font-size:14px;margin-bottom:10px;">先完成下面这些，就能解锁：</div>' + pending.map(p => {
+      const label = (p.label || p.type || '').replace(/</g, '&lt;');
+      let btn = '';
+      if (p.lesson_id) {
+        const lid = String(p.lesson_id).replace(/"/g, '&quot;');
+        const name = lid === 'u3-consolidate' ? '去做专项巩固' : '去做复习';
+        btn = `<button onclick="location.href='/lesson?lesson=${lid}'" style="margin-top:8px;padding:10px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;font-size:14px;font-weight:700;cursor:pointer;">${name} →</button>`;
+      } else if (p.type === 'retest') {
+        btn = '<div style="margin-top:8px;font-size:13px;color:#5f6368;">错题会在上课时自动出现，跟着做完就行。</div>';
+      }
+      return `<div style="background:#f8f9fa;border-radius:12px;padding:14px;margin-bottom:10px;"><div style="font-weight:700;font-size:15px;">📝 ${label}</div>${btn}</div>`;
+    }).join('');
+  }
+  ov.style.display = 'flex';
+}
 
 // 继续学习按钮
 const cur = ORDER[currentIdx];
