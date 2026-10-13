@@ -43,6 +43,15 @@
   .score-big .total { font-size:20px; color:#5f6368; }
   .score-bar { height:12px; background:#f0f0f0; border-radius:6px; overflow:hidden; margin:16px 0; }
   .score-fill { height:100%; background:linear-gradient(90deg,#1a73e8,#6c3fd4); border-radius:6px; transition:width 1s ease; }
+  /* 2026-10-13：夜间模式适配（走查发现白色字在白色卡上看不见） */
+  html[data-theme="dark"] .section { background:#2d2d2d !important; border-color:#555 !important; }
+  html[data-theme="dark"] .section h2, html[data-theme="dark"] .section h3 { color:#f0f0f0 !important; }
+  html[data-theme="dark"] .section .sub { color:#aaa !important; }
+  html[data-theme="dark"] .q { background:#333 !important; border-color:#555 !important; }
+  html[data-theme="dark"] .q-num { color:#7ab8ff !important; }
+  html[data-theme="dark"] .q-stem { color:#f0f0f0 !important; }
+  html[data-theme="dark"] .opt { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
+  html[data-theme="dark"] input[type=text], html[data-theme="dark"] textarea { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
 </style>
 </head>
 <body>
@@ -97,7 +106,7 @@ async function load() {
 function render() {
   let html = '';
   EXAM.sections.forEach(sec => {
-    html += `<div class="section"><h2>${sec.title}</h2><div class="sub">满分 ${sec.total} 分</div>`;
+    html += `<div class="section"><h2>${sec.title}</h2><div class="sub">满分 ${sec.score} 分</div>`;
     sec.parts.forEach(part => {
       if (part.title) html += `<h3 style="margin:16px 0 8px;font-size:18px;">${part.title}</h3>`;
       if (part.passage) html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;">${part.passage}</div>`;
