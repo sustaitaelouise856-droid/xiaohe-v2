@@ -201,6 +201,13 @@
   .node.locked { opacity: .5; cursor: not-allowed; background: #f6f7f9; border: 2px dashed #cfd4dc; }
   .node.locked .icon { filter: grayscale(1); opacity: .7; }
   .node.locked .name, .node.locked .label { color: #98a2b3; }
+  /* 2026-10-13：锁定弹窗深色模式（走查发现白字白底看不见） */
+  html[data-theme="dark"] #lockedBox { background:#2d2d2d !important; }
+  html[data-theme="dark"] #lockedBox .locked-title { color:#f0f0f0 !important; }
+  html[data-theme="dark"] #lockedClose { background:#3a3a3a !important; color:#f0f0f0 !important; }
+  html[data-theme="dark"] #lockedList > div { color:#aaa !important; }
+  html[data-theme="dark"] #lockedList > div > div { background:#3a3a3a !important; }
+  html[data-theme="dark"] #lockedList > div > div > div:first-child { color:#f0f0f0 !important; }
   .node.available .icon { color: #9aa0a6; }
   /* 底部导航：毛玻璃 + 轻盈阴影 */
   .tabbar {
@@ -349,6 +356,7 @@ let serverDone = new Set();
 let serverCurrent = null;   // 服务器判定的"当前在学"课程 id
 let serverStarted = [];     // [{id, updated_at}] 学过但没学完
 let lockedSet = new Set();  // 服务端判定的未解锁课程（2026-10-12：Unit 4锁死）
+let pendingReviewIds = []; // 待办的复习课id（2026-10-13：无正课可上时继续按钮指向这里）
 async function loadServerProgress() {
   try {
     const r = await fetch('/api/done-lessons');
@@ -368,6 +376,14 @@ async function loadServerProgress() {
       for (const l of d2.lessons) {
         if (l.open === false) lockedSet.add(l.lesson_id);
       }
+    }
+  } catch {}
+  // 拉取待办复习（2026-10-13：继续按钮兜底用）
+  try {
+    const r3 = await fetch('/api/daily-reviews');
+    const d3 = await r3.json();
+    if (d3.ok && Array.isArray(d3.pending)) {
+      pendingReviewIds = d3.pending.filter(p => p.lesson_id).map(p => p.lesson_id);
     }
   } catch {}
 }
@@ -409,7 +425,9 @@ function computeCurrent() {
   // 3) 第一门没完成且未锁定的
   const idx = ORDER.findIndex(l => !isDone(l.id) && !isLocked(l.id));
   if (idx !== -1) return idx;
-  return ORDER.length - 1; // 全完成
+  // 2026-10-13修：正课全做完或全锁定时，不再兜底到最后一个（可能是锁定的），
+  // 返回-1，由调用方指向待办复习
+  return -1;
 }
 
 // 先加载服务器进度，算好当前课再渲染
@@ -502,6 +520,7 @@ UNITS.forEach(unit => {
 
 // 顶部统计
 document.getElementById("doneCount").textContent = doneN;
+document.getElementById("totalCount").textContent = ORDER.length; // 2026-10-13修：之前写死27，实际25个，对不上
 document.getElementById("pct").textContent = Math.round(doneN / ORDER.length * 100) + "%";
 document.getElementById("pfill").style.width = (doneN / ORDER.length * 100) + "%";
 
@@ -546,9 +565,9 @@ async function showLockedDialog(lessonId) {
     ov.id = 'lockedOverlay';
     ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;';
     ov.innerHTML = '<div id="lockedBox" style="background:#fff;border-radius:16px;max-width:420px;width:100%;padding:24px;box-shadow:0 8px 32px rgba(0,0,0,.2);">'
-      + '<div style="font-size:18px;font-weight:800;margin-bottom:8px;">🔒 这门课还没解锁</div>'
+      + '<div style="font-size:18px;font-weight:800;margin-bottom:8px;color:#202124;" class="locked-title">🔒 这门课还没解锁</div>'
       + '<div id="lockedList" style="margin:12px 0;"></div>'
-      + '<button id="lockedClose" style="width:100%;padding:12px;border:0;border-radius:12px;background:#f0f0f0;font-size:15px;font-weight:700;cursor:pointer;">知道了</button></div>';
+      + '<button id="lockedClose" style="width:100%;padding:12px;border:0;border-radius:12px;background:#f0f0f0;font-size:15px;font-weight:700;cursor:pointer;color:#202124;">知道了</button></div>';
     document.body.appendChild(ov);
     ov.addEventListener('click', e => { if (e.target === ov) ov.style.display = 'none'; });
     document.getElementById('lockedClose').onclick = () => { ov.style.display = 'none'; };
@@ -574,11 +593,24 @@ async function showLockedDialog(lessonId) {
 }
 
 // 继续学习按钮
-const cur = ORDER[currentIdx];
-document.getElementById("continueSub").textContent = "下一课：" + cur.name + "（" + cur.label + "）";
-document.getElementById("btnContinue").onclick = () => {
-  location.href = "/lesson?lesson=" + cur.id;
-};
+// 2026-10-13修：无正课可上时（currentIdx=-1），指向待办复习，不再跳锁定课
+(function() {
+  const sub = document.getElementById("continueSub");
+  const btn = document.getElementById("btnContinue");
+  if (currentIdx !== -1 && ORDER[currentIdx]) {
+    const cur = ORDER[currentIdx];
+    sub.textContent = "下一课：" + cur.name + "（" + cur.label + "）";
+    btn.onclick = () => { location.href = "/lesson?lesson=" + cur.id; };
+  } else if (pendingReviewIds.length > 0) {
+    const rid = pendingReviewIds[0];
+    const rname = rid === 'u3-consolidate' ? 'Unit 3 专项巩固' : rid;
+    sub.textContent = "去做复习：" + rname;
+    btn.onclick = () => { location.href = "/lesson?lesson=" + rid; };
+  } else {
+    sub.textContent = "都学完了，太棒了！";
+    btn.onclick = () => { location.href = "/growth.html"; };
+  }
+})();
 }
 
 </script>
