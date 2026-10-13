@@ -1273,8 +1273,12 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     fb.className = 'fb no';
     fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
     $('btnSub').disabled = false;
-    // 带着做（g 版）：服务端判定连错 2 次/同一错答案两次 → 进入小步模式，不再走自动二级提示
-    if (isPractice && s.kind === 'short' && b.guided && b.guided.steps && b.guided.steps.length) {
+    // 保底出口优先（2026-10-13）：第3次错后直接给"先看答案，继续往下"，不再进带着做。
+    // 之前是先进带着做小步、把保底按钮挤到下面，孩子被困在小步里出不来。
+    if (b.show_answer) {
+      renderShowAnswerBtn(s, b.show_answer);
+    } else if (isPractice && s.kind === 'short' && b.guided && b.guided.steps && b.guided.steps.length) {
+      // 带着做（g 版）：服务端判定连错 2 次/同一错答案两次 → 进入小步模式，不再走自动二级提示
       startGuided(s, b.guided);
     } else {
       // 自动升级（2026-10-02 规范第 5 条）：练习阶段同一题连错 2 次，不用等孩子点，
@@ -1285,8 +1289,6 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
         if (wrongCt[s.item_id] === 2 && autoHelp) autoHelp(2, true);
       }
     }
-    // 保底出口（g 版）：练习阶段第 3 次 wrong 显示"先看答案，继续往下"
-    if (b.show_answer) renderShowAnswerBtn(s, b.show_answer);
   }
   qT0 = Date.now(); // 重新计时：反馈出现后到下一次提交
   // 反馈出现在首屏外时自动滚入视野（C10 横屏 800px 高下选项区较长）
@@ -1358,7 +1360,13 @@ function endGuidedToFull() {
 // 保底：显示"先看答案，继续往下"按钮；点后展示答案+原因，进入抄写模式
 function renderShowAnswerBtn(s, sa) {
   var fb = $('fb');
-  fb.innerHTML = fb.innerHTML
+  // 2026-10-13：保底出口独占显示，不再追加到带着做下面。退出带着做状态，恢复主输入框。
+  if (typeof guidedState !== 'undefined' && guidedState) guidedState = null;
+  var ai = $('answerInput'); if (ai) ai.disabled = false;
+  var bs = $('btnSub'); if (bs) bs.style.display = '';
+  var bh = $('btnHelp'); if (bh) bh.disabled = false;
+  fb.className = 'fb no';
+  fb.innerHTML = '<div>这道题先看答案，抄一遍，我们继续往下。</div>'
     + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div>';
   $('btnShowAns').onclick = function () { showAnswerCopy(s, sa); };
   showInView($('btnShowAns'));
