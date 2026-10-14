@@ -1394,8 +1394,8 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     $('btnSub').textContent = v === 'typo' ? '改好提交' : '用英文重写提交';
   } else {
     // wrong / wrong_retry：反馈只针对她实际写的内容，允许重答
+    // 2026-10-14修：答错后的"再想一想"反馈不算帮助，不置 sawFb（否则重试会被误记为用了提示）
     fastStreak.n = 0;
-    sawFb[s.item_id] = true;
     fb.className = 'fb no';
     fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
     $('btnSub').disabled = false;
