@@ -425,6 +425,12 @@ app.post('/api/change-access-code', auth.requireAuth, (req, res) => {
 app.get('/api/state', auth.requireAuth, (req, res) => {
   if (req.query.lesson && !validLesson(String(req.query.lesson))) return badLesson(res);
   const lid = String(req.query.lesson || 'u2r1');
+// 前端版本检测（2026-10-14）：服务端重启/重新部署后，前端自动重载拿新JS，避免"修了但浏览器还是旧代码"
+const SERVER_BOOT_TIME = Date.now();
+app.get('/api/version', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json({ ok: true, version: SERVER_BOOT_TIME });
+});
   const st = lessonState(lid);
   const today = shanghaiDay();
   const p2_open = st.p1_done === 1;
