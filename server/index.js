@@ -148,8 +148,10 @@ function publicStep(s, lessonId, version, choices) {
     stem: substituteChoices(s.stem, C), task: s.task,
     teach_html: substituteChoices(s.teach_html, C), reading: s.reading, audio_id: s.audio_id,
   };
-  if (s.kind === 'mcq' || s.kind === 'short') o.item_id = `${lessonId}-v${version}-s${s.item_step || s.step}`;
+  if (s.kind === 'mcq' || s.kind === 'short' || s.kind === 'chunk') o.item_id = `${lessonId}-v${version}-s${s.item_step || s.step}`;
   if (s.kind === 'mcq') o.options = s.options;
+  // 拼句题（2026-10-14）：下发打乱的词块，前端点选拼句；答案用 expects 判分
+  if (s.kind === 'chunk') o.chunks = s.chunks;
   // choice 步骤：下发 choice_key 与选项（选项只有标签，没有答案可泄）；选择不记作答不判分
   if (s.kind === 'choice') { o.choice_key = s.choice_key; o.options = s.options; }
   // 第二天开场复习副本的标记（2026-10-02）：前端据此打"复习题"标
@@ -791,8 +793,30 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
   // 2026-10-11：课程数据修好后浏览器仍显示旧版（u2r5 事件），禁缓存，
   // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
   res.set('Cache-Control', 'no-store');
-  if (req.query.lesson && !validLesson(String(req.query.lesson))) return badLesson(res);
-  const lid = String(req.query.lesson || 'u2r1');
+  const qlid = String(req.query.lesson || 'u2r1');
+  // 每日闯关（2026-10-14）：虚拟课程，画像驱动动态选题，不走文件和门禁
+  if (qlid === 'daily-retest') {
+    // 回填漏网错题，保证选题池最新
+    try { retest.backfillWrongToRetest(); } catch {}
+    const gen = retest.generateDailyRetest();
+    const choices = {};
+    const steps = gen.steps.map((g, idx) => {
+      // 用原始 lessonId 生成 item_id，保证作答记到原题、复测能解决
+      const pub = publicStep(g.step, g.origLessonId, g.origVersion, choices);
+      pub.step = idx + 1;
+      pub.daily_retest = true;
+      pub.knowledge_point = g.knowledge_point;
+      return pub;
+    });
+    return res.json({
+      lesson_id: 'daily-retest', version: 1, title: '今日闯关',
+      home_subtitle: '每天开始先闯关，补上昨天的短板',
+      practice_end: steps.length, part1_desc: '', part2_desc: '',
+      steps, daily_retest: true,
+    });
+  }
+  if (req.query.lesson && !validLesson(qlid)) return badLesson(res);
+  const lid = qlid;
   const L = loadLesson(lid);
   if (!L) return res.status(404).json({ ok: false, error: 'no_lesson' });
   // 二审三1：前面的课没做完，这门课不开放（直接拼 URL 也进不来）
@@ -858,7 +882,62 @@ app.post('/api/progress', auth.requireAuth, (req, res) => {
 app.get('/api/retest/pending', auth.requireAuth, (req, res) => {
   // 每次查询时顺带回填历史，确保 h 上线前的"看答案过"记录可被读取
   retest.backfillFromHistory();
+  // 2026-10-14补画像：多次答错（2+次）但未进队列的也回填
+  retest.backfillWrongToRetest();
   res.json({ ok: true, pending: retest.getPending() });
+});
+// 每日闯关状态（2026-10-14）：今日题数、是否已通关、连续闯关天数
+app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    retest.backfillWrongToRetest();
+    const items = retest.selectDailyRetestItems(8);
+    const today = shanghaiDay();
+    // 今日是否已通关：checkins 有今天，且今天做过 daily-retest 的题
+    const checked = db.prepare('SELECT 1 FROM checkins WHERE day=?').get(today);
+    let doneCount = 0;
+    try {
+      doneCount = db.prepare(`SELECT COUNT(DISTINCT item_id) AS c FROM attempts
+        WHERE date(created_at, '+8 hours') = ? AND item_id IN (
+          SELECT item_id FROM retest_queue WHERE status IN ('pending','resolved')
+        )`).get(today).c || 0;
+    } catch {}
+    // 连续天数：从今天（或昨天）往前数 checkins 连续的天数
+    let streak = 0;
+    try {
+      const days = db.prepare('SELECT day FROM checkins ORDER BY day DESC').all().map(r => r.day);
+      const set = new Set(days);
+      let d = new Date(today + 'T12:00:00');
+      if (!set.has(today)) d.setDate(d.getDate() - 1); // 今天没打卡，从昨天算
+      while (true) {
+        const ds = d.toISOString().slice(0, 10);
+        if (set.has(ds)) { streak++; d.setDate(d.getDate() - 1); }
+        else break;
+      }
+    } catch {}
+    res.json({ ok: true, today, question_count: items.length,
+      checked_in: !!checked, streak,
+      has_questions: items.length > 0 });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
+});
+// 每日闯关通关（2026-10-14）：记打卡，返回连续天数（供前端庆祝）
+app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    db.prepare("INSERT OR IGNORE INTO checkins(day, created_at) VALUES(?, datetime('now'))").run(shanghaiDay());
+    const newTitles = checkTitles();
+    // 重算连续天数
+    const s = db.prepare('SELECT day FROM checkins ORDER BY day DESC').all().map(r => r.day);
+    const set = new Set(s);
+    let streak = 0;
+    const d = new Date(shanghaiDay() + 'T12:00:00');
+    while (true) {
+      const ds = d.toISOString().slice(0, 10);
+      if (set.has(ds)) { streak++; d.setDate(d.getDate() - 1); }
+      else break;
+    }
+    res.json({ ok: true, streak, newTitles });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
 });
 // 单元测验卷（2026-10-12）：广州新中考140分制
 exams.setDb(db);
