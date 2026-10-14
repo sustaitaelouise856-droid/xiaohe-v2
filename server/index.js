@@ -640,6 +640,23 @@ const TITLE_DEFS = [
     id: 'unit6_conqueror', name: 'Unit 6 征服者', icon: '🏛️',
     desc: 'u6r1-u6r5全部完成，平均正确率≥80%',
   },
+  // 2026-10-14 Elouise要求：错题成就
+  {
+    id: 'mistake_slayer', name: '错题克星', icon: '🗡️',
+    desc: '累计消灭10道待复测错题（零帮助独立答对）',
+  },
+  {
+    id: 'comeback_kid', name: '知错就改', icon: '💪',
+    desc: '从错题本重做一道题并答对',
+  },
+  {
+    id: 'daily_challenger', name: '闯关达人', icon: '🎯',
+    desc: '完成3次每日闯关',
+  },
+  {
+    id: 'irregular_slayer', name: '不规则克星', icon: '⚡',
+    desc: '不规则变化6道题全部独立答对',
+  },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -743,6 +760,38 @@ function checkTitles() {
   unitConqueror(5, 'present_perfect_master');
   unitConqueror(5, 'unit5_conqueror');
   unitConqueror(6, 'unit6_conqueror');
+  // 2026-10-14 Elouise要求：错题成就
+  // 1. 错题克星：累计 resolved 10道待复测（零帮助独立答对才会计入 resolved）
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='resolved'").get();
+    if (r && r.c >= 10) grant('mistake_slayer');
+  } catch {}
+  // 2. 知错就改：从错题本单题重做（single_retry）答对过
+  // 判定：有 attempts 的 item_id 来自单题重做且 correct=1。单题重做的 session 特征：URL 带 retry_item，
+  // 服务端无法直接区分，改用：错题本展示过的 item（attempts correct=0 过）后来 correct=1 且 independent=1
+  try {
+    const r = db.prepare(`
+      SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
+      WHERE a.correct=1 AND a.independent=1
+      AND EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0)
+    `).get();
+    if (r && r.c >= 1) grant('comeback_kid');
+  } catch {}
+  // 3. 闯关达人：完成3次每日闯关
+  try {
+    const r = db.prepare("SELECT value FROM app_state WHERE key='daily_retest_count'").get();
+    if (r && (parseInt(r.value, 10) || 0) >= 3) grant('daily_challenger');
+  } catch {}
+  // 4. 不规则克星：6道不规则题全部独立答对（取最后一次作答）
+  try {
+    const irregularIds = ['u3-consolidate-v1-s3','u3-consolidate-v1-s6','u3r2-v1-s20','u3r2-v1-s19','review3-v1-s5','review3-v1-s10','review3-v1-s1'];
+    let okCount = 0;
+    for (const iid of irregularIds) {
+      const r = db.prepare("SELECT correct, helped FROM attempts WHERE item_id=? ORDER BY rowid DESC LIMIT 1").get(iid);
+      if (r && r.correct === 1 && r.helped === 0) okCount++;
+    }
+    if (okCount >= 6) grant('irregular_slayer');
+  } catch {}
   return newly;
 }
 
@@ -956,6 +1005,12 @@ app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     db.prepare("INSERT OR IGNORE INTO checkins(day, created_at) VALUES(?, datetime('now'))").run(shanghaiDay());
+    // 2026-10-14：记录每日闯关完成次数（供"闯关达人"称号）
+    try {
+      const cur = db.prepare("SELECT value FROM app_state WHERE key='daily_retest_count'").get();
+      const n = cur ? (parseInt(cur.value, 10) || 0) + 1 : 1;
+      db.prepare("INSERT OR REPLACE INTO app_state(key, value) VALUES('daily_retest_count', ?)").run(String(n));
+    } catch {}
     const newTitles = checkTitles();
     // 重算连续天数
     const s = db.prepare('SELECT day FROM checkins ORDER BY day DESC').all().map(r => r.day);
