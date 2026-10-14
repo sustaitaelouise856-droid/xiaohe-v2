@@ -640,14 +640,14 @@ const TITLE_DEFS = [
     id: 'unit6_conqueror', name: 'Unit 6 征服者', icon: '🏛️',
     desc: 'u6r1-u6r5全部完成，平均正确率≥80%',
   },
-  // 2026-10-14 Elouise要求：错题成就
+  // 2026-10-14 Elouise要求：错题成就（2026-10-14 19:05加难度：太容易，提10-20倍）
   {
     id: 'mistake_slayer', name: '错题克星', icon: '🗡️',
-    desc: '累计消灭10道待复测错题（零帮助独立答对）',
+    desc: '累计消灭100道待复测错题（零帮助独立答对）',
   },
   {
     id: 'comeback_kid', name: '知错就改', icon: '💪',
-    desc: '从错题本重做一道题并答对',
+    desc: '从错题本重做20道题并答对',
   },
   {
     id: 'daily_challenger', name: '闯关达人', icon: '🎯',
@@ -761,12 +761,12 @@ function checkTitles() {
   unitConqueror(5, 'unit5_conqueror');
   unitConqueror(6, 'unit6_conqueror');
   // 2026-10-14 Elouise要求：错题成就
-  // 1. 错题克星：累计 resolved 10道待复测（零帮助独立答对才会计入 resolved）
+  // 1. 错题克星：累计 resolved 100道待复测（零帮助独立答对才会计入 resolved）——2026-10-14 19:05加难度（10倍）
   try {
     const r = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='resolved'").get();
-    if (r && r.c >= 10) grant('mistake_slayer');
+    if (r && r.c >= 100) grant('mistake_slayer');
   } catch {}
-  // 2. 知错就改：从错题本单题重做（single_retry）答对过
+  // 2. 知错就改：从错题本单题重做20道并答对——2026-10-14 19:05加难度（20倍）
   // 判定：有 attempts 的 item_id 来自单题重做且 correct=1。单题重做的 session 特征：URL 带 retry_item，
   // 服务端无法直接区分，改用：错题本展示过的 item（attempts correct=0 过）后来 correct=1 且 independent=1
   try {
@@ -775,7 +775,7 @@ function checkTitles() {
       WHERE a.correct=1 AND a.independent=1
       AND EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0)
     `).get();
-    if (r && r.c >= 1) grant('comeback_kid');
+    if (r && r.c >= 20) grant('comeback_kid');
   } catch {}
   // 3. 闯关达人：完成3次每日闯关
   try {
