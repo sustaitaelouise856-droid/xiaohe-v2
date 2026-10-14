@@ -636,19 +636,45 @@ async function showLockedDialog(lessonId) {
 
 // 继续学习按钮
 // 2026-10-13修：无正课可上时（currentIdx=-1），指向待办复习，不再跳锁定课
-(function() {
+// 2026-10-14改（Elouise）：有复习待办或错题时按钮变"📝 继续复习"，点进去先做待办、再做错题；做完变回"📍 继续学习"
+(async function() {
   const sub = document.getElementById("continueSub");
   const btn = document.getElementById("btnContinue");
-  if (currentIdx !== -1 && ORDER[currentIdx]) {
+  // 拉取待复测错题数
+  let mistakeCount = 0;
+  try {
+    const r = await fetch('/api/retest/pending');
+    const d = await r.json();
+    if (d.ok && Array.isArray(d.pending)) mistakeCount = d.pending.length;
+  } catch {}
+  const hasReview = pendingReviewIds.length > 0;
+  const hasMistake = mistakeCount > 0;
+  // 更新按钮主文本（2026-10-14：健壮写法，找文本节点）
+  function setBtnText(t) {
+    for (const n of btn.childNodes) {
+      if (n.nodeType === 3 && n.textContent.trim()) { n.textContent = t; break; }
+    }
+  }
+  if (hasReview || hasMistake) {
+    // 有复习任务 → 显示"继续复习"
+    setBtnText('📝 继续复习 ');
+    if (hasReview) {
+      const rid = pendingReviewIds[0];
+      const rname = rid === 'u3-consolidate' ? 'Unit 3 专项巩固' : rid;
+      sub.textContent = "去做复习：" + rname + (hasMistake ? `（另有${mistakeCount}道错题）` : '');
+      btn.onclick = () => { location.href = "/lesson?lesson=" + rid; };
+    } else {
+      // 无待办复习但有错题 → 直接进错题本
+      sub.textContent = `去消错题：还有${mistakeCount}道`;
+      btn.onclick = () => { location.href = "/progress.html"; };
+    }
+  } else if (currentIdx !== -1 && ORDER[currentIdx]) {
+    setBtnText('📍 继续学习 ');
     const cur = ORDER[currentIdx];
     sub.textContent = "下一课：" + cur.name + "（" + cur.label + "）";
     btn.onclick = () => { location.href = "/lesson?lesson=" + cur.id; };
-  } else if (pendingReviewIds.length > 0) {
-    const rid = pendingReviewIds[0];
-    const rname = rid === 'u3-consolidate' ? 'Unit 3 专项巩固' : rid;
-    sub.textContent = "去做复习：" + rname;
-    btn.onclick = () => { location.href = "/lesson?lesson=" + rid; };
   } else {
+    setBtnText('📍 继续学习 ');
     sub.textContent = "都学完了，太棒了！";
     btn.onclick = () => { location.href = "/growth.html"; };
   }
