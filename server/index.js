@@ -1115,7 +1115,29 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         created_at: r.created_at,
       };
     });
-    res.json({ ok: true, mistakes });
+    // 2026-10-14：过滤掉已解决的（retest_queue.status='resolved'），它们进"最近拿下"
+    let filtered = mistakes;
+    let resolvedList = [];
+    try {
+      const resolvedIds = new Set(
+        db.prepare("SELECT item_id FROM retest_queue WHERE status='resolved'").all().map(r => r.item_id)
+      );
+      filtered = mistakes.filter(m => !resolvedIds.has(m.item_id));
+      // 已攻克列表：resolved 的，按 resolved_at 倒序，取最近20
+      const rRows = db.prepare(`
+        SELECT q.item_id, q.resolved_at, i.prompt, i.answer, q.knowledge_point
+        FROM retest_queue q LEFT JOIN items i ON q.item_id=i.item_id
+        WHERE q.status='resolved' ORDER BY q.resolved_at DESC LIMIT 20
+      `).all();
+      resolvedList = rRows.map(r => ({
+        item_id: r.item_id,
+        question: String(r.prompt || '').slice(0, 200),
+        correct: String(r.answer || '').slice(0, 200),
+        resolved_at: r.resolved_at,
+        knowledge_point: r.knowledge_point || '',
+      }));
+    } catch {}
+    res.json({ ok: true, mistakes: filtered, resolved: resolvedList });
   } catch (e) {
     console.error('[mistakes]', e.message);
     res.json({ ok: false, mistakes: [] });
