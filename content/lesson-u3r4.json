@@ -12,7 +12,7 @@
       "kind": "teach",
       "audio_id": "u3r4-story-01",
       "title": "供应商的邮件",
-      "teach_html": "<p>【承上启下】昨天听了客人买电脑。今天学写推荐：用比较级和最高级写一段产品推荐。</p><p>站长收到供应商的邮件：有三款显示器（monitor，显示器），问广播站想订哪款。</p><p>站长让你<strong>回一封邮件</strong>，对比三款显示器，推荐一款。写邮件和打电话不一样：<strong>要把比较级、最高级写清楚</strong>，对方看不见你的表情，只能看文字。</p><p>今天学写邮件里的比较和推荐。</p>"
+      "teach_html": "<p>站长收到供应商的邮件：有三款显示器（monitor，显示器），问广播站想订哪款。</p><p>站长让你<strong>回一封邮件</strong>，对比三款显示器，推荐一款。写邮件和打电话不一样：<strong>要把比较级、最高级写清楚</strong>，对方看不见你的表情，只能看文字。</p><p>今天学写邮件里的比较和推荐。</p>"
     },
     {
       "step": 2,
@@ -174,8 +174,7 @@
         "A": "第一段是开头（Dear…）。再数一遍。",
         "B": "第三段是推荐。再数一遍。",
         "D": "第四段是结尾。再数一遍。"
-      },
-      "reading": "Dear Mr. Wang,\nThank you for your email. I want to compare the three monitors.\nMonitor B is bigger than Monitor A. It is also more expensive than Monitor C.\nMonitor B has the clearest picture. I recommend Monitor B.\nPlease reply soon.\nBest wishes,\nXiao He"
+      }
     },
     {
       "step": 14,
@@ -688,7 +687,11 @@
           "type": "word",
           "answers": [
             "keyboard y is quieter than keyboard x. it is the most comfortable",
-            "y is quieter than x. it is the most comfortable"
+            "y is quieter than x. it is the most comfortable",
+            "keyboard y is quieter than keyboard x. keyboard y is the most comfortable",
+            "keyboard y is quieter than keyboard x keyboard y is the most comfortable",
+            "y is quieter than x. y is the most comfortable",
+            "y is quieter than x y is the most comfortable"
           ],
           "cn": [
             "Y比X安静。Y是最舒服的"
