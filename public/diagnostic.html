@@ -139,7 +139,7 @@ async function submitMcq(letter, btn) {
     showAck();
   } catch (e) {
     document.querySelectorAll('.opt').forEach(b => b.disabled = false);
-    alert('网络有点慢，再点一次试试');
+    prettyAlert('网络有点慢，再点一次试试', '📶');
   }
 }
 
@@ -154,7 +154,7 @@ async function submitShort() {
     showAck();
   } catch (e) {
     document.querySelectorAll('.btn').forEach(b => b.disabled = false);
-    alert('网络有点慢，再点一次试试');
+    prettyAlert('网络有点慢，再点一次试试', '📶');
   }
 }
 
@@ -168,7 +168,7 @@ async function giveUp() {
     showAck();
   } catch (e) {
     document.querySelectorAll('.btn,.opt').forEach(b => b.disabled = false);
-    alert('网络有点慢，再点一次试试');
+    prettyAlert('网络有点慢，再点一次试试', '📶');
   }
 }
 
@@ -211,14 +211,15 @@ function nextSection() {
     if (d && d.ok) {
       location.href = '/';
     } else {
-      alert('保存失败：' + ((d && d.error) || '未知错误') + '，请重试');
+      prettyAlert('保存失败：' + ((d && d.error) || '未知错误') + '，请重试', '⚠️');
     }
   }).catch((e) => {
-    alert('网络错误，请重试');
+    prettyAlert('网络错误，请重试', '📶');
   });
 }
 
 try { loadSection(FORM, SECTION); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
 </script>
+<script src="/modal.js"></script>
 </body>
 </html>
