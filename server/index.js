@@ -821,13 +821,44 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
   if (!L) return res.status(404).json({ ok: false, error: 'no_lesson' });
   // 二审三1：前面的课没做完，这门课不开放（直接拼 URL 也进不来）
   if (!lessonOpen(lid)) return res.status(403).json({ ok: false, error: 'lesson_locked' });
+  // 单题重做（2026-10-14）：错题本"重做这道题"，只返回这一道题，不进整课流程
+  const retryItem = String(req.query.retry_item || '');
+  if (retryItem) {
+    const m = /^([a-z0-9-]+)-v(\d+)-s(\d+)$/i.exec(retryItem);
+    if (m) {
+      const stepNum = Number(m[3]);
+      const origStep = (L.lesson.steps || []).find(s => s.step === stepNum && (s.kind === 'mcq' || s.kind === 'short'));
+      if (origStep) {
+        const choices = loadChoices(lid);
+        const pub = publicStep(origStep, lid, L.lesson.version, choices);
+        pub.step = 1;
+        pub.single_retry = true;
+        pub.review = true;
+        return res.json({
+          lesson_id: lid, version: L.lesson.version,
+          title: '错题重做', home_subtitle: '只做这一道，做对就消掉',
+          practice_end: 1, part1_desc: '', part2_desc: '',
+          steps: [pub], single_retry: true, retry_item: retryItem,
+        });
+      }
+    }
+    // 找不到题目：返回 404，前端会提示
+    return res.status(404).json({ ok: false, error: 'retry_item_not_found' });
+  }
   // 2026-10-12：u3-consolidate 新一轮开始时重置session计时
   // 如果上次已学完（p1+p2都done），这次打开就是新的一轮
   if (lid === 'u3-consolidate') {
     try {
       const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='u3-consolidate'").get();
       const sess = getConsolidationSessionStart();
-      if (!sess || (st && st.p1_done === 1 && st.p2_done === 1)) {
+      // 2026-10-14修：已过关（u3_consolidation_done=1）的不再重置，避免"做完→刷新→又没做完"死循环
+      // 只有"做完但没过关"时才重置开始新一轮
+      let passed = false;
+      try {
+        const pr = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
+        passed = !!(pr && pr.value === '1');
+      } catch {}
+      if ((!sess || (st && st.p1_done === 1 && st.p2_done === 1)) && !passed) {
         startConsolidationSession();
         // 重置完成标记，开始新一轮
         if (st && st.p1_done === 1 && st.p2_done === 1) {
