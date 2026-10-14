@@ -1057,6 +1057,9 @@ async function advance() {
         const d2 = await r2.json().catch(() => ({}));
         if (d2 && d2.ok) window._dailyStreak = d2.streak;
       } catch {}
+    } else if (LESSON && LESSON.single_retry) {
+      // 单题重做（2026-10-14）：只做一道题，不调整课的 /api/complete（否则会误标整课完成）
+      // 作答已在 submit 时记入 attempts，retest_queue 的解决由服务端判分逻辑处理
     } else {
       try {
         const r = await fetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -1353,6 +1356,11 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
     // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）
     if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。'), correct: true, helped: !!b.helped };
+    // 单题重做（2026-10-14）：零帮助答对 → 调接口消掉复测项
+    if (LESSON && LESSON.single_retry && LESSON.retry_item && !b.helped) {
+      fetch('/api/retest/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ item_id: LESSON.retry_item }) }).catch(() => {});
+    }
     fb.className = 'fb ok';
     fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml;
     nextrow.style.display = 'flex';
@@ -1554,7 +1562,11 @@ async function submitCopy(s, answer) {
       window.__reportInitFailure('关键浏览器功能缺失');
       return;
     }
-    const r = await fetch('/api/lesson?lesson=' + encodeURIComponent(LID));
+    // 2026-10-14修：错题本"重做这道题"需要把 retry_item 传给服务端，否则服务端收不到、直接返回整课
+    const urlParams = new URLSearchParams(location.search);
+    const retryItemParam = urlParams.get('retry_item');
+    const lessonUrl = '/api/lesson?lesson=' + encodeURIComponent(LID) + (retryItemParam ? '&retry_item=' + encodeURIComponent(retryItemParam) : '');
+    const r = await fetch(lessonUrl);
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
     // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
