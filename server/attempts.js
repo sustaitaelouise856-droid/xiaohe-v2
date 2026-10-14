@@ -8,6 +8,7 @@
 // - 每次作答记录 elapsed_ms（客户端上报：题目出现到提交的毫秒数），供后台判断是否猜题
 const db = require('./db');
 const grade = require('./grade');
+const retest = require('./retest');
 
 function contentVerdict(item, answer) {
   if (item.kind === 'mcq') {
@@ -43,6 +44,18 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   if (r.verdict === 'typo') {
     db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
       .run(item.item_id, sid, '拼写');
+  }
+  // 不规则变化/比较级答错：记专项弱点标签（2026-10-14补画像，供每日闯关优先抽题）
+  if (r.verdict === 'wrong' || r.verdict === 'wrong_retry') {
+    try {
+      let tag = null;
+      if (retest.IRREGULAR_ITEMS.has(item.item_id)) tag = '不规则变化';
+      else if (retest.COMPARATIVE_ITEMS.has(item.item_id)) tag = '比较级';
+      if (tag) {
+        db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
+          .run(item.item_id, sid, tag);
+      }
+    } catch {}
   }
 
   let verdict = r.verdict;
