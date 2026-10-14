@@ -585,15 +585,19 @@ async function renderHome() {
   if (bothDone) {
     const sum = await summary(LID);
     const ind = sum.independent, helped = sum.helped;
+    const total = sum.items || (ind + helped) || 1;
+    const rate = Math.round(ind / total * 100);
     const weak = [...new Set(sum.weaknesses || [])];
     const pr = await parentReport(LID);
     // 2026-10-14：u3-consolidate 没过关时显示"重新挑战"按钮（替代自动重置）
     const showRetry = LID === 'u3-consolidate' && LESSON && LESSON.consolidation_passed === false;
     html += `<div class="card"><h2 class="stem">两部分都完成了</h2>
       <div class="stats">
+        <div class="stat"><b>${rate}%</b><span>独立正确率</span></div>
         <div class="stat"><b>${ind}</b><span>独立完成（题）</span></div>
-        <div class="stat"><b>${helped}</b><span>有帮助完成（题）</span></div>
+        <div class="stat"><b>${helped}</b><span>求助/看提示（题）</span></div>
       </div>
+      <p class="scene">独立正确率 = 独立完成的题 ÷ 总题数。答错后只显示"再想一想"不算求助；只有点了"老师教我"才算。</p>
       <p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>
       ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
