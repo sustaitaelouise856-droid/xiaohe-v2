@@ -929,6 +929,13 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
         return !!(pr && pr.value === '1');
       } catch { return false; }
     })() : undefined,
+    // 2026-10-14：u3-consolidate 当前轮次开始时间（供前端检测新一轮，清掉旧 sid）
+    consolidation_session: lid === 'u3-consolidate' ? (() => {
+      try {
+        const sr = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_session'").get();
+        return sr ? sr.value : null;
+      } catch { return null; }
+    })() : undefined,
   });
 });
 
