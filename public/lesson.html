@@ -610,7 +610,7 @@ async function renderHome() {
   const btnRetry = document.getElementById('btnRetry');
   if (btnRetry) {
     btnRetry.onclick = async () => {
-      if (!confirm('重新挑战会清空当前进度，开始新一轮。确定吗？')) return;
+      if (!await prettyConfirm('重新挑战会清空当前进度，开始新一轮。确定吗？', {icon:'🔄'})) return;
       try {
         await fetch('/api/consolidation/retry', { method: 'POST' });
       } catch {}
@@ -1583,5 +1583,6 @@ async function submitCopy(s, answer) {
   }
 })();
 </script>
+<script src="/modal.js"></script>
 </body>
 </html>
