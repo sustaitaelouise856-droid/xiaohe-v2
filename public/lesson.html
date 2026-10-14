@@ -587,6 +587,8 @@ async function renderHome() {
     const ind = sum.independent, helped = sum.helped;
     const weak = [...new Set(sum.weaknesses || [])];
     const pr = await parentReport(LID);
+    // 2026-10-14：u3-consolidate 没过关时显示"重新挑战"按钮（替代自动重置）
+    const showRetry = LID === 'u3-consolidate' && LESSON && LESSON.consolidation_passed === false;
     html += `<div class="card"><h2 class="stem">两部分都完成了</h2>
       <div class="stats">
         <div class="stat"><b>${ind}</b><span>独立完成（题）</span></div>
@@ -595,7 +597,8 @@ async function renderHome() {
       <p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>
       ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
-      <p class="scene">做完的课程不能重做。下一课见。</p>
+      ${showRetry ? `<p class="scene" style="color:#e65100;font-weight:700;">还没过关（需要零求助、独立正确率≥85%才能解锁 Unit 4）。</p>
+      <div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 重新挑战</button></div>` : `<p class="scene">做完的课程不能重做。下一课见。</p>`}
       <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">返回首页 →</button></div></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
@@ -603,6 +606,17 @@ async function renderHome() {
   }
   wrap.innerHTML = html;
   wrap.querySelectorAll('[data-go]').forEach(b => b.onclick = () => startPart(+b.dataset.go));
+  // 重新挑战按钮（2026-10-14）
+  const btnRetry = document.getElementById('btnRetry');
+  if (btnRetry) {
+    btnRetry.onclick = async () => {
+      if (!confirm('重新挑战会清空当前进度，开始新一轮。确定吗？')) return;
+      try {
+        await fetch('/api/consolidation/retry', { method: 'POST' });
+      } catch {}
+      location.reload();
+    };
+  }
   // 新称号庆祝（2026-10-12）：advance() 里存的 window._newTitles
   if (window._newTitles && window._newTitles.length) {
     const ids = window._newTitles;
