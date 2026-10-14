@@ -1603,10 +1603,13 @@ async function submitCopy(s, answer) {
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
     // 2026-10-14修：u3-consolidate 新一轮检测——服务端 session 变了，清掉本地旧 ST（含旧 sid），防旧 help_events 污染
+    // 2026-10-14 19:54修：首次运行时 lastSess 为空也要清（旧 ST 的 sid 是修复前的，会污染）
     if (LID === 'u3-consolidate' && LESSON && LESSON.consolidation_session) {
       try {
         const lastSess = localStorage.getItem('xh2-u3-consolidate-sess');
-        if (lastSess && lastSess !== LESSON.consolidation_session) {
+        const stRaw = localStorage.getItem('xh2-u3-consolidate');
+        const needsClear = (!lastSess && stRaw) || (lastSess && lastSess !== LESSON.consolidation_session);
+        if (needsClear) {
           localStorage.removeItem('xh2-u3-consolidate');
         }
         localStorage.setItem('xh2-u3-consolidate-sess', LESSON.consolidation_session);
