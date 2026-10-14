@@ -1566,6 +1566,21 @@ async function submitCopy(s, answer) {
       window.__reportInitFailure('关键浏览器功能缺失');
       return;
     }
+    // 2026-10-14：服务端版本检测——部署新版本后自动重载，免得浏览器跑旧JS
+    try {
+      const vr = await fetch('/api/version', { cache: 'no-store' }).then(r => r.json()).catch(() => null);
+      if (vr && vr.version) {
+        window.__serverVersion = vr.version;
+        setInterval(async () => {
+          try {
+            const vr2 = await fetch('/api/version', { cache: 'no-store' }).then(r => r.json()).catch(() => null);
+            if (vr2 && vr2.version && vr2.version !== window.__serverVersion) {
+              location.reload();
+            }
+          } catch {}
+        }, 60000); // 每60秒检查一次
+      }
+    } catch {}
     // 2026-10-14修：错题本"重做这道题"需要把 retry_item 传给服务端，否则服务端收不到、直接返回整课
     const urlParams = new URLSearchParams(location.search);
     const retryItemParam = urlParams.get('retry_item');
