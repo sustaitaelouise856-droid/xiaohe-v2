@@ -1561,6 +1561,9 @@ async function submitCopy(s, answer) {
 /* ---------- 启动 ---------- */
 (async function init() {
   try {
+    // 2026-10-14修：sawFb 是页面级变量，不清空会导致上一轮的"看过反馈"污染新一轮。init 时清空。
+    sawFb = {};
+    wrongCt = {};
     // k包：C10 兼容检查，关键 API 缺失时直接显示重载按钮
     if (window.__checkCompat && !window.__checkCompat()) {
       window.__reportInitFailure('关键浏览器功能缺失');
@@ -1578,7 +1581,7 @@ async function submitCopy(s, answer) {
               location.reload();
             }
           } catch {}
-        }, 60000); // 每60秒检查一次
+        }, 10000); // 每10秒检查一次（2026-10-14 Elouise要求加快，原60秒）
       }
     } catch {}
     // 2026-10-14修：错题本"重做这道题"需要把 retry_item 传给服务端，否则服务端收不到、直接返回整课
