@@ -30,9 +30,18 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   const sid = String(session_id || '');
   const phase = item.phase || 'practice';
 
+  // 2026-10-14修：help_events 只算当前轮次内的（防旧 session_id 复用污染）
+  // u3-consolidate 的轮次由 app_state.u3_consolidation_session 界定
+  let helpEventCutoff = '2000-01-01';
+  try {
+    if (item.item_id && item.item_id.startsWith('u3-consolidate')) {
+      const sr = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_session'").get();
+      if (sr && sr.value) helpEventCutoff = sr.value;
+    }
+  } catch {}
   const helped = (
-    db.prepare('SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=?')
-      .get(item.item_id, sid).c > 0 || saw_feedback
+    db.prepare('SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=? AND created_at >= ?')
+      .get(item.item_id, sid, helpEventCutoff).c > 0 || saw_feedback
   ) ? 1 : 0;
   const prior = db.prepare('SELECT COUNT(*) AS c FROM attempts WHERE item_id=? AND session_id=?')
     .get(item.item_id, sid).c;
