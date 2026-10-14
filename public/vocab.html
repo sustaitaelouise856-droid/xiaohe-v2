@@ -333,7 +333,7 @@ let matchFirst = null, matchDone = 0, matchTotal = 0;
 document.getElementById('btnMatch').onclick = () => {
   const v = getVocab();
   let words = Object.keys(v).filter(w => v[w].zh);
-  if (words.length < 2) { alert('生词太少，先去课程里加点词吧'); return; }
+  if (words.length < 2) { prettyAlert('生词太少，先去课程里加点词吧', '📖'); return; }
   words = words.sort(() => Math.random() - 0.5).slice(0, 6);
   matchTotal = words.length; matchDone = 0; matchFirst = null;
   const cards = [];
@@ -410,5 +410,6 @@ render();
   <a href="/growth.html"><span class="ticon">🌱</span>成长</a>
   <a href="/settings.html"><span class="ticon">⚙️</span>设置</a>
 </div>
+<script src="/modal.js"></script>
 </body>
 </html>
