@@ -1839,6 +1839,35 @@ function unitLessonsDone(u) {
 }
 function hasPendingReviews() { return getPendingReviews().length > 0; }
 
+// 每天10道错题检查（2026-10-14 Elouise：解锁新课要求③）
+// 规则：每天从错题本做10道，完全独立完成、不点老师教我；不足10道做完为止
+function checkDailyMistakes() {
+  try {
+    // 待复测错题数
+    let pending = 0;
+    try {
+      const r = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      pending = r ? r.c : 0;
+    } catch {}
+    const target = Math.min(10, pending);
+    if (target <= 0) return true; // 没错题了，直接过
+    // 今天独立完成的错题数（上海日期）
+    // 条件：correct=1, helped=0, independent=1，且这道题曾经错过（是错题本里的）
+    const today = shanghaiDay();
+    const r = db.prepare(`
+      SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
+      WHERE a.correct=1 AND a.helped=0 AND a.independent=1
+      AND date(a.created_at, '+8 hours') = ?
+      AND (
+        EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
+        OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
+      )
+    `).get(today);
+    const doneToday = r ? r.c : 0;
+    return doneToday >= target;
+  } catch { return false; }
+}
+
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
@@ -1852,6 +1881,7 @@ function lessonOpen(lid) {
   if (lid === 'u3-consolidate') return true;
   // Unit 4 锁定（2026-10-11 Elouise：严禁盲目赶进度；2026-10-12加：review3也必须学完）
   // 解锁条件：①u3-consolidate 通过（零求助、独立正确率≥85%）②review3 学完（p1+p2）
+  // 2026-10-14加：③每天从错题本做10道（独立完成、不点老师教我，不足10道做完为止）
   // 没完成复习就不解锁新的
   if (/^u4r\d+$/.test(lid)) {
     try {
@@ -1859,6 +1889,8 @@ function lessonOpen(lid) {
       if (!done || done.value !== '1') return false;
       const r3 = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
       if (!r3 || r3.p1_done !== 1 || r3.p2_done !== 1) return false;
+      // ③ 每天10道错题（2026-10-14 Elouise）
+      if (!checkDailyMistakes()) return false;
     } catch { return false; }
   }
   // 数学/语文课独立，不参与英语主线解锁
