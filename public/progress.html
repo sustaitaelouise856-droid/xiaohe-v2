@@ -209,6 +209,7 @@ function showMistake(i) {
     + '<div style="margin-bottom:12px;"><b>你的答案：</b><br><span style="color:#c5221f;">' + escHtml(m.given || '（空）') + '</span></div>'
     + '<div style="margin-bottom:12px;"><b>正确答案：</b><br><span style="color:#137333;font-weight:600;">' + escHtml(m.correct || '（无）') + '</span></div>'
     + '<div style="color:#999;font-size:13px;margin-bottom:16px;">' + escHtml(m.created_at || '') + ' · ' + escHtml(m.lesson_id || '') + '</div>'
+    + (m.item_id && m.lesson_id ? '<button onclick="location.href=\'/lesson?lesson=' + encodeURIComponent(m.lesson_id) + '&retry_item=' + encodeURIComponent(m.item_id) + '\'" style="width:100%;padding:12px;border-radius:12px;border:0;background:#ff8f00;color:#fff;font-size:16px;font-weight:700;margin-bottom:8px;">🔁 重做这道题</button>' : '')
     + '<button onclick="document.getElementById(\'mistakeOv\').remove()" style="width:100%;padding:12px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;">知道了</button>'
     + '</div>';
   ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
