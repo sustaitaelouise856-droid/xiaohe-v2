@@ -430,7 +430,9 @@
           "type": "word",
           "answers": [
             "m is faster than n. it is the fastest",
-            "m is faster than n it is the fastest"
+            "m is faster than n it is the fastest",
+            "m is faster than n. m is the fastest",
+            "m is faster than n m is the fastest"
           ],
           "cn": [
             "M比N快。M是最快的"
