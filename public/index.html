@@ -275,6 +275,12 @@
 </div>
 
 <div class="continue-wrap">
+  <!-- 每日闯关（2026-10-14）：每天开始前先复测，画像驱动补短板 -->
+  <div id="dailyCard" style="display:none;background:linear-gradient(135deg,#fff8e1,#ffecb3);border:2px solid #ffb300;border-radius:16px;padding:16px;margin-bottom:12px;text-align:center;">
+    <div style="font-size:17px;font-weight:800;color:#e65100;" id="dailyTitle">🔥 今日闯关</div>
+    <div style="font-size:13px;color:#795548;margin:6px 0;" id="dailyDesc">加载中…</div>
+    <button id="btnDaily" style="display:none;margin-top:8px;padding:12px 32px;border:0;border-radius:12px;background:linear-gradient(135deg,#ff8f00,#ffb300);color:#fff;font-size:16px;font-weight:800;cursor:pointer;">开始闯关 →</button>
+  </div>
   <button class="btn-continue" id="btnContinue">
     📍 继续学习
     <small id="continueSub">点我进入下一课</small>
@@ -591,6 +597,42 @@ async function showLockedDialog(lessonId) {
   }
   ov.style.display = 'flex';
 }
+
+// 每日闯关卡（2026-10-14）：每天开始前先复测，仪式感拉满
+(async function initDailyCard() {
+  const card = document.getElementById('dailyCard');
+  const title = document.getElementById('dailyTitle');
+  const desc = document.getElementById('dailyDesc');
+  const btn = document.getElementById('btnDaily');
+  if (!card) return;
+  try {
+    const r = await fetch('/api/daily-retest/status');
+    const d = await r.json();
+    if (!d.ok) return;
+    card.style.display = 'block';
+    const streakTxt = d.streak > 0 ? ` · 🔥连闯${d.streak}天` : '';
+    if (!d.has_questions) {
+      // 无待复测：今日无短板
+      title.textContent = '🎉 今日状态极佳';
+      desc.textContent = '没有待补的短板，继续保持！' + streakTxt;
+      btn.style.display = 'none';
+    } else if (d.checked_in) {
+      // 已通关
+      title.textContent = '✅ 今日已通关';
+      desc.textContent = `短板补完了，明天继续！` + streakTxt;
+      btn.style.display = 'none';
+      card.style.background = 'linear-gradient(135deg,#e8f5e9,#c8e6c9)';
+      card.style.borderColor = '#4caf50';
+      title.style.color = '#2e7d32';
+    } else {
+      // 待闯关
+      title.textContent = '🔥 今日闯关';
+      desc.textContent = `${d.question_count}道错题等你补 · 先闯关再上新课` + streakTxt;
+      btn.style.display = 'inline-block';
+      btn.onclick = () => { location.href = '/lesson?lesson=daily-retest'; };
+    }
+  } catch (e) { /* 静默失败，不挡首页 */ }
+})();
 
 // 继续学习按钮
 // 2026-10-13修：无正课可上时（currentIdx=-1），指向待办复习，不再跳锁定课
