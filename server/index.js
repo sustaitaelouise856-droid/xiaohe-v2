@@ -898,21 +898,12 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
   // 如果上次已学完（p1+p2都done），这次打开就是新的一轮
   if (lid === 'u3-consolidate') {
     try {
-      const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='u3-consolidate'").get();
       const sess = getConsolidationSessionStart();
-      // 2026-10-14修：已过关（u3_consolidation_done=1）的不再重置，避免"做完→刷新→又没做完"死循环
-      // 只有"做完但没过关"时才重置开始新一轮
-      let passed = false;
-      try {
-        const pr = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
-        passed = !!(pr && pr.value === '1');
-      } catch {}
-      if ((!sess || (st && st.p1_done === 1 && st.p2_done === 1)) && !passed) {
+      // 2026-10-14修：取消"打开已完成课就自动清零"的逻辑（导致"做完→刷新→又没做完"死循环，用户体验极差）
+      // 新逻辑：做完就稳定显示完成；想重挑战（刷过关）点"重新挑战"按钮手动重置
+      // 只需确保 session 存在（用于过关判定），不重置 p1/p2
+      if (!sess) {
         startConsolidationSession();
-        // 重置完成标记，开始新一轮
-        if (st && st.p1_done === 1 && st.p2_done === 1) {
-          db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0 WHERE lesson_id='u3-consolidate'").run();
-        }
       }
     } catch (e) { console.error('[consolidation] session', e.message); }
   }
@@ -925,6 +916,13 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     part1_desc: L.lesson.part1_desc || '',
     part2_desc: L.lesson.part2_desc || '',
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
+    // 2026-10-14：u3-consolidate 过关状态（供前端显示"重新挑战"）
+    consolidation_passed: lid === 'u3-consolidate' ? (() => {
+      try {
+        const pr = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
+        return !!(pr && pr.value === '1');
+      } catch { return false; }
+    })() : undefined,
   });
 });
 
@@ -1023,6 +1021,15 @@ app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
       else break;
     }
     res.json({ ok: true, streak, newTitles });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
+});
+// 专项巩固重新挑战（2026-10-14）：手动重置，开始新一轮（替代之前的自动重置）
+app.post('/api/consolidation/retry', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id='u3-consolidate'").run();
+    startConsolidationSession();
+    res.json({ ok: true });
   } catch (e) { res.json({ ok: false, error: e.message }); }
 });
 // 单元测验卷（2026-10-12）：广州新中考140分制
@@ -1889,6 +1896,31 @@ app.post('/api/admin/fix-review3-p2', (req, res) => {
     const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
     console.log('[admin] fix-review3-p2: items=' + items.c + ', correct_items=' + (doneItems ? doneItems.c : 0));
     res.json({ ok: true, p1_done: st.p1_done, p2_done: st.p2_done, items: items.c });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
+// 管理员修复：u3-consolidate 被自动重置 bug 卡住，恢复完成状态（2026-10-14）
+// 背景：自动重置逻辑导致"做完→刷新→又没做完"死循环，Elouise 10:23-10:30 做的20题被 10:30:26 的重置清空
+app.post('/api/admin/fix-consolidation-reset', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    // 验证：10:23-10:30 确实做完了20题
+    const done = db.prepare(`
+      SELECT COUNT(DISTINCT item_id) c FROM attempts
+      WHERE item_id LIKE 'u3-consolidate%' AND correct=1
+      AND created_at BETWEEN '2026-10-14 10:20:00' AND '2026-10-14 10:31:00'
+    `).get();
+    if (!done || done.c < 15) {
+      return res.json({ ok: false, error: 'not_enough_evidence', count: done ? done.c : 0 });
+    }
+    db.prepare("UPDATE lesson_state SET p1_done=1, p2_done=1, updated_at=datetime('now') WHERE lesson_id='u3-consolidate'").run();
+    const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='u3-consolidate'").get();
+    console.log('[admin] fix-consolidation-reset: restored p1/p2=1, evidence_items=' + done.c);
+    res.json({ ok: true, p1_done: st.p1_done, p2_done: st.p2_done, evidence: done.c });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
