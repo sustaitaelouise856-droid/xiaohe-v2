@@ -524,8 +524,16 @@ async function parentReport(lid) {
 async function renderHome() {
   topbar.style.display = 'none'; au.pause();
   try { $('btnSeeReading').style.display = 'none'; } catch {}
-  // 单题重做完成（2026-10-14）：错题本来的，只显示返回按钮
+  // 单题重做（2026-10-14）：初次加载显示题目，答完才显示完成页
+  // 2026-10-14修：之前初次加载就直接显示"重做完了"，bug
   if (LESSON && LESSON.single_retry) {
+    // 用专用标记判断是否答完（不用 ST.p1.done，避免旧课残留污染）
+    if (!window._singleRetryDone) {
+      // 没答完 → 直接开始做题
+      startPart(1);
+      return;
+    }
+    // 答完了 → 显示完成页
     const html = `<div class="card" style="text-align:center;">
       <div style="font-size:48px;">✅</div>
       <h2 class="stem">这道题重做完了！</h2>
@@ -1066,6 +1074,7 @@ async function advance() {
     } else if (LESSON && LESSON.single_retry) {
       // 单题重做（2026-10-14）：只做一道题，不调整课的 /api/complete（否则会误标整课完成）
       // 作答已在 submit 时记入 attempts，retest_queue 的解决由服务端判分逻辑处理
+      window._singleRetryDone = true; // 标记已答完，renderHome 显示完成页
     } else {
       try {
         const r = await fetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
