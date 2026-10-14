@@ -1978,6 +1978,23 @@ app.post('/api/admin/fix-sawfb-helped', (req, res) => {
     res.json({ ok: false, error: e.message });
   }
 });
+// 管理员：移除称号（2026-10-14 19:35 Elouise要求）
+// 背景："知错就改"在难度1时就被获得，现难度提到20，需收回
+app.post('/api/admin/revoke-title', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const { title_id } = req.body || {};
+    if (!title_id) return res.json({ ok: false, error: 'no_title_id' });
+    const r = db.prepare('DELETE FROM titles WHERE title_id=?').run(title_id);
+    console.log('[admin] revoke-title:', title_id, 'deleted:', r.changes);
+    res.json({ ok: true, revoked: title_id, deleted: r.changes });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
 // 管理员备份接口：下载 SQLite 数据库文件（用于 Google Drive 自动备份）
 // 需要 BACKUP_TOKEN 环境变量验证
 app.get('/api/admin/backup', (req, res) => {
