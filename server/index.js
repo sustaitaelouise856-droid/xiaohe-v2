@@ -2012,20 +2012,25 @@ app.post('/api/admin/clear-consolidation', (req, res) => {
 });
 // 管理员：修复 sawFb bug 导致的误标 helped（2026-10-14 19:10）
 // 背景：答错后的反馈把 sawFb 置 true，导致重试被误记为用了提示。Elouise 确认 s7/s8 没点过帮助。
+// 2026-10-14 19:54扩展：也修 session_id 复用污染的（s3 用了旧 sid，关联到昨天的 help_events）
 app.post('/api/admin/fix-sawfb-helped', (req, res) => {
   const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
   if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
     return res.status(403).json({ ok: false, error: 'forbidden' });
   }
   try {
-    // 只修当前 session（11:07:10开始）的 s7/s8，且没有 help_events 的
     const sess = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_session'").get();
     const sessTime = sess ? sess.value : '2020-01-01';
+    // 修 s7/s8（sawFb bug）+ s3（session_id 复用污染）
+    // 条件：当前轮次内、correct、没有当前轮次内的 help_events
     const r = db.prepare(`
       UPDATE attempts SET helped=0, independent=1
-      WHERE item_id IN ('u3-consolidate-v1-s7', 'u3-consolidate-v1-s8')
+      WHERE item_id IN ('u3-consolidate-v1-s3', 'u3-consolidate-v1-s7', 'u3-consolidate-v1-s8')
       AND created_at >= ? AND verdict IN ('correct', 'correct_retry')
-      AND NOT EXISTS (SELECT 1 FROM help_events h WHERE h.item_id=attempts.item_id AND h.created_at >= ?)
+      AND NOT EXISTS (
+        SELECT 1 FROM help_events h 
+        WHERE h.item_id=attempts.item_id AND h.created_at >= ?
+      )
     `).run(sessTime, sessTime);
     res.json({ ok: true, fixed: r.changes });
   } catch (e) {
