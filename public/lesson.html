@@ -302,6 +302,7 @@ const au = new Audio();
 const LESSON_PARAM = new URLSearchParams(location.search).get('lesson');
 if (!LESSON_PARAM) { location.replace('/'); throw new Error('redirecting'); }
 const LID = LESSON_PARAM; // ?lesson=u2r2
+const RETRY_ITEM = new URLSearchParams(location.search).get('retry_item'); // 错题本"重做这道题" (2026-10-14)
 let LESSON = null;
 let PART = 1, POS = 0;            // 当前部分与下标
 let sawFb = {};                   // item_id -> 看过反馈/帮助
@@ -640,6 +641,28 @@ async function startPart(n) {
     await fetch('/api/start', { method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ part: n, lesson: LID }) });
   } catch {}
+  // 错题本"重做这道题"（2026-10-14）：直接跳到指定题目，自动判断在 Part 1 还是 Part 2
+  // 用 window._retryDone 防递归死循环（startPart(2) 内不再重复跳转）
+  if (RETRY_ITEM && !window._retryDone) {
+    window._retryDone = true;
+    const inP1 = stepsOf(1).some(s => s.item_id === RETRY_ITEM);
+    const inP2 = stepsOf(2).some(s => s.item_id === RETRY_ITEM);
+    if (inP2 && !inP1 && n === 1) {
+      // 题目在 Part 2：切换过去（递归内 _retryDone 已置位，不会再跳）
+      st.pos = POS; store.save(ST);
+      startPart(2);
+      return;
+    }
+    const arr = stepsOf(n);
+    const rIdx = arr.findIndex(s => s.item_id === RETRY_ITEM);
+    if (rIdx >= 0) {
+      POS = rIdx;
+      st.pos = POS; store.save(ST);
+      renderStep();
+      return;
+    }
+    // 找不到题目：按正常流程从头开始（不 return，走下面）
+  }
   // 按题目ID续课（服务端落盘）；找不到ID（如题目已删）则从头开始
   const rid = resumeId(n);
   const idx = posOfId(n, rid);
