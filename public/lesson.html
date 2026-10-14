@@ -618,6 +618,8 @@ async function renderHome() {
       try {
         await fetch('/api/consolidation/retry', { method: 'POST' });
       } catch {}
+      // 2026-10-14修：清掉本地 ST（含旧 sid），否则旧 help_events 会污染新一轮（session_id 复用 bug）
+      try { localStorage.removeItem('xh2-u3-consolidate'); } catch {}
       location.reload();
     };
   }
@@ -1591,6 +1593,20 @@ async function submitCopy(s, answer) {
     const r = await fetch(lessonUrl);
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
+    // 2026-10-14修：u3-consolidate 新一轮检测——服务端 session 变了，清掉本地旧 ST（含旧 sid），防旧 help_events 污染
+    if (LID === 'u3-consolidate' && LESSON && LESSON.consolidation_session) {
+      try {
+        const lastSess = localStorage.getItem('xh2-u3-consolidate-sess');
+        if (lastSess && lastSess !== LESSON.consolidation_session) {
+          localStorage.removeItem('xh2-u3-consolidate');
+        }
+        localStorage.setItem('xh2-u3-consolidate-sess', LESSON.consolidation_session);
+        // 清掉后重载 ST
+        ST = store.load();
+        if (!ST.p1) ST.p1 = { sid: '', pos: 0, done: false };
+        if (!ST.p2) ST.p2 = { sid: '', pos: 0, done: false };
+      } catch {}
+    }
     // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
     if (LESSON && LESSON.error === 'lesson_locked') {
       document.title = '小禾英语 · 课程未解锁';
