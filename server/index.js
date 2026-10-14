@@ -111,9 +111,20 @@ function lessonAgg(lid) {
     `SELECT item_id FROM items WHERE lesson_id=?${ver != null ? ' AND version=?' : ''}`
   ).all(...(ver != null ? [lid, ver] : [lid]));
   const curLogical = new Set(curRows.map(r => logicalItemId(r.item_id)));
+  // u3-consolidate 只统计当前挑战轮次（u3_consolidation_session 之后），
+  // 历史轮次的误标 helped 不能污染当前轮次的过关判定（2026-10-14 修）。
+  let sessFilter = '';
+  let sessArgs = [];
+  if (lid === 'u3-consolidate') {
+    const sess = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_session'").get();
+    if (sess && sess.value) {
+      sessFilter = ' AND created_at >= ?';
+      sessArgs = [sess.value];
+    }
+  }
   const rows = db.prepare(
-    'SELECT item_id, independent, helped, correct FROM attempts WHERE item_id LIKE ?'
-  ).all(lid + '-%');
+    `SELECT item_id, independent, helped, correct FROM attempts WHERE item_id LIKE ?${sessFilter}`
+  ).all(lid + '-%', ...sessArgs);
   const byLogical = new Map();
   for (const r of rows) {
     const key = logicalItemId(r.item_id);
