@@ -1,8 +1,9 @@
 'use strict';
-// 作答提交与判分规则（Elouise 2026-09-29 确认，2026-09-29 晚补充）：
-// - 练习阶段：反馈可以讲清楚；但看过反馈/帮助后答对 -> helped=1（有帮助完成），independent=0
+// 作答提交与判分规则（Elouise 2026-09-29 确认，2026-09-29 晚补充，2026-10-14 重构）：
+// - 练习阶段：反馈可以讲清楚；但点了"老师教我"（help_events 有记录）后答对 -> helped=1（有帮助完成），independent=0
 // - 验证阶段：只以第一次作答判定；重答 -> verdict 为 correct_retry/wrong_retry，不计独立完成
-// - "看过反馈后重答"靠客户端上报 saw_feedback=1；同一 session 内按 (session_id, item_id) 判定重答
+// - 2026-10-14重构：不再信任客户端 saw_feedback（多个 bug 污染），helped 只认服务端 help_events 表
+//   答错后"再想一想"不算帮助；只有点了"老师教我"才算
 // - 中文作答（verdict=chinese）：内容理解记 independent=1（独立完成），英文书写记 helped=1
 //   （有帮助完成），并记一条弱点事件 tag='英文书写'，供下节课复习
 // - 每次作答记录 elapsed_ms（客户端上报：题目出现到提交的毫秒数），供后台判断是否猜题
@@ -30,8 +31,13 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   const sid = String(session_id || '');
   const phase = item.phase || 'practice';
 
-  // 2026-10-14修：help_events 只算当前轮次内的（防旧 session_id 复用污染）
-  // u3-consolidate 的轮次由 app_state.u3_consolidation_session 界定
+  // 2026-10-14彻底重构（Elouise要求）：helped 只认服务端记录，不再信任客户端 saw_feedback
+  // 原因：saw_feedback 是前端上报的布尔值，被多个 bug 污染（答错反馈误置、session_id 复用等），不可靠
+  // 新规则：
+  // 1. help_events 表有记录（点了"老师教我"）→ helped=1
+  // 2. verdict='copied'（看了答案照抄）→ helped=1（在下面的 copied 分支已处理）
+  // 3. verdict='chinese'（中文作答）→ helped=1（在下面的 chinese 分支已处理）
+  // 4. 其他情况 → helped=0（答错后"再想一想"不算帮助）
   let helpEventCutoff = '2000-01-01';
   try {
     if (item.item_id && item.item_id.startsWith('u3-consolidate')) {
@@ -41,7 +47,7 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   } catch {}
   const helped = (
     db.prepare('SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=? AND created_at >= ?')
-      .get(item.item_id, sid, helpEventCutoff).c > 0 || saw_feedback
+      .get(item.item_id, sid, helpEventCutoff).c > 0
   ) ? 1 : 0;
   const prior = db.prepare('SELECT COUNT(*) AS c FROM attempts WHERE item_id=? AND session_id=?')
     .get(item.item_id, sid).c;
