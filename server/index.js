@@ -1024,10 +1024,12 @@ app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
   } catch (e) { res.json({ ok: false, error: e.message }); }
 });
 // 专项巩固重新挑战（2026-10-14）：手动重置，开始新一轮（替代之前的自动重置）
+// 2026-10-14 18:55修：彻底清空——逐题进度(progress表)也要删，否则从第13步续上
 app.post('/api/consolidation/retry', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id='u3-consolidate'").run();
+    db.prepare("DELETE FROM progress WHERE lesson_id='u3-consolidate'").run();
     startConsolidationSession();
     res.json({ ok: true });
   } catch (e) { res.json({ ok: false, error: e.message }); }
@@ -1921,6 +1923,22 @@ app.post('/api/admin/fix-consolidation-reset', (req, res) => {
     const st = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='u3-consolidate'").get();
     console.log('[admin] fix-consolidation-reset: restored p1/p2=1, evidence_items=' + done.c);
     res.json({ ok: true, p1_done: st.p1_done, p2_done: st.p2_done, evidence: done.c });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
+// 管理员：彻底清空 u3-consolidate 进度（2026-10-14 18:55）
+// Elouise 点"重新挑战"后仍从第13步续上——progress 表没清。现在彻底清掉，回到原生状态
+app.post('/api/admin/clear-consolidation', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id='u3-consolidate'").run();
+    db.prepare("DELETE FROM progress WHERE lesson_id='u3-consolidate'").run();
+    startConsolidationSession();
+    res.json({ ok: true, cleared: true });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
