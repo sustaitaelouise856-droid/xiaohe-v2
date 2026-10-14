@@ -432,16 +432,17 @@ app.post('/api/change-access-code', auth.requireAuth, (req, res) => {
 
 // 课程进度（服务端记录）：完成即学 + 防重做
 // 第二部分开放规则（2026-10-02 总任务书取消两天制）：第一部分完成即可学第二部分，
-// 不再等到第二天。p1_started_day 仍记录（历史数据），只是不再作为开放条件。
-app.get('/api/state', auth.requireAuth, (req, res) => {
-  if (req.query.lesson && !validLesson(String(req.query.lesson))) return badLesson(res);
-  const lid = String(req.query.lesson || 'u2r1');
 // 前端版本检测（2026-10-14）：服务端重启/重新部署后，前端自动重载拿新JS，避免"修了但浏览器还是旧代码"
 const SERVER_BOOT_TIME = Date.now();
 app.get('/api/version', (req, res) => {
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, version: SERVER_BOOT_TIME });
 });
+
+// 不再等到第二天。p1_started_day 仍记录（历史数据），只是不再作为开放条件。
+app.get('/api/state', auth.requireAuth, (req, res) => {
+  if (req.query.lesson && !validLesson(String(req.query.lesson))) return badLesson(res);
+  const lid = String(req.query.lesson || 'u2r1');
   const st = lessonState(lid);
   const today = shanghaiDay();
   const p2_open = st.p1_done === 1;
