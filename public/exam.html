@@ -150,7 +150,7 @@ function selectOpt(qid, oi) {
 
 function playAudio(url) {
   const a = new Audio(url);
-  a.play().catch(e => alert('音频播放失败'));
+  a.play().catch(e => prettyAlert('音频播放失败', '🔇'));
 }
 
 let mediaRec = null, recChunks = [];
@@ -177,7 +177,7 @@ async function toggleRec(qid, btn) {
     btn.classList.add('stop');
     st.textContent = '🔴 录音中…';
   } catch (e) {
-    alert('无法访问麦克风');
+    prettyAlert('无法访问麦克风', '🎤');
   }
 }
 
@@ -191,7 +191,7 @@ function startTimer() {
 }
 
 async function submitExam() {
-  if (!confirm('确定交卷吗？')) return;
+  if (!await prettyConfirm('确定交卷吗？', {icon:'📝'})) return;
   clearInterval(timerInt);
   document.getElementById('submitBar').style.display = 'none';
   document.getElementById('examBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">判分中…</div>';
@@ -235,5 +235,6 @@ function showResult(data) {
 
 load();
 </script>
+<script src="/modal.js"></script>
 </body>
 </html>
