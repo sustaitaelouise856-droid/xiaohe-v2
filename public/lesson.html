@@ -1619,9 +1619,13 @@ async function submitCopy(s, answer) {
       }
     } catch {}
     // 2026-10-14修：错题本"重做这道题"需要把 retry_item 传给服务端，否则服务端收不到、直接返回整课
+    // 2026-10-15修：批量重做需要把 items 参数也传过去
     const urlParams = new URLSearchParams(location.search);
     const retryItemParam = urlParams.get('retry_item');
-    const lessonUrl = '/api/lesson?lesson=' + encodeURIComponent(LID) + (retryItemParam ? '&retry_item=' + encodeURIComponent(retryItemParam) : '');
+    const batchItemsParam = urlParams.get('items');
+    let lessonUrl = '/api/lesson?lesson=' + encodeURIComponent(LID);
+    if (retryItemParam) lessonUrl += '&retry_item=' + encodeURIComponent(retryItemParam);
+    if (batchItemsParam) lessonUrl += '&items=' + encodeURIComponent(batchItemsParam);
     const r = await fetch(lessonUrl);
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
