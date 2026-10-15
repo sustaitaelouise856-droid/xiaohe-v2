@@ -666,7 +666,8 @@ async function showLockedDialog(lessonId) {
     if (d2 && d2.ok && d2.dailyMistakes) dailyMistakes = d2.dailyMistakes;
   } catch {}
   const hasReview = pendingReviewIds.length > 0;
-  const hasMistake = mistakeCount > 0;
+  // 2026-10-15修：hasMistake 只看今日10道是否做完，不看历史总数（41道不清完也显示继续学习）
+  const hasMistake = dailyMistakes ? (dailyMistakes.done < dailyMistakes.target && dailyMistakes.target > 0) : (mistakeCount > 0);
   // 更新按钮主文本（2026-10-14：健壮写法，找文本节点）
   function setBtnText(t) {
     for (const n of btn.childNodes) {
