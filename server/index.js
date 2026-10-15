@@ -1159,23 +1159,30 @@ app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
 app.get('/api/mistakes', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    // 取最近50道答错的题（含看答案过、粘贴等），按 item_id 去重只留最新一条
+    // 取最近答错的题（含看答案过、粘贴等）
     // 2026-10-13修：items表没有question_json列，改用prompt/answer列
-    // 2026-10-15 Elouise：去重，避免同一题多次答错占多条
+    // 2026-10-15 Elouise：去重，同一题（忽略版本号）只留最后一次答错
+    // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取100条再 JS 去重
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
              i.prompt, i.answer, i.lesson_id
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
-      AND a.rowid = (
-        SELECT MAX(b.rowid) FROM attempts b
-        WHERE b.item_id = a.item_id AND b.correct = 0
-      )
       ORDER BY a.created_at DESC
-      LIMIT 50
+      LIMIT 100
     `).all();
-    const mistakes = rows.map(r => {
+    // 按 logicalItemId 去重，只保留每题最新的一条
+    const seen = new Set();
+    const deduped = [];
+    for (const r of rows) {
+      const key = logicalItemId(r.item_id);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      deduped.push(r);
+      if (deduped.length >= 50) break;
+    }
+    const mistakes = deduped.map(r => {
       let detail = null;
       try { detail = JSON.parse(r.detail_json || '{}'); } catch {}
       // 提取正确答案
