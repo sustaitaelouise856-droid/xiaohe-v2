@@ -914,6 +914,37 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
       steps, daily_retest: true,
     });
   }
+  // 批量重做（2026-10-15 Elouise）：错题本多选一起做，items=逗号分隔的 item_id 列表
+  // 虚拟课程，不走文件和门禁，每道题用原 lesson 的判分
+  if (qlid === 'batch-retry') {
+    const itemsParam = String(req.query.items || '');
+    const itemIds = itemsParam.split(',').map(s => s.trim()).filter(Boolean).slice(0, 20);
+    if (!itemIds.length) return res.status(400).json({ ok: false, error: 'no_items' });
+    const steps = [];
+    const choices = {};
+    for (const iid of itemIds) {
+      const m = /^([a-z0-9-]+)-v(\d+)-s(\d+)$/i.exec(iid);
+      if (!m) continue;
+      const origLid = m[1], origVer = Number(m[2]), stepNum = Number(m[3]);
+      const OL = loadLesson(origLid);
+      if (!OL) continue;
+      const origStep = (OL.lesson.steps || []).find(s => s.step === stepNum && (s.kind === 'mcq' || s.kind === 'short' || s.kind === 'chunk'));
+      if (!origStep) continue;
+      const pub = publicStep(origStep, origLid, origVer, choices);
+      pub.step = steps.length + 1;
+      pub.batch_retry = true;
+      pub.review = true;
+      pub.retry_item = iid;
+      steps.push(pub);
+    }
+    if (!steps.length) return res.status(404).json({ ok: false, error: 'no_valid_items' });
+    return res.json({
+      lesson_id: 'batch-retry', version: 1, title: '错题批量重做',
+      home_subtitle: `共 ${steps.length} 道，一道一道来`,
+      practice_end: steps.length, part1_desc: '', part2_desc: '',
+      steps, batch_retry: true,
+    });
+  }
   if (req.query.lesson && !validLesson(qlid)) return badLesson(res);
   const lid = qlid;
   const L = loadLesson(lid);
@@ -1128,14 +1159,19 @@ app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
 app.get('/api/mistakes', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    // 取最近50道答错的题（含看答案过、粘贴等）
+    // 取最近50道答错的题（含看答案过、粘贴等），按 item_id 去重只留最新一条
     // 2026-10-13修：items表没有question_json列，改用prompt/answer列
+    // 2026-10-15 Elouise：去重，避免同一题多次答错占多条
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
              i.prompt, i.answer, i.lesson_id
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
+      AND a.rowid = (
+        SELECT MAX(b.rowid) FROM attempts b
+        WHERE b.item_id = a.item_id AND b.correct = 0
+      )
       ORDER BY a.created_at DESC
       LIMIT 50
     `).all();
@@ -1743,7 +1779,9 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
   const step = L ? L.stepsByItem[itemId] : null;
   const phase = step ? (step.phase || 'practice') : 'practice';
   const sid = String(body.session_id || '');
-  if (step) {
+  // 2026-10-15：错题重做（单题/批量）豁免防重做——用户从错题本主动发起，不算刷课
+  const isRetry = body.is_retry === true || body.is_retry === 1 || body.is_retry === '1';
+  if (step && !isRetry) {
     // 第二部分开场复习放行（2026-10-02 规范第 7 条）：第二部分已开放时，复习池题目
     // 在当前（第二部分）会话里、尚未答对前，允许重答一次热身，不算"重做第一部分"。
     const reviewRedo = phase === 'practice'
