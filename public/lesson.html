@@ -331,6 +331,8 @@ function progressId(s) {
 }
 let PROG = { p1: null, p2: null }; // 服务端进度 {p1: item_id, p2: item_id}
 async function loadProg() {
+  // 2026-10-15修：每日闯关不加载服务端进度（每天题目不同，旧进度无效且可能损坏）
+  if (LID === 'daily-retest') { PROG = { p1: null, p2: null }; return; }
   try {
     const r = await fetch('/api/progress?lesson=' + encodeURIComponent(LID));
     if (r.ok) { const b = await r.json(); if (b && b.progress) PROG = b.progress; }
@@ -698,11 +700,6 @@ async function renderHome() {
 async function startPart(n) {
   PART = n; const st = ST['p' + n];
   if (!st.sid) { st.sid = uuid(); store.save(ST); }
-  // 2026-10-15修：每日闯关每次都从头开始，清掉可能损坏的续课位置
-  if (LID === 'daily-retest') {
-    st.pos = 0; st.maxPos = 0; delete PROG['p' + n];
-    store.save(ST);
-  }
   const sessKey = n + ':' + st.sid;
   if (doneSetSid !== sessKey) { doneSet = {}; doneSetSid = sessKey; } // 新一轮作答（如练习课"再练一遍"）：清空终局记录
   try {
