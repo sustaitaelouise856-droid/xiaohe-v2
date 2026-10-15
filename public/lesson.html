@@ -409,13 +409,19 @@ function speakTts(text) {
   } catch (e) { return false; }
 }
 function setAudio(audioId) {
-  // 2026-10-15修：直接用顶部全局 au = new Audio()，不再 DOM 查找 id="au"（页面无此元素，null.pause() 会中断 renderStep 致白屏）
   const btnPlay = $('btnPlay');
   au.pause();
   setRate(getPlaySpeed());
   if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
   $('player').style.display = '';
-  au.src = '/audio/' + LID + '/' + audioId + '.mp3';
+  // 2026-10-15修：虚拟课（daily-retest/batch-retry）的题目来自原课，音频路径用 audio_id 前缀解析原课目录
+  // 如 review3-q01 → /audio/review3/，u3-consolidate-q11 → /audio/u3-consolidate/
+  let audioLid = LID;
+  if (LID === 'daily-retest' || LID === 'batch-retry') {
+    const m = /^(.+)-q\d+$/i.exec(audioId);
+    if (m) audioLid = m[1];
+  }
+  au.src = '/audio/' + audioLid + '/' + audioId + '.mp3';
   btnPlay.className = 'paused';
   // 音频加载失败时尝试 TTS
   au.onerror = () => { if (currentTtsText) speakTts(currentTtsText); };
