@@ -1352,7 +1352,7 @@ function wireQuestion(s) {
         body: JSON.stringify({ item_id: s.item_id, answer: given,
           session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms,
           pasted: window._pastedAnswer ? 1 : 0,
-          is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry)) ? 1 : 0 }) }); // 2026-10-12：粘贴标记；2026-10-15：重做豁免防重做
+          is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest")) ? 1 : 0 }) }); // 2026-10-12：粘贴标记；2026-10-15：重做豁免防重做
     } catch { err.textContent = '网络有点慢，再点一次试试。'; $('btnSub').disabled = false; return; }
     // h 版：先读响应体再按 error 分流，不能只看 HTTP 状态码——
     // 403 有两种：retry_exhausted（留本页看答案抄写）和 part_done（真做完，回首页）
@@ -1584,7 +1584,7 @@ async function submitCopy(s, answer) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ item_id: s.item_id, answer: answer,
         session_id: ST['p' + PART].sid, saw_feedback: 1, elapsed_ms: 0, copied: 1,
-        is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry)) ? 1 : 0 }) });
+        is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest")) ? 1 : 0 }) });
     b = await r.json();
   } catch (e) { b = null; }
   if (!b || !b.ok) {
