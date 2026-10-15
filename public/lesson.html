@@ -498,6 +498,8 @@ function partCard(n, title, desc, state) {
   let action, locked = false;
   if (n === 1) {
     if (state.p1_done) action = `<p class="done-line">已完成</p>`;
+    // 2026-10-15修：每日闯关不显示"继续"，直接"开始闯关"（防续课状态损坏卡死）
+    else if (LID === 'daily-retest') action = `<button class="big" data-go="1">开始闯关</button>`;
     else if (hasResume(1)) action = `<button class="big" data-go="1">继续：第 ${posLabel(1)} 步</button>`;
     else action = `<button class="big" data-go="1">开始上课</button>`;
   } else {
@@ -696,6 +698,11 @@ async function renderHome() {
 async function startPart(n) {
   PART = n; const st = ST['p' + n];
   if (!st.sid) { st.sid = uuid(); store.save(ST); }
+  // 2026-10-15修：每日闯关每次都从头开始，清掉可能损坏的续课位置
+  if (LID === 'daily-retest') {
+    st.pos = 0; st.maxPos = 0; delete PROG['p' + n];
+    store.save(ST);
+  }
   const sessKey = n + ':' + st.sid;
   if (doneSetSid !== sessKey) { doneSet = {}; doneSetSid = sessKey; } // 新一轮作答（如练习课"再练一遍"）：清空终局记录
   try {
