@@ -1128,18 +1128,29 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
       };
     });
     // 2026-10-14：过滤掉已解决的（retest_queue.status='resolved'），它们进"最近拿下"
+    // 2026-10-15修：只有"无 pending 记录"的才算真正攻克；有 pending 的（即使也有 resolved）仍留在"正在攻克"
     let filtered = mistakes;
     let resolvedList = [];
     try {
-      const resolvedIds = new Set(
-        db.prepare("SELECT item_id FROM retest_queue WHERE status='resolved'").all().map(r => r.item_id)
+      const pendingIds = new Set(
+        db.prepare("SELECT item_id FROM retest_queue WHERE status='pending'").all().map(r => r.item_id)
       );
-      filtered = mistakes.filter(m => !resolvedIds.has(m.item_id));
-      // 已攻克列表：resolved 的，按 resolved_at 倒序，取最近20
+      // 正在攻克：mistakes 里去掉"已解决且无待处理"的
+      const fullyResolvedIds = new Set(
+        db.prepare(`
+          SELECT item_id FROM retest_queue WHERE status='resolved'
+          AND item_id NOT IN (SELECT item_id FROM retest_queue WHERE status='pending')
+        `).all().map(r => r.item_id)
+      );
+      filtered = mistakes.filter(m => !fullyResolvedIds.has(m.item_id));
+      // 已攻克列表：有 resolved 且无 pending 的，按 resolved_at 倒序，取最近20
       const rRows = db.prepare(`
-        SELECT q.item_id, q.resolved_at, i.prompt, i.answer, q.knowledge_point
+        SELECT q.item_id, MAX(q.resolved_at) as resolved_at, i.prompt, i.answer, q.knowledge_point
         FROM retest_queue q LEFT JOIN items i ON q.item_id=i.item_id
-        WHERE q.status='resolved' ORDER BY q.resolved_at DESC LIMIT 20
+        WHERE q.status='resolved'
+        AND q.item_id NOT IN (SELECT item_id FROM retest_queue WHERE status='pending')
+        GROUP BY q.item_id
+        ORDER BY resolved_at DESC LIMIT 20
       `).all();
       resolvedList = rRows.map(r => ({
         item_id: r.item_id,
