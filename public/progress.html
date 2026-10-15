@@ -97,8 +97,7 @@
 <div id="topbar">学习报告</div>
 <div id="wrap">
   <div class="tabs">
-    <button class="tab active" onclick="showTab('mastery')">掌握情况</button>
-    <button class="tab" onclick="showTab('mistakes')">错题本</button>
+    <button class="tab active" onclick="showTab('mistakes')">错题本</button>
     <button class="tab" onclick="showTab('trend')">学习趋势</button>
   </div>
   <div id="tab-trend" style="display:none">
@@ -119,14 +118,7 @@
       <div id="weakList"><div class="empty">正在加载…</div></div>
     </div>
   </div>
-  <div id="tab-mastery">
-    <div class="card">
-      <h2>知识点掌握</h2>
-      <div class="subtitle">做完新人能力检测后，这里会显示你的强项和待加强项。</div>
-      <div id="mastery-list"><div class="empty">加载中…</div></div>
-    </div>
-  </div>
-  <div id="tab-mistakes" style="display:none">
+  <div id="tab-mistakes">
     <div class="card">
       <h2>正在攻克</h2>
       <div class="subtitle">这几个知识点正在练习中，换一道同类型的题独立做对，就真正拿下了。</div>
@@ -162,15 +154,6 @@ function kpName(kp) { return KP_NAMES[kp] || '英语练习'; }
 function esc(t) { return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 async function api(p) { const r = await fetch(p); return r.json(); }
-
-async function loadMastery() {
-  const d = await api('/api/mastery');
-  const el = document.getElementById('mastery-list');
-  if (!d.ok || !d.items.length) { el.innerHTML = '<div class="empty">还没有数据，做完新人能力检测后会显示在这里。</div>'; return; }
-  el.innerHTML = d.items.map(k =>
-    `<div class="kp"><span class="badge ${esc(k.status)}">${esc(k.status)}</span><span class="kp-name">${esc(kpName(k.knowledge_point))}</span></div>`
-  ).join('');
-}
 
 async function loadMistakes() {
   const focusEl = document.getElementById('focus-list');
@@ -231,7 +214,6 @@ function showMistake(i) {
 function showTab(t) {
   document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
-  document.getElementById('tab-mastery').style.display = t === 'mastery' ? '' : 'none';
   document.getElementById('tab-mistakes').style.display = t === 'mistakes' ? '' : 'none';
   document.getElementById('tab-trend').style.display = t === 'trend' ? '' : 'none';
   if (t === 'mistakes') loadMistakes();
@@ -305,7 +287,7 @@ function drawTrendChart(trend) {
   });
 }
 
-try { loadMastery(); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
+try { loadMistakes(); } catch (e) { if (window.__reportInitFailure) window.__reportInitFailure(e.message || String(e)); }
 </script>
 
 <div class="tabbar">
