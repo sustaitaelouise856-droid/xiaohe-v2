@@ -658,6 +658,13 @@ async function showLockedDialog(lessonId) {
     const d = await r.json();
     if (d.ok && Array.isArray(d.pending)) mistakeCount = d.pending.length;
   } catch {}
+  // 2026-10-15 Elouise：拉取今日错题进度（解锁新课要求是每天10道，不是清完所有）
+  let dailyMistakes = null;
+  try {
+    const r2 = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
+    const d2 = await r2.json();
+    if (d2 && d2.ok && d2.dailyMistakes) dailyMistakes = d2.dailyMistakes;
+  } catch {}
   const hasReview = pendingReviewIds.length > 0;
   const hasMistake = mistakeCount > 0;
   // 更新按钮主文本（2026-10-14：健壮写法，找文本节点）
@@ -672,11 +679,19 @@ async function showLockedDialog(lessonId) {
     if (hasReview) {
       const rid = pendingReviewIds[0];
       const rname = rid === 'u3-consolidate' ? 'Unit 3 专项巩固' : rid;
-      sub.textContent = "去做复习：" + rname + (hasMistake ? `（另有${mistakeCount}道错题）` : '');
+      // 2026-10-15：错题提示改成今日进度，不说"另有53道"
+      const mistakeTxt = (hasMistake && dailyMistakes && dailyMistakes.target > 0)
+        ? `（今日错题 ${dailyMistakes.done}/${dailyMistakes.target}）`
+        : (hasMistake ? `（另有${mistakeCount}道错题）` : '');
+      sub.textContent = "去做复习：" + rname + mistakeTxt;
       btn.onclick = () => { location.href = "/lesson?lesson=" + rid; };
     } else {
-      // 无待办复习但有错题 → 直接进错题本
-      sub.textContent = `去消错题：还有${mistakeCount}道`;
+      // 无待办复习但有错题 → 显示今日错题进度（2026-10-15 Elouise：解锁要求是每天10道，不是清完53道）
+      if (dailyMistakes && dailyMistakes.target > 0) {
+        sub.textContent = `今日错题：已做 ${dailyMistakes.done}/${dailyMistakes.target} 道`;
+      } else {
+        sub.textContent = `去消错题：还有${mistakeCount}道`;
+      }
       btn.onclick = () => { location.href = "/progress.html"; };
     }
   } else if (currentIdx !== -1 && ORDER[currentIdx]) {
