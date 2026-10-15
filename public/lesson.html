@@ -406,12 +406,15 @@ function speakTts(text) {
     return true;
   } catch (e) { return false; }
 }
-function setAudio(audioId) {
+function setAudio(audioId, lessonOverride) {
+  const au = $('au'), btnPlay = $('btnPlay');
   au.pause();
   setRate(getPlaySpeed());
   if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
   $('player').style.display = '';
-  au.src = '/audio/' + LID + '/' + audioId + '.mp3';
+  // 2026-10-15修：批量重做时用原课 ID 拼音频路径（虚拟课 batch-retry 下没有音频文件）
+  const audioLid = lessonOverride || LID;
+  au.src = '/audio/' + audioLid + '/' + audioId + '.mp3';
   btnPlay.className = 'paused';
   // 音频加载失败时尝试 TTS
   au.onerror = () => { if (currentTtsText) speakTts(currentTtsText); };
@@ -769,7 +772,13 @@ function renderStep() {
     div.innerHTML = rawHtml;
     currentTtsText = (div.textContent || div.innerText || '').trim().slice(0, 500);
   } catch (e) { currentTtsText = ''; }
-  setAudio(s.audio_id);
+  // 2026-10-15：批量重做时从 retry_item 提取原课 ID，用于音频路径
+  let audioLid = null;
+  if (s.batch_retry && s.retry_item) {
+    const m = /^([a-z0-9-]+)-v\d+-s\d+$/i.exec(s.retry_item);
+    if (m) audioLid = m[1];
+  }
+  setAudio(s.audio_id, audioLid);
   let html = '';
   if (s.kind === 'teach') {
     const isStory = /story/.test(s.audio_id || '');
