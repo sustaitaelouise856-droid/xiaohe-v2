@@ -671,6 +671,31 @@ const TITLE_DEFS = [
     id: 'daily_challenger', name: '闯关达人', icon: '🎯',
     desc: '完成3次每日闯关',
   },
+  // 2026-10-15 Elouise要求：连闯/签到系列称号
+  {
+    id: 'challenge_streak_7', name: '连闯七天', icon: '🔥',
+    desc: '连续7天完成今日闯关',
+  },
+  {
+    id: 'signin_14', name: '半月坚持', icon: '📅',
+    desc: '连续签到14天',
+  },
+  {
+    id: 'signin_21', name: '三周习惯', icon: '🌱',
+    desc: '连续签到21天',
+  },
+  {
+    id: 'signin_36', name: '月余不辍', icon: '🏵️',
+    desc: '连续签到36天',
+  },
+  {
+    id: 'signin_100', name: '百日筑基', icon: '💯',
+    desc: '连续签到100天',
+  },
+  {
+    id: 'signin_120', name: '百廿持恒', icon: '👑',
+    desc: '连续签到120天',
+  },
   {
     id: 'irregular_slayer', name: '不规则克星', icon: '⚡',
     desc: '不规则变化6道题全部独立答对',
@@ -743,9 +768,16 @@ function checkTitles() {
     if (streak >= 20) grant('spelling_star');
   } catch {}
   // 4. 坚持小勇士：连续签到7天
+  // 2026-10-15 Elouise：加签到系列称号（14/21/36/100/120天）+ 连闯7天
   try {
     const st = checkinStatus();
     if (st && st.streak >= 7) grant('streak_warrior');
+    if (st && st.streak >= 7) grant('challenge_streak_7');
+    if (st && st.streak >= 14) grant('signin_14');
+    if (st && st.streak >= 21) grant('signin_21');
+    if (st && st.streak >= 36) grant('signin_36');
+    if (st && st.streak >= 100) grant('signin_100');
+    if (st && st.streak >= 120) grant('signin_120');
   } catch {}
   // 5. Unit 3 征服者：u3r1-u3r5全完成，平均独立正确率≥80%
   try {
