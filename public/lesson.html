@@ -331,8 +331,8 @@ function progressId(s) {
 }
 let PROG = { p1: null, p2: null }; // 服务端进度 {p1: item_id, p2: item_id}
 async function loadProg() {
-  // 2026-10-15修：每日闯关不加载服务端进度（每天题目不同，旧进度无效且可能损坏）
-  if (LID === 'daily-retest') { PROG = { p1: null, p2: null }; return; }
+  // 2026-10-15修：虚拟课（每日闯关/批量重做）不加载服务端进度——题目每次动态生成，旧进度无效且导致白屏
+  if (LID === 'daily-retest' || LID === 'batch-retry') { PROG = { p1: null, p2: null }; return; }
   try {
     const r = await fetch('/api/progress?lesson=' + encodeURIComponent(LID));
     if (r.ok) { const b = await r.json(); if (b && b.progress) PROG = b.progress; }
@@ -500,8 +500,8 @@ function partCard(n, title, desc, state) {
   let action, locked = false;
   if (n === 1) {
     if (state.p1_done) action = `<p class="done-line">已完成</p>`;
-    // 2026-10-15修：每日闯关不显示"继续"，直接"开始闯关"（防续课状态损坏卡死）
-    else if (LID === 'daily-retest') action = `<button class="big" data-go="1">开始闯关</button>`;
+    // 2026-10-15修：虚拟课（每日闯关/批量重做）不显示"继续"，直接开始（防续课状态损坏卡死）
+    else if (LID === 'daily-retest' || LID === 'batch-retry') action = `<button class="big" data-go="1">${LID === 'daily-retest' ? '开始闯关' : '开始重做'}</button>`;
     else if (hasResume(1)) action = `<button class="big" data-go="1">继续：第 ${posLabel(1)} 步</button>`;
     else action = `<button class="big" data-go="1">开始上课</button>`;
   } else {
