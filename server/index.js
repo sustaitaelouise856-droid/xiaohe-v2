@@ -2041,6 +2041,8 @@ function lessonOpen(lid) {
       if (!r3 || r3.p1_done !== 1 || r3.p2_done !== 1) return false;
       // ③ 每天10道错题（2026-10-14 Elouise）
       if (!checkDailyMistakes()) return false;
+      // 2026-10-15修：三条件全过，直接解锁，不再走后面的每日复习门（否则41道待复测永远拦着）
+      return true;
     } catch { return false; }
   }
   // 数学/语文课独立，不参与英语主线解锁
