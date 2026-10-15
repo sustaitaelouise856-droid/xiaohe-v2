@@ -792,7 +792,7 @@ function renderStep() {
     // 故事选择（2026-10-02）：选项只有标签无答案，点选即存档进下一步，不记作答不判分
     html = choiceStepHtml(s);
   } else {
-    const qk = s.review ? '复习题' : (s.kind === 'mcq' ? '选择' : (s.kind === 'chunk' ? '拼句' : '作答'));
+    const qk = s.review ? '复习' : (s.kind === 'mcq' ? '选择' : (s.kind === 'chunk' ? '拼句' : '作答'));
     const taskHtml = s.task ? `<div class="task">${escapeHtml(s.task)}</div>` : '';
     // 引用前面材料的按钮（2026-10-02 硬规则）：点开看原文，再点收起；see_also 可能是单个对象或数组
     const saList = s.see_also ? (Array.isArray(s.see_also) ? s.see_also : [s.see_also]) : [];
