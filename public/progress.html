@@ -124,7 +124,7 @@
       <div class="subtitle">这几个知识点正在练习中，换一道同类型的题独立做对，就真正拿下了。</div>
       <!-- 2026-10-15 Elouise：批量选择错题一起做 -->
       <div style="margin-bottom:12px;">
-        <button id="btnSelectMode" onclick="toggleSelectMode()" style="padding:10px 20px;border:2px solid #1a73e8;border-radius:10px;background:#fff;color:#1a73e8;font-size:14px;font-weight:700;cursor:pointer;">☑️ 选择错题一起做</button>
+        <button id="btnSelectMode" onclick="toggleSelectMode()" style="padding:10px 20px;border:2px solid #1a73e8;border-radius:10px;background:#fff;color:#1a73e8;font-size:14px;font-weight:700;cursor:pointer;">☑️ 选择错题</button>
         <button id="btnBatchStart" onclick="startBatchRetry()" style="display:none;padding:10px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#ff8f00,#ff6f00);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-left:8px;">开始做 (<span id="selCount">0</span>)</button>
       </div>
       <div id="focus-list"><div class="empty">加载中…</div></div>
@@ -249,7 +249,7 @@ function toggleSelectMode() {
     btn.textContent = '❌ 取消选择';
     batchBtn.style.display = 'inline-block';
   } else {
-    btn.textContent = '☑️ 选择错题一起做';
+    btn.textContent = '☑️ 选择错题';
     batchBtn.style.display = 'none';
   }
   updateSelCount();
