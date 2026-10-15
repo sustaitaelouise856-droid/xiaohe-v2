@@ -409,7 +409,8 @@ function speakTts(text) {
   } catch (e) { return false; }
 }
 function setAudio(audioId) {
-  const au = $('au'), btnPlay = $('btnPlay');
+  // 2026-10-15修：直接用顶部全局 au = new Audio()，不再 DOM 查找 id="au"（页面无此元素，null.pause() 会中断 renderStep 致白屏）
+  const btnPlay = $('btnPlay');
   au.pause();
   setRate(getPlaySpeed());
   if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
