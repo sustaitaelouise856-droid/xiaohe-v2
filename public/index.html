@@ -287,6 +287,12 @@
   </button>
 </div>
 
+<!-- 今日学习计划（2026-10-15 Elouise：孩子一打开就知道先做什么） -->
+<div id="dailyPlan" style="display:none;background:#fff;border:2px solid #e8eaed;border-radius:16px;padding:16px;margin:12px 0;">
+  <div style="font-size:16px;font-weight:800;margin-bottom:10px;">📋 今日学习计划</div>
+  <div id="planList" style="display:flex;flex-direction:column;gap:8px;"></div>
+</div>
+
 <div style="text-align:center;margin:6px 0 2px;">
   <a href="/phonics.html" style="display:inline-block;background:#fff;border:1px solid #dfe3ec;border-radius:12px;padding:10px 22px;font-size:15px;color:#1a73e8;text-decoration:none;">🔤 音标表：点一下就读发音</a>
 </div>
@@ -642,8 +648,58 @@ async function showLockedDialog(lessonId) {
       btn.style.display = 'inline-block';
       btn.onclick = () => { location.href = '/lesson?lesson=daily-retest'; };
     }
+    // 2026-10-15：渲染今日学习计划（三步走）
+    renderDailyPlan(d);
   } catch (e) { /* 静默失败，不挡首页 */ }
 })();
+
+// 今日学习计划（2026-10-15 Elouise：孩子一打开就知道先做什么）
+async function renderDailyPlan(dailyStatus) {
+  const planEl = document.getElementById('dailyPlan');
+  const listEl = document.getElementById('planList');
+  if (!planEl || !listEl) return;
+  try {
+    // 拉取今日错题进度
+    let dm = null;
+    try {
+      const r = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
+      const d = await r.json();
+      if (d && d.ok && d.dailyMistakes) dm = d.dailyMistakes;
+    } catch {}
+    const steps = [];
+    // 第1步：今日闯关
+    const dailyDone = dailyStatus && (dailyStatus.checked_in || !dailyStatus.has_questions);
+    steps.push({
+      done: dailyDone,
+      text: dailyDone ? '今日闯关：已完成 ✅' : `今日闯关：${dailyStatus ? dailyStatus.question_count : 8}道题`,
+      link: dailyDone ? null : '/lesson?lesson=daily-retest',
+      btn: dailyDone ? null : '去闯关 →'
+    });
+    // 第2步：今日错题
+    const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
+    const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
+    steps.push({
+      done: mOk,
+      text: mOk ? `今日错题：已完成 ✅` : `今日错题：${mDone}/${mTarget}道`,
+      link: mOk ? null : '/progress.html',
+      btn: mOk ? null : '去做错题 →'
+    });
+    // 第3步：新课学习
+    steps.push({
+      done: false,
+      text: '新课学习：Unit 4 被动语态',
+      link: '/lesson?lesson=u4r1',
+      btn: '开始上课 →'
+    });
+    listEl.innerHTML = steps.map((s, i) =>
+      `<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:10px;background:${s.done ? '#f1f8e9' : '#fff8e1'};border:1px solid ${s.done ? '#c8e6c9' : '#ffe0b2'};">`
+      + `<span style="font-size:14px;font-weight:600;">${i + 1}. ${s.text}</span>`
+      + (s.link ? `<button onclick="location.href='${s.link}'" style="padding:8px 16px;border:0;border-radius:8px;background:#1a73e8;color:#fff;font-size:13px;font-weight:700;cursor:pointer;">${s.btn}</button>` : '<span style="color:#4caf50;font-size:20px;">✓</span>')
+      + `</div>`
+    ).join('');
+    planEl.style.display = 'block';
+  } catch (e) { /* 静默失败 */ }
+}
 
 // 继续学习按钮
 // 2026-10-13修：无正课可上时（currentIdx=-1），指向待办复习，不再跳锁定课
