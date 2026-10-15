@@ -120,8 +120,13 @@
   </div>
   <div id="tab-mistakes">
     <div class="card">
-      <h2>正在攻克</h2>
+      <h2>我做错过的题</h2>
       <div class="subtitle">这几个知识点正在练习中，换一道同类型的题独立做对，就真正拿下了。</div>
+      <!-- 2026-10-15 Elouise：批量选择错题一起做 -->
+      <div style="margin-bottom:12px;">
+        <button id="btnSelectMode" onclick="toggleSelectMode()" style="padding:10px 20px;border:2px solid #1a73e8;border-radius:10px;background:#fff;color:#1a73e8;font-size:14px;font-weight:700;cursor:pointer;">☑️ 选择错题一起做</button>
+        <button id="btnBatchStart" onclick="startBatchRetry()" style="display:none;padding:10px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#ff8f00,#ff6f00);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-left:8px;">开始做 (<span id="selCount">0</span>)</button>
+      </div>
       <div id="focus-list"><div class="empty">加载中…</div></div>
     </div>
     <div class="card">
@@ -166,13 +171,9 @@ async function loadMistakes() {
       return;
     }
     window._mistakes = d.mistakes;
-    focusEl.innerHTML = d.mistakes.slice(0, 20).map((m, i) =>
-      `<div class="mistake-item" onclick="showMistake(${i})" style="border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;">`
-      + `<div style="font-weight:600;margin-bottom:6px;">${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
-      + `<div style="font-size:16px;color:#666;">你的答案：<span style="color:#c5221f;">${escHtml((m.given || '（空）').slice(0, 40))}</span></div>`
-      + `<div style="font-size:14px;color:#999;margin-top:4px;">${escHtml(m.created_at || '').slice(0, 16)} · 点击查看详情</div>`
-      + `</div>`
-    ).join('');
+    window._selectMode = false;
+    window._selected = new Set();
+    renderMistakeList();
     // 最近拿下（2026-10-14）：已解决的错题
     const resolved = d.resolved || [];
     if (resolved.length) {
@@ -211,6 +212,70 @@ function showMistake(i) {
     + '</div>';
   ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
   document.body.appendChild(ov);
+}
+
+// 2026-10-15 Elouise：错题多选一起做
+function renderMistakeList() {
+  const focusEl = document.getElementById('focus-list');
+  const mistakes = window._mistakes || [];
+  const selectMode = window._selectMode || false;
+  if (!mistakes.length) {
+    focusEl.innerHTML = '<div class="empty">太棒了，一道错题都没有！</div>';
+    return;
+  }
+  focusEl.innerHTML = mistakes.slice(0, 20).map((m, i) => {
+    const checked = (window._selected || new Set()).has(i) ? 'checked' : '';
+    const checkbox = selectMode
+      ? `<input type="checkbox" ${checked} onclick="event.stopPropagation();toggleSelect(${i})" style="width:22px;height:22px;margin-right:10px;flex-shrink:0;cursor:pointer;">`
+      : '';
+    const clickAction = selectMode ? `toggleSelect(${i})` : `showMistake(${i})`;
+    const hint = selectMode ? '' : ' · 点击查看详情';
+    return `<div class="mistake-item" onclick="${clickAction}" style="display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;${checked ? 'background:#e8f0fe;border-color:#1a73e8;' : ''}">`
+      + checkbox
+      + `<div style="flex:1;">`
+      + `<div style="font-weight:600;margin-bottom:6px;">${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
+      + `<div style="font-size:16px;color:#666;">你的答案：<span style="color:#c5221f;">${escHtml((m.given || '（空）').slice(0, 40))}</span></div>`
+      + `<div style="font-size:14px;color:#999;margin-top:4px;">${escHtml(m.created_at || '').slice(0, 16)}${hint}</div>`
+      + `</div></div>`;
+  }).join('');
+}
+
+function toggleSelectMode() {
+  window._selectMode = !window._selectMode;
+  window._selected = new Set();
+  const btn = document.getElementById('btnSelectMode');
+  const batchBtn = document.getElementById('btnBatchStart');
+  if (window._selectMode) {
+    btn.textContent = '❌ 取消选择';
+    batchBtn.style.display = 'inline-block';
+  } else {
+    btn.textContent = '☑️ 选择错题一起做';
+    batchBtn.style.display = 'none';
+  }
+  updateSelCount();
+  renderMistakeList();
+}
+
+function toggleSelect(i) {
+  if (!window._selected) window._selected = new Set();
+  if (window._selected.has(i)) window._selected.delete(i);
+  else window._selected.add(i);
+  updateSelCount();
+  renderMistakeList();
+}
+
+function updateSelCount() {
+  const el = document.getElementById('selCount');
+  if (el) el.textContent = (window._selected || new Set()).size;
+}
+
+function startBatchRetry() {
+  const mistakes = window._mistakes || [];
+  const selected = [...(window._selected || new Set())].sort((a, b) => a - b);
+  if (!selected.length) { alert('请先选择要做的错题'); return; }
+  const itemIds = selected.map(i => mistakes[i] && mistakes[i].item_id).filter(Boolean);
+  if (!itemIds.length) { alert('所选题没有有效的题目ID'); return; }
+  location.href = '/lesson?lesson=batch-retry&items=' + encodeURIComponent(itemIds.join(','));
 }
 
 function showTab(t) {
