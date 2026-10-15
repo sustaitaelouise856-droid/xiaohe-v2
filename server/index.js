@@ -1081,7 +1081,7 @@ app.get('/api/exam/:id', auth.requireAuth, (req, res) => {
 // 每日待复习项（首页显示）
 app.get('/api/daily-reviews', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
-  res.json({ ok: true, pending: getPendingReviews() });
+  res.json({ ok: true, pending: getPendingReviews(), dailyMistakes: getDailyMistakeProgress() });
 });
 app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
   // 2026-10-12改：服务端判分，不再信任前端传来的score
@@ -1875,16 +1875,10 @@ function hasPendingReviews() { return getPendingReviews().length > 0; }
 
 // 每天10道错题检查（2026-10-14 Elouise：解锁新课要求③）
 // 规则：每天从错题本做10道，完全独立完成、不点老师教我；不足10道做完为止
+// 2026-10-15修：目标数按"今日开始时的待复测数"算，即 当前剩余 + 今日已完成，
+// 避免"越做目标越小"的 bug（之前用 Math.min(10, 当前剩余)，做3道后目标从10变7）
 function checkDailyMistakes() {
   try {
-    // 待复测错题数
-    let pending = 0;
-    try {
-      const r = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
-      pending = r ? r.c : 0;
-    } catch {}
-    const target = Math.min(10, pending);
-    if (target <= 0) return true; // 没错题了，直接过
     // 今天独立完成的错题数（上海日期）
     // 条件：correct=1, helped=0, independent=1，且这道题曾经错过（是错题本里的）
     const today = shanghaiDay();
@@ -1898,8 +1892,42 @@ function checkDailyMistakes() {
       )
     `).get(today);
     const doneToday = r ? r.c : 0;
+    // 当前待复测错题数
+    let pending = 0;
+    try {
+      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      pending = pr ? pr.c : 0;
+    } catch {}
+    // 目标 = 今日开始时的可做错题数（当前剩余 + 今日已完成），最多10道
+    // 例：开始有8道，做3道后剩5道，目标仍是8（不是5），需做完8道
+    const target = Math.min(10, pending + doneToday);
+    if (target <= 0) return true; // 没错题了，直接过
     return doneToday >= target;
   } catch { return false; }
+}
+
+// 今日错题进度（供弹窗显示）：{done, target, pending}
+function getDailyMistakeProgress() {
+  try {
+    const today = shanghaiDay();
+    const r = db.prepare(`
+      SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
+      WHERE a.correct=1 AND a.helped=0 AND a.independent=1
+      AND date(a.created_at, '+8 hours') = ?
+      AND (
+        EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
+        OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
+      )
+    `).get(today);
+    const done = r ? r.c : 0;
+    let pending = 0;
+    try {
+      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      pending = pr ? pr.c : 0;
+    } catch {}
+    const target = Math.min(10, pending + done);
+    return { done, target, pending, ok: done >= target };
+  } catch { return { done: 0, target: 10, pending: 0, ok: false }; }
 }
 
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
