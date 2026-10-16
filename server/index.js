@@ -949,8 +949,11 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
   const lid = qlid;
   const L = loadLesson(lid);
   if (!L) return res.status(404).json({ ok: false, error: 'no_lesson' });
-  // 二审三1：前面的课没做完，这门课不开放（直接拼 URL 也进不来）
-  if (!lessonOpen(lid)) return res.status(403).json({ ok: false, error: 'lesson_locked' });
+  // 2026-10-16修：单题重做（retry_item）豁免课程解锁检查——错题本是复习，不是新学；
+  // 否则"做错题解锁新课"和"做错题需先解锁新课"形成死锁，永远解不了锁。
+  const isSingleRetry = !!String(req.query.retry_item || '');
+  // 二审三1：前面的课没做完，这门课不开放（直接拼 URL 也进不来）；单题重做豁免
+  if (!isSingleRetry && !lessonOpen(lid)) return res.status(403).json({ ok: false, error: 'lesson_locked' });
   // 单题重做（2026-10-14）：错题本"重做这道题"，只返回这一道题，不进整课流程
   const retryItem = String(req.query.retry_item || '');
   if (retryItem) {
