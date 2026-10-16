@@ -347,10 +347,11 @@ document.getElementById('btnTitles').onclick = async () => {
     // 百分比（2026-10-16：Elouise要求显示百分数）
     const pctStr = (ratio * 100).toFixed(1).replace(/\.0$/, '') + '%';
     let tier = 'bronze', tierName = '🥉 青铜', nextTip = '', msg = '';
-    if (ratio >= 0.8) { tier = 'diamond'; tierName = '💎 钻石'; nextTip = '已达最高段位！'; msg = '“钻石恒久远，一颗永流传。”继续闪耀吧！✨'; }
-    else if (ratio > 0.3) { tier = 'gold'; tierName = '🥇 黄金'; const need = Math.ceil(total*0.8)-earned; nextTip = `距离钻石还差 ${need} 个称号`; msg = '“金子总会发光。”钻石段位在向你招手！💪'; }
-    else if (ratio > 0.1) { tier = 'silver'; tierName = '白银'; const need = Math.ceil(total*0.6)-earned; nextTip = `距离黄金还差 ${need} 个称号`; msg = '“银鞍照白马，飒沓如流星。”继续努力！🌟'; }
-    else { tier = 'bronze'; tierName = '🥉 青铜'; const need = Math.max(1, Math.ceil(total*0.1)-earned); nextTip = `距离白银还差 ${need} 个称号`; msg = '“千里之行，始于足下。”加油！🚀'; }
+    // 2026-10-16：段位改四等分，每段25%，更均衡
+    if (ratio >= 0.75) { tier = 'diamond'; tierName = '💎 钻石'; nextTip = '已达最高段位！'; msg = '“钻石恒久远，一颗永流传。”继续闪耀吧！✨'; }
+    else if (ratio >= 0.5) { tier = 'gold'; tierName = '🥇 黄金'; const need = Math.ceil(total*0.75)-earned; nextTip = `距离钻石还差 ${need} 个称号`; msg = '“金子总会发光。”钻石段位在向你招手！💪'; }
+    else if (ratio >= 0.25) { tier = 'silver'; tierName = '白银'; const need = Math.ceil(total*0.5)-earned; nextTip = `距离黄金还差 ${need} 个称号`; msg = '“银鞍照白马，飒沓如流星。”继续努力！🌟'; }
+    else { tier = 'bronze'; tierName = '🥉 青铜'; const need = Math.max(1, Math.ceil(total*0.25)-earned); nextTip = `距离白银还差 ${need} 个称号`; msg = '“千里之行，始于足下。”加油！🚀'; }
     wall.className = 'tier-' + tier;
     document.getElementById('titleTierMini').textContent = '· ' + tierName;
     wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
@@ -370,9 +371,9 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   const earned = list.filter(x => x.earned).length;
   const ratio = earned / (list.length || 1);
   let name = '🥉 青铜';
-  if (ratio >= 0.8) name = '💎 钻石';
-  else if (ratio > 0.3) name = '🥇 黄金';
-  else if (ratio > 0.1) name = '白银';
+  if (ratio >= 0.75) name = '💎 钻石';
+  else if (ratio >= 0.5) name = '🥇 黄金';
+  else if (ratio >= 0.25) name = '白银';
   document.getElementById('titleTierMini').textContent = '· ' + name;
 }).catch(() => {});
 </script>
