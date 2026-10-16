@@ -106,7 +106,7 @@ UNITS.forEach(u => {
   d.onclick = () => selectUnit(u, d);
   grid.appendChild(d);
   // 预加载词数
-  fetch(`/content/words/${u.id}.json`).then(r => r.json()).then(j => {
+  fetch(`/words/${u.id}.json`).then(r => r.json()).then(j => {
     document.getElementById(`cnt-${u.id}`).textContent = `${j.words.length} 个词`;
   }).catch(() => {
     document.getElementById(`cnt-${u.id}`).textContent = '暂无';
@@ -118,7 +118,7 @@ async function selectUnit(u, el) {
   el.classList.add('sel');
   curUnit = u;
   try {
-    const r = await fetch(`/content/words/${u.id}.json`);
+    const r = await fetch(`/words/${u.id}.json`);
     const j = await r.json();
     words = j.words;
     idx = 0;
