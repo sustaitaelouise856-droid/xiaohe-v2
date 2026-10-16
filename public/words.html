@@ -266,6 +266,11 @@ function renderWord() {
   const badge = document.getElementById('wMastery');
   badge.textContent = m >= 3 ? '已掌握' : `掌握度 ${m}/3`;
   badge.className = 'mastery' + (m >= 3 ? ' done' : '');
+  // 短语标签（2026-10-16：课本短语单独标识）
+  const posEl = document.getElementById('wPos');
+  if (w.pos === 'phr.') {
+    posEl.innerHTML = '<span style="background:#fff3e0;color:#e65100;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700;">短语</span>';
+  }
   
   // 重置各模式 UI
   document.getElementById('optList').style.display = 'none';
