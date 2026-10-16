@@ -1,0 +1,296 @@
+{
+  "unit": "Unit 6",
+  "title": "Ancient stories",
+  "words": [
+    {
+      "en": "since",
+      "cn": "自...以后，自...以来",
+      "pos": "prep."
+    },
+    {
+      "en": "for",
+      "cn": "为了；表示持续时间",
+      "pos": "prep."
+    },
+    {
+      "en": "year",
+      "cn": "年，年度",
+      "pos": "n."
+    },
+    {
+      "en": "live",
+      "cn": "居住（过去分词 lived）",
+      "pos": "v."
+    },
+    {
+      "en": "visit",
+      "cn": "参观（过去分词 visited）",
+      "pos": "v."
+    },
+    {
+      "en": "stand",
+      "cn": "站立（过去分词 stood）",
+      "pos": "v."
+    },
+    {
+      "en": "celebrate",
+      "cn": "庆祝（过去分词 celebrated）",
+      "pos": "v."
+    },
+    {
+      "en": "tell",
+      "cn": "讲述（过去分词 told）",
+      "pos": "v."
+    },
+    {
+      "en": "race",
+      "cn": "比赛",
+      "pos": "n."
+    },
+    {
+      "en": "remember",
+      "cn": "记得（过去分词 remembered）",
+      "pos": "v."
+    },
+    {
+      "en": "keep",
+      "cn": "保持（过去分词 kept）",
+      "pos": "v."
+    },
+    {
+      "en": "hold",
+      "cn": "举办（过去分词 held）",
+      "pos": "v."
+    },
+    {
+      "en": "begin",
+      "cn": "开始（过去分词 begun）",
+      "pos": "v."
+    },
+    {
+      "en": "move",
+      "cn": "搬家，移动（过去分词 moved）",
+      "pos": "v."
+    },
+    {
+      "en": "build",
+      "cn": "建造（过去分词 built）",
+      "pos": "v."
+    },
+    {
+      "en": "know",
+      "cn": "知道（过去分词 known）",
+      "pos": "v."
+    },
+    {
+      "en": "born",
+      "cn": "出生的（be born 出生）",
+      "pos": "adj."
+    },
+    {
+      "en": "invent",
+      "cn": "发明（过去分词 invented）",
+      "pos": "v."
+    },
+    {
+      "en": "discover",
+      "cn": "发现（过去分词 discovered）",
+      "pos": "v."
+    },
+    {
+      "en": "collect",
+      "cn": "收集（过去分词 collected）",
+      "pos": "v."
+    },
+    {
+      "en": "stay",
+      "cn": "停留（过去分词 stayed）",
+      "pos": "v."
+    },
+    {
+      "en": "learn",
+      "cn": "学会（过去分词 learned）",
+      "pos": "v."
+    },
+    {
+      "en": "work",
+      "cn": "工作（过去分词 worked）",
+      "pos": "v."
+    },
+    {
+      "en": "wait",
+      "cn": "等待（过去分词 waited）",
+      "pos": "v."
+    },
+    {
+      "en": "watch",
+      "cn": "观看（过去分词 watched）",
+      "pos": "v."
+    },
+    {
+      "en": "study",
+      "cn": "学习（过去分词 studied）",
+      "pos": "v."
+    },
+    {
+      "en": "play",
+      "cn": "玩（过去分词 played）",
+      "pos": "v."
+    },
+    {
+      "en": "buy",
+      "cn": "买（过去分词 bought）",
+      "pos": "v."
+    },
+    {
+      "en": "open",
+      "cn": "开（过去分词 opened）",
+      "pos": "v."
+    },
+    {
+      "en": "sailor",
+      "cn": "水手",
+      "pos": "n."
+    },
+    {
+      "en": "boat",
+      "cn": "船",
+      "pos": "n."
+    },
+    {
+      "en": "mountain",
+      "cn": "山",
+      "pos": "n."
+    },
+    {
+      "en": "village",
+      "cn": "村庄",
+      "pos": "n."
+    },
+    {
+      "en": "hometown",
+      "cn": "家乡",
+      "pos": "n."
+    },
+    {
+      "en": "grandma",
+      "cn": "奶奶",
+      "pos": "n."
+    },
+    {
+      "en": "grandpa",
+      "cn": "爷爷",
+      "pos": "n."
+    },
+    {
+      "en": "compass",
+      "cn": "指南针",
+      "pos": "n."
+    },
+    {
+      "en": "paper",
+      "cn": "纸，文件",
+      "pos": "n."
+    },
+    {
+      "en": "ancient",
+      "cn": "古代的，古老的",
+      "pos": "adj."
+    },
+    {
+      "en": "story",
+      "cn": "故事",
+      "pos": "n."
+    },
+    {
+      "en": "dragon",
+      "cn": "龙",
+      "pos": "n."
+    },
+    {
+      "en": "thousand",
+      "cn": "一千",
+      "pos": "num."
+    },
+    {
+      "en": "hundred",
+      "cn": "一百",
+      "pos": "num."
+    },
+    {
+      "en": "museum",
+      "cn": "博物馆",
+      "pos": "n."
+    },
+    {
+      "en": "library",
+      "cn": "图书馆",
+      "pos": "n."
+    },
+    {
+      "en": "quiz",
+      "cn": "小测验",
+      "pos": "n."
+    },
+    {
+      "en": "ticket",
+      "cn": "票",
+      "pos": "n."
+    },
+    {
+      "en": "stamp",
+      "cn": "邮票",
+      "pos": "n."
+    },
+    {
+      "en": "football",
+      "cn": "足球",
+      "pos": "n."
+    },
+    {
+      "en": "film",
+      "cn": "电影",
+      "pos": "n."
+    },
+    {
+      "en": "book",
+      "cn": "书，书籍",
+      "pos": "n."
+    },
+    {
+      "en": "child",
+      "cn": "孩子",
+      "pos": "n."
+    },
+    {
+      "en": "young",
+      "cn": "年轻的",
+      "pos": "adj."
+    },
+    {
+      "en": "beautiful",
+      "cn": "美丽的",
+      "pos": "adj."
+    },
+    {
+      "en": "famous",
+      "cn": "著名的",
+      "pos": "adj."
+    },
+    {
+      "en": "proud",
+      "cn": "自豪的",
+      "pos": "adj."
+    },
+    {
+      "en": "ever",
+      "cn": "曾经，究竟",
+      "pos": "adv."
+    },
+    {
+      "en": "never",
+      "cn": "从不，决不",
+      "pos": "adv."
+    }
+  ]
+}
