@@ -1,0 +1,266 @@
+{
+  "unit": "Unit 4",
+  "title": "Inventions",
+  "words": [
+    {
+      "en": "invention",
+      "cn": "发明",
+      "pos": "n."
+    },
+    {
+      "en": "inventor",
+      "cn": "发明家",
+      "pos": "n."
+    },
+    {
+      "en": "invent",
+      "cn": "发明（过去分词 invented）",
+      "pos": "v."
+    },
+    {
+      "en": "paper",
+      "cn": "纸，文件",
+      "pos": "n."
+    },
+    {
+      "en": "telephone",
+      "cn": "电话，电话机",
+      "pos": "n."
+    },
+    {
+      "en": "phone",
+      "cn": "电话，受话器",
+      "pos": "n."
+    },
+    {
+      "en": "mobile",
+      "cn": "手机",
+      "pos": "n."
+    },
+    {
+      "en": "compass",
+      "cn": "指南针",
+      "pos": "n."
+    },
+    {
+      "en": "bulb",
+      "cn": "电灯泡",
+      "pos": "n."
+    },
+    {
+      "en": "lamp",
+      "cn": "灯",
+      "pos": "n."
+    },
+    {
+      "en": "printing",
+      "cn": "印刷术",
+      "pos": "n."
+    },
+    {
+      "en": "gunpowder",
+      "cn": "火药",
+      "pos": "n."
+    },
+    {
+      "en": "plastic",
+      "cn": "塑料",
+      "pos": "n."
+    },
+    {
+      "en": "bottle",
+      "cn": "瓶子",
+      "pos": "n."
+    },
+    {
+      "en": "box",
+      "cn": "盒子",
+      "pos": "n."
+    },
+    {
+      "en": "factory",
+      "cn": "工厂",
+      "pos": "n."
+    },
+    {
+      "en": "machine",
+      "cn": "机器",
+      "pos": "n."
+    },
+    {
+      "en": "robot",
+      "cn": "机器人",
+      "pos": "n."
+    },
+    {
+      "en": "ship",
+      "cn": "船",
+      "pos": "n."
+    },
+    {
+      "en": "bike",
+      "cn": "自行车",
+      "pos": "n."
+    },
+    {
+      "en": "wood",
+      "cn": "木材，木制品",
+      "pos": "n."
+    },
+    {
+      "en": "cloth",
+      "cn": "布",
+      "pos": "n."
+    },
+    {
+      "en": "ticket",
+      "cn": "票",
+      "pos": "n."
+    },
+    {
+      "en": "letter",
+      "cn": "信，字母",
+      "pos": "n."
+    },
+    {
+      "en": "list",
+      "cn": "目录，名单",
+      "pos": "n."
+    },
+    {
+      "en": "room",
+      "cn": "房间，空位",
+      "pos": "n."
+    },
+    {
+      "en": "create",
+      "cn": "创造（过去分词 created）",
+      "pos": "v."
+    },
+    {
+      "en": "develop",
+      "cn": "发展，开发（过去分词 developed）",
+      "pos": "v."
+    },
+    {
+      "en": "discover",
+      "cn": "发现（过去分词 discovered）",
+      "pos": "v."
+    },
+    {
+      "en": "build",
+      "cn": "建造（过去分词 built）",
+      "pos": "v."
+    },
+    {
+      "en": "write",
+      "cn": "写（过去分词 written）",
+      "pos": "v."
+    },
+    {
+      "en": "speak",
+      "cn": "说（过去分词 spoken）",
+      "pos": "v."
+    },
+    {
+      "en": "sell",
+      "cn": "卖（过去分词 sold）",
+      "pos": "v."
+    },
+    {
+      "en": "find",
+      "cn": "找到（过去分词 found）",
+      "pos": "v."
+    },
+    {
+      "en": "make",
+      "cn": "制造（过去分词 made）",
+      "pos": "v."
+    },
+    {
+      "en": "use",
+      "cn": "使用（过去分词 used）",
+      "pos": "v."
+    },
+    {
+      "en": "carry",
+      "cn": "搬运（过去分词 carried）",
+      "pos": "v."
+    },
+    {
+      "en": "clean",
+      "cn": "打扫（过去分词 cleaned）",
+      "pos": "v."
+    },
+    {
+      "en": "help",
+      "cn": "帮助",
+      "pos": "v."
+    },
+    {
+      "en": "order",
+      "cn": "次序，规则",
+      "pos": "n."
+    },
+    {
+      "en": "call",
+      "cn": "打电话，称呼",
+      "pos": "v."
+    },
+    {
+      "en": "welcome",
+      "cn": "欢迎",
+      "pos": "v."
+    },
+    {
+      "en": "online",
+      "cn": "在线的",
+      "pos": "adj."
+    },
+    {
+      "en": "useful",
+      "cn": "有用的，有益的 有用的",
+      "pos": "adj."
+    },
+    {
+      "en": "modern",
+      "cn": "现代的",
+      "pos": "adj."
+    },
+    {
+      "en": "ancient",
+      "cn": "古代的，古老的",
+      "pos": "adj."
+    },
+    {
+      "en": "true",
+      "cn": "真实的，正确的",
+      "pos": "adj."
+    },
+    {
+      "en": "false",
+      "cn": "错误的，虚伪的",
+      "pos": "adj."
+    },
+    {
+      "en": "fact",
+      "cn": "事实，真实性",
+      "pos": "n."
+    },
+    {
+      "en": "smart",
+      "cn": "聪明的，漂亮的",
+      "pos": "adj."
+    },
+    {
+      "en": "light",
+      "cn": "光，光亮",
+      "pos": "n."
+    },
+    {
+      "en": "participle",
+      "cn": "分词（过去分词）",
+      "pos": "n."
+    }
+  ]
+}
