@@ -185,6 +185,13 @@ function updateStats() {
     card.querySelector('.pfill').style.width = pct + '%';
     card.querySelector('.ptext').textContent = `已掌握 ${mastered}/${words.length}`;
   }
+  // 2026-10-16：同步掌握总数到服务端（供单词成就用）
+  try {
+    let totalMastered = 0;
+    for (const k in mastery) { if ((mastery[k] || {}).count >= 3) totalMastered++; }
+    fetch('/api/word-sync', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ masteredCount: totalMastered }) }).catch(() => {});
+  } catch {}
 }
 
 // 渲染单元
