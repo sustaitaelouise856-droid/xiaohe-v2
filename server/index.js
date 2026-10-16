@@ -700,6 +700,32 @@ const TITLE_DEFS = [
     id: 'irregular_slayer', name: '不规则克星', icon: '⚡',
     desc: '不规则变化6道题全部独立答对',
   },
+  // 2026-10-16 Elouise要求：加20个成就（连胜闯关/单词学习/错题累积/做题数/课程数）
+  // ——— 每天连胜闯关（4） ———
+  { id: 'challenge_streak_3', name: '连闯三天', icon: '🔥', desc: '连续3天完成今日闯关' },
+  { id: 'challenge_streak_14', name: '连闯两周', icon: '🌟', desc: '连续14天完成今日闯关' },
+  { id: 'challenge_streak_30', name: '月度闯关王', icon: '👑', desc: '连续30天完成今日闯关' },
+  { id: 'challenge_streak_60', name: '闯关传奇', icon: '💎', desc: '连续60天完成今日闯关' },
+  // ——— 单词学习（4） ———
+  { id: 'word_50', name: '单词新秀', icon: '📝', desc: '单词学习累计掌握50个词' },
+  { id: 'word_150', name: '单词能手', icon: '📚', desc: '单词学习累计掌握150个词' },
+  { id: 'word_250', name: '单词大师', icon: '🎓', desc: '单词学习累计掌握250个词' },
+  { id: 'word_350', name: '单词王者', icon: '👑', desc: '单词学习累计掌握350个词（全掌握）' },
+  // ——— 错题累积（4） ———
+  { id: 'mistake_10', name: '初露锋芒', icon: '🗡️', desc: '累计消灭10道错题' },
+  { id: 'mistake_50', name: '错题猎人', icon: '🏹', desc: '累计消灭50道错题' },
+  { id: 'mistake_200', name: '错题终结者', icon: '⚔️', desc: '累计消灭200道错题' },
+  { id: 'mistake_500', name: '错题传奇', icon: '🌟', desc: '累计消灭500道错题' },
+  // ——— 整体做题数（4） ———
+  { id: 'questions_100', name: '小试牛刀', icon: '🎯', desc: '累计做题100道' },
+  { id: 'questions_500', name: '渐入佳境', icon: '📈', desc: '累计做题500道' },
+  { id: 'questions_1000', name: '题海无涯', icon: '🌊', desc: '累计做题1000道' },
+  { id: 'questions_2000', name: '题王', icon: '👑', desc: '累计做题2000道' },
+  // ——— 做完课程数（4） ———
+  { id: 'courses_5', name: '初涉课堂', icon: '🚪', desc: '累计完成5节课' },
+  { id: 'courses_10', name: '学有所成', icon: '📖', desc: '累计完成10节课' },
+  { id: 'courses_15', name: '学富五车', icon: '🎒', desc: '累计完成15节课' },
+  { id: 'courses_20', name: '全部征服', icon: '🏆', desc: '累计完成20节课' },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -841,6 +867,52 @@ function checkTitles() {
       if (r && r.correct === 1 && r.helped === 0) okCount++;
     }
     if (okCount >= 6) grant('irregular_slayer');
+  } catch {}
+  // 2026-10-16 Elouise要求：20个新成就（连胜闯关/单词/错题累积/做题数/课程数）
+  // ——— 连胜闯关：查每日闯关完成天数 ———
+  try {
+    const r = db.prepare("SELECT COUNT(DISTINCT date(created_at)) c FROM daily_challenge WHERE completed=1").get();
+    const days = r ? r.c : 0;
+    if (days >= 3) grant('challenge_streak_3');
+    if (days >= 14) grant('challenge_streak_14');
+    if (days >= 30) grant('challenge_streak_30');
+    if (days >= 60) grant('challenge_streak_60');
+  } catch {}
+  // ——— 单词学习：查服务端同步的掌握词数 ———
+  try {
+    const r = db.prepare("SELECT value FROM app_state WHERE key='word_mastered_count'").get();
+    const wc = r ? (parseInt(r.value, 10) || 0) : 0;
+    if (wc >= 50) grant('word_50');
+    if (wc >= 150) grant('word_150');
+    if (wc >= 250) grant('word_250');
+    if (wc >= 350) grant('word_350');
+  } catch {}
+  // ——— 错题累积：resolved 计数 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='resolved'").get();
+    const mc = r ? r.c : 0;
+    if (mc >= 10) grant('mistake_10');
+    if (mc >= 50) grant('mistake_50');
+    if (mc >= 200) grant('mistake_200');
+    if (mc >= 500) grant('mistake_500');
+  } catch {}
+  // ——— 整体做题数 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts").get();
+    const qc = r ? r.c : 0;
+    if (qc >= 100) grant('questions_100');
+    if (qc >= 500) grant('questions_500');
+    if (qc >= 1000) grant('questions_1000');
+    if (qc >= 2000) grant('questions_2000');
+  } catch {}
+  // ——— 做完课程数 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+    const cc = r ? r.c : 0;
+    if (cc >= 5) grant('courses_5');
+    if (cc >= 10) grant('courses_10');
+    if (cc >= 15) grant('courses_15');
+    if (cc >= 20) grant('courses_20');
   } catch {}
   return newly;
 }
@@ -1349,6 +1421,19 @@ app.post('/api/vocab/del', auth.requireAuth, (req, res) => {
   const w = String((req.body || {}).word || '').toLowerCase().trim();
   if (w) db.prepare('DELETE FROM vocab_words WHERE word=?').run(w);
   res.json({ ok: true });
+});
+// 2026-10-16：单词学习掌握数同步（供称号 word_50/150/250/350 用）
+app.post('/api/word-sync', auth.requireAuth, (req, res) => {
+  const count = parseInt((req.body || {}).masteredCount, 10) || 0;
+  try {
+    const cur = db.prepare("SELECT value FROM app_state WHERE key='word_mastered_count'").get();
+    const curN = cur ? (parseInt(cur.value, 10) || 0) : 0;
+    if (count > curN) {
+      db.prepare("INSERT OR REPLACE INTO app_state(key, value) VALUES('word_mastered_count', ?)").run(String(count));
+    }
+    checkTitles();
+    res.json({ ok: true, count: Math.max(count, curN) });
+  } catch (e) { res.json({ ok: false }); }
 });
 app.get('/api/vocab/list', auth.requireAuth, (req, res) => {
   const rows = db.prepare('SELECT word, zh, ph, sent FROM vocab_words ORDER BY added_at DESC').all();
