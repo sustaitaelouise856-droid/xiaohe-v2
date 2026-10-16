@@ -86,6 +86,12 @@
     border-radius:20px; padding:20px; border:3px solid #0277bd;
     box-shadow:inset 0 3px 20px rgba(2,119,189,.3), inset 0 -2px 10px rgba(255,255,255,.5), 0 8px 32px rgba(2,136,209,.45); }
   .tier-msg { text-align:center; font-size:16px; color:var(--muted); margin:12px 0 4px; line-height:1.8; font-style:italic; }
+  /* 2026-10-16：称号墙段位深色模式适配 */
+  html[data-theme="dark"] .tier-bronze .title-wall,
+  html[data-theme="dark"] .tier-silver .title-wall,
+  html[data-theme="dark"] .tier-gold .title-wall,
+  html[data-theme="dark"] .tier-diamond .title-wall { filter:brightness(.75) saturate(.9); }
+  html[data-theme="dark"] .tier-msg { color:#aaa; }
   /* 签到日历 */
   .cal-grid { gap:6px !important; }
   .cal-grid .cal-head { text-align:center; font-size:13px; font-weight:600; color:var(--muted); padding:6px 4px; }
@@ -428,7 +434,8 @@ function renderCheckin(d) {
   (d.month || []).forEach(x => {
     const el = document.createElement("div");
     el.className = "cal-day" + (x.checked ? " checked" : "") + (x.isToday ? " today" : "") + (x.isFuture ? " future" : "");
-    el.textContent = x.checked ? "✅" : x.day;
+    // 2026-10-16修：已签到显示日期+✅，不覆盖日期数字
+    el.innerHTML = x.checked ? `<div style="font-size:12px;">${x.day}</div><div style="font-size:14px;">✅</div>` : x.day;
     el.title = x.date;
     cal.appendChild(el);
   });
