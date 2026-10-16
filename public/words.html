@@ -13,7 +13,7 @@
   #topbar { position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--line); padding:12px 16px; display:flex; align-items:center; gap:12px; box-shadow:0 2px 8px rgba(60,64,67,.06); }
   #topbar b { font-size:19px; font-weight:800; }
   #topbar .back { border:0; background:#e8f0fe; font-size:15px; color:var(--blue); cursor:pointer; padding:8px 16px; border-radius:999px; font-weight:700; }
-  #wrap { max-width:720px; margin:0 auto; padding:20px 16px 120px; }
+  #wrap { max-width:720px; margin:0 auto; padding:20px 16px 140px; /* 2026-10-16：底部留空防tabbar遮挡选项 */ }
   
   /* 单元看板 */
   .unit-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; }
@@ -300,8 +300,22 @@ function renderWord() {
       document.getElementById('wHint').textContent = '听发音，选正确的中文意思';
       document.getElementById('wHint').style.display = 'block';
       playAudio(w.en);
+      // 2026-10-16加：听音模式重播按钮（没听清可重听）
+      let replayBtn = document.getElementById('btnReplay');
+      if (!replayBtn) {
+        replayBtn = document.createElement('button');
+        replayBtn.id = 'btnReplay';
+        replayBtn.className = 'audio-btn';
+        replayBtn.textContent = '🔊 重播发音';
+        replayBtn.style.marginBottom = '12px';
+        document.getElementById('optList').before(replayBtn);
+      }
+      replayBtn.style.display = 'inline-block';
+      replayBtn.onclick = () => playAudio(w.en);
     } else {
       document.getElementById('wEn').style.display = 'block';
+      const rb = document.getElementById('btnReplay');
+      if (rb) rb.style.display = 'none';
     }
     buildOptions(w);
   }
@@ -390,11 +404,21 @@ document.getElementById('btnSpellSub').onclick = () => {
   if (val === w.en.toLowerCase()) {
     inp.className = 'ok';
     addMastery(curUnit.id, w.en, true);
+    spellWrong = 0;
     setTimeout(nextWord, 600);
   } else {
+    spellWrong = (spellWrong || 0) + 1;
     inp.className = 'no';
     addMastery(curUnit.id, w.en, false);
-    setTimeout(() => { inp.value = ''; inp.className = ''; inp.focus(); }, 800);
+    // 2026-10-16修：错3次显示正确答案，不让孩子无限重试
+    if (spellWrong >= 3) {
+      inp.value = w.en;
+      inp.className = 'ok';
+      document.getElementById('wHint').textContent = `答案：${w.en}（${w.cn}）`;
+      setTimeout(() => { spellWrong = 0; nextWord(); }, 2000);
+    } else {
+      setTimeout(() => { inp.value = ''; inp.className = ''; inp.focus(); }, 800);
+    }
   }
 };
 document.getElementById('btnSpellSkip').onclick = () => { addMastery(curUnit.id, queue[idx].en, false); nextWord(); };
