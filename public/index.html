@@ -358,14 +358,37 @@ document.getElementById('btnTitles').onclick = async () => {
     wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
       + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（${pctStr}）</div>`
       + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
-      + `<div class="title-wall">` + list.map(x =>
-        `<div class="title-item ${x.earned ? 'earned' : 'locked'}" style="${x.earned ? '' : 'filter:grayscale(1);'}">`
+      + `<div class="title-wall">` + list.map((x, i) =>
+        `<div class="title-item ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;${x.earned ? '' : 'filter:grayscale(1);'}">`
         + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
         + `<div class="nm">${x.earned ? x.name : '???'}</div>`
-        + `<div class="cond">${x.earned ? '已获得' : '未获得'}</div></div>`).join('')
+        + `<div class="cond">${x.earned ? '已获得' : '点击查看'}</div></div>`).join('')
       + `</div><div class="tier-msg">${msg}</div>`;
+    // 存下来供详情弹窗用
+    window._modalTitles = list;
   } catch (e) { wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载失败</div>'; }
 };
+// 称号详情弹窗（首页 modal 用）
+function showTitleModalDetail(i) {
+  const x = (window._modalTitles || [])[i];
+  if (!x) return;
+  const old = document.getElementById('titleModalDetail');
+  if (old) old.remove();
+  const ov = document.createElement('div');
+  ov.id = 'titleModalDetail';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;';
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:320px;width:100%;text-align:center;">'
+    + '<div style="font-size:48px;">' + (x.earned ? x.icon : '🔒') + '</div>'
+    + '<h3 style="margin:12px 0 8px;">' + esc(x.name) + '</h3>'
+    + '<p style="color:#5f6368;font-size:14px;line-height:1.6;">' + esc(x.desc || '暂无说明') + '</p>'
+    + '<div style="margin:12px 0;padding:10px;background:' + (x.earned ? '#e6f4ea' : '#fef7e0') + ';border-radius:10px;font-size:14px;color:' + (x.earned ? '#137333' : '#b06000') + ';">'
+    + (x.earned ? '✅ 已获得' : '⏳ 未获得，加油！') + '</div>'
+    + '<button onclick="document.getElementById(\'titleModalDetail\').remove()" style="padding:10px 32px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;">知道了</button>'
+    + '</div>';
+  ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
+  document.body.appendChild(ov);
+}
 // 首页加载时显示当前段位
 fetch('/api/titles').then(r => r.json()).then(t => {
   const list = t.titles || [];
