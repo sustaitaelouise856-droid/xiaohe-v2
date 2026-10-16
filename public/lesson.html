@@ -1406,9 +1406,15 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）
     if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。'), correct: true, helped: !!b.helped };
     // 单题重做（2026-10-14）：零帮助答对 → 调接口消掉复测项
-    if (LESSON && LESSON.single_retry && LESSON.retry_item && !b.helped) {
-      fetch('/api/retest/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ item_id: LESSON.retry_item }) }).catch(() => {});
+    // 批量重做（2026-10-16修：之前漏了，批量重做的题答对也要消掉——Elouise报告阻塞性bug）
+    if (LESSON && !b.helped) {
+      let resolveId = null;
+      if (LESSON.single_retry && LESSON.retry_item) resolveId = LESSON.retry_item;
+      else if (LESSON.batch_retry && s.item_id) resolveId = s.item_id;
+      if (resolveId) {
+        fetch('/api/retest/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ item_id: resolveId }) }).catch(() => {});
+      }
     }
     fb.className = 'fb ok';
     fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml;
