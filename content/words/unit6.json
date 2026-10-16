@@ -291,6 +291,81 @@
       "en": "never",
       "cn": "从不，决不",
       "pos": "adv."
+    },
+    {
+      "en": "locate",
+      "pos": "v.",
+      "cn": "把……安置在 soldier /9sRWldZR(r)/ n. 士兵"
+    },
+    {
+      "en": "empty",
+      "pos": "adj.",
+      "cn": "空的"
+    },
+    {
+      "en": "victory",
+      "pos": "n.",
+      "cn": "胜利；成功"
+    },
+    {
+      "en": "joke",
+      "pos": "n.",
+      "cn": "笑话；玩笑 midnight /9mIdnaIt/ n. 午夜"
+    },
+    {
+      "en": "except",
+      "pos": "prep.",
+      "cn": "除……之外"
+    },
+    {
+      "en": "hide",
+      "pos": "v.",
+      "cn": "藏；隐蔽"
+    },
+    {
+      "en": "secretly",
+      "pos": "adv.",
+      "cn": "秘密地"
+    },
+    {
+      "en": "enter",
+      "pos": "v.",
+      "cn": "进来；进入"
+    },
+    {
+      "en": "succeed",
+      "pos": "v.",
+      "cn": "达到目的；成功  *trick /trIk/ n. 诡计"
+    },
+    {
+      "en": "fight",
+      "pos": "v.",
+      "cn": "打仗；战斗"
+    },
+    {
+      "en": "beat",
+      "pos": "v.",
+      "cn": "打败（某人） v. 敲打"
+    },
+    {
+      "en": "enemy",
+      "pos": "n.",
+      "cn": "敌人"
+    },
+    {
+      "en": "fail",
+      "pos": "v.",
+      "cn": "失败；未能（做到）"
+    },
+    {
+      "en": "therefore",
+      "pos": "adv.",
+      "cn": "因此；所以  within /wI9QIn/ prep. 在（某段时间） 之内"
+    },
+    {
+      "en": "regularly",
+      "pos": "adv.",
+      "cn": "有规律地 repeat /rI9pi:t/ v. 重复"
     }
   ]
 }
