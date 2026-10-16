@@ -147,8 +147,9 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     Number.isFinite(ms) && ms >= 0 ? Math.round(ms) : null, pastedFlag);
 
   // 复测闭环（2026-10-03）：零帮助独立答对 → 解决待复测
-  // verdict=correct 且 independent=1（无帮助）时，清除该题所有 pending 复测
-  if (verdict === 'correct' && independent === 1) {
+  // verdict=correct/correct_retry 且 independent=1（无帮助）时，清除该题所有 pending 复测
+  // 2026-10-16修：加 correct_retry——重做时答对 verdict 是 correct_retry，不是 correct（Elouise报告阻塞性bug）
+  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1) {
     try {
       db.prepare(`
         UPDATE retest_queue SET status='resolved', resolved_at=datetime('now')
