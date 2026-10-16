@@ -90,10 +90,12 @@ function getPending() {
 // 标记解决：复测题零帮助独立答对
 function resolveRetest(itemId, knowledgePoint) {
   try {
+    // 2026-10-16修：只按 item_id 匹配，不要求 knowledge_point 一致
+    // （前端单题重做时只传 item_id，knowledge_point 对不上导致永远消不掉——Elouise 2026-10-16 报告阻塞性bug）
     const r = db.prepare(`
       UPDATE retest_queue SET status='resolved', resolved_at=datetime('now')
-      WHERE item_id=? AND knowledge_point=? AND status='pending'
-    `).run(itemId, knowledgePoint);
+      WHERE item_id=? AND status='pending'
+    `).run(itemId);
     return r.changes > 0;
   } catch { return false; }
 }
