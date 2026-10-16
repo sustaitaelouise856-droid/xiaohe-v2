@@ -2226,6 +2226,16 @@ function lessonOpen(lid) {
       // ③ 每天10道错题（2026-10-14 Elouise）
       if (!checkDailyMistakes()) return false;
       // 2026-10-15修：三条件全过，直接解锁，不再走后面的每日复习门（否则41道待复测永远拦着）
+      // 2026-10-17修：三门过只解锁 u4r1，u4r2+ 仍需前一课完成（逐课开放）
+      // 之前 return true 导致 u4r1-u4r5 同时开放——Elouise 10-16 报告高风险
+      if (lid === 'u4r1') return true;
+      // u4r2+：检查前一课是否完成
+      const num = parseInt(lid.replace('u4r', ''), 10);
+      if (num > 1) {
+        const prev = `u4r${num - 1}`;
+        const st = lessonState(prev);
+        if (!(st && st.p2_done === 1)) return false;
+      }
       return true;
     } catch { return false; }
   }
