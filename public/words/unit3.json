@@ -1,0 +1,346 @@
+{
+  "unit": "Unit 3",
+  "title": "Computers",
+  "words": [
+    {
+      "en": "computer",
+      "cn": "电脑",
+      "pos": "n."
+    },
+    {
+      "en": "laptop",
+      "cn": "笔记本电脑",
+      "pos": "n."
+    },
+    {
+      "en": "tablet",
+      "cn": "平板电脑",
+      "pos": "n."
+    },
+    {
+      "en": "phone",
+      "cn": "电话，受话器",
+      "pos": "n."
+    },
+    {
+      "en": "screen",
+      "cn": "屏幕",
+      "pos": "n."
+    },
+    {
+      "en": "monitor",
+      "cn": "显示器",
+      "pos": "n."
+    },
+    {
+      "en": "keyboard",
+      "cn": "键盘",
+      "pos": "n."
+    },
+    {
+      "en": "memory",
+      "cn": "内存，记忆",
+      "pos": "n."
+    },
+    {
+      "en": "program",
+      "cn": "程序",
+      "pos": "n."
+    },
+    {
+      "en": "picture",
+      "cn": "图片",
+      "pos": "n."
+    },
+    {
+      "en": "game",
+      "cn": "游戏",
+      "pos": "n."
+    },
+    {
+      "en": "email",
+      "cn": "电子邮件",
+      "pos": "n."
+    },
+    {
+      "en": "order",
+      "cn": "订单",
+      "pos": "n."
+    },
+    {
+      "en": "price",
+      "cn": "价格，代价",
+      "pos": "n."
+    },
+    {
+      "en": "cost",
+      "cn": "代价，价值",
+      "pos": "n."
+    },
+    {
+      "en": "size",
+      "cn": "大小，尺寸",
+      "pos": "n."
+    },
+    {
+      "en": "inch",
+      "cn": "英寸",
+      "pos": "n."
+    },
+    {
+      "en": "delivery",
+      "cn": "递送，交货",
+      "pos": "n."
+    },
+    {
+      "en": "shop",
+      "cn": "购物",
+      "pos": "v."
+    },
+    {
+      "en": "customer",
+      "cn": "顾客",
+      "pos": "n."
+    },
+    {
+      "en": "product",
+      "cn": "产品",
+      "pos": "n."
+    },
+    {
+      "en": "homework",
+      "cn": "家庭作业",
+      "pos": "n."
+    },
+    {
+      "en": "recommend",
+      "cn": "推荐",
+      "pos": "v."
+    },
+    {
+      "en": "reply",
+      "cn": "回复",
+      "pos": "v."
+    },
+    {
+      "en": "compare",
+      "cn": "比较",
+      "pos": "v."
+    },
+    {
+      "en": "deliver",
+      "cn": "递送",
+      "pos": "v."
+    },
+    {
+      "en": "useful",
+      "cn": "有用的",
+      "pos": "adj."
+    },
+    {
+      "en": "comfortable",
+      "cn": "舒服的，轻松的",
+      "pos": "adj."
+    },
+    {
+      "en": "interesting",
+      "cn": "有趣的",
+      "pos": "adj."
+    },
+    {
+      "en": "easy",
+      "cn": "容易的，缓缓的",
+      "pos": "adj."
+    },
+    {
+      "en": "nice",
+      "cn": "美好的，和蔼的",
+      "pos": "adj."
+    },
+    {
+      "en": "hot",
+      "cn": "热的，热心的",
+      "pos": "adj."
+    },
+    {
+      "en": "fun",
+      "cn": "有趣的",
+      "pos": "adj."
+    },
+    {
+      "en": "beautiful",
+      "cn": "美丽的",
+      "pos": "adj."
+    },
+    {
+      "en": "powerful",
+      "cn": "功能强大的",
+      "pos": "adj."
+    },
+    {
+      "en": "quiet",
+      "cn": "安静的",
+      "pos": "adj."
+    },
+    {
+      "en": "clear",
+      "cn": "清楚的，明确的",
+      "pos": "adj."
+    },
+    {
+      "en": "expensive",
+      "cn": "贵的，奢华的",
+      "pos": "adj."
+    },
+    {
+      "en": "cheap",
+      "cn": "便宜的，不值钱的",
+      "pos": "adj."
+    },
+    {
+      "en": "fast",
+      "cn": "快速的，紧的",
+      "pos": "adj."
+    },
+    {
+      "en": "slow",
+      "cn": "慢的，缓慢的",
+      "pos": "adj."
+    },
+    {
+      "en": "big",
+      "cn": "大的，重要的",
+      "pos": "adj."
+    },
+    {
+      "en": "heavy",
+      "cn": "重的，巨大的",
+      "pos": "adj."
+    },
+    {
+      "en": "light",
+      "cn": "轻的",
+      "pos": "adj."
+    },
+    {
+      "en": "good",
+      "cn": "好的",
+      "pos": "adj."
+    },
+    {
+      "en": "bad",
+      "cn": "坏的",
+      "pos": "adj."
+    },
+    {
+      "en": "faster",
+      "cn": "更快的（fast的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "fastest",
+      "cn": "最快的（fast的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "slower",
+      "cn": "更慢的（slow的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "cheaper",
+      "cn": "更便宜的（cheap的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "cheapest",
+      "cn": "最便宜的（cheap的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "bigger",
+      "cn": "更大的（big的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "biggest",
+      "cn": "最大的（big的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "smaller",
+      "cn": "更小的（small的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "smallest",
+      "cn": "最小的（small的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "lighter",
+      "cn": "更轻的（light的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "lightest",
+      "cn": "最轻的（light的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "heavier",
+      "cn": "更重的（heavy的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "heaviest",
+      "cn": "最重的（heavy的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "better",
+      "cn": "更好的（good的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "best",
+      "cn": "最好的（good的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "worse",
+      "cn": "更差的（bad的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "worst",
+      "cn": "最差的（bad的最高级）",
+      "pos": "adj."
+    },
+    {
+      "en": "nicer",
+      "cn": "更漂亮的（nice的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "easier",
+      "cn": "更容易的（easy的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "hotter",
+      "cn": "更热的（hot的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "quieter",
+      "cn": "更安静的（quiet的比较级）",
+      "pos": "adj."
+    },
+    {
+      "en": "clearest",
+      "cn": "最清晰的（clear的最高级）",
+      "pos": "adj."
+    }
+  ]
+}
