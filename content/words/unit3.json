@@ -341,6 +341,171 @@
       "en": "clearest",
       "cn": "最清晰的（clear的最高级）",
       "pos": "adj."
+    },
+    {
+      "en": "flood",
+      "pos": "n.",
+      "cn": "洪水；水灾"
+    },
+    {
+      "en": "expert",
+      "pos": "n.",
+      "cn": "专家"
+    },
+    {
+      "en": "mobile",
+      "pos": "adj.",
+      "cn": "可移动的"
+    },
+    {
+      "en": "payment",
+      "pos": "n.",
+      "cn": "付款；支付"
+    },
+    {
+      "en": "warn",
+      "pos": "v.",
+      "cn": "提醒注意；警告"
+    },
+    {
+      "en": "treatment",
+      "pos": "n.",
+      "cn": "治疗；疗法 data /9deItR/ n. 数据"
+    },
+    {
+      "en": "company",
+      "pos": "n.",
+      "cn": "公司 交通"
+    },
+    {
+      "en": "software",
+      "pos": "n.",
+      "cn": "软件"
+    },
+    {
+      "en": "app",
+      "pos": "n.",
+      "cn": "（application 的缩写）"
+    },
+    {
+      "en": "download",
+      "pos": "v.",
+      "cn": "下载 tiny /9taIni/ adj. 微小的"
+    },
+    {
+      "en": "message",
+      "pos": "n.",
+      "cn": "（书面或口头的）"
+    },
+    {
+      "en": "electronic",
+      "pos": "adj.",
+      "cn": "电子的"
+    },
+    {
+      "en": "smoothly",
+      "pos": "adv.",
+      "cn": "平稳地；"
+    },
+    {
+      "en": "social",
+      "pos": "adj.",
+      "cn": "社交的"
+    },
+    {
+      "en": "breakthrough",
+      "pos": "n.",
+      "cn": "突破；"
+    },
+    {
+      "en": "era",
+      "pos": "n.",
+      "cn": "时代；纪元"
+    },
+    {
+      "en": "digital",
+      "pos": "adj.",
+      "cn": "数码的"
+    },
+    {
+      "en": "traffic",
+      "pos": "n.",
+      "cn": "路上行驶的车辆；"
+    },
+    {
+      "en": "weight",
+      "pos": "n.",
+      "cn": "重量"
+    },
+    {
+      "en": "microchip",
+      "pos": "n.",
+      "cn": "微芯片；"
+    },
+    {
+      "en": "multimedia",
+      "pos": "n.",
+      "cn": "多媒体"
+    },
+    {
+      "en": "major",
+      "pos": "adj.",
+      "cn": "主要的；"
+    },
+    {
+      "en": "negative",
+      "pos": "adj.",
+      "cn": "消极的"
+    },
+    {
+      "en": "positive",
+      "pos": "adj.",
+      "cn": "正面的；"
+    },
+    {
+      "en": "interview",
+      "pos": "v.",
+      "cn": "采访"
+    },
+    {
+      "en": "represent",
+      "pos": "v.",
+      "cn": "代表"
+    },
+    {
+      "en": "connect to",
+      "pos": "phr.",
+      "cn": "连接"
+    },
+    {
+      "en": "mobile payment",
+      "pos": "phr.",
+      "cn": "移动支付"
+    },
+    {
+      "en": "rubbish bin",
+      "pos": "phr.",
+      "cn": "垃圾箱"
+    },
+    {
+      "en": "social media",
+      "pos": "phr.",
+      "cn": "社交媒体"
+    },
+    {
+      "en": "in person",
+      "pos": "phr.",
+      "cn": "亲自；亲身"
+    },
+    {
+      "en": "the general public",
+      "pos": "phr.",
+      "cn": "公众；大众"
+    },
+    {
+      "en": "flight schedule",
+      "pos": "phr.",
+      "cn": "航班时刻表"
     }
   ]
 }
