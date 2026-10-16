@@ -342,24 +342,24 @@ async function load() {
     const ratio = earned / total;
     // 十分之几（2026-10-16修：保留1位小数，避免四舍五入与段位矛盾，如5/40=12.5%显示"十分之1"却属白银段）
     const tenthStr = (ratio * 10).toFixed(1).replace(/\.0$/, '');
-    // 2026-10-16：段位徽章去掉动画表情，纯文字更干净
-    let tier = 'bronze', tierName = '青铜', nextTip = '', msg = '';
+    // 2026-10-16：段位徽章保留表情（Elouise要求加回）
+    let tier = 'bronze', tierName = '🥉 青铜', nextTip = '', msg = '';
     if (ratio >= 0.8) {
-      tier = 'diamond'; tierName = '钻石';
+      tier = 'diamond'; tierName = '💎 钻石';
       nextTip = '已达最高段位！';
       msg = '“钻石恒久远，一颗永流传。”你已经是英语学习里的钻石了，继续闪耀吧！✨';
     } else if (ratio > 0.3) {
-      tier = 'gold'; tierName = '黄金';
+      tier = 'gold'; tierName = '🥇 黄金';
       const need = Math.ceil(total * 0.8) - earned;
       nextTip = `距离钻石还差 ${need} 个称号`;
       msg = '“金子总会发光。”你已经超过一半人了，钻石段位在向你招手！💪';
     } else if (ratio > 0.1) {
-      tier = 'silver'; tierName = '白银';
+      tier = 'silver'; tierName = '🥈 白银';
       const need = Math.ceil(total * 0.6) - earned;
       nextTip = `距离黄金还差 ${need} 个称号`;
       msg = '“银鞍照白马，飒沓如流星。”继续努力，黄金在等你！🌟';
     } else {
-      tier = 'bronze'; tierName = '青铜';
+      tier = 'bronze'; tierName = '🥉 青铜';
       const need = Math.max(1, Math.ceil(total * 0.1) - earned);
       nextTip = total > 1 ? `距离白银还差 ${need} 个称号` : '开始收集你的第一个称号吧！';
       msg = '“千里之行，始于足下。”每个大师都曾是青铜，加油！🚀';
