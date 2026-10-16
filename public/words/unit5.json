@@ -1,0 +1,326 @@
+{
+  "unit": "Unit 5",
+  "title": "Educational exchanges",
+  "words": [
+    {
+      "en": "eat",
+      "cn": "吃（过去分词 eaten）",
+      "pos": "v."
+    },
+    {
+      "en": "see",
+      "cn": "看见（过去分词 seen）",
+      "pos": "v."
+    },
+    {
+      "en": "meet",
+      "cn": "遇见（过去分词 met）",
+      "pos": "v."
+    },
+    {
+      "en": "visit",
+      "cn": "参观（过去分词 visited）",
+      "pos": "v."
+    },
+    {
+      "en": "learn",
+      "cn": "学会（过去分词 learned）",
+      "pos": "v."
+    },
+    {
+      "en": "try",
+      "cn": "尝试（过去分词 tried）",
+      "pos": "v."
+    },
+    {
+      "en": "go",
+      "cn": "去（过去分词 gone）",
+      "pos": "v."
+    },
+    {
+      "en": "take",
+      "cn": "带去，花费（过去分词 taken）",
+      "pos": "v."
+    },
+    {
+      "en": "ride",
+      "cn": "骑（过去分词 ridden）",
+      "pos": "v."
+    },
+    {
+      "en": "fly",
+      "cn": "飞（过去分词 flown）",
+      "pos": "v."
+    },
+    {
+      "en": "swim",
+      "cn": "游泳（过去分词 swum）",
+      "pos": "v."
+    },
+    {
+      "en": "sing",
+      "cn": "唱歌（过去分词 sung）",
+      "pos": "v."
+    },
+    {
+      "en": "dance",
+      "cn": "跳舞（过去分词 danced）",
+      "pos": "v."
+    },
+    {
+      "en": "speak",
+      "cn": "说（过去分词 spoken）",
+      "pos": "v."
+    },
+    {
+      "en": "write",
+      "cn": "写（过去分词 written）",
+      "pos": "v."
+    },
+    {
+      "en": "forget",
+      "cn": "忘记（过去分词 forgotten）",
+      "pos": "v."
+    },
+    {
+      "en": "choose",
+      "cn": "选择（过去分词 chosen）",
+      "pos": "v."
+    },
+    {
+      "en": "break",
+      "cn": "打破（过去分词 broken）",
+      "pos": "v."
+    },
+    {
+      "en": "arrive",
+      "cn": "到达（过去分词 arrived）",
+      "pos": "v."
+    },
+    {
+      "en": "smell",
+      "cn": "闻起来（过去分词 smelled）",
+      "pos": "v."
+    },
+    {
+      "en": "finish",
+      "cn": "完成（过去分词 finished）",
+      "pos": "v."
+    },
+    {
+      "en": "join",
+      "cn": "加入（过去分词 joined）",
+      "pos": "v."
+    },
+    {
+      "en": "buy",
+      "cn": "买（过去分词 bought）",
+      "pos": "v."
+    },
+    {
+      "en": "drink",
+      "cn": "喝（过去分词 drunk）",
+      "pos": "v."
+    },
+    {
+      "en": "drive",
+      "cn": "开车（过去分词 driven）",
+      "pos": "v."
+    },
+    {
+      "en": "wake",
+      "cn": "醒来（过去分词 woken）",
+      "pos": "v."
+    },
+    {
+      "en": "know",
+      "cn": "知道（过去分词 known）",
+      "pos": "v."
+    },
+    {
+      "en": "be",
+      "cn": "是（过去分词 been）",
+      "pos": "v."
+    },
+    {
+      "en": "do",
+      "cn": "做（过去分词 done）",
+      "pos": "v."
+    },
+    {
+      "en": "have",
+      "cn": "已经（助动词，过去分词 had）",
+      "pos": "v."
+    },
+    {
+      "en": "exchange",
+      "cn": "交流",
+      "pos": "n."
+    },
+    {
+      "en": "stage",
+      "cn": "阶段，舞台",
+      "pos": "n."
+    },
+    {
+      "en": "final",
+      "cn": "最后的",
+      "pos": "adj."
+    },
+    {
+      "en": "fun",
+      "cn": "乐趣，玩笑",
+      "pos": "n."
+    },
+    {
+      "en": "food",
+      "cn": "食物",
+      "pos": "n."
+    },
+    {
+      "en": "film",
+      "cn": "电影",
+      "pos": "n."
+    },
+    {
+      "en": "dumplings",
+      "cn": "饺子",
+      "pos": "n."
+    },
+    {
+      "en": "noodles",
+      "cn": "面条",
+      "pos": "n."
+    },
+    {
+      "en": "hotpot",
+      "cn": "火锅",
+      "pos": "n."
+    },
+    {
+      "en": "chopsticks",
+      "cn": "筷子",
+      "pos": "n."
+    },
+    {
+      "en": "yummy",
+      "cn": "好吃的",
+      "pos": "adj."
+    },
+    {
+      "en": "diary",
+      "cn": "日记",
+      "pos": "n."
+    },
+    {
+      "en": "survey",
+      "cn": "调查",
+      "pos": "n."
+    },
+    {
+      "en": "quiz",
+      "cn": "小测验",
+      "pos": "n."
+    },
+    {
+      "en": "club",
+      "cn": "俱乐部",
+      "pos": "n."
+    },
+    {
+      "en": "park",
+      "cn": "公园",
+      "pos": "n."
+    },
+    {
+      "en": "museum",
+      "cn": "博物馆",
+      "pos": "n."
+    },
+    {
+      "en": "library",
+      "cn": "图书馆",
+      "pos": "n."
+    },
+    {
+      "en": "bank",
+      "cn": "银行",
+      "pos": "n."
+    },
+    {
+      "en": "panda",
+      "cn": "熊猫",
+      "pos": "n."
+    },
+    {
+      "en": "city",
+      "cn": "城市",
+      "pos": "n."
+    },
+    {
+      "en": "home",
+      "cn": "家",
+      "pos": "n."
+    },
+    {
+      "en": "lunch",
+      "cn": "午餐",
+      "pos": "n."
+    },
+    {
+      "en": "abroad",
+      "cn": "到国外",
+      "pos": "adv."
+    },
+    {
+      "en": "snow",
+      "cn": "雪，积雪",
+      "pos": "n."
+    },
+    {
+      "en": "friend",
+      "cn": "朋友",
+      "pos": "n."
+    },
+    {
+      "en": "never",
+      "cn": "从不，决不",
+      "pos": "adv."
+    },
+    {
+      "en": "ever",
+      "cn": "曾经，究竟",
+      "pos": "adv."
+    },
+    {
+      "en": "since",
+      "cn": "自...以后，自...以来",
+      "pos": "prep."
+    },
+    {
+      "en": "yet",
+      "cn": "还，尚",
+      "pos": "adv."
+    },
+    {
+      "en": "already",
+      "cn": "已经，早已",
+      "pos": "adv."
+    },
+    {
+      "en": "just",
+      "cn": "刚刚；正好",
+      "pos": "adv."
+    },
+    {
+      "en": "twice",
+      "cn": "两次",
+      "pos": "adv."
+    },
+    {
+      "en": "for",
+      "cn": "为，因为",
+      "pos": "prep."
+    }
+  ]
+}
