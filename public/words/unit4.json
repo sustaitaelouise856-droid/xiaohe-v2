@@ -261,6 +261,141 @@
       "en": "participle",
       "cn": "分词（过去分词）",
       "pos": "n."
+    },
+    {
+      "en": "balloon",
+      "pos": "n.",
+      "cn": "气球"
+    },
+    {
+      "en": "central",
+      "pos": "adj.",
+      "cn": "在中心的"
+    },
+    {
+      "en": "although",
+      "pos": "conj.",
+      "cn": "虽然；尽管； 即使"
+    },
+    {
+      "en": "attach",
+      "pos": "v.",
+      "cn": "把……固定； 把……附（在……上）"
+    },
+    {
+      "en": "pull",
+      "pos": "v.",
+      "cn": "拉；拽；扯；拖"
+    },
+    {
+      "en": "doubt",
+      "pos": "n.",
+      "cn": "疑惑；疑问"
+    },
+    {
+      "en": "personally",
+      "pos": "adv.",
+      "cn": "就个人 意见"
+    },
+    {
+      "en": "statement",
+      "pos": "n.",
+      "cn": "说明"
+    },
+    {
+      "en": "benefit",
+      "pos": "n.",
+      "cn": "益处；优势"
+    },
+    {
+      "en": "wing",
+      "pos": "n.",
+      "cn": "（飞行器的）翅膀； 机翼 distance /9dIstRns/ n. 距离 petrol /9petrRl/ n. 汽油"
+    },
+    {
+      "en": "avoid",
+      "pos": "v.",
+      "cn": "避免；防止"
+    },
+    {
+      "en": "anywhere",
+      "pos": "adv.",
+      "cn": "在（或去） 任何地方"
+    },
+    {
+      "en": "notice",
+      "pos": "v.",
+      "cn": "看（或听）到； 注意到 type /taIp/ n. （印刷用的）活字 *mixture /9mIkstSR(r)/ n. 混合物"
+    },
+    {
+      "en": "heat",
+      "pos": "v.",
+      "cn": "加热；变热 press /pres/ v. （被）压 metal /9metl/ n. 金属"
+    },
+    {
+      "en": "take place",
+      "pos": "phr.",
+      "cn": "发生；进行"
+    },
+    {
+      "en": "for instance",
+      "pos": "phr.",
+      "cn": "例如；比如"
+    },
+    {
+      "en": "large amounts of",
+      "pos": "phr.",
+      "cn": "大量"
+    },
+    {
+      "en": "international trade",
+      "pos": "phr.",
+      "cn": "国际贸易"
+    },
+    {
+      "en": "depend on",
+      "pos": "phr.",
+      "cn": "依靠；依赖"
+    },
+    {
+      "en": "without doubt",
+      "pos": "phr.",
+      "cn": "毫无疑问"
+    },
+    {
+      "en": "of all time",
+      "pos": "phr.",
+      "cn": "自古以来；有史以来"
+    },
+    {
+      "en": "make fun of",
+      "pos": "phr.",
+      "cn": "取笑；拿……开玩笑"
+    },
+    {
+      "en": "traffic jam",
+      "pos": "phr.",
+      "cn": "堵车；交通阻塞"
+    },
+    {
+      "en": "steam locomotive",
+      "pos": "phr.",
+      "cn": "蒸汽机车"
+    },
+    {
+      "en": "crewed spacecraft",
+      "pos": "phr.",
+      "cn": "载人航天器"
+    },
+    {
+      "en": "on foot",
+      "pos": "phr.",
+      "cn": "步行"
+    },
+    {
+      "en": "a number of",
+      "pos": "phr.",
+      "cn": "几个；若干"
     }
   ]
 }
