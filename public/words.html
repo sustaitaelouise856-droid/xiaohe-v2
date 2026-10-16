@@ -215,8 +215,24 @@ async function selectUnit(u, el) {
     // 优先复习未掌握的词
     queue = [...words].sort((a, b) => getMastery(u.id, a.en) - getMastery(u.id, b.en));
     idx = 0;
+    // 2026-10-16：进学习模式后隐藏单元看板，界面更干净
+    document.getElementById('unitGrid').style.display = 'none';
     document.getElementById('modeSection').style.display = 'block';
     document.getElementById('learnArea').style.display = 'block';
+    // 加一个"换单元"按钮
+    if (!document.getElementById('btnChangeUnit')) {
+      const btn = document.createElement('button');
+      btn.id = 'btnChangeUnit';
+      btn.textContent = '← 换单元';
+      btn.style.cssText = 'margin-bottom:12px;padding:10px 20px;border:1px solid #dadce0;background:#fff;border-radius:999px;font-size:14px;cursor:pointer;';
+      btn.onclick = () => {
+        document.getElementById('unitGrid').style.display = 'grid';
+        document.getElementById('modeSection').style.display = 'none';
+        document.getElementById('learnArea').style.display = 'none';
+        btn.remove();
+      };
+      document.getElementById('modeSection').prepend(btn);
+    }
     updateStats();
     renderWord();
     document.getElementById('learnArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -331,14 +347,33 @@ document.getElementById('btnShow').onclick = () => {
 function nextWord() {
   idx++;
   if (idx >= queue.length) {
-    // 重新按掌握度排序，未掌握的优先
-    queue = [...words].sort((a, b) => getMastery(curUnit.id, a.en) - getMastery(curUnit.id, b.en));
-    idx = 0;
     const m = words.filter(w => isMastered(curUnit.id, w.en)).length;
-    if (m === words.length) { alert(`🎉 ${curUnit.name} 全部掌握！太棒了！`); return; }
+    // 卡片模式循环复习，其他模式显示完成页（2026-10-16：测试/拼写/听音做完要结束，不能无限循环）
+    if (mode === 'card') {
+      queue = [...words].sort((a, b) => getMastery(curUnit.id, a.en) - getMastery(curUnit.id, b.en));
+      idx = 0;
+      if (m === words.length) { showComplete(); return; }
+    } else {
+      showComplete();
+      return;
+    }
   }
   updateStats();
   renderWord();
+}
+
+function showComplete() {
+  const m = words.filter(w => isMastered(curUnit.id, w.en)).length;
+  document.getElementById('learnArea').innerHTML = `
+    <div style="background:#fff;border-radius:22px;padding:48px 24px;text-align:center;box-shadow:0 6px 24px rgba(60,64,67,.1);">
+      <div style="font-size:56px;">🎉</div>
+      <h2 style="margin:16px 0 8px;">本轮完成！</h2>
+      <p style="color:#5f6368;">${curUnit.name} 已掌握 ${m}/${words.length} 个词</p>
+      <div class="btn-row" style="margin-top:24px;">
+        <button onclick="location.reload()" style="background:#1a73e8;color:#fff;">再来一轮</button>
+        <button onclick="document.getElementById('learnArea').style.display='none';document.getElementById('unitGrid').style.display='grid';" style="background:#f1f3f4;color:#5f6368;">换单元</button>
+      </div>
+    </div>`;
 }
 document.getElementById('btnKnow').onclick = () => { addMastery(curUnit.id, queue[idx].en, true); nextWord(); };
 document.getElementById('btnUnknown').onclick = () => { addMastery(curUnit.id, queue[idx].en, false); nextWord(); };
@@ -363,8 +398,21 @@ document.getElementById('spellInput').addEventListener('keypress', e => {
 });
 
 function playAudio(text) {
-  try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.85; speechSynthesis.speak(u); } catch {}
+  try {
+    // 2026-10-16修：听音模式音频无声问题——确保 speechSynthesis 可用，加重试
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.8; u.volume = 1;
+    // 有些浏览器需要先获取 voices
+    const voices = speechSynthesis.getVoices();
+    const enVoice = voices.find(v => v.lang.startsWith('en'));
+    if (enVoice) u.voice = enVoice;
+    speechSynthesis.speak(u);
+  } catch {}
 }
+// 页面加载时预热 voices（解决首次播放无声）
+try { if ('speechSynthesis' in window) speechSynthesis.getVoices(); } catch {}
 document.getElementById('btnPlayAudio').onclick = () => { if (queue[idx]) playAudio(queue[idx].en); };
 try { const th = localStorage.getItem('xh_theme'); if (th) document.documentElement.setAttribute('data-theme', th); } catch {}
 </script>
