@@ -321,6 +321,171 @@
       "en": "for",
       "cn": "为，因为",
       "pos": "prep."
+    },
+    {
+      "en": "nervous",
+      "pos": "adj.",
+      "cn": "焦虑的； 担忧的"
+    },
+    {
+      "en": "chopstick",
+      "pos": "n.",
+      "cn": "筷子"
+    },
+    {
+      "en": "tour",
+      "pos": "n.",
+      "cn": "旅行；旅游"
+    },
+    {
+      "en": "independent",
+      "pos": "adj.",
+      "cn": "自主的"
+    },
+    {
+      "en": "content",
+      "pos": "n.",
+      "cn": "内容"
+    },
+    {
+      "en": "feeling",
+      "pos": "n.",
+      "cn": "感觉；感情"
+    },
+    {
+      "en": "foreign",
+      "pos": "adj.",
+      "cn": "外国的"
+    },
+    {
+      "en": "shock",
+      "pos": "n.",
+      "cn": "震惊；令人震惊的事  *confused /kRn9fju:zd/ adj. 糊涂的； 迷惑的"
+    },
+    {
+      "en": "anxious",
+      "pos": "adj.",
+      "cn": "焦虑的； 忧虑的"
+    },
+    {
+      "en": "honeymoon",
+      "pos": "n.",
+      "cn": "蜜月"
+    },
+    {
+      "en": "depend",
+      "pos": "v.",
+      "cn": "需要；依靠"
+    },
+    {
+      "en": "unfamiliar",
+      "pos": "adj.",
+      "cn": "陌生的； 不熟悉的"
+    },
+    {
+      "en": "homesick",
+      "pos": "adj.",
+      "cn": "想家的"
+    },
+    {
+      "en": "technique",
+      "pos": "n.",
+      "cn": "技巧；技艺"
+    },
+    {
+      "en": "path",
+      "pos": "n.",
+      "cn": "小路；小径"
+    },
+    {
+      "en": "lonely",
+      "pos": "adj.",
+      "cn": "孤独的 deal /di:l/ v. 对付；应付"
+    },
+    {
+      "en": "international",
+      "pos": "adj.",
+      "cn": "国际的"
+    },
+    {
+      "en": "situation",
+      "pos": "n.",
+      "cn": "情况 accept /Rk9sept/ v. 接受"
+    },
+    {
+      "en": "adaptation",
+      "pos": "n.",
+      "cn": "适应"
+    },
+    {
+      "en": "towards",
+      "pos": "prep.",
+      "cn": "向；朝； 对着"
+    },
+    {
+      "en": "attack",
+      "pos": "n.",
+      "cn": "袭击；攻击"
+    },
+    {
+      "en": "fog",
+      "pos": "n.",
+      "cn": "雾"
+    },
+    {
+      "en": "Beijing opera",
+      "pos": "phr.",
+      "cn": "京剧"
+    },
+    {
+      "en": "host family",
+      "pos": "phr.",
+      "cn": "寄宿家庭"
+    },
+    {
+      "en": "make jokes about",
+      "pos": "phr.",
+      "cn": "蜿蜒"
+    },
+    {
+      "en": "succeed in",
+      "pos": "phr.",
+      "cn": "在……方面成功"
+    },
+    {
+      "en": "culture shock",
+      "pos": "phr.",
+      "cn": "文化冲击"
+    },
+    {
+      "en": "be tired of",
+      "pos": "phr.",
+      "cn": "厌烦"
+    },
+    {
+      "en": "deal with",
+      "pos": "phr.",
+      "cn": "解决；处理"
+    },
+    {
+      "en": "go on board",
+      "pos": "phr.",
+      "cn": "上船"
+    },
+    {
+      "en": "feel at home",
+      "pos": "phr.",
+      "cn": "感到舒适自在"
+    },
+    {
+      "en": "be jealous of",
+      "pos": "phr.",
+      "cn": "嫉妒"
+    },
+    {
+      "en": "be full of",
+      "pos": "phr.",
+      "cn": "装满；充满"
     }
   ]
 }
