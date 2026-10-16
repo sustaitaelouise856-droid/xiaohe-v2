@@ -299,10 +299,30 @@
 #titleModalWall.tier-gold .tier-badge { background:linear-gradient(135deg,#ff8f00,#ffd54f,#ff8f00); color:#fff; box-shadow:0 4px 20px rgba(255,143,0,.6); }
 #titleModalWall.tier-diamond .tier-badge { background:linear-gradient(135deg,#0288d1,#81d4fa,#0288d1); color:#fff; box-shadow:0 4px 20px rgba(2,136,209,.6); }
 #titleModalWall .title-wall { display:flex; flex-wrap:wrap; gap:10px; border-radius:20px; padding:16px; }
-#titleModalWall.tier-bronze .title-wall { background:linear-gradient(160deg,#d7ccc8,#a1887f,#8d6e63); border:3px solid #5d4037; }
-#titleModalWall.tier-silver .title-wall { background:linear-gradient(160deg,#eceff1,#b0bec5,#90a4ae); border:3px solid #546e7a; }
-#titleModalWall.tier-gold .title-wall { background:linear-gradient(160deg,#ffecb3,#ffd54f,#ffb300); border:3px solid #e65100; }
-#titleModalWall.tier-diamond .title-wall { background:linear-gradient(160deg,#e1f5fe,#b3e5fc,#81d4fa); border:3px solid #0277bd; }
+/* 2026-10-16：进一步提升质感——多层金属纹理 */
+#titleModalWall.tier-bronze .title-wall { background:
+  repeating-linear-gradient(90deg, rgba(62,39,35,.07) 0 2px, transparent 2px 4px),
+  radial-gradient(ellipse at 20% 30%, rgba(188,170,164,.5) 0%, transparent 50%),
+  linear-gradient(160deg,#d7ccc8 0%,#a1887f 30%,#8d6e63 60%,#6d4c41 100%);
+  border:3px solid #5d4037; box-shadow:inset 0 3px 18px rgba(62,39,35,.35), 0 6px 20px rgba(93,64,55,.3); }
+#titleModalWall.tier-silver .title-wall { background:
+  repeating-linear-gradient(90deg, rgba(55,71,79,.06) 0 1px, transparent 1px 3px),
+  linear-gradient(105deg, rgba(255,255,255,.7) 0%, transparent 25%, rgba(255,255,255,.3) 50%, transparent 75%, rgba(255,255,255,.5) 100%),
+  linear-gradient(160deg,#eceff1 0%,#b0bec5 40%,#90a4ae 70%,#78909c 100%);
+  border:3px solid #546e7a; box-shadow:inset 0 3px 18px rgba(55,71,79,.3), 0 6px 20px rgba(120,144,156,.3); }
+#titleModalWall.tier-gold .title-wall { background:
+  repeating-conic-gradient(from 0deg at 50% 30%, rgba(255,143,0,.07) 0deg 2deg, transparent 2deg 4deg),
+  linear-gradient(105deg, rgba(255,255,255,.8) 0%, transparent 20%, rgba(255,255,255,.35) 45%, transparent 65%, rgba(255,255,255,.6) 100%),
+  radial-gradient(ellipse at 50% 25%, rgba(255,245,200,.7) 0%, transparent 55%),
+  linear-gradient(160deg,#ffecb3 0%,#ffd54f 35%,#ffb300 70%,#ff8f00 100%);
+  border:3px solid #e65100; box-shadow:inset 0 3px 20px rgba(230,81,0,.3), 0 8px 28px rgba(255,143,0,.45); }
+#titleModalWall.tier-diamond .title-wall { background:
+  repeating-linear-gradient(45deg, rgba(2,119,189,.08) 0 8px, transparent 8px 16px),
+  repeating-linear-gradient(-45deg, rgba(2,119,189,.08) 0 8px, transparent 8px 16px),
+  linear-gradient(115deg, rgba(255,255,255,.9) 0%, transparent 18%, rgba(255,255,255,.4) 38%, transparent 55%, rgba(255,255,255,.7) 78%, transparent 100%),
+  radial-gradient(ellipse at 25% 20%, rgba(255,255,255,.8) 0%, transparent 35%),
+  linear-gradient(160deg,#e1f5fe 0%,#b3e5fc 35%,#81d4fa 70%,#4fc3f7 100%);
+  border:3px solid #0277bd; box-shadow:inset 0 3px 20px rgba(2,119,189,.3), 0 8px 32px rgba(2,136,209,.45); }
 #titleModalWall .title-item { width:30%; min-width:90px; text-align:center; padding:14px 6px; border-radius:14px; border:2px solid #e1e5eb; background:#fff; }
 #titleModalWall .title-item .ic { font-size:36px; }
 #titleModalWall .title-item .nm { font-size:15px; font-weight:700; margin-top:6px; }
@@ -324,7 +344,8 @@ document.getElementById('btnTitles').onclick = async () => {
     const earned = list.filter(x => x.earned).length;
     const total = list.length || 1;
     const ratio = earned / total;
-    const tenthStr = (ratio * 10).toFixed(1).replace(/\.0$/, '');
+    // 百分比（2026-10-16：Elouise要求显示百分数）
+    const pctStr = (ratio * 100).toFixed(1).replace(/\.0$/, '') + '%';
     let tier = 'bronze', tierName = '🥉 青铜', nextTip = '', msg = '';
     if (ratio >= 0.8) { tier = 'diamond'; tierName = '💎 钻石'; nextTip = '已达最高段位！'; msg = '“钻石恒久远，一颗永流传。”继续闪耀吧！✨'; }
     else if (ratio > 0.3) { tier = 'gold'; tierName = '🥇 黄金'; const need = Math.ceil(total*0.8)-earned; nextTip = `距离钻石还差 ${need} 个称号`; msg = '“金子总会发光。”钻石段位在向你招手！💪'; }
@@ -333,7 +354,7 @@ document.getElementById('btnTitles').onclick = async () => {
     wall.className = 'tier-' + tier;
     document.getElementById('titleTierMini').textContent = '· ' + tierName;
     wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
-      + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（十分之${tenthStr}）</div>`
+      + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（${pctStr}）</div>`
       + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
       + `<div class="title-wall">` + list.map(x =>
         `<div class="title-item ${x.earned ? 'earned' : 'locked'}" style="${x.earned ? '' : 'filter:grayscale(1);'}">`
