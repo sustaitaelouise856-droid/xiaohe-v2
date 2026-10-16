@@ -434,6 +434,22 @@ document.getElementById('spellInput').addEventListener('keypress', e => {
 });
 
 function playAudio(text) {
+  // 2026-10-16改：优先播放预录制MP3（iOS上speechSynthesis无声），404再回退到TTS
+  try {
+    const unitDir = (typeof curUnit !== 'undefined' && curUnit && curUnit.id)
+      ? curUnit.id.replace('unit', 'u') : 'u3';
+    const fn = String(text).toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '') + '.mp3';
+    const url = '/audio/words/' + unitDir + '/' + fn;
+    const audio = new Audio(url);
+    audio.oncanplaythrough = () => { try { audio.play(); } catch {} };
+    audio.onerror = () => playAudioTTS(text); // MP3缺失/404 → 回退TTS
+    // 超时兜底：2秒还没能播放就回退TTS
+    const timer = setTimeout(() => { try { audio.pause(); } catch {} playAudioTTS(text); }, 2000);
+    audio.onplay = () => clearTimeout(timer);
+    audio.load();
+  } catch { playAudioTTS(text); }
+}
+function playAudioTTS(text) {
   try {
     // 2026-10-16修：听音模式音频无声问题——确保 speechSynthesis 可用，加重试
     if (!('speechSynthesis' in window)) return;
