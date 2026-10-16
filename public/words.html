@@ -238,7 +238,9 @@ function renderWord() {
   if (!queue.length) return;
   const w = queue[idx];
   const m = getMastery(curUnit.id, w.en);
-  document.getElementById('progress').textContent = `${idx + 1} / ${queue.length} · ${w.en}`;
+  // 听音模式不暴露英文单词（标题只显示进度）
+  const showEn = mode !== 'listen';
+  document.getElementById('progress').textContent = showEn ? `${idx + 1} / ${queue.length} · ${w.en}` : `${idx + 1} / ${queue.length}`;
   document.getElementById('wEn').textContent = w.en;
   document.getElementById('wPos').textContent = w.pos || '';
   document.getElementById('wCn').textContent = w.cn;
