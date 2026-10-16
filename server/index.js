@@ -1779,15 +1779,19 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
   const itemId = String(body.item_id || '');
   // 防重做：该部分已在服务端标记完成，直接拒绝（与浏览器数据无关）
   const lid = lessonOf(itemId) || 'u2r1';
-  // 二审三1：课没开放就拒绝作答（防直接调接口）
-  if (!lessonOpen(lid)) return res.status(403).json({ ok: false, error: 'lesson_locked' });
+  // 2026-10-16修：错题重做（单题/批量）豁免课程解锁检查——错题本是复习，不是新学；
+  // 否则 u4r1 错题在课程未解锁时提交会被 403，客户端 renderHome 又重头开始，形成死循环卡死孩子。
+  const isRetryEarly = body.is_retry === true || body.is_retry === 1 || body.is_retry === '1';
+  // 二审三1：课没开放就拒绝作答（防直接调接口）；重做模式豁免
+  if (!isRetryEarly && !lessonOpen(lid)) return res.status(403).json({ ok: false, error: 'lesson_locked' });
   const L = loadLesson(lid);
   const st = lessonState(lid);
   const step = L ? L.stepsByItem[itemId] : null;
   const phase = step ? (step.phase || 'practice') : 'practice';
   const sid = String(body.session_id || '');
   // 2026-10-15：错题重做（单题/批量）豁免防重做——用户从错题本主动发起，不算刷课
-  const isRetry = body.is_retry === true || body.is_retry === 1 || body.is_retry === '1';
+  // （isRetryEarly 已在 lessonOpen 检查前定义，这里复用）
+  const isRetry = isRetryEarly;
   if (step && !isRetry) {
     // 第二部分开场复习放行（2026-10-02 规范第 7 条）：第二部分已开放时，复习池题目
     // 在当前（第二部分）会话里、尚未答对前，允许重答一次热身，不算"重做第一部分"。
