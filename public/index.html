@@ -208,6 +208,13 @@
   html[data-theme="dark"] #lockedList > div { color:#aaa !important; }
   html[data-theme="dark"] #lockedList > div > div { background:#3a3a3a !important; }
   html[data-theme="dark"] #lockedList > div > div > div:first-child { color:#f0f0f0 !important; }
+  /* 2026-10-16：今日学习计划+单词进度深色适配（走查发现白底浅字看不见） */
+  html[data-theme="dark"] #dailyPlan { background:#2d2d2d !important; border-color:#444 !important; }
+  html[data-theme="dark"] #dailyPlan > div:first-child { color:#f0f0f0 !important; }
+  html[data-theme="dark"] #dailyPlanList > div { background:#3a3a3a !important; border-color:#555 !important; }
+  html[data-theme="dark"] #dailyPlanList span { color:#f0f0f0 !important; }
+  html[data-theme="dark"] #wordsProgress > div { background:#3a3a3a !important; }
+  html[data-theme="dark"] #wordsProgress div { color:#f0f0f0 !important; }
   .node.available .icon { color: #9aa0a6; }
   /* 底部导航：毛玻璃 + 轻盈阴影 */
   .tabbar {
@@ -307,24 +314,31 @@
 </div>
 <script>
 // 首页单词进度看板（2026-10-16）
+// 2026-10-16修：按固定顺序渲染，不随网络时序乱序
 (function() {
   const units = ['unit3','unit4','unit5','unit6'];
   const names = { unit3:'U3', unit4:'U4', unit5:'U5', unit6:'U6' };
   const mastery = JSON.parse(localStorage.getItem('xh_words_mastery') || '{}');
   const box = document.getElementById('wordsProgress');
   if (!box) return;
+  // 先占位，保证顺序
+  const holders = {};
+  units.forEach(uid => {
+    const d = document.createElement('div');
+    d.style.cssText = 'flex:1;background:#fff;border-radius:10px;padding:8px 6px;text-align:center;';
+    d.innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div><div style="font-size:11px;color:#5f6368;">加载中…</div>`;
+    box.appendChild(d);
+    holders[uid] = d;
+  });
   units.forEach(uid => {
     fetch(`/words/${uid}.json`).then(r => r.json()).then(j => {
       const total = j.words.length;
       const m = j.words.filter(w => (mastery[uid+':'+w.en]||{}).count >= 3).length;
       const pct = Math.round(m/total*100);
-      const d = document.createElement('div');
-      d.style.cssText = 'flex:1;background:#fff;border-radius:10px;padding:8px 6px;text-align:center;';
-      d.innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div>
+      holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div>
         <div style="height:6px;background:#f1f3f4;border-radius:999px;margin:6px 0;overflow:hidden;"><div style="height:100%;width:${pct}%;background:#1a73e8;border-radius:999px;"></div></div>
         <div style="font-size:11px;color:#5f6368;">${m}/${total}</div>`;
-      box.appendChild(d);
-    }).catch(()=>{});
+    }).catch(()=>{ holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;">${names[uid]}</div><div style="font-size:11px;color:#999;">--</div>`; });
   });
 })();
 </script>
@@ -716,13 +730,23 @@ async function renderDailyPlan(dailyStatus) {
       link: mOk ? null : '/progress.html',
       btn: mOk ? null : '去做错题 →'
     });
-    // 第3步：新课学习
-    steps.push({
-      done: false,
-      text: '新课学习：Unit 4 被动语态',
-      link: '/lesson?lesson=u4r1',
-      btn: '开始上课 →'
-    });
+    // 第3步：新课学习（2026-10-16修：动态取当前可上课程，不再硬编码u4r1）
+    const curLesson = (typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null;
+    if (curLesson) {
+      steps.push({
+        done: false,
+        text: `新课学习：${curLesson.name}`,
+        link: `/lesson?lesson=${curLesson.id}`,
+        btn: '开始上课 →'
+      });
+    } else {
+      steps.push({
+        done: true,
+        text: '新课学习：本单元已学完 🎉',
+        link: null,
+        btn: null
+      });
+    }
     listEl.innerHTML = steps.map((s, i) =>
       `<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:10px;background:${s.done ? '#f1f8e9' : '#fff8e1'};border:1px solid ${s.done ? '#c8e6c9' : '#ffe0b2'};">`
       + `<span style="font-size:14px;font-weight:600;">${i + 1}. ${s.text}</span>`
