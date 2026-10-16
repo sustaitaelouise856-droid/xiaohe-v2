@@ -40,6 +40,16 @@
   .title-item .cond { font-size:15px; color:var(--muted); margin-top:6px; line-height:1.4; }
   .title-item.earned { border-color:var(--gold); background:linear-gradient(160deg,#fffbe6,#fff3c4); box-shadow:0 4px 14px rgba(242,193,78,.35), inset 0 1px 0 rgba(255,255,255,.6); }
   .title-item.locked { opacity:.72 !important; background:#f1f3f4; border:2px dashed #c8cdd4; box-shadow:none; }
+  /* 称号墙段位（2026-10-16 Elouise：按集齐比例显示青铜/白银/黄金/钻石质感） */
+  .tier-badge { display:inline-block; padding:8px 28px; border-radius:999px; font-size:20px; font-weight:800; margin-bottom:16px; letter-spacing:1px; }
+  .tier-bronze .tier-badge { background:linear-gradient(135deg,#8d6e63,#a1887f,#8d6e63); color:#fff; box-shadow:0 4px 12px rgba(141,110,99,.4); }
+  .tier-silver .tier-badge { background:linear-gradient(135deg,#90a4ae,#b0bec5,#90a4ae); color:#fff; box-shadow:0 4px 12px rgba(144,164,174,.4); }
+  .tier-gold .tier-badge { background:linear-gradient(135deg,#ffa000,#ffca28,#ffa000); color:#fff; box-shadow:0 4px 16px rgba(255,160,0,.5); }
+  .tier-diamond .tier-badge { background:linear-gradient(135deg,#4fc3f7,#b3e5fc,#4fc3f7); color:#01579b; box-shadow:0 4px 16px rgba(79,195,247,.6); }
+  .tier-bronze .title-wall { background:linear-gradient(160deg,#efebe9,#d7ccc8); border-radius:16px; padding:16px; }
+  .tier-silver .title-wall { background:linear-gradient(160deg,#eceff1,#cfd8dc); border-radius:16px; padding:16px; }
+  .tier-gold .title-wall { background:linear-gradient(160deg,#fff8e1,#ffecb3); border-radius:16px; padding:16px; }
+  .tier-diamond .title-wall { background:linear-gradient(160deg,#e1f5fe,#b3e5fc); border-radius:16px; padding:16px; }
   /* 签到日历 */
   .cal-grid { gap:6px !important; }
   .cal-grid .cal-head { text-align:center; font-size:13px; font-weight:600; color:var(--muted); padding:6px 4px; }
@@ -279,17 +289,31 @@ async function load() {
   }
   // 称号墙（复用 /api/titles），点击查看获得要求
   // 2026-10-12：未获得显示灰色+🔒+???，点击才显示真图标和要求
+  // 2026-10-16：加段位——集齐≤1/10青铜，≤3/10白银，≤6/10黄金，≥8/10钻石
   try {
     const t = await (await fetch('/api/titles')).json();
     const list = (t.titles || []);
     window._titles = list;
-    document.getElementById('titleWall').innerHTML = list.length
-      ? list.map((x, i) => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '" onclick="showTitleDetail(' + i + ')" style="cursor:pointer;'
-        + (x.earned ? '' : 'filter:grayscale(1);opacity:.6;') + '">'
-        + '<div class="ic">' + (x.earned ? x.icon : '🔒') + '</div>'
-        + '<div class="nm">' + (x.earned ? esc(x.name) : '???') + '</div>'
-        + '<div class="cond">' + (x.earned ? '已获得' : '点击查看要求') + '</div></div>').join('')
-      : '<div class="empty">暂无称号数据</div>';
+    const earned = list.filter(x => x.earned).length;
+    const total = list.length || 1;
+    const ratio = earned / total;
+    let tier = 'bronze', tierName = '🥉 青铜', nextTip = '';
+    if (ratio >= 0.8) { tier = 'diamond'; tierName = '💎 钻石'; nextTip = '已达最高段位！'; }
+    else if (ratio > 0.3) { tier = 'gold'; tierName = '🥇 黄金'; nextTip = `再集齐 ${Math.ceil(total*0.8)-earned} 个升钻石`; }
+    else if (ratio > 0.1) { tier = 'silver'; tierName = '🥈 白银'; nextTip = `再集齐 ${Math.ceil(total*0.3)-earned} 个升黄金`; }
+    else { tier = 'bronze'; tierName = '🥉 青铜'; nextTip = total > 10 ? `再集齐 ${Math.ceil(total*0.1)-earned} 个升白银` : ''; }
+    const wallCard = document.getElementById('titleWall').closest('.card');
+    if (wallCard) wallCard.classList.add('tier-' + tier);
+    document.getElementById('titleWall').innerHTML =
+      `<div style="text-align:center;width:100%;margin-bottom:4px;"><span class="tier-badge">${tierName}</span>`
+      + `<div style="font-size:15px;color:var(--muted);margin-top:6px;">已集齐 ${earned}/${total}${nextTip ? ' · ' + nextTip : ''}</div></div>`
+      + (list.length
+        ? list.map((x, i) => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '" onclick="showTitleDetail(' + i + ')" style="cursor:pointer;'
+          + (x.earned ? '' : 'filter:grayscale(1);opacity:.6;') + '">'
+          + '<div class="ic">' + (x.earned ? x.icon : '🔒') + '</div>'
+          + '<div class="nm">' + (x.earned ? esc(x.name) : '???') + '</div>'
+          + '<div class="cond">' + (x.earned ? '已获得' : '点击查看要求') + '</div></div>').join('')
+        : '<div class="empty">暂无称号数据</div>');
   } catch (e) {
     document.getElementById('titleWall').innerHTML = '<div class="empty">加载失败</div>';
   }
