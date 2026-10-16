@@ -726,6 +726,23 @@ const TITLE_DEFS = [
   { id: 'courses_10', name: '学有所成', icon: '📖', desc: '累计完成10节课' },
   { id: 'courses_15', name: '学富五车', icon: '🎒', desc: '累计完成15节课' },
   { id: 'courses_20', name: '全部征服', icon: '🏆', desc: '累计完成20节课' },
+  // 2026-10-16 Elouise要求：加4个累计学习分钟数成就 + 10个其他新成就
+  // ——— 累计学习分钟数（4） ———
+  { id: 'minutes_60', name: '初涉学海', icon: '⏱️', desc: '累计学习60分钟' },
+  { id: 'minutes_300', name: '渐入佳境', icon: '⏰', desc: '累计学习300分钟（5小时）' },
+  { id: 'minutes_900', name: '持之以恒', icon: '🕐', desc: '累计学习900分钟（15小时）' },
+  { id: 'minutes_1800', name: '学霸本色', icon: '👑', desc: '累计学习1800分钟（30小时）' },
+  // ——— 其他新成就（10） ———
+  { id: 'review_3', name: '复习达人', icon: '📝', desc: '完成3节复习课' },
+  { id: 'independent_5', name: '自力更生', icon: '💪', desc: '零求助完成5节课' },
+  { id: 'streak_15', name: '连对高手', icon: '🔥', desc: '连续答对15道题（零求助）' },
+  { id: 'retry_10', name: '知错能改', icon: '🔄', desc: '重做答对10道题' },
+  { id: 'vocab_30', name: '生词收藏家', icon: '📚', desc: '生词本收藏30个词' },
+  { id: 'perfect_1', name: '满分闯关', icon: '💯', desc: '每日闯关获得满分' },
+  { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成学习' },
+  { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成学习' },
+  { id: 'weekend_1', name: '周末学霸', icon: '📅', desc: '周末完成学习' },
+  { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无拼写错误' },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -913,6 +930,81 @@ function checkTitles() {
     if (cc >= 10) grant('courses_10');
     if (cc >= 15) grant('courses_15');
     if (cc >= 20) grant('courses_20');
+  } catch {}
+  // 2026-10-16 Elouise要求：4个累计学习分钟数 + 10个其他新成就
+  // ——— 累计学习分钟数 ———
+  try {
+    const r = db.prepare("SELECT COALESCE(SUM(elapsed_ms),0) ms FROM attempts").get();
+    const mins = Math.round((r ? r.ms : 0) / 60000);
+    if (mins >= 60) grant('minutes_60');
+    if (mins >= 300) grant('minutes_300');
+    if (mins >= 900) grant('minutes_900');
+    if (mins >= 1800) grant('minutes_1800');
+  } catch {}
+  // ——— 复习达人：完成3节复习课 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE lesson_id LIKE 'review%' AND p1_done=1 AND p2_done=1").get();
+    if (r && r.c >= 3) grant('review_3');
+  } catch {}
+  // ——— 自力更生：零求助完成5节课 ———
+  try {
+    const r = db.prepare(`
+      SELECT COUNT(DISTINCT ls.lesson_id) c FROM lesson_state ls
+      WHERE ls.p1_done=1 AND ls.p2_done=1
+      AND NOT EXISTS (SELECT 1 FROM attempts a WHERE a.item_id LIKE ls.lesson_id || '%' AND a.helped=1)
+      AND NOT EXISTS (SELECT 1 FROM help_events h WHERE h.item_id LIKE ls.lesson_id || '%')
+    `).get();
+    if (r && r.c >= 5) grant('independent_5');
+  } catch {}
+  // ——— 连对高手：连续答对15道题（零求助） ———
+  try {
+    const rows = db.prepare("SELECT correct, helped FROM attempts ORDER BY id DESC LIMIT 30").all();
+    let streak = 0;
+    for (const r of rows) {
+      if (r.correct === 1 && r.helped === 0) streak++;
+      else break;
+    }
+    if (streak >= 15) grant('streak_15');
+  } catch {}
+  // ——— 知错能改：重做答对10道题 ———
+  try {
+    const r = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE verdict='correct_retry'").get();
+    if (r && r.c >= 10) grant('retry_10');
+  } catch {}
+  // ——— 生词收藏家：生词本收藏30个词 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM vocab_words").get();
+    if (r && r.c >= 30) grant('vocab_30');
+  } catch {}
+  // ——— 满分闯关：每日闯关获得满分 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM daily_challenge WHERE completed=1 AND score=100").get();
+    if (r && r.c >= 1) grant('perfect_1');
+  } catch {}
+  // ——— 早起鸟：早上7点前完成学习 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', created_at) AS INTEGER) < 7").get();
+    if (r && r.c >= 1) grant('morning_1');
+  } catch {}
+  // ——— 夜读星：晚上22点后完成学习 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', created_at) AS INTEGER) >= 22").get();
+    if (r && r.c >= 1) grant('night_1');
+  } catch {}
+  // ——— 周末学霸：周末完成学习 ———
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE strftime('%w', created_at) IN ('0','6')").get();
+    if (r && r.c >= 1) grant('weekend_1');
+  } catch {}
+  // ——— 火眼金睛：连续50道题无拼写错误 ———
+  try {
+    const rows = db.prepare("SELECT verdict FROM attempts ORDER BY id DESC LIMIT 60").all();
+    let streak = 0;
+    for (const r of rows) {
+      if (r.verdict !== 'typo') streak++;
+      else break;
+    }
+    if (streak >= 50) grant('no_typo_50');
   } catch {}
   return newly;
 }
