@@ -279,7 +279,82 @@
     <div class="stat"><b id="pct">0%</b>进度</div>
   </div>
   <div class="progress-bar"><div class="progress-fill" id="pfill" style="width:0%"></div></div>
+  <!-- 称号墙按钮（2026-10-16 Elouise：从成长页移到首页，做成按钮弹窗） -->
+  <button id="btnTitles" style="margin-top:12px;padding:10px 28px;border:2px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(255,255,255,.2);color:#fff;font-size:15px;font-weight:800;cursor:pointer;backdrop-filter:blur(4px);">🏆 称号墙 <span id="titleTierMini"></span></button>
 </div>
+
+<!-- 称号墙弹窗 -->
+<div id="titleModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;overflow-y:auto;padding:20px 12px;" onclick="if(event.target===this)this.style.display='none'">
+  <div id="titleModalBody" style="max-width:640px;margin:0 auto;background:#fff;border-radius:20px;padding:20px;position:relative;">
+    <button onclick="document.getElementById('titleModal').style.display='none'" style="position:absolute;top:12px;right:12px;width:36px;height:36px;border:0;border-radius:50%;background:#f1f3f4;font-size:18px;cursor:pointer;">✕</button>
+    <h2 style="text-align:center;margin:0 0 16px;">🏆 称号墙</h2>
+    <div id="titleModalWall"></div>
+  </div>
+</div>
+<style>
+/* 称号墙弹窗内的段位样式（复用成长页） */
+#titleModalWall .tier-badge { display:inline-block; padding:10px 36px; border-radius:999px; font-size:22px; font-weight:800; margin-bottom:12px; letter-spacing:2px; }
+#titleModalWall.tier-bronze .tier-badge { background:linear-gradient(135deg,#6d4c41,#a1887f,#6d4c41); color:#fff; box-shadow:0 4px 16px rgba(109,76,65,.5); }
+#titleModalWall.tier-silver .tier-badge { background:linear-gradient(135deg,#78909c,#cfd8dc,#78909c); color:#fff; box-shadow:0 4px 16px rgba(120,144,156,.5); }
+#titleModalWall.tier-gold .tier-badge { background:linear-gradient(135deg,#ff8f00,#ffd54f,#ff8f00); color:#fff; box-shadow:0 4px 20px rgba(255,143,0,.6); }
+#titleModalWall.tier-diamond .tier-badge { background:linear-gradient(135deg,#0288d1,#81d4fa,#0288d1); color:#fff; box-shadow:0 4px 20px rgba(2,136,209,.6); }
+#titleModalWall .title-wall { display:flex; flex-wrap:wrap; gap:10px; border-radius:20px; padding:16px; }
+#titleModalWall.tier-bronze .title-wall { background:linear-gradient(160deg,#d7ccc8,#a1887f,#8d6e63); border:3px solid #5d4037; }
+#titleModalWall.tier-silver .title-wall { background:linear-gradient(160deg,#eceff1,#b0bec5,#90a4ae); border:3px solid #546e7a; }
+#titleModalWall.tier-gold .title-wall { background:linear-gradient(160deg,#ffecb3,#ffd54f,#ffb300); border:3px solid #e65100; }
+#titleModalWall.tier-diamond .title-wall { background:linear-gradient(160deg,#e1f5fe,#b3e5fc,#81d4fa); border:3px solid #0277bd; }
+#titleModalWall .title-item { width:30%; min-width:90px; text-align:center; padding:14px 6px; border-radius:14px; border:2px solid #e1e5eb; background:#fff; }
+#titleModalWall .title-item .ic { font-size:36px; }
+#titleModalWall .title-item .nm { font-size:15px; font-weight:700; margin-top:6px; }
+#titleModalWall .title-item .cond { font-size:12px; color:#5f6368; margin-top:4px; }
+#titleModalWall .title-item.earned { border-color:#f2c14e; background:linear-gradient(160deg,#fffbe6,#fff3c4); }
+#titleModalWall .title-item.locked { opacity:.7; background:#f1f3f4; }
+#titleModalWall .tier-msg { text-align:center; font-size:14px; color:#5f6368; margin:12px 0 4px; font-style:italic; width:100%; }
+</style>
+<script>
+// 首页称号墙弹窗（2026-10-16）
+document.getElementById('btnTitles').onclick = async () => {
+  const modal = document.getElementById('titleModal');
+  const wall = document.getElementById('titleModalWall');
+  modal.style.display = 'block';
+  wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载中…</div>';
+  try {
+    const t = await (await fetch('/api/titles')).json();
+    const list = (t.titles || []);
+    const earned = list.filter(x => x.earned).length;
+    const total = list.length || 1;
+    const ratio = earned / total;
+    const tenthStr = (ratio * 10).toFixed(1).replace(/\.0$/, '');
+    let tier = 'bronze', tierName = '🥉 青铜', nextTip = '', msg = '';
+    if (ratio >= 0.8) { tier = 'diamond'; tierName = '💎 钻石'; nextTip = '已达最高段位！'; msg = '“钻石恒久远，一颗永流传。”继续闪耀吧！✨'; }
+    else if (ratio > 0.3) { tier = 'gold'; tierName = '🥇 黄金'; const need = Math.ceil(total*0.8)-earned; nextTip = `距离钻石还差 ${need} 个称号`; msg = '“金子总会发光。”钻石段位在向你招手！💪'; }
+    else if (ratio > 0.1) { tier = 'silver'; tierName = '白银'; const need = Math.ceil(total*0.6)-earned; nextTip = `距离黄金还差 ${need} 个称号`; msg = '“银鞍照白马，飒沓如流星。”继续努力！🌟'; }
+    else { tier = 'bronze'; tierName = '🥉 青铜'; const need = Math.max(1, Math.ceil(total*0.1)-earned); nextTip = `距离白银还差 ${need} 个称号`; msg = '“千里之行，始于足下。”加油！🚀'; }
+    wall.className = 'tier-' + tier;
+    document.getElementById('titleTierMini').textContent = '· ' + tierName;
+    wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
+      + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（十分之${tenthStr}）</div>`
+      + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
+      + `<div class="title-wall">` + list.map(x =>
+        `<div class="title-item ${x.earned ? 'earned' : 'locked'}" style="${x.earned ? '' : 'filter:grayscale(1);'}">`
+        + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
+        + `<div class="nm">${x.earned ? x.name : '???'}</div>`
+        + `<div class="cond">${x.earned ? '已获得' : '未获得'}</div></div>`).join('')
+      + `</div><div class="tier-msg">${msg}</div>`;
+  } catch (e) { wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载失败</div>'; }
+};
+// 首页加载时显示当前段位
+fetch('/api/titles').then(r => r.json()).then(t => {
+  const list = t.titles || [];
+  const earned = list.filter(x => x.earned).length;
+  const ratio = earned / (list.length || 1);
+  let name = '🥉 青铜';
+  if (ratio >= 0.8) name = '💎 钻石';
+  else if (ratio > 0.3) name = '🥇 黄金';
+  else if (ratio > 0.1) name = '白银';
+  document.getElementById('titleTierMini').textContent = '· ' + name;
+}).catch(() => {});
+</script>
 
 <div class="continue-wrap">
   <!-- 每日闯关（2026-10-14）：每天开始前先复测，画像驱动补短板 -->
