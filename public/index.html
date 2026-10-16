@@ -302,8 +302,32 @@
   <a href="/words.html" style="display:block;background:linear-gradient(135deg,#e8f0fe,#f3e5f5);border:2px solid #1a73e8;border-radius:16px;padding:16px;text-decoration:none;">
     <div style="font-size:17px;font-weight:800;color:#1a73e8;">📚 单词学习</div>
     <div style="font-size:13px;color:#5f6368;margin-top:6px;">按课本单元背单词 · 卡片记忆 + 拼写练习 · Unit 3-6 共242词</div>
+    <div id="wordsProgress" style="margin-top:10px;display:flex;gap:8px;"></div>
   </a>
 </div>
+<script>
+// 首页单词进度看板（2026-10-16）
+(function() {
+  const units = ['unit3','unit4','unit5','unit6'];
+  const names = { unit3:'U3', unit4:'U4', unit5:'U5', unit6:'U6' };
+  const mastery = JSON.parse(localStorage.getItem('xh_words_mastery') || '{}');
+  const box = document.getElementById('wordsProgress');
+  if (!box) return;
+  units.forEach(uid => {
+    fetch(`/words/${uid}.json`).then(r => r.json()).then(j => {
+      const total = j.words.length;
+      const m = j.words.filter(w => (mastery[uid+':'+w.en]||{}).count >= 3).length;
+      const pct = Math.round(m/total*100);
+      const d = document.createElement('div');
+      d.style.cssText = 'flex:1;background:#fff;border-radius:10px;padding:8px 6px;text-align:center;';
+      d.innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div>
+        <div style="height:6px;background:#f1f3f4;border-radius:999px;margin:6px 0;overflow:hidden;"><div style="height:100%;width:${pct}%;background:#1a73e8;border-radius:999px;"></div></div>
+        <div style="font-size:11px;color:#5f6368;">${m}/${total}</div>`;
+      box.appendChild(d);
+    }).catch(()=>{});
+  });
+})();
+</script>
 
 <div class="units" id="units"></div>
 
