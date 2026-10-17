@@ -60,7 +60,7 @@ function backfillWrongToRetest() {
     const rows = db.prepare(`
       SELECT a.item_id, COUNT(*) AS c, MAX(a.session_id) AS sid
       FROM attempts a
-      LEFT JOIN retest_queue q ON q.item_id = a.item_id AND q.status = 'pending'
+      LEFT JOIN retest_queue q ON q.item_id = a.item_id
       WHERE a.verdict IN ('wrong', 'wrong_retry') AND q.id IS NULL
       GROUP BY a.item_id
       HAVING c >= 2
