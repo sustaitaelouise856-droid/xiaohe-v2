@@ -2379,6 +2379,22 @@ app.post('/api/admin/revoke-title', (req, res) => {
     res.json({ ok: false, error: e.message });
   }
 });
+// 管理员：删除今日打卡（2026-10-17：修复误记的每日闯关打卡）
+app.post('/api/admin/delete-checkin', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const { day } = req.body || {};
+    const targetDay = day || require('./time').shanghaiDay();
+    const r = db.prepare('DELETE FROM checkins WHERE day=?').run(targetDay);
+    console.log('[admin] delete-checkin:', targetDay, 'deleted:', r.changes);
+    res.json({ ok: true, day: targetDay, deleted: r.changes });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
 // 管理员备份接口：下载 SQLite 数据库文件（用于 Google Drive 自动备份）
 // 需要 BACKUP_TOKEN 环境变量验证
 app.get('/api/admin/backup', (req, res) => {
