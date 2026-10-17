@@ -1485,6 +1485,12 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
 function startGuided(s, guided) {
   guidedState = { item_id: s.item_id, steps: guided.steps, idx: 0,
     session: ST['p' + PART].sid, isMcq: s.kind === 'mcq' };
+  // 2026-10-17 Elouise：弹引导=求助，记help_events
+  try {
+    fetch('/api/help', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: s.item_id, session_id: ST['p' + PART].sid, level: 1 })
+    }).catch(() => {});
+  } catch {}
   var ai = $('answerInput'); if (ai) ai.disabled = true;
   var bs = $('btnSub'); if (bs) bs.style.display = 'none';
   var bh = $('btnHelp'); if (bh) bh.disabled = true;
