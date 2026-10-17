@@ -739,9 +739,9 @@ const TITLE_DEFS = [
   { id: 'retry_10', name: '知错能改', icon: '🔄', desc: '重做答对10道题' },
   { id: 'vocab_30', name: '生词收藏家', icon: '📚', desc: '生词本收藏30个词' },
   { id: 'perfect_1', name: '满分闯关', icon: '💯', desc: '每日闯关获得满分' },
-  { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成学习' },
-  { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成学习' },
-  { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50次学习' },
+  { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成一节课' },
+  { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成一节课' },
+  { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50节课' },
   { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无拼写错误' },
 
   // 2026-10-17 Elouise：补齐到80个——等级制+新类别
@@ -761,7 +761,7 @@ const TITLE_DEFS = [
   { id: 'daily_30', name: '闯关一月', icon: '🏆', desc: '完成30天每日闯关', cat: '坚持', rarity: '史诗' },
   { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无拼写错误', cat: '学霸', rarity: '史诗' },
   { id: 'help_free_20', name: '独立20连', icon: '🚀', desc: '连续20道零求助', cat: '学霸', rarity: '稀有' },
-  { id: 'weekend_100', name: '周末战神', icon: '⚔️', desc: '周末累计100次学习', cat: '坚持', rarity: '史诗' },
+  { id: 'weekend_100', name: '周末战神', icon: '⚔️', desc: '周末累计完成100节课', cat: '坚持', rarity: '史诗' },
   { id: 'midnight_oil', name: '夜猫子', icon: '🦉', desc: '凌晨0-5点完成学习（隐藏）', cat: '隐藏', rarity: '传说' },
   { id: 'first_light', name: '破晓者', icon: '🌄', desc: '早上5-6点完成学习（隐藏）', cat: '隐藏', rarity: '传说' },
   { id: 'marathon', name: '马拉松', icon: '🏃', desc: '单日学习超过120分钟', cat: '坚持', rarity: '稀有' },
@@ -1010,19 +1010,19 @@ function checkTitles() {
     if (r && r.c >= 1) grant('perfect_1');
   } catch {}
   // ——— 早起鸟：早上7点前完成学习 ———
-  // ——— 早起鸟：早上7点前完成学习（北京时间，2026-10-17修：之前用UTC时间误判） ———
+  // ——— 早起鸟：早上7点前完成一节课（2026-10-17 Elouise：按完成课程数） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) < 7").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r && r.c >= 1) grant('morning_1');
   } catch {}
-  // ——— 夜读星：晚上22点后完成学习（北京时间） ———
+  // ——— 夜读星：晚上22点后完成一节课 ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) >= 22").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r && r.c >= 1) grant('night_1');
   } catch {}
-  // ——— 周末学霸：周末累计完成50次学习（2026-10-17 Elouise：之前1次太简单，改成50次；修UTC时区bug） ———
+  // ——— 周末学霸：周末累计完成50节课（2026-10-17 Elouise：按完成课程数，不是答题数） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE strftime('%w', datetime(created_at, '+8 hours')) IN ('0','6')").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
     if (r && r.c >= 50) grant('weekend_50');
   } catch {}
   // ——— 火眼金睛：连续50道题无拼写错误 ———
@@ -1082,11 +1082,11 @@ function checkTitles() {
     if (r && r.c >= 50) grant('vocab_master_50');
     if (r && r.c >= 100) grant('vocab_master_100');
   } catch {}
-  // 早起7次/夜读7次（按天去重）
+  // 早起7次/夜读7次（按天去重，2026-10-17：按完成课程数）
   try {
-    const r1 = db.prepare("SELECT COUNT(DISTINCT date(created_at, '+8 hours')) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) < 7").get();
+    const r1 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r1 && r1.c >= 7) grant('morning_7');
-    const r2 = db.prepare("SELECT COUNT(DISTINCT date(created_at, '+8 hours')) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) >= 22").get();
+    const r2 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r2 && r2.c >= 7) grant('night_7');
   } catch {}
   // 闯关7/30天
@@ -1111,17 +1111,17 @@ function checkTitles() {
   } catch {}
   // 周末100次
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE strftime('%w', datetime(created_at, '+8 hours')) IN ('0','6')").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
     if (r && r.c >= 100) grant('weekend_100');
   } catch {}
-  // 凌晨0-5点（隐藏）
+  // 凌晨0-5点（隐藏，2026-10-17：按完成课程数）
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
     if (r && r.c >= 1) grant('midnight_oil');
   } catch {}
   // 早上5-6点（隐藏）
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
     if (r && r.c >= 1) grant('first_light');
   } catch {}
   // 单日120分钟
