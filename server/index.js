@@ -1562,6 +1562,19 @@ app.post('/api/words/mastery', auth.requireAuth, (req, res) => {
   } catch (e) { res.json({ ok: false, error: e.message }); }
 });
 
+// 每日复习队列（2026-10-17）：昨天错的 + 1-3级超过2天没复习的，最多20个
+app.get('/api/words/review', auth.requireAuth, (req, res) => {
+  try {
+    const rows = db.prepare(`
+      SELECT word, level, wrong_n, last_at FROM word_mastery
+      WHERE level BETWEEN 1 AND 3
+      AND (last_at IS NULL OR date(last_at, '+8 hours') < date('now', '+8 hours', '-2 days'))
+      ORDER BY wrong_n DESC, last_at ASC LIMIT 20
+    `).all();
+    res.json({ ok: true, review: rows });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
+});
+
 // 诊断报告：知识点状态 + 家长一页报告
 app.get('/api/diagnostic/report', auth.requireAuth, (req, res) => {
   const { form } = req.query;
