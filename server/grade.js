@@ -23,7 +23,9 @@ const HOUR_WORDS = ['one','two','three','four','five','six','seven','eight','nin
 function normalize(text) {
   return String(text || '')
     .toLowerCase()
-    .replace(/[.,;!?'"“”‘’()\[\]{}<>_~*^$#@+=|\\\/?-]/g, ' ')
+    // 2026-10-17修：撇号是英文缩写组成部分（如 wasn't），先删除不替换空格，避免 "wasn't"→"wasn t" 误判
+    .replace(/[''']/g, '')
+    .replace(/[.,;!?"“”()\[\]{}<>_~*^$#@+=|\\\/?-]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
