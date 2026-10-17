@@ -179,7 +179,7 @@ async function loadMistakes() {
     if (resolved.length) {
       doneEl.innerHTML = resolved.map(m =>
         `<div style="border:1px solid #c8e6c9;border-radius:12px;padding:14px;margin-bottom:10px;background:#f1f8e9;">`
-        + `<div style="font-weight:600;margin-bottom:6px;">✅ ${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
+        + `<div style="font-weight:600;margin-bottom:6px;color:#212121;">✅ ${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
         + `<div style="font-size:14px;color:#666;">正确答案：${escHtml((m.correct || '').slice(0, 60))}</div>`
         + `<div style="font-size:13px;color:#999;margin-top:4px;">${escHtml(m.resolved_at || '').slice(0, 16)} 攻克${m.knowledge_point ? ' · ' + escHtml(m.knowledge_point) : ''}</div>`
         + `</div>`
@@ -233,7 +233,7 @@ function renderMistakeList() {
     return `<div class="mistake-item" onclick="${clickAction}" style="display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;${checked ? 'background:#e8f0fe;border-color:#1a73e8;' : ''}">`
       + checkbox
       + `<div style="flex:1;">`
-      + `<div style="font-weight:600;margin-bottom:6px;">${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
+      + `<div style="font-weight:600;margin-bottom:6px;color:#212121;">${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
       + `<div style="font-size:16px;color:#666;">你的答案：<span style="color:#c5221f;">${escHtml((m.given || '（空）').slice(0, 40))}</span></div>`
       + `<div style="font-size:14px;color:#999;margin-top:4px;">${escHtml(m.created_at || '').slice(0, 16)}${hint}</div>`
       + `</div></div>`;
