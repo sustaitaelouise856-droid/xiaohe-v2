@@ -741,7 +741,7 @@ const TITLE_DEFS = [
   { id: 'perfect_1', name: '满分闯关', icon: '💯', desc: '每日闯关获得满分' },
   { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成学习' },
   { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成学习' },
-  { id: 'weekend_1', name: '周末学霸', icon: '📅', desc: '周末完成学习' },
+  { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50次学习' },
   { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无拼写错误' },
 ];
 
@@ -982,19 +982,20 @@ function checkTitles() {
     if (r && r.c >= 1) grant('perfect_1');
   } catch {}
   // ——— 早起鸟：早上7点前完成学习 ———
+  // ——— 早起鸟：早上7点前完成学习（北京时间，2026-10-17修：之前用UTC时间误判） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', created_at) AS INTEGER) < 7").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r && r.c >= 1) grant('morning_1');
   } catch {}
-  // ——— 夜读星：晚上22点后完成学习 ———
+  // ——— 夜读星：晚上22点后完成学习（北京时间） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', created_at) AS INTEGER) >= 22").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r && r.c >= 1) grant('night_1');
   } catch {}
-  // ——— 周末学霸：周末完成学习 ———
+  // ——— 周末学霸：周末累计完成50次学习（2026-10-17 Elouise：之前1次太简单，改成50次；修UTC时区bug） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE strftime('%w', created_at) IN ('0','6')").get();
-    if (r && r.c >= 1) grant('weekend_1');
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE strftime('%w', datetime(created_at, '+8 hours')) IN ('0','6')").get();
+    if (r && r.c >= 50) grant('weekend_50');
   } catch {}
   // ——— 火眼金睛：连续50道题无拼写错误 ———
   try {
