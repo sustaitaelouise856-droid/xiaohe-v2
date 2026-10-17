@@ -408,7 +408,7 @@ function speakTts(text) {
     return true;
   } catch (e) { return false; }
 }
-function setAudio(audioId) {
+function setAudio(audioId, itemId) {
   const btnPlay = $('btnPlay');
   au.pause();
   setRate(getPlaySpeed());
@@ -416,10 +416,14 @@ function setAudio(audioId) {
   $('player').style.display = '';
   // 2026-10-15修：虚拟课（daily-retest/batch-retry）的题目来自原课，音频路径用 audio_id 前缀解析原课目录
   // 如 review3-q01 → /audio/review3/，u3-consolidate-q11 → /audio/u3-consolidate/
+  // 2026-10-17修：原课题目还有 u3r3-v01 这类 -vNN 命名（254/568 道题），旧正则解析不到，
+  // 指向 /audio/daily-retest/… 404。改从 item_id（如 u3r3-v1-s26）解析原课目录，正则兜底保留。
   let audioLid = LID;
   if (LID === 'daily-retest' || LID === 'batch-retry') {
-    const m = /^(.+)-q\d+$/i.exec(audioId);
-    if (m) audioLid = m[1];
+    const im = /^([a-z0-9-]+)-v\d+-s\d+$/i.exec(itemId || '');
+    const qm = /^(.+)-q\d+$/i.exec(audioId || '');
+    if (im) audioLid = im[1];
+    else if (qm) audioLid = qm[1];
   }
   au.src = '/audio/' + audioLid + '/' + audioId + '.mp3';
   btnPlay.className = 'paused';
@@ -781,7 +785,7 @@ function renderStep() {
     div.innerHTML = rawHtml;
     currentTtsText = (div.textContent || div.innerText || '').trim().slice(0, 500);
   } catch (e) { currentTtsText = ''; }
-  setAudio(s.audio_id);
+  setAudio(s.audio_id, s.item_id);
   let html = '';
   if (s.kind === 'teach') {
     const isStory = /story/.test(s.audio_id || '');
