@@ -94,6 +94,13 @@
     <div class="stat"><div class="n" id="stToday">0</div><div class="l">今日学习</div></div>
   </div>
   
+  <!-- 今日复习（2026-10-17升级） -->
+  <div id="reviewSection" style="display:none; margin-bottom:20px;">
+    <div style="font-size:15px;font-weight:800;margin-bottom:10px;">📝 今日复习 <span id="reviewCount" style="color:var(--muted);font-weight:400;"></span></div>
+    <div id="reviewList" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+    <button id="btnStartReview" class="mode-btn" style="width:100%;margin-top:10px;">开始复习</button>
+  </div>
+  
   <!-- 单元选择 -->
   <div class="unit-grid" id="unitGrid"></div>
   
@@ -216,7 +223,28 @@ const grid = document.getElementById('unitGrid');
 // 2026-10-17升级：先从后端加载掌握度，再渲染
 loadMastery().then(() => {
   renderUnitCards();
+  loadReview();
 });
+// 加载今日复习队列
+async function loadReview() {
+  try {
+    const r = await fetch('/api/words/review');
+    const d = await r.json();
+    if (d.ok && d.review && d.review.length > 0) {
+      document.getElementById('reviewSection').style.display = 'block';
+      document.getElementById('reviewCount').textContent = `(${d.review.length}个)`;
+      const list = document.getElementById('reviewList');
+      list.innerHTML = d.review.map(x => 
+        `<span style="background:#fff3e0;padding:6px 12px;border-radius:999px;font-size:13px;">${x.word} <small style="color:#999;">${getMasteryLabel(x.level)}</small></span>`
+      ).join('');
+      // 开始复习按钮：用这些词创建练习队列
+      document.getElementById('btnStartReview').onclick = () => {
+        // 简单实现：提示用户选择单元后，这些词会优先出现
+        alert(`今日有${d.review.length}个词待复习，选单元后它们会优先出现`);
+      };
+    }
+  } catch {}
+}
 function renderUnitCards() {
 UNITS.forEach(u => {
   const d = document.createElement('div');
