@@ -743,6 +743,34 @@ const TITLE_DEFS = [
   { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成学习' },
   { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50次学习' },
   { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无拼写错误' },
+
+  // 2026-10-17 Elouise：补齐到80个——等级制+新类别
+  { id: 'streak_30', name: '连对大师', icon: '🔥', desc: '连续答对30道（零求助）', cat: '学霸', rarity: '稀有' },
+  { id: 'streak_50', name: '连对宗师', icon: '💥', desc: '连续答对50道（零求助）', cat: '学霸', rarity: '史诗' },
+  { id: 'minutes_3600', name: '学霸本色·金', icon: '⏰', desc: '累计学习3600分钟（60小时）', cat: '坚持', rarity: '史诗' },
+  { id: 'vocab_100', name: '生词大户', icon: '📚', desc: '生词本100个词', cat: '探索', rarity: '稀有' },
+  { id: 'review_10', name: '复习专家', icon: '🔄', desc: '完成10节复习课', cat: '坚持', rarity: '稀有' },
+  { id: 'independent_10', name: '独立大师', icon: '💪', desc: '零求助完成10节课', cat: '学霸', rarity: '稀有' },
+  { id: 'retry_30', name: '知错能改·金', icon: '🛠️', desc: '重做答对30道', cat: '学霸', rarity: '稀有' },
+  { id: 'perfect_3', name: '满分常客', icon: '💯', desc: '每日闯关满分3次', cat: '学霸', rarity: '史诗' },
+  { id: 'vocab_master_50', name: '词汇小成', icon: '📖', desc: '50个单词达到掌握级', cat: '学霸', rarity: '稀有' },
+  { id: 'vocab_master_100', name: '词汇大师', icon: '👑', desc: '100个单词达到掌握级', cat: '学霸', rarity: '史诗' },
+  { id: 'morning_7', name: '早起习惯', icon: '🌅', desc: '7天早上7点前学习', cat: '坚持', rarity: '稀有' },
+  { id: 'night_7', name: '夜读习惯', icon: '🌙', desc: '7天晚上22点后学习', cat: '坚持', rarity: '稀有' },
+  { id: 'daily_7', name: '闯关一周', icon: '🎯', desc: '完成7天每日闯关', cat: '坚持', rarity: '普通' },
+  { id: 'daily_30', name: '闯关一月', icon: '🏆', desc: '完成30天每日闯关', cat: '坚持', rarity: '史诗' },
+  { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无拼写错误', cat: '学霸', rarity: '史诗' },
+  { id: 'help_free_20', name: '独立20连', icon: '🚀', desc: '连续20道零求助', cat: '学霸', rarity: '稀有' },
+  { id: 'weekend_100', name: '周末战神', icon: '⚔️', desc: '周末累计100次学习', cat: '坚持', rarity: '史诗' },
+  { id: 'midnight_oil', name: '夜猫子', icon: '🦉', desc: '凌晨0-5点完成学习（隐藏）', cat: '隐藏', rarity: '传说' },
+  { id: 'first_light', name: '破晓者', icon: '🌄', desc: '早上5-6点完成学习（隐藏）', cat: '隐藏', rarity: '传说' },
+  { id: 'marathon', name: '马拉松', icon: '🏃', desc: '单日学习超过120分钟', cat: '坚持', rarity: '稀有' },
+  { id: 'comeback', name: '卷土重来', icon: '💫', desc: '同一道错题重做3次后答对', cat: '学霸', rarity: '稀有' },
+  { id: 'perfectionist', name: '完美主义', icon: '✨', desc: '单节课100%正确率（20题+）', cat: '学霸', rarity: '史诗' },
+  { id: 'explorer', name: '探索者', icon: '🧭', desc: '使用过全部4种单词模式', cat: '探索', rarity: '普通' },
+  { id: 'social', name: '分享达人', icon: '💌', desc: '分享学习报告给家长（隐藏）', cat: '隐藏', rarity: '普通' },
+  { id: 'lucky_7', name: '幸运七', icon: '🍀', desc: '7月7日完成学习（隐藏）', cat: '隐藏', rarity: '传说' },
+  { id: 'century', name: '百年大计', icon: '💯', desc: '累计答对1000道题', cat: '坚持', rarity: '传说' },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -1006,6 +1034,105 @@ function checkTitles() {
       else break;
     }
     if (streak >= 50) grant('no_typo_50');
+  } catch {}
+  // ——— 2026-10-17新增26个：等级制 ———
+  // 连对30/50
+  try {
+    const rows = db.prepare("SELECT correct, helped FROM attempts ORDER BY id DESC LIMIT 60").all();
+    let s = 0;
+    for (const r of rows) { if (r.correct === 1 && r.helped === 0) s++; else break; }
+    if (s >= 30) grant('streak_30');
+    if (s >= 50) grant('streak_50');
+  } catch {}
+  // 3600分钟
+  try {
+    const r = db.prepare("SELECT COALESCE(SUM(elapsed_ms),0) ms FROM attempts").get();
+    if (r && r.ms >= 3600 * 60 * 1000) grant('minutes_3600');
+  } catch {}
+  // 生词100
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM vocab_words").get();
+    if (r && r.c >= 100) grant('vocab_100');
+  } catch {}
+  // 复习10节
+  try {
+    const r = db.prepare("SELECT COUNT(DISTINCT lesson_id) c FROM lesson_state WHERE p2_done=1 AND lesson_id LIKE 'review%'").get();
+    if (r && r.c >= 10) grant('review_10');
+  } catch {}
+  // 零求助10节
+  try {
+    const r = db.prepare(`SELECT COUNT(*) c FROM (
+      SELECT lesson_id FROM attempts GROUP BY lesson_id HAVING SUM(helped)=0 AND COUNT(*)>=5
+    )`).get();
+    if (r && r.c >= 10) grant('independent_10');
+  } catch {}
+  // 重做30道
+  try {
+    const r = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE verdict='correct_retry'").get();
+    if (r && r.c >= 30) grant('retry_30');
+  } catch {}
+  // 满分3次
+  try {
+    const r = db.prepare("SELECT value FROM app_state WHERE key='daily_retest_perfect'").get();
+    if (r && parseInt(r.value) >= 3) grant('perfect_3');
+  } catch {}
+  // 掌握50/100词
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM word_mastery WHERE level>=4").get();
+    if (r && r.c >= 50) grant('vocab_master_50');
+    if (r && r.c >= 100) grant('vocab_master_100');
+  } catch {}
+  // 早起7次/夜读7次（按天去重）
+  try {
+    const r1 = db.prepare("SELECT COUNT(DISTINCT date(created_at, '+8 hours')) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) < 7").get();
+    if (r1 && r1.c >= 7) grant('morning_7');
+    const r2 = db.prepare("SELECT COUNT(DISTINCT date(created_at, '+8 hours')) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) >= 22").get();
+    if (r2 && r2.c >= 7) grant('night_7');
+  } catch {}
+  // 闯关7/30天
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM checkins WHERE kind='challenge'").get();
+    if (r && r.c >= 7) grant('daily_7');
+    if (r && r.c >= 30) grant('daily_30');
+  } catch {}
+  // 100道无拼写错
+  try {
+    const rows = db.prepare("SELECT verdict FROM attempts ORDER BY id DESC LIMIT 120").all();
+    let streak = 0;
+    for (const r of rows) { if (r.verdict !== 'typo') streak++; else break; }
+    if (streak >= 100) grant('no_typo_100');
+  } catch {}
+  // 连续20道零求助
+  try {
+    const rows = db.prepare("SELECT helped FROM attempts ORDER BY id DESC LIMIT 25").all();
+    let s = 0;
+    for (const r of rows) { if (r.helped === 0) s++; else break; }
+    if (s >= 20) grant('help_free_20');
+  } catch {}
+  // 周末100次
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE strftime('%w', datetime(created_at, '+8 hours')) IN ('0','6')").get();
+    if (r && r.c >= 100) grant('weekend_100');
+  } catch {}
+  // 凌晨0-5点（隐藏）
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
+    if (r && r.c >= 1) grant('midnight_oil');
+  } catch {}
+  // 早上5-6点（隐藏）
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE CAST(strftime('%H', datetime(created_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
+    if (r && r.c >= 1) grant('first_light');
+  } catch {}
+  // 单日120分钟
+  try {
+    const r = db.prepare(`SELECT MAX(ms) m FROM (SELECT SUM(elapsed_ms) ms FROM attempts GROUP BY date(created_at, '+8 hours'))`).get();
+    if (r && r.m >= 120 * 60 * 1000) grant('marathon');
+  } catch {}
+  // 累计1000道
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE correct=1").get();
+    if (r && r.c >= 1000) grant('century');
   } catch {}
   return newly;
 }
