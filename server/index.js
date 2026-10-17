@@ -1506,7 +1506,7 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         verdict: r.verdict,
         created_at: r.created_at,
       };
-    });
+    }).filter(m => m.question && m.question.trim() !== '');  // 2026-10-17：过滤掉题干为空的（item_id在items表无匹配）
     // 2026-10-14：过滤掉已解决的（retest_queue.status='resolved'），它们进"最近拿下"
     // 2026-10-15修：只有"无 pending 记录"的才算真正攻克；有 pending 的（即使也有 resolved）仍留在"正在攻克"
     let filtered = mistakes;
