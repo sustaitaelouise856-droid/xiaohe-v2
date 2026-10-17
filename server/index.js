@@ -1533,6 +1533,35 @@ app.get('/api/vocab/list', auth.requireAuth, (req, res) => {
   res.json({ ok: true, words: rows });
 });
 
+// 单词掌握度（2026-10-17）：5级制，0陌生/1眼熟/2会认/3会拼/4掌握
+app.get('/api/words/mastery', auth.requireAuth, (req, res) => {
+  try {
+    const rows = db.prepare('SELECT word, level, correct_n, wrong_n, last_at FROM word_mastery').all();
+    const map = {};
+    for (const r of rows) map[r.word] = r;
+    res.json({ ok: true, mastery: map });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
+});
+
+// 更新单词掌握度：correct=1答对+1级，0答错-1级（0-4钳制）
+app.post('/api/words/mastery', auth.requireAuth, (req, res) => {
+  try {
+    const { word, correct } = req.body || {};
+    if (!word) return res.json({ ok: false, error: 'no_word' });
+    const cur = db.prepare('SELECT level, correct_n, wrong_n FROM word_mastery WHERE word=?').get(word);
+    let level = cur ? cur.level : 0;
+    let cn = cur ? cur.correct_n : 0;
+    let wn = cur ? cur.wrong_n : 0;
+    if (correct) { level = Math.min(4, level + 1); cn++; }
+    else { level = Math.max(0, level - 1); wn++; }
+    db.prepare(`INSERT INTO word_mastery(word, level, correct_n, wrong_n, last_at, updated_at)
+      VALUES(?, ?, ?, ?, datetime('now'), datetime('now'))
+      ON CONFLICT(word) DO UPDATE SET level=excluded.level, correct_n=excluded.correct_n,
+      wrong_n=excluded.wrong_n, last_at=excluded.last_at, updated_at=excluded.updated_at`).run(word, level, cn, wn);
+    res.json({ ok: true, word, level });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
+});
+
 // 诊断报告：知识点状态 + 家长一页报告
 app.get('/api/diagnostic/report', auth.requireAuth, (req, res) => {
   const { form } = req.query;
