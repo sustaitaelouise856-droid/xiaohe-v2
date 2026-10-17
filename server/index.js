@@ -2478,6 +2478,20 @@ app.post('/api/admin/cleanup-retest', (req, res) => {
     res.json({ ok: false, error: e.message });
   }
 });
+// 管理员：恢复签到（2026-10-17：恢复误删的Elouise签到）
+app.post('/api/admin/restore-checkin', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const { day, kind } = req.body || {};
+    const d = day || require('./time').shanghaiDay();
+    const k = kind || 'manual';
+    db.prepare("INSERT OR IGNORE INTO checkins(day, kind, created_at) VALUES(?, ?, datetime('now'))").run(d, k);
+    res.json({ ok: true, day: d, kind: k });
+  } catch (e) { res.json({ ok: false, error: e.message }); }
+});
 // 管理员备份接口：下载 SQLite 数据库文件（用于 Google Drive 自动备份）
 // 需要 BACKUP_TOKEN 环境变量验证
 app.get('/api/admin/backup', (req, res) => {
