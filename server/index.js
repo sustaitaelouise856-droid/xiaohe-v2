@@ -317,7 +317,7 @@ app.get('/api/checkin', auth.requireAuth, (req, res) => {
 app.post('/api/checkin', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    db.prepare("INSERT OR IGNORE INTO checkins(day, created_at) VALUES(?, datetime('now'))").run(shanghaiDay());
+    db.prepare("INSERT OR IGNORE INTO checkins(day, kind, created_at) VALUES(?, 'manual', datetime('now'))").run(shanghaiDay());
   } catch (e) { console.error('[checkin] write', e.message); }
   const newTitles = checkTitles(); // 签到可能触发"坚持小勇士"
   try { res.json({ ...checkinStatus(), newTitles }); }
@@ -1228,7 +1228,7 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
     const items = retest.selectDailyRetestItems(8);
     const today = shanghaiDay();
     // 今日是否已通关：checkins 有今天，且今天做过 daily-retest 的题
-    const checked = db.prepare('SELECT 1 FROM checkins WHERE day=?').get(today);
+    const checked = db.prepare("SELECT 1 FROM checkins WHERE day=? AND kind='challenge'").get(today);
     let doneCount = 0;
     try {
       doneCount = db.prepare(`SELECT COUNT(DISTINCT item_id) AS c FROM attempts
@@ -1239,7 +1239,7 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
     // 连续天数：从今天（或昨天）往前数 checkins 连续的天数
     let streak = 0;
     try {
-      const days = db.prepare('SELECT day FROM checkins ORDER BY day DESC').all().map(r => r.day);
+      const days = db.prepare("SELECT day FROM checkins WHERE kind='challenge' ORDER BY day DESC").all().map(r => r.day);
       const set = new Set(days);
       let d = new Date(today + 'T12:00:00');
       if (!set.has(today)) d.setDate(d.getDate() - 1); // 今天没打卡，从昨天算
@@ -1258,7 +1258,17 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
 app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    db.prepare("INSERT OR IGNORE INTO checkins(day, created_at) VALUES(?, datetime('now'))").run(shanghaiDay());
+    // 2026-10-17防线：当天没做过闯关题，拒绝写通关记录（防前端误调）
+    const today = shanghaiDay();
+    const ansCount = db.prepare(`
+      SELECT COUNT(*) c FROM attempts
+      WHERE date(created_at, '+8 hours') = ?
+      AND session_id LIKE '%daily-retest%'
+    `).get(today);
+    if (!ansCount || ansCount.c === 0) {
+      return res.json({ ok: false, error: 'no_answers_today' });
+    }
+    db.prepare("INSERT OR IGNORE INTO checkins(day, kind, created_at) VALUES(?, 'challenge', datetime('now'))").run(today);
     // 2026-10-14：记录每日闯关完成次数（供"闯关达人"称号）
     try {
       const cur = db.prepare("SELECT value FROM app_state WHERE key='daily_retest_count'").get();
