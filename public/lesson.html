@@ -1410,7 +1410,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     if (LESSON && !b.helped) {
       let resolveId = null;
       if (LESSON.single_retry && LESSON.retry_item) resolveId = LESSON.retry_item;
-      else if (LESSON.batch_retry && s.item_id) resolveId = s.item_id;
+      else if (LESSON.batch_retry && s.retry_item) resolveId = s.retry_item;
       if (resolveId) {
         fetch('/api/retest/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ item_id: resolveId }) }).catch(() => {});
