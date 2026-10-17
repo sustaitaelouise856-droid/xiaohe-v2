@@ -122,6 +122,27 @@ CREATE TABLE IF NOT EXISTS checkins (
   day        TEXT PRIMARY KEY,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
+// 2026-10-17迁移：签到和闯关分开记。kind='manual'(成长页签到) | 'challenge'(每日闯关通关)
+try {
+  const cols = db.prepare("PRAGMA table_info(checkins)").all();
+  const hasKind = cols.some(c => c.name === 'kind');
+  if (!hasKind) {
+    // 重建表以支持 (day, kind) 复合主键
+    db.exec(`
+      CREATE TABLE checkins_new (
+        day        TEXT NOT NULL,
+        kind       TEXT NOT NULL DEFAULT 'manual',
+        created_at TEXT NOT NULL DEFAULT (datetime('now')),
+        PRIMARY KEY (day, kind)
+      );
+      INSERT INTO checkins_new(day, kind, created_at)
+        SELECT day, 'manual', created_at FROM checkins;
+      DROP TABLE checkins;
+      ALTER TABLE checkins_new RENAME TO checkins;
+    `);
+    console.log('[db] checkins migrated: added kind column');
+  }
+} catch (e) { console.log('[db] checkins migration skip:', e.message); }
 // 弱点事件：如下节课要复习的"英文书写"
 db.exec(`
 CREATE TABLE IF NOT EXISTS weakness_events (
