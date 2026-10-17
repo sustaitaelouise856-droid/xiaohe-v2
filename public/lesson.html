@@ -1664,6 +1664,16 @@ async function submitCopy(s, answer) {
         if (!ST.p2) ST.p2 = { sid: '', pos: 0, done: false };
       } catch {}
     }
+    // 2026-10-17修：单题重做强制用新 session_id，不复用旧课的 sid
+    // 否则旧 help_events 会污染（Elouise 报告：没点提示却显示"用了提示"）
+    if (LESSON && LESSON.single_retry) {
+      try {
+        const freshSid = 'retry-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+        if (!ST.p1) ST.p1 = { sid: '', pos: 0, done: false };
+        ST.p1.sid = freshSid;
+        store.save(ST);
+      } catch {}
+    }
     // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
     if (LESSON && LESSON.error === 'lesson_locked') {
       document.title = '小禾英语 · 课程未解锁';
