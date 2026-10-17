@@ -215,3 +215,14 @@ CREATE TABLE IF NOT EXISTS story_choices (
   updated_at TEXT NOT NULL DEFAULT (datetime('now')),
   PRIMARY KEY (lesson_id, choice_key)
 );`);
+// 单词掌握度（2026-10-17 Elouise：单词学习区升级，5级掌握制）
+// level: 0陌生 1眼熟 2会认 3会拼 4掌握；答对+1，答错-1
+db.exec(`
+CREATE TABLE IF NOT EXISTS word_mastery (
+  word       TEXT PRIMARY KEY,
+  level      INTEGER NOT NULL DEFAULT 0,
+  correct_n  INTEGER NOT NULL DEFAULT 0,
+  wrong_n    INTEGER NOT NULL DEFAULT 0,
+  last_at    TEXT,
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
