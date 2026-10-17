@@ -2395,6 +2395,37 @@ app.post('/api/admin/delete-checkin', (req, res) => {
     res.json({ ok: false, error: e.message });
   }
 });
+// 管理员：清理错题本重复pending（2026-10-17 Elouise死命令：删重复、删已做对的）
+app.post('/api/admin/cleanup-retest', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    // 1. 删重复：每个item_id只留最早的一条pending，其余删除
+    const dups = db.prepare(`
+      DELETE FROM retest_queue WHERE id IN (
+        SELECT id FROM (
+          SELECT id, ROW_NUMBER() OVER (PARTITION BY item_id ORDER BY id ASC) as rn
+          FROM retest_queue WHERE status='pending'
+        ) WHERE rn > 1
+      )
+    `).run();
+    // 2. 删已做对的：今天有correct=1,helped=0,independent=1的，删其pending
+    const today = require('./time').shanghaiDay();
+    const done = db.prepare(`
+      DELETE FROM retest_queue WHERE status='pending' AND item_id IN (
+        SELECT DISTINCT item_id FROM attempts
+        WHERE correct=1 AND helped=0 AND independent=1
+        AND date(created_at, '+8 hours') = ?
+      )
+    `).run(today);
+    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes);
+    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
 // 管理员备份接口：下载 SQLite 数据库文件（用于 Google Drive 自动备份）
 // 需要 BACKUP_TOKEN 环境变量验证
 app.get('/api/admin/backup', (req, res) => {
