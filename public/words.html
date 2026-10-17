@@ -153,27 +153,44 @@ const UNITS = [
   { id: 'unit6', name: 'Unit 6', title: 'Ancient stories', desc: '古代故事 · 现在完成时' },
 ];
 let curUnit = null, words = [], queue = [], idx = 0, mode = 'card';
-let mastery = JSON.parse(localStorage.getItem('xh_words_mastery') || '{}'); // key: unit:en -> {count:0-3}
+let mastery = {}; // 2026-10-17升级：从后端加载，5级制 0陌生/1眼熟/2会认/3会拼/4掌握
 let todayCount = parseInt(localStorage.getItem('xh_words_today_' + new Date().toDateString()) || '0');
 
-function mkey(u, en) { return u + ':' + en; }
-function getMastery(u, en) { return (mastery[mkey(u, en)] || {}).count || 0; }
-function addMastery(u, en, ok) {
-  const k = mkey(u, en);
-  const m = mastery[k] || { count: 0 };
-  if (ok) m.count = Math.min(3, m.count + 1);
-  else m.count = Math.max(0, m.count - 1);
-  mastery[k] = m;
-  localStorage.setItem('xh_words_mastery', JSON.stringify(mastery));
+// 从后端加载掌握度
+async function loadMastery() {
+  try {
+    const r = await fetch('/api/words/mastery');
+    const d = await r.json();
+    if (d.ok) mastery = d.mastery || {};
+  } catch {}
+}
+
+function getMastery(en) { return (mastery[en] || {}).level || 0; }
+function getMasteryLabel(lv) {
+  return ['陌生', '眼熟', '会认', '会拼', '掌握'][lv] || '陌生';
+}
+async function addMastery(en, ok) {
+  // 调后端更新
+  try {
+    const r = await fetch('/api/words/mastery', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ word: en, correct: !!ok })
+    });
+    const d = await r.json();
+    if (d.ok) {
+      mastery[en] = mastery[en] || {};
+      mastery[en].level = d.level;
+    }
+  } catch {}
   todayCount++;
   localStorage.setItem('xh_words_today_' + new Date().toDateString(), todayCount);
   updateStats();
 }
-function isMastered(u, en) { return getMastery(u, en) >= 3; }
+function isMastered(en) { return getMastery(en) >= 4; }
 
 function updateStats() {
   if (!curUnit || !words.length) return;
-  const mastered = words.filter(w => isMastered(curUnit.id, w.en)).length;
+  const mastered = words.filter(w => isMastered(w.en)).length;
   document.getElementById('stTotal').textContent = words.length;
   document.getElementById('stMastered').textContent = mastered;
   document.getElementById('stToday').textContent = todayCount;
@@ -196,6 +213,11 @@ function updateStats() {
 
 // 渲染单元
 const grid = document.getElementById('unitGrid');
+// 2026-10-17升级：先从后端加载掌握度，再渲染
+loadMastery().then(() => {
+  renderUnitCards();
+});
+function renderUnitCards() {
 UNITS.forEach(u => {
   const d = document.createElement('div');
   d.className = 'unit-card'; d.dataset.unit = u.id;
@@ -204,12 +226,13 @@ UNITS.forEach(u => {
   d.onclick = () => selectUnit(u, d);
   grid.appendChild(d);
   fetch(`/words/${u.id}.json`).then(r => r.json()).then(j => {
-    const m = j.words.filter(w => isMastered(u.id, w.en)).length;
+    const m = j.words.filter(w => isMastered(w.en)).length;
     const pct = Math.round(m / j.words.length * 100);
     d.querySelector('.pfill').style.width = pct + '%';
     document.getElementById(`pt-${u.id}`).textContent = `已掌握 ${m}/${j.words.length}`;
   }).catch(() => { document.getElementById(`pt-${u.id}`).textContent = '暂无'; });
 });
+} // end renderUnitCards
 
 async function selectUnit(u, el) {
   document.querySelectorAll('.unit-card').forEach(x => x.classList.remove('sel'));
@@ -220,7 +243,7 @@ async function selectUnit(u, el) {
     const j = await r.json();
     words = j.words;
     // 优先复习未掌握的词
-    queue = [...words].sort((a, b) => getMastery(u.id, a.en) - getMastery(u.id, b.en));
+    queue = [...words].sort((a, b) => getMastery(a.en) - getMastery(b.en));
     idx = 0;
     // 2026-10-16：进学习模式后隐藏单元看板，界面更干净
     document.getElementById('unitGrid').style.display = 'none';
@@ -251,7 +274,7 @@ document.querySelectorAll('#modeGrid .mode-btn').forEach(b => {
     document.querySelectorAll('#modeGrid .mode-btn').forEach(x => x.classList.remove('sel'));
     b.classList.add('sel');
     mode = b.dataset.mode;
-    queue = [...words].sort((a, b) => getMastery(curUnit.id, a.en) - getMastery(curUnit.id, b.en));
+    queue = [...words].sort((a, b) => getMastery(a.en) - getMastery(b.en));
     idx = 0;
     renderWord();
   };
@@ -260,7 +283,7 @@ document.querySelectorAll('#modeGrid .mode-btn').forEach(b => {
 function renderWord() {
   if (!queue.length) return;
   const w = queue[idx];
-  const m = getMastery(curUnit.id, w.en);
+  const m = getMastery(w.en);
   // 听音模式不暴露英文单词（标题只显示进度）
   const showEn = mode !== 'listen';
   document.getElementById('progress').textContent = showEn ? `${idx + 1} / ${queue.length} · ${w.en}` : `${idx + 1} / ${queue.length}`;
@@ -350,11 +373,11 @@ function buildOptions(w) {
       list.querySelectorAll('.opt').forEach(x => x.style.pointerEvents = 'none');
       if (o.ok) {
         b.classList.add('correct');
-        addMastery(curUnit.id, w.en, true);
+        addMastery(w.en, true);
         setTimeout(nextWord, 800);
       } else {
         b.classList.add('wrong');
-        addMastery(curUnit.id, w.en, false);
+        addMastery(w.en, false);
         // 标出正确项
         [...list.children].forEach(x => { if (x.textContent === w.cn) x.classList.add('correct'); });
         setTimeout(nextWord, 1500);
@@ -373,10 +396,10 @@ document.getElementById('btnShow').onclick = () => {
 function nextWord() {
   idx++;
   if (idx >= queue.length) {
-    const m = words.filter(w => isMastered(curUnit.id, w.en)).length;
+    const m = words.filter(w => isMastered(w.en)).length;
     // 卡片模式循环复习，其他模式显示完成页（2026-10-16：测试/拼写/听音做完要结束，不能无限循环）
     if (mode === 'card') {
-      queue = [...words].sort((a, b) => getMastery(curUnit.id, a.en) - getMastery(curUnit.id, b.en));
+      queue = [...words].sort((a, b) => getMastery(a.en) - getMastery(b.en));
       idx = 0;
       if (m === words.length) { showComplete(); return; }
     } else {
@@ -389,7 +412,7 @@ function nextWord() {
 }
 
 function showComplete() {
-  const m = words.filter(w => isMastered(curUnit.id, w.en)).length;
+  const m = words.filter(w => isMastered(w.en)).length;
   document.getElementById('learnArea').innerHTML = `
     <div style="background:#fff;border-radius:22px;padding:48px 24px;text-align:center;box-shadow:0 6px 24px rgba(60,64,67,.1);">
       <div style="font-size:56px;">🎉</div>
@@ -401,8 +424,8 @@ function showComplete() {
       </div>
     </div>`;
 }
-document.getElementById('btnKnow').onclick = () => { addMastery(curUnit.id, queue[idx].en, true); nextWord(); };
-document.getElementById('btnUnknown').onclick = () => { addMastery(curUnit.id, queue[idx].en, false); nextWord(); };
+document.getElementById('btnKnow').onclick = () => { addMastery(queue[idx].en, true); nextWord(); };
+document.getElementById('btnUnknown').onclick = () => { addMastery(queue[idx].en, false); nextWord(); };
 
 document.getElementById('btnSpellSub').onclick = () => {
   const w = queue[idx];
@@ -410,13 +433,13 @@ document.getElementById('btnSpellSub').onclick = () => {
   const val = inp.value.trim().toLowerCase();
   if (val === w.en.toLowerCase()) {
     inp.className = 'ok';
-    addMastery(curUnit.id, w.en, true);
+    addMastery(w.en, true);
     spellWrong = 0;
     setTimeout(nextWord, 600);
   } else {
     spellWrong = (spellWrong || 0) + 1;
     inp.className = 'no';
-    addMastery(curUnit.id, w.en, false);
+    addMastery(w.en, false);
     // 2026-10-16修：错3次显示正确答案，不让孩子无限重试
     if (spellWrong >= 3) {
       inp.value = w.en;
@@ -428,7 +451,7 @@ document.getElementById('btnSpellSub').onclick = () => {
     }
   }
 };
-document.getElementById('btnSpellSkip').onclick = () => { addMastery(curUnit.id, queue[idx].en, false); nextWord(); };
+document.getElementById('btnSpellSkip').onclick = () => { addMastery(queue[idx].en, false); nextWord(); };
 document.getElementById('spellInput').addEventListener('keypress', e => {
   if (e.key === 'Enter') document.getElementById('btnSpellSub').click();
 });
