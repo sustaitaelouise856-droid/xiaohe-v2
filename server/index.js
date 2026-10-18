@@ -2495,7 +2495,14 @@ function lessonOpen(lid) {
     try {
       const st = lessonState(lid);
       const started = st && (st.p1_done === 1 || st.p2_done === 1);
-      if (!started && hasPendingReviews()) return false;
+      if (!started) {
+        // 2026-10-18修：错题门禁按"每天10道"（Elouise 10-15定），不是清完所有待复测；
+        // 之前用 hasPendingReviews()（待复测>0就锁），导致 u5r1 被幽灵错题永久锁死（当晚事故）。
+        // review课/专项巩固的待办仍按原来锁，只有 retest 改走每日10道口径。
+        const nonRetest = getPendingReviews().filter(p => p.type !== 'retest');
+        if (nonRetest.length > 0) return false;
+        if (!checkDailyMistakes()) return false;
+      }
     } catch {}
   }
   const ids = orderedLessons();
@@ -2684,14 +2691,22 @@ app.post('/api/admin/cleanup-retest', (req, res) => {
         )
       )
     `).run();
-    // 5. 删13:12测试批次：同秒批量插入、knowledge_point='general'的26道测试pending（2026-10-18 Elouise批准）
+    // 5. 测试批次（13:12同秒批量插入、knowledge_point='general'的26道）：标 resolved 而不是删除
+    // （2026-10-18教训：直接 DELETE 会被 backfillWrongToRetest 复活——这些题 wrong≥2 且删后无 retest_queue 记录；
+    // 标 resolved 后 backfill 的 q.id IS NULL 条件不成立，不会再加回来。2026-10-18 Elouise批准清掉）
+    const testIds = ['u2r2-v3-s33','u2r2-v3-s34','u2r2-v3-s35','u2r3-v1-s29','u2r3-v1-s33','u2r3-v1-s35','u2r4-v1-s21','u2r4-v1-s34','u2r4-v1-s35','u2r5-v1-s17','u2r5-v1-s26','u2r5-v1-s34','u3r1-v1-s32','u3r2-v1-s31','u3r2-v1-s33','u3r3-v1-s31','u3r3-v1-s32','u3r4-v1-s30','u3r4-v1-s31','u3r4-v1-s34','u3r5-v1-s28','u3r3-v1-s20','u2r4-v1-s32','u4r2-v1-s29','u4r2-v1-s35','u3r2-v1-s30'];
     const testBatch = db.prepare(`
-      DELETE FROM retest_queue WHERE status='pending'
-      AND id BETWEEN 137 AND 162
-      AND knowledge_point='general'
-    `).run();
-    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes, 'stuck_deleted=', stuck.changes, 'testBatch_deleted=', testBatch.changes);
-    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes, stuck_deleted: stuck.changes, testBatch_deleted: testBatch.changes });
+      UPDATE retest_queue SET status='resolved', resolved_at=datetime('now')
+      WHERE status='pending' AND item_id IN (${testIds.map(() => '?').join(',')})
+    `).run(...testIds);
+    // 兜底：若连 pending 行都没有（已被删），补 resolved 行防 backfill 复活
+    const insRes = db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, resolved_at)
+      SELECT ?, 'general', 'resolved', datetime('now')
+      WHERE NOT EXISTS (SELECT 1 FROM retest_queue WHERE item_id=?)`);
+    let testBatchIns = 0;
+    for (const iid of testIds) { testBatchIns += insRes.run(iid, iid).changes; }
+    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes, 'stuck_deleted=', stuck.changes, 'testBatch_resolved=', testBatch.changes, 'testBatch_ins=', testBatchIns);
+    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes, stuck_deleted: stuck.changes, testBatch_resolved: testBatch.changes, testBatch_ins: testBatchIns });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
