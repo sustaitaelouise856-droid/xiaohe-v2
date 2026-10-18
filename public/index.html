@@ -484,20 +484,20 @@ function titlePageTurn(d) {
 }
 // 称号详情弹窗（首页 modal 用）
 // 2026-10-18 Elouise：八段位，按百分比
-// 2026-10-18 Elouise：段位改称号点制（普通1点/稀有2点/史诗3点/传说4点）
+// 2026-10-18 Elouise：段位改称号点制（普通1点/稀有2点/史诗4点/传说8点）
 function getTitlePoints(list) {
-  const pts = { '普通': 1, '稀有': 2, '史诗': 3, '传说': 4 };
+  const pts = { '普通': 1, '稀有': 2, '史诗': 4, '传说': 8 };
   return list.filter(x => x.earned).reduce((s, x) => s + (pts[x.rarity || '普通'] || 1), 0);
 }
 function getTierByPoints(points) {
   const tiers = [
-    { min: 106, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
-    { min: 91, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
-    { min: 76, tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！' },
-    { min: 61, tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！' },
-    { min: 46, tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！' },
-    { min: 31, tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！' },
-    { min: 16, tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！' },
+    { min: 140, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
+    { min: 120, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
+    { min: 100, tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！' },
+    { min: 80, tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！' },
+    { min: 60, tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！' },
+    { min: 40, tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！' },
+    { min: 20, tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！' },
     { min: 0, tier: 'bronze', name: '青铜', msg: '“千里之行，始于足下。”加油！' },
   ];
   for (let i = 0; i < tiers.length; i++) {
@@ -552,21 +552,21 @@ function showTierPreview() {
   const total = list.length || 80;
   const ratio = earned / total;
   const tiers = [
-    { name: '青铜', range: '0 - 15点', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！',
+    { name: '青铜', range: '0 - 19点', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！',
       bg: '#a1887f', border: '#4e342e', txt: '#fff' },
-    { name: '白银', range: '16 - 30点', min: 16, color: '#78909c', desc: '已有进步，再接再厉！',
+    { name: '白银', range: '20 - 39点', min: 20, color: '#78909c', desc: '已有进步，再接再厉！',
       bg: '#b0bec5', border: '#455a64', txt: '#37474f' },
-    { name: '黄金', range: '31 - 45点', min: 31, color: '#ff8f00', desc: '稳步上升，铂金在望！',
+    { name: '黄金', range: '40 - 59点', min: 40, color: '#ff8f00', desc: '稳步上升，铂金在望！',
       bg: '#ffd54f', border: '#bf360c', txt: '#4e342e' },
-    { name: '铂金', range: '46 - 60点', min: 46, color: '#00acc1', desc: '过半在即，钻石招手！',
+    { name: '铂金', range: '60 - 79点', min: 60, color: '#00acc1', desc: '过半在即，钻石招手！',
       bg: '#80deea', border: '#006064', txt: '#004d40' },
-    { name: '钻石', range: '61 - 75点', min: 61, color: '#0288d1', desc: '已过半，大师不远了！',
+    { name: '钻石', range: '80 - 99点', min: 80, color: '#0288d1', desc: '已过半，大师不远了！',
       bg: '#81d4fa', border: '#01579b', txt: '#01579b' },
-    { name: '大师', range: '76 - 90点', min: 76, color: '#7b1fa2', desc: '高手风范，宗师可期！',
+    { name: '大师', range: '100 - 119点', min: 100, color: '#7b1fa2', desc: '高手风范，宗师可期！',
       bg: '#ce93d8', border: '#4a148c', txt: '#fff' },
-    { name: '宗师', range: '91 - 105点', min: 91, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！',
+    { name: '宗师', range: '120 - 139点', min: 120, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！',
       bg: '#f48fb1', border: '#880e4f', txt: '#fff' },
-    { name: '王者', range: '106 - 130点', min: 106, color: '#ff6f00', desc: '最高荣誉，你是传奇！',
+    { name: '王者', range: '140 - 160点', min: 140, color: '#ff6f00', desc: '最高荣誉，你是传奇！',
       bg: '#ffcc80', border: '#bf360c', txt: '#4e342e' },
   ];
   const points = getTitlePoints(list);
