@@ -386,8 +386,9 @@ document.getElementById('btnTitles').onclick = async () => {
   } catch (e) { wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载失败</div>'; }
 };
 // 2026-10-18 史诗级：按稀有度分组渲染（带翻页，一页一个稀有度）
+// 2026-10-18 Elouise：顺序倒转，普通在前、传说在后
 function renderTitlesGrouped(list, page) {
-  const order = ['传说', '史诗', '稀有', '普通'];
+  const order = ['普通', '稀有', '史诗', '传说'];
   const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
   const rarity = order[page] || order[0];
   const items = list.filter(x => (x.rarity || '普通') === rarity);
