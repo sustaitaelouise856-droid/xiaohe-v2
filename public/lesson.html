@@ -282,6 +282,10 @@
 </style>
 <script src="/dict.min.js"></script>
 <link rel="stylesheet" href="/theme.css">
+<script>
+// 学科身份（2026-10-18）：语文课用独立设置（xh_yw_ 前缀），必须在 theme.js 之前
+window.XH_SUBJECT = /^yw-/.test(new URLSearchParams(location.search).get('lesson') || '') ? 'yuwen' : '';
+</script>
 <script src="/theme.js"></script>
 <script src="/sent-audio-manifest.js"></script>
 </head>
@@ -422,7 +426,7 @@ function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60
 // 播放速度：从设置页读取（2026-10-11 加），默认 1.0
 function getPlaySpeed() {
   try {
-    const v = parseFloat(localStorage.getItem('xh_play_speed'));
+    const v = parseFloat(localStorage.getItem((IS_YUWEN ? 'xh_yw_' : 'xh_') + 'play_speed'));
     return (v >= 0.5 && v <= 2.0) ? v : 1.0;
   } catch { return 1.0; }
 }
@@ -1009,7 +1013,7 @@ function speakSentence(text) {
     const h = text.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
     _sentAudio = new Audio('/audio/sent/' + h + '.mp3');
     try {
-      const v = parseFloat(localStorage.getItem('xh_play_speed'));
+      const v = parseFloat(localStorage.getItem((IS_YUWEN ? 'xh_yw_' : 'xh_') + 'play_speed'));
       if (v >= 0.5 && v <= 2.0) _sentAudio.playbackRate = v;
     } catch {}
     _sentAudio.play().catch(() => {});
