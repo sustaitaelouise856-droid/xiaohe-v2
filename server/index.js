@@ -515,6 +515,14 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       // 闯关天数（2026-10-18补）
       const chCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='challenge'").get();
       progressData.challenge = chCount ? chCount.c : 0;
+      // 复习课数（2026-10-18补）
+      const rCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE '%review%'").get();
+      progressData.review = rCount ? rCount.c : 0;
+      // 周末完成课数（2026-10-18补）
+      const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
+      progressData.weekend = weCount ? weCount.c : 0;
+      // 累计分钟数（2026-10-18补，按做题数估算1.5分钟/题）
+      progressData.minutes = (progressData.questions || 0) * 1.5;
     } catch (e) {}
     // 进度映射：title_id -> {current, target}
     const progressMap = {
@@ -545,6 +553,13 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       'challenge_streak_14': { current: progressData.challenge || 0, target: 14 },
       'challenge_streak_30': { current: progressData.challenge || 0, target: 30 },
       'challenge_streak_60': { current: progressData.challenge || 0, target: 60 },
+      'daily_7': { current: progressData.challenge || 0, target: 7 },
+      'daily_30': { current: progressData.challenge || 0, target: 30 },
+      'review_10': { current: progressData.review || 0, target: 10 },
+      'weekend_100': { current: progressData.weekend || 0, target: 100 },
+      'minutes_3600': { current: Math.floor(progressData.minutes || 0), target: 3600 },
+      'vocab_master_50': { current: progressData.words || 0, target: 50 },
+      'vocab_master_100': { current: progressData.words || 0, target: 100 },
     };
     res.json({
       ok: true,
