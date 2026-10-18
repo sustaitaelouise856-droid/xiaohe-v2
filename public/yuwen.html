@@ -8,13 +8,16 @@
   :root {
     --red: #c0392b;
     --red-dark: #96281b;
+    --orange: #e67e22;
     --gold: #f2c14e;
+    --green: #34a853;
     --ink: #202124;
     --muted: #5f6368;
     --bg: #faf6f0;
     --card: #ffffff;
     --shadow-sm: 0 1px 3px rgba(60,64,67,.08), 0 1px 2px rgba(60,64,67,.06);
     --shadow-md: 0 4px 12px rgba(60,64,67,.10), 0 2px 6px rgba(60,64,67,.08);
+    --shadow-red: 0 8px 20px rgba(192,57,43,.35);
     --radius-lg: 20px;
   }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -27,7 +30,7 @@
   /* 顶部：中国红渐变 */
   .hero {
     position: relative; overflow: hidden;
-    background: linear-gradient(150deg, #c0392b 0%, #d35400 55%, #e67e22 100%);
+    background: linear-gradient(150deg, #c0392b 0%, #d35400 45%, #e67e22 100%);
     color: #fff; padding: 34px 22px 30px;
     border-radius: 0 0 28px 28px;
     box-shadow: 0 8px 24px rgba(192,57,43,.28);
@@ -42,6 +45,17 @@
   .hero > * { position: relative; z-index: 1; }
   .hero h1 { margin: 0; font-size: 27px; font-weight: 800; letter-spacing: 4px; text-shadow: 0 2px 10px rgba(0,0,0,.20); }
   .hero .sub { margin: 10px 0 0; font-size: 13.5px; opacity: .92; letter-spacing: 1px; }
+  .hero .stats { display: flex; gap: 12px; margin-top: 18px; }
+  .stat {
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 16px; padding: 10px 16px;
+    font-size: 12.5px; letter-spacing: .5px;
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+  .stat b { font-size: 20px; font-weight: 800; display: block; letter-spacing: .5px; }
+  .progress-bar { height: 8px; background: rgba(255,255,255,.28); border-radius: 99px; margin-top: 16px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #ffffff, #ffe0b2); border-radius: 99px; transition: width .6s ease; }
   /* 继续学习按钮 */
   .continue-wrap { padding: 20px 20px 0; }
   .btn-continue {
@@ -50,54 +64,71 @@
     color: #fff; border: 0; border-radius: var(--radius-lg);
     padding: 18px; font-size: 18.5px; font-weight: 800; letter-spacing: 1.5px;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(192,57,43,.35), inset 0 1px 0 rgba(255,255,255,.28);
+    box-shadow: var(--shadow-red), inset 0 1px 0 rgba(255,255,255,.28);
     transition: transform .15s ease;
   }
   .btn-continue:active { transform: scale(.97); }
   .btn-continue small { display: block; font-size: 13px; font-weight: 400; opacity: .93; margin-top: 6px; letter-spacing: 1px; }
-  /* 课程卡片 */
-  .lessons { padding: 18px 20px 0; display: flex; flex-direction: column; gap: 14px; }
-  .lesson-card {
+  /* 单元与课程节点（仿英语学习地图） */
+  .units { padding: 6px 20px 0; }
+  .unit { margin-top: 28px; }
+  .unit-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 0 6px; }
+  .unit-head h2 { margin: 0; font-size: 18px; font-weight: 800; letter-spacing: .5px; }
+  .unit-head .count {
+    font-size: 12px; font-weight: 700; color: var(--muted);
+    background: rgba(192,57,43,.08);
+    padding: 4px 13px; border-radius: 99px;
+  }
+  .nodes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .node {
     background: var(--card); border-radius: var(--radius-lg);
-    padding: 18px; box-shadow: var(--shadow-sm);
-    display: flex; align-items: center; gap: 14px;
-    text-decoration: none; color: var(--ink);
-    border: 1px solid rgba(225,229,235,.6);
-    transition: transform .15s ease;
+    padding: 15px 6px; text-align: center;
+    cursor: pointer; border: 2px solid transparent;
+    box-shadow: var(--shadow-sm);
+    transition: transform .2s ease, box-shadow .25s ease;
+    min-height: 94px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
   }
-  .lesson-card:active { transform: scale(.98); }
-  .lesson-num {
-    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%;
-    background: linear-gradient(135deg, #c0392b, #e67e22);
-    color: #fff; font-size: 20px; font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
+  .node:active { transform: scale(.93); }
+  .node .icon { font-size: 26px; margin-bottom: 6px; }
+  .node .name { font-size: 12.5px; font-weight: 700; line-height: 1.35; }
+  .node .label { font-size: 10.5px; color: var(--muted); margin-top: 3px; letter-spacing: .5px; }
+  .node.done { border-color: #b7e0c3; background: linear-gradient(180deg, #f5fbf6 0%, #e9f7ed 100%); }
+  .node.done .name { color: #1e7e34; }
+  .node.current {
+    border-color: var(--red);
+    background: linear-gradient(180deg, #fef3f0 0%, #fde8e2 100%);
+    box-shadow: 0 0 0 4px rgba(192,57,43,.16), 0 6px 16px rgba(192,57,43,.22);
   }
-  .lesson-card.done .lesson-num { background: linear-gradient(135deg, #34a853, #6abf69); }
-  .lesson-info { flex: 1; }
-  .lesson-title { font-size: 16.5px; font-weight: 700; margin: 0 0 4px; }
-  .lesson-sub { font-size: 13px; color: var(--muted); margin: 0; }
-  .lesson-go { font-size: 22px; color: var(--red); flex: 0 0 auto; }
-  .lesson-card.done .lesson-go { color: #34a853; }
   /* 底部导航 */
   .bottomnav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(225,229,235,.8); display: flex; z-index: 10; }
   .bottomnav a { flex: 1; text-align: center; padding: 10px 0 14px; text-decoration: none; color: var(--muted); font-size: 12px; }
   .bottomnav a.on { color: var(--red); font-weight: 700; }
-  .shell-note { margin: 18px 20px 0; font-size: 12.5px; color: var(--muted); text-align: center; line-height: 1.8; }
+  .shell-note { margin: 22px 20px 0; font-size: 12.5px; color: var(--muted); text-align: center; line-height: 1.8; }
 </style>
+<script>window.XH_SUBJECT = 'yuwen';</script>
+<script src="/theme.js"></script>
 </head>
 <body>
 <div class="hero">
   <h1>📚 小禾语文</h1>
-  <p class="sub">小禾文史馆开馆 · 先上三节示范课</p>
+  <p class="sub">小禾文史馆 · 跟着馆长学语文</p>
+  <div class="stats">
+    <div class="stat"><b id="doneCount">0</b>已完成</div>
+    <div class="stat"><b id="totalCount">0</b>共多少课</div>
+    <div class="stat"><b id="pct">0%</b>进度</div>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="pfill" style="width:0%"></div></div>
 </div>
 
 <div class="continue-wrap">
-  <button class="btn-continue" id="btnContinue">▶ 继续学习<small id="continueSub">开馆第一课：《记承天寺夜游》</small></button>
+  <button class="btn-continue" id="btnContinue">▶ 继续学习<small id="continueSub"></small></button>
 </div>
 
-<div class="lessons" id="lessons"></div>
+<div class="units" id="units"></div>
 
-<p class="shell-note">语文系统外壳版 · 更多课程、复习、报告陆续上线</p>
+<p class="shell-note">语文学习地图 · 更多课程陆续上线</p>
 
 <div class="bottomnav">
   <a href="/yuwen.html" class="on">📚<br>语文</a>
@@ -105,34 +136,63 @@
 </div>
 
 <script>
-// 语文示范课（外壳版写死三节课，后续接服务端课程表）
-const YW_LESSONS = [
-  { id: 'yw-wenyan1', title: '开馆第一课：《记承天寺夜游》', sub: '文史馆开馆 · 苏轼的月夜 · 实词+背诵' },
-  { id: 'yw-read1', title: '审稿小编辑：读懂一篇记叙文', sub: '第 3 节 · 现代文阅读理解 · 答题套路' },
-  { id: 'yw-word1', title: '字词：己、已、巳三兄弟', sub: '字词第一课 · 形近字辨析' },
+// 语文课程结构（仿英语学习地图；后续接服务端课程表）
+const UNITS = [
+  { name: "文言文 · 古籍整理", lessons: [
+    { id: "yw-wenyan1", name: "记承天寺夜游", label: "开馆第一课" },
+  ]},
+  { name: "现代文阅读 · 审稿", lessons: [
+    { id: "yw-read1", name: "读懂一篇记叙文", label: "审稿入门" },
+  ]},
+  { name: "字词 · 练字房", lessons: [
+    { id: "yw-word1", name: "己已巳三兄弟", label: "字词第一课" },
+  ]},
 ];
+const ORDER = [];
+UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
+
 function isDone(id) {
   try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; }
 }
-const wrap = document.getElementById('lessons');
-YW_LESSONS.forEach((l, i) => {
-  const done = isDone(l.id);
-  const a = document.createElement('a');
-  a.className = 'lesson-card' + (done ? ' done' : '');
-  a.href = '/lesson?lesson=' + l.id;
-  a.innerHTML =
-    '<div class="lesson-num">' + (done ? '✓' : (i + 1)) + '</div>' +
-    '<div class="lesson-info"><p class="lesson-title">' + l.title + '</p>' +
-    '<p class="lesson-sub">' + l.sub + '</p></div>' +
-    '<div class="lesson-go">›</div>';
-  wrap.appendChild(a);
+
+const unitsEl = document.getElementById('units');
+let doneN = 0;
+let currentId = null;
+
+UNITS.forEach(unit => {
+  const div = document.createElement('div');
+  div.className = 'unit';
+  const doneInUnit = unit.lessons.filter(l => isDone(l.id)).length;
+  div.innerHTML = `<div class="unit-head"><h2>${unit.name}</h2><span class="count">${doneInUnit}/${unit.lessons.length}</span></div>`;
+  const nodes = document.createElement('div');
+  nodes.className = 'nodes';
+  unit.lessons.forEach(l => {
+    const done = isDone(l.id);
+    if (done) doneN++;
+    if (!done && !currentId) currentId = l.id;
+    const cls = done ? 'done' : (l.id === currentId ? 'current' : 'available');
+    const icon = done ? '✅' : (l.id === currentId ? '📍' : '📖');
+    const n = document.createElement('div');
+    n.className = 'node ' + cls;
+    n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
+    n.onclick = () => { location.href = '/lesson?lesson=' + l.id; };
+    nodes.appendChild(n);
+  });
+  div.appendChild(nodes);
+  unitsEl.appendChild(div);
 });
-// 继续学习：第一门没完成的
+
+// 顶部统计
+document.getElementById('doneCount').textContent = doneN;
+document.getElementById('totalCount').textContent = ORDER.length;
+document.getElementById('pct').textContent = Math.round(doneN / ORDER.length * 100) + '%';
+document.getElementById('pfill').style.width = (doneN / ORDER.length * 100) + '%';
+
+// 继续学习按钮
 (function () {
-  const next = YW_LESSONS.find(l => !isDone(l.id)) || YW_LESSONS[0];
-  const btn = document.getElementById('btnContinue');
-  document.getElementById('continueSub').textContent = next.title;
-  btn.onclick = () => { location.href = '/lesson?lesson=' + next.id; };
+  const next = ORDER.find(l => !isDone(l.id)) || ORDER[0];
+  document.getElementById('continueSub').textContent = '下一课：' + next.name;
+  document.getElementById('btnContinue').onclick = () => { location.href = '/lesson?lesson=' + next.id; };
 })();
 </script>
 </body>
