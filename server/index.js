@@ -490,89 +490,82 @@ app.post('/api/complete', auth.requireAuth, (req, res) => {
 });
 
 // 称号列表：返回全部称号定义 + 已获得状态
+// 2026-10-18 史诗级：称号进度计算（供 /api/titles 和 checkTitles 共用）
+function getTitleProgressMap() {
+  const progressData = {};
+  try {
+    const mistakeCount = db.prepare("SELECT COUNT(DISTINCT item_id) as c FROM retest_queue WHERE status='resolved'").get();
+    progressData.mistake = mistakeCount ? mistakeCount.c : 0;
+    const qCount = db.prepare("SELECT COUNT(*) as c FROM attempts").get();
+    progressData.questions = qCount ? qCount.c : 0;
+    const qcCount = db.prepare("SELECT COUNT(*) as c FROM attempts WHERE correct=1").get();
+    progressData.correct = qcCount ? qcCount.c : 0;
+    const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+    progressData.courses = cCount ? cCount.c : 0;
+    const wCount = db.prepare("SELECT COUNT(*) as c FROM word_mastery WHERE level>=4").get();
+    progressData.words = wCount ? wCount.c : 0;
+    const sCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='manual'").get();
+    progressData.signin = sCount ? sCount.c : 0;
+    const chCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='challenge'").get();
+    progressData.challenge = chCount ? chCount.c : 0;
+    const rCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE '%review%'").get();
+    progressData.review = rCount ? rCount.c : 0;
+    const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
+    progressData.weekend = weCount ? weCount.c : 0;
+    progressData.minutes = (progressData.questions || 0) * 1.5;
+  } catch (e) {}
+  return {
+    'mistake_10': { current: progressData.mistake || 0, target: 10 },
+    'mistake_50': { current: progressData.mistake || 0, target: 50 },
+    'mistake_200': { current: progressData.mistake || 0, target: 200 },
+    'mistake_500': { current: progressData.mistake || 0, target: 500 },
+    'mistake_slayer': { current: progressData.mistake || 0, target: 100 },
+    'questions_100': { current: progressData.questions || 0, target: 100 },
+    'questions_500': { current: progressData.questions || 0, target: 500 },
+    'questions_1000': { current: progressData.questions || 0, target: 1000 },
+    'questions_2000': { current: progressData.questions || 0, target: 2000 },
+    'century': { current: progressData.correct || 0, target: 1000 },
+    'courses_5': { current: progressData.courses || 0, target: 5 },
+    'courses_10': { current: progressData.courses || 0, target: 10 },
+    'courses_15': { current: progressData.courses || 0, target: 15 },
+    'courses_20': { current: progressData.courses || 0, target: 20 },
+    'word_50': { current: progressData.words || 0, target: 50 },
+    'word_150': { current: progressData.words || 0, target: 150 },
+    'word_250': { current: progressData.words || 0, target: 250 },
+    'word_350': { current: progressData.words || 0, target: 350 },
+    'vocab_master_50': { current: progressData.words || 0, target: 50 },
+    'vocab_master_100': { current: progressData.words || 0, target: 100 },
+    'signin_14': { current: progressData.signin || 0, target: 14 },
+    'signin_21': { current: progressData.signin || 0, target: 21 },
+    'signin_36': { current: progressData.signin || 0, target: 36 },
+    'signin_100': { current: progressData.signin || 0, target: 100 },
+    'signin_120': { current: progressData.signin || 0, target: 120 },
+    'streak_warrior': { current: progressData.signin || 0, target: 7 },
+    'challenge_streak_3': { current: progressData.challenge || 0, target: 3 },
+    'challenge_streak_7': { current: progressData.challenge || 0, target: 7 },
+    'challenge_streak_14': { current: progressData.challenge || 0, target: 14 },
+    'challenge_streak_30': { current: progressData.challenge || 0, target: 30 },
+    'challenge_streak_60': { current: progressData.challenge || 0, target: 60 },
+    'daily_7': { current: progressData.challenge || 0, target: 7 },
+    'daily_30': { current: progressData.challenge || 0, target: 30 },
+    'daily_challenger': { current: progressData.challenge || 0, target: 3 },
+    'review_3': { current: progressData.review || 0, target: 3 },
+    'review_10': { current: progressData.review || 0, target: 10 },
+    'weekend_50': { current: progressData.weekend || 0, target: 50 },
+    'weekend_100': { current: progressData.weekend || 0, target: 100 },
+    'minutes_60': { current: Math.floor(progressData.minutes || 0), target: 60 },
+    'minutes_300': { current: Math.floor(progressData.minutes || 0), target: 300 },
+    'minutes_900': { current: Math.floor(progressData.minutes || 0), target: 900 },
+    'minutes_1800': { current: Math.floor(progressData.minutes || 0), target: 1800 },
+    'minutes_3600': { current: Math.floor(progressData.minutes || 0), target: 3600 },
+  };
+}
+
 app.get('/api/titles', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     const earned = new Set(db.prepare('SELECT title_id FROM titles').all().map(r => r.title_id));
-      // 2026-10-18 史诗级：计算进度条数据
-    const progressData = {};
-    try {
-      // 消灭错题数
-      const mistakeCount = db.prepare("SELECT COUNT(DISTINCT item_id) as c FROM retest_queue WHERE status='resolved'").get();
-      progressData.mistake = mistakeCount ? mistakeCount.c : 0;
-      // 累计做题数
-      const qCount = db.prepare("SELECT COUNT(*) as c FROM attempts").get();
-      progressData.questions = qCount ? qCount.c : 0;
-      // 累计答对数（2026-10-18补）
-      const qcCount = db.prepare("SELECT COUNT(*) as c FROM attempts WHERE correct=1").get();
-      progressData.correct = qcCount ? qcCount.c : 0;
-      // 完成课程数
-      const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
-      progressData.courses = cCount ? cCount.c : 0;
-      // 掌握单词数
-      const wCount = db.prepare("SELECT COUNT(*) as c FROM word_mastery WHERE level>=4").get();
-      progressData.words = wCount ? wCount.c : 0;
-      // 签到天数（2026-10-18补）
-      const sCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='manual'").get();
-      progressData.signin = sCount ? sCount.c : 0;
-      // 闯关天数（2026-10-18补）
-      const chCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='challenge'").get();
-      progressData.challenge = chCount ? chCount.c : 0;
-      // 复习课数（2026-10-18补）
-      const rCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE '%review%'").get();
-      progressData.review = rCount ? rCount.c : 0;
-      // 周末完成课数（2026-10-18补）
-      const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
-      progressData.weekend = weCount ? weCount.c : 0;
-      // 累计分钟数（2026-10-18补，按做题数估算1.5分钟/题）
-      progressData.minutes = (progressData.questions || 0) * 1.5;
-    } catch (e) {}
-    // 进度映射：title_id -> {current, target}
-    const progressMap = {
-      'mistake_10': { current: progressData.mistake || 0, target: 10 },
-      'mistake_50': { current: progressData.mistake || 0, target: 50 },
-      'mistake_200': { current: progressData.mistake || 0, target: 200 },
-      'mistake_500': { current: progressData.mistake || 0, target: 500 },
-      'questions_100': { current: progressData.questions || 0, target: 100 },
-      'questions_500': { current: progressData.questions || 0, target: 500 },
-      'questions_1000': { current: progressData.questions || 0, target: 1000 },
-      'questions_2000': { current: progressData.questions || 0, target: 2000 },
-      'courses_5': { current: progressData.courses || 0, target: 5 },
-      'courses_10': { current: progressData.courses || 0, target: 10 },
-      'courses_15': { current: progressData.courses || 0, target: 15 },
-      'courses_20': { current: progressData.courses || 0, target: 20 },
-      'word_50': { current: progressData.words || 0, target: 50 },
-      'word_150': { current: progressData.words || 0, target: 150 },
-      'word_250': { current: progressData.words || 0, target: 250 },
-      'word_350': { current: progressData.words || 0, target: 350 },
-      'signin_14': { current: progressData.signin || 0, target: 14 },
-      'signin_21': { current: progressData.signin || 0, target: 21 },
-      'signin_36': { current: progressData.signin || 0, target: 36 },
-      'signin_100': { current: progressData.signin || 0, target: 100 },
-      'signin_120': { current: progressData.signin || 0, target: 120 },
-      'streak_warrior': { current: progressData.signin || 0, target: 7 },
-      'challenge_streak_3': { current: progressData.challenge || 0, target: 3 },
-      'challenge_streak_7': { current: progressData.challenge || 0, target: 7 },
-      'challenge_streak_14': { current: progressData.challenge || 0, target: 14 },
-      'challenge_streak_30': { current: progressData.challenge || 0, target: 30 },
-      'challenge_streak_60': { current: progressData.challenge || 0, target: 60 },
-      'daily_7': { current: progressData.challenge || 0, target: 7 },
-      'daily_30': { current: progressData.challenge || 0, target: 30 },
-      'review_10': { current: progressData.review || 0, target: 10 },
-      'weekend_100': { current: progressData.weekend || 0, target: 100 },
-      'minutes_3600': { current: Math.floor(progressData.minutes || 0), target: 3600 },
-      'vocab_master_50': { current: progressData.words || 0, target: 50 },
-      'vocab_master_100': { current: progressData.words || 0, target: 100 },
-      'minutes_60': { current: Math.floor(progressData.minutes || 0), target: 60 },
-      'minutes_300': { current: Math.floor(progressData.minutes || 0), target: 300 },
-      'minutes_900': { current: Math.floor(progressData.minutes || 0), target: 900 },
-      'minutes_1800': { current: Math.floor(progressData.minutes || 0), target: 1800 },
-      'review_3': { current: progressData.review || 0, target: 3 },
-      'weekend_50': { current: progressData.weekend || 0, target: 50 },
-      'daily_challenger': { current: progressData.challenge || 0, target: 3 },
-      'mistake_slayer': { current: progressData.mistake || 0, target: 100 },
-      'century': { current: progressData.correct || 0, target: 1000 },
-    };
+    const progressMap = getTitleProgressMap();
     res.json({
       ok: true,
       titles: TITLE_DEFS.map(t => ({
@@ -1196,6 +1189,13 @@ function checkTitles() {
   try {
     const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE correct=1").get();
     if (r && r.c >= 1000) grant('century');
+  } catch {}
+  // 2026-10-18修：进度条类称号，进度达标自动颁发（防"934/300还未获得"bug）
+  try {
+    const progressMap = getTitleProgressMap();
+    for (const [id, p] of Object.entries(progressMap)) {
+      if (p.current >= p.target) grant(id);
+    }
   } catch {}
   return newly;
 }
