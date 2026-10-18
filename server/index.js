@@ -2671,8 +2671,21 @@ app.post('/api/admin/cleanup-retest', (req, res) => {
         SELECT item_id FROM retest_queue WHERE status='resolved'
       )
     `).run();
-    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes);
-    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes });
+    // 4. 删"卡住"的：pending创建后有过correct作答，但没消掉（2026-10-18 Elouise：重做多次做对还卡着）
+    const stuck = db.prepare(`
+      DELETE FROM retest_queue WHERE status='pending' AND id IN (
+        SELECT q.id FROM retest_queue q
+        WHERE q.status='pending'
+        AND EXISTS (
+          SELECT 1 FROM attempts a
+          WHERE a.item_id = q.item_id
+          AND a.correct = 1
+          AND a.created_at > q.created_at
+        )
+      )
+    `).run();
+    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes, 'stuck_deleted=', stuck.changes);
+    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes, stuck_deleted: stuck.changes });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
