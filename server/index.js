@@ -395,6 +395,8 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
     if (byWeak[w] > 0) weaknesses.push(WEAK_PARENT[w]);
   }
   for (const t of agg.weaknesses) {
+    // 语文课过滤（2026-10-18）："英文书写"是英语课概念，yw- 课不显示
+    if (/^yw-/.test(lid) && t === '英文书写') continue;
     const label = t === '英文书写' ? '用英文把句子写出来' : (t === '拼写' ? '单词拼写'
       : (t === '看答案过' ? '看过答案的题要重练' : t));
     if (!weaknesses.includes(label)) weaknesses.push(label);
