@@ -360,8 +360,9 @@ document.getElementById('btnTitles').onclick = async () => {
     // 百分比（2026-10-16：Elouise要求显示百分数）
     const pctStr = (ratio * 100).toFixed(1).replace(/\.0$/, '') + '%';
     let tier = 'bronze', tierName = '青铜', nextTip = '', msg = '';
-    // 2026-10-18 Elouise：段位改八等分，每段12.5%
-    const tierInfo = getTierByRatio(ratio, total, earned);
+    // 2026-10-18 Elouise：段位改称号点制
+    const points = getTitlePoints(list);
+    const tierInfo = getTierByPoints(points);
     tier = tierInfo.tier; tierName = tierInfo.name; nextTip = tierInfo.nextTip; msg = tierInfo.msg;
     wall.className = 'tier-' + tier;
     document.getElementById('titleTierMini').textContent = '· ' + tierName;
@@ -483,7 +484,39 @@ function titlePageTurn(d) {
 }
 // 称号详情弹窗（首页 modal 用）
 // 2026-10-18 Elouise：八段位，按百分比
+// 2026-10-18 Elouise：段位改称号点制（普通1点/稀有2点/史诗3点/传说4点）
+function getTitlePoints(list) {
+  const pts = { '普通': 1, '稀有': 2, '史诗': 3, '传说': 4 };
+  return list.filter(x => x.earned).reduce((s, x) => s + (pts[x.rarity || '普通'] || 1), 0);
+}
+function getTierByPoints(points) {
+  const tiers = [
+    { min: 106, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
+    { min: 91, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
+    { min: 76, tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！' },
+    { min: 61, tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！' },
+    { min: 46, tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！' },
+    { min: 31, tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！' },
+    { min: 16, tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！' },
+    { min: 0, tier: 'bronze', name: '青铜', msg: '“千里之行，始于足下。”加油！' },
+  ];
+  for (let i = 0; i < tiers.length; i++) {
+    if (points >= tiers[i].min) {
+      const t = tiers[i];
+      let nextTip = '';
+      if (i > 0) {
+        const need = Math.max(1, tiers[i-1].min - points);
+        nextTip = `距离${tiers[i-1].name}还差 ${need} 称号点`;
+      } else {
+        nextTip = '已达最高段位！';
+      }
+      return { tier: t.tier, name: t.name, nextTip, msg: t.msg, points };
+    }
+  }
+  return { tier: 'bronze', name: '青铜', nextTip: '', msg: '', points };
+}
 function getTierByRatio(ratio, total, earned) {
+// 旧百分比制保留（已废弃，改用getTierByPoints）
   const tiers = [
     { min: 0.875, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
     { min: 0.75, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
@@ -519,24 +552,25 @@ function showTierPreview() {
   const total = list.length || 80;
   const ratio = earned / total;
   const tiers = [
-    { name: '青铜', range: '0% - 12.5%', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！',
-      bg: 'linear-gradient(165deg,#efebe9 0%,#d7ccc8 15%,#bcaaa4 30%,#a1887f 50%,#8d6e63 70%,#795548 85%,#5d4037 100%)', border: '#4e342e', txt: '#fff', shadow: 'rgba(255,235,220,.6)' },
-    { name: '白银', range: '12.5% - 25%', min: 0.125, color: '#78909c', desc: '已有进步，再接再厉！',
-      bg: 'linear-gradient(165deg,#fafafa 0%,#eceff1 20%,#cfd8dc 40%,#b0bec5 60%,#90a4ae 80%,#78909c 100%)', border: '#455a64', txt: '#37474f', shadow: 'rgba(255,255,255,.7)' },
-    { name: '黄金', range: '25% - 37.5%', min: 0.25, color: '#ff8f00', desc: '稳步上升，铂金在望！',
-      bg: 'linear-gradient(165deg,#fffde7 0%,#ffecb3 18%,#ffe082 35%,#ffd54f 52%,#ffca28 68%,#ffb300 84%,#ff8f00 100%)', border: '#bf360c', txt: '#4e342e', shadow: 'rgba(255,252,235,.8)' },
-    { name: '铂金', range: '37.5% - 50%', min: 0.375, color: '#00acc1', desc: '过半在即，钻石招手！',
-      bg: 'linear-gradient(165deg,#f5fdff 0%,#e0f7fa 20%,#b2ebf2 40%,#80deea 60%,#4dd0e1 80%,#00acc1 100%)', border: '#006064', txt: '#004d40', shadow: 'rgba(255,255,255,.7)' },
-    { name: '钻石', range: '50% - 62.5%', min: 0.5, color: '#0288d1', desc: '已过半，大师不远了！',
-      bg: 'linear-gradient(165deg,#f5fbff 0%,#e1f5fe 18%,#b3e5fc 36%,#81d4fa 54%,#4fc3f7 72%,#29b6f6 88%,#0288d1 100%)', border: '#01579b', txt: '#01579b', shadow: 'rgba(255,255,255,.8)' },
-    { name: '大师', range: '62.5% - 75%', min: 0.625, color: '#7b1fa2', desc: '高手风范，宗师可期！',
-      bg: 'linear-gradient(165deg,#fcf5ff 0%,#f3e5f5 18%,#e1bee7 36%,#ce93d8 54%,#ba68c8 72%,#9c27b0 88%,#7b1fa2 100%)', border: '#4a148c', txt: '#fff', shadow: 'rgba(250,240,255,.6)' },
-    { name: '宗师', range: '75% - 87.5%', min: 0.75, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！',
-      bg: 'linear-gradient(165deg,#fff5f8 0%,#fce4ec 18%,#f8bbd0 36%,#f48fb1 54%,#f06292 72%,#ec407a 88%,#d81b60 100%)', border: '#880e4f', txt: '#fff', shadow: 'rgba(255,245,248,.6)' },
-    { name: '王者', range: '87.5% - 100%', min: 0.875, color: '#ff6f00', desc: '最高荣誉，你是传奇！',
-      bg: 'linear-gradient(165deg,#fffdf5 0%,#fff3e0 16%,#ffe0b2 32%,#ffcc80 48%,#ffb74d 64%,#ffa726 80%,#ff9800 92%,#f57c00 100%)', border: '#bf360c', txt: '#4e342e', shadow: 'rgba(255,253,245,.8)' },
+    { name: '青铜', range: '0 - 15点', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！',
+      bg: '#a1887f', border: '#4e342e', txt: '#fff' },
+    { name: '白银', range: '16 - 30点', min: 16, color: '#78909c', desc: '已有进步，再接再厉！',
+      bg: '#b0bec5', border: '#455a64', txt: '#37474f' },
+    { name: '黄金', range: '31 - 45点', min: 31, color: '#ff8f00', desc: '稳步上升，铂金在望！',
+      bg: '#ffd54f', border: '#bf360c', txt: '#4e342e' },
+    { name: '铂金', range: '46 - 60点', min: 46, color: '#00acc1', desc: '过半在即，钻石招手！',
+      bg: '#80deea', border: '#006064', txt: '#004d40' },
+    { name: '钻石', range: '61 - 75点', min: 61, color: '#0288d1', desc: '已过半，大师不远了！',
+      bg: '#81d4fa', border: '#01579b', txt: '#01579b' },
+    { name: '大师', range: '76 - 90点', min: 76, color: '#7b1fa2', desc: '高手风范，宗师可期！',
+      bg: '#ce93d8', border: '#4a148c', txt: '#fff' },
+    { name: '宗师', range: '91 - 105点', min: 91, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！',
+      bg: '#f48fb1', border: '#880e4f', txt: '#fff' },
+    { name: '王者', range: '106 - 130点', min: 106, color: '#ff6f00', desc: '最高荣誉，你是传奇！',
+      bg: '#ffcc80', border: '#bf360c', txt: '#4e342e' },
   ];
-  const current = getTierByRatio(ratio, total, earned).name;
+  const points = getTitlePoints(list);
+  const current = getTierByPoints(points).name;
   const ov = document.createElement('div');
   ov.id = 'tierPreviewOv';
   ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;';
@@ -583,9 +617,8 @@ function showTitleModalDetail(i) {
 // 首页加载时显示当前段位 + 下一称号提示（2026-10-18 史诗级）
 fetch('/api/titles').then(r => r.json()).then(t => {
   const list = t.titles || [];
-  const earned = list.filter(x => x.earned).length;
-  const ratio = earned / (list.length || 1);
-  const name = getTierByRatio(ratio, list.length || 80, earned).name;
+  const points = getTitlePoints(list);
+  const name = getTierByPoints(points).name;
   document.getElementById('titleTierMini').textContent = '· ' + name;
   // 找下一个最接近的称号（有progress的优先，只看未获得且进度未达标的）
   const unobtained = list.filter(x => !x.earned && x.progress && x.progress.current < x.progress.target);
