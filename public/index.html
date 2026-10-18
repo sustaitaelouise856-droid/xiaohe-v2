@@ -373,23 +373,28 @@ document.getElementById('btnTitles').onclick = async () => {
     wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
       + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（${pctStr}）</div>`
       + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
-      + `<div id="titleWallGrouped">` + renderTitlesGrouped(list) + `</div>`
+      + `<div style="text-align:center;margin-bottom:12px;display:flex;justify-content:center;align-items:center;gap:12px;">`
+      + `<button onclick="rarityPageTurn(-1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">◀ 上一页</button>`
+      + `<span id="rarityPageInfo" style="font-size:14px;color:#666;font-weight:700;"></span>`
+      + `<button onclick="rarityPageTurn(1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">下一页 ▶</button>`
+      + `</div>`
+      + `<div id="titleWallGrouped">` + renderTitlesGrouped(list, 0) + `</div>`
       + `<div class="tier-msg">${msg}</div>`;
-    // 存下来供详情弹窗用
+    // 存下来供详情弹窗和翻页用
     window._modalTitles = list;
+    window._rarityPage = 0;
   } catch (e) { wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载失败</div>'; }
 };
-// 2026-10-18 史诗级：按稀有度分组渲染
-function renderTitlesGrouped(list) {
+// 2026-10-18 史诗级：按稀有度分组渲染（带翻页，一页一个稀有度）
+function renderTitlesGrouped(list, page) {
   const order = ['传说', '史诗', '稀有', '普通'];
   const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
-  let html = '';
-  order.forEach(rarity => {
-    const items = list.filter(x => (x.rarity || '普通') === rarity);
-    if (!items.length) return;
-    const earned = items.filter(x => x.earned).length;
-    html += `<div style="margin:16px 0 8px;font-size:16px;font-weight:800;color:${colors[rarity]};">${rarity}（${earned}/${items.length}）</div>`;
-    html += `<div class="title-wall" style="margin-bottom:8px;">`;
+  const rarity = order[page] || order[0];
+  const items = list.filter(x => (x.rarity || '普通') === rarity);
+  const earned = items.filter(x => x.earned).length;
+  const infoEl = document.getElementById('rarityPageInfo');
+  if (infoEl) infoEl.textContent = `${rarity}（${earned}/${items.length}）· ${page+1}/4`;
+  let html = `<div class="title-wall" style="margin-bottom:8px;">`;
     html += items.map(x => {
       const i = list.indexOf(x);
       const rc = colors[rarity];
@@ -408,8 +413,15 @@ function renderTitlesGrouped(list) {
       + `<div class="cond">${x.earned ? '已获得' : '点击查看如何获得'}</div></div>`;
     }).join('');
     html += `</div>`;
-  });
   return html;
+}
+function rarityPageTurn(d) {
+  const list = window._modalTitles || [];
+  let p = (window._rarityPage || 0) + d;
+  if (p < 0) p = 0;
+  if (p > 3) p = 3;
+  window._rarityPage = p;
+  document.getElementById('titleWallGrouped').innerHTML = renderTitlesGrouped(list, p);
 }
 // 旧翻页函数保留（暂不用）
 function renderTitlePage(list, page) {
