@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>成长 - 小禾语文</title>
+<style>
+  :root { --red:#c0392b; --red-dark:#96281b; --orange:#e67e22; --gold:#f2c14e; --green:#34a853; --ink:#202124; --muted:#5f6368; --bg:#faf6f0; --card:#fff; --shadow-sm:0 1px 3px rgba(60,64,67,.08); --radius-lg:20px; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); min-height:100vh; padding-bottom:90px; }
+  #topbar { position:sticky; top:0; z-index:5; background:linear-gradient(135deg,#c0392b,#e67e22); color:#fff; font-size:18px; font-weight:800; letter-spacing:2px; text-align:center; padding:14px; box-shadow:0 2px 12px rgba(192,57,43,.25); }
+  #wrap { padding:16px 16px 0; max-width:640px; margin:0 auto; }
+  .card { background:var(--card); border-radius:var(--radius-lg); padding:18px; margin-bottom:14px; box-shadow:var(--shadow-sm); }
+  .card h2 { margin:0 0 12px; font-size:16.5px; font-weight:800; }
+  .empty { text-align:center; color:var(--muted); padding:20px 12px; font-size:14px; line-height:1.8; }
+  .profile-summary { font-size:14.5px; line-height:1.9; }
+  .profile-summary b { color:var(--red); font-size:17px; }
+  .checkin-row { display:flex; gap:8px; justify-content:center; }
+  .checkin-day { width:40px; text-align:center; }
+  .checkin-day .dc { width:36px; height:36px; border-radius:50%; background:#f0e8e0; display:flex; align-items:center; justify-content:center; font-size:17px; margin:0 auto 4px; }
+  .checkin-day.done .dc { background:linear-gradient(135deg,#c0392b,#e67e22); }
+  .checkin-day .dl { font-size:10.5px; color:var(--muted); }
+  .checkin-btn { display:block; width:100%; margin-top:12px; padding:13px; border:0; border-radius:14px; background:linear-gradient(135deg,#c0392b,#e67e22); color:#fff; font-size:16px; font-weight:800; cursor:pointer; }
+  .checkin-btn:disabled { background:#d9c9bd; }
+  .title-head { text-align:center; margin-bottom:12px; }
+  .title-head .big { font-size:17px; font-weight:800; }
+  .title-head .sub { font-size:13px; color:var(--muted); margin-top:4px; }
+  .title-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; }
+  .title-item { text-align:center; padding:12px 4px; border-radius:14px; background:#faf6f0; cursor:pointer; border:2px solid transparent; }
+  .title-item.earned { border-color:#f2c14e; background:linear-gradient(180deg,#fffdf5,#fef6e8); }
+  .title-item.locked { filter:grayscale(1); opacity:.55; }
+  .title-item .ic { font-size:28px; }
+  .title-item .nm { font-size:11.5px; font-weight:700; margin-top:6px; line-height:1.3; }
+  .title-detail { display:none; margin-top:12px; padding:12px 14px; background:#fef3f0; border-radius:12px; font-size:13.5px; line-height:1.7; }
+  .title-detail.show { display:block; }
+  .bottomnav { position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top:1px solid rgba(225,229,235,.8); display:flex; z-index:10; }
+  .bottomnav a { flex:1; text-align:center; padding:10px 0 14px; text-decoration:none; color:var(--muted); font-size:12px; }
+  .bottomnav a.on { color:var(--red); font-weight:700; }
+</style>
+<script>window.XH_SUBJECT = 'yuwen';</script>
+<script src="/theme.js"></script>
+</head>
+<body>
+<div id="topbar">🌱 成长</div>
+<div id="wrap">
+  <div class="card">
+    <h2>👤 学生画像</h2>
+    <div class="profile-summary" id="profileSummary"><div class="empty">正在加载…</div></div>
+  </div>
+  <div class="card">
+    <h2>📅 每日签到</h2>
+    <div class="checkin-row" id="checkinRow"></div>
+    <button class="checkin-btn" id="checkinBtn" onclick="doCheckin()">📅 今日签到</button>
+  </div>
+  <div class="card">
+    <h2>🏆 称号墙</h2>
+    <div class="title-head"><div class="big" id="titleCount"></div><div class="sub">点每个称号查看获得要求</div></div>
+    <div class="title-grid" id="titleGrid"></div>
+    <div class="title-detail" id="titleDetail"></div>
+  </div>
+</div>
+<div class="bottomnav">
+  <a href="/yuwen.html">📚<br>语文</a>
+  <a href="/yuwen-progress.html">📊<br>报告</a>
+  <a href="/yuwen-growth.html" class="on">🌱<br>成长</a>
+  <a href="/yuwen-settings.html">⚙️<br>设置</a>
+</div>
+<script>
+function isDone(id) { try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; } }
+function sumDaily(field) {
+  let s = 0;
+  for (let i = 0; i < 365; i++) {
+    const d = new Date(); d.setDate(d.getDate() - i);
+    try { const o = JSON.parse(localStorage.getItem('xh_yw_daily_' + d.toISOString().slice(0, 10)) || '{}'); s += o[field] || 0; }
+    catch {}
+    if (i > 30 && s === 0) break;
+  }
+  return s;
+}
+function hasDaily(offset) {
+  const d = new Date(); d.setDate(d.getDate() - offset);
+  try { const o = JSON.parse(localStorage.getItem('xh_yw_daily_' + d.toISOString().slice(0, 10)) || '{}'); return (o.attempts || 0) > 0; }
+  catch { return false; }
+}
+const LESSON_IDS = ['yw-wenyan1', 'yw-read1', 'yw-word1'];
+// 完整版称号墙（12个，本地判定）
+const YW_TITLES = [
+  { icon: '📜', name: '初入文史馆', cond: '完成任意 1 节语文课', check: () => LESSON_IDS.some(isDone) },
+  { icon: '🌙', name: '月下夜游人', cond: '学完《记承天寺夜游》', check: () => isDone('yw-wenyan1') },
+  { icon: '⏰', name: '清晨读书郎', cond: '学完《五点的闹钟》阅读课', check: () => isDone('yw-read1') },
+  { icon: '✏️', name: '明辨己已巳', cond: '学完字词课「己已巳三兄弟」', check: () => isDone('yw-word1') },
+  { icon: '🏆', name: '文史小馆长', cond: '3 节示范课全部学完', check: () => LESSON_IDS.every(isDone) },
+  { icon: '🔥', name: '初露锋芒', cond: '累计答对 10 道题', check: () => sumDaily('correct') >= 10 },
+  { icon: '💪', name: '勤学好问', cond: '累计做题 30 道', check: () => sumDaily('attempts') >= 30 },
+  { icon: '📖', name: '书香满屋', cond: '累计学习 45 分钟', check: () => sumDaily('minutes') >= 45 },
+  { icon: '🗓️', name: '两日不辍', cond: '连续 2 天学习', check: () => hasDaily(0) && hasDaily(1) },
+  { icon: '🎯', name: '百发百中', cond: '单日做题≥5 且全部答对', check: () => {
+      for (let i = 0; i < 30; i++) { const d = new Date(); d.setDate(d.getDate() - i);
+        try { const o = JSON.parse(localStorage.getItem('xh_yw_daily_' + d.toISOString().slice(0, 10)) || '{}');
+          if ((o.attempts || 0) >= 5 && o.correct === o.attempts) return true; } catch {} }
+      return false; } },
+  { icon: '📝', name: '知错就改', cond: '错题本≤2 道且累计做题≥10', check: () => {
+      let n = 0; try { n = JSON.parse(localStorage.getItem('xh_yw_mistakes') || '[]').length; } catch {}
+      return n <= 2 && sumDaily('attempts') >= 10; } },
+  { icon: '👑', name: '文史馆馆长', cond: '集齐其他 11 个称号', check: () => YW_TITLES.slice(0, 11).every(t => { try { return t.check(); } catch { return false; } }) },
+];
+function earnedList() { return YW_TITLES.filter(t => { try { return t.check(); } catch { return false; } }); }
+// 画像
+(function profile() {
+  const days = new Set();
+  for (let i = 0; i < 60; i++) { if (hasDaily(i)) days.add(i); }
+  const done = LESSON_IDS.filter(isDone).length;
+  const earned = earnedList().length;
+  const minutes = sumDaily('minutes');
+  document.getElementById('profileSummary').innerHTML =
+    `在小禾文史馆学习了 <b>${days.size}</b> 天，学完 <b>${done}/3</b> 节课，` +
+    `累计学习 <b>${minutes}</b> 分钟，获得 <b>${earned}/12</b> 个称号。` +
+    (done < 3 ? '<br>继续加油，下一课在等你 📚' : '<br>三节课全拿下，馆长为你骄傲 🏆');
+})();
+// 签到
+(function checkin() {
+  const row = document.getElementById('checkinRow');
+  const names = ['日', '一', '二', '三', '四', '五', '六'];
+  let html = '';
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(); d.setDate(d.getDate() - i);
+    const key = 'xh_yw_checkin_' + d.toISOString().slice(0, 10);
+    let done = false;
+    try { done = localStorage.getItem(key) === '1'; } catch {}
+    html += `<div class="checkin-day ${done ? 'done' : ''}"><div class="dc">${done ? '✅' : '⭕'}</div><div class="dl">${names[d.getDay()]}</div></div>`;
+  }
+  row.innerHTML = html;
+  const today = 'xh_yw_checkin_' + new Date().toISOString().slice(0, 10);
+  try {
+    if (localStorage.getItem(today) === '1') {
+      const btn = document.getElementById('checkinBtn');
+      btn.disabled = true; btn.textContent = '✅ 今日已签到';
+    }
+  } catch {}
+})();
+function doCheckin() {
+  const today = 'xh_yw_checkin_' + new Date().toISOString().slice(0, 10);
+  try { localStorage.setItem(today, '1'); } catch {}
+  location.reload();
+}
+// 称号墙
+(function titles() {
+  const earned = earnedList().length;
+  document.getElementById('titleCount').textContent = `已获得 ${earned}/${YW_TITLES.length}`;
+  const grid = document.getElementById('titleGrid');
+  YW_TITLES.forEach(t => {
+    let ok = false;
+    try { ok = t.check(); } catch {}
+    const d = document.createElement('div');
+    d.className = 'title-item ' + (ok ? 'earned' : 'locked');
+    d.innerHTML = `<div class="ic">${ok ? t.icon : '🔒'}</div><div class="nm">${ok ? t.name : '???'}</div>`;
+    d.onclick = () => {
+      const det = document.getElementById('titleDetail');
+      det.innerHTML = `<b>${ok ? t.icon + ' ' + t.name : '🔒 未获得'}</b><br>获得要求：${t.cond}${ok ? '<br>状态：已获得 🎉' : ''}`;
+      det.classList.add('show');
+    };
+    grid.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>
