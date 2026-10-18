@@ -494,7 +494,7 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     const earned = new Set(db.prepare('SELECT title_id FROM titles').all().map(r => r.title_id));
-    // 2026-10-18 史诗级：计算进度条数据
+      // 2026-10-18 史诗级：计算进度条数据
     const progressData = {};
     try {
       // 消灭错题数
@@ -503,6 +503,9 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       // 累计做题数
       const qCount = db.prepare("SELECT COUNT(*) as c FROM attempts").get();
       progressData.questions = qCount ? qCount.c : 0;
+      // 累计答对数（2026-10-18补）
+      const qcCount = db.prepare("SELECT COUNT(*) as c FROM attempts WHERE correct=1").get();
+      progressData.correct = qcCount ? qcCount.c : 0;
       // 完成课程数
       const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
       progressData.courses = cCount ? cCount.c : 0;
@@ -560,6 +563,15 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       'minutes_3600': { current: Math.floor(progressData.minutes || 0), target: 3600 },
       'vocab_master_50': { current: progressData.words || 0, target: 50 },
       'vocab_master_100': { current: progressData.words || 0, target: 100 },
+      'minutes_60': { current: Math.floor(progressData.minutes || 0), target: 60 },
+      'minutes_300': { current: Math.floor(progressData.minutes || 0), target: 300 },
+      'minutes_900': { current: Math.floor(progressData.minutes || 0), target: 900 },
+      'minutes_1800': { current: Math.floor(progressData.minutes || 0), target: 1800 },
+      'review_3': { current: progressData.review || 0, target: 3 },
+      'weekend_50': { current: progressData.weekend || 0, target: 50 },
+      'daily_challenger': { current: progressData.challenge || 0, target: 3 },
+      'mistake_slayer': { current: progressData.mistake || 0, target: 100 },
+      'century': { current: progressData.correct || 0, target: 1000 },
     };
     res.json({
       ok: true,
