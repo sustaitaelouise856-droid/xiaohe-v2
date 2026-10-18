@@ -704,6 +704,7 @@ function showTitleModalDetail(i) {
   const pts = ptsMap[x.rarity] || 1;
   const rarColor = ({'普通':'#0d47a1','稀有':'#4a148c','史诗':'#bf360c','传说':'#e65100'}[x.rarity]) || '#0d47a1';
   const rarBg = ({'普通':'#e3f2fd','稀有':'#f3e5f5','史诗':'#fff3e0','传说':'#fff8e1'}[x.rarity]) || '#e3f2fd';
+  const catInfo = ({'学业':['📖','#1a73e8'],'坚持':['💪','#e8710a'],'突破':['🎯','#8e24aa'],'探索':['🔍','#1e8e3e'],'传奇':['🌟','#f9ab00']}[x.cat]) || ['📖','#1a73e8'];
   let progHtml = '';
   let remainTxt = '';
   if (x.progress && !x.earned) {
@@ -727,7 +728,8 @@ function showTitleModalDetail(i) {
     + '<div style="padding:22px 24px 24px;">'
     + '<div style="width:84px;height:84px;margin:0 auto;border-radius:50%;background:' + rarBg + ';display:flex;align-items:center;justify-content:center;font-size:44px;">' + (x.earned ? esc(x.icon) : '🔒') + '</div>'
     + '<h3 style="margin:12px 0 6px;font-size:19px;">' + esc(x.earned ? x.name : '???') + '</h3>'
-    + '<div style="margin-bottom:10px;"><span style="display:inline-block;font-size:12px;font-weight:800;color:' + rarColor + ';background:' + rarBg + ';border:1px solid ' + rarColor + ';border-radius:999px;padding:3px 12px;margin-right:6px;">' + esc(x.rarity || '普通') + '</span>'
+    + '<div style="margin-bottom:10px;"><span style="display:inline-block;font-size:12px;font-weight:800;color:' + catInfo[1] + ';background:#fff;border:2px solid ' + catInfo[1] + ';border-radius:999px;padding:3px 12px;margin-right:6px;">' + catInfo[0] + ' ' + esc(x.cat || '学业') + '</span>'
+    + '<span style="display:inline-block;font-size:12px;font-weight:800;color:' + rarColor + ';background:' + rarBg + ';border:1px solid ' + rarColor + ';border-radius:999px;padding:3px 12px;margin-right:6px;">' + esc(x.rarity || '普通') + '</span>'
     + '<span style="display:inline-block;font-size:12px;font-weight:800;color:#fff;background:' + rarColor + ';border-radius:999px;padding:3px 12px;">+' + pts + ' 称号点</span></div>'
     + '<p style="color:#5f6368;font-size:13px;line-height:1.7;text-align:left;background:#f8f9fa;border-radius:10px;padding:12px;margin:0;">🎯 <b>获得方法</b><br>' + esc(x.desc || '暂无说明') + '</p>'
     + progHtml
