@@ -598,7 +598,7 @@ function nightlyProfileOverride(fallback) {
     const p = JSON.parse(row.value);
     if (!p || !p.date) return fallback;
     const ageH = (Date.now() - new Date(p.date + 'T23:59:59+08:00').getTime()) / 36e5;
-    if (!(ageH >= 0 && ageH < 36)) return fallback;
+    if (!(ageH > -3 && ageH < 36)) return fallback; // 允许当天提前写入（负数）
     return {
       summary: p.summary || fallback.summary,
       weaknesses: (Array.isArray(p.weaknesses) && p.weaknesses.length) ? p.weaknesses : fallback.weaknesses,
