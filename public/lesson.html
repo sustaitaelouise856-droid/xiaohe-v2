@@ -826,6 +826,57 @@ function noticeHtml(reading) {
 }
 function escapeHtml(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
+// ---- 数学公式渲染（2026-10-08 数学课上线）：课程含 math:true 时按需加载 KaTeX ----
+let katexReady = false;
+async function ensureKaTeX() {
+  if (katexReady) return;
+  if (!document.querySelector('link[data-katex]')) {
+    const l = document.createElement('link');
+    l.rel = 'stylesheet'; l.setAttribute('data-katex', '1');
+    l.href = '/vendor/katex/katex.min.css';
+    document.head.appendChild(l);
+  }
+  if (!window.katex) {
+    await new Promise((res, rej) => {
+      const s = document.createElement('script');
+      s.src = '/vendor/katex/katex.min.js';
+      s.onload = res; s.onerror = rej;
+      document.head.appendChild(s);
+    });
+  }
+  katexReady = true;
+}
+// 把 \(...\) 行内公式和 $$...$$ 行间公式渲染为 KaTeX
+function renderMathIn(el) {
+  if (!window.katex || !el) return;
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (const node of nodes) {
+    if (node.parentElement && node.parentElement.closest('.katex')) continue;
+    const text = node.textContent;
+    if (text.indexOf('\\(') < 0 && text.indexOf('$$') < 0) continue;
+    const frag = document.createDocumentFragment();
+    let last = 0, changed = false;
+    const re = /\\\((.+?)\\\)|\$\$(.+?)\$\$/g;
+    let m;
+    while ((m = re.exec(text))) {
+      changed = true;
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      const tex = m[1] || m[2];
+      const span = document.createElement('span');
+      try { window.katex.render(tex, span, { throwOnError: false }); }
+      catch (e) { span.textContent = m[0]; }
+      frag.appendChild(span);
+      last = m.index + m[0].length;
+    }
+    if (changed) {
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    }
+  }
+}
+
 function renderStep() {
   const s = cur(), arr = stepsOf(PART);
   if (isSkipped(s)) { advance(); return; } // 被"跳过同类题"跳过的题直接略过
@@ -849,7 +900,9 @@ function renderStep() {
   let html = '';
   if (s.kind === 'teach') {
     const isStory = /story/.test(s.audio_id || '');
-    html = `<div class="card"><span class="kicker ${isStory ? 'story' : 'teach'}">${isStory ? '广播站故事' : '站长讲解'}</span>
+    const kickerStory = (LESSON && LESSON.kicker_story) || '广播站故事';
+    const kickerTeach = (LESSON && LESSON.kicker_teach) || '站长讲解';
+    html = `<div class="card"><span class="kicker ${isStory ? 'story' : 'teach'}">${isStory ? kickerStory : kickerTeach}</span>
       <div class="teachtext">${s.teach_html}</div>${noticeHtml(s.reading)}
       <div class="btnrow">${POS > 0 ? '<button class="ghost btnBack">回去看看</button>' : ''}<button class="big" id="btnNext">${POS + 1 >= arr.length ? '完成本部分' : '知道了，下一步'}</button></div></div>`;
   } else if (s.kind === 'choice') {
@@ -887,7 +940,8 @@ function renderStep() {
         <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else {
-      html += `<textarea id="answerInput" placeholder="在这里写英文答案" autocomplete="off" rows="2"></textarea>
+      const ph = (LESSON && LESSON.answer_placeholder) || '在这里写英文答案';
+      html += `<textarea id="answerInput" placeholder="${ph}" autocomplete="off" rows="2"></textarea>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
         <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
@@ -895,6 +949,8 @@ function renderStep() {
     html += `</div></div></div>`;
   }
   wrap.innerHTML = html;
+  // 数学课：渲染公式（2026-10-08）
+  if (LESSON && LESSON.math) { try { renderMathIn(wrap); } catch (e) {} }
   // 悬浮"看原文"按钮：仅手机端且本步有材料时显示（2026-10-11 修：入口页死按钮）
   try {
     const hasReading = !!((s.reading || '').trim() || (s.teach_html || '').includes('reading-pane'));
@@ -1726,6 +1782,17 @@ async function submitCopy(s, answer) {
     LESSON = await r.json();
     if (!LESSON || !Array.isArray(LESSON.steps) || LESSON.steps.length === 0) {
       throw new Error('lesson_empty');
+    }
+    // 数学课（2026-10-08）：预加载 KaTeX + 品牌覆盖（不与 yw- 注入冲突：yw 课无 math 标记）
+    if (LESSON.math) {
+      try { ensureKaTeX(); } catch (e) {}
+      if (LESSON.brand) {
+        window.XH_BRAND = LESSON.brand;
+        window.XH_SUBJECT = 'math';
+        document.title = document.title.replace(/小禾(英语|语文)/, LESSON.brand);
+        const b = document.getElementById('brand');
+        if (b) b.innerHTML = b.innerHTML.replace(/小禾(英语|语文)/, LESSON.brand);
+      }
     }
     // 2026-10-14修：u3-consolidate 新一轮检测——服务端 session 变了，清掉本地旧 ST（含旧 sid），防旧 help_events 污染
     // 2026-10-14 19:54修：首次运行时 lastSess 为空也要清（旧 ST 的 sid 是修复前的，会污染）
