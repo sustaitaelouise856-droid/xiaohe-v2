@@ -590,6 +590,24 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
 });
 
 // 成长档案（2026-10-12）：给家长看的学生画像+趋势+弱点，大白话
+// 2026-10-18：每晚深度画像覆盖（定时任务 23 点写入 nightly_profile，36 小时内优先显示）
+function nightlyProfileOverride(fallback) {
+  try {
+    const row = db.prepare("SELECT value FROM app_state WHERE key='nightly_profile'").get();
+    if (!row || !row.value) return fallback;
+    const p = JSON.parse(row.value);
+    if (!p || !p.date) return fallback;
+    const ageH = (Date.now() - new Date(p.date + 'T23:59:59+08:00').getTime()) / 36e5;
+    if (!(ageH >= 0 && ageH < 36)) return fallback;
+    return {
+      summary: p.summary || fallback.summary,
+      weaknesses: (Array.isArray(p.weaknesses) && p.weaknesses.length) ? p.weaknesses : fallback.weaknesses,
+      strengths: (Array.isArray(p.strengths) && p.strengths.length) ? p.strengths : fallback.strengths,
+      nightly_date: p.date,
+    };
+  } catch { return fallback; }
+}
+
 app.get('/api/growth', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
@@ -690,7 +708,7 @@ app.get('/api/growth', auth.requireAuth, (req, res) => {
 
     res.json({
       ok: true,
-      profile: { summary, weaknesses: topWeak, strengths },
+      profile: nightlyProfileOverride({ summary, weaknesses: topWeak, strengths }),
       trend,
       weakness_list,
       weekly,
@@ -2658,6 +2676,25 @@ app.post('/api/admin/delete-checkin', (req, res) => {
   }
 });
 // 管理员：清理错题本重复pending（2026-10-17 Elouise死命令：删重复、删已做对的）
+// 2026-10-18：每晚画像写入（23点定时任务调用，把深度分析结果存进库，成长页优先显示）
+app.post('/api/admin/set-profile', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const profile = req.body && req.body.profile;
+    if (!profile || typeof profile !== 'object' || !profile.date) {
+      return res.status(400).json({ ok: false, error: 'bad_profile' });
+    }
+    db.prepare(`INSERT INTO app_state(key, value) VALUES('nightly_profile', ?)
+      ON CONFLICT(key) DO UPDATE SET value=excluded.value`).run(JSON.stringify(profile));
+    res.json({ ok: true, date: profile.date });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: 'save_failed' });
+  }
+});
+
 app.post('/api/admin/cleanup-retest', (req, res) => {
   const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
   if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
