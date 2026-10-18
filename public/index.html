@@ -584,7 +584,7 @@ function showTierPreview() {
         + `<span style="font-size:18px;font-weight:800;color:${t.txt};text-shadow:0 1px 2px rgba(255,255,255,.5);">${t.name}${isCur ? ' ← 你在这里' : ''}</span>`
         + `<span style="font-size:12px;color:${t.txt};opacity:.8;">${t.range}</span>`
         + `</div>`
-        + `<div style="font-size:13px;color:${t.txt};opacity:.9;margin-top:4px;">需要 ${Math.ceil(total * t.min)} 个称号 · ${t.desc}</div>`
+        + `<div style="font-size:13px;color:${t.txt};opacity:.9;margin-top:4px;">${t.desc}</div>`
         + `</div>`;
     }).join('')
     + '<button onclick="document.getElementById(\'tierPreviewOv\').remove()" style="width:100%;padding:12px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;margin-top:8px;">知道了</button>'
