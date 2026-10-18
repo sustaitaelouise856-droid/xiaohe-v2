@@ -539,6 +539,7 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       'signin_36': { current: progressData.signin || 0, target: 36 },
       'signin_100': { current: progressData.signin || 0, target: 100 },
       'signin_120': { current: progressData.signin || 0, target: 120 },
+      'streak_warrior': { current: progressData.signin || 0, target: 7 },
       'challenge_streak_3': { current: progressData.challenge || 0, target: 3 },
       'challenge_streak_7': { current: progressData.challenge || 0, target: 7 },
       'challenge_streak_14': { current: progressData.challenge || 0, target: 14 },
