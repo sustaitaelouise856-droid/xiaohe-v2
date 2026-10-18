@@ -1409,9 +1409,10 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
     // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）
     if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。'), correct: true, helped: !!b.helped };
-    // 单题重做（2026-10-14）：零帮助答对 → 调接口消掉复测项
+    // 单题重做（2026-10-14）：答对 → 调接口消掉复测项
     // 批量重做（2026-10-16修：之前漏了，批量重做的题答对也要消掉——Elouise报告阻塞性bug）
-    if (LESSON && !b.helped) {
+    // 2026-10-18修：不管有没有用帮助，答对就消掉（helped只影响每日10道计数，不影响消错题）
+    if (LESSON) {
       let resolveId = null;
       if (LESSON.single_retry && LESSON.retry_item) resolveId = LESSON.retry_item;
       else if (LESSON.batch_retry && s.retry_item) resolveId = s.retry_item;
