@@ -370,7 +370,7 @@ document.getElementById('btnTitles').onclick = async () => {
     else { tier = 'bronze'; tierName = '青铜'; const need = Math.max(1, Math.ceil(total*0.25)-earned); nextTip = `距离白银还差 ${need} 个称号`; msg = '“千里之行，始于足下。”加油！🚀'; }
     wall.className = 'tier-' + tier;
     document.getElementById('titleTierMini').textContent = '· ' + tierName;
-    wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
+    wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge" onclick="showTierPreview()" style="cursor:pointer;" title="点击查看段位说明">${tierName}</span>`
       + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（${pctStr}）</div>`
       + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
       + `<div style="text-align:center;margin-bottom:12px;display:flex;justify-content:center;align-items:center;gap:12px;">`
@@ -451,6 +451,42 @@ function titlePageTurn(d) {
   document.getElementById('titlePageInfo').textContent = `${p+1} / ${total}`;
 }
 // 称号详情弹窗（首页 modal 用）
+// 2026-10-18 Elouise：点击段位徽章预览四个段位
+function showTierPreview() {
+  const old = document.getElementById('tierPreviewOv');
+  if (old) old.remove();
+  const list = window._modalTitles || [];
+  const earned = list.filter(x => x.earned).length;
+  const total = list.length || 80;
+  const ratio = earned / total;
+  const tiers = [
+    { name: '青铜', range: '0% - 25%', count: Math.ceil(total * 0.25), color: '#6d4c41', desc: '起步阶段，继续加油！' },
+    { name: '白银', range: '25% - 50%', count: Math.ceil(total * 0.5), color: '#78909c', desc: '已有进步，再接再厉！' },
+    { name: '黄金', range: '50% - 75%', count: Math.ceil(total * 0.75), color: '#ff8f00', desc: '过半了，离钻石不远了！' },
+    { name: '钻石', range: '75% - 100%', count: total, color: '#0288d1', desc: '最高荣誉，你是传奇！' },
+  ];
+  const current = ratio >= 0.75 ? '钻石' : ratio >= 0.5 ? '黄金' : ratio >= 0.25 ? '白银' : '青铜';
+  const ov = document.createElement('div');
+  ov.id = 'tierPreviewOv';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;';
+  ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:360px;width:100%;max-height:80vh;overflow-y:auto;">'
+    + '<h3 style="margin:0 0 16px;text-align:center;">🏆 段位预览</h3>'
+    + `<div style="text-align:center;margin-bottom:16px;font-size:14px;color:#666;">当前：已集齐 ${earned}/${total}（${(ratio*100).toFixed(1)}%）</div>`
+    + tiers.map(t => {
+      const isCur = t.name === current;
+      return `<div style="border:2px solid ${isCur ? t.color : '#e0e0e0'};border-radius:12px;padding:12px;margin-bottom:10px;background:${isCur ? '#f5f5f5' : '#fff'};">`
+        + `<div style="display:flex;align-items:center;justify-content:space-between;">`
+        + `<span style="font-size:18px;font-weight:800;color:${t.color};">${t.name}${isCur ? ' ← 你在这里' : ''}</span>`
+        + `<span style="font-size:12px;color:#999;">${t.range}</span>`
+        + `</div>`
+        + `<div style="font-size:13px;color:#666;margin-top:4px;">需要 ${t.count} 个称号 · ${t.desc}</div>`
+        + `</div>`;
+    }).join('')
+    + '<button onclick="document.getElementById(\'tierPreviewOv\').remove()" style="width:100%;padding:12px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;margin-top:8px;">知道了</button>'
+    + '</div>';
+  ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
+  document.body.appendChild(ov);
+}
 function showTitleModalDetail(i) {
   const x = (window._modalTitles || [])[i];
   if (!x) return;
