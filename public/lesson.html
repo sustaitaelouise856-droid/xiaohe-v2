@@ -256,42 +256,15 @@
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes popIn { from { transform: scale(.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-  /* 语文红主题（2026-10-18 Elouise：语文与英语彻底独立，课内全部变红） */
-  html[data-subject="yuwen"] { --blue:#c0392b; }
-  html[data-subject="yuwen"][data-theme="dark"] { --blue:#ff8a70; }
-  html[data-subject="yuwen"] #topbar > button:hover { border-color:#f0b9a6 !important; box-shadow:0 3px 10px rgba(192,57,43,.14); }
-  html[data-subject="yuwen"] #btnPlay { background:linear-gradient(135deg,#e67e22 0%,#c0392b 60%,#96281b 100%); box-shadow:0 4px 12px rgba(192,57,43,.35), inset 0 1px 0 rgba(255,255,255,.25); }
-  html[data-subject="yuwen"] #fill { background:linear-gradient(90deg,#e67e22,#c0392b); }
-  html[data-subject="yuwen"] .kicker.teach { background:linear-gradient(135deg,#e67e22,#c0392b); }
-  html[data-subject="yuwen"] .task { background:linear-gradient(135deg,#fdf0ec 0%,#fef7f4 100%); }
-  html[data-subject="yuwen"] .opt:hover { border-color:#f0b9a6; background:#fef9f6; box-shadow:0 6px 16px rgba(192,57,43,.14); }
-  html[data-subject="yuwen"] .opt:hover .k { border-color:#f0b9a6; }
-  html[data-subject="yuwen"] .opt.sel { background:linear-gradient(180deg,#fdeeee 0%,#fbd9d0 100%); box-shadow:0 6px 18px rgba(192,57,43,.22); }
-  html[data-subject="yuwen"] .opt.sel .k { background:linear-gradient(135deg,#e67e22 0%,#c0392b 70%); }
-  html[data-subject="yuwen"] .opt.sel:disabled:hover { box-shadow:0 4px 14px rgba(192,57,43,.18); }
-  html[data-subject="yuwen"] .chunk-picked { border-color:#f0b9a6; background:#fef9f6; }
-  html[data-subject="yuwen"] .chunkbtn:hover { background:#fef6f2; }
-  html[data-subject="yuwen"] .chunkbtn.in-picked { background:linear-gradient(180deg,#fdeeee 0%,#fbd9d0 100%); }
-  html[data-subject="yuwen"] button.big { background:linear-gradient(135deg,#e67e22 0%,#c0392b 55%,#96281b 100%); box-shadow:0 6px 16px rgba(192,57,43,.35), inset 0 1px 0 rgba(255,255,255,.25), inset 0 -2px 0 rgba(0,0,0,.08); }
-  html[data-subject="yuwen"] button.ghost:hover { background:#fef6f2; box-shadow:0 4px 12px rgba(192,57,43,.12); }
-  html[data-subject="yuwen"] .fb.info { background:linear-gradient(135deg,#fdeeea 0%,#f9d2c4 100%); }
-  html[data-subject="yuwen"] #bigplay button { background:linear-gradient(135deg,#e67e22,#c0392b 60%,#96281b); box-shadow:0 10px 30px rgba(192,57,43,.5), inset 0 1px 0 rgba(255,255,255,.25); }
-  html[data-subject="yuwen"] .sabox { background:linear-gradient(180deg,#fef8f5 0%,#fbe4da 100%); box-shadow:0 6px 18px rgba(192,57,43,.14); }
-  html[data-subject="yuwen"] #btnSeeReading { background:linear-gradient(135deg,#e67e22,#c0392b); }
-  html[data-subject="yuwen"] #answerInput:focus, html[data-subject="yuwen"] #gInput:focus, html[data-subject="yuwen"] #copyInput:focus { box-shadow:0 0 0 4px rgba(192,57,43,.13), inset 0 1px 4px rgba(60,64,67,.04); }
 </style>
 <script src="/dict.min.js"></script>
 <link rel="stylesheet" href="/theme.css">
-<script>
-// 学科身份（2026-10-18）：语文课用独立设置（xh_yw_ 前缀），必须在 theme.js 之前
-window.XH_SUBJECT = /^yw-/.test(new URLSearchParams(location.search).get('lesson') || '') ? 'yuwen' : '';
-</script>
 <script src="/theme.js"></script>
 <script src="/sent-audio-manifest.js"></script>
 </head>
 <body>
 <div id="topbar" style="display:none">
-  <button id="btnBack" onclick="location.href=HOME_URL" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">← 课程</button>
+  <button id="btnBack" onclick="location.href='/'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">← 课程</button>
   <button onclick="location.href='/vocab.html'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">📖 生词本</button>
   <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
   <div id="player">
@@ -329,45 +302,6 @@ const au = new Audio();
 const LESSON_PARAM = new URLSearchParams(location.search).get('lesson');
 if (!LESSON_PARAM) { location.replace('/'); throw new Error('redirecting'); }
 const LID = LESSON_PARAM; // ?lesson=u2r2
-// 学科独立（2026-10-18 Elouise）：yw- 开头为语文课——红色主题、品牌与返回链接全部切到语文
-const IS_YUWEN = /^yw-/.test(LID);
-const BRAND = IS_YUWEN ? '小禾语文' : '小禾英语';
-const HOME_URL = IS_YUWEN ? '/yuwen.html' : '/';
-if (IS_YUWEN) {
-  document.documentElement.setAttribute('data-subject', 'yuwen');
-  const _bn = document.querySelector('#brand');
-  if (_bn && _bn.firstChild) _bn.firstChild.textContent = BRAND;
-}
-// 语文学习数据埋点（2026-10-18）：本地记录，供语文学习报告/成长页使用，与英语完全隔离
-function trackYw(evt, info) {
-  if (!IS_YUWEN) return;
-  try {
-    const today = new Date().toISOString().slice(0, 10);
-    const dk = 'xh_yw_daily_' + today;
-    const d = JSON.parse(localStorage.getItem(dk) || '{"attempts":0,"correct":0}');
-    if (evt === 'attempt') d.attempts = (d.attempts || 0) + 1;
-    if (evt === 'correct') d.correct = (d.correct || 0) + 1;
-    d.minutes = Math.round((d.attempts || 0) * 1.5); // 与英语口径一致：每题约1.5分钟
-    localStorage.setItem(dk, JSON.stringify(d));
-    if (evt === 'wrong' && info && info.item_id) {
-      const mk = 'xh_yw_mistakes';
-      const arr = JSON.parse(localStorage.getItem(mk) || '[]');
-      // 同一题只保留最新一条
-      const filtered = arr.filter(x => x.item_id !== info.item_id);
-      filtered.unshift({ lesson: LID, item_id: info.item_id,
-        q: String(info.q || '').slice(0, 80), t: Date.now() });
-      localStorage.setItem(mk, JSON.stringify(filtered.slice(0, 100)));
-    }
-    if (evt === 'lesson_done') {
-      localStorage.setItem('xh_done_' + LID, '1');
-      // 答对的错题从错题本移除
-      const mk = 'xh_yw_mistakes';
-      const arr = JSON.parse(localStorage.getItem(mk) || '[]');
-      const kept = arr.filter(x => !(info && info.resolvedIds && info.resolvedIds.includes(x.item_id)));
-      if (kept.length !== arr.length) localStorage.setItem(mk, JSON.stringify(kept));
-    }
-  } catch {}
-}
 let LESSON = null;
 let PART = 1, POS = 0;            // 当前部分与下标
 let sawFb = {};                   // item_id -> 看过反馈/帮助
@@ -447,6 +381,26 @@ function posOfId(part, id) {
 }
 const uuid = () => ((typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : 's' + Date.now() + Math.random().toString(16).slice(2));
 
+// 2026-10-18 学习时段韧性（Elouise 死命令：学习时间系统不许掉链子）
+// 服务端推送重启/免费版休眠唤醒/网络抖动时，5xx 与网络层失败自动重试（指数退避），
+// 4xx 是业务错误（lesson_locked/part_done 等）直接返回不重试。默认最多等 2 分钟。
+async function apiFetch(url, opts, maxWaitMs) {
+  const maxWait = maxWaitMs == null ? 120000 : maxWaitMs;
+  const t0 = Date.now();
+  let delay = 800, lastErr = null;
+  for (;;) {
+    try {
+      const r = await fetch(url, opts);
+      if (r.status < 500) return r;
+      lastErr = new Error('http' + r.status);
+    } catch (e) { lastErr = e; }
+    if (Date.now() - t0 + delay > maxWait) break;
+    await new Promise(res => setTimeout(res, delay));
+    delay = Math.min(delay * 1.6, 10000);
+  }
+  throw lastErr || new Error('network');
+}
+
 const stepsOf = part => { const pe = (LESSON && LESSON.practice_end) || 22; return LESSON.steps.filter(s => part === 1 ? s.step <= pe : s.step > pe); };
 
 /* ---------- 音频 ---------- */
@@ -456,7 +410,7 @@ function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60
 // 播放速度：从设置页读取（2026-10-11 加），默认 1.0
 function getPlaySpeed() {
   try {
-    const v = parseFloat(localStorage.getItem((IS_YUWEN ? 'xh_yw_' : 'xh_') + 'play_speed'));
+    const v = parseFloat(localStorage.getItem('xh_play_speed'));
     return (v >= 0.5 && v <= 2.0) ? v : 1.0;
   } catch { return 1.0; }
 }
@@ -665,7 +619,7 @@ async function renderHome() {
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
   const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
-  let html = `<div style="margin-bottom:12px;"><button onclick="location.href=HOME_URL" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:${IS_YUWEN ? '#c0392b' : '#1a73e8'};font-weight:700;">← 返回${IS_YUWEN ? '语文' : '课程'}</button></div><div id="homeHead"><h1>${BRAND}</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
+  let html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>小禾英语</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
   if (isReview) {
     // 练习模式（2026-10-02 总任务书）：学完新课自动接着练；练完一遍可以再练一遍
     if (state.p1_done) {
@@ -711,7 +665,7 @@ async function renderHome() {
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
       ${showRetry ? `<p class="scene" style="color:#e65100;font-weight:700;">还没过关（需要零求助、独立正确率≥85%才能解锁 Unit 4）。</p>
       <div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 重新挑战</button></div>` : `<p class="scene">做完的课程不能重做。下一课见。</p>`}
-      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href=HOME_URL">← 返回${IS_YUWEN ? '语文' : '课程'}</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href=HOME_URL">返回${IS_YUWEN ? '语文' : '首页'} →</button></div></div>`;
+      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">返回首页 →</button></div></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
@@ -1043,7 +997,7 @@ function speakSentence(text) {
     const h = text.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
     _sentAudio = new Audio('/audio/sent/' + h + '.mp3');
     try {
-      const v = parseFloat(localStorage.getItem((IS_YUWEN ? 'xh_yw_' : 'xh_') + 'play_speed'));
+      const v = parseFloat(localStorage.getItem('xh_play_speed'));
       if (v >= 0.5 && v <= 2.0) _sentAudio.playbackRate = v;
     } catch {}
     _sentAudio.play().catch(() => {});
@@ -1186,7 +1140,8 @@ async function advance() {
       window._batchRetryDone = true;
     } else {
       try {
-        const r = await fetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        // 2026-10-18韧性：完成标记走 apiFetch，重启时多等一会儿，保证学完能落盘
+        const r = await apiFetch('/api/complete', { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ part: PART, lesson: LID }) });
         const d = await r.json().catch(() => ({}));
         // 称号庆祝（2026-10-12）：新获得称号存下来，renderHome 里弹庆祝
@@ -1194,7 +1149,6 @@ async function advance() {
           window._newTitles = d.newTitles;
         }
       } catch {}
-      trackYw('lesson_done');
     }
     ST['p' + PART].done = true; ST['p' + PART].pos = arr.length; store.save(ST); renderHome();
   }
@@ -1310,11 +1264,11 @@ function wireQuestion(s) {
     var timeout = new Promise(function (resolve, reject) {
       timer = setTimeout(function () { reject(new Error('timeout')); }, 10000);
     });
-    var req = fetch('/api/help', {
+    var req = apiFetch('/api/help', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ item_id: s.item_id, session_id: ST['p' + PART].sid, level: lvl })
-    }).then(function (r) {
+    }, 15000).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (b) {
         if (!r.ok || !b || b.ok !== true) throw new Error((b && b.error) || ('http_' + r.status));
         return b;
@@ -1425,12 +1379,13 @@ function wireQuestion(s) {
     const elapsed_ms = Date.now() - qT0;
     let r, b;
     try {
-      r = await fetch('/api/attempt', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      // 2026-10-18韧性：提交走 apiFetch，服务端重启时自动重试，答案不丢、孩子不卡
+      r = await apiFetch('/api/attempt', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ item_id: s.item_id, answer: given,
           session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms,
           pasted: window._pastedAnswer ? 1 : 0,
           is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest")) ? 1 : 0 }) }); // 2026-10-12：粘贴标记；2026-10-15：重做豁免防重做
-    } catch { err.textContent = '网络有点慢，再点一次试试。'; $('btnSub').disabled = false; return; }
+    } catch { err.textContent = '服务器正在重启，答案已保留，等几秒再点一次提交。'; $('btnSub').disabled = false; return; }
     // h 版：先读响应体再按 error 分流，不能只看 HTTP 状态码——
     // 403 有两种：retry_exhausted（留本页看答案抄写）和 part_done（真做完，回首页）
     try { b = await r.json(); } catch { b = null; }
@@ -1475,9 +1430,6 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
   const fb = $('fb'), nextrow = $('nextrow');
   const v = b.verdict;
   const good = (v === 'correct' || v === 'correct_retry');
-  trackYw('attempt');
-  if (good) trackYw('correct');
-  else trackYw('wrong', { item_id: s.item_id, q: s.question || s.stem || s.text || '' });
   const isPractice = (s.phase || 'practice') === 'practice';
   const nudgeHtml = b.nudge ? `<div class="nudge">${escapeHtml(b.nudge)}</div>` : '';
   if (good) {
@@ -1675,7 +1627,8 @@ async function submitCopy(s, answer) {
   var box = $('saBox');
   var b = null;
   try {
-    var r = await fetch('/api/attempt', { method: 'POST',
+    // 2026-10-18韧性：抄写提交也走 apiFetch
+    var r = await apiFetch('/api/attempt', { method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ item_id: s.item_id, answer: answer,
         session_id: ST['p' + PART].sid, saw_feedback: 1, elapsed_ms: 0, copied: 1,
@@ -1733,9 +1686,13 @@ async function submitCopy(s, answer) {
     let lessonUrl = '/api/lesson?lesson=' + encodeURIComponent(LID);
     if (retryItemParam) lessonUrl += '&retry_item=' + encodeURIComponent(retryItemParam);
     if (batchItemsParam) lessonUrl += '&items=' + encodeURIComponent(batchItemsParam);
-    const r = await fetch(lessonUrl);
+    // 2026-10-18韧性：课程加载走 apiFetch（扛服务端重启）；拿到后校验 steps，坏响应直接进失败 UI
+    const r = await apiFetch(lessonUrl);
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
+    if (!LESSON || !Array.isArray(LESSON.steps) || LESSON.steps.length === 0) {
+      throw new Error('lesson_empty');
+    }
     // 2026-10-14修：u3-consolidate 新一轮检测——服务端 session 变了，清掉本地旧 ST（含旧 sid），防旧 help_events 污染
     // 2026-10-14 19:54修：首次运行时 lastSess 为空也要清（旧 ST 的 sid 是修复前的，会污染）
     if (LID === 'u3-consolidate' && LESSON && LESSON.consolidation_session) {
@@ -1765,7 +1722,7 @@ async function submitCopy(s, answer) {
     }
     // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
     if (LESSON && LESSON.error === 'lesson_locked') {
-      document.title = BRAND + ' · 课程未解锁';
+      document.title = '小禾英语 · 课程未解锁';
       wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
         <div style="font-size:48px;margin-bottom:16px;">🔒</div>
         <h2 class="stem">这门课还没解锁</h2>
@@ -1776,7 +1733,7 @@ async function submitCopy(s, answer) {
       return;
     }
     await loadProg(); // 续课进度（服务端，按题目ID）
-    document.title = BRAND + ' · ' + (LESSON.home_subtitle || LESSON.title || '');
+    document.title = '小禾英语 · ' + (LESSON.home_subtitle || LESSON.title || '');
     const brandSmall = document.querySelector('#brand small');
     if (brandSmall) brandSmall.textContent = LESSON.home_subtitle || LESSON.title || '';
     renderHome();
