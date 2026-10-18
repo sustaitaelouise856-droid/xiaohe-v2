@@ -350,10 +350,6 @@ document.getElementById('btnTitles').onclick = async () => {
   const modal = document.getElementById('titleModal');
   const wall = document.getElementById('titleModalWall');
   modal.style.display = 'block';
-  // 2026-10-18性能优化：如果已预加载，直接显示
-  if (wall.dataset.preloaded) {
-    return;
-  }
   wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载中…</div>';
   try {
     const t = await (await fetch('/api/titles')).json();
@@ -570,26 +566,8 @@ fetch('/api/titles').then(r => r.json()).then(t => {
       hint.textContent = `🎯 距「${next.name}」还差 ${remain} 步`;
     }
   }
-  // 2026-10-18性能优化：预加载称号墙（空闲时后台渲染，点开时直接显示）
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => preloadTitleWall(t), { timeout: 3000 });
-  } else {
-    setTimeout(() => preloadTitleWall(t), 2000);
-  }
+  // 2026-10-18性能优化：预加载已回滚（预渲染导致空白bug，改用CSS简化+content-visibility优化）
 }).catch(() => {});
-// 预加载称号墙HTML，存起来点开时直接用
-function preloadTitleWall(t) {
-  try {
-    const wall = document.getElementById('titleModalWall');
-    if (!wall || wall.dataset.preloaded) return;
-    const list = (t.titles || []);
-    window._modalTitles = list;
-    window._rarityPage = 0;
-    // 只预渲染第一页（普通），其他页点开时再渲染
-    renderTitlesGrouped(list, 0);
-    wall.dataset.preloaded = '1';
-  } catch (e) {}
-}
 </script>
 
 <div class="continue-wrap">
