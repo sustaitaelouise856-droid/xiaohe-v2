@@ -17,6 +17,7 @@ sys.path.insert(0, '/opt/hatch/skills/skill-creator/bin')
 from dynamic_credentials import add_surrogate_to_request, read_json_response
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SITE_URL = 'https://xiaohe-v2-1.onrender.com'  # 2026-10-18：推送前查活跃度用
 OWNER = 'sustaitaelouise856-droid'
 REPO = 'xiaohe-v2'
 RENDER_DEPLOY_URL = 'https://api.render.com/v1/services/srv-db2sq149v7es73a52qvg/deploys'
@@ -106,7 +107,28 @@ def main():
     ap = argparse.ArgumentParser(description='发版检查门禁 + GitHub 推送 + Render 部署')
     ap.add_argument('-m', '--message', required=True, help='提交信息')
     ap.add_argument('files', nargs='+', help='<本地路径>:<仓库路径>')
+    ap.add_argument('--during-study', action='store_true',
+                    help='孩子正在学习时仍推送（Elouise 明确要求"现在推"时才用）')
     args = ap.parse_args()
+
+    # 2026-10-18 学习时段保护：孩子近15分钟有作答 → 推送会重启服务打断学习，默认阻断
+    if not args.during_study:
+        try:
+            import urllib.request, json as _json, datetime as _dt
+            with urllib.request.urlopen(SITE_URL + '/api/activity', timeout=15) as r:
+                act = _json.load(r)
+            last = act.get('last_attempt')
+            if last:
+                dt = _dt.datetime.strptime(last[:19], '%Y-%m-%d %H:%M:%S')
+                mins = (_dt.datetime.utcnow() - dt).total_seconds() / 60
+                if mins < 15:
+                    print('⛔ 阻断：孩子正在学习（%d 分钟前有作答），推送会重启服务打断。' % int(mins), flush=True)
+                    print('   非紧急请等他学完再推；紧急修复经 Elouise 明确要求后加 --during-study 重推。', flush=True)
+                    return 1
+        except SystemExit:
+            raise
+        except Exception as e:
+            print('（活跃度检查失败，继续推送：%s）' % e, flush=True)
 
     pairs = []
     for item in args.files:
