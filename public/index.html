@@ -455,14 +455,14 @@ function titlePageTurn(d) {
 // 2026-10-18 Elouise：八段位，按百分比
 function getTierByRatio(ratio, total, earned) {
   const tiers = [
-    { min: 0.875, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！👑' },
-    { min: 0.75, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！🔥' },
-    { min: 0.625, tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！💪' },
-    { min: 0.5, tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！✨' },
-    { min: 0.375, tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！💎' },
-    { min: 0.25, tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！🌟' },
-    { min: 0.125, tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！🚀' },
-    { min: 0, tier: 'bronze', name: '青铜', msg: '“千里之行，始于足下。”加油！💪' },
+    { min: 0.875, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
+    { min: 0.75, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
+    { min: 0.625, tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！' },
+    { min: 0.5, tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！' },
+    { min: 0.375, tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！' },
+    { min: 0.25, tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！' },
+    { min: 0.125, tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！' },
+    { min: 0, tier: 'bronze', name: '青铜', msg: '“千里之行，始于足下。”加油！' },
   ];
   for (let i = 0; i < tiers.length; i++) {
     if (ratio >= tiers[i].min) {
@@ -503,7 +503,7 @@ function showTierPreview() {
   ov.id = 'tierPreviewOv';
   ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;';
   ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:360px;width:100%;max-height:80vh;overflow-y:auto;">'
-    + '<h3 style="margin:0 0 16px;text-align:center;">🏆 段位预览</h3>'
+    + '<h3 style="margin:0 0 16px;text-align:center;">段位预览</h3>'
     + `<div style="text-align:center;margin-bottom:16px;font-size:14px;color:#666;">当前：已集齐 ${earned}/${total}（${(ratio*100).toFixed(1)}%）</div>`
     + tiers.map(t => {
       const isCur = t.name === current;
