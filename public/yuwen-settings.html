@@ -100,6 +100,7 @@
   html[data-theme="dark"] .speed-row input[type=range]::-moz-range-thumb { border-color:#7ab8ff; }
 </style>
 <link rel="stylesheet" href="/theme.css">
+<script>window.XH_SUBJECT = 'yuwen';</script>
 <script src="/theme.js"></script>
 </head>
 <body>
@@ -168,13 +169,13 @@
 <script>
 function getSpeed() {
   try {
-    const v = parseFloat(localStorage.getItem('xh_play_speed'));
+    const v = parseFloat(localStorage.getItem('xh_yw_play_speed'));
     return (v >= 0.5 && v <= 2.0) ? v : 1.0;
   } catch { return 1.0; }
 }
 function setSpeed(v) {
   v = Math.round(v * 10) / 10;
-  try { localStorage.setItem('xh_play_speed', String(v)); } catch {}
+  try { localStorage.setItem('xh_yw_play_speed', String(v)); } catch {}
   document.getElementById('speedRange').value = v;
   document.getElementById('speedVal').textContent = v.toFixed(1) + 'x';
   document.querySelectorAll('.speed-btns button').forEach(b => {
@@ -192,13 +193,13 @@ setSpeed(getSpeed());
 // ---- 字体大小（2026-10-11 加） ----
 function getFontSize() {
   try {
-    const v = parseFloat(localStorage.getItem('xh_font_size'));
+    const v = parseFloat(localStorage.getItem('xh_yw_font_size'));
     return (v >= 0.8 && v <= 1.5) ? v : 1.0;
   } catch { return 1.0; }
 }
 function setFontSize(v) {
   v = Math.round(v * 10) / 10;
-  try { localStorage.setItem('xh_font_size', String(v)); } catch {}
+  try { localStorage.setItem('xh_yw_font_size', String(v)); } catch {}
   document.getElementById('fontRange').value = v;
   document.getElementById('fontVal').textContent = v.toFixed(1) + 'x';
   document.querySelectorAll('[data-fv]').forEach(b => {
@@ -218,10 +219,10 @@ document.querySelectorAll('[data-fv]').forEach(b => {
 
 // ---- 外观主题（2026-10-11 加） ----
 function getTheme() {
-  try { return localStorage.getItem('xh_theme') || 'light'; } catch { return 'light'; }
+  try { return localStorage.getItem('xh_yw_theme') || 'light'; } catch { return 'light'; }
 }
 function setTheme(t) {
-  try { localStorage.setItem('xh_theme', t); } catch {}
+  try { localStorage.setItem('xh_yw_theme', t); } catch {}
   document.querySelectorAll('[data-tv]').forEach(b => {
     b.classList.toggle('on', b.dataset.tv === t);
   });
