@@ -125,6 +125,10 @@
       <!-- 2026-10-18 史诗级加强：统计+筛选+优先级 -->
       <div id="mistakeStats" style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;"></div>
       <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+        <button onclick="startTodayTen()" style="padding:12px 24px;border:0;border-radius:12px;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 4px 14px rgba(26,115,232,.35);">🎯 开始今日10道</button>
+        <input id="mistakeSearch" oninput="renderMistakeList()" placeholder="🔍 搜题目…" style="padding:10px 16px;border:2px solid #e3e7ee;border-radius:10px;font-size:14px;flex:1;min-width:120px;">
+      </div>
+      <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
         <select id="kpFilter" onchange="filterByKp()" style="padding:10px 16px;border:2px solid #e3e7ee;border-radius:10px;font-size:14px;background:#fff;cursor:pointer;">
           <option value="">全部知识点</option>
         </select>
@@ -250,6 +254,23 @@ function updateMistakeStats() {
     });
   }
 }
+// 2026-10-18 史诗级：一键开始今日10道（自动选最紧急的10道）
+function startTodayTen() {
+  const mistakes = window._mistakes || [];
+  if (!mistakes.length) { alert('太棒了，一道错题都没有！'); return; }
+  // 按错次降序+时间升序（最紧急优先）
+  const sorted = [...mistakes].sort((a, b) => {
+    const wcDiff = (b.wrong_count || 1) - (a.wrong_count || 1);
+    if (wcDiff !== 0) return wcDiff;
+    return new Date(a.created_at) - new Date(b.created_at);
+  });
+  const top10 = sorted.slice(0, 10);
+  const itemIds = top10.map(m => m.item_id).filter(Boolean);
+  if (!itemIds.length) { alert('没有有效的题目'); return; }
+  if (confirm(`今日10道已选好（错得最多的${itemIds.length}道），开始吗？`)) {
+    location.href = '/lesson?lesson=batch-retry&items=' + encodeURIComponent(itemIds.join(','));
+  }
+}
 function filterByKp() { renderMistakeList(); }
 
 // 2026-10-15 Elouise：错题多选一起做
@@ -266,6 +287,15 @@ function renderMistakeList() {
   const filterKp = kpFilter ? kpFilter.value : '';
   if (filterKp) {
     mistakes = mistakes.filter(m => (m.knowledge_point || '其他') === filterKp);
+  }
+  // 搜索
+  const searchEl = document.getElementById('mistakeSearch');
+  const keyword = searchEl ? searchEl.value.trim().toLowerCase() : '';
+  if (keyword) {
+    mistakes = mistakes.filter(m =>
+      (m.question || '').toLowerCase().includes(keyword) ||
+      (m.given || '').toLowerCase().includes(keyword)
+    );
   }
   // 排序
   const sortBy = document.getElementById('sortBy') ? document.getElementById('sortBy').value : 'wrong';
