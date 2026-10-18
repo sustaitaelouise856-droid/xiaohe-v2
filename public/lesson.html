@@ -30,6 +30,16 @@
           if (ta && ta.placeholder === '在这里写英文答案') ta.placeholder = '在这里写答案';
         });
         obs.observe(document.body, { childList: true, subtree: true });
+        // 红色主题（2026-10-19）：语文课中国红
+        var st = document.createElement('style');
+        st.textContent = `
+          [data-subject="yuwen"] .btn, [data-subject="yuwen"] button.big { background: linear-gradient(135deg, #e53935, #c62828) !important; border-color: #c62828 !important; }
+          [data-subject="yuwen"] #brand { color: #c62828 !important; }
+          [data-subject="yuwen"] h1 { color: #c62828 !important; }
+          [data-subject="yuwen"] .tag { background: #ffebee !important; color: #c62828 !important; border-color: #ef9a9a !important; }
+        `;
+        document.head.appendChild(st);
+        document.documentElement.setAttribute('data-subject', 'yuwen');
       });
     } else {
       window.XH_SUBJECT = 'english';
