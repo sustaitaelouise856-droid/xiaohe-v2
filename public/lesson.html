@@ -338,6 +338,36 @@ if (IS_YUWEN) {
   const _bn = document.querySelector('#brand');
   if (_bn && _bn.firstChild) _bn.firstChild.textContent = BRAND;
 }
+// 语文学习数据埋点（2026-10-18）：本地记录，供语文学习报告/成长页使用，与英语完全隔离
+function trackYw(evt, info) {
+  if (!IS_YUWEN) return;
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    const dk = 'xh_yw_daily_' + today;
+    const d = JSON.parse(localStorage.getItem(dk) || '{"attempts":0,"correct":0}');
+    if (evt === 'attempt') d.attempts = (d.attempts || 0) + 1;
+    if (evt === 'correct') d.correct = (d.correct || 0) + 1;
+    d.minutes = Math.round((d.attempts || 0) * 1.5); // 与英语口径一致：每题约1.5分钟
+    localStorage.setItem(dk, JSON.stringify(d));
+    if (evt === 'wrong' && info && info.item_id) {
+      const mk = 'xh_yw_mistakes';
+      const arr = JSON.parse(localStorage.getItem(mk) || '[]');
+      // 同一题只保留最新一条
+      const filtered = arr.filter(x => x.item_id !== info.item_id);
+      filtered.unshift({ lesson: LID, item_id: info.item_id,
+        q: String(info.q || '').slice(0, 80), t: Date.now() });
+      localStorage.setItem(mk, JSON.stringify(filtered.slice(0, 100)));
+    }
+    if (evt === 'lesson_done') {
+      localStorage.setItem('xh_done_' + LID, '1');
+      // 答对的错题从错题本移除
+      const mk = 'xh_yw_mistakes';
+      const arr = JSON.parse(localStorage.getItem(mk) || '[]');
+      const kept = arr.filter(x => !(info && info.resolvedIds && info.resolvedIds.includes(x.item_id)));
+      if (kept.length !== arr.length) localStorage.setItem(mk, JSON.stringify(kept));
+    }
+  } catch {}
+}
 let LESSON = null;
 let PART = 1, POS = 0;            // 当前部分与下标
 let sawFb = {};                   // item_id -> 看过反馈/帮助
@@ -1164,6 +1194,7 @@ async function advance() {
           window._newTitles = d.newTitles;
         }
       } catch {}
+      trackYw('lesson_done');
     }
     ST['p' + PART].done = true; ST['p' + PART].pos = arr.length; store.save(ST); renderHome();
   }
@@ -1444,6 +1475,9 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
   const fb = $('fb'), nextrow = $('nextrow');
   const v = b.verdict;
   const good = (v === 'correct' || v === 'correct_retry');
+  trackYw('attempt');
+  if (good) trackYw('correct');
+  else trackYw('wrong', { item_id: s.item_id, q: s.question || s.stem || s.text || '' });
   const isPractice = (s.phase || 'practice') === 'practice';
   const nudgeHtml = b.nudge ? `<div class="nudge">${escapeHtml(b.nudge)}</div>` : '';
   if (good) {
