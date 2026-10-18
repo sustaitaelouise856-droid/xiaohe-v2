@@ -2579,8 +2579,14 @@ app.post('/api/admin/cleanup-retest', (req, res) => {
         AND date(created_at, '+8 hours') = ?
       )
     `).run(today);
-    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes);
-    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes });
+    // 3. 删"已解决又有待办"的：item已有resolved，其pending是旧重复（2026-10-18 Elouise批准清掉）
+    const stale = db.prepare(`
+      DELETE FROM retest_queue WHERE status='pending' AND item_id IN (
+        SELECT item_id FROM retest_queue WHERE status='resolved'
+      )
+    `).run();
+    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes);
+    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
