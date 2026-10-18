@@ -2241,6 +2241,19 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
   // 预判错法匹配（short 判 wrong 后用；先算好，attempts.js 在判 wrong 时记入 detail_json）
   let predicted = null;
   if (step && step.kind === 'short') predicted = matchPredicted(step, body.answer);
+  // 按需补种（2026-10-18）：draft 课（yw-/sx-）若 seed 未入库，作答时从文件补种题目——
+  // 防 gdrive-restore 覆盖或 seed 未跑导致的 no_item
+  try {
+    const hasItem = db.prepare('SELECT 1 FROM items WHERE item_id=?').get(itemId);
+    if (!hasItem) {
+      const mm = /^(.+)-v\d+-s\d+$/.exec(itemId);
+      if (mm) {
+        const seedLid = mm[1];
+        const st = (/^sx\d+$/.test(seedLid) || /^yw-/.test(seedLid)) ? 'draft' : 'pilot';
+        seed.seedLesson(seedLid, null, st);
+      }
+    }
+  } catch {}
   const r = attempts.submitAttempt({ item_id: body.item_id, answer: body.answer,
     session_id: body.session_id, saw_feedback: body.saw_feedback,
     elapsed_ms: body.elapsed_ms, copied: body.copied ? 1 : 0, predicted,
