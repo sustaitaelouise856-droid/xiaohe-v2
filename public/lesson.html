@@ -1418,10 +1418,12 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     // 单题重做（2026-10-14）：答对 → 调接口消掉复测项
     // 批量重做（2026-10-16修：之前漏了，批量重做的题答对也要消掉——Elouise报告阻塞性bug）
     // 2026-10-18修：不管有没有用帮助，答对就消掉（helped只影响每日10道计数，不影响消错题）
+    // 2026-10-18补：每日闯关答对也要消错题（根因：daily-retest从不调resolve，导致题目永远卡住）
     if (LESSON) {
       let resolveId = null;
       if (LESSON.single_retry && LESSON.retry_item) resolveId = LESSON.retry_item;
       else if (LESSON.batch_retry && s.retry_item) resolveId = s.retry_item;
+      else if (LESSON.daily_retest && s.item_id) resolveId = s.item_id;
       if (resolveId) {
         fetch('/api/retest/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ item_id: resolveId }) }).catch(() => {});
