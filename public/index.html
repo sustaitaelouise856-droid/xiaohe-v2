@@ -513,6 +513,67 @@ function getTierByRatio(ratio, total, earned) {
 }
 // 2026-10-18 Elouise：点击段位徽章预览八个段位
 // 2026-10-18 Elouise：称号墙使用须知
+// 2026-10-18 Elouise：获得称号时的全屏庆祝（按稀有度不同奢华度）
+function showTitleCelebration(title) {
+  const old = document.getElementById('titleCelebOv');
+  if (old) old.remove();
+  const pts = { '普通': 1, '稀有': 2, '史诗': 4, '传说': 8 };
+  const point = pts[title.rarity || '普通'] || 1;
+  const rarity = title.rarity || '普通';
+  
+  // 按稀有度配置奢华度
+  const config = {
+    '普通': {
+      bg: 'linear-gradient(165deg,#e3f2fd 0%,#90caf9 100%)',
+      border: '#64b5f6', glow: 'none', anim: 'none',
+      titleSize: '32px', iconSize: '64px'
+    },
+    '稀有': {
+      bg: 'linear-gradient(165deg,#f3e5f5 0%,#ce93d8 100%)',
+      border: '#ab47bc', glow: '0 0 30px rgba(156,39,176,.4)',
+      anim: 'celebFloat 3s ease-in-out infinite',
+      titleSize: '36px', iconSize: '72px'
+    },
+    '史诗': {
+      bg: 'linear-gradient(165deg,#fff3e0 0%,#ffcc80 50%,#ff9800 100%)',
+      border: '#ff9800', glow: '0 0 50px rgba(255,152,0,.6)',
+      anim: 'celebFloat 2s ease-in-out infinite, celebGlow 2s ease-in-out infinite',
+      titleSize: '40px', iconSize: '80px'
+    },
+    '传说': {
+      bg: 'linear-gradient(165deg,#fff8e1 0%,#ffe082 30%,#ffb300 60%,#ff8f00 100%)',
+      border: '#ffb300', glow: '0 0 80px rgba(255,183,3,.8)',
+      anim: 'celebFloat 1.5s ease-in-out infinite, celebGlow 1.5s ease-in-out infinite, celebSpin 8s linear infinite',
+      titleSize: '44px', iconSize: '96px'
+    }
+  };
+  const c = config[rarity] || config['普通'];
+  
+  const ov = document.createElement('div');
+  ov.id = 'titleCelebOv';
+  ov.style.cssText = 'position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.7);';
+  ov.innerHTML = `
+    <style>
+      @keyframes celebFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+      @keyframes celebGlow { 0%,100% { filter:brightness(1); } 50% { filter:brightness(1.2); } }
+      @keyframes celebSpin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+      @keyframes celebPop { 0% { transform:scale(.5); opacity:0; } 60% { transform:scale(1.1); opacity:1; } 100% { transform:scale(1); opacity:1; } }
+    </style>
+    <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;box-sizing:border-box;background:${c.bg};animation:celebPop .5s ease-out;">
+      <div style="font-size:18px;color:#666;margin-bottom:16px;letter-spacing:2px;">🎉 恭喜获得新称号 🎉</div>
+      <div style="font-size:${c.iconSize};margin-bottom:16px;animation:${c.anim};filter:drop-shadow(${c.glow});">${title.icon || '🏆'}</div>
+      <div style="font-size:${c.titleSize};font-weight:900;margin-bottom:8px;animation:${c.anim};">${title.name}</div>
+      <div style="font-size:16px;font-weight:700;color:${rarity === '普通' ? '#0d47a1' : rarity === '稀有' ? '#4a148c' : rarity === '史诗' ? '#bf360c' : '#e65100'};margin-bottom:8px;">${rarity}称号</div>
+      <div style="font-size:20px;font-weight:800;color:#1a73e8;margin-bottom:16px;">+${point} 称号点</div>
+      <div style="font-size:14px;color:#666;max-width:300px;text-align:center;line-height:1.6;margin-bottom:24px;">${title.desc || ''}</div>
+      <button onclick="document.getElementById('titleCelebOv').remove()" style="padding:14px 48px;border-radius:30px;border:3px solid ${c.border};background:#fff;font-size:18px;font-weight:700;cursor:pointer;box-shadow:${c.glow};">太棒了！</button>
+    </div>
+  `;
+  ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
+  document.body.appendChild(ov);
+  // 3秒后自动关闭（传说5秒）
+  setTimeout(() => { const el = document.getElementById('titleCelebOv'); if (el) el.remove(); }, rarity === '传说' ? 5000 : 3000);
+}
 function showTitleGuide() {
   const old = document.getElementById('titleGuideOv');
   if (old) old.remove();
