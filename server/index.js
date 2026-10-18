@@ -2680,7 +2680,7 @@ app.post('/api/admin/cleanup-retest', (req, res) => {
           SELECT 1 FROM attempts a
           WHERE a.item_id = q.item_id
           AND a.correct = 1
-          AND a.created_at > q.created_at
+          AND a.created_at >= q.created_at
         )
       )
     `).run();
