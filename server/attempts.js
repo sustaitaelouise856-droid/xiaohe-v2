@@ -107,10 +107,10 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
       }
       const kps = dims.length ? dims : ['general'];
       for (const kp of kps) {
-        // 去重：同一题同一知识点 pending 只留一条
+        // 去重：同一题 pending 只留一条（2026-10-18修：不按knowledge_point区分，否则重复）
         const ex = db.prepare(
-          "SELECT id FROM retest_queue WHERE item_id=? AND knowledge_point=? AND status='pending'"
-        ).get(item.item_id, kp);
+          "SELECT id FROM retest_queue WHERE item_id=? AND status='pending'"
+        ).get(item.item_id);
         if (!ex) {
           db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, source_session)
             VALUES(?,?, 'pending', ?)`)
