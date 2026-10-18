@@ -494,9 +494,48 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     const earned = new Set(db.prepare('SELECT title_id FROM titles').all().map(r => r.title_id));
+    // 2026-10-18 史诗级：计算进度条数据
+    const progressData = {};
+    try {
+      // 消灭错题数
+      const mistakeCount = db.prepare("SELECT COUNT(DISTINCT item_id) as c FROM retest_queue WHERE status='resolved'").get();
+      progressData.mistake = mistakeCount ? mistakeCount.c : 0;
+      // 累计做题数
+      const qCount = db.prepare("SELECT COUNT(*) as c FROM attempts").get();
+      progressData.questions = qCount ? qCount.c : 0;
+      // 完成课程数
+      const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+      progressData.courses = cCount ? cCount.c : 0;
+      // 掌握单词数
+      const wCount = db.prepare("SELECT COUNT(*) as c FROM word_mastery WHERE level>=4").get();
+      progressData.words = wCount ? wCount.c : 0;
+    } catch (e) {}
+    // 进度映射：title_id -> {current, target}
+    const progressMap = {
+      'mistake_10': { current: progressData.mistake || 0, target: 10 },
+      'mistake_50': { current: progressData.mistake || 0, target: 50 },
+      'mistake_200': { current: progressData.mistake || 0, target: 200 },
+      'mistake_500': { current: progressData.mistake || 0, target: 500 },
+      'questions_100': { current: progressData.questions || 0, target: 100 },
+      'questions_500': { current: progressData.questions || 0, target: 500 },
+      'questions_1000': { current: progressData.questions || 0, target: 1000 },
+      'questions_2000': { current: progressData.questions || 0, target: 2000 },
+      'courses_5': { current: progressData.courses || 0, target: 5 },
+      'courses_10': { current: progressData.courses || 0, target: 10 },
+      'courses_15': { current: progressData.courses || 0, target: 15 },
+      'courses_20': { current: progressData.courses || 0, target: 20 },
+      'word_50': { current: progressData.words || 0, target: 50 },
+      'word_150': { current: progressData.words || 0, target: 150 },
+      'word_250': { current: progressData.words || 0, target: 250 },
+      'word_350': { current: progressData.words || 0, target: 350 },
+    };
     res.json({
       ok: true,
-      titles: TITLE_DEFS.map(t => ({ ...t, earned: earned.has(t.id) })),
+      titles: TITLE_DEFS.map(t => ({
+        ...t,
+        earned: earned.has(t.id),
+        progress: progressMap[t.id] || null,
+      })),
     });
   } catch (e) {
     res.json({ ok: false, titles: [] });
