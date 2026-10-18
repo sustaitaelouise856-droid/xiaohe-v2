@@ -343,7 +343,9 @@
 @keyframes legendaryGlow { 0%,100% { box-shadow:0 0 20px rgba(249,168,37,.6); } 50% { box-shadow:0 0 30px rgba(249,168,37,.9); } }
 @keyframes shine { 0% { left:-100%; } 50%,100% { left:100%; } }
 #titleModalWall .title-item.earned.rar-普通 { border-color:#f2c14e; }
-#titleModalWall .title-item.locked { opacity:.75; }
+#titleModalWall .title-item.locked { background:linear-gradient(160deg,#212121 0%,#000000 100%) !important; border-color:#000 !important; box-shadow:none !important; animation:none !important; }
+#titleModalWall .title-item.locked .nm, #titleModalWall .title-item.locked .cond { color:#9e9e9e !important; }
+#titleModalWall .title-item.locked::before, #titleModalWall .title-item.locked::after { display:none !important; }
 #titleModalWall .title-item.earned .nm { color:#5d4037; }
 #titleModalWall .title-item.earned .cond { color:#8d6e63; }
 #titleModalWall .title-item.locked { opacity:.7; background:#f1f3f4; }
@@ -380,7 +382,7 @@ document.getElementById('btnTitles').onclick = async () => {
         const rarity = x.rarity || '普通';
         // 2026-10-18史诗级加强：用CSS类实现稀有度特效
         const rc = { '普通': '#0d47a1', '稀有': '#4a148c', '史诗': '#bf360c', '传说': '#e65100' }[rarity] || '#0d47a1';
-        return `<div class="title-item rar-${rarity} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;${x.earned ? '' : 'filter:grayscale(.6);opacity:.8;'}">`
+        return `<div class="title-item rar-${rarity} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;">`
         + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
         + `<div class="nm">${x.earned ? x.name : '???'}</div>`
         + `<div style="font-size:11px;color:${rc};font-weight:700;">${rarity}</div>`
