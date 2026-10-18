@@ -1577,7 +1577,13 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     // 2026-10-14修：答错后的"再想一想"反馈不算帮助，不置 sawFb（否则重试会被误记为用了提示）
     fastStreak.n = 0;
     fb.className = 'fb no';
-    fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
+    // 前端兜底（2026-10-19）：若服务端没返回针对性反馈，用步骤自带的 wrong_feedback
+    let fbText = b.feedback;
+    if ((!fbText || fbText === '再想一想。' || fbText === '再看一看通知。') && s && s.wrong_feedback && s.kind === 'mcq') {
+      const g = String(givenAnswer || '').trim().toUpperCase();
+      if (s.wrong_feedback[g]) fbText = s.wrong_feedback[g];
+    }
+    fb.innerHTML = escapeHtml(fbText || '再想一想。') + nudgeHtml;
     $('btnSub').disabled = false;
     // 保底出口优先（2026-10-13）：第3次错后直接给"先看答案，继续往下"，不再进带着做。
     // 之前是先进带着做小步、把保底按钮挤到下面，孩子被困在小步里出不来。
