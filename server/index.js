@@ -509,6 +509,12 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       // 掌握单词数
       const wCount = db.prepare("SELECT COUNT(*) as c FROM word_mastery WHERE level>=4").get();
       progressData.words = wCount ? wCount.c : 0;
+      // 签到天数（2026-10-18补）
+      const sCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='manual'").get();
+      progressData.signin = sCount ? sCount.c : 0;
+      // 闯关天数（2026-10-18补）
+      const chCount = db.prepare("SELECT COUNT(DISTINCT day) as c FROM checkins WHERE kind='challenge'").get();
+      progressData.challenge = chCount ? chCount.c : 0;
     } catch (e) {}
     // 进度映射：title_id -> {current, target}
     const progressMap = {
@@ -528,6 +534,16 @@ app.get('/api/titles', auth.requireAuth, (req, res) => {
       'word_150': { current: progressData.words || 0, target: 150 },
       'word_250': { current: progressData.words || 0, target: 250 },
       'word_350': { current: progressData.words || 0, target: 350 },
+      'signin_14': { current: progressData.signin || 0, target: 14 },
+      'signin_21': { current: progressData.signin || 0, target: 21 },
+      'signin_36': { current: progressData.signin || 0, target: 36 },
+      'signin_100': { current: progressData.signin || 0, target: 100 },
+      'signin_120': { current: progressData.signin || 0, target: 120 },
+      'challenge_streak_3': { current: progressData.challenge || 0, target: 3 },
+      'challenge_streak_7': { current: progressData.challenge || 0, target: 7 },
+      'challenge_streak_14': { current: progressData.challenge || 0, target: 14 },
+      'challenge_streak_30': { current: progressData.challenge || 0, target: 30 },
+      'challenge_streak_60': { current: progressData.challenge || 0, target: 60 },
     };
     res.json({
       ok: true,
