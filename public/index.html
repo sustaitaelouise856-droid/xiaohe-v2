@@ -285,9 +285,9 @@
 </div>
 
 <!-- 称号墙弹窗 -->
-<div id="titleModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;overflow-y:auto;padding:20px 12px;" onclick="if(event.target===this)this.style.display='none'">
-  <div id="titleModalBody" style="max-width:640px;margin:0 auto;background:#fff;border-radius:20px;padding:20px;position:relative;">
-    <button onclick="document.getElementById('titleModal').style.display='none'" style="position:absolute;top:12px;right:12px;width:36px;height:36px;border:0;border-radius:50%;background:#f1f3f4;font-size:18px;cursor:pointer;">✕</button>
+<div id="titleModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;overflow:hidden;" onclick="if(event.target===this)this.style.display='none'">
+  <div id="titleModalBody" style="width:100%;height:100%;margin:0;background:#fff;padding:20px;position:relative;overflow-y:auto;box-sizing:border-box;">
+    <button onclick="document.getElementById('titleModal').style.display='none'" style="position:absolute;top:12px;right:12px;width:36px;height:36px;border:0;border-radius:50%;background:#f1f3f4;font-size:18px;cursor:pointer;z-index:10;">✕</button>
     <h2 style="text-align:center;margin:0 0 16px;">🏆 称号墙</h2>
     <div id="titleModalWall"></div>
   </div>
@@ -385,12 +385,27 @@ document.getElementById('btnTitles').onclick = async () => {
 function renderTitlesGrouped(list, page) {
   const order = ['普通', '稀有', '史诗', '传说'];
   const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
-  const rarity = order[page] || order[0];
-  const items = list.filter(x => (x.rarity || '普通') === rarity);
-  const earned = items.filter(x => x.earned).length;
+  // 2026-10-18性能优化：每页12个，一页刚好显示完，不滚动
+  const PER_PAGE = 12;
+  const rarity = order[Math.floor(page / 10)] || order[0];
+  const subPage = page % 10;
+  const allItems = list.filter(x => (x.rarity || '普通') === rarity);
+  const totalPages = Math.ceil(allItems.length / PER_PAGE);
+  const items = allItems.slice(subPage * PER_PAGE, (subPage + 1) * PER_PAGE);
+  const earned = allItems.filter(x => x.earned).length;
   const infoEl = document.getElementById('rarityPageInfo');
-  if (infoEl) infoEl.textContent = `${rarity}（${earned}/${items.length}）· ${page+1}/4`;
-  let html = `<div class="title-wall" style="margin-bottom:8px;">`;
+  if (infoEl) {
+    const rarityIdx = order.indexOf(rarity) + 1;
+    if (totalPages > 1) {
+      infoEl.textContent = `${rarity}（${earned}/${allItems.length}）· ${rarityIdx}/4 · 第${subPage+1}/${totalPages}页`;
+    } else {
+      infoEl.textContent = `${rarity}（${earned}/${allItems.length}）· ${rarityIdx}/4`;
+    }
+  }
+  // 存总页数供翻页用
+  window._rarityTotalPages = totalPages;
+  window._rarityCurrent = rarity;
+  let html = `<div class="title-wall" style="margin-bottom:8px;display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;">`;
     html += items.map(x => {
       const i = list.indexOf(x);
       const rc = colors[rarity];
@@ -414,10 +429,31 @@ function renderTitlesGrouped(list, page) {
 function rarityPageTurn(d) {
   const list = window._modalTitles || [];
   let p = (window._rarityPage || 0) + d;
+  // 新分页：每稀有度10个槽位，实际用到的按该稀有度总页数
+  const order = ['普通', '稀有', '史诗', '传说'];
+  const PER_PAGE = 12;
+  // 计算总页数
+  let totalSlots = 0;
+  const rarityPages = order.map(r => {
+    const n = list.filter(x => (x.rarity || '普通') === r).length;
+    return Math.ceil(n / PER_PAGE);
+  });
+  totalSlots = rarityPages.reduce((a, b) => a + b, 0);
   if (p < 0) p = 0;
-  if (p > 3) p = 3;
+  if (p >= totalSlots) p = totalSlots - 1;
   window._rarityPage = p;
-  document.getElementById('titleWallGrouped').innerHTML = renderTitlesGrouped(list, p);
+  // 找到对应的rarity和subPage
+  let acc = 0, rarityIdx = 0, subPage = 0;
+  for (let i = 0; i < 4; i++) {
+    if (p < acc + rarityPages[i]) {
+      rarityIdx = i;
+      subPage = p - acc;
+      break;
+    }
+    acc += rarityPages[i];
+  }
+  const renderPage = rarityIdx * 10 + subPage;
+  document.getElementById('titleWallGrouped').innerHTML = renderTitlesGrouped(list, renderPage);
 }
 // 旧翻页函数保留（暂不用）
 function renderTitlePage(list, page) {
