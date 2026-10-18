@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>小禾语文 · 学习地图</title>
+<style>
+  :root {
+    --red: #c0392b;
+    --red-dark: #96281b;
+    --gold: #f2c14e;
+    --ink: #202124;
+    --muted: #5f6368;
+    --bg: #faf6f0;
+    --card: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(60,64,67,.08), 0 1px 2px rgba(60,64,67,.06);
+    --shadow-md: 0 4px 12px rgba(60,64,67,.10), 0 2px 6px rgba(60,64,67,.08);
+    --radius-lg: 20px;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--ink);
+    min-height: 100vh; padding-bottom: 90px;
+  }
+  /* 顶部：中国红渐变 */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(150deg, #c0392b 0%, #d35400 55%, #e67e22 100%);
+    color: #fff; padding: 34px 22px 30px;
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 8px 24px rgba(192,57,43,.28);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,.13) 1.5px, transparent 1.7px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero h1 { margin: 0; font-size: 27px; font-weight: 800; letter-spacing: 4px; text-shadow: 0 2px 10px rgba(0,0,0,.20); }
+  .hero .sub { margin: 10px 0 0; font-size: 13.5px; opacity: .92; letter-spacing: 1px; }
+  /* 继续学习按钮 */
+  .continue-wrap { padding: 20px 20px 0; }
+  .btn-continue {
+    display: block; width: 100%;
+    background: linear-gradient(135deg, #c0392b 0%, #e67e22 130%);
+    color: #fff; border: 0; border-radius: var(--radius-lg);
+    padding: 18px; font-size: 18.5px; font-weight: 800; letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(192,57,43,.35), inset 0 1px 0 rgba(255,255,255,.28);
+    transition: transform .15s ease;
+  }
+  .btn-continue:active { transform: scale(.97); }
+  .btn-continue small { display: block; font-size: 13px; font-weight: 400; opacity: .93; margin-top: 6px; letter-spacing: 1px; }
+  /* 课程卡片 */
+  .lessons { padding: 18px 20px 0; display: flex; flex-direction: column; gap: 14px; }
+  .lesson-card {
+    background: var(--card); border-radius: var(--radius-lg);
+    padding: 18px; box-shadow: var(--shadow-sm);
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none; color: var(--ink);
+    border: 1px solid rgba(225,229,235,.6);
+    transition: transform .15s ease;
+  }
+  .lesson-card:active { transform: scale(.98); }
+  .lesson-num {
+    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%;
+    background: linear-gradient(135deg, #c0392b, #e67e22);
+    color: #fff; font-size: 20px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lesson-card.done .lesson-num { background: linear-gradient(135deg, #34a853, #6abf69); }
+  .lesson-info { flex: 1; }
+  .lesson-title { font-size: 16.5px; font-weight: 700; margin: 0 0 4px; }
+  .lesson-sub { font-size: 13px; color: var(--muted); margin: 0; }
+  .lesson-go { font-size: 22px; color: var(--red); flex: 0 0 auto; }
+  .lesson-card.done .lesson-go { color: #34a853; }
+  /* 底部导航 */
+  .bottomnav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(225,229,235,.8); display: flex; z-index: 10; }
+  .bottomnav a { flex: 1; text-align: center; padding: 10px 0 14px; text-decoration: none; color: var(--muted); font-size: 12px; }
+  .bottomnav a.on { color: var(--red); font-weight: 700; }
+  .shell-note { margin: 18px 20px 0; font-size: 12.5px; color: var(--muted); text-align: center; line-height: 1.8; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>📚 小禾语文</h1>
+  <p class="sub">小禾文史馆开馆 · 先上三节示范课</p>
+</div>
+
+<div class="continue-wrap">
+  <button class="btn-continue" id="btnContinue">▶ 继续学习<small id="continueSub">开馆第一课：《记承天寺夜游》</small></button>
+</div>
+
+<div class="lessons" id="lessons"></div>
+
+<p class="shell-note">语文系统外壳版 · 更多课程、复习、报告陆续上线</p>
+
+<div class="bottomnav">
+  <a href="/">🌱<br>英语</a>
+  <a href="/yuwen.html" class="on">📚<br>语文</a>
+  <a href="/settings.html">⚙️<br>设置</a>
+</div>
+
+<script>
+// 语文示范课（外壳版写死三节课，后续接服务端课程表）
+const YW_LESSONS = [
+  { id: 'yw-wenyan1', title: '开馆第一课：《记承天寺夜游》', sub: '文史馆开馆 · 苏轼的月夜 · 实词+背诵' },
+  { id: 'yw-read1', title: '审稿小编辑：读懂一篇记叙文', sub: '第 3 节 · 现代文阅读理解 · 答题套路' },
+  { id: 'yw-word1', title: '字词：己、已、巳三兄弟', sub: '字词第一课 · 形近字辨析' },
+];
+function isDone(id) {
+  try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; }
+}
+const wrap = document.getElementById('lessons');
+YW_LESSONS.forEach((l, i) => {
+  const done = isDone(l.id);
+  const a = document.createElement('a');
+  a.className = 'lesson-card' + (done ? ' done' : '');
+  a.href = '/lesson?lesson=' + l.id;
+  a.innerHTML =
+    '<div class="lesson-num">' + (done ? '✓' : (i + 1)) + '</div>' +
+    '<div class="lesson-info"><p class="lesson-title">' + l.title + '</p>' +
+    '<p class="lesson-sub">' + l.sub + '</p></div>' +
+    '<div class="lesson-go">›</div>';
+  wrap.appendChild(a);
+});
+// 继续学习：第一门没完成的
+(function () {
+  const next = YW_LESSONS.find(l => !isDone(l.id)) || YW_LESSONS[0];
+  const btn = document.getElementById('btnContinue');
+  document.getElementById('continueSub').textContent = next.title;
+  btn.onclick = () => { location.href = '/lesson?lesson=' + next.id; };
+})();
+</script>
+</body>
+</html>
