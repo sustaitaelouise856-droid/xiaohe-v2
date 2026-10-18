@@ -154,6 +154,12 @@
 <div id="wrap">
   <div class="card" id="profileCard"><div class="empty">正在加载…</div></div>
 
+  <!-- 称号墙（2026-10-18修复：补上之前缺失的#titleWall容器，JS取不到元素直接报错） -->
+  <div class="card">
+    <h2>🏆 称号墙</h2>
+    <div id="titleWall"><div class="empty">正在加载…</div></div>
+  </div>
+
   <!-- 签到日历（2026-10-12从首页移到这里） -->
   <div class="card">
     <h2>📅 每日签到</h2>
@@ -383,6 +389,8 @@ async function load() {
   // 2026-10-16：加段位——集齐≤1/10青铜，≤3/10白银，≤6/10黄金，≥8/10钻石
   // 2026-10-16晚：整面质感纹路 + 空位显示十分之几 + 距下一段位 + 寄语
   try {
+    const wallEl = document.getElementById('titleWall');
+    if (!wallEl) return;
     const t = await (await fetch('/api/titles')).json();
     const list = (t.titles || []);
     window._titles = list;
@@ -413,12 +421,13 @@ async function load() {
       nextTip = total > 1 ? `距离白银还差 ${need} 个称号` : '开始收集你的第一个称号吧！';
       msg = '“千里之行，始于足下。”每个大师都曾是青铜，加油！🚀';
     }
-    const wallCard = document.getElementById('titleWall').closest('.card');
+    const wallCard = wallEl.closest('.card');
     if (wallCard) wallCard.classList.add('tier-' + tier);
-    document.getElementById('titleWall').innerHTML =
+    wallEl.innerHTML =
       `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
       + `<div style="font-size:17px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（十分之${tenthStr}）</div>`
       + `<div style="font-size:15px;color:var(--muted);margin-top:4px;">${nextTip}</div></div>`
+      + '<div class="title-wall">'
       + (list.length
         ? list.map((x, i) => '<div class="title-item ' + (x.earned ? 'earned' : 'locked') + '" onclick="showTitleDetail(' + i + ')" style="cursor:pointer;'
           + (x.earned ? '' : 'filter:grayscale(1);opacity:.6;') + '">'
@@ -426,9 +435,11 @@ async function load() {
           + '<div class="nm">' + (x.earned ? esc(x.name) : '???') + '</div>'
           + '<div class="cond">' + (x.earned ? '已获得' : '点击查看要求') + '</div></div>').join('')
         : '<div class="empty">暂无称号数据</div>')
+      + '</div>'
       + `<div class="tier-msg" style="width:100%;">${msg}</div>`;
   } catch (e) {
-    document.getElementById('titleWall').innerHTML = '<div class="empty">加载失败</div>';
+    const wallEl2 = document.getElementById('titleWall');
+    if (wallEl2) wallEl2.innerHTML = '<div class="empty">加载失败</div>';
   }
 }
 function showTitleDetail(i) {
