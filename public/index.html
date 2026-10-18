@@ -328,6 +328,31 @@
   radial-gradient(ellipse at 25% 20%, rgba(255,255,255,.8) 0%, transparent 35%),
   linear-gradient(160deg,#e1f5fe 0%,#b3e5fc 35%,#81d4fa 70%,#4fc3f7 100%);
   border:3px solid #0277bd; box-shadow:inset 0 3px 20px rgba(2,119,189,.3), 0 8px 32px rgba(2,136,209,.45); }
+/* 2026-10-18：补齐铂金/大师/宗师/王者的墙面质感 */
+#titleModalWall.tier-platinum .title-wall { background:
+  repeating-linear-gradient(90deg, rgba(0,96,100,.06) 0 1px, transparent 1px 3px),
+  linear-gradient(105deg, rgba(255,255,255,.7) 0%, transparent 25%, rgba(255,255,255,.3) 50%, transparent 75%, rgba(255,255,255,.5) 100%),
+  linear-gradient(160deg,#e0f7fa 0%,#80deea 40%,#4dd0e1 70%,#00acc1 100%);
+  border:3px solid #00838f; box-shadow:inset 0 3px 18px rgba(0,131,143,.3), 0 6px 20px rgba(0,172,193,.3); }
+#titleModalWall.tier-master .title-wall { background:
+  repeating-conic-gradient(from 0deg at 50% 30%, rgba(123,31,162,.07) 0deg 2deg, transparent 2deg 4deg),
+  linear-gradient(105deg, rgba(255,255,255,.8) 0%, transparent 20%, rgba(255,255,255,.35) 45%, transparent 65%, rgba(255,255,255,.6) 100%),
+  radial-gradient(ellipse at 50% 25%, rgba(243,229,245,.7) 0%, transparent 55%),
+  linear-gradient(160deg,#f3e5f5 0%,#ce93d8 35%,#ab47bc 70%,#7b1fa2 100%);
+  border:3px solid #6a1b9a; box-shadow:inset 0 3px 20px rgba(106,27,154,.3), 0 8px 28px rgba(123,31,162,.45); }
+#titleModalWall.tier-grandmaster .title-wall { background:
+  repeating-linear-gradient(45deg, rgba(216,27,96,.08) 0 8px, transparent 8px 16px),
+  repeating-linear-gradient(-45deg, rgba(216,27,96,.08) 0 8px, transparent 8px 16px),
+  linear-gradient(115deg, rgba(255,255,255,.9) 0%, transparent 18%, rgba(255,255,255,.4) 38%, transparent 55%, rgba(255,255,255,.7) 78%, transparent 100%),
+  radial-gradient(ellipse at 25% 20%, rgba(255,255,255,.8) 0%, transparent 35%),
+  linear-gradient(160deg,#fce4ec 0%,#f48fb1 35%,#ec407a 70%,#d81b60 100%);
+  border:3px solid #ad1457; box-shadow:inset 0 3px 20px rgba(173,20,87,.3), 0 8px 32px rgba(216,27,96,.45); }
+#titleModalWall.tier-king .title-wall { background:
+  repeating-conic-gradient(from 0deg at 50% 30%, rgba(255,111,0,.1) 0deg 2deg, transparent 2deg 4deg),
+  linear-gradient(105deg, rgba(255,255,255,.9) 0%, transparent 20%, rgba(255,255,255,.4) 45%, transparent 65%, rgba(255,255,255,.7) 100%),
+  radial-gradient(ellipse at 50% 25%, rgba(255,243,224,.8) 0%, transparent 55%),
+  linear-gradient(160deg,#fff3e0 0%,#ffcc80 35%,#ffa726 70%,#ff6f00 100%);
+  border:3px solid #e65100; box-shadow:inset 0 3px 20px rgba(230,81,0,.35), 0 8px 32px rgba(255,111,0,.5); }
 #titleModalWall .title-item { width:30%; min-width:90px; text-align:center; padding:14px 6px; border-radius:14px; border:2px solid #e1e5eb; background:#fff; position:relative; overflow:hidden; transition:transform .2s, box-shadow .2s; }
 #titleModalWall .title-item:hover { transform:translateY(-2px); }
 #titleModalWall .title-item .ic { font-size:36px; position:relative; z-index:1; }
@@ -489,14 +514,22 @@ function showTierPreview() {
   const total = list.length || 80;
   const ratio = earned / total;
   const tiers = [
-    { name: '青铜', range: '0% - 12.5%', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！' },
-    { name: '白银', range: '12.5% - 25%', min: 0.125, color: '#78909c', desc: '已有进步，再接再厉！' },
-    { name: '黄金', range: '25% - 37.5%', min: 0.25, color: '#ff8f00', desc: '稳步上升，铂金在望！' },
-    { name: '铂金', range: '37.5% - 50%', min: 0.375, color: '#00acc1', desc: '过半在即，钻石招手！' },
-    { name: '钻石', range: '50% - 62.5%', min: 0.5, color: '#0288d1', desc: '已过半，大师不远了！' },
-    { name: '大师', range: '62.5% - 75%', min: 0.625, color: '#7b1fa2', desc: '高手风范，宗师可期！' },
-    { name: '宗师', range: '75% - 87.5%', min: 0.75, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！' },
-    { name: '王者', range: '87.5% - 100%', min: 0.875, color: '#ff6f00', desc: '最高荣誉，你是传奇！' },
+    { name: '青铜', range: '0% - 12.5%', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！',
+      bg: 'linear-gradient(160deg,#d7ccc8 0%,#a1887f 30%,#8d6e63 60%,#6d4c41 100%)', border: '#5d4037', txt: '#3e2723' },
+    { name: '白银', range: '12.5% - 25%', min: 0.125, color: '#78909c', desc: '已有进步，再接再厉！',
+      bg: 'linear-gradient(160deg,#eceff1 0%,#b0bec5 40%,#90a4ae 70%,#78909c 100%)', border: '#546e7a', txt: '#37474f' },
+    { name: '黄金', range: '25% - 37.5%', min: 0.25, color: '#ff8f00', desc: '稳步上升，铂金在望！',
+      bg: 'linear-gradient(160deg,#ffecb3 0%,#ffd54f 35%,#ffb300 70%,#ff8f00 100%)', border: '#e65100', txt: '#4e342e' },
+    { name: '铂金', range: '37.5% - 50%', min: 0.375, color: '#00acc1', desc: '过半在即，钻石招手！',
+      bg: 'linear-gradient(160deg,#e0f7fa 0%,#80deea 40%,#4dd0e1 70%,#00acc1 100%)', border: '#00838f', txt: '#004d40' },
+    { name: '钻石', range: '50% - 62.5%', min: 0.5, color: '#0288d1', desc: '已过半，大师不远了！',
+      bg: 'linear-gradient(160deg,#e1f5fe 0%,#b3e5fc 35%,#81d4fa 70%,#4fc3f7 100%)', border: '#0277bd', txt: '#01579b' },
+    { name: '大师', range: '62.5% - 75%', min: 0.625, color: '#7b1fa2', desc: '高手风范，宗师可期！',
+      bg: 'linear-gradient(160deg,#f3e5f5 0%,#ce93d8 35%,#ab47bc 70%,#7b1fa2 100%)', border: '#6a1b9a', txt: '#fff' },
+    { name: '宗师', range: '75% - 87.5%', min: 0.75, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！',
+      bg: 'linear-gradient(160deg,#fce4ec 0%,#f48fb1 35%,#ec407a 70%,#d81b60 100%)', border: '#ad1457', txt: '#fff' },
+    { name: '王者', range: '87.5% - 100%', min: 0.875, color: '#ff6f00', desc: '最高荣誉，你是传奇！',
+      bg: 'linear-gradient(160deg,#fff3e0 0%,#ffcc80 35%,#ffa726 70%,#ff6f00 100%)', border: '#e65100', txt: '#4e342e' },
   ];
   const current = getTierByRatio(ratio, total, earned).name;
   const ov = document.createElement('div');
@@ -507,12 +540,12 @@ function showTierPreview() {
     + `<div style="text-align:center;margin-bottom:16px;font-size:14px;color:#666;">当前：已集齐 ${earned}/${total}（${(ratio*100).toFixed(1)}%）</div>`
     + tiers.map(t => {
       const isCur = t.name === current;
-      return `<div style="border:2px solid ${isCur ? t.color : '#e0e0e0'};border-radius:12px;padding:12px;margin-bottom:10px;background:${isCur ? '#f5f5f5' : '#fff'};">`
+      return `<div style="border:3px solid ${t.border};border-radius:12px;padding:12px;margin-bottom:10px;background:${t.bg};${isCur ? 'box-shadow:0 0 0 3px ' + t.color + ', 0 4px 16px rgba(0,0,0,.25);' : ''}">`
         + `<div style="display:flex;align-items:center;justify-content:space-between;">`
-        + `<span style="font-size:18px;font-weight:800;color:${t.color};">${t.name}${isCur ? ' ← 你在这里' : ''}</span>`
-        + `<span style="font-size:12px;color:#999;">${t.range}</span>`
+        + `<span style="font-size:18px;font-weight:800;color:${t.txt};text-shadow:0 1px 2px rgba(255,255,255,.5);">${t.name}${isCur ? ' ← 你在这里' : ''}</span>`
+        + `<span style="font-size:12px;color:${t.txt};opacity:.8;">${t.range}</span>`
         + `</div>`
-        + `<div style="font-size:13px;color:#666;margin-top:4px;">需要 ${Math.ceil(total * t.min)} 个称号 · ${t.desc}</div>`
+        + `<div style="font-size:13px;color:${t.txt};opacity:.9;margin-top:4px;">需要 ${Math.ceil(total * t.min)} 个称号 · ${t.desc}</div>`
         + `</div>`;
     }).join('')
     + '<button onclick="document.getElementById(\'tierPreviewOv\').remove()" style="width:100%;padding:12px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;margin-top:8px;">知道了</button>'
