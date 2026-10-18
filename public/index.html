@@ -483,8 +483,8 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   else if (ratio >= 0.5) name = '黄金';
   else if (ratio >= 0.25) name = '白银';
   document.getElementById('titleTierMini').textContent = '· ' + name;
-  // 找下一个最接近的称号（有progress的优先）
-  const unobtained = list.filter(x => !x.earned && x.progress);
+  // 找下一个最接近的称号（有progress的优先，只看未获得且进度未达标的）
+  const unobtained = list.filter(x => !x.earned && x.progress && x.progress.current < x.progress.target);
   if (unobtained.length) {
     unobtained.sort((a, b) => {
       const pa = a.progress.current / a.progress.target;
@@ -494,7 +494,8 @@ fetch('/api/titles').then(r => r.json()).then(t => {
     const next = unobtained[0];
     const hint = document.getElementById('nextTitleHint');
     if (hint) {
-      hint.textContent = `🎯 距「${next.name}」还差 ${next.progress.target - next.progress.current} 步`;
+      const remain = Math.max(0, next.progress.target - next.progress.current);
+      hint.textContent = `🎯 距「${next.name}」还差 ${remain} 步`;
     }
   }
 }).catch(() => {});
