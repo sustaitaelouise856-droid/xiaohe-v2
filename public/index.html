@@ -281,6 +281,7 @@
   <div class="progress-bar"><div class="progress-fill" id="pfill" style="width:0%"></div></div>
   <!-- 称号墙按钮（2026-10-16 Elouise：从成长页移到首页，做成按钮弹窗） -->
   <button id="btnTitles" style="margin-top:12px;padding:10px 28px;border:2px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(255,255,255,.2);color:#fff;font-size:15px;font-weight:800;cursor:pointer;backdrop-filter:blur(4px);">🏆 称号墙 <span id="titleTierMini"></span></button>
+  <div id="nextTitleHint" style="margin-top:8px;font-size:13px;color:rgba(255,255,255,.9);text-align:center;"></div>
 </div>
 
 <!-- 称号墙弹窗 -->
@@ -372,19 +373,45 @@ document.getElementById('btnTitles').onclick = async () => {
     wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
       + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（${pctStr}）</div>`
       + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
-      + `<div class="title-wall" id="titleWallPage">` + renderTitlePage(list, 0) + `</div>`
-      + `<div style="text-align:center;margin-top:12px;display:flex;justify-content:center;align-items:center;gap:16px;">`
-      + `<button onclick="titlePageTurn(-1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">◀ 上一页</button>`
-      + `<span id="titlePageInfo" style="font-size:14px;color:#666;">1 / ${Math.ceil(list.length/12)}</span>`
-      + `<button onclick="titlePageTurn(1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">下一页 ▶</button>`
-      + `</div>`
+      + `<div id="titleWallGrouped">` + renderTitlesGrouped(list) + `</div>`
       + `<div class="tier-msg">${msg}</div>`;
-    // 存下来供详情弹窗和翻页用
+    // 存下来供详情弹窗用
     window._modalTitles = list;
-    window._titlePage = 0;
   } catch (e) { wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载失败</div>'; }
 };
-// 翻页渲染（2026-10-18 Elouise：称号墙做成翻页）
+// 2026-10-18 史诗级：按稀有度分组渲染
+function renderTitlesGrouped(list) {
+  const order = ['传说', '史诗', '稀有', '普通'];
+  const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
+  let html = '';
+  order.forEach(rarity => {
+    const items = list.filter(x => (x.rarity || '普通') === rarity);
+    if (!items.length) return;
+    const earned = items.filter(x => x.earned).length;
+    html += `<div style="margin:16px 0 8px;font-size:16px;font-weight:800;color:${colors[rarity]};">${rarity}（${earned}/${items.length}）</div>`;
+    html += `<div class="title-wall" style="margin-bottom:8px;">`;
+    html += items.map(x => {
+      const i = list.indexOf(x);
+      const rc = colors[rarity];
+      let progressHtml = '';
+      if (!x.earned && x.progress) {
+        const pct = Math.min(100, Math.round(100 * x.progress.current / x.progress.target));
+        progressHtml = `<div style="margin-top:6px;background:#e0e0e0;border-radius:999px;height:6px;overflow:hidden;">`
+          + `<div style="width:${pct}%;height:100%;background:${rc};border-radius:999px;"></div></div>`
+          + `<div style="font-size:11px;color:#666;margin-top:2px;">${x.progress.current}/${x.progress.target}</div>`;
+      }
+      return `<div class="title-item rar-${rarity} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;">`
+      + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
+      + `<div class="nm">${x.earned ? x.name : '???'}</div>`
+      + `<div style="font-size:11px;color:${rc};font-weight:700;">${rarity}</div>`
+      + progressHtml
+      + `<div class="cond">${x.earned ? '已获得' : '点击查看如何获得'}</div></div>`;
+    }).join('');
+    html += `</div>`;
+  });
+  return html;
+}
+// 旧翻页函数保留（暂不用）
 function renderTitlePage(list, page) {
   const per = 12;
   const start = page * per;
@@ -422,8 +449,10 @@ function showTitleModalDetail(i) {
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:320px;width:100%;text-align:center;">'
     + '<div style="font-size:48px;">' + (x.earned ? x.icon : '🔒') + '</div>'
-    + '<h3 style="margin:12px 0 8px;">' + esc(x.name) + '</h3>'
-    + '<p style="color:#5f6368;font-size:14px;line-height:1.6;">' + esc(x.desc || '暂无说明') + '</p>'
+    + '<h3 style="margin:12px 0 8px;">' + esc(x.earned ? x.name : '???') + '</h3>'
+    + '<div style="font-size:12px;color:' + ({'普通':'#0d47a1','稀有':'#4a148c','史诗':'#bf360c','传说':'#e65100'}[x.rarity] || '#0d47a1') + ';font-weight:700;margin-bottom:8px;">' + esc(x.rarity || '普通') + '</div>'
+    + '<p style="color:#5f6368;font-size:14px;line-height:1.6;text-align:left;background:#f8f9fa;border-radius:10px;padding:12px;">💡 <b>如何获得：</b><br>' + esc(x.desc || '暂无说明') + '</p>'
+    + (x.progress && !x.earned ? '<div style="margin:12px 0;"><div style="background:#e0e0e0;border-radius:999px;height:10px;overflow:hidden;"><div style="width:' + Math.min(100, Math.round(100*x.progress.current/x.progress.target)) + '%;height:100%;background:#1a73e8;"></div></div><div style="font-size:13px;color:#666;margin-top:4px;">进度：' + x.progress.current + '/' + x.progress.target + '</div></div>' : '')
     + '<div style="margin:12px 0;padding:10px;background:' + (x.earned ? '#e6f4ea' : '#fef7e0') + ';border-radius:10px;font-size:14px;color:' + (x.earned ? '#137333' : '#b06000') + ';">'
     + (x.earned ? '✅ 已获得' : '⏳ 未获得，加油！') + '</div>'
     + '<button onclick="document.getElementById(\'titleModalDetail\').remove()" style="padding:10px 32px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;">知道了</button>'
@@ -431,7 +460,7 @@ function showTitleModalDetail(i) {
   ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
   document.body.appendChild(ov);
 }
-// 首页加载时显示当前段位
+// 首页加载时显示当前段位 + 下一称号提示（2026-10-18 史诗级）
 fetch('/api/titles').then(r => r.json()).then(t => {
   const list = t.titles || [];
   const earned = list.filter(x => x.earned).length;
@@ -441,6 +470,20 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   else if (ratio >= 0.5) name = '黄金';
   else if (ratio >= 0.25) name = '白银';
   document.getElementById('titleTierMini').textContent = '· ' + name;
+  // 找下一个最接近的称号（有progress的优先）
+  const unobtained = list.filter(x => !x.earned && x.progress);
+  if (unobtained.length) {
+    unobtained.sort((a, b) => {
+      const pa = a.progress.current / a.progress.target;
+      const pb = b.progress.current / b.progress.target;
+      return pb - pa;
+    });
+    const next = unobtained[0];
+    const hint = document.getElementById('nextTitleHint');
+    if (hint) {
+      hint.textContent = `🎯 距「${next.name}」还差 ${next.progress.target - next.progress.current} 步`;
+    }
+  }
 }).catch(() => {});
 </script>
 
