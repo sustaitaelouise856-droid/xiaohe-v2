@@ -378,7 +378,7 @@ document.getElementById('btnTitles').onclick = async () => {
       + `<span id="titlePageInfo" style="font-size:14px;color:#666;">1 / ${Math.ceil(list.length/12)}</span>`
       + `<button onclick="titlePageTurn(1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">下一页 ▶</button>`
       + `</div>`
-      + `</div><div class="tier-msg">${msg}</div>`;
+      + `<div class="tier-msg">${msg}</div>`;
     // 存下来供详情弹窗和翻页用
     window._modalTitles = list;
     window._titlePage = 0;
@@ -410,7 +410,6 @@ function titlePageTurn(d) {
   document.getElementById('titleWallPage').innerHTML = renderTitlePage(list, p);
   document.getElementById('titlePageInfo').textContent = `${p+1} / ${total}`;
 }
-};
 // 称号详情弹窗（首页 modal 用）
 function showTitleModalDetail(i) {
   const x = (window._modalTitles || [])[i];
