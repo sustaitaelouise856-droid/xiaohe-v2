@@ -1390,6 +1390,12 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     home_subtitle: L.lesson.home_subtitle || '',
     part1_desc: L.lesson.part1_desc || '',
     part2_desc: L.lesson.part2_desc || '',
+    // 数学课标记（前端按需加载 KaTeX）+ 多学科品牌/kicker 数据驱动（2026-10-08 数学课上线）
+    math: !!L.lesson.math,
+    brand: L.lesson.brand || '',
+    kicker_story: L.lesson.kicker_story || '',
+    kicker_teach: L.lesson.kicker_teach || '',
+    answer_placeholder: L.lesson.answer_placeholder || '',
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
     // 2026-10-14：u3-consolidate 过关状态（供前端显示"重新挑战"）
     consolidation_passed: lid === 'u3-consolidate' ? (() => {
