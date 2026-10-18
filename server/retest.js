@@ -99,11 +99,17 @@ function resolveRetest(itemId, knowledgePoint) {
     if (r.changes > 0) return true;
     // 2026-10-16 21:35修：如果没有 pending 记录（比如只有1次wrong没进队列），直接插入一条 resolved
     // 否则错题本里永远消不掉——Elouise 21:32 报告"做了也不消失"
+    // 2026-10-18修：先检查是否已有resolved，避免重复插入
     try {
-      db.prepare(`
-        INSERT INTO retest_queue(item_id, knowledge_point, status, resolved_at, source_session)
-        VALUES(?, ?, 'resolved', datetime('now'), 'manual_resolve')
-      `).run(itemId, knowledgePoint || 'general');
+      const existing = db.prepare(
+        "SELECT id FROM retest_queue WHERE item_id=? AND status='resolved' LIMIT 1"
+      ).get(itemId);
+      if (!existing) {
+        db.prepare(`
+          INSERT INTO retest_queue(item_id, knowledge_point, status, resolved_at, source_session)
+          VALUES(?, ?, 'resolved', datetime('now'), 'manual_resolve')
+        `).run(itemId, knowledgePoint || 'general');
+      }
       return true;
     } catch { return false; }
   } catch { return false; }
