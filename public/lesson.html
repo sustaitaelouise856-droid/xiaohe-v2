@@ -708,7 +708,13 @@ async function renderHome() {
 /* ---------- 上课 ---------- */
 async function startPart(n) {
   PART = n; const st = ST['p' + n];
-  if (!st.sid) { st.sid = uuid(); store.save(ST); }
+  const isDaily = (typeof LID !== 'undefined' && LID === 'daily-retest');
+  if (!st.sid || (isDaily && !String(st.sid).includes('daily-retest'))) {
+    // 2026-10-18修：每日闯关的sid带daily-retest标记，供后端计数
+    const base = uuid();
+    st.sid = isDaily ? 'daily-retest-' + base : base;
+    store.save(ST);
+  }
   const sessKey = n + ':' + st.sid;
   if (doneSetSid !== sessKey) { doneSet = {}; doneSetSid = sessKey; } // 新一轮作答（如练习课"再练一遍"）：清空终局记录
   try {
