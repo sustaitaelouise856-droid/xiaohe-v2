@@ -304,45 +304,79 @@
 #titleModalWall.tier-grandmaster .tier-badge { background:linear-gradient(135deg,#d81b60,#f48fb1,#d81b60); color:#fff; box-shadow:0 4px 20px rgba(216,27,96,.6); }
 #titleModalWall.tier-king .tier-badge { background:linear-gradient(135deg,#ff6f00,#ffab40,#ff6f00); color:#fff; box-shadow:0 4px 24px rgba(255,111,0,.8); }
 #titleModalWall .title-wall { display:flex; flex-wrap:wrap; gap:10px; border-radius:20px; padding:16px; }
-/* 2026-10-16：进一步提升质感——多层金属纹理 */
+/* 2026-10-18：八段位超级质感升级——多层奢华金属/宝石纹理 */
 #titleModalWall.tier-bronze .title-wall { background:
-  repeating-linear-gradient(90deg, rgba(62,39,35,.07) 0 2px, transparent 2px 4px),
-  radial-gradient(ellipse at 20% 30%, rgba(188,170,164,.5) 0%, transparent 50%),
-  linear-gradient(160deg,#d7ccc8 0%,#a1887f 30%,#8d6e63 60%,#6d4c41 100%);
-  border:3px solid #5d4037; box-shadow:inset 0 3px 18px rgba(62,39,35,.35), 0 6px 20px rgba(93,64,55,.3); }
+  repeating-linear-gradient(90deg, rgba(62,39,35,.08) 0 1px, transparent 1px 3px),
+  repeating-linear-gradient(0deg, rgba(62,39,35,.05) 0 1px, transparent 1px 4px),
+  radial-gradient(ellipse at 15% 20%, rgba(255,235,220,.6) 0%, transparent 40%),
+  radial-gradient(ellipse at 85% 80%, rgba(62,39,35,.4) 0%, transparent 45%),
+  radial-gradient(ellipse at 50% 50%, rgba(188,170,164,.35) 0%, transparent 60%),
+  linear-gradient(165deg,#efebe9 0%,#d7ccc8 15%,#bcaaa4 30%,#a1887f 50%,#8d6e63 70%,#795548 85%,#5d4037 100%);
+  border:3px solid #4e342e; box-shadow:inset 0 2px 12px rgba(255,235,220,.4), inset 0 -3px 18px rgba(62,39,35,.45), 0 8px 28px rgba(93,64,55,.4); }
 #titleModalWall.tier-silver .title-wall { background:
-  repeating-linear-gradient(90deg, rgba(55,71,79,.06) 0 1px, transparent 1px 3px),
-  linear-gradient(105deg, rgba(255,255,255,.7) 0%, transparent 25%, rgba(255,255,255,.3) 50%, transparent 75%, rgba(255,255,255,.5) 100%),
-  linear-gradient(160deg,#eceff1 0%,#b0bec5 40%,#90a4ae 70%,#78909c 100%);
-  border:3px solid #546e7a; box-shadow:inset 0 3px 18px rgba(55,71,79,.3), 0 6px 20px rgba(120,144,156,.3); }
+  repeating-linear-gradient(90deg, rgba(55,71,79,.07) 0 1px, transparent 1px 2px),
+  repeating-linear-gradient(0deg, rgba(255,255,255,.15) 0 1px, transparent 1px 3px),
+  linear-gradient(105deg, rgba(255,255,255,.9) 0%, transparent 15%, rgba(255,255,255,.4) 30%, transparent 45%, rgba(255,255,255,.7) 60%, transparent 80%, rgba(255,255,255,.5) 100%),
+  radial-gradient(ellipse at 20% 15%, rgba(255,255,255,.85) 0%, transparent 35%),
+  radial-gradient(ellipse at 80% 85%, rgba(55,71,79,.25) 0%, transparent 40%),
+  linear-gradient(165deg,#fafafa 0%,#eceff1 20%,#cfd8dc 40%,#b0bec5 60%,#90a4ae 80%,#78909c 100%);
+  border:3px solid #455a64; box-shadow:inset 0 2px 12px rgba(255,255,255,.7), inset 0 -3px 18px rgba(55,71,79,.35), 0 8px 28px rgba(120,144,156,.4); }
 #titleModalWall.tier-gold .title-wall { background:
-  repeating-conic-gradient(from 0deg at 50% 30%, rgba(255,143,0,.07) 0deg 2deg, transparent 2deg 4deg),
-  linear-gradient(105deg, rgba(255,255,255,.8) 0%, transparent 20%, rgba(255,255,255,.35) 45%, transparent 65%, rgba(255,255,255,.6) 100%),
-  radial-gradient(ellipse at 50% 25%, rgba(255,245,200,.7) 0%, transparent 55%),
-  linear-gradient(160deg,#ffecb3 0%,#ffd54f 35%,#ffb300 70%,#ff8f00 100%);
-  border:3px solid #e65100; box-shadow:inset 0 3px 20px rgba(230,81,0,.3), 0 8px 28px rgba(255,143,0,.45); }
-#titleModalWall.tier-diamond .title-wall { background:
-  repeating-linear-gradient(45deg, rgba(2,119,189,.08) 0 8px, transparent 8px 16px),
-  repeating-linear-gradient(-45deg, rgba(2,119,189,.08) 0 8px, transparent 8px 16px),
-  linear-gradient(115deg, rgba(255,255,255,.9) 0%, transparent 18%, rgba(255,255,255,.4) 38%, transparent 55%, rgba(255,255,255,.7) 78%, transparent 100%),
-  radial-gradient(ellipse at 25% 20%, rgba(255,255,255,.8) 0%, transparent 35%),
-  linear-gradient(160deg,#e1f5fe 0%,#b3e5fc 35%,#81d4fa 70%,#4fc3f7 100%);
-  border:3px solid #0277bd; box-shadow:inset 0 3px 20px rgba(2,119,189,.3), 0 8px 32px rgba(2,136,209,.45); }
-/* 2026-10-18：补齐铂金/大师/宗师/王者的墙面质感 */
+  repeating-conic-gradient(from 0deg at 50% 25%, rgba(255,143,0,.09) 0deg 1.5deg, transparent 1.5deg 3deg),
+  repeating-linear-gradient(45deg, rgba(255,255,255,.12) 0 2px, transparent 2px 6px),
+  linear-gradient(105deg, rgba(255,255,255,.95) 0%, transparent 12%, rgba(255,255,255,.45) 28%, transparent 42%, rgba(255,255,255,.75) 58%, transparent 75%, rgba(255,255,255,.55) 100%),
+  radial-gradient(ellipse at 50% 20%, rgba(255,252,235,.9) 0%, transparent 50%),
+  radial-gradient(ellipse at 15% 85%, rgba(230,81,0,.3) 0%, transparent 40%),
+  radial-gradient(ellipse at 85% 85%, rgba(255,183,3,.35) 0%, transparent 40%),
+  linear-gradient(165deg,#fffde7 0%,#ffecb3 18%,#ffe082 35%,#ffd54f 52%,#ffca28 68%,#ffb300 84%,#ff8f00 100%);
+  border:3px solid #bf360c; box-shadow:inset 0 2px 14px rgba(255,252,235,.6), inset 0 -4px 22px rgba(191,54,12,.4), 0 10px 36px rgba(255,143,0,.55); }
 #titleModalWall.tier-platinum .title-wall { background:
-  repeating-linear-gradient(90deg, rgba(0,96,100,.06) 0 1px, transparent 1px 3px),
-  linear-gradient(105deg, rgba(255,255,255,.7) 0%, transparent 25%, rgba(255,255,255,.3) 50%, transparent 75%, rgba(255,255,255,.5) 100%),
-  linear-gradient(160deg,#e0f7fa 0%,#80deea 40%,#4dd0e1 70%,#00acc1 100%);
-  border:3px solid #00838f; box-shadow:inset 0 3px 18px rgba(0,131,143,.3), 0 6px 20px rgba(0,172,193,.3); }
+  repeating-linear-gradient(90deg, rgba(0,96,100,.07) 0 1px, transparent 1px 2px),
+  repeating-linear-gradient(0deg, rgba(255,255,255,.18) 0 1px, transparent 1px 3px),
+  linear-gradient(105deg, rgba(255,255,255,.9) 0%, transparent 15%, rgba(255,255,255,.4) 30%, transparent 45%, rgba(255,255,255,.7) 60%, transparent 80%, rgba(255,255,255,.5) 100%),
+  radial-gradient(ellipse at 25% 15%, rgba(255,255,255,.8) 0%, transparent 35%),
+  radial-gradient(ellipse at 75% 85%, rgba(0,131,143,.25) 0%, transparent 40%),
+  linear-gradient(165deg,#f5fdff 0%,#e0f7fa 20%,#b2ebf2 40%,#80deea 60%,#4dd0e1 80%,#00acc1 100%);
+  border:3px solid #006064; box-shadow:inset 0 2px 12px rgba(255,255,255,.6), inset 0 -3px 18px rgba(0,96,100,.35), 0 8px 28px rgba(0,172,193,.4); }
+#titleModalWall.tier-diamond .title-wall { background:
+  repeating-linear-gradient(45deg, rgba(2,119,189,.1) 0 6px, transparent 6px 12px),
+  repeating-linear-gradient(-45deg, rgba(2,119,189,.1) 0 6px, transparent 6px 12px),
+  repeating-linear-gradient(90deg, rgba(255,255,255,.15) 0 2px, transparent 2px 8px),
+  linear-gradient(115deg, rgba(255,255,255,.95) 0%, transparent 12%, rgba(255,255,255,.5) 25%, transparent 38%, rgba(255,255,255,.8) 52%, transparent 68%, rgba(255,255,255,.6) 85%, transparent 100%),
+  radial-gradient(ellipse at 20% 15%, rgba(255,255,255,.9) 0%, transparent 30%),
+  radial-gradient(ellipse at 80% 20%, rgba(179,229,252,.6) 0%, transparent 35%),
+  radial-gradient(ellipse at 50% 90%, rgba(2,119,189,.25) 0%, transparent 45%),
+  linear-gradient(165deg,#f5fbff 0%,#e1f5fe 18%,#b3e5fc 36%,#81d4fa 54%,#4fc3f7 72%,#29b6f6 88%,#0288d1 100%);
+  border:3px solid #01579b; box-shadow:inset 0 2px 14px rgba(255,255,255,.7), inset 0 -4px 22px rgba(1,87,155,.4), 0 10px 36px rgba(2,136,209,.55); }
 #titleModalWall.tier-master .title-wall { background:
-  repeating-conic-gradient(from 0deg at 50% 30%, rgba(123,31,162,.07) 0deg 2deg, transparent 2deg 4deg),
-  linear-gradient(105deg, rgba(255,255,255,.8) 0%, transparent 20%, rgba(255,255,255,.35) 45%, transparent 65%, rgba(255,255,255,.6) 100%),
-  radial-gradient(ellipse at 50% 25%, rgba(243,229,245,.7) 0%, transparent 55%),
-  linear-gradient(160deg,#f3e5f5 0%,#ce93d8 35%,#ab47bc 70%,#7b1fa2 100%);
-  border:3px solid #6a1b9a; box-shadow:inset 0 3px 20px rgba(106,27,154,.3), 0 8px 28px rgba(123,31,162,.45); }
+  repeating-conic-gradient(from 0deg at 50% 25%, rgba(123,31,162,.1) 0deg 1.5deg, transparent 1.5deg 3deg),
+  repeating-linear-gradient(45deg, rgba(255,255,255,.1) 0 2px, transparent 2px 6px),
+  linear-gradient(105deg, rgba(255,255,255,.9) 0%, transparent 12%, rgba(255,255,255,.4) 28%, transparent 42%, rgba(255,255,255,.7) 58%, transparent 75%, rgba(255,255,255,.5) 100%),
+  radial-gradient(ellipse at 50% 20%, rgba(250,240,255,.85) 0%, transparent 50%),
+  radial-gradient(ellipse at 15% 85%, rgba(106,27,154,.35) 0%, transparent 40%),
+  radial-gradient(ellipse at 85% 85%, rgba(186,104,200,.3) 0%, transparent 40%),
+  linear-gradient(165deg,#fcf5ff 0%,#f3e5f5 18%,#e1bee7 36%,#ce93d8 54%,#ba68c8 72%,#9c27b0 88%,#7b1fa2 100%);
+  border:3px solid #4a148c; box-shadow:inset 0 2px 14px rgba(250,240,255,.5), inset 0 -4px 22px rgba(74,20,140,.45), 0 10px 36px rgba(123,31,162,.55); }
 #titleModalWall.tier-grandmaster .title-wall { background:
-  repeating-linear-gradient(45deg, rgba(216,27,96,.08) 0 8px, transparent 8px 16px),
-  repeating-linear-gradient(-45deg, rgba(216,27,96,.08) 0 8px, transparent 8px 16px),
+  repeating-linear-gradient(45deg, rgba(216,27,96,.1) 0 6px, transparent 6px 12px),
+  repeating-linear-gradient(-45deg, rgba(216,27,96,.1) 0 6px, transparent 6px 12px),
+  repeating-linear-gradient(90deg, rgba(255,255,255,.14) 0 2px, transparent 2px 8px),
+  linear-gradient(115deg, rgba(255,255,255,.95) 0%, transparent 12%, rgba(255,255,255,.5) 25%, transparent 38%, rgba(255,255,255,.8) 52%, transparent 68%, rgba(255,255,255,.6) 85%, transparent 100%),
+  radial-gradient(ellipse at 20% 15%, rgba(255,255,255,.85) 0%, transparent 30%),
+  radial-gradient(ellipse at 80% 20%, rgba(248,187,208,.55) 0%, transparent 35%),
+  radial-gradient(ellipse at 50% 90%, rgba(173,20,87,.3) 0%, transparent 45%),
+  linear-gradient(165deg,#fff5f8 0%,#fce4ec 18%,#f8bbd0 36%,#f48fb1 54%,#f06292 72%,#ec407a 88%,#d81b60 100%);
+  border:3px solid #880e4f; box-shadow:inset 0 2px 14px rgba(255,245,248,.6), inset 0 -4px 22px rgba(136,14,79,.45), 0 10px 36px rgba(216,27,96,.55); }
+#titleModalWall.tier-king .title-wall { background:
+  repeating-conic-gradient(from 0deg at 50% 25%, rgba(255,111,0,.12) 0deg 1.5deg, transparent 1.5deg 3deg),
+  repeating-linear-gradient(45deg, rgba(255,255,255,.14) 0 2px, transparent 2px 6px),
+  linear-gradient(105deg, rgba(255,255,255,.95) 0%, transparent 10%, rgba(255,255,255,.5) 25%, transparent 40%, rgba(255,255,255,.8) 55%, transparent 72%, rgba(255,255,255,.6) 88%, transparent 100%),
+  radial-gradient(ellipse at 50% 18%, rgba(255,253,245,.95) 0%, transparent 48%),
+  radial-gradient(ellipse at 12% 80%, rgba(230,81,0,.35) 0%, transparent 42%),
+  radial-gradient(ellipse at 88% 80%, rgba(255,183,3,.4) 0%, transparent 42%),
+  radial-gradient(ellipse at 50% 50%, rgba(255,224,130,.3) 0%, transparent 55%),
+  linear-gradient(165deg,#fffdf5 0%,#fff3e0 16%,#ffe0b2 32%,#ffcc80 48%,#ffb74d 64%,#ffa726 80%,#ff9800 92%,#f57c00 100%);
+  border:3px solid #bf360c; box-shadow:inset 0 2px 16px rgba(255,253,245,.7), inset 0 -4px 24px rgba(191,54,12,.45), 0 12px 40px rgba(255,111,0,.6); }
   linear-gradient(115deg, rgba(255,255,255,.9) 0%, transparent 18%, rgba(255,255,255,.4) 38%, transparent 55%, rgba(255,255,255,.7) 78%, transparent 100%),
   radial-gradient(ellipse at 25% 20%, rgba(255,255,255,.8) 0%, transparent 35%),
   linear-gradient(160deg,#fce4ec 0%,#f48fb1 35%,#ec407a 70%,#d81b60 100%);
@@ -515,21 +549,21 @@ function showTierPreview() {
   const ratio = earned / total;
   const tiers = [
     { name: '青铜', range: '0% - 12.5%', min: 0, color: '#6d4c41', desc: '起步阶段，继续加油！',
-      bg: 'linear-gradient(160deg,#d7ccc8 0%,#a1887f 30%,#8d6e63 60%,#6d4c41 100%)', border: '#5d4037', txt: '#3e2723' },
+      bg: 'linear-gradient(165deg,#efebe9 0%,#d7ccc8 15%,#bcaaa4 30%,#a1887f 50%,#8d6e63 70%,#795548 85%,#5d4037 100%)', border: '#4e342e', txt: '#fff', shadow: 'rgba(255,235,220,.6)' },
     { name: '白银', range: '12.5% - 25%', min: 0.125, color: '#78909c', desc: '已有进步，再接再厉！',
-      bg: 'linear-gradient(160deg,#eceff1 0%,#b0bec5 40%,#90a4ae 70%,#78909c 100%)', border: '#546e7a', txt: '#37474f' },
+      bg: 'linear-gradient(165deg,#fafafa 0%,#eceff1 20%,#cfd8dc 40%,#b0bec5 60%,#90a4ae 80%,#78909c 100%)', border: '#455a64', txt: '#37474f', shadow: 'rgba(255,255,255,.7)' },
     { name: '黄金', range: '25% - 37.5%', min: 0.25, color: '#ff8f00', desc: '稳步上升，铂金在望！',
-      bg: 'linear-gradient(160deg,#ffecb3 0%,#ffd54f 35%,#ffb300 70%,#ff8f00 100%)', border: '#e65100', txt: '#4e342e' },
+      bg: 'linear-gradient(165deg,#fffde7 0%,#ffecb3 18%,#ffe082 35%,#ffd54f 52%,#ffca28 68%,#ffb300 84%,#ff8f00 100%)', border: '#bf360c', txt: '#4e342e', shadow: 'rgba(255,252,235,.8)' },
     { name: '铂金', range: '37.5% - 50%', min: 0.375, color: '#00acc1', desc: '过半在即，钻石招手！',
-      bg: 'linear-gradient(160deg,#e0f7fa 0%,#80deea 40%,#4dd0e1 70%,#00acc1 100%)', border: '#00838f', txt: '#004d40' },
+      bg: 'linear-gradient(165deg,#f5fdff 0%,#e0f7fa 20%,#b2ebf2 40%,#80deea 60%,#4dd0e1 80%,#00acc1 100%)', border: '#006064', txt: '#004d40', shadow: 'rgba(255,255,255,.7)' },
     { name: '钻石', range: '50% - 62.5%', min: 0.5, color: '#0288d1', desc: '已过半，大师不远了！',
-      bg: 'linear-gradient(160deg,#e1f5fe 0%,#b3e5fc 35%,#81d4fa 70%,#4fc3f7 100%)', border: '#0277bd', txt: '#01579b' },
+      bg: 'linear-gradient(165deg,#f5fbff 0%,#e1f5fe 18%,#b3e5fc 36%,#81d4fa 54%,#4fc3f7 72%,#29b6f6 88%,#0288d1 100%)', border: '#01579b', txt: '#01579b', shadow: 'rgba(255,255,255,.8)' },
     { name: '大师', range: '62.5% - 75%', min: 0.625, color: '#7b1fa2', desc: '高手风范，宗师可期！',
-      bg: 'linear-gradient(160deg,#f3e5f5 0%,#ce93d8 35%,#ab47bc 70%,#7b1fa2 100%)', border: '#6a1b9a', txt: '#fff' },
+      bg: 'linear-gradient(165deg,#fcf5ff 0%,#f3e5f5 18%,#e1bee7 36%,#ce93d8 54%,#ba68c8 72%,#9c27b0 88%,#7b1fa2 100%)', border: '#4a148c', txt: '#fff', shadow: 'rgba(250,240,255,.6)' },
     { name: '宗师', range: '75% - 87.5%', min: 0.75, color: '#d81b60', desc: '睥睨群雄，王者一步之遥！',
-      bg: 'linear-gradient(160deg,#fce4ec 0%,#f48fb1 35%,#ec407a 70%,#d81b60 100%)', border: '#ad1457', txt: '#fff' },
+      bg: 'linear-gradient(165deg,#fff5f8 0%,#fce4ec 18%,#f8bbd0 36%,#f48fb1 54%,#f06292 72%,#ec407a 88%,#d81b60 100%)', border: '#880e4f', txt: '#fff', shadow: 'rgba(255,245,248,.6)' },
     { name: '王者', range: '87.5% - 100%', min: 0.875, color: '#ff6f00', desc: '最高荣誉，你是传奇！',
-      bg: 'linear-gradient(160deg,#fff3e0 0%,#ffcc80 35%,#ffa726 70%,#ff6f00 100%)', border: '#e65100', txt: '#4e342e' },
+      bg: 'linear-gradient(165deg,#fffdf5 0%,#fff3e0 16%,#ffe0b2 32%,#ffcc80 48%,#ffb74d 64%,#ffa726 80%,#ff9800 92%,#f57c00 100%)', border: '#bf360c', txt: '#4e342e', shadow: 'rgba(255,253,245,.8)' },
   ];
   const current = getTierByRatio(ratio, total, earned).name;
   const ov = document.createElement('div');
