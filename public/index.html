@@ -385,32 +385,18 @@ document.getElementById('btnTitles').onclick = async () => {
 // 2026-10-18 史诗级：按稀有度分组渲染（带翻页，一页一个稀有度）
 // 2026-10-18 Elouise：顺序倒转，普通在前、传说在后
 function renderTitlesGrouped(list, page) {
-  const order = ['普通', '稀有', '史诗', '传说'];
   const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
-  // 2026-10-18性能优化：每页12个，一页刚好显示完，不滚动
-  const PER_PAGE = 12;
-  const rarity = order[Math.floor(page / 10)] || order[0];
-  const subPage = page % 10;
-  const allItems = list.filter(x => (x.rarity || '普通') === rarity);
-  const totalPages = Math.ceil(allItems.length / PER_PAGE);
-  const items = allItems.slice(subPage * PER_PAGE, (subPage + 1) * PER_PAGE);
-  const earned = allItems.filter(x => x.earned).length;
+  // 2026-10-18 Elouise：每页10个，共8页，不按稀有度分
+  const PER_PAGE = 10;
+  const totalPages = 8;
+  const items = list.slice(page * PER_PAGE, (page + 1) * PER_PAGE);
   const infoEl = document.getElementById('rarityPageInfo');
-  if (infoEl) {
-    const rarityIdx = order.indexOf(rarity) + 1;
-    if (totalPages > 1) {
-      infoEl.textContent = `${rarity}（${earned}/${allItems.length}）· ${rarityIdx}/4 · 第${subPage+1}/${totalPages}页`;
-    } else {
-      infoEl.textContent = `${rarity}（${earned}/${allItems.length}）· ${rarityIdx}/4`;
-    }
-  }
-  // 存总页数供翻页用
-  window._rarityTotalPages = totalPages;
-  window._rarityCurrent = rarity;
+  if (infoEl) infoEl.textContent = `第 ${page+1}/${totalPages} 页`;
   let html = `<div class="title-wall" style="margin-bottom:8px;display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;">`;
     html += items.map(x => {
       const i = list.indexOf(x);
-      const rc = colors[rarity];
+      const r = x.rarity || '普通';
+      const rc = colors[r];
       let progressHtml = '';
       if (!x.earned && x.progress) {
         const pct = Math.min(100, Math.round(100 * x.progress.current / x.progress.target));
@@ -418,10 +404,10 @@ function renderTitlesGrouped(list, page) {
           + `<div style="width:${pct}%;height:100%;background:${rc};border-radius:999px;"></div></div>`
           + `<div style="font-size:11px;color:#666;margin-top:2px;">${x.progress.current}/${x.progress.target}</div>`;
       }
-      return `<div class="title-item rar-${rarity} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;">`
+      return `<div class="title-item rar-${r} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;">`
       + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
       + `<div class="nm">${x.earned ? x.name : '???'}</div>`
-      + `<div style="font-size:11px;color:${rc};font-weight:700;">${rarity}</div>`
+      + `<div style="font-size:11px;color:${rc};font-weight:700;">${r}</div>`
       + progressHtml
       + `<div class="cond">${x.earned ? '已获得' : '点击查看如何获得'}</div></div>`;
     }).join('');
@@ -431,31 +417,10 @@ function renderTitlesGrouped(list, page) {
 function rarityPageTurn(d) {
   const list = window._modalTitles || [];
   let p = (window._rarityPage || 0) + d;
-  // 新分页：每稀有度10个槽位，实际用到的按该稀有度总页数
-  const order = ['普通', '稀有', '史诗', '传说'];
-  const PER_PAGE = 12;
-  // 计算总页数
-  let totalSlots = 0;
-  const rarityPages = order.map(r => {
-    const n = list.filter(x => (x.rarity || '普通') === r).length;
-    return Math.ceil(n / PER_PAGE);
-  });
-  totalSlots = rarityPages.reduce((a, b) => a + b, 0);
   if (p < 0) p = 0;
-  if (p >= totalSlots) p = totalSlots - 1;
+  if (p > 7) p = 7;
   window._rarityPage = p;
-  // 找到对应的rarity和subPage
-  let acc = 0, rarityIdx = 0, subPage = 0;
-  for (let i = 0; i < 4; i++) {
-    if (p < acc + rarityPages[i]) {
-      rarityIdx = i;
-      subPage = p - acc;
-      break;
-    }
-    acc += rarityPages[i];
-  }
-  const renderPage = rarityIdx * 10 + subPage;
-  document.getElementById('titleWallGrouped').innerHTML = renderTitlesGrouped(list, renderPage);
+  document.getElementById('titleWallGrouped').innerHTML = renderTitlesGrouped(list, p);
 }
 // 旧翻页函数保留（暂不用）
 function renderTitlePage(list, page) {
