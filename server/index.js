@@ -46,8 +46,14 @@ function lessonState(lessonId) {
 // ?lesson= 白名单（2026-10-02）：参数给了但不在已入库课程（lessons 表）里 -> 400，
 // 且校验通过前不得调 lessonState()，免得垃圾 lesson_id 在 lesson_state 里留一行。
 function validLesson(lid) {
-  try { return !!db.prepare('SELECT 1 FROM lessons WHERE lesson_id=?').get(lid); }
-  catch { return false; }
+  try { if (db.prepare('SELECT 1 FROM lessons WHERE lesson_id=?').get(lid)) return true; }
+  catch {}
+  // 兜底（2026-10-18）：draft 学科（yw-/sx-）若 DB 未入库但文件存在，也放行——
+  // loadLesson 本就从文件读，validLesson 不应成为单点故障
+  try {
+    return /^(yw-[a-z0-9]+|sx\d+)$/.test(lid) &&
+           fs.existsSync(path.join(seed.contentDir(), `lesson-${lid}.json`));
+  } catch { return false; }
 }
 function badLesson(res) { return res.status(400).json({ ok: false, error: 'bad_lesson' }); }
 // ---- 故事选择持久化（2026-10-02 总指挥补充条款）：第 4 课起，广播站剧情里学生的选择
