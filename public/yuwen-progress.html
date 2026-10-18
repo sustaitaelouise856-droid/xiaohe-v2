@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>学习报告 - 小禾语文</title>
+<style>
+  :root { --red:#c0392b; --red-dark:#96281b; --orange:#e67e22; --green:#34a853; --ink:#202124; --muted:#5f6368; --bg:#faf6f0; --card:#fff; --shadow-sm:0 1px 3px rgba(60,64,67,.08); --radius-lg:20px; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); min-height:100vh; padding-bottom:90px; }
+  #topbar { position:sticky; top:0; z-index:5; background:linear-gradient(135deg,#c0392b,#e67e22); color:#fff; font-size:18px; font-weight:800; letter-spacing:2px; text-align:center; padding:14px; box-shadow:0 2px 12px rgba(192,57,43,.25); }
+  #wrap { padding:16px 16px 0; max-width:640px; margin:0 auto; }
+  .tabs { display:flex; gap:10px; margin-bottom:14px; }
+  .tab { flex:1; padding:12px; border:2px solid #e8d5cc; background:#fff; border-radius:14px; font-size:15px; font-weight:700; color:var(--muted); cursor:pointer; }
+  .tab.active { border-color:var(--red); color:var(--red); background:#fef3f0; }
+  .card { background:var(--card); border-radius:var(--radius-lg); padding:18px; margin-bottom:14px; box-shadow:var(--shadow-sm); }
+  .card h2 { margin:0 0 12px; font-size:16.5px; font-weight:800; }
+  .subtitle { font-size:13px; color:var(--muted); margin:-6px 0 12px; line-height:1.6; }
+  .empty { text-align:center; color:var(--muted); padding:24px 12px; font-size:14px; line-height:1.8; }
+  .stat-row { display:flex; gap:10px; flex-wrap:wrap; }
+  .stat { flex:1; min-width:70px; text-align:center; background:#fef6f2; border-radius:14px; padding:12px 6px; }
+  .stat b { display:block; font-size:22px; color:var(--red); }
+  .stat span { font-size:12px; color:var(--muted); }
+  .legend { display:flex; gap:16px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--muted); }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:4px; }
+  .mistake-item { background:#fef9f6; border:1px solid #f0ddd2; border-radius:12px; padding:12px; margin-bottom:10px; font-size:14px; line-height:1.6; }
+  .mistake-item .q { font-weight:700; }
+  .mistake-item .meta { font-size:12px; color:var(--muted); margin-top:4px; }
+  .weak-item { display:flex; justify-content:space-between; align-items:center; background:#fef9f6; border-radius:12px; padding:12px 14px; margin-bottom:8px; font-size:14px; }
+  .weak-item .ct { background:#fde8e2; color:var(--red-dark); font-weight:800; border-radius:99px; padding:2px 10px; font-size:12.5px; }
+  .bottomnav { position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top:1px solid rgba(225,229,235,.8); display:flex; z-index:10; }
+  .bottomnav a { flex:1; text-align:center; padding:10px 0 14px; text-decoration:none; color:var(--muted); font-size:12px; }
+  .bottomnav a.on { color:var(--red); font-weight:700; }
+</style>
+<script>window.XH_SUBJECT = 'yuwen';</script>
+<script src="/theme.js"></script>
+</head>
+<body>
+<div id="topbar">📊 学习报告</div>
+<div id="wrap">
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('trend')">学习趋势</button>
+    <button class="tab" onclick="showTab('mistakes')">错题本</button>
+  </div>
+  <div id="tab-trend">
+    <div class="card">
+      <h2>📈 最近7天学习趋势</h2>
+      <canvas id="trendChart" style="width:100%;height:200px;"></canvas>
+      <div class="legend"><span><span class="dot" style="background:#c0392b"></span>学习分钟</span><span><span class="dot" style="background:#e67e22"></span>做题数</span></div>
+    </div>
+    <div class="card">
+      <h2>📊 本周小结</h2>
+      <div class="stat-row" id="weeklyRow"><div class="empty">正在加载…</div></div>
+    </div>
+    <div class="card">
+      <h2>🎯 弱点清单</h2>
+      <div id="weakList"><div class="empty">正在加载…</div></div>
+    </div>
+  </div>
+  <div id="tab-mistakes" style="display:none">
+    <div class="card">
+      <h2>我做错过的题</h2>
+      <div class="subtitle">这些题再独立做对一次，就真正拿下了。</div>
+      <div id="mistakeList"><div class="empty">加载中…</div></div>
+    </div>
+  </div>
+</div>
+<div class="bottomnav">
+  <a href="/yuwen.html">📚<br>语文</a>
+  <a href="/yuwen-progress.html" class="on">📊<br>报告</a>
+  <a href="/yuwen-growth.html">🌱<br>成长</a>
+  <a href="/yuwen-settings.html">⚙️<br>设置</a>
+</div>
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab-trend').style.display = name === 'trend' ? '' : 'none';
+  document.getElementById('tab-mistakes').style.display = name === 'mistakes' ? '' : 'none';
+}
+function getDaily(offset) {
+  const d = new Date(); d.setDate(d.getDate() - offset);
+  const key = 'xh_yw_daily_' + d.toISOString().slice(0, 10);
+  try { return JSON.parse(localStorage.getItem(key) || '{"attempts":0,"correct":0,"minutes":0}'); }
+  catch { return { attempts: 0, correct: 0, minutes: 0 }; }
+}
+function lessonName(id) {
+  return { 'yw-wenyan1': '《记承天寺夜游》', 'yw-read1': '《五点的闹钟》', 'yw-word1': '己已巳三兄弟' }[id] || id;
+}
+// 趋势图
+(function drawTrend() {
+  const cv = document.getElementById('trendChart');
+  const ctx = cv.getContext('2d');
+  const W = cv.offsetWidth || 300, H = 200;
+  cv.width = W * 2; cv.height = H * 2; ctx.scale(2, 2);
+  const days = [];
+  for (let i = 6; i >= 0; i--) days.push(getDaily(i));
+  const maxM = Math.max(10, ...days.map(d => d.minutes || 0));
+  const maxA = Math.max(10, ...days.map(d => d.attempts || 0));
+  const bw = W / 7;
+  days.forEach((d, i) => {
+    const x = i * bw + bw * 0.2, w = bw * 0.6;
+    const mh = (d.minutes || 0) / maxM * (H - 40);
+    ctx.fillStyle = '#c0392b';
+    ctx.fillRect(x, H - 20 - mh, w * 0.45, mh);
+    const ah = (d.attempts || 0) / maxA * (H - 40);
+    ctx.fillStyle = '#e67e22';
+    ctx.fillRect(x + w * 0.5, H - 20 - ah, w * 0.45, ah);
+    ctx.fillStyle = '#999'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center';
+    const dt = new Date(); dt.setDate(dt.getDate() - (6 - i));
+    ctx.fillText((dt.getMonth() + 1) + '/' + dt.getDate(), i * bw + bw / 2, H - 6);
+  });
+})();
+// 本周小结
+(function weekly() {
+  let minutes = 0, attempts = 0, correct = 0;
+  for (let i = 0; i < 7; i++) { const d = getDaily(i); minutes += d.minutes || 0; attempts += d.attempts || 0; correct += d.correct || 0; }
+  const doneCount = ['yw-wenyan1', 'yw-read1', 'yw-word1'].filter(id => { try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; } }).length;
+  const acc = attempts ? Math.round(correct / attempts * 100) : 0;
+  document.getElementById('weeklyRow').innerHTML =
+    `<div class="stat"><b>${minutes}</b><span>分钟</span></div>` +
+    `<div class="stat"><b>${attempts}</b><span>做题</span></div>` +
+    `<div class="stat"><b>${acc}%</b><span>正确率</span></div>` +
+    `<div class="stat"><b>${doneCount}/3</b><span>课程完成</span></div>`;
+})();
+// 弱点清单（按课程统计错题）
+(function weak() {
+  let arr = [];
+  try { arr = JSON.parse(localStorage.getItem('xh_yw_mistakes') || '[]'); } catch {}
+  const el = document.getElementById('weakList');
+  if (!arr.length) { el.innerHTML = '<div class="empty">还没有错题，继续保持 🎉</div>'; return; }
+  const byLesson = {};
+  arr.forEach(m => { byLesson[m.lesson] = (byLesson[m.lesson] || 0) + 1; });
+  el.innerHTML = Object.entries(byLesson).map(([lid, c]) =>
+    `<div class="weak-item"><span>${lessonName(lid)}</span><span class="ct">${c} 道待拿下</span></div>`).join('');
+})();
+// 错题本
+(function mistakes() {
+  let arr = [];
+  try { arr = JSON.parse(localStorage.getItem('xh_yw_mistakes') || '[]'); } catch {}
+  const el = document.getElementById('mistakeList');
+  if (!arr.length) { el.innerHTML = '<div class="empty">错题本是空的 🎉<br>做错的题会自动记在这里</div>'; return; }
+  el.innerHTML = arr.map(m => {
+    const dt = new Date(m.t);
+    return `<div class="mistake-item"><div class="q">${escapeHtml(m.q || '(题目)')}</div>` +
+      `<div class="meta">${lessonName(m.lesson)} · ${dt.getMonth() + 1}/${dt.getDate()} ` +
+      `<a href="/lesson?lesson=${m.lesson}" style="color:#c0392b;font-weight:700;">去重做 →</a></div></div>`;
+  }).join('');
+})();
+function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+</script>
+</body>
+</html>
