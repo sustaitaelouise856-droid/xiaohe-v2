@@ -294,15 +294,17 @@
 </div>
 <style>
 /* 称号墙弹窗内的段位样式（复用成长页） */
-#titleModalWall .tier-badge { display:inline-block; padding:10px 36px; border-radius:999px; font-size:22px; font-weight:800; margin-bottom:12px; letter-spacing:2px; }
-#titleModalWall.tier-bronze .tier-badge { background:linear-gradient(135deg,#6d4c41,#a1887f,#6d4c41); color:#fff; box-shadow:0 4px 16px rgba(109,76,65,.5); }
-#titleModalWall.tier-silver .tier-badge { background:linear-gradient(135deg,#78909c,#cfd8dc,#78909c); color:#fff; box-shadow:0 4px 16px rgba(120,144,156,.5); }
-#titleModalWall.tier-gold .tier-badge { background:linear-gradient(135deg,#ff8f00,#ffd54f,#ff8f00); color:#fff; box-shadow:0 4px 20px rgba(255,143,0,.6); }
-#titleModalWall.tier-platinum .tier-badge { background:linear-gradient(135deg,#00acc1,#80deea,#00acc1); color:#fff; box-shadow:0 4px 20px rgba(0,172,193,.6); }
-#titleModalWall.tier-diamond .tier-badge { background:linear-gradient(135deg,#0288d1,#81d4fa,#0288d1); color:#fff; box-shadow:0 4px 20px rgba(2,136,209,.6); }
-#titleModalWall.tier-master .tier-badge { background:linear-gradient(135deg,#7b1fa2,#ce93d8,#7b1fa2); color:#fff; box-shadow:0 4px 20px rgba(123,31,162,.6); }
-#titleModalWall.tier-grandmaster .tier-badge { background:linear-gradient(135deg,#d81b60,#f48fb1,#d81b60); color:#fff; box-shadow:0 4px 20px rgba(216,27,96,.6); }
-#titleModalWall.tier-king .tier-badge { background:linear-gradient(135deg,#ff6f00,#ffab40,#ff6f00); color:#fff; box-shadow:0 4px 24px rgba(255,111,0,.8); }
+#titleModalWall .tier-badge { display:inline-block; padding:12px 42px; border-radius:999px; font-size:23px; font-weight:900; margin-bottom:14px; letter-spacing:3px; position:relative; overflow:hidden; text-shadow:0 2px 4px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2); border:2px solid rgba(255,255,255,.35); }
+#titleModalWall .tier-badge::before { content:''; position:absolute; inset:0; background:linear-gradient(105deg, transparent 20%, rgba(255,255,255,.4) 40%, rgba(255,255,255,.6) 50%, rgba(255,255,255,.4) 60%, transparent 80%); pointer-events:none; }
+#titleModalWall .tier-badge::after { content:''; position:absolute; inset:0; border-radius:999px; box-shadow:inset 0 2px 6px rgba(255,255,255,.5), inset 0 -3px 8px rgba(0,0,0,.25); pointer-events:none; }
+#titleModalWall.tier-bronze .tier-badge { background:linear-gradient(135deg,#5d4037 0%,#8d6e63 25%,#a1887f 50%,#8d6e63 75%,#5d4037 100%); color:#fff; box-shadow:0 6px 20px rgba(109,76,65,.6), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-silver .tier-badge { background:linear-gradient(135deg,#546e7a 0%,#90a4ae 25%,#cfd8dc 50%,#90a4ae 75%,#546e7a 100%); color:#fff; box-shadow:0 6px 20px rgba(120,144,156,.6), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-gold .tier-badge { background:linear-gradient(135deg,#e65100 0%,#ffb300 25%,#ffd54f 50%,#ffb300 75%,#e65100 100%); color:#fff; box-shadow:0 6px 24px rgba(255,143,0,.7), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-platinum .tier-badge { background:linear-gradient(135deg,#006064 0%,#4dd0e1 25%,#80deea 50%,#4dd0e1 75%,#006064 100%); color:#fff; box-shadow:0 6px 24px rgba(0,172,193,.7), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-diamond .tier-badge { background:linear-gradient(135deg,#01579b 0%,#4fc3f7 25%,#81d4fa 50%,#4fc3f7 75%,#01579b 100%); color:#fff; box-shadow:0 6px 24px rgba(2,136,209,.7), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-master .tier-badge { background:linear-gradient(135deg,#4a148c 0%,#ab47bc 25%,#ce93d8 50%,#ab47bc 75%,#4a148c 100%); color:#fff; box-shadow:0 6px 24px rgba(123,31,162,.7), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-grandmaster .tier-badge { background:linear-gradient(135deg,#880e4f 0%,#ec407a 25%,#f48fb1 50%,#ec407a 75%,#880e4f 100%); color:#fff; box-shadow:0 6px 24px rgba(216,27,96,.7), 0 2px 6px rgba(0,0,0,.2); }
+#titleModalWall.tier-king .tier-badge { background:linear-gradient(135deg,#bf360c 0%,#ffa726 25%,#ffcc80 50%,#ffa726 75%,#bf360c 100%); color:#fff; box-shadow:0 8px 28px rgba(255,111,0,.8), 0 2px 8px rgba(0,0,0,.25); }
 #titleModalWall .title-wall { display:flex; flex-wrap:wrap; gap:10px; border-radius:20px; padding:16px; }
 /* 2026-10-18：八段位超级质感升级——多层奢华金属/宝石纹理 */
 #titleModalWall.tier-bronze .title-wall { background:
