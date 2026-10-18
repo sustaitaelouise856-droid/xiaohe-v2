@@ -700,16 +700,40 @@ function showTitleModalDetail(i) {
   ov.id = 'titleModalDetail';
   ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:320px;width:100%;text-align:center;">'
-    + '<div style="font-size:48px;">' + (x.earned ? x.icon : '🔒') + '</div>'
-    + '<h3 style="margin:12px 0 8px;">' + esc(x.earned ? x.name : '???') + '</h3>'
-    + '<div style="font-size:12px;color:' + ({'普通':'#0d47a1','稀有':'#4a148c','史诗':'#bf360c','传说':'#e65100'}[x.rarity] || '#0d47a1') + ';font-weight:700;margin-bottom:8px;">' + esc(x.rarity || '普通') + '</div>'
-    + '<p style="color:#5f6368;font-size:14px;line-height:1.6;text-align:left;background:#f8f9fa;border-radius:10px;padding:12px;">💡 <b>如何获得：</b><br>' + esc(x.desc || '暂无说明') + '</p>'
-    + (x.progress && !x.earned ? '<div style="margin:12px 0;"><div style="background:#e0e0e0;border-radius:999px;height:10px;overflow:hidden;"><div style="width:' + Math.min(100, Math.round(100*x.progress.current/x.progress.target)) + '%;height:100%;background:#1a73e8;"></div></div><div style="font-size:13px;color:#666;margin-top:4px;">进度：' + x.progress.current + '/' + x.progress.target + '</div></div>' : '')
-    + '<div style="margin:12px 0;padding:10px;background:' + (x.earned ? '#e6f4ea' : '#fef7e0') + ';border-radius:10px;font-size:14px;color:' + (x.earned ? '#137333' : '#b06000') + ';">'
-    + (x.earned ? '✅ 已获得' : '⏳ 未获得，加油！') + '</div>'
-    + '<button onclick="document.getElementById(\'titleModalDetail\').remove()" style="padding:10px 32px;border-radius:12px;border:0;background:#1a73e8;color:#fff;font-size:16px;">知道了</button>'
-    + '</div>';
+  const ptsMap = {'普通':1,'稀有':2,'史诗':4,'传说':8};
+  const pts = ptsMap[x.rarity] || 1;
+  const rarColor = ({'普通':'#0d47a1','稀有':'#4a148c','史诗':'#bf360c','传说':'#e65100'}[x.rarity]) || '#0d47a1';
+  const rarBg = ({'普通':'#e3f2fd','稀有':'#f3e5f5','史诗':'#fff3e0','传说':'#fff8e1'}[x.rarity]) || '#e3f2fd';
+  let progHtml = '';
+  let remainTxt = '';
+  if (x.progress && !x.earned) {
+    const cur = x.progress.current, tgt = x.progress.target;
+    const remain = Math.max(0, tgt - cur);
+    const pct = tgt > 0 ? Math.min(100, Math.round(100 * cur / tgt)) : 0;
+    remainTxt = remain > 0 ? ('还差 ' + remain + ' 步') : '就差临门一脚！';
+    progHtml = '<div style="margin:12px 0;text-align:left;">'
+      + '<div style="display:flex;justify-content:space-between;font-size:12px;color:#5f6368;margin-bottom:4px;"><span>已完成 ' + cur + ' / ' + tgt + '</span><span>' + pct + '%</span></div>'
+      + '<div style="background:#e0e0e0;border-radius:999px;height:10px;overflow:hidden;"><div style="width:' + pct + '%;height:100%;background:' + rarColor + ';"></div></div>'
+      + '<div style="font-size:13px;color:' + rarColor + ';font-weight:700;margin-top:6px;">💪 ' + esc(remainTxt) + '</div>'
+      + '</div>';
+  }
+  const statusHtml = x.earned
+    ? '<div style="margin:12px 0;padding:10px;background:#e6f4ea;border-radius:10px;font-size:14px;color:#137333;">✅ 已拿下！+' + pts + ' 称号点已计入段位</div>'
+    : '<div style="margin:12px 0;padding:10px;background:#fef7e0;border-radius:10px;font-size:14px;color:#b06000;">'
+      + (x.progress ? '⏳ ' + esc(remainTxt) + '，继续冲！' : '🔒 按上面的方法完成就能解锁')
+      + '</div>';
+  ov.innerHTML = '<div style="background:#fff;border-radius:16px;max-width:330px;width:100%;text-align:center;overflow:hidden;">'
+    + '<div style="height:6px;background:' + rarColor + ';"></div>'
+    + '<div style="padding:22px 24px 24px;">'
+    + '<div style="width:84px;height:84px;margin:0 auto;border-radius:50%;background:' + rarBg + ';display:flex;align-items:center;justify-content:center;font-size:44px;">' + (x.earned ? esc(x.icon) : '🔒') + '</div>'
+    + '<h3 style="margin:12px 0 6px;font-size:19px;">' + esc(x.earned ? x.name : '???') + '</h3>'
+    + '<div style="margin-bottom:10px;"><span style="display:inline-block;font-size:12px;font-weight:800;color:' + rarColor + ';background:' + rarBg + ';border:1px solid ' + rarColor + ';border-radius:999px;padding:3px 12px;margin-right:6px;">' + esc(x.rarity || '普通') + '</span>'
+    + '<span style="display:inline-block;font-size:12px;font-weight:800;color:#fff;background:' + rarColor + ';border-radius:999px;padding:3px 12px;">+' + pts + ' 称号点</span></div>'
+    + '<p style="color:#5f6368;font-size:13px;line-height:1.7;text-align:left;background:#f8f9fa;border-radius:10px;padding:12px;margin:0;">🎯 <b>获得方法</b><br>' + esc(x.desc || '暂无说明') + '</p>'
+    + progHtml
+    + statusHtml
+    + '<button onclick="document.getElementById(\'titleModalDetail\').remove()" style="padding:10px 36px;border-radius:12px;border:0;background:' + rarColor + ';color:#fff;font-size:16px;font-weight:700;">' + (x.earned ? '太棒了' : '继续冲') + '</button>'
+    + '</div></div>';
   ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
   document.body.appendChild(ov);
 }
