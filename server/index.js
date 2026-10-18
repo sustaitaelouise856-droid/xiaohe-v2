@@ -167,6 +167,9 @@ function publicStep(s, lessonId, version, choices) {
   };
   if (s.kind === 'mcq' || s.kind === 'short' || s.kind === 'chunk') o.item_id = `${lessonId}-v${version}-s${s.item_step || s.step}`;
   if (s.kind === 'mcq') o.options = s.options;
+  // 错因反馈下发（2026-10-19）：wrong_feedback 是给学生看的反馈文案，不是答案——
+  // 随步骤下发，前端答错时可直接展示，不依赖服务端 stepsByItem 查找
+  if (s.kind === 'mcq' && s.wrong_feedback) o.wrong_feedback = s.wrong_feedback;
   // 拼句题（2026-10-14）：下发打乱的词块，前端点选拼句；答案用 expects 判分
   if (s.kind === 'chunk') o.chunks = s.chunks;
   // choice 步骤：下发 choice_key 与选项（选项只有标签，没有答案可泄）；选择不记作答不判分
@@ -392,6 +395,8 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
   }
   const weaknesses = [];
   for (const w of ['old_info', 'spelling', 'omission']) {
+    // 语文课过滤（2026-10-19）：old_info(分清新旧通知)/omission(把时间地点写全)是英语课概念
+    if (/^yw-/.test(lid) && (w === 'old_info' || w === 'omission')) continue;
     if (byWeak[w] > 0) weaknesses.push(WEAK_PARENT[w]);
   }
   for (const t of agg.weaknesses) {
