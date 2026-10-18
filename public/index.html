@@ -604,25 +604,7 @@ function showTierPreview() {
     const swipe = document.getElementById('tierSwipe');
     if (swipe && curIdx >= 0) swipe.scrollLeft = swipe.clientWidth * curIdx;
   }, 100);
-  // 2026-10-18 Elouise：滑动时居中的卡片放大一点
-  setTimeout(() => {
-    const swipe = document.getElementById('tierSwipe');
-    if (!swipe) return;
-    const cards = swipe.children;
-    const updateScale = () => {
-      const centerX = swipe.scrollLeft + swipe.clientWidth / 2;
-      for (let i = 0; i < cards.length; i++) {
-        const card = cards[i];
-        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-        const dist = Math.abs(centerX - cardCenter) / swipe.clientWidth;
-        const scale = Math.max(0.92, 1 - dist * 0.15);
-        card.style.transform = `scale(${scale})`;
-        card.style.transition = 'transform .2s';
-      }
-    };
-    swipe.addEventListener('scroll', updateScale, { passive: true });
-    updateScale();
-  }, 200);
+  // 2026-10-18：去掉滑动缩放（导致闪动），只保留scroll-snap停顿
 }
 function showTitleModalDetail(i) {
   const x = (window._modalTitles || [])[i];
