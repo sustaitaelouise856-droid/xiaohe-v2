@@ -2684,8 +2684,14 @@ app.post('/api/admin/cleanup-retest', (req, res) => {
         )
       )
     `).run();
-    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes, 'stuck_deleted=', stuck.changes);
-    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes, stuck_deleted: stuck.changes });
+    // 5. 删13:12测试批次：同秒批量插入、knowledge_point='general'的26道测试pending（2026-10-18 Elouise批准）
+    const testBatch = db.prepare(`
+      DELETE FROM retest_queue WHERE status='pending'
+      AND id BETWEEN 137 AND 162
+      AND knowledge_point='general'
+    `).run();
+    console.log('[admin] cleanup-retest: dups_deleted=', dups.changes, 'done_deleted=', done.changes, 'stale_deleted=', stale.changes, 'stuck_deleted=', stuck.changes, 'testBatch_deleted=', testBatch.changes);
+    res.json({ ok: true, dups_deleted: dups.changes, done_deleted: done.changes, stale_deleted: stale.changes, stuck_deleted: stuck.changes, testBatch_deleted: testBatch.changes });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
