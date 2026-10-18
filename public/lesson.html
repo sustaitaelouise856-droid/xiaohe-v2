@@ -5,6 +5,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>小禾英语 · 第一课</title>
+<script>
+// 语文课品牌适配（2026-10-18）：?lesson=yw-* 时把品牌换成小禾语文
+(function(){
+  try {
+    var m = /[?&]lesson=([^&]+)/.exec(location.search);
+    var lid = m ? decodeURIComponent(m[1]) : '';
+    if (/^yw-/.test(lid)) {
+      window.XH_SUBJECT = 'yuwen';
+      window.XH_BRAND = '小禾语文';
+      window.XH_HOME = '/yuwen.html';
+      // 页面加载后替换品牌文字和返回链接
+      document.addEventListener('DOMContentLoaded', function(){
+        document.title = document.title.replace('小禾英语', '小禾语文');
+        var b = document.getElementById('brand');
+        if (b) b.innerHTML = b.innerHTML.replace('小禾英语', '小禾语文');
+        // 返回按钮改到语文首页
+        document.querySelectorAll('button[onclick*="location.href=\'/\'"]').forEach(function(btn){
+          btn.setAttribute('onclick', btn.getAttribute('onclick').replace("location.href='/'", "location.href='/yuwen.html'"));
+        });
+        // 简答题占位符去掉"英文"
+        var obs = new MutationObserver(function(){
+          var ta = document.getElementById('answerInput');
+          if (ta && ta.placeholder === '在这里写英文答案') ta.placeholder = '在这里写答案';
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+      });
+    } else {
+      window.XH_SUBJECT = 'english';
+      window.XH_BRAND = '小禾英语';
+      window.XH_HOME = '/';
+    }
+  } catch(e) {}
+})();
+</script>
 <script src="/choice-step.js"></script>
 <style>
   :root {
@@ -619,7 +653,7 @@ async function renderHome() {
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
   const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
-  let html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>小禾英语</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
+  let html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>${window.XH_BRAND||'小禾英语'}</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
   if (isReview) {
     // 练习模式（2026-10-02 总任务书）：学完新课自动接着练；练完一遍可以再练一遍
     if (state.p1_done) {
@@ -1722,7 +1756,7 @@ async function submitCopy(s, answer) {
     }
     // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
     if (LESSON && LESSON.error === 'lesson_locked') {
-      document.title = '小禾英语 · 课程未解锁';
+      document.title = (window.XH_BRAND||'小禾英语') + ' · 课程未解锁';
       wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
         <div style="font-size:48px;margin-bottom:16px;">🔒</div>
         <h2 class="stem">这门课还没解锁</h2>
@@ -1733,7 +1767,7 @@ async function submitCopy(s, answer) {
       return;
     }
     await loadProg(); // 续课进度（服务端，按题目ID）
-    document.title = '小禾英语 · ' + (LESSON.home_subtitle || LESSON.title || '');
+    document.title = (window.XH_BRAND||'小禾英语') + ' · ' + (LESSON.home_subtitle || LESSON.title || '');
     const brandSmall = document.querySelector('#brand small');
     if (brandSmall) brandSmall.textContent = LESSON.home_subtitle || LESSON.title || '';
     renderHome();
