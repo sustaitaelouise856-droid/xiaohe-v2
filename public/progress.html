@@ -122,8 +122,17 @@
     <div class="card">
       <h2>我做错过的题</h2>
       <div class="subtitle">这几个知识点正在练习中，换一道同类型的题独立做对，就真正拿下了。</div>
-      <!-- 2026-10-15 Elouise：批量选择错题一起做 -->
-      <div style="margin-bottom:12px;">
+      <!-- 2026-10-18 史诗级加强：统计+筛选+优先级 -->
+      <div id="mistakeStats" style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;"></div>
+      <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+        <select id="kpFilter" onchange="filterByKp()" style="padding:10px 16px;border:2px solid #e3e7ee;border-radius:10px;font-size:14px;background:#fff;cursor:pointer;">
+          <option value="">全部知识点</option>
+        </select>
+        <select id="sortBy" onchange="renderMistakeList()" style="padding:10px 16px;border:2px solid #e3e7ee;border-radius:10px;font-size:14px;background:#fff;cursor:pointer;">
+          <option value="wrong">错得最多优先</option>
+          <option value="recent">最近错的优先</option>
+          <option value="oldest">最早错的优先</option>
+        </select>
         <button id="btnSelectMode" onclick="toggleSelectMode()" style="padding:10px 20px;border:2px solid #1a73e8;border-radius:10px;background:#fff;color:#1a73e8;font-size:14px;font-weight:700;cursor:pointer;">☑️ 选择错题</button>
         <button id="btnBatchStart" onclick="startBatchRetry()" style="display:none;padding:10px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#ff8f00,#ff6f00);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-left:8px;">开始做 (<span id="selCount">0</span>)</button>
       </div>
@@ -173,6 +182,7 @@ async function loadMistakes() {
     window._mistakes = d.mistakes;
     window._selectMode = false;
     window._selected = new Set();
+    updateMistakeStats();
     renderMistakeList();
     // 最近拿下（2026-10-14）：已解决的错题
     const resolved = d.resolved || [];
@@ -214,30 +224,83 @@ function showMistake(i) {
   document.body.appendChild(ov);
 }
 
+// 2026-10-18 史诗级加强：统计+筛选+排序
+function updateMistakeStats() {
+  const mistakes = window._mistakes || [];
+  const statsEl = document.getElementById('mistakeStats');
+  if (!statsEl) return;
+  // 按知识点统计
+  const kpCount = {};
+  mistakes.forEach(m => {
+    const kp = m.knowledge_point || '其他';
+    kpCount[kp] = (kpCount[kp] || 0) + 1;
+  });
+  const total = mistakes.length;
+  const topKp = Object.entries(kpCount).sort((a,b) => b[1]-a[1]).slice(0, 3);
+  statsEl.innerHTML = `<div style="background:#e8f0fe;border-radius:10px;padding:8px 16px;font-size:14px;font-weight:700;color:#1a73e8;">📝 共 ${total} 道</div>`
+    + topKp.map(([kp, c]) => `<div style="background:#fff3e0;border-radius:10px;padding:8px 16px;font-size:14px;color:#e65100;">${escHtml(kpName(kp))} ×${c}</div>`).join('');
+  // 更新筛选下拉
+  const filter = document.getElementById('kpFilter');
+  if (filter && filter.options.length <= 1) {
+    Object.keys(kpCount).sort().forEach(kp => {
+      const opt = document.createElement('option');
+      opt.value = kp;
+      opt.textContent = `${kpName(kp)} (${kpCount[kp]})`;
+      filter.appendChild(opt);
+    });
+  }
+}
+function filterByKp() { renderMistakeList(); }
+
 // 2026-10-15 Elouise：错题多选一起做
 function renderMistakeList() {
   const focusEl = document.getElementById('focus-list');
-  const mistakes = window._mistakes || [];
+  let mistakes = window._mistakes || [];
   const selectMode = window._selectMode || false;
   if (!mistakes.length) {
     focusEl.innerHTML = '<div class="empty">太棒了，一道错题都没有！</div>';
     return;
   }
-  focusEl.innerHTML = mistakes.slice(0, 20).map((m, i) => {
+  // 筛选
+  const kpFilter = document.getElementById('kpFilter');
+  const filterKp = kpFilter ? kpFilter.value : '';
+  if (filterKp) {
+    mistakes = mistakes.filter(m => (m.knowledge_point || '其他') === filterKp);
+  }
+  // 排序
+  const sortBy = document.getElementById('sortBy') ? document.getElementById('sortBy').value : 'wrong';
+  const sorted = [...mistakes].sort((a, b) => {
+    if (sortBy === 'wrong') return (b.wrong_count || 1) - (a.wrong_count || 1);
+    if (sortBy === 'recent') return new Date(b.created_at) - new Date(a.created_at);
+    if (sortBy === 'oldest') return new Date(a.created_at) - new Date(b.created_at);
+    return 0;
+  });
+  // 建立原索引映射（用于选择和详情）
+  const origIndex = new Map(sorted.map(m => [m.item_id, window._mistakes.indexOf(m)]));
+  focusEl.innerHTML = sorted.map((m) => {
+    const i = origIndex.get(m.item_id);
     const checked = (window._selected || new Set()).has(i) ? 'checked' : '';
     const checkbox = selectMode
       ? `<input type="checkbox" ${checked} onclick="event.stopPropagation();toggleSelect(${i})" style="width:22px;height:22px;margin-right:10px;flex-shrink:0;cursor:pointer;">`
       : '';
     const clickAction = selectMode ? `toggleSelect(${i})` : `showMistake(${i})`;
     const hint = selectMode ? '' : ' · 点击查看详情';
-    return `<div class="mistake-item" onclick="${clickAction}" style="display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;${checked ? 'background:#e8f0fe;border-color:#1a73e8;' : ''}">`
+    // 错次徽章：错3次+红色，2次橙色，1次灰色
+    const wc = m.wrong_count || 1;
+    const wcBadge = wc >= 3
+      ? `<span style="background:#c5221f;color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;margin-left:8px;">错${wc}次 🔥</span>`
+      : wc === 2
+      ? `<span style="background:#e8710a;color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;margin-left:8px;">错2次</span>`
+      : '';
+    const kpTag = m.knowledge_point ? `<span style="background:#f3e5f5;color:#6a1b9a;border-radius:6px;padding:2px 8px;font-size:12px;margin-left:8px;">${escHtml(kpName(m.knowledge_point))}</span>` : '';
+    return `<div class="mistake-item" onclick="${clickAction}" style="display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;${checked ? 'background:#e8f0fe;border-color:#1a73e8;' : ''}${wc >= 3 ? 'border-left:4px solid #c5221f;' : ''}">`
       + checkbox
       + `<div style="flex:1;">`
-      + `<div style="font-weight:600;margin-bottom:6px;color:#212121;">${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
+      + `<div style="font-weight:600;margin-bottom:6px;color:#212121;">${escHtml((m.question || '（题干）').slice(0, 60))}...${wcBadge}${kpTag}</div>`
       + `<div style="font-size:16px;color:#666;">你的答案：<span style="color:#c5221f;">${escHtml((m.given || '（空）').slice(0, 40))}</span></div>`
       + `<div style="font-size:14px;color:#999;margin-top:4px;">${escHtml(m.created_at || '').slice(0, 16)}${hint}</div>`
       + `</div></div>`;
-  }).join('');
+  }).join('') || '<div class="empty">该知识点下没有错题</div>';
 }
 
 function toggleSelectMode() {
