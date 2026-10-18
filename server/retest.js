@@ -167,7 +167,27 @@ function selectDailyRetestItems(maxCount) {
     }
     // 排序：优先级 > 知识点内按时间（旧的先，避免堆积）
     cands.sort((a, b) => (a.priority - b.priority) || (a.created_at < b.created_at ? -1 : 1));
-    return cands.slice(0, max);
+    // 2026-10-18修：同优先级内随机打乱，避免每天题目顺序完全一样
+    const result = [];
+    let i = 0;
+    while (i < cands.length && result.length < max) {
+      const prio = cands[i].priority;
+      const group = [];
+      while (i < cands.length && cands[i].priority === prio) {
+        group.push(cands[i++]);
+      }
+      // Fisher-Yates shuffle with daily seed
+      const seed = new Date().toISOString().slice(0, 10);
+      let h = 0;
+      for (let k = 0; k < seed.length; k++) h = (h * 31 + seed.charCodeAt(k)) >>> 0;
+      for (let k = group.length - 1; k > 0; k--) {
+        h = (h * 1103515245 + 12345) >>> 0;
+        const j = h % (k + 1);
+        [group[k], group[j]] = [group[j], group[k]];
+      }
+      result.push(...group);
+    }
+    return result.slice(0, max);
   } catch { return []; }
 }
 
