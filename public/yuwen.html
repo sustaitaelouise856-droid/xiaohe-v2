@@ -106,6 +106,24 @@
   .bottomnav a { flex: 1; text-align: center; padding: 10px 0 14px; text-decoration: none; color: var(--muted); font-size: 12px; }
   .bottomnav a.on { color: var(--red); font-weight: 700; }
   .shell-note { margin: 22px 20px 0; font-size: 12.5px; color: var(--muted); text-align: center; line-height: 1.8; }
+  /* 微小版称号墙（2026-10-18：仿英语称号墙，本地判定） */
+  .title-card {
+    margin: 20px 20px 0; background: var(--card); border-radius: var(--radius-lg);
+    padding: 16px 14px; box-shadow: var(--shadow-sm);
+    border: 2px solid rgba(192,57,43,.12);
+  }
+  .title-card h3 { margin: 0 0 4px; font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+  .title-card .tsub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .title-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .title-item { text-align: center; padding: 10px 2px; border-radius: 12px; background: #faf6f0; cursor: pointer; }
+  .title-item .ic { font-size: 24px; }
+  .title-item .nm { font-size: 10.5px; font-weight: 700; margin-top: 4px; line-height: 1.3; }
+  .title-item.locked { filter: grayscale(1); opacity: .55; }
+  .title-detail {
+    display: none; margin-top: 10px; padding: 10px 12px;
+    background: #fef3f0; border-radius: 12px; font-size: 13px; line-height: 1.6;
+  }
+  .title-detail.show { display: block; }
 </style>
 <script>window.XH_SUBJECT = 'yuwen';</script>
 <script src="/theme.js"></script>
@@ -124,6 +142,13 @@
 
 <div class="continue-wrap">
   <button class="btn-continue" id="btnContinue">▶ 继续学习<small id="continueSub"></small></button>
+</div>
+
+<div class="title-card">
+  <h3>🏆 我的称号</h3>
+  <div class="tsub" id="titleSub"></div>
+  <div class="title-grid" id="titleGrid"></div>
+  <div class="title-detail" id="titleDetail"></div>
 </div>
 
 <div class="units" id="units"></div>
@@ -150,6 +175,35 @@ const UNITS = [
 ];
 const ORDER = [];
 UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
+
+// 微小版称号墙：本地判定，无服务端
+const YW_TITLES = [
+  { icon: '📜', name: '初入文史馆', cond: '完成任意 1 节语文课', check: () => ORDER.some(l => isDone(l.id)) },
+  { icon: '🌙', name: '月下夜游人', cond: '学完《记承天寺夜游》', check: () => isDone('yw-wenyan1') },
+  { icon: '⏰', name: '清晨读书郎', cond: '学完《五点的闹钟》阅读课', check: () => isDone('yw-read1') },
+  { icon: '✏️', name: '明辨己已巳', cond: '学完字词课「己已巳三兄弟」', check: () => isDone('yw-word1') },
+  { icon: '🏆', name: '文史小馆长', cond: '3 节示范课全部学完', check: () => ORDER.every(l => isDone(l.id)) },
+];
+function renderTitles() {
+  const grid = document.getElementById('titleGrid');
+  const earned = YW_TITLES.filter(t => { try { return t.check(); } catch { return false; } }).length;
+  document.getElementById('titleSub').textContent = `已获得 ${earned}/${YW_TITLES.length}`;
+  grid.innerHTML = '';
+  YW_TITLES.forEach((t, i) => {
+    let ok = false;
+    try { ok = t.check(); } catch {}
+    const d = document.createElement('div');
+    d.className = 'title-item' + (ok ? '' : ' locked');
+    d.innerHTML = `<div class="ic">${ok ? t.icon : '🔒'}</div><div class="nm">${ok ? t.name : '???'}</div>`;
+    d.onclick = () => {
+      const det = document.getElementById('titleDetail');
+      det.innerHTML = `<b>${ok ? t.icon + ' ' + t.name : '🔒 未获得'}</b><br>获得要求：${t.cond}${ok ? '<br>状态：已获得 🎉' : ''}`;
+      det.classList.add('show');
+    };
+    grid.appendChild(d);
+  });
+}
+renderTitles();
 
 function isDone(id) {
   try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; }
