@@ -386,10 +386,12 @@ document.getElementById('btnTitles').onclick = async () => {
 // 2026-10-18 Elouise：顺序倒转，普通在前、传说在后
 function renderTitlesGrouped(list, page) {
   const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
-  // 2026-10-18 Elouise：每页10个，共8页，不按稀有度分
+  // 2026-10-18 Elouise：每页10个，共8页，按稀有度排序（普通→稀有→史诗→传说）
   const PER_PAGE = 10;
   const totalPages = 8;
-  const items = list.slice(page * PER_PAGE, (page + 1) * PER_PAGE);
+  const order = { '普通': 0, '稀有': 1, '史诗': 2, '传说': 3 };
+  const sorted = [...list].sort((a, b) => (order[a.rarity || '普通'] || 0) - (order[b.rarity || '普通'] || 0));
+  const items = sorted.slice(page * PER_PAGE, (page + 1) * PER_PAGE);
   const infoEl = document.getElementById('rarityPageInfo');
   if (infoEl) infoEl.textContent = `第 ${page+1}/${totalPages} 页`;
   let html = `<div class="title-wall" style="margin-bottom:8px;display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;">`;
@@ -523,7 +525,7 @@ function showTitleGuide() {
     + '<p><b>一、什么是称号点？</b><br>每个称号按稀有度折算成点数：<br>· 普通称号 = 1点<br>· 稀有称号 = 2点<br>· 史诗称号 = 4点<br>· 传说称号 = 8点<br>共80个称号，满分160点。</p>'
     + '<p><b>二、段位怎么算？</b><br>按你的总称号点确定段位，共8个段位：<br>· 青铜：0-19点<br>· 白银：20-39点<br>· 黄金：40-59点<br>· 铂金：60-79点<br>· 钻石：80-99点<br>· 大师：100-119点<br>· 宗师：120-139点<br>· 王者：140-160点</p>'
     + '<p><b>三、怎么获得称号？</b><br>完成学习任务自动获得，比如：做对题目、连续学习、完成课程、消灭错题等。点击任意称号可查看获得方法。</p>'
-    + '<p><b>四、页面怎么翻？</b><br>共80个称号，每页显示10个，一共8页。用"上一页/下一页"按钮翻页。</p>'
+    + '<p><b>四、页面怎么翻？</b><br>共80个称号，按稀有度排序（普通→稀有→史诗→传说），每页显示10个，一共8页。用"上一页/下一页"按钮翻页。</p>'
     + '<p><b>五、段位徽章可以点</b><br>点击顶部的段位徽章（如"白银"），可预览8个段位的点数区间。</p>'
     + '<p><b>六、未获得的称号</b><br>显示为黑色卡片，名字是"???"，点击可查看如何获得。已获得的会显示彩色。</p>'
     + '</div>'
