@@ -372,20 +372,44 @@ document.getElementById('btnTitles').onclick = async () => {
     wall.innerHTML = `<div style="text-align:center;width:100%;margin-bottom:8px;"><span class="tier-badge">${tierName}</span>`
       + `<div style="font-size:16px;font-weight:700;margin-top:8px;">已集齐 ${earned}/${total}（${pctStr}）</div>`
       + `<div style="font-size:14px;color:#5f6368;margin-top:4px;">${nextTip}</div></div>`
-      + `<div class="title-wall">` + list.map((x, i) => {
-        const rarity = x.rarity || '普通';
-        // 2026-10-18史诗级加强：用CSS类实现稀有度特效
-        const rc = { '普通': '#0d47a1', '稀有': '#4a148c', '史诗': '#bf360c', '传说': '#e65100' }[rarity] || '#0d47a1';
-        return `<div class="title-item rar-${rarity} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;">`
-        + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
-        + `<div class="nm">${x.earned ? x.name : '???'}</div>`
-        + `<div style="font-size:11px;color:${rc};font-weight:700;">${rarity}</div>`
-        + `<div class="cond">${x.earned ? '已获得' : '点击查看'}</div></div>`;
-      }).join('')
+      + `<div class="title-wall" id="titleWallPage">` + renderTitlePage(list, 0) + `</div>`
+      + `<div style="text-align:center;margin-top:12px;display:flex;justify-content:center;align-items:center;gap:16px;">`
+      + `<button onclick="titlePageTurn(-1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">◀ 上一页</button>`
+      + `<span id="titlePageInfo" style="font-size:14px;color:#666;">1 / ${Math.ceil(list.length/12)}</span>`
+      + `<button onclick="titlePageTurn(1)" style="padding:8px 20px;border-radius:20px;border:2px solid #90caf9;background:#e3f2fd;font-size:16px;cursor:pointer;">下一页 ▶</button>`
+      + `</div>`
       + `</div><div class="tier-msg">${msg}</div>`;
-    // 存下来供详情弹窗用
+    // 存下来供详情弹窗和翻页用
     window._modalTitles = list;
+    window._titlePage = 0;
   } catch (e) { wall.innerHTML = '<div style="text-align:center;padding:40px;color:#999;">加载失败</div>'; }
+};
+// 翻页渲染（2026-10-18 Elouise：称号墙做成翻页）
+function renderTitlePage(list, page) {
+  const per = 12;
+  const start = page * per;
+  const items = list.slice(start, start + per);
+  return items.map((x, j) => {
+    const i = start + j;
+    const rarity = x.rarity || '普通';
+    const rc = { '普通': '#0d47a1', '稀有': '#4a148c', '史诗': '#bf360c', '传说': '#e65100' }[rarity] || '#0d47a1';
+    return `<div class="title-item rar-${rarity} ${x.earned ? 'earned' : 'locked'}" onclick="showTitleModalDetail(${i})" style="cursor:pointer;">`
+    + `<div class="ic">${x.earned ? x.icon : '🔒'}</div>`
+    + `<div class="nm">${x.earned ? x.name : '???'}</div>`
+    + `<div style="font-size:11px;color:${rc};font-weight:700;">${rarity}</div>`
+    + `<div class="cond">${x.earned ? '已获得' : '点击查看'}</div></div>`;
+  }).join('');
+}
+function titlePageTurn(d) {
+  const list = window._modalTitles || [];
+  const total = Math.ceil(list.length / 12);
+  let p = (window._titlePage || 0) + d;
+  if (p < 0) p = 0;
+  if (p >= total) p = total - 1;
+  window._titlePage = p;
+  document.getElementById('titleWallPage').innerHTML = renderTitlePage(list, p);
+  document.getElementById('titlePageInfo').textContent = `${p+1} / ${total}`;
+}
 };
 // 称号详情弹窗（首页 modal 用）
 function showTitleModalDetail(i) {
