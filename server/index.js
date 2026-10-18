@@ -1450,7 +1450,8 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
     // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取100条再 JS 去重
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
-             i.prompt, i.answer, i.lesson_id
+             i.prompt, i.answer, i.lesson_id, i.knowledge_point,
+             (SELECT COUNT(*) FROM attempts a2 WHERE a2.item_id=a.item_id AND a2.correct=0) as wrong_count
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
@@ -1485,6 +1486,8 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         correct: correctAnswer.slice(0, 200),
         verdict: r.verdict,
         created_at: r.created_at,
+        knowledge_point: r.knowledge_point || '',
+        wrong_count: r.wrong_count || 1,
       };
     });
     // 2026-10-14：过滤掉已解决的（retest_queue.status='resolved'），它们进"最近拿下"
