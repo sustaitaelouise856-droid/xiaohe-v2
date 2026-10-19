@@ -167,9 +167,6 @@ function publicStep(s, lessonId, version, choices) {
   };
   if (s.kind === 'mcq' || s.kind === 'short' || s.kind === 'chunk') o.item_id = `${lessonId}-v${version}-s${s.item_step || s.step}`;
   if (s.kind === 'mcq') o.options = s.options;
-  // 错因反馈下发（2026-10-19）：wrong_feedback 是给学生看的反馈文案，不是答案——
-  // 随步骤下发，前端答错时可直接展示，不依赖服务端 stepsByItem 查找
-  if (s.kind === 'mcq' && s.wrong_feedback) o.wrong_feedback = s.wrong_feedback;
   // 拼句题（2026-10-14）：下发打乱的词块，前端点选拼句；答案用 expects 判分
   if (s.kind === 'chunk') o.chunks = s.chunks;
   // choice 步骤：下发 choice_key 与选项（选项只有标签，没有答案可泄）；选择不记作答不判分
@@ -374,6 +371,8 @@ app.get('/api/summary', auth.requireAuth, (req, res) => {
 // 学会了什么（独立/有帮助完成数）、哪里还弱（弱点译成给家长看的话）、用了多久。
 // 聚合口径与 /api/summary?lesson= 一致（版本归一化）。
 const WEAK_PARENT = { old_info: '分清新旧通知', spelling: '单词拼写', omission: '把时间地点写全' };
+const WEAK_PARENT_SX = { old_info: '审题看条件', spelling: '计算准确性', omission: '步骤写完整' };
+const WEAK_PARENT_YW = { old_info: '分清新旧信息', spelling: '字词书写', omission: '要点写全' };
 app.get('/api/parent-report', auth.requireAuth, (req, res) => {
   const lid = String(req.query.lesson || '');
   if (!lid || !validLesson(lid)) return badLesson(res);
@@ -394,10 +393,9 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
     if (w in byWeak) byWeak[w]++;
   }
   const weaknesses = [];
+  const WP = /^sx-/.test(lid) ? WEAK_PARENT_SX : (/^yw-/.test(lid) ? WEAK_PARENT_YW : WEAK_PARENT);
   for (const w of ['old_info', 'spelling', 'omission']) {
-    // 语文课过滤（2026-10-19）：old_info(分清新旧通知)/omission(把时间地点写全)是英语课概念
-    if (/^yw-/.test(lid) && (w === 'old_info' || w === 'omission')) continue;
-    if (byWeak[w] > 0) weaknesses.push(WEAK_PARENT[w]);
+    if (byWeak[w] > 0) weaknesses.push(WP[w]);
   }
   for (const t of agg.weaknesses) {
     // 语文课过滤（2026-10-18）："英文书写"是英语课概念，yw- 课不显示
@@ -839,7 +837,7 @@ const TITLE_DEFS = [
   { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成一节课', cat: '坚持', rarity: '普通' },
   { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成一节课', cat: '坚持', rarity: '普通' },
   { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50节课', cat: '坚持', rarity: '普通' },
-  { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无拼写错误', cat: '突破', rarity: '普通' },
+  { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无错误', cat: '突破', rarity: '普通' },
 
   // 2026-10-17 Elouise：补齐到80个——等级制+新类别
   { id: 'streak_30', name: '连对大师', icon: '🔥', desc: '连续答对30道（零求助）', cat: '突破', rarity: '普通' },
@@ -856,7 +854,7 @@ const TITLE_DEFS = [
   { id: 'night_7', name: '夜读习惯', icon: '🌙', desc: '7天晚上22点后学习', cat: '坚持', rarity: '普通' },
   { id: 'daily_7', name: '闯关一周', icon: '🎯', desc: '完成7天每日闯关', cat: '坚持', rarity: '普通' },
   { id: 'daily_30', name: '闯关一月', icon: '🏆', desc: '完成30天每日闯关', cat: '坚持', rarity: '普通' },
-  { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无拼写错误', cat: '突破', rarity: '普通' },
+  { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无错误', cat: '突破', rarity: '普通' },
   { id: 'help_free_20', name: '独立20连', icon: '🚀', desc: '连续20道零求助', cat: '突破', rarity: '普通' },
   { id: 'weekend_100', name: '周末战神', icon: '⚔️', desc: '周末累计完成100节课', cat: '坚持', rarity: '普通' },
   { id: 'midnight_oil', name: '夜猫子', icon: '🦉', desc: '凌晨0-5点完成学习（隐藏）', cat: '传奇', rarity: '普通' },
@@ -2313,25 +2311,6 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
   }
   if (r.error === 'bad_kind') return res.status(400).json({ ok: false, error: 'bad_kind' });
   r.feedback = feedbackFor(step, r.verdict, body.answer, r.detail);
-  // 最终兜底（2026-10-19）：若反馈仍是通用语，直接从文件读 wrong_feedback
-  if ((r.verdict === 'wrong' || r.verdict === 'wrong_retry') &&
-      (!r.feedback || r.feedback === '再想一想。' || r.feedback === '再看一看通知。')) {
-    try {
-      const lid2 = lessonOf(itemId);
-      const fp2 = path.join(seed.contentDir(), `lesson-${lid2}.json`);
-      if (fs.existsSync(fp2)) {
-        const lj = JSON.parse(fs.readFileSync(fp2, 'utf-8'));
-        const m2 = /^(.+)-v\d+-s(\d+)$/.exec(itemId);
-        if (m2) {
-          const st2 = lj.steps.find(x => String(x.step) === m2[2] && x.kind === 'mcq');
-          const g2 = String(body.answer || '').trim().toUpperCase();
-          if (st2 && st2.wrong_feedback && st2.wrong_feedback[g2]) {
-            r.feedback = st2.wrong_feedback[g2];
-          }
-        }
-      }
-    } catch {}
-  }
   // 真人老师式纠错（g 版）：带着做 + 保底出口
   if (step && (r.verdict === 'wrong' || r.verdict === 'wrong_retry')) {
     if (step.kind === 'short' && phase === 'practice' && guidedTrigger(itemId, sid)) {
@@ -2744,6 +2723,62 @@ app.post('/api/admin/set-profile', (req, res) => {
   } catch (e) {
     res.status(500).json({ ok: false, error: 'save_failed' });
   }
+});
+
+// 2026-10-19：学生问题反馈（Elouise：学生端截图+文字入口，反馈直达老师）
+app.post('/api/feedback', auth.requireAuth, (req, res) => {
+  try {
+    const b = req.body || {};
+    const text = String(b.text || '').trim().slice(0, 2000);
+    if (!text && !b.image_b64) return res.status(400).json({ ok: false, error: 'empty' });
+    // 图片限 1.5MB（前端已压缩）
+    const img = String(b.image_b64 || '').slice(0, 2000000);
+    const r = db.prepare(`INSERT INTO student_feedback
+      (lesson_id, step_no, item_id, text, image_b64, url, user_agent)
+      VALUES (?, ?, ?, ?, ?, ?, ?)`)
+      .run(String(b.lesson_id || '').slice(0, 64) || null,
+            Number(b.step_no) || null,
+            String(b.item_id || '').slice(0, 64) || null,
+            text || null, img || null,
+            String(b.url || '').slice(0, 256) || null,
+            String(req.headers['user-agent'] || '').slice(0, 256));
+    res.json({ ok: true, id: r.lastInsertRowid });
+  } catch (e) { res.status(500).json({ ok: false, error: 'save_failed' }); }
+});
+// 学生看自己的反馈和老师的回复
+app.get('/api/feedback/mine', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, lesson_id, text,
+      CASE WHEN image_b64 IS NOT NULL AND image_b64 != '' THEN 1 ELSE 0 END AS has_image,
+      status, reply FROM student_feedback ORDER BY id DESC LIMIT 20`).all();
+    res.json({ ok: true, list: rows });
+  } catch { res.json({ ok: true, list: [] }); }
+});
+// 管理：看全部反馈（含图）
+app.get('/api/admin/feedback', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  try {
+    const rows = db.prepare(`SELECT * FROM student_feedback ORDER BY id DESC LIMIT 50`).all();
+    res.json({ ok: true, list: rows });
+  } catch { res.json({ ok: true, list: [] }); }
+});
+// 管理：回复学生
+app.post('/api/admin/feedback/reply', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const b = req.body || {};
+    db.prepare(`UPDATE student_feedback SET status='replied', reply=?, replied_at=datetime('now')
+      WHERE id=?`).run(String(b.reply || '').slice(0, 2000), Number(b.id) || 0);
+    res.json({ ok: true });
+  } catch { res.status(500).json({ ok: false, error: 'save_failed' }); }
 });
 
 app.post('/api/admin/cleanup-retest', (req, res) => {
