@@ -825,78 +825,7 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   });
 })();
 
-// 学生反馈入口（2026-10-19 Elouise：首页也要能反馈，不用她再给手机）
-(function() {
-  if (document.getElementById('btnFeedbackHome')) return;
-  const b = document.createElement('button');
-  b.id = 'btnFeedbackHome';
-  b.textContent = '📝 反馈问题';
-  b.style.cssText = 'position:fixed;bottom:24px;right:16px;z-index:60;background:#fff;color:#1a73e8;border:2px solid #1a73e8;border-radius:999px;padding:11px 18px;font-size:15px;font-weight:700;box-shadow:0 4px 14px rgba(26,115,232,.25);cursor:pointer;';
-  b.onclick = () => {
-    let ov = document.getElementById('fbHomeModal');
-    if (!ov) {
-      ov = document.createElement('div');
-      ov.id = 'fbHomeModal';
-      ov.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;align-items:center;justify-content:center;padding:20px;';
-      ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:20px;max-width:380px;width:100%;">'
-        + '<h3 style="margin:0 0 10px;font-size:17px;">📝 告诉老师</h3>'
-        + '<div style="font-size:13px;color:#5f6368;margin-bottom:8px;">遇到问题、看不懂、想提建议，都可以在这里说，老师会尽快处理。</div>'
-        + '<textarea id="fbHomeText" placeholder="比如：Unit 5 第1课打不开…" style="width:100%;min-height:90px;border:1px solid #dadce0;border-radius:10px;padding:10px;font-size:15px;box-sizing:border-box;"></textarea>'
-        + '<div style="margin-top:10px;"><label for="fbHomeImg" style="display:inline-block;padding:9px 16px;border:1px dashed #1a73e8;border-radius:10px;color:#1a73e8;font-size:14px;font-weight:700;cursor:pointer;">📷 加截图</label>'
-        + '<input type="file" id="fbHomeImg" accept="image/*" style="display:none;">'
-        + '<span id="fbHomeImgName" style="font-size:13px;color:#5f6368;margin-left:8px;"></span></div>'
-        + '<img id="fbHomePreview" style="max-width:100%;max-height:140px;border-radius:8px;margin-top:8px;display:none;">'
-        + '<div id="fbHomeHint" style="font-size:13px;color:#5f6368;margin-top:8px;"></div>'
-        + '<div style="display:flex;gap:10px;margin-top:14px;">'
-        + '<button id="fbHomeSubmit" style="flex:1;padding:12px;border:0;border-radius:10px;background:#1a73e8;color:#fff;font-size:15px;font-weight:700;cursor:pointer;">发送</button>'
-        + '<button id="fbHomeCancel" style="flex:1;padding:12px;border:1px solid #dadce0;border-radius:10px;background:#fff;font-size:15px;cursor:pointer;">取消</button>'
-        + '</div></div>';
-      document.body.appendChild(ov);
-      ov.addEventListener('click', e => { if (e.target === ov) ov.style.display = 'none'; });
-      let imgB64 = '';
-      ov.querySelector('#fbHomeImg').addEventListener('change', function() {
-        const f = this.files && this.files[0]; if (!f) return;
-        ov.querySelector('#fbHomeImgName').textContent = '压缩中…';
-        const img = new Image();
-        img.onload = () => {
-          try {
-            const s = Math.min(1, 1000 / img.width);
-            const c = document.createElement('canvas');
-            c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
-            c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
-            imgB64 = c.toDataURL('image/jpeg', 0.7);
-            const pv = ov.querySelector('#fbHomePreview'); pv.src = imgB64; pv.style.display = 'block';
-            ov.querySelector('#fbHomeImgName').textContent = '已添加 ✓';
-          } catch { ov.querySelector('#fbHomeImgName').textContent = '图片处理失败'; }
-          URL.revokeObjectURL(img.src);
-        };
-        img.src = URL.createObjectURL(f);
-      });
-      ov.querySelector('#fbHomeCancel').onclick = () => { ov.style.display = 'none'; };
-      ov.querySelector('#fbHomeSubmit').onclick = async () => {
-        const hint = ov.querySelector('#fbHomeHint');
-        const text = ov.querySelector('#fbHomeText').value.trim();
-        if (!text && !imgB64) { hint.textContent = '写点文字或加张截图吧。'; return; }
-        hint.textContent = '发送中…';
-        try {
-          const r = await fetch('/api/feedback', { method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ lesson_id: '', text, image_b64: imgB64, url: location.href }) });
-          const d = await r.json().catch(() => ({}));
-          if (d && d.ok) {
-            hint.textContent = '已收到！老师会尽快处理。';
-            ov.querySelector('#fbHomeText').value = ''; imgB64 = '';
-            ov.querySelector('#fbHomePreview').style.display = 'none';
-            ov.querySelector('#fbHomeImgName').textContent = '';
-            setTimeout(() => { ov.style.display = 'none'; }, 1600);
-          } else hint.textContent = '发送失败，再点一次试试。';
-        } catch { hint.textContent = '网络不好，稍后再试。'; }
-      };
-    }
-    ov.style.display = 'flex';
-  };
-  document.body.appendChild(b);
-})();
+// 反馈入口已移到设置页（2026-10-19：浮动按钮挡做题按钮）
 </script>
 
 <div class="units" id="units"></div>
