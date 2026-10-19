@@ -184,6 +184,22 @@ CREATE TABLE IF NOT EXISTS client_errors (
   user_agent TEXT,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
+// 学生问题反馈（2026-10-19 Elouise：学生端截图+文字反馈入口，不用她再给手机）
+db.exec(`
+CREATE TABLE IF NOT EXISTS student_feedback (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  lesson_id  TEXT,
+  step_no    INTEGER,
+  item_id    TEXT,
+  text       TEXT,
+  image_b64  TEXT,
+  url        TEXT,
+  user_agent TEXT,
+  status     TEXT NOT NULL DEFAULT 'new',
+  reply      TEXT,
+  replied_at TEXT
+);`);
 // 摸底诊断（2026-10-03 P2）：广播站"新人能力检测"
 // 3段×15-20分钟，自适应（连错3停），两套平行卷A/B
 db.exec(`
