@@ -38,7 +38,9 @@
   html[data-theme="dark"] #reviewBar { background:rgba(45,45,45,.94); }
   /* 消消乐卡片 */
   .match-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:18px 0; }
-  .match-card { background:var(--card,#fff); border:2px solid var(--line); border-radius:var(--radius-md,16px); padding:18px 8px; text-align:center; font-size:17px; font-weight:700; cursor:pointer; min-height:78px; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm); transition:transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, background .25s ease, border-color .25s ease, opacity .3s ease; will-change:transform; }
+  .match-card { background:var(--card,#fff); border:2px solid var(--line); border-radius:var(--radius-md,16px); padding:18px 8px; text-align:center; font-size:17px; font-weight:700; cursor:pointer; min-height:78px; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm); transition:transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, background .25s ease, border-color .25s ease, opacity .3s ease; will-change:transform; word-break:break-word; overflow-wrap:break-word; }
+  /* 中文释义卡片：字小一点，行高松一点，长释义不挤 (2026-10-19 Elouise：消单词排版问题) */
+  .match-card.zh { font-size:13px; font-weight:500; line-height:1.5; padding:12px 8px; min-height:88px; }
   .match-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-md); }
   .match-card.selected { border-color:var(--blue); background:linear-gradient(135deg,var(--blue-light,#e8f0fe) 0%,rgba(232,240,254,.55) 100%); transform:scale(1.07) translateY(-2px); box-shadow:0 8px 20px rgba(26,115,232,.38), inset 0 1px 0 rgba(255,255,255,.4); }
   .match-card.matched { opacity:0; pointer-events:none; transform:scale(.7) rotate(6deg); }
@@ -360,7 +362,7 @@ document.getElementById('btnMatch').onclick = () => {
   }
   grid.style.display = 'grid';
   grid.innerHTML = cards.map((c, i) =>
-    `<div class="match-card" data-word="${c.word.replace(/"/g,'&quot;')}" data-idx="${i}">${esc(c.text)}</div>`
+    `<div class="match-card${c.type === 'zh' ? ' zh' : ''}" data-word="${c.word.replace(/"/g,'&quot;')}" data-idx="${i}">${esc(c.text)}</div>`
   ).join('');
   grid.querySelectorAll('.match-card').forEach(card => {
     card.onclick = () => matchClick(card);
