@@ -1578,6 +1578,7 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
     // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取500条再 JS 去重
     // 2026-10-20修：items表没有 knowledge_point 列（之前 i.knowledge_point 导致整端点抛错、错题本一直显示空），改从 retest_queue 取
     // 2026-10-20 Elouise：做错过的永久保留不消失，每条带 status（pending 待复测 / resolved 已掌握），pending 在前
+    // 2026-10-20 Elouise 学科分离：错题本只显示英语题，排除 yw-（语文）/sx（数学）
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
              i.prompt, i.answer, i.lesson_id,
@@ -1586,6 +1587,7 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       ORDER BY a.created_at DESC
       LIMIT 500
     `).all();
@@ -1646,6 +1648,7 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         SELECT q.item_id, MAX(q.resolved_at) as resolved_at, i.prompt, i.answer, q.knowledge_point
         FROM retest_queue q LEFT JOIN items i ON q.item_id=i.item_id
         WHERE q.status='resolved'
+        AND q.item_id NOT LIKE 'yw-%' AND q.item_id NOT LIKE 'sx%'
         AND q.item_id NOT IN (SELECT item_id FROM retest_queue WHERE status='pending')
         GROUP BY q.item_id
         ORDER BY resolved_at DESC LIMIT 20
@@ -2395,8 +2398,8 @@ function currentLesson() {
 function getPendingReviews() {
   const pending = [];
   try {
-    // ① 待复测错题（一直算）
-    const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending'").get();
+    // ① 待复测错题（一直算；2026-10-20 Elouise 学科分离：只算英语，排除 yw-/sx）
+    const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
     if (rc && rc.c > 0) pending.push({ type: 'retest', count: rc.c, label: `待复测错题 ${rc.c} 道` });
     // ② review课：只看当前单元（2026-10-13 Elouise定：旧单元的加练课不算，不永久锁课）
     // 2026-10-13补（Elouise要求）：单元的5节课没学完，它的复习就不算待办。
@@ -2469,16 +2472,17 @@ function checkDailyMistakes() {
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
       WHERE a.correct=1 AND a.helped=0 AND a.independent=1
       AND date(a.created_at, '+8 hours') = ?
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       AND (
         EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
         OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
       )
     `).get(today);
     const doneToday = r ? r.c : 0;
-    // 当前待复测错题数
+    // 当前待复测错题数（2026-10-20 学科分离：只算英语）
     let pending = 0;
     try {
-      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
       pending = pr ? pr.c : 0;
     } catch {}
     // 目标 = 今日开始时的可做错题数（当前剩余 + 今日已完成），最多10道
@@ -2497,6 +2501,7 @@ function getDailyMistakeProgress() {
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
       WHERE a.correct=1 AND a.helped=0 AND a.independent=1
       AND date(a.created_at, '+8 hours') = ?
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       AND (
         EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
         OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
@@ -2505,7 +2510,7 @@ function getDailyMistakeProgress() {
     const done = r ? r.c : 0;
     let pending = 0;
     try {
-      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
       pending = pr ? pr.c : 0;
     } catch {}
     const target = Math.min(10, pending + done);
