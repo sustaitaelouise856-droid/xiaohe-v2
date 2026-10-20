@@ -506,6 +506,66 @@
       "en": "flight schedule",
       "pos": "phr.",
       "cn": "航班时刻表"
+    },
+    {
+      "en": "network",
+      "cn": "网络",
+      "pos": "n."
+    },
+    {
+      "en": "data",
+      "cn": "数据",
+      "pos": "n."
+    },
+    {
+      "en": "flow",
+      "cn": "（人或事物）涌流；流动",
+      "pos": "v."
+    },
+    {
+      "en": "effect",
+      "cn": "影响",
+      "pos": "n."
+    },
+    {
+      "en": "opinion",
+      "cn": "意见；看法",
+      "pos": "n."
+    },
+    {
+      "en": "novel",
+      "cn": "（长篇）小说",
+      "pos": "n."
+    },
+    {
+      "en": "comment",
+      "cn": "评论",
+      "pos": "n."
+    },
+    {
+      "en": "basis",
+      "cn": "基础",
+      "pos": "n."
+    },
+    {
+      "en": "microprocessor",
+      "cn": "微处理器",
+      "pos": "n."
+    },
+    {
+      "en": "tiny",
+      "cn": "微小的",
+      "pos": "adj."
+    },
+    {
+      "en": "bring big changes to",
+      "cn": "给……带来重大变化",
+      "pos": "phr."
+    },
+    {
+      "en": "take ... for example",
+      "cn": "以……为例",
+      "pos": "phr."
     }
   ]
 }
