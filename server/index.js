@@ -521,7 +521,7 @@ function getTitleProgressMap() {
     progressData.questions = qCount ? qCount.c : 0;
     const qcCount = db.prepare("SELECT COUNT(*) as c FROM attempts WHERE correct=1").get();
     progressData.correct = qcCount ? qcCount.c : 0;
-    const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+    const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%'").get();
     progressData.courses = cCount ? cCount.c : 0;
     const wCount = db.prepare("SELECT COUNT(*) as c FROM word_mastery WHERE level>=4").get();
     progressData.words = wCount ? wCount.c : 0;
@@ -531,7 +531,7 @@ function getTitleProgressMap() {
     progressData.challenge = chCount ? chCount.c : 0;
     const rCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE '%review%'").get();
     progressData.review = rCount ? rCount.c : 0;
-    const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
+    const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
     progressData.weekend = weCount ? weCount.c : 0;
     progressData.minutes = (progressData.questions || 0) * 1.5;
   } catch (e) {}
@@ -1047,7 +1047,7 @@ function checkTitles() {
   } catch {}
   // ——— 做完课程数 ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%'").get();
     const cc = r ? r.c : 0;
     if (cc >= 5) grant('courses_5');
     if (cc >= 10) grant('courses_10');
@@ -1107,17 +1107,17 @@ function checkTitles() {
   // ——— 早起鸟：早上7点前完成学习 ———
   // ——— 早起鸟：早上7点前完成一节课（2026-10-17 Elouise：按完成课程数） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r && r.c >= 1) grant('morning_1');
   } catch {}
   // ——— 夜读星：晚上22点后完成一节课 ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r && r.c >= 1) grant('night_1');
   } catch {}
   // ——— 周末学霸：周末累计完成50节课（2026-10-17 Elouise：按完成课程数，不是答题数） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
     if (r && r.c >= 50) grant('weekend_50');
   } catch {}
   // ——— 火眼金睛：连续50道题无拼写错误 ———
@@ -1179,9 +1179,9 @@ function checkTitles() {
   } catch {}
   // 早起7次/夜读7次（按天去重，2026-10-17：按完成课程数）
   try {
-    const r1 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
+    const r1 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r1 && r1.c >= 7) grant('morning_7');
-    const r2 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
+    const r2 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r2 && r2.c >= 7) grant('night_7');
   } catch {}
   // 闯关7/30天
@@ -1206,17 +1206,17 @@ function checkTitles() {
   } catch {}
   // 周末100次
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
     if (r && r.c >= 100) grant('weekend_100');
   } catch {}
   // 凌晨0-5点（隐藏，2026-10-17：按完成课程数）
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
     if (r && r.c >= 1) grant('midnight_oil');
   } catch {}
   // 早上5-6点（隐藏）
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
     if (r && r.c >= 1) grant('first_light');
   } catch {}
   // 单日120分钟
