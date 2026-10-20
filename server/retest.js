@@ -62,6 +62,7 @@ function backfillWrongToRetest() {
       FROM attempts a
       LEFT JOIN retest_queue q ON q.item_id = a.item_id
       WHERE a.verdict IN ('wrong', 'wrong_retry') AND q.id IS NULL
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       GROUP BY a.item_id
       HAVING c >= 2
     `).all();
@@ -77,12 +78,14 @@ function backfillWrongToRetest() {
   } catch { return 0; }
 }
 
-// 获取待复测列表
+// 获取待复测列表（2026-10-20 Elouise 学科分离：只返回英语，语文 yw-/数学 sx 不混入）
 function getPending() {
   try {
     return db.prepare(`
       SELECT id, item_id, knowledge_point, source_session, variant_item_id, created_at
-      FROM retest_queue WHERE status = 'pending' ORDER BY created_at
+      FROM retest_queue WHERE status = 'pending'
+      AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'
+      ORDER BY created_at
     `).all();
   } catch { return []; }
 }
@@ -131,9 +134,11 @@ function selectDailyRetestItems(maxCount) {
   const max = Math.min(Math.max(Number(maxCount) || 8, 1), 12);
   try {
     // 候选1：retest_queue pending（已按知识点分类）
+    // 2026-10-20 Elouise 学科分离：只选英语题，排除 yw-/sx
     const queued = db.prepare(`
       SELECT item_id, knowledge_point, created_at
       FROM retest_queue WHERE status = 'pending'
+      AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'
     `).all();
     // 候选2：最近7天 weakness_events（去重，不在队列里的）
     const weak = db.prepare(`
@@ -141,6 +146,7 @@ function selectDailyRetestItems(maxCount) {
       FROM weakness_events we
       LEFT JOIN retest_queue q ON q.item_id = we.item_id AND q.status = 'pending'
       WHERE we.created_at >= datetime('now', '-7 days') AND q.id IS NULL
+      AND we.item_id NOT LIKE 'yw-%' AND we.item_id NOT LIKE 'sx%'
       GROUP BY we.item_id
     `).all();
 
