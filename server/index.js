@@ -2530,6 +2530,11 @@ function lessonOpen(lid) {
   // 没完成复习就不解锁新的
   if (/^u4r\d+$/.test(lid)) {
     try {
+      // 2026-10-20修：已开的课保持开放（Elouise 10-12 定：门禁只锁未开始的新课）。
+      // u4 分支之前漏了这条豁免，导致已学完的 u4 课在当天没做满10道错题时也 403，
+      // 与 u5/u6 通用分支的 started 豁免不一致。冒烟检查发现后补齐。
+      const selfSt = lessonState(lid);
+      if (selfSt && (selfSt.p1_done === 1 || selfSt.p2_done === 1)) return true;
       const done = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
       if (!done || done.value !== '1') return false;
       const r3 = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
