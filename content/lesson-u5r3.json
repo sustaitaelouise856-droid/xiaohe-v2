@@ -3,7 +3,7 @@
   "practice_end": 24,
   "home_subtitle": "第三课 · 刚做完",
   "part1_desc": "第 1–24 步：跟站长学 just、already、yet，分清完成时和过去时。",
-  "part2_desc": "第 25–36 步：独立看第二周记录，用 just/already/yet 和时态判断。",
+  "part2_desc": "第 25–42 步：独立看第二周记录，最后是 6 道挑战题——没有提示，还混了以前学的被动语态和最高级。",
   "note": "本课阅读材料为教研自编，非课本原文。考查能力：just/already/yet、现在完成时与一般过去时的区别、for/since。Unit 5 Educational exchanges 主题。",
   "steps": [
     {
@@ -131,7 +131,7 @@
       "wrong_feedback": {
         "B": "yet 一般不放肯定句中间，这里用 already。",
         "C": "just 是“刚刚”，这里“已经”用 already。",
-        "D": "never 是“从不”，意思不对。"
+        "D": "never 是“从来没有”，和“已经认识了”意思正好反了；肯定句说“已经”用 already。"
       },
       "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
     },
@@ -179,7 +179,7 @@
       "wrong_feedback": {
         "A": "already 不放疑问句末，这里用 yet。",
         "C": "just 放 have 后面，这里句末用 yet。",
-        "D": "never 是“从不”，意思不对。"
+        "D": "never 是“从来没有”，不能放进这个问句里；问“参观完了吗”，句末要用 yet。"
       },
       "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
     },
@@ -203,7 +203,7 @@
       "wrong_feedback": {
         "A": "yesterday 是具体过去时间，用过去时 went，不用完成时。",
         "B": "同上，用过去时；而且主语是 Tom，不用 have。",
-        "D": "goes 是现在时，不对。"
+        "D": "goes 是一般现在时，说的是平常的事；昨天已经发生完的事要用过去时 went。"
       },
       "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
     },
@@ -225,9 +225,9 @@
       "help": "说经历，不说具体时间，用什么？",
       "explain": "He has been to Beijing.",
       "wrong_feedback": {
-        "A": "goes 是现在时，不对。",
+        "A": "goes 是一般现在时，说的是平常的事；这里说“去过北京”这种经历，要用现在完成时 has been。",
         "B": "went 是过去时，这里说经历用完成时。",
-        "C": "going 是现在分词，不对。"
+        "C": "going 是现在分词，前面得先有 be 动词才能用；这里 been 的前面缺的是 has：He has been to Beijing。"
       },
       "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
     },
@@ -250,8 +250,8 @@
       "explain": "He has learned English for three years.",
       "wrong_feedback": {
         "B": "since 后面跟过去时间点，这里“三年”是段时间，用 for。",
-        "C": "in 不这样用。",
-        "D": "at 不这样用。"
+        "C": "in 接一段时间时表示“过多久之后”，不表示“持续了多久”；“持续三年”要用 for。",
+        "D": "at 用来指钟点（比如 at 7 点），不能接“三年”这样的时间段；表示持续用 for。"
       },
       "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
     },
@@ -274,7 +274,7 @@
       "explain": "He has lived here since 2020.",
       "wrong_feedback": {
         "A": "for 后面跟一段时间，这里 2020 是时间点，用 since。",
-        "C": "from 不和完成时这样搭配。",
+        "C": "from 只指出从哪儿开始，不表示一直持续到现在；现在完成时里“从 2020 年起”要用 since。",
         "D": "in 2020 是“在2020年”，不表“从……起”。"
       },
       "reading": "Week 1: Li Ming has just arrived at school, has already met Anna; Anna has already visited the library, hasn't eaten dumplings yet; Tom went to the park yesterday"
@@ -490,9 +490,9 @@
       "help": "“刚刚”。",
       "explain": "Mei has just joined the club.",
       "wrong_feedback": {
-        "A": "再想想意思。",
-        "C": "再想想位置。",
-        "D": "再想想意思。"
+        "A": "already 是“已经”，强调早就做完了；这里小梅是“刚刚”加入俱乐部，要用 just。",
+        "C": "yet 只能放在否定句或疑问句的句末，不能放在 has 后面；这里说“刚刚”，用 just。",
+        "D": "ever 是“曾经”，一般在疑问句里问经历；这里是陈述“刚刚加入”，用 just。"
       },
       "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
     },
@@ -514,9 +514,9 @@
       "help": "肯定句“已经”。",
       "explain": "Mei has already made friends.",
       "wrong_feedback": {
-        "A": "再想想位置。",
-        "B": "再想想意思。",
-        "C": "再想想意思。"
+        "A": "yet 要放在句末，而且多用在否定句和疑问句里；这里是肯定句说“已经”，要用 already。",
+        "B": "just 是“刚刚”，强调动作刚发生那一刻；这里说的是“已经交到朋友了”这个结果，用 already。",
+        "C": "never 是“从来没有”，意思正好反了：小梅已经交到朋友了，要用 already。"
       },
       "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
     },
@@ -538,9 +538,9 @@
       "help": "否定句末尾。",
       "explain": "Jack hasn't tried noodles yet.",
       "wrong_feedback": {
-        "B": "再想想位置。",
-        "C": "再想想位置。",
-        "D": "再想想意思。"
+        "B": "already 用在肯定句、放在 has 后面；这里是否定句句末说“还没”，要用 yet。",
+        "C": "just 放在 has 后面表示“刚刚”；这里空在句末、又是否定句，要用 yet。",
+        "D": "ever 是“曾经”，多用在疑问句里；这里是否定句说“还没尝过”，句末用 yet。"
       },
       "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
     },
@@ -562,9 +562,9 @@
       "help": "具体过去时间。",
       "explain": "Jack went to the museum last Sunday.",
       "wrong_feedback": {
-        "A": "再想想时态。",
-        "B": "再想想时态和主语。",
-        "D": "再想想时态。"
+        "A": "last Sunday 是具体的过去时间，要用一般过去时；现在完成时（has gone）不能和具体过去时间一起用，所以选 went。",
+        "B": "have gone 错了两处：last Sunday 要用过去时；而且主语 Jack 是一个人，也该用 has 不是 have。这里直接用 went。",
+        "D": "goes 是一般现在时，说的是平常的习惯；这里讲的是上周日已经发生的事，用过去时 went。"
       },
       "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
     },
@@ -586,9 +586,9 @@
       "help": "一段时间。",
       "explain": "Lily has danced for two years.",
       "wrong_feedback": {
-        "A": "再想想 for 和 since。",
-        "C": "再想想搭配。",
-        "D": "再想想搭配。"
+        "A": "since 后面跟的是一个时间点（比如 2023 年）；two years 是一段时间，前面要用 for。",
+        "C": "in 接一段时间时是“在……之后”的意思，不表示“持续了多久”；“持续两年”要用 for two years。",
+        "D": "at 用来指钟点（比如 at 7 点），后面不能接“两年”这样的时间段；表示持续用 for。"
       },
       "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
     },
@@ -610,9 +610,9 @@
       "help": "过去时间点。",
       "explain": "Lily has danced since 2023.",
       "wrong_feedback": {
-        "A": "再想想 for 和 since。",
-        "B": "再想想搭配。",
-        "C": "再想想意思。"
+        "A": "for 后面跟一段时间（比如 two years）；2023 是一个时间点，“从那时起一直到现在”要用 since。",
+        "B": "from 只说从哪儿起，不表示一直持续到现在；现在完成时里“从某年起”固定搭配是 since。",
+        "C": "in 2023 是“在 2023 年”，说的是那一年里发生的事；这里是“从 2023 年一直到现在”，用 since。"
       },
       "reading": "Week 2: Mei has just joined the club, has already made friends; Jack hasn't tried noodles yet, went to the museum last Sunday; Lily has danced for two years, since 2023"
     },
@@ -747,10 +747,162 @@
     {
       "step": 36,
       "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 去过香港吗",
+      "scene": "问姐姐去过香港吗。",
+      "stem": "______ your sister ever been to Hong Kong?",
+      "options": [
+        "Have",
+        "Has",
+        "Is",
+        "Does"
+      ],
+      "answer": "B",
+      "help": "先数一数：主语是一个，还是多个。",
+      "explain": "Has your sister ever been to Hong Kong?",
+      "wrong_feedback": {
+        "A": "主语 your sister 是一个（第三人称单数），现在完成时的疑问句要用 Has 开头，不用 Have。",
+        "C": "Is 后面不能直接跟 been 组成完成时；问“去过没有”要用 Has 开头：Has ... ever been。",
+        "D": "Does 后面要跟动词原形，跟不了 been；表示经历的疑问句要用 Has。"
+      }
+    },
+    {
+      "step": 37,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 得过奖吗",
+      "scene": "问哥哥得过奖吗。",
+      "stem": "______ your brother ever won a prize?",
+      "task": "只写句首的那个词。",
+      "answer_text": "Has",
+      "help": "先数一数：主语是一个，还是多个。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "Has"
+          ],
+          "cn": [
+            "（句首助动词）"
+          ]
+        }
+      ],
+      "explain": "Has your brother ever won a prize?",
+      "common_errors": [
+        {
+          "when": "写了 Have",
+          "say": "主语 your brother 是一人（第三人称单数），句首要用 Has，不用 Have。"
+        }
+      ]
+    },
+    {
+      "step": 38,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 新路",
+      "scene": "这条新路是去年修好的。",
+      "stem": "The new road ______ last year.",
+      "options": [
+        "builds",
+        "built",
+        "is building",
+        "was built"
+      ],
+      "answer": "D",
+      "help": "先想：路是自己修的，还是被人修的？再看时间是去年还是现在。",
+      "explain": "The new road was built last year.",
+      "wrong_feedback": {
+        "A": "builds 是主动语态“（人）修”，可路是被人修的，要用被动语态。",
+        "B": "built 是主动语态的过去式，意思是“（谁）修了”；路是被修好的，要用被动 was built。",
+        "C": "is building 是“正在修”，而且是主动；这里说的是去年已经修好了，用过去的被动 was built。"
+      }
+    },
+    {
+      "step": 39,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 英语被广泛使用",
+      "scene": "英语在很多国家被使用。",
+      "stem": "English ______ in many countries.",
+      "task": "写出空里的两个词（be 动词 + 过去分词）。",
+      "answer_text": "is spoken",
+      "help": "先想：英语是自己用的，还是被人使用的。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "is spoken"
+          ],
+          "cn": [
+            "被使用（被动语态）"
+          ]
+        }
+      ],
+      "explain": "English is spoken in many countries.",
+      "common_errors": [
+        {
+          "when": "写了 speaks",
+          "say": "speaks 是主动“（人）说”；英语是被说的，要用被动 is spoken。"
+        },
+        {
+          "when": "写了 is speak",
+          "say": "被动语态要用过去分词：speak 的过去分词是 spoken，写 is spoken。"
+        }
+      ]
+    },
+    {
+      "step": 40,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 最高的山",
+      "scene": "珠穆朗玛峰是世界上最高的山。",
+      "stem": "Mount Qomolangma is the ______ mountain in the world.",
+      "options": [
+        "higher",
+        "high",
+        "highest",
+        "more higher"
+      ],
+      "answer": "C",
+      "help": "看范围：是跟一个比，还是跟全世界比。",
+      "explain": "Mount Qomolangma is the highest mountain in the world.",
+      "wrong_feedback": {
+        "A": "higher 是比较级，只用来比两者高低；这里和全世界比，要用最高级 highest。",
+        "B": "high 是原形，the 后面表示“最……”时要用最高级 highest。",
+        "D": "比较级、最高级前面不能再加 more；“最高的”是 the highest。"
+      }
+    },
+    {
+      "step": 41,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 刚到机场",
+      "scene": "他们刚到机场。",
+      "stem": "They ______ just arrived at the airport.",
+      "options": [
+        "have",
+        "has",
+        "is",
+        "was"
+      ],
+      "answer": "A",
+      "help": "先数一数：主语是一个，还是多个。",
+      "explain": "They have just arrived at the airport.",
+      "wrong_feedback": {
+        "B": "has 只跟第三人称单数（he、she、it）走；主语 They 是复数，要用 have。",
+        "C": "is 后面不能直接跟 arrived 组成完成时；“刚到”要用 have arrived。",
+        "D": "was 是过去的 be 动词，跟不了 arrived 表完成；“刚到、和现在有关”要用现在完成时 have arrived。"
+      }
+    },
+    {
+      "step": 42,
+      "phase": "validate",
       "kind": "teach",
       "audio_id": "u5r3-ending",
       "title": "节目预告",
-      "teach_html": "<p>第一周、第二周都讲清楚了。站长说：just、already、yet 都会用了。</p><p>下一期，站长教你<strong>写交流日记</strong>——用现在完成时写下自己的经历。</p>"
+      "teach_html": "<p>第二周的记录看完了，最后的挑战题也闯过来了——里面混着的被动语态和最高级，你都碰到了。</p><p>下一期，站长教你<strong>写交流日记</strong>——用现在完成时写下自己的经历。</p>"
     }
   ],
   "title": "刚做完：just、already、yet",
