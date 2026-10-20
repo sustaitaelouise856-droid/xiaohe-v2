@@ -120,7 +120,7 @@
   </div>
   <div id="tab-mistakes">
     <div class="card">
-      <h2>我做错过的题</h2>
+      <h2>待复测</h2>
       <div class="subtitle">这几个知识点正在练习中，换一道同类型的题独立做对，就真正拿下了。</div>
       <!-- 2026-10-18 史诗级加强：统计+筛选+优先级 -->
       <div id="mistakeStats" style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;"></div>
@@ -143,8 +143,8 @@
       <div id="focus-list"><div class="empty">加载中…</div></div>
     </div>
     <div class="card">
-      <h2>最近拿下</h2>
-      <div class="subtitle">这些是你最近真正掌握的，继续保持。</div>
+      <h2>已掌握</h2>
+      <div class="subtitle">这些是你已经攻克的。做错过的都留在这里，随时回看。</div>
       <div id="done-list"><div class="empty">还没有，做了练习后会显示在这里。</div></div>
     </div>
     <div class="card fold">
@@ -179,31 +179,39 @@ async function loadMistakes() {
   // 用新的错题本API
   try {
     const d = await (await fetch('/api/mistakes')).json();
-    if (!d.ok || !d.mistakes.length) {
-      focusEl.innerHTML = '<div class="empty">太棒了，一道错题都没有！</div>';
+    if (!d.ok) {
+      focusEl.innerHTML = '<div class="empty">加载失败，请稍后刷新重试</div>';
       return;
     }
-    window._mistakes = d.mistakes;
+    // 2026-10-20 Elouise：保留不消失——待复测（pending）和已掌握（resolved）分区显示
+    const all = d.mistakes || [];
+    const pend = all.filter(m => m.status !== 'resolved');
+    const reso = all.filter(m => m.status === 'resolved');
+    window._mistakes = all;
+    window._pending = pend;
     window._selectMode = false;
     window._selected = new Set();
-    updateMistakeStats();
+    updateMistakeStats(pend.length, reso.length);
     renderMistakeList();
-    // 最近拿下（2026-10-14）：已解决的错题
-    const resolved = d.resolved || [];
-    if (resolved.length) {
-      doneEl.innerHTML = resolved.map(m =>
-        `<div style="border:1px solid #c8e6c9;border-radius:12px;padding:14px;margin-bottom:10px;background:#f1f8e9;">`
-        + `<div style="font-weight:600;margin-bottom:6px;color:#212121;">✅ ${escHtml((m.question || '（题干）').slice(0, 60))}...</div>`
-        + `<div style="font-size:14px;color:#666;">正确答案：${escHtml((m.correct || '').slice(0, 60))}</div>`
-        + `<div style="font-size:13px;color:#999;margin-top:4px;">${escHtml(m.resolved_at || '').slice(0, 16)} 攻克${m.knowledge_point ? ' · ' + escHtml(m.knowledge_point) : ''}</div>`
-        + `</div>`
-      ).join('');
-    } else {
-      doneEl.innerHTML = '<div class="empty">还没有，做了练习后会显示在这里。</div>';
-    }
+    renderMasteredList(doneEl, reso);
   } catch (e) {
     focusEl.innerHTML = '<div class="empty">加载失败</div>';
   }
+}
+// 2026-10-20：已掌握分区——置灰＋「已攻克」徽章，做错过的永久保留
+function renderMasteredList(doneEl, reso) {
+  if (!reso || !reso.length) {
+    doneEl.innerHTML = '<div class="empty">还没有，做了练习后会显示在这里。</div>';
+    return;
+  }
+  doneEl.innerHTML = reso.map(m =>
+    `<div style="border:1px solid #dcdcdc;border-radius:12px;padding:14px;margin-bottom:10px;background:#f7f7f7;opacity:.85;">`
+    + `<div style="font-weight:600;margin-bottom:6px;color:#666;">${escHtml((m.question || '（题干）').slice(0, 60))}...`
+    + `<span style="background:#e8f5e9;color:#2e7d32;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;margin-left:8px;">✅ 已攻克</span></div>`
+    + `<div style="font-size:14px;color:#999;">正确答案：${escHtml((m.correct || '').slice(0, 60))}</div>`
+    + `<div style="font-size:13px;color:#999;margin-top:4px;">${escHtml(m.resolved_at || '').slice(0, 16)} 攻克${m.knowledge_point ? ' · ' + escHtml(kpName(m.knowledge_point)) : ''}</div>`
+    + `</div>`
+  ).join('');
 }
 function showMistake(i) {
   const m = (window._mistakes || [])[i];
@@ -229,8 +237,9 @@ function showMistake(i) {
 }
 
 // 2026-10-18 史诗级加强：统计+筛选+排序
-function updateMistakeStats() {
-  const mistakes = window._mistakes || [];
+// 2026-10-20：统计只看待复测（_pending），另加「已掌握」计数
+function updateMistakeStats(pendCount, resoCount) {
+  const mistakes = window._pending || window._mistakes || [];
   const statsEl = document.getElementById('mistakeStats');
   if (!statsEl) return;
   // 按知识点统计
@@ -239,9 +248,10 @@ function updateMistakeStats() {
     const kp = m.knowledge_point || '其他';
     kpCount[kp] = (kpCount[kp] || 0) + 1;
   });
-  const total = mistakes.length;
+  const total = pendCount != null ? pendCount : mistakes.length;
   const topKp = Object.entries(kpCount).sort((a,b) => b[1]-a[1]).slice(0, 3);
-  statsEl.innerHTML = `<div style="background:#e8f0fe;border-radius:10px;padding:8px 16px;font-size:14px;font-weight:700;color:#1a73e8;">📝 共 ${total} 道</div>`
+  statsEl.innerHTML = `<div style="background:#e8f0fe;border-radius:10px;padding:8px 16px;font-size:14px;font-weight:700;color:#1a73e8;">📝 待复测 ${total} 道</div>`
+    + (resoCount ? `<div style="background:#e8f5e9;border-radius:10px;padding:8px 16px;font-size:14px;font-weight:700;color:#2e7d32;">✅ 已掌握 ${resoCount} 道</div>` : '')
     + topKp.map(([kp, c]) => `<div style="background:#fff3e0;border-radius:10px;padding:8px 16px;font-size:14px;color:#e65100;">${escHtml(kpName(kp))} ×${c}</div>`).join('');
   // 更新筛选下拉
   const filter = document.getElementById('kpFilter');
@@ -256,8 +266,8 @@ function updateMistakeStats() {
 }
 // 2026-10-18 史诗级：一键开始今日10道（自动选最紧急的10道）
 function startTodayTen() {
-  const mistakes = window._mistakes || [];
-  if (!mistakes.length) { alert('太棒了，一道错题都没有！'); return; }
+  const mistakes = window._pending || window._mistakes || [];
+  if (!mistakes.length) { alert('太棒了，待复测的错题都做完了！'); return; }
   // 按错次降序+时间升序（最紧急优先）
   const sorted = [...mistakes].sort((a, b) => {
     const wcDiff = (b.wrong_count || 1) - (a.wrong_count || 1);
@@ -276,10 +286,13 @@ function filterByKp() { renderMistakeList(); }
 // 2026-10-15 Elouise：错题多选一起做
 function renderMistakeList() {
   const focusEl = document.getElementById('focus-list');
-  let mistakes = window._mistakes || [];
+  // 2026-10-20：主列表只显示待复测（pending）；已掌握的在「已掌握」分区
+  let mistakes = window._pending || window._mistakes || [];
   const selectMode = window._selectMode || false;
   if (!mistakes.length) {
-    focusEl.innerHTML = '<div class="empty">太棒了，一道错题都没有！</div>';
+    focusEl.innerHTML = window._mistakes && window._mistakes.length
+      ? '<div class="empty">🎉 待复测的都拿下了！已掌握的题在下面那一区。</div>'
+      : '<div class="empty">太棒了，一道错题都没有！</div>';
     return;
   }
   // 筛选
