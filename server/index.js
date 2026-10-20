@@ -1575,16 +1575,19 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
     // 取最近答错的题（含看答案过、粘贴等）
     // 2026-10-13修：items表没有question_json列，改用prompt/answer列
     // 2026-10-15 Elouise：去重，同一题（忽略版本号）只留最后一次答错
-    // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取100条再 JS 去重
+    // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取500条再 JS 去重
+    // 2026-10-20修：items表没有 knowledge_point 列（之前 i.knowledge_point 导致整端点抛错、错题本一直显示空），改从 retest_queue 取
+    // 2026-10-20 Elouise：做错过的永久保留不消失，每条带 status（pending 待复测 / resolved 已掌握），pending 在前
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
-             i.prompt, i.answer, i.lesson_id, i.knowledge_point,
+             i.prompt, i.answer, i.lesson_id,
+             (SELECT q.knowledge_point FROM retest_queue q WHERE q.item_id=a.item_id ORDER BY q.id DESC LIMIT 1) as knowledge_point,
              (SELECT COUNT(*) FROM attempts a2 WHERE a2.item_id=a.item_id AND a2.correct=0) as wrong_count
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
       ORDER BY a.created_at DESC
-      LIMIT 100
+      LIMIT 500
     `).all();
     // 按 logicalItemId 去重，只保留每题最新的一条
     const seen = new Set();
@@ -1594,7 +1597,6 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
       if (seen.has(key)) continue;
       seen.add(key);
       deduped.push(r);
-      if (deduped.length >= 50) break;
     }
     const mistakes = deduped.map(r => {
       let detail = null;
@@ -1618,22 +1620,27 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         wrong_count: r.wrong_count || 1,
       };
     });
-    // 2026-10-14：过滤掉已解决的（retest_queue.status='resolved'），它们进"最近拿下"
-    // 2026-10-15修：只有"无 pending 记录"的才算真正攻克；有 pending 的（即使也有 resolved）仍留在"正在攻克"
-    let filtered = mistakes;
+    // 2026-10-20 Elouise：保留不消失。做错过的都在 mistakes 里，每条带 status：
+    //   pending=待复测（含未进复测队列的错题），resolved=已攻克（重做答对进队列 resolved 且无 pending）
     let resolvedList = [];
     try {
-      const pendingIds = new Set(
-        db.prepare("SELECT item_id FROM retest_queue WHERE status='pending'").all().map(r => r.item_id)
-      );
-      // 正在攻克：mistakes 里去掉"已解决且无待处理"的
+      // 只有"无 pending 记录"的才算真正攻克；有 pending 的（即使也有 resolved）仍算待复测
       const fullyResolvedIds = new Set(
         db.prepare(`
           SELECT item_id FROM retest_queue WHERE status='resolved'
           AND item_id NOT IN (SELECT item_id FROM retest_queue WHERE status='pending')
         `).all().map(r => r.item_id)
       );
-      filtered = mistakes.filter(m => !fullyResolvedIds.has(m.item_id));
+      const resolvedAtMap = new Map(
+        db.prepare("SELECT item_id, MAX(resolved_at) AS ra FROM retest_queue WHERE status='resolved' GROUP BY item_id")
+          .all().map(r => [r.item_id, r.ra])
+      );
+      for (const m of mistakes) {
+        m.status = fullyResolvedIds.has(m.item_id) ? 'resolved' : 'pending';
+        if (m.status === 'resolved') m.resolved_at = resolvedAtMap.get(m.item_id) || '';
+      }
+      // pending 在前，resolved 在后；组内保持最近答错优先
+      mistakes.sort((a, b) => (a.status === b.status ? 0 : a.status === 'pending' ? -1 : 1));
       // 已攻克列表：有 resolved 且无 pending 的，按 resolved_at 倒序，取最近20
       const rRows = db.prepare(`
         SELECT q.item_id, MAX(q.resolved_at) as resolved_at, i.prompt, i.answer, q.knowledge_point
@@ -1651,10 +1658,10 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         knowledge_point: r.knowledge_point || '',
       }));
     } catch {}
-    res.json({ ok: true, mistakes: filtered, resolved: resolvedList });
+    res.json({ ok: true, mistakes, resolved: resolvedList });
   } catch (e) {
     console.error('[mistakes]', e.message);
-    res.json({ ok: false, mistakes: [] });
+    res.json({ ok: false, mistakes: [], resolved: [] });
   }
 });
 app.post('/api/retest/resolve', auth.requireAuth, (req, res) => {
