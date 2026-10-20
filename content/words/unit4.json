@@ -396,6 +396,51 @@
       "en": "a number of",
       "pos": "phr.",
       "cn": "几个；若干"
+    },
+    {
+      "en": "wheel",
+      "cn": "轮；车轮",
+      "pos": "n."
+    },
+    {
+      "en": "prediction",
+      "cn": "预言；预测",
+      "pos": "n."
+    },
+    {
+      "en": "distance",
+      "cn": "距离",
+      "pos": "n."
+    },
+    {
+      "en": "petrol",
+      "cn": "汽油",
+      "pos": "n."
+    },
+    {
+      "en": "type",
+      "cn": "（印刷用的）活字",
+      "pos": "n."
+    },
+    {
+      "en": "mixture",
+      "cn": "混合物",
+      "pos": "n."
+    },
+    {
+      "en": "press",
+      "cn": "（被）压",
+      "pos": "v."
+    },
+    {
+      "en": "metal",
+      "cn": "金属",
+      "pos": "n."
+    },
+    {
+      "en": "3D printer",
+      "cn": "3D 打印机",
+      "pos": "phr."
     }
   ]
 }
