@@ -1850,6 +1850,33 @@ async function submitCopy(s, answer) {
       <button class="btn btn-primary" onclick="location.reload()">重新加载本题</button></div>`;
   }
 })();
+
+// ---------- 老师回复提醒（2026-10-20 Elouise：老师一回复，页面弹窗提醒） ----------
+(function() {
+  const KEY = 'xh_fb_seen_reply_id';
+  async function checkFbReplies() {
+    try {
+      const r = await fetch('/api/feedback/mine', { cache: 'no-store' });
+      const d = await r.json().catch(() => ({}));
+      const list = (d && d.list) || [];
+      const replied = list.filter(f => f.reply && f.status === 'replied');
+      if (!replied.length) return;
+      const maxId = Math.max.apply(null, replied.map(f => f.id));
+      const seen = parseInt(localStorage.getItem(KEY) || '0', 10) || 0;
+      if (!seen) { localStorage.setItem(KEY, String(maxId)); return; }
+      if (maxId <= seen) return;
+      localStorage.setItem(KEY, String(maxId));
+      const tip = document.createElement('div');
+      tip.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#1a73e8;color:#fff;padding:14px 20px;border-radius:14px;font-size:15px;z-index:9999;max-width:86%;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer;text-align:center;';
+      tip.innerHTML = '👩‍🏫 老师回复了你的反馈，点这里去看看 →';
+      tip.onclick = () => { location.href = '/settings.html#fbList'; };
+      document.body.appendChild(tip);
+      setTimeout(() => tip.remove(), 8000);
+    } catch {}
+  }
+  checkFbReplies();
+  setInterval(checkFbReplies, 120000);
+})();
 </script>
 <script src="/modal.js"></script>
 </body>
