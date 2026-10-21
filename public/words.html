@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<script src="/client-error.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>单词学习 · 小禾英语</title>
@@ -187,8 +188,10 @@ async function addMastery(en, ok) {
     if (d.ok) {
       mastery[en] = mastery[en] || {};
       mastery[en].level = d.level;
+    } else if (window.__reportError) {
+      window.__reportError('mastery sync failed: ok=false word=' + en, location.href, 0, 0, '');
     }
-  } catch {}
+  } catch (e) { if (window.__reportError) window.__reportError('mastery sync failed: ' + (e && e.message), location.href, 0, 0, ''); }
   todayCount++;
   localStorage.setItem('xh_words_today_' + new Date().toDateString(), todayCount);
   updateStats();
