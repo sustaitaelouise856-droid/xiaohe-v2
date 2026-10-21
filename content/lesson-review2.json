@@ -1,264 +1,638 @@
 {
-  "lesson_id": "review2",
-  "version": 1,
-  "title": "加练：Unit 2 综合复习",
-  "home_subtitle": "加练：Unit 2 综合复习",
-  "part1_desc": "第 1–15 步：通知、数据、来信综合练习（可反复练）。",
-  "part2_desc": "",
-  "practice_end": 8,
-  "steps": [
+ "lesson_id": "review2",
+ "version": 2,
+ "title": "加练：Unit 2 综合复习",
+ "home_subtitle": "加练：Unit 2 综合复习",
+ "part1_desc": "第 1–15 步：通知、数据、来信综合练习；第 16–24 步：挑战段——更难，还混了最高级、被动和完成时（可反复练）。",
+ "part2_desc": "",
+ "practice_end": 8,
+ "steps": [
+  {
+   "kind": "teach",
+   "title": "Unit 2 综合练习",
+   "teach_html": "<p>站长：Unit 2 学完了，来一组综合练习，查漏补缺。</p><p>通知、数据、来信，都会考到。</p>",
+   "scene": "复习",
+   "step": 1,
+   "phase": "practice"
+  },
+  {
+   "kind": "teach",
+   "title": "通知复习",
+   "teach_html": "<div class='reading-pane'><pre>【通知一】Meeting: Monday, 3:00 p.m., classroom\n【通知二】Meeting: Tuesday, 4:00 p.m., classroom\n【语音】moves to the library</pre></div>",
+   "scene": "看通知",
+   "step": 2,
+   "phase": "practice"
+  },
+  {
+   "kind": "mcq",
+   "title": "会议时间",
+   "stem": "会议最终时间是？",
+   "options": [
+    "A. Monday, 3:00 p.m.",
+    "B. Tuesday, 3:00 p.m.",
+    "C. Tuesday, 4:00 p.m.",
+    "D. Monday, 4:00 p.m."
+   ],
+   "answer": "C",
+   "explain": "通知二更新了时间：Tuesday, 4:00 p.m.。通知一是旧的作废，看最新的一张。",
+   "help": "看第二张。",
+   "predicted_errors": [],
+   "scene": "核对",
+   "step": 3,
+   "phase": "practice",
+   "wrong_feedback": {
+    "A": "这是通知一的旧时间。通知二已经把时间改了，要看最新的一张。",
+    "B": "星期对了，但 3:00 是通知一的时间；通知二改成了 4:00。",
+    "D": "星期和时间都是通知一的旧信息。最终安排是通知二的 Tuesday, 4:00 p.m.。"
+   }
+  },
+  {
+   "kind": "mcq",
+   "title": "会议地点",
+   "stem": "会议地点最终是哪里？",
+   "options": [
+    "A. the classroom",
+    "B. the library",
+    "C. the gym",
+    "D. the hall"
+   ],
+   "answer": "B",
+   "explain": "语音最后通知：moves to the library。地点改了两次，以最后一次通知为准。",
+   "help": "听语音。",
+   "predicted_errors": [],
+   "scene": "核对",
+   "step": 4,
+   "phase": "practice",
+   "wrong_feedback": {
+    "A": "classroom 是通知里原来写的地点，但语音又改成了图书馆，最后以语音为准。",
+    "C": "通知和语音都没提 gym。别猜，回到原话里找地点。",
+    "D": "hall 没在任何通知里出现过。地点最终改成了 the library。"
+   }
+  },
+  {
+   "kind": "teach",
+   "title": "数据复习",
+   "teach_html": "<div class='reading-pane'><pre>【数据】\nVisitors: 800 (up 25% from last month)\nSales: 1,500 yuan (up 10%)</pre></div>",
+   "scene": "看数据",
+   "step": 5,
+   "phase": "practice"
+  },
+  {
+   "kind": "mcq",
+   "title": "访客涨幅",
+   "stem": "访客比上月涨了多少？",
+   "options": [
+    "A. 10%",
+    "B. 20%",
+    "C. 25%",
+    "D. 30%"
+   ],
+   "answer": "C",
+   "explain": "看 Visitors 那一行：800 (up 25% from last month)，访客涨幅是 25%。",
+   "help": "看 Visitors 行。",
+   "predicted_errors": [],
+   "scene": "读数",
+   "step": 6,
+   "phase": "practice",
+   "wrong_feedback": {
+    "A": "10% 是 Sales（销售额）的涨幅，不是访客的。先看准是哪一行再答。",
+    "B": "数据里没有 20%。访客那行写的是 up 25%。",
+    "D": "数据里没有 30%。Visitors 那行：up 25%。"
+   }
+  },
+  {
+   "kind": "short",
+   "title": "写出销售额",
+   "stem": "写出销售额和涨幅。",
+   "task": "写数字。",
+   "answer_text": "1,500 yuan, up 10%",
+   "expects": [
     {
-      "kind": "teach",
-      "title": "Unit 2 综合练习",
-      "teach_html": "<p>站长：Unit 2 学完了，来一组综合练习，查漏补缺。</p><p>通知、数据、来信，都会考到。</p>",
-      "scene": "复习",
-      "step": 1,
-      "phase": "practice"
+     "id": "num",
+     "type": "word",
+     "answers": [
+      "1 500",
+      "1500"
+     ],
+     "cn": [
+      "1500"
+     ]
     },
     {
-      "kind": "teach",
-      "title": "通知复习",
-      "teach_html": "<div class='reading-pane'><pre>【通知一】Meeting: Monday, 3:00 p.m., classroom\n【通知二】Meeting: Tuesday, 4:00 p.m., classroom\n【语音】moves to the library</pre></div>",
-      "scene": "看通知",
-      "step": 2,
-      "phase": "practice"
-    },
-    {
-      "kind": "mcq",
-      "title": "会议时间",
-      "stem": "会议最终时间是？",
-      "options": [
-        "A. Monday, 3:00 p.m.",
-        "B. Tuesday, 3:00 p.m.",
-        "C. Tuesday, 4:00 p.m.",
-        "D. Monday, 4:00 p.m."
-      ],
-      "answer": "C",
-      "explain": "通知二更新：Tuesday, 4:00 p.m.。",
-      "help": "看第二张。",
-      "predicted_errors": [],
-      "scene": "核对",
-      "step": 3,
-      "phase": "practice"
-    },
-    {
-      "kind": "mcq",
-      "title": "会议地点",
-      "stem": "会议地点最终是哪里？",
-      "options": [
-        "A. the classroom",
-        "B. the library",
-        "C. the gym",
-        "D. the hall"
-      ],
-      "answer": "B",
-      "explain": "语音：library。",
-      "help": "听语音。",
-      "predicted_errors": [],
-      "scene": "核对",
-      "step": 4,
-      "phase": "practice"
-    },
-    {
-      "kind": "teach",
-      "title": "数据复习",
-      "teach_html": "<div class='reading-pane'><pre>【数据】\nVisitors: 800 (up 25% from last month)\nSales: 1,500 yuan (up 10%)</pre></div>",
-      "scene": "看数据",
-      "step": 5,
-      "phase": "practice"
-    },
-    {
-      "kind": "mcq",
-      "title": "访客涨幅",
-      "stem": "访客比上月涨了多少？",
-      "options": [
-        "A. 10%",
-        "B. 20%",
-        "C. 25%",
-        "D. 30%"
-      ],
-      "answer": "C",
-      "explain": "up 25%。",
-      "help": "看 Visitors 行。",
-      "predicted_errors": [],
-      "scene": "读数",
-      "step": 6,
-      "phase": "practice"
-    },
-    {
-      "kind": "short",
-      "title": "写出销售额",
-      "stem": "写出销售额和涨幅。",
-      "task": "写数字。",
-      "answer_text": "1,500 yuan, up 10%",
-      "expects": [
-        {
-          "id": "num",
-          "type": "word",
-          "answers": [
-            "1 500",
-            "1500"
-          ],
-          "cn": [
-            "1500"
-          ]
-        },
-        {
-          "id": "pct",
-          "type": "word",
-          "answers": [
-            "10",
-            "ten"
-          ],
-          "cn": [
-            "10%"
-          ]
-        }
-      ],
-      "explain": "1,500 yuan, up 10%。",
-      "help": "数字 1,500，涨幅 10%。",
-      "predicted_errors": [],
-      "scene": "写数",
-      "step": 7,
-      "phase": "practice"
-    },
-    {
-      "kind": "teach",
-      "title": "来信复习",
-      "teach_html": "<div class='reading-pane'><pre>【来信】\nDear, can you play \"Star\" for my sister? She loves dancing.</pre></div>",
-      "scene": "读信",
-      "step": 8,
-      "phase": "practice"
-    },
-    {
-      "kind": "mcq",
-      "title": "来信请求",
-      "stem": "请求是什么？",
-      "options": [
-        "A. Play \"Star\"",
-        "B. Dance",
-        "C. Write",
-        "D. Sing"
-      ],
-      "answer": "A",
-      "explain": "点歌：Play \"Star\"。",
-      "help": "找请求。",
-      "predicted_errors": [],
-      "scene": "抓请求",
-      "step": 9,
-      "phase": "practice"
-    },
-    {
-      "kind": "short",
-      "title": "回复来信",
-      "stem": "承诺播放 \"Star\"。",
-      "task": "写承诺。",
-      "answer_text": "I promise to play \"Star\" for your sister.",
-      "expects": [
-        {
-          "id": "p",
-          "type": "word",
-          "answers": [
-            "promise"
-          ],
-          "cn": [
-            "保证"
-          ]
-        }
-      ],
-      "explain": "I promise to play \"Star\" for your sister.",
-      "help": "I promise 开头。",
-      "predicted_errors": [],
-      "scene": "写回复",
-      "step": 10,
-      "phase": "practice"
-    },
-    {
-      "kind": "teach",
-      "title": "综合核对",
-      "teach_html": "<p>三类信息都会了。最后综合检查。</p>",
-      "scene": "核对",
-      "step": 11,
-      "phase": "practice"
-    },
-    {
-      "kind": "mcq",
-      "title": "综合判断",
-      "stem": "以下哪个是旧信息？",
-      "options": [
-        "A. Tuesday, 4:00 p.m.",
-        "B. Monday, 3:00 p.m.",
-        "C. the library",
-        "D. up 25%"
-      ],
-      "answer": "B",
-      "explain": "Monday 是旧时间。",
-      "help": "找被更新的。",
-      "predicted_errors": [],
-      "scene": "综合",
-      "step": 12,
-      "phase": "practice"
-    },
-    {
-      "kind": "short",
-      "title": "综合输出",
-      "stem": "写一句：会议时间地点。",
-      "task": "写句子。",
-      "answer_text": "The meeting is on Tuesday at 4:00 p.m. in the library.",
-      "expects": [
-        {
-          "id": "t",
-          "type": "time",
-          "hour": 4,
-          "minute": 0,
-          "meridiem": "pm",
-          "cn": [
-            "4点"
-          ]
-        },
-        {
-          "id": "p",
-          "type": "word",
-          "answers": [
-            "library"
-          ],
-          "cn": [
-            "图书馆"
-          ]
-        }
-      ],
-      "explain": "The meeting is on Tuesday at 4:00 p.m. in the library.",
-      "help": "时间地点都要。",
-      "predicted_errors": [],
-      "scene": "输出",
-      "step": 13,
-      "phase": "practice"
-    },
-    {
-      "kind": "mcq",
-      "title": "数字应用",
-      "stem": "800 访客，涨 25%，上月多少人？（估算）",
-      "options": [
-        "A. 600",
-        "B. 640",
-        "C. 700",
-        "D. 750"
-      ],
-      "answer": "B",
-      "explain": "800/1.25=640。",
-      "help": "倒推。",
-      "predicted_errors": [],
-      "scene": "算数",
-      "step": 14,
-      "phase": "practice"
-    },
-    {
-      "kind": "teach",
-      "title": "练习完成",
-      "teach_html": "<p>综合练习完成！Unit 2 知识点都过了一遍。</p>",
-      "scene": "结束",
-      "step": 15,
-      "phase": "practice"
+     "id": "pct",
+     "type": "word",
+     "answers": [
+      "10",
+      "ten"
+     ],
+     "cn": [
+      "10%"
+     ]
     }
-  ]
+   ],
+   "explain": "数据里写的是 Sales: 1,500 yuan (up 10%)，销售额和涨幅两个数都要有。",
+   "help": "看【数据】里 Sales 那一行，金额和涨幅都要写上。",
+   "predicted_errors": [],
+   "scene": "写数",
+   "step": 7,
+   "phase": "practice",
+   "common_errors": [
+    {
+     "when": "只写了一个数",
+     "say": "要写两个数：销售额 1,500 和涨幅 10%，缺一个都不完整。"
+    },
+    {
+     "when": "写了 800 或 25%",
+     "say": "那是访客（Visitors）的数据。这题问销售额，看 Sales 那一行。"
+    },
+    {
+     "when": "写成 1,500 yuan, up 25%",
+     "say": "销售额对了，但 25% 是访客的涨幅；销售额涨的是 10%。"
+    },
+    {
+     "when": "数字写成 1.500",
+     "say": "英语里千位数用逗号隔开：1,500。小数点是另一回事，别混。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "title": "来信复习",
+   "teach_html": "<div class='reading-pane'><pre>【来信】\nDear, can you play \"Star\" for my sister? She loves dancing.</pre></div>",
+   "scene": "读信",
+   "step": 8,
+   "phase": "practice"
+  },
+  {
+   "kind": "mcq",
+   "title": "来信请求",
+   "stem": "请求是什么？",
+   "options": [
+    "A. Play \"Star\"",
+    "B. Dance",
+    "C. Write",
+    "D. Sing"
+   ],
+   "answer": "A",
+   "explain": "来信的请求是点歌：can you play \"Star\" for my sister，所以请求是 Play \"Star\"。",
+   "help": "找请求。",
+   "predicted_errors": [],
+   "scene": "抓请求",
+   "step": 9,
+   "phase": "practice",
+   "wrong_feedback": {
+    "B": "dancing 是妹妹喜欢做的事，不是她请求电台做的事。请求要找 can you… 那句。",
+    "C": "信里没请任何人写东西。请求是请电台播放一首歌。",
+    "D": "信里只说妹妹 loves dancing，没说请人唱歌。请求是 Play \"Star\"。"
+   }
+  },
+  {
+   "kind": "short",
+   "title": "回复来信",
+   "stem": "承诺播放 \"Star\"。",
+   "task": "写承诺。",
+   "answer_text": "I promise to play \"Star\" for your sister.",
+   "expects": [
+    {
+     "id": "p",
+     "type": "word",
+     "answers": [
+      "promise"
+     ],
+     "cn": [
+      "保证"
+     ]
+    }
+   ],
+   "explain": "I promise to play \"Star\" for your sister.",
+   "help": "I promise 开头。",
+   "predicted_errors": [],
+   "scene": "写回复",
+   "step": 10,
+   "phase": "practice",
+   "common_errors": [
+    {
+     "when": "写了 I will play…",
+     "say": "意思能通，但这题练的是承诺句式：I promise to play…，promise 后面跟 to 加动词原形。"
+    },
+    {
+     "when": "写成 I promise play",
+     "say": "promise 后面要加 to：I promise to play。"
+    },
+    {
+     "when": "写成 I promises",
+     "say": "主语是 I 时动词用原形 promise，不加 s。"
+    },
+    {
+     "when": "漏了歌名或 for your sister",
+     "say": "承诺要说全：play \"Star\" for your sister，点给谁的也要写上。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "title": "综合核对",
+   "teach_html": "<p>三类信息都会了。最后综合检查。</p>",
+   "scene": "核对",
+   "step": 11,
+   "phase": "practice"
+  },
+  {
+   "kind": "mcq",
+   "title": "综合判断",
+   "stem": "以下哪个是旧信息？",
+   "options": [
+    "A. Tuesday, 4:00 p.m.",
+    "B. Monday, 3:00 p.m.",
+    "C. the library",
+    "D. up 25%"
+   ],
+   "answer": "B",
+   "explain": "Monday, 3:00 p.m. 是通知一的时间，已经被通知二改掉了，所以它是旧信息；其余三项都是现行有效的。",
+   "help": "找被更新的。",
+   "predicted_errors": [],
+   "scene": "综合",
+   "step": 12,
+   "phase": "practice",
+   "wrong_feedback": {
+    "A": "Tuesday, 4:00 p.m. 是通知二的新时间，现行有效，不是旧信息。",
+    "C": "the library 是语音通知的新地点，现行有效。",
+    "D": "up 25% 是现在的数据，没有被改掉。"
+   }
+  },
+  {
+   "kind": "short",
+   "title": "综合输出",
+   "stem": "写一句：会议时间地点。",
+   "task": "写句子。",
+   "answer_text": "The meeting is on Tuesday at 4:00 p.m. in the library.",
+   "expects": [
+    {
+     "id": "t",
+     "type": "time",
+     "hour": 4,
+     "minute": 0,
+     "meridiem": "pm",
+     "cn": [
+      "4点"
+     ]
+    },
+    {
+     "id": "p",
+     "type": "word",
+     "answers": [
+      "library"
+     ],
+     "cn": [
+      "图书馆"
+     ]
+    }
+   ],
+   "explain": "The meeting is on Tuesday at 4:00 p.m. in the library.",
+   "help": "时间地点都要。",
+   "predicted_errors": [],
+   "scene": "输出",
+   "step": 13,
+   "phase": "practice",
+   "common_errors": [
+    {
+     "when": "写了 Monday 或 3:00",
+     "say": "那是通知一的旧信息。最终时间是通知二的 Tuesday, 4:00 p.m.。"
+    },
+    {
+     "when": "地点写了 classroom",
+     "say": "classroom 是原来的地点，语音已经改成了 the library。"
+    },
+    {
+     "when": "时间写成 4:00 a.m.",
+     "say": "下午四点用 p.m.，a.m. 是上午，别把时段写反。"
+    },
+    {
+     "when": "漏了星期或地点",
+     "say": "这句要三样齐：星期二 + 4:00 p.m. + 图书馆，缺一样不完整。"
+    }
+   ]
+  },
+  {
+   "kind": "mcq",
+   "title": "数字应用",
+   "stem": "800 访客，涨 25%，上月多少人？（估算）",
+   "options": [
+    "A. 600",
+    "B. 640",
+    "C. 700",
+    "D. 750"
+   ],
+   "answer": "B",
+   "explain": "涨 25% 后是上月的 1.25 倍，倒推用除法：800 ÷ 1.25 = 640。",
+   "help": "倒推。",
+   "predicted_errors": [],
+   "scene": "算数",
+   "step": 14,
+   "phase": "practice",
+   "wrong_feedback": {
+    "A": "600 不对。验算：600 × 1.25 = 750，不是 800。倒推要用 800 ÷ 1.25。",
+    "C": "700 太接近 800 了。验算：700 × 1.25 = 875，超过 800 了。正确答案 640 × 1.25 = 800。",
+    "D": "750 也不对。750 × 1.25 = 937.5。记住：现在的数 ÷ 1.25 才是上月的数。"
+   }
+  },
+  {
+   "kind": "teach",
+   "title": "练习完成",
+   "teach_html": "<p>综合练习完成！Unit 2 知识点都过了一遍。</p>",
+   "scene": "结束",
+   "step": 15,
+   "phase": "practice"
+  },
+  {
+   "kind": "teach",
+   "title": "挑战段",
+   "scene": "挑战",
+   "teach_html": "<p>前面的综合练习过完了？最后是挑战段：题目比前面难，还混了以前学的最高级，和新学的完成时、被动语态。做错也没关系，看讲解，下次就会了。</p>",
+   "step": 16,
+   "phase": "validate"
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 听众倒推",
+   "scene": "广播站听众调查",
+   "stem": "本月听众 1,200 人，比上月涨了 20%。上月听众多少人？",
+   "task": "只写数字。",
+   "answer_text": "1,000",
+   "expects": [
+    {
+     "id": "n",
+     "type": "word",
+     "answers": [
+      "1000",
+      "1 000"
+     ],
+     "cn": [
+      "1000 人"
+     ]
+    }
+   ],
+   "help": "倒着推：本月的人数是上月的百分之几？",
+   "explain": "涨 20% 后是上月的 1.2 倍：1,200 ÷ 1.2 = 1,000。",
+   "common_errors": [
+    {
+     "when": "写了 960",
+     "say": "960 是拿 1,200 直接打八折。涨 20% 是在上月的基数上涨，不能这么算，要除回去：1,200 ÷ 1.2。"
+    },
+    {
+     "when": "写了 1,440",
+     "say": "那是再往上涨 20% 的结果。这题问上月，用除法倒推。"
+    },
+    {
+     "when": "写了 240",
+     "say": "240 只是涨出来的人数，题目问的是上月的总人数：1,000。"
+    },
+    {
+     "when": "写了 1,100 左右的估算数",
+     "say": "别估，列式算：上月 × 1.2 = 1,200，所以上月 = 1,000。"
+    }
+   ],
+   "step": 17,
+   "phase": "validate"
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 节目结束时间",
+   "scene": "排节目单",
+   "stem": "节目 3:40 p.m. 开始，时长 50 分钟。结束时间是几点？",
+   "task": "写时间，如 4:30 p.m.。",
+   "answer_text": "4:30 p.m.",
+   "expects": [
+    {
+     "id": "t",
+     "type": "time",
+     "hour": 4,
+     "minute": 30,
+     "meridiem": "pm",
+     "cn": [
+      "下午4点半"
+     ]
+    }
+   ],
+   "help": "从 3:40 往后数 50 分钟，分钟满 60 要进位。",
+   "explain": "3:40 往后 20 分钟到 4:00，再加 30 分钟，结束是 4:30 p.m.。",
+   "common_errors": [
+    {
+     "when": "写了 3:90",
+     "say": "没有 3:90 这个时间。分钟满 60 就进位成 1 小时：是 4:30。"
+    },
+    {
+     "when": "写了 4:30 a.m.",
+     "say": "这是下午的节目，结束也在下午，用 p.m.。"
+    },
+    {
+     "when": "写了 4:20",
+     "say": "数错了：40 + 50 = 90 分钟，是 1 小时 30 分钟，3 点加上去是 4:30。"
+    }
+   ],
+   "step": 18,
+   "phase": "validate"
+  },
+  {
+   "kind": "mcq",
+   "title": "挑战 · 通知改了又改",
+   "scene": "派对通知改了又改",
+   "stem": "通知一：Party, Friday, 7:00 p.m., in the hall。通知二：派对改到 Saturday。语音：时间不变，地点改到 the gym。派对最终安排是？",
+   "options": [
+    "A. Friday, 7:00 p.m., in the hall",
+    "B. Saturday, 8:00 p.m., in the gym",
+    "C. Saturday, 7:00 p.m., in the hall",
+    "D. Saturday, 7:00 p.m., in the gym"
+   ],
+   "answer": "D",
+   "help": "三条信息一条一条对：先定星期，再定时间，最后定地点。",
+   "explain": "星期被通知二改为 Saturday，时间从没改过还是 7:00 p.m.，地点被语音改为 the gym。",
+   "wrong_feedback": {
+    "A": "这是通知一的老安排，星期和地点后来都被改掉了。",
+    "B": "星期和地点对了，但时间从没改过，一直是 7:00 p.m.，不是 8:00。",
+    "C": "星期对了，但地点被语音改成了 the gym，hall 是旧地点。"
+   },
+   "step": 19,
+   "phase": "validate"
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 大数字",
+   "scene": "播报听众总数",
+   "stem": "把英文数字写成阿拉伯数字：two thousand five hundred",
+   "task": "只写数字。",
+   "answer_text": "2,500",
+   "expects": [
+    {
+     "id": "n",
+     "type": "word",
+     "answers": [
+      "2500",
+      "2 500"
+     ],
+     "cn": [
+      "2500"
+     ]
+    }
+   ],
+   "help": "拆开看：two thousand 是多少，five hundred 是多少，再合起来。",
+   "explain": "two thousand（2,000）+ five hundred（500）= 2,500。",
+   "common_errors": [
+    {
+     "when": "写了 250",
+     "say": "少了一位。two thousand 是两千，five hundred 是五百，合起来是 2,500。"
+    },
+    {
+     "when": "写了 2,050",
+     "say": "five hundred 是 500，不是 50。hundred 管的是百位：2,500。"
+    },
+    {
+     "when": "写了 25,000",
+     "say": "多了一位。two thousand 是 2 千不是 2 万：2,500。"
+    }
+   ],
+   "step": 20,
+   "phase": "validate"
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 最高的塔",
+   "scene": "三座广播塔比高度",
+   "stem": "Of the three radio towers, Tower C is ______ (tall).",
+   "task": "写出 tall 的正确形式。",
+   "answer_text": "the tallest",
+   "expects": [
+    {
+     "id": "w",
+     "type": "word",
+     "answers": [
+      "the tallest"
+     ],
+     "cn": [
+      "最高的"
+     ]
+    }
+   ],
+   "help": "一共三座塔在比，用哪个级？前面还差一个小词。",
+   "explain": "三者比较用最高级，tall 是短词直接加 -est，前面加 the：the tallest。",
+   "common_errors": [
+    {
+     "when": "只写了 tallest",
+     "say": "最高级前面要加 the：the tallest，别漏掉。"
+    },
+    {
+     "when": "写了 taller",
+     "say": "taller 是两者比较用的比较级。这里有三座塔，用最高级 the tallest。"
+    },
+    {
+     "when": "写了 most tall 或 the most tallest",
+     "say": "tall 是短词，最高级直接加 -est 就够了，不用 most：the tallest。"
+    }
+   ],
+   "step": 21,
+   "phase": "validate"
+  },
+  {
+   "kind": "mcq",
+   "title": "挑战 · 本周最红的歌",
+   "scene": "本周歌曲榜",
+   "stem": "Which song is ______ this week?",
+   "options": [
+    "A. more popular",
+    "B. most popular",
+    "C. the most popular",
+    "D. popularer"
+   ],
+   "answer": "C",
+   "help": "在所有歌里排第一，用哪个形式？想想前面那个小词。",
+   "explain": "问“哪首最受欢迎”用最高级。popular 是长词用 most，最高级前面还要加 the：the most popular。",
+   "wrong_feedback": {
+    "A": "more popular 是比较级，一般要有 than 或两者对比才用；这里是所有歌里选第一名，用最高级。",
+    "B": "most popular 意思接近了，但最高级前面要加 the：the most popular。",
+    "D": "popular 是长词，不能直接加 -er。长词的比较级、最高级要用 more / most。"
+   },
+   "step": 22,
+   "phase": "validate"
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 节目被播放",
+   "scene": "介绍广播站",
+   "stem": "The radio show ______ (play) on the radio every morning.",
+   "task": "写出 play 的正确形式（两个词）。",
+   "answer_text": "is played",
+   "expects": [
+    {
+     "id": "w",
+     "type": "word",
+     "answers": [
+      "is played"
+     ],
+     "cn": [
+      "被播放"
+     ]
+    }
+   ],
+   "help": "想一想：节目是自己播放，还是被人播放？再想：every morning 用什么时态？",
+   "explain": "节目是被播放的，用被动语态：be + 过去分词。every morning 是每天的习惯，用现在时：is played。",
+   "common_errors": [
+    {
+     "when": "只写了 played",
+     "say": "少了 be 动词。被动语态是 be + 过去分词：is played。"
+    },
+    {
+     "when": "写了 is play",
+     "say": "be 动词后面要用过去分词 played，不是原形 play：is played。"
+    },
+    {
+     "when": "写了 was played",
+     "say": "every morning 说明是每天的习惯动作用现在时，be 动词用 is，不用 was。"
+    },
+    {
+     "when": "写了 plays",
+     "say": "plays 是节目自己“播放”，可节目播不了自己，它是被人播放的：is played。"
+    }
+   ],
+   "step": 23,
+   "phase": "validate"
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 站长收信",
+   "scene": "站长收信",
+   "stem": "The manager has already ______ (receive) three letters today.",
+   "task": "写出 receive 的正确形式。",
+   "answer_text": "received",
+   "expects": [
+    {
+     "id": "w",
+     "type": "word",
+     "answers": [
+      "received"
+     ],
+     "cn": [
+      "收到（过去分词）"
+     ]
+    }
+   ],
+   "help": "has 后面跟动词的哪种形式？想想完成时的公式。",
+   "explain": "现在完成时是 has/have + 过去分词，receive 的过去分词是 received。",
+   "common_errors": [
+    {
+     "when": "写了 receive（原形）",
+     "say": "has 后面要用过去分词，不是原形：received。"
+    },
+    {
+     "when": "写了 receiving",
+     "say": "receiving 是现在分词，进行时才用。完成时用过去分词 received。"
+    },
+    {
+     "when": "写了 receives",
+     "say": "receives 是一般现在时的三单形式，跟不了 has。has + 过去分词：received。"
+    }
+   ],
+   "step": 24,
+   "phase": "validate"
+  }
+ ]
 }
