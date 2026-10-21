@@ -1,9 +1,9 @@
 {
  "lesson_id": "u6r3",
- "practice_end": 21,
+ "practice_end": 27,
  "home_subtitle": "第三课 · 古今对比",
- "part1_desc": "第 1–21 步：跟站长分清完成时和过去时——一个还继续、一个结束了。先找信号词，再选时态。",
- "part2_desc": "第 22–44 步：独立判断造纸术资料；最后 14 道挑战题——双空对比、被动时态、比较级混考，先找信号再下手。",
+ "part1_desc": "第 1–21 步：跟站长分清完成时和过去时；练习里掺着挑战题，边学边辨信号词。",
+ "part2_desc": "第 22–49 步：独立判断造纸术资料，难题一路跟到课尾压轴：古今双空对比、被动时态、比较级混考。",
  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时与一般过去时的辨析（信号词判断）、双空对比、被动语态时态、比较级最高级混考。Unit 6 Ancient stories 主题。",
  "steps": [
   {
@@ -130,6 +130,52 @@
   {
    "step": 12,
    "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 信号：很久以前",
+   "scene": "古代人很久以前修了这堵墙。",
+   "stem": "Ancient people ___ (build) this wall long ago.",
+   "task": "写过去式。",
+   "answer_text": "built",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "built"
+     ],
+     "cn": [
+      "建造（过去式）"
+     ],
+     "olds": [
+      "has built",
+      "build"
+     ]
+    }
+   ],
+   "help": "先找信号：long ago 表示事情发生在什么时候、结束没有？",
+   "explain": "Ancient people built this wall long ago.",
+   "common_errors": [
+    {
+     "when": "写了 has built",
+     "say": "long ago 是明确的过去时间，要用过去时 built，完成时不能和明确过去时间连用。"
+    },
+    {
+     "when": "写了 builded",
+     "say": "build 是不规则动词，过去式是 built，不能加 ed。"
+    },
+    {
+     "when": "写了 builds",
+     "say": "builds 是现在时三单；long ago 的事要用过去式 built。"
+    },
+    {
+     "when": "写了 build",
+     "say": "build 是原形，过去的事要用 built。"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r3-q03",
    "title": "昨天去了",
@@ -152,7 +198,7 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 13,
+   "step": 14,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r3-q04",
@@ -176,7 +222,44 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 14,
+   "kind": "short",
+   "title": "挑战 · 子子孙孙接着挖",
+   "scene": "愚公下决心后，他的子孙后代一直挖山，挖到了今天。",
+   "stem": "Yu Gong's family ___ the mountain since he made the decision. (dig)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "has dug",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has dug"
+     ],
+     "olds": [
+      "have dug"
+     ],
+     "cn": [
+      "一直在挖（现在完成时）"
+     ]
+    }
+   ],
+   "help": "从愚公那时一直挖到现在；主语 Yu Gong's family 看作一个整体（it）。dig 的过去分词要双写 g。",
+   "explain": "Yu Gong's family has dug the mountain since he made the decision.",
+   "common_errors": [
+    {
+     "when": "写了 dug",
+     "say": "dug 是过去时；这里从过去一直挖到现在，用 has dug。"
+    },
+    {
+     "when": "写了 have dug",
+     "say": "family 在这里看作一个整体，用 has，不用 have。"
+    }
+   ],
+   "phase": "practice",
+   "step": 15
+  },
+  {
+   "step": 16,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r3-q06",
@@ -200,7 +283,7 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 15,
+   "step": 17,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r3-q07",
@@ -224,7 +307,29 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 16,
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · Has 吗",
+   "scene": "问姐姐试过剪纸没有。",
+   "stem": "______ your sister ever tried paper cutting?",
+   "options": [
+    "Have",
+    "Has",
+    "Did",
+    "Does"
+   ],
+   "answer": "B",
+   "help": "先数主语：your sister 是一个还是多个？再看 tried 是什么形式。",
+   "explain": "Has your sister ever tried paper cutting?",
+   "wrong_feedback": {
+    "A": "your sister 是第三人称单数，完成时疑问句要用 Has，不用 Have。",
+    "C": "Did 后面要跟动词原形 try，跟不了过去分词 tried；问经历用 Has。",
+    "D": "Does 后面跟原形 try；这里有 tried 和 ever，表示经历，要用 Has。"
+   }
+  },
+  {
+   "step": 19,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r3-q09",
@@ -248,7 +353,7 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 17,
+   "step": 20,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r3-q10",
@@ -288,7 +393,54 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 18,
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 写出过去分词：write",
+   "scene": "把 write 变成过去分词。",
+   "stem": "写出 write 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "written",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "written"
+     ],
+     "cn": [
+      "写（过去分词）"
+     ],
+     "olds": [
+      "wrote",
+      "writed",
+      "write"
+     ]
+    }
+   ],
+   "help": "想一想 write 的三种形式：write、wrote、第三个是？",
+   "explain": "write → wrote（过去式）→ written（过去分词）。",
+   "common_errors": [
+    {
+     "when": "写了 wrote",
+     "say": "wrote 是过去式（yesterday I wrote），过去分词是 written（I have written）。"
+    },
+    {
+     "when": "写了 writed",
+     "say": "write 是不规则动词，不能加 ed：wrote / written。"
+    },
+    {
+     "when": "写了 writing",
+     "say": "writing 是现在分词，过去分词是 written。"
+    },
+    {
+     "when": "写了 write",
+     "say": "write 是原形，过去分词是 written。"
+    }
+   ]
+  },
+  {
+   "step": 22,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r3-q11",
@@ -329,7 +481,41 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 19,
+   "kind": "short",
+   "title": "挑战 · 上周就看完了",
+   "scene": "同桌问你借那本故事书，你说：我上周就看完了，你拿去吧。",
+   "stem": "I ___ the book last week. (finish)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "finished",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "finished"
+     ],
+     "olds": [
+      "have finished",
+      "has finished"
+     ],
+     "cn": [
+      "看完了（过去时）"
+     ]
+    }
+   ],
+   "help": "先找时间词：last week 是已经过去的时间点，这种句子里完成时进不来。",
+   "explain": "I finished the book last week. 有明确的过去时间 last week，用一般过去时，不能用现在完成时。",
+   "common_errors": [
+    {
+     "when": "写了 have finished",
+     "say": "last week 是明确的过去时间，和现在完成时冲突；这时老老实实用过去时 finished。"
+    }
+   ],
+   "phase": "practice",
+   "step": 23
+  },
+  {
+   "step": 24,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r3-q12",
@@ -365,7 +551,7 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 20,
+   "step": 25,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r3-q13",
@@ -405,7 +591,29 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 21,
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 比较级别漏 than",
+   "scene": "两个故事比一比哪个更有意思。",
+   "stem": "This story is ______ than that one.",
+   "options": [
+    "more interesting",
+    "interesting",
+    "most interesting",
+    "the most interesting"
+   ],
+   "answer": "A",
+   "help": "先找信号：句中有 than，比较的是几个？",
+   "explain": "This story is more interesting than that one.",
+   "wrong_feedback": {
+    "B": "interesting 是原级，没有比较的意思；有 than 就要用比较级 more interesting。",
+    "C": "most interesting 是最高级的一部分，要跟 the 连用、不能跟 than；这里两者比较，用比较级。",
+    "D": "the most interesting 是最高级，跟 than 连用不对；有 than 用比较级 more interesting。"
+   }
+  },
+  {
+   "step": 27,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r3-q14",
@@ -442,7 +650,7 @@
    "reading": "Yu Gong was an old man. He lived near two big mountains. He moved the mountains with his family. People have told this story for thousands of years."
   },
   {
-   "step": 22,
+   "step": 28,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r3-v-intro",
@@ -451,7 +659,7 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 23,
+   "step": 29,
    "phase": "validate",
    "kind": "mcq",
    "title": "蔡伦造纸",
@@ -474,7 +682,29 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 24,
+   "step": 30,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 信号：上周日",
+   "scene": "问答：上周日看的电影。",
+   "stem": "— When did you see the film? — I ___ it last Sunday.",
+   "options": [
+    "have seen",
+    "see",
+    "seen",
+    "saw"
+   ],
+   "answer": "D",
+   "help": "先找信号词：last Sunday 告诉你什么？",
+   "explain": "last Sunday 是明确的过去时间，用过去时 saw；完成时不能跟明确的过去时间连用。",
+   "wrong_feedback": {
+    "A": "have seen 是完成时。last Sunday 是明确的过去时间，完成时不能和它连用，要用 saw。",
+    "B": "see 是原形，问的是过去看的电影，要用过去式 saw。",
+    "C": "seen 是过去分词，必须跟 has/have 连用；这里用 saw。"
+   }
+  },
+  {
+   "step": 31,
    "phase": "validate",
    "kind": "mcq",
    "title": "用了两千年",
@@ -497,7 +727,55 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 25,
+   "kind": "short",
+   "title": "挑战 · 从竹简到博物馆",
+   "scene": "两个时代放一句里：古人写在竹子上，今天的我们把竹简收进博物馆保存至今。",
+   "stem": "Long ago, people ___ (write) on bamboo, and we ___ (keep) the bamboo books in museums since then.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "wrote have kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "wrote"
+     ],
+     "olds": [
+      "have written"
+     ],
+     "cn": [
+      "写（过去时）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "have kept"
+     ],
+     "olds": [],
+     "cn": [
+      "一直保存着（现在完成时）"
+     ]
+    }
+   ],
+   "help": "一句里两个时代：long ago 的动作已经结束；since then 的动作持续到现在。两个空时态不一样。",
+   "explain": "Long ago, people wrote on bamboo, and we have kept the bamboo books in museums since then.",
+   "common_errors": [
+    {
+     "when": "第一个空写了完成时",
+     "say": "long ago 的事已经结束，用过去时 wrote。"
+    },
+    {
+     "when": "第二个空写了 kept",
+     "say": "有 since then，是保存到现在，要用 have kept。"
+    }
+   ],
+   "phase": "validate",
+   "step": 32
+  },
+  {
+   "step": 33,
    "phase": "validate",
    "kind": "short",
    "title": "写在竹子上",
@@ -544,7 +822,29 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 26,
+   "step": 34,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 信号：since 从句",
+   "scene": "爸爸从二十岁起就在这家工厂工作。",
+   "stem": "My father has worked in this factory ___ he was twenty.",
+   "options": [
+    "for",
+    "from",
+    "at",
+    "since"
+   ],
+   "answer": "D",
+   "help": "先看空后面跟的是一个时间点、一段时间，还是一个句子？",
+   "explain": "since 后面可以跟一个表示过去时间的句子（he was twenty），表示“自从那时起”。",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间（如 for ten years），不能跟一个句子，这里用 since。",
+    "B": "from 只说起点，不能跟句子表示持续到现在，这里用 since。",
+    "C": "at 跟时间点（如 at seven），不能跟句子，这里用 since。"
+   }
+  },
+  {
+   "step": 35,
    "phase": "validate",
    "kind": "short",
    "title": "一直用到今天",
@@ -590,7 +890,96 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 27,
+   "kind": "short",
+   "title": "挑战 · 从司马迁到今天",
+   "scene": "司马迁在汉朝写成《史记》，这本书一直被人们读到今天。",
+   "stem": "Sima Qian ___ (write) Shiji long ago, and people ___ (read) it since then.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "wrote have read",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "wrote"
+     ],
+     "olds": [
+      "has written"
+     ],
+     "cn": [
+      "写（过去时）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "have read"
+     ],
+     "olds": [
+      "have readed"
+     ],
+     "cn": [
+      "一直在读（现在完成时）"
+     ]
+    }
+   ],
+   "help": "还是老办法：先给每个空找时间词。long ago 管第一个空，since then 管第二个空。",
+   "explain": "Sima Qian wrote Shiji long ago, and people have read it since then. read 的过去分词还是 read（拼写不变，读音变）。",
+   "common_errors": [
+    {
+     "when": "第一个空写了完成时",
+     "say": "long ago 是明确的过去，完成时不能进，用 wrote。"
+    },
+    {
+     "when": "第二个空写了 have readed",
+     "say": "read 是不规则动词，过去分词还是 read，不加 ed。"
+    }
+   ],
+   "phase": "validate",
+   "step": 36
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 信号：持续一百多年",
+   "scene": "这座老桥已经立了一百多年了。",
+   "stem": "The old bridge has stood here ___ more than 100 years.",
+   "task": "只写 since 或 for。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "cn": [
+      "持续（时间段）"
+     ]
+    }
+   ],
+   "help": "先看空后面：more than 100 years 是时间点还是时间段？",
+   "explain": "for + 时间段（more than 100 years），表示持续了多久。",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "since 后面跟时间点（如 1920 年）；100 years 是一段时间，要用 for。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说从哪开始，不能表示持续了多久，这里用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 加时间段不表示“持续到现在”，这里用 for。"
+    }
+   ]
+  },
+  {
+   "step": 38,
    "phase": "validate",
    "kind": "mcq",
    "title": "在竹子上写过吗",
@@ -613,7 +1002,69 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 28,
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 被动也有时态",
+   "scene": "长城是两千多年前修建的。",
+   "stem": "The Great Wall ______ more than 2,000 years ago.",
+   "options": [
+    "is built",
+    "has built",
+    "was built",
+    "builds"
+   ],
+   "answer": "C",
+   "help": "先想：长城是被人修的，还是自己长出来的？再看 ago 是什么信号。",
+   "explain": "The Great Wall was built more than 2,000 years ago.",
+   "wrong_feedback": {
+    "A": "is built 是现在的被动；ago 表示两千多年前，事情在过去，要用 was built。",
+    "B": "has built 是主动语态，长城不会自己建自己；长城是被人修建的，要用被动 was built。",
+    "D": "builds 是主动现在时，也不对：长城是被人修建的，而且是过去的事，用 was built。"
+   }
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 钥匙还没找到",
+   "scene": "他找钥匙找了一上午，到现在还没找到。",
+   "stem": "He ___ his key yet. (not find)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "hasn't found",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hasn't found",
+      "has not found"
+     ],
+     "olds": [
+      "didn't find",
+      "haven't found",
+      "hasn't find"
+     ],
+     "cn": [
+      "还没找到（现在完成时否定）"
+     ]
+    }
+   ],
+   "help": "句尾有 yet，而且结果连着现在（现在还没钥匙）。主语是 he，否定要怎么拼？",
+   "explain": "He hasn't found his key yet. 现在完成时的否定：hasn't + 过去分词。",
+   "common_errors": [
+    {
+     "when": "写了 didn't find",
+     "say": "didn't find 只说过去没找到；这里强调“到现在还没有”，而且有 yet，用 hasn't found。"
+    },
+    {
+     "when": "写了 haven't found",
+     "say": "主语是 he，用 hasn't，不是 haven't。"
+    }
+   ],
+   "phase": "validate",
+   "step": 40
+  },
+  {
+   "step": 41,
    "phase": "validate",
    "kind": "short",
    "title": "昨晚读故事",
@@ -660,400 +1111,7 @@
    "reading": "Cai Lun was a Chinese man. He made paper long ago. Before that, people wrote on bamboo. People have used paper for about two thousand years. We still use paper every day."
   },
   {
-   "step": 29,
-   "phase": "validate",
-   "kind": "teach",
-   "title": "挑战前：先找信号",
-   "teach_html": "<p>最后一关：<strong>挑战段</strong>。做题先别急着选动词，先找<strong>信号词</strong>：</p><p>看到 <strong>yesterday、last year、in 2019、ago</strong> 这类明确的过去时间 → 用<strong>过去时</strong>（完成时不能和明确的过去时间连用）。</p><p>看到 <strong>since、for、ever</strong>，或一件事从过去一直到现在 → 用<strong>完成时</strong>。</p><p>还有几道混了以前学的被动语态和比较级，慢慢来。</p>"
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 信号：上周日",
-   "scene": "问答：上周日看的电影。",
-   "stem": "— When did you see the film? — I ___ it last Sunday.",
-   "options": [
-    "saw",
-    "have seen",
-    "see",
-    "seen"
-   ],
-   "answer": "A",
-   "help": "先找信号词：last Sunday 告诉你什么？",
-   "explain": "last Sunday 是明确的过去时间，用过去时 saw；完成时不能跟明确的过去时间连用。",
-   "wrong_feedback": {
-    "B": "have seen 是完成时。last Sunday 是明确的过去时间，完成时不能和它连用，要用 saw。",
-    "C": "see 是原形，问的是过去看的电影，要用过去式 saw。",
-    "D": "seen 是过去分词，必须跟 has/have 连用；这里用 saw。"
-   }
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 信号：很久以前",
-   "scene": "古代人很久以前修了这堵墙。",
-   "stem": "Ancient people ___ (build) this wall long ago.",
-   "task": "写过去式。",
-   "answer_text": "built",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "built"
-     ],
-     "cn": [
-      "建造（过去式）"
-     ],
-     "olds": [
-      "has built",
-      "build"
-     ]
-    }
-   ],
-   "help": "先找信号：long ago 表示事情发生在什么时候、结束没有？",
-   "explain": "Ancient people built this wall long ago.",
-   "common_errors": [
-    {
-     "when": "写了 has built",
-     "say": "long ago 是明确的过去时间，要用过去时 built，完成时不能和明确过去时间连用。"
-    },
-    {
-     "when": "写了 builded",
-     "say": "build 是不规则动词，过去式是 built，不能加 ed。"
-    },
-    {
-     "when": "写了 builds",
-     "say": "builds 是现在时三单；long ago 的事要用过去式 built。"
-    },
-    {
-     "when": "写了 build",
-     "say": "build 是原形，过去的事要用 built。"
-    }
-   ]
-  },
-  {
-   "step": 32,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 信号：since 从句",
-   "scene": "爸爸从二十岁起就在这家工厂工作。",
-   "stem": "My father has worked in this factory ___ he was twenty.",
-   "options": [
-    "for",
-    "from",
-    "at",
-    "since"
-   ],
-   "answer": "D",
-   "help": "先看空后面跟的是一个时间点、一段时间，还是一个句子？",
-   "explain": "since 后面可以跟一个表示过去时间的句子（he was twenty），表示“自从那时起”。",
-   "wrong_feedback": {
-    "A": "for 后面跟一段时间（如 for ten years），不能跟一个句子，这里用 since。",
-    "B": "from 只说起点，不能跟句子表示持续到现在，这里用 since。",
-    "C": "at 跟时间点（如 at seven），不能跟句子，这里用 since。"
-   }
-  },
-  {
-   "step": 33,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 信号：持续一百多年",
-   "scene": "这座老桥已经立了一百多年了。",
-   "stem": "The old bridge has stood here ___ more than 100 years.",
-   "task": "只写 since 或 for。",
-   "answer_text": "for",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "for",
-      "For"
-     ],
-     "cn": [
-      "持续（时间段）"
-     ]
-    }
-   ],
-   "help": "先看空后面：more than 100 years 是时间点还是时间段？",
-   "explain": "for + 时间段（more than 100 years），表示持续了多久。",
-   "common_errors": [
-    {
-     "when": "写了 since",
-     "say": "since 后面跟时间点（如 1920 年）；100 years 是一段时间，要用 for。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只说从哪开始，不能表示持续了多久，这里用 for。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 加时间段不表示“持续到现在”，这里用 for。"
-    }
-   ]
-  },
-  {
-   "step": 34,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 古今双空（上）",
-   "scene": "同一个发明，两句话。先看第一句讲什么时候。",
-   "stem": "Bi Sheng ___ (invent) printing in the Song dynasty.",
-   "task": "写动词的正确形式。",
-   "answer_text": "invented",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "invented"
-     ],
-     "cn": [
-      "发明（过去式）"
-     ],
-     "olds": [
-      "has invented",
-      "invent",
-      "invents"
-     ]
-    }
-   ],
-   "help": "先找信号：in the Song dynasty 是哪个时间？",
-   "explain": "Bi Sheng invented printing in the Song dynasty.",
-   "common_errors": [
-    {
-     "when": "写了 has invented",
-     "say": "in the Song dynasty 是明确的过去时间（宋朝），完成时不能和明确过去时间连用，用过去时 invented。"
-    },
-    {
-     "when": "写了 invents",
-     "say": "invents 是现在时三单；宋朝的事要用过去式 invented。"
-    },
-    {
-     "when": "写了 invent",
-     "say": "invent 是原形，过去的事要用 invented。"
-    }
-   ],
-   "reading": "Bi Sheng invented printing in the Song dynasty. People have used printing for about 1,000 years."
-  },
-  {
-   "step": 35,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 古今双空（下）",
-   "scene": "还是印刷术，这句讲从那时到现在。",
-   "stem": "People ___ (use) printing for about 1,000 years.",
-   "task": "写两个词（have + 过去分词）。",
-   "answer_text": "have used",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "have used"
-     ],
-     "cn": [
-      "一直使用（完成时）"
-     ]
-    }
-   ],
-   "help": "先找信号：for about 1,000 years 表示持续了多久？",
-   "explain": "People have used printing for about 1,000 years.",
-   "common_errors": [
-    {
-     "when": "写了 used",
-     "say": "只写 used 是过去时。for 1,000 years 表示一直用到现在，要用完成时 have used。"
-    },
-    {
-     "when": "写了 has used",
-     "say": "主语 People 是复数，助动词用 have，不用 has。"
-    },
-    {
-     "when": "写了 use",
-     "say": "use 是原形；表示持续到现在要用 have used。"
-    }
-   ],
-   "reading": "Bi Sheng invented printing in the Song dynasty. People have used printing for about 1,000 years."
-  },
-  {
-   "step": 36,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 古今双空（续·上）",
-   "scene": "一个人先住村里、后来搬进城里。先看第一句。",
-   "stem": "He ___ (live) in the village in 2010.",
-   "task": "写动词的正确形式。",
-   "answer_text": "lived",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "lived"
-     ],
-     "cn": [
-      "住（过去式）"
-     ],
-     "olds": [
-      "has lived",
-      "live",
-      "lives"
-     ]
-    }
-   ],
-   "help": "先找信号：in 2010 是什么时间？他现在还住村里吗？",
-   "explain": "He lived in the village in 2010.",
-   "common_errors": [
-    {
-     "when": "写了 has lived",
-     "say": "in 2010 是明确的过去时间，而且他现在不住村里了，用过去时 lived。"
-    },
-    {
-     "when": "写了 lives",
-     "say": "lives 是现在时；in 2010 的事要用过去式 lived。"
-    },
-    {
-     "when": "写了 live",
-     "say": "live 是原形，过去的事要用 lived。"
-    }
-   ],
-   "reading": "He lived in the village in 2010. He has lived in the city since 2015."
-  },
-  {
-   "step": 37,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 古今双空（续·下）",
-   "scene": "同一个人，第二句讲 2015 年到现在。",
-   "stem": "He ___ (live) in the city since 2015.",
-   "task": "写两个词（has + 过去分词）。",
-   "answer_text": "has lived",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "has lived"
-     ],
-     "cn": [
-      "一直住（完成时）"
-     ]
-    }
-   ],
-   "help": "先找信号：since 2015 出现时，动词用哪种时态？主语是 He，助动词用哪个？",
-   "explain": "He has lived in the city since 2015.",
-   "common_errors": [
-    {
-     "when": "写了 lived",
-     "say": "只写 lived 是过去时。since 2015 表示一直住到现在，要用完成时 has lived。"
-    },
-    {
-     "when": "写了 have lived",
-     "say": "主语是 He（第三人称单数），助动词用 has，不用 have。"
-    },
-    {
-     "when": "写了 lives",
-     "say": "lives 是现在时，不能和 since 2015 连用表示持续到现在，要用 has lived。"
-    }
-   ],
-   "reading": "He lived in the village in 2010. He has lived in the city since 2015."
-  },
-  {
-   "step": 38,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · Has 吗",
-   "scene": "问姐姐试过剪纸没有。",
-   "stem": "______ your sister ever tried paper cutting?",
-   "options": [
-    "Have",
-    "Has",
-    "Did",
-    "Does"
-   ],
-   "answer": "B",
-   "help": "先数主语：your sister 是一个还是多个？再看 tried 是什么形式。",
-   "explain": "Has your sister ever tried paper cutting?",
-   "wrong_feedback": {
-    "A": "your sister 是第三人称单数，完成时疑问句要用 Has，不用 Have。",
-    "C": "Did 后面要跟动词原形 try，跟不了过去分词 tried；问经历用 Has。",
-    "D": "Does 后面跟原形 try；这里有 tried 和 ever，表示经历，要用 Has。"
-   }
-  },
-  {
-   "step": 39,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 写出过去分词：write",
-   "scene": "把 write 变成过去分词。",
-   "stem": "写出 write 的过去分词。",
-   "task": "只写一个英文单词。",
-   "answer_text": "written",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "written"
-     ],
-     "cn": [
-      "写（过去分词）"
-     ],
-     "olds": [
-      "wrote",
-      "writed",
-      "write"
-     ]
-    }
-   ],
-   "help": "想一想 write 的三种形式：write、wrote、第三个是？",
-   "explain": "write → wrote（过去式）→ written（过去分词）。",
-   "common_errors": [
-    {
-     "when": "写了 wrote",
-     "say": "wrote 是过去式（yesterday I wrote），过去分词是 written（I have written）。"
-    },
-    {
-     "when": "写了 writed",
-     "say": "write 是不规则动词，不能加 ed：wrote / written。"
-    },
-    {
-     "when": "写了 writing",
-     "say": "writing 是现在分词，过去分词是 written。"
-    },
-    {
-     "when": "写了 write",
-     "say": "write 是原形，过去分词是 written。"
-    }
-   ]
-  },
-  {
-   "step": 40,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 被动也有时态",
-   "scene": "长城是两千多年前修建的。",
-   "stem": "The Great Wall ______ more than 2,000 years ago.",
-   "options": [
-    "is built",
-    "has built",
-    "was built",
-    "builds"
-   ],
-   "answer": "C",
-   "help": "先想：长城是被人修的，还是自己长出来的？再看 ago 是什么信号。",
-   "explain": "The Great Wall was built more than 2,000 years ago.",
-   "wrong_feedback": {
-    "A": "is built 是现在的被动；ago 表示两千多年前，事情在过去，要用 was built。",
-    "B": "has built 是主动语态，长城不会自己建自己；长城是被人修建的，要用被动 was built。",
-    "D": "builds 是主动现在时，也不对：长城是被人修建的，而且是过去的事，用 was built。"
-   }
-  },
-  {
-   "step": 41,
+   "step": 42,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 现在的被动",
@@ -1098,29 +1156,180 @@
    ]
   },
   {
-   "step": 42,
+   "step": 43,
    "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 比较级别漏 than",
-   "scene": "两个故事比一比哪个更有意思。",
-   "stem": "This story is ______ than that one.",
-   "options": [
-    "more interesting",
-    "interesting",
-    "most interesting",
-    "the most interesting"
-   ],
-   "answer": "A",
-   "help": "先找信号：句中有 than，比较的是几个？",
-   "explain": "This story is more interesting than that one.",
-   "wrong_feedback": {
-    "B": "interesting 是原级，没有比较的意思；有 than 就要用比较级 more interesting。",
-    "C": "most interesting 是最高级的一部分，要跟 the 连用、不能跟 than；这里两者比较，用比较级。",
-    "D": "the most interesting 是最高级，跟 than 连用不对；有 than 用比较级 more interesting。"
-   }
+   "kind": "teach",
+   "title": "挑战前：先找信号",
+   "teach_html": "<p>最后一关：<strong>挑战段</strong>。做题先别急着选动词，先找<strong>信号词</strong>：</p><p>看到 <strong>yesterday、last year、in 2019、ago</strong> 这类明确的过去时间 → 用<strong>过去时</strong>（完成时不能和明确的过去时间连用）。</p><p>看到 <strong>since、for、ever</strong>，或一件事从过去一直到现在 → 用<strong>完成时</strong>。</p><p>还有几道混了以前学的被动语态和比较级，慢慢来。</p>"
   },
   {
-   "step": 43,
+   "step": 44,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 古今双空（上）",
+   "scene": "同一个发明，两句话。先看第一句讲什么时候。",
+   "stem": "Bi Sheng ___ (invent) printing in the Song dynasty.",
+   "task": "写动词的正确形式。",
+   "answer_text": "invented",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "invented"
+     ],
+     "cn": [
+      "发明（过去式）"
+     ],
+     "olds": [
+      "has invented",
+      "invent",
+      "invents"
+     ]
+    }
+   ],
+   "help": "先找信号：in the Song dynasty 是哪个时间？",
+   "explain": "Bi Sheng invented printing in the Song dynasty.",
+   "common_errors": [
+    {
+     "when": "写了 has invented",
+     "say": "in the Song dynasty 是明确的过去时间（宋朝），完成时不能和明确过去时间连用，用过去时 invented。"
+    },
+    {
+     "when": "写了 invents",
+     "say": "invents 是现在时三单；宋朝的事要用过去式 invented。"
+    },
+    {
+     "when": "写了 invent",
+     "say": "invent 是原形，过去的事要用 invented。"
+    }
+   ],
+   "reading": "Bi Sheng invented printing in the Song dynasty. People have used printing for about 1,000 years."
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 古今双空（下）",
+   "scene": "还是印刷术，这句讲从那时到现在。",
+   "stem": "People ___ (use) printing for about 1,000 years.",
+   "task": "写两个词（have + 过去分词）。",
+   "answer_text": "have used",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have used"
+     ],
+     "cn": [
+      "一直使用（完成时）"
+     ]
+    }
+   ],
+   "help": "先找信号：for about 1,000 years 表示持续了多久？",
+   "explain": "People have used printing for about 1,000 years.",
+   "common_errors": [
+    {
+     "when": "写了 used",
+     "say": "只写 used 是过去时。for 1,000 years 表示一直用到现在，要用完成时 have used。"
+    },
+    {
+     "when": "写了 has used",
+     "say": "主语 People 是复数，助动词用 have，不用 has。"
+    },
+    {
+     "when": "写了 use",
+     "say": "use 是原形；表示持续到现在要用 have used。"
+    }
+   ],
+   "reading": "Bi Sheng invented printing in the Song dynasty. People have used printing for about 1,000 years."
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 古今双空（续·上）",
+   "scene": "一个人先住村里、后来搬进城里。先看第一句。",
+   "stem": "He ___ (live) in the village in 2010.",
+   "task": "写动词的正确形式。",
+   "answer_text": "lived",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "lived"
+     ],
+     "cn": [
+      "住（过去式）"
+     ],
+     "olds": [
+      "has lived",
+      "live",
+      "lives"
+     ]
+    }
+   ],
+   "help": "先找信号：in 2010 是什么时间？他现在还住村里吗？",
+   "explain": "He lived in the village in 2010.",
+   "common_errors": [
+    {
+     "when": "写了 has lived",
+     "say": "in 2010 是明确的过去时间，而且他现在不住村里了，用过去时 lived。"
+    },
+    {
+     "when": "写了 lives",
+     "say": "lives 是现在时；in 2010 的事要用过去式 lived。"
+    },
+    {
+     "when": "写了 live",
+     "say": "live 是原形，过去的事要用 lived。"
+    }
+   ],
+   "reading": "He lived in the village in 2010. He has lived in the city since 2015."
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 古今双空（续·下）",
+   "scene": "同一个人，第二句讲 2015 年到现在。",
+   "stem": "He ___ (live) in the city since 2015.",
+   "task": "写两个词（has + 过去分词）。",
+   "answer_text": "has lived",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has lived"
+     ],
+     "cn": [
+      "一直住（完成时）"
+     ]
+    }
+   ],
+   "help": "先找信号：since 2015 出现时，动词用哪种时态？主语是 He，助动词用哪个？",
+   "explain": "He has lived in the city since 2015.",
+   "common_errors": [
+    {
+     "when": "写了 lived",
+     "say": "只写 lived 是过去时。since 2015 表示一直住到现在，要用完成时 has lived。"
+    },
+    {
+     "when": "写了 have lived",
+     "say": "主语是 He（第三人称单数），助动词用 has，不用 have。"
+    },
+    {
+     "when": "写了 lives",
+     "say": "lives 是现在时，不能和 since 2015 连用表示持续到现在，要用 has lived。"
+    }
+   ],
+   "reading": "He lived in the village in 2010. He has lived in the city since 2015."
+  },
+  {
+   "step": 48,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 最高级",
@@ -1165,7 +1374,7 @@
    ]
   },
   {
-   "step": 44,
+   "step": 49,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r3-ending",
@@ -1175,5 +1384,5 @@
  ],
  "title": "古今对比：完成时 vs 过去时",
  "unit": "Unit 6 Ancient stories",
- "version": 2
+ "version": 3
 }
