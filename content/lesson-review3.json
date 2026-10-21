@@ -1,550 +1,922 @@
 {
-  "lesson_id": "review3",
-  "version": 1,
-  "title": "加练：最高级专项复习",
-  "home_subtitle": "加练3 · 最高级专项",
-  "part1_desc": "不规则变形：good-better-the best，bad-worse-the worst",
-  "part2_desc": "规则变化拼写：6个最高级手写",
-  "practice_end": 8,
-  "note": "2026-10-12 晨间专项复习，依据10-11学习数据（131题/72%）定制",
-  "steps": [
+ "lesson_id": "review3",
+ "version": 2,
+ "title": "加练：最高级专项复习",
+ "home_subtitle": "加练3 · 最高级专项",
+ "part1_desc": "不规则变形：good-better-the best，bad-worse-the worst",
+ "part2_desc": "规则变化拼写：6个最高级手写；第 17–24 步是挑战段：没有提示，比较级/最高级高阶题，还混了被动语态和现在完成时回锅题",
+ "practice_end": 8,
+ "note": "2026-10-12 晨间专项复习，依据10-11学习数据（131题/72%）定制",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "review3-q01",
+   "title": "认出 the best",
+   "scene": "good 的最高级是哪个？",
+   "stem": "Which is the superlative of \"good\"?",
+   "options": [
+    "better",
+    "the best",
+    "best",
+    "gooder"
+   ],
+   "answer": "B",
+   "help": "最高级是三个里面挑第一名，不规则变化要死记。",
+   "help_line": "good → better → the best",
+   "explain": "the best（最好的）。good 的变化不规则：good-better-the best。",
+   "wrong_feedback": {
+    "A": "better 是比较级（两个人比才用）；题目问的是最高级，要 the best。",
+    "C": "只差一个 the：最高级前面一般要加 the，完整说法是 the best。",
+    "D": "gooder 不存在。good 的变化不规则，要死记：good-better-the best。"
+   }
+  },
+  {
+   "step": 2,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "review3-q02",
+   "title": "认出 the worst",
+   "scene": "bad 的最高级是哪个？",
+   "stem": "Which is the superlative of \"bad\"?",
+   "options": [
+    "badder",
+    "worse",
+    "worst",
+    "the worst"
+   ],
+   "answer": "D",
+   "help": "和 good 一样，bad 的变化也是不规则的，死记。",
+   "help_line": "bad → worse → the worst",
+   "explain": "the worst（最坏的）。bad 的变化不规则：bad-worse-the worst。",
+   "wrong_feedback": {
+    "A": "badder 不存在。bad 的变化不规则，要死记：bad-worse-the worst。",
+    "B": "worse 是比较级（更坏）；题目问的是最高级（最坏的），要用 the worst。",
+    "C": "只差一个 the：最高级前面一般要加 the，完整说法是 the worst。"
+   }
+  },
+  {
+   "step": 3,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q03",
+   "title": "写出比较级：good",
+   "scene": "写出 good 的比较级。",
+   "stem": "写出 good 的比较级形式。",
+   "task": "写英文。",
+   "answer_text": "better",
+   "expects": [
     {
-      "step": 1,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "review3-q01",
-      "title": "认出 the best",
-      "scene": "good 的最高级是哪个？",
-      "stem": "Which is the superlative of \"good\"?",
-      "options": [
-        "better",
-        "the best",
-        "best",
-        "gooder"
-      ],
-      "answer": "B",
-      "help": "最高级是三个里面挑第一名，不规则变化要死记。",
-      "help_line": "good → better → the best",
-      "explain": "the best（最好的）。good 的变化不规则：good-better-the best。",
-      "wrong_feedback": {
-        "A": "better 是比较级（更好），题目要的是最高级（最好的）。",
-        "C": "best 前面少了 the。最高级前面一般加 the。",
-        "D": "gooder 不存在，good 的变化不规则。"
-      }
-    },
-    {
-      "step": 2,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "review3-q02",
-      "title": "认出 the worst",
-      "scene": "bad 的最高级是哪个？",
-      "stem": "Which is the superlative of \"bad\"?",
-      "options": [
-        "badder",
-        "worse",
-        "worst",
-        "the worst"
-      ],
-      "answer": "D",
-      "help": "和 good 一样，bad 的变化也是不规则的，死记。",
-      "help_line": "bad → worse → the worst",
-      "explain": "the worst（最坏的）。bad 的变化不规则：bad-worse-the worst。",
-      "wrong_feedback": {
-        "A": "badder 不存在，bad 的变化不规则。",
-        "B": "worse 是比较级（更坏），题目要的是最高级（最坏的）。",
-        "C": "worst 前面少了 the。最高级前面一般加 the。"
-      }
-    },
-    {
-      "step": 3,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q03",
-      "title": "写出比较级：good",
-      "scene": "写出 good 的比较级。",
-      "stem": "写出 good 的比较级形式。",
-      "task": "写英文。",
-      "answer_text": "better",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "better"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "比较级是两者比，不规则变化死记：good-better。",
-      "help_line": "good → better → the best",
-      "explain": "better。口诀：good-better-best。",
-      "common_errors": [
-        {
-          "when": "写了 best",
-          "say": "best 是最高级，题目要的是比较级 better。"
-        },
-        {
-          "when": "写了 gooder",
-          "say": "gooder 不存在，good 的变化不规则，是 better。"
-        }
-      ]
-    },
-    {
-      "step": 4,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q04",
-      "title": "写出最高级：good",
-      "scene": "写出 good 的最高级（含 the）。",
-      "stem": "写出 good 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the best",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the best",
-            "best"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "最高级前面一般加 the，不规则变化死记。",
-      "help_line": "good → better → the best",
-      "explain": "the best。口诀：good-better-best。",
-      "common_errors": [
-        {
-          "when": "写了 better",
-          "say": "better 是比较级，题目要的是最高级 the best。"
-        },
-        {
-          "when": "漏了 the",
-          "say": "最高级前面一般加 the，是 the best。"
-        }
-      ]
-    },
-    {
-      "step": 5,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q05",
-      "title": "写出比较级：bad",
-      "scene": "写出 bad 的比较级。",
-      "stem": "写出 bad 的比较级形式。",
-      "task": "写英文。",
-      "answer_text": "worse",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "worse"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "不规则变化死记：bad-worse。",
-      "help_line": "bad → worse → the worst",
-      "explain": "worse。口诀：bad-worse-worst。",
-      "common_errors": [
-        {
-          "when": "写了 worst",
-          "say": "worst 是最高级，题目要的是比较级 worse。"
-        },
-        {
-          "when": "写了 badder",
-          "say": "badder 不存在，bad 的变化不规则，是 worse。"
-        }
-      ]
-    },
-    {
-      "step": 6,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q06",
-      "title": "写出最高级：bad",
-      "scene": "写出 bad 的最高级（含 the）。",
-      "stem": "写出 bad 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the worst",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the worst",
-            "worst"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "最高级前面一般加 the，不规则变化死记。",
-      "help_line": "bad → worse → the worst",
-      "explain": "the worst。口诀：bad-worse-worst。",
-      "common_errors": [
-        {
-          "when": "写了 worse",
-          "say": "worse 是比较级，题目要的是最高级 the worst。"
-        },
-        {
-          "when": "漏了 the",
-          "say": "最高级前面一般加 the，是 the worst。"
-        }
-      ]
-    },
-    {
-      "step": 7,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q07",
-      "title": "写出最高级：cheap",
-      "scene": "写出 cheap 的最高级（含 the）。",
-      "stem": "写出 cheap 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the cheapest",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the cheapest",
-            "cheapest"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "短单词加 est，前面加 the。",
-      "help_line": "cheap → the cheapest",
-      "explain": "the cheapest（最便宜的）。",
-      "common_errors": [
-        {
-          "when": "写了 cheaper",
-          "say": "cheaper 是比较级，要最高级 the cheapest。"
-        },
-        {
-          "when": "漏了 the",
-          "say": "最高级前面一般加 the。"
-        }
-      ]
-    },
-    {
-      "step": 8,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q08",
-      "title": "写出最高级：fast",
-      "scene": "写出 fast 的最高级（含 the）。",
-      "stem": "写出 fast 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the fastest",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the fastest",
-            "fastest"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "短单词加 est，前面加 the。",
-      "help_line": "fast → the fastest",
-      "explain": "the fastest（最快的）。",
-      "common_errors": [
-        {
-          "when": "写了 faster",
-          "say": "faster 是比较级，要最高级 the fastest。"
-        },
-        {
-          "when": "漏了 the",
-          "say": "最高级前面一般加 the。"
-        }
-      ]
-    },
-    {
-      "step": 9,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q09",
-      "title": "写出最高级：big",
-      "scene": "写出 big 的最高级（含 the）。",
-      "stem": "写出 big 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the biggest",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the biggest",
-            "biggest"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "big 结尾是短元音+单个辅音，要双写 g 再加 est。",
-      "help_line": "big → the biggest（双写 g）",
-      "explain": "the biggest（最大的）。big 双写 g 再加 est。",
-      "common_errors": [
-        {
-          "when": "写了 bigest",
-          "say": "少了一个 g，big 要双写 g：the biggest。"
-        },
-        {
-          "when": "写了 bigger",
-          "say": "bigger 是比较级，要最高级 the biggest。"
-        }
-      ]
-    },
-    {
-      "step": 10,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q10",
-      "title": "写出最高级：heavy",
-      "scene": "写出 heavy 的最高级（含 the）。",
-      "stem": "写出 heavy 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the heaviest",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the heaviest",
-            "heaviest"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "heavy 结尾是辅音+y，把 y 变成 i 再加 est。",
-      "help_line": "heavy → the heaviest（y 变 i）",
-      "explain": "the heaviest（最重的）。y 变成 i 再加 est。",
-      "common_errors": [
-        {
-          "when": "写了 heavyest",
-          "say": "y 要变成 i，不能直接加 est：the heaviest。"
-        },
-        {
-          "when": "写了 heavier",
-          "say": "heavier 是比较级，要最高级 the heaviest。"
-        }
-      ]
-    },
-    {
-      "step": 11,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q11",
-      "title": "写出最高级：interesting",
-      "scene": "写出 interesting 的最高级（含 the）。",
-      "stem": "写出 interesting 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the most interesting",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the most interesting",
-            "most interesting"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "长单词用 most，不加 est。",
-      "help_line": "interesting → the most interesting",
-      "explain": "the most interesting（最有趣的）。长单词前面加 the most。",
-      "common_errors": [
-        {
-          "when": "写了 interestingest",
-          "say": "长单词不加 est，用 the most：the most interesting。"
-        },
-        {
-          "when": "写了 the more interesting",
-          "say": "more 是比较级，最高级用 most。"
-        }
-      ]
-    },
-    {
-      "step": 12,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q12",
-      "title": "写出最高级：expensive",
-      "scene": "写出 expensive 的最高级（含 the）。",
-      "stem": "写出 expensive 的最高级形式（含 the）。",
-      "task": "写英文。",
-      "answer_text": "the most expensive",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "the most expensive",
-            "most expensive"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "长单词用 most，不加 est。",
-      "help_line": "expensive → the most expensive",
-      "explain": "the most expensive（最贵的）。长单词前面加 the most。",
-      "common_errors": [
-        {
-          "when": "写了 expensivest",
-          "say": "长单词不加 est，用 the most：the most expensive。"
-        },
-        {
-          "when": "漏了 the",
-          "say": "最高级前面一般加 the。"
-        }
-      ]
-    },
-    {
-      "step": 13,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "review3-q13",
-      "title": "选词填空：最快",
-      "scene": "三台电脑比速度。",
-      "stem": "Computer Y is ___ of the three.",
-      "options": [
-        "the fastest",
-        "faster",
-        "fastest",
-        "more fast"
-      ],
-      "answer": "A",
-      "help": "三台里面挑第一，要最高级；fast 是短单词。",
-      "help_line": "fast → the fastest",
-      "explain": "the fastest。三台里最快，用最高级。",
-      "wrong_feedback": {
-        "B": "faster 是比较级（更快），这里是三台里挑第一，要最高级。",
-        "C": "fastest 前面少了 the。最高级前面一般加 the。",
-        "D": "more fast 不对，fast 是短单词，直接加 est。"
-      }
-    },
-    {
-      "step": 14,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "review3-q14",
-      "title": "选词填空：最便宜",
-      "scene": "商店里比价格。",
-      "stem": "It is ___ in the shop.",
-      "options": [
-        "cheaper",
-        "more cheap",
-        "the cheapest",
-        "cheapest"
-      ],
-      "answer": "C",
-      "help": "商店里挑最便宜的，要最高级；cheap 是短单词。",
-      "help_line": "cheap → the cheapest",
-      "explain": "the cheapest。店里最便宜的，用最高级。",
-      "wrong_feedback": {
-        "A": "cheaper 是比较级（更便宜），这里要最高级。",
-        "B": "more cheap 不对，cheap 是短单词，直接加 est。",
-        "D": "cheapest 前面少了 the。最高级前面一般加 the。"
-      }
-    },
-    {
-      "step": 15,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q15",
-      "title": "连词成句",
-      "scene": "把词连成一句完整的话。",
-      "stem": "把下面几个词连成一句完整的话：Y / is / the best / computer",
-      "task": "写英文。",
-      "answer_text": "Y is the best computer.",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "y is the best computer.",
-            "y is the best computer"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "the best 前面已经有 the，直接按顺序连起来。",
-      "help_line": "Y is the best computer.",
-      "explain": "Y is the best computer.（Y 是最好的电脑。）",
-      "common_errors": [
-        {
-          "when": "the best 位置放错",
-          "say": "the best 是表语，放在 is 后面：Y is the best computer。"
-        },
-        {
-          "when": "漏了 the",
-          "say": "best 前面要加 the：the best。"
-        }
-      ]
-    },
-    {
-      "step": 16,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "review3-q16",
-      "title": "整句写作",
-      "scene": "用 the cheapest 写一句话。",
-      "stem": "用 the cheapest 写一句英文：Z 电脑是三台里最便宜的。",
-      "task": "写英文。",
-      "answer_text": "Computer Z is the cheapest of the three.",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "computer z is the cheapest of the three.",
-            "computer z is the cheapest of the three"
-          ],
-          "cn": [
-            ""
-          ]
-        }
-      ],
-      "help": "主语 + is + the cheapest + of the three（三台里）。",
-      "help_line": "Computer Z is the cheapest of the three.",
-      "explain": "Computer Z is the cheapest of the three.（Z 电脑是三台里最便宜的。）",
-      "common_errors": [
-        {
-          "when": "写了 cheaper",
-          "say": "cheaper 是比较级，这里要最高级 the cheapest。"
-        },
-        {
-          "when": "漏了 of the three",
-          "say": "三台里要说 of the three，意思才完整。"
-        }
-      ]
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "cn": [
+      ""
+     ]
     }
-  ]
+   ],
+   "help": "比较级是两者比，不规则变化死记：good-better。",
+   "help_line": "good → better → the best",
+   "explain": "better。口诀：good-better-best。",
+   "common_errors": [
+    {
+     "when": "写了 best",
+     "say": "best 是最高级（三个里挑第一）；这里只要比较级，用 better。"
+    },
+    {
+     "when": "写了 gooder",
+     "say": "gooder 不存在。good 不规则，直接记：good-better-the best。"
+    },
+    {
+     "when": "写了 more good",
+     "say": "不规则的词不用 more。good 的比较级就是 better 一个词。"
+    },
+    {
+     "when": "写成 beter",
+     "say": "拼写少了一个 t：better 是双 t，别漏。"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q04",
+   "title": "写出最高级：good",
+   "scene": "写出 good 的最高级（含 the）。",
+   "stem": "写出 good 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the best",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the best",
+      "best"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "最高级前面一般加 the，不规则变化死记。",
+   "help_line": "good → better → the best",
+   "explain": "the best。口诀：good-better-best。",
+   "common_errors": [
+    {
+     "when": "写了 better",
+     "say": "better 是比较级；题目要最高级，用 the best。"
+    },
+    {
+     "when": "只写了 best",
+     "say": "最高级前面一般加 the，完整说法是 the best。"
+    },
+    {
+     "when": "写了 most good",
+     "say": "most 只配长单词。good 不规则，最高级是 the best。"
+    },
+    {
+     "when": "写了 goodest",
+     "say": "goodest 不存在。good 不规则：good-better-the best。"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q05",
+   "title": "写出比较级：bad",
+   "scene": "写出 bad 的比较级。",
+   "stem": "写出 bad 的比较级形式。",
+   "task": "写英文。",
+   "answer_text": "worse",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "worse"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "不规则变化死记：bad-worse。",
+   "help_line": "bad → worse → the worst",
+   "explain": "worse。口诀：bad-worse-worst。",
+   "common_errors": [
+    {
+     "when": "写了 worst",
+     "say": "worst 是最高级；这里要比较级，用 worse。"
+    },
+    {
+     "when": "写了 badder",
+     "say": "badder 不存在。bad 不规则，直接记：bad-worse-the worst。"
+    },
+    {
+     "when": "写了 more bad",
+     "say": "不规则的词不用 more。bad 的比较级就是 worse。"
+    },
+    {
+     "when": "写成 wrose",
+     "say": "字母顺序错了：worse 是 w-o-r-s-e，慢慢写。"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q06",
+   "title": "写出最高级：bad",
+   "scene": "写出 bad 的最高级（含 the）。",
+   "stem": "写出 bad 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the worst",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the worst",
+      "worst"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "最高级前面一般加 the，不规则变化死记。",
+   "help_line": "bad → worse → the worst",
+   "explain": "the worst。口诀：bad-worse-worst。",
+   "common_errors": [
+    {
+     "when": "写了 worse",
+     "say": "worse 是比较级；题目要最高级，用 the worst。"
+    },
+    {
+     "when": "写了 the worse",
+     "say": "the 后面要跟最高级：the worst，不是 the worse。"
+    },
+    {
+     "when": "只写了 worst",
+     "say": "最高级前面一般加 the，完整说法是 the worst。"
+    },
+    {
+     "when": "写了 baddest",
+     "say": "baddest 不存在。bad 不规则：bad-worse-the worst。"
+    }
+   ]
+  },
+  {
+   "step": 7,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q07",
+   "title": "写出最高级：cheap",
+   "scene": "写出 cheap 的最高级（含 the）。",
+   "stem": "写出 cheap 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the cheapest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the cheapest",
+      "cheapest"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "短单词加 est，前面加 the。",
+   "help_line": "cheap → the cheapest",
+   "explain": "the cheapest（最便宜的）。",
+   "common_errors": [
+    {
+     "when": "写了 cheaper",
+     "say": "cheaper 是比较级；这里要最高级，用 the cheapest。"
+    },
+    {
+     "when": "写了 more cheap",
+     "say": "cheap 是短单词，不用 more，直接加 est。"
+    },
+    {
+     "when": "写了 the most cheap",
+     "say": "most 只配长单词。短单词最高级直接加 est：the cheapest。"
+    },
+    {
+     "when": "只写了 cheapest",
+     "say": "最高级前面一般加 the，完整说法是 the cheapest。"
+    }
+   ]
+  },
+  {
+   "step": 8,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q08",
+   "title": "写出最高级：fast",
+   "scene": "写出 fast 的最高级（含 the）。",
+   "stem": "写出 fast 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the fastest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the fastest",
+      "fastest"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "短单词加 est，前面加 the。",
+   "help_line": "fast → the fastest",
+   "explain": "the fastest（最快的）。",
+   "common_errors": [
+    {
+     "when": "写了 faster",
+     "say": "faster 是比较级；这里要最高级，用 the fastest。"
+    },
+    {
+     "when": "写了 more fast",
+     "say": "fast 是短单词，不用 more，直接加 est。"
+    },
+    {
+     "when": "写了 the most fast",
+     "say": "most 只配长单词。短单词最高级直接加 est：the fastest。"
+    },
+    {
+     "when": "只写了 fastest",
+     "say": "最高级前面一般加 the，完整说法是 the fastest。"
+    }
+   ]
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q09",
+   "title": "写出最高级：big",
+   "scene": "写出 big 的最高级（含 the）。",
+   "stem": "写出 big 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the biggest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the biggest",
+      "biggest"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "big 结尾是短元音+单个辅音，要双写 g 再加 est。",
+   "help_line": "big → the biggest（双写 g）",
+   "explain": "the biggest（最大的）。big 双写 g 再加 est。",
+   "common_errors": [
+    {
+     "when": "写了 bigest",
+     "say": "少了一个 g。big 是短元音+单个辅音结尾，要双写 g 再加 est：the biggest。"
+    },
+    {
+     "when": "写了 bigger",
+     "say": "bigger 是比较级；这里要最高级，用 the biggest。"
+    },
+    {
+     "when": "写了 most big",
+     "say": "big 是短单词，不用 most，直接双写 g 加 est。"
+    },
+    {
+     "when": "只写了 biggest",
+     "say": "最高级前面一般加 the，完整说法是 the biggest。"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q10",
+   "title": "写出最高级：heavy",
+   "scene": "写出 heavy 的最高级（含 the）。",
+   "stem": "写出 heavy 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the heaviest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the heaviest",
+      "heaviest"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "heavy 结尾是辅音+y，把 y 变成 i 再加 est。",
+   "help_line": "heavy → the heaviest（y 变 i）",
+   "explain": "the heaviest（最重的）。y 变成 i 再加 est。",
+   "common_errors": [
+    {
+     "when": "写了 heavyest",
+     "say": "y 没变。heavy 以辅音+y 结尾，要先把 y 变 i 再加 est：the heaviest。"
+    },
+    {
+     "when": "写了 heavier",
+     "say": "heavier 是比较级；这里要最高级，用 the heaviest。"
+    },
+    {
+     "when": "写了 heavyiest",
+     "say": "y 变 i 之后就不要再写 y 了：heaviest，不要多一个字母。"
+    },
+    {
+     "when": "只写了 heaviest",
+     "say": "最高级前面一般加 the，完整说法是 the heaviest。"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q11",
+   "title": "写出最高级：interesting",
+   "scene": "写出 interesting 的最高级（含 the）。",
+   "stem": "写出 interesting 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the most interesting",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the most interesting",
+      "most interesting"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "长单词用 most，不加 est。",
+   "help_line": "interesting → the most interesting",
+   "explain": "the most interesting（最有趣的）。长单词前面加 the most。",
+   "common_errors": [
+    {
+     "when": "写了 interestingest",
+     "say": "长单词不加 est。interesting 音节多，最高级用 the most：the most interesting。"
+    },
+    {
+     "when": "写了 the more interesting",
+     "say": "more 是比较级的词；最高级要用 most，不是 more。"
+    },
+    {
+     "when": "写了 interestinger",
+     "say": "长单词不用 er，也不能又 er 又 most，只选一种：the most interesting。"
+    },
+    {
+     "when": "只写了 most interesting",
+     "say": "最高级前面一般加 the，完整说法是 the most interesting。"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q12",
+   "title": "写出最高级：expensive",
+   "scene": "写出 expensive 的最高级（含 the）。",
+   "stem": "写出 expensive 的最高级形式（含 the）。",
+   "task": "写英文。",
+   "answer_text": "the most expensive",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the most expensive",
+      "most expensive"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "长单词用 most，不加 est。",
+   "help_line": "expensive → the most expensive",
+   "explain": "the most expensive（最贵的）。长单词前面加 the most。",
+   "common_errors": [
+    {
+     "when": "写了 expensivest",
+     "say": "长单词不加 est。expensive 音节多，最高级用 the most：the most expensive。"
+    },
+    {
+     "when": "写了 the more expensive",
+     "say": "more 是比较级的词；最高级要用 most，不是 more。"
+    },
+    {
+     "when": "写了 expensiver",
+     "say": "长单词不用 er。expensive 的最高级是 the most expensive。"
+    },
+    {
+     "when": "只写了 most expensive",
+     "say": "最高级前面一般加 the，完整说法是 the most expensive。"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "review3-q13",
+   "title": "选词填空：最快",
+   "scene": "三台电脑比速度。",
+   "stem": "Computer Y is ___ of the three.",
+   "options": [
+    "the fastest",
+    "faster",
+    "fastest",
+    "more fast"
+   ],
+   "answer": "A",
+   "help": "三台里面挑第一，要最高级；fast 是短单词。",
+   "help_line": "fast → the fastest",
+   "explain": "the fastest。三台里最快，用最高级。",
+   "wrong_feedback": {
+    "B": "faster 是比较级（更快），两个人比才用；这里有 of the three（三台里挑第一），要用最高级。",
+    "C": "fastest 方向对，但前面少了 the：最高级前面一般要加 the，是 the fastest。",
+    "D": "more fast 不对。fast 是短单词，比较级/最高级直接加 er/est，不用 more。"
+   }
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "review3-q14",
+   "title": "选词填空：最便宜",
+   "scene": "商店里比价格。",
+   "stem": "It is ___ in the shop.",
+   "options": [
+    "cheaper",
+    "more cheap",
+    "the cheapest",
+    "cheapest"
+   ],
+   "answer": "C",
+   "help": "商店里挑最便宜的，要最高级；cheap 是短单词。",
+   "help_line": "cheap → the cheapest",
+   "explain": "the cheapest。店里最便宜的，用最高级。",
+   "wrong_feedback": {
+    "A": "cheaper 是比较级（更便宜）；in the shop 是在一堆里挑最便宜的，要用最高级。",
+    "B": "more cheap 不对。cheap 是短单词，直接加 est，不用 more。",
+    "D": "cheapest 方向对，但前面少了 the：最高级前面一般要加 the，是 the cheapest。"
+   }
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q15",
+   "title": "连词成句",
+   "scene": "把词连成一句完整的话。",
+   "stem": "把下面几个词连成一句完整的话：Y / is / the best / computer",
+   "task": "写英文。",
+   "answer_text": "Y is the best computer.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "y is the best computer.",
+      "y is the best computer"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "the best 前面已经有 the，直接按顺序连起来。",
+   "help_line": "Y is the best computer.",
+   "explain": "Y is the best computer.（Y 是最好的电脑。）",
+   "common_errors": [
+    {
+     "when": "the best 位置放错",
+     "say": "the best 放在 is 后面、computer 前面：Y is the best computer，顺序不能乱。"
+    },
+    {
+     "when": "漏了 the",
+     "say": "best 前面要加 the：the best 是固定搭配的一整块。"
+    },
+    {
+     "when": "把 computer 放在句首",
+     "say": "主语是 Y，句子从 Y 开始：Y is the best computer。"
+    },
+    {
+     "when": "写了 better",
+     "say": "题目给的词是 the best（最高级），原样用，不要换成比较级 better。"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "review3-q16",
+   "title": "整句写作",
+   "scene": "用 the cheapest 写一句话。",
+   "stem": "用 the cheapest 写一句英文：Z 电脑是三台里最便宜的。",
+   "task": "写英文。",
+   "answer_text": "Computer Z is the cheapest of the three.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "computer z is the cheapest of the three.",
+      "computer z is the cheapest of the three"
+     ],
+     "cn": [
+      ""
+     ]
+    }
+   ],
+   "help": "主语 + is + the cheapest + of the three（三台里）。",
+   "help_line": "Computer Z is the cheapest of the three.",
+   "explain": "Computer Z is the cheapest of the three.（Z 电脑是三台里最便宜的。）",
+   "common_errors": [
+    {
+     "when": "写了 cheaper",
+     "say": "cheaper 是比较级；三台里最便宜要用最高级 the cheapest。"
+    },
+    {
+     "when": "漏了 of the three",
+     "say": "'三台里'要说 of the three，少了它范围就不清楚。"
+    },
+    {
+     "when": "写了 of three",
+     "say": "the 不能省：of the three，三个词一个都不能少。"
+    },
+    {
+     "when": "写了 Z computer 开头",
+     "say": "主语顺序是 Computer Z（先 computer 后 Z）：Computer Z is the cheapest of the three。"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 手机比价",
+   "scene": "新手机比旧手机贵。",
+   "stem": "My new phone is ______ than the old one. (expensive)",
+   "task": "只写空格处。",
+   "answer_text": "more expensive",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more expensive"
+     ],
+     "cn": [
+      "更贵的（比较级）"
+     ]
+    }
+   ],
+   "help": "先找 than 在不在；再看 expensive 是长词还是短词，长词变比较级前面要加什么？",
+   "explain": "My new phone is more expensive than the old one.",
+   "common_errors": [
+    {
+     "when": "写了 expensiver",
+     "say": "expensive 是长单词，不加 er，要在前面加 more：more expensive。"
+    },
+    {
+     "when": "写了 most expensive",
+     "say": "most 是最高级，三个以上才用；这里有 than，是两者相比，用比较级 more expensive。"
+    },
+    {
+     "when": "写了 expensive",
+     "say": "漏了 more。长单词的比较级 = more + 原形，少了 more 就不对。"
+    },
+    {
+     "when": "写了 more expensiver",
+     "say": "more 和 er 只能选一个：长单词选 more，不要双写。"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 三个里挑第一",
+   "scene": "三个软件里，这个最好用。",
+   "stem": "Of the three apps, this one is ______ to use.",
+   "options": [
+    "easier",
+    "the easiest",
+    "easiest",
+    "the easier"
+   ],
+   "answer": "B",
+   "help": "先数一数：一共几个在比？三个里挑第一用哪一级？那一级前面还要带什么？",
+   "explain": "Of the three apps, this one is the easiest to use.",
+   "wrong_feedback": {
+    "A": "easier 是比较级，两个比才用；这里是 of the three（三个里挑第一），要用最高级。",
+    "C": "easiest 方向对，但前面少了 the：最高级前面一般加 the，是 the easiest。",
+    "D": "the easier 不对：比较级前面不加 the，而且这里要的是最高级 the easiest。"
+   }
+  },
+  {
+   "step": 19,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 唱得最差",
+   "scene": "他是小组里唱得最差的。",
+   "stem": "He is ______ singer in the group. (bad)",
+   "task": "写括号里词的正确形式（含 the）。",
+   "answer_text": "the worst",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the worst"
+     ],
+     "cn": [
+      "最差的"
+     ]
+    }
+   ],
+   "help": "bad 是不规则词，先想它的比较级、最高级分别长什么样；最高级前面一般还要带什么？",
+   "explain": "He is the worst singer in the group.",
+   "common_errors": [
+    {
+     "when": "写了 the worse",
+     "say": "worse 是比较级；the 后面要跟最高级：the worst。"
+    },
+    {
+     "when": "写了 worst",
+     "say": "漏了 the。最高级前面一般加 the，完整说法是 the worst。"
+    },
+    {
+     "when": "写了 baddest",
+     "say": "baddest 不存在。bad 不规则，要死记：bad-worse-the worst。"
+    },
+    {
+     "when": "写了 the most bad",
+     "say": "不规则词不用 most。bad 的最高级就是 the worst。"
+    }
+   ]
+  },
+  {
+   "step": 20,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 今天更热",
+   "scene": "今天比昨天热。",
+   "stem": "Today is ______ than yesterday. (hot)",
+   "task": "只写空格处。",
+   "answer_text": "hotter",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hotter"
+     ],
+     "cn": [
+      "更热的（比较级）"
+     ]
+    }
+   ],
+   "help": "有 than，是两天相比；hot 是短元音+单个辅音结尾，变形时先想想：某个字母要不要多写一个？",
+   "explain": "Today is hotter than yesterday.",
+   "common_errors": [
+    {
+     "when": "写了 hoter",
+     "say": "漏了双写：hot 要双写 t 再加 er，是 hotter。"
+    },
+    {
+     "when": "写了 more hot",
+     "say": "hot 是短单词，不用 more，直接加 er（别忘了双写 t）。"
+    },
+    {
+     "when": "写了 hottest",
+     "say": "hottest 是最高级；这里有 than，两者相比用比较级 hotter。"
+    },
+    {
+     "when": "写了 the hotter",
+     "say": "比较级前面不加 the。直接写 hotter 就行。"
+    }
+   ]
+  },
+  {
+   "step": 21,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 大桥回锅",
+   "scene": "这座桥是 2020 年建成的。",
+   "stem": "The bridge ______ in 2020.",
+   "options": [
+    "builds",
+    "built",
+    "was built",
+    "is built"
+   ],
+   "answer": "C",
+   "help": "先想：桥是自己建的，还是被人建的？再看时间：2020 年是过去还是现在？",
+   "explain": "The bridge was built in 2020.",
+   "wrong_feedback": {
+    "A": "builds 是主动语态'（人）修建'，可桥是被人建的，要用被动语态。",
+    "B": "built 是主动语态的过去式，意思是'（谁）建了'；桥是被建好的，要用被动 was built。",
+    "D": "is built 是现在的被动，可题目里有 in 2020（过去的时间），要用过去的被动 was built。"
+   }
+  },
+  {
+   "step": 22,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 种茶回锅",
+   "scene": "中国种茶（茶是被人种的）。",
+   "stem": "Tea ______ in China.",
+   "options": [
+    "is grown",
+    "grows",
+    "grew",
+    "grow"
+   ],
+   "answer": "A",
+   "help": "先想：茶是自己长出来的，还是被人种的？这句话说的是现在的事实，还是过去的事？",
+   "explain": "Tea is grown in China.",
+   "wrong_feedback": {
+    "B": "grows 是主动语态'（茶自己）长'，可茶是被人种的，要用被动语态 is grown。",
+    "C": "grew 是主动语态的过去式，还是主动；茶被种，要用被动 is grown。",
+    "D": "grow 是动词原形，和单数主语 Tea 对不上，而且这里要用被动 is grown。"
+   }
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 住在广州",
+   "scene": "从 2020 年起，我一直住在广州。",
+   "stem": "I ______ in Guangzhou since 2020. (live)",
+   "task": "写括号里词的正确形式。",
+   "answer_text": "have lived",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have lived"
+     ],
+     "cn": [
+      "一直住（现在完成时）"
+     ]
+    }
+   ],
+   "help": "since 后面跟的是一个开始的时间点；从那时一直到现在，用哪个时态？主语 I 配的是 have 还是 has？",
+   "explain": "I have lived in Guangzhou since 2020.",
+   "common_errors": [
+    {
+     "when": "写了 live",
+     "say": "原形只表示平时的习惯；since 2020 是'从那时到现在一直'，要用 have lived。"
+    },
+    {
+     "when": "写了 lived",
+     "say": "一般过去时只说过去那一段，已经断了；since 要连到现在，用现在完成时 have lived。"
+    },
+    {
+     "when": "写了 has lived",
+     "say": "has 配 he/she/it 这类单个主语；主语是 I，要用 have。"
+    },
+    {
+     "when": "写了 living",
+     "say": "结构不完整，少了 have：have lived 才是完整形式。"
+    }
+   ]
+  },
+  {
+   "step": 24,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 工作十年",
+   "scene": "爸爸在这家工厂工作十年了（现在还在工作）。",
+   "stem": "My father ______ in this factory for ten years. (work)",
+   "task": "写括号里词的正确形式。",
+   "answer_text": "has worked",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has worked"
+     ],
+     "cn": [
+      "已工作（现在完成时）"
+     ]
+    }
+   ],
+   "help": "for 后面跟的是一段时间（十年）；主语 my father 是一个（第三人称单数），have 和 has 选哪个？",
+   "explain": "My father has worked in this factory for ten years.",
+   "common_errors": [
+    {
+     "when": "写了 have worked",
+     "say": "主语 my father 是一个（第三人称单数），要用 has，不是 have。"
+    },
+    {
+     "when": "写了 works",
+     "say": "一般现在时只说现在的习惯，接不上 for ten years 这种'持续到现在'的时间，要用 has worked。"
+    },
+    {
+     "when": "写了 worked",
+     "say": "一般过去时表示已经结束，可他现在还在工作，要用现在完成时 has worked。"
+    },
+    {
+     "when": "写了 working",
+     "say": "结构不完整，少了 has：has worked 才是完整形式。"
+    }
+   ]
+  }
+ ]
 }
