@@ -1,9 +1,9 @@
 {
  "lesson_id": "u6r1",
- "practice_end": 21,
+ "practice_end": 27,
  "home_subtitle": "第一课 · 故事开场",
- "part1_desc": "第 1–21 步：跟站长认识 since 和 for，学会说“持续了多久”，先避开两个最容易踩的坑。",
- "part2_desc": "第 22–45 步：独立判断兵马俑资料，再闯挑战关：How long 提问、完成时综合，老语法回锅。",
+ "part1_desc": "第 1–21 步：跟站长认识 since 和 for；练习里掺着挑战题，边学边闯。",
+ "part2_desc": "第 22–50 步：独立判断兵马俑资料，难题一路跟到课尾压轴：How long 提问、完成时综合，老语法回锅。",
  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时中 since/for 的用法、时间点与时间段的区分、How long 提问；挑战段回锅被动语态与比较级/最高级。Unit 6 Ancient stories 主题。",
  "steps": [
   {
@@ -136,7 +136,49 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 13,
+   "kind": "short",
+   "title": "挑战 · 收古币的李爷爷",
+   "scene": "李爷爷从 2015 年起收集古钱币，一直收到现在。",
+   "stem": "Mr Li ___ old coins since 2015. (collect)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "has collected",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has collected"
+     ],
+     "olds": [
+      "has collect",
+      "have collected"
+     ],
+     "cn": [
+      "已经收集了（现在完成时）"
+     ]
+    }
+   ],
+   "help": "两条线索：从 2015 年一直到现在；主语 Mr Li 是“他”。have/has + 过去分词，先把这两点对上。",
+   "explain": "Mr Li has collected old coins since 2015. 从过去某个时间一直持续到现在，用现在完成时。",
+   "common_errors": [
+    {
+     "when": "写了 collected",
+     "say": "collected 是过去时，只说过去收过；这里从 2015 年收到现在没停，要用 has collected。"
+    },
+    {
+     "when": "写了 has collect",
+     "say": "has 后面要跟过去分词 collected，不能用原形 collect。"
+    },
+    {
+     "when": "写了 have collected",
+     "say": "主语 Mr Li 是第三人称单数（他），用 has，不用 have。"
+    }
+   ],
+   "phase": "practice",
+   "step": 13
+  },
+  {
+   "step": 14,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r1-q03",
@@ -160,7 +202,7 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 14,
+   "step": 15,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r1-q04",
@@ -184,7 +226,49 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 爷爷看过长城吗",
+   "scene": "问爷爷：您看过长城吗？",
+   "stem": "___ your grandfather ever seen the Great Wall?",
+   "task": "只写句首的那个词。",
+   "answer_text": "Has",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Has"
+     ],
+     "olds": [
+      "Have",
+      "have"
+     ],
+     "cn": [
+      "（句首助动词）"
+     ]
+    }
+   ],
+   "help": "先数一数：主语是一个人，还是多个人。",
+   "explain": "Has your grandfather ever seen the Great Wall?",
+   "common_errors": [
+    {
+     "when": "写了 Have",
+     "say": "主语 your grandfather 是一人（第三人称单数），疑问句句首用 Has，不用 Have。"
+    },
+    {
+     "when": "写了 Is",
+     "say": "Is 不能和 seen 组成现在完成时；问“看过没有”要用 Has。"
+    },
+    {
+     "when": "写了 Does",
+     "say": "Does 后面要跟动词原形，跟不了 seen；表示经历要用 Has。"
+    }
+   ],
+   "step": 16
+  },
+  {
+   "step": 17,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r1-q06",
@@ -208,7 +292,7 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 16,
+   "step": 18,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r1-q07",
@@ -232,7 +316,48 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 17,
+   "kind": "short",
+   "title": "挑战 · 钟楼站了多久",
+   "scene": "这座钟楼从 1900 年起就一直立在城中心，到今天还在。",
+   "stem": "The clock tower ___ in the centre of the town since 1900. (stand)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "has stood",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has stood"
+     ],
+     "olds": [
+      "has stand"
+     ],
+     "cn": [
+      "一直立着（现在完成时）"
+     ]
+    }
+   ],
+   "help": "从 1900 年立到现在 → 现在完成时。小心：stand 的过去分词是不规则的，不是加 ed。",
+   "explain": "The clock tower has stood in the centre of the town since 1900. stand 的过去分词是 stood。",
+   "common_errors": [
+    {
+     "when": "写了 stood",
+     "say": "stood 是过去式，听起来像“立过、现在不在了”；钟楼现在还在，用 has stood。"
+    },
+    {
+     "when": "写了 has stand",
+     "say": "has 后面要用过去分词：stand → stood，不是原形 stand。"
+    },
+    {
+     "when": "写了 stands",
+     "say": "stands 是一般现在时，说的是习惯；“从 1900 年到现在”要用完成时 has stood。"
+    }
+   ],
+   "phase": "practice",
+   "step": 19
+  },
+  {
+   "step": 20,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r1-q08",
@@ -256,7 +381,29 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 长城被参观",
+   "scene": "每年都有很多人参观长城。",
+   "stem": "The Great Wall ___ by many people every year.",
+   "options": [
+    "is visiting",
+    "visited",
+    "is visited",
+    "are visit"
+   ],
+   "answer": "C",
+   "help": "先想：长城是参观别人，还是被别人参观？every year 说明是经常发生，还是已经过去？",
+   "explain": "The Great Wall is visited by many people every year.",
+   "wrong_feedback": {
+    "A": "is visiting 是“正在参观”（主动），可长城是被参观的，要用被动 is visited。",
+    "B": "visited 只是过去式，没有 be 动词组不成被动；而且 every year 是经常发生的事，用现在时 is visited。",
+    "D": "主语 The Great Wall 是一个（单数），be 动词用 is；而且 visit 要用过去分词 visited。"
+   },
+   "step": 21
+  },
+  {
+   "step": 22,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r1-q09",
@@ -296,7 +443,7 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 19,
+   "step": 23,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r1-q10",
@@ -337,7 +484,44 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 20,
+   "kind": "short",
+   "title": "挑战 · 写完了吗",
+   "scene": "站长催稿：你的古代故事写完了吗？",
+   "stem": "— Have you finished the story ___? — Not yet. I'm still writing it.",
+   "task": "只写空里的一个词。",
+   "answer_text": "yet",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "yet"
+     ],
+     "olds": [
+      "already"
+     ],
+     "cn": [
+      "（问句/否定句句尾）了吗"
+     ]
+    }
+   ],
+   "help": "这是一个问句，问“……了吗”；回答是 Not yet。想一想 yet 和 already 各自常待在哪种句子里。",
+   "explain": "Have you finished the story yet? yet 常用于疑问句和否定句句尾；already 多用于肯定句。",
+   "common_errors": [
+    {
+     "when": "写了 already",
+     "say": "already 一般待在肯定句里（I have already finished.）；问“写完了吗”句尾用 yet。"
+    },
+    {
+     "when": "写了 still",
+     "say": "still 是“仍然”，放在 be 或动词前面的位置，不放在这种问句句尾。"
+    }
+   ],
+   "phase": "practice",
+   "step": 24
+  },
+  {
+   "step": 25,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r1-q11",
@@ -378,7 +562,29 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 等了半小时",
+   "scene": "我们在博物馆门口等了半小时。",
+   "stem": "We have waited at the gate ___ half an hour.",
+   "options": [
+    "since",
+    "from",
+    "in",
+    "for"
+   ],
+   "answer": "D",
+   "help": "half an hour 是一段时间，还是一个时间点？",
+   "explain": "We have waited at the gate for half an hour.",
+   "wrong_feedback": {
+    "A": "since 跟时间点；half an hour 是时间段，用 for。",
+    "B": "from 只说起点，不表示持续，用 for。",
+    "C": "in 不能表示“持续了多久”，用 for。"
+   },
+   "step": 26
+  },
+  {
+   "step": 27,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r1-q13",
@@ -419,7 +625,7 @@
    "reading": "The Great Wall is very old. People began to build it more than 2,000 years ago. It has stood for over 2,000 years. People have visited it since ancient times."
   },
   {
-   "step": 22,
+   "step": 28,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r1-v-intro",
@@ -448,10 +654,65 @@
     "D": "in 不能表示持续，这里用 for。"
    },
    "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979.",
-   "step": 23
+   "step": 29
   },
   {
-   "step": 24,
+   "kind": "short",
+   "title": "挑战 · 古币的下落",
+   "scene": "这片工地上，人们从 1970 年起陆续挖出古币，最好的一枚现在收在博物馆里。",
+   "stem": "People ___ (find) many old coins here since 1970, and the best one ___ (keep) in the museum now.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "have found is kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have found"
+     ],
+     "olds": [
+      "have find"
+     ],
+     "cn": [
+      "已经找到（现在完成时）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "is kept"
+     ],
+     "olds": [
+      "was kept",
+      "keeps"
+     ],
+     "cn": [
+      "被保存（现在被动）"
+     ]
+    }
+   ],
+   "help": "两个空不是一个时态：第一个空有 since 1970（持续到现在）；第二个空主语是古币，它是“被保存”，而且是现在的状态。",
+   "explain": "People have found many old coins here since 1970, and the best one is kept in the museum now. 前空完成时，后空现在的被动。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 found",
+     "say": "有 since 1970，是从那时一直到现在，要用 have found。"
+    },
+    {
+     "when": "第二个空写了 kept",
+     "say": "古币是“被保存”，要被动：is kept。而且是现在的状态，不用 was。"
+    },
+    {
+     "when": "两个空都写了过去时",
+     "say": "这句话跨了古今：since 1970 起是完成时，now 的状态是现在被动，分开看。"
+    }
+   ],
+   "phase": "validate",
+   "step": 30
+  },
+  {
+   "step": 31,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u6r1-v02",
@@ -473,316 +734,6 @@
     "C": "in 1979 是“在1979年”，是过去时的说法；从1979年一直参观到现在要用 since。"
    },
    "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 25,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r1-v03",
-   "title": "博物馆开放",
-   "scene": "博物馆从1979年起开放。",
-   "stem": "The museum has been open ___ 1979.",
-   "options": [
-    "for",
-    "from",
-    "since",
-    "in"
-   ],
-   "answer": "C",
-   "help": "时间点。",
-   "explain": "The museum has been open since 1979.",
-   "wrong_feedback": {
-    "A": "for 跟时间段，1979 是年份（时间点），用 since。",
-    "B": "from 不能表示持续到现在，博物馆从1979年开到现在，用 since。",
-    "D": "in 1979 只表示“在那一年”；一直开到现在要用 since。"
-   },
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 26,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r1-v04",
-   "title": "ancient 的意思",
-   "scene": "ancient 意思是？",
-   "stem": "The word \"ancient\" means ___.",
-   "options": [
-    "古代的",
-    "现代的",
-    "未来的",
-    "现在的"
-   ],
-   "answer": "A",
-   "help": "兵马俑是什么时候的？",
-   "explain": "ancient 意思是“古代的”。",
-   "wrong_feedback": {
-    "B": "“现代的”是 modern。ancient 指很久以前的，是“古代的”。",
-    "C": "“未来的”是 future 的意思。兵马俑是两千多年前的东西，ancient 是“古代的”。",
-    "D": "“现在的”是 present。ancient 是“古代的”，和现在正好相反。"
-   },
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 27,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r1-v05",
-   "title": "有名很久",
-   "scene": "西安有名很久了。",
-   "stem": "Xi'an has been famous ___ a long time.",
-   "options": [
-    "since",
-    "for",
-    "from",
-    "in"
-   ],
-   "answer": "B",
-   "help": "时间段。",
-   "explain": "Xi'an has been famous for a long time.",
-   "wrong_feedback": {
-    "A": "since 跟时间点；a long time 是一段时间，用 for。",
-    "C": "from 只说起点，这里表示“有名了很久”是持续，用 for。",
-    "D": "in 不能表示持续，用 for。"
-   },
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 28,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r1-v06",
-   "title": "从十岁起",
-   "scene": "她从十岁起住在西安。",
-   "stem": "She has lived in Xi'an ___ she was ten.",
-   "options": [
-    "for",
-    "from",
-    "in",
-    "since"
-   ],
-   "answer": "D",
-   "help": "since 可跟句子。",
-   "explain": "She has lived in Xi'an since she was ten.",
-   "wrong_feedback": {
-    "A": "for 跟时间段；she was ten 是“她十岁时”这个时间点（句子），用 since。",
-    "B": "from 后面不能这样跟一个句子表示“自从”，用 since。",
-    "C": "in 不能跟句子，用 since。"
-   },
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 29,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u6r1-v07",
-   "title": "两千两百年",
-   "scene": "兵马俑在那里两千两百多年了。",
-   "stem": "The warriors have stood there ___ over 2,200 years.",
-   "task": "只写 since 或 for。",
-   "answer_text": "for",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "for",
-      "For"
-     ],
-     "cn": [
-      "持续（时间段）"
-     ]
-    }
-   ],
-   "help": "时间段。",
-   "explain": "The warriors have stood there for over 2,200 years.",
-   "common_errors": [
-    {
-     "when": "写了 since",
-     "say": "over 2,200 years 是时间段，时间段用 for；since 只跟时间点（如 since 1979）。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只表示起点，不能表示“持续了多久”，用 for。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 不能表示持续，这里用 for + 时间段。"
-    }
-   ],
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u6r1-v08",
-   "title": "从1979年",
-   "scene": "人们从1979年起参观。",
-   "stem": "People have visited them ___ 1979.",
-   "task": "只写 since 或 for。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since",
-      "Since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "时间点。",
-   "explain": "People have visited them since 1979.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "1979 是年份，是时间点，时间点用 since；for 只跟时间段。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 是“从”，但“自从某点一直持续到现在”要用 since。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 1979 是“在1979年”（过去时的说法），这里用 since。"
-    }
-   ],
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u6r1-v10",
-   "title": "住了五年",
-   "scene": "他在这里住了五年。",
-   "stem": "He has worked here ___ five years.",
-   "task": "只写 since 或 for。",
-   "answer_text": "for",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "for",
-      "For"
-     ],
-     "cn": [
-      "持续（时间段）"
-     ]
-    }
-   ],
-   "help": "时间段。",
-   "explain": "He has worked here for five years.",
-   "common_errors": [
-    {
-     "when": "写了 since",
-     "say": "five years 是时间段，用 for；since 跟时间点。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只说起点，不表示持续，用 for。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 不能表示“持续五年”，用 for。"
-    }
-   ],
-   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
-  },
-  {
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u6r1-c-intro",
-   "title": "挑战预告：How long 怎么问",
-   "teach_html": "<p>独立判断过关！接下来是<strong>挑战关</strong>：题目都换了新面孔，站长只给方向提示。</p><p>先学一招：问“持续了多久”，用 <strong>How long</strong> + 现在完成时：<strong>How long have you lived here?</strong>（你在这儿住多久了？）回答时，时间段用 for，时间点用 since：<strong>For six years.</strong> / <strong>Since 2019.</strong></p><p>挑战里还会碰到“老朋友”：被动语态、比较级和最高级。看看你还记得多少。</p>",
-   "step": 32
-  },
-  {
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 问多久",
-   "scene": "问同桌：你学英语学多久了？",
-   "stem": "___ have you learned English?",
-   "options": [
-    "How long",
-    "How many",
-    "How often",
-    "How far"
-   ],
-   "answer": "A",
-   "help": "想一想：问的是“多长时间”，还是“多少个”“多久一次”“多远”。",
-   "explain": "How long have you learned English? 问持续了多久，用 How long。",
-   "wrong_feedback": {
-    "B": "How many 问数量（多少个），问“学了多久”要用 How long。",
-    "C": "How often 问频率（多久一次），这里问的是总共持续多久，用 How long。",
-    "D": "How far 问距离（多远），问时间长度用 How long。"
-   },
-   "step": 33
-  },
-  {
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 回答 How long",
-   "scene": "汤姆从 2019 年起住在西安，住到现在。",
-   "stem": "— How long has Tom lived in Xi'an? — He has lived there ___ 2019.",
-   "task": "只写空里的一个词。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since",
-      "Since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "看空后面：2019 是时间点，还是一段时间？",
-   "explain": "He has lived there since 2019.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "2019 是时间点，时间点用 since；for 跟时间段（如 for six years）。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只说从哪一年开始，不表示持续到现在；“自从2019年”用 since。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 2019 是“在2019年”，那是过去时的说法；持续到现在用 since。"
-    }
-   ],
-   "step": 34
-  },
-  {
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 等了半小时",
-   "scene": "我们在博物馆门口等了半小时。",
-   "stem": "We have waited at the gate ___ half an hour.",
-   "options": [
-    "since",
-    "from",
-    "in",
-    "for"
-   ],
-   "answer": "D",
-   "help": "half an hour 是一段时间，还是一个时间点？",
-   "explain": "We have waited at the gate for half an hour.",
-   "wrong_feedback": {
-    "A": "since 跟时间点；half an hour 是时间段，用 for。",
-    "B": "from 只说起点，不表示持续，用 for。",
-    "C": "in 不能表示“持续了多久”，用 for。"
-   },
-   "step": 35
   },
   {
    "phase": "validate",
@@ -821,49 +772,117 @@
      "say": "in 不能跟 last Friday 这样用；自从上周五用 since last Friday。"
     }
    ],
-   "step": 36
+   "step": 32
   },
   {
+   "step": 33,
    "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r1-v03",
+   "title": "博物馆开放",
+   "scene": "博物馆从1979年起开放。",
+   "stem": "The museum has been open ___ 1979.",
+   "options": [
+    "for",
+    "from",
+    "since",
+    "in"
+   ],
+   "answer": "C",
+   "help": "时间点。",
+   "explain": "The museum has been open since 1979.",
+   "wrong_feedback": {
+    "A": "for 跟时间段，1979 是年份（时间点），用 since。",
+    "B": "from 不能表示持续到现在，博物馆从1979年开到现在，用 since。",
+    "D": "in 1979 只表示“在那一年”；一直开到现在要用 since。"
+   },
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r1-v04",
+   "title": "ancient 的意思",
+   "scene": "ancient 意思是？",
+   "stem": "The word \"ancient\" means ___.",
+   "options": [
+    "古代的",
+    "现代的",
+    "未来的",
+    "现在的"
+   ],
+   "answer": "A",
+   "help": "兵马俑是什么时候的？",
+   "explain": "ancient 意思是“古代的”。",
+   "wrong_feedback": {
+    "B": "“现代的”是 modern。ancient 指很久以前的，是“古代的”。",
+    "C": "“未来的”是 future 的意思。兵马俑是两千多年前的东西，ancient 是“古代的”。",
+    "D": "“现在的”是 present。ancient 是“古代的”，和现在正好相反。"
+   },
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
+  },
+  {
    "kind": "short",
-   "title": "挑战 · 爷爷看过长城吗",
-   "scene": "问爷爷：您看过长城吗？",
-   "stem": "___ your grandfather ever seen the Great Wall?",
-   "task": "只写句首的那个词。",
-   "answer_text": "Has",
+   "title": "挑战 · 埋在地下的两千年",
+   "scene": "兵马俑在地下待了两千多年，直到 1974 年农民打井时才发现了他们。",
+   "stem": "The warriors ___ (stay) underground for over 2,000 years, and then farmers found them in 1974.",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "stayed",
    "expects": [
     {
      "id": "w1",
      "type": "word",
      "answers": [
-      "Has"
+      "stayed"
      ],
      "olds": [
-      "Have",
-      "have"
+      "have stayed",
+      "has stayed"
      ],
      "cn": [
-      "（句首助动词）"
+      "待着（过去时，已经结束）"
      ]
     }
    ],
-   "help": "先数一数：主语是一个人，还是多个人。",
-   "explain": "Has your grandfather ever seen the Great Wall?",
+   "help": "先别急着用完成时：后半句是 1974 年发生的事，整件事是不是已经结束了？再想时态。",
+   "explain": "The warriors stayed underground for over 2,000 years, and then farmers found them in 1974. 事情在 1974 年被发现时就结束了，是过去时。",
    "common_errors": [
     {
-     "when": "写了 Have",
-     "say": "主语 your grandfather 是一人（第三人称单数），疑问句句首用 Has，不用 Have。"
+     "when": "写了 have stayed",
+     "say": "完成时要和“现在”有联系；这里后面跟着 1974 年的往事，整段都在过去，用 stayed。"
     },
     {
-     "when": "写了 Is",
-     "say": "Is 不能和 seen 组成现在完成时；问“看过没有”要用 Has。"
-    },
-    {
-     "when": "写了 Does",
-     "say": "Does 后面要跟动词原形，跟不了 seen；表示经历要用 Has。"
+     "when": "写了 stay",
+     "say": "这是讲古人的事，动词要用过去式 stayed。"
     }
    ],
-   "step": 37
+   "phase": "validate",
+   "step": 35
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r1-v05",
+   "title": "有名很久",
+   "scene": "西安有名很久了。",
+   "stem": "Xi'an has been famous ___ a long time.",
+   "options": [
+    "since",
+    "for",
+    "from",
+    "in"
+   ],
+   "answer": "B",
+   "help": "时间段。",
+   "explain": "Xi'an has been famous for a long time.",
+   "wrong_feedback": {
+    "A": "since 跟时间点；a long time 是一段时间，用 for。",
+    "C": "from 只说起点，这里表示“有名了很久”是持续，用 for。",
+    "D": "in 不能表示持续，用 for。"
+   },
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
   },
   {
    "phase": "validate",
@@ -910,7 +929,72 @@
      "say": "finds 是第三人称单数现在时；have 后面要用过去分词 found。"
     }
    ],
-   "step": 38
+   "step": 37
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r1-v06",
+   "title": "从十岁起",
+   "scene": "她从十岁起住在西安。",
+   "stem": "She has lived in Xi'an ___ she was ten.",
+   "options": [
+    "for",
+    "from",
+    "in",
+    "since"
+   ],
+   "answer": "D",
+   "help": "since 可跟句子。",
+   "explain": "She has lived in Xi'an since she was ten.",
+   "wrong_feedback": {
+    "A": "for 跟时间段；she was ten 是“她十岁时”这个时间点（句子），用 since。",
+    "B": "from 后面不能这样跟一个句子表示“自从”，用 since。",
+    "C": "in 不能跟句子，用 since。"
+   },
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u6r1-v07",
+   "title": "两千两百年",
+   "scene": "兵马俑在那里两千两百多年了。",
+   "stem": "The warriors have stood there ___ over 2,200 years.",
+   "task": "只写 since 或 for。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "cn": [
+      "持续（时间段）"
+     ]
+    }
+   ],
+   "help": "时间段。",
+   "explain": "The warriors have stood there for over 2,200 years.",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "over 2,200 years 是时间段，时间段用 for；since 只跟时间点（如 since 1979）。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只表示起点，不能表示“持续了多久”，用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 不能表示持续，这里用 for + 时间段。"
+    }
+   ],
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
   },
   {
    "phase": "validate",
@@ -932,71 +1016,89 @@
     "C": "ever 用在疑问句里问经历（Have you ever ...?）；否定句句末用 yet。",
     "D": "just 是“刚刚”，放在 has 和动词中间，不能放在这个句末位置。"
    },
-   "step": 39
+   "step": 40
   },
   {
+   "step": 41,
    "phase": "validate",
    "kind": "short",
-   "title": "挑战 · 兵马俑被发现",
-   "scene": "兵马俑是 1974 年被农民发现的。",
-   "stem": "The Terracotta Warriors ___ in 1974.",
-   "task": "写出空里的两个词（be 动词 + 过去分词）。",
-   "answer_text": "were found",
+   "audio_id": "u6r1-v08",
+   "title": "从1979年",
+   "scene": "人们从1979年起参观。",
+   "stem": "People have visited them ___ 1979.",
+   "task": "只写 since 或 for。",
+   "answer_text": "since",
    "expects": [
     {
      "id": "w1",
      "type": "word",
      "answers": [
-      "were found"
+      "since",
+      "Since"
      ],
      "cn": [
-      "被发现（被动语态）"
+      "自从（时间点）"
      ]
     }
    ],
-   "help": "先想：兵马俑是自己出现的，还是被人发现的？再想：主语是一个，还是一群？",
-   "explain": "The Terracotta Warriors were found in 1974.",
+   "help": "时间点。",
+   "explain": "People have visited them since 1979.",
    "common_errors": [
     {
-     "when": "写了 was found",
-     "say": "主语 The Terracotta Warriors 是一群（复数），be 动词要用 were，不是 was。"
+     "when": "写了 for",
+     "say": "1979 是年份，是时间点，时间点用 since；for 只跟时间段。"
     },
     {
-     "when": "只写了 found",
-     "say": "少了 be 动词。被动语态 = be 动词 + 过去分词：were found。"
+     "when": "写了 from",
+     "say": "from 是“从”，但“自从某点一直持续到现在”要用 since。"
     },
     {
-     "when": "写了 finded",
-     "say": "find 的过去分词是 found，不能加 ed。"
-    },
-    {
-     "when": "写了 were find",
-     "say": "be 动词后面要用过去分词 found，不能用原形 find。"
+     "when": "写了 in",
+     "say": "in 1979 是“在1979年”（过去时的说法），这里用 since。"
     }
    ],
-   "step": 40
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
   },
   {
+   "step": 42,
    "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 长城被参观",
-   "scene": "每年都有很多人参观长城。",
-   "stem": "The Great Wall ___ by many people every year.",
-   "options": [
-    "is visiting",
-    "visited",
-    "is visited",
-    "are visit"
+   "kind": "short",
+   "audio_id": "u6r1-v10",
+   "title": "住了五年",
+   "scene": "他在这里住了五年。",
+   "stem": "He has worked here ___ five years.",
+   "task": "只写 since 或 for。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "cn": [
+      "持续（时间段）"
+     ]
+    }
    ],
-   "answer": "C",
-   "help": "先想：长城是参观别人，还是被别人参观？every year 说明是经常发生，还是已经过去？",
-   "explain": "The Great Wall is visited by many people every year.",
-   "wrong_feedback": {
-    "A": "is visiting 是“正在参观”（主动），可长城是被参观的，要用被动 is visited。",
-    "B": "visited 只是过去式，没有 be 动词组不成被动；而且 every year 是经常发生的事，用现在时 is visited。",
-    "D": "主语 The Great Wall 是一个（单数），be 动词用 is；而且 visit 要用过去分词 visited。"
-   },
-   "step": 41
+   "help": "时间段。",
+   "explain": "He has worked here for five years.",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "five years 是时间段，用 for；since 跟时间点。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说起点，不表示持续，用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 不能表示“持续五年”，用 for。"
+    }
+   ],
+   "reading": "The Terracotta Warriors are in Xi'an. Workers found them in 1974. They are more than 2,200 years old. People have visited them since 1979."
   },
   {
    "phase": "validate",
@@ -1038,7 +1140,118 @@
      "say": "少了 be 动词。被动语态 = be 动词 + 过去分词：was built。"
     }
    ],
-   "step": 42
+   "step": 43
+  },
+  {
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u6r1-c-intro",
+   "title": "挑战预告：How long 怎么问",
+   "teach_html": "<p>独立判断过关！接下来是<strong>挑战关</strong>：题目都换了新面孔，站长只给方向提示。</p><p>先学一招：问“持续了多久”，用 <strong>How long</strong> + 现在完成时：<strong>How long have you lived here?</strong>（你在这儿住多久了？）回答时，时间段用 for，时间点用 since：<strong>For six years.</strong> / <strong>Since 2019.</strong></p><p>挑战里还会碰到“老朋友”：被动语态、比较级和最高级。看看你还记得多少。</p>",
+   "step": 44
+  },
+  {
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 问多久",
+   "scene": "问同桌：你学英语学多久了？",
+   "stem": "___ have you learned English?",
+   "options": [
+    "How long",
+    "How many",
+    "How often",
+    "How far"
+   ],
+   "answer": "A",
+   "help": "想一想：问的是“多长时间”，还是“多少个”“多久一次”“多远”。",
+   "explain": "How long have you learned English? 问持续了多久，用 How long。",
+   "wrong_feedback": {
+    "B": "How many 问数量（多少个），问“学了多久”要用 How long。",
+    "C": "How often 问频率（多久一次），这里问的是总共持续多久，用 How long。",
+    "D": "How far 问距离（多远），问时间长度用 How long。"
+   },
+   "step": 45
+  },
+  {
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 回答 How long",
+   "scene": "汤姆从 2019 年起住在西安，住到现在。",
+   "stem": "— How long has Tom lived in Xi'an? — He has lived there ___ 2019.",
+   "task": "只写空里的一个词。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "看空后面：2019 是时间点，还是一段时间？",
+   "explain": "He has lived there since 2019.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "2019 是时间点，时间点用 since；for 跟时间段（如 for six years）。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说从哪一年开始，不表示持续到现在；“自从2019年”用 since。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 2019 是“在2019年”，那是过去时的说法；持续到现在用 since。"
+    }
+   ],
+   "step": 46
+  },
+  {
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 兵马俑被发现",
+   "scene": "兵马俑是 1974 年被农民发现的。",
+   "stem": "The Terracotta Warriors ___ in 1974.",
+   "task": "写出空里的两个词（be 动词 + 过去分词）。",
+   "answer_text": "were found",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "were found"
+     ],
+     "cn": [
+      "被发现（被动语态）"
+     ]
+    }
+   ],
+   "help": "先想：兵马俑是自己出现的，还是被人发现的？再想：主语是一个，还是一群？",
+   "explain": "The Terracotta Warriors were found in 1974.",
+   "common_errors": [
+    {
+     "when": "写了 was found",
+     "say": "主语 The Terracotta Warriors 是一群（复数），be 动词要用 were，不是 was。"
+    },
+    {
+     "when": "只写了 found",
+     "say": "少了 be 动词。被动语态 = be 动词 + 过去分词：were found。"
+    },
+    {
+     "when": "写了 finded",
+     "say": "find 的过去分词是 found，不能加 ed。"
+    },
+    {
+     "when": "写了 were find",
+     "say": "be 动词后面要用过去分词 found，不能用原形 find。"
+    }
+   ],
+   "step": 47
   },
   {
    "phase": "validate",
@@ -1098,7 +1311,7 @@
      "say": "只有第二个空是“最”；第一个空有 than，用 longer 就行，不要带 the。"
     }
    ],
-   "step": 43
+   "step": 48
   },
   {
    "phase": "validate",
@@ -1120,10 +1333,10 @@
     "C": "old 是单音节词，最高级直接加 est 变 oldest，不用 more。",
     "D": "oldest 本身已经是最高级，前面不能再加 most。"
    },
-   "step": 44
+   "step": 49
   },
   {
-   "step": 45,
+   "step": 50,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r1-ending",
@@ -1133,5 +1346,5 @@
  ],
  "title": "故事开场：since 和 for 入门",
  "unit": "Unit 6 Ancient stories",
- "version": 2
+ "version": 3
 }
