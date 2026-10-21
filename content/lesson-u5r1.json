@@ -3,7 +3,7 @@
   "practice_end": 22,
   "home_subtitle": "第一课 · 交流初体验",
   "part1_desc": "第 1–22 步：跟站长认识现在完成时，学会 have/has + 过去分词。",
-  "part2_desc": "第 23–34 步：独立判断交换生资料，用现在完成时说一说。",
+  "part2_desc": "第 23–42 步：独立判断交换生资料，用现在完成时说一说，再闯课末挑战段。",
   "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在完成时肯定句、have/has 与过去分词、ever/never。Unit 5 Educational exchanges 主题。",
   "steps": [
     {
@@ -303,6 +303,10 @@
         {
           "when": "写了 visit",
           "say": "visit 是原形，过去分词要加 ed：visited。"
+        },
+        {
+          "when": "写了 visits",
+          "say": "visits 是三单现在时，要的是过去分词 visited。"
         }
       ],
       "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
@@ -339,6 +343,14 @@
         {
           "when": "写了 saw",
           "say": "saw 是过去式，过去分词是 seen。"
+        },
+        {
+          "when": "写了 seeing",
+          "say": "seeing 是现在分词，过去分词是 seen。"
+        },
+        {
+          "when": "写了 sees",
+          "say": "sees 是三单现在时，过去分词是 seen。"
         }
       ],
       "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
@@ -371,6 +383,14 @@
         {
           "when": "写了 have",
           "say": "he 是三单，要用 has，不用 have。"
+        },
+        {
+          "when": "写了 is",
+          "say": "is 是 be 动词，这里要用 has + 过去分词：has lived。"
+        },
+        {
+          "when": "写了 had",
+          "say": "had 是过去式，现在完成时用 has。"
         }
       ],
       "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
@@ -403,6 +423,14 @@
         {
           "when": "写了 have",
           "say": "she 是三单，用 has。"
+        },
+        {
+          "when": "写了 is",
+          "say": "is 不能代替 has，这里要用 has never seen。"
+        },
+        {
+          "when": "写了 had",
+          "say": "had 是过去式，现在完成时用 has。"
         }
       ],
       "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
@@ -435,6 +463,14 @@
         {
           "when": "写了 went",
           "say": "went 是过去式，过去分词是 gone。"
+        },
+        {
+          "when": "写了 go",
+          "say": "go 是原形，过去分词是 gone。"
+        },
+        {
+          "when": "写了 going",
+          "say": "going 是现在分词，过去分词是 gone。"
         }
       ],
       "reading": "Li Ming: from China, has been to Beijing and Shanghai, has never been abroad\nAnna: from the UK, has been to China, has seen the Great Wall, has eaten dumplings"
@@ -463,12 +499,12 @@
         "are"
       ],
       "answer": "A",
-      "help": "三单。",
+      "help": "先数一数：Tom 是一个，还是多个。",
       "explain": "Tom has been to China twice.",
       "wrong_feedback": {
-        "B": "再想想三单用什么。",
-        "C": "再想想时态。",
-        "D": "再想想单复数。"
+        "B": "Tom 是一人（第三人称单数），要用 has，不用 have。",
+        "C": "is 是 be 动词，这里要用现在完成时的 has：Tom has been to China。",
+        "D": "are 用于复数主语，Tom 是一人，用 has。"
       },
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
     },
@@ -487,12 +523,12 @@
         "learns"
       ],
       "answer": "B",
-      "help": "过去分词。",
+      "help": "has 后面跟动词的哪种形式？",
       "explain": "Mei has learned English for three years.",
       "wrong_feedback": {
-        "A": "再想想过去分词。",
-        "C": "再想想词形。",
-        "D": "再想想时态。"
+        "A": "learn 是原形，has 后面要用过去分词 learned。",
+        "C": "learning 是现在分词，has 后面要用过去分词 learned。",
+        "D": "learns 是三单现在时，has 后面用过去分词 learned。"
       },
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
     },
@@ -511,12 +547,12 @@
         "eating"
       ],
       "answer": "C",
-      "help": "助动词后跟过去分词。",
+      "help": "Has 后面跟动词的哪种形式？",
       "explain": "Has Tom eaten dumplings?",
       "wrong_feedback": {
-        "A": "再想想词形。",
-        "B": "再想想过去分词。",
-        "D": "再想想词形。"
+        "A": "eat 是原形，Has 后面要用过去分词 eaten。",
+        "B": "ate 是过去式，现在完成时要用过去分词 eaten。",
+        "D": "eating 是现在分词，要用过去分词 eaten。"
       },
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
     },
@@ -535,12 +571,12 @@
         "visited"
       ],
       "answer": "D",
-      "help": "have 后面跟什么？",
+      "help": "have 后面跟动词的哪种形式？",
       "explain": "They have visited the Great Wall twice.",
       "wrong_feedback": {
-        "A": "再想想词形。",
-        "B": "再想想单复数。",
-        "C": "再想想词形。"
+        "A": "visit 是原形，have 后面要用过去分词 visited。",
+        "B": "visits 是三单现在时，这里要用过去分词 visited。",
+        "C": "visiting 是现在分词，要用过去分词 visited。"
       },
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
     },
@@ -559,12 +595,12 @@
         "Does"
       ],
       "answer": "A",
-      "help": "you 用哪个助动词？",
+      "help": "先看主语 you，再想问“经历”用哪个助动词开头。",
       "explain": "Have you ever been to the USA?",
       "wrong_feedback": {
-        "B": "再想想主语。",
-        "C": "再想想时态。",
-        "D": "再想想主语。"
+        "B": "you 不是第三人称单数，疑问句用 Have 开头，不用 Has。",
+        "C": "Do 后面要跟动词原形，跟不了 been；问“去过没有”要用 Have。",
+        "D": "Does 是三单用的，you 用 Have。"
       },
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
     },
@@ -583,12 +619,12 @@
         "just"
       ],
       "answer": "B",
-      "help": "“从没”用什么？",
+      "help": "句子说的是“从来没”，哪个词是这个意思？",
       "explain": "Tom has never seen snow.",
       "wrong_feedback": {
-        "A": "再想想意思。",
-        "C": "再想想位置。",
-        "D": "再想想意思。"
+        "A": "ever 是“曾经”，多用在疑问句里；这里说“从没见过”，用 never。",
+        "C": "yet 一般用在否定句和疑问句的句末，这里用 never。",
+        "D": "just 是“刚刚”，和“从没见过”意思对不上，用 never。"
       },
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
     },
@@ -620,6 +656,14 @@
         {
           "when": "写了 ate",
           "say": "ate 是过去式，过去分词是 eaten。"
+        },
+        {
+          "when": "写了 eat",
+          "say": "eat 是原形，过去分词是 eaten。"
+        },
+        {
+          "when": "写了 eating",
+          "say": "eating 是现在分词，过去分词是 eaten。"
         }
       ],
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
@@ -652,6 +696,14 @@
         {
           "when": "写了 meeted",
           "say": "meet 是不规则的，过去分词是 met，不是 meeted。"
+        },
+        {
+          "when": "写了 meet",
+          "say": "meet 是原形，过去分词是 met。"
+        },
+        {
+          "when": "写了 meeting",
+          "say": "meeting 是现在分词，过去分词是 met。"
         }
       ],
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
@@ -684,6 +736,14 @@
         {
           "when": "写了 has",
           "say": "I 后面用 have，不用 has。"
+        },
+        {
+          "when": "写了 is",
+          "say": "is 是 be 动词，I 后面要用 have：I have seen。"
+        },
+        {
+          "when": "写了 had",
+          "say": "had 是过去式，现在完成时用 have。"
         }
       ],
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
@@ -716,6 +776,14 @@
         {
           "when": "写了 have",
           "say": "he 是三单，用 has。"
+        },
+        {
+          "when": "写了 is",
+          "say": "is 不能代替 has，这里要用 has gone。"
+        },
+        {
+          "when": "写了 does",
+          "say": "does 后面跟动词原形，这里要用 has + 过去分词。"
         }
       ],
       "reading": "Tom: from the USA, has been to China twice, has eaten dumplings, has never seen snow\nMei: from China, has learned English for three years, has met Tom"
@@ -727,6 +795,274 @@
       "audio_id": "u5r1-ending",
       "title": "节目预告",
       "teach_html": "<p>今天的采访做得不错。站长说：交换生的经历都问清楚了。</p><p>下一期，站长要教你<strong>提问和回答</strong>——“你去过北京吗？”“去过。”“没去过。”英文该怎么问、怎么答。</p>"
+    },
+    {
+      "step": 35,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 吃过烤鸭吗",
+      "scene": "问安娜吃过北京烤鸭没有。",
+      "stem": "______ Anna ever tried Beijing duck?",
+      "task": "只写句首的那个词。",
+      "answer_text": "Has",
+      "help": "先数一数：主语是一个，还是多个。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "Has"
+          ],
+          "cn": [
+            "（句首助动词）"
+          ]
+        }
+      ],
+      "explain": "Has Anna ever tried Beijing duck?",
+      "common_errors": [
+        {
+          "when": "写了 Have",
+          "say": "主语 Anna 是一人（第三人称单数），句首要用 Has，不用 Have。"
+        },
+        {
+          "when": "写了 Is",
+          "say": "Is 后面跟不了 tried 组成完成时；问“吃过没有”要用 Has 开头：Has ... ever tried。"
+        },
+        {
+          "when": "写了 Does",
+          "say": "Does 后面要跟动词原形，跟不了 tried；表示经历的疑问句用 Has。"
+        },
+        {
+          "when": "写了 Do",
+          "say": "Do 用于 I/you/we/they，Anna 是一人，用 Has。"
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 教了十年英语",
+      "scene": "陈老师在我们学校教英语，教了十年了。",
+      "stem": "Mr Chen has ______ English in our school for ten years.",
+      "task": "写出空里的词（teach 的过去分词）。",
+      "answer_text": "taught",
+      "help": "teach 是不规则动词，它的过去分词要单独记。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "taught"
+          ],
+          "cn": [
+            "教（过去分词）"
+          ]
+        }
+      ],
+      "explain": "Mr Chen has taught English in our school for ten years.",
+      "common_errors": [
+        {
+          "when": "写了 teached",
+          "say": "teach 是不规则动词，不能直接加 ed，过去分词是 taught。"
+        },
+        {
+          "when": "写了 teach",
+          "say": "has 后面要用过去分词，不能用原形 teach，要用 taught。"
+        },
+        {
+          "when": "写了 teaching",
+          "say": "teaching 是现在分词，has 后面用过去分词 taught。"
+        }
+      ]
+    },
+    {
+      "step": 37,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 爷爷的信",
+      "scene": "爷爷不用电脑，他写信都是手写的。",
+      "stem": "My grandpa has ______ used a computer. He writes letters by hand.",
+      "options": [
+        "never",
+        "ever",
+        "yet",
+        "just"
+      ],
+      "answer": "A",
+      "help": "先想句子的意思：爷爷用过电脑吗？",
+      "explain": "My grandpa has never used a computer.",
+      "wrong_feedback": {
+        "B": "ever 是“曾经”，多用在疑问句里；这里说爷爷“从来没”用过，用 never。",
+        "C": "yet 一般用在否定句和疑问句的句末，这里要用 never。",
+        "D": "just 是“刚刚”，和“写信都是手写的”对不上；“从没”用 never。"
+      }
+    },
+    {
+      "step": 38,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 双胞胎到了",
+      "scene": "双胞胎刚刚到。",
+      "stem": "The twins ______ just arrived.",
+      "task": "只写 have 或 has。",
+      "answer_text": "have",
+      "help": "先数一数：双胞胎是一个人，还是两个人。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "have"
+          ],
+          "cn": [
+            "（复数用 have）"
+          ]
+        }
+      ],
+      "explain": "The twins have just arrived.",
+      "common_errors": [
+        {
+          "when": "写了 has",
+          "say": "the twins 是两个人（复数），用 have，不用 has。"
+        },
+        {
+          "when": "写了 had",
+          "say": "had 是过去式，这里是现在完成时，用 have。"
+        },
+        {
+          "when": "写了 is",
+          "say": "is 是 be 动词，不能代替 have；完成时要用 have + 过去分词。"
+        }
+      ]
+    },
+    {
+      "step": 39,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 2020 年的大桥",
+      "scene": "这座桥是 2020 年建成的。",
+      "stem": "The bridge ______ in 2020.",
+      "task": "写出空里的两个词（be 动词 + 过去分词）。",
+      "answer_text": "was built",
+      "help": "先想：桥是自己建的，还是被人建的？再看时间是哪一年。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was built"
+          ],
+          "cn": [
+            "被建成（被动语态）"
+          ]
+        }
+      ],
+      "explain": "The bridge was built in 2020.",
+      "common_errors": [
+        {
+          "when": "只写了 built",
+          "say": "只写 built 是主动语态，意思是“（谁）建了”；桥是被建的，要加 was：was built。"
+        },
+        {
+          "when": "写了 is built",
+          "say": "is built 是现在的被动，可这里的时间是 2020 年（过去），要用 was built。"
+        },
+        {
+          "when": "写了 was build",
+          "say": "被动语态要用过去分词：build 的过去分词是 built，写 was built。"
+        },
+        {
+          "when": "写了 builded",
+          "say": "build 是不规则动词，过去分词是 built，不是 builded。"
+        }
+      ]
+    },
+    {
+      "step": 40,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 南方水稻",
+      "scene": "水稻种在中国的南方。",
+      "stem": "Rice ______ in the south of China.",
+      "options": [
+        "grows",
+        "is grown",
+        "grew",
+        "grow"
+      ],
+      "answer": "B",
+      "help": "先想：水稻是自己种的，还是被人种的？",
+      "explain": "Rice is grown in the south of China.",
+      "wrong_feedback": {
+        "A": "grows 是主动语态“（植物）生长”；这里说水稻被人种，要用被动语态 is grown。",
+        "C": "grew 是主动语态的过去式，意思不对；水稻是被种的，用 is grown。",
+        "D": "grow 是原形，而且是主动；水稻被种要用被动 is grown。"
+      }
+    },
+    {
+      "step": 41,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "挑战 · 哪个箱子重",
+      "scene": "这个箱子比那个箱子重。",
+      "stem": "This box is ______ than that one.",
+      "options": [
+        "heavy",
+        "heaviest",
+        "heavier",
+        "more heavy"
+      ],
+      "answer": "C",
+      "help": "看到 than，就想比较级；heavy 的比较级怎么变？",
+      "explain": "This box is heavier than that one.",
+      "wrong_feedback": {
+        "A": "heavy 是原级，后面有 than，要用比较级 heavier。",
+        "B": "heaviest 是最高级（前面要加 the），和 than 搭配要用比较级 heavier。",
+        "D": "heavy 变比较级是把 y 变成 i 再加 er：heavier，不用 more。"
+      }
+    },
+    {
+      "step": 42,
+      "phase": "validate",
+      "kind": "short",
+      "title": "挑战 · 班里最高",
+      "scene": "汤姆是他们班里最高的。",
+      "stem": "Tom is the ______ student in his class.",
+      "task": "写出空里的词（tall 的最高级）。",
+      "answer_text": "tallest",
+      "help": "“最……”要用最高级；最高级前面有 the，空里只写词本身。",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "tallest"
+          ],
+          "cn": [
+            "最高（最高级）"
+          ]
+        }
+      ],
+      "explain": "Tom is the tallest student in his class.",
+      "common_errors": [
+        {
+          "when": "写了 taller",
+          "say": "taller 是比较级，是“两个比”；这里是全班里“最”高，用最高级 tallest。"
+        },
+        {
+          "when": "写了 most tall",
+          "say": "tall 是短词，最高级直接加 est：tallest，不用 most。"
+        },
+        {
+          "when": "写了 tall",
+          "say": "tall 是原级，“最”高要用 tallest。"
+        },
+        {
+          "when": "写了 the tallest",
+          "say": "空前面已经有 the 了，只写 tallest 一个词。"
+        }
+      ]
     }
   ],
   "title": "交流初体验：现在完成时入门",
