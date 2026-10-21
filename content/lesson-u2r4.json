@@ -1,1171 +1,1564 @@
 {
-  "home_subtitle": "第四课 · 来信点播",
-  "lesson_id": "u2r4",
-  "note": "v1（2026-10-02）：按逐题清单 v1 成课。总任务书取消两天制：第二部分开场复习为固定题（步 21–22，复现第 3 课涨跌方向与 promise 承诺句）；全课不出现相对日期说法。选择步（步 12、29）按故事选择契约写内容：{kind:choice, choice_key, stem, options, scene}，后续文本用 {{choice:key|默认文本}} 做回调占位；持久化与占位替换由程序侧实现。",
-  "part1_desc": "前半程：复盘数字播报，学回信三句话，读第一封来信、听 Tom 的语音留言。",
-  "part2_desc": "后半程：先热热身，再自己回第三封信、听 Ann 的留言、写完整回信。",
-  "practice_end": 19,
-  "steps": [
+ "home_subtitle": "第四课 · 来信点播",
+ "lesson_id": "u2r4",
+ "note": "v1（2026-10-02）：按逐题清单 v1 成课。总任务书取消两天制：第二部分开场复习为固定题（步 21–22，复现第 3 课涨跌方向与 promise 承诺句）；全课不出现相对日期说法。选择步（步 12、29）按故事选择契约写内容：{kind:choice, choice_key, stem, options, scene}，后续文本用 {{choice:key|默认文本}} 做回调占位；持久化与占位替换由程序侧实现。",
+ "part1_desc": "前半程：复盘数字播报，学回信三句话，读第一封来信、听 Tom 的语音留言。",
+ "part2_desc": "后半程：先热热身，再自己回第三封信、听 Ann 的留言、写完整回信。最后是挑战时间：把今天学的本事再往高处练一练。",
+ "practice_end": 19,
+ "steps": [
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 1,
+   "teach_html": "<p>新的一天，广播站开门。</p><p>前几课练的是看通知、播数字。今天换个新活：<strong>回信</strong>——听众来信点歌、提问，播音员要读懂信，抓住真正的请求，再写回信。</p><p>先复盘热身，再学新本领。</p>",
+   "title": "站长开场"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 2,
+   "teach_html": "<p>先热身。上次的数字播报，换三道新题考你：涨跌方向、一句播报、再看一张小表。</p>",
+   "title": "复盘热身"
+  },
+  {
+   "answer": "A",
+   "explain": "200 元到 160 元，变少了：went down。",
+   "help": "先比大小：160 比 200 小。变小对应的是 up 还是 down。",
+   "kind": "mcq",
+   "options": [
+    "went down",
+    "went up",
+    "没有变化",
+    "算不出来"
+   ],
+   "phase": "practice",
+   "review_weakness": "direction",
+   "scene": "先看涨跌方向还稳不稳。",
+   "stem": "Paper went from 200 yuan to 160 yuan.（纸的预算从 200 元变成了 160 元。）这是什么变化？",
+   "step": 3,
+   "title": "复盘：涨了还是跌了",
+   "wrong_feedback": {
+    "A": "",
+    "B": "200 到 160 是变少了。went up 是“涨”的意思，方向用反了——变少用 went down。",
+    "C": "数字从 200 变成了 160，明明变了。先比大小：160 比 200 小。",
+    "D": "不用怕，先比大小就能定方向：160 比 200 小，是跌了。"
+   }
+  },
+  {
+   "answer_text": "The milk went up 25% from last term.",
+   "common_errors": [
     {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 1,
-      "teach_html": "<p>新的一天，广播站开门。</p><p>前几课练的是看通知、播数字。今天换个新活：<strong>回信</strong>——听众来信点歌、提问，播音员要读懂信，抓住真正的请求，再写回信。</p><p>先复盘热身，再学新本领。</p>",
-      "title": "站长开场"
+     "say": "400 瓶到 500 瓶是变多了。down 是“跌”，变多要用 up。",
+     "when": "方向写反"
     },
     {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 2,
-      "teach_html": "<p>先热身。上次的数字播报，换三道新题考你：涨跌方向、一句播报、再看一张小表。</p>",
-      "title": "复盘热身"
+     "say": "多出来的 100 瓶要除以原来的 400：100÷400＝25%。别拿新数 500 去当被除数。",
+     "when": "百分比写成 20"
     },
     {
-      "answer": "A",
-      "explain": "200 元到 160 元，变少了：went down。",
-      "help": "先比大小：160 比 200 小。变小对应的是 up 还是 down。",
-      "kind": "mcq",
-      "options": [
-        "went down",
-        "went up",
-        "没有变化",
-        "算不出来"
-      ],
-      "phase": "practice",
-      "review_weakness": "direction",
-      "scene": "先看涨跌方向还稳不稳。",
-      "stem": "Paper went from 200 yuan to 160 yuan.（纸的预算从 200 元变成了 160 元。）这是什么变化？",
-      "step": 3,
-      "title": "复盘：涨了还是跌了",
-      "wrong_feedback": {
-        "A": "",
-        "B": "再比一比 200 和 160 哪个大，方向先定下来。",
-        "C": "200 到 160 变了。再看两个数字。",
-        "D": "能算出来：先比大小，再看方向。"
-      }
+     "say": "方向对了，还差数字：went up 后面要跟上百分之几。",
+     "when": "只写方向没写百分比"
     },
     {
-      "answer_text": "The milk went up 25% from last term.",
-      "common_errors": [
-        {
-          "say": "400 到 500 是变多了还是变少了？先定方向。",
-          "when": "方向写反"
-        },
-        {
-          "say": "多出来的 100 瓶，占原来的 400 的多少，算一算。",
-          "when": "百分比写错"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "up 25",
-            "up twenty five",
-            "up twenty-five"
-          ],
-          "cn": [
-            "涨了25%",
-            "上升25%"
-          ],
-          "id": "dirpct",
-          "olds": [
-            "down 25",
-            "down",
-            "up 20"
-          ],
-          "type": "word"
-        }
-      ],
-      "explain": "The milk went up 25% from last term.",
-      "help": "400 到 500，是涨还是跌，百分之几。",
-      "kind": "short",
-      "phase": "practice",
-      "review_weakness": "writing",
-      "scene": "把变化写成一句播报。",
-      "stem": "照着句子框写一句：The milk went ___ ___% from last term.（牛奶从 400 瓶卖到 500 瓶。）",
-      "step": 4,
-      "task": "写一句英文。",
-      "title": "复盘：写一句播报",
-      "predicted_errors": [
-        {
-          "wrong": "The milk went down 25% from last term.",
-          "cause": "粗心",
-          "say": "400 瓶卖到 500 瓶是变多了，你写的是变少，方向写反了。"
-        },
-        {
-          "wrong": "The milk went up 20% from last term.",
-          "cause": "不会这个知识",
-          "say": "多出来的 100 瓶占原来的 400 瓶的多少？再除一次看看。"
-        },
-        {
-          "wrong": "The milk went up.",
-          "cause": "粗心",
-          "say": "方向写对了，涨了百分之几还没写，把数字补上。"
-        },
-        {
-          "wrong": "牛奶涨了。",
-          "cause": "粗心",
-          "say": "涨了百分之几？把数字也写上。"
-        }
-      ],
-      "dim_help": {
-        "dirpct": {
-          "label": "涨跌方向和百分比",
-          "ask": "先看 400 和 500，牛奶是变多了还是变少了？"
-        }
-      }
-    },
-    {
-      "answer": "C",
-      "explain": "Bread 从 80 到 60，变少了，是跌了。",
-      "help": "一项一项比：这学期的数字比上学期小，就是跌了。",
-      "kind": "mcq",
-      "options": [
-        "Juice",
-        "Milk",
-        "Bread",
-        "都没跌"
-      ],
-      "phase": "practice",
-      "review_weakness": "direction",
-      "scene": "看这张新的小卖部小表。",
-      "stem": "小卖部数据：Juice 上学期 100 瓶，这学期 120 瓶；Bread 上学期 80 个，这学期 60 个；Milk 上学期 50 瓶，这学期 50 瓶。哪一项跌了？",
-      "step": 5,
-      "title": "复盘：哪一项跌了",
-      "wrong_feedback": {
-        "A": "Juice 从 100 到 120，是多了。再比比别项。",
-        "B": "Milk 两学期都是 50，没变。再比比别项。",
-        "C": "",
-        "D": "有一项跌了。一项一项对两个数字。"
-      }
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 6,
-      "teach_html": "<p>站长抱进来一叠信：“听众来信！有点歌的，有提问的，还有闲聊的。”</p><p>今天的任务：<strong>读懂每一封信，抓住真正的请求</strong>——点歌的就安排歌，提问的就查清楚回答，闲聊的不用放进回信。</p><p>回信有规矩，站长先教你。</p>",
-      "title": "新任务：来信了"
-    },
-    {
-      "audio_id": "u2r4-demo-reply",
-      "kind": "teach",
-      "phase": "teach",
-      "step": 7,
-      "teach_html": "<p>回信只学三句话，句句有用。</p><p><strong>第一句：reply（回应、回信）</strong>。Thank you for your letter.（谢谢你的来信。）In reply to your question…（回应你的问题……）——先谢，再答。</p><p><strong>第二句：promise（承诺）</strong>。I promise to play your song tomorrow.（我保证明天放你的歌。）——答应别人的事，用 promise。</p><p><strong>第三句：agree（同意）</strong>。Yes, we agree.（好的，我们同意。）——答应请求，用 agree。</p><p>点开声音，听站长读一遍示范。</p>",
-      "title": "新本领：回信三句话"
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 8,
-      "teach_html": "<p>读信三步，步步都算数：</p><ul><li>① <strong>找请求</strong>：信里“Can you…”“I want to know…”“do you agree…”这样的句子，就是真正的请求；</li><li>② <strong>闲聊放一边</strong>：“我最喜欢面条”这类话，回信里不用回答；</li><li>③ <strong>回信三步</strong>：先谢来信，再答请求，最后把事说清楚。</li></ul>",
-      "title": "读信的方法"
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
-      "step": 9,
-      "teach_html": "<p>第一封信来了，仔细读。等会儿要考：这封信真正的请求是什么。</p>",
-      "title": "第一封来信"
-    },
-    {
-      "answer": "A",
-      "explain": "请求：Can you play \"Morning Song\" for me on my birthday?",
-      "help": "找信里“Can you…”那句，那就是请求。",
-      "help_line": "Can you play \"Morning Song\" for me on my birthday?",
-      "kind": "mcq",
-      "material_label": "第一封来信",
-      "options": [
-        "在她生日那天放《Morning Song》",
-        "告诉大家她最喜欢英语课",
-        "夸一夸这个节目",
-        "没说清楚"
-      ],
-      "phase": "practice",
-      "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
-      "scene": "照着第一封来信找。",
-      "stem": "Lily 的信里，真正的请求是什么？",
-      "step": 10,
-      "title": "这封信的请求是什么",
-      "wrong_feedback": {
-        "A": "",
-        "B": "那是信里的闲聊，不是请求。再找找“Can you…”那句。",
-        "C": "夸节目是闲聊，回信不用回答这个。",
-        "D": "信里有一句“Can you play…”，那就是请求。"
-      }
-    },
-    {
-      "answer": "C",
-      "explain": "“我最喜欢的科目是英语”是闲聊，回信不用回答。",
-      "help": "闲聊就是和请求没关系的话。哪一句和点歌、生日都没关系？",
-      "help_line": "My favourite subject is English. I like your show very much.",
-      "kind": "mcq",
-      "material_label": "第一封来信",
-      "options": [
-        "My birthday is on October 10.",
-        "Can you play \"Morning Song\" for me on my birthday?",
-        "My favourite subject is English.",
-        "Thank you!"
-      ],
-      "phase": "practice",
-      "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
-      "scene": "还是第一封来信。",
-      "stem": "信里哪一句是闲聊——回信里不用回答的？",
-      "step": 11,
-      "title": "哪一句是闲聊",
-      "wrong_feedback": {
-        "A": "生日是哪天，回信里要写上，这是请求的一部分。",
-        "B": "这是请求本身，回信必须回答。",
-        "C": "",
-        "D": "谢谢是礼貌用语，回信开头也要写，不是闲聊。"
-      }
-    },
-    {
-      "choice_key": "segment_name",
-      "kind": "choice",
-      "options": [
-        "心愿点播",
-        "来信时间",
-        "点歌小喇叭",
-        "听众信箱"
-      ],
-      "scene": "新栏目诞生，名字由你定。",
-      "stem": "以后听众的来信都要在这个新栏目里播。给栏目取个名字，站长会一直用下去。",
-      "step": 12,
-      "title": "给栏目取名"
-    },
-    {
-      "audio_id": "u2r4-m1",
-      "kind": "teach",
-      "phase": "teach",
-      "step": 13,
-      "teach_html": "<p>第二封“信”是语音留言。点开听，Tom 说了什么。</p><p>听完要数：他提了几个请求。可以重听。</p>",
-      "title": "听：Tom 的语音留言"
-    },
-    {
-      "answer": "D",
-      "audio_id": "u2r4-m1",
-      "explain": "两个请求：问英语角的时间，点一首《Sunny Day》。“我最喜欢面条”是闲聊。",
-      "help": "数请求句：“is the English Corner…”和“I want…”是，“面条”是闲聊。",
-      "help_line": "I have a question: is the English Corner still on Thursday at four thirty? And I want to ask for a song: Sunny Day.",
-      "kind": "mcq",
-      "options": [
-        "1 个",
-        "3 个",
-        "没请求",
-        "2 个"
-      ],
-      "phase": "practice",
-      "scene": "听 Tom 的语音留言，先听，数请求。",
-      "stem": "（先听）Tom 的留言里，有几个真正的请求？",
-      "step": 14,
-      "title": "Tom 提了几个请求",
-      "wrong_feedback": {
-        "A": "再数数：问时间是一个，点歌又是一个。",
-        "B": "“我最喜欢面条”是闲聊，不算请求。",
-        "C": "有请求的：“is the English Corner…”和“I want to ask for a song”。",
-        "D": ""
-      }
-    },
-    {
-      "answer_text": "Sunny Day",
-      "common_errors": [
-        {
-          "say": "歌名再听一遍：“I want to ask for a song”后面那个词。",
-          "when": "歌名写错"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "sunny day"
-          ],
-          "cn": [
-            "晴天",
-            "《Sunny Day》"
-          ],
-          "id": "song",
-          "olds": [
-            "rainy day"
-          ],
-          "type": "word"
-        }
-      ],
-      "explain": "Tom 点的是《Sunny Day》。",
-      "help": "听“I want to ask for a song”后面那个歌名。",
-      "help_line": "And I want to ask for a song: Sunny Day.",
-      "kind": "short",
-      "phase": "practice",
-      "scene": "还是 Tom 的语音留言。",
-      "stem": "（先听）Tom 想点的歌叫什么名字？写出歌名。",
-      "step": 15,
-      "task": "写出歌名。",
-      "title": "Tom 点了哪首歌",
-      "predicted_errors": [
-        {
-          "wrong": "Rainy Day",
-          "cause": "粗心",
-          "say": "歌名的第一个词你听成了 rainy，再听一遍第一个词。"
-        },
-        {
-          "wrong": "Morning Song",
-          "cause": "没看到材料",
-          "say": "你写的这首歌是 Lily 点的，不是 Tom 点的。"
-        },
-        {
-          "wrong": "Sunny",
-          "cause": "粗心",
-          "say": "歌名有两个词，你只写了第一个，第二个词再听一遍。"
-        },
-        {
-          "wrong": "Sunnyday",
-          "cause": "粗心",
-          "say": "歌名是两个词，中间空一格再写一遍。"
-        }
-      ],
-      "dim_help": {
-        "song": {
-          "label": "歌名",
-          "ask": "Tom 说“I want to ask for a song”，后面那个词是什么？"
-        }
-      }
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 16,
-      "teach_html": "<p>站长写了回信示范，看他怎么回 Tom 的：</p><p>Dear Tom,<br>Thank you for your message. In reply to your question, the English Corner is still on Thursday at four thirty. I promise to play \"Sunny Day\" for you.</p><p>三步都在：<strong>谢来信</strong>（Thank you…）→<strong>答请求</strong>（In reply to your question…）→<strong>给承诺</strong>（I promise…）。</p>",
-      "title": "站长示范回信"
-    },
-    {
-      "answer": "D",
-      "explain": "第④句是闲聊，回信里不用写。Tom 的请求是问时间和点歌。",
-      "help": "一句一句对 Tom 的请求：这句回答了哪个请求？对不上的就是它。",
-      "help_line": "Oh, my favourite food is noodles.",
-      "kind": "mcq",
-      "options": [
-        "第①句",
-        "第②句",
-        "第③句",
-        "第④句"
-      ],
-      "phase": "practice",
-      "scene": "站长的回信草稿多了一句。对照着找。",
-      "stem": "回信草稿：① Thank you for your message. ② In reply to your question, the English Corner is still on Thursday at four thirty. ③ I promise to play \"Sunny Day\" for you. ④ My favourite food is noodles too. 哪一句该删掉？",
-      "step": 17,
-      "title": "回信里哪一句该删",
-      "wrong_feedback": {
-        "A": "开头谢来信是礼貌，要留着。",
-        "B": "这是回答 Tom 的问题，要留着。",
-        "C": "这是对点歌的承诺，要留着。",
-        "D": ""
-      }
-    },
-    {
-      "answer_text": "Thank you for your letter. I promise to play \"Morning Song\" on your birthday.",
-      "common_errors": [
-        {
-          "when": "没谢来信",
-          "say": "回信第一句先谢来信，加上 thank。"
-        },
-        {
-          "when": "没写 promise",
-          "say": "第二句是承诺，用上 promise 这个词。"
-        },
-        {
-          "when": "承诺动作不对",
-          "say": "回信承诺的是放歌（play），不是唱歌（sing）。"
-        },
-        {
-          "when": "歌名写错",
-          "say": "回第一封来信看，Lily 点的歌叫什么。"
-        }
-      ],
-      "expects": [
-        {
-          "id": "thank",
-          "answers": [
-            "thank",
-            "thanks"
-          ],
-          "cn": [
-            "谢谢",
-            "感谢"
-          ],
-          "type": "word"
-        },
-        {
-          "answers": [
-            "promise",
-            "promised",
-            "promises"
-          ],
-          "cn": [
-            "承诺",
-            "保证"
-          ],
-          "id": "promise",
-          "type": "word"
-        },
-        {
-          "id": "action",
-          "answers": [
-            "play",
-            "played",
-            "plays",
-            "playing"
-          ],
-          "olds": [
-            "sing",
-            "sang",
-            "sung",
-            "singing"
-          ],
-          "cn": [
-            "放",
-            "播放"
-          ],
-          "type": "word"
-        },
-        {
-          "answers": [
-            "morning song"
-          ],
-          "cn": [
-            "《Morning Song》"
-          ],
-          "id": "song",
-          "olds": [
-            "sunny day",
-            "rainbow"
-          ],
-          "type": "word"
-        },
-        {
-          "answers": [
-            "birthday",
-            "october 10",
-            "oct 10",
-            "10 october",
-            "10th october"
-          ],
-          "cn": [
-            "生日",
-            "10月10日"
-          ],
-          "id": "day",
-          "type": "word"
-        }
-      ],
-      "explain": "范文：Thank you for your letter. I promise to play \"Morning Song\" on your birthday。",
-      "help": "第①句谢来信；第②句是承诺：promise＋歌名＋生日。",
-      "help_line": "Can you play \"Morning Song\" for me on my birthday?",
-      "kind": "short",
-      "material_label": "第一封来信",
-      "phase": "practice",
-      "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
-      "scene": "轮到你写了：给 Lily 回 2 句。",
-      "stem": "照着句子框写 2 句：① Thank you for your ___. ② I ___ to play \"___\" on your ___.",
-      "step": 18,
-      "task": "写 2 句英文。",
-      "title": "给 Lily 写回信",
-      "predicted_errors": [
-        {
-          "wrong": "Thank you for your letter. I promise to sing \"Morning Song\" on your birthday.",
-          "cause": "不会这个知识",
-          "say": "你写的 sing 是“唱歌”的意思，第二句要的是另一个动作，回信示范里找。"
-        },
-        {
-          "wrong": "I promise to play \"Morning Song\" on your birthday.",
-          "cause": "粗心",
-          "say": "你只写了第二句，第一句谢来信还没写，补上。"
-        },
-        {
-          "wrong": "Thank you for your letter. I promise to play \"Sunny Day\" on your birthday.",
-          "cause": "没看到材料",
-          "say": "你写的歌名是 Tom 点的。Lily 的信再看一遍，她点的歌叫什么？"
-        },
-        {
-          "wrong": "Thank you for your letter. I promise to play \"Morning Song\".",
-          "cause": "粗心",
-          "say": "前两句的信息都对，生日还没写，什么时候放这首歌？"
-        },
-        {
-          "wrong": "Thank you for your letter. I agree to play \"Morning Song\" on your birthday.",
-          "cause": "不会这个知识",
-          "say": "你写的 agree 是“同意”，这里要的是“保证做到”的那个词，第二句里找。"
-        }
-      ],
-      "dim_help": {
-        "thank": {
-          "label": "谢来信",
-          "ask": "回信第一句是谢来信，跟着写：Thank you for your letter。"
-        },
-        "promise": {
-          "label": "承诺词",
-          "ask": "第二句是承诺，“保证做到”用哪个词？"
-        },
-        "action": {
-          "label": "承诺动作",
-          "ask": "承诺的是放歌还是唱歌？放歌用哪个词？"
-        },
-        "song": {
-          "label": "歌名",
-          "ask": "Lily 点的歌叫什么？回第一封信看。"
-        },
-        "day": {
-          "label": "生日",
-          "ask": "什么时候放这首歌？Lily 的生日是哪天？"
-        }
-      }
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 19,
-      "teach_html": "<p>今天练了读信找请求、听留言数请求，还学会了回信三句话：reply、promise、agree。</p><p>下一部分站长出门，第三封信你自己回。</p>",
-      "title": "小结"
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 20,
-      "teach_html": "<p>站长出门了。第三封信你自己回——正式回之前，先热热身。</p>",
-      "title": "自己回第三封信"
-    },
-    {
-      "answer": "B",
-      "explain": "120 到 150，多了 30 瓶，是原来的 25%：went up 25%。",
-      "help": "先比大小定方向；再算多出来的占原来多少。",
-      "kind": "mcq",
-      "options": [
-        "went down 20%",
-        "went up 25%",
-        "went up 20%",
-        "没有变化"
-      ],
-      "phase": "validate",
-      "scene": "先热热身：新数据，看看涨跌还稳不稳。",
-      "stem": "Juice 上学期卖 120 瓶，这学期卖 150 瓶。涨了百分之几？",
-      "step": 21,
-      "title": "开场复习：涨了多少",
-      "wrong_feedback": {
-        "A": "再比一比 120 和 150 哪个大，方向先定下来。",
-        "B": "",
-        "C": "方向对了，百分之几再算一算：多出来的除以原来的。",
-        "D": "120 到 150 变了。再看两个数字。"
-      }
-    },
-    {
-      "answer_text": "I promise to help you.",
-      "common_errors": [
-        {
-          "say": "承诺用 promise 这个词：I promise to…。",
-          "when": "没用 promise"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "promise",
-            "promised"
-          ],
-          "cn": [
-            "承诺",
-            "保证"
-          ],
-          "id": "promise",
-          "type": "word"
-        }
-      ],
-      "explain": "I promise to help you.（承诺句里有 promise 就对。）",
-      "help": "照着句框：I promise to…，后面接你要做的事。",
-      "kind": "short",
-      "phase": "validate",
-      "scene": "热热身第二题：承诺的话自己写一句。",
-      "stem": "照着写一句承诺：I promise to ___.",
-      "step": 22,
-      "task": "写一句英文。",
-      "title": "开场复习：写一句承诺",
-      "predicted_errors": [
-        {
-          "wrong": "I will help you.",
-          "cause": "不会这个知识",
-          "say": "will 是“将要”，这里要练的是“承诺”的说法，开头换个词。"
-        },
-        {
-          "wrong": "I agree to help you.",
-          "cause": "不会这个知识",
-          "say": "agree 是“同意”，承诺用另一个词，开头换一换。"
-        },
-        {
-          "wrong": "I can help you.",
-          "cause": "不会这个知识",
-          "say": "can 是“能”，承诺用另一个词，开头换一换。"
-        },
-        {
-          "wrong": "我会帮你。",
-          "cause": "粗心",
-          "say": "中文里“保证”的意思还没写出来，补上。"
-        }
-      ],
-      "dim_help": {
-        "promise": {
-          "label": "承诺词",
-          "ask": "“保证做到”用哪个词开头？"
-        }
-      }
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "reading": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack",
-      "step": 23,
-      "teach_html": "<p>第三封信来了，仔细读。这封有两个请求，别漏。</p>",
-      "title": "第三封来信"
-    },
-    {
-      "answer": "B",
-      "explain": "两个请求：问图书馆的开放时间，请广播站读他的诗。“我也喜欢面条”是闲聊。",
-      "help": "两句请求：“When is…”和“do you agree…”是。",
-      "help_line": "When is the school library open now? Also, do you agree to read my poem on the radio?",
-      "kind": "mcq",
-      "material_label": "第三封来信",
-      "options": [
-        "1 个",
-        "2 个",
-        "3 个",
-        "没请求"
-      ],
-      "phase": "validate",
-      "reading": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack",
-      "scene": "照着第三封来信数。",
-      "stem": "Jack 的信里，有几个真正的请求？",
-      "step": 24,
-      "title": "Jack 的信里有几个请求",
-      "wrong_feedback": {
-        "A": "再数数：问图书馆是一个，读诗又是一个。",
-        "B": "",
-        "C": "“我也喜欢面条”是闲聊，不算请求。",
-        "D": "有请求的：“When is the school library open now?”和“do you agree to read my poem”。"
-      }
-    },
-    {
-      "answer": "A",
-      "explain": "回信开头要客气：Dear Jack,。",
-      "help": "想想站长示范的回信开头是怎么写的。",
-      "kind": "mcq",
-      "options": [
-        "Dear Jack,",
-        "Hey, boy, listen to me.",
-        "You are wrong about the library.",
-        "Give me your poem now."
-      ],
-      "phase": "validate",
-      "scene": "给 Jack 写回信，开头第一句选哪个。",
-      "stem": "给 Jack 的回信，开头第一句用哪一句最合适？",
-      "step": 25,
-      "title": "回信的开头选哪句",
-      "wrong_feedback": {
-        "A": "",
-        "B": "语气不礼貌。回信开头要客气。",
-        "C": "还没回答问题，先别下这种结论。",
-        "D": "这是命令的语气，不礼貌。"
-      }
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "reading": "第一份通知：\nThe school library is open from twelve to one in the afternoon.\n\n第二份通知：\nThe school library is open from four to five in the afternoon.",
-      "step": 26,
-      "teach_html": "<p>Jack 问图书馆现在什么时候开。站长找出两份通知：只认最新的一份。</p>",
-      "title": "两份图书馆通知"
-    },
-    {
-      "answer": "B",
-      "explain": "只认第二份通知：下午 4 点到 5 点。",
-      "help": "两份通知只看第二份，第一份已经不算数了。",
-      "help_line": "第二份通知：The school library is open from four to five in the afternoon.",
-      "kind": "mcq",
-      "material_label": "图书馆通知",
-      "options": [
-        "第一份",
-        "第二份",
-        "两份都算",
-        "都不算"
-      ],
-      "phase": "validate",
-      "reading": "第一份通知：\nThe school library is open from twelve to one in the afternoon.\n\n第二份通知：\nThe school library is open from four to five in the afternoon.",
-      "scene": "照着两份图书馆通知。",
-      "stem": "Jack 问图书馆现在什么时候开。哪一份通知说了算？",
-      "step": 27,
-      "title": "哪一份通知说了算",
-      "wrong_feedback": {
-        "A": "第一份是旧的，已经不算数了。",
-        "B": "",
-        "C": "只认最新的一份。",
-        "D": "第二份是最新的，说了算。"
-      }
-    },
-    {
-      "answer_text": "The library is open from four to five in the afternoon.",
-      "common_errors": [
-        {
-          "say": "那是第一份通知上的旧时间。只看第二份。",
-          "when": "写了 twelve"
-        },
-        {
-          "say": "那是第一份通知上的旧时间。只看第二份。",
-          "when": "写了 one"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "four"
-          ],
-          "cn": [
-            "4",
-            "四"
-          ],
-          "id": "open",
-          "olds": [
-            "twelve"
-          ],
-          "type": "word"
-        },
-        {
-          "answers": [
-            "five"
-          ],
-          "cn": [
-            "5",
-            "五"
-          ],
-          "id": "close",
-          "olds": [
-            "one"
-          ],
-          "type": "word"
-        }
-      ],
-      "explain": "The library is open from four to five in the afternoon.",
-      "help": "只看第二份通知：from 后面是几点开，to 后面是几点关。",
-      "help_line": "第二份通知：The school library is open from four to five in the afternoon.",
-      "kind": "short",
-      "material_label": "图书馆通知",
-      "phase": "validate",
-      "reading": "第一份通知：\nThe school library is open from twelve to one in the afternoon.\n\n第二份通知：\nThe school library is open from four to five in the afternoon.",
-      "scene": "照着第二份通知写。",
-      "stem": "按第二份通知，图书馆现在什么时候开？写出时间。",
-      "step": 28,
-      "task": "写出开放时间。",
-      "title": "写出图书馆的开放时间",
-      "predicted_errors": [
-        {
-          "wrong": "twelve to one",
-          "cause": "没看到材料",
-          "say": "你写的是第一份通知上的旧时间，只看第二份通知。"
-        },
-        {
-          "wrong": "four",
-          "cause": "粗心",
-          "say": "开门时间对了，关门时间还没写，写全。"
-        },
-        {
-          "wrong": "five to six",
-          "cause": "没看到材料",
-          "say": "数字对不上第二份通知，再看一遍 Time 那一行。"
-        },
-        {
-          "wrong": "下午四点",
-          "cause": "粗心",
-          "say": "开门时间有了，关门时间还没写。"
-        }
-      ],
-      "dim_help": {
-        "open": {
-          "label": "开门时间",
-          "ask": "第二份通知上，图书馆几点开门？"
-        },
-        "close": {
-          "label": "关门时间",
-          "ask": "第二份通知上，图书馆几点关门？"
-        }
-      }
-    },
-    {
-      "choice_key": "reply_first",
-      "kind": "choice",
-      "options": [
-        "Lily 的生日祝福（生日最近）",
-        "Tom 的语音留言",
-        "Jack 的信"
-      ],
-      "scene": "播出顺序由你定。",
-      "stem": "三封信的回信都写好了，今晚时间只够播一封。先播哪一封？",
-      "step": 29,
-      "title": "先播哪一封回信"
-    },
-    {
-      "audio_id": "u2r4-m2",
-      "kind": "teach",
-      "phase": "teach",
-      "step": 30,
-      "teach_html": "<p>又来一封语音留言。点开听，Ann 说了什么，听完数请求、记歌名。</p>",
-      "title": "听：Ann 的语音留言"
-    },
-    {
-      "answer": "C",
-      "audio_id": "u2r4-m2",
-      "explain": "两个请求：问 Sports Day 的日期，给班级点《Rainbow》。“得了第一”是闲聊。",
-      "help": "一个一个数：问日期是一个，点歌又是一个。",
-      "help_line": "When is Sports Day? Please play Rainbow for my class.",
-      "kind": "mcq",
-      "options": [
-        "只问运动会是哪天",
-        "只点歌《Rainbow》",
-        "问日期＋点歌《Rainbow》",
-        "夸自己的班级得了第一"
-      ],
-      "phase": "validate",
-      "scene": "听 Ann 的语音留言，先听，再选。",
-      "stem": "（先听）Ann 的留言里，真正的请求是什么？",
-      "step": 31,
-      "title": "Ann 的请求是什么",
-      "wrong_feedback": {
-        "A": "还少了一个：她还点了一首歌。",
-        "B": "还少了一个：她先问了运动会的日期。",
-        "C": "",
-        "D": "夸班级是闲聊，不是请求。"
-      }
-    },
-    {
-      "answer_text": "Rainbow",
-      "common_errors": [
-        {
-          "say": "Sunny Day 是 Tom 点的。Ann 点的是另一首，再听一遍。",
-          "when": "写了 Sunny Day"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "rainbow"
-          ],
-          "cn": [
-            "彩虹",
-            "《Rainbow》"
-          ],
-          "id": "song",
-          "olds": [
-            "sunny day",
-            "morning song"
-          ],
-          "type": "word"
-        }
-      ],
-      "explain": "Ann 点的是《Rainbow》。",
-      "help": "听“Please play”后面那个歌名。",
-      "kind": "short",
-      "phase": "validate",
-      "scene": "还是 Ann 的语音留言。",
-      "stem": "（先听）Ann 给班级点的歌叫什么名字？写出歌名。",
-      "step": 32,
-      "task": "写出歌名。",
-      "title": "Ann 点了哪首歌",
-      "predicted_errors": [
-        {
-          "wrong": "Sunny Day",
-          "cause": "没看到材料",
-          "say": "你写的这首歌是 Tom 点的。Ann 的留言再听一遍。"
-        },
-        {
-          "wrong": "Morning Song",
-          "cause": "没看到材料",
-          "say": "你写的这首歌是 Lily 点的。Ann 的留言再听一遍。"
-        },
-        {
-          "wrong": "I don't know",
-          "cause": "粗心",
-          "say": "先听一遍再写，歌名在“I want to ask for a song”后面。"
-        },
-        {
-          "wrong": "rain bow",
-          "cause": "粗心",
-          "say": "你写的两个部分拼起来是一个词，中间不空格。"
-        }
-      ],
-      "dim_help": {
-        "song": {
-          "label": "歌名",
-          "ask": "Ann 说“I want to ask for a song”，后面那个词是什么？"
-        }
-      }
-    },
-    {
-      "answer": "D",
-      "explain": "④不写：Sunny Day 是 Tom 的，Jack 问时间和读诗。",
-      "help": "一句一句对 Jack 的两个请求：这句回答了哪个请求？对不上的就是它。",
-      "kind": "mcq",
-      "options": [
-        "第①句",
-        "第②句",
-        "第③句",
-        "第④句"
-      ],
-      "phase": "validate",
-      "scene": "给 Jack 的回信草稿有一句写错了。对照着找。",
-      "see_also": {
-        "label": "再看 Jack 的信",
-        "text": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack"
-      },
-      "stem": "回信草稿：① Dear Jack, thank you for your letter. ② In reply to your question, the library is open from four to five in the afternoon. ③ We agree to read your poem on the radio. ④ I promise to play \"Sunny Day\" for you. 哪一句不该写？",
-      "step": 33,
-      "title": "给 Jack 的回信：哪一句不该写",
-      "wrong_feedback": {
-        "A": "开头谢来信是对的。",
-        "B": "这是回答 Jack 的问题，时间也对得上第二份通知。",
-        "C": "Jack 信里问了读诗，答应他是对的。",
-        "D": ""
-      }
-    },
-    {
-      "answer_text": "I promise to read your poem on the radio.",
-      "common_errors": [
-        {
-          "say": "Jack 请读的是他的诗（poem），不是信。再看他的信。",
-          "when": "写了 letter"
-        },
-        {
-          "say": "歌是 Tom 和 Ann 点的。Jack 请读的是诗。",
-          "when": "写了 song"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "promise",
-            "promised"
-          ],
-          "cn": [
-            "承诺"
-          ],
-          "id": "promise",
-          "type": "word"
-        },
-        {
-          "answers": [
-            "poem"
-          ],
-          "cn": [
-            "诗"
-          ],
-          "id": "poem",
-          "olds": [
-            "letter",
-            "song"
-          ],
-          "type": "word"
-        }
-      ],
-      "explain": "改对了：I promise to read your poem on the radio.",
-      "help": "Jack 的第二个请求是什么？把那个词填进句框。",
-      "kind": "short",
-      "phase": "validate",
-      "scene": "把写错的那句改成对 Jack 的承诺。",
-      "see_also": {
-        "label": "再看 Jack 的信",
-        "text": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack"
-      },
-      "stem": "第④句写错了：那是 Tom 点的歌。照着句子框，把这句改成对 Jack 的承诺：I promise to ___ your ___ on the radio.",
-      "step": 34,
-      "task": "写完整的句子。",
-      "title": "把第④句改对",
-      "predicted_errors": [
-        {
-          "wrong": "I promise to read your letter on the radio.",
-          "cause": "没看到材料",
-          "say": "letter 是“信”的意思，Jack 请读的不是信，再看他的信里请读的是什么。"
-        },
-        {
-          "wrong": "I promise to read your song on the radio.",
-          "cause": "没看到材料",
-          "say": "歌是 Tom 和 Ann 点的。Jack 请读的是另一件事，再看他的信。"
-        },
-        {
-          "wrong": "I agree to read your poem on the radio.",
-          "cause": "不会这个知识",
-          "say": "agree 是“同意”，承诺用另一个词，前面那个词换一换。"
-        },
-        {
-          "wrong": "我保证在广播上读你的诗。",
-          "cause": "粗心",
-          "say": "意思对了，用英文写：承诺用哪个词开头？"
-        }
-      ],
-      "dim_help": {
-        "promise": {
-          "label": "承诺词",
-          "ask": "“保证做到”用哪个词开头？"
-        },
-        "poem": {
-          "label": "Jack 请读的东西",
-          "ask": "Jack 请广播站读的是他的什么？再看他的信。"
-        }
-      },
-      "audio_id": "u2r4-q34"
-    },
-    {
-      "answer_text": "Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Sunny Day\" for you.",
-      "common_errors": [
-        {
-          "say": "回 Tom 的留言听听：英语角是周几？",
-          "when": "星期写错"
-        },
-        {
-          "say": "Tom 点的歌再听一遍：“I want to ask for a song”后面。",
-          "when": "歌名写错"
-        }
-      ],
-      "expects": [
-        {
-          "answers": [
-            "thank",
-            "thanks"
-          ],
-          "cn": [
-            "谢谢",
-            "感谢"
-          ],
-          "id": "thank",
-          "type": "word"
-        },
-        {
-          "answers": [
-            "thursday"
-          ],
-          "cn": [
-            "周四",
-            "星期四"
-          ],
-          "id": "day",
-          "olds": [
-            "friday"
-          ],
-          "type": "word"
-        },
-        {
-          "answers": [
-            "four thirty",
-            "half past four",
-            "4 30",
-            "4:30"
-          ],
-          "cn": [
-            "四点半",
-            "4点半"
-          ],
-          "id": "clock",
-          "type": "word"
-        },
-        {
-          "answers": [
-            "promise",
-            "promised"
-          ],
-          "cn": [
-            "承诺",
-            "保证"
-          ],
-          "id": "promise",
-          "type": "word"
-        },
-        {
-          "answers": [
-            "sunny day"
-          ],
-          "cn": [
-            "《Sunny Day》",
-            "晴天"
-          ],
-          "id": "song",
-          "olds": [
-            "rainbow",
-            "morning song"
-          ],
-          "type": "word"
-        }
-      ],
-      "explain": "范文：Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Sunny Day\" for you。",
-      "help": "一句一句来：第①句谢来信；第②句回 Tom 的留言听时间；第③句是承诺＋歌名。",
-      "kind": "short",
-      "phase": "validate",
-      "scene": "最后由你写：给 Tom 的完整回信，3 句。",
-      "stem": "照着句子框写 3 句：① Thank you for your ___. ② In reply to your question, the English Corner is on ___ at ___. ③ I ___ to play \"___\" for you.",
-      "step": 35,
-      "task": "写 3 句英文。",
-      "title": "给 Tom 写完整回信",
-      "predicted_errors": [
-        {
-          "wrong": "Thank you for your message. In reply to your question, the English Corner is on Friday at four thirty. I promise to play \"Sunny Day\" for you.",
-          "cause": "没看到材料",
-          "say": "星期写错了。Tom 的留言再听一遍，英语角是周几？"
-        },
-        {
-          "wrong": "Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Rainbow\" for you.",
-          "cause": "没看到材料",
-          "say": "你写的歌名是 Ann 点的。Tom 的留言再听一遍，他点的歌叫什么？"
-        },
-        {
-          "wrong": "Thank you for your message. In reply to your question, the English Corner is on Thursday. I promise to play \"Sunny Day\" for you.",
-          "cause": "粗心",
-          "say": "星期写对了，几点还没写，at 后面加上时间。"
-        },
-        {
-          "wrong": "In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Sunny Day\" for you.",
-          "cause": "粗心",
-          "say": "三句话你写了后两句，第一句谢来信补上。"
-        },
-        {
-          "wrong": "Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I agree to play \"Sunny Day\" for you.",
-          "cause": "不会这个知识",
-          "say": "你写的 agree 是“同意”，这里要的是“保证做到”的那个词，第三句里找。"
-        }
-      ],
-      "dim_help": {
-        "thank": {
-          "label": "谢来信",
-          "ask": "回信第一句是谢来信，跟着写：Thank you for your message。"
-        },
-        "day": {
-          "label": "星期",
-          "ask": "英语角是周几？Tom 的留言再听一遍。"
-        },
-        "clock": {
-          "label": "时间",
-          "ask": "英语角是几点？at 后面是几点？"
-        },
-        "promise": {
-          "label": "承诺词",
-          "ask": "“保证做到”用哪个词？"
-        },
-        "song": {
-          "label": "歌名",
-          "ask": "Tom 点的歌叫什么？留言再听一遍。"
-        }
-      }
-    },
-    {
-      "kind": "teach",
-      "phase": "teach",
-      "step": 36,
-      "teach_html": "<p>三封信都回完了：Lily 的生日歌、Tom 的点歌、Jack 的问题，都有了着落。</p><p>你取的名字{{choice:segment_name|校园之声}}，今晚就用它开播。</p><p>下一课《期末大直播》：校庆大直播，多则通知、数字、来信一起来，到时候见。</p>",
-      "title": "回完了"
+     "say": "句子框还没写完：最后别漏掉 from last term。",
+     "when": "漏了 from last term"
     }
-  ],
-  "title": "Unit 2 第4课：来信点播",
-  "unit": "Unit 2",
-  "version": 1
+   ],
+   "dim_help": {
+    "dirpct": {
+     "ask": "先看 400 和 500，牛奶是变多了还是变少了？",
+     "label": "涨跌方向和百分比"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "up 25",
+      "up twenty five",
+      "up twenty-five"
+     ],
+     "cn": [
+      "涨了25%",
+      "上升25%"
+     ],
+     "id": "dirpct",
+     "olds": [
+      "down 25",
+      "down",
+      "up 20"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "The milk went up 25% from last term.",
+   "help": "400 到 500，是涨还是跌，百分之几。",
+   "kind": "short",
+   "phase": "practice",
+   "predicted_errors": [
+    {
+     "cause": "粗心",
+     "say": "400 瓶卖到 500 瓶是变多了，你写的是变少，方向写反了。",
+     "wrong": "The milk went down 25% from last term."
+    },
+    {
+     "cause": "不会这个知识",
+     "say": "多出来的 100 瓶占原来的 400 瓶的多少？再除一次看看。",
+     "wrong": "The milk went up 20% from last term."
+    },
+    {
+     "cause": "粗心",
+     "say": "方向写对了，涨了百分之几还没写，把数字补上。",
+     "wrong": "The milk went up."
+    },
+    {
+     "cause": "粗心",
+     "say": "涨了百分之几？把数字也写上。",
+     "wrong": "牛奶涨了。"
+    }
+   ],
+   "review_weakness": "writing",
+   "scene": "把变化写成一句播报。",
+   "stem": "照着句子框写一句：The milk went ___ ___% from last term.（牛奶从 400 瓶卖到 500 瓶。）",
+   "step": 4,
+   "task": "写一句英文。",
+   "title": "复盘：写一句播报"
+  },
+  {
+   "answer": "C",
+   "explain": "Bread 从 80 到 60，变少了，是跌了。",
+   "help": "一项一项比：这学期的数字比上学期小，就是跌了。",
+   "kind": "mcq",
+   "options": [
+    "Juice",
+    "Milk",
+    "Bread",
+    "都没跌"
+   ],
+   "phase": "practice",
+   "review_weakness": "direction",
+   "scene": "看这张新的小卖部小表。",
+   "stem": "小卖部数据：Juice 上学期 100 瓶，这学期 120 瓶；Bread 上学期 80 个，这学期 60 个；Milk 上学期 50 瓶，这学期 50 瓶。哪一项跌了？",
+   "step": 5,
+   "title": "复盘：哪一项跌了",
+   "wrong_feedback": {
+    "A": "Juice 从 100 涨到 120，是涨不是跌。跌的是前后数字变小的那一项。",
+    "B": "Milk 两学期都是 50，一点没变。去找数字变小的那一项。",
+    "C": "",
+    "D": "有一项的数字变小了，就是跌了。把三项的前后数字一对一对看。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 6,
+   "teach_html": "<p>站长抱进来一叠信：“听众来信！有点歌的，有提问的，还有闲聊的。”</p><p>今天的任务：<strong>读懂每一封信，抓住真正的请求</strong>——点歌的就安排歌，提问的就查清楚回答，闲聊的不用放进回信。</p><p>回信有规矩，站长先教你。</p>",
+   "title": "新任务：来信了"
+  },
+  {
+   "audio_id": "u2r4-demo-reply",
+   "kind": "teach",
+   "phase": "teach",
+   "step": 7,
+   "teach_html": "<p>回信只学三句话，句句有用。</p><p><strong>第一句：reply（回应、回信）</strong>。Thank you for your letter.（谢谢你的来信。）In reply to your question…（回应你的问题……）——先谢，再答。</p><p><strong>第二句：promise（承诺）</strong>。I promise to play your song tomorrow.（我保证明天放你的歌。）——答应别人的事，用 promise。</p><p><strong>第三句：agree（同意）</strong>。Yes, we agree.（好的，我们同意。）——答应请求，用 agree。</p><p>点开声音，听站长读一遍示范。</p>",
+   "title": "新本领：回信三句话"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 8,
+   "teach_html": "<p>读信三步，步步都算数：</p><ul><li>① <strong>找请求</strong>：信里“Can you…”“I want to know…”“do you agree…”这样的句子，就是真正的请求；</li><li>② <strong>闲聊放一边</strong>：“我最喜欢面条”这类话，回信里不用回答；</li><li>③ <strong>回信三步</strong>：先谢来信，再答请求，最后把事说清楚。</li></ul>",
+   "title": "读信的方法"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
+   "step": 9,
+   "teach_html": "<p>第一封信来了，仔细读。等会儿要考：这封信真正的请求是什么。</p>",
+   "title": "第一封来信"
+  },
+  {
+   "answer": "A",
+   "explain": "请求：Can you play \"Morning Song\" for me on my birthday?",
+   "help": "找信里“Can you…”那句，那就是请求。",
+   "help_line": "Can you play \"Morning Song\" for me on my birthday?",
+   "kind": "mcq",
+   "material_label": "第一封来信",
+   "options": [
+    "在她生日那天放《Morning Song》",
+    "告诉大家她最喜欢英语课",
+    "夸一夸这个节目",
+    "没说清楚"
+   ],
+   "phase": "practice",
+   "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
+   "scene": "照着第一封来信找。",
+   "stem": "Lily 的信里，真正的请求是什么？",
+   "step": 10,
+   "title": "这封信的请求是什么",
+   "wrong_feedback": {
+    "A": "",
+    "B": "“我最喜欢英语课”是她顺嘴说的闲聊，不是请广播站做的事。请求要找带 Can you 的那句。",
+    "C": "夸节目是客气话，不是请求。请求是“请你做某事”：Can you play…",
+    "D": "信里写得很清楚：Can you play \"Morning Song\" for me on my birthday——这就是她的请求。"
+   }
+  },
+  {
+   "answer": "C",
+   "explain": "“我最喜欢的科目是英语”是闲聊，回信不用回答。",
+   "help": "闲聊就是和请求没关系的话。哪一句和点歌、生日都没关系？",
+   "help_line": "My favourite subject is English. I like your show very much.",
+   "kind": "mcq",
+   "material_label": "第一封来信",
+   "options": [
+    "My birthday is on October 10.",
+    "Can you play \"Morning Song\" for me on my birthday?",
+    "My favourite subject is English.",
+    "Thank you!"
+   ],
+   "phase": "practice",
+   "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
+   "scene": "还是第一封来信。",
+   "stem": "信里哪一句是闲聊——回信里不用回答的？",
+   "step": 11,
+   "title": "哪一句是闲聊",
+   "wrong_feedback": {
+    "A": "生日是哪天，是点歌请求的一部分，回信里要对上日子，不能算闲聊。",
+    "B": "这是请求本身——请在生日那天放歌，回信必须回答它。",
+    "C": "",
+    "D": "“Thank you!”是礼貌用语，不是闲聊。闲聊是和点歌、生日完全没关系的那句。"
+   }
+  },
+  {
+   "choice_key": "segment_name",
+   "kind": "choice",
+   "options": [
+    "心愿点播",
+    "来信时间",
+    "点歌小喇叭",
+    "听众信箱"
+   ],
+   "scene": "新栏目诞生，名字由你定。",
+   "stem": "以后听众的来信都要在这个新栏目里播。给栏目取个名字，站长会一直用下去。",
+   "step": 12,
+   "title": "给栏目取名"
+  },
+  {
+   "audio_id": "u2r4-m1",
+   "kind": "teach",
+   "phase": "teach",
+   "step": 13,
+   "teach_html": "<p>第二封“信”是语音留言。点开听，Tom 说了什么。</p><p>听完要数：他提了几个请求。可以重听。</p>",
+   "title": "听：Tom 的语音留言"
+  },
+  {
+   "answer": "D",
+   "audio_id": "u2r4-m1",
+   "explain": "两个请求：问英语角的时间，点一首《Sunny Day》。“我最喜欢面条”是闲聊。",
+   "help": "数请求句：“is the English Corner…”和“I want…”是，“面条”是闲聊。",
+   "help_line": "I have a question: is the English Corner still on Thursday at four thirty? And I want to ask for a song: Sunny Day.",
+   "kind": "mcq",
+   "options": [
+    "1 个",
+    "3 个",
+    "没请求",
+    "2 个"
+   ],
+   "phase": "practice",
+   "scene": "听 Tom 的语音留言，先听，数请求。",
+   "stem": "（先听）Tom 的留言里，有几个真正的请求？",
+   "step": 14,
+   "title": "Tom 提了几个请求",
+   "wrong_feedback": {
+    "A": "漏了一个。Tom 提了两件请广播站做的事：问英语角的时间、点《Sunny Day》。",
+    "B": "“我最喜欢面条”是闲聊，不算请求。请求只有两个：问时间、点歌。",
+    "C": "有请求的：“is the English Corner…”是问事，“I want to ask for a song”是点歌。",
+    "D": ""
+   }
+  },
+  {
+   "answer_text": "Sunny Day",
+   "common_errors": [
+    {
+     "say": "那是 Lily 点的歌。Tom 的留言里，“I want to ask for a song”后面是另一个名字。",
+     "when": "写了 Morning Song"
+    },
+    {
+     "say": "第一个词听岔了：Tom 说的是 sunny（晴）不是 rainy（雨），再听一遍开头。",
+     "when": "写了 Rainy Day"
+    },
+    {
+     "say": "歌名有两个词，只写一半不算对，第二个词是 Day。",
+     "when": "只写了 Sunny"
+    },
+    {
+     "say": "歌名是两个词，中间空一格：Sunny Day。",
+     "when": "写成 Sunnyday"
+    }
+   ],
+   "dim_help": {
+    "song": {
+     "ask": "Tom 说“I want to ask for a song”，后面那个词是什么？",
+     "label": "歌名"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "sunny day"
+     ],
+     "cn": [
+      "晴天",
+      "《Sunny Day》"
+     ],
+     "id": "song",
+     "olds": [
+      "rainy day"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "Tom 点的是《Sunny Day》。",
+   "help": "听“I want to ask for a song”后面那个歌名。",
+   "help_line": "And I want to ask for a song: Sunny Day.",
+   "kind": "short",
+   "phase": "practice",
+   "predicted_errors": [
+    {
+     "cause": "粗心",
+     "say": "歌名的第一个词你听成了 rainy，再听一遍第一个词。",
+     "wrong": "Rainy Day"
+    },
+    {
+     "cause": "没看到材料",
+     "say": "你写的这首歌是 Lily 点的，不是 Tom 点的。",
+     "wrong": "Morning Song"
+    },
+    {
+     "cause": "粗心",
+     "say": "歌名有两个词，你只写了第一个，第二个词再听一遍。",
+     "wrong": "Sunny"
+    },
+    {
+     "cause": "粗心",
+     "say": "歌名是两个词，中间空一格再写一遍。",
+     "wrong": "Sunnyday"
+    }
+   ],
+   "scene": "还是 Tom 的语音留言。",
+   "stem": "（先听）Tom 想点的歌叫什么名字？写出歌名。",
+   "step": 15,
+   "task": "写出歌名。",
+   "title": "Tom 点了哪首歌"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 16,
+   "teach_html": "<p>站长写了回信示范，看他怎么回 Tom 的：</p><p>Dear Tom,<br>Thank you for your message. In reply to your question, the English Corner is still on Thursday at four thirty. I promise to play \"Sunny Day\" for you.</p><p>三步都在：<strong>谢来信</strong>（Thank you…）→<strong>答请求</strong>（In reply to your question…）→<strong>给承诺</strong>（I promise…）。</p>",
+   "title": "站长示范回信"
+  },
+  {
+   "answer": "D",
+   "explain": "第④句是闲聊，回信里不用写。Tom 的请求是问时间和点歌。",
+   "help": "一句一句对 Tom 的请求：这句回答了哪个请求？对不上的就是它。",
+   "help_line": "Oh, my favourite food is noodles.",
+   "kind": "mcq",
+   "options": [
+    "第①句",
+    "第②句",
+    "第③句",
+    "第④句"
+   ],
+   "phase": "practice",
+   "scene": "站长的回信草稿多了一句。对照着找。",
+   "stem": "回信草稿：① Thank you for your message. ② In reply to your question, the English Corner is still on Thursday at four thirty. ③ I promise to play \"Sunny Day\" for you. ④ My favourite food is noodles too. 哪一句该删掉？",
+   "step": 17,
+   "title": "回信里哪一句该删",
+   "wrong_feedback": {
+    "A": "第①句是开头谢留言，回信都要有这一句，要留着。",
+    "B": "第②句回答了 Tom 问的英语角时间，是正事，要留着。",
+    "C": "第③句是对点歌的承诺，正是回信该做的事，要留着。",
+    "D": ""
+   }
+  },
+  {
+   "answer_text": "Thank you for your letter. I promise to play \"Morning Song\" on your birthday.",
+   "common_errors": [
+    {
+     "say": "第一句先谢来信：Thank you for your letter，别上来就说承诺。",
+     "when": "没谢来信"
+    },
+    {
+     "say": "第二句是承诺句，要有 promise：I promise to play…",
+     "when": "没写 promise"
+    },
+    {
+     "say": "广播站是放歌（play），不是唱歌（sing）。承诺的是在生日那天“放”她点的歌。",
+     "when": "承诺动作写成 sing"
+    },
+    {
+     "say": "歌名是《Morning Song》，日子是她的生日（birthday）。别写成 Tom 的《Sunny Day》。",
+     "when": "歌名或日子写错"
+    }
+   ],
+   "dim_help": {
+    "action": {
+     "ask": "承诺的是放歌还是唱歌？放歌用哪个词？",
+     "label": "承诺动作"
+    },
+    "day": {
+     "ask": "什么时候放这首歌？Lily 的生日是哪天？",
+     "label": "生日"
+    },
+    "promise": {
+     "ask": "第二句是承诺，“保证做到”用哪个词？",
+     "label": "承诺词"
+    },
+    "song": {
+     "ask": "Lily 点的歌叫什么？回第一封信看。",
+     "label": "歌名"
+    },
+    "thank": {
+     "ask": "回信第一句是谢来信，跟着写：Thank you for your letter。",
+     "label": "谢来信"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "thank",
+      "thanks"
+     ],
+     "cn": [
+      "谢谢",
+      "感谢"
+     ],
+     "id": "thank",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "promise",
+      "promised",
+      "promises"
+     ],
+     "cn": [
+      "承诺",
+      "保证"
+     ],
+     "id": "promise",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "play",
+      "played",
+      "plays",
+      "playing"
+     ],
+     "cn": [
+      "放",
+      "播放"
+     ],
+     "id": "action",
+     "olds": [
+      "sing",
+      "sang",
+      "sung",
+      "singing"
+     ],
+     "type": "word"
+    },
+    {
+     "answers": [
+      "morning song"
+     ],
+     "cn": [
+      "《Morning Song》"
+     ],
+     "id": "song",
+     "olds": [
+      "sunny day",
+      "rainbow"
+     ],
+     "type": "word"
+    },
+    {
+     "answers": [
+      "birthday",
+      "october 10",
+      "oct 10",
+      "10 october",
+      "10th october"
+     ],
+     "cn": [
+      "生日",
+      "10月10日"
+     ],
+     "id": "day",
+     "type": "word"
+    }
+   ],
+   "explain": "范文：Thank you for your letter. I promise to play \"Morning Song\" on your birthday。",
+   "help": "第①句谢来信；第②句是承诺：promise＋歌名＋生日。",
+   "help_line": "Can you play \"Morning Song\" for me on my birthday?",
+   "kind": "short",
+   "material_label": "第一封来信",
+   "phase": "practice",
+   "predicted_errors": [
+    {
+     "cause": "不会这个知识",
+     "say": "你写的 sing 是“唱歌”的意思，第二句要的是另一个动作，回信示范里找。",
+     "wrong": "Thank you for your letter. I promise to sing \"Morning Song\" on your birthday."
+    },
+    {
+     "cause": "粗心",
+     "say": "你只写了第二句，第一句谢来信还没写，补上。",
+     "wrong": "I promise to play \"Morning Song\" on your birthday."
+    },
+    {
+     "cause": "没看到材料",
+     "say": "你写的歌名是 Tom 点的。Lily 的信再看一遍，她点的歌叫什么？",
+     "wrong": "Thank you for your letter. I promise to play \"Sunny Day\" on your birthday."
+    },
+    {
+     "cause": "粗心",
+     "say": "前两句的信息都对，生日还没写，什么时候放这首歌？",
+     "wrong": "Thank you for your letter. I promise to play \"Morning Song\"."
+    },
+    {
+     "cause": "不会这个知识",
+     "say": "你写的 agree 是“同意”，这里要的是“保证做到”的那个词，第二句里找。",
+     "wrong": "Thank you for your letter. I agree to play \"Morning Song\" on your birthday."
+    }
+   ],
+   "reading": "Dear Radio Station,\nMy birthday is on October 10. Can you play \"Morning Song\" for me on my birthday? I will listen with my friends.\nMy favourite subject is English. I like your show very much.\nThank you!\nLily",
+   "scene": "轮到你写了：给 Lily 回 2 句。",
+   "stem": "照着句子框写 2 句：① Thank you for your ___. ② I ___ to play \"___\" on your ___.",
+   "step": 18,
+   "task": "写 2 句英文。",
+   "title": "给 Lily 写回信"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 19,
+   "teach_html": "<p>今天练了读信找请求、听留言数请求，还学会了回信三句话：reply、promise、agree。</p><p>下一部分站长出门，第三封信你自己回。</p>",
+   "title": "小结"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 20,
+   "teach_html": "<p>站长出门了。第三封信你自己回——正式回之前，先热热身。</p>",
+   "title": "自己回第三封信"
+  },
+  {
+   "answer": "B",
+   "explain": "120 到 150，多了 30 瓶，是原来的 25%：went up 25%。",
+   "help": "先比大小定方向；再算多出来的占原来多少。",
+   "kind": "mcq",
+   "options": [
+    "went down 20%",
+    "went up 25%",
+    "went up 20%",
+    "没有变化"
+   ],
+   "phase": "validate",
+   "scene": "先热热身：新数据，看看涨跌还稳不稳。",
+   "stem": "Juice 上学期卖 120 瓶，这学期卖 150 瓶。涨了百分之几？",
+   "step": 21,
+   "title": "开场复习：涨了多少",
+   "wrong_feedback": {
+    "A": "120 到 150 是变多了，方向是涨不是跌。先把方向定下来，再算百分之几。",
+    "B": "",
+    "C": "方向对了，数算错了：多出来 30 瓶，30÷120＝25%，不是 20%。记住要用多出来的数除以原来的数。",
+    "D": "120 变到 150，数字明明变了。先比大小，再算多出来的占原来的百分之几。"
+   }
+  },
+  {
+   "answer_text": "I promise to help you.",
+   "common_errors": [
+    {
+     "say": "这句练的就是“承诺”的说法，要用 promise：I promise to…。will 只是“将要”，不算承诺。",
+     "when": "没用 promise"
+    },
+    {
+     "say": "promise 后面要加 to 再接动作：I promise to help you。",
+     "when": "promise 后面漏了 to"
+    },
+    {
+     "say": "I 后面用原形 promise，别加 s，也别用过去式。",
+     "when": "写成 promises 或 promised"
+    },
+    {
+     "say": "用英文写：“保证、承诺”就是 promise，句子框照着填。",
+     "when": "写了中文"
+    }
+   ],
+   "dim_help": {
+    "promise": {
+     "ask": "“保证做到”用哪个词开头？",
+     "label": "承诺词"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "promise",
+      "promised"
+     ],
+     "cn": [
+      "承诺",
+      "保证"
+     ],
+     "id": "promise",
+     "type": "word"
+    }
+   ],
+   "explain": "I promise to help you.（承诺句里有 promise 就对。）",
+   "help": "照着句框：I promise to…，后面接你要做的事。",
+   "kind": "short",
+   "phase": "validate",
+   "predicted_errors": [
+    {
+     "cause": "不会这个知识",
+     "say": "will 是“将要”，这里要练的是“承诺”的说法，开头换个词。",
+     "wrong": "I will help you."
+    },
+    {
+     "cause": "不会这个知识",
+     "say": "agree 是“同意”，承诺用另一个词，开头换一换。",
+     "wrong": "I agree to help you."
+    },
+    {
+     "cause": "不会这个知识",
+     "say": "can 是“能”，承诺用另一个词，开头换一换。",
+     "wrong": "I can help you."
+    },
+    {
+     "cause": "粗心",
+     "say": "中文里“保证”的意思还没写出来，补上。",
+     "wrong": "我会帮你。"
+    }
+   ],
+   "scene": "热热身第二题：承诺的话自己写一句。",
+   "stem": "照着写一句承诺：I promise to ___.",
+   "step": 22,
+   "task": "写一句英文。",
+   "title": "开场复习：写一句承诺"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "reading": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack",
+   "step": 23,
+   "teach_html": "<p>第三封信来了，仔细读。这封有两个请求，别漏。</p>",
+   "title": "第三封来信"
+  },
+  {
+   "answer": "B",
+   "explain": "两个请求：问图书馆的开放时间，请广播站读他的诗。“我也喜欢面条”是闲聊。",
+   "help": "两句请求：“When is…”和“do you agree…”是。",
+   "help_line": "When is the school library open now? Also, do you agree to read my poem on the radio?",
+   "kind": "mcq",
+   "material_label": "第三封来信",
+   "options": [
+    "1 个",
+    "2 个",
+    "3 个",
+    "没请求"
+   ],
+   "phase": "validate",
+   "reading": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack",
+   "scene": "照着第三封来信数。",
+   "stem": "Jack 的信里，有几个真正的请求？",
+   "step": 24,
+   "title": "Jack 的信里有几个请求",
+   "wrong_feedback": {
+    "A": "漏了一个。Jack 提了两件事：问图书馆的开放时间、请广播站读他的诗。",
+    "B": "",
+    "C": "“我也喜欢面条”是闲聊，不算请求。请求是带问句和 do you agree 的那两句。",
+    "D": "有请求的：“When is the school library open now?”是问事，“do you agree to read my poem”是请托。"
+   }
+  },
+  {
+   "answer": "A",
+   "explain": "回信开头要客气：Dear Jack,。",
+   "help": "想想站长示范的回信开头是怎么写的。",
+   "kind": "mcq",
+   "options": [
+    "Dear Jack,",
+    "Hey, boy, listen to me.",
+    "You are wrong about the library.",
+    "Give me your poem now."
+   ],
+   "phase": "validate",
+   "scene": "给 Jack 写回信，开头第一句选哪个。",
+   "stem": "给 Jack 的回信，开头第一句用哪一句最合适？",
+   "step": 25,
+   "title": "回信的开头选哪句",
+   "wrong_feedback": {
+    "A": "",
+    "B": "“Hey, boy, listen to me.”像在喊人干活，一点不客气。回信开头先写 Dear 加上对方的名字。",
+    "C": "上来就说“你错了”，人家的问还没回答，太冲了。开头要先客气地称呼对方。",
+    "D": "“Give me your poem now.”是命令的口气。回信是帮人办事，不是下命令。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "reading": "第一份通知：\nThe school library is open from twelve to one in the afternoon.\n\n第二份通知：\nThe school library is open from four to five in the afternoon.",
+   "step": 26,
+   "teach_html": "<p>Jack 问图书馆现在什么时候开。站长找出两份通知：只认最新的一份。</p>",
+   "title": "两份图书馆通知"
+  },
+  {
+   "answer": "B",
+   "explain": "只认第二份通知：下午 4 点到 5 点。",
+   "help": "两份通知只看第二份，第一份已经不算数了。",
+   "help_line": "第二份通知：The school library is open from four to five in the afternoon.",
+   "kind": "mcq",
+   "material_label": "图书馆通知",
+   "options": [
+    "第一份",
+    "第二份",
+    "两份都算",
+    "都不算"
+   ],
+   "phase": "validate",
+   "reading": "第一份通知：\nThe school library is open from twelve to one in the afternoon.\n\n第二份通知：\nThe school library is open from four to five in the afternoon.",
+   "scene": "照着两份图书馆通知。",
+   "stem": "Jack 问图书馆现在什么时候开。哪一份通知说了算？",
+   "step": 27,
+   "title": "哪一份通知说了算",
+   "wrong_feedback": {
+    "A": "第一份是旧通知，上面的时间已经改了。图书馆的事只认最新的一份。",
+    "B": "",
+    "C": "两份的时间不一样，不能都算。规矩是：新通知一出，旧的就作废。",
+    "D": "第二份就是最新的一份，它说了算：下午四点到五点。"
+   }
+  },
+  {
+   "answer_text": "The library is open from four to five in the afternoon.",
+   "common_errors": [
+    {
+     "say": "twelve 是第一份旧通知的开门时间。只认第二份：四点开门。",
+     "when": "写了 twelve"
+    },
+    {
+     "say": "one 是旧通知的关门时间。第二份写的是五点关门。",
+     "when": "写了 one"
+    },
+    {
+     "say": "只写几点开不够，把关门时间也写全：from four to five。",
+     "when": "只写了开门时间"
+    },
+    {
+     "say": "from 后面是开门时间，to 后面是关门时间，别把四点和五点调个儿。",
+     "when": "时间顺序写反"
+    }
+   ],
+   "dim_help": {
+    "close": {
+     "ask": "第二份通知上，图书馆几点关门？",
+     "label": "关门时间"
+    },
+    "open": {
+     "ask": "第二份通知上，图书馆几点开门？",
+     "label": "开门时间"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "four"
+     ],
+     "cn": [
+      "4",
+      "四"
+     ],
+     "id": "open",
+     "olds": [
+      "twelve"
+     ],
+     "type": "word"
+    },
+    {
+     "answers": [
+      "five"
+     ],
+     "cn": [
+      "5",
+      "五"
+     ],
+     "id": "close",
+     "olds": [
+      "one"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "The library is open from four to five in the afternoon.",
+   "help": "只看第二份通知：from 后面是几点开，to 后面是几点关。",
+   "help_line": "第二份通知：The school library is open from four to five in the afternoon.",
+   "kind": "short",
+   "material_label": "图书馆通知",
+   "phase": "validate",
+   "predicted_errors": [
+    {
+     "cause": "没看到材料",
+     "say": "你写的是第一份通知上的旧时间，只看第二份通知。",
+     "wrong": "twelve to one"
+    },
+    {
+     "cause": "粗心",
+     "say": "开门时间对了，关门时间还没写，写全。",
+     "wrong": "four"
+    },
+    {
+     "cause": "没看到材料",
+     "say": "数字对不上第二份通知，再看一遍 Time 那一行。",
+     "wrong": "five to six"
+    },
+    {
+     "cause": "粗心",
+     "say": "开门时间有了，关门时间还没写。",
+     "wrong": "下午四点"
+    }
+   ],
+   "reading": "第一份通知：\nThe school library is open from twelve to one in the afternoon.\n\n第二份通知：\nThe school library is open from four to five in the afternoon.",
+   "scene": "照着第二份通知写。",
+   "stem": "按第二份通知，图书馆现在什么时候开？写出时间。",
+   "step": 28,
+   "task": "写出开放时间。",
+   "title": "写出图书馆的开放时间"
+  },
+  {
+   "choice_key": "reply_first",
+   "kind": "choice",
+   "options": [
+    "Lily 的生日祝福（生日最近）",
+    "Tom 的语音留言",
+    "Jack 的信"
+   ],
+   "scene": "播出顺序由你定。",
+   "stem": "三封信的回信都写好了，今晚时间只够播一封。先播哪一封？",
+   "step": 29,
+   "title": "先播哪一封回信"
+  },
+  {
+   "audio_id": "u2r4-m2",
+   "kind": "teach",
+   "phase": "teach",
+   "step": 30,
+   "teach_html": "<p>又来一封语音留言。点开听，Ann 说了什么，听完数请求、记歌名。</p>",
+   "title": "听：Ann 的语音留言"
+  },
+  {
+   "answer": "C",
+   "audio_id": "u2r4-m2",
+   "explain": "两个请求：问 Sports Day 的日期，给班级点《Rainbow》。“得了第一”是闲聊。",
+   "help": "一个一个数：问日期是一个，点歌又是一个。",
+   "help_line": "When is Sports Day? Please play Rainbow for my class.",
+   "kind": "mcq",
+   "options": [
+    "只问运动会是哪天",
+    "只点歌《Rainbow》",
+    "问日期＋点歌《Rainbow》",
+    "夸自己的班级得了第一"
+   ],
+   "phase": "validate",
+   "scene": "听 Ann 的语音留言，先听，再选。",
+   "stem": "（先听）Ann 的留言里，真正的请求是什么？",
+   "step": 31,
+   "title": "Ann 的请求是什么",
+   "wrong_feedback": {
+    "A": "只说对了一半。Ann 还点了一首《Rainbow》，她的请求是两件事。",
+    "B": "只说对了一半。Ann 先问了 Sports Day 是哪天，然后才点歌。",
+    "C": "",
+    "D": "“班级得了第一”是她顺嘴报的成绩，是闲聊，不是请广播站做的事。"
+   }
+  },
+  {
+   "answer_text": "Rainbow",
+   "common_errors": [
+    {
+     "say": "那是 Tom 点的。Ann 点的歌在 “Please play” 后面，再听一遍。",
+     "when": "写了 Sunny Day"
+    },
+    {
+     "say": "那是 Lily 点的。Ann 给班级点的是另一首。",
+     "when": "写了 Morning Song"
+    },
+    {
+     "say": "Rainbow 是一个词，中间不空格。",
+     "when": "写成 rain bow"
+    },
+    {
+     "say": "歌名就一个词 Rainbow，照留言里的样子写，别加 s。",
+     "when": "写成 Rainbows"
+    }
+   ],
+   "dim_help": {
+    "song": {
+     "ask": "Ann 说“I want to ask for a song”，后面那个词是什么？",
+     "label": "歌名"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "rainbow"
+     ],
+     "cn": [
+      "彩虹",
+      "《Rainbow》"
+     ],
+     "id": "song",
+     "olds": [
+      "sunny day",
+      "morning song"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "Ann 点的是《Rainbow》。",
+   "help": "听“Please play”后面那个歌名。",
+   "kind": "short",
+   "phase": "validate",
+   "predicted_errors": [
+    {
+     "cause": "没看到材料",
+     "say": "你写的这首歌是 Tom 点的。Ann 的留言再听一遍。",
+     "wrong": "Sunny Day"
+    },
+    {
+     "cause": "没看到材料",
+     "say": "你写的这首歌是 Lily 点的。Ann 的留言再听一遍。",
+     "wrong": "Morning Song"
+    },
+    {
+     "cause": "粗心",
+     "say": "先听一遍再写，歌名在“I want to ask for a song”后面。",
+     "wrong": "I don't know"
+    },
+    {
+     "cause": "粗心",
+     "say": "你写的两个部分拼起来是一个词，中间不空格。",
+     "wrong": "rain bow"
+    }
+   ],
+   "scene": "还是 Ann 的语音留言。",
+   "stem": "（先听）Ann 给班级点的歌叫什么名字？写出歌名。",
+   "step": 32,
+   "task": "写出歌名。",
+   "title": "Ann 点了哪首歌"
+  },
+  {
+   "answer": "D",
+   "explain": "④不写：Sunny Day 是 Tom 的，Jack 问时间和读诗。",
+   "help": "一句一句对 Jack 的两个请求：这句回答了哪个请求？对不上的就是它。",
+   "kind": "mcq",
+   "options": [
+    "第①句",
+    "第②句",
+    "第③句",
+    "第④句"
+   ],
+   "phase": "validate",
+   "scene": "给 Jack 的回信草稿有一句写错了。对照着找。",
+   "see_also": {
+    "label": "再看 Jack 的信",
+    "text": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack"
+   },
+   "stem": "回信草稿：① Dear Jack, thank you for your letter. ② In reply to your question, the library is open from four to five in the afternoon. ③ We agree to read your poem on the radio. ④ I promise to play \"Sunny Day\" for you. 哪一句不该写？",
+   "step": 33,
+   "title": "给 Jack 的回信：哪一句不该写",
+   "wrong_feedback": {
+    "A": "第①句开头谢来信、称呼 Jack，都对，要留着。",
+    "B": "第②句回答图书馆的时间，和第二份通知对得上，是正事，要留着。",
+    "C": "第③句答应读诗——Jack 信里正问了这件事，答应得对，要留着。",
+    "D": ""
+   }
+  },
+  {
+   "answer_text": "I promise to read your poem on the radio.",
+   "audio_id": "u2r4-q34",
+   "common_errors": [
+    {
+     "say": "Jack 请读的是他的诗（poem），不是信（letter）。信是他寄来的，诗才是要读的。",
+     "when": "写了 letter"
+    },
+    {
+     "say": "歌是 Tom 和 Ann 点的。Jack 没点歌，他请广播站读他的诗（poem）。",
+     "when": "写了 song"
+    },
+    {
+     "say": "承诺句要有 promise：I promise to…。agree 是“同意”，这句练的是承诺的说法。",
+     "when": "没写 promise"
+    },
+    {
+     "say": "Jack 请广播站做的是 read（读他的诗），不是 play（放歌）——放歌是 Tom 的请求。",
+     "when": "动作写成 play"
+    }
+   ],
+   "dim_help": {
+    "poem": {
+     "ask": "Jack 请广播站读的是他的什么？再看他的信。",
+     "label": "Jack 请读的东西"
+    },
+    "promise": {
+     "ask": "“保证做到”用哪个词开头？",
+     "label": "承诺词"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "promise",
+      "promised"
+     ],
+     "cn": [
+      "承诺"
+     ],
+     "id": "promise",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "poem"
+     ],
+     "cn": [
+      "诗"
+     ],
+     "id": "poem",
+     "olds": [
+      "letter",
+      "song"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "改对了：I promise to read your poem on the radio.",
+   "help": "Jack 的第二个请求是什么？把那个词填进句框。",
+   "kind": "short",
+   "phase": "validate",
+   "predicted_errors": [
+    {
+     "cause": "没看到材料",
+     "say": "letter 是“信”的意思，Jack 请读的不是信，再看他的信里请读的是什么。",
+     "wrong": "I promise to read your letter on the radio."
+    },
+    {
+     "cause": "没看到材料",
+     "say": "歌是 Tom 和 Ann 点的。Jack 请读的是另一件事，再看他的信。",
+     "wrong": "I promise to read your song on the radio."
+    },
+    {
+     "cause": "不会这个知识",
+     "say": "agree 是“同意”，承诺用另一个词，前面那个词换一换。",
+     "wrong": "I agree to read your poem on the radio."
+    },
+    {
+     "cause": "粗心",
+     "say": "意思对了，用英文写：承诺用哪个词开头？",
+     "wrong": "我保证在广播上读你的诗。"
+    }
+   ],
+   "scene": "把写错的那句改成对 Jack 的承诺。",
+   "see_also": {
+    "label": "再看 Jack 的信",
+    "text": "Dear Radio Station,\nI am Jack. Can I ask a question? When is the school library open now? I heard it changed.\nAlso, do you agree to read my poem on the radio? It is about the moon.\nI like noodles too.\nThank you,\nJack"
+   },
+   "stem": "第④句写错了：那是 Tom 点的歌。照着句子框，把这句改成对 Jack 的承诺：I promise to ___ your ___ on the radio.",
+   "step": 34,
+   "task": "写完整的句子。",
+   "title": "把第④句改对"
+  },
+  {
+   "answer_text": "Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Sunny Day\" for you.",
+   "common_errors": [
+    {
+     "say": "英语角是星期四（Thursday）。Tom 的留言再听一遍，别写成 Friday。",
+     "when": "星期写错"
+    },
+    {
+     "say": "时间是四点半：four thirty（写 half past four 也行），别写成五点半。",
+     "when": "时间写错"
+    },
+    {
+     "say": "Tom 点的是《Sunny Day》。《Rainbow》是 Ann 的，《Morning Song》是 Lily 的，别串人。",
+     "when": "歌名写错"
+    },
+    {
+     "say": "第三句是承诺句，要有 promise：I promise to play…",
+     "when": "没写 promise"
+    }
+   ],
+   "dim_help": {
+    "clock": {
+     "ask": "英语角是几点？at 后面是几点？",
+     "label": "时间"
+    },
+    "day": {
+     "ask": "英语角是周几？Tom 的留言再听一遍。",
+     "label": "星期"
+    },
+    "promise": {
+     "ask": "“保证做到”用哪个词？",
+     "label": "承诺词"
+    },
+    "song": {
+     "ask": "Tom 点的歌叫什么？留言再听一遍。",
+     "label": "歌名"
+    },
+    "thank": {
+     "ask": "回信第一句是谢来信，跟着写：Thank you for your message。",
+     "label": "谢来信"
+    }
+   },
+   "expects": [
+    {
+     "answers": [
+      "thank",
+      "thanks"
+     ],
+     "cn": [
+      "谢谢",
+      "感谢"
+     ],
+     "id": "thank",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "thursday"
+     ],
+     "cn": [
+      "周四",
+      "星期四"
+     ],
+     "id": "day",
+     "olds": [
+      "friday"
+     ],
+     "type": "word"
+    },
+    {
+     "answers": [
+      "four thirty",
+      "half past four",
+      "4 30",
+      "4:30"
+     ],
+     "cn": [
+      "四点半",
+      "4点半"
+     ],
+     "id": "clock",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "promise",
+      "promised"
+     ],
+     "cn": [
+      "承诺",
+      "保证"
+     ],
+     "id": "promise",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "sunny day"
+     ],
+     "cn": [
+      "《Sunny Day》",
+      "晴天"
+     ],
+     "id": "song",
+     "olds": [
+      "rainbow",
+      "morning song"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "范文：Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Sunny Day\" for you。",
+   "help": "一句一句来：第①句谢来信；第②句回 Tom 的留言听时间；第③句是承诺＋歌名。",
+   "kind": "short",
+   "phase": "validate",
+   "predicted_errors": [
+    {
+     "cause": "没看到材料",
+     "say": "星期写错了。Tom 的留言再听一遍，英语角是周几？",
+     "wrong": "Thank you for your message. In reply to your question, the English Corner is on Friday at four thirty. I promise to play \"Sunny Day\" for you."
+    },
+    {
+     "cause": "没看到材料",
+     "say": "你写的歌名是 Ann 点的。Tom 的留言再听一遍，他点的歌叫什么？",
+     "wrong": "Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Rainbow\" for you."
+    },
+    {
+     "cause": "粗心",
+     "say": "星期写对了，几点还没写，at 后面加上时间。",
+     "wrong": "Thank you for your message. In reply to your question, the English Corner is on Thursday. I promise to play \"Sunny Day\" for you."
+    },
+    {
+     "cause": "粗心",
+     "say": "三句话你写了后两句，第一句谢来信补上。",
+     "wrong": "In reply to your question, the English Corner is on Thursday at four thirty. I promise to play \"Sunny Day\" for you."
+    },
+    {
+     "cause": "不会这个知识",
+     "say": "你写的 agree 是“同意”，这里要的是“保证做到”的那个词，第三句里找。",
+     "wrong": "Thank you for your message. In reply to your question, the English Corner is on Thursday at four thirty. I agree to play \"Sunny Day\" for you."
+    }
+   ],
+   "scene": "最后由你写：给 Tom 的完整回信，3 句。",
+   "stem": "照着句子框写 3 句：① Thank you for your ___. ② In reply to your question, the English Corner is on ___ at ___. ③ I ___ to play \"___\" for you.",
+   "step": 35,
+   "task": "写 3 句英文。",
+   "title": "给 Tom 写完整回信"
+  },
+  {
+   "kind": "teach",
+   "phase": "teach",
+   "step": 36,
+   "teach_html": "<p>三封信都回完了：Lily 的生日歌、Tom 的点歌、Jack 的问题，都有了着落。</p><p>你取的名字{{choice:segment_name|校园之声}}，今晚就用它开播。</p><p>下一课《期末大直播》：校庆大直播，多则通知、数字、来信一起来，到时候见。</p>",
+   "title": "回完了"
+  },
+  {
+   "answer_text": "The listeners went up 25% this term.",
+   "common_errors": [
+    {
+     "say": "80 到 100 是变多了，用 up。down 是变少的时候用的。",
+     "when": "方向写反"
+    },
+    {
+     "say": "20 是多出来的人数，不是百分比。要除以原来的 80：20÷80＝25%。",
+     "when": "百分比写成 20"
+    },
+    {
+     "say": "别把新数 100 直接除以 80。要算的是“多出来的 20 人”占原来的百分之几。",
+     "when": "百分比写成 125"
+    },
+    {
+     "say": "went up 后面还要跟百分之几，数字别漏。",
+     "when": "只写方向没写百分比"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "up 25",
+      "up twenty five",
+      "up twenty-five"
+     ],
+     "cn": [
+      "涨了25%",
+      "上升25%"
+     ],
+     "id": "dirpct",
+     "olds": [
+      "down 25",
+      "down",
+      "up 20"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "80 到 100，多了 20 人，20÷80＝25%：The listeners went up 25% this term.",
+   "help": "先比 80 和 100 定方向；再算多出来的人占原来 80 人的百分之几。",
+   "kind": "short",
+   "phase": "validate",
+   "scene": "广播站的听众数变了，这次没人给你现成的数，要自己算。",
+   "stem": "照着句框写一句播报：The listeners went ___ ___% this term.（听众上学期 80 人，这学期 100 人。）",
+   "step": 37,
+   "task": "写一句英文。",
+   "title": "挑战 · 听众涨了多少"
+  },
+  {
+   "answer": "C",
+   "explain": "三个请求：周五为班级放《Star Light》、问读书俱乐部什么时候开始、请广播站读她的故事。“学校又大又新”是闲聊。",
+   "help": "一句一句找：请广播站做事的句子才算请求，介绍自己学校的话不算。",
+   "kind": "mcq",
+   "material_label": "新来信",
+   "options": [
+    "2 个",
+    "4 个",
+    "3 个",
+    "没请求"
+   ],
+   "phase": "validate",
+   "reading": "Dear Radio Station,\nCan you play \"Star Light\" for my class on Friday? Also, when does the reading club start? And do you agree to read my story on the radio?\nMy school is big and new. I like it very much.\nThank you!\nMia",
+   "scene": "又来了一封新信。这次请求藏得多了，数仔细。",
+   "stem": "Mia 的信里，有几个真正的请求？",
+   "step": 38,
+   "title": "挑战 · 新来信数请求",
+   "wrong_feedback": {
+    "A": "漏了一个。请求有三个：点歌、问读书俱乐部的时间、请读故事。",
+    "B": "“我的学校又大又新”是闲聊，不算请求。请求只有三个。",
+    "C": "",
+    "D": "有请求的：带 Can you、when does、do you agree 的句子，都是在请广播站做事。"
+   }
+  },
+  {
+   "answer_text": "I promise to read your story on the radio.",
+   "common_errors": [
+    {
+     "say": "承诺句要用 promise：I promise to…",
+     "when": "没写 promise"
+    },
+    {
+     "say": "Mia 请读的是她的故事（story）。poem 是 Jack 的诗，别串人。",
+     "when": "读的东西写成 poem"
+    },
+    {
+     "say": "要读的是她写的故事（story）。letter 是她寄来的这封信本身，不是读的内容。",
+     "when": "读的东西写成 letter"
+    },
+    {
+     "say": "Mia 请的是“读”（read）她的故事，不是放歌（play）。",
+     "when": "动作写成 play"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "promise",
+      "promised"
+     ],
+     "cn": [
+      "承诺",
+      "保证"
+     ],
+     "id": "promise",
+     "type": "word"
+    },
+    {
+     "answers": [
+      "story"
+     ],
+     "cn": [
+      "故事"
+     ],
+     "id": "thing",
+     "olds": [
+      "poem",
+      "song",
+      "letter"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "I promise to read your story on the radio.",
+   "help": "两个空：承诺用哪个词、读的是什么——都回 Mia 的信里找。",
+   "kind": "short",
+   "phase": "validate",
+   "scene": "Mia 请广播站读她的故事。轮到你写承诺句，不许看前面的范文。",
+   "stem": "照着句子框写一句承诺：I ___ to read your ___ on the radio.",
+   "step": 39,
+   "task": "写一句英文。",
+   "title": "挑战 · 给 Mia 写承诺"
+  },
+  {
+   "answer_text": "The English Corner is on Friday at five.",
+   "common_errors": [
+    {
+     "say": "Thursday 是第一份旧通知上的。只认第二份：星期五。",
+     "when": "星期写了 Thursday"
+    },
+    {
+     "say": "四点半是旧时间。第二份已经改成五点了。",
+     "when": "时间写了 four thirty"
+    },
+    {
+     "say": "星期和时间都要写全：on Friday at five。",
+     "when": "只写了星期没写时间"
+    },
+    {
+     "say": "星期和时间要都来自第二份，别一份里抄一个。",
+     "when": "新旧抄混了"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "friday"
+     ],
+     "cn": [
+      "周五",
+      "星期五"
+     ],
+     "id": "day",
+     "olds": [
+      "thursday"
+     ],
+     "type": "word"
+    },
+    {
+     "answers": [
+      "five",
+      "5"
+     ],
+     "cn": [
+      "五点"
+     ],
+     "id": "clock",
+     "olds": [
+      "four thirty",
+      "half past four"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "第二份通知说了算：The English Corner is on Friday at five.",
+   "help": "先想本课的规矩：两份通知只认哪一份。星期和时间都从那一份里抄。",
+   "kind": "short",
+   "material_label": "英语角通知",
+   "phase": "validate",
+   "reading": "第一份通知：The English Corner is on Thursday at four thirty.\n\n第二份通知：The English Corner is on Friday at five.",
+   "scene": "英语角连着出了两份通知，时间改了。老规矩，看哪份说了算。",
+   "stem": "按说了算的那份通知，英语角现在是星期几、几点？照着写：The English Corner is on ___ at ___.",
+   "step": 40,
+   "task": "写出新的星期和时间。",
+   "title": "挑战 · 英语角改时间了"
+  },
+  {
+   "answer": "C",
+   "explain": "\"Sunny Day\" is more popular than \"Rainbow\".有 than 的地方用比较级 more popular。",
+   "help": "句子里有 than，想想“更……”的说法该用哪种形式。",
+   "kind": "mcq",
+   "options": [
+    "popular",
+    "the most popular",
+    "more popular",
+    "most popular"
+   ],
+   "phase": "validate",
+   "scene": "站长在比两首歌的人气，要用上比较的说法。",
+   "stem": "\"Sunny Day\" is ______ than \"Rainbow\".",
+   "step": 41,
+   "title": "挑战 · 哪首歌更受欢迎",
+   "wrong_feedback": {
+    "A": "popular 是原形，只能说“受欢迎”。句子里有 than，要用“更受欢迎”的说法。",
+    "B": "the most popular 是“三首以上里排第一”的说法。有 than 的是两首在比，不用它。",
+    "C": "",
+    "D": "most popular 前面少了 the，而且这句有 than，要用的是比较级 more popular。"
+   }
+  },
+  {
+   "answer_text": "most popular",
+   "common_errors": [
+    {
+     "say": "more popular 是两首相比（比较级）。这里是三首里排第一，用 most popular。",
+     "when": "写了 more popular"
+    },
+    {
+     "say": "原形只表示“受欢迎”。排第一要在前面加上 most。",
+     "when": "只写 popular"
+    },
+    {
+     "say": "句子里已经有 the 了，空里只写 most popular，别再加一个 the。",
+     "when": "写了 the most popular"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "most popular"
+     ],
+     "cn": [
+      "最受欢迎"
+     ],
+     "id": "sup",
+     "olds": [
+      "more popular"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "Of the three songs, \"Morning Song\" is the most popular.",
+   "help": "三首里排第一，用“最……”的说法；句子里已经有一个 the 了。",
+   "kind": "short",
+   "phase": "validate",
+   "scene": "三首歌里选人气第一名，写播报词。",
+   "stem": "照着写：Of the three songs, \"Morning Song\" is the ______.",
+   "step": 42,
+   "task": "只写空里的词。",
+   "title": "挑战 · 最受欢迎的歌"
+  },
+  {
+   "answer": "A",
+   "explain": "The letters are read on the radio every Friday.信是被读的，letters 又是复数，所以用 are read。",
+   "help": "先想：信是自己读，还是被人读？再数一数，主语是一封还是好多封。",
+   "kind": "mcq",
+   "options": [
+    "are read",
+    "is read",
+    "read",
+    "reads"
+   ],
+   "phase": "validate",
+   "scene": "说说广播站每周的固定节目：听众的信会被读出来。",
+   "stem": "The letters ______ on the radio every Friday.",
+   "step": 43,
+   "title": "挑战 · 信在广播里读",
+   "wrong_feedback": {
+    "A": "",
+    "B": "is 是给“一封信”用的。letters 是好多封，be 动词要用 are。",
+    "C": "read 是主动的“去读”。信不会自己读，是被人读出来的，要用 are read。",
+    "D": "reads 是“（人）读”。这句的主角是信，信是被读的：are read。"
+   }
+  },
+  {
+   "answer_text": "have received",
+   "common_errors": [
+    {
+     "say": "received 是“过去收了”。“这周已经收到”要带上 have：have received。",
+     "when": "只写 received"
+    },
+    {
+     "say": "has 是配 he、she 或一个人的。主语是 We，用 have。",
+     "when": "写了 has received"
+    },
+    {
+     "say": "have 后面要用 received 这个变化形式，不是原形 receive。",
+     "when": "写了 have receive"
+    }
+   ],
+   "expects": [
+    {
+     "answers": [
+      "have received"
+     ],
+     "cn": [
+      "已经收到"
+     ],
+     "id": "pp",
+     "olds": [
+      "has received"
+     ],
+     "type": "word"
+    }
+   ],
+   "explain": "We have received ten letters this week.",
+   "help": "“这周已经……”是到现在为止的事。想想主语 We 该配哪个词，后面再跟动词的变化形式。",
+   "kind": "short",
+   "phase": "validate",
+   "scene": "站长盘点这一周的来信，要写进周报。",
+   "stem": "照着写：We ______ ten letters this week.（我们这周已经收到了十封信。）",
+   "step": 44,
+   "task": "只写空里的词。",
+   "title": "挑战 · 本周收到多少信"
+  }
+ ],
+ "title": "Unit 2 第4课：来信点播",
+ "unit": "Unit 2",
+ "version": 2
 }
