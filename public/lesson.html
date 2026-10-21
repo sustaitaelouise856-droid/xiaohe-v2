@@ -1683,9 +1683,33 @@ function renderShowAnswerBtn(s, sa) {
   var bh = $('btnHelp'); if (bh) bh.disabled = false;
   fb.className = 'fb no';
   fb.innerHTML = '<div>这道题先看答案，抄一遍，我们继续往下。</div>'
-    + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div>';
+    + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div><div id="remedialBox"></div>';
   $('btnShowAns').onclick = function () { showAnswerCopy(s, sa); };
+  maybeShowRemedial();
   showInView($('btnShowAns'));
+}
+/* 数学补救地图（2026-10-21）：仅 sx 数学课在保底出口处给出"先回头补哪一步"，数据 public/math-remedial.json */
+var __remedialCache = null;
+function maybeShowRemedial() {
+  var box = $('remedialBox');
+  if (!box) return;
+  var lid = LESSON_PARAM || '';
+  if (lid.indexOf('sx') !== 0) return;
+  var render = function (data) {
+    var entry = data && data.lessons && data.lessons[lid];
+    if (!entry || !entry.items || !entry.items.length) return;
+    var h = '<div class="sabox" style="margin-top:10px;"><div>卡住不一定是这道题难，可能是前面有一步还没练熟。按顺序回头补，补完再回来就顺了：</div>';
+    entry.items.forEach(function (it, i) {
+      h += '<div style="margin-top:8px;line-height:1.6;">' + (i + 1) + '. <b>' + escapeHtml(it.name) + '</b>'
+        + (it.desc ? '<div style="color:#5f6368;font-size:14px;">' + escapeHtml(it.desc) + '</div>' : '')
+        + (it.sx ? '<div class="btnrow"><a class="opt" style="text-decoration:none;" href="/lesson?lesson=' + it.sx + '"><span>去补这一课 →</span></a></div>' : '')
+        + '</div>';
+    });
+    h += '<div style="margin-top:8px;color:#999;font-size:12px;">补救路线参考开源知识图谱 cn-math-taxonomy（CC BY-NC 4.0）</div></div>';
+    box.innerHTML = h;
+  };
+  if (__remedialCache) { render(__remedialCache); return; }
+  fetch('/math-remedial.json').then(function (r) { return r.json(); }).then(function (d) { __remedialCache = d; render(d); }).catch(function () {});
 }
 function showAnswerCopy(s, sa) {
   var box = $('saBox'); if (!box) return;
