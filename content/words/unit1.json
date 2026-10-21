@@ -1,0 +1,141 @@
+{
+  "unit": "Unit 1",
+  "title": "Look it up!",
+  "words": [
+    {
+      "en": "dinosaur",
+      "cn": "恐龙",
+      "pos": "n."
+    },
+    {
+      "en": "intelligent",
+      "cn": "有才智的；聪明的",
+      "pos": "adj."
+    },
+    {
+      "en": "talented",
+      "cn": "有才能的；天才的",
+      "pos": "adj."
+    },
+    {
+      "en": "artistic",
+      "cn": "有艺术天赋的；（尤指）有美术才能的",
+      "pos": "adj."
+    },
+    {
+      "en": "perhaps",
+      "cn": "可能；大概；也许",
+      "pos": "adv."
+    },
+    {
+      "en": "notebook",
+      "cn": "笔记本",
+      "pos": "n."
+    },
+    {
+      "en": "vehicle",
+      "cn": "交通工具；车辆",
+      "pos": "n."
+    },
+    {
+      "en": "prehistoric",
+      "cn": "史前的",
+      "pos": "adj."
+    },
+    {
+      "en": "completely",
+      "cn": "完全地；彻底地",
+      "pos": "adv."
+    },
+    {
+      "en": "original",
+      "cn": "原来的；起初的",
+      "pos": "adj."
+    },
+    {
+      "en": "birth",
+      "cn": "出生",
+      "pos": "n."
+    },
+    {
+      "en": "suffering",
+      "cn": "苦难；疼痛",
+      "pos": "n."
+    },
+    {
+      "en": "artist",
+      "cn": "艺术家；（尤指）画家",
+      "pos": "n."
+    },
+    {
+      "en": "death",
+      "cn": "死；死亡",
+      "pos": "n."
+    },
+    {
+      "en": "whole",
+      "cn": "全部的；所有的",
+      "pos": "adj."
+    },
+    {
+      "en": "piece",
+      "cn": "一首，一篇（作品）",
+      "pos": "n."
+    },
+    {
+      "en": "editor",
+      "cn": "（书籍的）编辑",
+      "pos": "n."
+    },
+    {
+      "en": "organize",
+      "cn": "安排；组织",
+      "pos": "v."
+    },
+    {
+      "en": "record",
+      "cn": "记录",
+      "pos": "v."
+    },
+    {
+      "en": "die out",
+      "cn": "灭绝",
+      "pos": "phr."
+    },
+    {
+      "en": "a type of",
+      "cn": "一种",
+      "pos": "phr."
+    },
+    {
+      "en": "be related to",
+      "cn": "与……属于同一种类",
+      "pos": "phr."
+    },
+    {
+      "en": "general education",
+      "cn": "通识教育",
+      "pos": "phr."
+    },
+    {
+      "en": "go back a long way",
+      "cn": "历史悠久",
+      "pos": "phr."
+    },
+    {
+      "en": "be similar to",
+      "cn": "与……相似",
+      "pos": "phr."
+    },
+    {
+      "en": "alphabetical order",
+      "cn": "字母顺序",
+      "pos": "phr."
+    },
+    {
+      "en": "play an important role",
+      "cn": "起到重要作用",
+      "pos": "phr."
+    }
+  ]
+}
