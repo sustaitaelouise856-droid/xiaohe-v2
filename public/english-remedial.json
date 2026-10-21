@@ -1,0 +1,437 @@
+{
+ "meta": {
+  "source": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+  "license": "CC BY-NC 4.0",
+  "note": "语法补救路线取自该开源知识图谱的英语语法前置关系（hard 边回溯 2 层）；知识点与教材版本无关，说明文字为图谱原文，tip 为小禾老师补充。内容为 AI 生成初稿、未经教师审核，仅作学习提示。",
+  "generated_at": "2026-10-21"
+ },
+ "lessons": {
+  "u3r1": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "u3r2": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "u3r3": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "u3r4": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "u3r5": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "u3-consolidate": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "review3": {
+   "targets": [
+    "形容词比较级",
+    "用 than 比较",
+    "形容词最高级"
+   ],
+   "items": [
+    {
+     "name": "大小和高矮",
+     "desc": "认读 big、small、tall 和 short。这里的 short 是矮的。"
+    },
+    {
+     "name": "形容词比较级",
+     "desc": "能写出 tall、long、heavy 的比较级 taller、longer、heavier。"
+    },
+    {
+     "name": "用 than 比较",
+     "desc": "用比较级加 than 对两者进行比较。"
+    }
+   ]
+  },
+  "u4r1": {
+   "targets": [
+    "一般现在时被动语态",
+    "一般过去时被动语态"
+   ],
+   "items": [
+    {
+     "name": "be 动词 am、is、are",
+     "desc": "能按主语选用 am、is 或 are。"
+    },
+    {
+     "name": "was 与 were",
+     "desc": "能用 was 和 were 谈论过去。"
+    },
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    }
+   ]
+  },
+  "u4r2": {
+   "targets": [
+    "一般现在时被动语态",
+    "一般过去时被动语态"
+   ],
+   "items": [
+    {
+     "name": "be 动词 am、is、are",
+     "desc": "能按主语选用 am、is 或 are。"
+    },
+    {
+     "name": "was 与 were",
+     "desc": "能用 was 和 were 谈论过去。"
+    },
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    }
+   ]
+  },
+  "u4r3": {
+   "targets": [
+    "一般现在时被动语态",
+    "一般过去时被动语态"
+   ],
+   "items": [
+    {
+     "name": "be 动词 am、is、are",
+     "desc": "能按主语选用 am、is 或 are。"
+    },
+    {
+     "name": "was 与 were",
+     "desc": "能用 was 和 were 谈论过去。"
+    },
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    }
+   ]
+  },
+  "u4r4": {
+   "targets": [
+    "一般现在时被动语态",
+    "一般过去时被动语态"
+   ],
+   "items": [
+    {
+     "name": "be 动词 am、is、are",
+     "desc": "能按主语选用 am、is 或 are。"
+    },
+    {
+     "name": "was 与 were",
+     "desc": "能用 was 和 were 谈论过去。"
+    },
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    }
+   ]
+  },
+  "u4r5": {
+   "targets": [
+    "一般现在时被动语态",
+    "一般过去时被动语态"
+   ],
+   "items": [
+    {
+     "name": "be 动词 am、is、are",
+     "desc": "能按主语选用 am、is 或 are。"
+    },
+    {
+     "name": "was 与 were",
+     "desc": "能用 was 和 were 谈论过去。"
+    },
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    }
+   ]
+  },
+  "review5": {
+   "targets": [
+    "一般现在时被动语态",
+    "一般过去时被动语态"
+   ],
+   "items": [
+    {
+     "name": "be 动词 am、is、are",
+     "desc": "能按主语选用 am、is 或 are。"
+    },
+    {
+     "name": "was 与 were",
+     "desc": "能用 was 和 were 谈论过去。"
+    },
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    }
+   ]
+  },
+  "u5r1": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u5r2": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u5r3": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u5r4": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u5r5": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u6r1": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u6r2": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u6r3": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u6r4": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  },
+  "u6r5": {
+   "targets": [
+    "现在完成时"
+   ],
+   "items": [
+    {
+     "name": "规则动词过去式",
+     "desc": "能写出规则动词的过去式。"
+    },
+    {
+     "name": "不规则动词过去式",
+     "desc": "能写出 go、see、have、do 和 read 的过去式。",
+     "tip": "完成时和被动语态里用的是过去分词，和过去式不完全一样：eat→eaten、see→seen、go→gone、speak→spoken，这几个最容易混。"
+    }
+   ]
+  }
+ }
+}
