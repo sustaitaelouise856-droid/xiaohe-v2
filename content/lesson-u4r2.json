@@ -1,745 +1,1098 @@
 {
-  "lesson_id": "u4r2",
-  "practice_end": 24,
-  "home_subtitle": "第二课 · 真假发明",
-  "part1_desc": "第 1–24 步：跟站长学被动语态的否定和疑问，核实发明小知识。",
-  "part2_desc": "第 25–36 步：独立判断，找出说法里的错误。",
-  "note": "本课阅读材料为教研自编，非课本原文。考查能力：被动语态否定句、一般疑问句与特殊疑问句。Unit 4 Inventions 主题。",
-  "steps": [
+ "lesson_id": "u4r2",
+ "practice_end": 24,
+ "home_subtitle": "第二课 · 真假发明",
+ "part1_desc": "第 1–24 步：跟站长学被动语态的否定和疑问，核实发明小知识。",
+ "part2_desc": "第 25–44 步：独立判断，找出说法里的错误。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：被动语态否定句、一般疑问句与特殊疑问句。Unit 4 Inventions 主题。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-story-01",
+   "title": "听众来信",
+   "teach_html": "<p>发明节目播出后，听众来信了。有人问：“纸真是中国人发明的吗？会不会是美国人发明的？”</p><p>站长说：好问题！做节目要讲证据。今天咱们学被动语态的<strong>否定句</strong>和<strong>疑问句</strong>，把说法一个个核实清楚。</p>"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-story-02",
+   "title": "核实清单",
+   "teach_html": "<p>看这张核实清单，对的打 TRUE，错的打 FALSE：</p><ul><li>1. Paper was invented in China.（纸是在中国发明的。）TRUE</li><li>2. Paper was invented in America.（纸是在美国发明的。）FALSE</li><li>3. The telephone was invented by Bell.（电话是贝尔发明的。）TRUE</li></ul><p>第2句是错的。英文里说“不是……”，否定句怎么说？下面站长教你。</p>",
+   "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-01",
+   "title": "否定句：wasn't / weren't",
+   "teach_html": "<p>被动语态变否定，很简单：在 <strong>was / were 后面加 not</strong>。</p><ul><li>was not = <strong>wasn't</strong>（单数）</li><li>were not = <strong>weren't</strong>（复数）</li></ul><p>例句：Paper <strong>wasn't invented</strong> in America.（纸不是在美国发明的。）</p>"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-02",
+   "title": "否定句例句",
+   "teach_html": "<p>再看几个否定句：</p><ul><li>The telephone <strong>wasn't invented</strong> in 1800.（电话不是在1800年发明的。）</li><li>Cars <strong>weren't made</strong> in China at first.（汽车起初不是在中国制造的。）</li><li>注意：<strong>过去分词不变</strong>，变的只是 was/were。</li></ul>"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-03",
+   "title": "一般疑问句",
+   "teach_html": "<p>想提问“是……吗？”，把 <strong>was / were 放到句首</strong>：</p><ul><li><strong>Was</strong> paper invented in China?（纸是在中国发明的吗？）</li><li><strong>Were</strong> cars made in Germany?（汽车是在德国制造的吗？）</li></ul><p>公式：<strong>Was / Were + 主语 + 过去分词 + ?</strong></p>"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-04",
+   "title": "简短回答",
+   "teach_html": "<p>回答这种问题，用 <strong>Yes / No + 主语 + was / wasn't</strong>：</p><ul><li>— Was paper invented in China?（纸是在中国发明的吗？）<br>— <strong>Yes, it was.</strong>（是的。）</li><li>— Was paper invented in America?<br>— <strong>No, it wasn't.</strong>（不是。）</li></ul><p>主语单数用 it，复数用 they：— Were they made in China? — Yes, they were.</p>"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-05",
+   "title": "特殊疑问句",
+   "teach_html": "<p>想问“何时、何地、何人”，把疑问词放最前面：</p><ul><li><strong>When</strong> was the telephone invented?（电话是何时发明的？）— In 1876.</li><li><strong>Where</strong> was paper invented?（纸是哪里发明的？）— In China.</li><li><strong>Who</strong> was paper invented by?（纸是谁发明的？）— By Cai Lun.</li></ul><p>公式：<strong>疑问词 + was / were + 主语 + 过去分词 (+ by)?</strong></p>"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-06",
+   "title": "by 的位置",
+   "teach_html": "<p>用 who 提问“谁”的时候，<strong>by 放在句尾</strong>：</p><ul><li>Who <strong>was</strong> paper <strong>invented by</strong>?（纸是谁发明的？）</li><li>回答：It was invented <strong>by Cai Lun</strong>.（是蔡伦发明的。）</li></ul><p>记住：疑问句里 by 不提前，留在尾巴上。</p>"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r2-teach-07",
+   "title": "小结",
+   "teach_html": "<p>今天学的三样，记牢：</p><ul><li>否定：wasn't / weren't + 过去分词</li><li>一般疑问：Was / Were + 主语 + 过去分词？回答 Yes, it was. / No, it wasn't.</li><li>特殊疑问：When / Where / Who + was / were + 主语 + 过去分词？</li></ul><p>下面站长带着你练，先核实那张清单。</p>"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u4r2-prac-01",
+   "title": "先看清单",
+   "teach_html": "<p>这是核实清单。做题时对照着看：第1、3句是对的，第2句是错的。</p><p>下面站长带着你练否定和疑问。</p>",
+   "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q01",
+   "title": "纸不是美国发明的",
+   "scene": "第2句是错的，怎么否定？",
+   "stem": "Paper ______ invented in America.",
+   "options": [
+    "was",
+    "wasn't",
+    "weren't",
+    "isn't"
+   ],
+   "answer": "B",
+   "help": "单数主语的否定。",
+   "explain": "Paper wasn't invented in America.",
+   "wrong_feedback": {
+    "A": "was 是肯定。这里要否定，用 wasn't。",
+    "C": "weren't 用于复数。Paper 单数，用 wasn't。",
+    "D": "isn't 是现在时。这里过去的事，用 wasn't。"
+   },
+   "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q02",
+   "title": "汽车起初不是中国造的",
+   "scene": "复数主语的否定。",
+   "stem": "Cars ______ made in China at first.",
+   "options": [
+    "weren't",
+    "wasn't",
+    "were",
+    "was"
+   ],
+   "answer": "A",
+   "help": "复数 + 否定。",
+   "explain": "Cars weren't made in China at first.",
+   "wrong_feedback": {
+    "B": "wasn't 用于单数。Cars 是复数，用 weren't。",
+    "C": "were 是肯定。这里要否定，用 weren't。",
+    "D": "was 是单数肯定。复数否定用 weren't。"
+   }
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q03",
+   "title": "电话是贝尔发明的吗",
+   "scene": "把第3句变成疑问句。",
+   "stem": "______ the telephone invented by Bell?",
+   "options": [
+    "Is",
+    "Are",
+    "Were",
+    "Was"
+   ],
+   "answer": "D",
+   "help": "过去 + 单数，疑问句把 was 放句首。",
+   "explain": "Was the telephone invented by Bell?",
+   "wrong_feedback": {
+    "A": "Is 是现在时。这里问过去的事，用 Was。",
+    "B": "Are 是现在时复数。用 Was。",
+    "C": "Were 用于复数主语。telephone 单数，用 Was。"
+   },
+   "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q04",
+   "title": "简短回答",
+   "scene": "纸是在中国发明的吗？是的。",
+   "stem": "— Was paper invented in China? — ______",
+   "options": [
+    "Yes, it is.",
+    "No, it wasn't.",
+    "Yes, it was.",
+    "Yes, they were."
+   ],
+   "answer": "C",
+   "help": "肯定回答：Yes + 主语 + was。",
+   "explain": "Yes, it was.",
+   "wrong_feedback": {
+    "A": "时态错了。问的是 was，答也要用 was：Yes, it was。",
+    "B": "这是“No”+ 否定。题目清单第1句是 TRUE，要肯定回答。",
+    "D": "they 是复数。这里主语是 paper（it），用 Yes, it was。"
+   }
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q05",
+   "title": "何时发明的",
+   "scene": "问电话的发明时间。",
+   "stem": "______ was the telephone invented?",
+   "options": [
+    "What",
+    "When",
+    "Where",
+    "Who"
+   ],
+   "answer": "B",
+   "help": "问时间用哪个疑问词？",
+   "explain": "When was the telephone invented? — In 1876.",
+   "wrong_feedback": {
+    "A": "What 问“什么”。问时间用 When。",
+    "C": "Where 问“哪里”。问时间用 When。",
+    "D": "Who 问“谁”。问时间用 When。"
+   }
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q06",
+   "title": "谁发明的",
+   "scene": "问纸的发明人。",
+   "stem": "Who ______ paper invented by?",
+   "options": [
+    "is",
+    "was",
+    "were",
+    "are"
+   ],
+   "answer": "B",
+   "help": "过去 + 单数。",
+   "explain": "Who was paper invented by? — By Cai Lun.",
+   "wrong_feedback": {
+    "A": "is 是现在时。这里问过去，用 was。",
+    "C": "were 用于复数。paper 单数，用 was。",
+    "D": "are 是现在时。这里问过去，用 was。"
+   }
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q07",
+   "title": "哪里发明的",
+   "scene": "问发明地点。",
+   "stem": "Where ______ printing invented?",
+   "options": [
+    "was",
+    "were",
+    "is",
+    "are"
+   ],
+   "answer": "A",
+   "help": "过去 + 单数。",
+   "explain": "Where was printing invented? — In China.",
+   "wrong_feedback": {
+    "B": "were 用于复数。printing 单数，用 was。",
+    "C": "is 是现在时。这里问过去，用 was。",
+    "D": "are 是现在时。这里问过去，用 was。"
+   }
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q08",
+   "title": "否定回答",
+   "scene": "纸是在美国发明的吗？不是。",
+   "stem": "— Was paper invented in America? — ______",
+   "options": [
+    "Yes, it was.",
+    "No, it was.",
+    "No, it wasn't.",
+    "Yes, it wasn't."
+   ],
+   "answer": "C",
+   "help": "清单第2句是 FALSE，要否定回答。",
+   "explain": "No, it wasn't.",
+   "wrong_feedback": {
+    "A": "这是肯定回答。但清单说第2句是错的，要否定回答。",
+    "B": "No 后面要跟否定：No, it wasn't。",
+    "D": "Yes 和 wasn't 矛盾。要 No, it wasn't。"
+   }
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r2-q09",
+   "title": "were 的疑问",
+   "scene": "复数主语提问。",
+   "stem": "______ cars made in Germany?",
+   "options": [
+    "Were",
+    "Was",
+    "Is",
+    "Are"
+   ],
+   "answer": "A",
+   "help": "cars 是复数。",
+   "explain": "Were cars made in Germany?",
+   "wrong_feedback": {
+    "B": "Was 用于单数。cars 是复数，疑问句句首要用 Were。",
+    "C": "Is 是现在时。这里问的是过去的事，用 Were。",
+    "D": "Are 是现在时复数。这里问过去的事，用 Were。"
+   }
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r2-q10",
+   "title": "改否定句",
+   "scene": "把肯定句变否定。",
+   "stem": "改成否定句：Paper was invented in China.",
+   "task": "写英文完整句子。",
+   "answer_text": "Paper was not invented in China.",
+   "expects": [
     {
-      "step": 1,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-story-01",
-      "title": "听众来信",
-      "teach_html": "<p>【承上启下】昨天学了被动语态的结构。今天多练几句，重点区分主动和被动。</p><p>发明节目播出后，听众来信了。有人问：“纸真是中国人发明的吗？会不会是美国人发明的？”</p><p>站长说：好问题！做节目要讲证据。今天咱们学被动语态的<strong>否定句</strong>和<strong>疑问句</strong>，把说法一个个核实清楚。</p>"
-    },
-    {
-      "step": 2,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-story-02",
-      "title": "核实清单",
-      "teach_html": "<p>看这张核实清单，对的打 TRUE，错的打 FALSE：</p><ul><li>1. Paper was invented in China.（纸是在中国发明的。）TRUE</li><li>2. Paper was invented in America.（纸是在美国发明的。）FALSE</li><li>3. The telephone was invented by Bell.（电话是贝尔发明的。）TRUE</li></ul><p>第2句是错的。英文里说“不是……”，否定句怎么说？下面站长教你。</p>",
-      "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
-    },
-    {
-      "step": 3,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-01",
-      "title": "否定句：wasn't / weren't",
-      "teach_html": "<p>被动语态变否定，很简单：在 <strong>was / were 后面加 not</strong>。</p><ul><li>was not = <strong>wasn't</strong>（单数）</li><li>were not = <strong>weren't</strong>（复数）</li></ul><p>例句：Paper <strong>wasn't invented</strong> in America.（纸不是在美国发明的。）</p>"
-    },
-    {
-      "step": 4,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-02",
-      "title": "否定句例句",
-      "teach_html": "<p>再看几个否定句：</p><ul><li>The telephone <strong>wasn't invented</strong> in 1800.（电话不是在1800年发明的。）</li><li>Cars <strong>weren't made</strong> in China at first.（汽车起初不是在中国制造的。）</li><li>注意：<strong>过去分词不变</strong>，变的只是 was/were。</li></ul>"
-    },
-    {
-      "step": 5,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-03",
-      "title": "一般疑问句",
-      "teach_html": "<p>想提问“是……吗？”，把 <strong>was / were 放到句首</strong>：</p><ul><li><strong>Was</strong> paper invented in China?（纸是在中国发明的吗？）</li><li><strong>Were</strong> cars made in Germany?（汽车是在德国制造的吗？）</li></ul><p>公式：<strong>Was / Were + 主语 + 过去分词 + ?</strong></p>"
-    },
-    {
-      "step": 6,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-04",
-      "title": "简短回答",
-      "teach_html": "<p>回答这种问题，用 <strong>Yes / No + 主语 + was / wasn't</strong>：</p><ul><li>— Was paper invented in China?（纸是在中国发明的吗？）<br>— <strong>Yes, it was.</strong>（是的。）</li><li>— Was paper invented in America?<br>— <strong>No, it wasn't.</strong>（不是。）</li></ul><p>主语单数用 it，复数用 they：— Were they made in China? — Yes, they were.</p>"
-    },
-    {
-      "step": 7,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-05",
-      "title": "特殊疑问句",
-      "teach_html": "<p>想问“何时、何地、何人”，把疑问词放最前面：</p><ul><li><strong>When</strong> was the telephone invented?（电话是何时发明的？）— In 1876.</li><li><strong>Where</strong> was paper invented?（纸是哪里发明的？）— In China.</li><li><strong>Who</strong> was paper invented by?（纸是谁发明的？）— By Cai Lun.</li></ul><p>公式：<strong>疑问词 + was / were + 主语 + 过去分词 (+ by)?</strong></p>"
-    },
-    {
-      "step": 8,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-06",
-      "title": "by 的位置",
-      "teach_html": "<p>用 who 提问“谁”的时候，<strong>by 放在句尾</strong>：</p><ul><li>Who <strong>was</strong> paper <strong>invented by</strong>?（纸是谁发明的？）</li><li>回答：It was invented <strong>by Cai Lun</strong>.（是蔡伦发明的。）</li></ul><p>记住：疑问句里 by 不提前，留在尾巴上。</p>"
-    },
-    {
-      "step": 9,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r2-teach-07",
-      "title": "小结",
-      "teach_html": "<p>今天学的三样，记牢：</p><ul><li>否定：wasn't / weren't + 过去分词</li><li>一般疑问：Was / Were + 主语 + 过去分词？回答 Yes, it was. / No, it wasn't.</li><li>特殊疑问：When / Where / Who + was / were + 主语 + 过去分词？</li></ul><p>下面站长带着你练，先核实那张清单。</p>"
-    },
-    {
-      "step": 10,
-      "phase": "practice",
-      "kind": "teach",
-      "audio_id": "u4r2-prac-01",
-      "title": "先看清单",
-      "teach_html": "<p>这是核实清单。做题时对照着看：第1、3句是对的，第2句是错的。</p><p>下面站长带着你练否定和疑问。</p>",
-      "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
-    },
-    {
-      "step": 11,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q01",
-      "title": "纸不是美国发明的",
-      "scene": "第2句是错的，怎么否定？",
-      "stem": "Paper ______ invented in America.",
-      "options": [
-        "was",
-        "wasn't",
-        "weren't",
-        "isn't"
-      ],
-      "answer": "B",
-      "help": "单数主语的否定。",
-      "explain": "Paper wasn't invented in America.",
-      "wrong_feedback": {
-        "A": "was 是肯定。这里要否定，用 wasn't。",
-        "C": "weren't 用于复数。Paper 单数，用 wasn't。",
-        "D": "isn't 是现在时。这里过去的事，用 wasn't。"
-      },
-      "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
-    },
-    {
-      "step": 12,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q02",
-      "title": "汽车起初不是中国造的",
-      "scene": "复数主语的否定。",
-      "stem": "Cars ______ made in China at first.",
-      "options": [
-        "weren't",
-        "wasn't",
-        "were",
-        "was"
-      ],
-      "answer": "A",
-      "help": "复数 + 否定。",
-      "explain": "Cars weren't made in China at first.",
-      "wrong_feedback": {
-        "B": "wasn't 用于单数。Cars 是复数，用 weren't。",
-        "C": "were 是肯定。这里要否定，用 weren't。",
-        "D": "was 是单数肯定。复数否定用 weren't。"
-      }
-    },
-    {
-      "step": 13,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q03",
-      "title": "电话是贝尔发明的吗",
-      "scene": "把第3句变成疑问句。",
-      "stem": "______ the telephone invented by Bell?",
-      "options": [
-        "Is",
-        "Are",
-        "Were",
-        "Was"
-      ],
-      "answer": "D",
-      "help": "过去 + 单数，疑问句把 was 放句首。",
-      "explain": "Was the telephone invented by Bell?",
-      "wrong_feedback": {
-        "A": "Is 是现在时。这里问过去的事，用 Was。",
-        "B": "Are 是现在时复数。用 Was。",
-        "C": "Were 用于复数主语。telephone 单数，用 Was。"
-      },
-      "reading": "Fact list:\n1. Paper was invented in China. (TRUE)\n2. Paper was invented in America. (FALSE)\n3. The telephone was invented by Bell. (TRUE)"
-    },
-    {
-      "step": 14,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q04",
-      "title": "简短回答",
-      "scene": "纸是在中国发明的吗？是的。",
-      "stem": "— Was paper invented in China? — ______",
-      "options": [
-        "Yes, it is.",
-        "No, it wasn't.",
-        "Yes, it was.",
-        "Yes, they were."
-      ],
-      "answer": "C",
-      "help": "肯定回答：Yes + 主语 + was。",
-      "explain": "Yes, it was.",
-      "wrong_feedback": {
-        "A": "时态错了。问的是 was，答也要用 was：Yes, it was。",
-        "B": "这是“No”+ 否定。题目清单第1句是 TRUE，要肯定回答。",
-        "D": "they 是复数。这里主语是 paper（it），用 Yes, it was。"
-      }
-    },
-    {
-      "step": 15,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q05",
-      "title": "何时发明的",
-      "scene": "问电话的发明时间。",
-      "stem": "______ was the telephone invented?",
-      "options": [
-        "What",
-        "When",
-        "Where",
-        "Who"
-      ],
-      "answer": "B",
-      "help": "问时间用哪个疑问词？",
-      "explain": "When was the telephone invented? — In 1876.",
-      "wrong_feedback": {
-        "A": "What 问“什么”。问时间用 When。",
-        "C": "Where 问“哪里”。问时间用 When。",
-        "D": "Who 问“谁”。问时间用 When。"
-      }
-    },
-    {
-      "step": 16,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q06",
-      "title": "谁发明的",
-      "scene": "问纸的发明人。",
-      "stem": "Who ______ paper invented by?",
-      "options": [
-        "is",
-        "was",
-        "were",
-        "are"
-      ],
-      "answer": "B",
-      "help": "过去 + 单数。",
-      "explain": "Who was paper invented by? — By Cai Lun.",
-      "wrong_feedback": {
-        "A": "is 是现在时。这里问过去，用 was。",
-        "C": "were 用于复数。paper 单数，用 was。",
-        "D": "are 是现在时。这里问过去，用 was。"
-      }
-    },
-    {
-      "step": 17,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q07",
-      "title": "哪里发明的",
-      "scene": "问发明地点。",
-      "stem": "Where ______ printing invented?",
-      "options": [
-        "was",
-        "were",
-        "is",
-        "are"
-      ],
-      "answer": "A",
-      "help": "过去 + 单数。",
-      "explain": "Where was printing invented? — In China.",
-      "wrong_feedback": {
-        "B": "were 用于复数。printing 单数，用 was。",
-        "C": "is 是现在时。这里问过去，用 was。",
-        "D": "are 是现在时。这里问过去，用 was。"
-      }
-    },
-    {
-      "step": 18,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q08",
-      "title": "否定回答",
-      "scene": "纸是在美国发明的吗？不是。",
-      "stem": "— Was paper invented in America? — ______",
-      "options": [
-        "Yes, it was.",
-        "No, it was.",
-        "No, it wasn't.",
-        "Yes, it wasn't."
-      ],
-      "answer": "C",
-      "help": "清单第2句是 FALSE，要否定回答。",
-      "explain": "No, it wasn't.",
-      "wrong_feedback": {
-        "A": "这是肯定回答。但清单说第2句是错的，要否定回答。",
-        "B": "No 后面要跟否定：No, it wasn't。",
-        "D": "Yes 和 wasn't 矛盾。要 No, it wasn't。"
-      }
-    },
-    {
-      "step": 19,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r2-q09",
-      "title": "were 的疑问",
-      "scene": "复数主语提问。",
-      "stem": "______ cars made in Germany?",
-      "options": [
-        "Were",
-        "Was",
-        "Is",
-        "Are"
-      ],
-      "answer": "A",
-      "help": "cars 是复数。",
-      "explain": "Were cars made in Germany?",
-      "wrong_feedback": {
-        "A": "Was 用于单数。cars 复数，用 Were。",
-        "C": "Is 是现在时。这里问过去，用 Were。",
-        "D": "Are 是现在时。这里问过去，用 Were。"
-      }
-    },
-    {
-      "step": 20,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r2-q10",
-      "title": "改否定句",
-      "scene": "把肯定句变否定。",
-      "stem": "改成否定句：Paper was invented in China.",
-      "task": "写英文完整句子。",
-      "answer_text": "Paper was not invented in China.",
-      "expects": [
-        {
-          "id": "s1",
-          "type": "word",
-          "answers": [
-            "paper was not invented in china",
-            "paper wasnt invented in china"
-          ],
-          "cn": [
-            "纸不是在中国发明的"
-          ]
-        }
-      ],
-      "help": "was 后面加 not。",
-      "explain": "Paper was not invented in China.（wasn't 也对）",
-      "common_errors": [
-        {
-          "when": "只写了 wasn't 没写句子",
-          "say": "要写完整句子：Paper was not invented in China。"
-        }
-      ]
-    },
-    {
-      "step": 21,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r2-q11",
-      "title": "改疑问句",
-      "scene": "把陈述句变疑问句。",
-      "stem": "改成疑问句：The telephone was invented by Bell.",
-      "task": "写英文完整句子。",
-      "answer_text": "Was the telephone invented by Bell?",
-      "expects": [
-        {
-          "id": "s2",
-          "type": "word",
-          "answers": [
-            "was the telephone invented by bell"
-          ],
-          "cn": [
-            "电话是贝尔发明的吗"
-          ]
-        }
-      ],
-      "help": "把 was 放到句首。",
-      "explain": "Was the telephone invented by Bell?",
-      "common_errors": [
-        {
-          "when": "was 没放句首",
-          "say": "疑问句要把 was 放到最前面：Was the telephone invented by Bell?"
-        }
-      ]
-    },
-    {
-      "step": 22,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r2-q12",
-      "title": "写出过去分词：do",
-      "scene": "不规则的。",
-      "stem": "写出 do 的过去分词。",
-      "task": "只写一个英文单词。",
-      "answer_text": "done",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "done"
-          ],
-          "cn": [
-            "做（过去分词）"
-          ]
-        }
-      ],
-      "help": "do 是不规则的。",
-      "explain": "do → done。",
-      "common_errors": [
-        {
-          "when": "写了 doed",
-          "say": "没有 doed 这种说法，记住是 done。"
-        }
-      ]
-    },
-    {
-      "step": 23,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r2-q13",
-      "title": "简短回答",
-      "scene": "肯定回答。",
-      "stem": "回答：Was paper invented in China?（用 Yes）",
-      "task": "写英文。",
-      "answer_text": "Yes, it was.",
-      "expects": [
-        {
-          "id": "s3",
-          "type": "word",
-          "answers": [
-            "yes it was",
-            "yes"
-          ],
-          "cn": [
-            "是的"
-          ]
-        }
-      ],
-      "help": "Yes + it + was。",
-      "explain": "Yes, it was.",
-      "common_errors": [
-        {
-          "when": "写了 Yes, it is",
-          "say": "问的是 was，回答也要用 was：Yes, it was。"
-        }
-      ]
-    },
-    {
-      "step": 24,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r2-q14",
-      "title": "填 was/were",
-      "scene": "特殊疑问句。",
-      "stem": "填空：___ they invented in China?",
-      "task": "只写 was 或 were。",
-      "answer_text": "were",
-      "expects": [
-        {
-          "id": "s4",
-          "type": "word",
-          "answers": [
-            "were"
-          ],
-          "cn": [
-            "（复数用 were）"
-          ]
-        }
-      ],
-      "help": "they 是复数。",
-      "explain": "复数用 were。",
-      "common_errors": [
-        {
-          "when": "写了 was",
-          "say": "they 是复数，疑问句也用 were。"
-        }
-      ]
-    },
-    {
-      "step": 25,
-      "phase": "validate",
-      "kind": "teach",
-      "audio_id": "u4r2-v-intro",
-      "title": "新任务：独立核实",
-      "teach_html": "<p>新任务：电灯泡 (light bulb) 是爱迪生 (Edison) 在1879年发明的，电话是贝尔在1876年发明的。</p><p>资料在上面。这次你自己核实说法，站长不提示了。</p><p>记住：否定 wasn't/weren't；疑问把 was/were 放句首。</p>",
-      "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
-    },
-    {
-      "step": 26,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r2-v01",
-      "title": "电灯泡的发明人",
-      "scene": "电灯泡是爱迪生发明的。",
-      "stem": "The light bulb ______ invented by Edison.",
-      "options": [
-        "is",
-        "are",
-        "was",
-        "were"
-      ],
-      "answer": "C",
-      "help": "过去 + 单数。",
-      "explain": "The light bulb was invented by Edison.",
-      "wrong_feedback": {
-        "A": "再想想时态。",
-        "B": "再想想单复数。",
-        "D": "再想想。"
-      },
-      "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
-    },
-    {
-      "step": 27,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r2-v02",
-      "title": "否定：电灯泡",
-      "scene": "电灯泡不是贝尔发明的。",
-      "stem": "The light bulb ______ invented by Bell.",
-      "options": [
-        "wasn't",
-        "weren't",
-        "was",
-        "isn't"
-      ],
-      "answer": "A",
-      "help": "单数否定。",
-      "explain": "The light bulb wasn't invented by Bell.",
-      "wrong_feedback": {
-        "B": "再想想单复数。",
-        "C": "再想想。",
-        "D": "再想想时态。"
-      },
-      "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
-    },
-    {
-      "step": 28,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r2-v03",
-      "title": "电灯泡是1879年发明的吗",
-      "scene": "一般疑问句。",
-      "stem": "______ the light bulb invented in 1879?",
-      "options": [
-        "Is",
-        "Are",
-        "Were",
-        "Was"
-      ],
-      "answer": "D",
-      "help": "过去 + 单数。",
-      "explain": "Was the light bulb invented in 1879?",
-      "wrong_feedback": {
-        "A": "再想想时态。",
-        "B": "再想想。",
-        "C": "再想想单复数。"
-      },
-      "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
-    },
-    {
-      "step": 29,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r2-v04",
-      "title": "何时",
-      "scene": "问电灯泡的发明时间。",
-      "stem": "______ was the light bulb invented?",
-      "options": [
-        "What",
-        "When",
-        "Where",
-        "Who"
-      ],
-      "answer": "B",
-      "help": "问时间。",
-      "explain": "When was the light bulb invented?",
-      "wrong_feedback": {
-        "A": "再想想。",
-        "C": "再想想。",
-        "D": "再想想。"
-      }
-    },
-    {
-      "step": 30,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r2-v05",
-      "title": "否定回答",
-      "scene": "电灯泡是贝尔发明的吗？不是。",
-      "stem": "— Was the light bulb invented by Bell? — ______",
-      "options": [
-        "Yes, it was.",
-        "No, it was.",
-        "Yes, it wasn't.",
-        "No, it wasn't."
-      ],
-      "answer": "D",
-      "help": "事实 + 否定回答。",
-      "explain": "No, it wasn't.",
-      "wrong_feedback": {
-        "A": "再想想。",
-        "B": "再想想。",
-        "C": "再想想。"
-      },
-      "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
-    },
-    {
-      "step": 31,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r2-v06",
-      "title": "谁发明的电话",
-      "scene": "特殊疑问句。",
-      "stem": "Who ______ the telephone invented by?",
-      "options": [
-        "is",
-        "are",
-        "was",
-        "were"
-      ],
-      "answer": "C",
-      "help": "过去 + 单数。",
-      "explain": "Who was the telephone invented by?",
-      "wrong_feedback": {
-        "A": "再想想时态。",
-        "B": "再想想。",
-        "D": "再想想单复数。"
-      }
-    },
-    {
-      "step": 32,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r2-v07",
-      "title": "写出过去分词：speak",
-      "scene": "不规则的。",
-      "stem": "写出 speak 的过去分词。",
-      "task": "只写一个英文单词。",
-      "answer_text": "spoken",
-      "expects": [
-        {
-          "id": "w2",
-          "type": "word",
-          "answers": [
-            "spoken"
-          ],
-          "cn": [
-            "说（过去分词）"
-          ]
-        }
-      ],
-      "help": "speak 是不规则的。",
-      "explain": "speak → spoken。",
-      "common_errors": [
-        {
-          "when": "写了 speaked",
-          "say": "记住是 spoken。"
-        }
-      ]
-    },
-    {
-      "step": 33,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r2-v08",
-      "title": "改否定句",
-      "scene": "独立改写。",
-      "stem": "改成否定句：They were invented in China.",
-      "task": "写英文完整句子。",
-      "answer_text": "They were not invented in China.",
-      "expects": [
-        {
-          "id": "s5",
-          "type": "word",
-          "answers": [
-            "they were not invented in china",
-            "they werent invented in china"
-          ],
-          "cn": [
-            "它们不是在中国发明的"
-          ]
-        }
-      ],
-      "help": "were 后面加 not。",
-      "explain": "They were not invented in China.",
-      "common_errors": [
-        {
-          "when": "用了 wasn't",
-          "say": "主语是 they（复数），用 weren't：They weren't invented in China。"
-        }
-      ]
-    },
-    {
-      "step": 34,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r2-v09",
-      "title": "改疑问句",
-      "scene": "独立改写。",
-      "stem": "改成疑问句：Paper was invented in China.",
-      "task": "写英文完整句子。",
-      "answer_text": "Was paper invented in China?",
-      "expects": [
-        {
-          "id": "s6",
-          "type": "word",
-          "answers": [
-            "was paper invented in china"
-          ],
-          "cn": [
-            "纸是在中国发明的吗"
-          ]
-        }
-      ],
-      "help": "把 was 放句首。",
-      "explain": "Was paper invented in China?",
-      "common_errors": [
-        {
-          "when": "was 没放句首",
-          "say": "把 was 放到最前面。"
-        }
-      ]
-    },
-    {
-      "step": 35,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r2-v10",
-      "title": "填空",
-      "scene": "特殊疑问。",
-      "stem": "填空：___ was the telephone invented?",
-      "task": "只写一个疑问词。",
-      "answer_text": "When",
-      "expects": [
-        {
-          "id": "s7",
-          "type": "word",
-          "answers": [
-            "when"
-          ],
-          "cn": [
-            "何时"
-          ]
-        }
-      ],
-      "help": "问的是时间 1876。",
-      "explain": "When was the telephone invented?",
-      "common_errors": [
-        {
-          "when": "写了 where",
-          "say": "问的是时间（1876），用 When。"
-        }
-      ]
-    },
-    {
-      "step": 36,
-      "phase": "validate",
-      "kind": "teach",
-      "audio_id": "u4r2-ending",
-      "title": "节目预告",
-      "teach_html": "<p>核实得很清楚。站长说：以后谁再乱讲发明的故事，咱们有证据反驳。</p><p>下一期，咱们看看<strong>现代</strong>的发明——电话、电灯这些东西，<strong>现在</strong>是怎么做出来的。节目预告：过去用 was/were，现在用什么？</p>"
+     "id": "s1",
+     "type": "word",
+     "answers": [
+      "paper was not invented in china",
+      "paper wasnt invented in china"
+     ],
+     "cn": [
+      "纸不是在中国发明的"
+     ]
     }
-  ],
-  "title": "真假发明：否定和疑问",
-  "unit": "Unit 4 Inventions",
-  "version": 1
+   ],
+   "help": "was 后面加 not。",
+   "explain": "Paper was not invented in China.（wasn't 也对）",
+   "common_errors": [
+    {
+     "when": "只写了 wasn't 没写句子",
+     "say": "要写完整句子：Paper was not invented in China。"
+    },
+    {
+     "when": "写了 didn't invented",
+     "say": "被动语态的否定不用 didn't：在 was 后面加 not——Paper was not invented in China。"
+    },
+    {
+     "when": "not 放在 was 前面",
+     "say": "not 的位置在 was 后面：was not invented，顺序别反。"
+    },
+    {
+     "when": "写了 invent 原形",
+     "say": "was 后面要用过去分词 invented，不能用原形 invent。"
+    }
+   ]
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r2-q11",
+   "title": "改疑问句",
+   "scene": "把陈述句变疑问句。",
+   "stem": "改成疑问句：The telephone was invented by Bell.",
+   "task": "写英文完整句子。",
+   "answer_text": "Was the telephone invented by Bell?",
+   "expects": [
+    {
+     "id": "s2",
+     "type": "word",
+     "answers": [
+      "was the telephone invented by bell"
+     ],
+     "cn": [
+      "电话是贝尔发明的吗"
+     ]
+    }
+   ],
+   "help": "把 was 放到句首。",
+   "explain": "Was the telephone invented by Bell?",
+   "common_errors": [
+    {
+     "when": "was 没放句首",
+     "say": "疑问句要把 was 放到最前面：Was the telephone invented by Bell?"
+    },
+    {
+     "when": "用了 Did 开头",
+     "say": "被动语态的疑问句不用 did：把原句里的 was 直接提到句首就行。"
+    },
+    {
+     "when": "写了 invent 原形",
+     "say": "was 后面是过去分词 invented，不能用原形 invent。"
+    },
+    {
+     "when": "漏了 by Bell",
+     "say": "这句问的是“谁发明的”，by Bell 不能丢：Was the telephone invented by Bell?"
+    }
+   ]
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r2-q12",
+   "title": "写出过去分词：do",
+   "scene": "不规则的。",
+   "stem": "写出 do 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "done",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "done"
+     ],
+     "cn": [
+      "做（过去分词）"
+     ]
+    }
+   ],
+   "help": "do 是不规则的。",
+   "explain": "do → done。",
+   "common_errors": [
+    {
+     "when": "写了 doed",
+     "say": "没有 doed 这种说法，记住是 done。"
+    },
+    {
+     "when": "写了 did",
+     "say": "did 是 do 的过去式。被动语态里用的是过去分词，要写 done。"
+    },
+    {
+     "when": "写了 doing",
+     "say": "doing 是“正在做”。这里要过去分词 done。"
+    },
+    {
+     "when": "写了 does",
+     "say": "does 是现在时的三单形式。do 的过去分词是 done。"
+    }
+   ]
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r2-q13",
+   "title": "简短回答",
+   "scene": "肯定回答。",
+   "stem": "回答：Was paper invented in China?（用 Yes）",
+   "task": "写英文。",
+   "answer_text": "Yes, it was.",
+   "expects": [
+    {
+     "id": "s3",
+     "type": "word",
+     "answers": [
+      "yes it was",
+      "yes"
+     ],
+     "cn": [
+      "是的"
+     ]
+    }
+   ],
+   "help": "Yes + it + was。",
+   "explain": "Yes, it was.",
+   "common_errors": [
+    {
+     "when": "写了 Yes, it is",
+     "say": "问的是 was，回答也要用 was：Yes, it was。"
+    },
+    {
+     "when": "写了 Yes, paper was",
+     "say": "简短回答里不用再重复 paper，用 it 代替：Yes, it was。"
+    },
+    {
+     "when": "写了 Yes, it did",
+     "say": "问题是用 was 问的，回答也要用 was，不能用 did：Yes, it was。"
+    }
+   ]
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r2-q14",
+   "title": "填 was/were",
+   "scene": "特殊疑问句。",
+   "stem": "填空：___ they invented in China?",
+   "task": "只写 was 或 were。",
+   "answer_text": "were",
+   "expects": [
+    {
+     "id": "s4",
+     "type": "word",
+     "answers": [
+      "were"
+     ],
+     "cn": [
+      "（复数用 were）"
+     ]
+    }
+   ],
+   "help": "they 是复数。",
+   "explain": "复数用 were。",
+   "common_errors": [
+    {
+     "when": "写了 was",
+     "say": "they 是复数，疑问句也用 were。"
+    },
+    {
+     "when": "写了 are",
+     "say": "are 是现在时。这里问的是过去的事，they 用 were。"
+    },
+    {
+     "when": "写了 is",
+     "say": "is 是单数、还是现在时。they 是复数、问的又是过去，用 were。"
+    }
+   ]
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u4r2-v-intro",
+   "title": "新任务：独立核实",
+   "teach_html": "<p>新任务：电灯泡 (light bulb) 是爱迪生 (Edison) 在1879年发明的，电话是贝尔在1876年发明的。</p><p>资料在上面。这次你自己核实说法，站长不提示了。</p><p>记住：否定 wasn't/weren't；疑问把 was/were 放句首。</p>",
+   "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r2-v01",
+   "title": "电灯泡的发明人",
+   "scene": "电灯泡是爱迪生发明的。",
+   "stem": "The light bulb ______ invented by Edison.",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "were"
+   ],
+   "answer": "C",
+   "help": "过去 + 单数。",
+   "explain": "The light bulb was invented by Edison.",
+   "wrong_feedback": {
+    "A": "is 是现在时。电灯泡是过去发明的，要用 was。",
+    "B": "are 是现在时复数。主语 the light bulb 是一个、又是过去的事，用 was。",
+    "D": "were 用在复数主语后面。the light bulb 是单数，过去时用 was。"
+   },
+   "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r2-v02",
+   "title": "否定：电灯泡",
+   "scene": "电灯泡不是贝尔发明的。",
+   "stem": "The light bulb ______ invented by Bell.",
+   "options": [
+    "wasn't",
+    "weren't",
+    "was",
+    "isn't"
+   ],
+   "answer": "A",
+   "help": "单数否定。",
+   "explain": "The light bulb wasn't invented by Bell.",
+   "wrong_feedback": {
+    "B": "weren't 是复数否定。the light bulb 是单数，否定用 wasn't。",
+    "C": "was 是肯定句。可清单上写了：电灯泡不是贝尔发明的，这里要否定，用 wasn't。",
+    "D": "isn't 是现在时否定。发明是过去的事，用 wasn't。"
+   },
+   "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r2-v03",
+   "title": "电灯泡是1879年发明的吗",
+   "scene": "一般疑问句。",
+   "stem": "______ the light bulb invented in 1879?",
+   "options": [
+    "Is",
+    "Are",
+    "Were",
+    "Was"
+   ],
+   "answer": "D",
+   "help": "过去 + 单数。",
+   "explain": "Was the light bulb invented in 1879?",
+   "wrong_feedback": {
+    "A": "Is 是现在时。问过去的事，句首要用 Was。",
+    "B": "Are 是现在时、还是复数。这里单数加过去，用 Was。",
+    "C": "Were 用在复数主语前面。the light bulb 是单数，用 Was。"
+   },
+   "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r2-v04",
+   "title": "何时",
+   "scene": "问电灯泡的发明时间。",
+   "stem": "______ was the light bulb invented?",
+   "options": [
+    "What",
+    "When",
+    "Where",
+    "Who"
+   ],
+   "answer": "B",
+   "help": "问时间。",
+   "explain": "When was the light bulb invented?",
+   "wrong_feedback": {
+    "A": "What 问的是“什么东西”。这里问的是哪一年发明的，用 When。",
+    "C": "Where 问的是“在什么地方”。问时间用 When。",
+    "D": "Who 问的是“是谁”。问时间用 When。"
+   }
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r2-v05",
+   "title": "否定回答",
+   "scene": "电灯泡是贝尔发明的吗？不是。",
+   "stem": "— Was the light bulb invented by Bell? — ______",
+   "options": [
+    "Yes, it was.",
+    "No, it was.",
+    "Yes, it wasn't.",
+    "No, it wasn't."
+   ],
+   "answer": "D",
+   "help": "事实 + 否定回答。",
+   "explain": "No, it wasn't.",
+   "wrong_feedback": {
+    "A": "这是肯定回答。可电灯泡不是贝尔发明的，事实对不上，要用 No 回答。",
+    "B": "No 后面不能接肯定。否定回答要说 No, it wasn't。",
+    "C": "Yes 和 wasn't 互相打架。事实不对时用 No 开头：No, it wasn't。"
+   },
+   "reading": "Light bulb: invented by Edison, in 1879, in America\nTelephone: invented by Bell, in 1876"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r2-v06",
+   "title": "谁发明的电话",
+   "scene": "特殊疑问句。",
+   "stem": "Who ______ the telephone invented by?",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "were"
+   ],
+   "answer": "C",
+   "help": "过去 + 单数。",
+   "explain": "Who was the telephone invented by?",
+   "wrong_feedback": {
+    "A": "is 是现在时。电话是过去发明的，要用 was。",
+    "B": "are 是现在时复数。这里过去加单数，用 was。",
+    "D": "were 用在复数主语前面。the telephone 是单数，用 was。"
+   }
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r2-v07",
+   "title": "写出过去分词：speak",
+   "scene": "不规则的。",
+   "stem": "写出 speak 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "spoken",
+   "expects": [
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "spoken"
+     ],
+     "cn": [
+      "说（过去分词）"
+     ]
+    }
+   ],
+   "help": "speak 是不规则的。",
+   "explain": "speak → spoken。",
+   "common_errors": [
+    {
+     "when": "写了 speaked",
+     "say": "记住是 spoken。"
+    },
+    {
+     "when": "写了 spoke",
+     "say": "spoke 是过去式。被动语态用的是过去分词，要写 spoken。"
+    },
+    {
+     "when": "写了 speaking",
+     "say": "speaking 是“正在说”。speak 的过去分词是 spoken。"
+    }
+   ]
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r2-v08",
+   "title": "改否定句",
+   "scene": "独立改写。",
+   "stem": "改成否定句：They were invented in China.",
+   "task": "写英文完整句子。",
+   "answer_text": "They were not invented in China.",
+   "expects": [
+    {
+     "id": "s5",
+     "type": "word",
+     "answers": [
+      "they were not invented in china",
+      "they werent invented in china"
+     ],
+     "cn": [
+      "它们不是在中国发明的"
+     ]
+    }
+   ],
+   "help": "were 后面加 not。",
+   "explain": "They were not invented in China.",
+   "common_errors": [
+    {
+     "when": "用了 wasn't",
+     "say": "主语是 they（复数），用 weren't：They weren't invented in China。"
+    },
+    {
+     "when": "写了 didn't invented",
+     "say": "被动语态的否定不用 didn't：在 were 后面加 not——They were not invented in China。"
+    },
+    {
+     "when": "not 放在 were 前面",
+     "say": "not 的位置在 were 后面：were not invented。"
+    },
+    {
+     "when": "写了 invent 原形",
+     "say": "were 后面要用过去分词 invented，不能用原形 invent。"
+    }
+   ]
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r2-v09",
+   "title": "改疑问句",
+   "scene": "独立改写。",
+   "stem": "改成疑问句：Paper was invented in China.",
+   "task": "写英文完整句子。",
+   "answer_text": "Was paper invented in China?",
+   "expects": [
+    {
+     "id": "s6",
+     "type": "word",
+     "answers": [
+      "was paper invented in china"
+     ],
+     "cn": [
+      "纸是在中国发明的吗"
+     ]
+    }
+   ],
+   "help": "把 was 放句首。",
+   "explain": "Was paper invented in China?",
+   "common_errors": [
+    {
+     "when": "was 没放句首",
+     "say": "把 was 放到最前面。"
+    },
+    {
+     "when": "用了 Did 开头",
+     "say": "被动语态的疑问句不用 did：把原句的 was 提到最前面。"
+    },
+    {
+     "when": "写了 invent 原形",
+     "say": "was 后面是过去分词 invented，不能用原形 invent。"
+    },
+    {
+     "when": "只在句尾加了问号",
+     "say": "语序不变只加问号不算疑问句：要把 was 提到 paper 前面——Was paper invented in China?"
+    }
+   ]
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r2-v10",
+   "title": "填空",
+   "scene": "特殊疑问。",
+   "stem": "填空：___ was the telephone invented?",
+   "task": "只写一个疑问词。",
+   "answer_text": "When",
+   "expects": [
+    {
+     "id": "s7",
+     "type": "word",
+     "answers": [
+      "when"
+     ],
+     "cn": [
+      "何时"
+     ]
+    }
+   ],
+   "help": "问的是时间 1876。",
+   "explain": "When was the telephone invented?",
+   "common_errors": [
+    {
+     "when": "写了 where",
+     "say": "问的是时间（1876），用 When。"
+    },
+    {
+     "when": "写了 what",
+     "say": "What 问的是“什么”。答案是 1876 年，问时间用 When。"
+    },
+    {
+     "when": "写了 who",
+     "say": "Who 问的是“谁发明的”。这里问的是年份，用 When。"
+    },
+    {
+     "when": "写了 how",
+     "say": "How 问的是“怎么做/怎么样”。问时间用 When。"
+    }
+   ]
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u4r2-ending",
+   "title": "节目预告",
+   "teach_html": "<p>核实得很清楚。站长说：以后谁再乱讲发明的故事，咱们有证据反驳。</p><p>下一期，咱们看看<strong>现代</strong>的发明——电话、电灯这些东西，<strong>现在</strong>是怎么做出来的。节目预告：过去用 was/were，现在用什么？</p>"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 这些车是德国造的吗",
+   "scene": "预告先放一边，临走加码：把这句改成疑问句。",
+   "stem": "改成疑问句：These cars were made in Germany.",
+   "task": "写英文完整句子。",
+   "answer_text": "Were these cars made in Germany?",
+   "help": "先数主语是一个还是多个，再决定把哪个词提到句首。",
+   "expects": [
+    {
+     "id": "c1",
+     "type": "word",
+     "answers": [
+      "were these cars made in germany"
+     ],
+     "cn": [
+      "这些车是德国制造的吗"
+     ]
+    }
+   ],
+   "explain": "Were these cars made in Germany?",
+   "common_errors": [
+    {
+     "when": "用了 Was 开头",
+     "say": "cars 是复数，疑问句要用 Were 开头，不用 Was。"
+    },
+    {
+     "when": "用了 Did 开头",
+     "say": "被动语态的疑问句不用 did：把原句的 were 提到句首就行。"
+    },
+    {
+     "when": "写了 make 原形",
+     "say": "were 后面要用过去分词 made，不能用原形 make。"
+    }
+   ]
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 窗户昨天没擦",
+   "scene": "把这句改成否定句。",
+   "stem": "改成否定句：The windows were cleaned yesterday.",
+   "task": "写英文完整句子。",
+   "answer_text": "The windows were not cleaned yesterday.",
+   "help": "否定是在 be 动词后面动手脚，先找到这句的 be 动词。",
+   "expects": [
+    {
+     "id": "c2",
+     "type": "word",
+     "answers": [
+      "the windows were not cleaned yesterday",
+      "the windows werent cleaned yesterday"
+     ],
+     "cn": [
+      "窗户昨天没有擦"
+     ]
+    }
+   ],
+   "explain": "The windows were not cleaned yesterday.（weren't 也对）",
+   "common_errors": [
+    {
+     "when": "用了 wasn't",
+     "say": "windows 是复数，要用 weren't / were not，不能用 wasn't。"
+    },
+    {
+     "when": "写了 didn't cleaned",
+     "say": "被动语态的否定不用 didn't：在 were 后面加 not。"
+    },
+    {
+     "when": "写了 clean 原形",
+     "say": "were 后面要用过去分词 cleaned，不能用原形 clean。"
+    }
+   ]
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 自行车的简短回答",
+   "scene": "核实清单上写着：自行车不是在中国发明的。",
+   "stem": "— Were the bikes invented in China? — ______",
+   "options": [
+    "Yes, it was.",
+    "No, they weren't.",
+    "No, it wasn't.",
+    "Yes, they was."
+   ],
+   "answer": "B",
+   "help": "先看问句的主语有几个、用的哪个 be 动词，回答要跟问句对上号。",
+   "explain": "No, they weren't.",
+   "wrong_feedback": {
+    "A": "两个地方对不上：主语是 bikes（复数）要用 they；而且清单说不是在中国发明的，要用 No 回答。",
+    "C": "方向对了，但 it 是单数。bikes 是复数，否定要用 they weren't。",
+    "D": "they 后面不能跟 was。复数要用 were：肯定回答是 Yes, they were。"
+   }
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 这首歌是谁写的",
+   "scene": "问这首歌的作者，只写空里的一个词。",
+   "stem": "Who ______ this song written by?",
+   "task": "只写空里的一个词。",
+   "answer_text": "was",
+   "help": "先看主语是单数还是复数，再看说的是过去还是现在。",
+   "expects": [
+    {
+     "id": "c3",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "（单数过去用 was）"
+     ]
+    }
+   ],
+   "explain": "Who was this song written by?",
+   "common_errors": [
+    {
+     "when": "写了 were",
+     "say": "song 是一首歌（单数），用 was，不用 were。"
+    },
+    {
+     "when": "写了 is",
+     "say": "is 是现在时。这首歌是以前写出来的，问过去用 was。"
+    },
+    {
+     "when": "写了 did",
+     "say": "被动语态不用 did 提问，空里要填 be 动词 was。"
+    }
+   ]
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 长得多",
+   "scene": "这座桥比那座旧桥长得多，只写空里的一个词。",
+   "stem": "This bridge is much ______ than the old one.",
+   "task": "只写空里的一个词。",
+   "answer_text": "longer",
+   "help": "后面有 than，先想“长”的比较级怎么写。",
+   "expects": [
+    {
+     "id": "c4",
+     "type": "word",
+     "answers": [
+      "longer"
+     ],
+     "cn": [
+      "更长"
+     ]
+    }
+   ],
+   "explain": "This bridge is much longer than the old one.",
+   "common_errors": [
+    {
+     "when": "写了 more long",
+     "say": "long 是短词，比较级直接加 -er：longer，不能用 more long。"
+    },
+    {
+     "when": "写了 long 原形",
+     "say": "有 than 的地方要用比较级 longer，不能用原形 long。"
+    },
+    {
+     "when": "写了 longest",
+     "say": "longest 是最高级（最长）。这里是两座桥比，用比较级 longer。"
+    }
+   ]
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 最有用的发明",
+   "scene": "在所有发明里挑第一名。",
+   "stem": "Of all the inventions, the computer is ______ one.",
+   "options": [
+    "useful",
+    "more useful",
+    "the most useful",
+    "most useful"
+   ],
+   "answer": "C",
+   "help": "先看范围：是两个比，还是在一堆里挑第一？再想挑第一时前面要站着谁。",
+   "explain": "Of all the inventions, the computer is the most useful one.",
+   "wrong_feedback": {
+    "A": "useful 是原形，只能说“有用”，不能表示“最有用”。一堆里挑第一要用最高级。",
+    "B": "more useful 是比较级，是两个东西比高低。这里是所有发明里挑第一，用最高级。",
+    "D": "意思对了一半：最高级前面必须加 the——the most useful。"
+   }
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 已经参观过了",
+   "scene": "我哥哥已经参观过这家工厂了，只写空里的一个词。",
+   "stem": "My brother ______ already visited the factory.",
+   "task": "只写空里的一个词。",
+   "answer_text": "has",
+   "help": "先数主语是一个还是多个，再看：表示“已经做过”时，句中站着哪个小帮手。",
+   "expects": [
+    {
+     "id": "c5",
+     "type": "word",
+     "answers": [
+      "has"
+     ],
+     "cn": [
+      "（三单用 has）"
+     ]
+    }
+   ],
+   "explain": "My brother has already visited the factory.",
+   "common_errors": [
+    {
+     "when": "写了 have",
+     "say": "主语 my brother 是一个人（第三人称单数），要用 has，不用 have。"
+    },
+    {
+     "when": "写了 is",
+     "say": "is 后面不能跟 visited 组成“已经做过”。表示经历要用 has + 过去分词。"
+    },
+    {
+     "when": "写了 did",
+     "say": "did 后面要跟动词原形，不能跟 visited。这里要用 has。"
+    }
+   ]
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 她试过吗",
+   "scene": "问她有没有试过这台新机器。",
+   "stem": "______ she ever tried the new machine?",
+   "options": [
+    "Has",
+    "Does",
+    "Is",
+    "Did"
+   ],
+   "answer": "A",
+   "help": "盯住 ever 和 tried 这两个词，想想哪种句型爱用它们提问。",
+   "explain": "Has she ever tried the new machine?",
+   "wrong_feedback": {
+    "B": "Does 后面要跟动词原形（try），跟不了 tried。问“做过没有”要用 Has 开头。",
+    "C": "Is 后面不能直接跟过去分词 tried 表示经历。这种问法要用 Has。",
+    "D": "Did 是一般过去时，后面也要跟原形 try。这里有 ever + tried，是完成时的问法，用 Has。"
+   }
+  }
+ ],
+ "title": "真假发明：否定和疑问",
+ "unit": "Unit 4 Inventions",
+ "version": 2
 }
