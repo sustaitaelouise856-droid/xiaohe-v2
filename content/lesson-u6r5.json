@@ -1,9 +1,9 @@
 {
  "lesson_id": "u6r5",
- "practice_end": 17,
+ "practice_end": 22,
  "home_subtitle": "第五课 · 故事大直播",
- "part1_desc": "第 1–17 步：跟站长复习 Unit 6 的 since/for、How long、两种时态和过去分词，再用长城资料热身。",
- "part2_desc": "第 18–46 步：屈原 quiz 独立决赛，再加时赛四单元混考（完成时、被动语态、比较级最高级、Unit 6 课本词）和一篇古代智慧故事阅读。",
+ "part1_desc": "第 1–17 步：跟站长复习 Unit 6 的 since/for、How long、两种时态和过去分词；热身里就掺着挑战题。",
+ "part2_desc": "第 18–51 步：屈原 quiz 独立决赛，难题一路跟到课尾：加时赛四单元混考和一篇古代智慧故事阅读收官。",
  "note": "本课阅读材料为教研自编，非课本原文。考查能力：Unit 6 综合（since/for、How long、完成时 vs 过去时、过去分词）＋跨单元混考（Unit 4 被动语态、Unit 3 比较级/最高级、Unit 6 课本词）＋中考题型阅读理解。Unit 6 Ancient stories 主题。提难版：目标首次正确率 70–80%。",
  "steps": [
   {
@@ -123,6 +123,28 @@
    "step": 11,
    "phase": "practice",
    "kind": "mcq",
+   "title": "挑战 · 从明朝起",
+   "scene": "这座古镇从明朝起就出名了。",
+   "stem": "The old town has been famous ______ the Ming Dynasty.",
+   "options": [
+    "for",
+    "from",
+    "in",
+    "since"
+   ],
+   "answer": "D",
+   "help": "先看空后面：明朝是一个时间点，还是一段时间。",
+   "explain": "since + 时间点：从明朝一直到现在。",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间（如 for 600 years）；the Ming Dynasty 是时间点，要用 since。",
+    "B": "from 只说从什么时候开始，不表示持续到现在；跟 has been 连用表示持续，用 since。",
+    "C": "in the Ming Dynasty 是“在明朝时期”，指过去那段时间，不能表示持续到现在；这里用 since。"
+   }
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
    "audio_id": "u6r5-q05",
    "title": "去年去了",
    "scene": "他去年去了北京。",
@@ -144,7 +166,45 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 12,
+   "kind": "short",
+   "title": "挑战 · 听过屈原吗",
+   "scene": "直播连线：问一位同学，你听过屈原的故事吗？",
+   "stem": "— ___ you ever heard the story of Qu Yuan? — Yes, many times.",
+   "task": "只写空里的一个词。",
+   "answer_text": "Have",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Have"
+     ],
+     "olds": [
+      "Has",
+      "Did"
+     ],
+     "cn": [
+      "（完成时问句句首）"
+     ]
+    }
+   ],
+   "help": "问的是“到现在为止有没有过这个经历”，而且后面跟着 ever。主语是 you，句首该用哪个？",
+   "explain": "Have you ever heard the story of Qu Yuan? 现在完成时问经历：Have + 主语 + ever + 过去分词。",
+   "common_errors": [
+    {
+     "when": "写了 Has",
+     "say": "主语是 you，不是他/她单数，用 Have。"
+    },
+    {
+     "when": "写了 Did",
+     "say": "Did 问的是过去某个时候做没做；问“到现在有没有过经历”、还带着 ever，要用 Have。"
+    }
+   ],
+   "phase": "practice",
+   "step": 13
+  },
+  {
+   "step": 14,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r5-q06",
@@ -168,7 +228,7 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 13,
+   "step": 15,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r5-q07",
@@ -192,7 +252,29 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 14,
+   "step": 16,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 长城被参观",
+   "scene": "长城每年有数百万人参观。",
+   "stem": "The Great Wall ______ by millions of people every year.",
+   "options": [
+    "visits",
+    "visited",
+    "is visited",
+    "visiting"
+   ],
+   "answer": "C",
+   "help": "先想：长城是去参观别人的，还是被别人参观的。",
+   "explain": "The Great Wall is visited by millions of people every year.",
+   "wrong_feedback": {
+    "A": "visits 是主动“参观别人”；长城是被参观的，要用被动 is visited。",
+    "B": "visited 只是过去分词，少了 be 动词；被动语态 = be + 过去分词：is visited。",
+    "D": "visiting 是现在分词，不能单独作谓语；被参观要用 is visited。"
+   }
+  },
+  {
+   "step": 17,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r5-q08",
@@ -216,7 +298,7 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 15,
+   "step": 18,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r5-q09",
@@ -257,7 +339,84 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 16,
+   "kind": "short",
+   "title": "挑战 · 去年的一百万游客",
+   "scene": "报数据：长城去年一整年迎来了上百万游客。",
+   "stem": "Millions of people ___ the Great Wall last year. (visit)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "visited",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "visited"
+     ],
+     "olds": [
+      "have visited",
+      "visit"
+     ],
+     "cn": [
+      "参观了（过去时）"
+     ]
+    }
+   ],
+   "help": "时间词 last year 已经把这件事钉在过去了——完成时在这里进不来。",
+   "explain": "Millions of people visited the Great Wall last year. 有 last year，用一般过去时。",
+   "common_errors": [
+    {
+     "when": "写了 have visited",
+     "say": "last year 是明确的过去时间，不能和现在完成时连用，用 visited。"
+    }
+   ],
+   "phase": "practice",
+   "step": 19
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 假装睡着",
+   "scene": "小男孩假装睡着了，其实在偷听故事。",
+   "stem": "The little boy ______ (pretend) to be asleep when his mother came in.",
+   "task": "写出 pretend 的正确形式，只写一个词。",
+   "answer_text": "pretended",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "pretended"
+     ],
+     "cn": [
+      "假装（过去式）"
+     ],
+     "olds": [
+      "pretend",
+      "pretends",
+      "pretending"
+     ]
+    }
+   ],
+   "help": "先看时间：when his mother came in 是什么时候的事。",
+   "explain": "The little boy pretended to be asleep when his mother came in.",
+   "common_errors": [
+    {
+     "when": "写了 pretend",
+     "say": "came in 是过去时，这句讲的也是过去的事，pretend 要变成过去式 pretended。"
+    },
+    {
+     "when": "写了 pretends",
+     "say": "pretends 是现在时三单；故事讲的是过去的事，用 pretended。"
+    },
+    {
+     "when": "写了 pretending",
+     "say": "pretending 是现在分词，前面要有 be 动词才能作谓语；这里直接用过去式 pretended。"
+    }
+   ]
+  },
+  {
+   "step": 21,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r5-q12",
@@ -297,7 +456,7 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 17,
+   "step": 22,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u6r5-q13",
@@ -338,7 +497,7 @@
    "reading": "The Great Wall has stood for over 2,000 years. People have celebrated the Dragon Boat Festival since ancient times. Yu Gong's story has been told for thousands of years."
   },
   {
-   "step": 18,
+   "step": 23,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r5-v-intro",
@@ -347,7 +506,7 @@
    "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
   },
   {
-   "step": 19,
+   "step": 24,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u6r5-v01",
@@ -371,7 +530,29 @@
    "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
   },
   {
-   "step": 20,
+   "step": 25,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 看过龙舟赛吗",
+   "scene": "问奶奶看过龙舟赛吗。",
+   "stem": "______ your grandma ever seen a dragon boat race?",
+   "options": [
+    "Has",
+    "Have",
+    "Is",
+    "Does"
+   ],
+   "answer": "A",
+   "help": "先数主语：grandma 是一个还是多个；再看 seen 是什么形式。",
+   "explain": "Has your grandma ever seen a dragon boat race?",
+   "wrong_feedback": {
+    "B": "grandma 是一位（第三人称单数），完成时疑问句要用 Has 开头，不用 Have。",
+    "C": "Is 后面跟不了过去分词 seen 组成完成时；问经历要用 Has。",
+    "D": "Does 后面要跟动词原形 see，跟不了 seen；问经历要用 Has。"
+   }
+  },
+  {
+   "step": 26,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u6r5-v02",
@@ -395,7 +576,7 @@
    "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
   },
   {
-   "step": 21,
+   "step": 27,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u6r5-v04",
@@ -419,298 +600,7 @@
    "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
   },
   {
-   "step": 22,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r5-v06",
-   "title": "从2022年",
-   "scene": "她从2022年起存着这张票。",
-   "stem": "She has kept the ticket ___ 2022.",
-   "options": [
-    "for",
-    "from",
-    "in",
-    "since"
-   ],
-   "answer": "D",
-   "help": "时间点。",
-   "explain": "She has kept the ticket since 2022.",
-   "wrong_feedback": {
-    "A": "for 后面跟一段时间（如 for three years）；2022 是时间点，要用 since。",
-    "B": "from 只说从哪一年起，不表示一直持续到现在；跟 has kept 连用表示持续，用 since。",
-    "C": "in 2022 是一般过去时里“在某年”的说法，不能跟 has kept 表示持续到现在；这里用 since。"
-   },
-   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
-  },
-  {
-   "step": 23,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r5-v07",
-   "title": "去年看了",
-   "scene": "他去年看了龙舟赛。",
-   "stem": "He ___ the race last June.",
-   "options": [
-    "has watched",
-    "watches",
-    "watched",
-    "watch"
-   ],
-   "answer": "C",
-   "help": "过去的时间。",
-   "explain": "He watched the race last June.",
-   "wrong_feedback": {
-    "A": "has watched 是现在完成时，不能跟 last June 这种明确的过去时间连用；用过去时 watched。",
-    "B": "watches 是现在时；last June 是过去的时间，要用 watched。",
-    "D": "watch 是原形，He 也不能直接跟原形；而且 last June 指过去，用 watched。"
-   },
-   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
-  },
-  {
-   "step": 24,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u6r5-v11",
-   "title": "很早以前",
-   "scene": "屈原生活在很早以前。",
-   "stem": "Qu Yuan ___ (live) long ago.",
-   "task": "写过去式。",
-   "answer_text": "lived",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "lived"
-     ],
-     "cn": [
-      "生活（过去式）"
-     ]
-    }
-   ],
-   "help": "过去的事。",
-   "explain": "Qu Yuan lived long ago.",
-   "common_errors": [
-    {
-     "when": "写了 has lived",
-     "say": "long ago 是很久以前，事情早已结束，用过去时 lived；完成时 has lived 不能跟 long ago 连用。"
-    },
-    {
-     "when": "写了 lives",
-     "say": "屈原是古人，long ago 的事用过去时 lived，lives 是现在时。"
-    },
-    {
-     "when": "写了 live",
-     "say": "主语 Qu Yuan 讲的是过去的事，用过去式 lived，不用原形 live。"
-    }
-   ],
-   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
-  },
-  {
-   "step": 25,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u6r5-v13",
-   "title": "从周一",
-   "scene": "他从周一起在这里。",
-   "stem": "He has been here ___ Monday.",
-   "task": "只写 since 或 for。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since",
-      "Since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "时间点。",
-   "explain": "He has been here since Monday.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "Monday 是时间点（星期一那一天），用 since；for 后面跟一段时间。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只说从哪天开始，不表示持续到现在；从周一一直到现在用 since。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 后面跟月份、年份这类大段时间，不能跟 Monday 这样的一天；这里用 since。"
-    }
-   ],
-   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
-  },
-  {
-   "step": 26,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "一直住在这里",
-   "scene": "我爷爷从出生起就住在这个村子里。",
-   "stem": "My grandpa ______ in this village since he was born.",
-   "options": [
-    "lived",
-    "has lived",
-    "lives",
-    "is living"
-   ],
-   "answer": "B",
-   "help": "先看时间：since he was born 是只在过去，还是从过去一直到现在。",
-   "explain": "My grandpa has lived in this village since he was born.",
-   "wrong_feedback": {
-    "A": "lived 是过去时，只说过去住过；since he was born 表示从出生一直住到现在，要用完成时 has lived。",
-    "C": "lives 是现在时，只说现在的一般情况；“从出生到现在”这一整段时间要用完成时 has lived。",
-    "D": "is living 是现在进行时，强调此刻正在进行；表示从过去持续到现在的状态，用完成时 has lived。"
-   }
-  },
-  {
-   "step": 27,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "从没读过",
-   "scene": "我从没读过这个故事，这是第一次。",
-   "stem": "I have ______ read this story before. This is my first time.",
-   "options": [
-    "ever",
-    "already",
-    "never",
-    "just"
-   ],
-   "answer": "C",
-   "help": "先看后半句：这是第一次，说明以前读过没有。",
-   "explain": "I have never read this story before.",
-   "wrong_feedback": {
-    "A": "ever 多用在疑问句里问“曾经……吗”；这句是肯定形式说“从没”，要用 never。",
-    "B": "already 是“已经”，跟后半句“这是第一次”矛盾；从没读过要用 never。",
-    "D": "just 是“刚刚”；句子说的是以前从来没读过，用 never。"
-   }
-  },
-  {
    "step": 28,
-   "phase": "validate",
-   "kind": "short",
-   "title": "写出过去分词：begin",
-   "scene": "把 begin 变成过去分词。",
-   "stem": "The dragon boat race has ______ (begin).",
-   "task": "写出 begin 的过去分词，只写一个词。",
-   "answer_text": "begun",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "begun"
-     ],
-     "cn": [
-      "开始（过去分词）"
-     ],
-     "olds": [
-      "began",
-      "begined"
-     ]
-    }
-   ],
-   "help": "begin 的三形变化里，a 和 u 别写混。",
-   "explain": "begin → began（过去式）→ begun（过去分词）；has 后面用过去分词。",
-   "common_errors": [
-    {
-     "when": "写了 began",
-     "say": "began 是过去式；has 后面要跟过去分词 begun。"
-    },
-    {
-     "when": "写了 begined",
-     "say": "begin 是不规则动词，不能加 ed：began / begun。"
-    },
-    {
-     "when": "写了 beginning",
-     "say": "beginning 是现在分词，过去分词是 begun。"
-    }
-   ]
-  },
-  {
-   "step": 29,
-   "phase": "validate",
-   "kind": "short",
-   "title": "昨天写信",
-   "scene": "他昨天写了一封信。",
-   "stem": "He ______ (write) a letter yesterday.",
-   "task": "写出 write 的正确形式，只写一个词。",
-   "answer_text": "wrote",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "wrote"
-     ],
-     "cn": [
-      "写（过去式）"
-     ],
-     "olds": [
-      "writed",
-      "has written"
-     ]
-    }
-   ],
-   "help": "先看时间词 yesterday。",
-   "explain": "He wrote a letter yesterday.",
-   "common_errors": [
-    {
-     "when": "写了 has written",
-     "say": "yesterday 是明确的过去时间，不能用完成时；用过去式 wrote。"
-    },
-    {
-     "when": "写了 writed",
-     "say": "write 是不规则动词，过去式是 wrote，不能加 ed。"
-    },
-    {
-     "when": "写了 written",
-     "say": "written 是过去分词，要跟 have/has 连用；这句没有 has，用过去式 wrote。"
-    },
-    {
-     "when": "写了 write",
-     "say": "yesterday 的事要用过去式 wrote，不能用原形。"
-    }
-   ]
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u6r5-c-intro",
-   "title": "加时赛：四单元混考",
-   "teach_html": "<p>决赛还没完——最后一场<strong>加时赛</strong>，把四个单元的东西混在一起考：</p><p>现在完成时（Unit 5、6）、被动语态（Unit 4）、比较级和最高级（Unit 3），还有 Unit 6 的课本词。这次没有资料卡对照，全靠自己判断。</p><p>最后还有一篇古代智慧故事的<strong>阅读理解</strong>。开始！</p>"
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 看过龙舟赛吗",
-   "scene": "问奶奶看过龙舟赛吗。",
-   "stem": "______ your grandma ever seen a dragon boat race?",
-   "options": [
-    "Has",
-    "Have",
-    "Is",
-    "Does"
-   ],
-   "answer": "A",
-   "help": "先数主语：grandma 是一个还是多个；再看 seen 是什么形式。",
-   "explain": "Has your grandma ever seen a dragon boat race?",
-   "wrong_feedback": {
-    "B": "grandma 是一位（第三人称单数），完成时疑问句要用 Has 开头，不用 Have。",
-    "C": "Is 后面跟不了过去分词 seen 组成完成时；问经历要用 Has。",
-    "D": "Does 后面要跟动词原形 see，跟不了 seen；问经历要用 Has。"
-   }
-  },
-  {
-   "step": 32,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 故事讲了几千年",
@@ -751,12 +641,13 @@
    ]
   },
   {
-   "step": 33,
+   "step": 29,
    "phase": "validate",
    "kind": "mcq",
-   "title": "挑战 · 从明朝起",
-   "scene": "这座古镇从明朝起就出名了。",
-   "stem": "The old town has been famous ______ the Ming Dynasty.",
+   "audio_id": "u6r5-v06",
+   "title": "从2022年",
+   "scene": "她从2022年起存着这张票。",
+   "stem": "She has kept the ticket ___ 2022.",
    "options": [
     "for",
     "from",
@@ -764,16 +655,93 @@
     "since"
    ],
    "answer": "D",
-   "help": "先看空后面：明朝是一个时间点，还是一段时间。",
-   "explain": "since + 时间点：从明朝一直到现在。",
+   "help": "时间点。",
+   "explain": "She has kept the ticket since 2022.",
    "wrong_feedback": {
-    "A": "for 后面跟一段时间（如 for 600 years）；the Ming Dynasty 是时间点，要用 since。",
-    "B": "from 只说从什么时候开始，不表示持续到现在；跟 has been 连用表示持续，用 since。",
-    "C": "in the Ming Dynasty 是“在明朝时期”，指过去那段时间，不能表示持续到现在；这里用 since。"
-   }
+    "A": "for 后面跟一段时间（如 for three years）；2022 是时间点，要用 since。",
+    "B": "from 只说从哪一年起，不表示一直持续到现在；跟 has kept 连用表示持续，用 since。",
+    "C": "in 2022 是一般过去时里“在某年”的说法，不能跟 has kept 表示持续到现在；这里用 since。"
+   },
+   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
   },
   {
-   "step": 34,
+   "kind": "short",
+   "title": "挑战 · 愚公的开始",
+   "scene": "愚公快九十岁时开始移山，他的故事被人们讲了几千年，讲到今天。",
+   "stem": "Yu Gong ___ (begin) to move the mountains when he was nearly 90, and his story ___ told for thousands of years.",
+   "task": "两个空都填好，只写两个空里的部分，中间空一格。",
+   "answer_text": "began has been",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "began"
+     ],
+     "olds": [
+      "has begun",
+      "begun"
+     ],
+     "cn": [
+      "开始（过去时）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "has been"
+     ],
+     "olds": [
+      "was",
+      "is"
+     ],
+     "cn": [
+      "一直被讲（现在完成时被动的一半）"
+     ]
+    }
+   ],
+   "help": "第一个空：when he was nearly 90，是过去。第二个空：故事是“被讲”的，而且从古代讲到现在——be 动词要变成完成时的样子。",
+   "explain": "Yu Gong began to move the mountains when he was nearly 90, and his story has been told for thousands of years.",
+   "common_errors": [
+    {
+     "when": "第一个空写了 begun",
+     "say": "begun 是过去分词，要跟 have/has 连用；这里是过去时，用 began。"
+    },
+    {
+     "when": "第二个空写了 was",
+     "say": "was told 只讲过去被讲；讲了几千年讲到现在，要用 has been told。"
+    }
+   ],
+   "phase": "validate",
+   "step": 30
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r5-v07",
+   "title": "去年看了",
+   "scene": "他去年看了龙舟赛。",
+   "stem": "He ___ the race last June.",
+   "options": [
+    "has watched",
+    "watches",
+    "watched",
+    "watch"
+   ],
+   "answer": "C",
+   "help": "过去的时间。",
+   "explain": "He watched the race last June.",
+   "wrong_feedback": {
+    "A": "has watched 是现在完成时，不能跟 last June 这种明确的过去时间连用；用过去时 watched。",
+    "B": "watches 是现在时；last June 是过去的时间，要用 watched。",
+    "D": "watch 是原形，He 也不能直接跟原形；而且 last June 指过去，用 watched。"
+   },
+   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
+  },
+  {
+   "step": 32,
    "phase": "validate",
    "kind": "mcq",
    "title": "挑战 · 参观博物馆",
@@ -795,29 +763,88 @@
    }
   },
   {
-   "step": 35,
+   "step": 33,
    "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 长城被参观",
-   "scene": "长城每年有数百万人参观。",
-   "stem": "The Great Wall ______ by millions of people every year.",
-   "options": [
-    "visits",
-    "visited",
-    "is visited",
-    "visiting"
+   "kind": "short",
+   "audio_id": "u6r5-v11",
+   "title": "很早以前",
+   "scene": "屈原生活在很早以前。",
+   "stem": "Qu Yuan ___ (live) long ago.",
+   "task": "写过去式。",
+   "answer_text": "lived",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "lived"
+     ],
+     "cn": [
+      "生活（过去式）"
+     ]
+    }
    ],
-   "answer": "C",
-   "help": "先想：长城是去参观别人的，还是被别人参观的。",
-   "explain": "The Great Wall is visited by millions of people every year.",
-   "wrong_feedback": {
-    "A": "visits 是主动“参观别人”；长城是被参观的，要用被动 is visited。",
-    "B": "visited 只是过去分词，少了 be 动词；被动语态 = be + 过去分词：is visited。",
-    "D": "visiting 是现在分词，不能单独作谓语；被参观要用 is visited。"
-   }
+   "help": "过去的事。",
+   "explain": "Qu Yuan lived long ago.",
+   "common_errors": [
+    {
+     "when": "写了 has lived",
+     "say": "long ago 是很久以前，事情早已结束，用过去时 lived；完成时 has lived 不能跟 long ago 连用。"
+    },
+    {
+     "when": "写了 lives",
+     "say": "屈原是古人，long ago 的事用过去时 lived，lives 是现在时。"
+    },
+    {
+     "when": "写了 live",
+     "say": "主语 Qu Yuan 讲的是过去的事，用过去式 lived，不用原形 live。"
+    }
+   ],
+   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
   },
   {
-   "step": 36,
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u6r5-v13",
+   "title": "从周一",
+   "scene": "他从周一起在这里。",
+   "stem": "He has been here ___ Monday.",
+   "task": "只写 since 或 for。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "时间点。",
+   "explain": "He has been here since Monday.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "Monday 是时间点（星期一那一天），用 since；for 后面跟一段时间。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说从哪天开始，不表示持续到现在；从周一一直到现在用 since。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 后面跟月份、年份这类大段时间，不能跟 Monday 这样的一天；这里用 since。"
+    }
+   ],
+   "reading": "Qu Yuan lived long ago. People have remembered him for over 2,000 years. They have held dragon boat races since ancient times."
+  },
+  {
+   "step": 35,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 老桥建成",
@@ -864,7 +891,66 @@
    ]
   },
   {
-   "step": 37,
+   "step": 36,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "一直住在这里",
+   "scene": "我爷爷从出生起就住在这个村子里。",
+   "stem": "My grandpa ______ in this village since he was born.",
+   "options": [
+    "lived",
+    "has lived",
+    "lives",
+    "is living"
+   ],
+   "answer": "B",
+   "help": "先看时间：since he was born 是只在过去，还是从过去一直到现在。",
+   "explain": "My grandpa has lived in this village since he was born.",
+   "wrong_feedback": {
+    "A": "lived 是过去时，只说过去住过；since he was born 表示从出生一直住到现在，要用完成时 has lived。",
+    "C": "lives 是现在时，只说现在的一般情况；“从出生到现在”这一整段时间要用完成时 has lived。",
+    "D": "is living 是现在进行时，强调此刻正在进行；表示从过去持续到现在的状态，用完成时 has lived。"
+   }
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 做伞五十年",
+   "scene": "老艺人从年轻时开始做油纸伞，做到现在，五十年了。",
+   "stem": "The old man ___ oil-paper umbrellas for 50 years. (make)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "has made",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has made"
+     ],
+     "olds": [
+      "has make"
+     ],
+     "cn": [
+      "一直在做（现在完成时）"
+     ]
+    }
+   ],
+   "help": "for 50 years 是从过去一直数到现在的一段时间。主语是 the old man（他），make 的过去分词是不规则的。",
+   "explain": "The old man has made oil-paper umbrellas for 50 years.",
+   "common_errors": [
+    {
+     "when": "写了 made",
+     "say": "made 只讲过去做过；做了五十年做到现在，要用 has made。"
+    },
+    {
+     "when": "写了 has make",
+     "say": "has 后面跟过去分词 made，不能用原形 make。"
+    }
+   ],
+   "phase": "validate",
+   "step": 37
+  },
+  {
+   "step": 38,
    "phase": "validate",
    "kind": "mcq",
    "title": "挑战 · 龙舟上电视",
@@ -886,7 +972,206 @@
    }
   },
   {
-   "step": 38,
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "从没读过",
+   "scene": "我从没读过这个故事，这是第一次。",
+   "stem": "I have ______ read this story before. This is my first time.",
+   "options": [
+    "ever",
+    "already",
+    "never",
+    "just"
+   ],
+   "answer": "C",
+   "help": "先看后半句：这是第一次，说明以前读过没有。",
+   "explain": "I have never read this story before.",
+   "wrong_feedback": {
+    "A": "ever 多用在疑问句里问“曾经……吗”；这句是肯定形式说“从没”，要用 never。",
+    "B": "already 是“已经”，跟后半句“这是第一次”矛盾；从没读过要用 never。",
+    "D": "just 是“刚刚”；句子说的是以前从来没读过，用 never。"
+   }
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 更精彩",
+   "scene": "今年的龙舟赛比去年更精彩。",
+   "stem": "This year's dragon boat race was ______ than last year's.",
+   "options": [
+    "more exciting",
+    "most exciting",
+    "exciting",
+    "excitinger"
+   ],
+   "answer": "A",
+   "help": "先看空后面有没有 than，再数一数比的是几年。",
+   "explain": "两者比较又有 than，用比较级 more exciting。",
+   "wrong_feedback": {
+    "B": "most exciting 是最高级，跟三者以上比；这里是今年和去年两年相比，用比较级。而且最高级前面还要有 the。",
+    "C": "exciting 是原形，不能表示“更精彩”；有 than 的句子要用比较级 more exciting。",
+    "D": "exciting 是多音节词，比较级用 more exciting，不能加 er，没有 excitinger 这个词。"
+   }
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写出过去分词：begin",
+   "scene": "把 begin 变成过去分词。",
+   "stem": "The dragon boat race has ______ (begin).",
+   "task": "写出 begin 的过去分词，只写一个词。",
+   "answer_text": "begun",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "begun"
+     ],
+     "cn": [
+      "开始（过去分词）"
+     ],
+     "olds": [
+      "began",
+      "begined"
+     ]
+    }
+   ],
+   "help": "begin 的三形变化里，a 和 u 别写混。",
+   "explain": "begin → began（过去式）→ begun（过去分词）；has 后面用过去分词。",
+   "common_errors": [
+    {
+     "when": "写了 began",
+     "say": "began 是过去式；has 后面要跟过去分词 begun。"
+    },
+    {
+     "when": "写了 begined",
+     "say": "begin 是不规则动词，不能加 ed：began / begun。"
+    },
+    {
+     "when": "写了 beginning",
+     "say": "beginning 是现在分词，过去分词是 begun。"
+    }
+   ]
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 更打动我",
+   "scene": "说说今年的故事会：这个故事比我去年听的那个更打动我。",
+   "stem": "This story is ___ than the one I heard last year. (moving)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "more moving",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more moving"
+     ],
+     "olds": [
+      "most moving"
+     ],
+     "cn": [
+      "更打动人的（比较级）"
+     ]
+    }
+   ],
+   "help": "后面有 than，是两者比。moving 是长词（多音节），比较级要在它前面加词。",
+   "explain": "This story is more moving than the one I heard last year. 多音节词的比较级用 more + 原形。",
+   "common_errors": [
+    {
+     "when": "写了 moving",
+     "say": "光用原形 moving 没有“更”的意思；有 than 就要有比较级 more moving。"
+    },
+    {
+     "when": "写了 most moving",
+     "say": "most 是最高级“三者以上最”；这里只有两个故事在比，用 more。"
+    }
+   ],
+   "phase": "validate",
+   "step": 42
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "昨天写信",
+   "scene": "他昨天写了一封信。",
+   "stem": "He ______ (write) a letter yesterday.",
+   "task": "写出 write 的正确形式，只写一个词。",
+   "answer_text": "wrote",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "wrote"
+     ],
+     "cn": [
+      "写（过去式）"
+     ],
+     "olds": [
+      "writed",
+      "has written"
+     ]
+    }
+   ],
+   "help": "先看时间词 yesterday。",
+   "explain": "He wrote a letter yesterday.",
+   "common_errors": [
+    {
+     "when": "写了 has written",
+     "say": "yesterday 是明确的过去时间，不能用完成时；用过去式 wrote。"
+    },
+    {
+     "when": "写了 writed",
+     "say": "write 是不规则动词，过去式是 wrote，不能加 ed。"
+    },
+    {
+     "when": "写了 written",
+     "say": "written 是过去分词，要跟 have/has 连用；这句没有 has，用过去式 wrote。"
+    },
+    {
+     "when": "写了 write",
+     "say": "yesterday 的事要用过去式 wrote，不能用原形。"
+    }
+   ]
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 打败敌人",
+   "scene": "故事里，士兵们最后打败了敌人。",
+   "stem": "In the story, the soldiers fought bravely and at last they beat the ______.",
+   "options": [
+    "victory",
+    "enemy",
+    "captain",
+    "author"
+   ],
+   "answer": "B",
+   "help": "先看动词 beat（打败）：被打败的应该是哪一方。",
+   "explain": "beat the enemy：打败敌人。enemy 是 Unit 6 课本词——敌人。",
+   "wrong_feedback": {
+    "A": "victory 是“胜利”，是打赢的结果，不能说 beat the victory；被打败的对象是 enemy（敌人）。",
+    "C": "captain 是“首领、队长”，是带队的人；被打败的是对方的人——enemy。",
+    "D": "author 是“作者、作家”，是写故事的人；战场上被打败的是 enemy。"
+   }
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u6r5-c-intro",
+   "title": "加时赛：四单元混考",
+   "teach_html": "<p>决赛还没完——最后一场<strong>加时赛</strong>，把四个单元的东西混在一起考：</p><p>现在完成时（Unit 5、6）、被动语态（Unit 4）、比较级和最高级（Unit 3），还有 Unit 6 的课本词。这次没有资料卡对照，全靠自己判断。</p><p>最后还有一篇古代智慧故事的<strong>阅读理解</strong>。开始！</p>"
+  },
+  {
+   "step": 46,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 更老、最强壮",
@@ -945,94 +1230,7 @@
    ]
   },
   {
-   "step": 39,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 更精彩",
-   "scene": "今年的龙舟赛比去年更精彩。",
-   "stem": "This year's dragon boat race was ______ than last year's.",
-   "options": [
-    "more exciting",
-    "most exciting",
-    "exciting",
-    "excitinger"
-   ],
-   "answer": "A",
-   "help": "先看空后面有没有 than，再数一数比的是几年。",
-   "explain": "两者比较又有 than，用比较级 more exciting。",
-   "wrong_feedback": {
-    "B": "most exciting 是最高级，跟三者以上比；这里是今年和去年两年相比，用比较级。而且最高级前面还要有 the。",
-    "C": "exciting 是原形，不能表示“更精彩”；有 than 的句子要用比较级 more exciting。",
-    "D": "exciting 是多音节词，比较级用 more exciting，不能加 er，没有 excitinger 这个词。"
-   }
-  },
-  {
-   "step": 40,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 打败敌人",
-   "scene": "故事里，士兵们最后打败了敌人。",
-   "stem": "In the story, the soldiers fought bravely and at last they beat the ______.",
-   "options": [
-    "victory",
-    "enemy",
-    "captain",
-    "author"
-   ],
-   "answer": "B",
-   "help": "先看动词 beat（打败）：被打败的应该是哪一方。",
-   "explain": "beat the enemy：打败敌人。enemy 是 Unit 6 课本词——敌人。",
-   "wrong_feedback": {
-    "A": "victory 是“胜利”，是打赢的结果，不能说 beat the victory；被打败的对象是 enemy（敌人）。",
-    "C": "captain 是“首领、队长”，是带队的人；被打败的是对方的人——enemy。",
-    "D": "author 是“作者、作家”，是写故事的人；战场上被打败的是 enemy。"
-   }
-  },
-  {
-   "step": 41,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 假装睡着",
-   "scene": "小男孩假装睡着了，其实在偷听故事。",
-   "stem": "The little boy ______ (pretend) to be asleep when his mother came in.",
-   "task": "写出 pretend 的正确形式，只写一个词。",
-   "answer_text": "pretended",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "pretended"
-     ],
-     "cn": [
-      "假装（过去式）"
-     ],
-     "olds": [
-      "pretend",
-      "pretends",
-      "pretending"
-     ]
-    }
-   ],
-   "help": "先看时间：when his mother came in 是什么时候的事。",
-   "explain": "The little boy pretended to be asleep when his mother came in.",
-   "common_errors": [
-    {
-     "when": "写了 pretend",
-     "say": "came in 是过去时，这句讲的也是过去的事，pretend 要变成过去式 pretended。"
-    },
-    {
-     "when": "写了 pretends",
-     "say": "pretends 是现在时三单；故事讲的是过去的事，用 pretended。"
-    },
-    {
-     "when": "写了 pretending",
-     "say": "pretending 是现在分词，前面要有 be 动词才能作谓语；这里直接用过去式 pretended。"
-    }
-   ]
-  },
-  {
-   "step": 42,
+   "step": 47,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r5-read-01",
@@ -1040,7 +1238,7 @@
    "teach_html": "<p>加时赛最后一项：<strong>阅读理解</strong>。先把短文读完，再答后面的 3 道题。</p><p>Long ago, a young farmer worked in the fields near a big tree. One day, a rabbit ran fast, hit the tree and died. The farmer picked it up and thought, 'How lucky I am! I don't need to work. I can wait here and get a rabbit every day.' From that day on, he stopped working. At first, his wife told him to go back to work, but he didn't listen. He sat by the tree from morning to night, but no rabbit came again. His fields became empty, and his neighbours laughed at him. The old story teaches us: luck may come once, but it will not come every day. Only hard work brings a good life.</p>"
   },
   {
-   "step": 43,
+   "step": 48,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 阅读1",
@@ -1084,7 +1282,7 @@
    "reading": "Long ago, a young farmer worked in the fields near a big tree. One day, a rabbit ran fast, hit the tree and died. The farmer picked it up and thought, 'How lucky I am! I don't need to work. I can wait here and get a rabbit every day.' From that day on, he stopped working. At first, his wife told him to go back to work, but he didn't listen. He sat by the tree from morning to night, but no rabbit came again. His fields became empty, and his neighbours laughed at him. The old story teaches us: luck may come once, but it will not come every day. Only hard work brings a good life."
   },
   {
-   "step": 44,
+   "step": 49,
    "phase": "validate",
    "kind": "mcq",
    "title": "挑战 · 阅读2",
@@ -1107,7 +1305,7 @@
    "reading": "Long ago, a young farmer worked in the fields near a big tree. One day, a rabbit ran fast, hit the tree and died. The farmer picked it up and thought, 'How lucky I am! I don't need to work. I can wait here and get a rabbit every day.' From that day on, he stopped working. At first, his wife told him to go back to work, but he didn't listen. He sat by the tree from morning to night, but no rabbit came again. His fields became empty, and his neighbours laughed at him. The old story teaches us: luck may come once, but it will not come every day. Only hard work brings a good life."
   },
   {
-   "step": 45,
+   "step": 50,
    "phase": "validate",
    "kind": "mcq",
    "title": "挑战 · 阅读3",
@@ -1130,7 +1328,7 @@
    "reading": "Long ago, a young farmer worked in the fields near a big tree. One day, a rabbit ran fast, hit the tree and died. The farmer picked it up and thought, 'How lucky I am! I don't need to work. I can wait here and get a rabbit every day.' From that day on, he stopped working. At first, his wife told him to go back to work, but he didn't listen. He sat by the tree from morning to night, but no rabbit came again. His fields became empty, and his neighbours laughed at him. The old story teaches us: luck may come once, but it will not come every day. Only hard work brings a good life."
   },
   {
-   "step": 46,
+   "step": 51,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r5-ending",
@@ -1140,5 +1338,5 @@
  ],
  "title": "故事大直播：综合复习",
  "unit": "Unit 6 Ancient stories",
- "version": 2
+ "version": 3
 }
