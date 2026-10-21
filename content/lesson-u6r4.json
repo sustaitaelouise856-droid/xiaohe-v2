@@ -1,824 +1,1294 @@
 {
-  "lesson_id": "u6r4",
-  "practice_end": 23,
-  "home_subtitle": "第四课 · 写家乡故事",
-  "part1_desc": "第 1–23 步：跟站长学写家乡故事，练 since/for 和连接词。",
-  "part2_desc": "第 24–36 步：独立完成老房子资料的写作基本功。",
-  "note": "本课阅读材料为教研自编，非课本原文。考查能力：用 since/for 写作、连接词、时态选择。Unit 6 Ancient stories 主题。",
-  "steps": [
+ "lesson_id": "u6r4",
+ "practice_end": 21,
+ "home_subtitle": "第四课 · 写家乡故事",
+ "part1_desc": "第 1–21 步：跟站长学写家乡故事，练 since/for、写变化三句型和连接词。",
+ "part2_desc": "第 22–44 步：独立完成老房子资料题，再闯 12 道挑战题（混了被动语态和比较级、最高级），最后写一整段家乡故事。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：用 since/for 与完成时写家乡变化、被动语态写建造、最高级、连接词；挑战段混练被动语态与比较级/最高级，课末有一段 3 信息点家乡故事写作。Unit 6 Wisdom counts 主题。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-story-01",
+   "title": "写自己的故事",
+   "teach_html": "<p>古代故事第四期，站长说：听了这么多古代故事，这期<strong>你来写</strong>——<strong>我的家乡故事</strong>！</p><p><strong>hometown</strong> 是“家乡”，<strong>village</strong> 是“村庄”。用学过的 since 和 for，把家乡的故事写下来。</p>"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t01",
+   "title": "写作用 since/for",
+   "teach_html": "<p>写“一直持续到现在”的事，用完成时 + since/for：</p><p>My family has lived here <strong>since 1998</strong>.（我家从1998年起住在这里。）<br>We have kept old photos <strong>for many years</strong>.（我们存旧照片很多年了。）</p>"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t02",
+   "title": "三部分结构",
+   "teach_html": "<p>写故事分三部分：</p><p>① <strong>开头</strong>：介绍家乡（My hometown is…）。<br>② <strong>中间</strong>：讲故事、讲变化（过去时讲过去的事，完成时讲持续到现在的事）。<br>③ <strong>结尾</strong>：说感受（I love… / I am proud of…）。</p><p><strong>proud</strong> 是“自豪的”。</p>"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t03",
+   "title": "连接词",
+   "teach_html": "<p>三个常用连接词：</p><p><strong>and</strong>（和）连两件事；<strong>but</strong>（但是）转折；<strong>because</strong>（因为）说原因。</p><p>I love my hometown <strong>because</strong> it is old and beautiful.（我爱家乡，因为它古老又美丽。）</p>"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t04",
+   "title": "范文句子",
+   "teach_html": "<p>看范文里的句子：</p><p>My <strong>grandpa</strong> was born in this village.（我爷爷出生在这个村子。）<strong>grandpa</strong> 是“爷爷”。</p><p>He has lived here <strong>since 1960</strong>.（他从1960年起住在这里。）</p>"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t05",
+   "title": "时态提醒",
+   "teach_html": "<p>写作时态提醒：</p><p>写“<strong>过去发生、结束了</strong>”→ 过去时（was born, moved）。<br>写“<strong>从过去持续到现在</strong>”→ 完成时（has lived since…, have kept for…）。</p>"
+  },
+  {
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t08",
+   "title": "写变化三句型",
+   "teach_html": "<p>写家乡的<strong>变化</strong>，有三个好用的句型：</p><p>① 变化：Our town <strong>has changed</strong> a lot.（小镇变化很大。）My hometown <strong>has become</strong> more beautiful.（家乡变得更美了。）<br>② 建造：The bridge <strong>was built</strong> in 1930.（桥建于1930年——桥是被建成的，用被动。）<br>③ 最……：It is <strong>the oldest</strong> building in the village.（它是村里最古老的建筑。）</p><p>下面的练习和挑战都会用到这三个句型。</p>",
+   "step": 7
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t06",
+   "title": "范文",
+   "teach_html": "<p>小范文（自编）：</p><p>My hometown is a small village. It is very old. My grandpa was born here. He has lived here since 1960. Our family has kept old photos for many years. I love my hometown because it is beautiful.</p><p>六句话，开头+中间+结尾，齐了。</p>"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u6r4-t07",
+   "title": "写作检查清单",
+   "teach_html": "<p>写完检查三件事：</p><p>① 用了 <strong>since/for</strong> 吗？② <strong>时态</strong>对吗（过去的事过去时，持续到现在完成时）？③ 单词<strong>拼对</strong>了吗？</p><p>下面先练基本功，再自己写。</p>"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u6r4-prac-01",
+   "title": "先看资料",
+   "teach_html": "<p>这是林涛家乡的资料卡。做题时对照着看：林涛的家乡是个小村庄，他家从1980年起住在那里，存了很多老物件。</p><p>下面站长带着你练写作基本功。</p>",
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r4-q01",
+   "title": "从1998年",
+   "scene": "我家从1998年起住在这里。",
+   "stem": "My family has lived here ___ 1998.",
+   "options": [
+    "for",
+    "since",
+    "last",
+    "ago"
+   ],
+   "answer": "B",
+   "help": "1998 是时间点。",
+   "explain": "My family has lived here since 1998.",
+   "wrong_feedback": {
+    "A": "1998 是时间点，用 since，不用 for。",
+    "C": "last 是过去时标志，这里用完成时。",
+    "D": "ago 是过去时标志，这里用完成时。"
+   },
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r4-q03",
+   "title": "出生",
+   "scene": "他1960年出生。",
+   "stem": "He ___ born in 1960.",
+   "options": [
+    "was",
+    "is",
+    "has been",
+    "be"
+   ],
+   "answer": "A",
+   "help": "1960 年出生，是过去的事。",
+   "explain": "He was born in 1960.",
+   "wrong_feedback": {
+    "B": "is 是现在时，1960 年是过去，用 was。",
+    "C": "has been 是完成时，这里讲过去的事，用 was。",
+    "D": "be 是原形，不对。"
+   },
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r4-q06",
+   "title": "2010年搬来",
+   "scene": "我们2010年搬到这里。",
+   "stem": "We moved here ___ 2010.",
+   "options": [
+    "since",
+    "for",
+    "in",
+    "ago"
+   ],
+   "answer": "C",
+   "help": "“在2010年”，过去的时间。",
+   "explain": "We moved here in 2010.",
+   "wrong_feedback": {
+    "A": "moved 是过去时，不用 since。",
+    "B": "moved 是过去时，不用 for。",
+    "D": "ago 前面不加 in，直接说 years ago。"
+   },
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q07",
+   "title": "从1998年",
+   "scene": "我家从1998年起住在这里。",
+   "stem": "My family has lived here ___ 1998.",
+   "task": "只写 since 或 for。",
+   "answer_text": "since",
+   "expects": [
     {
-      "step": 1,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-story-01",
-      "title": "写自己的故事",
-      "teach_html": "<p>【承上启下】昨天找时间状语。今天学用 since/for 讲一个古代故事。</p><p>古代故事第四期，站长说：听了这么多古代故事，这期<strong>你来写</strong>——<strong>我的家乡故事</strong>！</p><p><strong>hometown</strong> 是“家乡”，<strong>village</strong> 是“村庄”。用学过的 since 和 for，把家乡的故事写下来。</p>"
-    },
-    {
-      "step": 2,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t01",
-      "title": "写作用 since/for",
-      "teach_html": "<p>写“一直持续到现在”的事，用完成时 + since/for：</p><p>My family has lived here <strong>since 1998</strong>.（我家从1998年起住在这里。）<br>We have kept old photos <strong>for many years</strong>.（我们存旧照片很多年了。）</p>"
-    },
-    {
-      "step": 3,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t02",
-      "title": "三部分结构",
-      "teach_html": "<p>写故事分三部分：</p><p>① <strong>开头</strong>：介绍家乡（My hometown is…）。<br>② <strong>中间</strong>：讲故事、讲变化（过去时讲过去的事，完成时讲持续到现在的事）。<br>③ <strong>结尾</strong>：说感受（I love… / I am proud of…）。</p><p><strong>proud</strong> 是“自豪的”。</p>"
-    },
-    {
-      "step": 4,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t03",
-      "title": "连接词",
-      "teach_html": "<p>三个常用连接词：</p><p><strong>and</strong>（和）连两件事；<strong>but</strong>（但是）转折；<strong>because</strong>（因为）说原因。</p><p>I love my hometown <strong>because</strong> it is old and beautiful.（我爱家乡，因为它古老又美丽。）</p>"
-    },
-    {
-      "step": 5,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t04",
-      "title": "范文句子",
-      "teach_html": "<p>看范文里的句子：</p><p>My <strong>grandpa</strong> was born in this village.（我爷爷出生在这个村子。）<strong>grandpa</strong> 是“爷爷”。</p><p>He has lived here <strong>since 1960</strong>.（他从1960年起住在这里。）</p>"
-    },
-    {
-      "step": 6,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t05",
-      "title": "时态提醒",
-      "teach_html": "<p>写作时态提醒：</p><p>写“<strong>过去发生、结束了</strong>”→ 过去时（was born, moved）。<br>写“<strong>从过去持续到现在</strong>”→ 完成时（has lived since…, have kept for…）。</p>"
-    },
-    {
-      "step": 7,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t06",
-      "title": "范文",
-      "teach_html": "<p>小范文（自编）：</p><p>My hometown is a small village. It is very old. My grandpa was born here. He has lived here since 1960. Our family has kept old photos for many years. I love my hometown because it is beautiful.</p><p>六句话，开头+中间+结尾，齐了。</p>"
-    },
-    {
-      "step": 8,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u6r4-t07",
-      "title": "写作检查清单",
-      "teach_html": "<p>写完检查三件事：</p><p>① 用了 <strong>since/for</strong> 吗？② <strong>时态</strong>对吗（过去的事过去时，持续到现在完成时）？③ 单词<strong>拼对</strong>了吗？</p><p>下面先练基本功，再自己写。</p>"
-    },
-    {
-      "step": 9,
-      "phase": "practice",
-      "kind": "teach",
-      "audio_id": "u6r4-prac-01",
-      "title": "先看资料",
-      "teach_html": "<p>这是林涛家乡的资料卡。做题时对照着看：林涛的家乡是个小村庄，他家从1980年起住在那里，存了很多老物件。</p><p>下面站长带着你练写作基本功。</p>",
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 10,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u6r4-q01",
-      "title": "从1998年",
-      "scene": "我家从1998年起住在这里。",
-      "stem": "My family has lived here ___ 1998.",
-      "options": [
-        "for",
-        "since",
-        "last",
-        "ago"
-      ],
-      "answer": "B",
-      "help": "1998 是时间点。",
-      "explain": "My family has lived here since 1998.",
-      "wrong_feedback": {
-        "A": "1998 是时间点，用 since，不用 for。",
-        "C": "last 是过去时标志，这里用完成时。",
-        "D": "ago 是过去时标志，这里用完成时。"
-      },
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 11,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u6r4-q02",
-      "title": "存了很多年",
-      "scene": "我们存旧照片很多年了。",
-      "stem": "We have kept old photos ___ many years.",
-      "options": [
-        "last",
-        "ago",
-        "for",
-        "since"
-      ],
-      "answer": "C",
-      "help": "“很多年”是时间段。",
-      "explain": "We have kept old photos for many years.",
-      "wrong_feedback": {
-        "A": "last 是过去时标志，这里用完成时。",
-        "B": "ago 是过去时标志，这里用完成时。",
-        "D": "很多年是时间段，用 for，不用 since。"
-      },
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 12,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u6r4-q03",
-      "title": "出生",
-      "scene": "他1960年出生。",
-      "stem": "He ___ born in 1960.",
-      "options": [
-        "was",
-        "is",
-        "has been",
-        "be"
-      ],
-      "answer": "A",
-      "help": "1960 年出生，是过去的事。",
-      "explain": "He was born in 1960.",
-      "wrong_feedback": {
-        "B": "is 是现在时，1960 年是过去，用 was。",
-        "C": "has been 是完成时，这里讲过去的事，用 was。",
-        "D": "be 是原形，不对。"
-      },
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 13,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u6r4-q04",
-      "title": "village 的意思",
-      "scene": "village 意思是？",
-      "stem": "The word \"village\" means ___.",
-      "options": [
-        "城市",
-        "村庄",
-        "河流",
-        "山"
-      ],
-      "answer": "B",
-      "help": "家乡是个小 village。",
-      "explain": "village 意思是“村庄”。",
-      "wrong_feedback": {
-        "A": "城市是 city，不是 village。",
-        "C": "河流是 river，不是 village。",
-        "D": "山是 mountain，不是 village。"
-      },
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 14,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u6r4-q05",
-      "title": "学了两年",
-      "scene": "她在这里学了两年了。",
-      "stem": "She has studied here ___ two years.",
-      "options": [
-        "last",
-        "ago",
-        "since",
-        "for"
-      ],
-      "answer": "D",
-      "help": "“两年”是时间段。",
-      "explain": "She has studied here for two years.",
-      "wrong_feedback": {
-        "A": "last 是过去时标志，这里用完成时。",
-        "B": "ago 是过去时标志，这里用完成时。",
-        "C": "两年是时间段，用 for，不用 since。"
-      },
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 15,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u6r4-q06",
-      "title": "2010年搬来",
-      "scene": "我们2010年搬到这里。",
-      "stem": "We moved here ___ 2010.",
-      "options": [
-        "since",
-        "for",
-        "in",
-        "ago"
-      ],
-      "answer": "C",
-      "help": "“在2010年”，过去的时间。",
-      "explain": "We moved here in 2010.",
-      "wrong_feedback": {
-        "A": "moved 是过去时，不用 since。",
-        "B": "moved 是过去时，不用 for。",
-        "D": "ago 前面不加 in，直接说 years ago。"
-      },
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 16,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q07",
-      "title": "从1998年",
-      "scene": "我家从1998年起住在这里。",
-      "stem": "My family has lived here ___ 1998.",
-      "task": "只写 since 或 for。",
-      "answer_text": "since",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "since",
-            "Since"
-          ],
-          "cn": [
-            "自从（时间点）"
-          ]
-        }
-      ],
-      "help": "1998 是时间点。",
-      "explain": "My family has lived here since 1998.",
-      "common_errors": [
-        {
-          "when": "写了 for",
-          "say": "1998 是时间点，用 since。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 17,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q08",
-      "title": "village 的中文",
-      "scene": "写出 village 的中文。",
-      "stem": "写出 village 的中文意思。",
-      "task": "写中文。",
-      "answer_text": "村庄",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "村庄"
-          ],
-          "cn": [
-            "村庄"
-          ]
-        }
-      ],
-      "help": "家乡是个小 village。",
-      "explain": "village 的中文是“村庄”。",
-      "common_errors": [
-        {
-          "when": "写了“城市”",
-          "say": "“城市”是 city。village 是“村庄”。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 18,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q09",
-      "title": "存了很多年",
-      "scene": "他们存了很多年。",
-      "stem": "They have kept it ___ many years.",
-      "task": "只写 since 或 for。",
-      "answer_text": "for",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "for",
-            "For"
-          ],
-          "cn": [
-            "持续（时间段）"
-          ]
-        }
-      ],
-      "help": "很多年是时间段。",
-      "explain": "They have kept it for many years.",
-      "common_errors": [
-        {
-          "when": "写了 since",
-          "say": "很多年是时间段，用 for。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 19,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q10",
-      "title": "1960年出生",
-      "scene": "他1960年出生。",
-      "stem": "He ___ (be) born in 1960.",
-      "task": "写过去式。",
-      "answer_text": "was",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "was"
-          ],
-          "cn": [
-            "是（过去式）"
-          ]
-        }
-      ],
-      "help": "1960 年是过去。",
-      "explain": "He was born in 1960.",
-      "common_errors": [
-        {
-          "when": "写了 is",
-          "say": "1960 年是过去的事，用 was，不用 is。"
-        },
-        {
-          "when": "写了 has been",
-          "say": "这里讲过去的事，用 was。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 20,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q11",
-      "title": "因为",
-      "scene": "我爱它，因为它很古老。",
-      "stem": "I love it ___ it is old.",
-      "task": "写连接词。",
-      "answer_text": "because",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "because",
-            "Because"
-          ],
-          "cn": [
-            "因为"
-          ]
-        }
-      ],
-      "help": "表示原因。",
-      "explain": "I love it because it is old.",
-      "common_errors": [
-        {
-          "when": "写了 but",
-          "say": "but 是“但是”，这里表示原因，用 because。"
-        },
-        {
-          "when": "写了 and",
-          "say": "and 是“和”，这里表示原因，用 because。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 21,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q12",
-      "title": "从六岁",
-      "scene": "她从六岁起住在这里。",
-      "stem": "She has lived here ___ she was six.",
-      "task": "只写 since 或 for。",
-      "answer_text": "since",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "since",
-            "Since"
-          ],
-          "cn": [
-            "自从"
-          ]
-        }
-      ],
-      "help": "since 可跟句子。",
-      "explain": "She has lived here since she was six.",
-      "common_errors": [
-        {
-          "when": "写了 for",
-          "say": "since 后面可跟句子，这里用 since。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 22,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q13",
-      "title": "hometown 的中文",
-      "scene": "写出 hometown 的中文。",
-      "stem": "写出 hometown 的中文意思。",
-      "task": "写中文。",
-      "answer_text": "家乡",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "家乡"
-          ],
-          "cn": [
-            "家乡"
-          ]
-        }
-      ],
-      "help": "My hometown is…",
-      "explain": "hometown 的中文是“家乡”。",
-      "common_errors": [
-        {
-          "when": "写了“家”",
-          "say": "“家”是 home。hometown 是“家乡”。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 23,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u6r4-q14",
-      "title": "认识五年",
-      "scene": "我们认识五年了。",
-      "stem": "We have known each other ___ five years.",
-      "task": "只写 since 或 for。",
-      "answer_text": "for",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "for",
-            "For"
-          ],
-          "cn": [
-            "持续（时间段）"
-          ]
-        }
-      ],
-      "help": "五年是时间段。",
-      "explain": "We have known each other for five years.",
-      "common_errors": [
-        {
-          "when": "写了 since",
-          "say": "五年是时间段，用 for。"
-        }
-      ],
-      "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
-    },
-    {
-      "step": 24,
-      "phase": "validate",
-      "kind": "teach",
-      "audio_id": "u6r4-v-intro",
-      "title": "新任务：独立写",
-      "teach_html": "<p>新任务来了：这次是<strong>小梅奶奶的老房子</strong>的资料。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>since + 时间点</strong>，<strong>for + 时间段</strong>；过去的事用过去时。</p>",
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 25,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u6r4-v01",
-      "title": "从1975年",
-      "scene": "她奶奶从1975年起住在老房子里。",
-      "stem": "Her grandma has lived there ___ 1975.",
-      "options": [
-        "since",
-        "for",
-        "last",
-        "ago"
-      ],
-      "answer": "A",
-      "help": "时间点。",
-      "explain": "Her grandma has lived there since 1975.",
-      "wrong_feedback": {
-        "B": "再想想时间点和时间段。",
-        "C": "再想想时态标志。",
-        "D": "再想想时态标志。"
-      },
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 26,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u6r4-v02",
-      "title": "四十多年",
-      "scene": "这家人有这房子四十多年了。",
-      "stem": "The family has had the house ___ over 40 years.",
-      "options": [
-        "since",
-        "last",
-        "ago",
-        "for"
-      ],
-      "answer": "D",
-      "help": "时间段。",
-      "explain": "The family has had the house for over 40 years.",
-      "wrong_feedback": {
-        "A": "再想想时间点和时间段。",
-        "B": "再想想时态标志。",
-        "C": "再想想时态标志。"
-      },
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 27,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u6r4-v03",
-      "title": "grandma 的意思",
-      "scene": "grandma 意思是？",
-      "stem": "The word \"grandma\" means ___.",
-      "options": [
-        "奶奶",
-        "妈妈",
-        "姐姐",
-        "阿姨"
-      ],
-      "answer": "A",
-      "help": "谁住在老房子里？",
-      "explain": "grandma 意思是“奶奶”。",
-      "wrong_feedback": {
-        "B": "再想想。",
-        "C": "再想想。",
-        "D": "再想想。"
-      },
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 28,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u6r4-v04",
-      "title": "1980年买",
-      "scene": "他们1980年买的房子。",
-      "stem": "They bought the house ___ 1980.",
-      "options": [
-        "since",
-        "for",
-        "in",
-        "ago"
-      ],
-      "answer": "C",
-      "help": "过去的时间。",
-      "explain": "They bought the house in 1980.",
-      "wrong_feedback": {
-        "A": "再想想时态。",
-        "B": "再想想时态。",
-        "D": "再想想。"
-      },
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 29,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u6r4-v05",
-      "title": "从小时候",
-      "scene": "她从小时候就存照片。",
-      "stem": "She has kept photos ___ she was young.",
-      "options": [
-        "last",
-        "ago",
-        "since",
-        "for"
-      ],
-      "answer": "C",
-      "help": "since 可跟句子。",
-      "explain": "She has kept photos since she was young.",
-      "wrong_feedback": {
-        "A": "再想想时态标志。",
-        "B": "再想想时态标志。",
-        "D": "再想想时间点和时间段。"
-      },
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 30,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u6r4-v06",
-      "title": "出生在这",
-      "scene": "他出生在这所房子里。",
-      "stem": "He ___ born in this house.",
-      "options": [
-        "is",
-        "has been",
-        "be",
-        "was"
-      ],
-      "answer": "D",
-      "help": "过去的事。",
-      "explain": "He was born in this house.",
-      "wrong_feedback": {
-        "A": "再想想时态。",
-        "B": "再想想时态。",
-        "C": "再想想时态。"
-      },
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 31,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u6r4-v11",
-      "title": "从1975年",
-      "scene": "她奶奶从1975年起住在那里。",
-      "stem": "Her grandma has lived there ___ 1975.",
-      "task": "只写 since 或 for。",
-      "answer_text": "since",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "since",
-            "Since"
-          ],
-          "cn": [
-            "自从（时间点）"
-          ]
-        }
-      ],
-      "help": "时间点。",
-      "explain": "Her grandma has lived there since 1975.",
-      "common_errors": [
-        {
-          "when": "写了 for",
-          "say": "再想想时间点和时间段。"
-        }
-      ],
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 32,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u6r4-v12",
-      "title": "grandma 的中文",
-      "scene": "写出 grandma 的中文。",
-      "stem": "写出 grandma 的中文意思。",
-      "task": "写中文。",
-      "answer_text": "奶奶",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "奶奶"
-          ],
-          "cn": [
-            "奶奶"
-          ]
-        }
-      ],
-      "help": "谁住在老房子里？",
-      "explain": "grandma 的中文是“奶奶”。",
-      "common_errors": [
-        {
-          "when": "写了“妈妈”",
-          "say": "“妈妈”是 mother。grandma 是“奶奶”。"
-        }
-      ],
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 33,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u6r4-v13",
-      "title": "但是",
-      "scene": "房子很旧，但是我爱它。",
-      "stem": "The house is old, ___ I love it.",
-      "task": "写连接词。",
-      "answer_text": "but",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "but",
-            "But"
-          ],
-          "cn": [
-            "但是"
-          ]
-        }
-      ],
-      "help": "表示转折。",
-      "explain": "The house is old, but I love it.",
-      "common_errors": [
-        {
-          "when": "写了 because",
-          "say": "because 是“因为”，这里转折，用 but。"
-        }
-      ],
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 34,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u6r4-v14",
-      "title": "四十年",
-      "scene": "他们有这房子四十年了。",
-      "stem": "They have had it ___ 40 years.",
-      "task": "只写 since 或 for。",
-      "answer_text": "for",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "for",
-            "For"
-          ],
-          "cn": [
-            "持续（时间段）"
-          ]
-        }
-      ],
-      "help": "时间段。",
-      "explain": "They have had it for 40 years.",
-      "common_errors": [
-        {
-          "when": "写了 since",
-          "say": "再想想时间点和时间段。"
-        }
-      ],
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 35,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u6r4-v15",
-      "title": "从2010年",
-      "scene": "我们从2010年起住在这里。",
-      "stem": "We have lived here ___ 2010.",
-      "task": "只写 since 或 for。",
-      "answer_text": "since",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "since",
-            "Since"
-          ],
-          "cn": [
-            "自从（时间点）"
-          ]
-        }
-      ],
-      "help": "时间点。",
-      "explain": "We have lived here since 2010.",
-      "common_errors": [
-        {
-          "when": "写了 for",
-          "say": "再想想时间点和时间段。"
-        }
-      ],
-      "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
-    },
-    {
-      "step": 36,
-      "phase": "validate",
-      "kind": "teach",
-      "audio_id": "u6r4-ending",
-      "title": "节目预告",
-      "teach_html": "<p>家乡故事写完了。站长说：你的故事里有 since、有 for，时态也对，很完整！</p><p>下一期是<strong>故事大直播</strong>——古代故事系列 quiz 总复习，看看你记住了多少。</p>"
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
     }
-  ],
-  "title": "写一写：我的家乡故事",
-  "unit": "Unit 6 Ancient stories",
-  "version": 1
+   ],
+   "help": "1998 是时间点。",
+   "explain": "My family has lived here since 1998.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "1998 是时间点，用 since；for 后面跟一段时间（如 many years）。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 不能这样表示“自从某年起”；完成时里“从1998年起”用 since。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 1998 是过去时的说法，要配过去时；这里是 has lived 完成时，用 since。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q10",
+   "title": "1960年出生",
+   "scene": "他1960年出生。",
+   "stem": "He ___ (be) born in 1960.",
+   "task": "写过去式。",
+   "answer_text": "was",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "是（过去式）"
+     ]
+    }
+   ],
+   "help": "1960 年是过去。",
+   "explain": "He was born in 1960.",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "1960 年出生是过去的事，be 动词用过去式 was，不用 is。"
+    },
+    {
+     "when": "写了 has been",
+     "say": "出生是一次性的过去动作，不能说 has been born；用 was born。"
+    },
+    {
+     "when": "写了 be",
+     "say": "be 是原形，不能直接放进句子；出生要用 was born 里的 was。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q11",
+   "title": "因为",
+   "scene": "我爱它，因为它很古老。",
+   "stem": "I love it ___ it is old.",
+   "task": "写连接词。",
+   "answer_text": "because",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "because",
+      "Because"
+     ],
+     "cn": [
+      "因为"
+     ]
+    }
+   ],
+   "help": "表示原因。",
+   "explain": "I love it because it is old.",
+   "common_errors": [
+    {
+     "when": "写了 so",
+     "say": "so 是“所以”，方向反了；这里是给出爱它的原因，用 because。"
+    },
+    {
+     "when": "写了 but",
+     "say": "but 是转折；“爱它，因为它古老”是原因，用 because。"
+    },
+    {
+     "when": "写了 and",
+     "say": "and 只是并列两件事，不表示原因；说原因要用 because。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q14",
+   "title": "认识五年",
+   "scene": "我们认识五年了。",
+   "stem": "We have known each other ___ five years.",
+   "task": "只写 since 或 for。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "cn": [
+      "持续（时间段）"
+     ]
+    }
+   ],
+   "help": "五年是时间段。",
+   "explain": "We have known each other for five years.",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "five years 是一段时间，用 for；since 后面跟时间点（如 2020）。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 不表示持续了多久；持续五年用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in five years 是“五年后”，是将来的意思；已经认识五年了用 for。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years."
+  },
+  {
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q15",
+   "title": "变化很大",
+   "scene": "村子这些年变化很大。",
+   "stem": "The village has ______ (change) a lot in the last ten years.",
+   "task": "写 change 的正确形式。",
+   "answer_text": "changed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "changed"
+     ],
+     "olds": [
+      "change"
+     ],
+     "cn": [
+      "变化（过去分词）"
+     ]
+    }
+   ],
+   "help": "has 后面跟动词的哪种形式？想想 change 的过去分词。",
+   "explain": "The village has changed a lot in the last ten years.",
+   "common_errors": [
+    {
+     "when": "写了 change",
+     "say": "has 后面要用过去分词 changed；动词原形 change 不能直接跟在 has 后面。"
+    },
+    {
+     "when": "写了 changing",
+     "say": "changing 是现在分词；has 后面用过去分词，写 changed。"
+    },
+    {
+     "when": "写了 changes",
+     "say": "changes 是第三人称单数的现在时；完成时是 has + 过去分词，写 changed。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years.",
+   "step": 18
+  },
+  {
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r4-q16",
+   "title": "老桥建成",
+   "scene": "村里的老桥是 1930 年建成的。",
+   "stem": "The old bridge in the village ______ in 1930.",
+   "options": [
+    "built",
+    "was built",
+    "has built",
+    "is building"
+   ],
+   "answer": "B",
+   "help": "先想：桥是自己建自己的，还是被建成的？再看时间是 1930 年还是现在。",
+   "explain": "The old bridge in the village was built in 1930.",
+   "wrong_feedback": {
+    "A": "built 是主动语态的过去式，意思是桥自己建自己；桥是被建成的，要用被动 was built。",
+    "C": "has built 还是主动，意思是“桥建了别的”；而且 1930 是过去的时间点，被动要用 was built。",
+    "D": "is building 是“正在建”，主动而且是现在；1930 年建成的事要用过去被动 was built。"
+   },
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years.",
+   "step": 19
+  },
+  {
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q17",
+   "title": "最干净的河",
+   "scene": "河比以前干净了，是我们镇上最干净的河。",
+   "stem": "The river is ______ than before, and it is ______ river in our town.",
+   "task": "写出两个空里的词（第一个空一个词，第二个空两个词）。",
+   "answer_text": "The river is cleaner than before, and it is the cleanest river in our town.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "cleaner"
+     ],
+     "olds": [
+      "more cleaner"
+     ],
+     "cn": [
+      "更干净（比较级）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "the cleanest",
+      "cleanest"
+     ],
+     "olds": [
+      "more cleanest"
+     ],
+     "cn": [
+      "最干净（最高级）"
+     ]
+    }
+   ],
+   "help": "先分清两个空：第一个是跟以前比，第二个是全镇范围里最……。",
+   "explain": "The river is cleaner than before, and it is the cleanest river in our town.",
+   "common_errors": [
+    {
+     "when": "第一个空写了 cleanest",
+     "say": "第一个空后面有 than，是跟以前比，用比较级 cleaner；最高级留给第二个空。"
+    },
+    {
+     "when": "第二个空写了 cleaner",
+     "say": "第二个空是全镇最干净的，要用最高级 the cleanest，不能用比较级。"
+    },
+    {
+     "when": "写了 more cleaner 或 more cleanest",
+     "say": "clean 是单音节词，直接加 er/est：cleaner、cleanest，前面不能再加 more。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years.",
+   "step": 20
+  },
+  {
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r4-q18",
+   "title": "爷爷讲过吗",
+   "scene": "问：爷爷给你讲过这个故事吗？",
+   "stem": "______ your grandpa ever told you this story?",
+   "task": "只写句首的那个词。",
+   "answer_text": "Has",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Has"
+     ],
+     "cn": [
+      "（句首助动词）"
+     ]
+    }
+   ],
+   "help": "先数主语是一个人还是多个人，再看 told 是动词的什么形式。",
+   "explain": "Has your grandpa ever told you this story?",
+   "common_errors": [
+    {
+     "when": "写了 Have",
+     "say": "主语 your grandpa 是一人（第三人称单数），疑问句句首要用 Has，不用 Have。"
+    },
+    {
+     "when": "写了 Did",
+     "say": "Did 后面要跟动词原形 tell，跟不了 told；表示经历用 Has。"
+    },
+    {
+     "when": "写了 Is",
+     "say": "Is 后面跟不了 told 组成完成时；问“讲过没有”要用 Has 开头。"
+    }
+   ],
+   "reading": "Lin Tao's hometown is a small village. His family has lived there since 1980. They have kept many old things for years.",
+   "step": 21
+  },
+  {
+   "step": 22,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u6r4-v-intro",
+   "title": "新任务：独立写",
+   "teach_html": "<p>新任务来了：这次是<strong>小梅奶奶的老房子</strong>的资料。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>since + 时间点</strong>，<strong>for + 时间段</strong>；过去的事用过去时。</p>",
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r4-v01",
+   "title": "从1975年",
+   "scene": "她奶奶从1975年起住在老房子里。",
+   "stem": "Her grandma has lived there ___ 1975.",
+   "options": [
+    "since",
+    "for",
+    "last",
+    "ago"
+   ],
+   "answer": "A",
+   "help": "时间点。",
+   "explain": "Her grandma has lived there since 1975.",
+   "wrong_feedback": {
+    "B": "for 后面跟一段时间（如 for many years）；1975 是时间点，用 since。",
+    "C": "last 是过去时的标志词，要配过去时；这里是 has lived 完成时，“从1975年起”用 since。",
+    "D": "ago 是过去时的标志词（如 two years ago）；完成时讲“从某时起”用 since。"
+   },
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 24,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r4-v02",
+   "title": "四十多年",
+   "scene": "这家人有这房子四十多年了。",
+   "stem": "The family has had the house ___ over 40 years.",
+   "options": [
+    "since",
+    "last",
+    "ago",
+    "for"
+   ],
+   "answer": "D",
+   "help": "时间段。",
+   "explain": "The family has had the house for over 40 years.",
+   "wrong_feedback": {
+    "A": "since 后面跟时间点；over 40 years 是一段时间，用 for。",
+    "B": "last 不能这样直接跟 over 40 years；持续四十多年用 for。",
+    "C": "ago 说的是过去的时间点（40 years ago 是四十年前的那一刻）；这里是持续四十多年到现在，用 for。"
+   },
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r4-v04",
+   "title": "1980年买",
+   "scene": "他们1980年买的房子。",
+   "stem": "They bought the house ___ 1980.",
+   "options": [
+    "since",
+    "for",
+    "in",
+    "ago"
+   ],
+   "answer": "C",
+   "help": "过去的时间。",
+   "explain": "They bought the house in 1980.",
+   "wrong_feedback": {
+    "A": "since 要配完成时；bought 是过去时，说哪一年买的用 in 1980。",
+    "B": "for 表示持续的一段时间；这里是 1980 这个年份点，用 in。",
+    "D": "ago 前面要有一段时间（如 two years ago）；直接跟年份 1980 用 in。"
+   },
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r4-v05",
+   "title": "从小时候",
+   "scene": "她从小时候就存照片。",
+   "stem": "She has kept photos ___ she was young.",
+   "options": [
+    "last",
+    "ago",
+    "since",
+    "for"
+   ],
+   "answer": "C",
+   "help": "since 可跟句子。",
+   "explain": "She has kept photos since she was young.",
+   "wrong_feedback": {
+    "A": "last 是过去时的标志词；这里是 has kept 完成时，引出起点用 since。",
+    "B": "ago 是过去时的标志词，要配过去时；完成时里“自从”用 since。",
+    "D": "for 后面跟一段时间；空后面是“she was young”这个起点句子，用 since。"
+   },
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r4-v06",
+   "title": "出生在这",
+   "scene": "他出生在这所房子里。",
+   "stem": "He ___ born in this house.",
+   "options": [
+    "is",
+    "has been",
+    "be",
+    "was"
+   ],
+   "answer": "D",
+   "help": "过去的事。",
+   "explain": "He was born in this house.",
+   "wrong_feedback": {
+    "A": "is 是现在时；他出生是过去的事，be 动词用过去式 was。",
+    "B": "has been born 不对，出生是一次性的过去动作，要用 was born。",
+    "C": "be 是动词原形，不能直接放进句子；出生要用 was。"
+   },
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u6r4-v13",
+   "title": "但是",
+   "scene": "房子很旧，但是我爱它。",
+   "stem": "The house is old, ___ I love it.",
+   "task": "写连接词。",
+   "answer_text": "but",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "but",
+      "But"
+     ],
+     "cn": [
+      "但是"
+     ]
+    }
+   ],
+   "help": "表示转折。",
+   "explain": "The house is old, but I love it.",
+   "common_errors": [
+    {
+     "when": "写了 because",
+     "say": "前后不是原因关系：房子旧、我却爱它，是转折，用 but。"
+    },
+    {
+     "when": "写了 and",
+     "say": "and 只是并列，体现不出“虽然旧却爱它”的转折；转折用 but。"
+    },
+    {
+     "when": "写了 so",
+     "say": "so 引出结果，方向不对；这里是让步转折，用 but。"
+    }
+   ],
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u6r4-v14",
+   "title": "四十年",
+   "scene": "他们有这房子四十年了。",
+   "stem": "They have had it ___ 40 years.",
+   "task": "只写 since 或 for。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "cn": [
+      "持续（时间段）"
+     ]
+    }
+   ],
+   "help": "时间段。",
+   "explain": "They have had it for 40 years.",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "40 years 是一段时间，用 for；since 后面跟时间点。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 不表示持续时间；有这房子四十年了用 for。"
+    },
+    {
+     "when": "写了 last",
+     "say": "last 要跟具体的一段时间（如 last year）；这里直接跟 40 years，用 for。"
+    }
+   ],
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u6r4-v15",
+   "title": "从2010年",
+   "scene": "我们从2010年起住在这里。",
+   "stem": "We have lived here ___ 2010.",
+   "task": "只写 since 或 for。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "时间点。",
+   "explain": "We have lived here since 2010.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "2010 是时间点，用 since；for 后面跟一段时间。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 不能表示“自从某年起持续到现在”；完成时用 since。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 2010 要配过去时；句子是 have lived 完成时，用 since。"
+    }
+   ],
+   "reading": "Mei's grandma has lived in the old house since 1975. The family has had the house for over 40 years."
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 小镇变化大",
+   "scene": "写家乡的变化：小镇这些年变化很大。",
+   "stem": "Our town has ______ (change) a lot in the last ten years.",
+   "task": "写 change 的正确形式。",
+   "answer_text": "changed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "changed"
+     ],
+     "olds": [
+      "change"
+     ],
+     "cn": [
+      "变化（过去分词）"
+     ]
+    }
+   ],
+   "help": "has 后面跟动词的哪种形式？先想 change 的过去分词怎么写。",
+   "explain": "Our town has changed a lot in the last ten years.",
+   "common_errors": [
+    {
+     "when": "写了 change",
+     "say": "has 后面要用过去分词 changed；原形 change 不能直接跟在 has 后面。"
+    },
+    {
+     "when": "写了 changing",
+     "say": "changing 是现在分词；完成时 has 后面用过去分词 changed。"
+    },
+    {
+     "when": "写了 changes",
+     "say": "changes 是现在时三单形式；这里是完成时，写 changed。"
+    }
+   ],
+   "phase": "validate",
+   "step": 31
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 家乡变美了",
+   "scene": "写家乡的变化：我的家乡变成了美丽的地方。",
+   "stem": "My hometown ______ a beautiful place these years.",
+   "task": "写出空里的两个词。",
+   "answer_text": "has become",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has become"
+     ],
+     "olds": [
+      "became",
+      "becomed",
+      "has became"
+     ],
+     "cn": [
+      "已经变成（现在完成时）"
+     ]
+    }
+   ],
+   "help": "“变成了”是从过去到现在的结果，想想 become 的过去分词和句首助动词。",
+   "explain": "My hometown has become a beautiful place these years.",
+   "common_errors": [
+    {
+     "when": "只写了 became",
+     "say": "became 是过去式，只说过去变过；“这些年变成了”是持续到现在的结果，要用 has become。"
+    },
+    {
+     "when": "写了 has became",
+     "say": "has 后面用过去分词：become 的过去分词还是 become，写 has become。"
+    },
+    {
+     "when": "写了 is become",
+     "say": "is 不能和 become 组成完成时；表示变化的结果用 has become。"
+    }
+   ],
+   "phase": "validate",
+   "step": 32
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 从小住到现在",
+   "scene": "奶奶从还是个小女孩时起就住在老房子里。",
+   "stem": "Grandma has lived in the old house ______ she was a little girl.",
+   "task": "只写一个英文单词。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since"
+     ],
+     "cn": [
+      "自从（引出起点）"
+     ]
+    }
+   ],
+   "help": "先看空后面跟的是一个起点句子，还是一段时间。",
+   "explain": "Grandma has lived in the old house since she was a little girl.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "for 后面跟一段时间（如 for ten years）；空后面是“she was a little girl”这个起点，用 since。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 不能这样带出一个起点句子；“自从……”用 since。"
+    },
+    {
+     "when": "写了 when",
+     "say": "when 只是“在……时候”；从小一直住到现在是持续到现在，用 since。"
+    }
+   ],
+   "phase": "validate",
+   "step": 33
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 2019年修的路",
+   "scene": "写家乡：2019 年，一条新路修到了我们村。",
+   "stem": "A new road ______ to our village in 2019.",
+   "task": "写出空里的两个词（be 动词 + 过去分词）。",
+   "answer_text": "was built",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was built"
+     ],
+     "olds": [
+      "was build",
+      "is built"
+     ],
+     "cn": [
+      "被修建（被动语态）"
+     ]
+    }
+   ],
+   "help": "先看时间是 2019 年还是现在，再想路是自己修的还是被修的。",
+   "explain": "A new road was built to our village in 2019.",
+   "common_errors": [
+    {
+     "when": "只写了 built",
+     "say": "built 是主动语态的过去式；路是被修的，被动语态不能少 be 动词：was built。"
+    },
+    {
+     "when": "写了 is built",
+     "say": "is built 是现在的被动；修路是 2019 年的事，要用 was built。"
+    },
+    {
+     "when": "写了 was build",
+     "say": "be 动词后面要用过去分词：build 的过去分词是 built，写 was built。"
+    }
+   ],
+   "phase": "validate",
+   "step": 34
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 村里最老的树",
+   "scene": "写家乡：这棵老树是我们村里最老的树。",
+   "stem": "This old tree is ______ tree in our village.",
+   "task": "写出空里的词。",
+   "answer_text": "the oldest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the oldest",
+      "oldest"
+     ],
+     "olds": [
+      "most oldest",
+      "older"
+     ],
+     "cn": [
+      "最老的（最高级）"
+     ]
+    }
+   ],
+   "help": "先看范围：是在全村的树里面比，还是只跟一棵树比？",
+   "explain": "This old tree is the oldest tree in our village.",
+   "common_errors": [
+    {
+     "when": "写了 older",
+     "say": "older 是比较级，跟一棵树比才用；全村范围里“最老的”要用最高级 the oldest。"
+    },
+    {
+     "when": "写了 the most old",
+     "say": "old 是单音节词，最高级直接加 est：oldest，不用 most。"
+    },
+    {
+     "when": "写了 most oldest",
+     "say": "oldest 本身已经是最高级，前面不能再加 most。"
+    }
+   ],
+   "phase": "validate",
+   "step": 35
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 镇上最美的地方",
+   "scene": "写家乡：湖是我们镇上最美的地方。",
+   "stem": "The lake is ______ place in our town.",
+   "task": "写出空里的词。",
+   "answer_text": "the most beautiful",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the most beautiful",
+      "most beautiful"
+     ],
+     "olds": [
+      "more beautiful"
+     ],
+     "cn": [
+      "最美的（最高级）"
+     ]
+    }
+   ],
+   "help": "先看范围：全镇里最……，beautiful 是长词还是短词？",
+   "explain": "The lake is the most beautiful place in our town.",
+   "common_errors": [
+    {
+     "when": "写了 more beautiful",
+     "say": "more beautiful 是比较级，跟一个地方比才用；全镇“最美的”要用最高级 the most beautiful。"
+    },
+    {
+     "when": "写了 beautifullest",
+     "say": "beautiful 是多音节词，最高级要在前面加 most，不能在词尾加 est。"
+    },
+    {
+     "when": "写了 the most beautifuler",
+     "say": "多音节词用 most 构成最高级，词尾不要再加 er：the most beautiful。"
+    }
+   ],
+   "phase": "validate",
+   "step": 36
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 家乡上过故事书吗",
+   "scene": "问：你的家乡上过有名的故事书吗？",
+   "stem": "______ your hometown ever been in a famous story?",
+   "task": "只写句首的那个词。",
+   "answer_text": "Has",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Has"
+     ],
+     "cn": [
+      "（句首助动词）"
+     ]
+    }
+   ],
+   "help": "先看主语 your hometown 是一个还是多个，再看 been 是什么形式。",
+   "explain": "Has your hometown ever been in a famous story?",
+   "common_errors": [
+    {
+     "when": "写了 Have",
+     "say": "主语 your hometown 是一个地方（第三人称单数），疑问句句首要用 Has，不用 Have。"
+    },
+    {
+     "when": "写了 Is",
+     "say": "Is 后面跟不了 been 组成完成时；问“上过没有”要用 Has 开头。"
+    },
+    {
+     "when": "写了 Did",
+     "say": "Did 后面要跟动词原形 be，跟不了 been；表示经历用 Has。"
+    }
+   ],
+   "phase": "validate",
+   "step": 37
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 保存了三百年",
+   "scene": "人们把这口老井保存了三百年。",
+   "stem": "People have ______ (keep) this old well for 300 years.",
+   "task": "写 keep 的正确形式。",
+   "answer_text": "kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "kept"
+     ],
+     "olds": [
+      "keeped"
+     ],
+     "cn": [
+      "保存（过去分词）"
+     ]
+    }
+   ],
+   "help": "have 后面用过去分词；keep 是不规则动词，先想它的过去分词怎么写。",
+   "explain": "People have kept this old well for 300 years.",
+   "common_errors": [
+    {
+     "when": "写了 keeped",
+     "say": "keep 是不规则动词，过去分词是 kept，不能加 ed。"
+    },
+    {
+     "when": "写了 keep",
+     "say": "keep 是原形；have 后面要用过去分词 kept。"
+    },
+    {
+     "when": "写了 keeping",
+     "say": "keeping 是现在分词；have 后面用过去分词 kept。"
+    }
+   ],
+   "phase": "validate",
+   "step": 38
+  },
+  {
+   "kind": "mcq",
+   "title": "挑战 · 爷爷的一生",
+   "scene": "爷爷 1950 年出生在这个村子，从那时起一直住在这里。",
+   "stem": "My grandpa ______ in this village in 1950, and he ______ here since then.",
+   "options": [
+    "was born; has lived",
+    "is born; lives",
+    "was born; lived",
+    "born; has lived"
+   ],
+   "answer": "A",
+   "help": "先分两个空：第一个是 1950 年一次性的事，第二个是从那时一直到现在。",
+   "explain": "My grandpa was born in this village in 1950, and he has lived here since then.",
+   "wrong_feedback": {
+    "B": "is born 不对：出生是 1950 年的事，要用 was born；而且“从那时起一直住”要用完成时 has lived，不用 lives。",
+    "C": "第一个空对了。第二个空 lived 是过去时，只说过去住过；since then 是一直到现在，要用 has lived。",
+    "D": "第一个空少了 was：“出生”要说 was born；第二个空 has lived 是对的。"
+   },
+   "phase": "validate",
+   "step": 39
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 每年都修的桥",
+   "scene": "这座老桥每年都要修一次。",
+   "stem": "The old bridge ______ every year.",
+   "task": "写出空里的两个词（be 动词 + 过去分词）。",
+   "answer_text": "is repaired",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is repaired"
+     ],
+     "olds": [
+      "is repair",
+      "was repaired"
+     ],
+     "cn": [
+      "被修理（被动语态）"
+     ]
+    }
+   ],
+   "help": "先看 every year 说明是现在经常发生的事，再想桥是自己修自己还是被人修。",
+   "explain": "The old bridge is repaired every year.",
+   "common_errors": [
+    {
+     "when": "只写了 repaired",
+     "say": "repaired 单独放是主动的过去式；桥是被人修的，被动语态要带 be 动词：is repaired。"
+    },
+    {
+     "when": "写了 was repaired",
+     "say": "was 是过去；every year 说明年年都修、现在也一样，用现在的 is repaired。"
+    },
+    {
+     "when": "写了 is repair",
+     "say": "be 动词后面要用过去分词：repair 的过去分词是 repaired，写 is repaired。"
+    }
+   ],
+   "phase": "validate",
+   "step": 40
+  },
+  {
+   "kind": "mcq",
+   "title": "挑战 · 老人讲的故事",
+   "scene": "这个故事是很多年前一位老人讲出来的。",
+   "stem": "The story ______ by an old man long ago.",
+   "options": [
+    "told",
+    "was told",
+    "tells",
+    "is telling"
+   ],
+   "answer": "B",
+   "help": "先看故事是讲别人的，还是被人讲出来的；再看时间 long ago。",
+   "explain": "The story was told by an old man long ago.",
+   "wrong_feedback": {
+    "A": "told 是主动语态，意思是故事去讲别人；故事是被人讲的，要用被动 was told。",
+    "C": "tells 是现在时主动，时间和语态都不对；long ago 的事、又是被讲，用 was told。",
+    "D": "is telling 是“正在讲”，主动且是现在进行；这个故事是过去被人讲出来的，用 was told。"
+   },
+   "phase": "validate",
+   "step": 41
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 最宽的路",
+   "scene": "新路比旧路宽，是我们镇上最宽的路。",
+   "stem": "The new road is ______ than the old one, and it is ______ road in our town.",
+   "task": "写出两个空里的词（第一个空一个词，第二个空两个词）。",
+   "answer_text": "The new road is wider than the old one, and it is the widest road in our town.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "wider"
+     ],
+     "olds": [
+      "more wider"
+     ],
+     "cn": [
+      "更宽（比较级）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "the widest",
+      "widest"
+     ],
+     "olds": [
+      "more widest"
+     ],
+     "cn": [
+      "最宽（最高级）"
+     ]
+    }
+   ],
+   "help": "先分清两个空：第一个是新路和旧路两条比，第二个是全镇范围里最……。",
+   "explain": "The new road is wider than the old one, and it is the widest road in our town.",
+   "common_errors": [
+    {
+     "when": "第一个空写了 widest",
+     "say": "第一个空后面有 than，是两条路比宽窄，用比较级 wider；最高级留给第二个空。"
+    },
+    {
+     "when": "第二个空写了 wider",
+     "say": "第二个空是全镇最宽的，要用最高级 the widest，不能用比较级。"
+    },
+    {
+     "when": "写了 more wider 或 more widest",
+     "say": "wide 是单音节词，直接加 er/est：wider、widest，前面不能再加 more。"
+    }
+   ],
+   "phase": "validate",
+   "step": 42
+  },
+  {
+   "phase": "validate",
+   "kind": "short",
+   "title": "写一段：我的家乡故事",
+   "scene": "家乡故事会要选故事贴出来。轮到你写一段家乡故事（4–5 句），交给站长。",
+   "stem": "写一段家乡故事，必须写到这三件事：① 一样老建筑是什么时候建的，或者家里人从什么时候起住在这里（was built in … / has lived … since …）；② 家乡的一个变化（has changed / has become …）；③ 你为什么喜欢家乡（I love … because …）。",
+   "task": "写 4–5 句英文，三件事一件都不能少。",
+   "answer_text": "My hometown is a small village. The old bridge was built in 1930. Our village has become more beautiful these years. I love my hometown because it is old and quiet.",
+   "expects": [
+    {
+     "id": "built",
+     "type": "word",
+     "answers": [
+      "was built",
+      "has lived",
+      "have lived",
+      "since"
+     ],
+     "cn": [
+      "建于何时 / 从何时起住在这里"
+     ]
+    },
+    {
+     "id": "change",
+     "type": "word",
+     "answers": [
+      "has changed",
+      "has become",
+      "have changed",
+      "have become"
+     ],
+     "cn": [
+      "家乡的一个变化"
+     ]
+    },
+    {
+     "id": "feeling",
+     "type": "word",
+     "answers": [
+      "because"
+     ],
+     "cn": [
+      "喜欢家乡的原因"
+     ]
+    }
+   ],
+   "help": "一句一句来：先写老建筑是哪年建的，再写家乡的一个变化，最后一句写你为什么喜欢它。",
+   "explain": "范文：My hometown is a small village. The old bridge was built in 1930. Our village has become more beautiful these years. I love my hometown because it is old and quiet.",
+   "common_errors": [
+    {
+     "when": "没写建筑是哪年建的、也没写从何时起住在这里",
+     "say": "三件事少了第一件：补一句 The old bridge was built in 1930. 或者 My family has lived here since 1998."
+    },
+    {
+     "when": "没写家乡的变化",
+     "say": "三件事少了第二件：补一句变化，如 Our village has become more beautiful.（has become + 变得怎么样）。"
+    },
+    {
+     "when": "没写喜欢家乡的原因",
+     "say": "三件事少了第三件：结尾补一句 I love my hometown because …，把原因说出来。"
+    },
+    {
+     "when": "全篇只用了过去时",
+     "say": "讲过去的事用过去时没问题，但“变化”和“从那时到现在”要用完成时：has become、has lived since…。"
+    },
+    {
+     "when": "变化句里主语是多个人/物却用了 has",
+     "say": "主语是 I/you/we/they 或复数时，完成时用 have：They have changed a lot. 单数主语才用 has。"
+    }
+   ],
+   "step": 43
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u6r4-ending",
+   "title": "节目预告",
+   "teach_html": "<p>家乡故事写完了。站长说：你的故事里有 since、有 for，时态也对，很完整！</p><p>下一期是<strong>故事大直播</strong>——古代故事系列 quiz 总复习，看看你记住了多少。</p>"
+  }
+ ],
+ "title": "写一写：我的家乡故事",
+ "unit": "Unit 6 Ancient stories",
+ "version": 1
 }
