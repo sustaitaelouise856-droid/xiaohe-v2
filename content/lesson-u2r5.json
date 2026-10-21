@@ -1,763 +1,1468 @@
 {
-  "lesson_id": "u2r5",
-  "version": 1,
-  "title": "第 5 课 · 期末大直播",
-  "home_subtitle": "第 5 课 · 期末大直播",
-  "part1_desc": "第 1–19 步：多材料核对、数据、来信（带练）。",
-  "part2_desc": "第 20–36 步：独立大直播。",
-  "practice_end": 19,
-  "steps": [
+ "lesson_id": "u2r5",
+ "version": 2,
+ "title": "第 5 课 · 期末大直播",
+ "home_subtitle": "第 5 课 · 期末大直播",
+ "part1_desc": "第 1–19 步：多材料核对、数据、来信（带练）。",
+ "part2_desc": "第 20–48 步：独立大直播＋挑战段。",
+ "practice_end": 19,
+ "steps": [
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "大直播前夜",
+   "teach_html": "<p>站长：明天就是<b>校庆大直播</b>了！三张通知、校园数据、听众来信，全都要核对一遍，写成一期完整的广播稿。</p><p>今晚我们先彩排，你来当主播。</p>",
+   "scene": "广播站",
+   "step": 1
+  },
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "三张通知",
+   "teach_html": "<p>先看演出通知。一共三张，只认最后一次更新。</p>",
+   "scene": "看通知",
+   "step": 2,
+   "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "最终时间",
+   "stem": "演出最终时间是？",
+   "options": [
+    "A. Friday, 6:00 p.m.",
+    "B. Friday, 7:00 p.m.",
+    "C. Saturday, 7:00 p.m.",
+    "D. Sunday, 7:00 p.m."
+   ],
+   "answer": "C",
+   "explain": "第二张更新：Saturday, 7:00 p.m.。",
+   "help": "只认最后一次更新，看第二张。",
+   "predicted_errors": [
     {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "大直播前夜",
-      "teach_html": "<p>站长：明天就是<b>校庆大直播</b>了！三张通知、校园数据、听众来信，全都要核对一遍，写成一期完整的广播稿。</p><p>今晚我们先彩排，你来当主播。</p>",
-      "scene": "广播站",
-      "step": 1
+     "match": "A",
+     "say": "A 是第一张的旧时间，已更新。"
     },
     {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "三张通知",
-      "teach_html": "<p>先看演出通知。一共三张，只认最后一次更新。</p>",
-      "scene": "看通知",
-      "step": 2,
-      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "最终时间",
-      "stem": "演出最终时间是？",
-      "options": [
-        "A. Friday, 6:00 p.m.",
-        "B. Friday, 7:00 p.m.",
-        "C. Saturday, 7:00 p.m.",
-        "D. Sunday, 7:00 p.m."
-      ],
-      "answer": "C",
-      "explain": "第二张更新：Saturday, 7:00 p.m.。",
-      "help": "只认最后一次更新，看第二张。",
-      "predicted_errors": [
-        {
-          "match": "A",
-          "say": "A 是第一张的旧时间，已更新。"
-        },
-        {
-          "match": "B",
-          "say": "星期错了：Saturday 不是 Friday。"
-        }
-      ],
-      "scene": "核对时间",
-      "step": 3,
-      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "最终地点",
-      "stem": "演出地点最终是哪里？",
-      "options": [
-        "A. the playground",
-        "B. the library",
-        "C. the gym",
-        "D. the school hall"
-      ],
-      "answer": "D",
-      "explain": "语音：搬到 school hall。",
-      "help": "听站长的语音，地点搬了。",
-      "predicted_errors": [
-        {
-          "match": "A",
-          "say": "A 是旧地点，语音说搬走了。"
-        }
-      ],
-      "scene": "核对地点",
-      "step": 4,
-      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
-    },
-    {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "校园数据",
-      "teach_html": "<p>再看校园数据。校庆参加人数和借书量都涨了。</p>",
-      "scene": "看数据",
-      "step": 5,
-      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "人数涨幅",
-      "stem": "参加演出的人数比去年涨了多少？",
-      "options": [
-        "A. 15%",
-        "B. 20%",
-        "C. 25%",
-        "D. 10%"
-      ],
-      "answer": "B",
-      "explain": "up 20% from last year。",
-      "help": "看 Students 那行，up 多少？",
-      "predicted_errors": [
-        {
-          "match": "A",
-          "say": "A 是借书量的涨幅，看错行了。"
-        }
-      ],
-      "scene": "读数据",
-      "step": 6,
-      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
-    },
-    {
-      "kind": "short",
-      "phase": "practice",
-      "title": "写出借书量",
-      "stem": "用英文写出 12 月借书量和涨幅。",
-      "task": "写出数字和百分比。",
-      "answer_text": "3,450 books, up 15%",
-      "expects": [
-        {
-          "id": "num",
-          "type": "word",
-          "answers": [
-            "3 450",
-            "3450"
-          ],
-          "cn": [
-            "3450",
-            "三千四百五十"
-          ]
-        },
-        {
-          "id": "pct",
-          "type": "word",
-          "answers": [
-            "15",
-            "fifteen"
-          ],
-          "cn": [
-            "15%",
-            "百分之十五"
-          ]
-        }
-      ],
-      "explain": "3,450 本，涨 15%。",
-      "help": "数字是 3,450，涨幅看 up 多少。",
-      "predicted_errors": [
-        {
-          "match": "3450",
-          "say": "数字对了，再写上 up 15%。"
-        }
-      ],
-      "scene": "写数据",
-      "dim_help": {
-        "num": {
-          "label": "借书量",
-          "ask": "12 月借了多少本书？"
-        },
-        "pct": {
-          "label": "涨幅",
-          "ask": "比 11 月涨了多少？"
-        }
-      },
-      "step": 7
-    },
-    {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "听众来信",
-      "teach_html": "<p>有两封听众来信。分清哪句是请求，哪句是闲聊。</p>",
-      "scene": "读信",
-      "step": 8,
-      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "来信一的请求",
-      "stem": "第一封信里，听众的请求是什么？",
-      "options": [
-        "A. Play \"Sunshine\"",
-        "B. Eat noodles",
-        "C. Write a letter",
-        "D. Cook noodles"
-      ],
-      "answer": "A",
-      "explain": "请求是点歌：Play \"Sunshine\"。",
-      "help": "请求是让广播站做的事。",
-      "predicted_errors": [
-        {
-          "match": "B",
-          "say": "面条是闲聊，不是请求。"
-        }
-      ],
-      "scene": "抓请求",
-      "step": 9,
-      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "来信二的请求",
-      "stem": "第二封信里，听众想问什么？",
-      "options": [
-        "A. When is lunch?",
-        "B. When is the English Corner?",
-        "C. Where is the dog?",
-        "D. What is the song?"
-      ],
-      "answer": "B",
-      "explain": "问 English Corner 的时间。",
-      "help": "找问句。",
-      "predicted_errors": [
-        {
-          "match": "C",
-          "say": "小狗是闲聊，不是问题。"
-        }
-      ],
-      "scene": "抓请求",
-      "step": 10,
-      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
-    },
-    {
-      "kind": "short",
-      "phase": "practice",
-      "title": "回复点歌",
-      "stem": "用英文回复第一封信：承诺播放 \"Sunshine\"。",
-      "task": "写出承诺句。",
-      "answer_text": "I promise to play \"Sunshine\" for you.",
-      "expects": [
-        {
-          "id": "promise",
-          "type": "word",
-          "answers": [
-            "promise"
-          ],
-          "cn": [
-            "保证",
-            "承诺"
-          ]
-        }
-      ],
-      "explain": "I promise to play \"Sunshine\" for you.",
-      "help": "用 I promise 开头。",
-      "predicted_errors": [],
-      "scene": "写回复",
-      "dim_help": {
-        "promise": {
-          "label": "承诺",
-          "ask": "用哪个词表示\"保证\"？"
-        }
-      },
-      "step": 11
-    },
-    {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "数字复盘",
-      "scene": "复盘",
-      "teach_html": "<p>站长：数据也要核对。记住 up 是涨，down 是降。</p>",
-      "step": 12
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "借书涨幅",
-      "stem": "12 月借书比 11 月涨了多少？",
-      "options": [
-        "A. 10%",
-        "B. 20%",
-        "C. 25%",
-        "D. 15%"
-      ],
-      "answer": "D",
-      "explain": "up 15% from November。",
-      "help": "看 Books 那行。",
-      "predicted_errors": [
-        {
-          "match": "B",
-          "say": "B 是人数的涨幅。"
-        }
-      ],
-      "scene": "读数据",
-      "step": 13,
-      "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "来信数量",
-      "stem": "一共有几封听众来信？",
-      "options": [
-        "A. 1 封",
-        "B. 3 封",
-        "C. 4 封",
-        "D. 2 封"
-      ],
-      "answer": "D",
-      "explain": "两封：来信一和来信二。",
-      "help": "数一数。",
-      "predicted_errors": [],
-      "scene": "数信",
-      "step": 14,
-      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
-    },
-    {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "交叉核对",
-      "teach_html": "<p>通知、数据、来信都看了。现在交叉核对，找出作废的信息。</p>",
-      "scene": "核对",
-      "step": 15
-    },
-    {
-      "kind": "mcq",
-      "phase": "practice",
-      "title": "旧信息",
-      "stem": "以下哪个信息已经是旧的，不用播了？",
-      "options": [
-        "A. Saturday, 7:00 p.m.",
-        "B. the school hall",
-        "C. Friday, 6:00 p.m.",
-        "D. up 20%"
-      ],
-      "answer": "C",
-      "explain": "Friday, 6:00 p.m. 是第一张的旧时间，已更新。",
-      "help": "找被更新掉的旧信息。",
-      "predicted_errors": [],
-      "scene": "找作废",
-      "step": 16,
-      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall."
-    },
-    {
-      "kind": "short",
-      "phase": "practice",
-      "title": "广播稿第一句",
-      "stem": "写出广播稿第一句：演出的最终时间地点。",
-      "task": "写完整句。",
-      "answer_text": "The show is on Saturday at 7:00 p.m. in the school hall.",
-      "expects": [
-        {
-          "id": "time",
-          "type": "time",
-          "hour": 7,
-          "minute": 0,
-          "meridiem": "pm",
-          "cn": [
-            "7点",
-            "晚上7点"
-          ]
-        },
-        {
-          "id": "place",
-          "type": "word",
-          "answers": [
-            "school hall"
-          ],
-          "cn": [
-            "学校大厅"
-          ]
-        }
-      ],
-      "explain": "The show is on Saturday at 7:00 p.m. in the school hall.",
-      "help": "时间看第二张，地点听语音。",
-      "predicted_errors": [
-        {
-          "match": "playground",
-          "say": "地点已搬到 school hall，不是 playground。"
-        }
-      ],
-      "scene": "写广播稿",
-      "dim_help": {
-        "time": {
-          "label": "时间",
-          "ask": "最终时间是几点？"
-        },
-        "place": {
-          "label": "地点",
-          "ask": "最终地点是哪里？"
-        }
-      },
-      "step": 17
-    },
-    {
-      "kind": "choice",
-      "phase": "practice",
-      "title": "选开场音乐",
-      "choice_key": "opening_song",
-      "options": [
-        "A. 《Sunshine》",
-        "B. 《Morning Song》"
-      ],
-      "scene": "选歌",
-      "step": 18,
-      "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
-    },
-    {
-      "kind": "teach",
-      "phase": "practice",
-      "title": "第一部分完成",
-      "teach_html": "<p>彩排完成！第二部分：正式大直播，独立完成。</p>",
-      "scene": "过渡",
-      "step": 19
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "大直播开始",
-      "teach_html": "<p>🔴 大直播开始！独立完成，不能回头看。</p>",
-      "scene": "直播",
-      "step": 20
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "听：演出通知",
-      "teach_html": "<p>听站长的语音留言，记下最终时间地点。</p>",
-      "scene": "听通知",
-      "step": 21,
-      "audio_id": "u2r5-announce",
-      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!"
-    },
-    {
-      "kind": "mcq",
-      "phase": "validate",
-      "title": "听：时间",
-      "stem": "语音里说的演出时间是？",
-      "options": [
-        "A. Friday, 7:00 p.m.",
-        "B. Saturday, 7:00 p.m.",
-        "C. Saturday, 6:00 p.m.",
-        "D. Sunday, 7:00 p.m."
-      ],
-      "answer": "B",
-      "explain": "Saturday, 7:00 p.m.",
-      "help": "仔细听时间。",
-      "predicted_errors": [
-        {
-          "match": "A",
-          "say": "星期听错了：Saturday 不是 Friday。"
-        }
-      ],
-      "scene": "听时间",
-      "step": 22,
-      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!",
-      "audio_id": "u2r5-announce"
-    },
-    {
-      "kind": "short",
-      "phase": "validate",
-      "title": "听：地点",
-      "stem": "语音里说的地点是哪里？",
-      "task": "写出地点。",
-      "answer_text": "school hall",
-      "expects": [
-        {
-          "id": "place",
-          "type": "word",
-          "answers": [
-            "school hall"
-          ],
-          "cn": [
-            "学校大厅",
-            "大厅"
-          ]
-        }
-      ],
-      "explain": "school hall.",
-      "help": "听地点关键词。",
-      "predicted_errors": [],
-      "scene": "听地点",
-      "step": 23,
-      "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!",
-      "audio_id": "u2r5-announce"
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "听：数据播报",
-      "teach_html": "<p>听数据播报，记下关键数字。</p>",
-      "scene": "听数据",
-      "step": 24,
-      "audio_id": "u2r5-data",
-      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
-    },
-    {
-      "kind": "mcq",
-      "phase": "validate",
-      "title": "数据比较",
-      "stem": "涨幅最大的是哪一项？",
-      "options": [
-        "A. Students, up 20%",
-        "B. Books, up 15%",
-        "C. Students, up 15%",
-        "D. Books, up 20%"
-      ],
-      "answer": "A",
-      "explain": "Students up 20%，最大。",
-      "help": "比较两个百分比。",
-      "predicted_errors": [
-        {
-          "match": "B",
-          "say": "15% 小于 20%。"
-        }
-      ],
-      "scene": "比数据",
-      "step": 25,
-      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
-    },
-    {
-      "kind": "short",
-      "phase": "validate",
-      "title": "写出数据",
-      "stem": "写出参加人数和涨幅。",
-      "task": "写数字。",
-      "answer_text": "1,200 students, up 20%",
-      "expects": [
-        {
-          "id": "num",
-          "type": "word",
-          "answers": [
-            "1 200",
-            "1200"
-          ],
-          "cn": [
-            "1200",
-            "一千二"
-          ]
-        },
-        {
-          "id": "pct",
-          "type": "word",
-          "answers": [
-            "20",
-            "twenty"
-          ],
-          "cn": [
-            "20%"
-          ]
-        }
-      ],
-      "explain": "1,200 students, up 20%。",
-      "help": "人数 1,200，涨幅 20%。",
-      "predicted_errors": [],
-      "scene": "写数据",
-      "dim_help": {
-        "num": {
-          "label": "人数",
-          "ask": "多少人参加？"
-        },
-        "pct": {
-          "label": "涨幅",
-          "ask": "涨了多少？"
-        }
-      },
-      "step": 26,
-      "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "读：来信",
-      "teach_html": "<p>读听众来信，抓住请求。</p>",
-      "scene": "读信",
-      "step": 27,
-      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
-    },
-    {
-      "kind": "mcq",
-      "phase": "validate",
-      "title": "来信请求",
-      "stem": "这封信的请求是什么？",
-      "options": [
-        "A. Play \"Rainbow\"",
-        "B. Feed the cat",
-        "C. Listen every day",
-        "D. Write a letter"
-      ],
-      "answer": "A",
-      "explain": "请求是点歌：Play \"Rainbow\"。",
-      "help": "找让广播站做的事。",
-      "predicted_errors": [
-        {
-          "match": "B",
-          "say": "白猫是闲聊。"
-        }
-      ],
-      "scene": "抓请求",
-      "step": 28,
-      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
-    },
-    {
-      "kind": "short",
-      "phase": "validate",
-      "title": "回复来信",
-      "stem": "用英文回复：承诺在她生日播放 \"Rainbow\"。",
-      "task": "写承诺句。",
-      "answer_text": "I promise to play \"Rainbow\" on your birthday.",
-      "expects": [
-        {
-          "id": "promise",
-          "type": "word",
-          "answers": [
-            "promise"
-          ],
-          "cn": [
-            "保证"
-          ]
-        }
-      ],
-      "explain": "I promise to play \"Rainbow\" on your birthday.",
-      "help": "I promise 开头。",
-      "predicted_errors": [],
-      "scene": "写回复",
-      "step": 29,
-      "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "最后核对",
-      "scene": "核对",
-      "teach_html": "<p>写终稿前，最后核对一遍三个信息。</p>",
-      "step": 30
-    },
-    {
-      "kind": "short",
-      "phase": "validate",
-      "title": "写出承诺",
-      "stem": "用英文写出对第二封来信的回复：询问 English Corner 时间。",
-      "task": "写问句。",
-      "answer_text": "When is the English Corner?",
-      "expects": [
-        {
-          "id": "q",
-          "type": "word",
-          "answers": [
-            "when"
-          ],
-          "cn": [
-            "何时"
-          ]
-        }
-      ],
-      "explain": "When is the English Corner?",
-      "help": "When 开头。",
-      "predicted_errors": [],
-      "dim_help": {
-        "q": {
-          "label": "提问",
-          "ask": "问时间的词是？"
-        }
-      },
-      "scene": "写回复",
-      "step": 31,
-      "reading": "【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "深呼吸",
-      "scene": "准备",
-      "teach_html": "<p>准备好了吗？深呼吸，写出完整广播稿。</p>",
-      "step": 32
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "写广播稿",
-      "teach_html": "<p>所有信息都齐了。现在独立写出完整广播稿，三句话：时间地点、数据、回复来信。</p>",
-      "scene": "写稿",
-      "step": 33
-    },
-    {
-      "kind": "short",
-      "phase": "validate",
-      "title": "完整广播稿",
-      "stem": "写出完整广播稿（三句）。",
-      "task": "写三句话。",
-      "answer_text": "The show is on Saturday at 7:00 p.m. in the school hall. 1,200 students joined, up 20%. I promise to play \"Rainbow\" on your birthday.",
-      "expects": [
-        {
-          "id": "time",
-          "type": "time",
-          "hour": 7,
-          "minute": 0,
-          "meridiem": "pm",
-          "cn": [
-            "7点"
-          ]
-        },
-        {
-          "id": "place",
-          "type": "word",
-          "answers": [
-            "school hall"
-          ],
-          "cn": [
-            "大厅"
-          ]
-        },
-        {
-          "id": "num",
-          "type": "word",
-          "answers": [
-            "1 200",
-            "1200"
-          ],
-          "cn": [
-            "1200"
-          ]
-        }
-      ],
-      "explain": "三句都要有：时间地点、数据、承诺。",
-      "help": "一句一句写，别漏。",
-      "predicted_errors": [],
-      "scene": "写终稿",
-      "dim_help": {
-        "time": {
-          "label": "时间",
-          "ask": "时间是几点？"
-        },
-        "place": {
-          "label": "地点",
-          "ask": "地点是哪里？"
-        },
-        "num": {
-          "label": "数据",
-          "ask": "人数和涨幅？"
-        }
-      },
-      "step": 34,
-      "reading": "【演出通知】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!\n\n【数据播报】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%.\n\n【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
-    },
-    {
-      "kind": "mcq",
-      "phase": "validate",
-      "title": "自我检查",
-      "stem": "广播稿写完，检查：以下哪项有误？",
-      "options": [
-        "A. 时间 Saturday 7pm 对",
-        "B. 地点 school hall 对",
-        "C. 时间 Friday 6pm 对",
-        "D. 数据 up 20% 对"
-      ],
-      "answer": "C",
-      "explain": "Friday 6pm 是旧时间，不用了。",
-      "help": "找错误的那项。",
-      "predicted_errors": [],
-      "scene": "检查",
-      "step": 35,
-      "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.\n\n【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
-    },
-    {
-      "kind": "teach",
-      "phase": "validate",
-      "title": "直播结束",
-      "teach_html": "<p>🎉 大直播圆满结束！Unit 2 全部完成，你已经是合格的小主播了。</p>",
-      "scene": "结束",
-      "step": 36
+     "match": "B",
+     "say": "星期错了：Saturday 不是 Friday。"
     }
-  ]
+   ],
+   "scene": "核对时间",
+   "step": 3,
+   "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.",
+   "wrong_feedback": {
+    "A": "这是第一张通知的旧时间，第二张已经改了。看带「更新」的那张。",
+    "B": "7:00 p.m. 对，但星期错了：第二张写的是 Saturday，不是 Friday。",
+    "D": "时间 7 点对，星期不对：通知写的是 Saturday，不是 Sunday。"
+   }
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "最终地点",
+   "stem": "演出地点最终是哪里？",
+   "options": [
+    "A. the playground",
+    "B. the library",
+    "C. the gym",
+    "D. the school hall"
+   ],
+   "answer": "D",
+   "explain": "语音：搬到 school hall。",
+   "help": "听站长的语音，地点搬了。",
+   "predicted_errors": [
+    {
+     "match": "A",
+     "say": "A 是旧地点，语音说搬走了。"
+    }
+   ],
+   "scene": "核对地点",
+   "step": 4,
+   "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.",
+   "wrong_feedback": {
+    "A": "playground 是通知上的旧地点；站长语音说演出搬走了。",
+    "B": "通知和语音里都没提图书馆。语音说的地点是 school hall。",
+    "C": "材料里没有 gym。地点要听站长语音：搬到 school hall。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "校园数据",
+   "teach_html": "<p>再看校园数据。校庆参加人数和借书量都涨了。</p>",
+   "scene": "看数据",
+   "step": 5,
+   "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)"
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "人数涨幅",
+   "stem": "参加演出的人数比去年涨了多少？",
+   "options": [
+    "A. 15%",
+    "B. 20%",
+    "C. 25%",
+    "D. 10%"
+   ],
+   "answer": "B",
+   "explain": "up 20% from last year。",
+   "help": "看 Students 那行，up 多少？",
+   "predicted_errors": [
+    {
+     "match": "A",
+     "say": "A 是借书量的涨幅，看错行了。"
+    }
+   ],
+   "scene": "读数据",
+   "step": 6,
+   "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)",
+   "wrong_feedback": {
+    "A": "15% 是借书量的涨幅，你看错行了。问的是参加人数，看 Students 那行。",
+    "C": "数据里没有 25%。Students 那行写的是 up 20%。",
+    "D": "数据里没有 10%。参加人数那行写着 up 20%。"
+   }
+  },
+  {
+   "kind": "short",
+   "phase": "practice",
+   "title": "写出借书量",
+   "stem": "用英文写出 12 月借书量和涨幅。",
+   "task": "写出数字和百分比。",
+   "answer_text": "3,450 books, up 15%",
+   "expects": [
+    {
+     "id": "num",
+     "type": "word",
+     "answers": [
+      "3 450",
+      "3450"
+     ],
+     "cn": [
+      "3450",
+      "三千四百五十"
+     ]
+    },
+    {
+     "id": "pct",
+     "type": "word",
+     "answers": [
+      "15",
+      "fifteen"
+     ],
+     "cn": [
+      "15%",
+      "百分之十五"
+     ]
+    }
+   ],
+   "explain": "3,450 本，涨 15%。",
+   "help": "数字是 3,450，涨幅看 up 多少。",
+   "predicted_errors": [
+    {
+     "match": "3450",
+     "say": "数字对了，再写上 up 15%。"
+    }
+   ],
+   "scene": "写数据",
+   "dim_help": {
+    "num": {
+     "label": "借书量",
+     "ask": "12 月借了多少本书？"
+    },
+    "pct": {
+     "label": "涨幅",
+     "ask": "比 11 月涨了多少？"
+    }
+   },
+   "step": 7,
+   "common_errors": [
+    {
+     "when": "漏了涨幅",
+     "say": "借书量写对了，还差涨幅：up 15%。"
+    },
+    {
+     "when": "写了 1200",
+     "say": "1,200 是参加人数，不是借书量。借书量看 Books 那行：3,450。"
+    },
+    {
+     "when": "写了 20",
+     "say": "20% 是参加人数的涨幅。借书的涨幅是 15%。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文数字写：3,450 和 15%。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "听众来信",
+   "teach_html": "<p>有两封听众来信。分清哪句是请求，哪句是闲聊。</p>",
+   "scene": "读信",
+   "step": 8,
+   "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "来信一的请求",
+   "stem": "第一封信里，听众的请求是什么？",
+   "options": [
+    "A. Play \"Sunshine\"",
+    "B. Eat noodles",
+    "C. Write a letter",
+    "D. Cook noodles"
+   ],
+   "answer": "A",
+   "explain": "请求是点歌：Play \"Sunshine\"。",
+   "help": "请求是让广播站做的事。",
+   "predicted_errors": [
+    {
+     "match": "B",
+     "say": "面条是闲聊，不是请求。"
+    }
+   ],
+   "scene": "抓请求",
+   "step": 9,
+   "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute.",
+   "wrong_feedback": {
+    "B": "面条是他闲聊时提到的，不是请求。请求是请广播站做的事：播放 \"Sunshine\"。",
+    "C": "写信是他正在做的事，不是请求。往下找 Can you... 那句。",
+    "D": "信里只说爱吃面条，没请广播站做面条。请求是点歌。"
+   }
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "来信二的请求",
+   "stem": "第二封信里，听众想问什么？",
+   "options": [
+    "A. When is lunch?",
+    "B. When is the English Corner?",
+    "C. Where is the dog?",
+    "D. What is the song?"
+   ],
+   "answer": "B",
+   "explain": "问 English Corner 的时间。",
+   "help": "找问句。",
+   "predicted_errors": [
+    {
+     "match": "C",
+     "say": "小狗是闲聊，不是问题。"
+    }
+   ],
+   "scene": "抓请求",
+   "step": 10,
+   "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute.",
+   "wrong_feedback": {
+    "A": "信里没问午餐。他问的是 English Corner 的时间。",
+    "C": "小狗只是闲聊提了一句，不是问题。找带问号的那句。",
+    "D": "第二封信没问歌曲。他问的是 English Corner 什么时候。"
+   }
+  },
+  {
+   "kind": "short",
+   "phase": "practice",
+   "title": "回复点歌",
+   "stem": "用英文回复第一封信：承诺播放 \"Sunshine\"。",
+   "task": "写出承诺句。",
+   "answer_text": "I promise to play \"Sunshine\" for you.",
+   "expects": [
+    {
+     "id": "promise",
+     "type": "word",
+     "answers": [
+      "promise"
+     ],
+     "cn": [
+      "保证",
+      "承诺"
+     ]
+    }
+   ],
+   "explain": "I promise to play \"Sunshine\" for you.",
+   "help": "用 I promise 开头。",
+   "predicted_errors": [],
+   "scene": "写回复",
+   "dim_help": {
+    "promise": {
+     "label": "承诺",
+     "ask": "用哪个词表示\"保证\"？"
+    }
+   },
+   "step": 11,
+   "common_errors": [
+    {
+     "when": "没写承诺",
+     "say": "回复要先承诺：用 I promise 开头，I promise to play \"Sunshine\" for you。"
+    },
+    {
+     "when": "写了 will",
+     "say": "will 是「将要」，不算承诺。这里要用 promise：I promise to play。"
+    },
+    {
+     "when": "写了 play",
+     "say": "动作和歌名都有了，还差承诺词 promise：I promise to play \"Sunshine\"。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文写承诺句：I promise to play \"Sunshine\" for you。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "数字复盘",
+   "scene": "复盘",
+   "teach_html": "<p>站长：数据也要核对。记住 up 是涨，down 是降。</p>",
+   "step": 12
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "借书涨幅",
+   "stem": "12 月借书比 11 月涨了多少？",
+   "options": [
+    "A. 10%",
+    "B. 20%",
+    "C. 25%",
+    "D. 15%"
+   ],
+   "answer": "D",
+   "explain": "up 15% from November。",
+   "help": "看 Books 那行。",
+   "predicted_errors": [
+    {
+     "match": "B",
+     "say": "B 是人数的涨幅。"
+    }
+   ],
+   "scene": "读数据",
+   "step": 13,
+   "reading": "【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)",
+   "wrong_feedback": {
+    "A": "数据里没有 10%。看 Books 那行：up 15%。",
+    "B": "20% 是参加人数的涨幅，看错行了。问的是借书，看 Books 那行。",
+    "C": "数据里没有 25%。Books 那行写的是 up 15% from November。"
+   }
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "来信数量",
+   "stem": "一共有几封听众来信？",
+   "options": [
+    "A. 1 封",
+    "B. 3 封",
+    "C. 4 封",
+    "D. 2 封"
+   ],
+   "answer": "D",
+   "explain": "两封：来信一和来信二。",
+   "help": "数一数。",
+   "predicted_errors": [],
+   "scene": "数信",
+   "step": 14,
+   "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute.",
+   "wrong_feedback": {
+    "A": "不止一封：材料里有【来信一】和【来信二】，一共两封。",
+    "B": "没有第三封。数一数标题：来信一、来信二，共 2 封。",
+    "C": "太多了。材料里只有来信一和来信二两封。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "交叉核对",
+   "teach_html": "<p>通知、数据、来信都看了。现在交叉核对，找出作废的信息。</p>",
+   "scene": "核对",
+   "step": 15
+  },
+  {
+   "kind": "mcq",
+   "phase": "practice",
+   "title": "旧信息",
+   "stem": "以下哪个信息已经是旧的，不用播了？",
+   "options": [
+    "A. Saturday, 7:00 p.m.",
+    "B. the school hall",
+    "C. Friday, 6:00 p.m.",
+    "D. up 20%"
+   ],
+   "answer": "C",
+   "explain": "Friday, 6:00 p.m. 是第一张的旧时间，已更新。",
+   "help": "找被更新掉的旧信息。",
+   "predicted_errors": [],
+   "scene": "找作废",
+   "step": 16,
+   "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.",
+   "wrong_feedback": {
+    "A": "这是第二张更新后的新时间，要播的正是它，不是旧信息。",
+    "B": "这是语音说的最终地点，是新信息，要播。",
+    "D": "这是校园数据里的现行数字，没有被更新掉。"
+   }
+  },
+  {
+   "kind": "short",
+   "phase": "practice",
+   "title": "广播稿第一句",
+   "stem": "写出广播稿第一句：演出的最终时间地点。",
+   "task": "写完整句。",
+   "answer_text": "The show is on Saturday at 7:00 p.m. in the school hall.",
+   "expects": [
+    {
+     "id": "time",
+     "type": "time",
+     "hour": 7,
+     "minute": 0,
+     "meridiem": "pm",
+     "cn": [
+      "7点",
+      "晚上7点"
+     ]
+    },
+    {
+     "id": "place",
+     "type": "word",
+     "answers": [
+      "school hall"
+     ],
+     "cn": [
+      "学校大厅"
+     ]
+    }
+   ],
+   "explain": "The show is on Saturday at 7:00 p.m. in the school hall.",
+   "help": "时间看第二张，地点听语音。",
+   "predicted_errors": [
+    {
+     "match": "playground",
+     "say": "地点已搬到 school hall，不是 playground。"
+    }
+   ],
+   "scene": "写广播稿",
+   "dim_help": {
+    "time": {
+     "label": "时间",
+     "ask": "最终时间是几点？"
+    },
+    "place": {
+     "label": "地点",
+     "ask": "最终地点是哪里？"
+    }
+   },
+   "step": 17,
+   "common_errors": [
+    {
+     "when": "混入旧信息",
+     "say": "有旧信息写进来了：时间用第二张的 Saturday 7:00 p.m.，地点用语音说的 school hall。"
+    },
+    {
+     "when": "写了 playground",
+     "say": "地点已搬到 school hall，不是 playground。"
+    },
+    {
+     "when": "写了 Friday",
+     "say": "星期错了：最终时间是 Saturday，不是 Friday（那是第一张的旧时间）。"
+    },
+    {
+     "when": "没写地点",
+     "say": "还差地点：in the school hall。"
+    }
+   ]
+  },
+  {
+   "kind": "choice",
+   "phase": "practice",
+   "title": "选开场音乐",
+   "choice_key": "opening_song",
+   "options": [
+    "A. 《Sunshine》",
+    "B. 《Morning Song》"
+   ],
+   "scene": "选歌",
+   "step": 18,
+   "reading": "【来信一】\nDear station,\nCan you play \"Sunshine\" for me? I love noodles.\n\n【来信二】\nHi, when is the English Corner? I want to join. My dog is cute."
+  },
+  {
+   "kind": "teach",
+   "phase": "practice",
+   "title": "第一部分完成",
+   "teach_html": "<p>彩排完成！第二部分：正式大直播，独立完成。</p>",
+   "scene": "过渡",
+   "step": 19
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "大直播开始",
+   "teach_html": "<p>🔴 大直播开始！独立完成，不能回头看。</p>",
+   "scene": "直播",
+   "step": 20
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "听：演出通知",
+   "teach_html": "<p>听站长的语音留言，记下最终时间地点。</p>",
+   "scene": "听通知",
+   "step": 21,
+   "audio_id": "u2r5-announce",
+   "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!"
+  },
+  {
+   "kind": "mcq",
+   "phase": "validate",
+   "title": "听：时间",
+   "stem": "语音里说的演出时间是？",
+   "options": [
+    "A. Friday, 7:00 p.m.",
+    "B. Saturday, 7:00 p.m.",
+    "C. Saturday, 6:00 p.m.",
+    "D. Sunday, 7:00 p.m."
+   ],
+   "answer": "B",
+   "explain": "Saturday, 7:00 p.m.",
+   "help": "星期和钟点都要听清，别只抓一个。",
+   "predicted_errors": [
+    {
+     "match": "A",
+     "say": "星期听错了：Saturday 不是 Friday。"
+    }
+   ],
+   "scene": "听时间",
+   "step": 22,
+   "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!",
+   "audio_id": "u2r5-announce",
+   "wrong_feedback": {
+    "A": "7 点对，星期听错了：语音说的是 Saturday，不是 Friday。",
+    "C": "星期对，时间错了：语音说 7:00 p.m.，不是 6:00。",
+    "D": "星期不对：语音说的是 Saturday，不是 Sunday。"
+   }
+  },
+  {
+   "kind": "short",
+   "phase": "validate",
+   "title": "听：地点",
+   "stem": "语音里说的地点是哪里？",
+   "task": "写出地点。",
+   "answer_text": "school hall",
+   "expects": [
+    {
+     "id": "place",
+     "type": "word",
+     "answers": [
+      "school hall"
+     ],
+     "cn": [
+      "学校大厅",
+      "大厅"
+     ]
+    }
+   ],
+   "explain": "school hall.",
+   "help": "听地点关键词。",
+   "predicted_errors": [],
+   "scene": "听地点",
+   "step": 23,
+   "reading": "【语音文字版】\nThe anniversary show is on Saturday at 7:00 p.m. in the school hall. See you there!",
+   "audio_id": "u2r5-announce",
+   "common_errors": [
+    {
+     "when": "写了 playground",
+     "say": "playground 是通知上的旧地点；语音里说的是 school hall。"
+    },
+    {
+     "when": "写了 library",
+     "say": "语音里没提图书馆，地点是 school hall。"
+    },
+    {
+     "when": "只写了 hall",
+     "say": "要写全：school hall。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文写地点：school hall。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "听：数据播报",
+   "teach_html": "<p>听数据播报，记下关键数字。</p>",
+   "scene": "听数据",
+   "step": 24,
+   "audio_id": "u2r5-data",
+   "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%."
+  },
+  {
+   "kind": "mcq",
+   "phase": "validate",
+   "title": "数据比较",
+   "stem": "涨幅最大的是哪一项？",
+   "options": [
+    "A. Students, up 20%",
+    "B. Books, up 15%",
+    "C. Students, up 15%",
+    "D. Books, up 20%"
+   ],
+   "answer": "A",
+   "explain": "Students up 20%，最大。",
+   "help": "比较两个百分比。",
+   "predicted_errors": [
+    {
+     "match": "B",
+     "say": "15% 小于 20%。"
+    }
+   ],
+   "scene": "比数据",
+   "step": 25,
+   "reading": "【播报文字版】\n1,200 students joined the show, up 20% from last year. We borrowed 3,450 books in December, up 15%.",
+   "wrong_feedback": {
+    "B": "15% 比 20% 小。涨幅最大要挑百分比最大的那项。",
+    "C": "Students 是对的，但它的涨幅是 20%，不是 15%——15% 是 Books 的。",
+    "D": "20% 是 Students 的涨幅，Books 只有 15%，两项的数字对调了。"
+   }
+  },
+  {
+   "kind": "short",
+   "phase": "validate",
+   "title": "写出数据",
+   "stem": "写出参加人数和涨幅。",
+   "task": "写数字。",
+   "answer_text": "1,200 students, up 20%",
+   "expects": [
+    {
+     "id": "num",
+     "type": "word",
+     "answers": [
+      "1 200",
+      "1200"
+     ],
+     "cn": [
+      "1200",
+      "一千二"
+     ]
+    },
+    {
+     "id": "pct",
+     "type": "word",
+     "answers": [
+      "20",
+      "twenty"
+     ],
+     "cn": [
+      "20%"
+     ]
+    }
+   ],
+   "explain": "1,200 students, up 20%。",
+   "help": "看播报文字版，人数和涨幅都在第一句里。",
+   "predicted_errors": [],
+   "scene": "写数据",
+   "dim_help": {
+    "num": {
+     "label": "人数",
+     "ask": "多少人参加？"
+    },
+    "pct": {
+     "label": "涨幅",
+     "ask": "涨了多少？"
+    }
+   },
+   "step": 26,
+   "common_errors": [
+    {
+     "when": "漏了涨幅",
+     "say": "人数写对了，还差涨幅：up 20%。"
+    },
+    {
+     "when": "写了 3450",
+     "say": "3,450 是借书量，不是参加人数。参加人数是 1,200。"
+    },
+    {
+     "when": "写了 15",
+     "say": "15% 是借书的涨幅。参加人数的涨幅是 20%。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文数字写：1,200 和 20%。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "读：来信",
+   "teach_html": "<p>读听众来信，抓住请求。</p>",
+   "scene": "读信",
+   "step": 27,
+   "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white."
+  },
+  {
+   "kind": "mcq",
+   "phase": "validate",
+   "title": "来信请求",
+   "stem": "这封信的请求是什么？",
+   "options": [
+    "A. Play \"Rainbow\"",
+    "B. Feed the cat",
+    "C. Listen every day",
+    "D. Write a letter"
+   ],
+   "answer": "A",
+   "explain": "请求是点歌：Play \"Rainbow\"。",
+   "help": "找让广播站做的事。",
+   "predicted_errors": [
+    {
+     "match": "B",
+     "say": "白猫是闲聊。"
+    }
+   ],
+   "scene": "抓请求",
+   "step": 28,
+   "reading": "【来信】\nDear station, please play \"Rainbow\" on my birthday. I promise to listen every day. My cat is white.",
+   "wrong_feedback": {
+    "B": "白猫只是闲聊里提到的，信里没请人喂猫。请求看 please 那句。",
+    "C": "这是她自己的承诺（I promise to listen），不是她向广播站提的请求。",
+    "D": "写信不是请求。她请广播站做的是播放 \"Rainbow\"。"
+   }
+  },
+  {
+   "kind": "short",
+   "phase": "validate",
+   "title": "回复来信",
+   "stem": "用英文回复：承诺在她生日播放 \"Rainbow\"。",
+   "task": "写承诺句。",
+   "answer_text": "I promise to play \"Rainbow\" on your birthday.",
+   "expects": [
+    {
+     "id": "promise",
+     "type": "word",
+     "answers": [
+      "promise"
+     ],
+     "cn": [
+      "保证"
+     ]
+    }
+   ],
+   "explain": "I promise to play \"Rainbow\" on your birthday.",
+   "help": "I promise 开头。",
+   "predicted_errors": [],
+   "scene": "写回复",
+   "step": 29,
+   "common_errors": [
+    {
+     "when": "没写承诺词",
+     "say": "承诺句要用 promise：I promise to play \"Rainbow\" on your birthday。"
+    },
+    {
+     "when": "写了 will",
+     "say": "will 只是「将要」，不算承诺。要用 promise：I promise to play \"Rainbow\"。"
+    },
+    {
+     "when": "写了 Sunshine",
+     "say": "歌名写错了：这封信点的是 \"Rainbow\"，不是 \"Sunshine\"（那是上一封信的）。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文写：I promise to play \"Rainbow\" on your birthday。"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "最后核对",
+   "scene": "核对",
+   "teach_html": "<p>写终稿前，最后核对一遍三个信息。</p>",
+   "step": 30
+  },
+  {
+   "kind": "short",
+   "phase": "validate",
+   "title": "写出承诺",
+   "stem": "用英文写出对第二封来信的回复：询问 English Corner 时间。",
+   "task": "写问句。",
+   "answer_text": "When is the English Corner?",
+   "expects": [
+    {
+     "id": "q",
+     "type": "word",
+     "answers": [
+      "when",
+      "what time"
+     ],
+     "cn": [
+      "何时"
+     ]
+    }
+   ],
+   "explain": "When is the English Corner?",
+   "help": "When 开头。",
+   "predicted_errors": [],
+   "dim_help": {
+    "q": {
+     "label": "提问",
+     "ask": "问时间的词是？"
+    }
+   },
+   "scene": "写回复",
+   "step": 31,
+   "common_errors": [
+    {
+     "when": "没写 when",
+     "say": "问时间要用 When 开头：When is the English Corner?"
+    },
+    {
+     "when": "写了 where",
+     "say": "where 问地点；问时间用 when：When is the English Corner?"
+    },
+    {
+     "when": "写了 what",
+     "say": "这节课用的问法是 When：When is the English Corner?"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文问句：When is the English Corner?"
+    }
+   ]
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "深呼吸",
+   "scene": "准备",
+   "teach_html": "<p>准备好了吗？深呼吸，写出完整广播稿。</p>",
+   "step": 32
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "写广播稿",
+   "teach_html": "<p>所有信息都齐了。现在独立写出完整广播稿，三句话：时间地点、数据、回复来信。</p>",
+   "scene": "写稿",
+   "step": 33
+  },
+  {
+   "kind": "short",
+   "phase": "validate",
+   "title": "完整广播稿",
+   "stem": "写出完整广播稿（三句）。",
+   "task": "写三句话。",
+   "answer_text": "The show is on Saturday at 7:00 p.m. in the school hall. 1,200 students joined, up 20%. I promise to play \"Rainbow\" on your birthday.",
+   "expects": [
+    {
+     "id": "time",
+     "type": "time",
+     "hour": 7,
+     "minute": 0,
+     "meridiem": "pm",
+     "cn": [
+      "7点"
+     ]
+    },
+    {
+     "id": "place",
+     "type": "word",
+     "answers": [
+      "school hall"
+     ],
+     "cn": [
+      "大厅"
+     ]
+    },
+    {
+     "id": "num",
+     "type": "word",
+     "answers": [
+      "1 200",
+      "1200"
+     ],
+     "cn": [
+      "1200"
+     ]
+    }
+   ],
+   "explain": "三句都要有：时间地点、数据、承诺。",
+   "help": "一句一句写，别漏。",
+   "predicted_errors": [],
+   "scene": "写终稿",
+   "dim_help": {
+    "time": {
+     "label": "时间",
+     "ask": "时间是几点？"
+    },
+    "place": {
+     "label": "地点",
+     "ask": "地点是哪里？"
+    },
+    "num": {
+     "label": "数据",
+     "ask": "人数和涨幅？"
+    }
+   },
+   "step": 34,
+   "common_errors": [
+    {
+     "when": "漏了数据",
+     "say": "还差数据那句：1,200 students joined, up 20%。"
+    },
+    {
+     "when": "漏了地点",
+     "say": "第一句要带地点：in the school hall。"
+    },
+    {
+     "when": "混入旧信息",
+     "say": "有旧信息混进来了：时间用 Saturday 7:00 p.m.，地点用 school hall。"
+    },
+    {
+     "when": "写了 playground",
+     "say": "地点是 school hall，不是 playground（旧地点）。"
+    }
+   ]
+  },
+  {
+   "kind": "mcq",
+   "phase": "validate",
+   "title": "自我检查",
+   "stem": "广播稿写完，检查：以下哪项有误？",
+   "options": [
+    "A. 时间 Saturday 7pm 对",
+    "B. 地点 school hall 对",
+    "C. 时间 Friday 6pm 对",
+    "D. 数据 up 20% 对"
+   ],
+   "answer": "C",
+   "explain": "Friday 6pm 是旧时间，不用了。",
+   "help": "找错误的那项。",
+   "predicted_errors": [],
+   "scene": "检查",
+   "step": 35,
+   "reading": "【第一张通知】\nSchool Anniversary Show\nTime: Friday, 6:00 p.m.\nPlace: the playground\n\n【第二张通知】（更新）\nTime: Saturday, 7:00 p.m.\nPlace: the playground\n\n【站长的语音】\nThe show moves to the school hall.\n\n【校园数据】\nStudents at the show: 1,200 (up 20% from last year)\nBooks borrowed in December: 3,450 (up 15% from November)",
+   "wrong_feedback": {
+    "A": "这一项没错：最终时间就是 Saturday 7 p.m.。要找的是说错的那一项。",
+    "B": "这一项没错：最终地点是 school hall。继续找说错的那项。",
+    "D": "这一项没错：数据是 up 20%。说错的是把旧时间当成对的那项。"
+   }
+  },
+  {
+   "kind": "teach",
+   "phase": "validate",
+   "title": "直播结束",
+   "teach_html": "<p>🎉 大直播圆满结束！Unit 2 全部完成，你已经是合格的小主播了。</p>",
+   "scene": "结束",
+   "step": 36
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 写数据",
+   "scene": "新学期数据播报。",
+   "reading": "【校园数据】\nNew books this term: 1,750 (up 25% from last term)",
+   "stem": "用英文写出新书数量和涨幅。",
+   "task": "写出数字和百分比。",
+   "answer_text": "1,750 books, up 25%",
+   "expects": [
+    {
+     "id": "num",
+     "type": "word",
+     "answers": [
+      "1 750",
+      "1750"
+     ],
+     "cn": [
+      "1750",
+      "一千七百五十"
+     ]
+    },
+    {
+     "id": "pct",
+     "type": "word",
+     "answers": [
+      "25",
+      "twenty-five",
+      "twenty five"
+     ],
+     "cn": [
+      "25%"
+     ]
+    }
+   ],
+   "help": "看数据那行：数量和 up 后面的百分比都要写。",
+   "explain": "1,750 本，涨 25%。",
+   "dim_help": {
+    "num": {
+     "label": "数量",
+     "ask": "新进了多少本书？"
+    },
+    "pct": {
+     "label": "涨幅",
+     "ask": "涨了多少？"
+    }
+   },
+   "common_errors": [
+    {
+     "when": "漏了涨幅",
+     "say": "数量写对了，还差涨幅：up 25%。"
+    },
+    {
+     "when": "没写数量",
+     "say": "先写数量：1,750 books。"
+    },
+    {
+     "when": "写了 3450",
+     "say": "3,450 是上节课借书量的数据。这道题的数据是 1,750。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文数字写：1,750 和 25%。"
+    }
+   ]
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 最终地点",
+   "scene": "读书周讲座有更新。",
+   "reading": "【通知】\nReading Week Talk\nTime: Wednesday, 4:30 p.m.\nPlace: the library\n\n【更新】\nThe talk moves to Thursday, 4:30 p.m. in the reading room.",
+   "stem": "讲座最终在哪里举行？",
+   "options": [
+    "A. the library",
+    "B. the reading room",
+    "C. the classroom",
+    "D. the school hall"
+   ],
+   "answer": "B",
+   "help": "有「更新」就以更新为准，旧通知作废。",
+   "explain": "更新说搬到 reading room（周四 4:30）。",
+   "wrong_feedback": {
+    "A": "library 是第一张通知的旧地点，更新里已经搬走了。",
+    "C": "材料里没提 classroom。更新说的是 reading room。",
+    "D": "school hall 是演出那道题的地点，别串题。更新说 reading room。"
+   }
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 写通知句",
+   "scene": "把中文通知写成英文广播句。",
+   "stem": "写出句子：合唱比赛在周日上午 9 点在体育馆举行。",
+   "task": "写完整句。",
+   "answer_text": "The singing show is on Sunday at 9:00 a.m. in the gym.",
+   "expects": [
+    {
+     "id": "time",
+     "type": "time",
+     "hour": 9,
+     "minute": 0,
+     "meridiem": "am",
+     "cn": [
+      "9点",
+      "上午9点"
+     ]
+    },
+    {
+     "id": "place",
+     "type": "word",
+     "answers": [
+      "gym"
+     ],
+     "cn": [
+      "体育馆"
+     ]
+    }
+   ],
+   "help": "先写时间（星期+钟点），再写地点。",
+   "explain": "The singing show is on Sunday at 9:00 a.m. in the gym.",
+   "dim_help": {
+    "time": {
+     "label": "时间",
+     "ask": "星期几、几点？"
+    },
+    "place": {
+     "label": "地点",
+     "ask": "在哪里举行？"
+    }
+   },
+   "common_errors": [
+    {
+     "when": "写了 p.m.",
+     "say": "上午 9 点是 a.m.，不是 p.m.（p.m. 是下午、晚上）。"
+    },
+    {
+     "when": "没写地点",
+     "say": "还差地点：in the gym。"
+    },
+    {
+     "when": "写了 Saturday",
+     "say": "星期错了：题目说的是周日 Sunday，不是 Saturday。"
+    },
+    {
+     "when": "漏了时间",
+     "say": "还差时间：on Sunday at 9:00 a.m。"
+    }
+   ]
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 比涨幅",
+   "scene": "三项活动数据。",
+   "reading": "【活动数据】\nSongs: up 30%\nStories: up 10%\nNews: up 25%",
+   "stem": "涨幅最小的是哪一项？",
+   "options": [
+    "A. Songs, up 30%",
+    "B. News, up 25%",
+    "C. Stories, up 10%",
+    "D. Stories, up 30%"
+   ],
+   "answer": "C",
+   "help": "把三个百分比排一排，挑最小的。",
+   "explain": "Stories up 10%，最小。",
+   "wrong_feedback": {
+    "A": "30% 是最大的，题目问的是最小。",
+    "B": "25% 是中间的那个，不是最小。",
+    "D": "Stories 对，但它的涨幅是 10%，不是 30%——30% 是 Songs 的。"
+   }
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 回复承诺",
+   "scene": "新来信点歌。",
+   "reading": "【来信】\nDear station, can you play \"Star\" for our class on Friday? We love your show.",
+   "stem": "用英文回复：承诺周五播放 \"Star\"。",
+   "task": "写承诺句。",
+   "answer_text": "I promise to play \"Star\" on Friday.",
+   "expects": [
+    {
+     "id": "promise",
+     "type": "word",
+     "answers": [
+      "promise"
+     ],
+     "cn": [
+      "承诺",
+      "保证"
+     ]
+    }
+   ],
+   "help": "用 I promise 开头，后面接要做的事。",
+   "explain": "I promise to play \"Star\" on Friday.",
+   "dim_help": {
+    "promise": {
+     "label": "承诺",
+     "ask": "用哪个词表示「保证」？"
+    }
+   },
+   "common_errors": [
+    {
+     "when": "没写承诺",
+     "say": "承诺句要用 promise：I promise to play \"Star\" on Friday。"
+    },
+    {
+     "when": "写了 will",
+     "say": "will 只是「将要」，不算承诺。要用 promise。"
+    },
+    {
+     "when": "写了 Sunshine",
+     "say": "这封信点的是 \"Star\"，不是 \"Sunshine\"（那是前面课的）。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文写承诺句。"
+    }
+   ]
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 读播报",
+   "scene": "看播报文字版，写出数据。",
+   "reading": "【播报文字版】\n860 students joined the art show, up 8% from last year.",
+   "stem": "写出参加人数和涨幅。",
+   "task": "写数字。",
+   "answer_text": "860 students, up 8%",
+   "expects": [
+    {
+     "id": "num",
+     "type": "word",
+     "answers": [
+      "860"
+     ],
+     "cn": [
+      "860",
+      "八百六十"
+     ]
+    },
+    {
+     "id": "pct",
+     "type": "word",
+     "answers": [
+      "8",
+      "eight"
+     ],
+     "cn": [
+      "8%"
+     ]
+    }
+   ],
+   "help": "人数和 up 后面的数字都在播报里。",
+   "explain": "860 人，涨 8%。",
+   "dim_help": {
+    "num": {
+     "label": "人数",
+     "ask": "多少人参加？"
+    },
+    "pct": {
+     "label": "涨幅",
+     "ask": "涨了多少？"
+    }
+   },
+   "common_errors": [
+    {
+     "when": "漏了涨幅",
+     "say": "人数对了，还差涨幅：up 8%。"
+    },
+    {
+     "when": "写了 20",
+     "say": "20% 是前面演出数据的涨幅。这道题的播报是 up 8%。"
+    },
+    {
+     "when": "只写了中文",
+     "say": "要用英文数字写：860 和 8%。"
+    }
+   ]
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 写活动句",
+   "scene": "英语角时间表。",
+   "stem": "写出句子：英语角在每周二下午 3 点半在图书馆举行。",
+   "task": "写完整句。",
+   "answer_text": "The English Corner is on Tuesday at 3:30 p.m. in the library.",
+   "expects": [
+    {
+     "id": "time",
+     "type": "time",
+     "hour": 3,
+     "minute": 30,
+     "meridiem": "pm",
+     "cn": [
+      "3点半",
+      "下午3点半"
+     ]
+    },
+    {
+     "id": "place",
+     "type": "word",
+     "answers": [
+      "library"
+     ],
+     "cn": [
+      "图书馆"
+     ]
+    }
+   ],
+   "help": "下午 3 点半是 3:30 p.m.；地点前面用 in。",
+   "explain": "The English Corner is on Tuesday at 3:30 p.m. in the library.",
+   "dim_help": {
+    "time": {
+     "label": "时间",
+     "ask": "星期几、几点？"
+    },
+    "place": {
+     "label": "地点",
+     "ask": "在哪里？"
+    }
+   },
+   "common_errors": [
+    {
+     "when": "写了 a.m.",
+     "say": "下午 3 点半是 p.m.，不是 a.m.（a.m. 是上午）。"
+    },
+    {
+     "when": "没写地点",
+     "say": "还差地点：in the library。"
+    },
+    {
+     "when": "写了 Monday",
+     "say": "星期错了：周二是 Tuesday，不是 Monday。"
+    }
+   ]
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪个更大",
+   "scene": "两个场地比大小。",
+   "stem": "The school hall is ______ than the gym.",
+   "options": [
+    "A. bigger",
+    "B. big",
+    "C. the biggest",
+    "D. more big"
+   ],
+   "answer": "A",
+   "help": "句子里有 than，空里要用比较级。",
+   "explain": "有 than 用比较级：bigger。",
+   "wrong_feedback": {
+    "B": "big 是原级。后面有 than，要用比较级 bigger。",
+    "C": "the biggest 是最高级，跟 than 不搭；最高级用在「范围里最……」。",
+    "D": "big 的比较级直接加 er：bigger。没有 more big 这个说法。"
+   }
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 最安静的",
+   "scene": "选最安静的房间读书。",
+   "stem": "Of all the rooms, the library is ______ (quiet). 写出括号里词的正确形式。",
+   "task": "只写那个词（前面带 the 也对）。",
+   "answer_text": "the quietest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "quietest"
+     ],
+     "cn": [
+      "最安静的"
+     ]
+    }
+   ],
+   "help": "「所有房间里最……」用最高级，前面加 the。",
+   "explain": "the quietest（quiet 的最高级）。",
+   "common_errors": [
+    {
+     "when": "写了 quieter",
+     "say": "quieter 是比较级（两个比）。这里是所有房间里挑，用最高级 quietest。"
+    },
+    {
+     "when": "写了 most quiet",
+     "say": "quiet 变最高级直接加 est：quietest，不用 most。"
+    },
+    {
+     "when": "写了 quiettest",
+     "say": "拼写多了一个 t：quiet + est = quietest。"
+    }
+   ]
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 转折比较",
+   "scene": "两个季节对比。",
+   "stem": "Winter is cold, but spring is ______ than winter.",
+   "options": [
+    "A. warm",
+    "B. warmest",
+    "C. more warm",
+    "D. warmer"
+   ],
+   "answer": "D",
+   "help": "but 后面有 than，空里要填比较级。",
+   "explain": "warmer than（比较级 + than）。",
+   "wrong_feedback": {
+    "A": "warm 是原级。后面有 than，必须用比较级 warmer。",
+    "B": "warmest 是最高级，跟 than 不搭；最高级前面要用 the 加范围。",
+    "C": "warm 的比较级是 warmer，不说 more warm。"
+   }
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 被打扫",
+   "scene": "礼堂每天打扫。",
+   "stem": "The hall ______ (clean) every day. 写出括号里词的正确形式。",
+   "task": "写出完整形式。",
+   "answer_text": "is cleaned",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is cleaned"
+     ],
+     "cn": [
+      "被打扫"
+     ]
+    }
+   ],
+   "help": "礼堂是「被打扫」的对象：be 动词 + 过去分词。",
+   "explain": "is cleaned（一般现在时被动：is + cleaned）。",
+   "common_errors": [
+    {
+     "when": "写了 cleans",
+     "say": "cleans 是主动（它去打扫别人）。礼堂是被打扫的，要用 is cleaned。"
+    },
+    {
+     "when": "写了 cleaned",
+     "say": "只写 cleaned 还差 be 动词：is cleaned。"
+    },
+    {
+     "when": "写了 is clean",
+     "say": "clean 是形容词「干净的」；「被打扫」要用过去分词 cleaned：is cleaned。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 得过奖吗",
+   "scene": "问一个班得过奖没有。",
+   "stem": "______ your class ever won a prize?",
+   "task": "只写句首的那个词。",
+   "answer_text": "Has",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Has"
+     ],
+     "cn": [
+      "（句首助动词）"
+     ]
+    }
+   ],
+   "help": "先数主语：your class 是一个班，看作单数。",
+   "explain": "Has your class ever won a prize?",
+   "common_errors": [
+    {
+     "when": "写了 Have",
+     "say": "主语 your class 看作一个整体（单数），句首用 Has，不用 Have。"
+    },
+    {
+     "when": "写了 Does",
+     "say": "Does 后面要跟动词原形，跟不了 won；问经历用 Has。"
+    },
+    {
+     "when": "写了 Is",
+     "say": "Is 后面不能跟 won 组成完成时；问经历要用 Has。"
+    }
+   ]
+  }
+ ]
 }
