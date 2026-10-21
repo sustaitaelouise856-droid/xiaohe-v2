@@ -312,8 +312,8 @@ function renderWord() {
   if (!queue.length) return;
   const w = queue[idx];
   const m = getMastery(w.en);
-  // 听音模式不暴露英文单词（标题只显示进度）
-  const showEn = mode !== 'listen';
+  // 听音/拼写模式不暴露英文单词（标题只显示进度；2026-10-21 修：拼写模式顶部进度条曾把英文答案漏出来）
+  const showEn = mode !== 'listen' && mode !== 'spell';
   document.getElementById('progress').textContent = showEn ? `${idx + 1} / ${queue.length} · ${w.en}` : `${idx + 1} / ${queue.length}`;
   document.getElementById('wEn').textContent = w.en;
   document.getElementById('wPos').textContent = w.pos || '';
