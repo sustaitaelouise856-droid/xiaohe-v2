@@ -1,0 +1,146 @@
+{
+  "unit": "Unit 2",
+  "title": "Amazing numbers",
+  "words": [
+    {
+      "en": "flight",
+      "cn": "（尤指乘飞机的）航程",
+      "pos": "n."
+    },
+    {
+      "en": "schedule",
+      "cn": "日程安排",
+      "pos": "n."
+    },
+    {
+      "en": "everywhere",
+      "cn": "到处；各个地方",
+      "pos": "adv."
+    },
+    {
+      "en": "challenge",
+      "cn": "向（某人）挑战",
+      "pos": "v."
+    },
+    {
+      "en": "prize",
+      "cn": "奖赏；奖励",
+      "pos": "n."
+    },
+    {
+      "en": "promise",
+      "cn": "承诺；保证",
+      "pos": "v."
+    },
+    {
+      "en": "chessboard",
+      "cn": "国际象棋棋盘",
+      "pos": "n."
+    },
+    {
+      "en": "silver",
+      "cn": "银",
+      "pos": "n."
+    },
+    {
+      "en": "hesitation",
+      "cn": "犹豫",
+      "pos": "n."
+    },
+    {
+      "en": "wonder",
+      "cn": "想知道；琢磨",
+      "pos": "v."
+    },
+    {
+      "en": "agree",
+      "cn": "同意；赞成",
+      "pos": "v."
+    },
+    {
+      "en": "currently",
+      "cn": "目前；当前",
+      "pos": "adv."
+    },
+    {
+      "en": "check",
+      "cn": "检查；核查",
+      "pos": "v."
+    },
+    {
+      "en": "budget",
+      "cn": "预算",
+      "pos": "n."
+    },
+    {
+      "en": "province",
+      "cn": "省份",
+      "pos": "n."
+    },
+    {
+      "en": "sharply",
+      "cn": "急剧地；突然大幅度地",
+      "pos": "adv."
+    },
+    {
+      "en": "count",
+      "cn": "计算（或清点）总数",
+      "pos": "v."
+    },
+    {
+      "en": "system",
+      "cn": "系统",
+      "pos": "n."
+    },
+    {
+      "en": "symbol",
+      "cn": "符号；记号",
+      "pos": "n."
+    },
+    {
+      "en": "exactly",
+      "cn": "准确地；确切地",
+      "pos": "adv."
+    },
+    {
+      "en": "per cent",
+      "cn": "百分之……",
+      "pos": "phr."
+    },
+    {
+      "en": "price tag",
+      "cn": "价格标签",
+      "pos": "phr."
+    },
+    {
+      "en": "for a moment",
+      "cn": "片刻；一会儿",
+      "pos": "phr."
+    },
+    {
+      "en": "without hesitation",
+      "cn": "毫不犹豫",
+      "pos": "phr."
+    },
+    {
+      "en": "go up",
+      "cn": "上升",
+      "pos": "phr."
+    },
+    {
+      "en": "go down",
+      "cn": "下降",
+      "pos": "phr."
+    },
+    {
+      "en": "write down",
+      "cn": "写下；记下",
+      "pos": "phr."
+    },
+    {
+      "en": "instead of",
+      "cn": "代替；作为……的替换",
+      "pos": "phr."
+    }
+  ]
+}
