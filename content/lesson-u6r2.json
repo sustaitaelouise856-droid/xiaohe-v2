@@ -1,9 +1,9 @@
 {
  "lesson_id": "u6r2",
- "practice_end": 23,
+ "practice_end": 28,
  "home_subtitle": "第二课 · 问多久",
- "part1_desc": "第 1–23 步：跟站长学 How long 提问，学会问“持续了多久”。",
- "part2_desc": "第 24–47 步：独立判断造纸术资料，再挑战完形填空（油纸伞的故事）和跨单元混考。",
+ "part1_desc": "第 1–23 步：跟站长学 How long 提问；练习里掺着挑战题，边学边闯。",
+ "part2_desc": "第 24–52 步：独立判断造纸术资料，难题一路跟到课尾压轴：油纸伞完形填空和跨单元混考。",
  "note": "本课阅读材料为教研自编，非课本原文。考查能力：How long 提问句型、for/since 回答；挑战段含完形填空（中考题型）与跨单元混考（被动语态、最高级、been/gone）。Unit 6 Ancient stories 主题。",
  "steps": [
   {
@@ -131,6 +131,28 @@
    "step": 12,
    "phase": "practice",
    "kind": "mcq",
+   "title": "挑战 · 试过赛龙舟吗",
+   "scene": "问爸爸试过赛龙舟吗。",
+   "stem": "______ your dad ever tried dragon boat racing?",
+   "options": [
+    "Have",
+    "Has",
+    "Is",
+    "Does"
+   ],
+   "answer": "B",
+   "help": "先数一数：主语 your dad 是一个，还是多个。",
+   "explain": "Has your dad ever tried dragon boat racing?",
+   "wrong_feedback": {
+    "A": "your dad 是一人（第三人称单数），现在完成时疑问句要用 Has 开头，不用 Have。",
+    "C": "Is 后面跟不了过去分词 tried 组成完成时；问经历要用 Has。",
+    "D": "Does 后面要跟动词原形 try，跟不了 tried；表示经历的疑问句要用 Has。"
+   }
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
    "audio_id": "u6r2-q03",
    "title": "从2020年",
    "scene": "他从2020年起住在这里。",
@@ -152,7 +174,7 @@
    "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
   },
   {
-   "step": 13,
+   "step": 14,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r2-q04",
@@ -176,7 +198,45 @@
    "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
   },
   {
-   "step": 14,
+   "kind": "short",
+   "title": "挑战 · 写在纸上",
+   "scene": "蔡伦改进造纸术后，人们从那时起一直用纸写字，写到今天。",
+   "stem": "People ___ on paper since Cai Lun's time. (write)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "have written",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have written"
+     ],
+     "olds": [
+      "wrote",
+      "have wrote"
+     ],
+     "cn": [
+      "一直在写（现在完成时）"
+     ]
+    }
+   ],
+   "help": "从蔡伦那时写到今天 → 现在完成时。注意 write 的过去分词是不规则的。",
+   "explain": "People have written on paper since Cai Lun's time. write 的过去分词是 written。",
+   "common_errors": [
+    {
+     "when": "写了 wrote",
+     "say": "wrote 是过去时，只讲过去的一次；这里是从古代一直写到今天，用 have written。"
+    },
+    {
+     "when": "写了 have wrote",
+     "say": "have 后面要用过去分词 written，wrote 是过去式，不能跟在 have 后面。"
+    }
+   ],
+   "phase": "practice",
+   "step": 15
+  },
+  {
+   "step": 16,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r2-q05",
@@ -200,7 +260,7 @@
    "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
   },
   {
-   "step": 15,
+   "step": 17,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u6r2-q06",
@@ -224,772 +284,8 @@
    "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
   },
   {
-   "step": 16,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u6r2-q07",
-   "title": "自古以来",
-   "scene": "自古以来人们庆祝端午节。",
-   "stem": "People have celebrated it ___ ancient times.",
-   "options": [
-    "for",
-    "since",
-    "from",
-    "at"
-   ],
-   "answer": "B",
-   "help": "“自古以来”是时间点。",
-   "explain": "People have celebrated it since ancient times.",
-   "wrong_feedback": {
-    "A": "for 后面跟时间段，“自古以来”是时间点，用 since。",
-    "C": "from 是“从”，“自从”用 since。",
-    "D": "at 后面跟时刻，不对。"
-   },
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 17,
-   "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u6r2-q08",
-   "title": "从小时候",
-   "scene": "他们从小时候就认识。",
-   "stem": "—How long have they known each other? —___ they were children.",
-   "options": [
-    "For",
-    "From",
-    "Since",
-    "In"
-   ],
-   "answer": "C",
-   "help": "since 可跟句子。",
-   "explain": "—How long have they known each other? —Since they were children.",
-   "wrong_feedback": {
-    "A": "for 后面跟时间段，这里“自从小时候”用 since。",
-    "B": "from 是“从”，“自从”用 since。",
-    "D": "in 后面跟年份月份，这里用 since。"
-   },
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
    "step": 18,
    "phase": "practice",
-   "kind": "mcq",
-   "audio_id": "u6r2-q09",
-   "title": "工作五年",
-   "scene": "她在这里工作五年了。",
-   "stem": "She has worked here ___ five years.",
-   "options": [
-    "for",
-    "since",
-    "from",
-    "in"
-   ],
-   "answer": "A",
-   "help": "“五年”是时间段。",
-   "explain": "She has worked here for five years.",
-   "wrong_feedback": {
-    "B": "since 后面跟时间点，“五年”是时间段，用 for。",
-    "C": "from 是“从”，这里用 for。",
-    "D": "in 不能表示“持续”，用 for。"
-   },
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 19,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u6r2-q10",
-   "title": "问多久",
-   "scene": "问“他在这里住了多久”。",
-   "stem": "___ long has he lived here?",
-   "task": "只写 How、What、When 中的一个。",
-   "answer_text": "How",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "How",
-      "how"
-     ],
-     "cn": [
-      "多久"
-     ]
-    }
-   ],
-   "help": "“多久”用 How long。",
-   "explain": "How long has he lived here?",
-   "common_errors": [
-    {
-     "when": "写了 When",
-     "say": "When 问“何时”，问“多久”用 How。"
-    },
-    {
-     "when": "写了 What",
-     "say": "What 问“什么”，问“多久”用 How。"
-    },
-    {
-     "when": "写了 Where",
-     "say": "Where 问“哪里”，问“多久”用 How。"
-    }
-   ],
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 20,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u6r2-q11",
-   "title": "等了两小时",
-   "scene": "问等了多久，回答两小时。",
-   "stem": "—How long have you waited? —___ two hours.",
-   "task": "只写 since 或 for。",
-   "answer_text": "For",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "for",
-      "For"
-     ],
-     "cn": [
-      "持续（时间段）"
-     ]
-    }
-   ],
-   "help": "两小时是时间段。",
-   "explain": "—How long have you waited? —For two hours.",
-   "common_errors": [
-    {
-     "when": "写了 since",
-     "say": "两小时是时间段，用 for。"
-    },
-    {
-     "when": "写了 From",
-     "say": "from 是“从”，回答“持续了两小时”用 For。"
-    }
-   ],
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 21,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u6r2-q12",
-   "title": "remember 的中文",
-   "scene": "写出 remember 的中文。",
-   "stem": "写出 remember 的中文意思。",
-   "task": "写中文。",
-   "answer_text": "记得",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "记得"
-     ],
-     "cn": [
-      "记得；纪念"
-     ]
-    }
-   ],
-   "help": "人们 remember 屈原。",
-   "explain": "remember 的中文是“记得”。",
-   "common_errors": [
-    {
-     "when": "写了“忘记”",
-     "say": "“忘记”是 forget。remember 是“记得”。"
-    }
-   ],
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 22,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u6r2-q13",
-   "title": "从周一",
-   "scene": "他从周一起在这里。",
-   "stem": "He has been here ___ Monday.",
-   "task": "只写 since 或 for。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since",
-      "Since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "周一是时间点。",
-   "explain": "He has been here since Monday.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "周一是时间点，用 since。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只说“从”，“自从周一起”用 since。"
-    }
-   ],
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 23,
-   "phase": "practice",
-   "kind": "short",
-   "audio_id": "u6r2-q14",
-   "title": "待了多久",
-   "scene": "问“他们待了多久”。",
-   "stem": "___ long have they stayed?",
-   "task": "只写 How、What、When 中的一个。",
-   "answer_text": "How",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "How",
-      "how"
-     ],
-     "cn": [
-      "多久"
-     ]
-    }
-   ],
-   "help": "“多久”用 How long。",
-   "explain": "How long have they stayed?",
-   "common_errors": [
-    {
-     "when": "写了 When",
-     "say": "When 问“何时”，这里问“多久”，用 How。"
-    },
-    {
-     "when": "写了 What",
-     "say": "What 问“什么”，问“多久”用 How。"
-    }
-   ],
-   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
-  },
-  {
-   "step": 24,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u6r2-v-intro",
-   "title": "新任务：独立判断",
-   "teach_html": "<p>新任务来了：这次是<strong>造纸术 (paper-making)</strong> 的资料。中国人很早发明了纸，呼应咱们之前发明单元讲过的内容。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>How long</strong> 问多久；<strong>for + 时间段</strong>，<strong>since + 时间点</strong>。</p>",
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 25,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r2-v02",
-   "title": "用纸多久",
-   "scene": "问“人们用纸多久了”。",
-   "stem": "___ long have people used paper?",
-   "options": [
-    "How",
-    "What",
-    "When",
-    "Where"
-   ],
-   "answer": "A",
-   "help": "先想一想：这句问的是一段时间，还是一个时间点、一个地点。",
-   "explain": "How long have people used paper?",
-   "wrong_feedback": {
-    "B": "What 问“什么”，问“多久”用 How。",
-    "C": "When 问“何时”（时间点），这里问的是“用了多久”（一段时间），用 How。",
-    "D": "Where 问“哪里”，问“多久”用 How。"
-   },
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 26,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r2-v03",
-   "title": "自古以来",
-   "scene": "自古以来人们造纸。",
-   "stem": "They have made paper ___ ancient times.",
-   "options": [
-    "for",
-    "from",
-    "since",
-    "at"
-   ],
-   "answer": "C",
-   "help": "先看空后面跟的 ancient times：它是一个时间点。",
-   "explain": "They have made paper since ancient times.",
-   "wrong_feedback": {
-    "A": "for 后面跟一段时间；ancient times 是时间点，用 since。",
-    "B": "from 只说“从……”，“自从……起一直到现在”用 since。",
-    "D": "at 后面跟时刻（如 at 7 o'clock），这里用 since。"
-   },
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 27,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r2-v04",
-   "title": "invent 的意思",
-   "scene": "invent 意思是？",
-   "stem": "The word \"invent\" means ___.",
-   "options": [
-    "发明",
-    "发现",
-    "参观",
-    "庆祝"
-   ],
-   "answer": "A",
-   "help": "想一想：中国人把纸从无到有造出来，这个动作叫什么。",
-   "explain": "invent 意思是“发明”。",
-   "wrong_feedback": {
-    "B": "“发现”是找到本来就有的东西；invent 是造出新东西，是“发明”。",
-    "C": "参观是 visit，不是 invent。",
-    "D": "庆祝是 celebrate，不是 invent。"
-   },
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 28,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r2-v05",
-   "title": "存了十年",
-   "scene": "她这本旧书存了十年了。",
-   "stem": "She has kept the old book ___ ten years.",
-   "options": [
-    "since",
-    "for",
-    "from",
-    "in"
-   ],
-   "answer": "B",
-   "help": "先看空后面跟的 ten years：它是一段时间。",
-   "explain": "She has kept the old book for ten years.",
-   "wrong_feedback": {
-    "A": "since 后面跟时间点；ten years 是一段时间，用 for。",
-    "C": "from 是“从”，表示“持续了……”用 for。",
-    "D": "in 不能接一段时间表示“持续了多久”，用 for。"
-   },
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 29,
-   "phase": "validate",
-   "kind": "mcq",
-   "audio_id": "u6r2-v06",
-   "title": "从八岁",
-   "scene": "他从八岁起集邮。",
-   "stem": "He has collected stamps ___ he was eight.",
-   "options": [
-    "for",
-    "from",
-    "after",
-    "since"
-   ],
-   "answer": "D",
-   "help": "先看空后面跟的是什么：这里跟的是一整句话。",
-   "explain": "He has collected stamps since he was eight.",
-   "wrong_feedback": {
-    "A": "for 后面跟一段时间；这里跟的是一句话 he was eight，用 since。",
-    "B": "from 是“从”，“自从……起”用 since。",
-    "C": "after 只表示“在……之后”的先后关系，不能表示“自从那时起一直到现在”；这里用 since。"
-   },
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 30,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "古桥六百年",
-   "scene": "这座古桥在这里已经六百多年了。",
-   "stem": "The old bridge has stood here ______ more than 600 years.",
-   "options": [
-    "since",
-    "for",
-    "from",
-    "in"
-   ],
-   "answer": "B",
-   "help": "先看空后面跟的 more than 600 years：它是一段时间。",
-   "explain": "The old bridge has stood here for more than 600 years.",
-   "wrong_feedback": {
-    "A": "since 后面跟时间点；more than 600 years 是一段时间，用 for。",
-    "C": "from 是“从”，表示“持续了……”用 for。",
-    "D": "in 不能接一段时间表示“持续了多久”，用 for。"
-   }
-  },
-  {
-   "step": 31,
-   "phase": "validate",
-   "kind": "short",
-   "audio_id": "u6r2-v10",
-   "title": "invent 的中文",
-   "scene": "写出 invent 的中文。",
-   "stem": "写出 invent 的中文意思。",
-   "task": "写中文。",
-   "answer_text": "发明",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "发明"
-     ],
-     "cn": [
-      "发明"
-     ]
-    }
-   ],
-   "help": "中国人 invent 了纸——把这个词的意思写出来。",
-   "explain": "invent 的中文是“发明”。",
-   "common_errors": [
-    {
-     "when": "写了“发现”",
-     "say": "“发现”是找到本来就有的东西；invent 是造出新东西，中文是“发明”。"
-    },
-    {
-     "when": "写了“造纸”",
-     "say": "造纸是 make paper 这个动作；invent 这个词本身的意思是“发明”。"
-    }
-   ],
-   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
-  },
-  {
-   "step": 32,
-   "phase": "validate",
-   "kind": "short",
-   "title": "收藏老照片",
-   "scene": "博物馆从 2015 年起收藏这些老照片。",
-   "stem": "The museum has kept these old photos ______ 2015.",
-   "task": "只写 since 或 for。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since",
-      "Since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "先看空后面跟的 2015：它是一个时间点。",
-   "explain": "The museum has kept these old photos since 2015.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "2015 是时间点（年份），for 后面跟一段时间；时间点用 since。"
-    }
-   ]
-  },
-  {
-   "step": 33,
-   "phase": "validate",
-   "kind": "teach",
-   "audio_id": "u6r2-cloze-01",
-   "title": "挑战 · 完形短文",
-   "teach_html": "<p>挑战来了：<strong>完形填空</strong>。下面是油纸伞手艺人林师傅的故事。先把短文读一遍，知道大概讲什么，再逐个空选。</p><p>Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then.</p>"
-  },
-  {
-   "step": 34,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 完形第1空",
-   "scene": "结合短文上下文选词。",
-   "stem": "He has made them ______ 1985.",
-   "options": [
-    "for",
-    "since",
-    "from",
-    "after"
-   ],
-   "answer": "B",
-   "help": "先看空后面跟的 1985：它是一个年份（时间点），还是一段时间。",
-   "explain": "1985 是时间点，“自从 1985 年起”用 since。",
-   "wrong_feedback": {
-    "A": "for 后面跟一段时间；1985 是时间点（年份），用 since。",
-    "C": "from 只说从哪一年开始，不表示一直持续到现在；“自从 1985 年起”用 since。",
-    "D": "after 是“在……之后”，只说先后，不表示一直持续到现在；“自从 1985 年起”用 since。"
-   },
-   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
-  },
-  {
-   "step": 35,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 完形第2空",
-   "scene": "结合短文上下文选词。",
-   "stem": "People have used oil-paper umbrellas in China ______ a long time.",
-   "options": [
-    "since",
-    "at",
-    "for",
-    "from"
-   ],
-   "answer": "C",
-   "help": "先看空后面跟的 a long time：它是一段时间。",
-   "explain": "a long time 是一段时间，“持续了很久”用 for。",
-   "wrong_feedback": {
-    "A": "since 后面跟时间点；a long time 是一段时间，用 for。",
-    "B": "at 后面跟时刻，跟不了“一段时间”，这里用 for。",
-    "D": "from 是“从”，“持续了很长时间”用 for。"
-   },
-   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
-  },
-  {
-   "step": 36,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 完形第3空",
-   "scene": "结合短文上下文选词。",
-   "stem": "\"Have you ______ seen an umbrella made by hand?\" he asks visitors.",
-   "options": [
-    "never",
-    "yet",
-    "ever",
-    "already"
-   ],
-   "answer": "C",
-   "help": "先想一想：这句是在问“有没有过这个经历”，还是在问“做完没有”。",
-   "explain": "问“曾经……吗”（经历）用 ever，放在 have 和过去分词之间。",
-   "wrong_feedback": {
-    "A": "never 是“从不”，用在陈述句里表示否定；问经历要用 ever。",
-    "B": "yet 一般放在疑问句的最后（Have you seen it yet?），不放在 seen 前面问经历。",
-    "D": "already 多用在肯定句里表示“已经……”；问经历用 ever。"
-   },
-   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
-  },
-  {
-   "step": 37,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 完形第4空",
-   "scene": "结合短文上下文选词。",
-   "stem": "Last year, a TV station ______ a short film about him.",
-   "options": [
-    "makes",
-    "make",
-    "has made",
-    "made"
-   ],
-   "answer": "D",
-   "help": "先找时间词：这句话说的事情发生在什么时候。",
-   "explain": "Last year 是明确的过去时间，要用一般过去时 made。",
-   "wrong_feedback": {
-    "A": "makes 是现在时三单；Last year 说的是过去的事，要用 made。",
-    "B": "make 是原形，主语 a TV station 是第三人称单数，而且时间是去年，要用 made。",
-    "C": "has made 是现在完成时，不能和 Last year 这种明确的过去时间连用；这里用 made。"
-   },
-   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
-  },
-  {
-   "step": 38,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 问答配对",
-   "scene": "选最合适的回答。",
-   "stem": "—How long has Mr Li taught in this school? —______",
-   "options": [
-    "For ten years.",
-    "In 2015.",
-    "Ten years ago.",
-    "Since ten years."
-   ],
-   "answer": "A",
-   "help": "先分清：问题问的是“多久”（一段时间），还是“何时”（时间点）。",
-   "explain": "—How long has Mr Li taught in this school? —For ten years.",
-   "wrong_feedback": {
-    "B": "In 2015 回答的是“何时”（时间点）；How long 问“多久”，要答一段时间。",
-    "C": "Ten years ago 是“十年前”，是一个时间点，答的是 When 的问题；How long 要答持续的时间段。",
-    "D": "since 后面只能跟时间点，跟不了 ten years 这种时间段；时间段前面用 For。"
-   }
-  },
-  {
-   "step": 39,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 改写句子",
-   "scene": "把前一句改写成用完成时 + since 的句子，只写空里的一个词。",
-   "stem": "He began to collect stamps in 2018. → He has collected stamps ______ 2018.",
-   "task": "只写一个英文单词。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since",
-      "Since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "先看空后面跟的 2018：它是一个时间点。",
-   "explain": "He has collected stamps since 2018.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "2018 是时间点，for 后面跟一段时间；时间点用 since。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 只说从哪开始，“自从那时到现在”用 since。"
-    },
-    {
-     "when": "写了 in",
-     "say": "in 2018 是“在 2018 年”，是过去时的说法；完成时里“自从 2018 年”用 since。"
-    },
-    {
-     "when": "写了 ago",
-     "say": "ago 是“以前”，用在过去时里，不能接在 has collected 后面。"
-    }
-   ]
-  },
-  {
-   "step": 40,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 当导游多久了",
-   "scene": "她从 2019 年起当导游。",
-   "stem": "—How long has she been a guide? —______ 2019.",
-   "task": "只写 Since 或 For（句首大写）。",
-   "answer_text": "Since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "Since",
-      "since"
-     ],
-     "cn": [
-      "自从（时间点）"
-     ]
-    }
-   ],
-   "help": "先看回答要接的 2019：它是一个时间点。",
-   "explain": "—How long has she been a guide? —Since 2019.",
-   "common_errors": [
-    {
-     "when": "写了 For",
-     "say": "2019 是时间点，For 后面跟一段时间；时间点用 Since。"
-    },
-    {
-     "when": "写了 In",
-     "say": "In 2019 是“在 2019 年”，问的是从那时到现在有多久，用 Since。"
-    },
-    {
-     "when": "写了 From",
-     "say": "from 是“从”，“自从……起”用 Since。"
-    }
-   ]
-  },
-  {
-   "step": 41,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 试过赛龙舟吗",
-   "scene": "问爸爸试过赛龙舟吗。",
-   "stem": "______ your dad ever tried dragon boat racing?",
-   "options": [
-    "Have",
-    "Has",
-    "Is",
-    "Does"
-   ],
-   "answer": "B",
-   "help": "先数一数：主语 your dad 是一个，还是多个。",
-   "explain": "Has your dad ever tried dragon boat racing?",
-   "wrong_feedback": {
-    "A": "your dad 是一人（第三人称单数），现在完成时疑问句要用 Has 开头，不用 Have。",
-    "C": "Is 后面跟不了过去分词 tried 组成完成时；问经历要用 Has。",
-    "D": "Does 后面要跟动词原形 try，跟不了 tried；表示经历的疑问句要用 Has。"
-   }
-  },
-  {
-   "step": 42,
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 保存了十年",
-   "scene": "她把这些老照片保存了十年了。",
-   "stem": "She has ______ the old photos for ten years. (keep)",
-   "task": "写出括号里动词的正确形式。",
-   "answer_text": "kept",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "kept"
-     ],
-     "cn": [
-      "保存（过去分词）"
-     ]
-    }
-   ],
-   "help": "先想：has 后面跟动词的哪种形式；再想 keep 的变化是规则的还是不规则的。",
-   "explain": "She has kept the old photos for ten years.",
-   "common_errors": [
-    {
-     "when": "写了 keeped",
-     "say": "keep 是不规则动词，过去分词是 kept，不能加 ed。"
-    },
-    {
-     "when": "写了 keep",
-     "say": "has 后面要用过去分词 kept，不能用原形 keep。"
-    },
-    {
-     "when": "写了 keeping",
-     "say": "keeping 是现在分词，has 后面用过去分词 kept。"
-    },
-    {
-     "when": "写了 keeps",
-     "say": "keeps 是三单现在式，has 后面用过去分词 kept。"
-    }
-   ]
-  },
-  {
-   "step": 43,
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 去了图书馆",
-   "scene": "汤姆不在这儿，他去图书馆了，还没回来。",
-   "stem": "—Where is Tom? —He has ______ to the library.",
-   "options": [
-    "been",
-    "visited",
-    "went",
-    "gone"
-   ],
-   "answer": "D",
-   "help": "先看场景：人回来了没有，这决定选 been 还是 gone。",
-   "explain": "He has gone to the library.（去了还没回来，所以不在这儿。）",
-   "wrong_feedback": {
-    "A": "been to 是“去过，已经回来了”；汤姆还没回来，人不在这儿，要用 gone to。",
-    "B": "visit 后面直接跟地点（visit the library），不能加 to；这里要用 gone。",
-    "C": "went 是过去式，不能跟在 has 后面；has 后面要用过去分词 gone。"
-   }
-  },
-  {
-   "step": 44,
-   "phase": "validate",
    "kind": "short",
    "title": "挑战 · 纸是造出来的",
    "scene": "很久以前，纸是在中国被造出来的。",
@@ -1033,6 +329,821 @@
    ]
   },
   {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r2-q07",
+   "title": "自古以来",
+   "scene": "自古以来人们庆祝端午节。",
+   "stem": "People have celebrated it ___ ancient times.",
+   "options": [
+    "for",
+    "since",
+    "from",
+    "at"
+   ],
+   "answer": "B",
+   "help": "“自古以来”是时间点。",
+   "explain": "People have celebrated it since ancient times.",
+   "wrong_feedback": {
+    "A": "for 后面跟时间段，“自古以来”是时间点，用 since。",
+    "C": "from 是“从”，“自从”用 since。",
+    "D": "at 后面跟时刻，不对。"
+   },
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r2-q08",
+   "title": "从小时候",
+   "scene": "他们从小时候就认识。",
+   "stem": "—How long have they known each other? —___ they were children.",
+   "options": [
+    "For",
+    "From",
+    "Since",
+    "In"
+   ],
+   "answer": "C",
+   "help": "since 可跟句子。",
+   "explain": "—How long have they known each other? —Since they were children.",
+   "wrong_feedback": {
+    "A": "for 后面跟时间段，这里“自从小时候”用 since。",
+    "B": "from 是“从”，“自从”用 since。",
+    "D": "in 后面跟年份月份，这里用 since。"
+   },
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u6r2-q09",
+   "title": "工作五年",
+   "scene": "她在这里工作五年了。",
+   "stem": "She has worked here ___ five years.",
+   "options": [
+    "for",
+    "since",
+    "from",
+    "in"
+   ],
+   "answer": "A",
+   "help": "“五年”是时间段。",
+   "explain": "She has worked here for five years.",
+   "wrong_feedback": {
+    "B": "since 后面跟时间点，“五年”是时间段，用 for。",
+    "C": "from 是“从”，这里用 for。",
+    "D": "in 不能表示“持续”，用 for。"
+   },
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r2-q10",
+   "title": "问多久",
+   "scene": "问“他在这里住了多久”。",
+   "stem": "___ long has he lived here?",
+   "task": "只写 How、What、When 中的一个。",
+   "answer_text": "How",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "How",
+      "how"
+     ],
+     "cn": [
+      "多久"
+     ]
+    }
+   ],
+   "help": "“多久”用 How long。",
+   "explain": "How long has he lived here?",
+   "common_errors": [
+    {
+     "when": "写了 When",
+     "say": "When 问“何时”，问“多久”用 How。"
+    },
+    {
+     "when": "写了 What",
+     "say": "What 问“什么”，问“多久”用 How。"
+    },
+    {
+     "when": "写了 Where",
+     "say": "Where 问“哪里”，问“多久”用 How。"
+    }
+   ],
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 保存了十年",
+   "scene": "她把这些老照片保存了十年了。",
+   "stem": "She has ______ the old photos for ten years. (keep)",
+   "task": "写出括号里动词的正确形式。",
+   "answer_text": "kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "kept"
+     ],
+     "cn": [
+      "保存（过去分词）"
+     ]
+    }
+   ],
+   "help": "先想：has 后面跟动词的哪种形式；再想 keep 的变化是规则的还是不规则的。",
+   "explain": "She has kept the old photos for ten years.",
+   "common_errors": [
+    {
+     "when": "写了 keeped",
+     "say": "keep 是不规则动词，过去分词是 kept，不能加 ed。"
+    },
+    {
+     "when": "写了 keep",
+     "say": "has 后面要用过去分词 kept，不能用原形 keep。"
+    },
+    {
+     "when": "写了 keeping",
+     "say": "keeping 是现在分词，has 后面用过去分词 kept。"
+    },
+    {
+     "when": "写了 keeps",
+     "say": "keeps 是三单现在式，has 后面用过去分词 kept。"
+    }
+   ]
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r2-q11",
+   "title": "等了两小时",
+   "scene": "问等了多久，回答两小时。",
+   "stem": "—How long have you waited? —___ two hours.",
+   "task": "只写 since 或 for。",
+   "answer_text": "For",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "cn": [
+      "持续（时间段）"
+     ]
+    }
+   ],
+   "help": "两小时是时间段。",
+   "explain": "—How long have you waited? —For two hours.",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "两小时是时间段，用 for。"
+    },
+    {
+     "when": "写了 From",
+     "say": "from 是“从”，回答“持续了两小时”用 For。"
+    }
+   ],
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 他去哪儿了",
+   "scene": "王小明不在教室，同学说他刚出门去河边看龙舟赛了，还没回来。",
+   "stem": "— Where is Wang Xiaoming? — He ___ to the river to watch the dragon boat race.",
+   "task": "只写空里的一个词。",
+   "answer_text": "has gone",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has gone"
+     ],
+     "olds": [
+      "has been"
+     ],
+     "cn": [
+      "去了（还没回来）"
+     ]
+    }
+   ],
+   "help": "他人现在不在这儿。想一想：gone 和 been，哪个是“去了还没回”，哪个是“去过已经回来了”？",
+   "explain": "He has gone to the river. has gone to 表示人去了某地、还没回来；has been to 是去过、已经回来了。",
+   "common_errors": [
+    {
+     "when": "写了 has been",
+     "say": "has been to 是“去过、回来了”；他现在人不在，用 has gone to。"
+    },
+    {
+     "when": "写了 went",
+     "say": "went 只说他去了，不强调“现在还没回”这个结果；这句问的是他现在在哪，用 has gone。"
+    }
+   ],
+   "phase": "practice",
+   "step": 25
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r2-q12",
+   "title": "remember 的中文",
+   "scene": "写出 remember 的中文。",
+   "stem": "写出 remember 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "记得",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "记得"
+     ],
+     "cn": [
+      "记得；纪念"
+     ]
+    }
+   ],
+   "help": "人们 remember 屈原。",
+   "explain": "remember 的中文是“记得”。",
+   "common_errors": [
+    {
+     "when": "写了“忘记”",
+     "say": "“忘记”是 forget。remember 是“记得”。"
+    }
+   ],
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r2-q13",
+   "title": "从周一",
+   "scene": "他从周一起在这里。",
+   "stem": "He has been here ___ Monday.",
+   "task": "只写 since 或 for。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "周一是时间点。",
+   "explain": "He has been here since Monday.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "周一是时间点，用 since。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说“从”，“自从周一起”用 since。"
+    }
+   ],
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 28,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u6r2-q14",
+   "title": "待了多久",
+   "scene": "问“他们待了多久”。",
+   "stem": "___ long have they stayed?",
+   "task": "只写 How、What、When 中的一个。",
+   "answer_text": "How",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "How",
+      "how"
+     ],
+     "cn": [
+      "多久"
+     ]
+    }
+   ],
+   "help": "“多久”用 How long。",
+   "explain": "How long have they stayed?",
+   "common_errors": [
+    {
+     "when": "写了 When",
+     "say": "When 问“何时”，这里问“多久”，用 How。"
+    },
+    {
+     "when": "写了 What",
+     "say": "What 问“什么”，问“多久”用 How。"
+    }
+   ],
+   "reading": "The Dragon Boat Festival is in June. People remember Qu Yuan. They have dragon boat races. People have celebrated it for over 2,000 years."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u6r2-v-intro",
+   "title": "新任务：独立判断",
+   "teach_html": "<p>新任务来了：这次是<strong>造纸术 (paper-making)</strong> 的资料。中国人很早发明了纸，呼应咱们之前发明单元讲过的内容。</p><p>资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：<strong>How long</strong> 问多久；<strong>for + 时间段</strong>，<strong>since + 时间点</strong>。</p>",
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r2-v02",
+   "title": "用纸多久",
+   "scene": "问“人们用纸多久了”。",
+   "stem": "___ long have people used paper?",
+   "options": [
+    "How",
+    "What",
+    "When",
+    "Where"
+   ],
+   "answer": "A",
+   "help": "先想一想：这句问的是一段时间，还是一个时间点、一个地点。",
+   "explain": "How long have people used paper?",
+   "wrong_feedback": {
+    "B": "What 问“什么”，问“多久”用 How。",
+    "C": "When 问“何时”（时间点），这里问的是“用了多久”（一段时间），用 How。",
+    "D": "Where 问“哪里”，问“多久”用 How。"
+   },
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 问答配对",
+   "scene": "选最合适的回答。",
+   "stem": "—How long has Mr Li taught in this school? —______",
+   "options": [
+    "In 2015.",
+    "Ten years ago.",
+    "Since ten years.",
+    "For ten years."
+   ],
+   "answer": "D",
+   "help": "先分清：问题问的是“多久”（一段时间），还是“何时”（时间点）。",
+   "explain": "—How long has Mr Li taught in this school? —For ten years.",
+   "wrong_feedback": {
+    "A": "In 2015 回答的是“何时”（时间点）；How long 问“多久”，要答一段时间。",
+    "B": "Ten years ago 是“十年前”，是一个时间点，答的是 When 的问题；How long 要答持续的时间段。",
+    "C": "since 后面只能跟时间点，跟不了 ten years 这种时间段；时间段前面用 For。"
+   }
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r2-v03",
+   "title": "自古以来",
+   "scene": "自古以来人们造纸。",
+   "stem": "They have made paper ___ ancient times.",
+   "options": [
+    "for",
+    "from",
+    "since",
+    "at"
+   ],
+   "answer": "C",
+   "help": "先看空后面跟的 ancient times：它是一个时间点。",
+   "explain": "They have made paper since ancient times.",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间；ancient times 是时间点，用 since。",
+    "B": "from 只说“从……”，“自从……起一直到现在”用 since。",
+    "D": "at 后面跟时刻（如 at 7 o'clock），这里用 since。"
+   },
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r2-v04",
+   "title": "invent 的意思",
+   "scene": "invent 意思是？",
+   "stem": "The word \"invent\" means ___.",
+   "options": [
+    "发明",
+    "发现",
+    "参观",
+    "庆祝"
+   ],
+   "answer": "A",
+   "help": "想一想：中国人把纸从无到有造出来，这个动作叫什么。",
+   "explain": "invent 意思是“发明”。",
+   "wrong_feedback": {
+    "B": "“发现”是找到本来就有的东西；invent 是造出新东西，是“发明”。",
+    "C": "参观是 visit，不是 invent。",
+    "D": "庆祝是 celebrate，不是 invent。"
+   },
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 老照片的五十年",
+   "scene": "图书馆从 1975 年起保存这批老照片，每个月还会把它们展示给参观者看。",
+   "stem": "The library ___ (keep) the photos since 1975, and the photos ___ (show) to visitors every month.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "has kept are shown",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has kept"
+     ],
+     "olds": [
+      "has keep"
+     ],
+     "cn": [
+      "一直保存着（现在完成时）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "are shown"
+     ],
+     "olds": [
+      "show",
+      "were shown"
+     ],
+     "cn": [
+      "被展示（现在被动）"
+     ]
+    }
+   ],
+   "help": "两个空分开判：第一个空有 since 1975；第二个空主语是照片，照片是“被展示”，时间是每个月（现在）。",
+   "explain": "The library has kept the photos since 1975, and the photos are shown to visitors every month.",
+   "common_errors": [
+    {
+     "when": "第一个空写了 kept",
+     "say": "有 since 1975，是持续到现在的保存，要用 has kept。"
+    },
+    {
+     "when": "第二个空写了 shown 或 show",
+     "say": "照片是被人展示的，要被动：are shown；every month 是现在的事，不用 were。"
+    }
+   ],
+   "phase": "validate",
+   "step": 34
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r2-v05",
+   "title": "存了十年",
+   "scene": "她这本旧书存了十年了。",
+   "stem": "She has kept the old book ___ ten years.",
+   "options": [
+    "since",
+    "for",
+    "from",
+    "in"
+   ],
+   "answer": "B",
+   "help": "先看空后面跟的 ten years：它是一段时间。",
+   "explain": "She has kept the old book for ten years.",
+   "wrong_feedback": {
+    "A": "since 后面跟时间点；ten years 是一段时间，用 for。",
+    "C": "from 是“从”，表示“持续了……”用 for。",
+    "D": "in 不能接一段时间表示“持续了多久”，用 for。"
+   },
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 改写句子",
+   "scene": "把前一句改写成用完成时 + since 的句子，只写空里的一个词。",
+   "stem": "He began to collect stamps in 2018. → He has collected stamps ______ 2018.",
+   "task": "只写一个英文单词。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "先看空后面跟的 2018：它是一个时间点。",
+   "explain": "He has collected stamps since 2018.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "2018 是时间点，for 后面跟一段时间；时间点用 since。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说从哪开始，“自从那时到现在”用 since。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 2018 是“在 2018 年”，是过去时的说法；完成时里“自从 2018 年”用 since。"
+    },
+    {
+     "when": "写了 ago",
+     "say": "ago 是“以前”，用在过去时里，不能接在 has collected 后面。"
+    }
+   ]
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u6r2-v06",
+   "title": "从八岁",
+   "scene": "他从八岁起集邮。",
+   "stem": "He has collected stamps ___ he was eight.",
+   "options": [
+    "for",
+    "from",
+    "after",
+    "since"
+   ],
+   "answer": "D",
+   "help": "先看空后面跟的是什么：这里跟的是一整句话。",
+   "explain": "He has collected stamps since he was eight.",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间；这里跟的是一句话 he was eight，用 since。",
+    "B": "from 是“从”，“自从……起”用 since。",
+    "C": "after 只表示“在……之后”的先后关系，不能表示“自从那时起一直到现在”；这里用 since。"
+   },
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 老街卖纸",
+   "scene": "这条老街从明朝起就以卖纸出名，纸一直卖到今天。",
+   "stem": "Paper ___ in this old street since the Ming dynasty. (sell)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "has been sold",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has been sold"
+     ],
+     "olds": [
+      "was sold",
+      "has sold",
+      "is sold"
+     ],
+     "cn": [
+      "一直在卖（现在完成时被动）"
+     ]
+    }
+   ],
+   "help": "主语是 paper：纸不会自己卖，是“被卖”；再加上从明朝到今天——被动和完成时要叠在一起。",
+   "explain": "Paper has been sold in this old street since the Ming dynasty. 现在完成时的被动：has been + 过去分词。",
+   "common_errors": [
+    {
+     "when": "写了 was sold",
+     "say": "was sold 是过去被卖，和现在断开了；从明朝卖到今天要用 has been sold。"
+    },
+    {
+     "when": "写了 has sold",
+     "say": "主语是 paper，它是被卖的对象，has 后面还要加 been 才是被动。"
+    }
+   ],
+   "phase": "validate",
+   "step": 38
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "古桥六百年",
+   "scene": "这座古桥在这里已经六百多年了。",
+   "stem": "The old bridge has stood here ______ more than 600 years.",
+   "options": [
+    "since",
+    "for",
+    "from",
+    "in"
+   ],
+   "answer": "B",
+   "help": "先看空后面跟的 more than 600 years：它是一段时间。",
+   "explain": "The old bridge has stood here for more than 600 years.",
+   "wrong_feedback": {
+    "A": "since 后面跟时间点；more than 600 years 是一段时间，用 for。",
+    "C": "from 是“从”，表示“持续了……”用 for。",
+    "D": "in 不能接一段时间表示“持续了多久”，用 for。"
+   }
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 当导游多久了",
+   "scene": "她从 2019 年起当导游。",
+   "stem": "—How long has she been a guide? —______ 2019.",
+   "task": "只写 Since 或 For（句首大写）。",
+   "answer_text": "Since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Since",
+      "since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "先看回答要接的 2019：它是一个时间点。",
+   "explain": "—How long has she been a guide? —Since 2019.",
+   "common_errors": [
+    {
+     "when": "写了 For",
+     "say": "2019 是时间点，For 后面跟一段时间；时间点用 Since。"
+    },
+    {
+     "when": "写了 In",
+     "say": "In 2019 是“在 2019 年”，问的是从那时到现在有多久，用 Since。"
+    },
+    {
+     "when": "写了 From",
+     "say": "from 是“从”，“自从……起”用 Since。"
+    }
+   ]
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u6r2-v10",
+   "title": "invent 的中文",
+   "scene": "写出 invent 的中文。",
+   "stem": "写出 invent 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "发明",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "发明"
+     ],
+     "cn": [
+      "发明"
+     ]
+    }
+   ],
+   "help": "中国人 invent 了纸——把这个词的意思写出来。",
+   "explain": "invent 的中文是“发明”。",
+   "common_errors": [
+    {
+     "when": "写了“发现”",
+     "say": "“发现”是找到本来就有的东西；invent 是造出新东西，中文是“发明”。"
+    },
+    {
+     "when": "写了“造纸”",
+     "say": "造纸是 make paper 这个动作；invent 这个词本身的意思是“发明”。"
+    }
+   ],
+   "reading": "Chinese people invented paper long ago. People have used paper for over 2,000 years. They have made paper since ancient times."
+  },
+  {
+   "kind": "short",
+   "title": "挑战 · 伞做好了吗",
+   "scene": "采访做油纸伞的老艺人。",
+   "stem": "— Have you finished the umbrella ___? — Yes, I have ___ finished it.",
+   "task": "写出两个空的词，中间空一格。",
+   "answer_text": "yet already",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "yet"
+     ],
+     "olds": [],
+     "cn": [
+      "（问句句尾）了吗"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "already"
+     ],
+     "olds": [],
+     "cn": [
+      "已经"
+     ]
+    }
+   ],
+   "help": "两个空是一对：问的那句句尾用什么词，答的那句（肯定句）里用什么词，正好相反着记。",
+   "explain": "— Have you finished the umbrella yet? — Yes, I have already finished it. yet 进问句/否定句，already 进肯定句。",
+   "common_errors": [
+    {
+     "when": "两个空都写了 yet",
+     "say": "答句是肯定句“我已经做完了”，要用 already；yet 留给问句和否定句。"
+    },
+    {
+     "when": "两个空都写了 already",
+     "say": "问句句尾问“……了吗”要用 yet；already 一般在肯定句里。"
+    }
+   ],
+   "phase": "validate",
+   "step": 42
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "收藏老照片",
+   "scene": "博物馆从 2015 年起收藏这些老照片。",
+   "stem": "The museum has kept these old photos ______ 2015.",
+   "task": "只写 since 或 for。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "cn": [
+      "自从（时间点）"
+     ]
+    }
+   ],
+   "help": "先看空后面跟的 2015：它是一个时间点。",
+   "explain": "The museum has kept these old photos since 2015.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "2015 是时间点（年份），for 后面跟一段时间；时间点用 since。"
+    }
+   ]
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 去了图书馆",
+   "scene": "汤姆不在这儿，他去图书馆了，还没回来。",
+   "stem": "—Where is Tom? —He has ______ to the library.",
+   "options": [
+    "been",
+    "visited",
+    "went",
+    "gone"
+   ],
+   "answer": "D",
+   "help": "先看场景：人回来了没有，这决定选 been 还是 gone。",
+   "explain": "He has gone to the library.（去了还没回来，所以不在这儿。）",
+   "wrong_feedback": {
+    "A": "been to 是“去过，已经回来了”；汤姆还没回来，人不在这儿，要用 gone to。",
+    "B": "visit 后面直接跟地点（visit the library），不能加 to；这里要用 gone。",
+    "C": "went 是过去式，不能跟在 has 后面；has 后面要用过去分词 gone。"
+   }
+  },
+  {
    "step": 45,
    "phase": "validate",
    "kind": "mcq",
@@ -1056,6 +1167,106 @@
   },
   {
    "step": 46,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u6r2-cloze-01",
+   "title": "挑战 · 完形短文",
+   "teach_html": "<p>挑战来了：<strong>完形填空</strong>。下面是油纸伞手艺人林师傅的故事。先把短文读一遍，知道大概讲什么，再逐个空选。</p><p>Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then.</p>"
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第1空",
+   "scene": "结合短文上下文选词。",
+   "stem": "He has made them ______ 1985.",
+   "options": [
+    "for",
+    "since",
+    "from",
+    "after"
+   ],
+   "answer": "B",
+   "help": "先看空后面跟的 1985：它是一个年份（时间点），还是一段时间。",
+   "explain": "1985 是时间点，“自从 1985 年起”用 since。",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间；1985 是时间点（年份），用 since。",
+    "C": "from 只说从哪一年开始，不表示一直持续到现在；“自从 1985 年起”用 since。",
+    "D": "after 是“在……之后”，只说先后，不表示一直持续到现在；“自从 1985 年起”用 since。"
+   },
+   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第2空",
+   "scene": "结合短文上下文选词。",
+   "stem": "People have used oil-paper umbrellas in China ______ a long time.",
+   "options": [
+    "since",
+    "at",
+    "for",
+    "from"
+   ],
+   "answer": "C",
+   "help": "先看空后面跟的 a long time：它是一段时间。",
+   "explain": "a long time 是一段时间，“持续了很久”用 for。",
+   "wrong_feedback": {
+    "A": "since 后面跟时间点；a long time 是一段时间，用 for。",
+    "B": "at 后面跟时刻，跟不了“一段时间”，这里用 for。",
+    "D": "from 是“从”，“持续了很长时间”用 for。"
+   },
+   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第3空",
+   "scene": "结合短文上下文选词。",
+   "stem": "\"Have you ______ seen an umbrella made by hand?\" he asks visitors.",
+   "options": [
+    "never",
+    "yet",
+    "ever",
+    "already"
+   ],
+   "answer": "C",
+   "help": "先想一想：这句是在问“有没有过这个经历”，还是在问“做完没有”。",
+   "explain": "问“曾经……吗”（经历）用 ever，放在 have 和过去分词之间。",
+   "wrong_feedback": {
+    "A": "never 是“从不”，用在陈述句里表示否定；问经历要用 ever。",
+    "B": "yet 一般放在疑问句的最后（Have you seen it yet?），不放在 seen 前面问经历。",
+    "D": "already 多用在肯定句里表示“已经……”；问经历用 ever。"
+   },
+   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第4空",
+   "scene": "结合短文上下文选词。",
+   "stem": "Last year, a TV station ______ a short film about him.",
+   "options": [
+    "makes",
+    "make",
+    "has made",
+    "made"
+   ],
+   "answer": "D",
+   "help": "先找时间词：这句话说的事情发生在什么时候。",
+   "explain": "Last year 是明确的过去时间，要用一般过去时 made。",
+   "wrong_feedback": {
+    "A": "makes 是现在时三单；Last year 说的是过去的事，要用 made。",
+    "B": "make 是原形，主语 a TV station 是第三人称单数，而且时间是去年，要用 made。",
+    "C": "has made 是现在完成时，不能和 Last year 这种明确的过去时间连用；这里用 made。"
+   },
+   "reading": "Mr Lin makes oil-paper umbrellas in a small town. He has made them __1__ 1985. \"I fell in love with this old craft when I was a boy,\" he says. People have used oil-paper umbrellas in China __2__ a long time. He has taught his son the craft, and now his son works with him. \"Have you __3__ seen an umbrella made by hand?\" he asks visitors. Last year, a TV station __4__ a short film about him. Many people watched it, and more visitors have come to his shop since then."
+  },
+  {
+   "step": 51,
    "phase": "validate",
    "kind": "short",
    "title": "挑战 · 最长的河",
@@ -1097,7 +1308,7 @@
    ]
   },
   {
-   "step": 47,
+   "step": 52,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u6r2-ending",
@@ -1107,5 +1318,5 @@
  ],
  "title": "多久了：How long 提问",
  "unit": "Unit 6 Ancient stories",
- "version": 2
+ "version": 3
 }
