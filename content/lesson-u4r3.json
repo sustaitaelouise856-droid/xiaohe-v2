@@ -1,774 +1,1444 @@
 {
-  "lesson_id": "u4r3",
-  "practice_end": 24,
-  "home_subtitle": "第三课 · 现代发明",
-  "part1_desc": "第 1–24 步：跟站长学现在时被动语态，帮发明展做宣传广播。",
-  "part2_desc": "第 25–36 步：独立做展览第二天的广播，预告下一课《我的发明》。",
-  "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在时被动语态 is/are + 过去分词，及与过去时被动的区分。Unit 4 Inventions 主题。",
-  "steps": [
+ "lesson_id": "u4r3",
+ "practice_end": 24,
+ "home_subtitle": "第三课 · 现代发明",
+ "part1_desc": "第 1–24 步：跟站长学现在时被动语态，帮发明展做宣传广播。",
+ "part2_desc": "第 25–46 步：独立做展览第二天的广播，预告下一课《我的发明》。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：现在时被动语态 is/are + 过去分词，及与过去时被动的区分。Unit 4 Inventions 主题。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-story-01",
+   "title": "发明展来了",
+   "teach_html": "<p>学校要办一场<strong>发明展</strong>（exhibition，展览），站长接了个大任务：广播站负责给发明展做宣传广播。</p><p>从古代的四大发明，到现代的电话、电灯，都要讲。你来当小主播，怎么样？</p><p>先跟站长学一个新本领：<strong>现在时的被动语态</strong>。</p>"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-story-02",
+   "title": "订票电话",
+   "teach_html": "<p>开播前，听众打来电话订票（ticket，票；order，订购）。</p><p>听众问：“票在哪里买？电灯泡是在哪里生产的？”站长说：这些问题，都要用<strong>现在时的被动</strong>来回答。</p><p>因为说的都是<strong>现在的情况</strong>，不是过去的故事。</p>"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-01",
+   "title": "新句型",
+   "teach_html": "<p><strong>现在时的被动语态</strong>：<strong>is / are + 过去分词</strong>。</p><ul><li>Paper（纸） <strong>is used</strong> every day（每天）。——纸每天都被使用。</li><li>Light bulbs（电灯泡） <strong>are made</strong> in factories（工厂）。——电灯泡在工厂里被制造。</li></ul><p>公式：<strong>be 的现在时 + 过去分词</strong>。use（使用）的过去分词是 used，make（制造）的过去分词是 made。</p>"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-02",
+   "title": "is 还是 are",
+   "teach_html": "<p>单数用 <strong>is</strong>，复数用 <strong>are</strong>，看主语：</p><ul><li>The telephone（电话） <strong>is</strong> used every day.（单数）</li><li>Telephones <strong>are</strong> used every day.（复数）</li><li>This invention（发明物） <strong>is</strong> made by an inventor（发明家）。</li><li>These inventions <strong>are</strong> made by inventors.</li></ul><p>小窍门：主语是复数（有 s），be 动词就用复数的 are。</p>"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-03",
+   "title": "过去和现在",
+   "teach_html": "<p><strong>was / were</strong> 说的是<strong>过去发生</strong>的事，<strong>is / are</strong> 说的是<strong>现在的情况</strong>：</p><ul><li>The telephone <strong>was invented</strong> by Bell <strong>in 1876</strong>.（1876 年，过去）</li><li>Telephones <strong>are used</strong> every day <strong>now</strong>.（现在）</li><li>Paper <strong>was invented</strong> in China long <strong>ago</strong>（以前）。（过去）</li><li>Paper <strong>is used</strong> in our school <strong>today</strong>.（现在）</li></ul><p>invent（发明，动词）的过去分词是 invented。看到 in 1876、ago，用 was / were；看到 every day、now、today，用 is / are。</p>"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-04",
+   "title": "否定和疑问",
+   "teach_html": "<p>否定句：is + not = <strong>isn't</strong>，are + not = <strong>aren't</strong>。</p><ul><li>Paper <strong>isn't</strong> made of wood.（纸不是木头做的。）</li><li>Tickets <strong>aren't</strong> sold on Monday.（票周一不卖。）</li></ul><p>一般疑问句：把 is / are 放到句首：</p><ul><li><strong>Is</strong> paper used every day? — Yes, it is.</li><li><strong>Are</strong> light bulbs made in China? — Yes, they are.</li></ul>"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-05",
+   "title": "特殊疑问句",
+   "teach_html": "<p>特殊疑问句也一样，只是前面加疑问词：</p><ul><li><strong>Where</strong> are light bulbs made?（电灯泡在哪里被制造？）</li><li><strong>When</strong> are tickets sold?（票什么时候卖？）</li><li><strong>Who</strong> is it made by?（它是由谁制造的？by，由……）</li></ul><p>公式：<strong>疑问词 + is / are + 主语 + 过去分词</strong>。</p>"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-06",
+   "title": "展览新词",
+   "teach_html": "<p>做展览广播，还要会这几个词：</p><ul><li><strong>exhibition</strong>（展览）：the invention exhibition（发明展）</li><li><strong>ticket</strong>（票）：Tickets are 10 yuan.（票 10 元。）</li><li><strong>order</strong>（订购）：You can order tickets by phone.（你可以打电话订票。）</li></ul><p>by phone（打电话）里的 by，和“由……”的 by 是同一个词，意思看句子。</p>"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-07",
+   "title": "小结",
+   "teach_html": "<p>今天的新本领，小结一下：</p><ul><li><strong>is / are + 过去分词</strong> = 现在时的被动，说现在的情况。</li><li>单数 is，复数 are。</li><li>过去（in 1876、ago）用 was / were；现在（every day、now）用 is / are。</li><li>否定 isn't / aren't；疑问把 is / are 放句首。</li></ul><p>下面帮发明展做广播，练起来！</p>"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "audio_id": "u4r3-teach-08",
+   "title": "新任务：展览广播",
+   "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
+   "teach_html": "<p>新任务：你是展览广播员，资料在上面。</p><p>票 10 元，在校门口卖；电灯泡在大工厂生产，每天都被使用；纸很久以前在中国被发明，今天在我们学校被使用。</p><p>站长会陪你练，答错了会讲原因。</p>"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q01",
+   "title": "纸的使用",
+   "scene": "广播第一句：纸每天都被使用。",
+   "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
+   "stem": "Paper ______ used every day.",
+   "options": [
+    "is",
+    "was",
+    "are",
+    "be"
+   ],
+   "answer": "A",
+   "help": "先看时间：every day 说的是现在每天都这样；再看主语 Paper 是单数。",
+   "explain": "Paper is used every day. Paper 是单数、说现在，用 is + 过去分词 used。",
+   "wrong_feedback": {
+    "B": "was 是过去时。every day 说的是现在每天都在用，要用 is。",
+    "C": "are 给复数主语用。Paper（纸）是不可数名词，按单数算，用 is。",
+    "D": "be 是原形，不能直接放进句子做谓语；单数现在要用 is。"
+   },
+   "common_errors": [
     {
-      "step": 1,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-story-01",
-      "title": "发明展来了",
-      "teach_html": "<p>【承上启下】前两天学了被动语态。今天看发明故事，找里面的被动句。</p><p>学校要办一场<strong>发明展</strong>（exhibition，展览），站长接了个大任务：广播站负责给发明展做宣传广播。</p><p>从古代的四大发明，到现代的电话、电灯，都要讲。你来当小主播，怎么样？</p><p>先跟站长学一个新本领：<strong>现在时的被动语态</strong>。</p>"
+     "when": "选了 was",
+     "say": "看到 used 就想到过去是常见误区：先看时间词，every day 是现在，用 is。"
     },
     {
-      "step": 2,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-story-02",
-      "title": "订票电话",
-      "teach_html": "<p>开播前，听众打来电话订票（ticket，票；order，订购）。</p><p>听众问：“票在哪里买？电灯泡是在哪里生产的？”站长说：这些问题，都要用<strong>现在时的被动</strong>来回答。</p><p>因为说的都是<strong>现在的情况</strong>，不是过去的故事。</p>"
+     "when": "选了 are",
+     "say": "Paper 是不可数名词，按单数处理：Paper is ..."
     },
     {
-      "step": 3,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-01",
-      "title": "新句型",
-      "teach_html": "<p><strong>现在时的被动语态</strong>：<strong>is / are + 过去分词</strong>。</p><ul><li>Paper（纸） <strong>is used</strong> every day（每天）。——纸每天都被使用。</li><li>Light bulbs（电灯泡） <strong>are made</strong> in factories（工厂）。——电灯泡在工厂里被制造。</li></ul><p>公式：<strong>be 的现在时 + 过去分词</strong>。use（使用）的过去分词是 used，make（制造）的过去分词是 made。</p>"
-    },
-    {
-      "step": 4,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-02",
-      "title": "is 还是 are",
-      "teach_html": "<p>单数用 <strong>is</strong>，复数用 <strong>are</strong>，看主语：</p><ul><li>The telephone（电话） <strong>is</strong> used every day.（单数）</li><li>Telephones <strong>are</strong> used every day.（复数）</li><li>This invention（发明物） <strong>is</strong> made by an inventor（发明家）。</li><li>These inventions <strong>are</strong> made by inventors.</li></ul><p>小窍门：主语是复数（有 s），be 动词就用复数的 are。</p>"
-    },
-    {
-      "step": 5,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-03",
-      "title": "过去和现在",
-      "teach_html": "<p><strong>was / were</strong> 说的是<strong>过去发生</strong>的事，<strong>is / are</strong> 说的是<strong>现在的情况</strong>：</p><ul><li>The telephone <strong>was invented</strong> by Bell <strong>in 1876</strong>.（1876 年，过去）</li><li>Telephones <strong>are used</strong> every day <strong>now</strong>.（现在）</li><li>Paper <strong>was invented</strong> in China long <strong>ago</strong>（以前）。（过去）</li><li>Paper <strong>is used</strong> in our school <strong>today</strong>.（现在）</li></ul><p>invent（发明，动词）的过去分词是 invented。看到 in 1876、ago，用 was / were；看到 every day、now、today，用 is / are。</p>"
-    },
-    {
-      "step": 6,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-04",
-      "title": "否定和疑问",
-      "teach_html": "<p>否定句：is + not = <strong>isn't</strong>，are + not = <strong>aren't</strong>。</p><ul><li>Paper <strong>isn't</strong> made of wood.（纸不是木头做的。）</li><li>Tickets <strong>aren't</strong> sold on Monday.（票周一不卖。）</li></ul><p>一般疑问句：把 is / are 放到句首：</p><ul><li><strong>Is</strong> paper used every day? — Yes, it is.</li><li><strong>Are</strong> light bulbs made in China? — Yes, they are.</li></ul>"
-    },
-    {
-      "step": 7,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-05",
-      "title": "特殊疑问句",
-      "teach_html": "<p>特殊疑问句也一样，只是前面加疑问词：</p><ul><li><strong>Where</strong> are light bulbs made?（电灯泡在哪里被制造？）</li><li><strong>When</strong> are tickets sold?（票什么时候卖？）</li><li><strong>Who</strong> is it made by?（它是由谁制造的？by，由……）</li></ul><p>公式：<strong>疑问词 + is / are + 主语 + 过去分词</strong>。</p>"
-    },
-    {
-      "step": 8,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-06",
-      "title": "展览新词",
-      "teach_html": "<p>做展览广播，还要会这几个词：</p><ul><li><strong>exhibition</strong>（展览）：the invention exhibition（发明展）</li><li><strong>ticket</strong>（票）：Tickets are 10 yuan.（票 10 元。）</li><li><strong>order</strong>（订购）：You can order tickets by phone.（你可以打电话订票。）</li></ul><p>by phone（打电话）里的 by，和“由……”的 by 是同一个词，意思看句子。</p>"
-    },
-    {
-      "step": 9,
-      "phase": "teach",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-07",
-      "title": "小结",
-      "teach_html": "<p>今天的新本领，小结一下：</p><ul><li><strong>is / are + 过去分词</strong> = 现在时的被动，说现在的情况。</li><li>单数 is，复数 are。</li><li>过去（in 1876、ago）用 was / were；现在（every day、now）用 is / are。</li><li>否定 isn't / aren't；疑问把 is / are 放句首。</li></ul><p>下面帮发明展做广播，练起来！</p>"
-    },
-    {
-      "step": 10,
-      "phase": "practice",
-      "kind": "teach",
-      "audio_id": "u4r3-teach-08",
-      "title": "新任务：展览广播",
-      "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
-      "teach_html": "<p>新任务：你是展览广播员，资料在上面。</p><p>票 10 元，在校门口卖；电灯泡在大工厂生产，每天都被使用；纸很久以前在中国被发明，今天在我们学校被使用。</p><p>站长会陪你练，答错了会讲原因。</p>"
-    },
-    {
-      "step": 11,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q01",
-      "title": "纸的使用",
-      "scene": "广播第一句：纸每天都被使用。",
-      "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
-      "stem": "Paper ______ used every day.",
-      "options": [
-        "is",
-        "was",
-        "are",
-        "be"
-      ],
-      "answer": "A",
-      "help": "不对。现在的情况，每天，单数主语。",
-      "explain": "Paper 是单数，说现在，用 is。",
-      "wrong_feedback": {
-        "B": "was 是过去，这里说的是现在每天。",
-        "C": "are 给复数主语用，Paper 是单数。",
-        "D": "be 不能单独做谓语，要用 is。"
-      }
-    },
-    {
-      "step": 12,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q02",
-      "title": "电灯泡的生产",
-      "scene": "广播第二句：电灯泡在工厂被制造。",
-      "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
-      "stem": "Light bulbs ______ made in factories.",
-      "options": [
-        "is",
-        "was",
-        "are",
-        "am"
-      ],
-      "answer": "C",
-      "help": "不对。主语是复数。",
-      "explain": "Light bulbs 是复数，用 are。",
-      "wrong_feedback": {
-        "A": "is 给单数用，Light bulbs 是复数。",
-        "B": "was 是过去单数，这里说现在。",
-        "D": "am 只跟 I 用。"
-      }
-    },
-    {
-      "step": 13,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q03",
-      "title": "票在哪里卖",
-      "scene": "听众问：票在校门口卖吗？",
-      "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
-      "stem": "______ tickets sold at the school gate?",
-      "options": [
-        "Is",
-        "Are",
-        "Does",
-        "Do"
-      ],
-      "answer": "B",
-      "help": "不对。tickets 是复数。",
-      "explain": "Are tickets sold ...? 复数主语用 Are 开头。",
-      "wrong_feedback": {
-        "A": "Is 给单数用，tickets 是复数。",
-        "C": "Does 后面不跟过去分词 sold，要用 Are。",
-        "D": "Do 后面不跟 sold，疑问句用 Are。"
-      }
-    },
-    {
-      "step": 14,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q04",
-      "title": "电话的过去",
-      "scene": "广播讲电话：1876 年的事。",
-      "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
-      "stem": "The telephone ______ invented by Bell in 1876.",
-      "options": [
-        "is",
-        "are",
-        "were",
-        "was"
-      ],
-      "answer": "D",
-      "help": "不对。1876 年，过去的事。",
-      "explain": "in 1876 是过去，用 was。",
-      "wrong_feedback": {
-        "A": "is 说现在，1876 年是过去。",
-        "B": "are 是现在复数，这里过去单数。",
-        "C": "were 给复数用，telephone 是单数。"
-      }
-    },
-    {
-      "step": 15,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q05",
-      "title": "现代电话",
-      "scene": "广播讲现在：手机每天都被用。",
-      "stem": "Modern phones ______ used every day now.",
-      "options": [
-        "is",
-        "are",
-        "was",
-        "were"
-      ],
-      "answer": "B",
-      "help": "不对。now，现在，复数主语。",
-      "explain": "phones 复数 + 现在 = are。",
-      "wrong_feedback": {
-        "A": "is 给单数用，phones 是复数。",
-        "C": "was 是过去，这里有 now。",
-        "D": "were 是过去，这里说现在。"
-      }
-    },
-    {
-      "step": 16,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q06",
-      "title": "哪里生产",
-      "scene": "听众问：电灯泡在哪里被制造？",
-      "stem": "Where ______ light bulbs made?",
-      "options": [
-        "are",
-        "is",
-        "was",
-        "do"
-      ],
-      "answer": "A",
-      "help": "不对。light bulbs 复数，说现在。",
-      "explain": "Where are light bulbs made? 复数用 are。",
-      "wrong_feedback": {
-        "B": "is 给单数用。",
-        "C": "was 是过去，这里问现在。",
-        "D": "do 后面不跟 made，要用 are。"
-      }
-    },
-    {
-      "step": 17,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q07",
-      "title": "否定句",
-      "scene": "纠正一个说法：纸不是木头做的。",
-      "stem": "Paper isn't ______ of wood.",
-      "options": [
-        "make",
-        "makes",
-        "making",
-        "made"
-      ],
-      "answer": "D",
-      "help": "不对。被动要用过去分词。",
-      "explain": "isn't made，否定被动也是 be + 过去分词。",
-      "wrong_feedback": {
-        "A": "make 是原形，被动要用过去分词 made。",
-        "B": "makes 是三单形式，被动不用它。",
-        "C": "making 是进行时，被动要用 made。"
-      }
-    },
-    {
-      "step": 18,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q08",
-      "title": "电话订票",
-      "scene": "广播：票可以电话订购。",
-      "stem": "They ______ sold by phone. You can order them.",
-      "options": [
-        "is",
-        "was",
-        "are",
-        "be"
-      ],
-      "answer": "C",
-      "help": "不对。They，复数，现在。",
-      "explain": "They are sold ... 复数现在用 are。",
-      "wrong_feedback": {
-        "A": "is 给单数用，They 是复数。",
-        "B": "was 是过去，这里说现在。",
-        "D": "be 不能单独做谓语，要用 are。"
-      }
-    },
-    {
-      "step": 19,
-      "phase": "practice",
-      "kind": "mcq",
-      "audio_id": "u4r3-q09",
-      "title": "选正确句子",
-      "scene": "站长考你：哪句是对的？",
-      "stem": "选出正确的一句。",
-      "options": [
-        "Paper are used every day.",
-        "Paper is used every day.",
-        "Paper is use every day.",
-        "Paper used every day."
-      ],
-      "answer": "B",
-      "help": "不对。一句一句检查主语和动词。",
-      "explain": "Paper is used every day. 单数 is + 过去分词 used。",
-      "wrong_feedback": {
-        "A": "Paper 是单数，不能用 are。",
-        "C": "use 是原形，被动要用过去分词 used。",
-        "D": "少了 is，句子不完整。"
-      }
-    },
-    {
-      "step": 20,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r3-q10",
-      "title": "填 is/are",
-      "scene": "快速填空。",
-      "stem": "填空：Paper ___ used every day.",
-      "task": "只写一个英文单词。",
-      "answer_text": "is",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "is"
-          ],
-          "cn": [
-            "是"
-          ]
-        }
-      ],
-      "help": "不对。单数，现在。",
-      "explain": "Paper is used every day.",
-      "common_errors": [
-        {
-          "when": "写了 are",
-          "say": "Paper 是单数，用 is。"
-        },
-        {
-          "when": "写了 was",
-          "say": "every day 是现在，用 is。"
-        }
-      ]
-    },
-    {
-      "step": 21,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r3-q11",
-      "title": "填 is/are",
-      "scene": "快速填空。",
-      "stem": "填空：Light bulbs ___ made in factories.",
-      "task": "只写一个英文单词。",
-      "answer_text": "are",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "are"
-          ],
-          "cn": [
-            "是"
-          ]
-        }
-      ],
-      "help": "不对。复数主语。",
-      "explain": "Light bulbs are made in factories.",
-      "common_errors": [
-        {
-          "when": "写了 is",
-          "say": "Light bulbs 是复数，用 are。"
-        }
-      ]
-    },
-    {
-      "step": 22,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r3-q12",
-      "title": "写过去分词",
-      "scene": "快速写。",
-      "stem": "写出 make 的过去分词。",
-      "task": "只写一个英文单词。",
-      "answer_text": "made",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "made"
-          ],
-          "cn": [
-            "制造（过去分词）"
-          ]
-        }
-      ],
-      "help": "不对。make 是不规则的。",
-      "explain": "make 的过去分词是 made。",
-      "common_errors": [
-        {
-          "when": "写了 make",
-          "say": "make 是原形，过去分词是 made。"
-        },
-        {
-          "when": "写了 maked",
-          "say": "make 不加 ed，是不规则的：made。"
-        }
-      ]
-    },
-    {
-      "step": 23,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r3-q13",
-      "title": "写过去分词",
-      "scene": "快速写。",
-      "stem": "写出 invent 的过去分词。",
-      "task": "只写一个英文单词。",
-      "answer_text": "invented",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "invented"
-          ],
-          "cn": [
-            "发明（过去分词）"
-          ]
-        }
-      ],
-      "help": "不对。规则变化。",
-      "explain": "invented。",
-      "common_errors": [
-        {
-          "when": "写了 invent",
-          "say": "invent 是原形，规则变化直接加 ed：invented。"
-        }
-      ]
-    },
-    {
-      "step": 24,
-      "phase": "practice",
-      "kind": "short",
-      "audio_id": "u4r3-q14",
-      "title": "补全句子",
-      "scene": "补全广播词。",
-      "stem": "补全句子：Tickets ___ ___ at the school gate.（票在校门口卖。）",
-      "task": "写两个英文单词。",
-      "answer_text": "are sold",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "are"
-          ],
-          "cn": [
-            "是"
-          ]
-        },
-        {
-          "id": "w2",
-          "type": "word",
-          "answers": [
-            "sold"
-          ],
-          "cn": [
-            "卖（过去分词）"
-          ]
-        }
-      ],
-      "help": "不对。be 动词 + 过去分词。",
-      "explain": "Tickets are sold at the school gate.",
-      "common_errors": [
-        {
-          "when": "只写了一个词",
-          "say": "要两个词：are + sold。"
-        },
-        {
-          "when": "写了 is sold",
-          "say": "Tickets 是复数，用 are sold。"
-        }
-      ]
-    },
-    {
-      "step": 25,
-      "phase": "validate",
-      "kind": "teach",
-      "audio_id": "u4r3-story-03",
-      "title": "新任务：第二天广播",
-      "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
-      "teach_html": "<p>新任务：展览第二天，全靠你自己，站长不说话了。资料在上面。</p><p>今天的票在网上卖；手机（mobile phone）在深圳生产，被很多人使用；指南针（compass）是古代（ancient）中国发明的，今天在轮船（ship）上还在用。</p><p>记住：过去的事用 was / were，现在的情况用 is / are。</p>"
-    },
-    {
-      "step": 26,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r3-v01",
-      "title": "今天的票",
-      "scene": "第二天广播：今天的票。",
-      "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
-      "stem": "New tickets ______ sold online today.",
-      "options": [
-        "is",
-        "was",
-        "were",
-        "are"
-      ],
-      "answer": "D",
-      "help": "tickets 复数，today 现在。",
-      "explain": "are。",
-      "wrong_feedback": {
-        "A": "tickets 是复数。再想想。",
-        "B": "today 是现在。再想想。",
-        "C": "were 是过去。再想想。"
-      }
-    },
-    {
-      "step": 27,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r3-v02",
-      "title": "手机的生产",
-      "scene": "第二天广播：手机。",
-      "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
-      "stem": "Mobile phones ______ made in Shenzhen.",
-      "options": [
-        "are",
-        "is",
-        "was",
-        "be"
-      ],
-      "answer": "A",
-      "help": "复数主语，现在。",
-      "explain": "are。",
-      "wrong_feedback": {
-        "B": "phones 是复数。再想想。",
-        "C": "这是现在的情况。再想想。",
-        "D": "be 不能单独做谓语。再想想。"
-      }
-    },
-    {
-      "step": 28,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r3-v03",
-      "title": "指南针的过去",
-      "scene": "第二天广播：指南针。",
-      "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
-      "stem": "The compass ______ invented in ancient China.",
-      "options": [
-        "is",
-        "are",
-        "was",
-        "be"
-      ],
-      "answer": "C",
-      "help": "古代的事。",
-      "explain": "was。",
-      "wrong_feedback": {
-        "A": "这是过去的事。再想想。",
-        "B": "compass 是单数，也是过去。再想想。",
-        "D": "was 才是过去的 be 动词。再想想。"
-      }
-    },
-    {
-      "step": 29,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r3-v04",
-      "title": "轮船上的使用",
-      "scene": "第二天广播：今天还在用。",
-      "stem": "It ______ used on ships today.",
-      "options": [
-        "is",
-        "are",
-        "was",
-        "were"
-      ],
-      "answer": "A",
-      "help": "It 单数，today 现在。",
-      "explain": "is。",
-      "wrong_feedback": {
-        "B": "It 是单数。再想想。",
-        "C": "today 是现在。再想想。",
-        "D": "were 给复数用。再想想。"
-      }
-    },
-    {
-      "step": 30,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r3-v05",
-      "title": "很多人使用",
-      "scene": "听众问：手机被很多人用吗？",
-      "stem": "______ mobile phones used by many people?",
-      "options": [
-        "Is",
-        "Does",
-        "Do",
-        "Are"
-      ],
-      "answer": "D",
-      "help": "phones 复数。",
-      "explain": "Are。",
-      "wrong_feedback": {
-        "A": "phones 是复数。再想想。",
-        "B": "Does 后面不跟 used。再想想。",
-        "C": "Do 后面不跟 used。再想想。"
-      }
-    },
-    {
-      "step": 31,
-      "phase": "validate",
-      "kind": "mcq",
-      "audio_id": "u4r3-v06",
-      "title": "选正确句子",
-      "scene": "站长最后考你一次。",
-      "stem": "选出正确的一句。",
-      "options": [
-        "Mobile phones is used every day.",
-        "Mobile phones are used every day.",
-        "Mobile phones are use every day.",
-        "Mobile phones used every day."
-      ],
-      "answer": "B",
-      "help": "一句一句检查。",
-      "explain": "are used。",
-      "wrong_feedback": {
-        "A": "phones 是复数，不能用 is。再想想。",
-        "C": "被动要用过去分词 used。再想想。",
-        "D": "少了 are。再想想。"
-      }
-    },
-    {
-      "step": 32,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r3-v07",
-      "title": "填 is/are",
-      "scene": "快速填空。",
-      "stem": "填空：Tickets ___ sold online today.",
-      "task": "只写一个英文单词。",
-      "answer_text": "are",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "are"
-          ],
-          "cn": [
-            "是"
-          ]
-        }
-      ],
-      "help": "复数，现在。",
-      "explain": "are。",
-      "common_errors": [
-        {
-          "when": "写了 is",
-          "say": "tickets 是复数。再想想。"
-        }
-      ]
-    },
-    {
-      "step": 33,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r3-v08",
-      "title": "填 was/were",
-      "scene": "快速填空。",
-      "stem": "填空：The compass ___ invented in ancient China.",
-      "task": "只写一个英文单词。",
-      "answer_text": "was",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "was"
-          ],
-          "cn": [
-            "是（过去）"
-          ]
-        }
-      ],
-      "help": "古代的事。",
-      "explain": "was。",
-      "common_errors": [
-        {
-          "when": "写了 is",
-          "say": "古代的事，用 was。再想想。"
-        }
-      ]
-    },
-    {
-      "step": 34,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r3-v09",
-      "title": "写过去分词",
-      "scene": "快速写。",
-      "stem": "写出 build（建造）的过去分词。",
-      "task": "只写一个英文单词。",
-      "answer_text": "built",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "built"
-          ],
-          "cn": [
-            "建造（过去分词）"
-          ]
-        }
-      ],
-      "help": "不规则的。",
-      "explain": "built。",
-      "common_errors": [
-        {
-          "when": "写了 builded",
-          "say": "build 是不规则的：built。再想想。"
-        }
-      ]
-    },
-    {
-      "step": 35,
-      "phase": "validate",
-      "kind": "short",
-      "audio_id": "u4r3-v10",
-      "title": "补全句子",
-      "scene": "补全广播词。",
-      "stem": "补全：They ___ ___ by many people.（它们被很多人使用。）",
-      "task": "写两个英文单词。",
-      "answer_text": "are used",
-      "expects": [
-        {
-          "id": "w1",
-          "type": "word",
-          "answers": [
-            "are"
-          ],
-          "cn": [
-            "是"
-          ]
-        },
-        {
-          "id": "w2",
-          "type": "word",
-          "answers": [
-            "used"
-          ],
-          "cn": [
-            "使用（过去分词）"
-          ]
-        }
-      ],
-      "help": "They 复数。",
-      "explain": "are used。",
-      "common_errors": [
-        {
-          "when": "写了 is used",
-          "say": "They 是复数，用 are。再想想。"
-        }
-      ]
-    },
-    {
-      "step": 36,
-      "phase": "validate",
-      "kind": "teach",
-      "audio_id": "u4r3-ending",
-      "title": "广播成功",
-      "teach_html": "<p>广播成功！发明展的听众都听懂了：<strong>is / are + 过去分词</strong>说现在，<strong>was / were + 过去分词</strong>说过去。</p><p>站长说：下一课，我们要写一写<strong>《我的发明》</strong>。想想你要发明什么，先在心里打个草稿吧！</p>"
+     "when": "选了 be",
+     "say": "be 不能单独做谓语，要变成 is / are / was / were 中的一个。"
     }
-  ],
-  "title": "现代发明：现在时的被动",
-  "unit": "Unit 4 Inventions",
-  "version": 1
+   ]
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q02",
+   "title": "电灯泡的生产",
+   "scene": "广播第二句：电灯泡在工厂被制造。",
+   "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
+   "stem": "Light bulbs ______ made in factories.",
+   "options": [
+    "is",
+    "was",
+    "are",
+    "am"
+   ],
+   "answer": "C",
+   "help": "主语 Light bulbs 是复数（有 s），说的是现在的一般情况。",
+   "explain": "Light bulbs are made in factories. 复数主语 + 现在，用 are。",
+   "wrong_feedback": {
+    "A": "is 给单数主语用。Light bulbs 带 s，是复数，要用 are。",
+    "B": "was 又是过去、又是单数，这里两个都不对：现在、复数，用 are。",
+    "D": "am 只能跟 I 一起用（I am），不能跟 Light bulbs。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is",
+     "say": "先数主语：bulbs 有 s 是复数，be 动词要用 are。"
+    },
+    {
+     "when": "选了 was",
+     "say": "这句说的是现在的一般情况，不是过去；而且复数过去要用 were，不是 was。"
+    },
+    {
+     "when": "选了 am",
+     "say": "am 只配 I，其他主语都不行。"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q03",
+   "title": "票在哪里卖",
+   "scene": "听众问：票在校门口卖吗？",
+   "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
+   "stem": "______ tickets sold at the school gate?",
+   "options": [
+    "Is",
+    "Are",
+    "Does",
+    "Do"
+   ],
+   "answer": "B",
+   "help": "这是被动语态的疑问句：把 be 动词提到句首。tickets 是复数。",
+   "explain": "Are tickets sold at the school gate? 复数主语的被动疑问句用 Are 开头 + 过去分词 sold。",
+   "wrong_feedback": {
+    "A": "Is 给单数主语用，tickets 是复数，疑问句要用 Are 开头。",
+    "C": "Does 后面要跟动词原形（sell），不能跟过去分词 sold；被动疑问句要用 Are。",
+    "D": "Do 后面同样要跟原形 sell，跟不了 sold；这里要用 Are。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 Is",
+     "say": "tickets 有 s，是复数，句首用 Are。"
+    },
+    {
+     "when": "选了 Does / Do",
+     "say": "看到 sold（过去分词）就说明是被动句，提问要用 be 动词 Are，不是 Do / Does。"
+    },
+    {
+     "when": "把 Are 和 sold 的位置写反",
+     "say": "疑问句顺序是：Are + 主语 + 过去分词（Are tickets sold ...?）。"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q04",
+   "title": "电话的过去",
+   "scene": "广播讲电话：1876 年的事。",
+   "reading": "Welcome to the Invention Exhibition!\nTickets are 10 yuan. They are sold at the school gate.\nLight bulbs are made in a big factory. They are used every day.\nPaper was invented in China long ago. It is used in our school today.",
+   "stem": "The telephone ______ invented by Bell in 1876.",
+   "options": [
+    "is",
+    "are",
+    "were",
+    "was"
+   ],
+   "answer": "D",
+   "help": "先找时间词：in 1876 是明明白白的过去；主语 the telephone 是单数。",
+   "explain": "The telephone was invented by Bell in 1876. 过去 + 单数，用 was。",
+   "wrong_feedback": {
+    "A": "is 是现在时。in 1876 是过去的时间，be 动词要用过去式 was。",
+    "B": "are 是现在时、还是复数，这里过去 + 单数，两个都不对，用 was。",
+    "C": "were 是过去复数，telephone 是单数，过去单数用 was。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is / are",
+     "say": "发明发生在 1876 年，看到很久以前的年份就用过去时 was / were。"
+    },
+    {
+     "when": "选了 were",
+     "say": "were 给复数主语和 you 用；单数主语过去用 was。"
+    },
+    {
+     "when": "拿不准 was 还是 were",
+     "say": "先数主语：单数 was、复数 were。telephone 是单数，用 was。"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q05",
+   "title": "现代电话",
+   "scene": "广播讲现在：手机每天都被用。",
+   "stem": "Modern phones ______ used every day now.",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "were"
+   ],
+   "answer": "B",
+   "help": "now 是现在的时间词；phones 是复数。现在 + 复数选哪个？",
+   "explain": "Modern phones are used every day now. 现在 + 复数 = are。",
+   "wrong_feedback": {
+    "A": "is 给单数用，phones 是复数，要用 are。",
+    "C": "was 是过去时，这句有 now（现在），要用现在时的 are。",
+    "D": "were 是过去复数；有 now 就不能用过去时，用 are。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 was / were",
+     "say": "now、today、every day 都是现在的时间词，配 is / are，不配 was / were。"
+    },
+    {
+     "when": "选了 is",
+     "say": "phones 有 s 是复数，现在时用 are。"
+    },
+    {
+     "when": "因为 every day 选了过去时",
+     "say": "every day 是'每天'，说的是现在的习惯，不是过去。"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q06",
+   "title": "哪里生产",
+   "scene": "听众问：电灯泡在哪里被制造？",
+   "stem": "Where ______ light bulbs made?",
+   "options": [
+    "are",
+    "is",
+    "was",
+    "do"
+   ],
+   "answer": "A",
+   "help": "Where 提问的是地点，后面还是被动句：light bulbs 是复数，说现在的一般情况。",
+   "explain": "Where are light bulbs made? 复数 + 现在，用 are。",
+   "wrong_feedback": {
+    "B": "is 给单数用，light bulbs 是复数，要用 are。",
+    "C": "was 是过去单数，这里问的是现在的一般情况，复数用 are。",
+    "D": "do 后面要跟动词原形 make，跟不了过去分词 made；被动句要用 are。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is",
+     "say": "bulbs 是复数，Where 后面跟 are。"
+    },
+    {
+     "when": "选了 was",
+     "say": "问'在哪里生产'说的是现在的一般情况，不是过去某一次。"
+    },
+    {
+     "when": "选了 do",
+     "say": "made 是过去分词，前面只能放 be 动词，不能放 do。"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q07",
+   "title": "否定句",
+   "scene": "纠正一个说法：纸不是木头做的。",
+   "stem": "Paper isn't ______ of wood.",
+   "options": [
+    "make",
+    "makes",
+    "making",
+    "made"
+   ],
+   "answer": "D",
+   "help": "isn't 后面是被动结构：be + 过去分词。make 的过去分词是哪个？",
+   "explain": "Paper isn't made of wood. 否定句的被动也是 be + 过去分词 made。",
+   "wrong_feedback": {
+    "A": "make 是动词原形。被动语态要用过去分词：isn't made。",
+    "B": "makes 是第三人称单数形式（主动语态才用），被动要用过去分词 made。",
+    "C": "making 是 -ing 形式，用在进行时里；被动要用过去分词 made。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 make",
+     "say": "is / isn't 后面跟过去分词 made，不是原形 make。"
+    },
+    {
+     "when": "选了 makes",
+     "say": "makes 是'某人制造'的主动形式，带三单的 s；这句纸是'被制造'，先判断主动还是被动，被动用 made。"
+    },
+    {
+     "when": "选了 making",
+     "say": "making 是正在进行的动作；被动结构固定是 be + 过去分词。"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q08",
+   "title": "电话订票",
+   "scene": "广播：票可以电话订购。",
+   "stem": "They ______ sold by phone. You can order them.",
+   "options": [
+    "is",
+    "was",
+    "are",
+    "be"
+   ],
+   "answer": "C",
+   "help": "They 是复数；这句说的是现在可以电话订票的一般情况。",
+   "explain": "They are sold by phone. 复数 + 现在 = are。",
+   "wrong_feedback": {
+    "A": "is 给单数用，They 是复数，要用 are。",
+    "B": "was 是过去单数，这里现在 + 复数，用 are。",
+    "D": "be 是原形不能直接做谓语，复数现在要用 are。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is",
+     "say": "They 永远配 are（现在）或 were（过去），不配 is。"
+    },
+    {
+     "when": "选了 was",
+     "say": "这句说现在的情况：You can order them（现在可以订），所以用 are。"
+    },
+    {
+     "when": "因为有 by phone 就以为是过去",
+     "say": "by 短语只说明'通过什么方式'，跟时态无关；时态看时间词和上下文。"
+    }
+   ]
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "u4r3-q09",
+   "title": "选正确句子",
+   "scene": "站长考你：哪句是对的？",
+   "stem": "选出正确的一句。",
+   "options": [
+    "Paper are used every day.",
+    "Paper is used every day.",
+    "Paper is use every day.",
+    "Paper used every day."
+   ],
+   "answer": "B",
+   "help": "一句一句查两关：①be 动词和主语单复数对不对；②动词是不是过去分词。",
+   "explain": "Paper is used every day. 正确的一句要同时满足：单数 is + 过去分词 used。",
+   "wrong_feedback": {
+    "A": "这句错在 are：Paper 是单数（不可数），要用 is。",
+    "C": "这句错在 use：被动要用过去分词 used，不能用原形 use。",
+    "D": "这句少了 is：被动句必须有 be 动词，Paper is used 才是完整句子。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 A",
+     "say": "Paper 按单数算：Paper is ...，别被后面的 every day 带偏。"
+    },
+    {
+     "when": "选了 C",
+     "say": "use 少了 -d。过去分词 used 才对，这类'漏尾巴'的错最常见，选完回头看一眼词尾。"
+    },
+    {
+     "when": "选了 D",
+     "say": "没有 be 动词的不是被动句，句子也不完整。"
+    }
+   ]
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r3-q10",
+   "title": "填 is/are",
+   "scene": "快速填空。",
+   "stem": "填空：Paper ___ used every day.",
+   "task": "只写一个英文单词。",
+   "answer_text": "is",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is"
+     ],
+     "cn": [
+      "是"
+     ]
+    }
+   ],
+   "help": "Paper 是单数、不可数；every day 说现在。填 be 动词的现在时单数形式。",
+   "explain": "Paper is used every day. 单数 + 现在 = is。",
+   "common_errors": [
+    {
+     "when": "写了 are",
+     "say": "Paper 是不可数名词，按单数算，用 is。"
+    },
+    {
+     "when": "写了 was",
+     "say": "every day 是现在的时间词，用 is，不用过去时 was。"
+    },
+    {
+     "when": "写了 am",
+     "say": "am 只跟 I 一起用；Paper 要用 is。"
+    },
+    {
+     "when": "写了 be",
+     "say": "be 是原形，要变成和主语搭配的形式：单数现在是 is。"
+    }
+   ]
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r3-q11",
+   "title": "填 is/are",
+   "scene": "快速填空。",
+   "stem": "填空：Light bulbs ___ made in factories.",
+   "task": "只写一个英文单词。",
+   "answer_text": "are",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "cn": [
+      "是"
+     ]
+    }
+   ],
+   "help": "数一数主语：bulbs 带 s 是复数；说的是现在的一般情况。",
+   "explain": "Light bulbs are made in factories. 复数 + 现在 = are。",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "Light bulbs 是复数，用 are。"
+    },
+    {
+     "when": "写了 was",
+     "say": "was 是过去、还是单数；这里现在 + 复数，用 are。"
+    },
+    {
+     "when": "写了 were",
+     "say": "were 是过去复数；这句说的是现在的一般情况，用 are。"
+    },
+    {
+     "when": "写了 be",
+     "say": "be 要变成 are 才能跟复数主语搭配。"
+    }
+   ]
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r3-q12",
+   "title": "写过去分词",
+   "scene": "快速写。",
+   "stem": "写出 make 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "made",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "made"
+     ],
+     "cn": [
+      "制造（过去分词）"
+     ]
+    }
+   ],
+   "help": "make 是不规则动词，它的过去分词不是加 ed，想想 make → made。",
+   "explain": "make 的过去分词是 made（make–made–made）。",
+   "common_errors": [
+    {
+     "when": "写了 maked",
+     "say": "make 是不规则动词，不能加 ed，过去分词是 made。"
+    },
+    {
+     "when": "写了 make",
+     "say": "这是原形；过去分词是 made。"
+    },
+    {
+     "when": "写了 making",
+     "say": "making 是 -ing 形式；过去分词是 made。"
+    }
+   ]
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r3-q13",
+   "title": "写过去分词",
+   "scene": "快速写。",
+   "stem": "写出 invent 的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "invented",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "invented"
+     ],
+     "cn": [
+      "发明（过去分词）"
+     ]
+    }
+   ],
+   "help": "invent 是规则动词，过去分词直接在词尾加 ed。",
+   "explain": "invent 的过去分词是 invented（规则变化，加 ed）。",
+   "common_errors": [
+    {
+     "when": "写了 invent",
+     "say": "这是原形，规则动词加 ed：invented。"
+    },
+    {
+     "when": "写了 inventted",
+     "say": "invent 词尾是 t，但不用双写，直接加 ed：invented。"
+    },
+    {
+     "when": "写了 invention",
+     "say": "invention 是名词'发明（物）'；动词的过去分词是 invented。"
+    }
+   ]
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "u4r3-q14",
+   "title": "补全句子",
+   "scene": "补全广播词。",
+   "stem": "补全句子：Tickets ___ ___ at the school gate.（票在校门口卖。）",
+   "task": "写两个英文单词。",
+   "answer_text": "are sold",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "cn": [
+      "是"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "sold"
+     ],
+     "cn": [
+      "卖（过去分词）"
+     ]
+    }
+   ],
+   "help": "两个空：第一个是 be 动词（tickets 复数、说现在），第二个是 sell 的过去分词。",
+   "explain": "Tickets are sold at the school gate. 复数现在被动：are + sold。",
+   "common_errors": [
+    {
+     "when": "写了 is sold",
+     "say": "Tickets 是复数，be 动词用 are：are sold。"
+    },
+    {
+     "when": "只写了一个词",
+     "say": "被动要两个词：be 动词 + 过去分词（are sold），一个都不能少。"
+    },
+    {
+     "when": "写了 are sell",
+     "say": "第二个词要用过去分词 sold，不是原形 sell。"
+    },
+    {
+     "when": "在后面多加了 by people",
+     "say": "这句没说是谁卖的，不用加 by 短语；by 只在要说明执行者时才加，没提就别加。"
+    }
+   ]
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u4r3-story-03",
+   "title": "新任务：第二天广播",
+   "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
+   "teach_html": "<p>新任务：展览第二天，全靠你自己，站长不说话了。资料在上面。</p><p>今天的票在网上卖；手机（mobile phone）在深圳生产，被很多人使用；指南针（compass）是古代（ancient）中国发明的，今天在轮船（ship）上还在用。</p><p>记住：过去的事用 was / were，现在的情况用 is / are。</p>"
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r3-v01",
+   "title": "今天的票",
+   "scene": "第二天广播：今天的票。",
+   "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
+   "stem": "New tickets ______ sold online today.",
+   "options": [
+    "is",
+    "was",
+    "were",
+    "are"
+   ],
+   "answer": "D",
+   "help": "两个线索：tickets 是复数；today 是现在。两个线索都指向同一个答案。",
+   "explain": "New tickets are sold online today. 复数 + 现在 = are。",
+   "wrong_feedback": {
+    "A": "is 给单数用，tickets 是复数，要用 are。",
+    "B": "was 是过去时单数，today 是现在，而且主语是复数，用 are。",
+    "C": "were 是过去复数；today 说的是现在，要用 are。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is",
+     "say": "tickets 有 s 是复数，现在时用 are。"
+    },
+    {
+     "when": "选了 was / were",
+     "say": "today、now 是现在的时间词，看到它们就排除 was / were。"
+    },
+    {
+     "when": "因为 online 拿不准",
+     "say": "online 只说明卖的方式（网上），不影响时态和单复数。"
+    }
+   ]
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r3-v02",
+   "title": "手机的生产",
+   "scene": "第二天广播：手机。",
+   "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
+   "stem": "Mobile phones ______ made in Shenzhen.",
+   "options": [
+    "are",
+    "is",
+    "was",
+    "be"
+   ],
+   "answer": "A",
+   "help": "phones 是复数；这句说的是现在的一般事实。",
+   "explain": "Mobile phones are made in Shenzhen. 复数 + 现在 = are。",
+   "wrong_feedback": {
+    "B": "is 给单数用，phones 是复数，要用 are。",
+    "C": "was 是过去单数；这句说现在的一般情况，复数用 are。",
+    "D": "be 是原形，不能直接做谓语；复数现在要用 are。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is",
+     "say": "phones 有 s，be 动词跟着主语走：复数用 are。"
+    },
+    {
+     "when": "选了 was",
+     "say": "在深圳生产是现在的事实，不是过去某一次的事，用 are。"
+    },
+    {
+     "when": "选了 be",
+     "say": "be 必须先变成 is / are / was / were 才能进句子。"
+    }
+   ]
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r3-v03",
+   "title": "指南针的过去",
+   "scene": "第二天广播：指南针。",
+   "reading": "Day 2 of the Invention Exhibition!\nNew tickets are sold online today.\nMobile phones are made in Shenzhen. They are used by many people.\nThe compass was invented in ancient China. It is used on ships today.",
+   "stem": "The compass ______ invented in ancient China.",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "be"
+   ],
+   "answer": "C",
+   "help": "时间线索是 in ancient China（在中国古代），是很久以前的事；compass 是单数。",
+   "explain": "The compass was invented in ancient China. 过去 + 单数 = was。",
+   "wrong_feedback": {
+    "A": "is 是现在时，指南针的发明是古代的事，要用过去时 was。",
+    "B": "are 是现在时、还是复数，这里过去 + 单数，用 was。",
+    "D": "be 是原形；过去单数的 be 动词是 was。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 is / are",
+     "say": "ancient（古代）就是过去的时间词，看到它用 was / were。"
+    },
+    {
+     "when": "拿不准 was 还是 were",
+     "say": "compass 是单数，过去时用 was；were 留给复数主语。"
+    },
+    {
+     "when": "选了 be",
+     "say": "be 是原形，进句子前要先变形：过去单数是 was。"
+    }
+   ]
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r3-v04",
+   "title": "轮船上的使用",
+   "scene": "第二天广播：今天还在用。",
+   "stem": "It ______ used on ships today.",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "were"
+   ],
+   "answer": "A",
+   "help": "It 是单数；today 是现在。单数 + 现在。",
+   "explain": "It is used on ships today. 单数 + 现在 = is。",
+   "wrong_feedback": {
+    "B": "are 给复数用，It 是单数，要用 is。",
+    "C": "was 是过去时，today 是现在，要用 is。",
+    "D": "were 是过去复数，这里单数 + 现在，用 is。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 are",
+     "say": "It 永远配单数：现在 is、过去 was。"
+    },
+    {
+     "when": "选了 was",
+     "say": "today 把时间定在现在，排除一切过去时。"
+    },
+    {
+     "when": "因为 ships 是复数选了 are",
+     "say": "be 动词跟主语 It 走，不跟后面的 ships 走。"
+    }
+   ]
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r3-v05",
+   "title": "很多人使用",
+   "scene": "听众问：手机被很多人用吗？",
+   "stem": "______ mobile phones used by many people?",
+   "options": [
+    "Is",
+    "Does",
+    "Do",
+    "Are"
+   ],
+   "answer": "D",
+   "help": "被动疑问句把 be 动词放句首；phones 是复数。",
+   "explain": "Are mobile phones used by many people? 复数被动疑问句用 Are 开头。",
+   "wrong_feedback": {
+    "A": "Is 给单数用，phones 是复数，句首要用 Are。",
+    "B": "Does 后面要跟动词原形 use，跟不了过去分词 used；被动疑问句要用 Are。",
+    "C": "Do 同样跟不了 used；看到 used 就知道要用 be 动词 Are 提问。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 Is",
+     "say": "phones 是复数，Are 开头。"
+    },
+    {
+     "when": "选了 Does / Do",
+     "say": "used 是过去分词，说明这是被动句；被动句提问用 be 动词，不用 do / does。"
+    },
+    {
+     "when": "Are 选对了但觉得 by many people 多余",
+     "say": "by many people 说明'被很多人（使用）'，是这句的内容，不能删；by 短语只在没提执行者时才不加。"
+    }
+   ]
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "audio_id": "u4r3-v06",
+   "title": "选正确句子",
+   "scene": "站长最后考你一次。",
+   "stem": "选出正确的一句。",
+   "options": [
+    "Mobile phones is used every day.",
+    "Mobile phones are used every day.",
+    "Mobile phones are use every day.",
+    "Mobile phones used every day."
+   ],
+   "answer": "B",
+   "help": "老规矩查两关：be 动词对不对（phones 是复数）；分词对不对（used）。",
+   "explain": "Mobile phones are used every day. 复数 are + 过去分词 used，两关都过。",
+   "wrong_feedback": {
+    "A": "这句错在 is：phones 是复数，要用 are。",
+    "C": "这句错在 use：被动要用过去分词 used，不能用原形。",
+    "D": "这句少了 are：没有 be 动词就不是被动句，句子也不完整。"
+   },
+   "common_errors": [
+    {
+     "when": "选了 A",
+     "say": "phones 有 s，is 是单数的，配不上。"
+    },
+    {
+     "when": "选了 C",
+     "say": "use 漏了 -d：过去分词是 used。词尾这种小地方最容易丢分，选完检查一遍。"
+    },
+    {
+     "when": "选了 D",
+     "say": "被动句的 be 动词不能省：are used。"
+    }
+   ]
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r3-v07",
+   "title": "填 is/are",
+   "scene": "快速填空。",
+   "stem": "填空：Tickets ___ sold online today.",
+   "task": "只写一个英文单词。",
+   "answer_text": "are",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "cn": [
+      "是"
+     ]
+    }
+   ],
+   "help": "tickets 复数，today 现在——两个线索都指向现在时复数。",
+   "explain": "Tickets are sold online today. 复数 + 现在 = are。",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "tickets 是复数，用 are。"
+    },
+    {
+     "when": "写了 was / were",
+     "say": "today 是现在的时间词，用 are，不用过去时。"
+    },
+    {
+     "when": "写了 be",
+     "say": "be 要变成 are 才能跟复数主语搭配。"
+    }
+   ]
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r3-v08",
+   "title": "填 was/were",
+   "scene": "快速填空。",
+   "stem": "填空：The compass ___ invented in ancient China.",
+   "task": "只写一个英文单词。",
+   "answer_text": "was",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "是（过去）"
+     ]
+    }
+   ],
+   "help": "ancient China 是古代，时间在过去；compass 是单数。填 be 动词的过去式单数。",
+   "explain": "The compass was invented in ancient China. 过去 + 单数 = was。",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "古代的事是过去时，单数用 was。"
+    },
+    {
+     "when": "写了 were",
+     "say": "were 给复数主语用；compass 是单数，用 was。"
+    },
+    {
+     "when": "写了 are",
+     "say": "are 是现在复数，这里过去 + 单数，两个都不对，用 was。"
+    }
+   ]
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r3-v09",
+   "title": "写过去分词",
+   "scene": "快速写。",
+   "stem": "写出 build（建造）的过去分词。",
+   "task": "只写一个英文单词。",
+   "answer_text": "built",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "built"
+     ],
+     "cn": [
+      "建造（过去分词）"
+     ]
+    }
+   ],
+   "help": "build 是不规则动词，过去分词不是 builded，想想 build → built。",
+   "explain": "build 的过去分词是 built（build–built–built）。",
+   "common_errors": [
+    {
+     "when": "写了 builded",
+     "say": "build 是不规则动词，不能加 ed，过去分词是 built。"
+    },
+    {
+     "when": "写了 build",
+     "say": "这是原形；过去分词是 built，最后一个字母是 t。"
+    },
+    {
+     "when": "写了 builted",
+     "say": "built 本身就是过去分词，不用再加 ed。"
+    }
+   ]
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "u4r3-v10",
+   "title": "补全句子",
+   "scene": "补全广播词。",
+   "stem": "补全：They ___ ___ by many people.（它们被很多人使用。）",
+   "task": "写两个英文单词。",
+   "answer_text": "are used",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "cn": [
+      "是"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "used"
+     ],
+     "cn": [
+      "使用（过去分词）"
+     ]
+    }
+   ],
+   "help": "两个空：They 是复数、说现在，第一个空填 are；第二个空是 use 的过去分词。",
+   "explain": "They are used by many people. 复数现在被动：are + used。",
+   "common_errors": [
+    {
+     "when": "写了 is used",
+     "say": "They 是复数，第一个空用 are：are used。"
+    },
+    {
+     "when": "写了 are use",
+     "say": "第二个词要用过去分词 used，不能用原形 use。"
+    },
+    {
+     "when": "只写了一个词",
+     "say": "被动要两个词：are + used，缺一不可。"
+    },
+    {
+     "when": "写了 were used",
+     "say": "这句说的是现在的一般情况（被很多人使用），用 are；were 是过去时。"
+    }
+   ]
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "teach",
+   "audio_id": "u4r3-ending",
+   "title": "广播成功",
+   "teach_html": "<p>广播成功！发明展的听众都听懂了：<strong>is / are + 过去分词</strong>说现在，<strong>was / were + 过去分词</strong>说过去。</p><p>站长说：下一课，我们要写一写<strong>《我的发明》</strong>。想想你要发明什么，先在心里打个草稿吧！</p>"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 大桥哪年建的",
+   "scene": "广播里介绍一座大桥。",
+   "stem": "The bridge ______ ______ in 2019.",
+   "task": "写两个英文单词。",
+   "answer_text": "was built",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "是（过去）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "built"
+     ],
+     "cn": [
+      "建造（过去分词）"
+     ]
+    }
+   ],
+   "help": "先看时间：in 2019 是过去。再看主语 the bridge 是单数。被动 = be 的过去式 + 过去分词。",
+   "explain": "The bridge was built in 2019. 过去 + 单数，用 was + built。",
+   "common_errors": [
+    {
+     "when": "写了 is built",
+     "say": "in 2019 是过去的时间，现在时 is 不行，要用 was。"
+    },
+    {
+     "when": "写了 was builded",
+     "say": "build 是不规则动词，过去分词是 built，不是 builded。"
+    },
+    {
+     "when": "写了 were built",
+     "say": "bridge 是单数，过去时用 was；were 是给复数的。"
+    }
+   ]
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 英语传世界",
+   "scene": "广播里介绍英语的使用范围。",
+   "stem": "English ______ spoken in many countries today.",
+   "options": [
+    "was",
+    "is",
+    "are",
+    "were"
+   ],
+   "answer": "B",
+   "help": "today 把时间定在现在；English（语言）按单数算。",
+   "explain": "English is spoken in many countries today. 现在 + 单数 = is。",
+   "wrong_feedback": {
+    "A": "was 是过去时，today 是现在，要用 is。",
+    "C": "are 给复数用，English 作为语言是单数，用 is。",
+    "D": "were 是过去复数，今天的事、又是单数，用 is。"
+   }
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 这些车",
+   "scene": "广播里介绍汽车工厂。",
+   "stem": "These cars ______ made in China now.",
+   "task": "只写 be 动词。",
+   "answer_text": "are",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "cn": [
+      "是"
+     ]
+    }
+   ],
+   "help": "now 是现在；these cars 是复数。be 动词选现在时复数形式。",
+   "explain": "These cars are made in China now. 现在 + 复数 = are。",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "cars 是复数，用 are。"
+    },
+    {
+     "when": "写了 were",
+     "say": "now 是现在的时间词，过去时 were 不行，用 are。"
+    },
+    {
+     "when": "写了 was",
+     "say": "was 是过去单数，这里现在 + 复数，用 are。"
+    }
+   ]
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 第一列火车",
+   "scene": "广播里讲交通工具的历史。",
+   "stem": "The first train ______ invented about 200 years ago.",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "be"
+   ],
+   "answer": "C",
+   "help": "ago（……以前）是明确的过去信号；the first train 是单数。",
+   "explain": "The first train was invented about 200 years ago. 过去 + 单数 = was。",
+   "wrong_feedback": {
+    "A": "is 是现在时，200 years ago 是过去，要用 was。",
+    "B": "are 是现在复数，这里过去 + 单数，用 was。",
+    "D": "be 是原形不能做谓语；过去单数用 was。"
+   }
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 最长的河",
+   "scene": "广播里介绍中国的河流。",
+   "stem": "The Yangtze River is the ______ river in China.",
+   "task": "写 long 的最高级。",
+   "answer_text": "longest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "longest"
+     ],
+     "cn": [
+      "最长的"
+     ]
+    }
+   ],
+   "help": "in China 给了范围（不止两个在比），前面又有 the，要用最高级：long 加 est。",
+   "explain": "The Yangtze River is the longest river in China. the + 最高级 longest。",
+   "common_errors": [
+    {
+     "when": "写了 longer",
+     "say": "longer 是比较级（两者比较）；有 the 和 in China 的范围，要用最高级 longest。"
+    },
+    {
+     "when": "写了 most long",
+     "say": "long 是短词，最高级直接加 est：longest，不用 most。"
+    },
+    {
+     "when": "写了 longestest",
+     "say": "最高级只加一次 est：longest。"
+    }
+   ]
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 最有用的发明",
+   "scene": "广播里评选最有用的发明。",
+   "stem": "Of all the inventions, the computer is the ______ useful one.",
+   "options": [
+    "most",
+    "more",
+    "much",
+    "very"
+   ],
+   "answer": "A",
+   "help": "Of all（在所有……中）+ the，后面要跟最高级；useful 是长词，最高级前面加 most。",
+   "explain": "Of all the inventions, the computer is the most useful one. 长形容词的最高级是 the most + 原级。",
+   "wrong_feedback": {
+    "B": "more 是比较级（两者之间比）；Of all the inventions 是跟全部比，要用最高级 most。",
+    "C": "much 不能跟 useful 组成最高级；长词最高级用 most。",
+    "D": "very 只能加强原级（very useful），不能表示'最'；要用 most useful。"
+   }
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 她写了两篇故事",
+   "scene": "广播稿在介绍一位小作家。",
+   "stem": "She has already ______ two stories this year.",
+   "task": "写 write 的过去分词。",
+   "answer_text": "written",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "written"
+     ],
+     "cn": [
+      "写（过去分词）"
+     ]
+    }
+   ],
+   "help": "has already 后面是现在完成时，要用过去分词。write 是不规则的：write–wrote–written。",
+   "explain": "She has already written two stories this year. write 的过去分词是 written。",
+   "common_errors": [
+    {
+     "when": "写了 wrote",
+     "say": "wrote 是过去式；has 后面要用过去分词 written。过去式和过去分词长得不一样的词要分清。"
+    },
+    {
+     "when": "写了 writed",
+     "say": "write 是不规则动词，不能加 ed：written。"
+    },
+    {
+     "when": "写了 writing",
+     "say": "writing 是 -ing 形式；has 后面跟过去分词 written。"
+    }
+   ]
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 窗户每周擦",
+   "scene": "广播里介绍展厅的日常安排。",
+   "stem": "______ the windows cleaned every week?",
+   "options": [
+    "Is",
+    "Does",
+    "Do",
+    "Are"
+   ],
+   "answer": "D",
+   "help": "cleaned 是过去分词，说明是被动句，提问要用 be 动词；windows 是复数。",
+   "explain": "Are the windows cleaned every week? 复数被动疑问句用 Are 开头。",
+   "wrong_feedback": {
+    "A": "Is 给单数用，windows 是复数，要用 Are。",
+    "B": "Does 后面跟动词原形，跟不了过去分词 cleaned；被动疑问句用 Are。",
+    "C": "Do 同样跟不了 cleaned；要用 Are。"
+   }
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 窗户已经擦过了",
+   "scene": "还是刚才那些窗户：已经擦干净了。",
+   "stem": "The windows ______ ______ ______ already. They look clean now.",
+   "task": "写三个英文单词。",
+   "answer_text": "have been cleaned",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have"
+     ],
+     "cn": [
+      "已经"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "been"
+     ],
+     "cn": [
+      "被（be 的过去分词）"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "cleaned"
+     ],
+     "cn": [
+      "擦（过去分词）"
+     ]
+    }
+   ],
+   "help": "这句是'已经被擦过了'：先用 have（windows 是复数）表示完成，再加 been（be 的过去分词）表示被动，最后是 cleaned。顺序：have + been + 过去分词。",
+   "explain": "The windows have been cleaned already. 现在完成时的被动：have been + 过去分词，意思是'已经被擦过了'。",
+   "common_errors": [
+    {
+     "when": "写了 are cleaned",
+     "say": "are cleaned 是'（每周）被擦'的一般现在；这句有 already（已经），强调已经擦完、现在很干净，要用 have been cleaned。"
+    },
+    {
+     "when": "写了 has been cleaned",
+     "say": "windows 是复数，完成时用 have，不是 has：have been cleaned。"
+    },
+    {
+     "when": "写了 have being cleaned",
+     "say": "中间这个词是 been（be 的过去分词），不是 being。"
+    },
+    {
+     "when": "只写了 have cleaned",
+     "say": "have cleaned 是主动（它们擦了别的东西）；窗户是被擦的，中间要加 been：have been cleaned。"
+    }
+   ]
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 博物馆",
+   "scene": "广播里介绍一座博物馆，新旧两件事一起说。",
+   "stem": "The museum ______ ______ in 1998, and it ______ ______ by many people every year.",
+   "task": "写四个英文单词（先写前半句的两个，再写后半句的两个）。",
+   "answer_text": "was built is visited",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "cn": [
+      "是（过去）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "built"
+     ],
+     "cn": [
+      "建造（过去分词）"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "is"
+     ],
+     "cn": [
+      "是"
+     ]
+    },
+    {
+     "id": "w4",
+     "type": "word",
+     "answers": [
+      "visited"
+     ],
+     "cn": [
+      "参观（过去分词）"
+     ]
+    }
+   ],
+   "help": "一句里有两件事：in 1998 建成是过去（主语单数）；every year 被参观是现在（it 是单数）。前半用 was，后半用 is，分词别忘了变形。",
+   "explain": "The museum was built in 1998, and it is visited by many people every year. 过去的事用 was built，现在的事用 is visited。",
+   "common_errors": [
+    {
+     "when": "前后都写了 was",
+     "say": "后半句有 every year，是现在的习惯，要用 is visited；只有 in 1998 那半是过去。"
+    },
+    {
+     "when": "前后都写了 is",
+     "say": "前半句 in 1998 是过去，be 动词要用 was：was built。"
+    },
+    {
+     "when": "写了 builded 或 visit",
+     "say": "分词要变形：build → built（不规则），visit → visited（规则加 ed）。"
+    },
+    {
+     "when": "四个词顺序写乱了",
+     "say": "顺序跟着句子走：was built（建成）……is visited（被参观），前两个是过去，后两个是现在。"
+    }
+   ]
+  }
+ ],
+ "title": "现代发明：现在时的被动",
+ "unit": "Unit 4 Inventions",
+ "version": 2
 }
