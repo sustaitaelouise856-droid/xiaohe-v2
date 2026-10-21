@@ -2525,6 +2525,8 @@ function lessonOpen(lid) {
   if (/^(deep|moon)\d+$/.test(lid)) return true;
   // review3 是针对性干预复习课（2026-10-11），随时可进，不等主线学完
   if (lid === 'review3') return true;
+  // review5 是 Unit 4 综合复习加练课（2026-10-21），Unit 4 已学完，直接开放，不设新门
+  if (lid === 'review5') return true;
   // u3-consolidate 是 Unit 3 专项巩固课（2026-10-11 踩刹车），随时可进
   if (lid === 'u3-consolidate') return true;
   // Unit 3 专项巩固课（2026-10-11 Elouise：严禁盲目赶进度），随时可进
