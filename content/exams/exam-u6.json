@@ -439,7 +439,7 @@
               "num": 1,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "People have celebrated it <b><u>__1__</u></b> more than two thousand years.",
               "options": [
                 "since",
                 "for",
@@ -452,7 +452,7 @@
               "num": 2,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "It is <b><u>__2__</u></b> memory of Qu Yuan, a great poet.",
               "options": [
                 "at",
                 "on",
@@ -465,7 +465,7 @@
               "num": 3,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "Every year <b><u>__3__</u></b> the festival, people eat zongzi and watch dragon boat races.",
               "options": [
                 "in",
                 "on",
@@ -478,7 +478,7 @@
               "num": 4,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "My family has watched the races <b><u>__4__</u></b> I was a little child.",
               "options": [
                 "for",
                 "since",
@@ -491,7 +491,7 @@
               "num": 5,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "Last year, my brother <b><u>__5__</u></b> part in a race for the first time.",
               "options": [
                 "took",
                 "takes",
@@ -504,7 +504,7 @@
               "num": 6,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "He has practised hard <b><u>__6__</u></b> then.",
               "options": [
                 "for",
                 "from",
@@ -517,7 +517,7 @@
               "num": 7,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "This year he wants <b><u>__7__</u></b> again.",
               "options": [
                 "win",
                 "winning",
@@ -530,7 +530,7 @@
               "num": 8,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "Many visitors <b><u>__8__</u></b> come to our town since last week.",
               "options": [
                 "has",
                 "had",
@@ -543,7 +543,7 @@
               "num": 9,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "The festival <b><u>__9__</u></b> people together and makes everyone happy.",
               "options": [
                 "bring",
                 "brought",
@@ -556,7 +556,7 @@
               "num": 10,
               "type": "choice",
               "score": 1,
-              "stem": "",
+              "stem": "I <b><u>__10__</u></b> never missed it.",
               "options": [
                 "have",
                 "has",
