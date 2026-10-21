@@ -486,6 +486,46 @@
       "en": "be full of",
       "pos": "phr.",
       "cn": "装满；充满"
+    },
+    {
+      "en": "grateful",
+      "cn": "感激的",
+      "pos": "adj."
+    },
+    {
+      "en": "confused",
+      "cn": "糊涂的；迷惑的",
+      "pos": "adj."
+    },
+    {
+      "en": "phase",
+      "cn": "阶段；时期",
+      "pos": "n."
+    },
+    {
+      "en": "deal",
+      "cn": "对付；应付",
+      "pos": "v."
+    },
+    {
+      "en": "expect",
+      "cn": "期待；盼望",
+      "pos": "v."
+    },
+    {
+      "en": "accept",
+      "cn": "接受",
+      "pos": "v."
+    },
+    {
+      "en": "tai chi",
+      "cn": "太极（拳）",
+      "pos": "phr."
+    },
+    {
+      "en": "snake its way",
+      "cn": "蜿蜒",
+      "pos": "phr."
     }
   ]
 }
