@@ -1,0 +1,303 @@
+{
+  "lesson_id": "review5",
+  "version": 1,
+  "title": "加练：Unit 4 综合复习",
+  "home_subtitle": "加练：Unit 4 综合复习",
+  "part1_desc": "第 1–15 步：被动语态综合练习（可反复练）。",
+  "part2_desc": "",
+  "practice_end": 8,
+  "steps": [
+    {
+      "kind": "teach",
+      "title": "被动语态综合",
+      "teach_html": "<p>站长：Unit 4 的被动语态学完了！来一组综合练习，专治错题——出的都是容易栽的地方。</p><p>可以反复练，练到全对为止。</p>",
+      "scene": "复习",
+      "step": 1,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "被动公式",
+      "teach_html": "<div class='reading-pane'><pre>【被动语态公式】be + 过去分词\n现在：am / is / are + 过去分词\n　The bike is made in China.（这辆自行车产自中国。）\n过去：was / were + 过去分词\n　The bike was made in 2020.（这辆自行车产自2020年。）</pre></div>",
+      "scene": "看公式",
+      "step": 2,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "认过去分词",
+      "stem": "speak 的过去分词是哪个？",
+      "options": [
+        "A. spoken",
+        "B. speaked",
+        "C. speaking",
+        "D. spoke"
+      ],
+      "answer": "A",
+      "wrong_feedback": {
+        "B": "speaked 这个词不存在。speak 是不规则动词，过去分词是 spoken，死记：speak-spoke-spoken。",
+        "C": "speaking 是现在分词，表示“正在说”。被动语态要的是过去分词 spoken。",
+        "D": "spoke 是过去式（昨天说了）。被动语态 be 后面跟的是过去分词，要用 spoken。"
+      },
+      "explain": "speak → spoken（不规则，死记）。",
+      "help": "不规则的，想想 speak-spoke-？",
+      "predicted_errors": [],
+      "scene": "辨形",
+      "step": 3,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "选 be 动词",
+      "stem": "These bikes ___ made in China.",
+      "options": [
+        "A. is",
+        "B. are",
+        "C. was",
+        "D. am"
+      ],
+      "answer": "B",
+      "wrong_feedback": {
+        "A": "bikes 是复数，is 只跟单数主语。复数主语用 are。",
+        "C": "was 是过去式。这句话说的是现在的事实（产自中国），用现在时的 are。",
+        "D": "am 只跟 I 搭配。bikes 是复数主语，用 are。"
+      },
+      "explain": "These bikes are made in China.（复数主语 + are）",
+      "help": "主语 bikes 是复数。",
+      "predicted_errors": [],
+      "scene": "搭配",
+      "step": 4,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "不规则过去分词",
+      "teach_html": "<div class='reading-pane'><pre>【不规则过去分词，死记】\nspeak-spoke-spoken（说）\nbuild-built-built（建造）\nfind-found-found（找到）\ndo-did-done（做）\nwrite-wrote-written（写）\n规则的直接加 -ed：invent-invented（发明）</pre></div>",
+      "scene": "记单词",
+      "step": 5,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "否定句",
+      "stem": "The shop ___ open yesterday.（否定）",
+      "options": [
+        "A. isn't",
+        "B. aren't",
+        "C. wasn't",
+        "D. weren't"
+      ],
+      "answer": "C",
+      "wrong_feedback": {
+        "A": "isn't 是现在时否定。yesterday 是过去时间，be 动词也要用过去式：wasn't。",
+        "B": "aren't 是现在时复数否定。shop 是单数、yesterday 是过去，用 wasn't。",
+        "D": "weren't 是复数过去否定。shop 是单数主语，用 wasn't。"
+      },
+      "explain": "The shop wasn't open yesterday.（单数 + 过去 → wasn't）",
+      "help": "单数 shop，过去 yesterday。",
+      "predicted_errors": [],
+      "scene": "否定",
+      "step": 6,
+      "phase": "practice"
+    },
+    {
+      "kind": "short",
+      "title": "写过去分词",
+      "stem": "写出 find 的过去分词。",
+      "task": "只写一个英文单词。",
+      "answer_text": "found",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "found"
+          ],
+          "cn": [
+            "找到（过去分词）"
+          ]
+        }
+      ],
+      "explain": "find → found（不规则，死记）。",
+      "help": "不规则的：find → found。",
+      "predicted_errors": [],
+      "scene": "默写",
+      "step": 7,
+      "phase": "practice",
+      "common_errors": [
+        {
+          "when": "写了 finded",
+          "say": "find 是不规则的：found，不是加 -ed。死记 find-found。"
+        },
+        {
+          "when": "写了 find",
+          "say": "find 是原形，题目要的是过去分词：found。"
+        }
+      ]
+    },
+    {
+      "kind": "teach",
+      "title": "疑问句",
+      "teach_html": "<div class='reading-pane'><pre>【被动语态疑问句】\n疑问词 + was/were + 主语 + 过去分词？\n　When was the telephone invented?（电话是什么时候发明的？）\n一般疑问句回答：\n　— Was it invented in 1876? — Yes, it was. / No, it wasn't.\n（问的是 Was，肯定答 it was，否定答 it wasn't）</pre></div>",
+      "scene": "看句型",
+      "step": 8,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "选疑问词",
+      "stem": "___ was the telephone invented?（1876 年）",
+      "options": [
+        "A. What",
+        "B. Where",
+        "C. Who",
+        "D. When"
+      ],
+      "answer": "D",
+      "wrong_feedback": {
+        "A": "What 问的是“什么东西”。括号里给的是年份 1876，问时间用 When。",
+        "B": "Where 问的是“在哪里”。括号里给的是年份 1876，问时间用 When。",
+        "C": "Who 问的是“谁”。括号里给的是年份 1876，问时间用 When。"
+      },
+      "explain": "When was the telephone invented?（问年份 → When）",
+      "help": "括号里是年份，问时间。",
+      "predicted_errors": [],
+      "scene": "疑问词",
+      "step": 9,
+      "phase": "practice"
+    },
+    {
+      "kind": "short",
+      "title": "回答问句",
+      "stem": "— Was the bridge built in 1900? — Yes, ___.",
+      "task": "补全回答，写两个词。",
+      "answer_text": "it was",
+      "expects": [
+        {
+          "id": "s1",
+          "type": "word",
+          "answers": [
+            "it was",
+            "yes it was"
+          ],
+          "cn": [
+            "是的"
+          ]
+        }
+      ],
+      "explain": "Yes, it was.（问的是 Was，肯定回答 it was）",
+      "help": "问的是 Was，答 it was。",
+      "predicted_errors": [],
+      "scene": "问答",
+      "step": 10,
+      "phase": "practice",
+      "common_errors": [
+        {
+          "when": "写了 it is",
+          "say": "问的是 Was（过去），回答也要用过去：it was。"
+        },
+        {
+          "when": "写了 yes",
+          "say": "光写 Yes 不够，补全回答：Yes, it was。"
+        }
+      ]
+    },
+    {
+      "kind": "teach",
+      "title": "by 短语",
+      "teach_html": "<div class='reading-pane'><pre>【by + 动作发出者】\n被动语态里，“谁做的”用 by 引出：\n　The novel was written by Mo Yan.（这部小说是莫言写的。）\n　The light bulb was invented by Edison.（电灯是爱迪生发明的。）</pre></div>",
+      "scene": "看搭配",
+      "step": 11,
+      "phase": "practice"
+    },
+    {
+      "kind": "mcq",
+      "title": "选介词",
+      "stem": "The novel was written ___ Mo Yan.",
+      "options": [
+        "A. with",
+        "B. by",
+        "C. from",
+        "D. of"
+      ],
+      "answer": "B",
+      "wrong_feedback": {
+        "A": "with 表示“用（工具）”，比如 write with a pen。动作的发出者（谁写的）用 by。",
+        "C": "from 表示“从哪里来”。动作的发出者（谁写的）用 by：written by Mo Yan。",
+        "D": "of 表示“……的”。动作的发出者（谁写的）用 by：written by Mo Yan。"
+      },
+      "explain": "written by Mo Yan（被动语态的动作发出者用 by）。",
+      "help": "谁写的？用 by。",
+      "predicted_errors": [],
+      "scene": "介词",
+      "step": 12,
+      "phase": "practice"
+    },
+    {
+      "kind": "short",
+      "title": "填 be 动词",
+      "stem": "Tea ___ grown in Hangzhou.",
+      "task": "只写一个英文单词。",
+      "answer_text": "is",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "is"
+          ],
+          "cn": [
+            "是"
+          ]
+        }
+      ],
+      "explain": "Tea is grown in Hangzhou.（tea 单数 + 现在 → is）",
+      "help": "tea 是单数，现在时。",
+      "predicted_errors": [],
+      "scene": "填空",
+      "step": 13,
+      "phase": "practice",
+      "common_errors": [
+        {
+          "when": "写了 are",
+          "say": "tea 是单数（一种茶），单数主语用 is。"
+        },
+        {
+          "when": "写了 was",
+          "say": "这句话说的是现在的事实（杭州产茶），用现在时的 is。"
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "认被动语态",
+      "stem": "哪个句子用了被动语态？",
+      "options": [
+        "A. She wrote a letter.",
+        "B. They are playing football.",
+        "C. He opened the door.",
+        "D. The letter was written."
+      ],
+      "answer": "D",
+      "wrong_feedback": {
+        "A": "She wrote 是主动语态（她写了）。被动语态长这样：be + 过去分词，选 D。",
+        "B": "are playing 是现在进行时（正在踢）。被动语态是 be + 过去分词，选 D。",
+        "C": "He opened 是主动语态（他打开了）。被动语态是 be + 过去分词，选 D。"
+      },
+      "explain": "The letter was written.（was + written = 被动）",
+      "help": "找 be + 过去分词。",
+      "predicted_errors": [],
+      "scene": "辨认",
+      "step": 14,
+      "phase": "practice"
+    },
+    {
+      "kind": "teach",
+      "title": "练习完成",
+      "teach_html": "<p>综合练习完成！被动语态的公式、否定、疑问、by 短语都过了一遍。</p><p>错了的题会自动进错题本，记得每天回来做 10 道。</p>",
+      "scene": "结束",
+      "step": 15,
+      "phase": "practice"
+    }
+  ]
+}
