@@ -1,10 +1,10 @@
 {
  "lesson_id": "u5r4",
- "practice_end": 23,
+ "practice_end": 27,
  "home_subtitle": "第四课 · 我的交流日记",
- "part1_desc": "第 1–23 步：跟站长学用现在完成时写交流日记。",
- "part2_desc": "第 24–44 步：独立写日记，再闯 12 道挑战题（混了被动语态和比较级、最高级），最后写一整段交流日记。",
- "note": "本课阅读材料为教研自编，非课本原文。考查能力：用现在完成时写作、never/already、and/but/because；挑战段混练被动语态与比较级/最高级，课末有一段 3 信息点日记写作。Unit 5 Educational exchanges 主题。",
+ "part1_desc": "第 1–27 步：跟站长学用现在完成时写交流日记，中间穿插挑战题和写句练习。",
+ "part2_desc": "第 28–55 步：独立写日记闯关（挑战题穿插其中），完形填空 4 空，再闯课尾压轴挑战，最后写一整段交流日记。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：用现在完成时写作、never/already、and/but/because；难度均匀分布全程：主课段穿插挑战题与产出型写句题（否定/疑问变换、since/for、三单 Has、被动辨析、最高级+完成时混搭），新增完形填空 4 空（中考题型），课末有一段 3 信息点日记写作。Unit 5 Educational exchanges 主题。",
  "steps": [
   {
    "step": 1,
@@ -160,7 +160,45 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 14,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 住在这里十年了",
+   "scene": "他们住在这个镇上已经十年了。",
+   "stem": "They have lived in this town ______ ten years.",
+   "task": "只写一个英文单词。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for"
+     ],
+     "cn": [
+      "（持续一段时间）"
+     ]
+    }
+   ],
+   "help": "先看空后面是多长一段时间，还是一个时间点。",
+   "explain": "They have lived in this town for ten years.",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "since 后面跟的是时间点（如 2020 年）；ten years 是一段时间，要用 for。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 是“从某地/某时来”，不表示持续多久；持续十年用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in + 时间段多指“在……之后”，将来才发生；已经持续了十年要用 for。"
+    }
+   ],
+   "step": 14
+  },
+  {
+   "step": 15,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u5r4-q05",
@@ -184,7 +222,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 15,
+   "step": 16,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u5r4-q06",
@@ -208,7 +246,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 16,
+   "step": 17,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u5r4-q07",
@@ -232,7 +270,70 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 17,
+   "phase": "practice",
+   "kind": "short",
+   "title": "写一写：改成否定句",
+   "scene": "日记里要写“我还没参观过博物馆”。",
+   "stem": "把这个句子改成否定句，写出完整的句子：I have visited the museum.",
+   "task": "写出改好的完整句子（用 never 或 haven't 都可以）。",
+   "answer_text": "I have never visited the museum.",
+   "expects": [
+    {
+     "id": "subj",
+     "type": "word",
+     "answers": [
+      "i have never",
+      "i haven't",
+      "i have not"
+     ],
+     "cn": [
+      "我还没"
+     ]
+    },
+    {
+     "id": "verb",
+     "type": "word",
+     "answers": [
+      "never visited",
+      "haven't visited",
+      "not visited"
+     ],
+     "olds": [
+      "has never visited",
+      "hasn't visited",
+      "visited never",
+      "have visit the museum"
+     ],
+     "cn": [
+      "参观过（否定）"
+     ]
+    }
+   ],
+   "help": "否定有两种写法，想一想 never 应该站在哪个词后面。",
+   "explain": "I have never visited the museum.（也可以写 I haven't visited the museum.）",
+   "common_errors": [
+    {
+     "when": "写了 has never visited",
+     "say": "主语是 I，用 have：I have never visited…，has 是给第三人称单数用的。"
+    },
+    {
+     "when": "把 never 写在 visited 后面",
+     "say": "never 要放在 have 和过去分词中间：have never visited，不能写成 visited never。"
+    },
+    {
+     "when": "写了 didn't visit",
+     "say": "didn't 是过去时否定；写“还没做过”要用现在完成时：have never visited。"
+    },
+    {
+     "when": "漏了 have 只写 never visited",
+     "say": "句子的骨架是 have + 过去分词，have 不能省：I have never visited…。"
+    }
+   ],
+   "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice.",
+   "step": 18
+  },
+  {
+   "step": 19,
    "phase": "practice",
    "kind": "mcq",
    "audio_id": "u5r4-q08",
@@ -256,7 +357,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 18,
+   "step": 20,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u5r4-q09",
@@ -299,7 +400,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 19,
+   "step": 21,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u5r4-q10",
@@ -339,7 +440,29 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 20,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 很多地方种茶",
+   "scene": "中国很多地方都种茶。",
+   "stem": "Tea ______ in many parts of China.",
+   "options": [
+    "grows",
+    "grew",
+    "is grown",
+    "is growing"
+   ],
+   "answer": "C",
+   "help": "先想：茶是自己种自己的，还是被人种的？",
+   "explain": "Tea is grown in many parts of China.",
+   "wrong_feedback": {
+    "A": "grows 是主动语态，意思是“（茶）自己生长”；茶是被人种的，要用被动 is grown。",
+    "B": "grew 是主动语态的过去式，同样是主动；茶被种，要用被动语态 is grown。",
+    "D": "is growing 是“正在生长”，还是主动意思；“种茶”是人对茶做的事，用被动 is grown。"
+   },
+   "step": 22
+  },
+  {
+   "step": 23,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u5r4-q11",
@@ -382,7 +505,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 21,
+   "step": 24,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u5r4-q12",
@@ -422,7 +545,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 22,
+   "step": 25,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u5r4-q13",
@@ -462,7 +585,69 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "title": "写一写：改成疑问句",
+   "scene": "你想问同学“他们尝过火锅吗”。",
+   "stem": "把这个句子改成一般疑问句，写出完整的问句：They have tried hotpot.",
+   "task": "写出完整的问句（问经历，别忘了 ever 的位置）。",
+   "answer_text": "Have they ever tried hotpot?",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "have they"
+     ],
+     "olds": [
+      "has they",
+      "did they try"
+     ],
+     "cn": [
+      "（疑问句开头）"
+     ]
+    },
+    {
+     "id": "verb",
+     "type": "word",
+     "answers": [
+      "tried hotpot"
+     ],
+     "olds": [
+      "try hotpot",
+      "tries hotpot",
+      "tried the hotpot"
+     ],
+     "cn": [
+      "尝过火锅"
+     ]
+    }
+   ],
+   "help": "疑问句要把哪个词搬到句首？ever 又该跟在谁后面？",
+   "explain": "Have they ever tried hotpot?（have 提到句首，ever 放在主语 they 后面）",
+   "common_errors": [
+    {
+     "when": "写了 Has they",
+     "say": "主语 they 是复数，句首用 Have，不是 Has。"
+    },
+    {
+     "when": "写了 Did they try",
+     "say": "Did 是问过去某一次；问“尝过没有”这种经历，要用 Have they ever tried…。"
+    },
+    {
+     "when": "ever 放在句首或句尾",
+     "say": "ever 在疑问句里放在主语后面、动词前面：Have they ever tried…。"
+    },
+    {
+     "when": "写了 try hotpot（原形）",
+     "say": "have 后面要用过去分词 tried，不能用原形 try。"
+    }
+   ],
+   "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice.",
+   "step": 26
+  },
+  {
+   "step": 27,
    "phase": "practice",
    "kind": "short",
    "audio_id": "u5r4-q14",
@@ -502,7 +687,7 @@
    "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice."
   },
   {
-   "step": 24,
+   "step": 28,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u5r4-v-intro",
@@ -511,7 +696,7 @@
    "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
   },
   {
-   "step": 25,
+   "step": 29,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u5r4-v01",
@@ -535,7 +720,45 @@
    "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
   },
   {
-   "step": 26,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 十岁起就有了",
+   "scene": "这块表从我十岁起就戴着了。",
+   "stem": "I have had this watch ______ I was ten.",
+   "task": "只写一个英文单词。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since"
+     ],
+     "cn": [
+      "（自从）"
+     ]
+    }
+   ],
+   "help": "先看空后面跟的是一个起点，还是一段时间。",
+   "explain": "I have had this watch since I was ten.",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "for 后面跟一段时间（如 for ten years）；空后面是“I was ten”这个起点，要用 since。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 不能这样带出一个起点句子；“自从……”用 since。"
+    },
+    {
+     "when": "写了 when",
+     "say": "when 只是“在……时候”，不表示一直持续到现在；从十岁持续到现在用 since。"
+    }
+   ],
+   "step": 30
+  },
+  {
+   "step": 31,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u5r4-v02",
@@ -559,7 +782,7 @@
    "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
   },
   {
-   "step": 27,
+   "step": 32,
    "phase": "validate",
    "kind": "short",
    "audio_id": "u5r4-v07",
@@ -602,7 +825,29 @@
    "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
   },
   {
-   "step": 28,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 还没试过滑雪",
+   "scene": "我们还没试过滑雪。",
+   "stem": "We haven't tried skiing ______.",
+   "options": [
+    "already",
+    "never",
+    "ever",
+    "yet"
+   ],
+   "answer": "D",
+   "help": "先看句子是肯定还是否定，再看空在句子的什么位置。",
+   "explain": "We haven't tried skiing yet.",
+   "wrong_feedback": {
+    "A": "already 用在肯定句；这是否定句，“还没”用 yet 放在句尾。",
+    "B": "haven't 已经是否定了，再加 never 就是双重否定，错了；“还没”用 yet。",
+    "C": "ever 是“曾经”，用在疑问句里问经历；这句是“还没试过”，用 yet。"
+   },
+   "step": 33
+  },
+  {
+   "step": 34,
    "phase": "validate",
    "kind": "mcq",
    "audio_id": "u5r4-v05",
@@ -626,7 +871,69 @@
    "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
   },
   {
-   "step": 29,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写一写：从2020年起",
+   "scene": "日记里写你住在广州的时间。",
+   "stem": "用现在完成时写出这个句子：我从 2020 年起就住在广州了。（主语用 I，“住”用 live）",
+   "task": "写出完整的英文句子。",
+   "answer_text": "I have lived in Guangzhou since 2020.",
+   "expects": [
+    {
+     "id": "verb",
+     "type": "word",
+     "answers": [
+      "have lived"
+     ],
+     "olds": [
+      "has lived",
+      "have live in",
+      "have living"
+     ],
+     "cn": [
+      "住（完成时）"
+     ]
+    },
+    {
+     "id": "time",
+     "type": "word",
+     "answers": [
+      "since 2020"
+     ],
+     "olds": [
+      "for 2020",
+      "since five years"
+     ],
+     "cn": [
+      "从2020年起"
+     ]
+    }
+   ],
+   "help": "2020 是时间点还是时间段？先想清楚，再选那个词。",
+   "explain": "I have lived in Guangzhou since 2020.（since + 时间点 2020）",
+   "common_errors": [
+    {
+     "when": "写了 for 2020",
+     "say": "for 后面跟一段时间（如 for five years）；2020 是时间点，要用 since。"
+    },
+    {
+     "when": "写了 has lived",
+     "say": "主语是 I，用 have lived；has 只配第三人称单数。"
+    },
+    {
+     "when": "写了 have live",
+     "say": "have 后面要用过去分词 lived，不能用原形 live。"
+    },
+    {
+     "when": "漏了 have 只写 lived",
+     "say": "lived 是过去式，句子就变成“过去住过”；表示一直住到现在要用 have lived。"
+    }
+   ],
+   "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice.",
+   "step": 35
+  },
+  {
+   "step": 36,
    "phase": "validate",
    "kind": "short",
    "audio_id": "u5r4-v10",
@@ -666,7 +973,59 @@
    "reading": "My diary: I have joined the club. I have already learned to sing. I have never danced on stage, but I want to try because it looks fun."
   },
   {
-   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 老学校",
+   "scene": "这所老学校建于 2010 年，学生们从那时起就在这里学习。",
+   "stem": "The old school ______ in 2010, and students have studied there ______ then.",
+   "task": "写出两个空里的词（第一个空两个词，第二个空一个词）。",
+   "answer_text": "The old school was built in 2010, and students have studied there since then.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was built"
+     ],
+     "cn": [
+      "被建成（被动语态）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "since"
+     ],
+     "cn": [
+      "自从（那时起）"
+     ]
+    }
+   ],
+   "help": "先看两个信号：2010 年已经过去了；后半句是从那时一直到现在。",
+   "explain": "The old school was built in 2010, and students have studied there since then.",
+   "common_errors": [
+    {
+     "when": "第一个空只写了 built",
+     "say": "built 是主动过去式；学校是被建成的，被动语态不能少 be 动词：was built。"
+    },
+    {
+     "when": "第一个空写了 is built",
+     "say": "建学校是 2010 年的事，用过去的被动 was built，不能用 is。"
+    },
+    {
+     "when": "第二个空写了 for",
+     "say": "for 后面要跟一段时间；then 是那个时间点，“从那时起”用 since。"
+    },
+    {
+     "when": "第二个空写了 from",
+     "say": "from 不能单独表示“自从那时起一直到现在”；这里用 since。"
+    }
+   ],
+   "step": 37
+  },
+  {
+   "step": 38,
    "phase": "validate",
    "kind": "short",
    "audio_id": "u5r4-v09",
@@ -710,6 +1069,186 @@
   },
   {
    "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 最有趣的书",
+   "scene": "这是我读过的最有趣的书。",
+   "stem": "This is the ______ book I have ever read.",
+   "options": [
+    "more interesting",
+    "most interesting",
+    "interestinger",
+    "the most interesting"
+   ],
+   "answer": "B",
+   "help": "先看范围：是跟一本书比，还是在读过的所有书里最……。",
+   "explain": "This is the most interesting book I have ever read.",
+   "wrong_feedback": {
+    "A": "more interesting 是比较级，用来跟一本书比；the 后面加上“I have ever read”是最大范围，要用最高级 most interesting。",
+    "C": "interesting 是多音节词，最高级要在前面加 most，不能在词尾加 er。",
+    "D": "句子里已经有 the 了，空里再写 the 就重复了；空里只写 most interesting。"
+   },
+   "step": 39
+  },
+  {
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战 · 完形短文",
+   "teach_html": "<p>新题型：<strong>完形填空</strong>。先把短文读一遍，知道大概讲什么，再逐个空选。</p><p>Lin Tao has just come back from Shanghai. He went on a five-day exchange trip there last week. He has kept a diary __1__ the trip began, and he has written about many new things in it. On the first day, his host brother asked him, “Have you __2__ eaten xiaolongbao?” Lin Tao tried some and loved them. He took many photos and bought a small gift for his mum. The school he visited is famous in the city. It __3__ more than a hundred years ago, and many students study there now. “Shanghai is __4__ than I thought,” Lin Tao says. “I have learned a lot on this trip.”</p>",
+   "step": 40
+  },
+  {
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第1空",
+   "scene": "结合短文上下文选词。",
+   "stem": "He has kept a diary ______ the trip began, and he has written about many new things in it.",
+   "options": [
+    "for",
+    "since",
+    "during",
+    "from"
+   ],
+   "answer": "B",
+   "help": "看空后面跟的是什么：是一个时间点（事情开始的那一刻），还是多长一段时间？",
+   "explain": "since + 时间点（the trip began），表示从那时起一直到现在。",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间（如 for five days）；这里跟的是 the trip began 这个时间点，要用 since。",
+    "C": "during 后面跟一段时间里的时期（如 during the trip），不能跟 began 这样的句子，这里用 since。",
+    "D": "from 只表示起点“从……”，不能把 kept a diary 一直连到现在，这里用 since。"
+   },
+   "reading": "Lin Tao has just come back from Shanghai. He went on a five-day exchange trip there last week. He has kept a diary __1__ the trip began, and he has written about many new things in it. On the first day, his host brother asked him, “Have you __2__ eaten xiaolongbao?” Lin Tao tried some and loved them. He took many photos and bought a small gift for his mum. The school he visited is famous in the city. It __3__ more than a hundred years ago, and many students study there now. “Shanghai is __4__ than I thought,” Lin Tao says. “I have learned a lot on this trip.”",
+   "step": 41
+  },
+  {
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第2空",
+   "scene": "结合短文上下文选词。",
+   "stem": "On the first day, his host brother asked him, 'Have you ______ eaten xiaolongbao?'",
+   "options": [
+    "ever",
+    "never",
+    "already",
+    "yet"
+   ],
+   "answer": "A",
+   "help": "这是在问对方“有没有过这种经历”，想想疑问句里哪个词专门问经历。",
+   "explain": "Have you ever eaten…? 是问经历的固定问法。",
+   "wrong_feedback": {
+    "B": "never 用在肯定句里表示“从没”：I have never eaten…；问句里问经历要用 ever。",
+    "C": "already 多用在肯定句“已经……了”；这里问“吃过吗”，用 ever。",
+    "D": "yet 多放在否定句和疑问句的句尾表示“还（没）”，不放在动词前面；这里问经历用 ever。"
+   },
+   "reading": "Lin Tao has just come back from Shanghai. He went on a five-day exchange trip there last week. He has kept a diary __1__ the trip began, and he has written about many new things in it. On the first day, his host brother asked him, “Have you __2__ eaten xiaolongbao?” Lin Tao tried some and loved them. He took many photos and bought a small gift for his mum. The school he visited is famous in the city. It __3__ more than a hundred years ago, and many students study there now. “Shanghai is __4__ than I thought,” Lin Tao says. “I have learned a lot on this trip.”",
+   "step": 42
+  },
+  {
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第3空",
+   "scene": "结合短文上下文选词。",
+   "stem": "It ______ more than a hundred years ago, and many students study there now.",
+   "options": [
+    "built",
+    "has built",
+    "was built",
+    "builds"
+   ],
+   "answer": "C",
+   "help": "先看主语：学校是“建”的发出者，还是“被建”的对象？再看时间：一百多年前。",
+   "explain": "学校是被建成的，用被动 was built；一百多年前是过去的时间点，不用完成时。",
+   "wrong_feedback": {
+    "A": "built 是主动“建了”，学校自己不能建自己；学校是被建的，要用被动。",
+    "B": "has built 也是主动，而且和 a hundred years ago 这个过去时间点不配。",
+    "D": "builds 是一般现在时，和“一百多年前”这个时间对不上。"
+   },
+   "reading": "Lin Tao has just come back from Shanghai. He went on a five-day exchange trip there last week. He has kept a diary __1__ the trip began, and he has written about many new things in it. On the first day, his host brother asked him, “Have you __2__ eaten xiaolongbao?” Lin Tao tried some and loved them. He took many photos and bought a small gift for his mum. The school he visited is famous in the city. It __3__ more than a hundred years ago, and many students study there now. “Shanghai is __4__ than I thought,” Lin Tao says. “I have learned a lot on this trip.”",
+   "step": 43
+  },
+  {
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 完形第4空",
+   "scene": "结合短文上下文选词。",
+   "stem": "'Shanghai is ______ than I thought,' Lin Tao says.",
+   "options": [
+    "big",
+    "biggest",
+    "more big",
+    "bigger"
+   ],
+   "answer": "D",
+   "help": "句子里有 than，先判断这是比较级还是最高级；再想 big 变比较级要不要双写。",
+   "explain": "有 than 用比较级；big 双写 g 再加 er：bigger。",
+   "wrong_feedback": {
+    "A": "big 是原级，后面有 than，要用比较级。",
+    "B": "biggest 是最高级，要和 the 连用、跟一群比；这里有 than，是两者比较。",
+    "C": "big 是单音节词，比较级直接双写加 er，没有 more big 这种说法。"
+   },
+   "reading": "Lin Tao has just come back from Shanghai. He went on a five-day exchange trip there last week. He has kept a diary __1__ the trip began, and he has written about many new things in it. On the first day, his host brother asked him, “Have you __2__ eaten xiaolongbao?” Lin Tao tried some and loved them. He took many photos and bought a small gift for his mum. The school he visited is famous in the city. It __3__ more than a hundred years ago, and many students study there now. “Shanghai is __4__ than I thought,” Lin Tao says. “I have learned a lot on this trip.”",
+   "step": 44
+  },
+  {
+   "phase": "validate",
+   "kind": "short",
+   "title": "写一写：信是昨天写的",
+   "scene": "广播站收到一封信，你要记录它的来历。",
+   "stem": "写出这个句子：这封信是昨天写的。（“写”用 write，要用被动语态）",
+   "task": "写出完整的英文句子。",
+   "answer_text": "The letter was written yesterday.",
+   "expects": [
+    {
+     "id": "verb",
+     "type": "word",
+     "answers": [
+      "was written"
+     ],
+     "olds": [
+      "has written",
+      "have written",
+      "was wrote",
+      "letter wrote"
+     ],
+     "cn": [
+      "被写"
+     ]
+    },
+    {
+     "id": "time",
+     "type": "word",
+     "answers": [
+      "yesterday"
+     ],
+     "cn": [
+      "昨天"
+     ]
+    }
+   ],
+   "help": "信自己不会写自己。想一想：谁是动作的承受者？时间又是哪一天？",
+   "explain": "The letter was written yesterday.（信是被写的，用 was written）",
+   "common_errors": [
+    {
+     "when": "写了 has written",
+     "say": "has written 是“（某人）已经写了”，主语得是写信的人；信是被写的，要用被动：was written。"
+    },
+    {
+     "when": "写了 was wrote",
+     "say": "被动是 be + 过去分词：write 的过去分词是 written，不是过去式 wrote。"
+    },
+    {
+     "when": "写了 The letter wrote",
+     "say": "信不会自己写，缺了被动的骨架 was；要写 was written。"
+    },
+    {
+     "when": "漏了 yesterday",
+     "say": "句子还要写上时间：yesterday 别漏。"
+    }
+   ],
+   "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice.",
+   "step": 45
+  },
+  {
+   "phase": "validate",
    "kind": "short",
    "title": "挑战 · 妈妈做过饺子吗",
    "scene": "问妈妈做过饺子吗。",
@@ -744,7 +1283,7 @@
      "say": "Do 后面要跟动词原形 cook，跟不了 cooked；表示经历用 Has。"
     }
    ],
-   "step": 31
+   "step": 46
   },
   {
    "phase": "validate",
@@ -766,83 +1305,69 @@
     "C": "Is 后面跟不了 won 组成完成时；问经历要用 Has。",
     "D": "Did 是过去时的助动词，后面必须跟动词原形 win；won 是过去分词，要配 Has。"
    },
-   "step": 32
+   "step": 47
   },
   {
    "phase": "validate",
    "kind": "short",
-   "title": "挑战 · 住在这里十年了",
-   "scene": "他们住在这个镇上已经十年了。",
-   "stem": "They have lived in this town ______ ten years.",
-   "task": "只写一个英文单词。",
-   "answer_text": "for",
+   "title": "写一写：她没见过雪",
+   "scene": "同伴来自北方，你想写写她和雪的故事。",
+   "stem": "写出这个句子：她从来没见过雪。（“见”用 see，主语用 She）",
+   "task": "写出完整的英文句子。",
+   "answer_text": "She has never seen snow.",
    "expects": [
     {
-     "id": "w1",
+     "id": "verb",
      "type": "word",
      "answers": [
-      "for"
+      "has never seen"
+     ],
+     "olds": [
+      "have never seen",
+      "has never saw",
+      "has seen never",
+      "has never seeing"
      ],
      "cn": [
-      "（持续一段时间）"
+      "从来没见过"
+     ]
+    },
+    {
+     "id": "obj",
+     "type": "word",
+     "answers": [
+      "snow"
+     ],
+     "olds": [
+      "snows"
+     ],
+     "cn": [
+      "雪"
      ]
     }
    ],
-   "help": "先看空后面是多长一段时间，还是一个时间点。",
-   "explain": "They have lived in this town for ten years.",
+   "help": "先想主语是 She，助动词用哪个；再想 see 的过去分词是哪个。",
+   "explain": "She has never seen snow.（has never + 过去分词 seen）",
    "common_errors": [
     {
-     "when": "写了 since",
-     "say": "since 后面跟的是时间点（如 2020 年）；ten years 是一段时间，要用 for。"
+     "when": "写了 have never seen",
+     "say": "主语 She 是第三人称单数，要用 has：She has never seen…。"
     },
     {
-     "when": "写了 from",
-     "say": "from 是“从某地/某时来”，不表示持续多久；持续十年用 for。"
+     "when": "写了 has never saw",
+     "say": "saw 是过去式；has 后面要用过去分词 seen。"
     },
     {
-     "when": "写了 in",
-     "say": "in + 时间段多指“在……之后”，将来才发生；已经持续了十年要用 for。"
+     "when": "把 never 写在 seen 后面",
+     "say": "never 放在 has 和过去分词中间：has never seen。"
+    },
+    {
+     "when": "写了 doesn't see",
+     "say": "“从来没见过”是经历，用现在完成时 has never seen，不用一般现在时。"
     }
    ],
-   "step": 33
-  },
-  {
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 十岁起就有了",
-   "scene": "这块表从我十岁起就戴着了。",
-   "stem": "I have had this watch ______ I was ten.",
-   "task": "只写一个英文单词。",
-   "answer_text": "since",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "since"
-     ],
-     "cn": [
-      "（自从）"
-     ]
-    }
-   ],
-   "help": "先看空后面跟的是一个起点，还是一段时间。",
-   "explain": "I have had this watch since I was ten.",
-   "common_errors": [
-    {
-     "when": "写了 for",
-     "say": "for 后面跟一段时间（如 for ten years）；空后面是“I was ten”这个起点，要用 since。"
-    },
-    {
-     "when": "写了 from",
-     "say": "from 不能这样带出一个起点句子；“自从……”用 since。"
-    },
-    {
-     "when": "写了 when",
-     "say": "when 只是“在……时候”，不表示一直持续到现在；从十岁持续到现在用 since。"
-    }
-   ],
-   "step": 34
+   "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice.",
+   "step": 48
   },
   {
    "phase": "validate",
@@ -883,51 +1408,7 @@
      "say": "speaking 是现在分词；has 后面用过去分词 spoken。"
     }
    ],
-   "step": 35
-  },
-  {
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 还没试过滑雪",
-   "scene": "我们还没试过滑雪。",
-   "stem": "We haven't tried skiing ______.",
-   "options": [
-    "already",
-    "never",
-    "ever",
-    "yet"
-   ],
-   "answer": "D",
-   "help": "先看句子是肯定还是否定，再看空在句子的什么位置。",
-   "explain": "We haven't tried skiing yet.",
-   "wrong_feedback": {
-    "A": "already 用在肯定句；这是否定句，“还没”用 yet 放在句尾。",
-    "B": "haven't 已经是否定了，再加 never 就是双重否定，错了；“还没”用 yet。",
-    "C": "ever 是“曾经”，用在疑问句里问经历；这句是“还没试过”，用 yet。"
-   },
-   "step": 36
-  },
-  {
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 很多地方种茶",
-   "scene": "中国很多地方都种茶。",
-   "stem": "Tea ______ in many parts of China.",
-   "options": [
-    "grows",
-    "grew",
-    "is grown",
-    "is growing"
-   ],
-   "answer": "C",
-   "help": "先想：茶是自己种自己的，还是被人种的？",
-   "explain": "Tea is grown in many parts of China.",
-   "wrong_feedback": {
-    "A": "grows 是主动语态，意思是“（茶）自己生长”；茶是被人种的，要用被动 is grown。",
-    "B": "grew 是主动语态的过去式，同样是主动；茶被种，要用被动语态 is grown。",
-    "D": "is growing 是“正在生长”，还是主动意思；“种茶”是人对茶做的事，用被动 is grown。"
-   },
-   "step": 37
+   "step": 49
   },
   {
    "phase": "validate",
@@ -965,7 +1446,70 @@
      "say": "be 动词后面要用过去分词：build 的过去分词是 built，写 was built。"
     }
    ],
-   "step": 38
+   "step": 50
+  },
+  {
+   "phase": "validate",
+   "kind": "short",
+   "title": "写一写：最美味的一餐",
+   "scene": "日记里夸一夸交流时吃到的最好吃的一餐。",
+   "stem": "写出这个句子：这是我吃过的最美味的一餐。",
+   "task": "写出完整的英文句子（最高级 + 现在完成时）。",
+   "answer_text": "This is the most delicious meal I have ever eaten.",
+   "expects": [
+    {
+     "id": "sup",
+     "type": "word",
+     "answers": [
+      "most delicious"
+     ],
+     "olds": [
+      "more delicious",
+      "deliciousest",
+      "most delicious than"
+     ],
+     "cn": [
+      "最美味的"
+     ]
+    },
+    {
+     "id": "perf",
+     "type": "word",
+     "answers": [
+      "ever eaten",
+      "have eaten"
+     ],
+     "olds": [
+      "ever ate",
+      "have eat"
+     ],
+     "cn": [
+      "吃过的"
+     ]
+    }
+   ],
+   "help": "“最美味”用最高级，别忘了 the；“吃过的”要用完成时，eat 的过去分词是哪个？",
+   "explain": "This is the most delicious meal I have ever eaten.",
+   "common_errors": [
+    {
+     "when": "写了 more delicious",
+     "say": "“最美味”是最高级：the most delicious；more 是比较级，跟别人比的时候才用。"
+    },
+    {
+     "when": "写了 ever ate",
+     "say": "ate 是过去式；have 后面要用过去分词 eaten：have ever eaten。"
+    },
+    {
+     "when": "漏了 the",
+     "say": "最高级前面要加 the：the most delicious meal。"
+    },
+    {
+     "when": "写了 has ever eaten（主语是 I）",
+     "say": "句子里“我”是 I，用 have：I have ever eaten。"
+    }
+   ],
+   "reading": "Model diary: I have met two friends. I have already visited the park. I have never eaten hotpot, but I want to try it because it smells nice.",
+   "step": 51
   },
   {
    "phase": "validate",
@@ -1003,29 +1547,7 @@
      "say": "be 动词后面要用过去分词：use 的过去分词是 used，写 are used。"
     }
    ],
-   "step": 39
-  },
-  {
-   "phase": "validate",
-   "kind": "mcq",
-   "title": "挑战 · 最有趣的书",
-   "scene": "这是我读过的最有趣的书。",
-   "stem": "This is the ______ book I have ever read.",
-   "options": [
-    "more interesting",
-    "most interesting",
-    "interestinger",
-    "the most interesting"
-   ],
-   "answer": "B",
-   "help": "先看范围：是跟一本书比，还是在读过的所有书里最……。",
-   "explain": "This is the most interesting book I have ever read.",
-   "wrong_feedback": {
-    "A": "more interesting 是比较级，用来跟一本书比；the 后面加上“I have ever read”是最大范围，要用最高级 most interesting。",
-    "C": "interesting 是多音节词，最高级要在前面加 most，不能在词尾加 er。",
-    "D": "句子里已经有 the 了，空里再写 the 就重复了；空里只写 most interesting。"
-   },
-   "step": 40
+   "step": 52
   },
   {
    "phase": "validate",
@@ -1084,59 +1606,7 @@
      "say": "只有第二个空是“最”；第一个空有 than，用比较级 taller 就行，不要带 the。"
     }
    ],
-   "step": 41
-  },
-  {
-   "phase": "validate",
-   "kind": "short",
-   "title": "挑战 · 老学校",
-   "scene": "这所老学校建于 2010 年，学生们从那时起就在这里学习。",
-   "stem": "The old school ______ in 2010, and students have studied there ______ then.",
-   "task": "写出两个空里的词（第一个空两个词，第二个空一个词）。",
-   "answer_text": "The old school was built in 2010, and students have studied there since then.",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "was built"
-     ],
-     "cn": [
-      "被建成（被动语态）"
-     ]
-    },
-    {
-     "id": "w2",
-     "type": "word",
-     "answers": [
-      "since"
-     ],
-     "cn": [
-      "自从（那时起）"
-     ]
-    }
-   ],
-   "help": "先看两个信号：2010 年已经过去了；后半句是从那时一直到现在。",
-   "explain": "The old school was built in 2010, and students have studied there since then.",
-   "common_errors": [
-    {
-     "when": "第一个空只写了 built",
-     "say": "built 是主动过去式；学校是被建成的，被动语态不能少 be 动词：was built。"
-    },
-    {
-     "when": "第一个空写了 is built",
-     "say": "建学校是 2010 年的事，用过去的被动 was built，不能用 is。"
-    },
-    {
-     "when": "第二个空写了 for",
-     "say": "for 后面要跟一段时间；then 是那个时间点，“从那时起”用 since。"
-    },
-    {
-     "when": "第二个空写了 from",
-     "say": "from 不能单独表示“自从那时起一直到现在”；这里用 since。"
-    }
-   ],
-   "step": 42
+   "step": 53
   },
   {
    "phase": "validate",
@@ -1206,10 +1676,10 @@
      "say": "主语是 I 的时候用 have，不是 has：I have been to …。"
     }
    ],
-   "step": 43
+   "step": 54
   },
   {
-   "step": 44,
+   "step": 55,
    "phase": "validate",
    "kind": "teach",
    "audio_id": "u5r4-ending",
@@ -1219,5 +1689,5 @@
  ],
  "title": "写一写：我的交流日记",
  "unit": "Unit 5 Educational exchanges",
- "version": 2
+ "version": 3
 }
