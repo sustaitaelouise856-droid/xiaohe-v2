@@ -197,6 +197,51 @@ function selectDailyRetestItems(maxCount) {
   } catch { return []; }
 }
 
+// 课程升版后 item_id 版本号变化（如 u3r4-v1-s34 → u3r4-v2-s34），队列与弱点事件里的
+// 旧版指针会成孤儿：孩子按当前版重做对了，旧版 pending 行消不掉、每日计数也不认。
+// 本函数把 retest_queue 的 pending 行与 weakness_events 的 item_id 指针迁到当前版本
+// （items 表同课同题步的最高版本；升版保步号、旧版 items 永不删除，故可安全对齐）。
+// attempts（作答原始记录）与 resolved 历史行一律不动。幂等，可反复调用。
+function normalizeRetestQueueVersions() {
+  try {
+    let movedQ = 0, movedW = 0, merged = 0;
+    const currentId = (itemId) => {
+      const m = /^(.+)-v(\d+)-s(\d+)$/.exec(itemId || '');
+      if (!m) return null;
+      const cur = db.prepare(
+        'SELECT item_id FROM items WHERE lesson_id=? AND step_no=? ORDER BY version DESC LIMIT 1'
+      ).get(m[1], Number(m[3]));
+      return cur ? cur.item_id : null;
+    };
+    const pend = db.prepare("SELECT id, item_id FROM retest_queue WHERE status='pending'").all();
+    for (const r of pend) {
+      const cur = currentId(r.item_id);
+      if (!cur || cur === r.item_id) continue;
+      const clash = db.prepare(
+        "SELECT id FROM retest_queue WHERE item_id=? AND status='pending' LIMIT 1"
+      ).get(cur);
+      if (clash) {
+        db.prepare("UPDATE retest_queue SET status='resolved', resolved_at=datetime('now'), source_session='version_merge' WHERE id=?").run(r.id);
+        merged++;
+      } else {
+        db.prepare('UPDATE retest_queue SET item_id=? WHERE id=?').run(cur, r.id);
+        movedQ++;
+      }
+    }
+    const weaks = db.prepare('SELECT DISTINCT item_id FROM weakness_events').all();
+    for (const w of weaks) {
+      const cur = currentId(w.item_id);
+      if (!cur || cur === w.item_id) continue;
+      db.prepare('UPDATE weakness_events SET item_id=? WHERE item_id=?').run(cur, w.item_id);
+      movedW++;
+    }
+    if (movedQ || movedW || merged) {
+      console.log(`[retest] version normalize: queue moved=${movedQ} merged=${merged} weakness moved=${movedW}`);
+    }
+    return movedQ + movedW + merged;
+  } catch (e) { console.error('[retest] version normalize failed', e); return 0; }
+}
+
 // 从 item_id 反查原始 step 定义（格式如 u3r5-v1-s28）
 const _lessonCache = {};
 function loadOriginalStep(itemId) {
@@ -259,4 +304,4 @@ function generateDailyRetest() {
   return { steps, total: steps.length };
 }
 
-module.exports = { backfillFromHistory, backfillWrongToRetest, getPending, resolveRetest, isPendingRetest, IRREGULAR_ITEMS, COMPARATIVE_ITEMS, classifyKnowledgePoint, selectDailyRetestItems, generateDailyRetest, loadOriginalStep };
+module.exports = { backfillFromHistory, backfillWrongToRetest, normalizeRetestQueueVersions, getPending, resolveRetest, isPendingRetest, IRREGULAR_ITEMS, COMPARATIVE_ITEMS, classifyKnowledgePoint, selectDailyRetestItems, generateDailyRetest, loadOriginalStep };
