@@ -35,13 +35,13 @@
        "script": "W: The telephone was invented by Alexander Bell in 1876. Q: Who invented the telephone?",
        "stem": "Who invented the telephone?",
        "options": [
-        "Cai Lun",
         "Alexander Bell",
         "Thomas Edison",
-        "Bi Sheng"
+        "Bi Sheng",
+        "Cai Lun"
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 0,
+       "audio": "/audio/exam-u4/listening-1.mp3"
       },
       {
        "num": 2,
@@ -50,13 +50,13 @@
        "script": "M: Paper is made from wood. First, trees are cut down. Then the wood is made into paper. Q: What is paper made from?",
        "stem": "What is paper made from?",
        "options": [
-        "Cotton",
-        "Wood",
         "Plastic",
-        "Glass"
+        "Cotton",
+        "Glass",
+        "Wood"
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 3,
+       "audio": "/audio/exam-u4/listening-2.mp3"
       },
       {
        "num": 3,
@@ -65,13 +65,13 @@
        "script": "W: The light bulb was invented in 1879. It is used to give light at night. Q: When was the light bulb invented?",
        "stem": "When was the light bulb invented?",
        "options": [
-        "In 1876",
-        "In 1879",
         "In 1877",
-        "In 1880"
+        "In 1880",
+        "In 1879",
+        "In 1876"
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 2,
+       "audio": "/audio/exam-u4/listening-3.mp3"
       },
       {
        "num": 4,
@@ -80,13 +80,13 @@
        "script": "M: Many books are printed every year. They are sold in bookshops all over the world. Q: Where are the books sold?",
        "stem": "Where are the books sold?",
        "options": [
+        "In museums",
         "In schools",
         "In bookshops",
-        "In libraries",
-        "In museums"
+        "In libraries"
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 2,
+       "audio": "/audio/exam-u4/listening-4.mp3"
       },
       {
        "num": 5,
@@ -101,7 +101,7 @@
         "Dozens"
        ],
        "answer": 2,
-       "audio": ""
+       "audio": "/audio/exam-u4/listening-5.mp3"
       },
       {
        "num": 6,
@@ -110,13 +110,13 @@
        "script": "M: English is spoken in many countries. It is taught in schools all over China. Q: Where is English taught?",
        "stem": "Where is English taught?",
        "options": [
-        "Only in England",
-        "In schools all over China",
+        "In hospitals",
         "Only in America",
-        "In hospitals"
+        "Only in England",
+        "In schools all over China"
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 3,
+       "audio": "/audio/exam-u4/listening-6.mp3"
       }
      ]
     },
@@ -137,7 +137,7 @@
         "Maybe."
        ],
        "answer": 0,
-       "audio": ""
+       "audio": "/audio/exam-u4/listening-7.mp3"
       },
       {
        "num": 2,
@@ -146,13 +146,13 @@
        "script": "W: Are these watches made in Switzerland? M: No, they are made in China. Q: Where are these watches made?",
        "stem": "Where are these watches made?",
        "options": [
+        "In Japan",
         "In Switzerland",
         "In China",
-        "In Japan",
         "In America"
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 2,
+       "audio": "/audio/exam-u4/listening-8.mp3"
       },
       {
        "num": 3,
@@ -167,7 +167,7 @@
         "In the 1930s"
        ],
        "answer": 0,
-       "audio": ""
+       "audio": "/audio/exam-u4/listening-9.mp3"
       },
       {
        "num": 4,
@@ -176,13 +176,13 @@
        "script": "W: Is tea grown in Hangzhou? M: Yes, the famous Longjing tea is grown there. Q: Is tea grown in Hangzhou?",
        "stem": "Is tea grown in Hangzhou?",
        "options": [
+        "No tea there.",
         "No, it isn't.",
         "Yes, it is.",
-        "Not sure.",
-        "No tea there."
+        "Not sure."
        ],
-       "answer": 1,
-       "audio": ""
+       "answer": 2,
+       "audio": "/audio/exam-u4/listening-10.mp3"
       }
      ]
     },
@@ -204,12 +204,12 @@
        "score": 1,
        "stem": "情景：你想问讲解员电话是什么时候发明的。下面哪一句问法正确？",
        "options": [
-        "When was the telephone invented?",
-        "When did the telephone invented?",
+        "When the telephone was invented?",
         "When is the telephone invent?",
-        "When the telephone was invented?"
+        "When did the telephone invented?",
+        "When was the telephone invented?"
        ],
-       "answer": 0,
+       "answer": 3,
        "audio": ""
       },
       {
@@ -239,12 +239,12 @@
        "score": 1,
        "stem": "Paper ______ in China about 2,000 years ago.",
        "options": [
-        "is invented",
         "was invented",
-        "invents",
-        "invented"
+        "is invented",
+        "invented",
+        "invents"
        ],
-       "answer": 1
+       "answer": 0
       },
       {
        "num": 2,
@@ -252,12 +252,12 @@
        "score": 1,
        "stem": "These cars ______ in Germany.",
        "options": [
-        "are made",
         "is made",
+        "are made",
         "was made",
         "make"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 3,
@@ -291,12 +291,12 @@
        "score": 1,
        "stem": "The storybook ______ by my sister yesterday.",
        "options": [
-        "was written",
         "is written",
-        "writes",
-        "wrote"
+        "was written",
+        "wrote",
+        "writes"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 6,
@@ -330,12 +330,12 @@
        "score": 1,
        "stem": "The telephone ______ in 1876.",
        "options": [
-        "invents",
         "is invented",
         "was invented",
-        "invented"
+        "invented",
+        "invents"
        ],
-       "answer": 2
+       "answer": 1
       },
       {
        "num": 9,
@@ -343,12 +343,12 @@
        "score": 1,
        "stem": "This song ______ by a famous singer.",
        "options": [
-        "is sung",
-        "sings",
         "was sing",
-        "sung"
+        "sung",
+        "is sung",
+        "sings"
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "num": 10,
@@ -356,12 +356,12 @@
        "score": 1,
        "stem": "The football match ______ on TV last night.",
        "options": [
-        "is shown",
-        "was shown",
         "shows",
-        "shown"
+        "shown",
+        "is shown",
+        "was shown"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 11,
@@ -370,11 +370,11 @@
        "stem": "______ the bridge ______ in 1990?",
        "options": [
         "Is; built",
-        "Was; built",
         "Does; build",
-        "Did; built"
+        "Did; built",
+        "Was; built"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 12,
@@ -382,12 +382,12 @@
        "score": 1,
        "stem": "Rice ______ in the south of China.",
        "options": [
-        "is grown",
         "are grown",
+        "is grown",
         "was grow",
         "grow"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 13,
@@ -408,12 +408,12 @@
        "score": 1,
        "stem": "The computer ______ for studying by many students.",
        "options": [
+        "was use",
         "is used",
-        "uses",
         "used",
-        "was use"
+        "uses"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 15,
@@ -453,12 +453,12 @@
        "score": 1,
        "stem": "The Eiffel Tower ______ by millions of visitors every year.",
        "options": [
-        "is visited",
-        "visits",
         "visited",
+        "visits",
+        "is visited",
         "is visiting"
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "num": 3,
@@ -466,12 +466,12 @@
        "score": 1,
        "stem": "This watch was ______ in Switzerland.",
        "options": [
-        "make",
-        "makes",
+        "making",
         "made",
-        "making"
+        "make",
+        "makes"
        ],
-       "answer": 2
+       "answer": 1
       },
       {
        "num": 4,
@@ -479,12 +479,12 @@
        "score": 1,
        "stem": "—Was the camera invented by Edison? —______.",
        "options": [
-        "Yes, it was",
         "No, it is",
+        "Yes, it was",
         "Yes, it is",
         "No, it does"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 5,
@@ -492,12 +492,12 @@
        "score": 1,
        "stem": "These T-shirts are ______ of cotton.",
        "options": [
-        "made",
         "make",
         "making",
+        "made",
         "makes"
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "num": 6,
@@ -505,12 +505,12 @@
        "score": 1,
        "stem": "The old bridge was pulled ______ last year.",
        "options": [
-        "down",
-        "up",
         "off",
-        "away"
+        "down",
+        "away",
+        "up"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 7,
@@ -518,12 +518,12 @@
        "score": 1,
        "stem": "Chopsticks ______ every day in China.",
        "options": [
-        "are used",
+        "using",
         "use",
         "uses",
-        "using"
+        "are used"
        ],
-       "answer": 0
+       "answer": 3
       },
       {
        "num": 8,
@@ -531,12 +531,12 @@
        "score": 1,
        "stem": "The movie ______ from a famous novel.",
        "options": [
-        "is adapted",
         "adapts",
         "adapted",
+        "is adapted",
         "adapting"
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "num": 9,
@@ -557,12 +557,12 @@
        "score": 1,
        "stem": "The new library ______ next to our school last year.",
        "options": [
-        "was built",
-        "is built",
+        "built",
         "builds",
-        "built"
+        "was built",
+        "is built"
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -577,12 +577,12 @@
        "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
        "stem": "Who invented paper?",
        "options": [
-        "Bi Sheng",
-        "Cai Lun",
         "Edison",
-        "Bell"
+        "Bell",
+        "Bi Sheng",
+        "Cai Lun"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 2,
@@ -591,12 +591,12 @@
        "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
        "stem": "What did people write on before paper was invented?",
        "options": [
+        "On leaves",
         "On bamboo or silk",
-        "On wood",
         "On walls",
-        "On leaves"
+        "On wood"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 3,
@@ -605,12 +605,12 @@
        "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
        "stem": "What was Cai Lun's paper made from?",
        "options": [
-        "Plastic",
         "Trees, old cloth and fishing nets",
+        "Glass",
         "Cotton",
-        "Glass"
+        "Plastic"
        ],
-       "answer": 1
+       "answer": 0
       },
       {
        "num": 4,
@@ -619,12 +619,12 @@
        "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
        "stem": "Why was Cai Lun's paper popular?",
        "options": [
-        "Because it was light and cheap",
-        "Because it was colorful",
         "Because it was heavy",
-        "Because it was expensive"
+        "Because it was expensive",
+        "Because it was colorful",
+        "Because it was light and cheap"
        ],
-       "answer": 0
+       "answer": 3
       },
       {
        "num": 5,
@@ -633,12 +633,12 @@
        "passage": "Paper is one of the most useful inventions in the world. It was invented in China about two thousand years ago by a man named Cai Lun.\n\nBefore paper was invented, people wrote on bamboo or silk. Bamboo was heavy and silk was expensive. Cai Lun made paper from trees, old cloth and fishing nets. His paper was light and cheap. Soon it was used all over China. Later, the way of making paper was brought to other countries.\n\nToday paper is used everywhere. We write on it, read books made of it, and even make clothes from special paper!",
        "stem": "Which of the following is TRUE?",
        "options": [
-        "Paper was invented in America",
         "Silk was cheaper than paper",
         "Paper is used everywhere today",
-        "Cai Lun invented printing"
+        "Cai Lun invented printing",
+        "Paper was invented in America"
        ],
-       "answer": 2
+       "answer": 1
       },
       {
        "num": 6,
@@ -647,12 +647,12 @@
        "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
        "stem": "How were books made in the past?",
        "options": [
-        "By machine",
         "By hand",
+        "By robot",
         "By computer",
-        "By robot"
+        "By machine"
        ],
-       "answer": 1
+       "answer": 0
       },
       {
        "num": 7,
@@ -662,11 +662,11 @@
        "stem": "Who invented movable type printing?",
        "options": [
         "Cai Lun",
+        "Bell",
         "Bi Sheng",
-        "Edison",
-        "Bell"
+        "Edison"
        ],
-       "answer": 1
+       "answer": 2
       },
       {
        "num": 8,
@@ -703,12 +703,12 @@
        "passage": "Books are very important to us. But do you know how books were made in the past?\n\nLong long ago, books were written by hand. It took a long time to finish one book. Then printing was invented. In China, Bi Sheng invented movable type printing in the 11th century. Small pieces with characters on them were put together to make a page. After printing, the pieces could be used again.\n\nThis was a great invention. Books could be printed faster and cheaper. More people could read books and learn new things.",
        "stem": "What does the underlined word \"movable\" mean?",
        "options": [
+        "沉重的",
         "固定的",
         "可移动的",
-        "昂贵的",
-        "沉重的"
+        "昂贵的"
        ],
-       "answer": 1
+       "answer": 2
       },
       {
        "num": 11,
@@ -717,12 +717,12 @@
        "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
        "stem": "When was the compass invented?",
        "options": [
-        "About 800 years ago",
         "More than 2,000 years ago",
+        "About 800 years ago",
         "In the 11th century",
         "In 1876"
        ],
-       "answer": 1
+       "answer": 0
       },
       {
        "num": 12,
@@ -731,12 +731,12 @@
        "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
        "stem": "What was the compass first used for?",
        "options": [
-        "For travelling",
-        "For building houses",
         "For cooking",
-        "For fishing"
+        "For fishing",
+        "For travelling",
+        "For building houses"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 13,
@@ -745,12 +745,12 @@
        "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
        "stem": "Who used the compass on ships?",
        "options": [
-        "Farmers",
         "Sailors",
+        "Farmers",
         "Teachers",
         "Doctors"
        ],
-       "answer": 1
+       "answer": 0
       },
       {
        "num": 14,
@@ -759,12 +759,12 @@
        "passage": "The compass is another great invention of China. It was invented more than two thousand years ago.\n\nAt first, it was not used for travelling. It was used to tell directions when people built houses. Later, it was used by sailors on ships. With a compass, sailors could find their way on the sea even at night.\n\nThe compass was brought to Europe about eight hundred years ago. It helped people travel around the world. Today, compasses are still used, but many people use phones to find directions.",
        "stem": "When was the compass brought to Europe?",
        "options": [
-        "About 800 years ago",
         "2,000 years ago",
-        "In 1876",
-        "Last year"
+        "About 800 years ago",
+        "Last year",
+        "In 1876"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 15,
@@ -793,12 +793,12 @@
        "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
        "stem": "When is the exhibition?",
        "options": [
+        "Sept. 20-25",
         "Oct. 20-25",
         "Oct. 25-30",
-        "Nov. 20-25",
-        "Sept. 20-25"
+        "Nov. 20-25"
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "num": 2,
@@ -807,12 +807,12 @@
        "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
        "stem": "Where is the exhibition?",
        "options": [
-        "School library",
-        "City Museum, 2nd Floor",
         "City Park",
-        "Science Center"
+        "School library",
+        "Science Center",
+        "City Museum, 2nd Floor"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 3,
@@ -821,12 +821,12 @@
        "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
        "stem": "Who invented the first telephone?",
        "options": [
-        "Edison",
-        "Bell",
+        "Bi Sheng",
         "Cai Lun",
-        "Bi Sheng"
+        "Edison",
+        "Bell"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 4,
@@ -835,12 +835,12 @@
        "passage": "Invention Exhibition\n\nTime: 9:00 a.m. - 5:00 p.m., October 20-25\nPlace: City Museum, 2nd Floor\n\nWhat you can see:\n- The first telephone, invented by Bell in 1876\n- An old printing machine from the Qing Dynasty\n- Models of paper-making from 2,000 years ago\n\nTickets: Students: 10 yuan; Adults: 20 yuan\nAll students are welcome!",
        "stem": "How much is a student ticket?",
        "options": [
-        "20 yuan",
         "15 yuan",
-        "10 yuan",
-        "Free"
+        "Free",
+        "20 yuan",
+        "10 yuan"
        ],
-       "answer": 2
+       "answer": 3
       },
       {
        "num": 5,
@@ -869,12 +869,12 @@
        "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
        "stem": "第1题",
        "options": [
-        "was invented",
-        "is invented",
+        "invents",
         "invented",
-        "invents"
+        "is invented",
+        "was invented"
        ],
-       "answer": 0
+       "answer": 3
       },
       {
        "num": 2,
@@ -883,12 +883,12 @@
        "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
        "stem": "第2题",
        "options": [
-        "talk",
-        "talks",
         "talked",
-        "talking"
+        "talking",
+        "talk",
+        "talks"
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "num": 3,
@@ -897,12 +897,12 @@
        "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
        "stem": "第3题",
        "options": [
-        "became",
-        "become",
+        "becoming",
         "becomes",
-        "becoming"
+        "become",
+        "became"
        ],
-       "answer": 0
+       "answer": 3
       },
       {
        "num": 4,
@@ -911,12 +911,12 @@
        "passage": "The telephone is one of the most important inventions. It __1__ by Alexander Bell in 1876. At first, people could only __2__ to others near them. Later, telephones __3__ better and better. Today, mobile phones are __4__ everywhere. They are used not only for calling, but also for __5__ photos, playing games and studying.",
        "stem": "第4题",
        "options": [
-        "use",
-        "used",
         "uses",
-        "using"
+        "using",
+        "use",
+        "used"
        ],
-       "answer": 1
+       "answer": 3
       },
       {
        "num": 5,
@@ -927,10 +927,10 @@
        "options": [
         "take",
         "takes",
-        "taking",
-        "took"
+        "took",
+        "taking"
        ],
-       "answer": 2
+       "answer": 3
       }
      ]
     },
