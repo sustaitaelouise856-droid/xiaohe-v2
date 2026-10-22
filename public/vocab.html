@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<script src="/client-error.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>我的生词本 · 小禾英语</title>
@@ -222,9 +223,22 @@ document.getElementById('revFlip').onclick = () => {
   document.getElementById('revFlip').style.display = 'none';
   document.getElementById('revBtns').style.display = 'flex';
 };
+// 掌握度同步（2026-10-22）：生词本的复习/拼写结果也写进后端5级掌握度，
+// 与 words.html 的 addMastery 同口径：认识/拼对=答对升1级，还不认识/拼错=答错降1级；只做增量写，不动本地逻辑
+function syncMastery(word, ok) {
+  try {
+    fetch('/api/words/mastery', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ word: word, correct: !!ok })
+    }).then(r => r.json()).then(d => {
+      if (!d.ok && window.__reportError) window.__reportError('vocab mastery sync failed: ok=false word=' + word, location.href, 0, 0, '');
+    }).catch(e => { if (window.__reportError) window.__reportError('vocab mastery sync failed: ' + (e && e.message), location.href, 0, 0, ''); });
+  } catch (e) { if (window.__reportError) window.__reportError('vocab mastery sync failed: ' + (e && e.message), location.href, 0, 0, ''); }
+}
 function revMark(known) {
   const v = getVocab(), w = queue[qi];
   if (v[w]) { v[w].reviews = (v[w].reviews||0)+1; if (known) v[w].ok = (v[w].ok||0)+1; else v[w].ok = 0; saveVocab(v); }
+  syncMastery(w, known);
   qi++; showRev();
 }
 document.getElementById('revNo').onclick = () => revMark(false);
@@ -320,6 +334,7 @@ function checkSpell() {
       input.style.background = '#fff8e1';
     }, 800);
   }
+  syncMastery(w, correct); // 拼写结果同步后端掌握度（与 words.html 同口径：拼对升1级、拼错降1级）
   setTimeout(() => {
     input.style.display = 'none';
     document.getElementById('spellCheckBtn').style.display = 'none';
