@@ -22,7 +22,7 @@
               "prompt": "请跟读下面的广播站开场白。",
               "text": "Good morning, everyone! This is Xiaohe Radio Station. I'm your host, Lin Tao. Today is Monday, October twelfth. Here is some good news for you. Our school sports meeting will be held this Friday on the playground. All students are welcome to join us. That's all for today. Thank you for listening, and see you tomorrow!",
               "score": 8,
-              "audio": ""
+              "audio": "/audio/exam-u2/read-aloud.mp3"
             }
           ]
         },
@@ -43,7 +43,7 @@
               ],
               "answer": 0,
               "score": 1.5,
-              "audio": "",
+              "audio": "/audio/exam-u2/listening-1.mp3",
               "dialogue": "W: Excuse me, when will the book sale be held? M: It will be held this Saturday morning in the school library."
             },
             {
@@ -58,7 +58,7 @@
               ],
               "answer": 2,
               "score": 1.5,
-              "audio": "",
+              "audio": "/audio/exam-u2/listening-2.mp3",
               "dialogue": "M: Hi, this is Xiaohe Radio. What's your favourite programme? W: I like the English Corner best. It's on Wednesday evening."
             },
             {
@@ -73,7 +73,7 @@
               ],
               "answer": 1,
               "score": 1.5,
-              "audio": "",
+              "audio": "/audio/exam-u2/listening-3.mp3",
               "dialogue": "W: How many books did Grade Eight borrow in October? M: They borrowed 1,250 books, the most of all the grades."
             },
             {
@@ -88,7 +88,7 @@
               ],
               "answer": 3,
               "score": 1.5,
-              "audio": "",
+              "audio": "/audio/exam-u2/listening-4.mp3",
               "dialogue": "M: Did the number of listeners go up or down last week? W: It went up 20%. More and more students like our programmes."
             },
             {
@@ -103,7 +103,7 @@
               ],
               "answer": 2,
               "score": 1.5,
-              "audio": "",
+              "audio": "/audio/exam-u2/listening-5.mp3",
               "dialogue": "W: Tom wrote to us yesterday. He wants to hear the song 'Tomorrow Will Be Better'. M: OK. Let's play it for him after the news."
             },
             {
@@ -118,7 +118,7 @@
               ],
               "answer": 1,
               "score": 1.5,
-              "audio": "",
+              "audio": "/audio/exam-u2/listening-6.mp3",
               "dialogue": "M: Where will the choir contest be held? W: In the school hall. It starts at 3:00 p.m. on Friday."
             }
           ]
@@ -141,7 +141,7 @@
               ],
               "answer": 1,
               "score": 1,
-              "audio": ""
+              "audio": "/audio/exam-u2/listening-7.mp3"
             },
             {
               "id": "u2s9",
@@ -155,7 +155,7 @@
               ],
               "answer": 0,
               "score": 1,
-              "audio": ""
+              "audio": "/audio/exam-u2/listening-7.mp3"
             },
             {
               "id": "u2s10",
@@ -169,7 +169,7 @@
               ],
               "answer": 3,
               "score": 1,
-              "audio": ""
+              "audio": "/audio/exam-u2/listening-7.mp3"
             },
             {
               "id": "u2s11",
@@ -183,7 +183,7 @@
               ],
               "answer": 2,
               "score": 1,
-              "audio": ""
+              "audio": "/audio/exam-u2/listening-7.mp3"
             }
           ]
         },
