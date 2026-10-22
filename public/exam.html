@@ -6,6 +6,7 @@
 <title>单元测验卷</title>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
+<script src="/client-error.js"></script>
 <style>
   :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --red:#d93025; }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
@@ -52,6 +53,41 @@
   html[data-theme="dark"] .q-stem { color:#f0f0f0 !important; }
   html[data-theme="dark"] .opt { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
   html[data-theme="dark"] input[type=text], html[data-theme="dark"] textarea { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
+  /* ===== 课程式播放器（2026-10-22，仅 exam-u2） ===== */
+  .cs-top { display:flex; justify-content:space-between; gap:10px; font-weight:700; font-size:15px; color:#3c4043; margin-bottom:8px; flex-wrap:wrap; }
+  .cs-track { height:10px; background:#e1e5eb; border-radius:5px; overflow:hidden; margin-bottom:10px; }
+  .cs-fillbar { height:100%; background:linear-gradient(90deg,#1a73e8,#6c3fd4); width:0; transition:width .3s ease; }
+  .cs-hint { font-size:13px; color:#80868b; margin-bottom:14px; }
+  .cs-crumb { font-size:14px; color:var(--blue); font-weight:700; margin-bottom:6px; }
+  .cs-passage, .cs-material { background:#f8f9fa; border-radius:12px; padding:16px; margin:12px 0; line-height:1.9; font-size:16px; white-space:pre-wrap; }
+  .cs-material { background:#f0f7ff; }
+  .cs-req { color:#5f6368; font-size:14px; margin:8px 0; line-height:1.7; }
+  .cs-req ul { margin:4px 0 4px 18px; padding:0; }
+  .cs-confirm { display:block; width:100%; margin-top:14px; background:linear-gradient(135deg,#1a73e8,#4a8ef7); color:#fff; border:0; border-radius:12px; padding:13px; font-size:16px; font-weight:700; cursor:pointer; }
+  .cs-confirm:disabled { background:#c6d4ea; cursor:not-allowed; }
+  .cs-nav { display:flex; gap:12px; margin:6px 0 10px; }
+  .cs-nav button { flex:1; padding:13px; border-radius:12px; font-size:16px; font-weight:700; border:2px solid #e1e5eb; background:#fff; cursor:pointer; }
+  .cs-nav button:disabled { opacity:.45; cursor:not-allowed; }
+  .cs-nav #csNext { background:linear-gradient(135deg,#1a73e8,#4a8ef7); color:#fff; border:0; }
+  .cs-nav #csNext:disabled { background:#c6d4ea; }
+  .cs-fb { border-radius:12px; padding:14px 16px; margin-top:16px; font-size:15px; line-height:1.8; }
+  .cs-fb.ok { background:#e6f4ea; color:#14532d; }
+  .cs-fb.ng { background:#fce8e6; color:#7a1f1a; }
+  .cs-fb.pend { background:#fff8e1; color:#7a5b12; }
+  .cs-mat { background:#f0f7ff; border-radius:12px; padding:12px 16px; margin-top:10px; font-size:14px; line-height:1.8; color:#3c4043; white-space:pre-wrap; }
+  .opt.cs-right { border-color:var(--green); background:#e6f4ea; }
+  .opt.cs-wrongpick { border-color:var(--red); background:#fce8e6; }
+  .opt:disabled { cursor:default; opacity:1; }
+  .cs-wc { font-size:13px; color:#999; margin-top:6px; }
+  .cs-skip { margin-top:10px; font-size:13px; }
+  .cs-skip a { color:#80868b; }
+  .cs-done-note { font-size:14px; color:#1e8e3e; margin:8px 0; }
+  .cs-review-row { border-top:1px solid #f0f0f0; padding:10px 0; font-size:14px; line-height:1.7; }
+  .cs-review-row:first-of-type { border-top:0; }
+  html[data-theme="dark"] .cs-top { color:#e8eaed !important; }
+  html[data-theme="dark"] .cs-passage, html[data-theme="dark"] .cs-material, html[data-theme="dark"] .cs-mat { background:#3a3a3a !important; color:#f0f0f0 !important; }
+  html[data-theme="dark"] .cs-nav button { background:#333 !important; color:#f0f0f0 !important; border-color:#555 !important; }
+  html[data-theme="dark"] .cs-nav #csNext { background:linear-gradient(135deg,#1a73e8,#4a8ef7) !important; color:#fff !important; }
 </style>
 </head>
 <body>
@@ -98,6 +134,8 @@ async function load() {
   }
   EXAM = d.exam;
   document.getElementById('examTitle').textContent = EXAM.title;
+  // 2026-10-22：exam-u2 试点课程式（一题一屏+立即反馈），其他卷保持一页式
+  if (id === 'exam-u2') { initCoursePlayer(); return; }
   render();
   document.getElementById('submitBar').style.display = 'flex';
   startTimer();
@@ -106,18 +144,32 @@ async function load() {
 function render() {
   let html = '';
   EXAM.sections.forEach(sec => {
-    html += `<div class="section"><h2>${sec.title}</h2><div class="sub">满分 ${sec.score} 分</div>`;
+    html += `<div class="section"><h2>${sec.title}</h2><div class="sub">满分 ${sec.score != null ? sec.score : sec.total} 分</div>`;
     sec.parts.forEach(part => {
       if (part.title) html += `<h3 style="margin:16px 0 8px;font-size:18px;">${part.title}</h3>`;
       if (part.passage) html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;">${part.passage}</div>`;
+      // 2026-10-22修：u3/u4/u5 的阅读/完形/语法填空材料存在每道题的 passage 字段里（同 part 内多题共用一段），
+      // 旧版只渲染 part.passage，导致这些卷的材料根本不显示（学生反馈"测验卷没有题目"的主因之一）。
+      // 同一段材料只在它第一次出现的那道题上方显示一次，后面题目不重复。
+      let lastPass = '';
       part.questions.forEach((q, qi) => {
         const qid = sec.id + '-' + part.id + '-' + qi;
         html += `<div class="q"><div class="q-num">${q.num || (qi+1)}. (${q.score}分)</div>`;
         if (q.audio) html += `<button class="audio-btn" onclick="playAudio('${q.audio}')">🔊 播放</button>`;
+        if (q.type !== 'speak' && q.passage && q.passage !== lastPass) {
+          lastPass = q.passage;
+          html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;white-space:pre-wrap;">${q.passage}</div>`;
+        }
         if (q.stem) html += `<div class="q-stem">${q.stem}</div>`;
         // 2026-10-13修：u2卷用prompt字段，前端之前只认stem，导致题目不显示
         if (q.prompt) html += `<div class="q-stem">${q.prompt}</div>`;
         if (q.requirements) html += `<div style="color:#5f6368;font-size:14px;margin:8px 0;line-height:1.7;">${q.requirements}</div>`;
+        // 2026-10-22修：hint 字段旧版只用作写作框占位符，选择/填空题的 hint 从不显示；
+        // 其中 u5 完形整篇短文就藏在第一题的 hint 里，不显示等于没题干。长 hint 按材料块显示，短 hint 显示为提示行。
+        if (q.hint && q.type !== 'writing') {
+          if (q.hint.length > 120) html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;white-space:pre-wrap;">${q.hint}</div>`;
+          else html += `<div style="font-size:13px;color:#999;margin:6px 0;">💡 ${q.hint}</div>`;
+        }
         if (q.type === 'choice') {
           q.options.forEach((op, oi) => {
             html += `<button class="opt" data-qid="${qid}" data-oi="${oi}" onclick="selectOpt('${qid}',${oi})"><span class="k">${'ABCD'[oi]}</span>${op}</button>`;
@@ -132,7 +184,7 @@ function render() {
           const material = q.text || q.passage;
           if (material) html += `<div style="background:#f0f7ff;border-radius:12px;padding:16px;margin:12px 0;line-height:1.9;font-size:16px;">${material}</div>`;
           html += `<div style="margin:8px 0;"><button class="rec-btn" onclick="toggleRec('${qid}',this)">🎤 开始录音</button><span class="rec-status" id="st-${qid}"></span></div>`;
-          html += `<div style="font-size:13px;color:#999;">${q.speak_hint || '录音完成后自动得分（参与分）'}</div>`;
+          html += `<div style="font-size:13px;color:#999;">${q.speak_hint || '录音完成后由老师批改计分'}</div>`;
         }
         html += `</div>`;
       });
@@ -236,5 +288,306 @@ function showResult(data) {
 load();
 </script>
 <script src="/modal.js"></script>
+<script>
+// ================= 课程式播放器（2026-10-22，仅 exam-u2） =================
+// 一题一屏、答完立即判分（服务端 /api/exam/answer，与整卷判分共用同一判分逻辑）、
+// 进度存服务端：中途退出再打开自动续答。其他测验卷仍走上方一页式，互不影响。
+const CS = {
+  flat: [], idx: 0, state: {}, sel: null,
+  elapsedBase: 0, sessionStart: Date.now(), timerInt: null,
+  rec: null, chunks: [], recorded: false
+};
+const CS_TYPE_NAME = { choice: '选择题', fill: '填空题', speak: '口语题', writing: '写作题' };
+function csEsc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function csElapsed() { return CS.elapsedBase + Math.floor((Date.now() - CS.sessionStart) / 1000); }
+function csFmtTime(sec) { return Math.floor(sec / 60) + '分' + String(sec % 60).padStart(2, '0') + '秒'; }
+function csTick() {
+  const el = document.getElementById('timer');
+  if (el) { const s = csElapsed(); el.textContent = '已用时 ' + Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+}
+function csFlatten() {
+  const out = [];
+  EXAM.sections.forEach(sec => sec.parts.forEach(part => {
+    part.questions.forEach((q, qi) => {
+      out.push({ qid: sec.id + '-' + part.id + '-' + qi, secTitle: sec.title, partTitle: part.title || '', passage: part.passage || '', q });
+    });
+  }));
+  return out;
+}
+
+async function initCoursePlayer() {
+  CS.flat = csFlatten();
+  try {
+    const r = await fetch('/api/exam/progress/' + EXAM.id);
+    const d = await r.json();
+    if (d.ok && d.progress) {
+      CS.elapsedBase = d.progress.elapsed_sec || 0;
+      Object.keys(d.progress.answers || {}).forEach(qid => { CS.state[qid] = d.progress.answers[qid]; });
+    }
+  } catch (e) { /* 拿不到进度就从头开始，不挡住考试 */ }
+  CS.sessionStart = Date.now();
+  const first = CS.flat.findIndex(e => !CS.state[e.qid]);
+  CS.idx = first === -1 ? CS.flat.length - 1 : first;
+  document.getElementById('examBody').innerHTML =
+    '<div class="cs-top"><span id="csProg"></span><span id="csScore"></span></div>' +
+    '<div class="cs-track"><div class="cs-fillbar" id="csBar"></div></div>' +
+    '<div class="cs-hint">进度会自动保存，中途退出也没关系，下次打开接着做。建议 100 分钟内做完。</div>' +
+    '<div id="csCard"></div>' +
+    '<div class="cs-nav"><button id="csPrev" onclick="csGo(-1)">← 上一题</button><button id="csNext" onclick="csNext()"></button></div>';
+  csTick();
+  CS.timerInt = setInterval(csTick, 1000);
+  csShow(CS.idx);
+}
+
+function csShow(i) {
+  CS.idx = i; CS.sel = null; CS.recorded = false;
+  const e = CS.flat[i], q = e.q, st = CS.state[e.qid];
+  const answered = !!st;
+  let h = '<div class="section">';
+  h += `<div class="cs-crumb">${csEsc(e.secTitle)}${e.partTitle ? ' · ' + csEsc(e.partTitle) : ''}</div>`;
+  h += `<div class="q-num">第 ${i + 1} 题（${q.score} 分）· ${CS_TYPE_NAME[q.type] || ''}</div>`;
+  if (e.passage) h += `<div class="cs-passage">${csEsc(e.passage)}</div>`;
+  if (q.audio) h += `<button class="audio-btn" onclick="playAudio('${q.audio}')">🔊 播放</button>`;
+  if (q.stem) h += `<div class="q-stem">${csEsc(q.stem)}</div>`;
+  if (q.prompt) h += `<div class="q-stem">${csEsc(q.prompt)}</div>`;
+  if (q.requirements) {
+    const reqs = Array.isArray(q.requirements) ? q.requirements : [q.requirements];
+    h += '<div class="cs-req">内容要点：<ul>' + reqs.map(r => `<li>${csEsc(r)}</li>`).join('') + '</ul></div>';
+  }
+  if (q.type === 'choice') {
+    const ci = answered && st.answer_display ? 'ABCD'.indexOf(st.answer_display.letter) : -1;
+    q.options.forEach((op, oi) => {
+      let cls = 'opt';
+      if (answered) {
+        if (oi === ci) cls += ' cs-right';
+        else if (Number(st.given) === oi) cls += ' cs-wrongpick';
+        if (Number(st.given) === oi) cls += ' sel';
+      }
+      h += `<button class="${cls}" id="csopt-${oi}" ${answered ? 'disabled' : ''} onclick="csPick(${oi})"><span class="k">${'ABCD'[oi]}</span>${csEsc(op)}</button>`;
+    });
+    if (!answered) h += '<button class="cs-confirm" id="csConfirm" disabled onclick="csConfirmChoice()">确认这道题</button>';
+  } else if (q.type === 'fill') {
+    h += `<input type="text" id="csFill" placeholder="请输入答案" value="${answered ? csEsc(st.given) : ''}" ${answered ? 'disabled' : ''}>`;
+    if (!answered) h += '<button class="cs-confirm" id="csConfirm" onclick="csConfirmFill()">确认这道题</button>';
+  } else if (q.type === 'speak') {
+    const material = q.text || q.passage;
+    if (material) h += `<div class="cs-material">${csEsc(material)}</div>`;
+    if (answered) h += `<div class="cs-done-note">${st.given === 'recorded' ? '✅ 这道题已录音保存。想重录可以再录一次，会自动更新。' : '这道题已跳过录音。有麦克风时可以再录一次，会自动更新。'}</div>`;
+    h += '<div style="margin:8px 0;"><button class="rec-btn" id="csRecBtn" onclick="csToggleRec()">🎤 开始录音</button><span class="rec-status" id="csRecSt"></span></div>';
+    if (!answered) {
+      h += '<button class="cs-confirm" id="csSpeakDone" disabled onclick="csConfirmSpeak()">这道题做完了</button>';
+      h += '<div class="cs-skip"><a href="javascript:void(0)" onclick="csSkipSpeak()">没有麦克风？跳过录音，直接完成这道题</a></div>';
+    }
+    h += '<div style="font-size:13px;color:#999;">朗读录音会留给老师批改</div>';
+  } else if (q.type === 'writing') {
+    if (q.tips) h += `<div class="cs-req">提示：${csEsc(q.tips)}</div>`;
+    h += `<textarea id="csWrite" placeholder="请在这里作答" oninput="csWordCount()">${answered ? csEsc(st.given) : ''}</textarea>`;
+    h += `<div class="cs-wc"><span id="csWc"></span>${q.min_words ? ' · 不少于 ' + q.min_words + ' 词' : ''}</div>`;
+    h += `<button class="cs-confirm" id="csConfirm" onclick="csConfirmWriting()">${answered ? '重新保存' : '保存这道题'}</button>`;
+  }
+  if (answered) h += csFeedbackHtml(e, st);
+  h += '</div>';
+  document.getElementById('csCard').innerHTML = h;
+  if (q.type === 'writing') csWordCount();
+  csUpdateChrome();
+}
+
+function csFeedbackHtml(e, st) {
+  const q = e.q;
+  if (st.result === 'pending') {
+    return `<div class="cs-fb pend">${q.type === 'speak' ? '🎤' : '✍️'} 已保存。这道题 ${st.max} 分由老师批改，先不计入现在的得分。</div>`;
+  }
+  if (st.result === 'correct') {
+    let s = `✅ 答对了，这道题 ${st.max} 分。`;
+    if (q.type === 'fill' && st.answer_display) s += `标准答案：「${csEsc(st.answer_display.text)}」`;
+    return `<div class="cs-fb ok">${s}</div>`;
+  }
+  let s = '❌ 这道题没答对。';
+  if (q.type === 'choice' && st.answer_display) {
+    const gi = Number(st.given);
+    s += `你选的是 ${'ABCD'[gi] || ''}「${csEsc(q.options[gi] || '')}」，正确答案是 ${st.answer_display.letter}「${csEsc(st.answer_display.text)}」。`;
+  } else if (q.type === 'fill' && st.answer_display) {
+    s += `你写的是「${csEsc(st.given)}」，正确答案是「${csEsc(st.answer_display.text)}」。`;
+  }
+  let h = `<div class="cs-fb ng">${s}</div>`;
+  if (st.material) h += `<div class="cs-mat">听力原文：${csEsc(st.material)}</div>`;
+  return h;
+}
+
+function csUpdateChrome() {
+  const total = CS.flat.length, done = Object.keys(CS.state).length;
+  let got = 0, mx = 0;
+  CS.flat.forEach(e => { const st = CS.state[e.qid]; if (st && st.result !== 'pending') { got += st.got; mx += st.max; } });
+  document.getElementById('csProg').textContent = `第 ${CS.idx + 1} / ${total} 题 · 已答 ${done} 题`;
+  document.getElementById('csScore').textContent = mx > 0 ? `客观题已得 ${got} / ${mx} 分` : '';
+  document.getElementById('csBar').style.width = (done / total * 100) + '%';
+  document.getElementById('csPrev').disabled = CS.idx === 0;
+  const next = document.getElementById('csNext');
+  if (CS.idx === total - 1) {
+    next.textContent = done === total ? '交卷看结果 📝' : '这是最后一题';
+    next.disabled = done !== total;
+  } else {
+    next.textContent = '下一题 →';
+    next.disabled = !CS.state[CS.flat[CS.idx].qid];
+  }
+}
+
+function csGo(d) {
+  const n = CS.idx + d;
+  if (n < 0 || n >= CS.flat.length) return;
+  csShow(n);
+  window.scrollTo(0, 0);
+}
+async function csNext() {
+  if (CS.idx === CS.flat.length - 1) {
+    if (Object.keys(CS.state).length === CS.flat.length) csFinish();
+    return;
+  }
+  csGo(1);
+}
+
+function csPick(oi) {
+  CS.sel = oi;
+  document.querySelectorAll('[id^="csopt-"]').forEach(b => b.classList.remove('sel'));
+  const b = document.getElementById('csopt-' + oi);
+  if (b) b.classList.add('sel');
+  const c = document.getElementById('csConfirm');
+  if (c) c.disabled = false;
+}
+function csConfirmChoice() { if (CS.sel !== null) csSave(CS.sel); }
+function csConfirmFill() {
+  const v = document.getElementById('csFill').value;
+  if (!v.trim()) { prettyAlert('先写上你的答案，再确认这道题', '✏️'); return; }
+  csSave(v);
+}
+function csConfirmSpeak() { if (CS.recorded) csSave('recorded'); }
+async function csSkipSpeak() {
+  if (!await prettyConfirm('没有麦克风就先跳过录音，这道题照样由老师批改。可以吗？', { icon: '🎤' })) return;
+  csSave('skipped_no_mic');
+}
+function csWordCount() {
+  const t = document.getElementById('csWrite'), w = document.getElementById('csWc');
+  if (!t || !w) return;
+  w.textContent = '已写 ' + (t.value.trim() ? t.value.trim().split(/\s+/).length : 0) + ' 词';
+}
+function csConfirmWriting() {
+  const v = document.getElementById('csWrite').value;
+  if (!v.trim()) { prettyAlert('先写一点内容，再保存这道题', '✏️'); return; }
+  csSave(v);
+}
+
+async function csSave(given) {
+  const e = CS.flat[CS.idx];
+  const btn = document.getElementById('csConfirm') || document.getElementById('csSpeakDone');
+  if (btn) btn.disabled = true;
+  try {
+    const r = await fetch('/api/exam/answer', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ exam_id: EXAM.id, qid: e.qid, given, elapsed: csElapsed() })
+    });
+    const d = await r.json();
+    if (!d.ok) { prettyAlert('保存失败，请再试一次', '⚠️'); if (btn) btn.disabled = false; return; }
+    CS.state[e.qid] = { given, got: d.got, max: d.max, result: d.result, answer_display: d.answer_display, material: d.material };
+    csShow(CS.idx);
+  } catch (err) {
+    prettyAlert('网络不太好，保存失败，请再试一次', '⚠️');
+    if (btn) btn.disabled = false;
+  }
+}
+
+async function csToggleRec() {
+  const btn = document.getElementById('csRecBtn'), stEl = document.getElementById('csRecSt');
+  if (CS.rec && CS.rec.state === 'recording') {
+    CS.rec.stop();
+    btn.textContent = '🎤 开始录音';
+    btn.classList.remove('stop');
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    CS.rec = new MediaRecorder(stream);
+    CS.chunks = [];
+    CS.rec.ondataavailable = ev => CS.chunks.push(ev.data);
+    CS.rec.onstop = () => {
+      stream.getTracks().forEach(t => t.stop());
+      stEl.textContent = '✅ 已录音';
+      CS.recorded = true;
+      const e = CS.flat[CS.idx];
+      if (CS.state[e.qid]) csSave('recorded');
+      else { const b = document.getElementById('csSpeakDone'); if (b) b.disabled = false; }
+    };
+    CS.rec.start();
+    btn.textContent = '⏹ 停止';
+    btn.classList.add('stop');
+    stEl.textContent = '🔴 录音中…';
+  } catch (err) {
+    prettyAlert('无法访问麦克风，可以用下面的"跳过录音"先完成这道题', '🎤');
+  }
+}
+
+async function csFinish() {
+  if (!await prettyConfirm('都答完了吗？交卷后就能看到成绩。', { icon: '📝' })) return;
+  clearInterval(CS.timerInt);
+  const answers = {};
+  CS.flat.forEach(e => { const st = CS.state[e.qid]; if (st) answers[e.qid] = st.given; });
+  document.getElementById('examBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">判分中…</div>';
+  try {
+    const resp = await fetch('/api/exam/submit', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ exam_id: EXAM.id, answers })
+    });
+    const data = await resp.json();
+    if (!data.ok) throw new Error('submit failed');
+    csShowResult(data);
+  } catch (e) {
+    document.getElementById('examBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">提交失败，请刷新页面重试。你的答案都已保存，不会丢。</div>';
+  }
+}
+
+function csShowResult(data) {
+  const detailMap = {};
+  (data.detail || []).forEach(d => { detailMap[d.qid] = d; });
+  let right = 0, wrong = 0;
+  (data.detail || []).forEach(d => { if (d.status === 'auto') { if (d.got === d.max) right++; else wrong++; } });
+  const pending = data.pending || [];
+  const pendingScore = pending.reduce((s, p) => s + p.max, 0);
+  const pct = data.total_objective > 0 ? Math.round(data.score / data.total_objective * 100) : 0;
+  document.getElementById('examBody').style.display = 'none';
+  const r = document.getElementById('result');
+  r.className = 'show';
+  let h = `<div class="section"><div class="score-big">
+    <div class="num">${data.score}</div><div class="total">/ ${data.total_objective} 分（客观题）</div>
+    <div class="score-bar"><div class="score-fill" style="width:${pct}%"></div></div>
+    <div style="font-size:16px;color:#5f6368;">客观题答对 ${right} 道、答错 ${wrong} 道 · 用时 ${csFmtTime(csElapsed())}</div>`;
+  if (pending.length) h += `<div style="font-size:14px;color:#b7791f;margin-top:12px;background:#fff8e1;border-radius:8px;padding:10px;">⏳ 口语和写作共 ${pending.length} 道（${pendingScore} 分）待老师批改，批改后计入总分</div>`;
+  h += `<div style="font-size:13px;color:#999;margin-top:8px;">全卷满分 ${EXAM.total_score} 分</div></div></div>`;
+  h += '<div class="section"><h2 style="font-size:19px;margin:0 0 8px;">逐题回顾</h2>';
+  CS.flat.forEach((e, i) => {
+    const d = detailMap[e.qid], st = CS.state[e.qid];
+    if (!d) return;
+    let icon = '⏳ 待批改';
+    if (d.status === 'auto') icon = d.got === d.max ? '✅ 答对' : '❌ 答错';
+    let mine = '', correct = '';
+    if (e.q.type === 'choice') {
+      const gi = Number(d.given);
+      mine = '你的答案：' + (isNaN(gi) || d.given === null ? '未答' : 'ABCD'[gi] + '「' + csEsc(e.q.options[gi] || '') + '」');
+      if (st && st.answer_display) correct = '正确答案：' + st.answer_display.letter + '「' + csEsc(st.answer_display.text) + '」';
+    } else if (e.q.type === 'fill') {
+      mine = '你的答案：「' + csEsc(String(d.given == null ? '' : d.given).slice(0, 60)) + '」';
+      if (st && st.answer_display) correct = '正确答案：「' + csEsc(st.answer_display.text) + '」';
+    } else if (e.q.type === 'speak') {
+      mine = d.given === 'recorded' ? '已录音，待老师批改' : '跳过录音，待老师批改';
+    } else if (e.q.type === 'writing') {
+      mine = '作文开头：「' + csEsc(String(d.given == null ? '' : d.given).slice(0, 50)) + '…」待老师批改';
+    }
+    h += `<div class="cs-review-row"><b>第 ${i + 1} 题</b>（${CS_TYPE_NAME[e.q.type] || ''} ${d.max} 分）${icon}<br>${mine}${correct ? '<br>' + correct : ''}</div>`;
+  });
+  h += '</div>';
+  h += '<div class="section" style="text-align:center;"><a href="/" style="color:var(--blue);text-decoration:none;font-size:17px;">← 返回首页</a></div>';
+  r.innerHTML = h;
+  window.scrollTo(0, 0);
+}
+
+</script>
 </body>
 </html>
