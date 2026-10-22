@@ -1,0 +1,1449 @@
+{
+ "lesson_id": "dict1",
+ "title": "精听听写 · 第一次远行",
+ "unit": "听说专项",
+ "version": 1,
+ "practice_end": 10,
+ "home_subtitle": "只用耳朵学英语：听一句，写一句",
+ "part1_desc": "认生词、盲听全篇、前半篇逐句听写",
+ "part2_desc": "后半篇独立听写、对照订正、金句跟读",
+ "kicker_story": "听写时间",
+ "kicker_teach": "听写教练",
+ "answer_placeholder": "听一句，写一句（写英文）",
+ "note": "试点课（2026-10-22 Elouise 批准）：精听听写，借鉴尚雯婕学习法缩小版。材料自编原创，贴 Unit 5 现在完成时。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "今天学听写",
+   "teach_html": "<p>今天换一种学法：<strong>精听听写</strong>。不看文字，只用耳朵，听一句、写一句。</p><p>材料是李明的交换周日记，用的全是这几节课学的现在完成时。规矩跟平时一样：可以重播、可以调慢速度；写错了看反馈改；实在写不出，点“老师教我”，或者按老规矩先看答案、继续往下，不会卡住。</p><p>先认四个生词，再开始听。</p>",
+   "audio_id": "dict1-intro"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "先认四个生词",
+   "teach_html": "<p>这篇里有四个新词，先认一下（词可以点，点了能听发音、看意思）：</p><p><strong>host family</strong> 寄宿家庭——出国交换时住的当地家庭。</p><p><strong>such</strong> 这样的——such delicious food，就是“这么好吃的食物”。</p><p><strong>shown</strong> 是 show 的过去分词：show–showed–shown，意思是“给看、带领”。</p><p><strong>memory</strong> 回忆——my best memory，我最美好的回忆。</p><p>认完了，点下一步，先把整篇听一遍。这一遍不写，只听个大概。</p>"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "盲听全篇",
+   "teach_html": "<p>整篇听一遍。这一遍不用写，先把大概意思听出来。</p><p>听的时候留意两件事：他刚到哪里？这一周都做了哪几件事？</p>",
+   "audio_id": "dict1-full"
+  },
+  {
+   "step": 4,
+   "phase": "practice",
+   "kind": "mcq",
+   "audio_id": "dict1-full",
+   "title": "大意理解",
+   "scene": "盲听之后，先抓大意。",
+   "stem": "刚才整篇短文主要在讲什么？",
+   "task": "只选一个最能概括整篇的。",
+   "options": [
+    "李明介绍他的学校",
+    "李明在交换周里经历的新鲜事",
+    "一次去博物馆参观的经过",
+    "李明给家人写的三封信"
+   ],
+   "answer": "B",
+   "help": "想想他这一周都做了哪几件事：如果有一个说法能把大部分事情都串起来，就是它。",
+   "explain": "整篇是李明的交换周记录：到达、吃晚餐、参观学校、交朋友、去博物馆、写信回家，讲的都是这一周的新鲜事。",
+   "wrong_feedback": {
+    "A": "学校只是其中一小部分，整篇讲的是他这一周经历的很多事。",
+    "C": "去博物馆只是其中一件事，不是整篇的中心。",
+    "D": "写信只是最后的一部分，整篇还讲了吃饭、交朋友、去上课。"
+   }
+  },
+  {
+   "step": 5,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "dict1-s01",
+   "title": "听写第1句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我刚到一个离家很远的新城市。",
+   "answer_text": "I have just arrived in a new city far from my home.",
+   "expects": [
+    {
+     "id": "arrived",
+     "type": "word",
+     "answers": [
+      "arrived"
+     ],
+     "cn": [
+      "到达"
+     ]
+    },
+    {
+     "id": "newcity",
+     "type": "word",
+     "answers": [
+      "new city"
+     ],
+     "cn": [
+      "新城市"
+     ]
+    },
+    {
+     "id": "far",
+     "type": "word",
+     "answers": [
+      "far"
+     ],
+     "cn": [
+      "远"
+     ]
+    },
+    {
+     "id": "home",
+     "type": "word",
+     "answers": [
+      "home"
+     ],
+     "cn": [
+      "家"
+     ]
+    }
+   ],
+   "dim_help": {
+    "arrived": {
+     "label": "arrived（到达）",
+     "ask": "这一句里“到达”的过去分词，只写它。"
+    },
+    "newcity": {
+     "label": "new city（新城市）",
+     "ask": "“新城市”是哪两个词？连着写。"
+    },
+    "far": {
+     "label": "far（远）",
+     "ask": "“远”是哪个词？只写它。"
+    },
+    "home": {
+     "label": "home（家）",
+     "ask": "句尾“家”是哪个词？只写它。"
+    }
+   },
+   "help": "先听前半句：I have just…，后面是“到达”。just 放在 have 和过去分词中间。",
+   "help_line": "I have just arrived in a new city far from my home.",
+   "explain": "I have just arrived in a new city far from my home.（我刚到一个离家很远的新城市。）just 放在 have 和过去分词 arrived 中间，表示“刚刚”。",
+   "common_errors": [
+    {
+     "when": "漏了arrived",
+     "say": "少了 arrived（到达）：have just 后面要用过去分词 arrived，不是 arrive。"
+    },
+    {
+     "when": "漏了new city",
+     "say": "少了 new city（新城市）：new 是“新的”，city 是“城市”。"
+    },
+    {
+     "when": "漏了far",
+     "say": "少了 far（远）：far from home 就是“离家很远”。"
+    },
+    {
+     "when": "漏了home",
+     "say": "少了 home（家）：句尾是 from my home，别漏掉。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have just arrive",
+     "say": "arrive 要用过去分词 arrived：have just arrived 才是“刚刚到达”。"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "dict1-s02",
+   "title": "听写第2句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：寄宿家庭已经做好了一顿丰盛的晚餐欢迎我。",
+   "answer_text": "My host family has already cooked a big dinner to welcome me.",
+   "expects": [
+    {
+     "id": "hostfamily",
+     "type": "word",
+     "answers": [
+      "host family"
+     ],
+     "cn": [
+      "寄宿家庭"
+     ]
+    },
+    {
+     "id": "already",
+     "type": "word",
+     "answers": [
+      "already"
+     ],
+     "cn": [
+      "已经"
+     ]
+    },
+    {
+     "id": "cooked",
+     "type": "word",
+     "answers": [
+      "cooked"
+     ],
+     "cn": [
+      "做好（饭）"
+     ]
+    },
+    {
+     "id": "dinner",
+     "type": "word",
+     "answers": [
+      "dinner"
+     ],
+     "cn": [
+      "晚餐"
+     ]
+    },
+    {
+     "id": "welcome",
+     "type": "word",
+     "answers": [
+      "welcome"
+     ],
+     "cn": [
+      "欢迎"
+     ]
+    }
+   ],
+   "dim_help": {
+    "hostfamily": {
+     "label": "host family（寄宿家庭）",
+     "ask": "“寄宿家庭”是哪两个词？连着写。"
+    },
+    "already": {
+     "label": "already（已经）",
+     "ask": "“已经”是哪个词？只写它。"
+    },
+    "cooked": {
+     "label": "cooked（做好（饭））",
+     "ask": "“做好（饭）”的过去分词，只写它。"
+    },
+    "dinner": {
+     "label": "dinner（晚餐）",
+     "ask": "“晚餐”是哪个词？只写它。"
+    },
+    "welcome": {
+     "label": "welcome（欢迎）",
+     "ask": "句尾“欢迎”是哪个词？只写它。"
+    }
+   },
+   "help": "先听 has already，再听后面的动作：做好了一顿晚餐。",
+   "help_line": "My host family has already cooked a big dinner to welcome me.",
+   "explain": "My host family has already cooked a big dinner to welcome me.（寄宿家庭已经做好一顿丰盛的晚餐来欢迎我。）already 放在 has 和过去分词中间。",
+   "common_errors": [
+    {
+     "when": "漏了host family",
+     "say": "少了 host family（寄宿家庭）：host family 就是交换时住的当地家庭。"
+    },
+    {
+     "when": "漏了already",
+     "say": "少了 already（已经）：它放在 has 和 cooked 中间，表示“已经”。"
+    },
+    {
+     "when": "漏了cooked",
+     "say": "少了 cooked（做好）：cook 的过去分词是 cooked，has 后面要用过去分词。"
+    },
+    {
+     "when": "漏了dinner",
+     "say": "少了 dinner（晚餐）：a big dinner 是一顿丰盛的晚餐。"
+    },
+    {
+     "when": "漏了welcome",
+     "say": "少了 welcome（欢迎）：to welcome me 是“为了欢迎我”。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has already cook",
+     "say": "cook 要用过去分词 cooked：has already cooked。"
+    }
+   ]
+  },
+  {
+   "step": 7,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "dict1-s03",
+   "title": "听写第3句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我以前从没吃过这么好吃的食物。",
+   "answer_text": "I have never eaten such delicious food before.",
+   "expects": [
+    {
+     "id": "never",
+     "type": "word",
+     "answers": [
+      "never"
+     ],
+     "cn": [
+      "从没"
+     ]
+    },
+    {
+     "id": "eaten",
+     "type": "word",
+     "answers": [
+      "eaten"
+     ],
+     "cn": [
+      "吃（过去分词）"
+     ]
+    },
+    {
+     "id": "such",
+     "type": "word",
+     "answers": [
+      "such"
+     ],
+     "cn": [
+      "这样的"
+     ]
+    },
+    {
+     "id": "delicious",
+     "type": "word",
+     "answers": [
+      "delicious"
+     ],
+     "cn": [
+      "美味的"
+     ]
+    },
+    {
+     "id": "food",
+     "type": "word",
+     "answers": [
+      "food"
+     ],
+     "cn": [
+      "食物"
+     ]
+    }
+   ],
+   "dim_help": {
+    "never": {
+     "label": "never（从没）",
+     "ask": "“从没”是哪个词？只写它。"
+    },
+    "eaten": {
+     "label": "eaten（吃（过去分词））",
+     "ask": "“吃”的过去分词，只写它。"
+    },
+    "such": {
+     "label": "such（这样的）",
+     "ask": "“这样的”是哪个词？只写它。"
+    },
+    "delicious": {
+     "label": "delicious（美味的）",
+     "ask": "“美味的”是哪个词？只写它。"
+    },
+    "food": {
+     "label": "food（食物）",
+     "ask": "“食物”是哪个词？只写它。"
+    }
+   },
+   "help": "这句是“从来没吃过”：have never 加过去分词，句尾还有 before。",
+   "help_line": "I have never eaten such delicious food before.",
+   "explain": "I have never eaten such delicious food before.（我以前从没吃过这么好吃的食物。）never 放在 have 和过去分词 eaten 中间；such delicious food 是“这么好吃的食物”。",
+   "common_errors": [
+    {
+     "when": "漏了never",
+     "say": "少了 never（从没）：have never 是“从来没有过”。"
+    },
+    {
+     "when": "漏了eaten",
+     "say": "少了 eaten（吃）：eat 的过去分词是 eaten，不是 ate（ate 是过去式）。"
+    },
+    {
+     "when": "漏了such",
+     "say": "少了 such（这样的）：such 后面跟形容词加名词，such delicious food。"
+    },
+    {
+     "when": "漏了delicious",
+     "say": "少了 delicious（美味的）：注意拼写 de-li-cious。"
+    },
+    {
+     "when": "漏了food",
+     "say": "少了 food（食物）：food 前面不加 a。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have never ate",
+     "say": "ate 是过去式；have 后面要用过去分词 eaten。"
+    }
+   ]
+  },
+  {
+   "step": 8,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "dict1-s04",
+   "title": "听写第4句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：安娜带我参观了学校，还给我讲了学校的历史。",
+   "answer_text": "Anna has shown me around the school and told me its history.",
+   "expects": [
+    {
+     "id": "shown",
+     "type": "word",
+     "answers": [
+      "shown"
+     ],
+     "cn": [
+      "带领（show 的过去分词）"
+     ]
+    },
+    {
+     "id": "around",
+     "type": "word",
+     "answers": [
+      "around"
+     ],
+     "cn": [
+      "到处"
+     ]
+    },
+    {
+     "id": "school",
+     "type": "word",
+     "answers": [
+      "school"
+     ],
+     "cn": [
+      "学校"
+     ]
+    },
+    {
+     "id": "told",
+     "type": "word",
+     "answers": [
+      "told"
+     ],
+     "cn": [
+      "告诉（tell 的过去分词）"
+     ]
+    },
+    {
+     "id": "history",
+     "type": "word",
+     "answers": [
+      "history"
+     ],
+     "cn": [
+      "历史"
+     ]
+    }
+   ],
+   "dim_help": {
+    "shown": {
+     "label": "shown（带领（show 的过去分词））",
+     "ask": "“带领参观”的 show 过去分词，只写它。"
+    },
+    "around": {
+     "label": "around（到处）",
+     "ask": "“到处”是哪个词？只写它。"
+    },
+    "school": {
+     "label": "school（学校）",
+     "ask": "“学校”是哪个词？只写它。"
+    },
+    "told": {
+     "label": "told（告诉（tell 的过去分词））",
+     "ask": "“告诉”的过去分词，只写它。"
+    },
+    "history": {
+     "label": "history（历史）",
+     "ask": "“历史”是哪个词？只写它。"
+    }
+   },
+   "help": "这句有两个动作：带我参观（shown me around）、告诉我历史（told me）。",
+   "help_line": "Anna has shown me around the school and told me its history.",
+   "explain": "Anna has shown me around the school and told me its history.（安娜带我参观了学校，还讲了学校的历史。）show 的过去分词是 shown，tell 的是 told，都是不规则变化。",
+   "common_errors": [
+    {
+     "when": "漏了shown",
+     "say": "少了 shown：show 的过去分词是 shown（show–showed–shown）。"
+    },
+    {
+     "when": "漏了around",
+     "say": "少了 around：show someone around 是“带某人到处参观”。"
+    },
+    {
+     "when": "漏了school",
+     "say": "少了 school（学校）：around the school 是“参观学校各处”。"
+    },
+    {
+     "when": "漏了told",
+     "say": "少了 told：tell 的过去分词是 told，不是 telled。"
+    },
+    {
+     "when": "漏了history",
+     "say": "少了 history（历史）：its history 是“它的历史”，its 不要写成 it's。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has showed",
+     "say": "show 的过去分词是 shown，不是 showed（showed 是过去式）。"
+    }
+   ]
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "dict1-s05",
+   "title": "听写第5句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我在班里交了两个新朋友。",
+   "answer_text": "I have made two new friends in my class.",
+   "expects": [
+    {
+     "id": "made",
+     "type": "word",
+     "answers": [
+      "made"
+     ],
+     "cn": [
+      "交（make 的过去分词）"
+     ]
+    },
+    {
+     "id": "two",
+     "type": "word",
+     "answers": [
+      "two"
+     ],
+     "cn": [
+      "两（个）"
+     ]
+    },
+    {
+     "id": "newfriends",
+     "type": "word",
+     "answers": [
+      "new friends"
+     ],
+     "cn": [
+      "新朋友"
+     ]
+    },
+    {
+     "id": "class",
+     "type": "word",
+     "answers": [
+      "class"
+     ],
+     "cn": [
+      "班级"
+     ]
+    }
+   ],
+   "dim_help": {
+    "made": {
+     "label": "made（交（make 的过去分词））",
+     "ask": "“交（朋友）”的 make 过去分词，只写它。"
+    },
+    "two": {
+     "label": "two（两（个））",
+     "ask": "“两个”的‘两’是哪个词？只写它。"
+    },
+    "newfriends": {
+     "label": "new friends（新朋友）",
+     "ask": "“新朋友”是哪两个词？连着写。"
+    },
+    "class": {
+     "label": "class（班级）",
+     "ask": "“班级”是哪个词？只写它。"
+    }
+   },
+   "help": "“交朋友”是 make friends，这里用的是现在完成时。",
+   "help_line": "I have made two new friends in my class.",
+   "explain": "I have made two new friends in my class.（我在班里交了两个新朋友。）make 的过去分词是 made。",
+   "common_errors": [
+    {
+     "when": "漏了made",
+     "say": "少了 made：make 的过去分词是 made；make friends 是“交朋友”。"
+    },
+    {
+     "when": "漏了two",
+     "say": "少了 two（两个）：two new friends，别和 to 混了。"
+    },
+    {
+     "when": "漏了new friends",
+     "say": "少了 new friends（新朋友）：是两个朋友，friends 要加 s。"
+    },
+    {
+     "when": "漏了class",
+     "say": "少了 class（班级）：in my class 是“在我的班里”。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have make",
+     "say": "make 的过去分词是 made：have made。"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "short",
+   "audio_id": "dict1-s06",
+   "title": "听写第6句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：老师带我们去了一座河边的著名博物馆。",
+   "answer_text": "Our teacher has taken us to a famous museum near the river.",
+   "expects": [
+    {
+     "id": "teacher",
+     "type": "word",
+     "answers": [
+      "teacher"
+     ],
+     "cn": [
+      "老师"
+     ]
+    },
+    {
+     "id": "taken",
+     "type": "word",
+     "answers": [
+      "taken"
+     ],
+     "cn": [
+      "带（take 的过去分词）"
+     ]
+    },
+    {
+     "id": "famous",
+     "type": "word",
+     "answers": [
+      "famous"
+     ],
+     "cn": [
+      "著名的"
+     ]
+    },
+    {
+     "id": "museum",
+     "type": "word",
+     "answers": [
+      "museum"
+     ],
+     "cn": [
+      "博物馆"
+     ]
+    },
+    {
+     "id": "river",
+     "type": "word",
+     "answers": [
+      "river"
+     ],
+     "cn": [
+      "河"
+     ]
+    }
+   ],
+   "dim_help": {
+    "teacher": {
+     "label": "teacher（老师）",
+     "ask": "“老师”是哪个词？只写它。"
+    },
+    "taken": {
+     "label": "taken（带（take 的过去分词））",
+     "ask": "“带”的 take 过去分词，只写它。"
+    },
+    "famous": {
+     "label": "famous（著名的）",
+     "ask": "“著名的”是哪个词？只写它。"
+    },
+    "museum": {
+     "label": "museum（博物馆）",
+     "ask": "“博物馆”是哪个词？只写它。"
+    },
+    "river": {
+     "label": "river（河）",
+     "ask": "“河”是哪个词？只写它。"
+    }
+   },
+   "help": "先听地点链：a famous museum，后面还有 near the river 把位置说清。",
+   "help_line": "Our teacher has taken us to a famous museum near the river.",
+   "explain": "Our teacher has taken us to a famous museum near the river.（老师带我们去了一座河边的著名博物馆。）take 的过去分词是 taken。",
+   "common_errors": [
+    {
+     "when": "漏了teacher",
+     "say": "少了 teacher（老师）：Our teacher 是“我们的老师”。"
+    },
+    {
+     "when": "漏了taken",
+     "say": "少了 taken：take 的过去分词是 taken（take–took–taken）。"
+    },
+    {
+     "when": "漏了famous",
+     "say": "少了 famous（著名的）：注意拼写 fa-mous。"
+    },
+    {
+     "when": "漏了museum",
+     "say": "少了 museum（博物馆）：注意拼写 mu-se-um，这个词最容易拼错。"
+    },
+    {
+     "when": "漏了river",
+     "say": "少了 river（河）：near the river 是“在河边”。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has took us",
+     "say": "took 是过去式；has 后面要用过去分词 taken。"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "第二部分：独立听写",
+   "teach_html": "<p>后半篇还是听写。这一部分算<strong>独立验证</strong>：每句先自己写；写错一次可以再试一次；错两次就直接看答案、抄一遍、继续往下，不会卡住。</p><p>全部写完之后有<strong>对照订正</strong>：原文全篇亮出来，今天的重点词一个一个讲。最后跟读三句最值得背下来的句子。</p>"
+  },
+  {
+   "step": 12,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s07",
+   "title": "听写第7句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：汤姆教了我一些简单的英文歌。",
+   "answer_text": "Tom has taught me some easy English songs.",
+   "expects": [
+    {
+     "id": "taught",
+     "type": "word",
+     "answers": [
+      "taught"
+     ],
+     "cn": [
+      "教（teach 的过去分词）"
+     ]
+    },
+    {
+     "id": "easy",
+     "type": "word",
+     "answers": [
+      "easy"
+     ],
+     "cn": [
+      "简单的"
+     ]
+    },
+    {
+     "id": "english",
+     "type": "word",
+     "answers": [
+      "English"
+     ],
+     "cn": [
+      "英文的"
+     ]
+    },
+    {
+     "id": "songs",
+     "type": "word",
+     "answers": [
+      "songs"
+     ],
+     "cn": [
+      "歌"
+     ]
+    }
+   ],
+   "dim_help": {
+    "taught": {
+     "label": "taught（教（teach 的过去分词））",
+     "ask": "“教”的过去分词，只写它。"
+    },
+    "easy": {
+     "label": "easy（简单的）",
+     "ask": "“简单的”是哪个词？只写它。"
+    },
+    "english": {
+     "label": "English（英文的）",
+     "ask": "“英文的”是哪个词？只写它。"
+    },
+    "songs": {
+     "label": "songs（歌）",
+     "ask": "“歌”是哪个词？只写它。"
+    }
+   },
+   "help": "“教我”是 taught me；teach 的过去分词是不规则的 taught。",
+   "help_line": "Tom has taught me some easy English songs.",
+   "explain": "Tom has taught me some easy English songs.（汤姆教了我一些简单的英文歌。）teach–taught–taught，过去式和过去分词一样。",
+   "common_errors": [
+    {
+     "when": "漏了taught",
+     "say": "少了 taught：teach 的过去分词是 taught（teach–taught–taught）。"
+    },
+    {
+     "when": "漏了easy",
+     "say": "少了 easy（简单的）：some easy songs 是“一些简单的歌”。"
+    },
+    {
+     "when": "漏了English",
+     "say": "少了 English（英文的）：English songs 是“英文歌”，正式写作时 E 要大写。"
+    },
+    {
+     "when": "漏了songs",
+     "say": "少了 songs（歌）：some 后面用复数 songs。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has teach",
+     "say": "teach 的过去分词是 taught，不是原形 teach。"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s08",
+   "title": "听写第8句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我们一起在操场上踢了足球。",
+   "answer_text": "We have played football together on the playground.",
+   "expects": [
+    {
+     "id": "played",
+     "type": "word",
+     "answers": [
+      "played"
+     ],
+     "cn": [
+      "踢/玩（play 的过去分词）"
+     ]
+    },
+    {
+     "id": "football",
+     "type": "word",
+     "answers": [
+      "football"
+     ],
+     "cn": [
+      "足球"
+     ]
+    },
+    {
+     "id": "together",
+     "type": "word",
+     "answers": [
+      "together"
+     ],
+     "cn": [
+      "一起"
+     ]
+    },
+    {
+     "id": "playground",
+     "type": "word",
+     "answers": [
+      "playground"
+     ],
+     "cn": [
+      "操场"
+     ]
+    }
+   ],
+   "dim_help": {
+    "played": {
+     "label": "played（踢/玩（play 的过去分词））",
+     "ask": "“踢/玩”的过去分词，只写它。"
+    },
+    "football": {
+     "label": "football（足球）",
+     "ask": "“足球”是哪个词？只写它。"
+    },
+    "together": {
+     "label": "together（一起）",
+     "ask": "“一起”是哪个词？只写它。"
+    },
+    "playground": {
+     "label": "playground（操场）",
+     "ask": "“操场”是哪个词？只写它。"
+    }
+   },
+   "help": "这句最省心：play 是规则动词，加 ed 就是过去分词。",
+   "help_line": "We have played football together on the playground.",
+   "explain": "We have played football together on the playground.（我们一起在操场上踢了足球。）played 是规则变化，play 加 ed。",
+   "common_errors": [
+    {
+     "when": "漏了played",
+     "say": "少了 played：play 的过去分词是 played，直接加 ed。"
+    },
+    {
+     "when": "漏了football",
+     "say": "少了 football（足球）：foot 加 ball，注意两个 l。"
+    },
+    {
+     "when": "漏了together",
+     "say": "少了 together（一起）：注意拼写 to-ge-ther。"
+    },
+    {
+     "when": "漏了playground",
+     "say": "少了 playground（操场）：play 加 ground 合起来的词。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have play",
+     "say": "play 要用过去分词 played：have played。"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s09",
+   "title": "听写第9句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我还没坐过校车。",
+   "answer_text": "I haven't tried the school bus yet.",
+   "expects": [
+    {
+     "id": "tried",
+     "type": "word",
+     "answers": [
+      "tried"
+     ],
+     "cn": [
+      "试过（try 的过去分词）"
+     ]
+    },
+    {
+     "id": "schoolbus",
+     "type": "word",
+     "answers": [
+      "school bus"
+     ],
+     "cn": [
+      "校车"
+     ]
+    },
+    {
+     "id": "yet",
+     "type": "word",
+     "answers": [
+      "yet"
+     ],
+     "cn": [
+      "还（没）"
+     ]
+    }
+   ],
+   "dim_help": {
+    "tried": {
+     "label": "tried（试过（try 的过去分词））",
+     "ask": "“试过”的过去分词，只写它。"
+    },
+    "schoolbus": {
+     "label": "school bus（校车）",
+     "ask": "“校车”是哪两个词？连着写。"
+    },
+    "yet": {
+     "label": "yet（还（没））",
+     "ask": "句尾“还（没）”是哪个词？只写它。"
+    }
+   },
+   "help": "“还没做过某事”：haven't 加过去分词，句尾放 yet。",
+   "help_line": "I haven't tried the school bus yet.",
+   "explain": "I haven't tried the school bus yet.（我还没坐过校车。）yet 放在否定句的句尾，表示“还（没）”。",
+   "common_errors": [
+    {
+     "when": "漏了tried",
+     "say": "少了 tried：try 的过去分词是 tried，y 变 i 再加 ed。"
+    },
+    {
+     "when": "漏了school bus",
+     "say": "少了 school bus（校车）：school 加 bus，两个词。"
+    },
+    {
+     "when": "漏了yet",
+     "say": "少了 yet（还）：haven't … yet 是“还没……”，yet 放在句尾。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "haven't try",
+     "say": "try 要用过去分词 tried：haven't tried。"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s10",
+   "title": "听写第10句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我给家人写了三封长信。",
+   "answer_text": "I have written three long letters to my family.",
+   "expects": [
+    {
+     "id": "written",
+     "type": "word",
+     "answers": [
+      "written"
+     ],
+     "cn": [
+      "写（write 的过去分词）"
+     ]
+    },
+    {
+     "id": "three",
+     "type": "word",
+     "answers": [
+      "three"
+     ],
+     "cn": [
+      "三（封）"
+     ]
+    },
+    {
+     "id": "letters",
+     "type": "word",
+     "answers": [
+      "letters"
+     ],
+     "cn": [
+      "信"
+     ]
+    },
+    {
+     "id": "family",
+     "type": "word",
+     "answers": [
+      "family"
+     ],
+     "cn": [
+      "家人"
+     ]
+    }
+   ],
+   "dim_help": {
+    "written": {
+     "label": "written（写（write 的过去分词））",
+     "ask": "“写”的过去分词，只写它。"
+    },
+    "three": {
+     "label": "three（三（封））",
+     "ask": "“三”是哪个词？只写它。"
+    },
+    "letters": {
+     "label": "letters（信）",
+     "ask": "“信”是哪个词？只写它。"
+    },
+    "family": {
+     "label": "family（家人）",
+     "ask": "“家人”是哪个词？只写它。"
+    }
+   },
+   "help": "write 的三态要听清：write–wrote–written，分词双写 t。",
+   "help_line": "I have written three long letters to my family.",
+   "explain": "I have written three long letters to my family.（我给家人写了三封长信。）written 里有两个 t。",
+   "common_errors": [
+    {
+     "when": "漏了written",
+     "say": "少了 written：write 的过去分词是 written，双写 t（write–wrote–written）。"
+    },
+    {
+     "when": "漏了three",
+     "say": "少了 three（三）：three long letters 是“三封长信”。"
+    },
+    {
+     "when": "漏了letters",
+     "say": "少了 letters（信）：三封信要用复数 letters。"
+    },
+    {
+     "when": "漏了family",
+     "say": "少了 family（家人）：to my family 是“给我家人”。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have wrote",
+     "say": "wrote 是过去式；have 后面要用过去分词 written。"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s11",
+   "title": "听写第11句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：这个星期我的英语进步了很多。",
+   "answer_text": "My English has improved a lot this week.",
+   "expects": [
+    {
+     "id": "english",
+     "type": "word",
+     "answers": [
+      "English"
+     ],
+     "cn": [
+      "英语"
+     ]
+    },
+    {
+     "id": "improved",
+     "type": "word",
+     "answers": [
+      "improved"
+     ],
+     "cn": [
+      "进步（improve 的过去分词）"
+     ]
+    },
+    {
+     "id": "alot",
+     "type": "word",
+     "answers": [
+      "a lot"
+     ],
+     "cn": [
+      "很多"
+     ]
+    },
+    {
+     "id": "thisweek",
+     "type": "word",
+     "answers": [
+      "this week"
+     ],
+     "cn": [
+      "这个星期"
+     ]
+    }
+   ],
+   "dim_help": {
+    "english": {
+     "label": "English（英语）",
+     "ask": "“英语”是哪个词？只写它。"
+    },
+    "improved": {
+     "label": "improved（进步（improve 的过去分词））",
+     "ask": "“进步”的过去分词，只写它。"
+    },
+    "alot": {
+     "label": "a lot（很多）",
+     "ask": "“很多”是哪两个词？连着写。"
+    },
+    "thisweek": {
+     "label": "this week（这个星期）",
+     "ask": "“这个星期”是哪两个词？连着写。"
+    }
+   },
+   "help": "主语是 My English，不是 I，所以用 has。听清 has 后面的分词。",
+   "help_line": "My English has improved a lot this week.",
+   "explain": "My English has improved a lot this week.（这个星期我的英语进步了很多。）主语是 English，所以用 has，不用 have。",
+   "common_errors": [
+    {
+     "when": "漏了English",
+     "say": "少了 English（英语）：My English 是“我的英语”，正式写作时 E 要大写。"
+    },
+    {
+     "when": "漏了improved",
+     "say": "少了 improved（进步）：improve 的过去分词是 improved。"
+    },
+    {
+     "when": "漏了a lot",
+     "say": "少了 a lot（很多）：improved a lot 是“进步了很多”，a lot 是两个词。"
+    },
+    {
+     "when": "漏了this week",
+     "say": "少了 this week（这个星期）：this 加 week，week 是“星期”。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has improve",
+     "say": "improve 要用过去分词 improved：has improved。"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s12",
+   "title": "听写第12句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：我给爸爸妈妈买了一件小礼物。",
+   "answer_text": "I have bought a small gift for my mum and dad.",
+   "expects": [
+    {
+     "id": "bought",
+     "type": "word",
+     "answers": [
+      "bought"
+     ],
+     "cn": [
+      "买（buy 的过去分词）"
+     ]
+    },
+    {
+     "id": "small",
+     "type": "word",
+     "answers": [
+      "small"
+     ],
+     "cn": [
+      "小的"
+     ]
+    },
+    {
+     "id": "gift",
+     "type": "word",
+     "answers": [
+      "gift"
+     ],
+     "cn": [
+      "礼物"
+     ]
+    },
+    {
+     "id": "mum",
+     "type": "word",
+     "answers": [
+      "mum"
+     ],
+     "cn": [
+      "妈妈"
+     ]
+    }
+   ],
+   "dim_help": {
+    "bought": {
+     "label": "bought（买（buy 的过去分词））",
+     "ask": "“买”的过去分词，只写它。"
+    },
+    "small": {
+     "label": "small（小的）",
+     "ask": "“小的”是哪个词？只写它。"
+    },
+    "gift": {
+     "label": "gift（礼物）",
+     "ask": "“礼物”是哪个词？只写它。"
+    },
+    "mum": {
+     "label": "mum（妈妈）",
+     "ask": "“妈妈”是哪个词？只写它。"
+    }
+   },
+   "help": "buy 的过去分词 bought 拼写特殊：b-o-u-g-h-t，慢慢听、慢慢写。",
+   "help_line": "I have bought a small gift for my mum and dad.",
+   "explain": "I have bought a small gift for my mum and dad.（我给爸爸妈妈买了一件小礼物。）buy–bought–bought，过去式和过去分词一样。",
+   "common_errors": [
+    {
+     "when": "漏了bought",
+     "say": "少了 bought：buy 的过去分词是 bought（buy–bought–bought）。"
+    },
+    {
+     "when": "漏了small",
+     "say": "少了 small（小的）：a small gift 是“一件小礼物”。"
+    },
+    {
+     "when": "漏了gift",
+     "say": "少了 gift（礼物）：注意拼写 gi-ft。"
+    },
+    {
+     "when": "漏了mum",
+     "say": "少了 mum（妈妈）：mum and dad 是“爸爸妈妈”。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have buy",
+     "say": "buy 的过去分词是 bought，不是原形 buy。"
+    }
+   ]
+  },
+  {
+   "step": 18,
+   "phase": "validate",
+   "kind": "short",
+   "audio_id": "dict1-s13",
+   "title": "听写第13句",
+   "scene": "李明的交换周日记",
+   "stem": "把这一句写下来",
+   "task": "点播放听这一句（可以重播、可以调慢），把整句话写下来。",
+   "reading": "这句的意思：这次旅行成了我最美好的回忆。",
+   "answer_text": "This trip has become my best memory.",
+   "expects": [
+    {
+     "id": "trip",
+     "type": "word",
+     "answers": [
+      "trip"
+     ],
+     "cn": [
+      "旅行"
+     ]
+    },
+    {
+     "id": "become",
+     "type": "word",
+     "answers": [
+      "become"
+     ],
+     "cn": [
+      "成为（become 的过去分词）"
+     ]
+    },
+    {
+     "id": "best",
+     "type": "word",
+     "answers": [
+      "best"
+     ],
+     "cn": [
+      "最好的"
+     ]
+    },
+    {
+     "id": "memory",
+     "type": "word",
+     "answers": [
+      "memory"
+     ],
+     "cn": [
+      "回忆"
+     ]
+    }
+   ],
+   "dim_help": {
+    "trip": {
+     "label": "trip（旅行）",
+     "ask": "“旅行”是哪个词？只写它。"
+    },
+    "become": {
+     "label": "become（成为（become 的过去分词））",
+     "ask": "“成为”的过去分词，只写它。"
+    },
+    "best": {
+     "label": "best（最好的）",
+     "ask": "“最好的”是哪个词？只写它。"
+    },
+    "memory": {
+     "label": "memory（回忆）",
+     "ask": "“回忆”是哪个词？只写它。"
+    }
+   },
+   "help": "become 很特别：过去式 became，过去分词又变回 become。",
+   "help_line": "This trip has become my best memory.",
+   "explain": "This trip has become my best memory.（这次旅行成了我最美好的回忆。）become–became–become，过去分词和原形一样。",
+   "common_errors": [
+    {
+     "when": "漏了trip",
+     "say": "少了 trip（旅行）：This trip 是“这次旅行”。"
+    },
+    {
+     "when": "漏了become",
+     "say": "少了 become：become 的过去分词还是 become（become–became–become）。"
+    },
+    {
+     "when": "漏了best",
+     "say": "少了 best（最好的）：good 的最高级是 best。"
+    },
+    {
+     "when": "漏了memory",
+     "say": "少了 memory（回忆）：注意拼写 me-mo-ry。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has became",
+     "say": "became 是过去式；become 的过去分词还是 become 本身。"
+    }
+   ]
+  },
+  {
+   "step": 19,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "对照订正",
+   "teach_html": "<p><strong>对照订正。</strong>把原文从头读一遍，找出自己写错、漏写的地方。</p><p>I have just arrived in a new city far from my home.</p><p>My host family has already cooked a big dinner to welcome me.</p><p>I have never eaten such delicious food before.</p><p>Anna has shown me around the school and told me its history.</p><p>I have made two new friends in my class.</p><p>Our teacher has taken us to a famous museum near the river.</p><p>Tom has taught me some easy English songs.</p><p>We have played football together on the playground.</p><p>I haven't tried the school bus yet.</p><p>I have written three long letters to my family.</p><p>My English has improved a lot this week.</p><p>I have bought a small gift for my mum and dad.</p><p>This trip has become my best memory.</p><p>今天最容易错的是<strong>不规则过去分词</strong>，一个个对一下：</p><p>eat–ate–<strong>eaten</strong>；show–showed–<strong>shown</strong>；tell–told–<strong>told</strong>；take–took–<strong>taken</strong>；teach–taught–<strong>taught</strong>；write–wrote–<strong>written</strong>（双写 t）；buy–bought–<strong>bought</strong>；become–became–<strong>become</strong>（分词和原形一样）；make–made–<strong>made</strong>；try–tried–<strong>tried</strong>（y 变 i）。</p><p>还有三个小地方：such delicious food 是“这么好吃的食物”；a lot 是两个词；yet 放在否定句句尾。</p><p>上面这些词都可以点：点了能听发音、看意思，还能加进生词本。自己拼错过的词，今晚多看两眼。</p>"
+  },
+  {
+   "step": 20,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "金句跟读 1",
+   "teach_html": "<p><strong>金句跟读。</strong>这句在中考写作和口语里都能直接用：</p><p><strong>I have never eaten such delicious food before.</strong></p><p>点播放听一遍，然后<strong>出声跟读两遍</strong>，读顺了再下一步。</p><p>句型：have never 加过去分词，中间再放 such 加形容词加名词。把 food 换成别的词，就是一句新话。</p>",
+   "audio_id": "dict1-s03"
+  },
+  {
+   "step": 21,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "金句跟读 2",
+   "teach_html": "<p><strong>金句跟读。</strong>这句在中考写作和口语里都能直接用：</p><p><strong>My English has improved a lot this week.</strong></p><p>点播放听一遍，然后<strong>出声跟读两遍</strong>，读顺了再下一步。</p><p>句型：has improved a lot，“进步了很多”。主语换成 My writing、My listening，这句都成立。</p>",
+   "audio_id": "dict1-s11"
+  },
+  {
+   "step": 22,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "金句跟读 3",
+   "teach_html": "<p><strong>金句跟读。</strong>这句在中考写作和口语里都能直接用：</p><p><strong>This trip has become my best memory.</strong></p><p>点播放听一遍，然后<strong>出声跟读两遍</strong>，读顺了再下一步。</p><p>这句适合放在作文最后收尾。become 的过去分词还是 become，别写成 became。</p>",
+   "audio_id": "dict1-s13"
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "收尾",
+   "teach_html": "<p>这一课到这里。</p><p>点完成之后，完成页会写清：今天多少句是独立写对的、哪几句用了帮助、哪些词还要多练。那些数字才是今天真正的成绩单。</p>"
+  }
+ ]
+}
