@@ -1538,6 +1538,7 @@ app.post('/api/consolidation/retry', auth.requireAuth, (req, res) => {
 // 单元测验卷（2026-10-12）：广州新中考140分制
 exams.setDb(db);
 exams.initTable();
+exams.initProgressTable();
 app.get('/api/exams', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, exams: exams.getExamList() });
@@ -1563,10 +1564,36 @@ app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
   // 2026-10-12改：服务端判分，不再信任前端传来的score
   const { exam_id, answers } = req.body || {};
   if (!exam_id) return res.status(400).json({ ok: false, error: 'no_exam_id' });
-  const g = exams.gradeExam(String(exam_id), answers || {});
+  const finalAnswers = Object.assign({}, answers || {});
+  // 2026-10-22：课程式卷子（exam-u2）交卷时以服务端逐题存档为准合并，防止前端状态丢失漏题；其他卷无存档、行为不变
+  if (exams.isCourseStyle(String(exam_id))) {
+    const saved = exams.getProgressAnswers(String(exam_id));
+    Object.keys(saved).forEach(k => { finalAnswers[k] = saved[k]; });
+  }
+  const g = exams.gradeExam(String(exam_id), finalAnswers);
   if (!g.ok) return res.status(400).json({ ok: false, error: g.error });
-  const ok = exams.saveScore(String(exam_id), g.score, g.detail, answers || {});
+  const ok = exams.saveScore(String(exam_id), g.score, g.detail, finalAnswers);
+  if (ok && exams.isCourseStyle(String(exam_id))) exams.clearProgress(String(exam_id));
   res.json({ ok, score: g.score, total_objective: g.total_objective, pending: g.pending, detail: g.detail });
+});
+// 课程式逐题作答（2026-10-22，仅 exam-u2）：答完一题立即判分并存档，支撑立即反馈与中途续答
+app.post('/api/exam/answer', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const { exam_id, qid, given, elapsed } = req.body || {};
+  if (!exam_id || !qid) return res.status(400).json({ ok: false, error: 'bad_request' });
+  if (!exams.isCourseStyle(String(exam_id))) return res.status(400).json({ ok: false, error: 'not_course_style' });
+  const m = String(exam_id).match(/exam-u(\d)/);
+  if (m && !exams.isUnitDone(parseInt(m[1]))) return res.status(403).json({ ok: false, error: 'locked' });
+  const r = exams.saveAnswer(String(exam_id), String(qid), given, elapsed);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+// 课程式进度读取（续答用）
+app.get('/api/exam/progress/:id', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const r = exams.getProgress(req.params.id);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
 });
 // 真正的错题本（2026-10-12）：返回每道错题的原题、孩子答案、正确答案
 app.get('/api/mistakes', auth.requireAuth, (req, res) => {
