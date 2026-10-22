@@ -14,7 +14,7 @@ function backfillFromHistory() {
     const rows = db.prepare(`
       SELECT DISTINCT we.item_id, we.session_id
       FROM weakness_events we
-      LEFT JOIN retest_queue rq ON rq.item_id = we.item_id AND rq.status = 'pending'
+      LEFT JOIN retest_queue rq ON rq.item_id = we.item_id
       WHERE we.tag = '看答案过' AND rq.id IS NULL
     `).all();
     let n = 0;
@@ -144,7 +144,7 @@ function selectDailyRetestItems(maxCount) {
     const weak = db.prepare(`
       SELECT DISTINCT we.item_id, we.tag, MAX(we.created_at) AS last_at
       FROM weakness_events we
-      LEFT JOIN retest_queue q ON q.item_id = we.item_id AND q.status = 'pending'
+      LEFT JOIN retest_queue q ON q.item_id = we.item_id
       WHERE we.created_at >= datetime('now', '-7 days') AND q.id IS NULL
       AND we.item_id NOT LIKE 'yw-%' AND we.item_id NOT LIKE 'sx%'
       GROUP BY we.item_id
