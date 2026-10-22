@@ -1450,6 +1450,7 @@ app.post('/api/progress', auth.requireAuth, (req, res) => {
 // 复测闭环（2026-10-03）：待复测列表与解决
 app.get('/api/retest/pending', auth.requireAuth, (req, res) => {
   // 每次查询时顺带回填历史，确保 h 上线前的"看答案过"记录可被读取
+  retest.normalizeRetestQueueVersions();
   retest.backfillFromHistory();
   // 2026-10-14补画像：多次答错（2+次）但未进队列的也回填
   retest.backfillWrongToRetest();
@@ -1460,6 +1461,7 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     retest.backfillWrongToRetest();
+    retest.normalizeRetestQueueVersions();
     const items = retest.selectDailyRetestItems(8);
     const today = shanghaiDay();
     // 今日是否已通关：checkins 有今天，且今天做过 daily-retest 的题
@@ -2492,12 +2494,15 @@ function hasPendingReviews() { return getPendingReviews().length > 0; }
 // 避免"越做目标越小"的 bug（之前用 Math.min(10, 当前剩余)，做3道后目标从10变7）
 function checkDailyMistakes() {
   try {
+    retest.normalizeRetestQueueVersions();
     // 今天独立完成的错题数（上海日期）
-    // 条件：correct=1, helped=0, independent=1，且这道题曾经错过（是错题本里的）
+    // 条件：correct=1, helped=0，且这道题曾经错过（是错题本里的）。
+    // 2026-10-22修：去掉 independent=1——Elouise 口径是"答对且零求助就计数、重做第二次答对也算"，
+    // independent=1 会把 correct_retry 全部排除，与口径矛盾（孩子 id=8 反馈实锤）。
     const today = shanghaiDay();
     const r = db.prepare(`
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
-      WHERE a.correct=1 AND a.helped=0 AND a.independent=1
+      WHERE a.correct=1 AND a.helped=0
       AND date(a.created_at, '+8 hours') = ?
       AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       AND (
@@ -2523,10 +2528,11 @@ function checkDailyMistakes() {
 // 今日错题进度（供弹窗显示）：{done, target, pending}
 function getDailyMistakeProgress() {
   try {
+    retest.normalizeRetestQueueVersions();
     const today = shanghaiDay();
     const r = db.prepare(`
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
-      WHERE a.correct=1 AND a.helped=0 AND a.independent=1
+      WHERE a.correct=1 AND a.helped=0
       AND date(a.created_at, '+8 hours') = ?
       AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       AND (
