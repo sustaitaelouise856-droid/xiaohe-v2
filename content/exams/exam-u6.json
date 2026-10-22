@@ -40,7 +40,7 @@
                 "For three years"
               ],
               "answer": 3,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-1.mp3",
               "script": "W: How long have you learned English, Tom? M: I have learned it for three years. I started in 2023. Q: How long has the boy learned English?"
             },
             {
@@ -55,7 +55,7 @@
                 "Six years ago"
               ],
               "answer": 0,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-2.mp3",
               "script": "M: Have you lived in Beijing for a long time? W: Yes, I have lived here since 2020. Q: When did the girl move to Beijing?"
             },
             {
@@ -70,7 +70,7 @@
                 "She has drawn the Great Wall"
               ],
               "answer": 0,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-3.mp3",
               "script": "M: Have you ever visited the Great Wall? W: Yes, I have visited it twice. It is wonderful. Q: What has the woman done?"
             },
             {
@@ -85,7 +85,7 @@
                 "Since over two thousand years"
               ],
               "answer": 1,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-4.mp3",
               "script": "W: The Dragon Boat Festival has a long history. People have celebrated it for over two thousand years. Q: How long has the Dragon Boat Festival been celebrated?"
             },
             {
@@ -100,7 +100,7 @@
                 "When his grandpa took the old photos"
               ],
               "answer": 2,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-5.mp3",
               "script": "M: Grandpa, how long have you kept these old photos? W: Since I was young. They are fifty years old now. Q: What does the boy want to know?"
             },
             {
@@ -115,7 +115,7 @@
                 "I have known him since 2019"
               ],
               "answer": 3,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-6.mp3",
               "script": "W: Which sentence is correct? A: I have known him since 2019. B: I have known him for 2019. Q: Which sentence is correct?"
             }
           ]
@@ -136,8 +136,8 @@
                 "About one hundred years"
               ],
               "answer": 1,
-              "audio": "",
-              "script": "Yu Gong was an old man who lived a very long time ago. He wanted to move two big mountains. People have told this story for thousands of years. It teaches us never to give up. Questions: 1. How long have people told the story of Yu Gong? 2. What did Yu Gong want to do? 3. Where did Yu Gong live? 4. What does the story teach us?"
+              "audio": "/audio/exam-u6/listening-7.mp3",
+              "script": "Yu Gong was an old man who lived a very long time ago. He wanted to move two big mountains. People have told this story for thousands of years. It teaches us never to give up. Questions: 1. How long have people told the story of Yu Gong? 2. What did Yu Gong want to do? 3. When did Yu Gong live? 4. What does the story teach us?"
             },
             {
               "num": 2,
@@ -151,7 +151,7 @@
                 "Move two big mountains"
               ],
               "answer": 3,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-7.mp3",
               "script": "（同上）"
             },
             {
@@ -166,7 +166,7 @@
                 "Last year"
               ],
               "answer": 2,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-7.mp3",
               "script": "（同上）"
             },
             {
@@ -181,7 +181,7 @@
                 "Tell stories"
               ],
               "answer": 0,
-              "audio": "",
+              "audio": "/audio/exam-u6/listening-7.mp3",
               "script": "（同上）"
             }
           ]
