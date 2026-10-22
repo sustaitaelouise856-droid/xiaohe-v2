@@ -18,7 +18,7 @@
               "type": "speak",
               "score": 8,
               "stem": "请认真听并模仿朗读下面的短文，注意语音语调。",
-              "audio": "",
+              "audio": "/audio/exam-u5/read-aloud.mp3",
               "passage": "Hello, I'm Tom, an exchange student from England. I have been in Guangzhou for three months. I have visited many interesting places. I have tried dumplings and hotpot. I have made a lot of new friends. Have you ever talked with a foreign student?"
             }
           ]
@@ -33,13 +33,13 @@
               "score": 1.5,
               "stem": "听句子：\"I have just finished my homework.\" 这句话的意思是：",
               "options": [
-                "我正在做作业。",
                 "我刚做完作业。",
                 "我还没做作业。",
+                "我正在做作业。",
                 "我明天做作业。"
               ],
-              "answer": 1,
-              "audio": "",
+              "answer": 0,
+              "audio": "/audio/exam-u5/listening-1.mp3",
               "hint": ""
             },
             {
@@ -48,13 +48,13 @@
               "score": 1.5,
               "stem": "听对话：—Have you ever been to Beijing? —____ 选出最佳答语：",
               "options": [
-                "Yes, I have.",
-                "No, I haven't been.",
                 "Yes, I do.",
-                "No, I don't."
+                "No, I don't.",
+                "Yes, I have.",
+                "No, I haven't been."
               ],
-              "answer": 0,
-              "audio": "",
+              "answer": 2,
+              "audio": "/audio/exam-u5/listening-2.mp3",
               "hint": ""
             },
             {
@@ -63,13 +63,13 @@
               "score": 1.5,
               "stem": "听句子：\"She has already visited the museum twice.\" 她去了博物馆几次？",
               "options": [
-                "一次。",
-                "两次。",
                 "三次。",
-                "还没去过。"
+                "一次。",
+                "还没去过。",
+                "两次。"
               ],
-              "answer": 1,
-              "audio": "",
+              "answer": 3,
+              "audio": "/audio/exam-u5/listening-3.mp3",
               "hint": ""
             },
             {
@@ -84,7 +84,7 @@
                 "火锅。"
               ],
               "answer": 1,
-              "audio": "",
+              "audio": "/audio/exam-u5/listening-4.mp3",
               "hint": ""
             },
             {
@@ -99,7 +99,7 @@
                 "2022年。"
               ],
               "answer": 1,
-              "audio": "",
+              "audio": "/audio/exam-u5/listening-5.mp3",
               "hint": ""
             },
             {
@@ -114,7 +114,7 @@
                 "打太极。"
               ],
               "answer": 2,
-              "audio": "",
+              "audio": "/audio/exam-u5/listening-6.mp3",
               "hint": ""
             }
           ]
@@ -129,13 +129,13 @@
               "score": 1,
               "stem": "听问题：\"Have you ever seen a panda?\" 最佳回答是：",
               "options": [
-                "Yes, I have.",
+                "Yes, I will.",
                 "Yes, I do.",
                 "No, I am not.",
-                "Yes, I will."
+                "Yes, I have."
               ],
-              "answer": 0,
-              "audio": "",
+              "answer": 3,
+              "audio": "/audio/exam-u5/listening-7.mp3",
               "hint": ""
             },
             {
@@ -144,13 +144,13 @@
               "score": 1,
               "stem": "听问题：\"Has Mike finished his lunch yet?\" 最佳回答是：",
               "options": [
+                "Yes, he does.",
                 "No, not yet.",
                 "Yes, I have.",
-                "No, I don't.",
-                "Yes, he does."
+                "No, I don't."
               ],
-              "answer": 0,
-              "audio": "",
+              "answer": 1,
+              "audio": "/audio/exam-u5/listening-8.mp3",
               "hint": ""
             },
             {
@@ -159,13 +159,13 @@
               "score": 1,
               "stem": "听问题：\"How long have you learned English?\" 最佳回答是：",
               "options": [
-                "For three years.",
                 "Three years ago.",
+                "Three years old.",
                 "In three years.",
-                "Three years old."
+                "For three years."
               ],
-              "answer": 0,
-              "audio": "",
+              "answer": 3,
+              "audio": "/audio/exam-u5/listening-9.mp3",
               "hint": ""
             },
             {
@@ -180,7 +180,7 @@
                 "I am reading a book."
               ],
               "answer": 0,
-              "audio": "",
+              "audio": "/audio/exam-u5/listening-10.mp3",
               "hint": ""
             }
           ]
@@ -240,12 +240,12 @@
               "score": 1,
               "stem": "—____ you ever been to Hangzhou? —Yes, I have.",
               "options": [
-                "Have",
-                "Has",
                 "Did",
-                "Do"
+                "Do",
+                "Has",
+                "Have"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -285,12 +285,12 @@
               "score": 1,
               "stem": "I have ____ seen such a beautiful picture.",
               "options": [
-                "ever",
-                "never",
                 "yet",
-                "already"
+                "already",
+                "never",
+                "ever"
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -301,11 +301,11 @@
               "stem": "—Has he tried hotpot ____? —Not yet.",
               "options": [
                 "already",
-                "just",
+                "yet",
                 "ever",
-                "yet"
+                "just"
               ],
-              "answer": 3,
+              "answer": 1,
               "audio": "",
               "hint": ""
             },
@@ -330,12 +330,12 @@
               "score": 1,
               "stem": "We have learned English ____ three years.",
               "options": [
-                "since",
                 "for",
-                "from",
-                "at"
+                "since",
+                "at",
+                "from"
               ],
-              "answer": 1,
+              "answer": 0,
               "audio": "",
               "hint": ""
             },
@@ -345,12 +345,12 @@
               "score": 1,
               "stem": "—Have you finished your lunch ____? —Yes, I've ____ finished it.",
               "options": [
-                "yet; already",
                 "already; yet",
+                "never; ever",
                 "ever; never",
-                "never; ever"
+                "yet; already"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -390,12 +390,12 @@
               "score": 1,
               "stem": "—____ she ever tried dumplings? —Yes, she loves them.",
               "options": [
-                "Have",
-                "Has",
                 "Did",
-                "Is"
+                "Is",
+                "Has",
+                "Have"
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -405,12 +405,12 @@
               "score": 1,
               "stem": "I have known him ____ we were children.",
               "options": [
-                "for",
-                "since",
                 "from",
-                "at"
+                "at",
+                "for",
+                "since"
               ],
-              "answer": 1,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -420,12 +420,12 @@
               "score": 1,
               "stem": "They ____ just ____ back from the museum.",
               "options": [
-                "have; come",
+                "has; came",
                 "has; come",
                 "have; came",
-                "has; came"
+                "have; come"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -435,12 +435,12 @@
               "score": 1,
               "stem": "How many books ____ you read this year?",
               "options": [
+                "do",
                 "have",
-                "has",
                 "did",
-                "do"
+                "has"
               ],
-              "answer": 0,
+              "answer": 1,
               "audio": "",
               "hint": ""
             },
@@ -450,12 +450,12 @@
               "score": 1,
               "stem": "She has ____ to Beijing twice.",
               "options": [
-                "be",
                 "been",
-                "being",
-                "go"
+                "go",
+                "be",
+                "being"
               ],
-              "answer": 1,
+              "answer": 0,
               "audio": "",
               "hint": ""
             }
@@ -471,12 +471,12 @@
               "score": 1,
               "stem": "1.",
               "options": [
+                "lives",
                 "has lived",
-                "has been lived",
                 "lived",
-                "lives"
+                "has been lived"
               ],
-              "answer": 0,
+              "answer": 1,
               "audio": "",
               "hint": "短文：Tom is an exchange student from England. He ____(1)____ in Guangzhou for two months. He ____(2)____ many new friends here. Last week, he ____(3)____ the Canton Tower with his classmates. He has ____(4)____ tried dim sum, and he loves it. He ____(5)____ learned to use chopsticks. \"Chinese culture is amazing!\" he says. He has ____(6)____ written emails to his parents in England. He ____(7)____ to the zoo yet, but he wants to go this weekend. His Chinese friend Li Hua has ____(8)____ him a lot. Tom says, \"I have ____(9)____ had such a good time!\" He will ____(10)____ his experiences in his diary."
             },
@@ -486,12 +486,12 @@
               "score": 1,
               "stem": "2.",
               "options": [
-                "has made",
-                "made",
                 "makes",
-                "is making"
+                "is making",
+                "made",
+                "has made"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -501,12 +501,12 @@
               "score": 1,
               "stem": "3.",
               "options": [
+                "visiting",
                 "has visited",
-                "visits",
                 "visit",
-                "visiting"
+                "visits"
               ],
-              "answer": 0,
+              "answer": 1,
               "audio": "",
               "hint": ""
             },
@@ -531,12 +531,12 @@
               "score": 1,
               "stem": "5.",
               "options": [
-                "has",
                 "have",
                 "is",
-                "are"
+                "are",
+                "has"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -546,12 +546,12 @@
               "score": 1,
               "stem": "6.",
               "options": [
-                "already",
                 "yet",
-                "just",
-                "ever"
+                "already",
+                "ever",
+                "just"
               ],
-              "answer": 0,
+              "answer": 1,
               "audio": "",
               "hint": ""
             },
@@ -561,12 +561,12 @@
               "score": 1,
               "stem": "7.",
               "options": [
-                "hasn't been",
                 "haven't been",
+                "aren't",
                 "isn't",
-                "aren't"
+                "hasn't been"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -591,12 +591,12 @@
               "score": 1,
               "stem": "9.",
               "options": [
-                "never",
-                "ever",
+                "just",
                 "already",
-                "just"
+                "never",
+                "ever"
               ],
-              "answer": 0,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -606,12 +606,12 @@
               "score": 1,
               "stem": "10.",
               "options": [
-                "write down",
+                "writing down",
                 "writes down",
                 "wrote down",
-                "writing down"
+                "write down"
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             }
@@ -627,12 +627,12 @@
               "score": 2,
               "stem": "Where is Anna from?",
               "options": [
-                "England.",
-                "Germany.",
                 "France.",
-                "America."
+                "America.",
+                "Germany.",
+                "England."
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": "短文一",
               "passage": "My name is Anna. I'm from Germany. I came to China as an exchange student last year. I have lived with a Chinese family for ten months. My host mother is very kind. She has taught me to make dumplings. I have learned to speak some Chinese. I can say \"ni hao\" and \"xie xie\". I have visited the Great Wall and the Summer Palace. China is so different from Germany, but I love it here. I have made many good friends. I will never forget this experience."
@@ -643,12 +643,12 @@
               "score": 2,
               "stem": "How long has Anna lived with a Chinese family?",
               "options": [
-                "For ten months.",
                 "For a year.",
                 "For ten weeks.",
+                "For ten months.",
                 "For a month."
               ],
-              "answer": 0,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -658,12 +658,12 @@
               "score": 2,
               "stem": "What has Anna's host mother taught her?",
               "options": [
-                "To speak German.",
                 "To make dumplings.",
-                "To write emails.",
-                "To play games."
+                "To speak German.",
+                "To play games.",
+                "To write emails."
               ],
-              "answer": 1,
+              "answer": 0,
               "audio": "",
               "hint": ""
             },
@@ -673,12 +673,12 @@
               "score": 2,
               "stem": "Which places has Anna visited?",
               "options": [
-                "The Great Wall and the Summer Palace.",
-                "The zoo and the museum.",
                 "Beijing and Shanghai.",
-                "The park and the school."
+                "The park and the school.",
+                "The Great Wall and the Summer Palace.",
+                "The zoo and the museum."
               ],
-              "answer": 0,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -688,12 +688,12 @@
               "score": 2,
               "stem": "How does Anna feel about China?",
               "options": [
-                "She doesn't like it.",
-                "She loves it.",
                 "She thinks it's boring.",
-                "She wants to leave."
+                "She wants to leave.",
+                "She loves it.",
+                "She doesn't like it."
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -703,12 +703,12 @@
               "score": 2,
               "stem": "How many students visited from Singapore?",
               "options": [
-                "Three.",
-                "Four.",
                 "Five.",
+                "Four.",
+                "Three.",
                 "Six."
               ],
-              "answer": 2,
+              "answer": 0,
               "audio": "",
               "hint": "短文二",
               "passage": "Last month, our school had an exchange program with a school in Singapore. Five students from Singapore visited us. I have talked with a girl named Mei. She has told me a lot about Singapore. It is a small but beautiful country. She has invited me to visit Singapore next year. We have become good friends. We have exchanged emails every week since then. I have learned that making friends from other countries is wonderful. I hope I can visit her one day."
@@ -719,12 +719,12 @@
               "score": 2,
               "stem": "What is Mei like according to the passage?",
               "options": [
+                "She is from China.",
                 "She is a girl from Singapore.",
                 "She is a teacher.",
-                "She is from China.",
                 "She is the writer's sister."
               ],
-              "answer": 0,
+              "answer": 1,
               "audio": "",
               "hint": ""
             },
@@ -734,12 +734,12 @@
               "score": 2,
               "stem": "What have the writer and Mei done since then?",
               "options": [
-                "They have met every day.",
-                "They have exchanged emails every week.",
+                "They have called every day.",
                 "They have visited each other.",
-                "They have called every day."
+                "They have exchanged emails every week.",
+                "They have met every day."
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -749,12 +749,12 @@
               "score": 2,
               "stem": "What has the writer learned?",
               "options": [
-                "Singapore is big.",
                 "Making foreign friends is wonderful.",
                 "English is difficult.",
+                "Singapore is big.",
                 "Traveling is expensive."
               ],
-              "answer": 1,
+              "answer": 0,
               "audio": "",
               "hint": ""
             },
@@ -780,11 +780,11 @@
               "stem": "How long has the writer joined the English corner?",
               "options": [
                 "For a year.",
-                "For half a year.",
+                "For a week.",
                 "For a month.",
-                "For a week."
+                "For half a year."
               ],
-              "answer": 1,
+              "answer": 3,
               "audio": "",
               "hint": "短文三",
               "passage": "Have you ever joined an English corner? I have joined ours for half a year. Every Friday afternoon, students meet in the school library. We have talked about movies, sports and our dreams. Some foreign teachers have joined us too. I was shy at first, but now I have become brave. I have made great progress in spoken English. Last week, I have even given a short speech in English! If you want to improve your English, come and join us."
@@ -795,12 +795,12 @@
               "score": 2,
               "stem": "When do students meet?",
               "options": [
-                "Every Monday morning.",
                 "Every Friday afternoon.",
-                "Every Saturday.",
-                "Every Sunday."
+                "Every Sunday.",
+                "Every Monday morning.",
+                "Every Saturday."
               ],
-              "answer": 1,
+              "answer": 0,
               "audio": "",
               "hint": ""
             },
@@ -810,12 +810,12 @@
               "score": 2,
               "stem": "What have they talked about?",
               "options": [
+                "Music and art.",
                 "Movies, sports and dreams.",
                 "Food and clothes.",
-                "Homework and exams.",
-                "Music and art."
+                "Homework and exams."
               ],
-              "answer": 0,
+              "answer": 1,
               "audio": "",
               "hint": ""
             },
@@ -826,11 +826,11 @@
               "stem": "What did the writer do last week?",
               "options": [
                 "He watched a movie.",
-                "He gave a short speech in English.",
                 "He met a foreign teacher.",
-                "He wrote an email."
+                "He wrote an email.",
+                "He gave a short speech in English."
               ],
-              "answer": 1,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -861,12 +861,12 @@
               "score": 1,
               "stem": "How long has Emma been in China?",
               "options": [
-                "One week.",
                 "One month.",
-                "One year.",
-                "Ten days."
+                "One week.",
+                "Ten days.",
+                "One year."
               ],
-              "answer": 1,
+              "answer": 0,
               "audio": "",
               "hint": "短文",
               "passage": "Dear Diary, Today is my first month in China. I have seen so many new things. I have tasted mapo tofu—it's spicy but delicious! I have ridden a shared bike to school. I have watched a Chinese opera with my host family. Everything is exciting. I have written ten pages in my diary. I miss my family, but I am happy here. —Emma"
@@ -877,12 +877,12 @@
               "score": 1,
               "stem": "What has Emma tasted?",
               "options": [
+                "Noodles.",
                 "Dumplings.",
                 "Hotpot.",
-                "Mapo tofu.",
-                "Noodles."
+                "Mapo tofu."
               ],
-              "answer": 2,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -892,12 +892,12 @@
               "score": 1,
               "stem": "How does Emma go to school?",
               "options": [
+                "By car.",
                 "By bus.",
-                "By shared bike.",
                 "On foot.",
-                "By car."
+                "By shared bike."
               ],
-              "answer": 1,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -922,12 +922,12 @@
               "score": 1,
               "stem": "How does Emma feel?",
               "options": [
-                "Sad.",
                 "Bored.",
                 "Happy.",
+                "Sad.",
                 "Tired."
               ],
-              "answer": 2,
+              "answer": 1,
               "audio": "",
               "hint": ""
             }
@@ -943,12 +943,12 @@
               "score": 2,
               "stem": "(1)",
               "options": [
-                "I am Mike from Canada.",
-                "I like playing football.",
                 "My school is big.",
-                "I have a dog."
+                "I have a dog.",
+                "I am Mike from Canada.",
+                "I like playing football."
               ],
-              "answer": 0,
+              "answer": 2,
               "audio": "",
               "hint": "选句填空",
               "passage": "Mike is writing about his exchange experience. He has finished the first part. Now he needs to choose the best sentences to complete his article. (1)____ I arrived in Beijing three months ago. (2)____ I have visited many famous places. (3)____ My Chinese has improved a lot. (4)____ I have made friends from all over the world. (5)____"
@@ -959,12 +959,12 @@
               "score": 2,
               "stem": "(2)",
               "options": [
-                "The Great Wall is the most amazing place I have ever seen.",
-                "I don't like traveling.",
+                "I stay at home every day.",
                 "Beijing is too cold.",
-                "I stay at home every day."
+                "I don't like traveling.",
+                "The Great Wall is the most amazing place I have ever seen."
               ],
-              "answer": 0,
+              "answer": 3,
               "audio": "",
               "hint": ""
             },
@@ -974,12 +974,12 @@
               "score": 2,
               "stem": "(3)",
               "options": [
-                "I can't speak Chinese at all.",
-                "I can now talk with my classmates in Chinese.",
                 "Chinese is too hard for me.",
-                "I never learn Chinese."
+                "I never learn Chinese.",
+                "I can now talk with my classmates in Chinese.",
+                "I can't speak Chinese at all."
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
@@ -989,12 +989,12 @@
               "score": 2,
               "stem": "(4)",
               "options": [
-                "I have no friends here.",
-                "They are all very friendly to me.",
                 "I don't like them.",
-                "We never talk."
+                "We never talk.",
+                "They are all very friendly to me.",
+                "I have no friends here."
               ],
-              "answer": 1,
+              "answer": 2,
               "audio": "",
               "hint": ""
             },
