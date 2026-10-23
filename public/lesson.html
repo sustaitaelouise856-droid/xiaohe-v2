@@ -1812,6 +1812,28 @@ async function submitCopy(s, answer) {
     const r = await apiFetch(lessonUrl);
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
+    // 2026-10-23修：被锁课程先分流。原 lesson_locked 分支在 steps 校验之后，
+    // 锁定时 steps 不合法先抛 lesson_empty 进"打不开了"，锁页永远显示不出来（孩子误以为页面坏了）
+    if (LESSON && LESSON.error === 'lesson_locked') {
+      document.title = (window.XH_BRAND||'小禾英语') + ' · 课程未解锁';
+      wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
+        <div style="font-size:48px;margin-bottom:16px;">🔒</div>
+        <h2 class="stem">这门新课还没开</h2>
+        <p class="scene">每天开始新课前，先独立做完今天的 10 道错题（不点老师教我），新课就自动开。</p>
+        <p class="scene" id="lockDaily" style="display:none;"></p>
+        <button class="btn btn-primary" onclick="location.href='/progress.html'">去做今日错题 →</button>
+        <button class="btn ghost" onclick="location.href='/'" style="margin-left:8px;">返回首页</button>
+      </div>`;
+      try {
+        const dr = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
+        const dd = await dr.json().catch(() => null);
+        if (dd && dd.ok && dd.dailyMistakes) {
+          const el = document.getElementById('lockDaily');
+          if (el) { el.textContent = '今日错题 ' + (dd.dailyMistakes.done || 0) + '/' + (dd.dailyMistakes.target || 10); el.style.display = ''; }
+        }
+      } catch {}
+      return;
+    }
     if (!LESSON || !Array.isArray(LESSON.steps) || LESSON.steps.length === 0) {
       throw new Error('lesson_empty');
     }
@@ -1852,18 +1874,6 @@ async function submitCopy(s, answer) {
         ST.p1.sid = freshSid;
         store.save(ST);
       } catch {}
-    }
-    // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
-    if (LESSON && LESSON.error === 'lesson_locked') {
-      document.title = (window.XH_BRAND||'小禾英语') + ' · 课程未解锁';
-      wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
-        <div style="font-size:48px;margin-bottom:16px;">🔒</div>
-        <h2 class="stem">这门课还没解锁</h2>
-        <p class="scene">进入 Unit 4 需要同时满足：<br>①「Unit 3 专项巩固」过关（零求助、独立正确率≥85%）<br>② review3 学完<br>③ 今天从错题本做10道（独立完成、不点老师教我，不足10道做完为止）<br><br>加油，把基础打牢！</p>
-        <button class="btn btn-primary" onclick="location.href='/'">返回首页</button>
-        <button class="btn ghost" onclick="location.href='/lesson?lesson=u3-consolidate'" style="margin-left:8px;">去专项巩固</button>
-      </div>`;
-      return;
     }
     await loadProg(); // 续课进度（服务端，按题目ID）
     document.title = (window.XH_BRAND||'小禾英语') + ' · ' + (LESSON.home_subtitle || LESSON.title || '');
