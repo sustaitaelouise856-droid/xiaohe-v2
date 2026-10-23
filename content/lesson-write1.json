@@ -1,0 +1,1327 @@
+{
+ "lesson_id": "write1",
+ "title": "写句子专项 · 完成时句子工厂",
+ "unit": "写作专项",
+ "version": 1,
+ "practice_end": 18,
+ "home_subtitle": "完成时句子工厂 · 先搭骨架再写句子",
+ "part1_desc": "第 1–18 步：第一车间——拆句三步法：先只练骨架（have/has＋过去分词）和分词拼写，再写带 since/for 的完整句。",
+ "part2_desc": "第 19–30 步：第二车间——被动完成时（has been＋过去分词），最后把三句话组装成一小段“我的交换周”。",
+ "kicker_story": "句子工厂",
+ "kicker_teach": "写作教练",
+ "answer_placeholder": "在这里写英文",
+ "note": "专项加练（2026-10-23 Elouise 批准）：针对 u5r4 产出题成片倒下（since 句/被动+完成时/段落写作）新建。教拆句三步法：搭骨架（have/has+过去分词）→挂时间（since/for）→补细节。材料自编原创，贴 Unit 5 交换生活；句型原型取自 u5r4 s37/s54 换情境重练。成长页加练区入口，永远开放不设门禁。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "句子工厂开工",
+   "teach_html": "<p>今天不开新课，咱们开一间<strong>句子工厂</strong>，专治一件事：意思都懂，就是<strong>写不出完整的句子</strong>。</p><p>写现在完成时的句子，有个笨办法，特别管用，叫<strong>拆句三步</strong>：</p><p>第一步，<strong>搭骨架</strong>：先写“谁 + have/has + 过去分词”。骨架对了，句子就塌不了。</p><p>第二步，<strong>挂时间</strong>：要说时间再挂上——一段时间用 for，一个起点用 since。</p><p>第三步，<strong>补细节</strong>：最后把地点、数量这些细节补上。</p><p>今天先在工厂里一颗螺丝一颗螺丝地练：先只搭骨架，再写整句，最后组装一小段。老规矩：可以点“老师教我”；连错几次会先看答案、继续往下，不会卡住。</p>",
+   "audio_id": "write1-intro"
+  },
+  {
+   "step": 2,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "看老师拆一句",
+   "teach_html": "<p>先看老师拆一句。目标句：“李明参观过科学博物馆了。”</p><p>第一步搭骨架：李明是第三人称单数，用 has；参观是 visit，过去分词 visited。骨架：<strong>Li Ming has visited</strong>。</p><p>第二步挂时间：这句没提时间，跳过。</p><p>第三步补细节：参观哪里？科学博物馆 the science museum。整句：<strong>Li Ming has visited the science museum.</strong></p><p>点播放听一遍这句。接下来轮到你：先只练第一步——搭骨架。</p>",
+   "audio_id": "write1-demo1"
+  },
+  {
+   "step": 3,
+   "phase": "practice",
+   "kind": "short",
+   "title": "骨架 1：吃过",
+   "scene": "句子工厂 · 只搭骨架",
+   "stem": "我已经吃过早餐了。",
+   "task": "只写骨架部分：have/has + 过去分词（两个词），主语不用写。",
+   "reading": "整句意思：我已经吃过早餐了。这一步只写“已经吃过”这个骨架。",
+   "answer_text": "have eaten",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "have"
+     ],
+     "cn": [
+      "have（主语是“我”）"
+     ]
+    },
+    {
+     "id": "part",
+     "type": "word",
+     "answers": [
+      "eaten"
+     ],
+     "cn": [
+      "吃（过去分词）"
+     ]
+    }
+   ],
+   "help": "拆句第一步：主语是“我”，骨架前半截用 have；“吃”的过去分词是不规则的，想想 eat–ate–? 最后一个才是分词。",
+   "help_line": "have eaten",
+   "explain": "have eaten。eat 的三态是 eat–ate–eaten：ate 是过去式，have 后面要用过去分词 eaten。主语是“我”，用 have。",
+   "common_errors": [
+    {
+     "when": "写了 have ate",
+     "say": "ate 是过去式；have 后面要用过去分词 eaten：have eaten。"
+    },
+    {
+     "when": "写了 has eaten",
+     "say": "主语是“我”（I），用 have，不用 has：have eaten。"
+    },
+    {
+     "when": "写了 have eat",
+     "say": "have 后面不能跟动词原形，要用过去分词 eaten。"
+    },
+    {
+     "when": "只写了 eaten",
+     "say": "骨架少了前半截：have 就是骨架的梁，have eaten 两个词一个都不能少。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have ate",
+     "say": "ate 是过去式；have 后面要用过去分词 eaten。"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "phase": "practice",
+   "kind": "short",
+   "title": "骨架 2：看过",
+   "scene": "句子工厂 · 只搭骨架",
+   "stem": "她已经看过这部电影了。",
+   "task": "只写骨架部分：have/has + 过去分词（两个词），主语不用写。",
+   "reading": "整句意思：她已经看过这部电影了。这一步只写“已经看过”这个骨架。",
+   "answer_text": "has seen",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "has"
+     ],
+     "cn": [
+      "has（主语是“她”）"
+     ]
+    },
+    {
+     "id": "part",
+     "type": "word",
+     "answers": [
+      "seen"
+     ],
+     "cn": [
+      "看（过去分词）"
+     ]
+    }
+   ],
+   "help": "拆句第一步：主语是“她”，单数第三人称，骨架用 has；“看”是 see，它的分词不是 saw。",
+   "help_line": "has seen",
+   "explain": "has seen。see 的三态是 see–saw–seen：saw 是过去式，分词是 seen。主语是“她”，用 has。",
+   "common_errors": [
+    {
+     "when": "写了 have seen",
+     "say": "主语是“她”（she），第三人称单数要用 has：has seen。"
+    },
+    {
+     "when": "写了 has saw",
+     "say": "saw 是过去式；has 后面要用过去分词 seen。"
+    },
+    {
+     "when": "写了 has see",
+     "say": "has 后面不能跟动词原形 see，要用过去分词 seen。"
+    },
+    {
+     "when": "只写了 seen",
+     "say": "骨架少了前半截：她作主语时是 has seen，has 不能丢。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has saw",
+     "say": "saw 是过去式；has 后面要用过去分词 seen。"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "phase": "practice",
+   "kind": "short",
+   "title": "骨架 3：到达",
+   "scene": "句子工厂 · 只搭骨架",
+   "stem": "他们已经到达车站了。",
+   "task": "只写骨架部分：have/has + 过去分词（两个词），主语不用写。",
+   "reading": "整句意思：他们已经到达车站了。这一步只写“已经到达”这个骨架。",
+   "answer_text": "have arrived",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "have"
+     ],
+     "cn": [
+      "have（主语是“他们”）"
+     ]
+    },
+    {
+     "id": "part",
+     "type": "word",
+     "answers": [
+      "arrived",
+      "reached"
+     ],
+     "cn": [
+      "到达（过去分词）"
+     ]
+    }
+   ],
+   "help": "拆句第一步：主语是“他们”，是复数，骨架用 have；“到达”arrive 是规则动词，分词加 ed。",
+   "help_line": "have arrived",
+   "explain": "have arrived。arrive 是规则动词，过去分词 arrived（写 reached 也对）。主语是“他们”，用 have。",
+   "common_errors": [
+    {
+     "when": "写了 has arrived",
+     "say": "主语是“他们”（they），是复数，要用 have：have arrived。"
+    },
+    {
+     "when": "写了 have arrive",
+     "say": "have 后面要用过去分词 arrived，arrive 是原形。"
+    },
+    {
+     "when": "只写了 arrived",
+     "say": "骨架少了前半截：have arrived，have 不能丢。"
+    },
+    {
+     "when": "写了 have arrives",
+     "say": "arrives 是第三人称单数的现在式，不是分词；这里要用 arrived。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have arrive",
+     "say": "arrive 是原形；have 后面要用过去分词 arrived。"
+    }
+   ]
+  },
+  {
+   "step": 6,
+   "phase": "practice",
+   "kind": "short",
+   "title": "骨架 4：买过",
+   "scene": "句子工厂 · 只搭骨架",
+   "stem": "他已经买了一本新书。",
+   "task": "只写骨架部分：have/has + 过去分词（两个词），主语不用写。",
+   "reading": "整句意思：他已经买了一本新书。这一步只写“已经买了”这个骨架。",
+   "answer_text": "has bought",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "has"
+     ],
+     "cn": [
+      "has（主语是“他”）"
+     ]
+    },
+    {
+     "id": "part",
+     "type": "word",
+     "answers": [
+      "bought"
+     ],
+     "cn": [
+      "买（过去分词）"
+     ]
+    }
+   ],
+   "help": "拆句第一步：主语是“他”，用 has；“买”buy 的分词拼写特殊，buy–bought–bought，过去式和分词长得一样。",
+   "help_line": "has bought",
+   "explain": "has bought。buy 的三态是 buy–bought–bought，拼写是 b-o-u-g-h-t。主语是“他”，用 has。",
+   "common_errors": [
+    {
+     "when": "写了 have bought",
+     "say": "主语是“他”（he），第三人称单数要用 has：has bought。"
+    },
+    {
+     "when": "写了 has buyed",
+     "say": "buy 是不规则动词，不能加 ed；它的过去分词是 bought。"
+    },
+    {
+     "when": "写了 has buy",
+     "say": "has 后面不能跟动词原形 buy，要用过去分词 bought。"
+    },
+    {
+     "when": "只写了 bought",
+     "say": "骨架少了前半截：has bought，has 不能丢。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has buyed",
+     "say": "buy 是不规则动词，过去分词是 bought，不能加 ed。"
+    }
+   ]
+  },
+  {
+   "step": 7,
+   "phase": "practice",
+   "kind": "short",
+   "title": "骨架 5：读完",
+   "scene": "句子工厂 · 只搭骨架",
+   "stem": "她已经读完这本书了。",
+   "task": "只写骨架部分：have/has + 过去分词（两个词），主语不用写。",
+   "reading": "整句意思：她已经读完这本书了。这一步只写“已经读完”这个骨架。小心：read 的过去分词和原形拼写一样。",
+   "answer_text": "has read",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "has"
+     ],
+     "cn": [
+      "has（主语是“她”）"
+     ]
+    },
+    {
+     "id": "part",
+     "type": "word",
+     "answers": [
+      "read"
+     ],
+     "cn": [
+      "读（过去分词）"
+     ]
+    }
+   ],
+   "help": "拆句第一步：主语是“她”，用 has；“读”read 很特别——原形、过去式、过去分词拼写全一样，都是 read。",
+   "help_line": "has read",
+   "explain": "has read。read 的三态拼写完全一样：read–read–read（只是读音不同）。所以 has read 就是“已经读过/读完”。主语是“她”，用 has。",
+   "common_errors": [
+    {
+     "when": "写了 have read",
+     "say": "主语是“她”（she），要用 has：has read。"
+    },
+    {
+     "when": "写了 has reads",
+     "say": "reads 是现在式的第三人称单数，不是分词；分词还是 read 本身。"
+    },
+    {
+     "when": "写了 has readed",
+     "say": "read 是不规则动词，不能加 ed；它的过去分词还是 read。"
+    },
+    {
+     "when": "只写了 read",
+     "say": "骨架少了前半截：has read，has 不能丢。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has readed",
+     "say": "read 的过去分词还是 read，不能加 ed。"
+    }
+   ]
+  },
+  {
+   "step": 8,
+   "phase": "practice",
+   "kind": "short",
+   "title": "分词拼写：游泳",
+   "scene": "分词修理铺 · 只写一个词",
+   "stem": "swim（游泳）的过去分词是哪个？",
+   "task": "只写 swim 的过去分词，一个词。可以先点播放，听一听它的三态。",
+   "reading": "swim 是“游泳”。它的三态属于“中间变、结尾也变”的一类，过去式和过去分词长得不一样。",
+   "answer_text": "swum",
+   "audio_id": "write1-p-swim",
+   "expects": [
+    {
+     "id": "swum",
+     "type": "word",
+     "answers": [
+      "swum"
+     ],
+     "cn": [
+      "游泳（过去分词）"
+     ]
+    }
+   ],
+   "help": "点播放听三态：swim–swam–swum。要的是最后一个：过去分词。它的结尾是 u 开头的那个词。",
+   "help_line": "swum",
+   "explain": "swum。swim 的三态是 swim–swam–swum：swam 是过去式，swum 才是过去分词，have/has 后面用 swum。",
+   "common_errors": [
+    {
+     "when": "写了 swam",
+     "say": "swam 是过去式（昨天的事用它）；过去分词是 swum，have/has 后面用 swum。"
+    },
+    {
+     "when": "写了 swimed 或 swimmed",
+     "say": "swim 是不规则动词，不能加 ed；它的过去分词是 swum。"
+    },
+    {
+     "when": "写了 swim",
+     "say": "这是原形；要的是过去分词 swum。"
+    },
+    {
+     "when": "写了 swun",
+     "say": "拼写差一点：是 swum，最后一个字母是 m。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "swam",
+     "say": "swam 是过去式；过去分词是 swum。"
+    }
+   ]
+  },
+  {
+   "step": 9,
+   "phase": "practice",
+   "kind": "short",
+   "title": "分词拼写：写",
+   "scene": "分词修理铺 · 只写一个词",
+   "stem": "write（写）的过去分词是哪个？",
+   "task": "只写 write 的过去分词，一个词。可以先点播放，听一听它的三态。",
+   "reading": "write 是“写”。它的三态里，过去分词最长，还要双写一个字母。",
+   "answer_text": "written",
+   "audio_id": "write1-p-write",
+   "expects": [
+    {
+     "id": "written",
+     "type": "word",
+     "answers": [
+      "written"
+     ],
+     "cn": [
+      "写（过去分词）"
+     ]
+    }
+   ],
+   "help": "点播放听三态：write–wrote–written。要的是最后一个。记住它的样子：双写 t，再加 en。",
+   "help_line": "written",
+   "explain": "written。write 的三态是 write–wrote–written：wrote 是过去式，written 是过去分词，双写 t 再加 en。",
+   "common_errors": [
+    {
+     "when": "写了 wrote",
+     "say": "wrote 是过去式；过去分词是 written。"
+    },
+    {
+     "when": "写了 writen",
+     "say": "少了一个 t：written 要双写 t，w-r-i-t-t-e-n。"
+    },
+    {
+     "when": "写了 write",
+     "say": "这是原形；要的是过去分词 written。"
+    },
+    {
+     "when": "写了 writted",
+     "say": "write 是不规则动词，不能加 ed 变形；过去分词是 written。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "writen",
+     "say": "written 要双写 t：w-r-i-t-t-e-n。"
+    }
+   ]
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "short",
+   "title": "分词拼写：拿/带",
+   "scene": "分词修理铺 · 只写一个词",
+   "stem": "take（拿、带）的过去分词是哪个？",
+   "task": "只写 take 的过去分词，一个词。可以先点播放，听一听它的三态。",
+   "reading": "take 是“拿、带”。它的过去式和过去分词只差一点，别拿错。",
+   "answer_text": "taken",
+   "audio_id": "write1-p-take",
+   "expects": [
+    {
+     "id": "taken",
+     "type": "word",
+     "answers": [
+      "taken"
+     ],
+     "cn": [
+      "拿/带（过去分词）"
+     ]
+    }
+   ],
+   "help": "点播放听三态：take–took–taken。要的是最后一个：过去分词，结尾是 en。",
+   "help_line": "taken",
+   "explain": "taken。take 的三态是 take–took–taken：took 是过去式，taken 是过去分词。",
+   "common_errors": [
+    {
+     "when": "写了 took",
+     "say": "took 是过去式；过去分词是 taken。"
+    },
+    {
+     "when": "写了 taked",
+     "say": "take 是不规则动词，不能加 ed；过去分词是 taken。"
+    },
+    {
+     "when": "写了 take",
+     "say": "这是原形；要的是过去分词 taken。"
+    },
+    {
+     "when": "写了 taken 写成 takken",
+     "say": "不用双写 k：taken 是 t-a-k-e-n。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "took",
+     "say": "took 是过去式；过去分词是 taken。"
+    }
+   ]
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "short",
+   "title": "整句 1：学了三年",
+   "scene": "句子工厂 · 写整句",
+   "stem": "我学英语已经三年了。",
+   "task": "写出完整的英文句子。按三步来：先搭骨架，再挂时间，最后补细节。",
+   "reading": "整句意思：我学英语已经三年了。注意“三年”是一段时间，不是一个时间点。",
+   "answer_text": "I have learned English for three years.",
+   "expects": [
+    {
+     "id": "learned",
+     "type": "word",
+     "answers": [
+      "learned",
+      "learnt"
+     ],
+     "cn": [
+      "学（过去分词）"
+     ]
+    },
+    {
+     "id": "fortime",
+     "type": "word",
+     "answers": [
+      "for three years",
+      "for 3 years"
+     ],
+     "cn": [
+      "三年（一段时间）"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——I have learned；挂时间——“三年”是一段时间，用 for；细节——English 放在 learned 后面。",
+   "help_line": "I have learned English for three years.",
+   "explain": "I have learned English for three years. 骨架 I have learned，时间 for three years（一段时间用 for），细节 English。",
+   "common_errors": [
+    {
+     "when": "写了 since three years",
+     "say": "three years 是一段时间，用 for；since 后面跟时间点，比如 since 2023。"
+    },
+    {
+     "when": "写了 have learn",
+     "say": "learn 要用过去分词 learned：have learned。"
+    },
+    {
+     "when": "写了 for three year",
+     "say": "三年是复数，year 要加 s：three years。"
+    },
+    {
+     "when": "写了 has learned",
+     "say": "主语是 I，用 have，不用 has。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "since three years",
+     "say": "three years 是一段时间，要用 for；since 后面跟时间点。"
+    }
+   ]
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "整句 2：从 2023 年起",
+   "scene": "句子工厂 · 写整句",
+   "stem": "她从 2023 年起就住在这里。",
+   "task": "写出完整的英文句子。按三步来：先搭骨架，再挂时间，最后补细节。",
+   "reading": "整句意思：她从 2023 年起就住在这里。注意“2023 年”是一个时间点，不是一段时间。",
+   "answer_text": "She has lived here since 2023.",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "has"
+     ],
+     "cn": [
+      "has（主语是“她”）"
+     ]
+    },
+    {
+     "id": "lived",
+     "type": "word",
+     "answers": [
+      "lived"
+     ],
+     "cn": [
+      "住（过去分词）"
+     ]
+    },
+    {
+     "id": "since",
+     "type": "word",
+     "answers": [
+      "since 2023"
+     ],
+     "cn": [
+      "从 2023 年起"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——She 后面是 has，住是 lived；挂时间——2023 是时间点，用 since；细节——here 放在 lived 后面。",
+   "help_line": "She has lived here since 2023.",
+   "explain": "She has lived here since 2023. 骨架 She has lived，时间 since 2023（时间点用 since）。主语是“她”，用 has。",
+   "common_errors": [
+    {
+     "when": "写了 for 2023",
+     "say": "2023 是一个时间点，用 since；for 后面跟一段时间，比如 for three years。"
+    },
+    {
+     "when": "写了 have lived",
+     "say": "主语是“她”（she），要用 has：has lived。"
+    },
+    {
+     "when": "写了 lives here（一般现在时）",
+     "say": "这句说的是“从过去一直到现在”，要用现在完成时 has lived，不能只写 lives。"
+    },
+    {
+     "when": "漏了 here",
+     "say": "细节没补全：“住在这里”的 here 不能丢。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "for 2023",
+     "say": "2023 是时间点，用 since；for 后面跟一段时间。"
+    }
+   ]
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "整句 3：认识五年",
+   "scene": "句子工厂 · 写整句",
+   "stem": "我们认识已经五年了。",
+   "task": "写出完整的英文句子。按三步来：先搭骨架，再挂时间，最后补细节。",
+   "reading": "整句意思：我们认识已经五年了。“认识”是 know，它的过去分词是不规则的。",
+   "answer_text": "We have known each other for five years.",
+   "expects": [
+    {
+     "id": "known",
+     "type": "word",
+     "answers": [
+      "known"
+     ],
+     "cn": [
+      "认识（过去分词）"
+     ]
+    },
+    {
+     "id": "fortime",
+     "type": "word",
+     "answers": [
+      "for five years",
+      "for 5 years"
+     ],
+     "cn": [
+      "五年（一段时间）"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——We have + know 的过去分词（know–knew–?，分词以 n 结尾）；挂时间——“五年”是一段时间，用 for；细节——each other 是“互相”。",
+   "help_line": "We have known each other for five years.",
+   "explain": "We have known each other for five years. know 的三态是 know–knew–known，过去分词是 known。时间 for five years（一段时间用 for）。",
+   "common_errors": [
+    {
+     "when": "写了 knowed",
+     "say": "know 是不规则动词，不能加 ed；过去分词是 known。"
+    },
+    {
+     "when": "写了 have knew",
+     "say": "knew 是过去式；have 后面要用过去分词 known。"
+    },
+    {
+     "when": "写了 since five years",
+     "say": "five years 是一段时间，用 for；since 后面跟时间点。"
+    },
+    {
+     "when": "漏了 each other",
+     "say": "“互相认识”的 each other 别漏：known each other。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have knew",
+     "say": "knew 是过去式；have 后面要用过去分词 known。"
+    }
+   ]
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "整句 4：当司机",
+   "scene": "句子工厂 · 写整句",
+   "stem": "我哥哥从 2019 年起就是一名司机了。",
+   "task": "写出完整的英文句子。按三步来：先搭骨架，再挂时间，最后补细节。",
+   "reading": "整句意思：我哥哥从 2019 年起就是一名司机了。“是”这个状态一直持续，要用 be 的过去分词 been。",
+   "answer_text": "My brother has been a driver since 2019.",
+   "expects": [
+    {
+     "id": "been",
+     "type": "word",
+     "answers": [
+      "has been"
+     ],
+     "cn": [
+      "是（be 的过去分词）"
+     ]
+    },
+    {
+     "id": "since",
+     "type": "word",
+     "answers": [
+      "since 2019"
+     ],
+     "cn": [
+      "从 2019 年起"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——“是司机”这种状态用 has been；挂时间——2019 是时间点，用 since；细节——a driver 放在 been 后面。",
+   "help_line": "My brother has been a driver since 2019.",
+   "explain": "My brother has been a driver since 2019. “是”要用 be 的过去分词 been：has been a driver。时间 since 2019（时间点用 since）。",
+   "common_errors": [
+    {
+     "when": "写了 have been",
+     "say": "主语是 my brother（他），要用 has：has been。"
+    },
+    {
+     "when": "写了 for 2019",
+     "say": "2019 是时间点，用 since；for 后面跟一段时间。"
+    },
+    {
+     "when": "写了 is a driver",
+     "say": "只写 is 是一般现在时；这句是从 2019 年一直到现在，要用完成时 has been。"
+    },
+    {
+     "when": "写了 has be",
+     "say": "be 的过去分词是 been：has been。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "for 2019",
+     "say": "2019 是时间点，用 since；for 后面跟一段时间。"
+    }
+   ]
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "title": "整句 5：从周一起下雨",
+   "scene": "句子工厂 · 写整句",
+   "stem": "从星期一起就一直在下雨。",
+   "task": "写出完整的英文句子。按三步来：先搭骨架，再挂时间，最后补细节。",
+   "reading": "整句意思：从星期一起就一直在下雨。天气作主语要用 It；“星期一”是时间点。",
+   "answer_text": "It has rained since Monday.",
+   "expects": [
+    {
+     "id": "aux",
+     "type": "word",
+     "answers": [
+      "has"
+     ],
+     "cn": [
+      "has（主语是 It）"
+     ]
+    },
+    {
+     "id": "rained",
+     "type": "word",
+     "answers": [
+      "rained"
+     ],
+     "cn": [
+      "下雨（过去分词）"
+     ]
+    },
+    {
+     "id": "since",
+     "type": "word",
+     "answers": [
+      "since Monday"
+     ],
+     "cn": [
+      "从星期一起"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——天气用 It 作主语，It 后面是 has，rain 的分词是 rained；挂时间——Monday 是时间点，用 since。",
+   "help_line": "It has rained since Monday.",
+   "explain": "It has rained since Monday. 天气句子用 It 作主语：It has rained。时间 since Monday（时间点用 since）。",
+   "common_errors": [
+    {
+     "when": "写了 have rained",
+     "say": "主语是 It，要用 has：It has rained。"
+    },
+    {
+     "when": "写了 for Monday",
+     "say": "Monday 是一个时间点，用 since；for 后面跟一段时间。"
+    },
+    {
+     "when": "写了 has rain",
+     "say": "rain 要用过去分词 rained：has rained。"
+    },
+    {
+     "when": "漏了 It",
+     "say": "英语句子不能没主语：天气句子要用 It 开头，It has rained。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have rained",
+     "say": "主语是 It，要用 has：It has rained。"
+    }
+   ]
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "整句 6：借书两周",
+   "scene": "句子工厂 · 写整句",
+   "stem": "这本书他已经借了两周了（借来一直没还）。",
+   "task": "写出完整的英文句子。按三步来：先搭骨架，再挂时间，最后补细节。",
+   "reading": "整句意思：这本书他已经借了两周了，借来一直没还。“借着不还”这个状态要用 keep（保持）的过去分词。",
+   "answer_text": "He has kept the book for two weeks.",
+   "expects": [
+    {
+     "id": "kept",
+     "type": "word",
+     "answers": [
+      "kept"
+     ],
+     "cn": [
+      "借着（keep 的过去分词）"
+     ]
+    },
+    {
+     "id": "fortime",
+     "type": "word",
+     "answers": [
+      "for two weeks",
+      "for 2 weeks"
+     ],
+     "cn": [
+      "两周（一段时间）"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——He has + keep 的过去分词（keep–kept–kept）；挂时间——“两周”是一段时间，用 for；细节——the book。",
+   "help_line": "He has kept the book for two weeks.",
+   "explain": "He has kept the book for two weeks. borrow 是“借入”那一下的动作，说“借了两周（一直没还）”要用 keep 的过去分词 kept。时间 for two weeks。",
+   "common_errors": [
+    {
+     "when": "写了 borrowed",
+     "say": "borrow 是“借入”那一下，不能跟“两周”这么长的时间；“借着不还”要用 keep 的过去分词 kept。"
+    },
+    {
+     "when": "写了 keeped",
+     "say": "keep 是不规则动词，过去分词是 kept，不能加 ed。"
+    },
+    {
+     "when": "写了 have kept",
+     "say": "主语是 he，要用 has：has kept。"
+    },
+    {
+     "when": "写了 since two weeks",
+     "say": "two weeks 是一段时间，用 for；since 后面跟时间点。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "borrowed",
+     "say": "“借了两周”是借着不还的状态，要用 kept，不是 borrowed。"
+    }
+   ]
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "选词 1：一段时间",
+   "scene": "句子工厂 · 挂时间零件",
+   "stem": "I have lived in this city ______ five years.",
+   "task": "选一个词填空。",
+   "options": [
+    "for",
+    "since",
+    "from",
+    "ago"
+   ],
+   "answer": "A",
+   "help": "先判断 five years：它是一段时间，还是一个时间点？想好了再选。",
+   "explain": "for five years。five years 是一段时间，用 for；since 后面跟时间点，比如 since 2021。",
+   "wrong_feedback": {
+    "B": "since 后面跟时间点（比如 since 2021）；five years 是一段时间，要用 for。",
+    "C": "from 不能这样单用表示“从……起”；一段时间要用 for。",
+    "D": "ago 是“以前”，用在过去时句子里（five years ago），这里是完成时，要用 for。"
+   }
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "选词 2：时间点",
+   "scene": "句子工厂 · 挂时间零件",
+   "stem": "She has worked in this school ______ 2020.",
+   "task": "选一个词填空。",
+   "options": [
+    "for",
+    "since",
+    "from",
+    "ago"
+   ],
+   "answer": "B",
+   "help": "先判断 2020：它是一段时间，还是一个时间点？想好了再选。",
+   "explain": "since 2020。2020 是一个时间点，用 since；for 后面跟一段时间，比如 for three years。",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间（比如 for three years）；2020 是时间点，要用 since。",
+    "C": "from 不能这样单用表示“自从”；时间点要用 since。",
+    "D": "ago 是“以前”，用在过去时句子里（in 2020 是时间点），这里要用 since。"
+   }
+  },
+  {
+   "step": 19,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新零件：被动完成时",
+   "teach_html": "<p>第二部分，工厂上一个新零件：<strong>被动完成时</strong>。</p><p>有些事，主角是“被做的东西”：桥是被人建的，信是被人寄的，教室是被人打扫的。这时骨架要多一个零件：<strong>东西 + has/have been + 过去分词</strong>。</p><p>拆句还是三步：第一步先判断——这件事是“谁主动做”，还是“东西被做”？是被做，骨架就在 has/have 后面放一个 <strong>been</strong>；第二步挂时间；第三步补细节。</p><p>最容易漏的就是这个 been。分清两个：has built 是“（他）已经建好了（某样东西）”，has <strong>been</strong> built 才是“（它）已经被建好了”。</p>",
+   "audio_id": "write1-passive"
+  },
+  {
+   "step": 20,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "看老师拆一句被动句",
+   "teach_html": "<p>目标句：“学校旁边已经建好了一座新图书馆。”</p><p>第一步：图书馆是<strong>被</strong>建的，主语 The new library 是单数，骨架：<strong>has been built</strong>。</p><p>第二步：这句没提时间，跳过。</p><p>第三步补细节：在哪里？学校旁边 near our school。整句：<strong>The new library has been built near our school.</strong></p><p>点播放听一遍。接下来四句，都按这个套路拆：先看主语是不是“被做的东西”。</p>",
+   "audio_id": "write1-demo2"
+  },
+  {
+   "step": 21,
+   "phase": "validate",
+   "kind": "short",
+   "title": "被动 1：新桥",
+   "scene": "句子工厂 · 第二车间",
+   "stem": "村子里的那座新桥已经建好了。",
+   "task": "写出完整的英文句子。先判断：桥是自己建的，还是被建的？",
+   "reading": "整句意思：村子里的那座新桥已经建好了。桥是被工人建起来的，它自己不会建自己。",
+   "answer_text": "The new bridge has been built.",
+   "expects": [
+    {
+     "id": "passive",
+     "type": "word",
+     "answers": [
+      "has been built"
+     ],
+     "cn": [
+      "已经被建好"
+     ]
+    }
+   ],
+   "help": "拆句第一步：桥是“被建”的，骨架里要有 been；桥是单数，用 has。build 的过去分词还是 built。",
+   "help_line": "The new bridge has been built.",
+   "explain": "The new bridge has been built. 桥是被建的，所以用 has been built：has + been + built，一个零件都不能少。",
+   "common_errors": [
+    {
+     "when": "写了 has built",
+     "say": "has built 是“（他）已经建好了”——那是主动。这句主语是桥，桥是被建的，要加 been：has been built。"
+    },
+    {
+     "when": "写了 been built（漏了 has）",
+     "say": "骨架少了 has：完成时的被动是 has been built，has 和 been 要连着出现。"
+    },
+    {
+     "when": "写了 has been builded",
+     "say": "build 是不规则动词，过去分词是 built，不能加 ed。"
+    },
+    {
+     "when": "写了 have been built",
+     "say": "主语 the new bridge 是单数，要用 has：has been built。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has built",
+     "say": "主语是桥，它是被建的，要加 been：has been built。"
+    }
+   ]
+  },
+  {
+   "step": 22,
+   "phase": "validate",
+   "kind": "short",
+   "title": "被动 2：教室",
+   "scene": "句子工厂 · 第二车间",
+   "stem": "教室已经被打扫干净了。",
+   "task": "写出完整的英文句子。先判断：教室是自己打扫的，还是被打扫的？",
+   "reading": "整句意思：教室已经被打扫干净了。教室是被同学们打扫的。",
+   "answer_text": "The classroom has been cleaned.",
+   "expects": [
+    {
+     "id": "passive",
+     "type": "word",
+     "answers": [
+      "has been cleaned"
+     ],
+     "cn": [
+      "已经被打扫"
+     ]
+    }
+   ],
+   "help": "拆句第一步：教室是“被打扫”的，骨架里要有 been；教室是单数，用 has。clean 的过去分词是 cleaned。",
+   "help_line": "The classroom has been cleaned.",
+   "explain": "The classroom has been cleaned. 教室是被打扫的，用 has been cleaned。clean 是规则动词，分词 cleaned。",
+   "common_errors": [
+    {
+     "when": "写了 has cleaned",
+     "say": "has cleaned 是“（他）已经打扫了”——主动。这句主语是教室，它是被打扫的，要加 been：has been cleaned。"
+    },
+    {
+     "when": "写了 been cleaned（漏了 has）",
+     "say": "骨架少了 has：has been cleaned 才是完整的被动完成时。"
+    },
+    {
+     "when": "写了 has been clean",
+     "say": "clean 是原形（也是形容词“干净的”）；been 后面要用过去分词 cleaned。"
+    },
+    {
+     "when": "写了 have been cleaned",
+     "say": "主语 the classroom 是单数，要用 has。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has cleaned",
+     "say": "主语是教室，它是被打扫的，要加 been：has been cleaned。"
+    }
+   ]
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "short",
+   "title": "被动 3：自行车",
+   "scene": "句子工厂 · 第二车间",
+   "stem": "我的自行车已经修好了。",
+   "task": "写出完整的英文句子。先判断：自行车是自己修的，还是被修好的？",
+   "reading": "整句意思：我的自行车已经修好了。自行车是被修车师傅修好的。",
+   "answer_text": "My bike has been repaired.",
+   "expects": [
+    {
+     "id": "passive",
+     "type": "word",
+     "answers": [
+      "has been repaired"
+     ],
+     "cn": [
+      "已经被修好"
+     ]
+    }
+   ],
+   "help": "拆句第一步：自行车是“被修”的，骨架里要有 been；bike 是单数，用 has。“修”是 repair，分词 repaired。",
+   "help_line": "My bike has been repaired.",
+   "explain": "My bike has been repaired. 自行车是被修好的，用 has been repaired。repair 是规则动词，分词 repaired。",
+   "common_errors": [
+    {
+     "when": "写了 has repaired",
+     "say": "has repaired 是“（他）已经修了”——主动。这句主语是自行车，它是被修的，要加 been：has been repaired。"
+    },
+    {
+     "when": "写了 been repaired（漏了 has）",
+     "say": "骨架少了 has：has been repaired，has 和 been 要连着出现。"
+    },
+    {
+     "when": "写了 has been repair",
+     "say": "repair 是原形；been 后面要用过去分词 repaired。"
+    },
+    {
+     "when": "写了 have been repaired",
+     "say": "主语 my bike 是单数，要用 has。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "has repaired",
+     "say": "主语是自行车，它是被修的，要加 been：has been repaired。"
+    }
+   ]
+  },
+  {
+   "step": 24,
+   "phase": "validate",
+   "kind": "short",
+   "title": "被动 4：信寄出去了",
+   "scene": "句子工厂 · 第二车间",
+   "stem": "那三封信已经寄出去了。",
+   "task": "写出完整的英文句子。先判断：信是自己寄的，还是被寄出去的？主语是单数还是复数？",
+   "reading": "整句意思：那三封信已经寄出去了。信是复数（三封），是被寄出去的；“寄”是 send，分词不规则。",
+   "answer_text": "The three letters have been sent.",
+   "expects": [
+    {
+     "id": "passive",
+     "type": "word",
+     "answers": [
+      "have been sent"
+     ],
+     "cn": [
+      "已经被寄出"
+     ]
+    }
+   ],
+   "help": "拆句第一步：信是“被寄”的，要有 been；主语是三封信，复数，这次用 have。send 的过去分词是 sent，不是 sended。",
+   "help_line": "The three letters have been sent.",
+   "explain": "The three letters have been sent. 主语是复数 letters，所以用 have been sent。send 的三态是 send–sent–sent。",
+   "common_errors": [
+    {
+     "when": "写了 has been sent",
+     "say": "主语是三封信（复数），要用 have：have been sent。"
+    },
+    {
+     "when": "写了 have been sended",
+     "say": "send 是不规则动词，过去分词是 sent，不能加 ed。"
+    },
+    {
+     "when": "写了 have sent",
+     "say": "have sent 是“（我们）已经寄了”——主动。这句主语是信，信是被寄的，要加 been：have been sent。"
+    },
+    {
+     "when": "写了 been sent（漏了 have）",
+     "say": "骨架少了 have：have been sent 才是完整的被动完成时。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have sent",
+     "say": "主语是信，它是被寄的，要加 been：have been sent。"
+    }
+   ]
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "最后组装：一小段话",
+   "teach_html": "<p>最后一关：把三句话组装成一小段，写<strong>你的交换周</strong>。</p><p>三句话分工：</p><p>第一句，<strong>去过哪里</strong>：I have been to …，或者 I have visited …</p><p>第二句，<strong>做过的一件新鲜事</strong>：交朋友、尝美食、学新本事，挑一件，用 have + 过去分词写。</p><p>第三句，<strong>待了多久 / 从什么时候起</strong>：句尾挂 for 一段时间，或者 since 一个时间点。</p><p>一句一句来，每句都先想骨架、再写出来。先看老师组装的一段样板。</p>",
+   "audio_id": "write1-para"
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "样板：一段交换周",
+   "teach_html": "<p>这是老师写的一段，主角是李明。主角换了人，但句架可以照搬：</p><p><strong>Li Ming has been to a small town near the sea. He has tried many kinds of seafood there. He has stayed with a host family for six days.</strong></p><p>一句一句看骨架：has been to（去过）、has tried（尝过）、has stayed … for six days（住了六天）。</p><p>点播放听一遍。接下来三句，换你写你自己的：主角换成 I，事情换成你自己的。</p>",
+   "audio_id": "write1-demo3"
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "short",
+   "title": "我的交换周 · 第 1 句",
+   "scene": "组装段落 · 第一句",
+   "stem": "写第一句：你去过的一个地方。",
+   "task": "用 I have been to … 或 I have visited … 写一个你去过的地方（城市、博物馆、海边、亲戚家都可以）。",
+   "reading": "第一句的任务：去过的地方。先想骨架（I have been to / I have visited），再补地方。",
+   "answer_text": "I have been to the science museum.",
+   "expects": [
+    {
+     "id": "place",
+     "type": "word",
+     "answers": [
+      "have been to",
+      "have visited",
+      "have gone to",
+      "have stayed in",
+      "have lived in"
+     ],
+     "cn": [
+      "去过（完成时）"
+     ]
+    }
+   ],
+   "help": "骨架先行：主语是 I，用 have；“去过”用 been to 或者 visited。先把骨架写出来，再补地方。",
+   "help_line": "I have been to the science museum.",
+   "explain": "参考：I have been to the science museum. 第一句只要写清“去过哪里”：骨架 have been to / have visited，加上地方。",
+   "common_errors": [
+    {
+     "when": "写了 went to（过去式）",
+     "say": "这段写的是经历，要用现在完成时：I have been to …，不要只写 went。"
+    },
+    {
+     "when": "写了 has been to",
+     "say": "主语是 I，用 have，不用 has：I have been to …。"
+    },
+    {
+     "when": "写了 have be to",
+     "say": "be 的过去分词是 been：have been to。"
+    },
+    {
+     "when": "只写了地方，没写骨架",
+     "say": "光写地方名不成句：先写 I have been to，再接地方。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "went to",
+     "say": "写经历要用完成时：I have been to …，不要只写 went。"
+    }
+   ]
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "short",
+   "title": "我的交换周 · 第 2 句",
+   "scene": "组装段落 · 第二句",
+   "stem": "写第二句：你在那里做过的一件新鲜事。",
+   "task": "用 have + 过去分词写一件事：交了新朋友、尝过当地食物、买了纪念品、学了新东西，都可以。",
+   "reading": "第二句的任务：一件做过的新鲜事。先想骨架（I have + 过去分词），再补事情的细节。",
+   "answer_text": "I have made two new friends there.",
+   "expects": [
+    {
+     "id": "experience",
+     "type": "word",
+     "answers": [
+      "have made",
+      "have tried",
+      "have learned",
+      "have learnt",
+      "have eaten",
+      "have bought",
+      "have taken",
+      "have met",
+      "have played",
+      "have seen",
+      "have visited",
+      "have cooked",
+      "have read",
+      "have watched",
+      "have listened",
+      "have helped",
+      "have gone"
+     ],
+     "cn": [
+      "做过的新鲜事"
+     ]
+    }
+   ],
+   "help": "骨架先行：I have + 过去分词。比如交朋友是 have made，尝美食是 have tried。先定是哪件事，再写分词。",
+   "help_line": "I have made two new friends there.",
+   "explain": "参考：I have made two new friends there. 第二句写一件做过的事：骨架 I have + 过去分词，事情可以换成你自己的。",
+   "common_errors": [
+    {
+     "when": "只用了过去式（比如只写 made）",
+     "say": "这段写经历要用完成时：分词前面要有 have，I have made …。"
+    },
+    {
+     "when": "写了 has",
+     "say": "主语是 I，用 have，不用 has。"
+    },
+    {
+     "when": "分词写成了原形（比如 have make）",
+     "say": "have 后面要用过去分词：make 的分词是 made。"
+    },
+    {
+     "when": "写的是计划或愿望，不是做过的事",
+     "say": "第二句要写已经做过的事，用完成时写一件真发生过的。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "have make",
+     "say": "make 的过去分词是 made：have made。"
+    }
+   ]
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "short",
+   "title": "我的交换周 · 第 3 句",
+   "scene": "组装段落 · 第三句",
+   "stem": "写第三句：你在那里待了多久，或者从什么时候起。",
+   "task": "骨架也要是完成时；句尾挂时间：for + 一段时间，或者 since + 时间点，二选一。",
+   "reading": "第三句的任务：待了多久 / 从什么时候起。比如待了五天，或者从星期一起。一段时间用 for，时间点用 since。",
+   "answer_text": "I have stayed there for five days.",
+   "expects": [
+    {
+     "id": "time",
+     "type": "word",
+     "answers": [
+      "for",
+      "since"
+     ],
+     "cn": [
+      "待了多久 / 从何时起"
+     ]
+    }
+   ],
+   "help": "三步走：骨架——I have stayed / I have lived；挂时间——待了几天是一段时间，用 for；是从某天起，用 since。先选一种再写。",
+   "help_line": "I have stayed there for five days.",
+   "explain": "参考：I have stayed there for five days. 第三句的关键是把时间挂对：一段时间用 for（for five days），时间点用 since（since Monday）。",
+   "common_errors": [
+    {
+     "when": "只写了过去式（比如只写 stayed）",
+     "say": "这句也要用完成时：I have stayed …，分词前面要有 have。"
+    },
+    {
+     "when": "一段时间用了 since（比如 since five days）",
+     "say": "five days 是一段时间，用 for；since 后面跟时间点，比如 since Monday。"
+    },
+    {
+     "when": "漏了时间",
+     "say": "第三句的任务就是交代时间：句尾要挂 for 一段时间，或 since 一个时间点。"
+    },
+    {
+     "when": "写了 has",
+     "say": "主语是 I，用 have，不用 has。"
+    }
+   ],
+   "predicted_errors": [
+    {
+     "wrong": "since five days",
+     "say": "five days 是一段时间，用 for；since 后面跟时间点。"
+    }
+   ]
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "收尾",
+   "teach_html": "<p>这一课到这里。今天工厂里练的就一招：<strong>先搭骨架，再挂时间，最后补细节</strong>。</p><p>以后写完成时句子卡住，先别急着点“老师教我”，在心里把三步过一遍：骨架对不对？时间挂对没有？细节齐不齐？</p><p>点完成之后，完成页会写清：今天多少句是独立写对的、哪几句用了帮助、哪些地方还要多练。那些数字才是今天真正的成绩单。</p>",
+   "audio_id": "write1-ending"
+  }
+ ]
+}
