@@ -205,7 +205,29 @@ function playAudio(url) {
   a.play().catch(e => prettyAlert('音频播放失败', '🔇'));
 }
 
-let mediaRec = null, recChunks = [];
+// 口语录音留存（2026-10-23）：旧版录完只在页面上标"已录音"，录音本体直接丢弃，
+// 老师事后无从批改。现在录完立刻上传存到服务器（BLOB 进库、随备份链走），
+// 服务器确认存好才标"已录音"；没存上会明确提示重录，绝不假装存了。
+const SPEECH_OK = {}; // qid -> true：该题已有一段录音在服务器存好
+async function uploadSpeechAudio(qid, blob, durationSec) {
+  const examId = new URLSearchParams(location.search).get('exam');
+  const b64 = await new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => { const t = String(fr.result || ''); const i = t.indexOf('base64,'); resolve(i >= 0 ? t.slice(i + 7) : t); };
+    fr.onerror = reject;
+    fr.readAsDataURL(blob);
+  });
+  const resp = await fetch('/api/exam/speech', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ exam_id: examId, qid, audio_b64: b64, mime: blob.type || '', duration_sec: durationSec || null })
+  });
+  const d = await resp.json().catch(() => null);
+  if (!resp.ok || !d || !d.ok) throw new Error('speech upload failed');
+  SPEECH_OK[qid] = true;
+  return d;
+}
+
+let mediaRec = null, recChunks = [], recStartTs = 0;
 async function toggleRec(qid, btn) {
   const st = document.getElementById('st-' + qid);
   if (mediaRec && mediaRec.state === 'recording') {
@@ -217,12 +239,26 @@ async function toggleRec(qid, btn) {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     mediaRec = new MediaRecorder(stream);
+    const recMime = mediaRec.mimeType || 'audio/webm';
     recChunks = [];
+    recStartTs = Date.now();
     mediaRec.ondataavailable = e => recChunks.push(e.data);
-    mediaRec.onstop = () => {
-      st.textContent = '✅ 已录音';
-      ANSWERS[qid] = 'recorded'; // 参与分
+    mediaRec.onstop = async () => {
       stream.getTracks().forEach(t => t.stop());
+      const dur = Math.max(1, Math.round((Date.now() - recStartTs) / 1000));
+      const blob = new Blob(recChunks, { type: recMime });
+      st.textContent = '⏳ 录音保存中…';
+      btn.disabled = true;
+      try {
+        await uploadSpeechAudio(qid, blob, dur);
+        st.textContent = '✅ 已录音';
+        ANSWERS[qid] = 'recorded'; // 参与分
+      } catch (e) {
+        st.textContent = SPEECH_OK[qid]
+          ? '⚠️ 这次没存上，还是上一段录音。可以再录一次'
+          : '⚠️ 录音没存上，再录一次';
+      }
+      btn.disabled = false;
     };
     mediaRec.start();
     btn.textContent = '⏹ 停止';
