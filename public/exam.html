@@ -599,14 +599,28 @@ async function csToggleRec() {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     CS.rec = new MediaRecorder(stream);
     CS.chunks = [];
+    CS.recStartTs = Date.now();
     CS.rec.ondataavailable = ev => CS.chunks.push(ev.data);
-    CS.rec.onstop = () => {
+    CS.rec.onstop = async () => {
       stream.getTracks().forEach(t => t.stop());
-      stEl.textContent = '✅ 已录音';
-      CS.recorded = true;
       const e = CS.flat[CS.idx];
-      if (CS.state[e.qid]) csSave('recorded');
-      else { const b = document.getElementById('csSpeakDone'); if (b) b.disabled = false; }
+      const qid = e.qid;
+      // 2026-10-23：课程式与一页式同规——录音先上传存好，才标已录音（旧版录完丢弃、批不了）
+      btn.disabled = true;
+      stEl.textContent = '⏳ 录音保存中…';
+      try {
+        const blob = new Blob(CS.chunks, { type: CS.rec.mimeType || 'audio/webm' });
+        const dur = Math.round((Date.now() - (CS.recStartTs || Date.now())) / 100) / 10;
+        await uploadSpeechAudio(qid, blob, dur);
+        stEl.textContent = '✅ 已录音';
+        CS.recorded = true;
+        if (CS.state[qid]) csSave('recorded');
+        else { const b = document.getElementById('csSpeakDone'); if (b) b.disabled = false; }
+      } catch (err) {
+        CS.recorded = !!SPEECH_OK[qid];
+        stEl.textContent = SPEECH_OK[qid] ? '⚠️ 这次没存上，还是上一段录音' : '⚠️ 录音没存上，再录一次';
+      }
+      btn.disabled = false;
     };
     CS.rec.start();
     btn.textContent = '⏹ 停止';
