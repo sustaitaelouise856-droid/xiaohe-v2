@@ -1,0 +1,1469 @@
+{
+ "lesson_id": "u7r4",
+ "practice_end": 27,
+ "home_subtitle": "第四课 · 大树的记忆",
+ "part1_desc": "第 1–27 步：跟站长去看老树的年轮，学 contain、particular、chemistry 等新词，用条件句和 unless 读《树的记忆》（上）；练习里掺着挑战题，边学边闯。",
+ "part2_desc": "第 28–50 步：独立判断《树的记忆》（下），看科学家用年轮查古火灾、算老房子的年代；课尾压轴：since/for、被动、现在完成时回锅，条件句与 unless 综合产出。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：条件句（2）与 unless 的综合运用（科学语境：年轮宽窄、火灾痕迹）、unless 改写、构词 -ize（memory→memorize）；挑战段回锅 since/for、被动语态、现在完成时。Unit 7 The secret of memory 主题，核心词 contain/particular/chemistry/natural disaster/figure out/scar，复现 summary/image/visual/tend/loss。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新节目：去看一棵老树",
+   "teach_html": "<p>广播站这次做<strong>户外节目</strong>：站长带大家去看村口的一棵<strong>老树</strong>。老树被风吹倒后锯开了，树干里面一圈一圈的，这就是<strong>年轮</strong>。</p><p>站长说：树也有<strong>记忆</strong>。年轮一圈就是一年，宽窄、黑斑都记着那一年发生的事。这一课，我们用<strong>条件句</strong>和 <strong>unless</strong> 把大树的记忆一句一句读出来。</p>",
+   "audio_id": "u7r4-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "条件句：谈必然结果",
+   "teach_html": "<p>先把老规矩拿出来：谈<strong>必然结果</strong>（科学事实、自然规律），用 <strong>If + 一般现在时，主句一般现在时</strong>，两边都不用 will。</p><p><strong>If a tree gets enough rain, its ring is wide.</strong>（雨水够，年轮就宽。）</p><p><strong>If a year is dry, the ring is narrow.</strong>（那一年干旱，年轮就窄。）主语是 a tree / a year 这类单数时，动词记得加 s：gets、is。</p>",
+   "audio_id": "u7r4-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "unless 综合：等于 if...not",
+   "teach_html": "<p><strong>unless</strong> 是这一课的综合工具：<strong>unless = if...not</strong>，意思是“除非；如果不”。</p><p><strong>Unless a tree gets water, it grows slowly.</strong>（除非树得到水，否则它长得慢。）= If a tree does <strong>not</strong> get water, it grows slowly.</p><p>记住一条铁律：用了 unless，从句里<strong>不再加 not</strong>。别写成 Unless a tree does not get water，那就错了。</p>",
+   "audio_id": "u7r4-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "年轮里的科学",
+   "teach_html": "<p>年轮怎么读？<strong>一年一圈</strong>：数一数有多少圈，就知道树活了多少年。</p><p><strong>宽圈</strong> = 那一年雨水足；<strong>窄圈</strong> = 那一年干旱；圈上的<strong>黑斑</strong> = 那一年发生过火灾。</p><p>把这些事实说成条件句：<strong>If the ring is wide, the year was wet.</strong> 科学家就是这样用年轮查古时候的火灾、算老房子的年代的。</p>",
+   "audio_id": "u7r4-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：contain 和 particular",
+   "teach_html": "<p><strong>contain</strong> /kənˈteɪn/ 是“包含；含有”：The tree <strong>contains</strong> a long story.（这棵树里藏着一个长长的故事。）主语是单数时用 contains。</p><p><strong>particular</strong> /pəˈtɪkjələ/ 是“专指的；特指的”：this <strong>particular</strong> ring（专指这一圈），不是泛指所有圈。</p>",
+   "audio_id": "u7r4-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二：chemistry 和 natural disaster",
+   "teach_html": "<p><strong>chemistry</strong> /ˈkemɪstri/ 是“化学”：Tree <strong>chemistry</strong> tells us about dry years.（树的化学成分会告诉我们哪些年干旱。）</p><p><strong>natural disaster</strong> 是“自然灾害”：火灾、干旱、洪水都是 natural disasters。年轮连自然灾害都记着。</p>",
+   "audio_id": "u7r4-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "短语 figure out 和脚注词 scar",
+   "teach_html": "<p><strong>figure out</strong> 是老朋友了，意思是“弄明白；算出来”：figure out the tree's age（算出树的年龄）。</p><p>再认识一个脚注词：<strong>scar</strong> /skɑː/ 是“伤疤”。人身上的伤疤记着受过的伤；年轮上的黑斑就是树的 scar，记着一场大火。</p>",
+   "audio_id": "u7r4-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "构词点：memory 加 -ize 变 memorize",
+   "teach_html": "<p>一个小构词点：名词后面加 <strong>-ize</strong>，可以变成动词。</p><p><strong>memory</strong>（记忆，名词）+ <strong>-ize</strong> → <strong>memorize</strong> /ˈmeməraɪz/（背诵；记住，动词）。</p><p>If you <strong>memorize</strong> the words, you remember them in the test. 这只是词汇扩展，记住这一对就够了。</p>",
+   "audio_id": "u7r4-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：三个坑",
+   "teach_html": "<p>练之前提醒三个坑：</p><p>坑一：<strong>unless 后面不加 not</strong>。Unless it rains 本身就是“如果不下雨”。</p><p>坑二：谈必然结果<strong>不用 will</strong>：If a year is wet, the ring is wide.</p><p>坑三：主语是单数（a tree、the ring、the wood），动词<strong>加 s</strong>：contains、gets、shows。</p>",
+   "audio_id": "u7r4-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：树的记忆（上）",
+   "teach_html": "<p>这是站长在老树旁边念的短文<strong>《树的记忆》（上）</strong>。做题时对照着看：年轮一年一圈，宽圈雨水足、窄圈干旱、黑斑是火灾。</p><p>下面站长带着你练。</p>",
+   "audio_id": "u7r4-prac-01",
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "雨水足，圈就宽",
+   "scene": "雨水充足的那一年，年轮宽。",
+   "stem": "If a year is wet, the ring ___ wide.",
+   "options": [
+    "is",
+    "are",
+    "will is",
+    "be"
+   ],
+   "answer": "A",
+   "help": "主语是 the ring（一个圈），be 动词选哪个？",
+   "explain": "If a year is wet, the ring is wide. 主语 the ring 是单数，用 is；谈必然结果不用 will。",
+   "wrong_feedback": {
+    "B": "are 是给复数主语用的；the ring 是一个圈，用 is。",
+    "C": "谈必然结果不用 will，而且 will 后面也不能跟 is 这样搭。",
+    "D": "be 是原形，不能直接放在单数主语后面，要用 is。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q01"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "树里藏着故事",
+   "scene": "老树的年轮里包含着长长的故事。",
+   "stem": "The old tree ___ a long story in its rings.",
+   "options": [
+    "tends",
+    "contains",
+    "figures",
+    "summarizes"
+   ],
+   "answer": "B",
+   "help": "哪个词是刚学的“包含；含有”？主语是单数，动词还要加 s。",
+   "explain": "The old tree contains a long story in its rings. contain 是“包含；含有”，主语单数用 contains。",
+   "wrong_feedback": {
+    "A": "tend 是“往往会”，后面跟 to do，不表示“包含”。",
+    "C": "figure 要和 out 连用才是“弄明白”，这里要的是“包含”：contains。",
+    "D": "summarize 是“总结”，说的是人写总结，不是树里“含有”故事。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q02"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 除非得到水",
+   "scene": "除非树得到水，否则它长得慢。",
+   "stem": "Unless a tree ___ enough water, it grows slowly. (get)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "gets",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "gets"
+     ],
+     "olds": [
+      "get",
+      "will get"
+     ],
+     "cn": [
+      "得到（主语是 a tree，单数）"
+     ]
+    }
+   ],
+   "help": "先看主语：a tree 是一棵树。unless 从句里的动词要不要加 s？",
+   "explain": "Unless a tree gets enough water, it grows slowly. 主语 a tree 是第三人称单数，get 加 s；unless 本身已经带“不”的意思，后面不用 not。",
+   "common_errors": [
+    {
+     "when": "写了 get",
+     "say": "主语 a tree 是单数，动词要加 s：gets。"
+    },
+    {
+     "when": "写了 does not get",
+     "say": "unless 本身就等于 if...not，后面再加 not 就重复了，直接用 gets。"
+    },
+    {
+     "when": "写了 will get",
+     "say": "谈必然结果用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "干旱年，圈就窄",
+   "scene": "那一年干旱，年轮就窄。",
+   "stem": "If a year ___ dry, the ring is narrow. (be)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "is",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is"
+     ],
+     "olds": [
+      "are",
+      "was"
+     ],
+     "cn": [
+      "是（主语是 a year，单数）"
+     ]
+    }
+   ],
+   "help": "主语是 a year（一年），算单数还是复数？谈的是规律，用现在还是过去？",
+   "explain": "If a year is dry, the ring is narrow. 主语 a year 是单数，用 is；谈规律用一般现在时。",
+   "common_errors": [
+    {
+     "when": "写了 are",
+     "say": "are 是给复数主语用的；a year 是单数，用 is。"
+    },
+    {
+     "when": "写了 was",
+     "say": "was 是过去式；这句谈的是规律，用一般现在时 is。"
+    },
+    {
+     "when": "写了 be",
+     "say": "be 是原形，单数主语后面要用 is。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q03"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "particular 的意思",
+   "scene": "particular 意思是？",
+   "stem": "The word \"particular\" means ___.",
+   "options": [
+    "化学",
+    "自然灾害",
+    "伤疤",
+    "专指的；特指的"
+   ],
+   "answer": "D",
+   "help": "回想生词课：this particular ring 指的是泛指还是专指这一圈？",
+   "explain": "particular 意思是“专指的；特指的”。",
+   "wrong_feedback": {
+    "A": "“化学”是 chemistry。particular 说的是“专指某一个”。",
+    "B": "“自然灾害”是 natural disaster。particular 是“特指的”。",
+    "C": "“伤疤”是 scar。particular 是“专指的；特指的”。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q04"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 数圈知年龄",
+   "scene": "数一数年轮，就知道树的年龄。",
+   "stem": "If you ___ (count) the rings, you ___ (know) the tree's age.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "count know",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "count"
+     ],
+     "olds": [
+      "counts"
+     ],
+     "cn": [
+      "数（主语是 you）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "know"
+     ],
+     "olds": [
+      "knows"
+     ],
+     "cn": [
+      "知道（主语是 you）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是 you。you 后面的动词加 s 还是用原形？",
+   "explain": "If you count the rings, you know the tree's age. 主语 you 用动词原形：count、know 都不加 s。",
+   "common_errors": [
+    {
+     "when": "写了 counts",
+     "say": "主语是 you，动词不加 s；counts 是给 he / she 用的。"
+    },
+    {
+     "when": "第二个空写了 knows",
+     "say": "主语还是 you，know 用原形，不加 s。"
+    },
+    {
+     "when": "写了 will know",
+     "say": "谈必然结果不用 will，主句也是一般现在时。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "short",
+   "title": "算出年龄",
+   "scene": "科学家算出了这棵树的年龄。",
+   "stem": "Scientists can ___ the tree's age from the rings. (figure out)",
+   "task": "写出空里的短语。",
+   "answer_text": "figure out",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "figure out"
+     ],
+     "olds": [
+      "figures out",
+      "find out"
+     ],
+     "cn": [
+      "弄明白；算出来"
+     ]
+    }
+   ],
+   "help": "这个短语是两个词：figure 加上一个小词，意思是“算出来”。",
+   "explain": "Scientists can figure out the tree's age from the rings. figure out 是“弄明白；算出来”。",
+   "common_errors": [
+    {
+     "when": "只写了 figure",
+     "say": "少了 out。figure out 是一个整体短语，两个词都要写。"
+    },
+    {
+     "when": "写了 find out",
+     "say": "find out 偏向“查明消息”；课上算年龄用的短语是 figure out。"
+    },
+    {
+     "when": "写了 figures out",
+     "say": "can 后面用动词原形：figure out，不能加 s。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q05"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "树的化学",
+   "scene": "树的化学成分能告诉我们干旱的年份。",
+   "stem": "___ helps scientists learn about dry years.",
+   "options": [
+    "summary",
+    "image",
+    "chemistry",
+    "visual"
+   ],
+   "answer": "C",
+   "help": "哪个词是“化学”？它是一门科学的名字。",
+   "explain": "Chemistry helps scientists learn about dry years. chemistry 是“化学”。",
+   "wrong_feedback": {
+    "A": "summary 是“总结”，是写出来的短文，不是这门科学。",
+    "B": "image 是“图像”，不是“化学”。",
+    "D": "visual 是“视觉的”，是形容词；这里要的是学科名 chemistry。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q06"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 圈窄除非下雨",
+   "scene": "年轮窄，除非那一年下雨多。",
+   "stem": "A ring is narrow ___ the year is wet.",
+   "task": "只写空里的一个词。",
+   "answer_text": "unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "when"
+     ],
+     "cn": [
+      "除非（= if...not）"
+     ]
+    }
+   ],
+   "help": "把 if 放进去读一读：意思通吗？这句话要的是“除非……否则就窄”。",
+   "explain": "A ring is narrow unless the year is wet. unless = if...not：如果那一年不湿，年轮就窄。",
+   "common_errors": [
+    {
+     "when": "写了 if",
+     "say": "if 是“如果”：如果那年湿，圈就窄——意思反了。要用 unless。"
+    },
+    {
+     "when": "写了 when",
+     "say": "when 说的是时间“当……时”；这里是条件“除非”，用 unless。"
+    },
+    {
+     "when": "写了 because",
+     "say": "because 说原因；这里前后是条件关系，用 unless。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 哪句是对的",
+   "scene": "下面哪一句条件句写对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless it does not rain, the ring is narrow.",
+    "Unless it rains, the ring is narrow.",
+    "If it will rain, the ring is wide.",
+    "The ring will is wide if it rains."
+   ],
+   "answer": "B",
+   "help": "一条一条查：unless 后面有没有多余的 not？if 从句里有没有 will？",
+   "explain": "Unless it rains, the ring is narrow. unless 本身等于 if...not，后面不能再加 not；谈必然结果不用 will。",
+   "wrong_feedback": {
+    "A": "unless 后面又加了 does not，“不”说了两遍，意思乱了。",
+    "C": "if 从句里不能用 will；谈必然结果用一般现在时：If it rains。",
+    "D": "will is 不是正确搭配，而且必然结果根本不用 will：the ring is wide。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "title": "树上的伤疤",
+   "scene": "年轮上的黑斑是树的一道伤疤。",
+   "stem": "The black ___ on the ring shows an old fire.",
+   "task": "只写空里的一个词（脚注词）。",
+   "answer_text": "scar",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "scar"
+     ],
+     "olds": [
+      "scars",
+      "mark"
+     ],
+     "cn": [
+      "伤疤"
+     ]
+    }
+   ],
+   "help": "脚注词：人身上留下的伤痕叫什么？树上的黑斑就是树的这个词。",
+   "explain": "The black scar on the ring shows an old fire. scar 是“伤疤”。",
+   "common_errors": [
+    {
+     "when": "写了 scars",
+     "say": "前面有 The black 单数提示，这里指一道伤疤，用单数 scar。"
+    },
+    {
+     "when": "写了 fire",
+     "say": "fire 是“火”本身；空里要的是“伤疤”这个词：scar。"
+    },
+    {
+     "when": "写了 story",
+     "say": "黑斑是树的伤疤，不是故事；表示伤疤的词是 scar。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q07"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "老树长得慢",
+   "scene": "老树往往会长得越来越慢。",
+   "stem": "Old trees ___ to grow more slowly year by year. (tend)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "tend",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "tend"
+     ],
+     "olds": [
+      "tends"
+     ],
+     "cn": [
+      "往往会（主语是复数 Old trees）"
+     ]
+    }
+   ],
+   "help": "主语 Old trees 是单棵还是多棵？复数主语的动词加不加 s？",
+   "explain": "Old trees tend to grow more slowly year by year. 主语 Old trees 是复数，tend 用原形。tend to do 是“往往会做某事”。",
+   "common_errors": [
+    {
+     "when": "写了 tends",
+     "say": "tends 是给单数主语用的；Old trees 是复数，用原形 tend。"
+    },
+    {
+     "when": "写了 tended",
+     "say": "tended 是过去式；这句谈的是普遍规律，用一般现在时。"
+    },
+    {
+     "when": "漏了 to",
+     "say": "tend 后面要跟 to：tend to grow，to 不能丢。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q08"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "什么是自然灾害",
+   "scene": "森林大火属于哪一类？",
+   "stem": "A forest fire is a kind of ___.",
+   "options": [
+    "natural disaster",
+    "visual image",
+    "short summary",
+    "memory loss"
+   ],
+   "answer": "A",
+   "help": "刚学过的短语：火灾、干旱、洪水这一类，合起来叫什么？",
+   "explain": "A forest fire is a kind of natural disaster. natural disaster 是“自然灾害”。",
+   "wrong_feedback": {
+    "B": "visual image 是“视觉图像”，说的是画面，不是灾害。",
+    "C": "short summary 是“简短总结”，和火灾不是一类。",
+    "D": "memory loss 是“记忆丧失”，是记忆问题，不是自然灾害。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q09"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 背住这些词",
+   "scene": "测验前把年轮的词背住。",
+   "stem": "Please ___ these ring words before the quiz. (memorize)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "memorize",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "memorize"
+     ],
+     "olds": [
+      "memorizes",
+      "memory"
+     ],
+     "cn": [
+      "背诵；记住（Please 后用原形）"
+     ]
+    }
+   ],
+   "help": "Please 后面跟动词原形。这个词是 memory 加 -ize 变来的动词。",
+   "explain": "Please memorize these ring words before the quiz. memorize 是 memory 加 -ize 变成的动词“背诵；记住”；Please 后面用原形。",
+   "common_errors": [
+    {
+     "when": "写了 memory",
+     "say": "memory 是名词“记忆”，这里需要动词“背住”：memorize。"
+    },
+    {
+     "when": "写了 memorizes",
+     "say": "Please 后面用动词原形，不加 s：memorize。"
+    },
+    {
+     "when": "写了 remember 的其他拼写错误",
+     "say": "这里要用构词课的新词 memorize，不是 remember。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "看得见的记录",
+   "scene": "年轮的照片是一种看得见的记录。",
+   "stem": "A photo of the rings is a ___ record of the tree's life.",
+   "options": [
+    "summary",
+    "loss",
+    "visual",
+    "particular"
+   ],
+   "answer": "C",
+   "help": "哪个词和“看”有关，是“视觉的”？",
+   "explain": "A photo of the rings is a visual record of the tree's life. visual 是“视觉的”。",
+   "wrong_feedback": {
+    "A": "summary 是“总结”，是文字概括，不是照片这种看得见的记录。",
+    "B": "loss 是“丧失”，意思不对。",
+    "D": "particular 是“特指的”，修饰“专指某一个”，不表示“看得见”。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q10"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 读短文：黑斑",
+   "scene": "根据短文《树的记忆》（上）回答。",
+   "stem": "According to the text, what does a black scar on a ring mean?",
+   "options": [
+    "The year was very wet.",
+    "The year was very dry.",
+    "The tree was cut down.",
+    "A fire happened long ago."
+   ],
+   "answer": "D",
+   "help": "回到短文里找 scar 那一句：A scar means a ...？",
+   "explain": "A fire happened long ago. 短文原话：A scar means a fire long ago.（黑斑表示很久以前的一场火。）",
+   "wrong_feedback": {
+    "A": "雨水足对应的是宽圈，不是黑斑。",
+    "B": "干旱对应的是窄圈，不是黑斑。",
+    "C": "树被砍下是故事的开头，不是黑斑的意思。"
+   },
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "写个总结",
+   "scene": "课最后，老师让大家给树的故事写个简短总结。",
+   "stem": "At the end, write a short ___ of the tree's story.",
+   "task": "只写空里的一个词。",
+   "answer_text": "summary",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "summary"
+     ],
+     "olds": [
+      "summarize",
+      "story"
+     ],
+     "cn": [
+      "总结；摘要"
+     ]
+    }
+   ],
+   "help": "a short ___ of...：要一个名词，意思是“总结”。刚在选项里见过它。",
+   "explain": "At the end, write a short summary of the tree's story. summary 是名词“总结；摘要”。",
+   "common_errors": [
+    {
+     "when": "写了 summarize",
+     "say": "summarize 是动词；a short 后面要跟名词 summary。"
+    },
+    {
+     "when": "写了 story",
+     "say": "story 是“故事”本身；空里要的是“总结”：summary。"
+    },
+    {
+     "when": "拼成了 summery",
+     "say": "注意拼写：summary 最后一个字母是 y，不是 e。"
+    }
+   ],
+   "reading": "An old tree in our town was cut down last week. Inside it, people saw many circles. Each circle is one year of the tree's life. If a year is wet, the ring is wide. If a year is dry, the ring is narrow. Some rings have black scars. A scar means a fire long ago. The tree contains a long story. If you count the rings, you figure out how old the tree is.",
+   "audio_id": "u7r4-q11"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：独立判断",
+   "teach_html": "<p>新任务：短文<strong>《树的记忆》（下）</strong>在上面。这次讲科学家怎么用年轮查一场<strong>古火灾</strong>、算一座<strong>老房子</strong>的年代。</p><p>这次你自己看、自己答，站长不提示了。记住：<strong>unless = if...not，从句里不再加 not</strong>；谈必然结果不用 will。</p>",
+   "audio_id": "u7r4-v-intro",
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "黑斑那一年",
+   "scene": "有黑斑的那一年，发生过一场火。",
+   "stem": "If a ring has a black scar, a fire ___ that year.",
+   "options": [
+    "happened",
+    "happen",
+    "will happen",
+    "happening"
+   ],
+   "answer": "A",
+   "help": "那是过去某一年发生过的事，用什么时态？",
+   "explain": "If a ring has a black scar, a fire happened that year. 短文讲的是过去那一年的事，用过去式 happened。",
+   "wrong_feedback": {
+    "B": "happen 是原形；主语 a fire 是单数，而且说的是过去的事，要用 happened。",
+    "C": "短文说的是已经发生过的火，不用 will。",
+    "D": "happening 是 -ing 形式，不能单独做谓语。"
+   },
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v02"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 除非仔细查",
+   "scene": "除非科学家仔细查，否则会漏掉这些小 marks。",
+   "stem": "Unless scientists ___ carefully, they miss these small marks. (check)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "check",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "check"
+     ],
+     "olds": [
+      "checks",
+      "do not check"
+     ],
+     "cn": [
+      "检查（主语是复数 scientists）"
+     ]
+    }
+   ],
+   "help": "主语 scientists 是一位还是多位？unless 后面还要不要加 not？",
+   "explain": "Unless scientists check carefully, they miss these small marks. 主语 scientists 是复数，用原形 check；unless 后面不加 not。",
+   "common_errors": [
+    {
+     "when": "写了 checks",
+     "say": "主语 scientists 是复数，动词用原形 check，不加 s。"
+    },
+    {
+     "when": "写了 do not check",
+     "say": "unless 本身就带“不”的意思，再加 do not 就重复了。"
+    },
+    {
+     "when": "写了 checked",
+     "say": "checked 是过去式；这句谈的是规律，用一般现在时 check。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "房子是哪年建的",
+   "scene": "他们算出了这座房子建成的年份。",
+   "stem": "They figure out the year the house ___.",
+   "options": [
+    "build",
+    "builds",
+    "was built",
+    "building"
+   ],
+   "answer": "C",
+   "help": "房子是自己建自己，还是被人建的？再看：说的是过去建成的事。",
+   "explain": "They figure out the year the house was built. 房子是被建的，用被动；建成是过去的事，用 was built。",
+   "wrong_feedback": {
+    "A": "build 是主动原形；房子是被建的，要用被动。",
+    "B": "builds 还是主动，而且时态也不对。",
+    "D": "building 是 -ing 形式，组不成“被建成”的意思。"
+   },
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v03"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "木头里含有",
+   "scene": "如果木头里含有特殊的东西，那年就特别。",
+   "stem": "If the wood ___ special things, the year was special. (contain)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "contains",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "contains"
+     ],
+     "olds": [
+      "contain",
+      "contained"
+     ],
+     "cn": [
+      "含有（主语是 the wood，单数）"
+     ]
+    }
+   ],
+   "help": "主语 the wood 算单数还是复数？单数主语的动词要加什么？",
+   "explain": "If the wood contains special things, the year was special. 主语 the wood 是单数，contain 加 s。",
+   "common_errors": [
+    {
+     "when": "写了 contain",
+     "say": "主语 the wood 是单数，动词要加 s：contains。"
+    },
+    {
+     "when": "写了 contained",
+     "say": "contained 是过去式；if 从句谈条件用一般现在时 contains。"
+    },
+    {
+     "when": "写了 is contain",
+     "say": "is 后面不能直接跟原形这样搭；一般现在时直接用 contains。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v04"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "专指的那一圈",
+   "scene": "他们只研究专指的那一圈，不是所有的圈。",
+   "stem": "They study one ___ ring, not all of them.",
+   "options": [
+    "general",
+    "particular",
+    "natural",
+    "visual"
+   ],
+   "answer": "B",
+   "help": "哪个词是“专指的；特指的”？句子里有 not all of them 在帮你排除泛指。",
+   "explain": "They study one particular ring, not all of them. particular 是“专指的；特指的”。",
+   "wrong_feedback": {
+    "A": "general 是“一般的、泛指的”，和 not all of them 正好矛盾。",
+    "C": "natural 是“自然的”，常和 disaster 连用，不是“特指的”。",
+    "D": "visual 是“视觉的”，说的是看得见，和“专指”无关。"
+   },
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v05"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 他数圈",
+   "scene": "科学家数了年轮，就知道了树的年龄。",
+   "stem": "If a scientist ___ (count) the rings, he ___ (learn) the tree's age.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "counts learns",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "counts"
+     ],
+     "olds": [
+      "count"
+     ],
+     "cn": [
+      "数（主语是 a scientist，单数）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "learns"
+     ],
+     "olds": [
+      "learn"
+     ],
+     "cn": [
+      "得知（主语是 he，单数）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是单数：a scientist 和 he。单数主语的动词都要发生什么变化？",
+   "explain": "If a scientist counts the rings, he learns the tree's age. 两个主语都是第三人称单数，count 和 learn 都加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 count",
+     "say": "主语 a scientist 是一个科学家，动词要加 s：counts。"
+    },
+    {
+     "when": "第二个空写了 learn",
+     "say": "主语还是 he，learn 也要加 s：learns。"
+    },
+    {
+     "when": "写了 will learn",
+     "say": "谈必然结果不用 will，主句用一般现在时 learns。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "title": "树的化学帮忙",
+   "scene": "树的化学成分也能帮忙。",
+   "stem": "Tree ___ also helps scientists learn about the past.",
+   "task": "只写空里的一个词。",
+   "answer_text": "chemistry",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "chemistry"
+     ],
+     "olds": [
+      "chemical",
+      "chemist"
+     ],
+     "cn": [
+      "化学"
+     ]
+    }
+   ],
+   "help": "哪个词是学科名“化学”？前面有 Tree，后面是 also helps。",
+   "explain": "Tree chemistry also helps scientists learn about the past. chemistry 是“化学”。",
+   "common_errors": [
+    {
+     "when": "写了 chemical",
+     "say": "chemical 是形容词或“化学品”；这里要学科名 chemistry。"
+    },
+    {
+     "when": "写了 chemist",
+     "say": "chemist 是“化学家”（人）；这里说的是树的化学成分，用 chemistry。"
+    },
+    {
+     "when": "拼写少了字母",
+     "say": "注意拼写：chemistry，中间是 -mist-。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v06"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个是自然灾害",
+   "scene": "下面哪一个是自然灾害？",
+   "stem": "Which of the following is a natural disaster?",
+   "options": [
+    "A birthday party",
+    "Building a house",
+    "A school trip",
+    "A forest fire"
+   ],
+   "answer": "D",
+   "help": "natural disaster 是“自然灾害”。四件事里，哪一件是大自然带来的灾难？",
+   "explain": "A forest fire. 森林大火是 natural disaster（自然灾害）。",
+   "wrong_feedback": {
+    "A": "生日派对是开心的事，不是灾害。",
+    "B": "建房子是人的活动，不是自然灾害。",
+    "C": "学校旅行是活动，不是灾害。"
+   },
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v07"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "老房子的图像",
+   "scene": "老房子的图像帮他们比对木头。",
+   "stem": "The ___ of the old house helps them match the wood. (image)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "image",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "image"
+     ],
+     "olds": [
+      "images"
+     ],
+     "cn": [
+      "图像"
+     ]
+    }
+   ],
+   "help": "提示词就是要填的词本身。前面有 The，后面是 of，填单数还是复数？",
+   "explain": "The image of the old house helps them match the wood. image 是“图像”，这里用单数。",
+   "common_errors": [
+    {
+     "when": "写了 images",
+     "say": "后面 helps 是单数动词，前面主语也要单数：image。"
+    },
+    {
+     "when": "写了 picture",
+     "say": "意思接近，但本课的复现词是 image，按提示词写 image。"
+    },
+    {
+     "when": "漏写或拼错",
+     "say": "注意拼写：image，i-m-a-g-e。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v08"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句是对的",
+   "scene": "下面哪一句写对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless scientists do not check, they miss the marks.",
+    "If scientists will check carefully, they miss nothing.",
+    "Scientists miss the marks unless they check carefully.",
+    "Scientists will misses the marks unless they check."
+   ],
+   "answer": "C",
+   "help": "查三点：unless 后有没有多余的 not？if 里有没有 will？动词形式对不对？",
+   "explain": "Scientists miss the marks unless they check carefully. unless 从句放在后面不用逗号；unless 后面不加 not。",
+   "wrong_feedback": {
+    "A": "unless 后面又加了 do not，“不”重复了。",
+    "B": "if 从句里不能用 will；而且 miss nothing 和前半意思也对不上。",
+    "D": "will 后面要用原形 miss，不能写 misses；谈规律也不用 will。"
+   },
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 除非被保护",
+   "scene": "除非老树被保护起来，否则很多会被砍掉。",
+   "stem": "___ old trees are protected, many are cut down.",
+   "task": "只写空里的一个词（首字母大写）。",
+   "answer_text": "Unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Unless",
+      "unless"
+     ],
+     "olds": [
+      "If"
+     ],
+     "cn": [
+      "除非"
+     ]
+    }
+   ],
+   "help": "这句话前半是“除非……”的条件。要填的词本身就带着“如果不”的意思。",
+   "explain": "Unless old trees are protected, many are cut down. Unless = if...not：如果老树得不到保护，很多就会被砍掉。",
+   "common_errors": [
+    {
+     "when": "写了 If",
+     "say": "If 是“如果”：如果老树被保护，很多被砍掉——意思反了。要用 Unless。"
+    },
+    {
+     "when": "写了 When",
+     "say": "When 说时间；这里是条件“除非”，用 Unless。"
+    },
+    {
+     "when": "写了 Because",
+     "say": "Because 说原因；这里前后是条件关系，用 Unless。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "怎么算出房子的年代",
+   "scene": "科学家怎么算出老房子是哪年建的？",
+   "stem": "How do scientists figure out when an old house was built?",
+   "options": [
+    "They match its wood with old tree rings.",
+    "They ask the house some questions.",
+    "They count the rooms in the house.",
+    "They paint the wood a new colour."
+   ],
+   "answer": "A",
+   "help": "回到短文找 figure out 那一段：they match its wood with ...？",
+   "explain": "They match its wood with old tree rings. 短文说：科学家把房子的木头和老树的年轮比对，就算出了建成年份。",
+   "wrong_feedback": {
+    "B": "房子不会回答问题；短文说的是比对木头和年轮。",
+    "C": "数房间数算不出年份；关键是比对年轮。",
+    "D": "给木头刷颜色和算年代没有关系。"
+   },
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v09"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "老树的丧失",
+   "scene": "老树的丧失是这座小镇的一个问题。",
+   "stem": "The ___ of old trees is a problem for the town. (loss)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "loss",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "loss"
+     ],
+     "olds": [
+      "lose",
+      "lost"
+     ],
+     "cn": [
+      "丧失；损失"
+     ]
+    }
+   ],
+   "help": "The ___ of...：这里要名词还是动词？提示词 loss 本身就是名词。",
+   "explain": "The loss of old trees is a problem for the town. loss 是名词“丧失”。",
+   "common_errors": [
+    {
+     "when": "写了 lose",
+     "say": "lose 是动词“失去”；The 后面、of 前面要放名词 loss。"
+    },
+    {
+     "when": "写了 lost",
+     "say": "lost 是 lose 的过去式/过去分词，也是动词形式，这里要用名词 loss。"
+    },
+    {
+     "when": "拼成了 los",
+     "say": "注意拼写：loss 是双写 s。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v10"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "干旱年出窄圈",
+   "scene": "干旱的年份往往会形成窄圈。",
+   "stem": "Dry years ___ to make narrow rings. (tend)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "tend",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "tend"
+     ],
+     "olds": [
+      "tends"
+     ],
+     "cn": [
+      "往往会（主语是复数 Dry years）"
+     ]
+    }
+   ],
+   "help": "主语 Dry years 是复数。tend to do 还记得吗？",
+   "explain": "Dry years tend to make narrow rings. 主语 Dry years 是复数，tend 用原形。",
+   "common_errors": [
+    {
+     "when": "写了 tends",
+     "say": "tends 是给单数主语用的；Dry years 是复数，用 tend。"
+    },
+    {
+     "when": "写了 tended",
+     "say": "这句谈的是规律，用一般现在时，不用过去式。"
+    },
+    {
+     "when": "漏了后面的 to 搭配",
+     "say": "tend 后面跟 to do：tend to make，to 是这个短语的一部分。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year.",
+   "audio_id": "u7r4-v11"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 黑圈讲火灾",
+   "scene": "如果一圈是黑的，它就讲述了一场古火灾。",
+   "stem": "If a ring ___ (be) black, it ___ (show) an old fire.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "is shows",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is"
+     ],
+     "olds": [
+      "are"
+     ],
+     "cn": [
+      "是（主语是 a ring，单数）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "shows"
+     ],
+     "olds": [
+      "show"
+     ],
+     "cn": [
+      "显示；讲述（主语是 it，单数）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是单数：a ring 和 it。be 动词选哪个？show 要不要加 s？",
+   "explain": "If a ring is black, it shows an old fire. 主语都是第三人称单数：be 用 is，show 加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 are",
+     "say": "a ring 是一个圈（单数），be 动词用 is。"
+    },
+    {
+     "when": "第二个空写了 show",
+     "say": "主语 it 是单数，show 要加 s：shows。"
+    },
+    {
+     "when": "写了 will show",
+     "say": "谈必然结果不用 will，用一般现在时 shows。"
+    }
+   ],
+   "reading": "Scientists study tree rings to learn about the past. If a house is very old, they match its wood with old tree rings. Then they figure out the year the house was built. Rings also show natural disasters. If a ring has a black scar, a fire happened that year. Unless scientists check carefully, they miss these small marks. Tree chemistry also helps: if the wood contains special things, the tree lived through a dry or dirty year."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：老朋友回锅",
+   "teach_html": "<p>独立判断过关！接下来是<strong>挑战关</strong>：since/for、被动语态、现在完成时几位老朋友回锅，最后两题要把<strong>条件句和 unless 合在一起</strong>产出句子。站长只给方向提示。</p>",
+   "audio_id": "u7r4-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 站了近百年",
+   "scene": "这棵老树从 1920 年起就立在这里。",
+   "stem": "This old tree has stood here ___ 1920.",
+   "options": [
+    "for",
+    "from",
+    "in",
+    "since"
+   ],
+   "answer": "D",
+   "help": "1920 是一个年份：是时间点，还是一段时间？",
+   "explain": "This old tree has stood here since 1920. since + 时间点；for + 时间段。",
+   "wrong_feedback": {
+    "A": "for 后面跟时间段（如 for 100 years）；1920 是时间点，用 since。",
+    "B": "from 只说起点，不表示一直持续到现在，用 since。",
+    "C": "in 1920 是“在 1920 年”，那是过去时的说法；持续到现在用 since。"
+   },
+   "reading": null
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 老树被锯倒",
+   "scene": "上周，老树被锯倒了。",
+   "stem": "The old tree ___ down last week.",
+   "options": [
+    "cut",
+    "was cut",
+    "cuts",
+    "cutting"
+   ],
+   "answer": "B",
+   "help": "树是自己锯自己，还是被人锯倒的？last week 是过去还是现在？",
+   "explain": "The old tree was cut down last week. 树是被锯倒的，用被动；last week 是过去，用 was cut。",
+   "wrong_feedback": {
+    "A": "只写 cut 是主动过去式；树是被锯的，要用被动 was cut。",
+    "C": "cuts 是一般现在时单数；时间和语态都不对。",
+    "D": "cutting 是 -ing 形式，组不成被动。"
+   },
+   "reading": null
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 研究了很多年",
+   "scene": "科学家们研究这棵树很多年了。",
+   "stem": "Scientists ___ this tree for many years. (study)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "have studied",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have studied"
+     ],
+     "olds": [
+      "has studied",
+      "have study"
+     ],
+     "cn": [
+      "已经研究了（现在完成时，主语复数）"
+     ]
+    }
+   ],
+   "help": "for many years + 一直到现在：用哪个时态？主语 Scientists 是复数，have 还是 has？",
+   "explain": "Scientists have studied this tree for many years. 从过去研究到现在，用现在完成时；主语复数用 have studied。",
+   "common_errors": [
+    {
+     "when": "写了 studied",
+     "say": "studied 只说过去研究过；for many years 一直持续到现在，要用 have studied。"
+    },
+    {
+     "when": "写了 has studied",
+     "say": "主语 Scientists 是复数，用 have，不用 has。"
+    },
+    {
+     "when": "写了 have study",
+     "say": "have 后面要用过去分词 studied，不能用原形。"
+    }
+   ],
+   "reading": null
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 圈窄除非下雨",
+   "scene": "用条件句和 unless 产出：年轮是窄的，除非下雨。",
+   "stem": "The ring ___ (be) narrow unless it ___ (rain).",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "is rains",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is"
+     ],
+     "olds": [
+      "are"
+     ],
+     "cn": [
+      "是（主语是 The ring，单数）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "rains"
+     ],
+     "olds": [
+      "rain"
+     ],
+     "cn": [
+      "下雨（主语是 it，单数）"
+     ]
+    }
+   ],
+   "help": "主句主语 The ring 是单数；unless 从句的主语 it 也是单数。两个动词都要照顾单数。",
+   "explain": "The ring is narrow unless it rains. 主语都是第三人称单数：be 用 is，rain 加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 are",
+     "say": "The ring 是一个圈，be 动词用 is。"
+    },
+    {
+     "when": "第二个空写了 rain",
+     "say": "unless 从句的主语是 it（单数），rain 要加 s：rains。"
+    },
+    {
+     "when": "在 unless 后面加了 not",
+     "say": "unless 本身就带“不”的意思，后面不用再加 not。"
+    }
+   ],
+   "reading": null
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 没水就死",
+   "scene": "用 unless 写完整条件：植物得不到水就会死。",
+   "stem": "Unless plants ___ (get) water, they ___ (die).",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "get die",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "get"
+     ],
+     "olds": [
+      "gets",
+      "do not get"
+     ],
+     "cn": [
+      "得到（主语是复数 plants）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "die"
+     ],
+     "olds": [
+      "dies"
+     ],
+     "cn": [
+      "死（主语是 they，复数）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是复数：plants 和 they。复数主语的动词加 s 吗？unless 后面还要 not 吗？",
+   "explain": "Unless plants get water, they die. 主语都是复数，动词用原形；unless 已经带“不”的意思，不再加 not。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 gets",
+     "say": "主语 plants 是复数，动词用原形 get。"
+    },
+    {
+     "when": "第一个空写了 do not get",
+     "say": "unless 本身等于 if...not，多写 do not 就重复了。"
+    },
+    {
+     "when": "第二个空写了 dies",
+     "say": "主语 they 是复数，die 用原形，不加 s。"
+    }
+   ],
+   "reading": null
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "节目预告",
+   "teach_html": "<p>大树的记忆读完了：年轮一年一圈，条件句说清宽窄，unless 说清“除非”。树的 scar 记着火，树的 chemistry 记着干旱——一棵树，就是一本写了一百年的书。</p><p>下一课，站长带你走进记忆的最后一站，敬请期待。</p>",
+   "audio_id": "u7r4-ending"
+  }
+ ],
+ "title": "大树的记忆：条件句综合",
+ "unit": "Unit 7 The secret of memory",
+ "version": 1
+}
