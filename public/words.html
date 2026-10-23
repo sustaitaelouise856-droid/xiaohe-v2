@@ -219,12 +219,12 @@ function getMastery(en) { return (mastery[en] || {}).level || 0; }
 function getMasteryLabel(lv) {
   return ['陌生', '眼熟', '会认', '会拼', '掌握'][lv] || '陌生';
 }
-async function addMastery(en, ok) {
-  // 调后端更新
+async function addMastery(en, ok, source) {
+  // 调后端更新（带 source，服务端按模式封顶：card/listen≤2、test≤3、spell≤4）
   try {
     const r = await fetch('/api/words/mastery', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ word: en, correct: !!ok })
+      body: JSON.stringify({ word: en, correct: !!ok, source: source || 'card' })
     });
     const d = await r.json();
     if (d.ok) {
@@ -502,11 +502,11 @@ function buildOptions(w) {
       list.querySelectorAll('.opt').forEach(x => x.style.pointerEvents = 'none');
       if (o.ok) {
         b.classList.add('correct');
-        addMastery(w.en, true);
+        addMastery(w.en, true, mode === 'listen' ? 'listen' : 'test');
         setTimeout(nextWord, 800);
       } else {
         b.classList.add('wrong');
-        addMastery(w.en, false);
+        addMastery(w.en, false, mode === 'listen' ? 'listen' : 'test');
         // 标出正确项
         [...list.children].forEach(x => { if (x.textContent === w.cn) x.classList.add('correct'); });
         setTimeout(nextWord, 1500);
@@ -578,8 +578,8 @@ function showComplete() {
 }
 
 
-document.getElementById('btnKnow').onclick = () => { addMastery(queue[idx].en, true); nextWord(); };
-document.getElementById('btnUnknown').onclick = () => { addMastery(queue[idx].en, false); nextWord(); };
+document.getElementById('btnKnow').onclick = () => { addMastery(queue[idx].en, true, 'card'); nextWord(); };
+document.getElementById('btnUnknown').onclick = () => { addMastery(queue[idx].en, false, 'card'); nextWord(); };
 
 document.getElementById('btnSpellSub').onclick = () => {
   const w = queue[idx];
@@ -587,13 +587,13 @@ document.getElementById('btnSpellSub').onclick = () => {
   const val = inp.value.trim().toLowerCase();
   if (val === w.en.toLowerCase()) {
     inp.className = 'ok';
-    addMastery(w.en, true);
+    addMastery(w.en, true, 'spell');
     spellWrong = 0;
     setTimeout(nextWord, 600);
   } else {
     spellWrong = (spellWrong || 0) + 1;
     inp.className = 'no';
-    addMastery(w.en, false);
+    addMastery(w.en, false, 'spell');
     // 2026-10-16修：错3次显示正确答案，不让孩子无限重试
     if (spellWrong >= 3) {
       inp.value = w.en;
@@ -605,7 +605,7 @@ document.getElementById('btnSpellSub').onclick = () => {
     }
   }
 };
-document.getElementById('btnSpellSkip').onclick = () => { addMastery(queue[idx].en, false); nextWord(); };
+document.getElementById('btnSpellSkip').onclick = () => { addMastery(queue[idx].en, false, 'spell'); nextWord(); };
 document.getElementById('spellInput').addEventListener('keypress', e => {
   if (e.key === 'Enter') document.getElementById('btnSpellSub').click();
 });
