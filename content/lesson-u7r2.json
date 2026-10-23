@@ -1,0 +1,1451 @@
+{
+ "lesson_id": "u7r2",
+ "practice_end": 27,
+ "home_subtitle": "第二课 · 遗忘曲线",
+ "part1_desc": "第 1–27 步：跟站长看遗忘曲线实验，练条件句 if 从句前后换位置、肯定否定互换；本课新词 regularly、repeat、note、visual、link、list、summary；练习里掺着挑战题，边学边闯。",
+ "part2_desc": "第 28–50 步：独立判断小林的复习计划，课尾压轴：since/for、被动、比较级回锅与条件句综合产出。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：条件句（2）深化（if 从句前后位置互换与逗号规则、肯定/否定互换 do not/does not、用条件句谈复习时机）、unless 预告（1 题）；挑战段回锅 since/for、被动语态、比较级。Unit 7 The secret of memory 主题，核心词 regularly/repeat/note/visual/link/list/summary 及短语 last but not least、make a point of doing something，复现 mentally/maintain/stressed/tend/normal。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "记忆节目第二期",
+   "teach_html": "<p>广播站的<strong>记忆节目</strong>来到第二期。站长在黑板上画了一条往下掉的曲线，说：这条曲线有个名字，叫<strong>遗忘曲线</strong>——它画的是：学完东西以后，我们忘得有多快。</p><p>这一课先把条件句再练深一层：<strong>if 从句换位置</strong>、<strong>肯定和否定互换</strong>，再用条件句聊聊<strong>什么时候复习最管用</strong>。</p>",
+   "audio_id": "u7r2-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "条件句复习：谈必然结果",
+   "teach_html": "<p>先把上一课的钥匙拿出来：谈必然结果的条件句，两边都用<strong>一般现在时</strong>，不用 will。</p><p><strong>If you review today, you remember the words well.</strong>（今天复习，单词就记得牢。）</p><p><strong>If a student does not review, he forgets quickly.</strong>（学生不复习，就忘得快。）注意：主语是 a student / he，否定用 <strong>does not</strong>，后面的动词用原形。</p>",
+   "audio_id": "u7r2-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新招：if 从句前后换位置",
+   "teach_html": "<p>这一课的新招：if 从句可以放在主句<strong>前面</strong>，也可以搬到<strong>后面</strong>，<strong>意思完全不变</strong>。</p><p>前面：<strong>If you make a list, you remember more.</strong>（如果你列个清单，你记得更多。）</p><p>后面：<strong>You remember more if you make a list.</strong></p><p>只有标点跟着变：if 从句在前面，中间加<strong>逗号</strong>；搬到后面，<strong>不用逗号</strong>。</p>",
+   "audio_id": "u7r2-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "换位置，动词一点不变",
+   "teach_html": "<p>换位置只是搬家，句子里的动词<strong>一个都不变</strong>：时态不变，主语是谁，动词还是什么样。</p><p><strong>If she reads her notes at night, she remembers them well.</strong></p><p>搬到后面：<strong>She remembers them well if she reads her notes at night.</strong> reads 还是 reads，remembers 还是 remembers。</p><p>所以做题时先认准：哪半句是条件（if 开头那半），哪半句是结果，搬完再检查逗号。</p>",
+   "audio_id": "u7r2-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "肯定和否定互换",
+   "teach_html": "<p>同一个意思，可以说肯定，也可以说否定，关键看你把 <strong>do not / does not</strong> 放在哪半句：</p><p><strong>If you sleep well, you remember better.</strong>（睡得好，记得更好。）</p><p><strong>If you do not sleep well, you do not remember well.</strong>（睡不好，就记不好。）</p><p>规律：主语是 I / you / we / they 用 <strong>do not</strong>；主语是 he / she / it 或一个人、一个东西，用 <strong>does not</strong>，而且 does 后面的动词<strong>变回原形</strong>：He <strong>does not forget</strong>（不是 forgets）。</p>",
+   "audio_id": "u7r2-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：regularly、repeat、note",
+   "teach_html": "<p><strong>regularly</strong> /ˈreɡjələli/ 是“有规律地”：review your words <strong>regularly</strong>（有规律地复习单词），就是隔几天就复习一次，不是一次学完就扔。</p><p><strong>repeat</strong> /rɪˈpiːt/ 是“重复”：<strong>repeat</strong> the words after me（跟我重复这些单词）。</p><p><strong>note</strong> /nəʊt/ 是“笔记；记录”：take <strong>notes</strong>（记笔记）；read your <strong>notes</strong>（看你的笔记）。</p>",
+   "audio_id": "u7r2-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二：visual、link、list、summary",
+   "teach_html": "<p><strong>visual</strong> /ˈvɪʒuəl/ 是“视觉的”：a <strong>visual</strong> picture（一幅看得见的画面）。把单词想成画面，就是用视觉记单词。</p><p><strong>link</strong> /lɪŋk/ 是“联系”，也能当动词用：<strong>link</strong> a new word to a picture（把新词和一幅画联系起来）。</p><p><strong>list</strong> /lɪst/ 是“清单”：make a word <strong>list</strong>（列一张单词清单）。</p><p><strong>summary</strong> /ˈsʌməri/ 是“总结；概括”：write a short <strong>summary</strong>（写一个简短的总结）。</p>",
+   "audio_id": "u7r2-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "两个短语",
+   "teach_html": "<p><strong>last but not least</strong> 是“最后但同样重要的”：报节目单、列办法时，最后一个出场不等于不重要。<strong>Last but not least</strong>, sleep well.（最后但同样重要的是，睡个好觉。）</p><p><strong>make a point of doing something</strong> 是“保证做某事、特意做某事”：of 后面跟动词的 -ing 形式。He <strong>makes a point of</strong> reviewing every night.（他保证每晚都复习。）记住这个骨架：make a point of + 动词ing。</p>",
+   "audio_id": "u7r2-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "老词回锅 + 易混点",
+   "teach_html": "<p>上一课的词今天还会出现：<strong>mentally</strong>（精神上）、<strong>maintain</strong>（保持）、<strong>stressed</strong>（焦虑不安的）、<strong>tend</strong>（往往会）、<strong>normal</strong>（正常的）。比如：People <strong>tend</strong> to forget new words fast.（人们往往会很快忘掉新词。）这是 <strong>normal</strong> 的，不用 <strong>stressed</strong>。</p><p>练之前提醒三个坑：一，换位置<strong>不换意思、不换动词</strong>，只换逗号；二，<strong>does not</strong> 后面动词用原形；三，谈必然结果<strong>不用 will</strong>。</p>",
+   "audio_id": "u7r2-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料",
+   "teach_html": "<p>站长把一百多年前一个实验的结果贴在公告栏上：一位科学家<strong>拿自己做实验</strong>，看看人学完东西以后忘得有多快。资料在上面，做题时对照着看。</p><p>下面站长带着你练：换位置、换否定、用条件句谈复习时机。</p>",
+   "audio_id": "u7r2-prac-01",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "换到后面",
+   "scene": "把条件放到后面，结果不变。",
+   "stem": "You remember more ___ you make a list.",
+   "options": [
+    "unless",
+    "if",
+    "because",
+    "when"
+   ],
+   "answer": "B",
+   "help": "哪半句是条件？“列清单”是记得更多的条件，用哪个词引出来？",
+   "explain": "You remember more if you make a list. if 从句搬到主句后面，意思不变，而且不用逗号。",
+   "wrong_feedback": {
+    "A": "unless 是“除非”，意思会变成“除非你列清单”，和原意不一样。",
+    "C": "because 是“因为”，说的是原因；这里“列清单”是条件，用 if。",
+    "D": "when 是“当……的时候”，说时间；这里是“如果……就……”，用 if。"
+   },
+   "audio_id": "u7r2-q01",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "有规律地复习",
+   "scene": "复习要有规律，不能学完就扔。",
+   "stem": "If you review your words ___, you remember them for a long time.",
+   "options": [
+    "mentally",
+    "especially",
+    "quickly",
+    "regularly"
+   ],
+   "answer": "D",
+   "help": "哪个词是今天刚学的“有规律地”？隔几天就复习一次的那种规律。",
+   "explain": "If you review your words regularly, you remember them for a long time. regularly 是“有规律地”。",
+   "wrong_feedback": {
+    "A": "mentally 是“精神上”，说的是动脑的状态，不是“有规律地”。",
+    "B": "especially 是“尤其”，不能放在这里修饰 review 的方式。",
+    "C": "quickly 是“快地”；这句话说的是复习的规律，不是一次复习的速度。"
+   },
+   "audio_id": "u7r2-q02",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 她看笔记",
+   "scene": "她晚上看笔记，就记得牢。",
+   "stem": "She ___ them well if she ___ her notes at night. (remember / read)",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "remembers reads",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "remembers"
+     ],
+     "olds": [
+      "remember"
+     ],
+     "cn": "记得牢（主语是 she）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "reads"
+     ],
+     "olds": [
+      "read"
+     ],
+     "cn": "看（主语是 she）"
+    }
+   ],
+   "help": "两个空的主语都是 she。if 从句搬到后面了，但动词的规矩一点没变。",
+   "explain": "She remembers them well if she reads her notes at night. 主语 she 是第三人称单数，remember 和 read 都加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 remember",
+     "say": "主语是 she，动词要加 s：remembers。换位置不换这个规矩。"
+    },
+    {
+     "when": "第二个空写了 read",
+     "say": "if 从句里的主语还是 she，read 也要加 s：reads。"
+    },
+    {
+     "when": "写了 will remember",
+     "say": "谈必然结果不用 will，两边都是一般现在时。"
+    }
+   ],
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "一小时忘一半",
+   "scene": "根据公告栏上的实验资料回答。",
+   "stem": "According to the experiment, how much did the scientist forget after one hour?",
+   "options": [
+    "About half.",
+    "About sixty percent.",
+    "About two thirds.",
+    "Almost everything."
+   ],
+   "answer": "A",
+   "help": "回资料里找 after one hour 那句，数字是多少？",
+   "explain": "About half. 资料原话：After one hour, he forgot about half of the words.（一小时后，他忘掉了一半左右。）",
+   "wrong_feedback": {
+    "B": "sixty percent 是九小时后的数字，不是 一小时。",
+    "C": "two thirds 是 24 小时后的数字，时间对不上。",
+    "D": "资料没有说“几乎全忘”；一小时后是忘掉一半左右。"
+   },
+   "audio_id": "u7r2-q03",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "视觉记忆",
+   "scene": "把单词想成画面，是在用视觉记单词。",
+   "stem": "A picture you see in your mind is a ___ picture.",
+   "options": [
+    "stressed",
+    "normal",
+    "visual",
+    "mental"
+   ],
+   "answer": "C",
+   "help": "哪个词的意思是“视觉的”，和“看得见的画面”有关？",
+   "explain": "A picture you see in your mind is a visual picture. visual 是“视觉的”。",
+   "wrong_feedback": {
+    "A": "stressed 是“焦虑不安的”，说的是心情，和画面没关系。",
+    "B": "normal 是“正常的”，不是“视觉的”。",
+    "D": "mental 是“精神的”，接近但不是“视觉的”；“视觉的”是 visual。"
+   },
+   "audio_id": "u7r2-q04",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 他不复习",
+   "scene": "他不复习笔记，就忘得快。",
+   "stem": "If he ___ his notes, he forgets them quickly. (not review)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "does not review",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "does not review",
+      "doesn't review"
+     ],
+     "olds": [
+      "do not review",
+      "will not review"
+     ],
+     "cn": "不复习（否定，主语是 he）"
+    }
+   ],
+   "help": "主语是 he。他的否定用 do not 还是 does not？有了它，后面的 review 还加 s 吗？",
+   "explain": "If he does not review his notes, he forgets them quickly. 主语 he 用 does not，后面的动词变回原形 review。",
+   "common_errors": [
+    {
+     "when": "写了 do not review",
+     "say": "do not 是给 I / you / they 用的；主语是 he，用 does not。"
+    },
+    {
+     "when": "只写了 not review",
+     "say": "少了 does。第三人称单数的否定是 does not review。"
+    },
+    {
+     "when": "写了 does not reviews",
+     "say": "有了 does，动词要变回原形：does not review，reviews 多了 s。"
+    }
+   ],
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "写个总结",
+   "scene": "一课学完，写一个简短的总结。",
+   "stem": "At the end of the lesson, write a short ___.",
+   "options": [
+    "summary",
+    "list",
+    "note",
+    "link"
+   ],
+   "answer": "A",
+   "help": "哪个词是“总结；概括”？把一课的内容用几句话收住。",
+   "explain": "At the end of the lesson, write a short summary. summary 是“总结；概括”。",
+   "wrong_feedback": {
+    "B": "list 是“清单”，是把东西一条条列出来，不是“总结”。",
+    "C": "note 是“笔记；记录”，是上课记下来的东西；summary 是学完之后写的概括。",
+    "D": "link 是“联系”，不能放在 write a short 后面表示一篇文字。"
+   },
+   "audio_id": "u7r2-q05",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "重复跟读",
+   "scene": "老师读一遍，大家重复一遍。",
+   "stem": "Please ___ the words after me.",
+   "options": [
+    "maintain",
+    "relax",
+    "summary",
+    "repeat"
+   ],
+   "answer": "D",
+   "help": "哪个词是“重复”？老师读完，学生再说一遍。",
+   "explain": "Please repeat the words after me. repeat 是“重复”。",
+   "wrong_feedback": {
+    "A": "maintain 是“维持；保持”，不是“再说一遍”。",
+    "B": "relax 是“放松”，和跟读没关系。",
+    "C": "summary 是名词“总结”，这里空里要的是动词。"
+   },
+   "audio_id": "u7r2-q06",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 睡前复习",
+   "scene": "睡前再看一次，单词就记得牢。",
+   "stem": "If you ___ (look) at the words again before bed, you ___ (remember) them well.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "look remember",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "look"
+     ],
+     "olds": [
+      "looks"
+     ],
+     "cn": "再看（主语是 you）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "remember"
+     ],
+     "olds": [
+      "remembers"
+     ],
+     "cn": "记得（主语是 you）"
+    }
+   ],
+   "help": "两个空的主语都是 you。这次谈的是复习时机：什么时候再看一次最管用？",
+   "explain": "If you look at the words again before bed, you remember them well. 主语 you 用动词原形：look、remember 都不加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 looks",
+     "say": "主语是 you，不加 s；looks 是给 he / she 用的。"
+    },
+    {
+     "when": "第二个空写了 remembers",
+     "say": "主语还是 you，remember 用原形。"
+    },
+    {
+     "when": "写了 will remember",
+     "say": "谈规律和必然结果不用 will，用一般现在时。"
+    }
+   ],
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "联系起来",
+   "scene": "把新词和一幅画联系起来。",
+   "stem": "If you ___ a new word to a picture, you remember it better.",
+   "options": [
+    "list",
+    "link",
+    "note",
+    "tend"
+   ],
+   "answer": "B",
+   "help": "哪个词既有“联系”的意思、又能当动词用在 to a picture 前面？",
+   "explain": "If you link a new word to a picture, you remember it better. link 是“联系”，link ... to ... 是“把……和……联系起来”。",
+   "wrong_feedback": {
+    "A": "list 是“清单”，是名词，不能这样当动词接 to a picture。",
+    "C": "note 是“笔记”，不能接 to a picture 表示联系。",
+    "D": "tend 是“往往会”，后面跟 to do，不能这样用。"
+   },
+   "audio_id": "u7r2-q07",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 不用就变弱",
+   "scene": "不用它，它就变弱。",
+   "stem": "Your memory ___ weaker if you ___ it. (get / not use)",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "gets do not use",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "gets"
+     ],
+     "olds": [
+      "get"
+     ],
+     "cn": "变弱（主语是 your memory）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "do not use",
+      "don't use"
+     ],
+     "olds": [
+      "does not use",
+      "will not use"
+     ],
+     "cn": "不用（否定，主语是 you）"
+    }
+   ],
+   "help": "第一个空主语是 your memory（一个东西），第二个空在 if 从句里，主语是 you，而且是否定。",
+   "explain": "Your memory gets weaker if you do not use it. memory 是第三人称单数用 gets；you 的否定是 do not use。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 get",
+     "say": "主语 your memory 是一个东西（第三人称单数），动词要加 s：gets。"
+    },
+    {
+     "when": "第二个空写了 does not use",
+     "say": "主语是 you，用 do not，不用 does not。"
+    },
+    {
+     "when": "只写了 not use",
+     "say": "少了 do：you 的否定要说 do not use。"
+    }
+   ],
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "repeat 的中文",
+   "scene": "写出 repeat 的中文意思。",
+   "stem": "写出 repeat 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "重复",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "重复"
+     ],
+     "olds": [],
+     "cn": [
+      "重复"
+     ]
+    }
+   ],
+   "help": "回想生词课：repeat the words after me，老师读完学生再做什么？",
+   "explain": "repeat 的中文是“重复”。",
+   "common_errors": [
+    {
+     "when": "写了“复习”",
+     "say": "“复习”是 review。repeat 是把刚说过、做过的事再做一遍：重复。"
+    },
+    {
+     "when": "写了“阅读”",
+     "say": "“阅读”是 read。repeat 强调再来一遍，不是第一次读。"
+    },
+    {
+     "when": "写了“记住”",
+     "say": "“记住”是 remember，是结果；repeat 是动作本身：重复。"
+    }
+   ],
+   "audio_id": "u7r2-q08",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "title": "最后但同样重要",
+   "scene": "节目单的最后一项：睡个好觉。",
+   "stem": "___ but not least, sleep well.",
+   "task": "只写空里的一个词（首字母大写）。",
+   "answer_text": "Last",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Last",
+      "last"
+     ],
+     "olds": [
+      "Finally"
+     ],
+     "cn": "最后（短语 last but not least 开头）"
+    }
+   ],
+   "help": "这是今天刚学的短语：报到最后一项时说“最后但同样重要的”。",
+   "explain": "Last but not least, sleep well. 短语 last but not least 表示“最后但同样重要的”。",
+   "common_errors": [
+    {
+     "when": "写了 Finally",
+     "say": "Finally 只是“最后”，没有“同样重要”的意思；这个短语的开头是 Last。"
+    },
+    {
+     "when": "写了 Least",
+     "say": "顺序反了：先 Last，后面才是 but not least。"
+    },
+    {
+     "when": "写了 At last",
+     "say": "at last 是“终于”，用在等了很久的事情上，这里是列举短语，用 Last。"
+    }
+   ],
+   "audio_id": "u7r2-q09",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 今晚不看清单",
+   "scene": "她今晚不看清单，明天就忘掉大半。",
+   "stem": "If she ___ (not look) at the list tonight, she ___ (forget) most of it.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "does not look forgets",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "does not look",
+      "doesn't look"
+     ],
+     "olds": [
+      "do not look",
+      "will not look"
+     ],
+     "cn": "不看（否定，主语是 she）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "forgets"
+     ],
+     "olds": [
+      "forget"
+     ],
+     "cn": "忘掉（主语是 she）"
+    }
+   ],
+   "help": "两个空主语都是 she，但第一个空是否定：有了 does，look 还加不加 s？第二个空没有 does，又该怎么样？",
+   "explain": "If she does not look at the list tonight, she forgets most of it. 否定用 does not look（动词回原形）；主句主语 she 用 forgets。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 do not look",
+     "say": "主语是 she，用 does not，不用 do not。"
+    },
+    {
+     "when": "第一个空写了 does not looks",
+     "say": "有了 does，后面动词变回原形：does not look。"
+    },
+    {
+     "when": "第二个空写了 forget",
+     "say": "主句主语还是 she，没有 does 帮忙，动词自己加 s：forgets。"
+    }
+   ],
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "short",
+   "title": "不写下来就忘",
+   "scene": "单词不写下来，很快就忘。",
+   "stem": "Words leave your memory quickly if you ___ them down. (not write)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "do not write",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "do not write",
+      "don't write"
+     ],
+     "olds": [
+      "does not write",
+      "will not write"
+     ],
+     "cn": "不写（否定，主语是 you）"
+    }
+   ],
+   "help": "if 从句搬到后面了，主语是 you，否定怎么说？",
+   "explain": "Words leave your memory quickly if you do not write them down. 主语 you 的否定是 do not write。",
+   "common_errors": [
+    {
+     "when": "写了 does not write",
+     "say": "does not 是给 he / she 用的；主语是 you，用 do not。"
+    },
+    {
+     "when": "只写了 not write",
+     "say": "少了 do：否定要说 do not write。"
+    },
+    {
+     "when": "写了 will not write",
+     "say": "谈规律不用 will，用一般现在时 do not write。"
+    }
+   ],
+   "audio_id": "u7r2-q10",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 除非及时复习",
+   "scene": "根据资料：不及时复习，新词很快就忘。",
+   "stem": "You forget most new words ___ you review them in time.",
+   "options": [
+    "if",
+    "when",
+    "unless",
+    "because"
+   ],
+   "answer": "C",
+   "help": "资料最后一句用的就是这个词，意思是“除非”。站长先剧透：下一课专门细讲它。",
+   "explain": "You forget most new words unless you review them in time. unless 是“除非；如果不”，等于 if...not。",
+   "wrong_feedback": {
+    "A": "if 是“如果”，放进去意思反了：如果复习就忘？不对。",
+    "B": "when 是“当……的时候”，说时间；这里要的是“除非”。",
+    "D": "because 是“因为”，说原因，不对。"
+   },
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "看总结记要点",
+   "scene": "看一遍总结，要点就记住了。",
+   "stem": "If you ___ (read) the summary, you remember the main ideas.",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "read",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "read"
+     ],
+     "olds": [
+      "reads",
+      "readed"
+     ],
+     "cn": "看（主语是 you）"
+    }
+   ],
+   "help": "主语是 you，动词用原形。",
+   "explain": "If you read the summary, you remember the main ideas. 主语 you 用原形 read。",
+   "common_errors": [
+    {
+     "when": "写了 reads",
+     "say": "reads 是给 he / she 用的；主语 you 用原形 read。"
+    },
+    {
+     "when": "写了 readed",
+     "say": "read 是不规则动词，而且这里谈规律用一般现在时原形 read。"
+    },
+    {
+     "when": "写了 will read",
+     "say": "if 从句里不用 will，用一般现在时。"
+    }
+   ],
+   "audio_id": "u7r2-q11",
+   "reading": "More than a hundred years ago, a scientist did an experiment on himself. He learned some new words and tested his memory again and again. The result was surprising. After one hour, he forgot about half of the words. After nine hours, he forgot about sixty percent. After twenty-four hours, he forgot about two thirds. The lesson is clear: you forget fast at first. Unless you review in time, most new words leave your memory soon."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：小林的复习计划",
+   "teach_html": "<p>新任务：站长请来一位同学<strong>小林</strong>，他的记性一直很好。他的复习计划写在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：if 从句可前可后，意思不变；否定看主语选 <strong>do not / does not</strong>。</p>",
+   "audio_id": "u7r2-v-intro",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "睡前做什么",
+   "scene": "根据小林的计划回答。",
+   "stem": "What does Xiaolin do before bed?",
+   "options": [
+    "He goes over everything.",
+    "He reads his notes again.",
+    "He writes a new summary.",
+    "He learns new words."
+   ],
+   "answer": "B",
+   "help": "在资料里找 before bed 那句，他睡前做什么？",
+   "explain": "He reads his notes again. 资料原话：Before bed, he reads them again.（睡前，他再看一次笔记。）",
+   "wrong_feedback": {
+    "A": "goes over everything 是周末做的事，时间对不上。",
+    "C": "资料里没说他睡前写总结；睡前做的是再看一次笔记。",
+    "D": "资料说的是复习旧笔记，不是学新词。"
+   },
+   "audio_id": "u7r2-v02",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 漏掉一次复习",
+   "scene": "他漏掉一次复习，就忘得快。",
+   "stem": "He forgets some words quickly if he ___ a review. (miss)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "misses",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "misses"
+     ],
+     "olds": [
+      "miss",
+      "missed"
+     ],
+     "cn": "漏掉（主语是 he）"
+    }
+   ],
+   "help": "if 从句在后面，主语是 he，动词要有什么变化？miss 的结尾还要多加一个 e。",
+   "explain": "He forgets some words quickly if he misses a review. 主语 he 是第三人称单数，miss 变 misses。",
+   "common_errors": [
+    {
+     "when": "写了 miss",
+     "say": "主语是 he，动词要加 es：misses。"
+    },
+    {
+     "when": "写了 missed",
+     "say": "missed 是过去式；资料讲的是他的规律，用一般现在时。"
+    },
+    {
+     "when": "写了 will miss",
+     "say": "谈规律不用 will。"
+    }
+   ],
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "照计划做",
+   "scene": "照着计划做，他就记得牢。",
+   "stem": "If Xiaolin ___ his plan, he remembers new words well.",
+   "options": [
+    "follows",
+    "follow",
+    "will follow",
+    "followed"
+   ],
+   "answer": "A",
+   "help": "主语是 Xiaolin（他一个人），动词用哪种形式？",
+   "explain": "If Xiaolin follows his plan, he remembers new words well. 主语 Xiaolin 是第三人称单数，follow 加 s。",
+   "wrong_feedback": {
+    "B": "主语是一个人（他），动词要加 s：follows。",
+    "C": "if 从句里不用 will，用一般现在时。",
+    "D": "followed 是过去式；这里说的是他的习惯和规律，用一般现在时。"
+   },
+   "audio_id": "u7r2-v03",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 不列清单",
+   "scene": "他不列清单，就容易忘词。",
+   "stem": "If a student ___ (not make) a list, he ___ (forget) the words easily.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "does not make forgets",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "does not make",
+      "doesn't make"
+     ],
+     "olds": [
+      "do not make",
+      "will not make"
+     ],
+     "cn": "不列（否定，主语是 a student）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "forgets"
+     ],
+     "olds": [
+      "forget"
+     ],
+     "cn": "忘（主语是 he）"
+    }
+   ],
+   "help": "第一个空主语是 a student（一个人），第二个空主语是 he。否定那空有了 does，动词要变回原形。",
+   "explain": "If a student does not make a list, he forgets the words easily. a student 用 does not make；he 用 forgets。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 do not make",
+     "say": "a student 是一个学生，用 does not，不用 do not。"
+    },
+    {
+     "when": "第一个空写了 does not makes",
+     "say": "有了 does，动词变回原形：does not make。"
+    },
+    {
+     "when": "第二个空写了 forget",
+     "say": "主语是 he，动词要加 s：forgets。"
+    }
+   ],
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪句标点对",
+   "scene": "下面哪一句的逗号用对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "You remember more, if you repeat the words.",
+    "If you repeat the words you remember more.",
+    "You remember more if you will repeat the words.",
+    "You remember more if you repeat the words."
+   ],
+   "answer": "D",
+   "help": "查两点：if 从句在后面要不要逗号？条件句里能不能用 will？",
+   "explain": "You remember more if you repeat the words. if 从句在主句后面，不用逗号；谈必然结果不用 will。",
+   "wrong_feedback": {
+    "A": "if 从句在后面，前面不加逗号；逗号是 if 从句在前面时用的。",
+    "B": "if 从句在前面，后面要加逗号：If you repeat the words, you remember more. 这句漏了逗号。",
+    "C": "谈必然结果不用 will，if 从句里更不能用 will。"
+   },
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "tend 的意思",
+   "scene": "人们往往会很快忘掉新词。",
+   "stem": "People tend to forget new words fast. The word \"tend\" means ___.",
+   "options": [
+    "喜欢",
+    "需要",
+    "往往会",
+    "必须"
+   ],
+   "answer": "C",
+   "help": "回想上一课：Memory tends to decline with age. tend 说的是“一般来说会怎样”。",
+   "explain": "tend 意思是“往往会”。",
+   "wrong_feedback": {
+    "A": "“喜欢”是 like。tend 不是喜好，是“一般来说会”。",
+    "B": "“需要”是 need。tend 说的是倾向，不是需要。",
+    "D": "“必须”是 must，语气太强；tend 只是“往往会”。"
+   },
+   "audio_id": "u7r2-v04",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 太焦虑脑子不转",
+   "scene": "人太焦虑，脑子就不好使。",
+   "stem": "Your brain ___ (not work) well if you ___ (be) too stressed.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "does not work are",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "does not work",
+      "doesn't work"
+     ],
+     "olds": [
+      "do not work",
+      "will not work"
+     ],
+     "cn": "不好使（否定，主语是 your brain）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "olds": [
+      "is"
+     ],
+     "cn": "是（主语是 you）"
+    }
+   ],
+   "help": "第一个空主语是 your brain（一个东西），第二个空主语是 you，be 动词选哪个？",
+   "explain": "Your brain does not work well if you are too stressed. brain 是第三人称单数用 does not work；you 用 are。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 do not work",
+     "say": "主语 your brain 是一个东西，用 does not，不用 do not。"
+    },
+    {
+     "when": "第二个空写了 is",
+     "say": "is 是给单数主语用的；you 用 are。"
+    },
+    {
+     "when": "写了 will not work",
+     "say": "谈规律用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "有规律地",
+   "scene": "小林有规律地复习笔记。",
+   "stem": "Xiaolin reviews his notes regularly. The word \"regularly\" means ___.",
+   "options": [
+    "认真地",
+    "快速地",
+    "大声地",
+    "有规律地"
+   ],
+   "answer": "D",
+   "help": "regularly 是本课生词：隔几天就做一次，不是一次做完就扔。",
+   "explain": "regularly 意思是“有规律地”。",
+   "wrong_feedback": {
+    "A": "“认真地”是 carefully。regularly 说的是做事的规律和节奏。",
+    "B": "“快速地”是 quickly，说的是速度；regularly 说的是隔段时间就做。",
+    "C": "“大声地”是 aloud。regularly 和声音没关系。"
+   },
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "记在脑子里",
+   "scene": "多动脑，记性就保持得住。",
+   "stem": "If you live a ___ active life, you maintain a good memory.",
+   "task": "只写空里的一个词。",
+   "answer_text": "mentally",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "mentally"
+     ],
+     "olds": [
+      "mental"
+     ],
+     "cn": "精神上（副词，修饰 active）"
+    }
+   ],
+   "help": "空里要修饰 active（形容词），要用副词形式。上一课学过这个词。",
+   "explain": "If you live a mentally active life, you maintain a good memory. mentally 是“精神上”，修饰 active。",
+   "common_errors": [
+    {
+     "when": "写了 mental",
+     "say": "mental 是形容词，不能修饰另一个形容词 active；这里要用副词 mentally。"
+    },
+    {
+     "when": "写了 regularly",
+     "say": "regularly 是“有规律地”，意思对不上；“精神上活跃的生活”是 mentally active life。"
+    },
+    {
+     "when": "写了 especially",
+     "say": "especially 是“尤其”，放在这里句子不通。"
+    }
+   ],
+   "audio_id": "u7r2-v05",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "太焦虑",
+   "scene": "太焦虑，记性就变差。",
+   "stem": "If you get too ___, your memory becomes less sharp.",
+   "options": [
+    "stressed",
+    "regular",
+    "visual",
+    "normal"
+   ],
+   "answer": "A",
+   "help": "哪个词是“焦虑不安的”？上一课学过。",
+   "explain": "If you get too stressed, your memory becomes less sharp. stressed 是“焦虑不安的”。",
+   "wrong_feedback": {
+    "B": "regular 是“有规律的”，不是一种心情，放进来意思不对。",
+    "C": "visual 是“视觉的”，和“记性变差”的原因对不上。",
+    "D": "normal 是“正常的”；get too normal 说不通，这里是 stressed。"
+   },
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "再看笔记",
+   "scene": "睡前把笔记再看一次。",
+   "stem": "Read your ___ again before bed.",
+   "task": "只写空里的一个词。",
+   "answer_text": "notes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "notes",
+      "note"
+     ],
+     "olds": [
+      "notebooks"
+     ],
+     "cn": "笔记（看的应该是上课记的笔记）"
+    }
+   ],
+   "help": "睡前再看的是上课记下来的什么？本课生词，常用复数。",
+   "explain": "Read your notes again before bed. notes 是“笔记”。",
+   "common_errors": [
+    {
+     "when": "写了 summary",
+     "say": "summary 是学完之后写的总结；睡前再看的是平时记的 notes（笔记）。"
+    },
+    {
+     "when": "写了 list",
+     "say": "list 是“清单”；计划里小林看的是 notes，不是清单。"
+    },
+    {
+     "when": "写了 words",
+     "say": "意思接近，但本课表示“笔记”的生词是 notes。"
+    }
+   ],
+   "audio_id": "u7r2-v06",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "下面哪一句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "He does not forgets the words.",
+    "If he does not reviews them, he forgets them.",
+    "He does not forget the words if he reviews them.",
+    "If he will review them, he remembers them."
+   ],
+   "answer": "C",
+   "help": "一条一条查：does 后面的动词变回原形了吗？if 从句里有 will 吗？",
+   "explain": "He does not forget the words if he reviews them. does not 后面用原形 forget；if 从句在后面不用逗号。",
+   "wrong_feedback": {
+    "A": "有了 does，动词要变回原形：does not forget，不能写 forgets。",
+    "B": "does not 后面要用原形 review，不能写 reviews。",
+    "D": "谈必然结果不用 will；if 从句里直接用一般现在时。"
+   },
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "很正常",
+   "scene": "忘掉一两个词，很正常。",
+   "stem": "Do not worry. It is ___ to forget a word or two.",
+   "task": "只写空里的一个词。",
+   "answer_text": "normal",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "normal"
+     ],
+     "olds": [
+      "usual"
+     ],
+     "cn": "正常的"
+    }
+   ],
+   "help": "哪个词是“正常的”？偶尔忘词，人人都会。",
+   "explain": "Do not worry. It is normal to forget a word or two. normal 是“正常的”。",
+   "common_errors": [
+    {
+     "when": "写了 stressed",
+     "say": "stressed 是“焦虑不安的”，正好是要劝他别有的状态，意思反了。"
+    },
+    {
+     "when": "写了 regularly",
+     "say": "regularly 是副词“有规律地”，不能放在 is 后面这样用。"
+    },
+    {
+     "when": "写了 visual",
+     "say": "visual 是“视觉的”，和“忘词正常不正常”没关系。"
+    }
+   ],
+   "audio_id": "u7r2-v07",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "做个总结",
+   "scene": "把这一课的主要内容收成几句话。",
+   "stem": "At the end, Xiaolin writes a short ___ of the lesson.",
+   "task": "只写空里的一个词。",
+   "answer_text": "summary",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "summary"
+     ],
+     "olds": [
+      "notes"
+     ],
+     "cn": "总结；概括"
+    }
+   ],
+   "help": "把一课的内容用几句话收住，叫什么？本课生词。",
+   "explain": "At the end, Xiaolin writes a short summary of the lesson. summary 是“总结；概括”。",
+   "common_errors": [
+    {
+     "when": "写了 list",
+     "say": "list 是“清单”，是把东西一条条列出来；把内容收成几句话是 summary。"
+    },
+    {
+     "when": "写了 note",
+     "say": "note 是“笔记”，是记下来的零散内容；summary 是整理过的概括。"
+    },
+    {
+     "when": "写了 link",
+     "say": "link 是“联系”，不是一篇文章。"
+    }
+   ],
+   "audio_id": "u7r2-v08",
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 不重复就记不住",
+   "scene": "他们不重复这些词，就记不住。",
+   "stem": "If they ___ (not repeat) the words, they ___ (not remember) them.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "do not repeat do not remember",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "do not repeat",
+      "don't repeat"
+     ],
+     "olds": [
+      "does not repeat",
+      "will not repeat"
+     ],
+     "cn": "不重复（否定，主语是 they）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "do not remember",
+      "don't remember"
+     ],
+     "olds": [
+      "does not remember",
+      "will not remember"
+     ],
+     "cn": "记不住（否定，主语是 they）"
+    }
+   ],
+   "help": "两个空主语都是 they。they 的否定用 do not 还是 does not？",
+   "explain": "If they do not repeat the words, they do not remember them. 主语 they 用 do not，动词用原形。",
+   "common_errors": [
+    {
+     "when": "写了 does not repeat",
+     "say": "does not 是给单数主语用的；they 是复数，用 do not。"
+    },
+    {
+     "when": "只写了 not repeat",
+     "say": "少了 do：否定要说 do not repeat。"
+    },
+    {
+     "when": "第二个空写了 does not remember",
+     "say": "主语还是 they，用 do not remember。"
+    }
+   ],
+   "reading": "Xiaolin is a careful student, and his memory is quite good. He has a clear review plan. After school, he reviews his notes once. Before bed, he reads them again. At the weekend, he goes over everything one more time. If he follows this plan, he remembers new words well. If he misses a review, he forgets some words quickly. So he makes a point of reviewing on time, and learning becomes easier for him."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：老朋友回锅",
+   "teach_html": "<p>独立判断过关！接下来是<strong>挑战关</strong>：几位老朋友回锅——<strong>since / for</strong>、<strong>被动语态</strong>、<strong>比较级</strong>，最后一题把今天的条件句综合起来用。站长只给方向提示。</p>",
+   "audio_id": "u7r2-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 从周一起",
+   "scene": "他从上周一起，天天复习这张清单。",
+   "stem": "He has reviewed this list every day ___ last Monday.",
+   "task": "只写空里的一个词。",
+   "answer_text": "since",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "since",
+      "Since"
+     ],
+     "olds": [
+      "for"
+     ],
+     "cn": "自从（时间点）"
+    }
+   ],
+   "help": "last Monday 是时间点还是一段时间？完成时里“自从某点”用哪个？",
+   "explain": "He has reviewed this list every day since last Monday. last Monday 是时间点，用 since。",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "for 跟时间段（如 for a week）；last Monday 是一个时间点，用 since。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说起点，不表示持续到现在；完成时用 since。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 不能这样跟 last Monday 用。"
+    }
+   ]
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 用了两年",
+   "scene": "这张单词清单，她用了两年了。",
+   "stem": "She has used this word list ___ two years.",
+   "task": "只写空里的一个词。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for",
+      "For"
+     ],
+     "olds": [
+      "since"
+     ],
+     "cn": "持续（时间段）"
+    }
+   ],
+   "help": "two years 是时间点还是一段时间？",
+   "explain": "She has used this word list for two years. two years 是时间段，用 for。",
+   "common_errors": [
+    {
+     "when": "写了 since",
+     "say": "since 跟时间点；two years 是时间段，用 for。"
+    },
+    {
+     "when": "写了 from",
+     "say": "from 只说起点，不表示“持续了多久”，用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "in 不能表示持续两年，用 for。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 总结被写出来",
+   "scene": "昨晚，小林把总结写出来了。",
+   "stem": "The summary ___ by Xiaolin last night.",
+   "options": [
+    "is writing",
+    "was written",
+    "writes",
+    "has write"
+   ],
+   "answer": "B",
+   "help": "先想：总结是写人的，还是被写的？再看 last night 是过去还是现在。",
+   "explain": "The summary was written by Xiaolin last night. 总结是被写出来的，用被动；last night 是过去，用 was written。",
+   "wrong_feedback": {
+    "A": "is writing 是“正在写”（主动），可主语是总结，它是被写的。",
+    "C": "writes 是主动的一般现在时；总结是被写的，要用被动。",
+    "D": "has write 不是正确形式；而且 last night 是过去，用 was written。"
+   }
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 列清单更容易",
+   "scene": "列清单复习，比只读一遍更容易记住。",
+   "stem": "Reviewing with a list is ___ than reading once. (easy)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "easier",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "easier"
+     ],
+     "olds": [
+      "more easy",
+      "easiest"
+     ],
+     "cn": "更容易（easy 的比较级）"
+    }
+   ],
+   "help": "空后面有 than，是比较。easy 变比较级，y 要变成什么？",
+   "explain": "Reviewing with a list is easier than reading once. easy 的比较级是 easier（y 变 i 再加 er）。",
+   "common_errors": [
+    {
+     "when": "写了 more easy",
+     "say": "easy 变比较级不用 more：y 变 i 加 er，是 easier。"
+    },
+    {
+     "when": "写了 easiest",
+     "say": "easiest 是最高级，要配 the 和范围；这里有 than，用比较级 easier。"
+    },
+    {
+     "when": "写了 easyer",
+     "say": "拼写错了：easy 的 y 先变 i，再加 er：easier。"
+    }
+   ]
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 条件句综合产出",
+   "scene": "有规律地复习笔记，单词就记得牢。",
+   "stem": "If you ___ (review) your notes regularly, you ___ (remember) them well.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "review remember",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "review"
+     ],
+     "olds": [
+      "reviews"
+     ],
+     "cn": "复习（主语是 you）"
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "remember"
+     ],
+     "olds": [
+      "remembers"
+     ],
+     "cn": "记得（主语是 you）"
+    }
+   ],
+   "help": "把今天学的合起来：条件句两边都用一般现在时，主语都是 you，新词 regularly 已经在句子里了。",
+   "explain": "If you review your notes regularly, you remember them well. 主语 you 两边都用原形：review、remember。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 reviews",
+     "say": "主语是 you，动词用原形 review，不加 s。"
+    },
+    {
+     "when": "第二个空写了 remembers",
+     "say": "主语还是 you，remember 用原形。"
+    },
+    {
+     "when": "写了 will remember",
+     "say": "谈必然结果不用 will，两边都是一般现在时。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "节目预告",
+   "teach_html": "<p>记忆节目第二期讲完了：你看清了<strong>遗忘曲线</strong>——学完忘得飞快，<strong>及时复习</strong>才拦得住；条件句也会换位置、换肯定否定，意思不变。</p><p>站长留一句复习口诀：<strong>Last but not least</strong>，睡个好觉也是复习。下一期细讲一个新词：<strong>unless</strong> 到底怎么用，敬请期待。</p>",
+   "audio_id": "u7r2-ending"
+  }
+ ],
+ "title": "遗忘曲线：条件句练兵",
+ "unit": "Unit 7 The secret of memory",
+ "version": 1
+}
