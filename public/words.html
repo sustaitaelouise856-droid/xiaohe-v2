@@ -27,6 +27,16 @@
   .unit-card .pbar { height:8px; background:#f1f3f4; border-radius:999px; margin-top:12px; overflow:hidden; }
   .unit-card .pfill { height:100%; background:linear-gradient(90deg,#1a73e8,#64b5f6); border-radius:999px; transition:width .5s; }
   .unit-card .ptext { font-size:12px; color:var(--muted); margin-top:6px; }
+  /* 小组卡片（2026-10-23：单元内分组，每组20词） */
+  .group-card { background:var(--card); border:2px solid var(--line); border-radius:18px; padding:18px 14px; cursor:pointer; transition:all .2s; position:relative; overflow:hidden; }
+  .group-card:active { transform:scale(.96); }
+  .group-card .un { font-size:15px; font-weight:800; color:var(--blue); }
+  .group-card .ut { font-size:13px; color:var(--ink); margin-top:4px; font-weight:600; }
+  .group-card .uc { font-size:12px; color:var(--muted); margin-top:4px; }
+  .group-card .pbar { height:8px; background:#f1f3f4; border-radius:999px; margin-top:12px; overflow:hidden; }
+  .group-card .pfill { height:100%; background:linear-gradient(90deg,#1a73e8,#64b5f6); border-radius:999px; transition:width .5s; }
+  .group-card .ptext { font-size:12px; color:var(--muted); margin-top:6px; }
+  .gback { margin-bottom:12px; padding:10px 20px; border:1px solid #dadce0; background:#fff; border-radius:999px; font-size:14px; cursor:pointer; }
   
   /* 模式选择 */
   .mode-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; }
@@ -104,6 +114,23 @@
   
   <!-- 单元选择 -->
   <div class="unit-grid" id="unitGrid"></div>
+  <!-- 小组选择（2026-10-23：单元内分组，每组20词，Elouise 定） -->
+  <div id="groupSection" style="display:none;">
+    <button class="gback" onclick="backToUnits()">← 换单元</button>
+    <div style="font-size:15px;font-weight:800;margin-bottom:10px;" id="groupTitle">选择小组</div>
+    <div class="unit-grid" id="groupGrid"></div>
+  </div>
+
+  <!-- 本组完成（2026-10-23：独立区块，不再销毁学习区 DOM） -->
+  <div id="completeSection" style="display:none;">
+    <div style="background:#fff;border-radius:22px;padding:48px 24px;text-align:center;box-shadow:0 6px 24px rgba(60,64,67,.1);">
+      <div style="font-size:56px;">🎉</div>
+      <h2 style="margin:16px 0 8px;" id="compTitle">本组完成！</h2>
+      <p style="color:#5f6368;" id="compText"></p>
+      <div class="btn-row" style="margin-top:24px;" id="compBtns1"></div>
+      <div class="btn-row" style="margin-top:10px;" id="compBtns2"></div>
+    </div>
+  </div>
   
   <!-- 模式选择 -->
   <div id="modeSection" style="display:none;">
@@ -163,6 +190,19 @@ const UNITS = [
   { id: 'unit6', name: 'Unit 6', title: 'Ancient stories', desc: '古代故事 · 现在完成时' },
 ];
 let curUnit = null, words = [], queue = [], idx = 0, mode = 'card';
+// 2026-10-23：单元内分组（Elouise 定，每组20词；按词表顺序切分，组成员稳定）
+const GROUP_SIZE = 20;
+let groups = [], curGroup = 0;
+function chunkWords(list, size) {
+  const out = [];
+  for (let i = 0; i < list.length; i += size) out.push(list.slice(i, i + size));
+  return out;
+}
+function currentGroupWords() { return groups.length ? (groups[curGroup] || []) : words; }
+function buildQueue() {
+  // 队列只含当前组；组内排序沿用旧规矩（未掌握优先），判分/掌握度逻辑不变
+  return currentGroupWords().slice().sort((a, b) => getMastery(a.en) - getMastery(b.en));
+}
 let mastery = {}; // 2026-10-17升级：从后端加载，5级制 0陌生/1眼熟/2会认/3会拼/4掌握
 let todayCount = parseInt(localStorage.getItem('xh_words_today_' + new Date().toDateString()) || '0');
 
@@ -275,31 +315,86 @@ async function selectUnit(u, el) {
     const r = await fetch(`/words/${u.id}.json`);
     const j = await r.json();
     words = j.words;
-    // 优先复习未掌握的词
-    queue = [...words].sort((a, b) => getMastery(a.en) - getMastery(b.en));
-    idx = 0;
-    // 2026-10-16：进学习模式后隐藏单元看板，界面更干净
+    // 2026-10-23：按词表顺序切组（每组20词），组成员不随掌握度变化
+    groups = chunkWords(words, GROUP_SIZE);
+    curGroup = 0;
     document.getElementById('unitGrid').style.display = 'none';
-    document.getElementById('modeSection').style.display = 'block';
-    document.getElementById('learnArea').style.display = 'block';
-    // 加一个"换单元"按钮
-    if (!document.getElementById('btnChangeUnit')) {
-      const btn = document.createElement('button');
-      btn.id = 'btnChangeUnit';
-      btn.textContent = '← 换单元';
-      btn.style.cssText = 'margin-bottom:12px;padding:10px 20px;border:1px solid #dadce0;background:#fff;border-radius:999px;font-size:14px;cursor:pointer;';
-      btn.onclick = () => {
-        document.getElementById('unitGrid').style.display = 'grid';
-        document.getElementById('modeSection').style.display = 'none';
-        document.getElementById('learnArea').style.display = 'none';
-        btn.remove();
-      };
-      document.getElementById('modeSection').prepend(btn);
-    }
+    document.getElementById('modeSection').style.display = 'none';
+    document.getElementById('learnArea').style.display = 'none';
+    document.getElementById('completeSection').style.display = 'none';
     updateStats();
-    renderWord();
-    document.getElementById('learnArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (groups.length > 1) {
+      renderGroups();
+      document.getElementById('groupSection').style.display = 'block';
+      document.getElementById('groupSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // 只有一组（≤20词）：不绕组选择，直接进学习
+      enterGroup(0);
+    }
   } catch (e) { alert('单词表加载失败'); }
+}
+
+// 渲染小组列表（每组：词序区间 + 已掌握进度）
+function renderGroups() {
+  document.getElementById('groupTitle').textContent = `${curUnit.name} · 选择小组（共 ${words.length} 个词，每组 ${GROUP_SIZE} 个）`;
+  const gg = document.getElementById('groupGrid');
+  gg.innerHTML = '';
+  groups.forEach((g, gi) => {
+    const m = g.filter(w => isMastered(w.en)).length;
+    const pct = Math.round(m / g.length * 100);
+    const d = document.createElement('div');
+    d.className = 'group-card';
+    d.innerHTML = `<div class="un">第 ${gi + 1} 组</div><div class="ut">第 ${gi * GROUP_SIZE + 1}–${gi * GROUP_SIZE + g.length} 个词</div><div class="uc">${curUnit.title}</div>
+    <div class="pbar"><div class="pfill" style="width:${pct}%"></div></div><div class="ptext">已掌握 ${m}/${g.length}</div>`;
+    d.onclick = () => enterGroup(gi);
+    gg.appendChild(d);
+  });
+}
+
+// 进入某一组学习：队列只含本组词，其余流程与旧版一致
+function enterGroup(gi) {
+  curGroup = gi;
+  queue = buildQueue();
+  idx = 0;
+  document.getElementById('groupSection').style.display = 'none';
+  document.getElementById('unitGrid').style.display = 'none';
+  document.getElementById('completeSection').style.display = 'none';
+  document.getElementById('modeSection').style.display = 'block';
+  document.getElementById('learnArea').style.display = 'block';
+  setupBackButton();
+  updateStats();
+  renderWord();
+  document.getElementById('learnArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// 学习区返回按钮：多组单元回组列表，单组单元回单元列表
+function setupBackButton() {
+  let btn = document.getElementById('btnChangeUnit');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'btnChangeUnit';
+    btn.style.cssText = 'margin-bottom:12px;padding:10px 20px;border:1px solid #dadce0;background:#fff;border-radius:999px;font-size:14px;cursor:pointer;';
+    document.getElementById('modeSection').prepend(btn);
+  }
+  btn.textContent = groups.length > 1 ? '← 选小组' : '← 换单元';
+  btn.onclick = () => { if (groups.length > 1) backToGroups(); else backToUnits(); };
+}
+
+function backToGroups() {
+  document.getElementById('modeSection').style.display = 'none';
+  document.getElementById('learnArea').style.display = 'none';
+  document.getElementById('completeSection').style.display = 'none';
+  renderGroups();
+  document.getElementById('groupSection').style.display = 'block';
+  document.getElementById('groupSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function backToUnits() {
+  document.getElementById('groupSection').style.display = 'none';
+  document.getElementById('modeSection').style.display = 'none';
+  document.getElementById('learnArea').style.display = 'none';
+  document.getElementById('completeSection').style.display = 'none';
+  document.getElementById('unitGrid').style.display = 'grid';
 }
 
 document.querySelectorAll('#modeGrid .mode-btn').forEach(b => {
@@ -307,7 +402,7 @@ document.querySelectorAll('#modeGrid .mode-btn').forEach(b => {
     document.querySelectorAll('#modeGrid .mode-btn').forEach(x => x.classList.remove('sel'));
     b.classList.add('sel');
     mode = b.dataset.mode;
-    queue = [...words].sort((a, b) => getMastery(a.en) - getMastery(b.en));
+    queue = buildQueue();
     idx = 0;
     renderWord();
   };
@@ -319,7 +414,8 @@ function renderWord() {
   const m = getMastery(w.en);
   // 听音/拼写模式不暴露英文单词（标题只显示进度；2026-10-21 修：拼写模式顶部进度条曾把英文答案漏出来）
   const showEn = mode !== 'listen' && mode !== 'spell';
-  document.getElementById('progress').textContent = showEn ? `${idx + 1} / ${queue.length} · ${w.en}` : `${idx + 1} / ${queue.length}`;
+  const gLabel = groups.length > 1 ? `第${curGroup + 1}组 · ` : '';
+  document.getElementById('progress').textContent = showEn ? `${gLabel}${idx + 1} / ${queue.length} · ${w.en}` : `${gLabel}${idx + 1} / ${queue.length}`;
   document.getElementById('wEn').textContent = w.en;
   document.getElementById('wPos').textContent = w.pos || '';
   document.getElementById('wCn').textContent = w.cn;
@@ -429,12 +525,13 @@ document.getElementById('btnShow').onclick = () => {
 function nextWord() {
   idx++;
   if (idx >= queue.length) {
-    const m = words.filter(w => isMastered(w.en)).length;
-    // 卡片模式循环复习，其他模式显示完成页（2026-10-16：测试/拼写/听音做完要结束，不能无限循环）
+    // 本组一轮结束（2026-10-23：范围由全单元收窄到当前组）
     if (mode === 'card') {
-      queue = [...words].sort((a, b) => getMastery(a.en) - getMastery(b.en));
+      // 卡片模式组内循环复习，本组全掌握才算完成（沿用旧规矩，范围改组内）
+      const g = currentGroupWords();
+      if (g.length && g.every(w => isMastered(w.en))) { showComplete(); return; }
+      queue = buildQueue();
       idx = 0;
-      if (m === words.length) { showComplete(); return; }
     } else {
       showComplete();
       return;
@@ -444,19 +541,43 @@ function nextWord() {
   renderWord();
 }
 
+
 function showComplete() {
+  const g = currentGroupWords();
+  const gm = g.filter(w => isMastered(w.en)).length;
   const m = words.filter(w => isMastered(w.en)).length;
-  document.getElementById('learnArea').innerHTML = `
-    <div style="background:#fff;border-radius:22px;padding:48px 24px;text-align:center;box-shadow:0 6px 24px rgba(60,64,67,.1);">
-      <div style="font-size:56px;">🎉</div>
-      <h2 style="margin:16px 0 8px;">本轮完成！</h2>
-      <p style="color:#5f6368;">${curUnit.name} 已掌握 ${m}/${words.length} 个词</p>
-      <div class="btn-row" style="margin-top:24px;">
-        <button onclick="location.reload()" style="background:#1a73e8;color:#fff;">再来一轮</button>
-        <button onclick="document.getElementById('learnArea').style.display='none';document.getElementById('unitGrid').style.display='grid';" style="background:#f1f3f4;color:#5f6368;">换单元</button>
-      </div>
-    </div>`;
+  document.getElementById('learnArea').style.display = 'none';
+  document.getElementById('modeSection').style.display = 'none';
+  document.getElementById('completeSection').style.display = 'block';
+  document.getElementById('compTitle').textContent = groups.length > 1 ? `第 ${curGroup + 1} 组完成！` : '本轮完成！';
+  document.getElementById('compText').textContent = groups.length > 1
+    ? `本组已掌握 ${gm}/${g.length} 个词 · ${curUnit.name} 全单元已掌握 ${m}/${words.length} 个词`
+    : `${curUnit.name} 已掌握 ${m}/${words.length} 个词`;
+  const b1 = document.getElementById('compBtns1');
+  const b2 = document.getElementById('compBtns2');
+  b1.innerHTML = ''; b2.innerHTML = '';
+  const mkBtn = (text, bg, color, fn) => {
+    const b = document.createElement('button');
+    b.textContent = text;
+    b.style.cssText = `background:${bg};color:${color};`;
+    b.onclick = fn;
+    return b;
+  };
+  if (groups.length > 1 && curGroup < groups.length - 1) {
+    b1.appendChild(mkBtn('下一组 →', '#1a73e8', '#fff', () => enterGroup(curGroup + 1)));
+    b1.appendChild(mkBtn('再来一组', '#f1f3f4', '#5f6368', () => enterGroup(curGroup)));
+    b2.appendChild(mkBtn('选小组', '#f1f3f4', '#5f6368', backToGroups));
+    b2.appendChild(mkBtn('换单元', '#f1f3f4', '#5f6368', backToUnits));
+  } else {
+    b1.appendChild(mkBtn('再来一轮', '#1a73e8', '#fff', () => enterGroup(curGroup)));
+    if (groups.length > 1) b1.appendChild(mkBtn('选小组', '#f1f3f4', '#5f6368', backToGroups));
+    b1.appendChild(mkBtn('换单元', '#f1f3f4', '#5f6368', backToUnits));
+  }
+  b2.style.display = b2.children.length ? 'flex' : 'none';
+  document.getElementById('completeSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+
 document.getElementById('btnKnow').onclick = () => { addMastery(queue[idx].en, true); nextWord(); };
 document.getElementById('btnUnknown').onclick = () => { addMastery(queue[idx].en, false); nextWord(); };
 
