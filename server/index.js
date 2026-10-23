@@ -1925,15 +1925,23 @@ app.get('/api/words/mastery', auth.requireAuth, (req, res) => {
 });
 
 // 更新单词掌握度：correct=1答对+1级，0答错-1级（0-4钳制）
+// 按来源封顶（2026-10-23晚修，学生实测卡片狂点"认识"可刷满）：
+// 卡片自报/听音辨义本质是"认"，最高升到2会认；中英测试最高3会拼；只有拼写答对能到4掌握。
+// 没带 source 的老调用默认按 card 封顶2（最严防刷）。封顶只限制上升、绝不压低已有等级；答错照旧-1不受封顶影响。
+const MASTERY_CAPS = { card: 2, listen: 2, test: 3, spell: 4 };
 app.post('/api/words/mastery', auth.requireAuth, (req, res) => {
   try {
-    const { word, correct } = req.body || {};
+    const { word, correct, source } = req.body || {};
     if (!word) return res.json({ ok: false, error: 'no_word' });
     const cur = db.prepare('SELECT level, correct_n, wrong_n FROM word_mastery WHERE word=?').get(word);
     let level = cur ? cur.level : 0;
     let cn = cur ? cur.correct_n : 0;
     let wn = cur ? cur.wrong_n : 0;
-    if (correct) { level = Math.min(4, level + 1); cn++; }
+    if (correct) {
+      const cap = MASTERY_CAPS[String(source || 'card')] != null ? MASTERY_CAPS[String(source || 'card')] : 2;
+      level = Math.min(4, Math.min(level + 1, Math.max(cap, level)));
+      cn++;
+    }
     else { level = Math.max(0, level - 1); wn++; }
     db.prepare(`INSERT INTO word_mastery(word, level, correct_n, wrong_n, last_at, updated_at)
       VALUES(?, ?, ?, ?, datetime('now'), datetime('now'))
