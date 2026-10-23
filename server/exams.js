@@ -331,4 +331,105 @@ function clearProgress(exam_id) {
   } catch { return false; }
 }
 
-module.exports = { setDb, getExam, getExamList, saveScore, initTable, isUnitDone, gradeExam, isCourseStyle, gradeOne, initProgressTable, saveAnswer, getProgress, getProgressAnswers, clearProgress };
+// ===== 口语录音留存 + 分期批改（2026-10-23，Elouise 定）=====
+// 旧机制只记 given='recorded'、录音本体直接丢弃，口语 15 分永远批不了。
+// 录音以 BLOB 存进 SQLite（Render 免费版磁盘临时、重启即丢，只有进库才能被
+// 每 5 分钟的 Google Drive 备份链带走）。本期只做留存与批改数据的存取，
+// 批改分数暂不并入交卷总分（gradeExam/gradeOne 对 speak 仍标 pending），
+// 并入方式等 Elouise 后续拍板。
+function initSpeechTable() {
+  try {
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS exam_speech (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        exam_id TEXT NOT NULL,
+        qid TEXT NOT NULL,
+        mime TEXT,
+        audio BLOB NOT NULL,
+        duration_sec REAL,
+        created_at TEXT NOT NULL,
+        score REAL,
+        note TEXT,
+        graded_at TEXT,
+        UNIQUE(exam_id, qid)
+      );
+    `);
+  } catch (e) { console.error('[exams] initSpeechTable', e.message); }
+}
+
+// 查某道 speak 题的满分（批改分数上限用）；题目不存在或非 speak 返回 null
+function speechMax(exam_id, qid) {
+  try {
+    const exam = loadExamRaw(exam_id);
+    const q = findQuestion(exam, qid);
+    if (!q || q.type !== 'speak') return null;
+    return q.score;
+  } catch { return null; }
+}
+
+// 保存/覆盖一段录音：同 exam_id+qid 重录覆盖旧行，并清空批改（score/note/graded_at），
+// 因为旧批改是对着旧录音给的，新录音必须重新批。
+function saveSpeech(exam_id, qid, mime, audioBuf, durationSec) {
+  try {
+    if (speechMax(exam_id, qid) == null) return { ok: false, error: 'unknown_speak_qid' };
+    db.prepare(`
+      INSERT INTO exam_speech (exam_id, qid, mime, audio, duration_sec, created_at, score, note, graded_at)
+      VALUES (?, ?, ?, ?, ?, datetime('now'), NULL, NULL, NULL)
+      ON CONFLICT(exam_id, qid) DO UPDATE SET
+        mime=excluded.mime, audio=excluded.audio, duration_sec=excluded.duration_sec,
+        created_at=excluded.created_at, score=NULL, note=NULL, graded_at=NULL
+    `).run(exam_id, qid, mime || null, audioBuf, durationSec == null ? null : durationSec);
+    const row = db.prepare(`SELECT id FROM exam_speech WHERE exam_id=? AND qid=?`).get(exam_id, qid);
+    return { ok: true, id: row ? row.id : null };
+  } catch (e) {
+    console.error('[exams] saveSpeech', e.message);
+    return { ok: false, error: e.message };
+  }
+}
+
+// 批改列表（不含 BLOB 本体，只给大小）：未批改排前面，其次按新近排序
+function listSpeech() {
+  try {
+    const rows = db.prepare(`
+      SELECT id, exam_id, qid, mime, length(audio) AS size, duration_sec,
+             created_at, score, note, graded_at
+      FROM exam_speech
+      ORDER BY (graded_at IS NOT NULL) ASC, id DESC
+    `).all();
+    return { ok: true, list: rows };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+// 取一段录音本体（管理端试听用）
+function getSpeechAudio(id) {
+  try {
+    const row = db.prepare(`SELECT mime, audio FROM exam_speech WHERE id=?`).get(Number(id) || 0);
+    if (!row) return { ok: false, error: 'not_found' };
+    return { ok: true, mime: row.mime || 'application/octet-stream', audio: row.audio };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+// 写入批改结果：分数必须在 0..该题满分 之间；查不到题目满分时兜底上限 20（cap_source='fallback' 注明）
+function gradeSpeech(id, score, note) {
+  try {
+    const row = db.prepare(`SELECT exam_id, qid FROM exam_speech WHERE id=?`).get(Number(id) || 0);
+    if (!row) return { ok: false, error: 'not_found' };
+    const sc = Number(score);
+    if (!isFinite(sc)) return { ok: false, error: 'bad_score' };
+    let max = speechMax(row.exam_id, row.qid);
+    let capSource = 'exam';
+    if (max == null) { max = 20; capSource = 'fallback'; }
+    if (sc < 0 || sc > max) return { ok: false, error: 'score_out_of_range', max };
+    db.prepare(`UPDATE exam_speech SET score=?, note=?, graded_at=datetime('now') WHERE id=?`)
+      .run(sc, note == null ? null : String(note).slice(0, 2000), Number(id));
+    return { ok: true, id: Number(id), score: sc, max, cap_source: capSource };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+module.exports = { setDb, getExam, getExamList, saveScore, initTable, isUnitDone, gradeExam, isCourseStyle, gradeOne, initProgressTable, saveAnswer, getProgress, getProgressAnswers, clearProgress, initSpeechTable, saveSpeech, listSpeech, getSpeechAudio, gradeSpeech };
