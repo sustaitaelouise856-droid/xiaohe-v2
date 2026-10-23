@@ -87,7 +87,7 @@ const LESSON_CACHE = {};
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u[2-6]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
+  if (!/^(?:u[2-7]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -2515,7 +2515,7 @@ function orderedLessons() {
       const ids = rows.map(r => r.lesson_id);
       // 主线：u2r1-u6r5 按教学顺序（2026-10-10 修复：原按 lesson_id 字母排序，deep1 会排到 u2r1 前面）
       const mainOrder = [];
-      for (let u = 2; u <= 6; u++) {
+      for (let u = 2; u <= 7; u++) {
         for (let r = 1; r <= 5; r++) {
           const lid = `u${u}r${r}`;
           if (ids.includes(lid)) mainOrder.push(lid);
@@ -2732,7 +2732,7 @@ function lessonOpen(lid) {
   // 复习课本身、已开的课（有真实进度的）不受影响
   // 2026-10-13修："已开"只认 p1_done/p2_done=1 的真实进度，单纯点开过（0/0）的
   // 不算已开，否则 u5/u6 的 0/0 打开记录会绕过门禁。
-  if (/^u[2-6]r\d+$/.test(lid) && !isReviewLesson(lid)) {
+  if (/^u[2-7]r\d+$/.test(lid) && !isReviewLesson(lid)) {
     try {
       const st = lessonState(lid);
       const started = st && (st.p1_done === 1 || st.p2_done === 1);
@@ -2749,7 +2749,7 @@ function lessonOpen(lid) {
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   // 主线只算 u2r-u6r（排除 review、deep、moon、sx、yw）
-  const isMainline = id => /^(u[2-6]r\d+|review\d+)$/.test(id);
+  const isMainline = id => /^(u[2-7]r\d+|review\d+)$/.test(id);
   const regular = ids.filter(id => isMainline(id) && !isReviewLesson(id));
   const allRegularDone = regular.every(id => {
     const st = lessonState(id);
