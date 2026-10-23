@@ -200,6 +200,7 @@ CREATE TABLE IF NOT EXISTS student_feedback (
   reply      TEXT,
   replied_at TEXT
 );`);
+ensureColumn('student_feedback', 'images_json', 'TEXT'); // 2026-10-23：多张截图（JSON 数组）；image_b64 保留首图兼容
 // 摸底诊断（2026-10-03 P2）：广播站"新人能力检测"
 // 3段×15-20分钟，自适应（连错3停），两套平行卷A/B
 db.exec(`
