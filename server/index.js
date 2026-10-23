@@ -28,6 +28,7 @@ const seed = require('./seed');
 const { shanghaiDay } = require('./time');
 
 const app = express();
+app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
 app.use(express.json({ limit: '256kb' }));
 app.set('trust proxy', false);
 
@@ -2259,6 +2260,28 @@ function conflictFeedback(step, detail) {
 }
 
 // 挑出给学生看的反馈语（选择题：答对讲原因；答错给针对性提示；简答题：常见错误提示）
+// 错维直说（2026-10-23）：上面几路反馈都没说中时，直接点名判分明细里真实没写对的维度。
+// 只用 detail.items 的实际状态（missing=漏写、contradiction=写了旧值/反了、typo=拼写差一点），
+// 严禁提及写对的维度；标签取 dim_help，其次 expects.cn，都没有就跳过该维度。最多 2 个。
+function dimWrongLines(step, detail) {
+  const items = ((detail && detail.items) || [])
+    .filter(i => i.status === 'missing' || i.status === 'contradiction' || i.status === 'typo');
+  const out = [];
+  for (const it of items) {
+    if (out.length >= 2) break;
+    const e = (step.expects || []).find(x => x.id === it.id);
+    if (!e) continue;
+    const dh = (step.dim_help || {})[it.id] || {};
+    const label = dh.label || (Array.isArray(e.cn) && e.cn[0]) || '';
+    if (!label) continue;
+    const want = it.want || (Array.isArray(e.answers) && e.answers[0]) || '';
+    if (it.status === 'missing') out.push('「' + label + '」还没写' + (want ? '，这里应写 ' + want : '') + '。');
+    else if (it.status === 'typo') out.push('「' + label + '」拼写差一点' + (want ? '，应写 ' + want : '') + '。');
+    else out.push('「' + label + '」写得不对' + (want ? '，应写 ' + want : '') + '。');
+  }
+  return out;
+}
+
 function feedbackFor(step, verdict, given, detail) {
   if (!step) return '';
   if (step.kind === 'mcq') {
@@ -2279,6 +2302,13 @@ function feedbackFor(step, verdict, given, detail) {
   for (let i = 0; i < aff.length; i++) parts.push(aff[i]);
   const gs = groundedSays(step, given, detail);
   for (let i = 0; i < gs.length; i++) parts.push(gs[i]);
+  // 2026-10-23：冲突/预判/接地反馈都没说中时补"错维直说"，不再只剩"再想一想"
+  // （affirm 部分对肯定不算"说中"，只有它时也要补）
+  const explanatory = parts.filter(x => x && aff.indexOf(x) < 0);
+  if (!explanatory.length) {
+    const dims = dimWrongLines(step, detail);
+    for (let i = 0; i < dims.length; i++) parts.push(dims[i]);
+  }
   const fb = parts.filter(Boolean).join('\n');
   return fb || ((detail && detail.note) || '再想一想。');
 }
@@ -2782,16 +2812,19 @@ app.post('/api/feedback', auth.requireAuth, (req, res) => {
   try {
     const b = req.body || {};
     const text = String(b.text || '').trim().slice(0, 2000);
-    if (!text && !b.image_b64) return res.status(400).json({ ok: false, error: 'empty' });
-    // 图片限 1.5MB（前端已压缩）
-    const img = String(b.image_b64 || '').slice(0, 2000000);
+    // 2026-10-23：多张截图（最多4张，每张前端已压缩）；未传 images_b64 时兼容旧单图
+    let imgs = [];
+    if (Array.isArray(b.images_b64)) imgs = b.images_b64.filter(x => typeof x === 'string' && x).slice(0, 4).map(x => x.slice(0, 2000000));
+    if (!imgs.length && b.image_b64) imgs = [String(b.image_b64).slice(0, 2000000)];
+    if (!text && !imgs.length) return res.status(400).json({ ok: false, error: 'empty' });
+    const img = imgs[0] || '';
     const r = db.prepare(`INSERT INTO student_feedback
-      (lesson_id, step_no, item_id, text, image_b64, url, user_agent)
-      VALUES (?, ?, ?, ?, ?, ?, ?)`)
+      (lesson_id, step_no, item_id, text, image_b64, images_json, url, user_agent)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`)
       .run(String(b.lesson_id || '').slice(0, 64) || null,
             Number(b.step_no) || null,
             String(b.item_id || '').slice(0, 64) || null,
-            text || null, img || null,
+            text || null, img || null, imgs.length ? JSON.stringify(imgs) : null,
             String(b.url || '').slice(0, 256) || null,
             String(req.headers['user-agent'] || '').slice(0, 256));
     res.json({ ok: true, id: r.lastInsertRowid });
@@ -2815,7 +2848,13 @@ app.get('/api/admin/feedback', (req, res) => {
   }
   res.set('Cache-Control', 'no-store');
   try {
-    const rows = db.prepare(`SELECT * FROM student_feedback ORDER BY id DESC LIMIT 50`).all();
+    const rows = db.prepare(`SELECT * FROM student_feedback ORDER BY id DESC LIMIT 50`).all()
+      .map(r => { // 2026-10-23：多图解析成 images 数组（旧数据回退到 image_b64 单图）
+        let images = [];
+        try { images = r.images_json ? JSON.parse(r.images_json) : []; } catch {}
+        if (!Array.isArray(images) || !images.length) images = r.image_b64 ? [r.image_b64] : [];
+        return Object.assign({}, r, { images });
+      });
     res.json({ ok: true, list: rows });
   } catch { res.json({ ok: true, list: [] }); }
 });
