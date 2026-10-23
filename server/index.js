@@ -774,7 +774,7 @@ const TITLE_DEFS = [
     desc: '从错题本重做20道题并答对', cat: '探索', rarity: '普通' },
   {
     id: 'daily_challenger', name: '闯关达人', icon: '🎯',
-    desc: '完成3次每日闯关', cat: '坚持', rarity: '稀有' },
+    desc: '完成3次每日闯关', cat: '坚持', rarity: '普通' },
   // 2026-10-15 Elouise要求：连闯/签到系列称号
   {
     id: 'challenge_streak_7', name: '连闯七天', icon: '🔥',
@@ -821,8 +821,8 @@ const TITLE_DEFS = [
   // ——— 做完课程数（4） ———
   { id: 'courses_5', name: '初涉课堂', icon: '🚪', desc: '累计完成5节课', cat: '学业', rarity: '普通' },
   { id: 'courses_10', name: '学有所成', icon: '📖', desc: '累计完成10节课', cat: '学业', rarity: '稀有' },
-  { id: 'courses_15', name: '学富五车', icon: '🎒', desc: '累计完成15节课', cat: '学业', rarity: '史诗' },
-  { id: 'courses_20', name: '全部征服', icon: '🏆', desc: '累计完成20节课', cat: '传奇', rarity: '传说' },
+  { id: 'courses_15', name: '学富五车', icon: '🎒', desc: '累计完成15节课', cat: '学业', rarity: '稀有' },
+  { id: 'courses_20', name: '全部征服', icon: '🏆', desc: '累计完成20节课', cat: '传奇', rarity: '史诗' },
   // 2026-10-16 Elouise要求：加4个累计学习分钟数成就 + 10个其他新成就
   // ——— 累计学习分钟数（4） ———
   { id: 'minutes_60', name: '初涉学海', icon: '⏱️', desc: '累计学习60分钟', cat: '坚持', rarity: '普通' },
