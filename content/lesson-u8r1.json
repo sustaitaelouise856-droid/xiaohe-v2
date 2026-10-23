@@ -1,0 +1,1386 @@
+{
+ "lesson_id": "u8r1",
+ "practice_end": 27,
+ "home_subtitle": "第一课 · 宠物开场",
+ "part1_desc": "第 1–27 步：跟站长学副词入门——说清动作是“怎么做”的；本课新词 faithful、responsible、awake 等；练习里掺着挑战题，边学边闯。",
+ "part2_desc": "第 28–50 步：独立读小猫咪咪的故事自己判断，课尾压轴：副词构成综合、被动与比较级回锅、条件句预告。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：副词构成（adj+-ly、-y→-ily、-le→-y）、副词位置（动词/宾语之后）、good→well、fast/early/hard 同形、形容词与副词辨析。Unit 8 Pets and us 主题，核心词 faithful/responsible/hold/awake/attack，短语 grow up/care for。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新节目：宠物与我们",
+   "teach_html": "<p>记忆系列讲完了，广播站的新节目开播：<strong>宠物与我们 (Pets and us)</strong>！这一单元我们聊宠物：人们为什么养宠物？养宠物每天要做些什么？</p><p>先看钥匙句：<strong>The dog runs fast.</strong>（这只狗跑得快。）这里的 fast 说的不是“狗怎么样”，而是“跑这个动作怎么样”。这种专门描写作的词，叫<strong>副词</strong>。本课我们就来学它。</p>",
+   "audio_id": "u8r1-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "副词是做什么的",
+   "teach_html": "<p>形容词描绘名词：<strong>a happy dog</strong>（一只快乐的狗），happy 说的是狗。</p><p>副词描绘动作：<strong>The dog plays happily.</strong>（狗开心地玩耍。），happily 说的是“玩”这个动作是怎么进行的。</p><p>一句话规则：想说清“动作怎么做”，就用副词。</p>",
+   "audio_id": "u8r1-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "副词构成（一）：直接加 -ly",
+   "teach_html": "<p>大多数副词是形容词加 <strong>-ly</strong> 变来的：</p><p>quick → <strong>quickly</strong>（快地）<br>careful → <strong>carefully</strong>（小心地）<br>quiet → <strong>quietly</strong>（安静地）<br>slow → <strong>slowly</strong>（慢地）</p><p>例：<strong>She speaks quietly.</strong>（她轻声说话。）</p>",
+   "audio_id": "u8r1-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "副词构成（二）：-y 和 -le 结尾",
+   "teach_html": "<p>两个小变身：</p><p>① 以 <strong>-y</strong> 结尾的形容词，把 y 变成 i 再加 ly：happy → <strong>happily</strong>，easy → <strong>easily</strong>。</p><p>② 以 <strong>-le</strong> 结尾的，把 e 换成 y：simple → <strong>simply</strong>。</p><p>例：<strong>The cat jumps easily.</strong>（猫轻松地跳。）</p>",
+   "audio_id": "u8r1-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "副词放哪里",
+   "teach_html": "<p>副词通常放在<strong>动词后面</strong>：<strong>Doudou runs fast.</strong></p><p>动词后面有宾语时，副词放在<strong>宾语后面</strong>：<strong>He closed the door quietly.</strong>（他轻轻地关上了门。）</p><p>不能说 closed quietly the door——副词不能挤在动词和宾语中间。</p>",
+   "audio_id": "u8r1-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "三个特殊成员",
+   "teach_html": "<p>① <strong>good</strong> 的副词不是 goodly，而是 <strong>well</strong>：<strong>She sings well.</strong>（她唱得好。）</p><p>② 有些词形容词和副词长得一模一样：<strong>fast</strong>（The dog is fast. / The dog runs fast.）、<strong>early</strong>、<strong>hard</strong>。</p><p>这三个词不要加 -ly，没有 fastly 这种词。</p>",
+   "audio_id": "u8r1-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：忠诚与责任",
+   "teach_html": "<p><strong>faithful</strong> /ˈfeɪθfl/ adj. 忠实的；忠诚的：<strong>a faithful dog</strong>（一只忠诚的狗）。</p><p><strong>responsible</strong> /rɪˈspɒnsəbl/ adj. 可信任的；可信赖的：<strong>a responsible owner</strong>（一位靠谱的主人）。</p><p><strong>hold</strong> /həʊld/ v. 抱着；拿着：<strong>hold the puppy</strong>（抱着小狗），<strong>hold the lead</strong>（拿着牵引绳）。</p>",
+   "audio_id": "u8r1-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二：醒着、攻击与短语",
+   "teach_html": "<p><strong>awake</strong> /əˈweɪk/ adj. 醒着：<strong>The baby is awake.</strong>（宝宝醒着。）</p><p><strong>attack</strong> /əˈtæk/ v. 袭击；攻击：好狗从不 attack 人。</p><p>短语：<strong>grow up</strong> 长大：<strong>Puppies grow up fast.</strong>；<strong>care for</strong> 照顾；照料：<strong>care for your pet</strong>（照顾你的宠物）。</p>",
+   "audio_id": "u8r1-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：形容词还是副词",
+   "teach_html": "<p>看它描绘谁：描绘名词或跟在 is/look 后面，用形容词；描绘动作，用副词。</p><p><strong>The dog is happy.</strong>（狗是快乐的。）→ happy 描绘狗。</p><p><strong>The dog plays happily.</strong>（狗开心地玩。）→ happily 描绘动作 plays。</p><p>特别注意：<strong>The dog looks happy.</strong> look 后面跟形容词，不用 happily。</p>",
+   "audio_id": "u8r1-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：泽泽和豆豆",
+   "teach_html": "<p>下面这篇短文讲的是泽泽和他的狗豆豆。读的时候留意：每个动作是“怎么做”的——那些词就是我们今天学的副词。短文会一直留在屏幕上，做题时可以随时回看。</p>",
+   "audio_id": "u8r1-prac-01",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "狗跑得快",
+   "scene": "豆豆跑得怎么样？",
+   "stem": "The dog runs ___.",
+   "options": [
+    "fastly",
+    "fast",
+    "faster",
+    "fastest"
+   ],
+   "answer": "B",
+   "help": "fast 的副词形式有什么特别？",
+   "explain": "The dog runs fast. fast 既是形容词也是副词，形式不变；没有比较时不用 faster 或 fastest。",
+   "wrong_feedback": {
+    "A": "没有 fastly 这个词；fast 本身就是副词，形式不变。",
+    "C": "这里没有在和别人比，不用比较级 faster。",
+    "D": "没有比较对象，不用最高级 fastest。"
+   },
+   "audio_id": "u8r1-q01",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "慢慢走",
+   "scene": "奶奶在公园里走得很慢。",
+   "stem": "My grandma walks very ___ in the park. (slow)",
+   "task": "只写空里的部分。",
+   "answer_text": "slowly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "slowly"
+     ],
+     "olds": [
+      "slow",
+      "sloly",
+      "slowlyer"
+     ],
+     "cn": [
+      "慢慢地"
+     ]
+    }
+   ],
+   "help": "修饰动词 walks 的词，要用 slow 的什么形式？",
+   "explain": "My grandma walks very slowly. walks 是动词，要用副词；slow 直接加 -ly 就是 slowly。",
+   "common_errors": [
+    {
+     "when": "写了 slow",
+     "say": "slow 是形容词，不能修饰动词 walks；加 -ly 变成副词 slowly。"
+    },
+    {
+     "when": "写了 sloly",
+     "say": "拼写错位了：slow + ly = slowly，慢慢写是 s-l-o-w-l-y。"
+    },
+    {
+     "when": "写了 slowlyer",
+     "say": "副词不能再加 -er 变比较级；这里也没有在比较，用原级 slowly。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 轻轻抱",
+   "scene": "她把小狗小心翼翼地抱在怀里。",
+   "stem": "She held the puppy ___ in her arms. (careful)",
+   "task": "只写空里的部分。",
+   "answer_text": "carefully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "carefully"
+     ],
+     "olds": [
+      "careful",
+      "carefuly"
+     ],
+     "cn": [
+      "小心地；认真地"
+     ]
+    }
+   ],
+   "help": "修饰 held（抱）这个动作的词，应该是形容词还是副词？",
+   "explain": "She held the puppy carefully in her arms. 修饰动作 held 要用副词；careful + ly = carefully，注意两个 l。",
+   "common_errors": [
+    {
+     "when": "写了 careful",
+     "say": "careful 是形容词，描绘的是名词；这里要描绘动作 held，用副词 carefully。"
+    },
+    {
+     "when": "写了 carefuly",
+     "say": "拼写少了一个 l：careful 本身以 l 结尾，再加 ly，是 carefully。"
+    },
+    {
+     "when": "写了 carefullys",
+     "say": "副词没有复数形式，不加 s。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "细心的男孩",
+   "scene": "选词填空。",
+   "stem": "He is a ___ boy. He always checks his homework twice.",
+   "options": [
+    "careful",
+    "carefully",
+    "carefuler",
+    "care"
+   ],
+   "answer": "A",
+   "help": "boy 前面的空，要描绘的是人还是动作？",
+   "explain": "He is a careful boy. 空在名词 boy 前面，描绘的是人，用形容词 careful。",
+   "wrong_feedback": {
+    "B": "boy 是名词，名词前面要用形容词 careful，不是副词 carefully。",
+    "C": "careful 的比较级是 more careful，而且这里没有在比较。",
+    "D": "care 是动词'关心'，不能放在名词 boy 前面描绘它。"
+   },
+   "audio_id": "u8r1-q02",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "睡得好",
+   "scene": "宝宝睡得香。",
+   "stem": "The baby sleeps ___.",
+   "options": [
+    "good",
+    "goodly",
+    "better",
+    "well"
+   ],
+   "answer": "D",
+   "help": "good 的副词形式是哪个特别的词？",
+   "explain": "The baby sleeps well. 修饰动词 sleeps 用副词；good 对应的副词是 well。",
+   "wrong_feedback": {
+    "A": "good 是形容词；修饰动词 sleeps 要用副词 well。",
+    "B": "没有 goodly 这个词；good 的副词形式是 well。",
+    "C": "这里没有比较，不用比较级 better。"
+   },
+   "audio_id": "u8r1-q03",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 安静读书",
+   "scene": "孩子们在图书馆安静地读书。",
+   "stem": "The children are reading ___ in the library. (quiet)",
+   "task": "只写空里的部分。",
+   "answer_text": "quietly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "quietly"
+     ],
+     "olds": [
+      "quiet",
+      "quietlys",
+      "quitely"
+     ],
+     "cn": [
+      "安静地"
+     ]
+    }
+   ],
+   "help": "reading 是动作，空里该放描绘动作的词。",
+   "explain": "The children are reading quietly. quiet + ly = quietly；注意拼写是 quietly，不是 quitely。",
+   "common_errors": [
+    {
+     "when": "写了 quiet",
+     "say": "quiet 是形容词；描绘动作 reading 要用副词 quietly。"
+    },
+    {
+     "when": "写了 quitely",
+     "say": "拼写错了：quiet 的 t 后面是 ly，写成 quietly，别漏掉中间的 e。"
+    },
+    {
+     "when": "写了 quietlys",
+     "say": "副词不分单复数，不加 s。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "轻松跳上墙",
+   "scene": "看短文：咪咪跳上沙发很轻松；这里说一只猫跳上墙。",
+   "stem": "Look! The cat jumps ___ onto the wall.",
+   "options": [
+    "easy",
+    "easyly",
+    "easily",
+    "easier"
+   ],
+   "answer": "C",
+   "help": "easy 变副词时，y 要变成什么？",
+   "explain": "The cat jumps easily onto the wall. easy 以 -y 结尾，变 y 为 i 再加 ly。",
+   "wrong_feedback": {
+    "A": "easy 是形容词；修饰动词 jumps 要用副词 easily。",
+    "B": "-y 结尾要先把 y 变成 i 再加 ly：easy → easily，不是 easyly。",
+    "D": "这里没有比较，不用比较级 easier。"
+   },
+   "audio_id": "u8r1-q04",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "轻松搬箱子",
+   "scene": "他能轻松地搬起这个重箱子。",
+   "stem": "He can carry the heavy box ___. (easy)",
+   "task": "只写空里的部分。",
+   "answer_text": "easily",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "easily"
+     ],
+     "olds": [
+      "easy",
+      "easyly",
+      "most easy"
+     ],
+     "cn": [
+      "轻松地"
+     ]
+    }
+   ],
+   "help": "carry 是动作，空里要放副词；注意 easy 结尾的 y 要先变身。",
+   "explain": "He can carry the heavy box easily. easy → easily：把 y 变成 i 再加 ly。",
+   "common_errors": [
+    {
+     "when": "写了 easy",
+     "say": "easy 是形容词；描绘动作 carry 要用副词 easily。"
+    },
+    {
+     "when": "写了 easyly",
+     "say": "拼写不对：-y 结尾先变 i，easyly 应写 easily。"
+    },
+    {
+     "when": "写了 more easy",
+     "say": "more 是比较级用的，这里没有比较；而且 easy 的副词是 easily。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "副词的位置",
+   "scene": "哪一句把副词放对了位置？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "She closed the door quietly.",
+    "She closed quietly the door.",
+    "She quietly the door closed.",
+    "She closed the door quiet."
+   ],
+   "answer": "A",
+   "help": "回想规则：有宾语时，副词站在哪里？",
+   "explain": "She closed the door quietly. 动词 closed 有宾语 the door，副词 quietly 放在宾语后面。",
+   "wrong_feedback": {
+    "B": "副词不能插在动词和宾语中间；要放在宾语 the door 后面。",
+    "C": "词序乱了：应该是主语 + 动词 + 宾语 + 副词。",
+    "D": "quiet 是形容词；修饰动词 closed 要用副词 quietly。"
+   },
+   "audio_id": "u8r1-q05",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 忠诚的狗",
+   "scene": "豆豆是一只忠诚的狗，它每天等泽泽回家。",
+   "stem": "Doudou is a ___ dog. He waits for Zeze every day. (faithful)",
+   "task": "只写空里的部分。",
+   "answer_text": "faithful",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "faithful"
+     ],
+     "olds": [
+      "faithfully",
+      "faith"
+     ],
+     "cn": [
+      "忠实的；忠诚的"
+     ]
+    }
+   ],
+   "help": "空在名词 dog 前面，描绘的是狗，不是动作。",
+   "explain": "Doudou is a faithful dog. 名词前用形容词 faithful；faithfully 是副词，用错了地方。",
+   "common_errors": [
+    {
+     "when": "写了 faithfully",
+     "say": "faithfully 是副词，描绘动作；这里要描绘名词 dog，用形容词 faithful。"
+    },
+    {
+     "when": "写了 faith",
+     "say": "faith 是名词'信任'，不能直接描绘 dog；要用形容词 faithful。"
+    },
+    {
+     "when": "写了 faithfuly",
+     "say": "拼写错了：词尾是 -ful，一个 l：faithful。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "faithful 的意思",
+   "scene": "选出 faithful 的正确意思。",
+   "stem": "faithful 的意思是 ___.",
+   "options": [
+    "友好的",
+    "忠实的；忠诚的",
+    "可信任的",
+    "醒着的"
+   ],
+   "answer": "B",
+   "help": "想想豆豆每天等主人回家——它最突出的品质是什么？",
+   "explain": "faithful 的意思是'忠实的；忠诚的'，说的是对主人一直不变心。",
+   "wrong_feedback": {
+    "A": "friendly 才是'友好的'；faithful 是对主人不变心的'忠实的'。",
+    "C": "那是 responsible 的意思；faithful 强调忠诚不变心。",
+    "D": "醒着是 awake；faithful 说的是忠诚。"
+   },
+   "audio_id": "u8r1-q06",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "responsible 的中文",
+   "scene": "写出 responsible 的中文意思。",
+   "stem": "写出 responsible 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "可信任的；可信赖的",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "可信任的",
+      "可信赖的",
+      "可信任的；可信赖的",
+      "负责任的",
+      "有责任心的"
+     ],
+     "olds": [],
+     "cn": [
+      "可信任的；可信赖的"
+     ]
+    }
+   ],
+   "help": "回想生词课：a responsible owner 是什么样的主人？",
+   "explain": "responsible 的中文是'可信任的；可信赖的'，也可以说'负责任的'。",
+   "common_errors": [
+    {
+     "when": "写了'忠实的'",
+     "say": "那是 faithful 的意思；responsible 说的是靠得住、能信任。"
+    },
+    {
+     "when": "写了'友好的'",
+     "say": "friendly 才是'友好的'；responsible 和'友不友好'没关系。"
+    },
+    {
+     "when": "写了'醒着的'",
+     "say": "那是 awake；responsible 是形容人靠谱的词。"
+    }
+   ],
+   "audio_id": "u8r1-q07",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "还醒着",
+   "scene": "夜里十一点，狗还醒着，别吵它睡觉——其实它根本没睡。",
+   "stem": "The dog is still ___. Don't make a noise.",
+   "options": [
+    "sleep",
+    "wake",
+    "asleep",
+    "awake"
+   ],
+   "answer": "D",
+   "help": "be 动词后面要放表示状态的词：醒着。",
+   "explain": "The dog is still awake. awake 是形容词，放在 be 动词后表示'醒着'的状态。",
+   "wrong_feedback": {
+    "A": "sleep 是动词，不能跟在 is 后面表示状态；'醒着'用形容词 awake。",
+    "B": "wake 是动词'醒来/叫醒'；这里 be 后面要放表示状态的 awake。",
+    "C": "asleep 是'睡着'，意思反了：它还醒着，所以别吵。"
+   },
+   "audio_id": "u8r1-q08",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 拿起牵引绳",
+   "scene": "泽泽拿起牵引绳，带豆豆出了门。",
+   "stem": "Zeze ___ the lead and walked out with Doudou. (hold)",
+   "task": "只写空里的部分。",
+   "answer_text": "held",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "held"
+     ],
+     "olds": [
+      "holded",
+      "holds"
+     ],
+     "cn": [
+      "拿着（过去式）"
+     ]
+    }
+   ],
+   "help": "句子讲的是过去的事；hold 的过去式是不规则形式，不是 holded。",
+   "explain": "Zeze held the lead and walked out. hold 的过去式是不规则形式 held，不是 holded。",
+   "common_errors": [
+    {
+     "when": "写了 holded",
+     "say": "hold 的过去式不加 -ed，是不规则变化：hold → held。"
+    },
+    {
+     "when": "写了 holds",
+     "say": "holds 是现在时第三人称单数；句子讲的是已经发生的事，要用过去式 held。"
+    },
+    {
+     "when": "写了 hold",
+     "say": "原形 hold 时态不对；and 后面是 walked（过去式），前面也要用过去式。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "小狗长得快",
+   "scene": "短文里说豆豆长大了；这里说小狗们。",
+   "stem": "Puppies ___ very fast. In a few months, they are big dogs.",
+   "options": [
+    "grow up",
+    "grow ups",
+    "grows up",
+    "grew up"
+   ],
+   "answer": "A",
+   "help": "主语是复数，动词用什么形式？短语本身有没有 s？",
+   "explain": "Puppies grow up very fast. grow up 是'长大'；主语是复数，grow 用原形。",
+   "wrong_feedback": {
+    "B": "短语 grow up 没有 grow ups 这种形式。",
+    "C": "主语 puppies 是复数，动词用原形 grow，不加 s。",
+    "D": "这里说的是普遍规律，用一般现在时，不用过去式 grew。"
+   },
+   "audio_id": "u8r1-q09",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "照顾好你的狗",
+   "scene": "好主人每天要做的事。",
+   "stem": "A good owner must ___ his dog every day.",
+   "options": [
+    "care of",
+    "look for",
+    "care for",
+    "care"
+   ],
+   "answer": "C",
+   "help": "生词课里'照顾'的短语是 care 加哪个介词？",
+   "explain": "A good owner must care for his dog every day. care for 是固定短语，表示'照顾；照料'。",
+   "wrong_feedback": {
+    "A": "固定短语是 care for，不是 care of。",
+    "B": "look for 是'寻找'；这里要的是'照顾'，用 care for。",
+    "D": "只写 care 不完整；'照顾某人'要用短语 care for 加上对象。"
+   },
+   "audio_id": "u8r1-q10",
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 照顾它它就爱你",
+   "scene": "用 care for 完成句子。",
+   "stem": "If you ___ a dog well, it will love you faithfully. (care for)",
+   "task": "只写空里的部分。",
+   "answer_text": "care for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "care for"
+     ],
+     "olds": [
+      "cares for",
+      "care of"
+     ],
+     "cn": [
+      "照顾"
+     ]
+    }
+   ],
+   "help": "主语是 you，动词用原形；短语要写完整。",
+   "explain": "If you care for a dog well, it will love you faithfully. care for 是'照顾'，主语 you 时动词用原形；短语不能写成 cares for 或 care of。",
+   "common_errors": [
+    {
+     "when": "写了 cares for",
+     "say": "主语是 you，不是第三人称单数，动词用原形 care for。"
+    },
+    {
+     "when": "写了 care of",
+     "say": "介词错了：'照顾'是 care for，不是 care of。"
+    },
+    {
+     "when": "写了 care",
+     "say": "短语不完整：care for 才是'照顾'，少了 for 意思就不对。"
+    }
+   ],
+   "reading": "Zeze has a dog called Doudou. Doudou is not a puppy now — he grew up fast. Every morning, Doudou wakes up early and waits by the door quietly. When Zeze opens the door, Doudou runs out happily. He runs fast, but he never attacks people. At the park, Zeze holds the lead carefully and plays with Doudou. Doudou listens well and comes back quickly. In the evening, Doudou sleeps quietly by Zeze's bed. He loves Zeze faithfully. Zeze says, 'A good owner must care for his dog.'"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：独立判断",
+   "teach_html": "<p>换新材料了。林老师带来一只小猫咪咪的故事，这次没有提示带着走，题目都要你自己判断。短文会留在屏幕上，读不懂的句子可以回看。注意找一找：咪咪做每个动作是“怎么做”的。</p>",
+   "audio_id": "u8r1-v-intro",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "咪咪起得晚",
+   "scene": "短文里说咪咪早上起得晚。",
+   "stem": "Mimi wakes up ___ and eats slowly.",
+   "options": [
+    "lately",
+    "late",
+    "later",
+    "lates"
+   ],
+   "answer": "B",
+   "help": "late 和 lately 只有一个字母之差，意思一样吗？",
+   "explain": "Mimi wakes up late. late 本身就是副词'晚'；lately 是'最近'，别混。",
+   "wrong_feedback": {
+    "A": "lately 是'最近'，不是'晚'；late 本身就可以作副词。",
+    "C": "later 是比较级'更晚'，短文里没有在比较。",
+    "D": "没有 lates 这个词；late 作副词时形式不变。"
+   },
+   "audio_id": "u8r1-v02",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 仔细清洁",
+   "scene": "咪咪每天仔细地清洁自己的毛。",
+   "stem": "Mimi cleans her fur ___ every day. (careful)",
+   "task": "只写空里的部分。",
+   "answer_text": "carefully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "carefully"
+     ],
+     "olds": [
+      "careful",
+      "carefuly"
+     ],
+     "cn": [
+      "仔细地"
+     ]
+    }
+   ],
+   "help": "cleans 是动作，空里放描绘动作的词。",
+   "explain": "Mimi cleans her fur carefully every day. careful + ly = carefully，别漏掉第二个 l。",
+   "common_errors": [
+    {
+     "when": "写了 careful",
+     "say": "careful 是形容词；描绘动作 cleans 要用副词 carefully。"
+    },
+    {
+     "when": "写了 carefuly",
+     "say": "拼写少一个 l：careful + ly = carefully。"
+    },
+    {
+     "when": "写了 carefullys",
+     "say": "副词不加复数 s。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "好朋友",
+   "scene": "陈奶奶对咪咪的评价。",
+   "stem": "Grandma Chen says Mimi is a ___ friend.",
+   "options": [
+    "well",
+    "better",
+    "nicely",
+    "good"
+   ],
+   "answer": "D",
+   "help": "friend 前面描绘名词的词，用形容词还是副词？",
+   "explain": "Grandma Chen says Mimi is a good friend. 名词前用形容词 good；well 是 good 的副词形式，用在动词后。",
+   "wrong_feedback": {
+    "A": "friend 是名词，前面要用形容词 good；well 是副词。",
+    "B": "短文里没有比较，不用比较级 better。",
+    "C": "nicely 是副词，不能放在名词 friend 前面。"
+   },
+   "audio_id": "u8r1-v03",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "轻轻地走",
+   "scene": "咪咪在公寓里走路很轻。",
+   "stem": "The cat walks ___ in the flat. (quiet)",
+   "task": "只写空里的部分。",
+   "answer_text": "quietly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "quietly"
+     ],
+     "olds": [
+      "quiet",
+      "quitely"
+     ],
+     "cn": [
+      "轻轻地；安静地"
+     ]
+    }
+   ],
+   "help": "walks 是动作；quiet 的副词怎么拼？",
+   "explain": "The cat walks quietly in the flat. quiet + ly = quietly，注意不要写成 quitely。",
+   "common_errors": [
+    {
+     "when": "写了 quiet",
+     "say": "quiet 是形容词；描绘动作 walks 要用副词 quietly。"
+    },
+    {
+     "when": "写了 quitely",
+     "say": "拼写错位：quietly 是 q-u-i-e-t-l-y，别把 e 和 t 写反。"
+    },
+    {
+     "when": "写了 quietlys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "三句里只有一句把副词用对了。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "She watches happily the birds.",
+    "She watches the birds happy.",
+    "She watches the birds happily.",
+    "She watch the birds happily."
+   ],
+   "answer": "C",
+   "help": "逐句查：副词形式对吗？位置对吗？动词形式对吗？",
+   "explain": "She watches the birds happily. happily 描绘动作 watches，放在宾语后面，位置和形式都对。",
+   "wrong_feedback": {
+    "A": "副词不能插在动词和宾语中间；happily 要放到宾语 the birds 后面。",
+    "B": "happy 是形容词；修饰动词 watches 要用副词 happily。",
+    "D": "主语 she 是第三人称单数，动词要加 s：watches。"
+   },
+   "audio_id": "u8r1-v04",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "从不跑快",
+   "scene": "咪咪从不在公寓里跑得飞快。",
+   "stem": "Mimi never runs ___ in the flat. (fast)",
+   "task": "只写空里的部分。",
+   "answer_text": "fast",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fast"
+     ],
+     "olds": [
+      "fastly",
+      "fastest"
+     ],
+     "cn": [
+      "快"
+     ]
+    }
+   ],
+   "help": "fast 这个词变副词时要不要变形？",
+   "explain": "Mimi never runs fast in the flat. fast 的副词和形容词同形，不加 -ly，也没有 fastly。",
+   "common_errors": [
+    {
+     "when": "写了 fastly",
+     "say": "没有 fastly 这个词；fast 本身就是副词。"
+    },
+    {
+     "when": "写了 faster",
+     "say": "这里没在和谁比较，不用比较级。"
+    },
+    {
+     "when": "写了 fastest",
+     "say": "没有比较对象，不用最高级。"
+    }
+   ],
+   "audio_id": "u8r1-v05",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "努力工作",
+   "scene": "他工作很努力，所以他的狗很健康。",
+   "stem": "He works ___ every day, so his dog is healthy and happy.",
+   "options": [
+    "hard",
+    "hardly",
+    "harder",
+    "hards"
+   ],
+   "answer": "A",
+   "help": "hard 和 hardly 只差两个字母，意思差多远？",
+   "explain": "He works hard every day. hard 作副词是'努力地'；hardly 是'几乎不'，千万别混。",
+   "wrong_feedback": {
+    "B": "hardly 是'几乎不'，意思完全变了：works hardly 是'几乎不工作'，和后半句对不上。",
+    "C": "这里没有比较，不用比较级 harder。",
+    "D": "没有 hards 这个词。"
+   },
+   "audio_id": "u8r1-v06",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 开心地玩",
+   "scene": "小狗和孩子们开心地玩耍。",
+   "stem": "The puppy played ___ with the children. (happy)",
+   "task": "只写空里的部分。",
+   "answer_text": "happily",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "happily"
+     ],
+     "olds": [
+      "happy",
+      "happyly"
+     ],
+     "cn": [
+      "开心地"
+     ]
+    }
+   ],
+   "help": "happy 变副词时，y 要先变成什么？",
+   "explain": "The puppy played happily with the children. happy 以 -y 结尾：y 变 i 再加 ly。",
+   "common_errors": [
+    {
+     "when": "写了 happy",
+     "say": "happy 是形容词；描绘动作 played 要用副词 happily。"
+    },
+    {
+     "when": "写了 happyly",
+     "say": "拼写不对：先把 y 变成 i，是 happily，不是 happyly。"
+    },
+    {
+     "when": "写了 happilys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "飞快地飞走",
+   "scene": "小鸟飞快地飞走了。",
+   "stem": "The bird flew away ___. (quick)",
+   "task": "只写空里的部分。",
+   "answer_text": "quickly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "quickly"
+     ],
+     "olds": [
+      "quick",
+      "quicklys"
+     ],
+     "cn": [
+      "迅速地"
+     ]
+    }
+   ],
+   "help": "flew away 是动作，空里放副词。",
+   "explain": "The bird flew away quickly. quick + ly = quickly。",
+   "common_errors": [
+    {
+     "when": "写了 quick",
+     "say": "quick 是形容词；描绘动作要用副词 quickly。"
+    },
+    {
+     "when": "写了 quicklys",
+     "say": "副词不加 s。"
+    },
+    {
+     "when": "写了 quicklier",
+     "say": "这里没有比较，不用比较级。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "care for 的意思",
+   "scene": "选出 care for 的正确意思。",
+   "stem": "care for 的意思是 ___.",
+   "options": [
+    "寻找",
+    "长大",
+    "抱着",
+    "照顾；照料"
+   ],
+   "answer": "D",
+   "help": "回想泽泽每天喂豆豆、陪豆豆玩——那是 care 的哪一面？",
+   "explain": "care for 的意思是'照顾；照料'。",
+   "wrong_feedback": {
+    "A": "那是 look for；care for 是把对方照看好。",
+    "B": "长大是 grow up；care for 说的是照顾别人。",
+    "C": "抱着是 hold；care for 是日常的照顾、照料。"
+   },
+   "audio_id": "u8r1-v07",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 从不攻击",
+   "scene": "忠诚的狗从不攻击自己爱的人。",
+   "stem": "Good dogs never ___ the people they love. (attack)",
+   "task": "只写空里的部分。",
+   "answer_text": "attack",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "attack"
+     ],
+     "olds": [
+      "attacks",
+      "attacked"
+     ],
+     "cn": [
+      "攻击"
+     ]
+    }
+   ],
+   "help": "主语是 dogs（复数），句子说的是一般规律。",
+   "explain": "Good dogs never attack the people they love. 主语是复数，一般现在时用动词原形 attack。",
+   "common_errors": [
+    {
+     "when": "写了 attacks",
+     "say": "主语 dogs 是复数，动词不能加 s；加 s 的是第三人称单数。"
+    },
+    {
+     "when": "写了 attacked",
+     "say": "这里说的是一般规律，用一般现在时原形，不用过去式。"
+    },
+    {
+     "when": "写了 attacking",
+     "say": "attacking 是 -ing 形式，前面需要 be 动词，这里没有。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "还醒着看门",
+   "scene": "灯亮着，狗还醒着，盯着门看。",
+   "stem": "The light is on and the dog is ___. It is watching the door.",
+   "options": [
+    "sleep",
+    "awake",
+    "wakes",
+    "asleep"
+   ],
+   "answer": "B",
+   "help": "is 后面放表示状态的形容词：醒着。",
+   "explain": "The dog is awake. awake 放在 be 动词后，表示'醒着'的状态。",
+   "wrong_feedback": {
+    "A": "sleep 是动词，不能跟在 is 后面表示状态；'醒着'用 awake。",
+    "C": "wakes 是动词形式；is 后面要放形容词 awake 表示状态。",
+    "D": "asleep 是'睡着了'，可它正盯着门看，意思对不上。"
+   },
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 简单地回答",
+   "scene": "请简单地回答这个问题。",
+   "stem": "Please answer the question ___. (simple)",
+   "task": "只写空里的部分。",
+   "answer_text": "simply",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "simply"
+     ],
+     "olds": [
+      "simplely",
+      "simple"
+     ],
+     "cn": [
+      "简单地"
+     ]
+    }
+   ],
+   "help": "simple 以 -le 结尾，变副词时 e 要换成什么？",
+   "explain": "Please answer the question simply. -le 结尾的形容词变副词：去 e 加 y，simple → simply。",
+   "common_errors": [
+    {
+     "when": "写了 simplely",
+     "say": "拼写不对：-le 结尾要把 e 换成 y，是 simply，不是 simplely。"
+    },
+    {
+     "when": "写了 simple",
+     "say": "simple 是形容词；描绘动作 answer 要用副词 simply。"
+    },
+    {
+     "when": "写了 simplys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "小狗长大",
+   "scene": "一只小狗第一年长得很快。",
+   "stem": "A puppy ___ very fast in its first year. (grow up)",
+   "task": "只写空里的部分。",
+   "answer_text": "grows up",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "grows up"
+     ],
+     "olds": [
+      "grow up",
+      "grew up"
+     ],
+     "cn": [
+      "长大"
+     ]
+    }
+   ],
+   "help": "主语 a puppy 是单数，grow 要不要加 s？",
+   "explain": "A puppy grows up very fast. 主语是单数第三人称，grow 要加 s：grows up。",
+   "common_errors": [
+    {
+     "when": "写了 grow up",
+     "say": "主语 a puppy 是单数，动词要加 s：grows up。"
+    },
+    {
+     "when": "写了 grew up",
+     "say": "这里说的是一般规律，用一般现在时，不用过去式。"
+    },
+    {
+     "when": "写了 grows",
+     "say": "只写 grows 少了 up，短语 grow up 才完整表示'长大'。"
+    }
+   ],
+   "audio_id": "u8r1-v08",
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 负责任地照顾",
+   "scene": "好主人会负责任地照顾宠物。",
+   "stem": "A good owner looks after his pet ___. (responsible)",
+   "task": "只写空里的部分。",
+   "answer_text": "responsibly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "responsibly"
+     ],
+     "olds": [
+      "responsible",
+      "responsiblely"
+     ],
+     "cn": [
+      "负责任地"
+     ]
+    }
+   ],
+   "help": "responsible 以 -le 结尾，变副词的规则和 simple 一样。",
+   "explain": "A good owner looks after his pet responsibly. responsible → responsibly：-le 结尾去 e 加 y。",
+   "common_errors": [
+    {
+     "when": "写了 responsible",
+     "say": "responsible 是形容词；描绘动作 looks after 要用副词 responsibly。"
+    },
+    {
+     "when": "写了 responsiblely",
+     "say": "拼写不对：-le 结尾去 e 加 y，是 responsibly。"
+    },
+    {
+     "when": "写了 responsibles",
+     "say": "这是把形容词加了 s，既不是形容词也不是副词。"
+    }
+   ],
+   "reading": "Mimi is a white cat. She lives happily in a small flat with Grandma Chen. Mimi walks quietly and jumps carefully onto the sofa. In the morning, she wakes up late and eats slowly. She cleans her fur carefully every day. When Grandma Chen works, Mimi sleeps quietly in the sun. She never runs fast in the flat and she never makes a loud noise. In the evening, Mimi sits by the window and watches the birds outside. She cannot catch them, but she watches them happily. Grandma Chen says Mimi is a good friend."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：老朋友回锅",
+   "teach_html": "<p>最后一组五道题是压轴挑战，里面混进了三位老朋友：四单元的<strong>被动语态</strong>、三单元的<strong>比较级</strong>，还有七单元<strong>条件句</strong>的预告。用今天学的副词功夫，再加上老本事，一起把它们拿下。</p>",
+   "audio_id": "u8r1-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "把副词用对的只有一句。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "He did carefully his homework.",
+    "He did his homework careful.",
+    "He did his homework carefully.",
+    "He does his homework carefully yesterday."
+   ],
+   "answer": "C",
+   "help": "逐句查三点：副词形式、副词位置、动词时态。",
+   "explain": "He did his homework carefully. carefully 放在宾语 homework 后面，形式和位置都对；其余三句分别错在位置、形式和时态。",
+   "wrong_feedback": {
+    "A": "副词不能插在动词和宾语中间；carefully 要放在宾语 homework 后面。",
+    "B": "careful 是形容词；修饰动词 did 要用副词 carefully。",
+    "D": "yesterday 是过去的时间，动词要用 did，不能用 does。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 狗被喂食",
+   "scene": "回锅四单元：被动语态。",
+   "stem": "The little dog ___ by Zeze every morning. (feed)",
+   "task": "只写空里的部分。",
+   "answer_text": "is fed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is fed"
+     ],
+     "olds": [
+      "feeds",
+      "is feed"
+     ],
+     "cn": [
+      "被喂"
+     ]
+    }
+   ],
+   "help": "小狗是被喂的，不是自己喂自己；feed 的过去分词是不规则的。",
+   "explain": "The little dog is fed by Zeze every morning. 被动语态：be + 过去分词；feed 的过去分词是 fed。",
+   "common_errors": [
+    {
+     "when": "写了 feeds",
+     "say": "feeds 是主动形式；小狗是被喂的对象，要用被动 is fed。"
+    },
+    {
+     "when": "写了 is feed",
+     "say": "被动语态要用过去分词 fed，不是原形 feed。"
+    },
+    {
+     "when": "写了 is feeded",
+     "say": "feed 的过去分词是不规则的 fed，没有 feeded。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 跑得更快",
+   "scene": "回锅三单元：比较级；这次比的是动作。",
+   "stem": "Doudou runs ___ than Mimi. (fast)",
+   "task": "只写空里的部分。",
+   "answer_text": "faster",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "faster"
+     ],
+     "olds": [
+      "more fast",
+      "fastly"
+     ],
+     "cn": [
+      "更快"
+     ]
+    }
+   ],
+   "help": "有 than，就是在比较；fast 的比较级怎么变？",
+   "explain": "Doudou runs faster than Mimi. fast 是同形副词，比较级直接加 -er：faster，不用 more fast。",
+   "common_errors": [
+    {
+     "when": "写了 more fast",
+     "say": "fast 这类短副词的比较级加 -er，不用 more。"
+    },
+    {
+     "when": "写了 fast",
+     "say": "有 than 就要用比较级 faster，原级不够。"
+    },
+    {
+     "when": "写了 fastly",
+     "say": "没有 fastly 这个词；而且比较级要用 faster。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 明天下雨",
+   "scene": "七单元条件句的近亲：谈将来的可能。",
+   "stem": "If it rains tomorrow, we ___ at home.",
+   "options": [
+    "will stay",
+    "stay",
+    "stays",
+    "stayed"
+   ],
+   "answer": "A",
+   "help": "注意时间词 tomorrow——说的是将来。",
+   "explain": "If it rains tomorrow, we will stay at home. 谈将来的可能：if 从句用一般现在时，主句用 will。",
+   "wrong_feedback": {
+    "B": "if 谈的是将来可能发生的事，主句要用 will stay。",
+    "C": "主语是 we，动词不能加 s；而且将来要用 will。",
+    "D": "这是将来的事，不用过去式 stayed。"
+   }
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 美美地唱",
+   "scene": "小女孩在演出中美美地唱了一首歌。",
+   "stem": "The little girl sang ___ in the school show. (beautiful)",
+   "task": "只写空里的部分。",
+   "answer_text": "beautifully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "beautifully"
+     ],
+     "olds": [
+      "beautiful",
+      "beautifuly"
+     ],
+     "cn": [
+      "优美地"
+     ]
+    }
+   ],
+   "help": "sang 是动作；beautiful 变副词时直接加什么？",
+   "explain": "The little girl sang beautifully in the school show. beautiful 以 -l 结尾，直接加 ly：beautifully，两个 l 别漏。",
+   "common_errors": [
+    {
+     "when": "写了 beautiful",
+     "say": "beautiful 是形容词；描绘动作 sang 要用副词 beautifully。"
+    },
+    {
+     "when": "写了 beautifuly",
+     "say": "拼写少一个 l：beautiful + ly = beautifully。"
+    },
+    {
+     "when": "写了 beautifullys",
+     "say": "副词不加 s。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "下集预告：公寓里的狗",
+   "teach_html": "<p>本课收官：你已经会给动作配上副词了——quickly、carefully、happily，还有 fast、well 这些特殊成员。</p><p>下一课我们去看看住在公寓（flat）里的狗：地方小、邻居多，麻烦也多。新词和新短语在等你，站长先卖个关子。</p>",
+   "audio_id": "u8r1-ending"
+  }
+ ],
+ "title": "宠物开场：副词入门",
+ "unit": "Unit 8 Pets and us",
+ "version": 1
+}
