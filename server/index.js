@@ -85,7 +85,7 @@ const LESSON_CACHE = {};
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u[2-6]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
+  if (!/^(?:u[2-6]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -2391,7 +2391,7 @@ function orderedLessons() {
         }
       }
       // 加餐/学科课（deep/moon/sx/yw）：不参与英语主线，排在主线后面
-      const extras = ids.filter(id => /^(deep|moon|dict)\d+$/.test(id) || /^(sx\d+|yw)/.test(id));
+      const extras = ids.filter(id => /^(deep|moon|dict|write)\d+$/.test(id) || /^(sx\d+|yw)/.test(id));
       // 练习课最后（保持现有逻辑）
       const reviews = ids.filter(id => isReviewLesson(id));
       return [...mainOrder, ...extras, ...reviews];
@@ -2555,7 +2555,7 @@ function getDailyMistakeProgress() {
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
   // 深海/登月加餐课、精听听写试点课（dict）永远开放（补充课不阻塞主线、不被每日复习门锁）
-  if (/^(deep|moon|dict)\d+$/.test(lid)) return true;
+  if (/^(deep|moon|dict|write)\d+$/.test(lid)) return true;
   // review3 是针对性干预复习课（2026-10-11），随时可进，不等主线学完
   if (lid === 'review3') return true;
   // review5 是 Unit 4 综合复习加练课（2026-10-21），Unit 4 已学完，直接开放，不设新门
