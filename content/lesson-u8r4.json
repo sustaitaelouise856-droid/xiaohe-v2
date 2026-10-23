@@ -1,0 +1,1410 @@
+{
+ "lesson_id": "u8r4",
+ "practice_end": 27,
+ "home_subtitle": "第四课 · 宠物从前传",
+ "part1_desc": "第 1–27 步：学副词最高级——most + -ly 副词、-est 同形副词、best/worst/least 三个不规则；跟着短文回几千年前的宠物世界，本课新词 magical、wealth、queen、servant、pride、among、relationship。",
+ "part2_desc": "第 28–50 步：独立读电影明星狗 Rin 的故事，课尾压轴：最高级综合、现在完成时与 unless 回锅、两者比较陷阱。",
+ "note": "本课阅读材料为教研自编（史实线索对齐课本 Section 4，文字原创），非课本原文。考查能力：副词最高级构成（most+-ly 副词、-est 同形副词、不规则 best/worst/least）、比较级与最高级辨析（than 与 of all）、most 作副词与作限定词辨析。Unit 8 主题，核心词 magical/wealth/queen/servant/pride/among/relationship，短语 catch the eye of somebody。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "时光机：几千年前的宠物",
+   "teach_html": "<p>今天广播站开时光机，去看看几千年前的宠物：埃及女王的猫、中世纪贵妇的小狗、农场里干活的狗。</p><p>讲历史时总要说“最……”：谁干活最卖力？人们最喜欢哪种动物？这就要用副词的<strong>最高级</strong>——三者或三者以上比较时的形式。</p>",
+   "audio_id": "u8r4-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "最高级的信号：范围",
+   "teach_html": "<p>比较级是两者之间比，后面常跟 than。最高级是<strong>在一个范围里排第一</strong>，常有这些信号：</p><p><strong>of all</strong>（在所有……中）、<strong>of the three</strong>、<strong>in the world</strong>、<strong>in our class</strong>。</p><p>例：<strong>Of all the dogs, Rin ran fastest.</strong>（在所有狗中，Rin 跑得最快。）</p>",
+   "audio_id": "u8r4-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "构成一：-ly 副词前面加 most",
+   "teach_html": "<p>以 -ly 结尾的副词，最高级在前面加 <strong>most</strong>（前面的 the 可以省略）：</p><p>carefully → <strong>(the) most carefully</strong><br>slowly → <strong>(the) most slowly</strong><br>patiently → <strong>(the) most patiently</strong></p><p>例：<strong>She listened most patiently.</strong> 和比较级对照记：more carefully（比）→ most carefully（最）。</p>",
+   "audio_id": "u8r4-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "构成二：同形副词加 -est",
+   "teach_html": "<p>和形容词同形的短副词，最高级加 <strong>-est</strong>：</p><p>fast → <strong>fastest</strong>，hard → <strong>hardest</strong>，early → <strong>earliest</strong>，late → <strong>latest</strong>（作副词时较少用）。</p><p>例：<strong>Dogs worked hardest on farms.</strong> 这类词不要用 most：不能说 most fast。</p>",
+   "audio_id": "u8r4-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "不规则三兄弟",
+   "teach_html": "<p>最高级的不规则形式只有三个高频的：</p><p>well → better → <strong>best</strong><br>badly → worse → <strong>worst</strong><br>little → less → <strong>least</strong></p><p>例：<strong>People loved Rin best.</strong>（人们最喜欢 Rin。）把三兄弟和上一课的比较级连起来背：better-best、worse-worst、less-least。</p>",
+   "audio_id": "u8r4-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "判断法：先数对象",
+   "teach_html": "<p>做题先数比较对象：</p><p>① 两个对象、或有 than → 比较级：<strong>faster than</strong>、<strong>more carefully than</strong>。</p><p>② 三个及以上、或有 of all / in ... 的范围 → 最高级：<strong>fastest of all</strong>、<strong>most carefully in the class</strong>。</p><p>数清楚再变形，就不会把比较级和最高级弄混。</p>",
+   "audio_id": "u8r4-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：魔力、财富、女王",
+   "teach_html": "<p><strong>magical</strong> /ˈmædʒɪkl/ adj. 有魔力的：<strong>magical powers</strong>（魔力）。名词 magic 是“魔法”。</p><p><strong>wealth</strong> /welθ/ n. 钱财；财富：<strong>a symbol of wealth</strong>（财富的象征）。</p><p><strong>queen</strong> /kwiːn/ n. 女王；王后。对应的国王是 king。</p>",
+   "audio_id": "u8r4-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二：仆人、自豪与关系",
+   "teach_html": "<p><strong>servant</strong> /ˈsɜːvənt/ n. 仆人；佣人：有钱人家的狗都有自己的 servant。</p><p><strong>pride</strong> /praɪd/ n. 自豪；骄傲：<strong>be full of pride</strong>（满心自豪）。形容词是 proud。</p><p><strong>among</strong> /əˈmʌŋ/ prep. 在……中（三者以上）：<strong>among all animals</strong>。</p><p><strong>relationship</strong> /rɪˈleɪʃnʃɪp/ n. 关系：<strong>the relationship between people and pets</strong>。</p>",
+   "audio_id": "u8r4-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "短语与构词",
+   "teach_html": "<p>短语：<strong>catch the eye of somebody</strong> 引起某人的注意：<strong>Rin caught the eye of a film-maker.</strong>（Rin 引起了一位电影人的注意。）注意 catch 在过去的事里要用 caught。</p><p>构词小站：形容词加 <strong>-ity</strong> 变名词：responsible → <strong>responsibility</strong>（责任），possible → possibility。拼写上把 -le 换成 -ility。</p>",
+   "audio_id": "u8r4-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：宠物从前传",
+   "teach_html": "<p>短文带你从古埃及走到中世纪。读的时候留意最高级的信号词 of all，看看每个“最”说的是谁。短文会留在屏幕上，随时可回看。</p>",
+   "audio_id": "u8r4-prac-01",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "干活最卖力",
+   "scene": "短文里农场的狗干活最卖力。",
+   "stem": "Of all the animals, dogs worked ___ on farms.",
+   "options": [
+    "harder",
+    "most hard",
+    "hardly",
+    "hardest"
+   ],
+   "answer": "D",
+   "help": "先数范围：of all 是几者比较？",
+   "explain": "Dogs worked hardest on farms. hard → hardest，三者以上用最高级。",
+   "wrong_feedback": {
+    "A": "有 of all（三者以上范围）用最高级 hardest，不用比较级。",
+    "B": "hard 的最高级加 -est，不用 most hard。",
+    "C": "hardly 是'几乎不'，意思完全不对。"
+   },
+   "audio_id": "u8r4-q01",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "吃得最慢",
+   "scene": "三只猫里咪咪吃得最慢。",
+   "stem": "Of the three cats, Mimi eats ___. (slowly)",
+   "task": "只写空里的部分。",
+   "answer_text": "most slowly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "most slowly",
+      "the most slowly"
+     ],
+     "olds": [
+      "slowliest",
+      "more slowly"
+     ],
+     "cn": [
+      "最慢地"
+     ]
+    }
+   ],
+   "help": "范围是三只猫；slowly 的最高级用哪种变法？",
+   "explain": "Of the three cats, Mimi eats most slowly. -ly 副词最高级前面加 most（the 可省）。",
+   "common_errors": [
+    {
+     "when": "写了 slowliest",
+     "say": "没有这种拼法；slowly 的最高级是 most slowly。"
+    },
+    {
+     "when": "写了 more slowly",
+     "say": "more slowly 是比较级；三者比较要用最高级。"
+    },
+    {
+     "when": "写了 slowlyest",
+     "say": "slowly 不能加 -est；用 most slowly。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 跑得最快",
+   "scene": "全班同学里他跑得最快。",
+   "stem": "Of all the students in our class, he runs ___. (fast)",
+   "task": "只写空里的部分。",
+   "answer_text": "fastest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fastest",
+      "the fastest"
+     ],
+     "olds": [
+      "most fast",
+      "faster"
+     ],
+     "cn": [
+      "最快"
+     ]
+    }
+   ],
+   "help": "of all the students 是大范围；fast 的最高级怎么变？",
+   "explain": "He runs fastest. fast 是同形短副词，最高级加 -est。",
+   "common_errors": [
+    {
+     "when": "写了 most fast",
+     "say": "fast 的最高级不用 most，直接加 -est：fastest。"
+    },
+    {
+     "when": "写了 faster",
+     "say": "faster 是比较级；有 of all 的范围要用最高级。"
+    },
+    {
+     "when": "写了 fastly",
+     "say": "没有 fastly 这个词。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "唱得最好",
+   "scene": "演出里她唱得最好。",
+   "stem": "She sings ___ of all the girls in the show.",
+   "options": [
+    "better",
+    "best",
+    "more well",
+    "goodest"
+   ],
+   "answer": "B",
+   "help": "well 的三级变化：well → better → ?",
+   "explain": "She sings best of all the girls. well 的最高级是 best。",
+   "wrong_feedback": {
+    "A": "of all 是最高级范围，用 best，不用比较级 better。",
+    "C": "well 的最高级是不规则的 best，不能用 more well。",
+    "D": "没有 goodest 这个词；记三兄弟：well-better-best。"
+   },
+   "audio_id": "u8r4-q02",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "title": "考得最差",
+   "scene": "全班里他这次考得最差，因为他没复习。",
+   "stem": "Of all the students, he did ___ in the test because he didn't study. (badly)",
+   "task": "只写空里的部分。",
+   "answer_text": "worst",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "worst",
+      "the worst"
+     ],
+     "olds": [
+      "more badly",
+      "worse"
+     ],
+     "cn": [
+      "最差地"
+     ]
+    }
+   ],
+   "help": "全班范围；badly 的最高级是不规则的。",
+   "explain": "He did worst in the test. badly → worse → worst，全班比较用最高级 worst。",
+   "common_errors": [
+    {
+     "when": "写了 more badly",
+     "say": "badly 的变化不规则，不用 more；最高级是 worst。"
+    },
+    {
+     "when": "写了 worse",
+     "say": "worse 是比较级；of all the students 是最高级范围。"
+    },
+    {
+     "when": "写了 badliest",
+     "say": "没有这种变法；记住 badly-worse-worst。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 最耐心地听",
+   "scene": "三家诊所里，Sunny Pet 听主人说话最耐心。",
+   "stem": "Among the three clinics, Sunny Pet listens to owners ___. (patiently)",
+   "task": "只写空里的部分。",
+   "answer_text": "most patiently",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "most patiently",
+      "the most patiently"
+     ],
+     "olds": [
+      "patientliest",
+      "more patiently"
+     ],
+     "cn": [
+      "最耐心地"
+     ]
+    }
+   ],
+   "help": "范围是三家；patiently 的最高级？",
+   "explain": "Sunny Pet listens to owners most patiently. -ly 副词最高级加 most。",
+   "common_errors": [
+    {
+     "when": "写了 patientliest",
+     "say": "没有这种拼法；用 most patiently。"
+    },
+    {
+     "when": "写了 more patiently",
+     "say": "那是比较级；三家比较用最高级。"
+    },
+    {
+     "when": "写了 patientlyest",
+     "say": "patiently 不能加 -est。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "有魔力的",
+   "scene": "埃及人相信猫有魔力，这个故事很神奇。",
+   "stem": "People believed cats had ___ powers.",
+   "options": [
+    "magical",
+    "magic",
+    "magically",
+    "magicals"
+   ],
+   "answer": "A",
+   "help": "powers 是名词，前面描绘它的用形容词还是副词？",
+   "explain": "People believed cats had magical powers. magical 是形容词'有魔力的'。",
+   "wrong_feedback": {
+    "B": "magic 多作名词'魔法'；描绘名词 powers 要用形容词 magical。",
+    "C": "magically 是副词；powers 是名词，前面用形容词 magical。",
+    "D": "形容词不加 s。"
+   },
+   "audio_id": "u8r4-q03",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "queen 的中文",
+   "scene": "写出 queen 的中文意思。",
+   "stem": "写出 queen 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "女王；王后",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "女王",
+      "王后",
+      "女王；王后"
+     ],
+     "olds": [],
+     "cn": [
+      "女王；王后"
+     ]
+    }
+   ],
+   "help": "想想短文里埃及的那位——她是国王还是女王？",
+   "explain": "queen 的中文是'女王；王后'。",
+   "common_errors": [
+    {
+     "when": "写了'国王'",
+     "say": "国王是 king；queen 是女性君主，女王或王后。"
+    },
+    {
+     "when": "写了'公主'",
+     "say": "公主是 princess，还没有登上王位。"
+    },
+    {
+     "when": "写了'仆人'",
+     "say": "仆人是 servant，地位正好相反。"
+    }
+   ],
+   "audio_id": "u8r4-q04",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "财富的象征",
+   "scene": "中世纪，宠物是财富和权力的象征。",
+   "stem": "In the Middle Ages, pets were a symbol of ___ and power.",
+   "options": [
+    "wealthy",
+    "pride",
+    "wealth",
+    "servant"
+   ],
+   "answer": "C",
+   "help": "a symbol of 后面跟名词；哪个词是'财富'？",
+   "explain": "Pets were a symbol of wealth and power. wealth 是名词'钱财；财富'。",
+   "wrong_feedback": {
+    "A": "wealthy 是形容词'富有的'；a symbol of 后面要用名词 wealth。",
+    "B": "pride 是'自豪'；和 power 并列作'象征'的应该是'财富'。",
+    "D": "servant 是'仆人'，意思不对。"
+   },
+   "audio_id": "u8r4-q05",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 自己的仆人",
+   "scene": "贵妇的小狗甚至有自己的仆人照顾。",
+   "stem": "The little dogs even had their own ___ to look after them. (servant)",
+   "task": "只写空里的部分。",
+   "answer_text": "servants",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "servants"
+     ],
+     "olds": [
+      "servant",
+      "servantes"
+     ],
+     "cn": [
+      "仆人（复数）"
+     ]
+    }
+   ],
+   "help": "their own 后面、又是好几只狗，仆人用单数还是复数？",
+   "explain": "The little dogs even had their own servants. 主语是 dogs（复数），仆人也用复数 servants。",
+   "common_errors": [
+    {
+     "when": "写了 servant",
+     "say": "狗是好几只，仆人也要用复数 servants。"
+    },
+    {
+     "when": "写了 servantes",
+     "say": "拼写错了：servant 的复数直接加 s，是 servants。"
+    },
+    {
+     "when": "写了 servant's",
+     "say": "这里不是所有格，不用撇号。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "在所有动物之中",
+   "scene": "在短文所有动物里，猫和狗离人最近。",
+   "stem": "___ all the pets in the story, cats and dogs lived closest to people.",
+   "options": [
+    "Between",
+    "Among",
+    "Of",
+    "In"
+   ],
+   "answer": "B",
+   "help": "三者以上'在……之中'，是哪个介词？",
+   "explain": "Among all the pets in the story... among 用于三者或三者以上的群体。",
+   "wrong_feedback": {
+    "A": "between 多用于两者之间；all the pets 是很多个，用 Among。",
+    "C": "of 不能这样放在句首表示'在众多之中'；固定用法是 Among + 群体。",
+    "D": "in 也不能；'在……（三者以上）中'用 among。"
+   },
+   "audio_id": "u8r4-q06",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "满心自豪",
+   "scene": "Duncan 对他的狗满心自豪。",
+   "stem": "Duncan was full of ___ for his clever dog. (pride)",
+   "task": "只写空里的部分。",
+   "answer_text": "pride",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "pride"
+     ],
+     "olds": [
+      "proud",
+      "prides"
+     ],
+     "cn": [
+      "自豪"
+     ]
+    }
+   ],
+   "help": "be full of 后面跟名词还是形容词？",
+   "explain": "Duncan was full of pride. pride 是名词'自豪'；proud 是形容词，不能跟在 of 后面。",
+   "common_errors": [
+    {
+     "when": "写了 proud",
+     "say": "proud 是形容词；be full of 后面用名词 pride。"
+    },
+    {
+     "when": "写了 prides",
+     "say": "pride 在这里是抽象名词，不加 s。"
+    },
+    {
+     "when": "写了 proudly",
+     "say": "proudly 是副词'自豪地'，位置和词性都不对。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "人与宠物的关系",
+   "scene": "这些年，人与宠物的关系越来越亲近。",
+   "stem": "Over the years, the ___ between people and pets has grown closer.",
+   "options": [
+    "relate",
+    "relationships",
+    "relation",
+    "relationship"
+   ],
+   "answer": "D",
+   "help": "the 和 between 之间要放名词：哪个是课本里的词？",
+   "explain": "The relationship between people and pets has grown closer. relationship 是名词'关系'。",
+   "wrong_feedback": {
+    "A": "relate 是动词；the 后面需要名词 relationship。",
+    "B": "这里说的是两类之间的关系（一个整体），用单数 relationship，和 has 也搭配。",
+    "C": "relation 也能作名词，但课本词条是 relationship，指人与人（宠物）之间的关系先用它。"
+   },
+   "audio_id": "u8r4-q07",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 引起注意",
+   "scene": "聪明的 Rin 引起了一位电影人的注意。",
+   "stem": "The clever dog ___ the eye of a film-maker. (catch)",
+   "task": "只写空里的部分。",
+   "answer_text": "caught",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "caught"
+     ],
+     "olds": [
+      "catched",
+      "catches"
+     ],
+     "cn": [
+      "引起（过去式）"
+     ]
+    }
+   ],
+   "help": "这是过去发生的事；catch 的过去式是不规则的。",
+   "explain": "The clever dog caught the eye of a film-maker. catch → caught，不规则，不能写 catched。",
+   "common_errors": [
+    {
+     "when": "写了 catched",
+     "say": "catch 的过去式是不规则的 caught，没有 catched。"
+    },
+    {
+     "when": "写了 catches",
+     "say": "讲的是过去的事，要用过去式 caught，不用现在时。"
+    },
+    {
+     "when": "写了 catch",
+     "say": "时态不对：整个故事都在讲过去。"
+    }
+   ],
+   "audio_id": "u8r4-q08",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "笑得最大声",
+   "scene": "我所有朋友里，汤姆笑得最大声。",
+   "stem": "Of all my friends, Tom laughs ___.",
+   "options": [
+    "loudlier",
+    "more loudly",
+    "most loudly",
+    "loudliest"
+   ],
+   "answer": "C",
+   "help": "of all 是最高级信号；loudly 怎么变最高级？",
+   "explain": "Tom laughs most loudly. -ly 副词最高级前面加 most。",
+   "wrong_feedback": {
+    "A": "-ly 副词的最高级用 most，不能加 -er。",
+    "B": "有 of all 用最高级 most loudly，不用比较级。",
+    "D": "没有 loudliest 这种拼法；用 most loudly。"
+   },
+   "audio_id": "u8r4-q09",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "起得最早",
+   "scene": "你家里谁起得最早？",
+   "stem": "Who gets up ___ in your family?",
+   "options": [
+    "earliest",
+    "earlier",
+    "most early",
+    "earlyest"
+   ],
+   "answer": "A",
+   "help": "全家范围内排第一：early 的最高级？",
+   "explain": "Who gets up earliest in your family? early → earliest（y 变 i 加 est）。",
+   "wrong_feedback": {
+    "B": "问的是全家范围（最高级），用 earliest，不用比较级。",
+    "C": "early 的最高级加 -est：earliest，不用 most。",
+    "D": "拼写：y 变 i 再加 est，是 earliest。"
+   },
+   "audio_id": "u8r4-q10",
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 干活最卖力",
+   "scene": "我们的狗很卖力，但农场的狗在所有狗里干活最卖力。",
+   "stem": "Our dog works hard, but the farm dog works ___ of all. (hard)",
+   "task": "只写空里的部分。",
+   "answer_text": "hardest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hardest",
+      "the hardest"
+     ],
+     "olds": [
+      "harder",
+      "most hardly"
+     ],
+     "cn": [
+      "最努力地"
+     ]
+    }
+   ],
+   "help": "of all 是范围信号；别被 hardly 拐走。",
+   "explain": "The farm dog works hardest of all. hard 的最高级是 hardest；hardly 是'几乎不'，意思错。",
+   "common_errors": [
+    {
+     "when": "写了 harder",
+     "say": "harder 是比较级；有 of all 要用最高级。"
+    },
+    {
+     "when": "写了 most hardly",
+     "say": "hardly 是'几乎不'，意思全反了；这里要用 hardest。"
+    },
+    {
+     "when": "写了 hardestest",
+     "say": "hardest 已经是最高级，不能再加。"
+    }
+   ],
+   "reading": "Long ago, in Egypt, people kept cats in their homes. A queen liked cats best of all animals, and many people believed cats had magical powers. In the Middle Ages in Europe, kings and queens kept dogs. Rich ladies carried small lapdogs, and the dogs even had their own servants! On farms, dogs worked hardest of all — they helped people hunt and look after animals. Cats and dogs lived closest to people. Of all the animals in history, they became people's best friends."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：电影明星狗",
+   "teach_html": "<p>换材料了：一只叫 Rin 的狗从战场走上了电影银幕。这次自己判断，还是老办法——先数比较的对象，再选比较级还是最高级。短文会留在屏幕上。</p>",
+   "audio_id": "u8r4-v-intro",
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "出名的原因",
+   "scene": "读短文回答：Rin 为什么出名？",
+   "stem": "Why did Rin become famous?",
+   "options": [
+    "He worked on a farm.",
+    "He caught a film-maker's cat.",
+    "He was a queen's dog.",
+    "He acted in many films."
+   ],
+   "answer": "D",
+   "help": "回短文找 acted 这个词出现的那句。",
+   "explain": "He acted in many films. 短文说他演了很多电影，因此出名。",
+   "wrong_feedback": {
+    "A": "短文没说他在农场工作；他是在犬展和电影里出的名。",
+    "B": "是 catch the eye of（引起注意），不是抓住了谁的猫。",
+    "C": "女王是上一篇短文里的人物；Rin 是士兵的狗。"
+   },
+   "audio_id": "u8r4-v02",
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 学得最快",
+   "scene": "Rin 学把戏是军营里所有狗里最快的。",
+   "stem": "Rin learned tricks ___ of all the dogs in the camp. (fast)",
+   "task": "只写空里的部分。",
+   "answer_text": "fastest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fastest",
+      "the fastest"
+     ],
+     "olds": [
+      "faster",
+      "most fast"
+     ],
+     "cn": [
+      "最快"
+     ]
+    }
+   ],
+   "help": "of all the dogs 是范围；fast 的最高级？",
+   "explain": "Rin learned tricks fastest of all the dogs. 三者以上用最高级 fastest。",
+   "common_errors": [
+    {
+     "when": "写了 faster",
+     "say": "faster 是比较级；这里有 of all 的范围，用最高级。"
+    },
+    {
+     "when": "写了 most fast",
+     "say": "fast 加 -est，不用 most。"
+    },
+    {
+     "when": "写了 fastly",
+     "say": "没有 fastly 这个词。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "最受喜爱",
+   "scene": "在所有电影狗里，人们最喜欢 Rin。",
+   "stem": "Of all the dogs in films, people loved Rin ___.",
+   "options": [
+    "better",
+    "wellest",
+    "best",
+    "more well"
+   ],
+   "answer": "C",
+   "help": "well 的三级变化背一遍：原级、比较级、最高级。",
+   "explain": "People loved Rin best. well 的最高级是 best。",
+   "wrong_feedback": {
+    "A": "of all 用最高级 best，不用比较级 better。",
+    "B": "没有 wellest 这个词；well 的最高级是 best。",
+    "D": "well 的三级是不规则的：well-better-best。"
+   },
+   "audio_id": "u8r4-v03",
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "跳得最高",
+   "scene": "Rin 在犬展上跳得最高。",
+   "stem": "Rin jumped ___ of all the dogs in the show. (high)",
+   "task": "只写空里的部分。",
+   "answer_text": "highest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "highest",
+      "the highest"
+     ],
+     "olds": [
+      "higher",
+      "most high"
+     ],
+     "cn": [
+      "最高"
+     ]
+    }
+   ],
+   "help": "of all 是最高级信号；high 这类短副词加什么？",
+   "explain": "Rin jumped highest of all the dogs. high 的最高级是 highest。",
+   "common_errors": [
+    {
+     "when": "写了 higher",
+     "say": "higher 是比较级；of all 要用最高级。"
+    },
+    {
+     "when": "写了 most high",
+     "say": "high 的最高级加 -est，不用 most。"
+    },
+    {
+     "when": "写了 highestest",
+     "say": "highest 已是最高级，不能重复加。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "三句里只有一句对。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Of the three singers, she sang more beautifully.",
+    "Of the three singers, she sang most beautifully.",
+    "Of the three singers, she sang beautifuliest.",
+    "Of the three singers, she sings most beautifully yesterday."
+   ],
+   "answer": "B",
+   "help": "逐句查：对象是三个；时态看 yesterday。",
+   "explain": "Of the three singers, she sang most beautifully. 对象三个用最高级，时态也对。",
+   "wrong_feedback": {
+    "A": "三位歌手比较用最高级 most beautifully，不用比较级 more。",
+    "C": "没有 beautifuliest 这种拼法；-ly 副词最高级用 most。",
+    "D": "yesterday 是过去的时间，动词要用 sang，不能用 sings。"
+   },
+   "audio_id": "u8r4-v04",
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "古人养猫",
+   "scene": "很久以前，埃及人养猫。",
+   "stem": "Long ago, people in Egypt ___ cats and kept them at home. (love)",
+   "task": "只写空里的部分。",
+   "answer_text": "loved",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "loved"
+     ],
+     "olds": [
+      "loves",
+      "love"
+     ],
+     "cn": [
+      "喜爱（过去式）"
+     ]
+    }
+   ],
+   "help": "Long ago 是过去的时间标记。",
+   "explain": "Long ago, people in Egypt loved cats. 讲过去的事，love 用过去式 loved。",
+   "common_errors": [
+    {
+     "when": "写了 loves",
+     "say": "Long ago 是过去，不能用现在时 loves。"
+    },
+    {
+     "when": "写了 love",
+     "say": "原形不对时态；要用过去式 loved。"
+    },
+    {
+     "when": "写了 loving",
+     "say": "loving 前面要有 be 动词，这里没有。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "wealth 的意思",
+   "scene": "选出 wealth 的正确意思。",
+   "stem": "In 'a symbol of wealth', 'wealth' means ___.",
+   "options": [
+    "钱财；财富",
+    "自豪",
+    "关系",
+    "魔力"
+   ],
+   "answer": "A",
+   "help": "回想生词课：a symbol of wealth and power。",
+   "explain": "wealth 的意思是'钱财；财富'。",
+   "wrong_feedback": {
+    "B": "那是 pride 的意思。",
+    "C": "那是 relationship。",
+    "D": "魔力对应 magical（有魔力的）；wealth 指钱财。"
+   },
+   "audio_id": "u8r4-v05",
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 责任",
+   "scene": "养狗能教会孩子责任。用 responsible 的名词形式填空。",
+   "stem": "Keeping a dog can teach children ___. (responsible)",
+   "task": "只写空里的部分；要用 responsible 的名词形式。",
+   "answer_text": "responsibility",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "responsibility"
+     ],
+     "olds": [
+      "responsible",
+      "responsibles"
+     ],
+     "cn": [
+      "责任"
+     ]
+    }
+   ],
+   "help": "teach sb 后面跟的是'东西'，要用名词；responsible 加 -ity 怎么拼？",
+   "explain": "Keeping a dog can teach children responsibility. responsible → responsibility：-le 换成 -ility。",
+   "common_errors": [
+    {
+     "when": "写了 responsible",
+     "say": "responsible 是形容词；这里需要名词 responsibility。"
+    },
+    {
+     "when": "写了 responsibles",
+     "say": "形容词不能加 s 当名词用。"
+    },
+    {
+     "when": "写了 responsibleity",
+     "say": "拼写不对：是 responsibility，中间是 -ibility。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "离人最近",
+   "scene": "在所有动物里，猫离人最近。",
+   "stem": "Of all the animals, cats lived ___ to people. (close)",
+   "task": "只写空里的部分。",
+   "answer_text": "closest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "closest",
+      "the closest"
+     ],
+     "olds": [
+      "closer",
+      "most close"
+     ],
+     "cn": [
+      "最近地"
+     ]
+    }
+   ],
+   "help": "of all 是最高级范围；close 的最高级加 -est。",
+   "explain": "Cats lived closest to people. close → closest。",
+   "common_errors": [
+    {
+     "when": "写了 closer",
+     "say": "closer 是比较级；of all 要用最高级。"
+    },
+    {
+     "when": "写了 most close",
+     "say": "close 这类短词最高级加 -est，不用 most。"
+    },
+    {
+     "when": "写了 closestest",
+     "say": "不能重复加 -est。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "大多数学生",
+   "scene": "我们班大多数学生养宠物。",
+   "stem": "___ students in our class have a pet at home.",
+   "options": [
+    "The most",
+    "More",
+    "Most",
+    "Mostly"
+   ],
+   "answer": "C",
+   "help": "句意是'大多数'，不是'最'，也不是'更多'。",
+   "explain": "Most students in our class have a pet. most 在这里是'大多数'，直接放在名词前。",
+   "wrong_feedback": {
+    "A": "the most 是'最……'（最高级），放在这里意思不对；句意是'大多数'。",
+    "B": "more 是'更多'，需要比较对象；这里是说'大多数学生'。",
+    "D": "mostly 是副词'主要地、大部分地（指情况）'，不能放在 students 前面。"
+   },
+   "audio_id": "u8r4-v06",
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 跑得最快引人注目",
+   "scene": "条件句里套最高级：跑得最快的狗最引人注目。",
+   "stem": "If a dog runs ___ of all, it may catch the eye of many people. (fast)",
+   "task": "只写空里的部分。",
+   "answer_text": "fastest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fastest",
+      "the fastest"
+     ],
+     "olds": [
+      "faster",
+      "fastly"
+     ],
+     "cn": [
+      "最快"
+     ]
+    }
+   ],
+   "help": "of all 决定了形式，和在哪个从句里无关。",
+   "explain": "If a dog runs fastest of all, it may catch the eye of many people. 范围是 of all，用最高级 fastest。",
+   "common_errors": [
+    {
+     "when": "写了 faster",
+     "say": "有 of all 就用最高级，不用比较级。"
+    },
+    {
+     "when": "写了 fastly",
+     "say": "没有 fastly 这个词。"
+    },
+    {
+     "when": "写了 most fast",
+     "say": "fast 加 -est，不用 most。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "谁找到了 Rin",
+   "scene": "回短文回答。",
+   "stem": "Who found Rin in France?",
+   "options": [
+    "A film-maker.",
+    "A queen.",
+    "A farmer.",
+    "An American soldier."
+   ],
+   "answer": "D",
+   "help": "短文第一句就说了是谁。",
+   "explain": "An American soldier. 短文开头：an American soldier found a small dog in France.",
+   "wrong_feedback": {
+    "A": "电影人是后来注意到 Rin 的；找到他的是士兵。",
+    "B": "女王是上一篇短文（埃及）里的人，别把两篇混在一起。",
+    "C": "短文里没有农夫这个人物。"
+   },
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 小狗被抱着",
+   "scene": "回锅四单元：被动语态（复数主语）。",
+   "stem": "In the Middle Ages, lapdogs ___ by rich ladies everywhere they went. (keep)",
+   "task": "只写空里的部分。",
+   "answer_text": "were kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "were kept"
+     ],
+     "olds": [
+      "was kept",
+      "are kept"
+     ],
+     "cn": [
+      "被养着"
+     ]
+    }
+   ],
+   "help": "主语 lapdogs 是复数，又是过去的事，be 动词用哪个？",
+   "explain": "Lapdogs were kept by rich ladies. 被动语态：复数 + 过去 → were kept。",
+   "common_errors": [
+    {
+     "when": "写了 kept",
+     "say": "少了 be 动词：被动语态要有 were kept 才完整。"
+    },
+    {
+     "when": "写了 was kept",
+     "say": "主语是复数 lapdogs，be 动词要用 were，不能用 was。"
+    },
+    {
+     "when": "写了 are kept",
+     "say": "讲的是中世纪（过去），要用 were kept。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "做得最仔细",
+   "scene": "三位护士里她工作最仔细。",
+   "stem": "Of the three nurses, she worked ___. (carefully)",
+   "task": "只写空里的部分。",
+   "answer_text": "most carefully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "most carefully",
+      "the most carefully"
+     ],
+     "olds": [
+      "more carefully",
+      "carefulliest"
+     ],
+     "cn": [
+      "最仔细地"
+     ]
+    }
+   ],
+   "help": "三位护士是范围；carefully 的最高级？",
+   "explain": "She worked most carefully. -ly 副词最高级用 most carefully。",
+   "common_errors": [
+    {
+     "when": "写了 more carefully",
+     "say": "那是比较级；三者比较用最高级。"
+    },
+    {
+     "when": "写了 carefulliest",
+     "say": "没有这种拼法；用 most carefully。"
+    },
+    {
+     "when": "写了 carefullyest",
+     "say": "carefully 不能加 -est。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 说得最好",
+   "scene": "林涛英语说得全班最好，他每天都练。",
+   "stem": "Lin Tao speaks English ___ in our class. He practises every day. (well)",
+   "task": "只写空里的部分。",
+   "answer_text": "best",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "best",
+      "the best"
+     ],
+     "olds": [
+      "better",
+      "wellest"
+     ],
+     "cn": [
+      "最好"
+     ]
+    }
+   ],
+   "help": "in our class 是范围；well 的最高级？",
+   "explain": "Lin Tao speaks English best in our class. well 的最高级是 best。",
+   "common_errors": [
+    {
+     "when": "写了 better",
+     "say": "better 是比较级；全班范围用最高级 best。"
+    },
+    {
+     "when": "写了 wellest",
+     "say": "没有 wellest；记住 well-better-best。"
+    },
+    {
+     "when": "写了 most well",
+     "say": "well 的最高级不规则，不用 most。"
+    }
+   ],
+   "reading": "In the First World War, an American soldier found a small dog in France and named him Rin. Rin learned tricks fastest of all the dogs in the camp. After the war, the soldier took Rin to America. Rin jumped highest and ran fastest in dog shows. One day, he caught the eye of a film-maker. Rin acted in many films and became very famous. His owner was full of pride for him. Of all the dogs in films, people loved Rin best."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：压轴五题",
+   "teach_html": "<p>最后五道压轴题：有五六单元的<strong>现在完成时</strong>、七单元的 <strong>unless</strong>，还有一个阴险的陷阱——<strong>只有两者比较时不能用最高级</strong>。数对象，先数对象！</p>",
+   "audio_id": "u8r4-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "把最高级用对的只有一句。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Of all the runners, he ran faster.",
+    "Of all the runners, he ran fastest.",
+    "Of all the runners, he ran most fast.",
+    "Of all the runners, he run fastest."
+   ],
+   "answer": "B",
+   "help": "逐句查：范围词、变法、时态。",
+   "explain": "Of all the runners, he ran fastest. 三处都对。",
+   "wrong_feedback": {
+    "A": "of all 是最高级范围，要用 fastest，不用比较级。",
+    "C": "fast 的最高级加 -est，不用 most fast。",
+    "D": "讲已经比完的赛，动词要用过去式 ran。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 养了几千年",
+   "scene": "回锅五六单元：现在完成时。",
+   "stem": "People ___ pets for thousands of years, and they still keep them today. (keep)",
+   "task": "只写空里的部分。",
+   "answer_text": "have kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have kept"
+     ],
+     "olds": [
+      "keeps",
+      "keep"
+     ],
+     "cn": [
+      "养（完成时）"
+     ]
+    }
+   ],
+   "help": "for thousands of years + still today：动作从过去持续到现在。",
+   "explain": "People have kept pets for thousands of years. 现在完成时 have kept，表示一直持续到现在。",
+   "common_errors": [
+    {
+     "when": "写了 keeps",
+     "say": "主语 people 是复数，而且时态也不对：持续几千年要用完成时。"
+    },
+    {
+     "when": "写了 keep",
+     "say": "原形不对；有 for + 时间段和 still，要用 have kept。"
+    },
+    {
+     "when": "写了 kept",
+     "say": "只写 kept 是一般过去时，强调的是过去某时；这里强调持续到现在。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 除非有暖窝",
+   "scene": "回锅七单元：unless。",
+   "stem": "Cats cannot be happy ___ they have a warm place to sleep. (unless)",
+   "task": "只写空里的部分。",
+   "answer_text": "unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "unlesss"
+     ],
+     "cn": [
+      "除非"
+     ]
+    }
+   ],
+   "help": "先理顺意思：有暖窝猫才开心；没有就——？",
+   "explain": "Cats cannot be happy unless they have a warm place to sleep. unless = if...not。",
+   "common_errors": [
+    {
+     "when": "写了 if",
+     "say": "意思反了：if they have 是'如果有暖窝就不能开心'，说不通。"
+    },
+    {
+     "when": "写了 unlesss",
+     "say": "拼写：unless 词尾两个 s 就够了。"
+    },
+    {
+     "when": "写了 if not",
+     "say": "这个空直接用 unless；if not 要另组从句，语序不对。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 两者用比较级",
+   "scene": "陷阱题：只有两只狗。",
+   "stem": "Of the two dogs, Bingo learns ___.",
+   "options": [
+    "faster",
+    "fastest",
+    "most fast",
+    "fastly"
+   ],
+   "answer": "A",
+   "help": "先数对象：the two dogs ——是两个还是更多？",
+   "explain": "Of the two dogs, Bingo learns faster. 两者之间用比较级，这是最高级最常见的陷阱。",
+   "wrong_feedback": {
+    "B": "只有两只狗比较，用比较级 faster；最高级要三者以上。",
+    "C": "fast 的比较级加 -er，不用 most。",
+    "D": "没有 fastly 这个词。"
+   }
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 全班说得最好",
+   "scene": "产出题：用 well 的正确形式完成句子。",
+   "stem": "In our class, nobody speaks English ___ than Lin Tao. Lin Tao is the best. (well)",
+   "task": "只写空里的部分。",
+   "answer_text": "better",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "olds": [
+      "best",
+      "more well"
+     ],
+     "cn": [
+      "更好"
+     ]
+    }
+   ],
+   "help": "nobody ... than 是比较结构：没有人比他更好——空里要比较级还是最高级？",
+   "explain": "Nobody speaks English better than Lin Tao. 有 than 的是比较级 better；best 虽然在后半句出现，但空里跟 than 搭配的是 better。",
+   "common_errors": [
+    {
+     "when": "写了 best",
+     "say": "空后面有 than，比较级才和 than 搭配；best 不跟 than。"
+    },
+    {
+     "when": "写了 more well",
+     "say": "well 的比较级是不规则的 better。"
+    },
+    {
+     "when": "写了 well",
+     "say": "有 than，要用比较级。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "下集预告：宠物大直播",
+   "teach_html": "<p>本课收官：最高级拿下，还躲过了'两者不用最高级'的陷阱。</p><p>下一课是全单元的<strong>宠物大直播</strong>：构成、比较级、最高级全部回炉，还要办一场辩论——到底该不该养狗？站长等你来战。</p>",
+   "audio_id": "u8r4-ending"
+  }
+ ],
+ "title": "宠物从前传：副词最高级",
+ "unit": "Unit 8 Pets and us",
+ "version": 1
+}
