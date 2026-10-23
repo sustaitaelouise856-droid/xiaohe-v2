@@ -132,7 +132,7 @@ function autoSeed() {
   for (const f of files) {
     // 正文课 u2r<数字>/u3r<数字>/u4r<数字>/u5r<数字>/u6r<数字> + 练习课 review<数字> + 专项巩固课 u3-consolidate（2026-10-11 踩刹车）
     // + 数学课 sx<数字>（draft 状态入库，不进英语首页序列，经直接链接访问）
-    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|u3-consolidate|sx\\d+|dict\d+)\.json$/.exec(f);
+    const m = /^lesson-(u2r\d+|u3r\d+|u4r\d+|u5r\d+|u6r\d+|review\d+|u3-consolidate|sx\\d+|dict\d+|write\d+)\.json$/.exec(f);
     if (!m) continue;
     const lid = m[1];
     try {
