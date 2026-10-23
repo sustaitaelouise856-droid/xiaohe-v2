@@ -1,0 +1,1522 @@
+{
+ "lesson_id": "u7r5",
+ "practice_end": 22,
+ "home_subtitle": "第五课 · 记忆大直播",
+ "part1_desc": "第 1–22 步：跟站长复习 Unit 7 的条件句（2）、unless 和全单元核心词；热身短文一句话回顾四课话题（记忆像肌肉、遗忘曲线、记忆挑战赛、大树的年轮），练习里掺着挑战题。",
+ "part2_desc": "第 23–50 步：独立决赛——读学姐给学弟学妹的信，用思维导图（WHAT/WHY/HOW）记住学过的东西；课尾压轴五题：被动、比较级、完成时回锅，加两道产出题（unless 合并句、写建议句）。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：Unit 7 综合（条件句（2）谈必然结果 If+一般现在时/主句一般现在时、unless=if...not 且从句不再加 not、全单元核心词与短语）＋跨课回锅（被动语态、比较级、现在完成时 since/for）。核心词 mentally/maintain/diet/stressed/tend/normal/loss/regularly/repeat/note/visual/link/list/summary/context/image/sense/contain/particular；短语 last but not least/make a point of/figure out/flash card/natural disaster。提难版：目标首次正确率 70–80%。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "记忆大直播：收官节目",
+   "teach_html": "<p>记忆系列最后一期：<strong>记忆大直播</strong>！站长主持收官节目，带着大家把整个 Unit 7 过一遍。</p><p>条件句、unless、一整单元的核心词，还有几封听众来信等着你。先热身复习，再进独立决赛——看看这个单元的东西，你到底记住了多少。</p>",
+   "audio_id": "u7r5-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "复习：条件句谈必然结果",
+   "teach_html": "<p>先复习本单元的大语法：<strong>条件句（2）谈必然结果</strong>（规律、常识、习惯）。</p><p>结构是：<strong>If + 一般现在时，主句一般现在时</strong>，两边都不用 will。</p><p><strong>If you use your memory often, it gets stronger.</strong>（经常用，记忆就变强。）主语是 it / he / she 时，动词记得<strong>加 s</strong>。</p>",
+   "audio_id": "u7r5-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "复习：unless = if...not",
+   "teach_html": "<p>再复习 <strong>unless</strong>：它的意思是<strong>“除非；如果不”</strong>，等于 <strong>if...not</strong>。</p><p><strong>Unless you review your notes, you forget them soon.</strong>（除非你复习笔记，不然很快就忘。）＝ If you do not review your notes, you forget them soon.</p><p>记住：unless 已经自带“不”的意思，<strong>unless 从句里不再加 not</strong>。</p>",
+   "audio_id": "u7r5-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "词汇回炉一：身体和状态",
+   "teach_html": "<p>核心词第一组：<strong>mentally</strong> /ˈmentəli/“精神上”；<strong>maintain</strong> /meɪnˈteɪn/“维持；保持”；<strong>diet</strong> /ˈdaɪət/“日常饮食”；<strong>stressed</strong> /strest/“焦虑不安的”；<strong>tend</strong> /tend/“往往会”；<strong>normal</strong> /ˈnɔːml/“正常的”；<strong>loss</strong> /lɒs/“丧失”；<strong>regularly</strong> /ˈreɡjələli/“有规律地；定期地”。</p><p>一句话串起来：A healthy diet helps you maintain a good memory, and a little memory loss is normal.</p>",
+   "audio_id": "u7r5-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "词汇回炉二：方法和动作",
+   "teach_html": "<p>核心词第二组：<strong>repeat</strong> /rɪˈpiːt/“重复”；<strong>note</strong> /nəʊt/“笔记；记录”；<strong>visual</strong> /ˈvɪʒuəl/“视觉的”；<strong>link</strong> /lɪŋk/“把……连接起来”；<strong>list</strong> /lɪst/“清单；列清单”；<strong>summary</strong> /ˈsʌməri/“摘要；总结”。</p><p>方法串起来：repeat the words, take notes, link them to visual images, make a list and write a summary.</p>",
+   "audio_id": "u7r5-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "词汇回炉三：理解和细节",
+   "teach_html": "<p>核心词第三组：<strong>context</strong> /ˈkɒntekst/“上下文；语境”；<strong>image</strong> /ˈɪmɪdʒ/“图像；画面”；<strong>sense</strong> /sens/“感觉；意义”（make sense 是“说得通”）；<strong>contain</strong> /kənˈteɪn/“包含”；<strong>particular</strong> /pəˈtɪkjələ/“特别的；特定的”。</p><p>猜词的时候看 context，把生词变成 image，句子就 make sense 了。</p>",
+   "audio_id": "u7r5-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "短语回炉：五个短语",
+   "teach_html": "<p>五个短语一起回炉：<strong>last but not least</strong>“最后但同样重要的是”；<strong>make a point of</strong>“特意做某事”；<strong>figure out</strong>“弄明白；想出”；<strong>flash card</strong>“（抽认）闪卡”；<strong>natural disaster</strong>“自然灾害”。</p><p>站长就 make a point of 一件事：每天复习一遍 flash cards。</p>",
+   "audio_id": "u7r5-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：三个坑",
+   "teach_html": "<p>决赛前提醒三个坑：</p><p>坑一：谈必然结果，if 和 unless 后面都<strong>不用 will</strong>。</p><p>坑二：unless 自带“不”，后面<strong>不再加 not</strong>：Unless you review...（不是 Unless you do not review...）。</p><p>坑三：主语是第三人称单数，动词<strong>加 s</strong>：She reviews her notes regularly, and she remembers more.</p>",
+   "audio_id": "u7r5-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "直播规则",
+   "teach_html": "<p>直播规则：前半段是<strong>热身复习</strong>，站长带提示；后半段是<strong>独立决赛</strong>，换一封新来信，提示只给方向，全靠你自己判断。</p><p>课尾还有五道压轴题，有两道要你自己写句子。热身资料在上面，做题时对照着看。开始！</p>",
+   "audio_id": "u7r5-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：四课话题回顾",
+   "teach_html": "<p>这篇短文把前面四课的话题各讲了一句：<strong>记忆像肌肉、遗忘曲线、记忆挑战赛、大树的年轮</strong>。先读一遍。</p><p>下面站长带着你热身复习。</p>",
+   "audio_id": "u7r5-prac-01",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "大声重复",
+   "scene": "把单词大声重复出来，你记得更好。",
+   "stem": "If you repeat a word aloud, you ___ it better.",
+   "options": [
+    "remembers",
+    "remember",
+    "will remember",
+    "remembered"
+   ],
+   "answer": "B",
+   "help": "主语是 you，动词用原形还是加 s？再看看时态：说的是规律。",
+   "explain": "If you repeat a word aloud, you remember it better. 主语 you 用原形 remember；谈规律用一般现在时。",
+   "wrong_feedback": {
+    "A": "remembers 是给 he / she 用的；主语是 you，不加 s。",
+    "C": "谈必然结果不用 will，两边都用一般现在时。",
+    "D": "remembered 是过去式；这句话说的是每次都成立的规律。"
+   },
+   "audio_id": "u7r5-q01",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 除非重复",
+   "scene": "不重复，单词很快就忘。",
+   "stem": "You forget a word quickly ___ you repeat it many times.",
+   "options": [
+    "if",
+    "when",
+    "because",
+    "unless"
+   ],
+   "answer": "D",
+   "help": "换一种说法：如果你不重复，你很快就忘。哪个词等于 if...not？",
+   "explain": "You forget a word quickly unless you repeat it many times. unless = if...not（除非；如果不）。",
+   "wrong_feedback": {
+    "A": "if 是“如果”，放进去意思反了：如果重复就忘？不对。",
+    "B": "when 是“当……时”，说的是时间；这里要的是“除非”。",
+    "C": "because 是“因为”，说原因；这里是条件，用 unless。"
+   },
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 压力太大",
+   "scene": "他压力太大了，就睡不好。",
+   "stem": "If he ___ (get) too stressed, he ___ (not sleep) well.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "gets does not sleep",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "gets"
+     ],
+     "olds": [
+      "get",
+      "will get"
+     ],
+     "cn": [
+      "变得（焦虑）（主语是 he）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "does not sleep",
+      "doesn't sleep"
+     ],
+     "olds": [
+      "do not sleep",
+      "will not sleep"
+     ],
+     "cn": [
+      "睡不好（否定，主语是 he）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是 he。第三人称单数的肯定和否定，动词分别怎么变？",
+   "explain": "If he gets too stressed, he does not sleep well. 主语 he 是第三人称单数：肯定 gets，否定 does not sleep。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 get",
+     "say": "主语是 he，动词要加 s：gets。"
+    },
+    {
+     "when": "第二个空写了 do not sleep",
+     "say": "主语是 he，否定用 does not，不是 do not。"
+    },
+    {
+     "when": "第二个空只写了 not sleep",
+     "say": "少了 does。第三人称单数的否定是 does not sleep。"
+    },
+    {
+     "when": "写了 will not sleep",
+     "say": "谈规律用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "保持好记性",
+   "scene": "生活上多动脑，就能多年保持好记性。",
+   "stem": "If you live a mentally active life, you can ___ a good memory for many years.",
+   "options": [
+    "maintain",
+    "repeat",
+    "contain",
+    "link"
+   ],
+   "answer": "A",
+   "help": "哪个词是“维持；保持”的意思？刚回炉的生词。",
+   "explain": "If you live a mentally active life, you can maintain a good memory for many years. maintain 是“维持；保持”。",
+   "wrong_feedback": {
+    "B": "repeat 是“重复”，说的是把动作再做一遍，不是“保持”。",
+    "C": "contain 是“包含”，比如书里包含故事；这里要的是“保持住记性”。",
+    "D": "link 是“把……连接起来”，后面要跟连接的对象，这里不搭。"
+   },
+   "audio_id": "u7r5-q02",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "title": "往往会忘",
+   "scene": "人们只听一遍名字，往往就会忘掉。",
+   "stem": "People ___ to forget names if they hear them only once. (tend)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "tend",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "tend"
+     ],
+     "olds": [
+      "tends",
+      "tended"
+     ],
+     "cn": [
+      "往往会（主语是 people）"
+     ]
+    }
+   ],
+   "help": "主语 people 是“人们”，是复数。tend 要加 s 吗？",
+   "explain": "People tend to forget names if they hear them only once. 主语 people 是复数，tend 用原形。",
+   "common_errors": [
+    {
+     "when": "写了 tends",
+     "say": "tends 是给单数主语用的（He tends to...）；people 是复数，用原形 tend。"
+    },
+    {
+     "when": "写了 tended",
+     "say": "tended 是过去式；这句话说的是普遍规律，用一般现在时。"
+    },
+    {
+     "when": "写了 will tend",
+     "say": "谈规律不用 will，直接用 tend。"
+    }
+   ],
+   "audio_id": "u7r5-q03",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 读短文：遗忘的速度",
+   "scene": "根据短文，遗忘曲线讲的是什么？",
+   "stem": "What does the passage say about forgetting?",
+   "options": [
+    "We forget fast at first, and then more slowly.",
+    "We forget slowly at first, and then fast.",
+    "We never forget if we learn something once.",
+    "Old trees forget one ring every year."
+   ],
+   "answer": "A",
+   "help": "回到短文，找 forget fast at first 那一句，对照四个选项。",
+   "explain": "We forget fast at first, and then more slowly. 短文原话：you forget fast at first, then more slowly — that is the forgetting curve.",
+   "wrong_feedback": {
+    "B": "说反了：短文说是先快（fast at first）后慢（more slowly）。",
+    "C": "短文说学完就会开始忘，只学一遍照样忘；never forget 不对。",
+    "D": "短文说大树的年轮是记录（each ring tells the story of one year），不是“忘记”。"
+   },
+   "audio_id": "u7r5-q04",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 弄明白",
+   "scene": "汤姆一开始没弄明白思维导图怎么画，老师演示后他懂了。",
+   "stem": "Tom could not ___ how to draw a mind map at first, but Miss Lin showed him step by step.",
+   "options": [
+    "make a point of",
+    "last but not least",
+    "figure out",
+    "flash card"
+   ],
+   "answer": "C",
+   "help": "空里要的是一个动词短语，意思是“弄明白；想出”。",
+   "explain": "Tom could not figure out how to draw a mind map at first. figure out 是“弄明白；想出”。",
+   "wrong_feedback": {
+    "A": "make a point of 是“特意做某事”，后面跟动名词，不跟 how to do，这里意思也不对。",
+    "B": "last but not least 是“最后但同样重要的是”，用来引出最后一点，不能放在 could not 后面。",
+    "D": "flash card 是名词“闪卡”，不能直接跟在 could not 后面作谓语。"
+   },
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "除非记笔记",
+   "scene": "上课不记笔记，一节课就忘掉一半。",
+   "stem": "Unless you ___ notes in class, you forget half of the lesson. (take)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "take",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "take"
+     ],
+     "olds": [
+      "takes",
+      "took"
+     ],
+     "cn": [
+      "记（笔记）（主语是 you）"
+     ]
+    }
+   ],
+   "help": "unless 从句的主语是 you，take 用原形还是加 s？想想 take notes 这个搭配。",
+   "explain": "Unless you take notes in class, you forget half of the lesson. 主语 you 用原形 take；take notes 是“记笔记”。",
+   "common_errors": [
+    {
+     "when": "写了 takes",
+     "say": "takes 是给 he / she 用的；主语是 you，用原形 take。"
+    },
+    {
+     "when": "写了 took",
+     "say": "took 是过去式；这句话谈的是规律，用一般现在时 take。"
+    },
+    {
+     "when": "写了 taking",
+     "say": "taking 是 -ing 形式，不能单独做从句的谓语；这里用原形 take。"
+    }
+   ],
+   "audio_id": "u7r5-q05",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "下面哪一句条件句写对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "If you will repeat the words, you remember them.",
+    "Unless you do not review, you forget the words.",
+    "If you repeat the words, you will remembers them.",
+    "Words stay in your mind if you repeat them."
+   ],
+   "answer": "D",
+   "help": "一条一条查：if / unless 后面有没有 will？unless 后面有没有多余的 not？",
+   "explain": "Words stay in your mind if you repeat them. 谈规律不用 will；if 从句在后面不用逗号。",
+   "wrong_feedback": {
+    "A": "if 从句里不能用 will；谈必然结果直接 If you repeat...。",
+    "B": "unless 已经自带“不”，再加 do not 就成了双重否定，意思反了。",
+    "C": "will 后面要用动词原形，不能写 will remembers；而且谈规律根本不用 will。"
+   },
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "把单词变成图",
+   "scene": "把单词变成一幅图，图会帮你记住它。",
+   "stem": "If you ___ (turn) a word into an image, the image ___ (help) you remember it.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "turn helps",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "turn"
+     ],
+     "olds": [
+      "turns",
+      "turned"
+     ],
+     "cn": [
+      "把……变成（主语是 you）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "helps"
+     ],
+     "olds": [
+      "help",
+      "will help"
+     ],
+     "cn": [
+      "帮助（主语是 the image）"
+     ]
+    }
+   ],
+   "help": "两个空主语不一样：第一个是 you，第二个是 the image（一幅图，一个东西）。",
+   "explain": "If you turn a word into an image, the image helps you remember it. you 用原形 turn；the image 是第三人称单数，help 加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 turns",
+     "say": "主语是 you，不加 s；turns 是给 he / she 用的。"
+    },
+    {
+     "when": "第二个空写了 help",
+     "say": "主语 the image 是一个东西（第三人称单数），help 要加 s：helps。"
+    },
+    {
+     "when": "写了 will help",
+     "say": "谈规律两边都用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "particular 的意思",
+   "scene": "particular 意思是？",
+   "stem": "The word \"particular\" means ___.",
+   "options": [
+    "普通的；一般的",
+    "特别的；特定的",
+    "自然的；天然的",
+    "清楚的；明显的"
+   ],
+   "answer": "B",
+   "help": "回想生词课：in particular 是“尤其”，particular 本身指“特别的；特定的”。",
+   "explain": "particular 意思是“特别的；特定的”。",
+   "wrong_feedback": {
+    "A": "“普通的；一般的”是 normal 一类的意思；particular 强调“特别的、特定的那一个”。",
+    "C": "“自然的”是 natural；particular 说的是“特别的；特定的”。",
+    "D": "“清楚的”是 clear；particular 不是讲清楚不清楚，是讲特别、特定。"
+   },
+   "audio_id": "u7r5-q06",
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 闪卡加规律复习",
+   "scene": "他给每个新词做一张闪卡，有规律地复习。",
+   "stem": "He makes a ___ for each new word and reviews it ___.",
+   "task": "两个空各写一个部分：第一个空写一种卡片短语，第二个空写“有规律地”的副词。",
+   "answer_text": "flash card regularly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "flash card",
+      "flash cards"
+     ],
+     "olds": [
+      "word card",
+      "picture card"
+     ],
+     "cn": [
+      "闪卡（抽认卡）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "regularly"
+     ],
+     "olds": [
+      "regular"
+     ],
+     "cn": [
+      "有规律地；定期地"
+     ]
+    }
+   ],
+   "help": "第一个空：生词卡有个专门的短语，flash 开头。第二个空：regular 加上 ly。",
+   "explain": "He makes a flash card for each new word and reviews it regularly. flash card 是“闪卡”；regularly 是“有规律地”。",
+   "common_errors": [
+    {
+     "when": "第一个空只写了 card",
+     "say": "只写 card 只是“卡片”；本单元的短语是 flash card（闪卡、抽认卡）。"
+    },
+    {
+     "when": "第二个空写了 regular",
+     "say": "regular 是形容词；修饰动词 reviews 要用副词 regularly。"
+    },
+    {
+     "when": "第二个空写了 often",
+     "say": "often 意思接近，但这道题练的是本单元的词 regularly（有规律地、定期地）。"
+    }
+   ],
+   "reading": "Your memory is like a muscle: if you use it often, it gets stronger. After you learn something, you forget fast at first, then more slowly — that is the forgetting curve. In our memory challenge, students linked new words to funny images and remembered most of them. Old trees also keep a record: each ring tells the story of one year. Memory, like a tree, grows little by little."
+  },
+  {
+   "step": 23,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：给学弟学妹的信",
+   "teach_html": "<p>直播下半场：一位学姐给学弟学妹写了一封信，讲<strong>怎样记住学过的东西</strong>，秘诀是<strong>思维导图</strong>——中间写 WHAT，一边写 WHY，另一边写 HOW。信在上面。</p><p>这一段独立作答，站长只给方向。记住：谈必然结果不用 will；unless 后面不再加 not。</p>",
+   "audio_id": "u7r5-v-intro",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 24,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "大树缺水",
+   "scene": "大树得不到足够的水，就会慢慢死去。",
+   "stem": "If an old tree does not get enough water, it ___.",
+   "options": [
+    "die",
+    "dies",
+    "will die",
+    "died"
+   ],
+   "answer": "B",
+   "help": "主语是 it，谈的是规律。",
+   "explain": "If an old tree does not get enough water, it dies. 主语 it 是第三人称单数，die 加 s；谈规律不用 will。",
+   "wrong_feedback": {
+    "A": "主语 it 是第三人称单数，动词要加 s：dies。",
+    "C": "谈必然结果不用 will，用一般现在时 dies。",
+    "D": "died 是过去式；这句话说的是规律，不是过去发生的事。"
+   },
+   "audio_id": "u7r5-v01",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 25,
+   "phase": "validate",
+   "kind": "short",
+   "title": "除非天天练",
+   "scene": "除非每天练一点，不然记忆会越来越差。",
+   "stem": "___ you practise a little every day, your memory gets worse.",
+   "task": "只写空里的一个词（首字母大写）。",
+   "answer_text": "Unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Unless",
+      "unless"
+     ],
+     "olds": [
+      "If",
+      "When"
+     ],
+     "cn": [
+      "除非（条件句开头）"
+     ]
+    }
+   ],
+   "help": "这句话等于 if you do not practise...，句首该用哪个词？",
+   "explain": "Unless you practise a little every day, your memory gets worse. unless = if...not，句首大写。",
+   "common_errors": [
+    {
+     "when": "写了 If",
+     "say": "If 是“如果”，意思会反过来：如果每天练，记忆变差？不对，要用 Unless。"
+    },
+    {
+     "when": "写了 When",
+     "say": "When 说的是时间“当……时”；这里是条件“除非”，用 Unless。"
+    },
+    {
+     "when": "在从句里又加了 not",
+     "say": "unless 自带“不”的意思，后面直接跟肯定形式：Unless you practise...。"
+    }
+   ],
+   "audio_id": "u7r5-v02",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 26,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "说得通",
+   "scene": "你的摘要太短了，我看不明白。",
+   "stem": "Your summary is too short. It does not make ___ to me.",
+   "options": [
+    "image",
+    "list",
+    "sense",
+    "note"
+   ],
+   "answer": "C",
+   "help": "有个固定搭配：make ___ 表示“说得通；有意义”。刚回炉的词。",
+   "explain": "Your summary is too short. It does not make sense to me. make sense 是“说得通；有意义”。",
+   "wrong_feedback": {
+    "A": "make image 不是固定搭配；“说得通”要用 sense。",
+    "B": "list 是“清单”；make a list 是“列清单”，跟“看不明白”对不上。",
+    "D": "note 是“笔记”；take notes 才是“记笔记”，这里要的是 sense。"
+   },
+   "audio_id": "u7r5-v03",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 27,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 他不复习就忘",
+   "scene": "除非他有规律地复习笔记，不然他会忘掉要点。",
+   "stem": "Unless he ___ (review) his notes regularly, he ___ (forget) the main points.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "reviews forgets",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "reviews"
+     ],
+     "olds": [
+      "review"
+     ],
+     "cn": [
+      "复习（主语是 he）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "forgets"
+     ],
+     "olds": [
+      "forget",
+      "will forget"
+     ],
+     "cn": [
+      "忘记（主语是 he）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是 he。unless 从句里不用 will，也不用再加 not。",
+   "explain": "Unless he reviews his notes regularly, he forgets the main points. 主语 he 是第三人称单数，两个动词都加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 review",
+     "say": "主语是 he，动词要加 s：reviews。"
+    },
+    {
+     "when": "第二个空写了 forget",
+     "say": "主语还是 he，forget 也要加 s：forgets。"
+    },
+    {
+     "when": "写了 will forget",
+     "say": "谈规律用一般现在时，不用 will。"
+    },
+    {
+     "when": "在 unless 后面加了 not",
+     "say": "unless 自带“不”，从句里用肯定形式 reviews，不要再加 not。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "context 的意思",
+   "scene": "context 意思是？",
+   "stem": "The word \"context\" means ___.",
+   "options": [
+    "上下文；语境",
+    "摘要；总结",
+    "图像；画面",
+    "压力；焦虑"
+   ],
+   "answer": "A",
+   "help": "猜生词意思的时候，要看它前后的句子——那些句子就是 context。",
+   "explain": "context 意思是“上下文；语境”。",
+   "wrong_feedback": {
+    "B": "“摘要；总结”是 summary；context 是单词所在的上下文、语境。",
+    "C": "“图像；画面”是 image；context 指文字前后的内容。",
+    "D": "“压力；焦虑”和 stressed 有关；context 是“上下文；语境”。"
+   },
+   "audio_id": "u7r5-v04",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "short",
+   "title": "自然灾害",
+   "scene": "洪水是一种自然灾害。",
+   "stem": "A flood is a kind of natural ___.",
+   "task": "只写空里的一个词。",
+   "answer_text": "disaster",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "disaster"
+     ],
+     "olds": [
+      "disasters"
+     ],
+     "cn": [
+      "灾害（natural disaster 自然灾害）"
+     ]
+    }
+   ],
+   "help": "natural 后面跟哪个词，能凑成本单元的短语“自然灾害”？",
+   "explain": "A flood is a kind of natural disaster. natural disaster 是“自然灾害”。",
+   "common_errors": [
+    {
+     "when": "写了 disasters",
+     "say": "a kind of 后面跟单数：disaster，不要加 s。"
+    },
+    {
+     "when": "把 natural disaster 都写进空里",
+     "say": "natural 已经在句子里了，空里只写 disaster 一个词。"
+    },
+    {
+     "when": "写了 diet",
+     "say": "diet 是“日常饮食”；洪水属于自然灾害，用 disaster。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "读信：地图中间",
+   "scene": "根据来信，思维导图的中间写什么？",
+   "stem": "According to the letter, in the middle of a mind map, you write ___.",
+   "task": "只写空里的部分（三个词）。",
+   "answer_text": "what you learn",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "what you learn",
+      "what you have learned"
+     ],
+     "olds": [
+      "why it is important",
+      "how you can use it"
+     ],
+     "cn": [
+      "学什么（地图中间的 WHAT）"
+     ]
+    }
+   ],
+   "help": "回到信里找 In the middle 那一句，中间写的是 WHAT 开头的那部分。",
+   "explain": "According to the letter, in the middle of a mind map, you write what you learn. 中间写 WHAT（学什么）。",
+   "common_errors": [
+    {
+     "when": "写了 why it is important",
+     "say": "那是 WHY，要写在地图的一边，不是中间。"
+    },
+    {
+     "when": "写了 how you can use it",
+     "say": "那是 HOW，要写在地图的另一边，不是中间。"
+    },
+    {
+     "when": "写了 the title",
+     "say": "信里没说中间写标题；中间写的是 what you learn（学什么）。"
+    }
+   ],
+   "audio_id": "u7r5-v05",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 她写摘要",
+   "scene": "她每节课后写个小摘要，要点就记得牢。",
+   "stem": "If she ___ a short summary after each lesson, she remembers the main points well.",
+   "options": [
+    "write",
+    "writing",
+    "will write",
+    "writes"
+   ],
+   "answer": "D",
+   "help": "主语是 she；if 从句里能不能用 will？",
+   "explain": "If she writes a short summary after each lesson, she remembers the main points well. 主语 she 是第三人称单数，write 加 s；if 从句不用 will。",
+   "wrong_feedback": {
+    "A": "主语是 she，动词要加 s：writes。",
+    "B": "writing 是 -ing 形式，不能单独做从句的谓语。",
+    "C": "if 从句里不用 will；谈习惯和规律用一般现在时。"
+   },
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "包含很多故事",
+   "scene": "这本书包含很多记忆冠军的故事。",
+   "stem": "This book ___ many stories about memory champions. (contain)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "contains",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "contains"
+     ],
+     "olds": [
+      "contain",
+      "contained"
+     ],
+     "cn": [
+      "包含（主语是 this book）"
+     ]
+    }
+   ],
+   "help": "主语 this book 是“一个东西”，算第三人称单数。",
+   "explain": "This book contains many stories about memory champions. 主语 this book 是第三人称单数，contain 加 s。",
+   "common_errors": [
+    {
+     "when": "写了 contain",
+     "say": "主语 this book 算第三人称单数，动词要加 s：contains。"
+    },
+    {
+     "when": "写了 contained",
+     "say": "contained 是过去式；这句话说的是书现在的内容，用一般现在时 contains。"
+    },
+    {
+     "when": "写了 is contain",
+     "say": "没有 is contain 这种形式；一般现在时直接用 contains。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "最后一点",
+   "scene": "引出最后一项建议：每周复习一遍你的思维导图。",
+   "stem": "___ , review your map every week and you will remember more.",
+   "options": [
+    "Make a point of",
+    "Figure out",
+    "Last but not least",
+    "Flash card"
+   ],
+   "answer": "C",
+   "help": "空在句首引出最后一点，哪个短语是“最后但同样重要的是”？",
+   "explain": "Last but not least, review your map every week and you will remember more. last but not least 用来引出最后一点。",
+   "wrong_feedback": {
+    "A": "make a point of 是“特意做某事”，后面跟动名词，不能这样放在句首引出建议。",
+    "B": "figure out 是“弄明白”，是动词短语，不能放在这里引出最后一点。",
+    "D": "flash card 是名词“闪卡”，放在句首说不通。"
+   },
+   "audio_id": "u7r5-v06",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 特意做某事",
+   "scene": "他特意每天晚上复习一遍闪卡。",
+   "stem": "He ___ reviewing his flash cards every night. (make a point of)",
+   "task": "用所给短语的正确形式填空，只写空里的部分。",
+   "answer_text": "makes a point of",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "makes a point of"
+     ],
+     "olds": [
+      "make a point of",
+      "makes a point to"
+     ],
+     "cn": [
+      "特意做某事（主语是 he）"
+     ]
+    }
+   ],
+   "help": "短语是 make a point of。主语是 he，make 要怎么变？短语一个词都不能少。",
+   "explain": "He makes a point of reviewing his flash cards every night. 主语 he 是第三人称单数，make 变 makes；短语是 makes a point of。",
+   "common_errors": [
+    {
+     "when": "写了 make a point of",
+     "say": "短语对了，但主语是 he，make 要变三单：makes a point of。"
+    },
+    {
+     "when": "漏了 of",
+     "say": "短语最后是 of：makes a point of，后面才能跟 reviewing。"
+    },
+    {
+     "when": "写了 makes a point to review",
+     "say": "这个短语固定用 of 加动名词：makes a point of reviewing，不是 to review。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "title": "视觉型学习者",
+   "scene": "视觉型的人记图片比记文字容易。",
+   "stem": "A ___ learner remembers pictures more easily than words.",
+   "task": "只写空里的一个词。",
+   "answer_text": "visual",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "visual"
+     ],
+     "olds": [
+      "vision",
+      "visuals"
+     ],
+     "cn": [
+      "视觉的"
+     ]
+    }
+   ],
+   "help": "哪种学习者是“看图记”的？要用形容词，修饰 learner。",
+   "explain": "A visual learner remembers pictures more easily than words. visual 是“视觉的”。",
+   "common_errors": [
+    {
+     "when": "写了 vision",
+     "say": "vision 是名词“视力；视野”；修饰 learner 要用形容词 visual。"
+    },
+    {
+     "when": "写了 visuals",
+     "say": "visuals 是名词复数“视觉材料”；这里要的是形容词 visual。"
+    },
+    {
+     "when": "写了 image",
+     "say": "image 是名词“图像”；“视觉型的学习者”用 visual learner。"
+    }
+   ],
+   "audio_id": "u7r5-v07",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 先列清单再写摘要",
+   "scene": "先列关键词清单，再用自己的话写个摘要。",
+   "stem": "First, make a ___ of the key words. Then write a short ___ of the lesson in your own words.",
+   "task": "两个空各写一个词，只写两个空里的部分，中间空一格。",
+   "answer_text": "list summary",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "list"
+     ],
+     "olds": [
+      "lists"
+     ],
+     "cn": [
+      "清单"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "summary"
+     ],
+     "olds": [
+      "summaries",
+      "note"
+     ],
+     "cn": [
+      "摘要；总结"
+     ]
+    }
+   ],
+   "help": "第一个空跟 make a ___ of 搭配；第二个空是“用自己的话把课文缩短写一遍”的成果。",
+   "explain": "First, make a list of the key words. Then write a short summary of the lesson in your own words. list 是“清单”，summary 是“摘要”。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 lists",
+     "say": "make a ___ of 里跟单数：a list，不要加 s。"
+    },
+    {
+     "when": "第二个空写了 summaries",
+     "say": "a short ___ 是单数：summary，不要用复数。"
+    },
+    {
+     "when": "第二个空写了 note",
+     "say": "note 是“笔记”；用自己的话缩写课文的成果叫 summary（摘要）。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "往往会忘",
+   "scene": "学生要是从不大声读，新词往往记不住。",
+   "stem": "Students ___ to forget a new word if they never say it aloud. (tend)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "tend",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "tend"
+     ],
+     "olds": [
+      "tends",
+      "tended"
+     ],
+     "cn": [
+      "往往会（主语是 students）"
+     ]
+    }
+   ],
+   "help": "主语是 students（他们），tend 用原形还是加 s？",
+   "explain": "Students tend to forget a new word if they never say it aloud. 主语 students 是复数，tend 用原形。",
+   "common_errors": [
+    {
+     "when": "写了 tends",
+     "say": "tends 是给单数主语用的（He tends to...）；students 是复数，用 tend。"
+    },
+    {
+     "when": "写了 tended",
+     "say": "tended 是过去式；这句话说的是普遍规律，用一般现在时。"
+    },
+    {
+     "when": "写了 will tend",
+     "say": "谈规律不用 will，直接用 tend。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "健康饮食",
+   "scene": "想保持好记性，健康的日常饮食真的有帮助。",
+   "stem": "If you want to maintain a good memory, a healthy ___ really helps.",
+   "task": "只写空里的一个词。",
+   "answer_text": "diet",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "diet"
+     ],
+     "olds": [
+      "diets",
+      "food"
+     ],
+     "cn": [
+      "日常饮食"
+     ]
+    }
+   ],
+   "help": "a healthy ___：本单元哪个词是“日常饮食”？注意 a 后面跟单数。",
+   "explain": "If you want to maintain a good memory, a healthy diet really helps. diet 是“日常饮食”。",
+   "common_errors": [
+    {
+     "when": "写了 diets",
+     "say": "a healthy ___ 跟单数：diet，不要加 s。"
+    },
+    {
+     "when": "写了 food",
+     "say": "food 只是“食物”；本单元表示“日常饮食”的词是 diet。"
+    },
+    {
+     "when": "写了 meal",
+     "say": "meal 是“一顿饭”；长期保持的饮食习惯用 diet。"
+    }
+   ],
+   "audio_id": "u7r5-v08",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句 unless 对",
+   "scene": "下面哪一句 unless 用对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless you sleep well, your memory gets worse.",
+    "Unless you do not sleep well, your memory gets worse.",
+    "You remember things well unless you sleep well.",
+    "Unless you will sleep well, your memory gets worse."
+   ],
+   "answer": "A",
+   "help": "查三点：unless 后面有没有多余的 not？有没有 will？意思有没有说反？",
+   "explain": "Unless you sleep well, your memory gets worse. unless = if...not：睡不好，记忆就变差，意思和形式都对。",
+   "wrong_feedback": {
+    "B": "unless 自带“不”，再加 do not 就是双重否定，意思变成“除非你睡得好”——说反了。",
+    "C": "意思反了：这句成了“睡得好就记不住”。unless 要放在“睡不好”的条件那边。",
+    "D": "unless 从句里不用 will，直接 Unless you sleep well...。"
+   },
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "精神上活跃",
+   "scene": "人老了也要保持精神上活跃：读书、玩文字游戏。",
+   "stem": "Stay ___ active as you grow old: read books and play word games.",
+   "task": "只写空里的一个词。",
+   "answer_text": "mentally",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "mentally"
+     ],
+     "olds": [
+      "mental"
+     ],
+     "cn": [
+      "精神上"
+     ]
+    }
+   ],
+   "help": "空里的词修饰 active（活跃），要用副词。哪个词是“精神上”？",
+   "explain": "Stay mentally active as you grow old. mentally 是“精神上”，副词修饰 active。",
+   "common_errors": [
+    {
+     "when": "写了 mental",
+     "say": "mental 是形容词，不能修饰 active；这里用副词 mentally。"
+    },
+    {
+     "when": "写了 mentally 的拼写错一位",
+     "say": "拼写对一遍：mentally——mental 后面加 ly。"
+    },
+    {
+     "when": "写了 happily",
+     "say": "happily 是“开心地”；本单元表示“精神上”的词是 mentally。"
+    }
+   ],
+   "audio_id": "u7r5-v09",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "记忆丧失",
+   "scene": "有一点记忆丧失，任何年龄都正常，不用太担心。",
+   "stem": "A little memory ___ is normal at any age. Do not worry too much.",
+   "task": "只写空里的一个词。",
+   "answer_text": "loss",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "loss"
+     ],
+     "olds": [
+      "lose",
+      "lost"
+     ],
+     "cn": [
+      "丧失"
+     ]
+    }
+   ],
+   "help": "memory ___ 是一个名词短语，哪个词是名词“丧失”？",
+   "explain": "A little memory loss is normal at any age. memory loss 是“记忆丧失”，loss 是名词。",
+   "common_errors": [
+    {
+     "when": "写了 lose",
+     "say": "lose 是动词“丢失”；memory 后面要跟名词 loss。"
+    },
+    {
+     "when": "写了 lost",
+     "say": "lost 是“迷路的；丢失的（过去分词）”；固定说法是 memory loss。"
+    },
+    {
+     "when": "写了 losing",
+     "say": "losing 是 -ing 形式；这个短语里用名词 loss。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "记下生词",
+   "scene": "把不认识的词记下来，之后再复习。",
+   "stem": "Take ___ of the words you do not know, and review them later.",
+   "task": "只写空里的部分。",
+   "answer_text": "notes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "notes",
+      "note"
+     ],
+     "olds": [
+      "note down"
+     ],
+     "cn": [
+      "笔记（take notes 记笔记）"
+     ]
+    }
+   ],
+   "help": "take ___ of... 是“把……记下来”；想想 take notes 这个搭配。",
+   "explain": "Take notes of the words you do not know, and review them later. take notes 是“记笔记”。",
+   "common_errors": [
+    {
+     "when": "写了 a note 的 a 也写进空里",
+     "say": "空里只写 notes 就够了，a 不在空里。"
+    },
+    {
+     "when": "写了 words",
+     "say": "words 已经在后半句里了；take 后面跟的是 notes（笔记）。"
+    },
+    {
+     "when": "写了 list",
+     "say": "list 是“清单”；“记笔记”这个搭配是 take notes。"
+    }
+   ],
+   "audio_id": "u7r5-v10",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "读信：为什么画地图",
+   "scene": "根据来信，为什么要画思维导图？",
+   "stem": "According to Lin Yue's letter, why should you draw a mind map?",
+   "options": [
+    "To copy the lesson word by word three times.",
+    "To link new ideas and remember them longer.",
+    "To draw beautiful pictures for your friends.",
+    "To play word games with your classmates."
+   ],
+   "answer": "B",
+   "help": "回到信里找 If you link... 那一句，图是拿来干什么的？",
+   "explain": "To link new ideas and remember them longer. 信里说：If you link new ideas to a clear map, you remember them longer.",
+   "wrong_feedback": {
+    "A": "信里没说把课文逐字抄三遍；思维导图是把新想法连接起来，不是抄写。",
+    "C": "图是帮你理清想法的工具，不是画漂亮图片送朋友；信里没这么说。",
+    "D": "玩文字游戏是锻炼大脑的活动，不是这封信讲的思维导图的用途。"
+   },
+   "audio_id": "u7r5-v11",
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：压轴五题",
+   "teach_html": "<p>决赛最后一关：<strong>压轴五题</strong>。被动语态、比较级、现在完成时几位老朋友会回来，还有两道要你<strong>自己写句子</strong>：一道用 unless 把两句合成一句，一道照着来信写一句建议。</p><p>站长只给方向提示。深呼吸，开始。</p>",
+   "audio_id": "u7r5-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 地图被画出来",
+   "scene": "昨天课上，学生们画出了思维导图。",
+   "stem": "The mind maps ___ by the students in class yesterday.",
+   "options": [
+    "draw",
+    "are drawn",
+    "drawing",
+    "were drawn"
+   ],
+   "answer": "D",
+   "help": "先想：地图是自己画自己的，还是被学生画出来的？再看 yesterday 是什么时候。",
+   "explain": "The mind maps were drawn by the students in class yesterday. 地图是被画的，用被动；yesterday 是过去，用 were drawn。",
+   "wrong_feedback": {
+    "A": "draw 是主动原形；地图是被画出来的，要用被动。",
+    "B": "are drawn 是现在的被动；yesterday 说明是昨天的事，要用 were。",
+    "C": "drawing 是 -ing 形式，不能单独做谓语，被动要用 be + 过去分词。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 记得更好",
+   "scene": "一张清楚的思维导图，比一长串单词表更能帮你记住新想法。",
+   "stem": "A clear mind map helps you remember new ideas ___ than a long list of words. (well)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "better",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "olds": [
+      "weller",
+      "more well",
+      "best"
+     ],
+     "cn": [
+      "更好（well 的比较级）"
+     ]
+    }
+   ],
+   "help": "空后面有 than，是比较。well 的比较级是不规则的，想想 good 的那一家。",
+   "explain": "A clear mind map helps you remember new ideas better than a long list of words. well 的比较级是不规则形式 better。",
+   "common_errors": [
+    {
+     "when": "写了 weller",
+     "say": "well 的比较级不规则，是 better，不能加 er。"
+    },
+    {
+     "when": "写了 more well",
+     "say": "well 变比较级不用 more，是 better。"
+    },
+    {
+     "when": "写了 best",
+     "say": "best 是最高级，要配 the 和范围；这里有 than，是比较级 better。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 从2023年起",
+   "scene": "她从 2023 年起就一直用闪卡了。",
+   "stem": "She has used flash cards ___ 2023.",
+   "options": [
+    "for",
+    "from",
+    "since",
+    "at"
+   ],
+   "answer": "C",
+   "help": "先看空后面：2023 是一个时间点，还是一段时间？完成时里“自从某点起”用哪个？",
+   "explain": "She has used flash cards since 2023. since + 时间点，表示从那时一直到现在。",
+   "wrong_feedback": {
+    "A": "for 后面跟一段时间（如 for three years）；2023 是时间点，要用 since。",
+    "B": "from 只说从哪一年开始，不表示一直持续到现在；跟 has used 连用表示持续，用 since。",
+    "D": "at 后面跟时刻（如 at 7 o'clock），不能跟年份表示“自从”。"
+   }
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 合并句子：unless",
+   "scene": "把两个简单句合并成一句，用 Unless 开头：① You do not review your notes. ② You forget them soon.",
+   "stem": "You do not review your notes. You forget them soon.",
+   "task": "把上面两个简单句合并成一句，用 Unless 开头，写出完整的一句。",
+   "answer_text": "Unless you review your notes, you forget them soon.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless you review your notes",
+      "unless you review the notes",
+      "unless you review them"
+     ],
+     "olds": [
+      "unless you do not review",
+      "unless you don't review",
+      "if you do not review"
+     ],
+     "cn": [
+      "除非你复习笔记（unless 从句不再加 not）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "you forget them soon",
+      "forget them soon",
+      "you forget your notes soon"
+     ],
+     "olds": [
+      "you will forget them soon"
+     ],
+     "cn": [
+      "你很快就会忘记（主句一般现在时）"
+     ]
+    }
+   ],
+   "help": "合并的办法：把第一句的 do not 去掉，句首换成 Unless；第二句原样接在后面，中间加逗号。",
+   "explain": "Unless you review your notes, you forget them soon. unless = if...not，所以原来的 do not 要去掉；主句谈规律，用一般现在时 forget。",
+   "common_errors": [
+    {
+     "when": "写了 Unless you do not review...",
+     "say": "unless 自带“不”，再写 do not 就重复了：Unless you review your notes...。"
+    },
+    {
+     "when": "开头用了 If",
+     "say": "这道题要求用 Unless 开头：Unless you review your notes, you forget them soon."
+    },
+    {
+     "when": "主句写了 will forget",
+     "say": "本单元条件句谈规律，主句用一般现在时：you forget them soon，不用 will。"
+    },
+    {
+     "when": "把 forget 写成了 forgets",
+     "say": "主句主语是 you，forget 用原形，不加 s。"
+    }
+   ]
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 写建议句",
+   "scene": "根据学姐的来信，给学弟学妹补全一句条件句建议。",
+   "stem": "If you ___ (write) the lesson in the middle of a mind map, you ___ (not forget) it easily.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "write do not forget",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "write"
+     ],
+     "olds": [
+      "writes",
+      "wrote"
+     ],
+     "cn": [
+      "写（主语是 you）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "do not forget",
+      "don't forget"
+     ],
+     "olds": [
+      "does not forget",
+      "will not forget"
+     ],
+     "cn": [
+      "不会忘（否定，主语是 you）"
+     ]
+    }
+   ],
+   "help": "信里说中间写 WHAT。两个空的主语都是 you；第二个空是一般现在时的否定，想想 do not 的位置。",
+   "explain": "If you write the lesson in the middle of a mind map, you do not forget it easily. 主语 you：肯定用原形 write，否定是 do not forget。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 writes",
+     "say": "主语是 you，动词用原形 write，不加 s。"
+    },
+    {
+     "when": "第二个空只写了 not forget",
+     "say": "少了 do：you 的否定是 do not forget。"
+    },
+    {
+     "when": "第二个空写了 does not forget",
+     "say": "does not 是给 he / she 用的；主语是 you，用 do not。"
+    },
+    {
+     "when": "写了 will not forget",
+     "say": "这句是条件句建议，谈规律用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "Dear friends,\nWelcome to our school! You will learn many new things, so here is my advice on memory. First, draw a mind map for each lesson. In the middle, write WHAT you learn. On one side, write WHY it is important. On the other side, write HOW you can use it. If you link new ideas to a clear map, you remember them longer. Last but not least, review your map every week.\nGood luck!\nLin Yue"
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "收官：把方法带走",
+   "teach_html": "<p>记忆大直播收官了！这个单元的东西都在这节课里过了一遍：<strong>条件句谈必然结果、unless = if...not</strong>，还有 repeat、link、summary、flash card 这些方法词。</p><p>最后送你站长的收官建议：把方法带走——<strong>make a point of 每天复习一点，记忆就像大树的年轮，一圈一圈长起来。</strong>下一单元见！</p>",
+   "audio_id": "u7r5-ending"
+  }
+ ],
+ "title": "记忆大直播：综合复习",
+ "unit": "Unit 7 The secret of memory",
+ "version": 1
+}
