@@ -866,7 +866,7 @@ const TITLE_DEFS = [
   { id: 'explorer', name: '探索者', icon: '🧭', desc: '使用过全部4种单词模式', cat: '探索', rarity: '普通' },
   { id: 'social', name: '分享达人', icon: '💌', desc: '分享学习报告给家长（隐藏）', cat: '传奇', rarity: '普通' },
   { id: 'lucky_7', name: '幸运七', icon: '🍀', desc: '7月7日完成学习（隐藏）', cat: '传奇', rarity: '普通' },
-  { id: 'century', name: '百年大计', icon: '💯', desc: '累计答对1000道题', cat: '学业', rarity: '普通' },
+  { id: 'century', name: '百年大计', icon: '💯', desc: '累计答对1000道题', cat: '学业', rarity: '传说' },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
