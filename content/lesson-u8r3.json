@@ -1,0 +1,1379 @@
+{
+ "lesson_id": "u8r3",
+ "practice_end": 27,
+ "home_subtitle": "第三课 · 副词比较级",
+ "part1_desc": "第 1–27 步：学副词比较级——-ly 副词用 more，同形副词加 -er，再加 better/worse/less 三个不规则；本课新词 complain、litter、unlikely 等和三个短语。",
+ "part2_desc": "第 28–50 步：独立读宠物诊所调查报告，课尾压轴：比较级综合、被动与形容词比较级回锅、条件句回锅。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：副词比较级构成（more+-ly 副词、-er 同形副词、不规则 better/worse/less/more）、than 结构、形容词比较级与副词比较级辨析。Unit 8 主题，核心词 complain/litter/unlikely/relieve/indoors，短语 lie around/complain about/in addition。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "公园里的比赛",
+   "teach_html": "<p>广播站的新节目来到公园：两只狗宾果和可可正在“比赛”——谁跑得快？谁游得好？谁叫得响？</p><p>要比较<strong>动作做得怎么样</strong>，就用副词的<strong>比较级</strong>：<strong>Bingo runs faster than Coco.</strong>（宾果比可可跑得快。）这一课我们就学它。</p>",
+   "audio_id": "u8r3-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "比较级的信号：than",
+   "teach_html": "<p>看到 <strong>than</strong>（比），就知道在比较两个人或物。形容词比较级你学过：bigger、faster（说名词）。</p><p>副词比较级说的是动作：<strong>He runs faster than me.</strong> 这里的 faster 说的是“跑”这个动作，不是说人。</p><p>一句话规则：比较“怎么做”，副词也要变比较级，后面常跟 than。</p>",
+   "audio_id": "u8r3-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "构成一：-ly 副词前面加 more",
+   "teach_html": "<p>以 <strong>-ly</strong> 结尾的副词，比较级在前面加 <strong>more</strong>，副词本身不变：</p><p>carefully → <strong>more carefully</strong><br>loudly → <strong>more loudly</strong><br>patiently → <strong>more patiently</strong><br>quickly → <strong>more quickly</strong></p><p>例：<strong>Coco waits more patiently than Bingo.</strong></p>",
+   "audio_id": "u8r3-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "构成二：同形副词加 -er",
+   "teach_html": "<p>和形容词同形的短副词，比较级直接加 <strong>-er</strong>（拼写规则和形容词一样）：</p><p>fast → <strong>faster</strong>，hard → <strong>harder</strong>，early → <strong>earlier</strong>（y 变 i），late → <strong>later</strong>。</p><p>例：<strong>He gets up earlier than me.</strong> 这类词不要用 more：不能说 more fast。</p>",
+   "audio_id": "u8r3-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "不规则四兄弟",
+   "teach_html": "<p>四个副词的比较级不规则，要单独记：</p><p>well → <strong>better</strong>（更好）<br>badly → <strong>worse</strong>（更差）<br>little → <strong>less</strong>（更少）<br>much → <strong>more</strong>（更多）</p><p>例：<strong>Coco swims better than Bingo.</strong> 不能说 more well。</p>",
+   "audio_id": "u8r3-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "大坑：不能双重比较",
+   "teach_html": "<p>最容易犯的错：more 和 -er 同时用。</p><p>✗ more faster　✗ more better　✗ carefullier</p><p>记住：一个词只能选一种变法——要么加 -er，要么前面加 more，要么用不规则形式。看到 than，先判断这个副词属于哪一类。</p>",
+   "audio_id": "u8r3-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：抱怨、垃圾、不大可能",
+   "teach_html": "<p><strong>complain</strong> /kəmˈpleɪn/ v. 抱怨；投诉：<strong>complain about the noise</strong>（抱怨噪音）。它的名词是 complaint。</p><p><strong>litter</strong> /ˈlɪtə/ n. 垃圾：<strong>Don't leave litter in the park.</strong></p><p><strong>unlikely</strong> /ʌnˈlaɪkli/ adj. 不大可能发生的：<strong>It is unlikely to rain.</strong>（不大可能下雨。）它的反义词是 likely（很可能）。</p>",
+   "audio_id": "u8r3-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二与短语",
+   "teach_html": "<p><strong>relieve</strong> /rɪˈliːv/ v.：课本里 cats use a litter box to relieve themselves，relieve oneself 是委婉说法，意思是“方便；解手”（上厕所）。</p><p><strong>indoors</strong> /ɪnˈdɔːz/ adv. 在室内：<strong>stay indoors</strong>。注意 indoor 多作形容词，indoors 才是副词。</p><p>短语：<strong>lie around</strong> 懒散度日；<strong>complain about</strong> 抱怨（某事）；<strong>in addition</strong> 除……以外（还）。</p>",
+   "audio_id": "u8r3-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：more careful 还是 more carefully",
+   "teach_html": "<p>careful 是形容词，carefully 是副词，比较级都用 more，但用在不同的地方：</p><p><strong>He is more careful than me.</strong>（他比我更细心。——说人，用形容词）</p><p><strong>He works more carefully than me.</strong>（他做事比我更仔细。——说动作，用副词）</p><p>判断方法不变：看描绘的是人还是动作。</p>",
+   "audio_id": "u8r3-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：宾果和可可",
+   "teach_html": "<p>短文讲的是公园里的两只狗宾果和可可，它们各有各的强项。读的时候把每个比较级圈出来：谁在哪方面更强？短文会留在屏幕上，随时可回看。</p>",
+   "audio_id": "u8r3-prac-01",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "跑得更快",
+   "scene": "短文原句改一改：宾果跑得比可可快。",
+   "stem": "Bingo runs ___ than Coco.",
+   "options": [
+    "faster",
+    "more fast",
+    "fastly",
+    "fastest"
+   ],
+   "answer": "A",
+   "help": "有 than；fast 属于哪一类副词？",
+   "explain": "Bingo runs faster than Coco. fast 的比较级是 faster。",
+   "wrong_feedback": {
+    "B": "fast 是同形短副词，比较级直接加 -er，不能用 more fast。",
+    "C": "没有 fastly 这个词；比较级是 faster。",
+    "D": "有 than 用比较级；fastest 是最高级，要三者以上比较时用。"
+   },
+   "audio_id": "u8r3-q01",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "游得更好",
+   "scene": "可可游泳比宾果好。",
+   "stem": "Coco swims ___ than Bingo. (well)",
+   "task": "只写空里的部分。",
+   "answer_text": "better",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "olds": [
+      "more well",
+      "best"
+     ],
+     "cn": [
+      "更好"
+     ]
+    }
+   ],
+   "help": "well 的比较级是不规则的，是哪个词？",
+   "explain": "Coco swims better than Bingo. well → better，不规则，不能说 more well。",
+   "common_errors": [
+    {
+     "when": "写了 more well",
+     "say": "well 的比较级是不规则形式 better，不能用 more well。"
+    },
+    {
+     "when": "写了 well",
+     "say": "有 than 就要用比较级 better，原级 well 不够。"
+    },
+    {
+     "when": "写了 best",
+     "say": "best 是最高级；两个对象比较用比较级 better。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 叫得更响",
+   "scene": "宾果看见猫时叫得比可可响。",
+   "stem": "Bingo barks ___ than Coco when he sees a cat. (loudly)",
+   "task": "只写空里的部分。",
+   "answer_text": "more loudly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more loudly"
+     ],
+     "olds": [
+      "loudlier",
+      "loudlyer",
+      "more loud"
+     ],
+     "cn": [
+      "更大声地"
+     ]
+    }
+   ],
+   "help": "loudly 以 -ly 结尾，它的比较级用哪种变法？",
+   "explain": "Bingo barks more loudly than Coco. -ly 副词的比较级在前面加 more，词本身不变。",
+   "common_errors": [
+    {
+     "when": "写了 loudlier",
+     "say": "-ly 副词不能加 -er 变比较级，要用 more loudly。"
+    },
+    {
+     "when": "写了 loudlyer",
+     "say": "同样的错：loudly 不能再加 -er。"
+    },
+    {
+     "when": "写了 more loud",
+     "say": "loud 是形容词；描绘动作 barks 的是副词 loudly，比较级是 more loudly。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "听得更仔细",
+   "scene": "她听得比她哥哥仔细。",
+   "stem": "She listens ___ than her brother.",
+   "options": [
+    "carefullier",
+    "more careful",
+    "carefully",
+    "more carefully"
+   ],
+   "answer": "D",
+   "help": "listens 是动作；carefully 的比较级怎么变？",
+   "explain": "She listens more carefully than her brother. 描绘动作用副词，-ly 副词比较级加 more。",
+   "wrong_feedback": {
+    "A": "-ly 结尾的副词比较级用 more，不能加 -er。",
+    "B": "careful 是形容词；描绘动作 listens 要用副词 carefully。",
+    "C": "有 than，要用比较级 more carefully，原级不够。"
+   },
+   "audio_id": "u8r3-q02",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "起得更早",
+   "scene": "他比我起得早。",
+   "stem": "He gets up ___ than me.",
+   "options": [
+    "more early",
+    "earlier",
+    "earliest",
+    "earlyer"
+   ],
+   "answer": "B",
+   "help": "early 和 fast 一类：比较级加什么？",
+   "explain": "He gets up earlier than me. early → earlier，注意 y 变 i。",
+   "wrong_feedback": {
+    "A": "early 是同形副词，比较级加 -er，不用 more。",
+    "C": "有 than 用比较级；earliest 是最高级。",
+    "D": "拼写：y 变 i 再加 er，是 earlier，不是 earlyer。"
+   },
+   "audio_id": "u8r3-q03",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 吃得更快",
+   "scene": "宾果晚上吃得比可可快。",
+   "stem": "Bingo eats ___ than Coco in the evening. (quickly)",
+   "task": "只写空里的部分。",
+   "answer_text": "more quickly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more quickly"
+     ],
+     "olds": [
+      "quicklier",
+      "quicklyer",
+      "more quick"
+     ],
+     "cn": [
+      "更快地"
+     ]
+    }
+   ],
+   "help": "quickly 的比较级：只能选一种变法。",
+   "explain": "Bingo eats more quickly than Coco. -ly 副词用 more 变比较级。",
+   "common_errors": [
+    {
+     "when": "写了 quicklier",
+     "say": "quickly 不能加 -er；用 more quickly。"
+    },
+    {
+     "when": "写了 quicklyer",
+     "say": "同样的错：-ly 副词比较级只加 more。"
+    },
+    {
+     "when": "写了 more quick",
+     "say": "quick 是形容词；描绘动作 eats 的副词是 quickly。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "走得更慢",
+   "scene": "老狗比以前走得慢。",
+   "stem": "The old dog walks ___ than before.",
+   "options": [
+    "slowlier",
+    "slower",
+    "more slowly",
+    "slowly"
+   ],
+   "answer": "C",
+   "help": "slowly 是 -ly 副词，它的比较级形式？",
+   "explain": "The old dog walks more slowly than before. -ly 副词前面加 more。",
+   "wrong_feedback": {
+    "A": "slowly 的比较级用 more slowly，不能加 -er。",
+    "B": "课本规范：slowly 的比较级是 more slowly；slower 主要作形容词用。",
+    "D": "有 than，要用比较级，原级 slowly 不够。"
+   },
+   "audio_id": "u8r3-q04",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "做得更差",
+   "scene": "他这次作业做得比我差。",
+   "stem": "He did the work ___ than me. (badly)",
+   "task": "只写空里的部分。",
+   "answer_text": "worse",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "worse"
+     ],
+     "olds": [
+      "more badly",
+      "worst"
+     ],
+     "cn": [
+      "更差地"
+     ]
+    }
+   ],
+   "help": "badly 的比较级是不规则四兄弟之一。",
+   "explain": "He did the work worse than me. badly → worse，不规则，不能用 more badly。",
+   "common_errors": [
+    {
+     "when": "写了 more badly",
+     "say": "badly 的比较级是不规则的 worse，不用 more。"
+    },
+    {
+     "when": "写了 worst",
+     "say": "worst 是最高级；两个人比较用比较级 worse。"
+    },
+    {
+     "when": "写了 badlier",
+     "say": "没有 badlier 这种变法；记住 badly → worse。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "抱怨噪音",
+   "scene": "邻居们在抱怨噪音。",
+   "stem": "The neighbours complain ___ the noise every night.",
+   "options": [
+    "for",
+    "with",
+    "to",
+    "about"
+   ],
+   "answer": "D",
+   "help": "短语 complain ___：抱怨某事，中间是哪个介词？",
+   "explain": "The neighbours complain about the noise. complain about 是固定搭配。",
+   "wrong_feedback": {
+    "A": "搭配是 complain about（抱怨某事），不是 complain for。",
+    "B": "complain with 不对；抱怨某事用 about。",
+    "C": "complain to 后面跟人（向某人抱怨）；这里后面是 the noise（事情），用 about。"
+   },
+   "audio_id": "u8r3-q05",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 懒散度日",
+   "scene": "有些猫整天懒散度日，什么也不做。",
+   "stem": "Some cats just ___ all day and do nothing. (lie around)",
+   "task": "只写空里的部分。",
+   "answer_text": "lie around",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "lie around"
+     ],
+     "olds": [
+      "lies around",
+      "lie about"
+     ],
+     "cn": [
+      "懒散度日"
+     ]
+    }
+   ],
+   "help": "主语 cats 是复数；短语要写完整，别把 around 换掉。",
+   "explain": "Some cats just lie around all day. lie around 是'懒散度日'；主语复数，lie 用原形。",
+   "common_errors": [
+    {
+     "when": "写了 lies around",
+     "say": "主语 some cats 是复数，动词不能加 s。"
+    },
+    {
+     "when": "写了 lie about",
+     "say": "短语是 lie around；lie about 不是这个意思。"
+    },
+    {
+     "when": "写了 lying around",
+     "say": "just 后面用动词原形短语，不用 -ing。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "不大可能",
+   "scene": "安静的猫不大可能整夜叫。",
+   "stem": "It is ___ that the quiet cat will bark all night.",
+   "options": [
+    "unlikely",
+    "likely",
+    "unlike",
+    "unlikelyer"
+   ],
+   "answer": "A",
+   "help": "先想意思：是'很可能'还是'不大可能'？",
+   "explain": "It is unlikely that the quiet cat will bark all night. unlikely = 不大可能发生的。",
+   "wrong_feedback": {
+    "B": "likely 是'很可能'；安静的猫整夜叫应该'不大可能'，意思反了。",
+    "C": "unlike 是'不像'，意思不对。",
+    "D": "unlikely 是形容词，没有这种比较级写法。"
+   },
+   "audio_id": "u8r3-q06",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "litter 的中文",
+   "scene": "写出 litter 在本单元的中文意思。",
+   "stem": "写出 litter 在本单元的中文意思。",
+   "task": "写中文。",
+   "answer_text": "垃圾",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "垃圾"
+     ],
+     "olds": [],
+     "cn": [
+      "垃圾"
+     ]
+    }
+   ],
+   "help": "回想短文和生词课：Don't leave litter in the park.",
+   "explain": "litter 在本单元是名词'垃圾'。",
+   "common_errors": [
+    {
+     "when": "写了'一窝小猫'",
+     "say": "litter 在别的语境里可以指'一窝幼崽'，但本单元取'垃圾'。"
+    },
+    {
+     "when": "写了'猫砂盆'",
+     "say": "猫砂盆是 litter box；litter 本身是'垃圾'的意思。"
+    },
+    {
+     "when": "写了'信件'",
+     "say": "信件是 letter，拼写只差一个字母，别混。"
+    }
+   ],
+   "audio_id": "u8r3-q07",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "在室内",
+   "scene": "狗不该整天待在室内。",
+   "stem": "Dogs should not stay ___ all day. They need fresh air.",
+   "options": [
+    "indoor",
+    "indoorsly",
+    "indoors",
+    "in doors"
+   ],
+   "answer": "C",
+   "help": "stay 后面要的是副词：indoor 还是 indoors？",
+   "explain": "Dogs should not stay indoors all day. indoors 是副词'在室内'。",
+   "wrong_feedback": {
+    "A": "indoor 多作形容词（如 indoor games）；表示'在室内'作副词用 indoors。",
+    "B": "没有 indoorsly 这种词；indoors 本身就是副词。",
+    "D": "要写成一个词：indoors，中间不分开。"
+   },
+   "audio_id": "u8r3-q08",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 除此之外",
+   "scene": "用 in addition 补充一点。",
+   "stem": "Dogs need food. ___ ___, they need love and exercise. (in addition)",
+   "task": "只写空里的部分。",
+   "answer_text": "in addition",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "in addition"
+     ],
+     "olds": [
+      "in additions",
+      "in additional"
+     ],
+     "cn": [
+      "除此之外（还）"
+     ]
+    }
+   ],
+   "help": "这个短语表示'除此之外还'，addition 的形式不能变。",
+   "explain": "In addition, they need love and exercise. in addition 是固定短语，addition 用单数、不加 s。",
+   "common_errors": [
+    {
+     "when": "写了 in additions",
+     "say": "短语里 addition 不加 s。"
+    },
+    {
+     "when": "写了 in additional",
+     "say": "additional 是形容词；短语里用名词 addition。"
+    },
+    {
+     "when": "写了 in addition to",
+     "say": "多了 to；in addition 单独用时后面直接跟句子。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "说得更有耐心",
+   "scene": "安娜在演出里比妹妹说得更有耐心。",
+   "stem": "Anna speaks ___ than her sister in the show.",
+   "options": [
+    "patientlier",
+    "more patiently",
+    "more patient",
+    "patiently"
+   ],
+   "answer": "B",
+   "help": "speaks 是动作；patiently 的比较级？",
+   "explain": "Anna speaks more patiently than her sister. 描绘动作用副词比较级 more patiently。",
+   "wrong_feedback": {
+    "A": "-ly 副词比较级用 more，不能加 -er。",
+    "C": "patient 是形容词；描绘动作 speaks 要用副词 patiently。",
+    "D": "有 than，要用比较级 more patiently。"
+   },
+   "audio_id": "u8r3-q09",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "睡得更少",
+   "scene": "他睡得比他的狗还少，因为他整天工作。",
+   "stem": "He sleeps ___ than his dog. He works all day.",
+   "options": [
+    "less",
+    "more little",
+    "littler",
+    "least"
+   ],
+   "answer": "A",
+   "help": "little 的比较级是不规则四兄弟里的哪一个？",
+   "explain": "He sleeps less than his dog. little → less（量更少）。",
+   "wrong_feedback": {
+    "B": "little 作副词时比较级是不规则的 less，不能说 more little。",
+    "C": "littler 是形容词'更小的'；这里比的是睡觉的量，用 less。",
+    "D": "有 than 用比较级 less；least 是最高级。"
+   },
+   "audio_id": "u8r3-q10",
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 干活更卖力",
+   "scene": "农场的狗比宠物狗干活更卖力。",
+   "stem": "Farm dogs work ___ than pet dogs. (hard)",
+   "task": "只写空里的部分。",
+   "answer_text": "harder",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "harder"
+     ],
+     "olds": [
+      "more hard",
+      "hard"
+     ],
+     "cn": [
+      "更努力地"
+     ]
+    }
+   ],
+   "help": "hard 是同形短副词，比较级走哪条路？",
+   "explain": "Farm dogs work harder than pet dogs. hard 的比较级直接加 -er：harder，不用 more。",
+   "common_errors": [
+    {
+     "when": "写了 more hard",
+     "say": "hard 这类短副词比较级加 -er，不用 more。"
+    },
+    {
+     "when": "写了 hard",
+     "say": "有 than 就要用比较级 harder，原级不够。"
+    },
+    {
+     "when": "写了 harderer",
+     "say": "harder 已经是比较级，不能再加重。"
+    }
+   ],
+   "reading": "Bingo and Coco are two dogs in the park. Bingo is bigger and runs faster than Coco. But Coco swims better than Bingo. Bingo barks more loudly than Coco when he sees a cat. Coco waits more patiently than Bingo at the gate. In the evening, Bingo eats more quickly than Coco. Who is the better dog? They are both good — in different ways!"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：宠物诊所调查报告",
+   "teach_html": "<p>换材料了。广播站做了一份宠物诊所调查报告，比较了镇上的几家诊所。这次自己判断：注意每个比较级说的是哪家诊所、哪件事。短文会留在屏幕上。</p>",
+   "audio_id": "u8r3-v-intro",
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "检查得更仔细",
+   "scene": "读调查报告回答。",
+   "stem": "The vets at Happy Paws check pets ___.",
+   "options": [
+    "faster",
+    "more patiently",
+    "more carefully",
+    "less carefully"
+   ],
+   "answer": "C",
+   "help": "回短文找 check pets 后面的词。",
+   "explain": "The vets at Happy Paws check pets more carefully. 短文原句：Its vets also check pets more carefully.",
+   "wrong_feedback": {
+    "A": "faster 说的是诊所帮忙的速度，不是检查得仔不仔细；短文里检查对应的是 more carefully。",
+    "B": "more patiently 说的是 Pet Care 的员工听主人说话，不是检查宠物。",
+    "D": "短文说 Happy Paws 检查得更仔细，不是 less。"
+   },
+   "audio_id": "u8r3-v02",
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 更耐心地听",
+   "scene": "Pet Care 的员工听得更有耐心。",
+   "stem": "The staff at Pet Care listen ___ to owners. (patiently)",
+   "task": "只写空里的部分。",
+   "answer_text": "more patiently",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more patiently"
+     ],
+     "olds": [
+      "patientlier",
+      "more patient"
+     ],
+     "cn": [
+      "更耐心地"
+     ]
+    }
+   ],
+   "help": "报告里在比较两家诊所；patiently 的比较级？",
+   "explain": "The staff at Pet Care listen more patiently to owners. -ly 副词比较级加 more。",
+   "common_errors": [
+    {
+     "when": "写了 patientlier",
+     "say": "patiently 不能加 -er；用 more patiently。"
+    },
+    {
+     "when": "写了 more patient",
+     "say": "patient 是形容词；描绘动作 listen 用副词 patiently。"
+    },
+    {
+     "when": "写了 patiently",
+     "say": "有比较语境，要用比较级 more patiently。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "等的时间更少",
+   "scene": "在 Happy Paws 等的时间更少。",
+   "stem": "Owners spend ___ time waiting at Happy Paws.",
+   "options": [
+    "least",
+    "more little",
+    "little",
+    "less"
+   ],
+   "answer": "D",
+   "help": "spend ... time 说的是量；little 的比较级是？",
+   "explain": "Owners spend less time waiting at Happy Paws. little → less。",
+   "wrong_feedback": {
+    "A": "这里是两家诊所之间的比较，用比较级 less；least 是最高级。",
+    "B": "little 的比较级是不规则的 less。",
+    "C": "原级不对；短文在和另一家比较，要用比较级。"
+   },
+   "audio_id": "u8r3-v03",
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "忙日干活更卖力",
+   "scene": "好的兽医在忙碌的日子里干活更卖力。",
+   "stem": "A good vet works ___ on busy days. (hard)",
+   "task": "只写空里的部分。",
+   "answer_text": "harder",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "harder"
+     ],
+     "olds": [
+      "more hard",
+      "hard"
+     ],
+     "cn": [
+      "更努力地"
+     ]
+    }
+   ],
+   "help": "和平时比，忙日更卖力——有比较的意思；hard 怎么变？",
+   "explain": "A good vet works harder on busy days. hard 的比较级是 harder。",
+   "common_errors": [
+    {
+     "when": "写了 more hard",
+     "say": "hard 的比较级加 -er，不用 more。"
+    },
+    {
+     "when": "写了 hard",
+     "say": "句中有比较的意思（比平时更卖力），要用比较级 harder。"
+    },
+    {
+     "when": "写了 hardly",
+     "say": "hardly 是'几乎不'，意思反了。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "三句里只有一句对。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "She sings beautifullier than her friend.",
+    "She sings more beautifully than her friend.",
+    "She sings more beautiful than her friend.",
+    "She sing more beautifully than her friend."
+   ],
+   "answer": "B",
+   "help": "逐句查：比较级变法对吗？描绘动作的词对吗？三单对吗？",
+   "explain": "She sings more beautifully than her friend. 形式、选词、三单都对。",
+   "wrong_feedback": {
+    "A": "-ly 副词的比较级用 more，不能加 -er。",
+    "C": "beautiful 是形容词；描绘 sings 用副词 beautifully。",
+    "D": "主语 she 是第三人称单数，动词要加 s：sings。"
+   },
+   "audio_id": "u8r3-v04",
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "不要乱扔垃圾",
+   "scene": "把 litter 填回句子。",
+   "stem": "Don't leave ___ in the park. Take it home with you. (litter)",
+   "task": "只写空里的部分。",
+   "answer_text": "litter",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "litter"
+     ],
+     "olds": [
+      "litters",
+      "littering"
+     ],
+     "cn": [
+      "垃圾"
+     ]
+    }
+   ],
+   "help": "litter 在这里是名词'垃圾'，不可数。",
+   "explain": "Don't leave litter in the park. litter 作'垃圾'是不可数名词，不加 s。",
+   "common_errors": [
+    {
+     "when": "写了 litters",
+     "say": "litter 表示'垃圾'时不可数，不能加 s。"
+    },
+    {
+     "when": "写了 littering",
+     "say": "littering 是动词'乱扔垃圾'的 -ing 形式；这里 leave 后面要的是名词。"
+    },
+    {
+     "when": "写了 letter",
+     "say": "letter 是'信件'，拼写只差一个字母，看清题目给的词。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "relieve 的意思",
+   "scene": "课本里的委婉说法。",
+   "stem": "Cats use a litter box to relieve themselves. 'Relieve themselves' here means ___.",
+   "options": [
+    "洗澡",
+    "睡觉",
+    "上厕所",
+    "玩耍"
+   ],
+   "answer": "C",
+   "help": "线索是 litter box——猫在猫砂盆里做什么？",
+   "explain": "'Relieve themselves' 是委婉说法，意思是'上厕所（解手）'。课本里 relieve 的释义就是'方便；解手'。",
+   "wrong_feedback": {
+    "A": "不是洗澡；猫用猫砂盆是去方便，不是洗澡。",
+    "B": "睡觉是 sleep；relieve themselves 是委婉说法，指解手。",
+    "D": "玩耍是 play；结合 litter box（猫砂盆）想，这件事和厕所有关。"
+   },
+   "audio_id": "u8r3-v05",
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 玩得更开心",
+   "scene": "孩子们今天玩得比以前开心。",
+   "stem": "The children played ___ than before. (happily)",
+   "task": "只写空里的部分。",
+   "answer_text": "more happily",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more happily"
+     ],
+     "olds": [
+      "happilier",
+      "more happy"
+     ],
+     "cn": [
+      "更开心地"
+     ]
+    }
+   ],
+   "help": "happily 已经是副词，它的比较级怎么变？",
+   "explain": "The children played more happily than before. -ly 副词比较级用 more，happily 本身不变。",
+   "common_errors": [
+    {
+     "when": "写了 happilier",
+     "say": "happilier 不是词；happier 是形容词'更开心的'，描绘动作要用 more happily。"
+    },
+    {
+     "when": "写了 more happy",
+     "say": "happy 是形容词；描绘动作 played 用副词 happily。"
+    },
+    {
+     "when": "写了 happily",
+     "say": "有 than，要用比较级。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "不大可能睡整天",
+   "scene": "豆豆太好动了，不大可能睡一整天。",
+   "stem": "It is ___ that Doudou will sleep all day — he is too active. (unlikely)",
+   "task": "只写空里的部分。",
+   "answer_text": "unlikely",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unlikely"
+     ],
+     "olds": [
+      "likely",
+      "unlikelys"
+     ],
+     "cn": [
+      "不大可能的"
+     ]
+    }
+   ],
+   "help": "先判断意思：太活泼的狗睡一整天，可能还是不大可能？",
+   "explain": "It is unlikely that Doudou will sleep all day. unlikely = 不大可能发生的。",
+   "common_errors": [
+    {
+     "when": "写了 likely",
+     "say": "意思反了：likely 是'很可能'；too active 说明睡整天不大可能。"
+    },
+    {
+     "when": "写了 unlikelys",
+     "say": "unlikely 是形容词，不加 s。"
+    },
+    {
+     "when": "写了 unlike",
+     "say": "unlike 是'不像'，意思不对。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "向诊所抱怨",
+   "scene": "上周林先生向诊所抱怨等得太久。",
+   "stem": "Last week, Mr Lin ___ to the clinic about the long wait.",
+   "options": [
+    "complained",
+    "complain",
+    "complaints",
+    "complains"
+   ],
+   "answer": "A",
+   "help": "时间词是 last week——动词用什么时态？",
+   "explain": "Last week, Mr Lin complained to the clinic. complain 的过去式是 complained。",
+   "wrong_feedback": {
+    "B": "last week 是过去的时间，要用过去式 complained。",
+    "C": "complaints 是名词'投诉'的复数，这里需要动词。",
+    "D": "讲的是上周的事，不能用现在时 complains。"
+   },
+   "audio_id": "u8r3-v06",
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 一样快",
+   "scene": "可可跑得和宾果一样快。",
+   "stem": "Coco can run ___ fast as Bingo. (as)",
+   "task": "只写空里的部分。",
+   "answer_text": "as",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as"
+     ],
+     "olds": [
+      "so",
+      "than"
+     ],
+     "cn": [
+      "和……一样"
+     ]
+    }
+   ],
+   "help": "表示'和……一样'的句型：as + 原级 + as，空里是前一个 as。",
+   "explain": "Coco can run as fast as Bingo. as...as 结构两边都用 as，中间用副词原级 fast。",
+   "common_errors": [
+    {
+     "when": "写了 so",
+     "say": "so...as 多用在否定句里；肯定句表示'一样'用 as...as。"
+    },
+    {
+     "when": "写了 than",
+     "say": "than 前面要跟比较级；这里 run 后面是原级 fast，结构是 as...as。"
+    },
+    {
+     "when": "写了 more",
+     "say": "more 是比较级用的；as...as 中间只放原级。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "谁游得更好",
+   "scene": "回第一篇短文回答。",
+   "stem": "According to the first text, who swims better?",
+   "options": [
+    "Bingo.",
+    "Both are the same.",
+    "Neither of them.",
+    "Coco."
+   ],
+   "answer": "D",
+   "help": "回短文找 swim 那一句。",
+   "explain": "Coco. 短文原句：Coco swims better than Bingo.",
+   "wrong_feedback": {
+    "A": "短文说 Coco swims better than Bingo，游得更好的是可可。",
+    "B": "短文明确分出了高下，不是'一样好'。",
+    "C": "两只狗都会游泳，只是可可更好。"
+   },
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 喂得更好",
+   "scene": "如果喂得比以前更好，狗会长得更壮。",
+   "stem": "If you feed a dog ___ than before, it will grow stronger. (well)",
+   "task": "只写空里的部分。",
+   "answer_text": "better",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "olds": [
+      "more well",
+      "well"
+     ],
+     "cn": [
+      "更好"
+     ]
+    }
+   ],
+   "help": "有 than 和 before，是在比较；well 的比较级？",
+   "explain": "If you feed a dog better than before, it will grow stronger. well → better，不规则。",
+   "common_errors": [
+    {
+     "when": "写了 more well",
+     "say": "well 的比较级是不规则的 better，不能加 more。"
+    },
+    {
+     "when": "写了 well",
+     "say": "有 than 就要用比较级 better。"
+    },
+    {
+     "when": "写了 best",
+     "say": "best 是最高级；这里是和以前比，用比较级。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "邻居又抱怨",
+   "scene": "邻居们每周都抱怨这只狗。",
+   "stem": "The neighbours ___ about the dog every week. (complain)",
+   "task": "只写空里的部分。",
+   "answer_text": "complain",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "complain"
+     ],
+     "olds": [
+      "complains",
+      "complaint"
+     ],
+     "cn": [
+      "抱怨"
+     ]
+    }
+   ],
+   "help": "主语 neighbours 是复数；every week 说明是经常发生的事。",
+   "explain": "The neighbours complain about the dog every week. 主语复数，动词用原形 complain。",
+   "common_errors": [
+    {
+     "when": "写了 complains",
+     "say": "主语是复数，动词不能加 s。"
+    },
+    {
+     "when": "写了 complaint",
+     "say": "complaint 是名词；这里需要动词 complain。"
+    },
+    {
+     "when": "写了 complained",
+     "say": "every week 是经常性的事，用一般现在时，不用过去式。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 做得更仔细",
+   "scene": "她做作业比她哥哥仔细。",
+   "stem": "She did her homework ___ than her brother. (carefully)",
+   "task": "只写空里的部分。",
+   "answer_text": "more carefully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more carefully"
+     ],
+     "olds": [
+      "carefullier",
+      "more careful"
+     ],
+     "cn": [
+      "更仔细地"
+     ]
+    }
+   ],
+   "help": "有 than；carefully 的比较级只能选一种变法。",
+   "explain": "She did her homework more carefully than her brother. -ly 副词比较级加 more。",
+   "common_errors": [
+    {
+     "when": "写了 carefullier",
+     "say": "carefully 不能加 -er；用 more carefully。"
+    },
+    {
+     "when": "写了 more careful",
+     "say": "careful 是形容词；描绘动作 did 用副词 carefully。"
+    },
+    {
+     "when": "写了 carefully",
+     "say": "有 than，要用比较级。"
+    }
+   ],
+   "reading": "We asked pet owners about the pet clinics in our town. Happy Paws helps animals faster than Pet Care. Its vets also check pets more carefully. At Pet Care, the staff listen more patiently to owners and answer questions more slowly and clearly. Owners spend less time waiting at Happy Paws, but they pay more money there. Which clinic is better? It is hard to say!"
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：压轴五题",
+   "teach_html": "<p>最后五道压轴题：老朋友有四单元的<strong>被动语态</strong>、三单元的<strong>形容词比较级</strong>、七单元的<strong>条件句</strong>，再混上本课的副词比较级。分清“说人还是说动作”，就能各个击破。</p>",
+   "audio_id": "u8r3-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "把比较级用对的只有一句。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "He drives carefullier than his father.",
+    "He drives more carefully than his father.",
+    "He drives more careful than his father.",
+    "He drive more carefully than his father."
+   ],
+   "answer": "B",
+   "help": "逐句查：变法、选词、三单。",
+   "explain": "He drives more carefully than his father. 三处都对。",
+   "wrong_feedback": {
+    "A": "-ly 副词的比较级用 more，不能加 -er。",
+    "C": "careful 是形容词；描绘 drives 要用副词 carefully。",
+    "D": "主语 he 是第三人称单数，动词要用 drives。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 毛被梳",
+   "scene": "回锅四单元：被动语态。",
+   "stem": "The dog's fur ___ every week by Grandma Chen. (brush)",
+   "task": "只写空里的部分。",
+   "answer_text": "is brushed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is brushed"
+     ],
+     "olds": [
+      "brushes",
+      "is brush"
+     ],
+     "cn": [
+      "被梳"
+     ]
+    }
+   ],
+   "help": "狗的毛是被梳的；brush 的过去分词是 brushed。",
+   "explain": "The dog's fur is brushed every week. 被动语态：is + brushed。",
+   "common_errors": [
+    {
+     "when": "写了 brushes",
+     "say": "brushes 是主动；毛是被梳的对象，要用被动 is brushed。"
+    },
+    {
+     "when": "写了 is brush",
+     "say": "被动要用过去分词 brushed，不是原形。"
+    },
+    {
+     "when": "写了 brushed",
+     "say": "少了 is：被动语态要有 be 动词，fur 是单数用 is。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 更大",
+   "scene": "回锅三单元：这次比的是体型（形容词）。",
+   "stem": "Bingo is ___ than Coco. (big)",
+   "task": "只写空里的部分。",
+   "answer_text": "bigger",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "bigger"
+     ],
+     "olds": [
+      "more big",
+      "big"
+     ],
+     "cn": [
+      "更大"
+     ]
+    }
+   ],
+   "help": "is 后面描绘的是狗本身，用形容词比较级；big 的拼写要双写。",
+   "explain": "Bingo is bigger than Coco. big → bigger：末尾辅音双写再加 er。",
+   "common_errors": [
+    {
+     "when": "写了 more big",
+     "say": "big 是短形容词，比较级加 -er，不用 more。"
+    },
+    {
+     "when": "写了 big",
+     "say": "有 than，要用比较级 bigger。"
+    },
+    {
+     "when": "写了 biger",
+     "say": "拼写：big 末尾的 g 要双写——bigger。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 耐心训练",
+   "scene": "回锅七单元：条件句谈规律。",
+   "stem": "If you ___ your dog patiently, it will learn fast.",
+   "options": [
+    "trains",
+    "trained",
+    "train",
+    "will train"
+   ],
+   "answer": "C",
+   "help": "if 从句里的动词，看主句的 will 就知道时态怎么配。",
+   "explain": "If you train your dog patiently, it will learn fast. 条件句：if 从句用一般现在时，主句用 will。",
+   "wrong_feedback": {
+    "A": "if 从句的主语是 you，动词用原形 train。",
+    "B": "条件句谈规律，if 从句用一般现在时，不用过去式。",
+    "D": "if 从句里不用 will；will 放在主句（it will learn）里。"
+   }
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 噪音更少",
+   "scene": "猫比狗发出的噪音少。",
+   "stem": "Cats are quieter pets. They make ___ noise than dogs. (little)",
+   "task": "只写空里的部分。",
+   "answer_text": "less",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "less"
+     ],
+     "olds": [
+      "more little",
+      "littler"
+     ],
+     "cn": [
+      "更少的"
+     ]
+    }
+   ],
+   "help": "noise 是不可数名词，说的是量；little 表量时的比较级？",
+   "explain": "They make less noise than dogs. little 表示量时，比较级是不规则的 less。",
+   "common_errors": [
+    {
+     "when": "写了 more little",
+     "say": "little 的比较级不能用 more 拼，是不规则的 less。"
+    },
+    {
+     "when": "写了 littler",
+     "say": "littler 多指个子'更小'；这里说噪音的量，用 less。"
+    },
+    {
+     "when": "写了 least",
+     "say": "有 than 用比较级 less，不用最高级。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "下集预告：宠物从前传",
+   "teach_html": "<p>本课收官：副词比较级你会用了——more carefully、faster、better、less 都拿下。</p><p>下一课我们坐时光机：几千年前的宠物长什么样？女王的猫、电影明星狗……还要学三者以上比较用的<strong>最高级</strong>。</p>",
+   "audio_id": "u8r3-ending"
+  }
+ ],
+ "title": "谁做得更好：副词比较级",
+ "unit": "Unit 8 Pets and us",
+ "version": 1
+}
