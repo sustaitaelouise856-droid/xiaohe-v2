@@ -1,0 +1,1399 @@
+{
+ "lesson_id": "u8r2",
+ "practice_end": 27,
+ "home_subtitle": "第二课 · 公寓养狗记",
+ "part1_desc": "第 1–27 步：闯 -ly 拼写关（-le 变 -y、fully、truly）+ hard/hardly、late/lately 两对易混词；本课新词 flat、choice、advise、cause 和三个短语。",
+ "part2_desc": "第 28–50 步：独立读邻居写给林先生的一封信，课尾压轴：副词综合、被动与现在完成时回锅、unless 回锅。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：副词拼写规则（-le→-y、-ll→+y、true→truly）、hard/hardly 与 late/lately 辨析、系动词后跟形容词、friendly 是形容词。Unit 8 主题，核心词 flat/choice/advise/cause，短语 in short/have no choice but to do/run free。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "公寓里的狗",
+   "teach_html": "<p>上一课豆豆在公园里跑得开心。今天我们去看一只住在<strong>公寓 (flat)</strong> 里的狗：地方小、邻居多，它的生活和豆豆可不一样。</p><p>这一课先闯一关：<strong>-ly 拼写关</strong>。副词的拼写有几个小陷阱，写错一个字母，考试里就是一分。再加两对长得很像的词：hard / hardly、late / lately。</p>",
+   "audio_id": "u8r2-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "拼写关一：-le 结尾变 -y",
+   "teach_html": "<p>形容词以 <strong>-le</strong> 结尾时，变副词要把 e 换成 y：</p><p>simple → <strong>simply</strong>（简单地）<br>gentle → <strong>gently</strong>（轻轻地）<br>terrible → <strong>terribly</strong>（非常；糟糕地）</p><p>例：<strong>She held the puppy gently.</strong>（她轻轻地抱着小狗。）千万别写成 gentlely。</p>",
+   "audio_id": "u8r2-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "拼写关二：fully 和 truly",
+   "teach_html": "<p>① 以 <strong>-ll</strong> 结尾的形容词，直接加 y：full → <strong>fully</strong>（完全地）。注意不是 fullly，三个 l 太多了。</p><p>② true 变副词要去掉 e：true → <strong>truly</strong>（真正地）。</p><p>例：<strong>I am truly sorry.</strong>（我真的很抱歉。）</p>",
+   "audio_id": "u8r2-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混词一：hard 与 hardly",
+   "teach_html": "<p>这对词只差两个字母，意思差得远：</p><p><strong>hard</strong> 副词 = 努力地：<strong>He works hard.</strong>（他努力工作。）</p><p><strong>hardly</strong> = 几乎不：<strong>He hardly works.</strong>（他几乎不工作。）</p><p>hardly 带着否定的味道，看见它，先想“几乎不”。</p>",
+   "audio_id": "u8r2-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混词二：late 与 lately",
+   "teach_html": "<p><strong>late</strong> 作副词 = 晚：<strong>He came late.</strong>（他来晚了。）late 和形容词同形，不用加 -ly。</p><p><strong>lately</strong> = 最近：<strong>I haven't seen him lately.</strong>（我最近没见过他。）</p><p>还有 <strong>fast</strong> 也一样：副词就是 fast，不要写 fastly。</p>",
+   "audio_id": "u8r2-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "系动词后面跟形容词",
+   "teach_html": "<p>look、sound、smell、taste、feel 这几个词像系动词，后面跟<strong>形容词</strong>，不跟副词：</p><p><strong>The dog looks happy.</strong>（狗看起来很开心。）<br><strong>The soup tastes good.</strong>（汤味道好。）<br><strong>The music sounds nice.</strong>（音乐听起来好听。）</p><p>特别提醒：<strong>feel well</strong> 里的 well 是形容词，意思是“身体好”。</p>",
+   "audio_id": "u8r2-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词：flat、choice、advise、cause",
+   "teach_html": "<p><strong>flat</strong> /flæt/ n. 公寓（英式说法）：<strong>live in a flat</strong>（住在公寓里）。</p><p><strong>choice</strong> /tʃɔɪs/ n. 选择：<strong>make a choice</strong>（做选择）。</p><p><strong>advise</strong> /ədˈvaɪz/ v. 劝告；建议：<strong>advise you to close the windows</strong>（建议你关上窗户）。</p><p><strong>cause</strong> /kɔːz/ v. 引起；造成：<strong>cause problems</strong>（造成麻烦）。</p>",
+   "audio_id": "u8r2-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "短语三件套",
+   "teach_html": "<p><strong>in short</strong> 总之；简言之：说了一堆之后，用它来收尾总结。</p><p><strong>have no choice but to do</strong> 别无选择，只能……：<strong>Cola has no choice but to stay indoors.</strong>（可乐只能待在室内。）注意 but 后面跟 to do。</p><p><strong>run free</strong> 四处自由走动：<strong>Dogs love to run free.</strong></p>",
+   "audio_id": "u8r2-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：friendly 不是副词",
+   "teach_html": "<p><strong>friendly</strong> 虽然以 -ly 结尾，但它是<strong>形容词</strong>：<strong>a friendly dog</strong>（一只友善的狗）。它不能描绘动作。</p><p>再看 <strong>well</strong> 的两个身份：副词——<strong>She sings well.</strong>（她唱得好。）；形容词——<strong>I feel well.</strong>（我感觉身体好。）</p><p>判断口诀：看它描绘谁，描绘动作是副词，描绘人或物是形容词。</p>",
+   "audio_id": "u8r2-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：公寓里的可乐",
+   "teach_html": "<p>短文讲的是小林和住在公寓里的狗可乐。读一读它每天的生活，留意 in short、have no choice but to stay indoors 这些新短语。短文会留在屏幕上，随时可回看。</p>",
+   "audio_id": "u8r2-prac-01",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "轻声说话",
+   "scene": "宝宝在睡觉，请轻声说话。",
+   "stem": "The baby is sleeping. Please speak ___.",
+   "options": [
+    "soft",
+    "softlys",
+    "softly",
+    "softer"
+   ],
+   "answer": "C",
+   "help": "speak 是动作，要用 soft 的副词形式。",
+   "explain": "Please speak softly. soft 直接加 -ly 变副词 softly。",
+   "wrong_feedback": {
+    "A": "soft 是形容词；修饰动词 speak 要用副词 softly。",
+    "B": "副词不加 s；soft + ly 就是 softly。",
+    "D": "这里没有比较，不用比较级 softer。"
+   },
+   "audio_id": "u8r2-q01",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "轻轻关窗",
+   "scene": "她轻轻地关上了窗。",
+   "stem": "She closed the window ___. (gentle)",
+   "task": "只写空里的部分。",
+   "answer_text": "gently",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "gently"
+     ],
+     "olds": [
+      "gentlely",
+      "gentle"
+     ],
+     "cn": [
+      "轻轻地"
+     ]
+    }
+   ],
+   "help": "gentle 以 -le 结尾，想想拼写关的规则。",
+   "explain": "She closed the window gently. -le 结尾去 e 加 y：gentle → gently。",
+   "common_errors": [
+    {
+     "when": "写了 gentlely",
+     "say": "拼写不对：-le 结尾要把 e 换成 y，是 gently，不是 gentlely。"
+    },
+    {
+     "when": "写了 gentle",
+     "say": "gentle 是形容词；描绘动作 closed 要用副词 gently。"
+    },
+    {
+     "when": "写了 gentlys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 弹得糟糕",
+   "scene": "他钢琴弹得很糟糕。",
+   "stem": "He played the piano ___. (terrible)",
+   "task": "只写空里的部分。",
+   "answer_text": "terribly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "terribly"
+     ],
+     "olds": [
+      "terriblely",
+      "terrible"
+     ],
+     "cn": [
+      "糟糕地；非常"
+     ]
+    }
+   ],
+   "help": "terrible 也是 -le 结尾，规则和 gentle 一样。",
+   "explain": "He played the piano terribly. terrible → terribly：去 e 加 y。",
+   "common_errors": [
+    {
+     "when": "写了 terriblely",
+     "say": "拼写不对：-le 结尾去 e 加 y，是 terribly。"
+    },
+    {
+     "when": "写了 terrible",
+     "say": "terrible 是形容词；描绘动作 played 要用副词 terribly。"
+    },
+    {
+     "when": "写了 terriblys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "真的很抱歉",
+   "scene": "他为吵醒宝宝道歉。",
+   "stem": "I am ___ sorry. My dog barked all night.",
+   "options": [
+    "truly",
+    "truely",
+    "true",
+    "truest"
+   ],
+   "answer": "A",
+   "help": "true 变副词，拼写上有个小动作：去掉什么？",
+   "explain": "I am truly sorry. true → truly：去掉 e 再加 ly。",
+   "wrong_feedback": {
+    "B": "true 变副词要去掉 e：truly，不是 truely。",
+    "C": "true 是形容词，不能修饰 sorry；要用副词 truly。",
+    "D": "truest 是形容词最高级，这里要用副词 truly。"
+   },
+   "audio_id": "u8r2-q02",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "title": "完全满了",
+   "scene": "大厅里完全坐满了人。",
+   "stem": "The hall was ___ full of people. (full)",
+   "task": "只写空里的部分。",
+   "answer_text": "fully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fully"
+     ],
+     "olds": [
+      "fullly",
+      "fuly"
+     ],
+     "cn": [
+      "完全地"
+     ]
+    }
+   ],
+   "help": "full 以 -ll 结尾，规则是直接加什么？",
+   "explain": "The hall was fully full of people. full 以 -ll 结尾，直接加 y：fully。注意只有两个 l 加一个 y。",
+   "common_errors": [
+    {
+     "when": "写了 fullly",
+     "say": "多了两个字母：full + y = fully，不是 full 再加 ly。"
+    },
+    {
+     "when": "写了 fuly",
+     "say": "漏了一个 l：full 本身有两个 l，fully 里也要保留。"
+    },
+    {
+     "when": "写了 full",
+     "say": "这里要用副词 fully 表示'完全'，不能直接填形容词 full。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 几乎不工作",
+   "scene": "他周日几乎不工作，整天睡觉。",
+   "stem": "He ___ works on Sundays. He just sleeps all day. (hard)",
+   "task": "只写空里的部分。",
+   "answer_text": "hardly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hardly"
+     ],
+     "olds": [
+      "hard",
+      "harder"
+     ],
+     "cn": [
+      "几乎不"
+     ]
+    }
+   ],
+   "help": "看后半句：整天睡觉。空里填'努力地'还是'几乎不'？",
+   "explain": "He hardly works on Sundays. hardly 是'几乎不'，和'整天睡觉'对得上；hard 是'努力地'，意思反了。",
+   "common_errors": [
+    {
+     "when": "写了 hard",
+     "say": "意思反了：hard 是'努力地'，可他整天睡觉，应该是'几乎不工作'——hardly。"
+    },
+    {
+     "when": "写了 harder",
+     "say": "harder 是比较级'更努力'，这里没有比较，而且意思也反。"
+    },
+    {
+     "when": "写了 hardlys",
+     "say": "没有 hardlys 这种写法；hardly 本身就是完整的词。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "睡得晚",
+   "scene": "对话：他看起来很累。",
+   "stem": "— You look tired. — Yes, I went to bed ___ last night.",
+   "options": [
+    "lately",
+    "late",
+    "later",
+    "latest"
+   ],
+   "answer": "B",
+   "help": "昨晚、上床——说的是'晚'还是'最近'？",
+   "explain": "I went to bed late last night. late 作副词是'晚'；lately 是'最近'，别混。",
+   "wrong_feedback": {
+    "A": "lately 是'最近'，不是'晚'；昨晚睡得晚用 late。",
+    "C": "later 是比较级'更晚'，这里没有在比较。",
+    "D": "latest 是'最新的'，意思不对。"
+   },
+   "audio_id": "u8r2-q03",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "最近见过吗",
+   "scene": "好久没见到那只狗了。",
+   "stem": "Have you seen that dog ___? I miss it. (late)",
+   "task": "只写空里的部分。",
+   "answer_text": "lately",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "lately"
+     ],
+     "olds": [
+      "late",
+      "later"
+     ],
+     "cn": [
+      "最近"
+     ]
+    }
+   ],
+   "help": "这句话问的是'最近'，不是'晚'。",
+   "explain": "Have you seen that dog lately? lately 是'最近'，常和完成时一起用；late 是'晚'，意思不对。",
+   "common_errors": [
+    {
+     "when": "写了 late",
+     "say": "late 是'晚'（时间晚）；问'最近有没有见过'要用 lately。"
+    },
+    {
+     "when": "写了 later",
+     "say": "later 是'更晚/以后'，是比较级，这里不用。"
+    },
+    {
+     "when": "写了 latelys",
+     "say": "没有 latelys 这种写法。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "花闻起来香",
+   "scene": "花园里的花。",
+   "stem": "The flowers in the garden smell ___.",
+   "options": [
+    "nicely",
+    "nicer",
+    "well",
+    "nice"
+   ],
+   "answer": "D",
+   "help": "smell 是系动词，它后面跟形容词还是副词？",
+   "explain": "The flowers smell nice. smell 作系动词，后面跟形容词 nice，表示'闻起来香'。",
+   "wrong_feedback": {
+    "A": "smell 是系动词，后面跟形容词 nice，不用副词 nicely。",
+    "B": "这里没有比较，不用比较级 nicer。",
+    "C": "well 在这里不对：smell 后面说花的气味，用形容词 nice。"
+   },
+   "audio_id": "u8r2-q04",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 看起来开心",
+   "scene": "狗盯着门口看，好像很开心。",
+   "stem": "The dog looks ___ at the door. Someone is coming. (happy)",
+   "task": "只写空里的部分。",
+   "answer_text": "happy",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "happy"
+     ],
+     "olds": [
+      "happily",
+      "happyly"
+     ],
+     "cn": [
+      "开心的"
+     ]
+    }
+   ],
+   "help": "look 在这里是系动词还是动作？想清楚再下笔。",
+   "explain": "The dog looks happy. look 是系动词，后面跟形容词 happy；happily 是描绘动作用的，这里不用。",
+   "common_errors": [
+    {
+     "when": "写了 happily",
+     "say": "look 是系动词，后跟形容词；happily 描绘动作，这里描绘的是狗的状态，用 happy。"
+    },
+    {
+     "when": "写了 happyly",
+     "say": "拼写也不对：happy 变副词是 happily；但这道题根本不用副词。"
+    },
+    {
+     "when": "写了 happys",
+     "say": "形容词不加 s。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "音乐听起来美",
+   "scene": "晚会上的音乐。",
+   "stem": "The music at the party sounds ___.",
+   "options": [
+    "beautiful",
+    "beautifully",
+    "beauty",
+    "more beautiful"
+   ],
+   "answer": "A",
+   "help": "sound 和 smell 一样是系动词。",
+   "explain": "The music sounds beautiful. 系动词 sound 后面跟形容词。",
+   "wrong_feedback": {
+    "B": "sound 是系动词，后跟形容词 beautiful；beautifully 是描绘动作用的。",
+    "C": "beauty 是名词'美'，不能跟在 sounds 后面作表语。",
+    "D": "这里没有比较，不用 more beautiful。"
+   },
+   "audio_id": "u8r2-q05",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "flat 的中文",
+   "scene": "写出 flat 在本单元里的中文意思。",
+   "stem": "写出 flat 在本单元里的中文意思。",
+   "task": "写中文。",
+   "answer_text": "公寓",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "公寓",
+      "一套公寓"
+     ],
+     "olds": [],
+     "cn": [
+      "公寓"
+     ]
+    }
+   ],
+   "help": "回想短文：Xiao Lin lives in a flat——那是什么地方？",
+   "explain": "flat 在本单元是名词'公寓'（英式说法）。",
+   "common_errors": [
+    {
+     "when": "写了'平坦的'",
+     "say": "'平坦的'也是 flat 的意思之一，但本单元里 flat 是名词，指住的'公寓'。"
+    },
+    {
+     "when": "写了'楼层'",
+     "say": "楼层是 floor；flat 指一整套公寓住房。"
+    },
+    {
+     "when": "写了'平底鞋'",
+     "say": "那是 flat 的另一个名词意思，和本单元的住房话题无关。"
+    }
+   ],
+   "audio_id": "u8r2-q06",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "只能待在室内",
+   "scene": "短文原句：公寓里的狗只能待在室内。",
+   "stem": "Dogs in small flats ___ stay indoors most of the day.",
+   "options": [
+    "have no choice but",
+    "have no choices but to",
+    "have no choice but to",
+    "has no choice but to"
+   ],
+   "answer": "C",
+   "help": "短语要写完整：but 后面还差一个小词。",
+   "explain": "Dogs in small flats have no choice but to stay indoors. have no choice but to do = 别无选择，只能做某事。",
+   "wrong_feedback": {
+    "A": "少了 to：固定搭配是 have no choice but to do。",
+    "B": "choice 在这个短语里用单数：no choice，不能加 s。",
+    "D": "主语 dogs 是复数，动词用 have，不能用 has。"
+   },
+   "audio_id": "u8r2-q07",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 总之",
+   "scene": "用 in short 完成总结句。",
+   "stem": "___ ___, I think cats are better pets for flats. (in short)",
+   "task": "只写空里的两个词。",
+   "answer_text": "in short",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "in short"
+     ],
+     "olds": [
+      "in shortly",
+      "in shorts"
+     ],
+     "cn": [
+      "总之"
+     ]
+    }
+   ],
+   "help": "这个短语是用来总结收尾的，short 在里面不变形。",
+   "explain": "In short, I think cats are better pets for flats. in short 是固定短语'总之'，short 不加 -ly。",
+   "common_errors": [
+    {
+     "when": "写了 in shortly",
+     "say": "shortly 是'很快、不久'的意思；总结用的短语是 in short。"
+    },
+    {
+     "when": "写了 in shorts",
+     "say": "shorts 是'短裤'，意思全变了；短语里是 short，不加 s。"
+    },
+    {
+     "when": "写了 in a short",
+     "say": "短语里没有 a：in short 是固定说法。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "花园里自由跑",
+   "scene": "可乐最开心的时刻。",
+   "stem": "Dogs love to ___ in the garden.",
+   "options": [
+    "run freely",
+    "runs free",
+    "free run",
+    "run free"
+   ],
+   "answer": "D",
+   "help": "本课短语：四处自由走动。",
+   "explain": "Dogs love to run free in the garden. run free 是固定短语。",
+   "wrong_feedback": {
+    "A": "课本短语是 run free（四处自由走动），记住这个固定搭配。",
+    "B": "前面有 to，后面动词用原形 run，不能加 s。",
+    "C": "词序反了：先动词 run，再 free。"
+   },
+   "audio_id": "u8r2-q08",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "造成麻烦",
+   "scene": "大声的音乐会给宝宝造成麻烦。",
+   "stem": "Loud music may ___ problems for the baby.",
+   "options": [
+    "causes",
+    "cause",
+    "caused",
+    "because"
+   ],
+   "answer": "B",
+   "help": "may 后面的动词是什么形式？",
+   "explain": "Loud music may cause problems for the baby. cause 是动词'引起；造成'，may 后用原形。",
+   "wrong_feedback": {
+    "A": "前面有 may，动词用原形 cause，不能加 s。",
+    "C": "may 后面用动词原形，不用过去式 caused。",
+    "D": "because 是连词，不能放在 may 后面当动词用。"
+   },
+   "audio_id": "u8r2-q09",
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 医生的建议",
+   "scene": "兽医建议主人多让可乐运动。",
+   "stem": "The vet advised the owner ___ Cola more exercise. (give)",
+   "task": "只写空里的部分。",
+   "answer_text": "to give",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "to give"
+     ],
+     "olds": [
+      "giving",
+      "gave"
+     ],
+     "cn": [
+      "给"
+     ]
+    }
+   ],
+   "help": "advise sb 后面跟什么结构？想想生词课的例句。",
+   "explain": "The vet advised the owner to give Cola more exercise. advise sb to do sth：建议某人做某事，to 不能少。",
+   "common_errors": [
+    {
+     "when": "写了 give",
+     "say": "少了 to：advise sb to do，to 是这个结构的一部分。"
+    },
+    {
+     "when": "写了 giving",
+     "say": "advise 后面不用 -ing；用 to give。"
+    },
+    {
+     "when": "写了 gave",
+     "say": "时态也不对：建议的内容用 to + 原形，不用过去式。"
+    }
+   ],
+   "reading": "Xiao Lin lives in a flat in the city. His dog Cola has no choice but to stay indoors most of the day. The flat is small, so Cola cannot run free in the rooms. Every evening, Xiao Lin takes Cola down to the garden. There, Cola runs happily and plays with other dogs. Cola is friendly and never barks loudly at people. In short, a flat is not a big place, but with love and care, a dog can live happily there."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：邻居的来信",
+   "teach_html": "<p>换材料了。周太太给林先生写了一封短信，因为林先生的狗夜里叫个不停。这次没有讲解带着，题目都靠你自己判断。短文会留在屏幕上，随时可回看。</p>",
+   "audio_id": "u8r2-v-intro",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "写信的原因",
+   "scene": "读周太太的信，回答问题。",
+   "stem": "Why did Mrs Zhou write the note?",
+   "options": [
+    "Because she wants a dog.",
+    "Because the dog is friendly.",
+    "Because she is moving away.",
+    "Because the dog's noise woke her baby."
+   ],
+   "answer": "D",
+   "help": "回短文里找：宝宝昨晚怎么了？",
+   "explain": "Because the dog's noise woke her baby. 信里说得很清楚：Last night, the baby woke up three times.",
+   "wrong_feedback": {
+    "A": "短文里她没说想要狗；她写这封信是请邻居帮忙解决夜里狗叫的问题。",
+    "B": "短文没提狗友不友好；起因是叫声把宝宝吵醒了三次。",
+    "C": "短文里没有搬家的内容，别自己加。"
+   },
+   "audio_id": "u8r2-v02",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 大声叫",
+   "scene": "信里说这只狗夜里叫得很大声。",
+   "stem": "The dog barks ___ at night. (loud)",
+   "task": "只写空里的部分。",
+   "answer_text": "loudly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "loudly"
+     ],
+     "olds": [
+      "loud",
+      "loudlyer"
+     ],
+     "cn": [
+      "大声地"
+     ]
+    }
+   ],
+   "help": "barks 是动作，loud 要变成什么形式？",
+   "explain": "The dog barks loudly at night. loud + ly = loudly。",
+   "common_errors": [
+    {
+     "when": "写了 loud",
+     "say": "loud 是形容词；描绘动作 barks 要用副词 loudly。"
+    },
+    {
+     "when": "写了 loudlyer",
+     "say": "副词没有 loudlyer 这种比较级写法；这里也没有比较。"
+    },
+    {
+     "when": "写了 loudlys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "累了的狗睡得安静",
+   "scene": "信里的最后一句建议。",
+   "stem": "A tired dog sleeps ___.",
+   "options": [
+    "quietly",
+    "quiet",
+    "more quiet",
+    "quietlyer"
+   ],
+   "answer": "A",
+   "help": "sleeps 是动作，配哪个词？",
+   "explain": "A tired dog sleeps quietly. 修饰 sleeps 用副词 quietly。",
+   "wrong_feedback": {
+    "B": "quiet 是形容词；修饰动词 sleeps 要用副词 quietly。",
+    "C": "more quiet 形式不对；quiet 的副词形式是 quietly。",
+    "D": "没有 quietlyer 这种写法，而且这里没有比较。"
+   },
+   "audio_id": "u8r2-v03",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "噪音造成问题",
+   "scene": "噪音给宝宝造成了大问题。",
+   "stem": "The noise ___ a big problem for the baby. (cause)",
+   "task": "只写空里的部分。",
+   "answer_text": "causes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "causes"
+     ],
+     "olds": [
+      "cause",
+      "caused"
+     ],
+     "cn": [
+      "造成"
+     ]
+    }
+   ],
+   "help": "主语 the noise 是单数；句子说的是现在的情况。",
+   "explain": "The noise causes a big problem for the baby. 主语单数，一般现在时动词加 s：causes。",
+   "common_errors": [
+    {
+     "when": "写了 cause",
+     "say": "主语 the noise 是单数第三人称，动词要加 s。"
+    },
+    {
+     "when": "写了 caused",
+     "say": "信里说的是现在的情况，用一般现在时，不用过去式。"
+    },
+    {
+     "when": "写了 causing",
+     "say": "causing 前面要有 be 动词，这里没有。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 汤的味道",
+   "scene": "三句里只有一句对。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "The soup tastes well.",
+    "The soup tastes goodly.",
+    "The soup tastes good.",
+    "The soup taste good."
+   ],
+   "answer": "C",
+   "help": "逐句查：系动词后面跟什么？动词三单对吗？",
+   "explain": "The soup tastes good. taste 是系动词，跟形容词 good；主语单数，tastes 加 s 也对。",
+   "wrong_feedback": {
+    "A": "taste 是系动词，后跟形容词 good；well 在这里不对。",
+    "B": "没有 goodly 这个词；系动词后面用形容词 good。",
+    "D": "主语 the soup 是单数，动词要用 tastes。"
+   },
+   "audio_id": "u8r2-v04",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "提建议",
+   "scene": "信里周太太提的建议。",
+   "stem": "I ___ you to play with Lucky more in the evening. (advise)",
+   "task": "只写空里的部分。",
+   "answer_text": "advise",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "advise"
+     ],
+     "olds": [
+      "advice",
+      "advised",
+      "advices"
+     ],
+     "cn": [
+      "建议"
+     ]
+    }
+   ],
+   "help": "写信的人是'我'，动词用什么形式？注意别和名词 advice 混。",
+   "explain": "I advise you to play with Lucky more. advise 是动词'建议'；advice 是名词，拼写不同。",
+   "common_errors": [
+    {
+     "when": "写了 advice",
+     "say": "advice 是名词'建议'（不可数）；这里需要动词 advise，注意结尾是 -ise 发 /z/ 音、名词是 -ice。"
+    },
+    {
+     "when": "写了 advised",
+     "say": "信里是现在提建议，用原形 advise，不用过去式。"
+    },
+    {
+     "when": "写了 advices",
+     "say": "没有 advices 这种形式；advise 是动词，不加 s 变复数。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "对孩子友善",
+   "scene": "这只狗对孩子们很友善。",
+   "stem": "The dog is very ___ to children.",
+   "options": [
+    "friendlily",
+    "friendly",
+    "friend",
+    "friends"
+   ],
+   "answer": "B",
+   "help": "friendly 以 -ly 结尾，它到底是形容词还是副词？",
+   "explain": "The dog is very friendly to children. friendly 是形容词，不是副词。",
+   "wrong_feedback": {
+    "A": "没有 friendlily 这种常用写法；friendly 本身就是形容词。",
+    "C": "friend 是名词'朋友'；这里需要形容词 friendly 表示'友善的'。",
+    "D": "friends 是名词复数，不能描绘狗的性情。"
+   },
+   "audio_id": "u8r2-v05",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 简单地说",
+   "scene": "请简单地说，我听不懂长单词。",
+   "stem": "Can you say it ___? I don't understand long words. (simple)",
+   "task": "只写空里的部分。",
+   "answer_text": "simply",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "simply"
+     ],
+     "olds": [
+      "simplely",
+      "simple"
+     ],
+     "cn": [
+      "简单地"
+     ]
+    }
+   ],
+   "help": "simple 的拼写规则，前两课练过：-le 结尾怎么办？",
+   "explain": "Can you say it simply? simple → simply：去 e 加 y。",
+   "common_errors": [
+    {
+     "when": "写了 simplely",
+     "say": "拼写不对：-le 结尾去 e 加 y，是 simply。"
+    },
+    {
+     "when": "写了 simple",
+     "say": "simple 是形容词；描绘动作 say 要用副词 simply。"
+    },
+    {
+     "when": "写了 simplys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "总之要照顾好",
+   "scene": "用 in short 收尾。",
+   "stem": "___ ___, dogs need love and time. (in short)",
+   "task": "只写空里的两个词。",
+   "answer_text": "in short",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "in short"
+     ],
+     "olds": [
+      "in shortly",
+      "at short"
+     ],
+     "cn": [
+      "总之"
+     ]
+    }
+   ],
+   "help": "总结收尾的固定短语，short 不变形。",
+   "explain": "In short, dogs need love and time. in short 是'总之'，用来总结前面说的话。",
+   "common_errors": [
+    {
+     "when": "写了 in shortly",
+     "say": "shortly 是'不久'；总结短语是 in short。"
+    },
+    {
+     "when": "写了 at short",
+     "say": "介词错了：固定搭配是 in short。"
+    },
+    {
+     "when": "写了 in short words",
+     "say": "多了 words；短语只有 in short 两个词。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "两个选择",
+   "scene": "收养处有两只狗可选。",
+   "stem": "You have two ___ here. Which dog do you like?",
+   "options": [
+    "choices",
+    "choice",
+    "chooses",
+    "choose"
+   ],
+   "answer": "A",
+   "help": "two 后面的名词要变成什么数？",
+   "explain": "You have two choices here. choice 是可数名词，前面有 two，要用复数 choices。",
+   "wrong_feedback": {
+    "B": "two 后面要用复数：choices。",
+    "C": "chooses 是动词'选择'的第三人称单数形式，不是名词。",
+    "D": "choose 是动词原形；这里需要名词'选择'。"
+   },
+   "audio_id": "u8r2-v06",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 只能待在室内",
+   "scene": "住在公寓里，可乐只能待在室内。",
+   "stem": "Living in a flat, Cola ___ stay indoors most of the day. (have no choice but to)",
+   "task": "只写空里的部分。",
+   "answer_text": "has no choice but to",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has no choice but to"
+     ],
+     "olds": [
+      "have no choice but to",
+      "has no choices but to"
+     ],
+     "cn": [
+      "只能"
+     ]
+    }
+   ],
+   "help": "主语 Cola 是单数，have 要变成什么？短语要写完整。",
+   "explain": "Cola has no choice but to stay indoors. 主语单数用 has；短语 have no choice but to do 里 to 不能少。",
+   "common_errors": [
+    {
+     "when": "写了 have no choice but to",
+     "say": "主语 Cola 是单数，have 要换成 has。"
+    },
+    {
+     "when": "写了 has no choice but",
+     "say": "少了 to：but to do 才是完整结构。"
+    },
+    {
+     "when": "写了 has no choices but to",
+     "say": "choice 在短语里用单数 no choice，不加 s。"
+    }
+   ],
+   "audio_id": "u8r2-v07",
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "可乐何时自由跑",
+   "scene": "回看短文 A 回答。",
+   "stem": "When can Cola run free?",
+   "options": [
+    "In the small rooms.",
+    "At night in bed.",
+    "In Mrs Zhou's flat.",
+    "In the garden every evening."
+   ],
+   "answer": "D",
+   "help": "回第一篇短文找 every evening 后面的地点。",
+   "explain": "In the garden every evening. 短文里写：Every evening, Xiao Lin takes Cola down to the garden.",
+   "wrong_feedback": {
+    "A": "短文说房间太小，不能自由跑；是每天傍晚在花园里。",
+    "B": "短文没有说夜里在床上跑，别自己编。",
+    "C": "周太太是邻居，短文没说可乐去她家跑。"
+   },
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 运动够睡得香",
+   "scene": "回锅七单元条件句：谈规律。",
+   "stem": "If a dog ___ enough exercise in the day, it sleeps well at night. (get)",
+   "task": "只写空里的部分。",
+   "answer_text": "gets",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "gets"
+     ],
+     "olds": [
+      "get",
+      "got"
+     ],
+     "cn": [
+      "得到"
+     ]
+    }
+   ],
+   "help": "if 从句谈规律用一般现在时；主语 a dog 是单数。",
+   "explain": "If a dog gets enough exercise, it sleeps well at night. 条件句谈必然结果，if 从句用一般现在时，主语单数动词加 s。",
+   "common_errors": [
+    {
+     "when": "写了 get",
+     "say": "主语 a dog 是单数，动词要加 s：gets。"
+    },
+    {
+     "when": "写了 got",
+     "say": "条件句谈规律，if 从句用一般现在时，不用过去式。"
+    },
+    {
+     "when": "写了 will get",
+     "say": "if 从句里不用 will；will 放在主句里。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "造成麻烦",
+   "scene": "大声叫会给邻居造成麻烦。",
+   "stem": "Loud barking can ___ trouble for neighbours. (cause)",
+   "task": "只写空里的部分。",
+   "answer_text": "cause",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "cause"
+     ],
+     "olds": [
+      "causes",
+      "caused"
+     ],
+     "cn": [
+      "造成"
+     ]
+    }
+   ],
+   "help": "can 后面的动词用什么形式？",
+   "explain": "Loud barking can cause trouble for neighbours. can 是情态动词，后面用动词原形 cause。",
+   "common_errors": [
+    {
+     "when": "写了 causes",
+     "say": "can 后面用原形，不能加 s。"
+    },
+    {
+     "when": "写了 caused",
+     "say": "can 后面不用过去式，用原形 cause。"
+    },
+    {
+     "when": "写了 causing",
+     "say": "can 后面不用 -ing 形式。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 耐心等待",
+   "scene": "小狗在门口耐心地等主人。",
+   "stem": "The little dog waited ___ for its owner at the door. (patient)",
+   "task": "只写空里的部分。",
+   "answer_text": "patiently",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "patiently"
+     ],
+     "olds": [
+      "patient",
+      "patientlyer"
+     ],
+     "cn": [
+      "耐心地"
+     ]
+    }
+   ],
+   "help": "patient 是形容词，变副词直接加什么？",
+   "explain": "The little dog waited patiently for its owner. patient + ly = patiently，新词 patiently 就是这么来的。",
+   "common_errors": [
+    {
+     "when": "写了 patient",
+     "say": "patient 是形容词；描绘动作 waited 要用副词 patiently。"
+    },
+    {
+     "when": "写了 patientlyer",
+     "say": "没有这种比较级写法，这里也没有比较。"
+    },
+    {
+     "when": "写了 patienty",
+     "say": "拼写少了 l：patiently 是 patient 加 ly。"
+    }
+   ],
+   "reading": "Dear Mr Lin, I am your neighbour. I like dogs, but your dog Lucky barks loudly at night. The noise causes a big problem for my baby. Last night, the baby woke up three times. I advise you to close the windows at night and play with Lucky more in the evening. A tired dog sleeps quietly. Thank you for your help. — Mrs Zhou"
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：压轴五题",
+   "teach_html": "<p>最后五道压轴题，混进了老朋友：四单元的<strong>被动语态</strong>、五六单元的<strong>现在完成时</strong>、七单元的 <strong>unless</strong>，再加上今天最容易错的 hardly。把今天学的都用上。</p>",
+   "audio_id": "u8r2-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "把副词用对的只有一句。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "She speaks English very good.",
+    "She speaks very well English.",
+    "She speaks English very well.",
+    "She speak English very well."
+   ],
+   "answer": "C",
+   "help": "逐句查：形式、位置、三单。",
+   "explain": "She speaks English very well. well 描绘 speaks，放在宾语后面，三单也对。",
+   "wrong_feedback": {
+    "A": "good 是形容词；修饰动词 speaks 要用副词 well。",
+    "B": "very well 要放在宾语 English 后面，不能插在动词和宾语中间。",
+    "D": "主语 she 是第三人称单数，动词要加 s：speaks。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 狗被洗澡",
+   "scene": "回锅四单元：被动语态。",
+   "stem": "The dog ___ a bath every Sunday. (give)",
+   "task": "只写空里的部分。",
+   "answer_text": "is given",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is given"
+     ],
+     "olds": [
+      "gives",
+      "is give"
+     ],
+     "cn": [
+      "被给（被洗澡）"
+     ]
+    }
+   ],
+   "help": "狗是被洗澡的对象；give 的过去分词是 given。",
+   "explain": "The dog is given a bath every Sunday. 被动语态 be + 过去分词；give → given。",
+   "common_errors": [
+    {
+     "when": "写了 gives",
+     "say": "gives 是主动；狗是被洗的对象，要用被动 is given。"
+    },
+    {
+     "when": "写了 is give",
+     "say": "被动要用过去分词 given，不是原形 give。"
+    },
+    {
+     "when": "写了 is gived",
+     "say": "give 的过去分词是不规则的 given，没有 gived。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 养了好几年",
+   "scene": "回锅五六单元：现在完成时 + since。",
+   "stem": "Zeze ___ Doudou since 2022. He loves him very much. (have)",
+   "task": "只写空里的部分。",
+   "answer_text": "has had",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has had"
+     ],
+     "olds": [
+      "has have",
+      "have had"
+     ],
+     "cn": [
+      "拥有（完成时）"
+     ]
+    }
+   ],
+   "help": "有 since 2022，是现在完成时；主语 Zeze 是单数。",
+   "explain": "Zeze has had Doudou since 2022. 现在完成时：has + 过去分词；have 的过去分词是 had。",
+   "common_errors": [
+    {
+     "when": "写了 has have",
+     "say": "has 后面要用过去分词 had，不是原形 have。"
+    },
+    {
+     "when": "写了 have had",
+     "say": "主语 Zeze 是单数，助动词用 has，不用 have。"
+    },
+    {
+     "when": "写了 had",
+     "say": "只有 had 是一般过去时；有 since，要用现在完成时 has had。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 几乎没时间",
+   "scene": "他太忙了，几乎没时间陪狗玩。",
+   "stem": "He is very busy. He ___ has time to play with his dog.",
+   "options": [
+    "hard",
+    "hardly",
+    "harder",
+    "lately"
+   ],
+   "answer": "B",
+   "help": "very busy 是提示：时间和 hardly 是老搭档。",
+   "explain": "He hardly has time to play with his dog. hardly = 几乎不，和'太忙'正好对上。",
+   "wrong_feedback": {
+    "A": "hard 是'努力地'；他太忙，应该是'几乎没时间'，用 hardly。",
+    "C": "harder 是比较级，这里要表达'几乎不'，不是比较。",
+    "D": "lately 是'最近'，放在这里意思不对，也不能表达'几乎没时间'。"
+   }
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 除非能自由跑",
+   "scene": "回锅七单元：unless。",
+   "stem": "A dog will be unhappy ___ it can run free every day. (unless)",
+   "task": "只写空里的部分。",
+   "answer_text": "unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "unlesss"
+     ],
+     "cn": [
+      "除非"
+     ]
+    }
+   ],
+   "help": "先想意思：能自由跑，狗是开心还是不开心？再选词。",
+   "explain": "A dog will be unhappy unless it can run free every day. unless = if...not：除非能自由跑，否则狗会不开心。",
+   "common_errors": [
+    {
+     "when": "写了 if",
+     "say": "意思反了：if it can run free 是'如果能自由跑'，那狗应该开心，和 unhappy 矛盾。"
+    },
+    {
+     "when": "写了 unlesss",
+     "say": "拼写错了：unless 末尾是两个 s，但一共只有两个 s 在词尾，别再多加。"
+    },
+    {
+     "when": "写了 if not",
+     "say": "if not 要放在从句条件里改写；这个空直接填 unless 最自然，if not 语序不对。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "下集预告：谁做得更好",
+   "teach_html": "<p>本课收官：-ly 拼写关你闯过来了，hardly 和 lately 也分清了。</p><p>下一课我们开始<strong>比一比</strong>：哪只狗跑得更快？哪只猫吃得更慢？副词也要比高下——比较级登场。</p>",
+   "audio_id": "u8r2-ending"
+  }
+ ],
+ "title": "公寓养狗记：-ly 拼写关",
+ "unit": "Unit 8 Pets and us",
+ "version": 1
+}
