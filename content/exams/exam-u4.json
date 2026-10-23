@@ -952,7 +952,8 @@
        "score": 2,
        "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
        "stem": "When was the seismograph invented?",
-       "answer": "In 132 AD"
+       "answer": "In 132 AD",
+       "accept": ["132 AD"]
       },
       {
        "num": 3,
@@ -960,7 +961,8 @@
        "score": 2,
        "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
        "stem": "What was the seismograph used for?",
-       "answer": "To tell the direction of earthquakes"
+       "answer": "To tell the direction of earthquakes",
+       "accept": ["tell the direction of earthquakes"]
       },
       {
        "num": 4,
@@ -968,7 +970,8 @@
        "score": 2,
        "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
        "stem": "Was it the first instrument of its kind in the world?",
-       "answer": "Yes, it was"
+       "answer": "Yes, it was",
+       "accept": ["it was the first", "the first instrument of its kind"]
       },
       {
        "num": 5,
@@ -976,7 +979,8 @@
        "score": 2,
        "passage": "Zhang Heng was a famous scientist in ancient China. The seismograph was invented by him in 132 AD. It was used to tell the direction of earthquakes. It was the first instrument of its kind in the world. People were surprised at his great invention.",
        "stem": "How did people feel about his invention?",
-       "answer": "Surprised"
+       "answer": "Surprised",
+       "accept": ["surprised"]
       }
      ]
     },
