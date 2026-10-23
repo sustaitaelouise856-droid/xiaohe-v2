@@ -336,6 +336,16 @@ function showResult(data) {
         } else {
           body = d.given === 'recorded' ? '已录音，待老师批改' : '未录音，待老师批改';
         }
+      } else if (d.status === 'graded') {
+        head += ' ✅ 已批改（' + d.got + ' 分）';
+        if (d.type === 'writing') {
+          body = String(d.given || '').trim()
+            ? '你写的内容：<br><span style="white-space:pre-wrap;">' + escHtml(d.given) + '</span>'
+            : '未作答';
+        } else {
+          body = d.given === 'recorded' ? '已录音，已批改' : '未录音，已批改';
+        }
+        if (d.note) body += '<br>老师评语：' + escHtml(d.note);
       } else {
         head += d.got === d.max ? ' ✅ 答对' : ' ❌ 答错';
         if (d.type === 'choice') {
@@ -649,6 +659,7 @@ function csShowResult(data) {
     if (!d) return;
     let icon = '⏳ 待批改';
     if (d.status === 'auto') icon = d.got === d.max ? '✅ 答对' : '❌ 答错';
+    else if (d.status === 'graded') icon = '✅ 已批改（' + d.got + ' 分）';
     let mine = '', correct = '';
     if (e.q.type === 'choice') {
       const gi = Number(d.given);
@@ -658,9 +669,12 @@ function csShowResult(data) {
       mine = '你的答案：「' + csEsc(String(d.given == null ? '' : d.given).slice(0, 60)) + '」';
       if (st && st.answer_display) correct = '正确答案：「' + csEsc(st.answer_display.text) + '」';
     } else if (e.q.type === 'speak') {
-      mine = d.given === 'recorded' ? '已录音，待老师批改' : '跳过录音，待老师批改';
+      mine = d.status === 'graded'
+        ? (d.given === 'recorded' ? '已录音，已批改' : '跳过录音，已批改') + (d.note ? '（评语：' + csEsc(d.note) + '）' : '')
+        : (d.given === 'recorded' ? '已录音，待老师批改' : '跳过录音，待老师批改');
     } else if (e.q.type === 'writing') {
-      mine = '作文开头：「' + csEsc(String(d.given == null ? '' : d.given).slice(0, 50)) + '…」待老师批改';
+      mine = '作文开头：「' + csEsc(String(d.given == null ? '' : d.given).slice(0, 50)) + '…」'
+        + (d.status === 'graded' ? '已批改' + (d.note ? '（评语：' + csEsc(d.note) + '）' : '') : '待老师批改');
     }
     h += `<div class="cs-review-row"><b>第 ${i + 1} 题</b>（${CS_TYPE_NAME[e.q.type] || ''} ${d.max} 分）${icon}<br>${mine}${correct ? '<br>' + correct : ''}</div>`;
   });
