@@ -172,17 +172,16 @@ function initTable() {
 }
 
 // 已存成绩按当前判分规则回算（2026-10-23，Elouise 批准）：判分口径修订后，
-// 用存档的原始答案重新判分，分数/detail 与现行 gradeExam 不一致才更新；幂等，判分确定性保证收敛。
+// 用存档的原始答案重新判分，分数/detail 与现行口径不一致才更新；幂等，判分确定性保证收敛。
+// 回算必须叠加已批改的主观分（口语 exam_speech / 作文 exam_writing_grades），
+// 否则每次重启都会把老师回填的分数冲回 pending —— 与 applySubjectiveGrades 共用 recomputeRowScore。
 function regradeStoredScores() {
   try {
     const rows = db.prepare(`SELECT id, exam_id, score, detail_json, answers_json FROM exam_scores`).all();
     for (const row of rows) {
-      if (!row.answers_json) continue;
-      let answers = null;
-      try { answers = JSON.parse(row.answers_json); } catch { continue; }
-      const r = gradeExam(row.exam_id, answers);
-      if (!r.ok) continue;
-      const newDetail = JSON.stringify(r.detail || []);
+      const r = recomputeRowScore(row);
+      if (!r) continue;
+      const newDetail = JSON.stringify(r.detail);
       if (r.score !== row.score || newDetail !== (row.detail_json || '')) {
         db.prepare(`UPDATE exam_scores SET score = ?, detail_json = ? WHERE id = ?`)
           .run(r.score, newDetail, row.id);
@@ -190,6 +189,75 @@ function regradeStoredScores() {
       }
     }
   } catch (e) { console.error('[exams] regradeStoredScores', e.message); }
+}
+
+// 查一条主观题 detail 的已批改分数：speak 查 exam_speech、writing 查 exam_writing_grades，
+// score 非 NULL 才算已批。批改表可能尚未建（initTable 的回算早于 initSpeechTable/initWritingTable
+// 的首次建表时序），查询失败按"无批改"处理。
+function subjectiveGradeOf(exam_id, d) {
+  try {
+    if (d.type === 'speak') {
+      const g = db.prepare(`SELECT score, note FROM exam_speech WHERE exam_id=? AND qid=?`).get(exam_id, d.qid);
+      if (g && g.score != null) return g;
+    } else if (d.type === 'writing') {
+      const g = db.prepare(`SELECT score, note FROM exam_writing_grades WHERE exam_id=? AND qid=?`).get(exam_id, d.qid);
+      if (g && g.score != null) return g;
+    }
+  } catch {}
+  return null;
+}
+
+// 共用重算（回算与批改回填同一口径）：用存档答案走 gradeExam 得基础 detail，
+// 再叠加已批改的主观分——命中条目覆盖 got、status 改 'graded'、附老师评语 note；
+// score 为全部 detail 的 got 合计（两位小数，避免浮点尘）。答案缺失/损坏或判分失败返回 null。
+function recomputeRowScore(row) {
+  if (!row.answers_json) return null;
+  let answers = null;
+  try { answers = JSON.parse(row.answers_json); } catch { return null; }
+  const r = gradeExam(row.exam_id, answers);
+  if (!r.ok) return null;
+  const detail = r.detail || [];
+  for (const d of detail) {
+    const g = subjectiveGradeOf(row.exam_id, d);
+    if (g) { d.got = g.score; d.status = 'graded'; d.note = g.note; }
+  }
+  const score = Math.round(detail.reduce((sum, d) => sum + (Number(d.got) || 0), 0) * 100) / 100;
+  return { score, detail };
+}
+
+// 主观题批改回填（2026-10-23，Elouise 定：主观题全部由 Muse 判分、批完回填卷面总分）：
+// 取该卷最新一条成绩行，按"重算+叠加"刷新 score/detail_json；与存量一致则不动（幂等）。
+// 批改给分、录音重录清批改、交卷落库后都调它，保证成绩行始终反映最新批改状态。
+function applySubjectiveGrades(exam_id) {
+  try {
+    const row = db.prepare(`SELECT id, exam_id, score, detail_json, answers_json FROM exam_scores WHERE exam_id=? ORDER BY id DESC LIMIT 1`).get(exam_id);
+    if (!row) return { ok: true, applied: false };
+    const r = recomputeRowScore(row);
+    if (!r) return { ok: true, applied: false };
+    const newDetail = JSON.stringify(r.detail);
+    if (r.score !== row.score || newDetail !== (row.detail_json || '')) {
+      db.prepare(`UPDATE exam_scores SET score = ?, detail_json = ? WHERE id = ?`).run(r.score, newDetail, row.id);
+      console.log('[exams] backfill', exam_id, 'id=' + row.id, row.score, '->', r.score);
+      return { ok: true, applied: true, score: r.score };
+    }
+    return { ok: true, applied: false, score: r.score };
+  } catch (e) {
+    console.error('[exams] applySubjectiveGrades', e.message);
+    return { ok: false, error: e.message };
+  }
+}
+
+// 读最新一条成绩行（交卷响应在回填生效后以存档为准）
+function getLatestScore(exam_id) {
+  try {
+    const row = db.prepare(`SELECT id, score, detail_json FROM exam_scores WHERE exam_id=? ORDER BY id DESC LIMIT 1`).get(exam_id);
+    if (!row) return { ok: false, error: 'not_found' };
+    let detail = [];
+    try { detail = JSON.parse(row.detail_json || '[]'); } catch {}
+    return { ok: true, id: row.id, score: row.score, detail };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
 }
 
 // ===== 课程式（一题一屏）支持（2026-10-22，Elouise 拍板：立即反馈，先只转 exam-u2 试水）=====
@@ -334,9 +402,9 @@ function clearProgress(exam_id) {
 // ===== 口语录音留存 + 分期批改（2026-10-23，Elouise 定）=====
 // 旧机制只记 given='recorded'、录音本体直接丢弃，口语 15 分永远批不了。
 // 录音以 BLOB 存进 SQLite（Render 免费版磁盘临时、重启即丢，只有进库才能被
-// 每 5 分钟的 Google Drive 备份链带走）。本期只做留存与批改数据的存取，
-// 批改分数暂不并入交卷总分（gradeExam/gradeOne 对 speak 仍标 pending），
-// 并入方式等 Elouise 后续拍板。
+// 每 5 分钟的 Google Drive 备份链带走）。批改分存 exam_speech，并经
+// applySubjectiveGrades 回填卷面总分（gradeExam 本身对 speak 仍标 pending，
+// 回填层负责叠加，判分核心口径不变）。
 function initSpeechTable() {
   try {
     db.exec(`
@@ -380,6 +448,8 @@ function saveSpeech(exam_id, qid, mime, audioBuf, durationSec) {
         created_at=excluded.created_at, score=NULL, note=NULL, graded_at=NULL
     `).run(exam_id, qid, mime || null, audioBuf, durationSec == null ? null : durationSec);
     const row = db.prepare(`SELECT id FROM exam_speech WHERE exam_id=? AND qid=?`).get(exam_id, qid);
+    // 重录已清掉旧批改：该卷若已有成绩行，同步回填让总分回落到 pending 口径，保持一致
+    applySubjectiveGrades(exam_id);
     return { ok: true, id: row ? row.id : null };
   } catch (e) {
     console.error('[exams] saveSpeech', e.message);
@@ -426,10 +496,99 @@ function gradeSpeech(id, score, note) {
     if (sc < 0 || sc > max) return { ok: false, error: 'score_out_of_range', max };
     db.prepare(`UPDATE exam_speech SET score=?, note=?, graded_at=datetime('now') WHERE id=?`)
       .run(sc, note == null ? null : String(note).slice(0, 2000), Number(id));
-    return { ok: true, id: Number(id), score: sc, max, cap_source: capSource };
+    // 批完回填卷面总分（该卷最新一条成绩行）
+    const ap = applySubjectiveGrades(row.exam_id);
+    return { ok: true, id: Number(id), score: sc, max, cap_source: capSource, total: ap && ap.ok ? ap.score : undefined, backfilled: !!(ap && ap.applied) };
   } catch (e) {
     return { ok: false, error: e.message };
   }
 }
 
-module.exports = { setDb, getExam, getExamList, saveScore, initTable, isUnitDone, gradeExam, isCourseStyle, gradeOne, initProgressTable, saveAnswer, getProgress, getProgressAnswers, clearProgress, initSpeechTable, saveSpeech, listSpeech, getSpeechAudio, gradeSpeech };
+// ===== 作文分期批改（2026-10-23，Elouise 定：主观题全部由 Muse 判分、批完回填总分）=====
+// 作文没有录音本体要存，孩子原文已在 exam_scores.answers_json 里；批改行单独存
+// exam_writing_grades（按 exam_id+qid 唯一定位），与 exam_speech 同一套模式：
+// 老师拉待批列表 → 逐篇给分写评语 → applySubjectiveGrades 回填卷面总分。
+// 不开页面录分入口（防孩子自改分），批改只走管理端 token 接口。
+function initWritingTable() {
+  try {
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS exam_writing_grades (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        exam_id TEXT NOT NULL,
+        qid TEXT NOT NULL,
+        score REAL,
+        note TEXT,
+        graded_at TEXT,
+        UNIQUE(exam_id, qid)
+      );
+    `);
+  } catch (e) { console.error('[exams] initWritingTable', e.message); }
+}
+
+// 查某道 writing 题的满分；题目不存在或非 writing 返回 null
+function writingMax(exam_id, qid) {
+  try {
+    const exam = loadExamRaw(exam_id);
+    const q = findQuestion(exam, qid);
+    if (!q || q.type !== 'writing') return null;
+    return q.score;
+  } catch { return null; }
+}
+
+// 待批改作文列表：各卷最新一条成绩行里的 writing 题，带她的作文全文与已有批改，未批排前
+function listWritingPending() {
+  try {
+    const rows = db.prepare(`
+      SELECT s.id, s.exam_id, s.answers_json, s.created_at FROM exam_scores s
+      WHERE s.id = (SELECT MAX(id) FROM exam_scores WHERE exam_id = s.exam_id)
+    `).all();
+    const out = [];
+    for (const row of rows) {
+      let exam = null;
+      try { exam = loadExamRaw(row.exam_id); } catch { continue; }
+      let answers = {};
+      try { answers = JSON.parse(row.answers_json || '{}'); } catch {}
+      exam.sections.forEach(sec => sec.parts.forEach(part => {
+        part.questions.forEach((q, qi) => {
+          if (q.type !== 'writing') return;
+          const qid = sec.id + '-' + part.id + '-' + qi;
+          let g = null;
+          try { g = db.prepare(`SELECT score, note, graded_at FROM exam_writing_grades WHERE exam_id=? AND qid=?`).get(row.exam_id, qid); } catch {}
+          out.push({
+            exam_id: row.exam_id, qid, num: q.num, max: q.score,
+            text: answers[qid] == null ? '' : String(answers[qid]),
+            score: g ? g.score : null, note: g ? g.note : null, graded_at: g ? g.graded_at : null,
+            submitted_at: row.created_at,
+          });
+        });
+      }));
+    }
+    out.sort((a, b) => (a.graded_at ? 1 : 0) - (b.graded_at ? 1 : 0) || (a.exam_id < b.exam_id ? -1 : a.exam_id > b.exam_id ? 1 : 0));
+    return { ok: true, list: out };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+// 给一篇作文写批改分数与评语：校验 qid 是该卷真实 writing 题、0<=score<=满分 →
+// upsert 批改行 → 回填该卷总分
+function gradeWriting(exam_id, qid, score, note) {
+  try {
+    const max = writingMax(exam_id, qid);
+    if (max == null) return { ok: false, error: 'unknown_writing_qid' };
+    const sc = Number(score);
+    if (!isFinite(sc)) return { ok: false, error: 'bad_score' };
+    if (sc < 0 || sc > max) return { ok: false, error: 'score_out_of_range', max };
+    db.prepare(`
+      INSERT INTO exam_writing_grades (exam_id, qid, score, note, graded_at)
+      VALUES (?, ?, ?, ?, datetime('now'))
+      ON CONFLICT(exam_id, qid) DO UPDATE SET score=excluded.score, note=excluded.note, graded_at=excluded.graded_at
+    `).run(exam_id, qid, sc, note == null ? null : String(note).slice(0, 2000));
+    const ap = applySubjectiveGrades(exam_id);
+    return { ok: true, exam_id, qid, score: sc, max, total: ap && ap.ok ? ap.score : undefined, backfilled: !!(ap && ap.applied) };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+module.exports = { setDb, getExam, getExamList, saveScore, initTable, isUnitDone, gradeExam, isCourseStyle, gradeOne, initProgressTable, saveAnswer, getProgress, getProgressAnswers, clearProgress, initSpeechTable, saveSpeech, listSpeech, getSpeechAudio, gradeSpeech, initWritingTable, listWritingPending, gradeWriting, applySubjectiveGrades, getLatestScore };
