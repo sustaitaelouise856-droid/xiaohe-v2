@@ -1,0 +1,1453 @@
+{
+ "lesson_id": "u7r3",
+ "practice_end": 27,
+ "home_subtitle": "第三课 · unless 登场",
+ "part1_desc": "第 1–27 步：跟站长学 unless——它等于 if...not，双向改写、从句可前可后、大坑是后面不再加 not；本课新词 fork、onion、ant、context、image、sense 和短语 flash card、figure out；练习结合广播站记忆力挑战赛，掺着挑战题边学边闯。",
+ "part2_desc": "第 28–50 步：独立完成第二场挑战赛的新词单题目，全是新句子改写与运用；课尾压轴：unless 综合产出、比较级与现在完成时回锅、词汇确认。",
+ "note": "本课阅读材料（两场记忆力挑战赛报道）为教研自编，非课本原文。考查能力：unless 的含义与 if...not 双向改写、unless 从句位置与逗号规则、unless 后不再加 not、条件句（2）谈必然结果两边一般现在时；挑战段回锅比较级/最高级、现在完成时。Unit 7 The secret of memory 主题，核心词 fork/onion/ant/context/image/sense，短语 flash card/figure out，复现 visual/link/repeat/note/list。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "记忆力挑战赛来了",
+   "teach_html": "<p>记忆系列继续。站长今天在广播站办了一场<strong>记忆力挑战赛</strong>：30 秒看 10 个词，合上书默写，看谁记得多。</p><p>比赛里有一句话人人都要会说：<strong>Unless you use tricks, you forget the words quickly.</strong>（除非你用技巧，否则你很快就把词忘光。）今天的主角就是 <strong>unless</strong>。</p>",
+   "audio_id": "u7r3-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "unless 登场：unless = if...not",
+   "teach_html": "<p><strong>unless</strong> 的意思是“<strong>除非；如果不</strong>”。它一个人就顶 <strong>if...not</strong> 两个词：</p><p><strong>Unless you review, you forget.</strong> = <strong>If you do not review, you forget.</strong>（如果你不复习，你就会忘。）</p><p>记住：unless 里面已经藏着“不”了，所以它出场时，原来的 <strong>not 要删掉</strong>。</p>",
+   "audio_id": "u7r3-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "示范一组：双向改写",
+   "teach_html": "<p>第一组示范，看清改写时什么变、什么不变：</p><p>原句：<strong>If you do not review the words, you forget them.</strong></p><p>改写：<strong>Unless you review the words, you forget them.</strong></p><p>变的只有条件部分：If → Unless，do not review → review（not 删掉）。主句 <strong>you forget them 一个词都不动</strong>。反过来也一样：看到 Unless，先把它换回 If...not 检查意思。</p>",
+   "audio_id": "u7r3-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "示范二组：第三人称 + 前后位置",
+   "teach_html": "<p>第二组，主语换成 she：</p><p>原句：<strong>If she does not make a list, she misses some words.</strong></p><p>改写：<strong>Unless she makes a list, she misses some words.</strong></p><p>注意：does not 没了，原来被 does 拿走的 <strong>s 要还给动词</strong>：make → <strong>makes</strong>。</p><p>位置和 if 一样可前可后：unless 从句在<strong>前面</strong>，后面加<strong>逗号</strong>；搬到主句<strong>后面</strong>，<strong>不用逗号</strong>：You forget them <strong>unless</strong> you review them.</p>",
+   "audio_id": "u7r3-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "大坑：unless 后面不再加 not",
+   "teach_html": "<p>本课最大的坑：<strong>Unless you don't review...</strong> 是<strong>错的</strong>。unless 已经等于 if...not，再加一个 not，就成了双重否定，意思全乱。</p><p>第二个提醒：谈必然结果，unless 句和条件句一样，<strong>两边都用一般现在时，不用 will</strong>：Unless you sleep well, your memory <strong>does not work</strong> well.（不是 will not work。）</p>",
+   "audio_id": "u7r3-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：fork、onion、ant",
+   "teach_html": "<p>挑战赛词单里的三个词：</p><p><strong>fork</strong> /fɔːk/“餐叉”：You eat salad with a <strong>fork</strong>.</p><p><strong>onion</strong> /ˈʌnjən/“洋葱”：Cut the <strong>onion</strong> into small pieces.</p><p><strong>ant</strong> /ænt/“蚂蚁”：An <strong>ant</strong> is a very small insect.</p>",
+   "audio_id": "u7r3-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二：context、image、sense",
+   "teach_html": "<p><strong>context</strong> /ˈkɒntekst/“上下文；语境”：看生词前后那句话，就能猜出词义。</p><p><strong>image</strong> /ˈɪmɪdʒ/“图像”：在脑子里给单词配一幅画，就是 make an <strong>image</strong>。</p><p><strong>sense</strong> /sens/“感觉官能”：a <strong>sense</strong> of smell（嗅觉）、a <strong>sense</strong> of hearing（听觉）。眼睛、耳朵、鼻子都是 sense。</p>",
+   "audio_id": "u7r3-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "短语：flash card、figure out",
+   "teach_html": "<p><strong>flash card</strong>“识字卡片”：一面写单词、一面写意思的小卡片，记词很好用。</p><p><strong>figure out</strong>“弄懂；弄清楚”：You can <strong>figure out</strong> a new word from its context.（你可以从上下文弄懂一个生词。）</p><p>再认几个老朋友：<strong>visual</strong>（视觉的）、<strong>link</strong>（联系；串联）、<strong>repeat</strong>（重复）、<strong>note</strong>（笔记；记下）、<strong>list</strong>（清单；词单）。</p>",
+   "audio_id": "u7r3-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "改写三步法",
+   "teach_html": "<p>把 if...not 改成 unless，只走三步：</p><p>第一步：找到 <strong>If + 主语 + do/does not</strong>。</p><p>第二步：If 换成 <strong>Unless</strong>，删掉 not；主语是 he / she 时，动词<strong>加回 s</strong>（does not write → <strong>writes</strong>）。</p><p>第三步：主句<strong>原样抄下来</strong>，一个词不改。</p><p>写完回读一遍：unless 后面还有没有 not？有就删掉。</p>",
+   "audio_id": "u7r3-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：挑战赛报道",
+   "teach_html": "<p>这是站长写的<strong>挑战赛报道</strong>。做题时对照着看：30 秒看 10 个词，分组记、编故事串记的人记得多；除非用技巧，否则很快忘光。</p><p>下面站长带着你练 unless 改写。</p>",
+   "audio_id": "u7r3-prac-01",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "第一次改写",
+   "scene": "不复习单词，就会把它们忘了。",
+   "stem": "If you do not review the words, you forget them. = ___",
+   "options": [
+    "Unless you review the words, you forget them.",
+    "Unless you do not review the words, you forget them.",
+    "If you review the words, you forget them.",
+    "Unless you forget the words, you review them."
+   ],
+   "answer": "A",
+   "help": "用改写三步法：If 换 Unless，删掉 not，主句不动。",
+   "explain": "Unless you review the words, you forget them. If...not 改成 unless：删掉 not，主句原样保留。",
+   "wrong_feedback": {
+    "B": "unless 后面不能再加 not：Unless you do not review 是双重否定，错。",
+    "C": "这句还是 if，而且把 not 删了以后意思反了：复习了反而忘？不对。",
+    "D": "条件和结果被调换了位置，意思全变了；改写只动条件部分。"
+   },
+   "audio_id": "u7r3-q01",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "看了多少秒",
+   "scene": "根据挑战赛报道回答。",
+   "stem": "How long did each student look at the ten words?",
+   "options": [
+    "Ten seconds.",
+    "Thirty seconds.",
+    "Three minutes.",
+    "One hour."
+   ],
+   "answer": "B",
+   "help": "回到报道第一句找数字：looked at ten words for ... seconds。",
+   "explain": "Thirty seconds. 报道原话：looked at ten words for thirty seconds.",
+   "wrong_feedback": {
+    "A": "ten 是词的个数（十个词），不是秒数。",
+    "C": "报道里没有 three minutes；看词的时间是 thirty seconds。",
+    "D": "one hour 太长了，挑战只给了 thirty seconds。"
+   },
+   "audio_id": "u7r3-q02",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 一个词改写",
+   "scene": "不把词串进故事里，词就忘得快。",
+   "stem": "You forget the words quickly if you do not link them in a story. = You forget the words quickly ___ you link them in a story.",
+   "task": "只写空里的一个词。",
+   "answer_text": "unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "if not",
+      "unless not"
+     ],
+     "cn": [
+      "除非（= if...not）"
+     ]
+    }
+   ],
+   "help": "空前面是结果，后面原来是 if you do not link。把它压缩成一个词。",
+   "explain": "You forget the words quickly unless you link them in a story. unless = if...not，从句搬到后面不用逗号。",
+   "common_errors": [
+    {
+     "when": "写了 if",
+     "say": "if 是“如果”，意思反了：if you link them 是“串进故事就忘”？这里要的是“除非”，用 unless。"
+    },
+    {
+     "when": "写了 if not",
+     "say": "两个词太啰嗦，而且位置不对；一个词 unless 就顶 if...not。"
+    },
+    {
+     "when": "写了 unless not",
+     "say": "unless 里已经藏着 not，再写 not 就成了双重否定。"
+    }
+   ],
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "哪句是对的",
+   "scene": "下面哪一句 unless 句子写对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless you don't use tricks, you forget quickly.",
+    "Unless you use tricks, you will forget quickly.",
+    "You forget quickly unless you don't use tricks.",
+    "Unless you use tricks, you forget quickly."
+   ],
+   "answer": "D",
+   "help": "逐句查两点：unless 后面有没有多余的 not？谈必然结果有没有混进 will？",
+   "explain": "Unless you use tricks, you forget quickly. unless 后不加 not；两边一般现在时，不用 will。",
+   "wrong_feedback": {
+    "A": "unless 后面又加了 don't，是双重否定，错。",
+    "B": "谈必然结果不用 will；主句用一般现在时 forget。",
+    "C": "unless 从句里多了 don't；应是 unless you use tricks。"
+   },
+   "audio_id": "u7r3-q03",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "short",
+   "title": "吃沙拉的工具",
+   "scene": "吃沙拉时用的工具。",
+   "stem": "You eat salad with a ___.",
+   "task": "只写空里的一个词。",
+   "answer_text": "fork",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fork"
+     ],
+     "olds": [
+      "spoon",
+      "knife"
+     ],
+     "cn": [
+      "餐叉"
+     ]
+    }
+   ],
+   "help": "想想挑战赛词单的第一个词：吃沙拉用的餐具。",
+   "explain": "You eat salad with a fork. fork 是“餐叉”。",
+   "common_errors": [
+    {
+     "when": "写了 spoon",
+     "say": "spoon 是“勺子”，喝汤用的；吃沙拉用 fork（餐叉）。"
+    },
+    {
+     "when": "写了 knife",
+     "say": "knife 是“刀”；这句话要的是叉子 fork。"
+    },
+    {
+     "when": "写了 forks",
+     "say": "前面有 a，一个餐叉用单数 fork。"
+    }
+   ],
+   "audio_id": "u7r3-q04",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · s 要还回去",
+   "scene": "他不把词写进清单，就记不住。",
+   "stem": "If he does not write the words in a list, he forgets them. = Unless he ___ the words in a list, he forgets them. (write)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "writes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "writes"
+     ],
+     "olds": [
+      "write",
+      "will write",
+      "writed"
+     ],
+     "cn": [
+      "写（主语是 he，does not 删掉后 s 还给动词）"
+     ]
+    }
+   ],
+   "help": "原句是 does not write。does 没了以后，被它拿走的 s 应该回到谁身上？",
+   "explain": "Unless he writes the words in a list, he forgets them. 删掉 does not 后，动词 write 加回 s。",
+   "common_errors": [
+    {
+     "when": "写了 write",
+     "say": "少了 s。主语 he 是第三人称单数，does not 删掉后要写 writes。"
+    },
+    {
+     "when": "写了 will write",
+     "say": "谈必然结果不用 will；而且 unless 从句里就用一般现在时 writes。"
+    },
+    {
+     "when": "写了 writed",
+     "say": "write 的形式变化不是加 ed；这里是一般现在时第三人称单数 writes。"
+    }
+   ],
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "onion 的意思",
+   "scene": "onion 意思是？",
+   "stem": "The word \"onion\" means ___.",
+   "options": [
+    "蚂蚁",
+    "餐叉",
+    "洋葱",
+    "二月"
+   ],
+   "answer": "C",
+   "help": "挑战赛词单里，切开会让人流泪的蔬菜是哪个？",
+   "explain": "onion 意思是“洋葱”。",
+   "wrong_feedback": {
+    "A": "“蚂蚁”是 ant。onion 是蔬菜：洋葱。",
+    "B": "“餐叉”是 fork。onion 是洋葱。",
+    "D": "“二月”是 February。onion 是洋葱。"
+   },
+   "audio_id": "u7r3-q05",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "靠上下文猜词",
+   "scene": "读生词前后那句话，就能猜出词义。",
+   "stem": "Read the sentences around a new word. The ___ helps you figure out its meaning.",
+   "task": "只写空里的一个词。",
+   "answer_text": "context",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "context"
+     ],
+     "olds": [
+      "image",
+      "sense"
+     ],
+     "cn": [
+      "上下文；语境"
+     ]
+    }
+   ],
+   "help": "生词前后那句话合起来叫什么？刚学的生词二里有。",
+   "explain": "The context helps you figure out its meaning. context 是“上下文；语境”。",
+   "common_errors": [
+    {
+     "when": "写了 image",
+     "say": "image 是脑子里的“图像”；句子前后的话叫 context（上下文）。"
+    },
+    {
+     "when": "写了 sense",
+     "say": "sense 是“感觉官能”（眼耳鼻）；这里说的是文字环境，用 context。"
+    },
+    {
+     "when": "拼错了",
+     "say": "注意拼写：c-o-n-t-e-x-t，最后是 xt。"
+    }
+   ],
+   "audio_id": "u7r3-q06",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 揪出双重否定",
+   "scene": "下面哪一句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless you repeat the words, you forget them.",
+    "Unless you do not repeat the words, you forget them.",
+    "You forget them unless you repeats the words.",
+    "If you repeat the words, you forget them."
+   ],
+   "answer": "A",
+   "help": "一条一条查：unless 后有没有 not？主语 you 的动词加 s 了吗？意思有没有反？",
+   "explain": "Unless you repeat the words, you forget them. unless 后不加 not，主语 you 用原形 repeat。",
+   "wrong_feedback": {
+    "B": "unless 后面又加了 do not，是双重否定，错。",
+    "C": "主语是 you，动词用原形 repeat，不能写 repeats。",
+    "D": "意思反了：这句是“如果你重复，你就忘”，和原意正好相反。"
+   },
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "弄懂这个词",
+   "scene": "我从图画里弄懂了这个词的意思。",
+   "stem": "I cannot ___ the meaning of this word from the picture. (弄懂；弄清楚)",
+   "task": "写出空里的短语（两个词）。",
+   "answer_text": "figure out",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "figure out"
+     ],
+     "olds": [
+      "find out",
+      "figures out"
+     ],
+     "cn": [
+      "弄懂；弄清楚"
+     ]
+    }
+   ],
+   "help": "生词课的短语：figure + 一个小词，表示“弄懂”。",
+   "explain": "I cannot figure out the meaning of this word from the picture. figure out 是“弄懂；弄清楚”。",
+   "common_errors": [
+    {
+     "when": "只写了 figure",
+     "say": "少了 out。这个短语是两个词：figure out，缺一不可。"
+    },
+    {
+     "when": "写了 find out",
+     "say": "find out 偏向“查明事实”；从上下文、图画里“弄懂词义”用 figure out。"
+    },
+    {
+     "when": "写了 figures out",
+     "say": "cannot 后面用动词原形：figure out，不加 s。"
+    }
+   ],
+   "audio_id": "u7r3-q07",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "从句在后面",
+   "scene": "下面哪一句标点和意思都对？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "You forget the story, unless you make an image in your mind.",
+    "Unless you make an image in your mind you forget the story.",
+    "Unless, you make an image in your mind, you forget the story.",
+    "You forget the story unless you make an image in your mind."
+   ],
+   "answer": "D",
+   "help": "记逗号规则：unless 从句在前面要加逗号，在后面不加；再看意思哪句通顺。",
+   "explain": "You forget the story unless you make an image in your mind. 从句在后面不用逗号。",
+   "wrong_feedback": {
+    "A": "unless 从句搬到后面时，前面不加逗号。",
+    "B": "unless 从句在句首，后面必须加逗号：Unless you make an image in your mind, you forget the story.",
+    "C": "Unless 后面不能直接加逗号，逗号要放在整个从句之后。"
+   },
+   "audio_id": "u7r3-q08",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 安娜为什么记得多",
+   "scene": "根据挑战赛报道回答。",
+   "stem": "Why did Anna remember nine words?",
+   "options": [
+    "She read the list ten times.",
+    "She grouped the words and linked them in a story.",
+    "She closed her book very early.",
+    "She only looked at February and onion."
+   ],
+   "answer": "B",
+   "help": "回到报道里找 Anna 那一句：她做了哪两件事？",
+   "explain": "She grouped the words and linked them in a story. 报道原话：Anna grouped the words and linked them in a funny story.",
+   "wrong_feedback": {
+    "A": "报道没有说她读了十遍；她的办法是分组加编故事。",
+    "C": "合上书是所有人都要做的步骤，不是她记得多的原因。",
+    "D": "她看的是全部十个词，只看两个词不可能记住九个。"
+   },
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "title": "识字卡片",
+   "scene": "一面写单词、一面写意思的小卡片。",
+   "stem": "A small card with a word on one side and its meaning on the other side is a ___ ___.",
+   "task": "写出空里的短语（两个词）。",
+   "answer_text": "flash card",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "flash card"
+     ],
+     "olds": [
+      "flash cards",
+      "word card"
+     ],
+     "cn": [
+      "识字卡片"
+     ]
+    }
+   ],
+   "help": "生词课的短语：flash + card。",
+   "explain": "A small card with a word on one side is a flash card. flash card 是“识字卡片”。",
+   "common_errors": [
+    {
+     "when": "写了 flash cards",
+     "say": "前面有 a，用单数：a flash card。"
+    },
+    {
+     "when": "只写了 card",
+     "say": "少了 flash；这个短语要两个词一起写。"
+    },
+    {
+     "when": "拼错了 flash",
+     "say": "注意拼写：f-l-a-s-h，flash card。"
+    }
+   ],
+   "audio_id": "u7r3-q09",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 两个空改写",
+   "scene": "汤姆不用图像记词，就记不住这个词。",
+   "stem": "If Tom does not use an image, he does not remember the word. = ___ Tom ___ (use) an image, he does not remember the word.",
+   "task": "两个空都填，只写两个空里的部分，中间空一格。",
+   "answer_text": "Unless uses",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Unless"
+     ],
+     "olds": [
+      "If"
+     ],
+     "cn": [
+      "除非（句首大写）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "uses"
+     ],
+     "olds": [
+      "use",
+      "will use"
+     ],
+     "cn": [
+      "用（主语是 Tom，s 还给动词）"
+     ]
+    }
+   ],
+   "help": "第一个空是改写的开关词；第二个空注意：does not 删掉后，s 要还给 use。",
+   "explain": "Unless Tom uses an image, he does not remember the word. 主句的 does not remember 是原句就有的，不动它；只改条件部分。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 If",
+     "say": "写 If 就还要带 not；这里整句改写成 unless 句，第一个空用 Unless。"
+    },
+    {
+     "when": "第二个空写了 use",
+     "say": "主语 Tom 是第三人称单数，does not 没了，use 要加 s：uses。"
+    },
+    {
+     "when": "把主句也改了",
+     "say": "主句 he does not remember the word 原样不动，改写只动条件部分。"
+    }
+   ],
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "sense 的意思",
+   "scene": "sense 意思是？",
+   "stem": "The word \"sense\" in \"a sense of smell\" means ___.",
+   "options": [
+    "图像",
+    "上下文",
+    "感觉官能",
+    "清单"
+   ],
+   "answer": "C",
+   "help": "a sense of smell 是“嗅觉”。眼睛、耳朵、鼻子这一类统称什么？",
+   "explain": "sense 意思是“感觉官能”。a sense of smell 就是嗅觉这种感觉官能。",
+   "wrong_feedback": {
+    "A": "“图像”是 image。sense 说的是眼耳鼻的功能：感觉官能。",
+    "B": "“上下文”是 context。sense 是感觉官能。",
+    "D": "“清单”是 list。sense 是感觉官能。"
+   },
+   "audio_id": "u7r3-q10",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 把词和图连起来",
+   "scene": "把词和图联系起来，词就留在脑子里。",
+   "stem": "Unless you ___ the words with a picture, they do not stay in your mind.",
+   "options": [
+    "link",
+    "links",
+    "linked",
+    "will link"
+   ],
+   "answer": "A",
+   "help": "unless 从句的主语是 you，动词用什么形式？再想时态：谈的是规律还是将来？",
+   "explain": "Unless you link the words with a picture, they do not stay in your mind. 主语 you 用原形 link。",
+   "wrong_feedback": {
+    "B": "links 是给 he / she 用的；主语是 you，用原形 link。",
+    "C": "linked 是过去式；谈规律用一般现在时。",
+    "D": "unless 从句里不用 will，用一般现在时。"
+   },
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "小小的昆虫",
+   "scene": "排着队搬食物的小昆虫。",
+   "stem": "A very small insect that carries food in a long line is an ___.",
+   "task": "只写空里的一个词。",
+   "answer_text": "ant",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "ant"
+     ],
+     "olds": [
+      "bee",
+      "ant's"
+     ],
+     "cn": [
+      "蚂蚁"
+     ]
+    }
+   ],
+   "help": "挑战赛词单里的小昆虫，a 开头、三个字母。",
+   "explain": "A very small insect that carries food in a long line is an ant. ant 是“蚂蚁”。",
+   "common_errors": [
+    {
+     "when": "写了 bee",
+     "say": "bee 是“蜜蜂”，会飞；排队搬食物的是 ant（蚂蚁）。"
+    },
+    {
+     "when": "写了 a ant",
+     "say": "空里只写词本身：ant；前面的 an 题目已经给了。"
+    },
+    {
+     "when": "拼错了",
+     "say": "注意拼写：a-n-t，只有三个字母。"
+    }
+   ],
+   "audio_id": "u7r3-q11",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：第二场挑战赛",
+   "teach_html": "<p>新任务：周五 Class 2 办了<strong>第二场挑战赛</strong>，换了一张新词单，资料在上面。这次你自己看、自己答。</p><p>记住改写三步法：Unless 换 If...not 检查；unless 后不加 not；两边一般现在时。</p>",
+   "audio_id": "u7r3-v-intro",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "本记了几个",
+   "scene": "根据第二场挑战赛资料回答。",
+   "stem": "How many words did Ben remember?",
+   "options": [
+    "Nine words.",
+    "Five words.",
+    "Ten words.",
+    "Two words."
+   ],
+   "answer": "B",
+   "help": "找 Ben 那一句：he remembered ... words。",
+   "explain": "Five words. 资料原话：he remembered five words.",
+   "wrong_feedback": {
+    "A": "nine 是上一场 Anna 的成绩，不是 Ben 的。",
+    "C": "ten 是词单上一共的词数；Ben 只记住了五个。",
+    "D": "资料说的是 five，不是 two。"
+   },
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 本的新办法",
+   "scene": "本不用新办法读词单，就只记得五个词。",
+   "stem": "If Ben does not read the list in a new way, he remembers only five words. = Unless Ben ___ the list in a new way, he remembers only five words. (read)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "reads",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "reads"
+     ],
+     "olds": [
+      "read",
+      "will read"
+     ],
+     "cn": [
+      "读（主语是 Ben，s 还给动词）"
+     ]
+    }
+   ],
+   "help": "主语是 Ben。does not 删掉以后，动词要发生什么变化？",
+   "explain": "Unless Ben reads the list in a new way, he remembers only five words. 主语 Ben 是第三人称单数，read 加 s。",
+   "common_errors": [
+    {
+     "when": "写了 read",
+     "say": "少了 s。主语 Ben 是一个人，does not 没了以后写 reads。"
+    },
+    {
+     "when": "写了 will read",
+     "say": "谈必然结果不用 will，用一般现在时 reads。"
+    },
+    {
+     "when": "写了 reading",
+     "say": "reading 是 -ing 形式，不能单独做谓语；这里要用 reads。"
+    }
+   ],
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "选对改写",
+   "scene": "把句子改写成 unless 句，选对的。",
+   "stem": "If you do not put a word in a sentence, you do not know it well. = ___",
+   "options": [
+    "Unless you put a word in a sentence, you know it well.",
+    "If you put a word in a sentence, you do not know it well.",
+    "Unless you do not put a word in a sentence, you do not know it well.",
+    "Unless you put a word in a sentence, you do not know it well."
+   ],
+   "answer": "D",
+   "help": "查三点：not 删干净了吗？主句动了吗？意思反了吗？",
+   "explain": "Unless you put a word in a sentence, you do not know it well. 条件部分删 not，主句原样保留。",
+   "wrong_feedback": {
+    "A": "主句被动了：原句主句是 you do not know it well，这句把 not 弄丢了。",
+    "B": "这句没有用 unless，而且意思反了。",
+    "C": "unless 后面还留着 do not，是双重否定。"
+   },
+   "audio_id": "u7r3-v02",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "脑子里的图",
+   "scene": "在脑子里给 mountain 配一幅清楚的画。",
+   "stem": "Make a clear ___ of the word \"mountain\" in your mind.",
+   "task": "只写空里的一个词。",
+   "answer_text": "image",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "image"
+     ],
+     "olds": [
+      "picture's",
+      "images"
+     ],
+     "cn": [
+      "图像"
+     ]
+    }
+   ],
+   "help": "在脑子里“配画”，用哪个生词？",
+   "explain": "Make a clear image of the word \"mountain\" in your mind. image 是“图像”。",
+   "common_errors": [
+    {
+     "when": "写了 images",
+     "say": "前面有 a，一幅图用单数 image。"
+    },
+    {
+     "when": "写了 context",
+     "say": "context 是上下文，说的是文字；脑子里的画是 image。"
+    },
+    {
+     "when": "拼错了",
+     "say": "注意拼写：i-m-a-g-e，image。"
+    }
+   ],
+   "audio_id": "u7r3-v03",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句是对的",
+   "scene": "下面哪一句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless you connect words with stories they disappear fast.",
+    "You disappear fast unless you connect words with stories.",
+    "Unless you connect words with stories, they disappear fast.",
+    "Unless you do not connect words with stories, they disappear fast."
+   ],
+   "answer": "C",
+   "help": "查逗号、查多余的 not、再查主语对不对：消失的是词，还是你？",
+   "explain": "Unless you connect words with stories, they disappear fast. 从句在前面加逗号；unless 后不加 not；消失的是 they（词）。",
+   "wrong_feedback": {
+    "A": "unless 从句在句首，后面少了逗号。",
+    "B": "主语错了：消失的是词（they），不是 you；这句变成“你消失得快”。",
+    "D": "unless 后面多了 do not，是双重否定。"
+   },
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "视觉帮手",
+   "scene": "图画是帮眼睛学习的帮手。",
+   "stem": "A picture is a ___ aid. It helps your eyes learn the words.",
+   "task": "只写空里的一个词。",
+   "answer_text": "visual",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "visual"
+     ],
+     "olds": [
+      "vision",
+      "visuals"
+     ],
+     "cn": [
+      "视觉的"
+     ]
+    }
+   ],
+   "help": "和“眼睛、看”有关的那个形容词，老朋友里的一个。",
+   "explain": "A picture is a visual aid. visual 是“视觉的”。",
+   "common_errors": [
+    {
+     "when": "写了 vision",
+     "say": "vision 是名词“视力”；这里修饰 aid，要用形容词 visual。"
+    },
+    {
+     "when": "写了 visuals",
+     "say": "这里不是名词复数；aid 前面放形容词 visual。"
+    },
+    {
+     "when": "拼错了",
+     "say": "注意拼写：v-i-s-u-a-l，visual。"
+    }
+   ],
+   "audio_id": "u7r3-v04",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "context 的意思",
+   "scene": "context 意思是？",
+   "stem": "The word \"context\" means ___.",
+   "options": [
+    "识字卡片",
+    "上下文；语境",
+    "感觉官能",
+    "图像"
+   ],
+   "answer": "B",
+   "help": "回想猜词那道题：靠生词前后的句子猜词义，那个环境叫什么？",
+   "explain": "context 意思是“上下文；语境”。",
+   "wrong_feedback": {
+    "A": "“识字卡片”是 flash card。context 是上下文；语境。",
+    "C": "“感觉官能”是 sense。context 是上下文；语境。",
+    "D": "“图像”是 image。context 是上下文；语境。"
+   },
+   "audio_id": "u7r3-v05",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 不记下来就忘",
+   "scene": "学生不把词记下来，一小时就忘了它。",
+   "stem": "If a student does not note the word down, he forgets it in an hour. = ___ a student ___ (note) the word down, he forgets it in an hour.",
+   "task": "两个空都填，只写两个空里的部分，中间空一格。",
+   "answer_text": "Unless notes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Unless"
+     ],
+     "olds": [
+      "If"
+     ],
+     "cn": [
+      "除非（句首大写）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "notes"
+     ],
+     "olds": [
+      "note",
+      "will note"
+     ],
+     "cn": [
+      "记下（主语是 a student，s 还给动词）"
+     ]
+    }
+   ],
+   "help": "第一个空是开关词；第二个空：主语是 a student，does not 没了，note 要加什么？",
+   "explain": "Unless a student notes the word down, he forgets it in an hour. 改写只动条件部分，主句不动。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 If",
+     "say": "用 If 就必须保留 not；这道题改成 unless 句，第一个空是 Unless。"
+    },
+    {
+     "when": "第二个空写了 note",
+     "say": "主语 a student 是第三人称单数，note 要加 s：notes。"
+    },
+    {
+     "when": "写了 Unless does not note",
+     "say": "unless 后面不能再留 does not，那是双重否定。"
+    }
+   ],
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "闻洋葱的官能",
+   "scene": "我们靠嗅觉记住洋葱的气味。",
+   "stem": "We use our ___ of smell to remember the onion.",
+   "options": [
+    "sense",
+    "flash card",
+    "context",
+    "fork"
+   ],
+   "answer": "A",
+   "help": "固定搭配：a ___ of smell（嗅觉）。",
+   "explain": "We use our sense of smell to remember the onion. sense 是“感觉官能”。",
+   "wrong_feedback": {
+    "B": "flash card 是识字卡片，不能和 of smell 搭配。",
+    "C": "context 是上下文；“嗅觉”是 sense of smell。",
+    "D": "fork 是餐叉；闻气味靠的是 sense（感觉官能）。"
+   },
+   "audio_id": "u7r3-v06",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "弄懂 village",
+   "scene": "我从图画和前后句弄懂了 village 的意思。",
+   "stem": "I can ___ the word \"village\" from the picture and the sentences around it.",
+   "task": "写出空里的短语（两个词）。",
+   "answer_text": "figure out",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "figure out"
+     ],
+     "olds": [
+      "find out",
+      "figures out"
+     ],
+     "cn": [
+      "弄懂；弄清楚"
+     ]
+    }
+   ],
+   "help": "can 后面用原形。哪个短语是“弄懂”？",
+   "explain": "I can figure out the word \"village\" from the picture and the sentences around it. figure out 是“弄懂；弄清楚”。",
+   "common_errors": [
+    {
+     "when": "只写了 figure",
+     "say": "少了 out，短语不完整：figure out。"
+    },
+    {
+     "when": "写了 figures out",
+     "say": "can 后面用原形，不加 s：figure out。"
+    },
+    {
+     "when": "写了 look out",
+     "say": "look out 是“小心”；“弄懂词义”是 figure out。"
+    }
+   ],
+   "audio_id": "u7r3-v07",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 不画就记不住",
+   "scene": "不把云朵词画下来，你就记不住它们。",
+   "stem": "You do not remember the cloud words if you do not draw them. = You do not remember the cloud words ___ you ___ them.",
+   "task": "两个空都填，只写两个空里的部分，中间空一格。",
+   "answer_text": "unless draw",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "if not"
+     ],
+     "cn": [
+      "除非（从句在后面，不用大写）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "draw"
+     ],
+     "olds": [
+      "draws",
+      "drew"
+     ],
+     "cn": [
+      "画（主语是 you）"
+     ]
+    }
+   ],
+   "help": "第一个空把 if...not 压成一个词；第二个空主语是 you，动词用什么形式？",
+   "explain": "You do not remember the cloud words unless you draw them. unless 从句在主句后面，不用逗号。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 if",
+     "say": "if 是“如果”，意思反了；这里是“除非”，用 unless。"
+    },
+    {
+     "when": "第二个空写了 draws",
+     "say": "主语是 you，动词用原形 draw，不加 s。"
+    },
+    {
+     "when": "写了 unless not draw",
+     "say": "unless 后面不能再加 not。"
+    }
+   ],
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "从句位置再判",
+   "scene": "下面哪一句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Words disappear fast, unless you use them in a sentence.",
+    "Unless you use them in a sentence words disappear fast.",
+    "Unless, you use them in a sentence, words disappear fast.",
+    "Words disappear fast unless you use them in a sentence."
+   ],
+   "answer": "D",
+   "help": "只查逗号位置：从句在前加逗号，在后不加。",
+   "explain": "Words disappear fast unless you use them in a sentence. unless 从句在后面，不用逗号。",
+   "wrong_feedback": {
+    "A": "从句在后面时，主句和从句之间不加逗号。",
+    "B": "从句在句首，后面少了逗号。",
+    "C": "Unless 后面不能紧跟逗号，逗号在整个从句之后。"
+   },
+   "audio_id": "u7r3-v08",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "汤里的洋葱",
+   "scene": "做汤前先把洋葱切成小块。",
+   "stem": "Cut the ___ into small pieces before you cook the soup.",
+   "task": "只写空里的一个词。",
+   "answer_text": "onion",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "onion"
+     ],
+     "olds": [
+      "onions",
+      "fork"
+     ],
+     "cn": [
+      "洋葱"
+     ]
+    }
+   ],
+   "help": "切开会让人流泪、能下锅的蔬菜是哪个？",
+   "explain": "Cut the onion into small pieces before you cook the soup. onion 是“洋葱”。",
+   "common_errors": [
+    {
+     "when": "写了 onions",
+     "say": "前面有 the + 一道汤用的一个洋葱，这里用单数 onion。"
+    },
+    {
+     "when": "写了 fork",
+     "say": "fork 是餐叉，不能切来下锅；下锅的是 onion。"
+    },
+    {
+     "when": "拼错了",
+     "say": "注意拼写：o-n-i-o-n，onion。"
+    }
+   ],
+   "audio_id": "u7r3-v09",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 她不串联就忘",
+   "scene": "她不把词和图像串起来，就记不住这个词。",
+   "stem": "If she does not link the word to an image, she does not remember it. = Unless she ___ the word to an image, she does not remember it. (link)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "links",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "links"
+     ],
+     "olds": [
+      "link",
+      "will link"
+     ],
+     "cn": [
+      "串联（主语是 she，s 还给动词）"
+     ]
+    }
+   ],
+   "help": "主语是 she。does not 删掉后，link 要发生什么变化？主句的 does not remember 不要动。",
+   "explain": "Unless she links the word to an image, she does not remember it. 条件部分删 not、动词加 s；主句原样保留。",
+   "common_errors": [
+    {
+     "when": "写了 link",
+     "say": "少了 s。主语 she 是第三人称单数，写 links。"
+    },
+    {
+     "when": "写了 will link",
+     "say": "谈必然结果不用 will，用一般现在时 links。"
+    },
+    {
+     "when": "把主句的 not 也删了",
+     "say": "主句的 does not remember 是原句的一部分，改写只动 if 条件部分。"
+    }
+   ],
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "本读的那张单子",
+   "scene": "本把词单读了一遍又一遍。",
+   "stem": "Ben only read the ___ again and again, so he remembered five words.",
+   "task": "只写空里的一个词。",
+   "answer_text": "list",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "list"
+     ],
+     "olds": [
+      "lists",
+      "note"
+     ],
+     "cn": [
+      "清单；词单"
+     ]
+    }
+   ],
+   "help": "资料里 Ben 反复读的那个东西叫什么？",
+   "explain": "Ben only read the list again and again, so he remembered five words. list 是“清单；词单”。",
+   "common_errors": [
+    {
+     "when": "写了 lists",
+     "say": "资料里是一张词单，用单数 list。"
+    },
+    {
+     "when": "写了 note",
+     "say": "note 是笔记；十个词排成的那张叫 list（词单）。"
+    },
+    {
+     "when": "拼错了",
+     "say": "注意拼写：l-i-s-t，list。"
+    }
+   ],
+   "audio_id": "u7r3-v10",
+   "reading": "On Friday, Class 2 tried a second Memory Challenge with new words: pencil, garden, chicken, winter, uncle, bottle, picture, village, doctor and cloud. They had thirty seconds to look. Ben only read the list again and again, so he remembered five words. Lily made flash cards and put each word in a sentence with context. Unless you connect words with images and stories, they disappear from your mind fast."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：老朋友回锅",
+   "teach_html": "<p>独立验证过关！接下来是<strong>挑战关</strong>：unless 综合产出打头阵，还有老朋友回锅——比较级、最高级和现在完成时。站长只给方向提示。</p>",
+   "audio_id": "u7r3-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 谁的办法最好",
+   "scene": "安娜的办法比本的办法好，是全班最好的办法。",
+   "stem": "Anna's way is ___ than Ben's way, and it is the ___ way in the class.",
+   "options": [
+    "good, best",
+    "better, better",
+    "better, best",
+    "best, better"
+   ],
+   "answer": "C",
+   "help": "第一个空后面有 than；第二个空有 the 和全班范围。good 的比较级和最高级都是不规则的。",
+   "explain": "Anna's way is better than Ben's way, and it is the best way in the class. 有 than 用比较级 better；the + 全班范围用最高级 best。",
+   "wrong_feedback": {
+    "A": "good 不能直接做比较级；good 的比较级是不规则形式 better。",
+    "B": "第二个空有 the 和“全班”范围，要用最高级 best，不是 better。",
+    "D": "两个空反了：有 than 的用 better，有 the 的用 best。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 卡片做好了",
+   "scene": "莉莉已经把新词的识字卡片做好了，今晚可以复习。",
+   "stem": "Lily ___ flash cards for the new words, so she can review them tonight. (make)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "has made",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "has made"
+     ],
+     "olds": [
+      "have made",
+      "has make"
+     ],
+     "cn": [
+      "已经做好了（现在完成时）"
+     ]
+    }
+   ],
+   "help": "“已经做好了、今晚能用”——动作完成了，结果留到现在。have/has + 过去分词，主语是 Lily。",
+   "explain": "Lily has made flash cards for the new words, so she can review them tonight. 主语 Lily 是第三人称单数，用 has made。",
+   "common_errors": [
+    {
+     "when": "写了 made",
+     "say": "made 是过去式，只说过去做过；这里强调已经做好、今晚能用，用 has made。"
+    },
+    {
+     "when": "写了 has make",
+     "say": "has 后面要用过去分词 made，不能用原形 make。"
+    },
+    {
+     "when": "写了 have made",
+     "say": "主语 Lily 是一人（第三人称单数），用 has，不用 have。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 压轴产出一",
+   "scene": "不用句子用一遍词，词就留不住。",
+   "stem": "___ you ___ (use) the words in a sentence, they do not stay in your mind.",
+   "task": "两个空都填，只写两个空里的部分，中间空一格。",
+   "answer_text": "Unless use",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Unless"
+     ],
+     "olds": [
+      "If"
+     ],
+     "cn": [
+      "除非（句首大写）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "use"
+     ],
+     "olds": [
+      "uses",
+      "will use"
+     ],
+     "cn": [
+      "用（主语是 you）"
+     ]
+    }
+   ],
+   "help": "这句话等于 If you do not use... 的改写。第一个空是开关词；第二个空主语是 you。",
+   "explain": "Unless you use the words in a sentence, they do not stay in your mind. unless = if...not，两边一般现在时。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 If",
+     "say": "用 If 就要保留 do not；整句改写成 unless 句，第一个空用 Unless。"
+    },
+    {
+     "when": "第二个空写了 uses",
+     "say": "主语是 you，动词用原形 use，不加 s。"
+    },
+    {
+     "when": "写了 will use",
+     "say": "谈必然结果不用 will，用一般现在时。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 压轴产出二",
+   "scene": "她不把词分组，就只记得住几个。",
+   "stem": "___ she ___ (group) the words, she remembers only a few of them.",
+   "task": "两个空都填，只写两个空里的部分，中间空一格。",
+   "answer_text": "Unless groups",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Unless"
+     ],
+     "olds": [
+      "If"
+     ],
+     "cn": [
+      "除非（句首大写）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "groups"
+     ],
+     "olds": [
+      "group",
+      "will group"
+     ],
+     "cn": [
+      "分组（主语是 she，s 还给动词）"
+     ]
+    }
+   ],
+   "help": "等于 If she does not group... 的改写。第二个空记住那条规矩：does 走了，s 要还给动词。",
+   "explain": "Unless she groups the words, she remembers only a few of them. 主语 she 是第三人称单数，group 加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 If",
+     "say": "用 If 就要带 does not；改写成 unless 句，第一个空用 Unless。"
+    },
+    {
+     "when": "第二个空写了 group",
+     "say": "少了 s。主语 she 是第三人称单数，写 groups。"
+    },
+    {
+     "when": "写了 Unless does not group",
+     "say": "unless 后面不能再留 does not，双重否定。"
+    }
+   ]
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · sense 再确认",
+   "scene": "sense 在 a sense of hearing 里的意思。",
+   "stem": "The word \"sense\" in \"a sense of hearing\" means ___.",
+   "options": [
+    "感觉官能",
+    "上下文；语境",
+    "识字卡片",
+    "弄清楚"
+   ],
+   "answer": "A",
+   "help": "a sense of hearing 是“听觉”。听觉属于眼耳鼻哪一类？",
+   "explain": "sense 意思是“感觉官能”。a sense of hearing 就是听觉这种感觉官能。",
+   "wrong_feedback": {
+    "B": "“上下文；语境”是 context。sense 是感觉官能。",
+    "C": "“识字卡片”是 flash card。sense 是感觉官能。",
+    "D": "“弄清楚”是 figure out。sense 是感觉官能。"
+   }
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "节目预告",
+   "teach_html": "<p>第三课讲完了：<strong>unless</strong> 正式上手——它等于 if...not，改写走三步，后面不许再加 not；挑战赛的记词法也都练到了：分组、串故事、配图像、用上下文。</p><p>下一课，站长带你把记词法连成一套完整的“记忆工具箱”，敬请期待。</p>",
+   "audio_id": "u7r3-ending"
+  }
+ ],
+ "title": "unless 登场：if...not 改写",
+ "unit": "Unit 7 The secret of memory",
+ "version": 1
+}
