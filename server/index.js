@@ -29,6 +29,7 @@ const { shanghaiDay } = require('./time');
 
 const app = express();
 app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
+app.use('/api/exam/speech', express.json({ limit: '6mb' })); // 2026-10-23：口语录音 base64 上传（单段上限 4MB），同上
 app.use(express.json({ limit: '256kb' }));
 app.set('trust proxy', false);
 
@@ -1542,6 +1543,7 @@ app.post('/api/consolidation/retry', auth.requireAuth, (req, res) => {
 exams.setDb(db);
 exams.initTable();
 exams.initProgressTable();
+exams.initSpeechTable();
 app.get('/api/exams', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, exams: exams.getExamList() });
@@ -1595,6 +1597,59 @@ app.post('/api/exam/answer', auth.requireAuth, (req, res) => {
 app.get('/api/exam/progress/:id', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   const r = exams.getProgress(req.params.id);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+
+// 口语录音留存（2026-10-23）：录音本体以 BLOB 存库，跟着数据库一起被备份链带走。
+// 学生录完一段就立刻上传存好，服务器确认后前端才标"已录音"；同题重录覆盖并清空旧批改。
+app.post('/api/exam/speech', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const b = req.body || {};
+  const exam_id = String(b.exam_id || ''), qid = String(b.qid || '');
+  let b64 = String(b.audio_b64 || '');
+  const di = b64.indexOf('base64,');
+  if (di >= 0) b64 = b64.slice(di + 7); // 兼容 data URL 前缀（前端一般已剥掉）
+  if (!exam_id || !qid || !b64) return res.status(400).json({ ok: false, error: 'bad_request' });
+  if (b64.length > 4 * 1024 * 1024) return res.status(413).json({ ok: false, error: 'too_large' });
+  const buf = Buffer.from(b64, 'base64');
+  if (!buf.length) return res.status(400).json({ ok: false, error: 'empty_audio' });
+  const dur = Number(b.duration_sec);
+  const r = exams.saveSpeech(exam_id, qid, String(b.mime || '').slice(0, 128) || null, buf, isFinite(dur) && dur > 0 ? dur : null);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+// 管理：口语录音列表（不含录音本体，未批改排前面）。鉴权照 /api/admin/feedback：备份 token。
+app.get('/api/admin/speech', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  const r = exams.listSpeech();
+  if (!r.ok) return res.status(500).json(r);
+  res.json(r);
+});
+// 管理：试听一段录音（按存档 mime 返回 BLOB 本体）
+app.get('/api/admin/speech/:id/audio', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  const r = exams.getSpeechAudio(req.params.id);
+  if (!r.ok) return res.status(404).json(r);
+  res.set('Content-Type', r.mime);
+  res.send(Buffer.from(r.audio));
+});
+// 管理：给一段录音写批改分数与评语（分期批改的落点；分数暂存 exam_speech，未并入交卷总分）
+app.post('/api/admin/speech/grade', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  const b = req.body || {};
+  const r = exams.gradeSpeech(b.id, b.score, b.note);
   if (!r.ok) return res.status(400).json(r);
   res.json(r);
 });
