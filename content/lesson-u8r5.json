@@ -1,0 +1,1383 @@
+{
+ "lesson_id": "u8r5",
+ "practice_end": 27,
+ "home_subtitle": "第五课 · 宠物大直播",
+ "part1_desc": "第 1–27 步：全单元回炉——副词构成总表、比较级最高级总表、19 个新词与 9 个短语逐个过；读一场'该不该养狗'的辩论，学找观点和论据。",
+ "part2_desc": "第 28–50 步：独立读宠物俱乐部给新主人的信，课尾压轴：全语法综合、被动与完成时回锅、事实与观点辨析、写作句产出。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：Unit 8 全语法综合（副词构成/位置/比较级/最高级/易混词）、全单元词汇短语复测、辩论体阅读的观点与论据提取、事实与观点辨析（对齐课本阅读题型）。压轴回锅被动语态、现在完成时、unless。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "宠物大直播：收官节目",
+   "teach_html": "<p>Unit 8 的最后一课，大直播开场！今天我们把整个单元的东西全部回炉：副词的构成、比较级、最高级、19 个新词和 9 个短语，一个都不能少。</p><p>节目还有一场重头戏——<strong>辩论</strong>：到底该不该养狗？两位同学各说各的理。你不但要读懂，还要能找出他们各自的<strong>观点和论据</strong>，这是课本阅读里的真题型。</p>",
+   "audio_id": "u8r5-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "回炉一：副词构成总表",
+   "teach_html": "<p>快速过一遍构成规则：</p><p>① 一般加 -ly：quick → quickly，careful → carefully。<br>② -y 结尾变 i 加 ly：happy → happily，easy → easily。<br>③ -le 结尾去 e 加 y：simple → simply，responsible → responsibly。<br>④ -ll 结尾加 y：full → fully；true 特例：truly。<br>⑤ 同形不动：fast、early、hard、late；good → well（特殊）。</p>",
+   "audio_id": "u8r5-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "回炉二：比较级最高级总表",
+   "teach_html": "<p>① -ly 副词：more carefully → most carefully。<br>② 同形副词：faster → fastest，harder → hardest，earlier → earliest。<br>③ 不规则：well → better → best；badly → worse → worst；little → less → least；much → more → most。</p><p>判断口诀：<strong>先数对象</strong>——两者或 than 用比较级；三者以上或 of all 用最高级；只有一个对象，什么级都不用。</p>",
+   "audio_id": "u8r5-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "词汇回炉一：狗与主人",
+   "teach_html": "<p><strong>faithful</strong> 忠实的；<strong>responsible</strong> 可信任的；<strong>awake</strong> 醒着；<strong>attack</strong>（动词）攻击；<strong>hold</strong> 抱着、拿着；<strong>choice</strong> 选择；<strong>flat</strong> 公寓。</p><p>造句回炉：<strong>A faithful dog is awake early and waits quietly. A responsible owner holds the lead carefully.</strong></p>",
+   "audio_id": "u8r5-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "词汇回炉二：麻烦与历史",
+   "teach_html": "<p><strong>complain</strong> 抱怨；<strong>litter</strong> 垃圾；<strong>unlikely</strong> 不大可能；<strong>relieve</strong> 方便、解手；<strong>indoors</strong> 在室内；<strong>advise</strong> 建议；<strong>cause</strong> 引起。</p><p>历史组：<strong>magical</strong> 有魔力的；<strong>wealth</strong> 财富；<strong>queen</strong> 女王；<strong>servant</strong> 仆人；<strong>pride</strong> 自豪；<strong>among</strong> 在……中；<strong>relationship</strong> 关系。</p>",
+   "audio_id": "u8r5-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "短语回炉：九个全过",
+   "teach_html": "<p><strong>grow up</strong> 长大；<strong>care for</strong> 照顾；<strong>in short</strong> 总之；<strong>have no choice but to do</strong> 只能……；<strong>run free</strong> 四处自由走动；<strong>lie around</strong> 懒散度日；<strong>complain about</strong> 抱怨（某事）；<strong>in addition</strong> 除此之外（还）；<strong>catch the eye of somebody</strong> 引起某人的注意。</p><p>这九个短语，直播里会换着花样考你。</p>",
+   "audio_id": "u8r5-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "辩论读法：观点 + 论据",
+   "teach_html": "<p>辩论文章的结构：先亮<strong>观点</strong>（I think... / In my opinion...），再一条一条给<strong>论据</strong>。</p><p>论据的信号词：<strong>First / Firstly</strong> 第一，<strong>Second / Secondly</strong> 第二，<strong>In addition</strong> 另外，<strong>Finally</strong> 最后；收尾用 <strong>In short</strong>。</p><p>还要分清：<strong>事实 (fact)</strong> 是能验证的，如'Dogs have four legs.'；<strong>观点 (opinion)</strong> 是个人看法，如'Dogs are the best pets.'——课本阅读题就爱考这个。</p>",
+   "audio_id": "u8r5-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：最后三个坑",
+   "teach_html": "<p>① <strong>hardly</strong> 不是 hard 的副词升级版，它是“几乎不”：He hardly sleeps.（他几乎不睡。）</p><p>② <strong>friendly</strong> 以 -ly 结尾却是形容词：a friendly dog。</p><p>③ 双重比较是大忌：more faster、more better、carefullier 全部不存在。变形之前先分类，再下手。</p>",
+   "audio_id": "u8r5-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "直播规则",
+   "teach_html": "<p>规则和前几课一样：练习部分（前 27 步）有短文带着，验证部分换新材料自己判断。题目里混着全单元的考点，还有几位老朋友（被动、完成时、unless）在压轴等你。</p><p>建议你准备好：每道题先在心里说清“描绘人还是动作、几个对象比较”，再选答案。</p>",
+   "audio_id": "u8r5-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料：该不该养狗",
+   "teach_html": "<p>下面是今天的辩论短文：李华说 YES，王博说 NO。读的时候把两人的观点和每条理由分开记。短文会留在屏幕上，随时可回看。</p>",
+   "audio_id": "u8r5-prac-01",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "说得清楚",
+   "scene": "老师说话很清楚，大家都听得见。",
+   "stem": "The teacher speaks ___ so everyone can hear her.",
+   "options": [
+    "clear",
+    "clearer",
+    "clearly",
+    "clearlyer"
+   ],
+   "answer": "C",
+   "help": "speaks 是动作，配形容词还是副词？",
+   "explain": "The teacher speaks clearly. clear + ly = clearly，描绘动作。",
+   "wrong_feedback": {
+    "A": "clear 是形容词；描绘动词 speaks 用副词 clearly。",
+    "B": "这里没有比较，不用比较级。",
+    "D": "没有 clearlyer 这种写法。"
+   },
+   "audio_id": "u8r5-q01",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "轻轻关门",
+   "scene": "宝宝睡着了，他轻轻地关上门。",
+   "stem": "He closed the door ___ because the baby was asleep. (quiet)",
+   "task": "只写空里的部分。",
+   "answer_text": "quietly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "quietly"
+     ],
+     "olds": [
+      "quiet",
+      "quitely"
+     ],
+     "cn": [
+      "轻轻地"
+     ]
+    }
+   ],
+   "help": "closed 是动作；quiet 的副词拼写别写错。",
+   "explain": "He closed the door quietly. quiet + ly = quietly。",
+   "common_errors": [
+    {
+     "when": "写了 quiet",
+     "say": "quiet 是形容词；描绘动作要用副词 quietly。"
+    },
+    {
+     "when": "写了 quitely",
+     "say": "拼写错位：quietly 的顺序是 q-u-i-e-t-l-y。"
+    },
+    {
+     "when": "写了 quietlys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 做得最仔细",
+   "scene": "全班同学里她做得最仔细。",
+   "stem": "She did the work ___ of all the students. (carefully)",
+   "task": "只写空里的部分。",
+   "answer_text": "most carefully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "most carefully",
+      "the most carefully"
+     ],
+     "olds": [
+      "more carefully",
+      "carefulliest"
+     ],
+     "cn": [
+      "最仔细地"
+     ]
+    }
+   ],
+   "help": "of all 是范围信号；carefully 的最高级？",
+   "explain": "She did the work most carefully of all. -ly 副词最高级用 most。",
+   "common_errors": [
+    {
+     "when": "写了 more carefully",
+     "say": "那是比较级；有 of all 要用最高级。"
+    },
+    {
+     "when": "写了 carefulliest",
+     "say": "没有这种拼法；用 most carefully。"
+    },
+    {
+     "when": "写了 carefully",
+     "say": "原级不对；全班比较用最高级。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "跑得更快",
+   "scene": "我的狗比你的狗跑得快。",
+   "stem": "My dog runs ___ than yours.",
+   "options": [
+    "more fast",
+    "faster",
+    "fastest",
+    "fastly"
+   ],
+   "answer": "B",
+   "help": "有 than；fast 怎么变比较级？",
+   "explain": "My dog runs faster than yours. 两者比较用比较级 faster。",
+   "wrong_feedback": {
+    "A": "fast 的比较级加 -er，不用 more。",
+    "C": "有 than 是两者比较，用比较级；fastest 是最高级。",
+    "D": "没有 fastly 这个词。"
+   },
+   "audio_id": "u8r5-q02",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "学得更努力",
+   "scene": "考试快到了，他学得比以前努力。",
+   "stem": "He studies ___ than before because the test is coming.",
+   "options": [
+    "hardly",
+    "more hard",
+    "hardest",
+    "harder"
+   ],
+   "answer": "D",
+   "help": "先看意思对不对，再看形式：hard 和 hardly 选谁？",
+   "explain": "He studies harder than before. hard 作副词是'努力地'，比较级 harder。",
+   "wrong_feedback": {
+    "A": "hardly 是'几乎不'，和'考试快到了要努力'意思相反。",
+    "B": "hard 的比较级加 -er：harder。",
+    "C": "有 than 用比较级，不用最高级。"
+   },
+   "audio_id": "u8r5-q03",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 两者用比较级",
+   "scene": "陷阱回炉：只有两个男孩。",
+   "stem": "Of the two boys, Jim writes ___. (carefully)",
+   "task": "只写空里的部分。",
+   "answer_text": "more carefully",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more carefully"
+     ],
+     "olds": [
+      "most carefully",
+      "carefullier"
+     ],
+     "cn": [
+      "更仔细地"
+     ]
+    }
+   ],
+   "help": "先数对象：the two boys 是几个？",
+   "explain": "Of the two boys, Jim writes more carefully. 两者之间用比较级，不能用 most。",
+   "common_errors": [
+    {
+     "when": "写了 most carefully",
+     "say": "most 是最高级，要三者以上；这里只有两个男孩。"
+    },
+    {
+     "when": "写了 carefullier",
+     "say": "carefully 不能加 -er；比较级用 more carefully。"
+    },
+    {
+     "when": "写了 carefully",
+     "say": "两者在比，要用比较级。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "对人友善",
+   "scene": "这只狗对谁都友善，从不攻击人。",
+   "stem": "The dog is ___ to everyone. It never attacks people.",
+   "options": [
+    "friendly",
+    "friendlily",
+    "friend",
+    "friends"
+   ],
+   "answer": "A",
+   "help": "friendly 的词性在易混点里专门讲过。",
+   "explain": "The dog is friendly to everyone. friendly 是形容词。",
+   "wrong_feedback": {
+    "B": "没有 friendlily 这种写法；friendly 本身是形容词。",
+    "C": "friend 是名词'朋友'；这里要形容词 friendly。",
+    "D": "friends 是名词复数，不能描绘性情。"
+   },
+   "audio_id": "u8r5-q04",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "很可能来",
+   "scene": "他从不迟到，很可能会来。",
+   "stem": "It is ___ that he will come. He is never late. (likely)",
+   "task": "只写空里的部分。",
+   "answer_text": "likely",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "likely"
+     ],
+     "olds": [
+      "unlikely",
+      "likelys"
+     ],
+     "cn": [
+      "很可能的"
+     ]
+    }
+   ],
+   "help": "从不迟到的人，会来是'很可能'还是'不大可能'？",
+   "explain": "It is likely that he will come. likely = 很可能；unlikely 是它的反义词。",
+   "common_errors": [
+    {
+     "when": "写了 unlikely",
+     "say": "意思反了：从不迟到说明'很可能'会来，用 likely。"
+    },
+    {
+     "when": "写了 likelys",
+     "say": "形容词不加 s。"
+    },
+    {
+     "when": "写了 like",
+     "say": "like 是'喜欢/像'，不是'可能'；要用 likely。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "忠诚地爱我们",
+   "scene": "读辩论短文李华的话。",
+   "stem": "Li Hua says dogs love us ___.",
+   "options": [
+    "faithful",
+    "faithfully",
+    "faith",
+    "faithfullyer"
+   ],
+   "answer": "B",
+   "help": "love 是动作；faithful 变副词加什么？",
+   "explain": "Dogs love us faithfully. faithful + ly = faithfully。",
+   "wrong_feedback": {
+    "A": "faithful 是形容词；描绘动词 love 要用副词 faithfully。",
+    "C": "faith 是名词'信任'，不能描绘动作。",
+    "D": "没有这种比较级写法，这里也没有比较。"
+   },
+   "audio_id": "u8r5-q05",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 攻击人",
+   "scene": "王博的论据之一：有些狗会攻击人。",
+   "stem": "Wang Bo says some dogs even ___ people. (attack)",
+   "task": "只写空里的部分。",
+   "answer_text": "attack",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "attack"
+     ],
+     "olds": [
+      "attacks",
+      "attacked"
+     ],
+     "cn": [
+      "攻击"
+     ]
+    }
+   ],
+   "help": "主语 some dogs 是复数；句子转述的是一般情况。",
+   "explain": "Some dogs even attack people. 主语复数，一般现在时动词用原形 attack。",
+   "common_errors": [
+    {
+     "when": "写了 attacks",
+     "say": "主语是复数 dogs，动词不能加 s。"
+    },
+    {
+     "when": "写了 attacked",
+     "say": "转述的是一般情况，用一般现在时，不用过去式。"
+    },
+    {
+     "when": "写了 attacking",
+     "say": "attacking 前面要有 be 动词，这里没有。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "总之",
+   "scene": "总结句的开头。",
+   "stem": "___ , I think dogs are great pets for most families.",
+   "options": [
+    "In shortly",
+    "In a short",
+    "In short",
+    "Short in"
+   ],
+   "answer": "C",
+   "help": "总结时用的固定短语，课本短语表里的。",
+   "explain": "In short, I think dogs are great pets. in short = 总之。",
+   "wrong_feedback": {
+    "A": "shortly 是'不久'；总结收尾的短语是 In short。",
+    "B": "没有 in a short 这个短语；固定说法是 in short。",
+    "D": "词序反了：先 in 再 short。"
+   },
+   "audio_id": "u8r5-q06",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "relationship 的中文",
+   "scene": "写出 relationship 的中文意思。",
+   "stem": "写出 relationship 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "关系",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "关系"
+     ],
+     "olds": [],
+     "cn": [
+      "关系"
+     ]
+    }
+   ],
+   "help": "回想 the relationship between people and pets。",
+   "explain": "relationship 的中文是'关系'。",
+   "common_errors": [
+    {
+     "when": "写了'友谊'",
+     "say": "友谊是 friendship；relationship 是更广的'关系'。"
+    },
+    {
+     "when": "写了'责任'",
+     "say": "责任是 responsibility，拼写有点像，别混。"
+    },
+    {
+     "when": "写了'亲戚'",
+     "say": "relation 可以指亲戚，但 relationship 指的是'关系'本身。"
+    }
+   ],
+   "audio_id": "u8r5-q07",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "兽医的建议",
+   "scene": "上周兽医建议我们多遛狗。",
+   "stem": "Last week, the vet ___ us to walk the dog more.",
+   "options": [
+    "advised",
+    "advise",
+    "advice",
+    "advises"
+   ],
+   "answer": "A",
+   "help": "时间词 last week 决定时态。",
+   "explain": "The vet advised us to walk the dog more. advise 的过去式是 advised。",
+   "wrong_feedback": {
+    "B": "last week 是过去，要用过去式 advised。",
+    "C": "advice 是名词；这里需要动词。",
+    "D": "讲的是上周的事，不能用现在时 advises。"
+   },
+   "audio_id": "u8r5-q08",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 狗被遛",
+   "scene": "回锅被动：狗每天被主人遛。",
+   "stem": "The dog ___ by its owner every day. (walk)",
+   "task": "只写空里的部分。",
+   "answer_text": "is walked",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is walked"
+     ],
+     "olds": [
+      "walks",
+      "is walk"
+     ],
+     "cn": [
+      "被遛"
+     ]
+    }
+   ],
+   "help": "狗是被遛的对象；every day 是一般现在时。",
+   "explain": "The dog is walked by its owner every day. 被动语态：is + walked。",
+   "common_errors": [
+    {
+     "when": "写了 walks",
+     "say": "walks 是主动（狗自己遛？）；狗是被遛的，要用被动。"
+    },
+    {
+     "when": "写了 is walk",
+     "say": "被动要用过去分词 walked，不是原形。"
+    },
+    {
+     "when": "写了 walked",
+     "say": "少了 is：被动结构要完整。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "猫更安静",
+   "scene": "猫比狗安静，所以适合公寓。",
+   "stem": "Cats are ___ than dogs, so they are good pets for flats.",
+   "options": [
+    "more quiet",
+    "quietlyer",
+    "quiet",
+    "quieter"
+   ],
+   "answer": "D",
+   "help": "描绘 cats 的是形容词还是副词？",
+   "explain": "Cats are quieter than dogs. quiet 的比较级是 quieter。",
+   "wrong_feedback": {
+    "A": "quiet 是短形容词，比较级直接加 -er：quieter。",
+    "B": "quietly 是副词；这里描绘 cats（名词）用形容词比较级。",
+    "C": "有 than，要用比较级。"
+   },
+   "audio_id": "u8r5-q09",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "跑得最快",
+   "scene": "公园里所有的宠物中，豆豆跑得最快。",
+   "stem": "Of all the pets in the park, Doudou runs ___.",
+   "options": [
+    "faster",
+    "most fast",
+    "fastest",
+    "fastly"
+   ],
+   "answer": "C",
+   "help": "of all 出现了——用哪一级？",
+   "explain": "Doudou runs fastest. 三者以上用最高级 fastest。",
+   "wrong_feedback": {
+    "A": "of all 是最高级范围，用 fastest。",
+    "B": "fast 的最高级加 -est，不用 most。",
+    "D": "没有 fastly 这个词。"
+   },
+   "audio_id": "u8r5-q10",
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 照顾好它就健康",
+   "scene": "条件句收尾：照顾得好，狗就健康。",
+   "stem": "If you ___ your dog well, it will be healthy and happy. (care for)",
+   "task": "只写空里的部分。",
+   "answer_text": "care for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "care for"
+     ],
+     "olds": [
+      "cares for",
+      "care of"
+     ],
+     "cn": [
+      "照顾"
+     ]
+    }
+   ],
+   "help": "主语 you 用原形；短语要完整。",
+   "explain": "If you care for your dog well, it will be healthy and happy. care for 是'照顾'，主语 you 用原形。",
+   "common_errors": [
+    {
+     "when": "写了 cares for",
+     "say": "主语是 you，动词不能加 s。"
+    },
+    {
+     "when": "写了 care of",
+     "say": "介词错了：'照顾'是 care for。"
+    },
+    {
+     "when": "写了 care",
+     "say": "短语不完整，少了 for。"
+    }
+   ],
+   "reading": "Li Hua says YES: 'Dogs are great friends. They love us faithfully and wait for us patiently every day. Keeping a dog also teaches us responsibility. We must feed them, walk them and care for them. In short, dogs make our lives happier.' Wang Bo says NO: 'Dogs can cause many problems. They bark loudly at night and leave hair everywhere. Some dogs even attack people. In addition, keeping a dog costs a lot of money. In short, a dog is not the perfect pet for every family.' Who do you agree with?"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：给新主人的信",
+   "teach_html": "<p>换材料了：宠物俱乐部写给新任狗主人的一封信，里面全是实在的建议。这次自己判断，还要注意信里 firstly/secondly 这样的结构词。短文会留在屏幕上。</p>",
+   "audio_id": "u8r5-v-intro",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "第一件事",
+   "scene": "读信回答：信里让新主人做的第一件事是什么？",
+   "stem": "What is the first thing the letter tells new owners to do?",
+   "options": [
+    "Walk their dogs every morning and evening.",
+    "Feed their dogs carefully.",
+    "Take their dogs to the vet every day.",
+    "Train their dogs at night."
+   ],
+   "answer": "A",
+   "help": "找 First 后面的那一句。",
+   "explain": "Walk their dogs every morning and evening. 信里 First 后面就是遛狗这件事。",
+   "wrong_feedback": {
+    "B": "喂食是第二条（Second），题目问的是第一件。",
+    "C": "信里说生病时才去看兽医，不是每天都去。",
+    "D": "信里没说夜里训练；训练是第三条，而且没提时间。"
+   },
+   "audio_id": "u8r5-v02",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 睡得最安静",
+   "scene": "运动够了的狗夜里睡得最安静。",
+   "stem": "Of all the pets, a dog that runs freely sleeps ___ at night. (quietly)",
+   "task": "只写空里的部分。",
+   "answer_text": "most quietly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "most quietly",
+      "the most quietly"
+     ],
+     "olds": [
+      "more quietly",
+      "quietliest"
+     ],
+     "cn": [
+      "最安静地"
+     ]
+    }
+   ],
+   "help": "of all 是范围；quietly 的最高级？",
+   "explain": "A dog that runs freely sleeps most quietly at night. -ly 副词最高级用 most。",
+   "common_errors": [
+    {
+     "when": "写了 more quietly",
+     "say": "那是比较级；of all 要用最高级。"
+    },
+    {
+     "when": "写了 quietliest",
+     "say": "没有这种拼法；用 most quietly。"
+    },
+    {
+     "when": "写了 quietly",
+     "say": "原级不对；有范围比较要用最高级。"
+    }
+   ],
+   "audio_id": "u8r5-v03",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "生病找兽医",
+   "scene": "狗生病了要带它去哪里？",
+   "stem": "If your dog gets ill, take it to the ___.",
+   "options": [
+    "servant",
+    "vet",
+    "queen",
+    "owner"
+   ],
+   "answer": "B",
+   "help": "信里 take it to the ___ if it gets ill。",
+   "explain": "Take it to the vet. vet 是'兽医'，是课本里的脚注生词。",
+   "wrong_feedback": {
+    "A": "servant 是仆人，治不了病；看病要找兽医 vet。",
+    "C": "queen 是女王，和看病没关系。",
+    "D": "owner 就是主人自己；信里说的是带去看兽医。"
+   },
+   "audio_id": "u8r5-v04",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "几乎不惹麻烦",
+   "scene": "训练好的狗几乎不惹麻烦。",
+   "stem": "A well-trained dog ___ ever causes trouble. (hard)",
+   "task": "只写空里的部分。",
+   "answer_text": "hardly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hardly"
+     ],
+     "olds": [
+      "hard",
+      "harder"
+     ],
+     "cn": [
+      "几乎不"
+     ]
+    }
+   ],
+   "help": "训练好的狗惹麻烦是'经常'还是'几乎不'？",
+   "explain": "A well-trained dog hardly ever causes trouble. hardly ever 是'几乎从不'，hardly 在这里是关键。",
+   "common_errors": [
+    {
+     "when": "写了 hard",
+     "say": "hard 是'努力地'：hard ever 读不通；这里要'几乎不'——hardly。"
+    },
+    {
+     "when": "写了 harder",
+     "say": "harder 是比较级，这里没有比较。"
+    },
+    {
+     "when": "写了 hardlys",
+     "say": "没有这种写法。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "全单元综合：只有一句全对。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "She did her homework carefullier than her brother.",
+    "She did her homework more careful than her brother.",
+    "She does her homework more carefully than her brother yesterday.",
+    "She did her homework more carefully than her brother."
+   ],
+   "answer": "D",
+   "help": "逐句查四点：变法、选词、时态、描绘对象。",
+   "explain": "She did her homework more carefully than her brother. 四处都对。",
+   "wrong_feedback": {
+    "A": "-ly 副词的比较级用 more，不能加 -er。",
+    "B": "careful 是形容词；描绘动作 did 要用副词 carefully。",
+    "C": "yesterday 是过去时间，动词要用 did，不能用 does。"
+   },
+   "audio_id": "u8r5-v05",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "开心健康地长大",
+   "scene": "小狗会开心地、健康地长大。",
+   "stem": "Your dog will grow up ___ and healthily. (happy)",
+   "task": "只写空里的部分。",
+   "answer_text": "happily",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "happily"
+     ],
+     "olds": [
+      "happy",
+      "happyly"
+     ],
+     "cn": [
+      "开心地"
+     ]
+    }
+   ],
+   "help": "grow up 是动作；happy 变副词的拼写规则？",
+   "explain": "Your dog will grow up happily and healthily. happy → happily：y 变 i 加 ly。",
+   "common_errors": [
+    {
+     "when": "写了 happy",
+     "say": "happy 是形容词；描绘动作 grow up 用副词 happily。"
+    },
+    {
+     "when": "写了 happyly",
+     "say": "拼写：先变 y 为 i，是 happily。"
+    },
+    {
+     "when": "写了 happilys",
+     "say": "副词不加 s。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "满心自豪",
+   "scene": "他的狗赢了比赛，他满心自豪。",
+   "stem": "The owner was full of ___ when his dog won the show.",
+   "options": [
+    "pride",
+    "proud",
+    "prides",
+    "proudly"
+   ],
+   "answer": "A",
+   "help": "be full of 后面跟名词还是形容词？",
+   "explain": "The owner was full of pride. pride 是名词'自豪'。",
+   "wrong_feedback": {
+    "B": "full of 后面用名词 pride；proud 是形容词。",
+    "C": "pride 是抽象名词，这里不加 s。",
+    "D": "proudly 是副词，不能跟在 of 后面。"
+   },
+   "audio_id": "u8r5-v06",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 最常养",
+   "scene": "所有宠物里，人们最常养狗。",
+   "stem": "Of all the pets, people keep dogs ___. (often)",
+   "task": "只写空里的部分。",
+   "answer_text": "most often",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "most often"
+     ],
+     "olds": [
+      "more often",
+      "oftenest"
+     ],
+     "cn": [
+      "最经常"
+     ]
+    }
+   ],
+   "help": "of all 是最高级范围；often 的最高级是 most often。",
+   "explain": "People keep dogs most often. often 的比较级是 more often，最高级是 most often。",
+   "common_errors": [
+    {
+     "when": "写了 more often",
+     "say": "那是比较级；of all 要用最高级。"
+    },
+    {
+     "when": "写了 oftenest",
+     "say": "没有 oftenest 这种常用形式；用 most often。"
+    },
+    {
+     "when": "写了 often",
+     "say": "原级不对；有范围比较要用最高级。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "除此之外",
+   "scene": "狗需要运动，除此之外还需要爱。",
+   "stem": "Dogs need exercise. ___ ___, they need love. (in addition)",
+   "task": "只写空里的部分。",
+   "answer_text": "in addition",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "in addition"
+     ],
+     "olds": [
+      "in additions",
+      "in additional"
+     ],
+     "cn": [
+      "除此之外（还）"
+     ]
+    }
+   ],
+   "help": "固定短语，addition 的形式不变。",
+   "explain": "In addition, they need love. in addition 表示'除此之外（还）'。",
+   "common_errors": [
+    {
+     "when": "写了 in additions",
+     "say": "短语里 addition 不加 s。"
+    },
+    {
+     "when": "写了 in additional",
+     "say": "additional 是形容词；短语里用名词 addition。"
+    },
+    {
+     "when": "写了 in addition to",
+     "say": "多了 to；单独使用时后面直接跟句子。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "有魔力的力量",
+   "scene": "故事里的猫有魔力。",
+   "stem": "The cat in the old story had ___ powers.",
+   "options": [
+    "wealth",
+    "pride",
+    "magical",
+    "magicly"
+   ],
+   "answer": "C",
+   "help": "powers 是名词，前面用形容词。",
+   "explain": "The cat had magical powers. magical 是形容词'有魔力的'。",
+   "wrong_feedback": {
+    "A": "wealth 是名词'财富'；描绘 powers 用形容词 magical。",
+    "B": "pride 是'自豪'，意思不对。",
+    "D": "没有 magicly 这个词；形容词是 magical。"
+   },
+   "audio_id": "u8r5-v07",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 第二条理由",
+   "scene": "写作结构：第二条理由用什么开头？",
+   "stem": "Firstly, dogs are good friends. ___, they teach us responsibility. (secondly)",
+   "task": "只写空里的部分。",
+   "answer_text": "Secondly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Secondly",
+      "secondly"
+     ],
+     "olds": [
+      "Second",
+      "Secondlys"
+     ],
+     "cn": [
+      "第二"
+     ]
+    }
+   ],
+   "help": "列举理由时，First/Firstly 对应的是哪个词？",
+   "explain": "Secondly, they teach us responsibility. 结构词：Firstly... Secondly... Finally...",
+   "common_errors": [
+    {
+     "when": "写了 Second",
+     "say": "作结构词（连接句子的）要用 Secondly；Second 多作形容词'第二的'。"
+    },
+    {
+     "when": "写了 Secondlys",
+     "say": "没有这种写法，不加 s。"
+    },
+    {
+     "when": "写了 Two",
+     "say": "Two 是数字'二'，不是列举用的结构词。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "王博的观点",
+   "scene": "回辩论短文：王博列出的麻烦里，不包括哪一项？",
+   "stem": "In the debate, which problem does Wang Bo NOT talk about?",
+   "options": [
+    "Dogs bark loudly at night.",
+    "Dogs are too big for small flats.",
+    "Keeping a dog costs a lot of money.",
+    "Some dogs attack people."
+   ],
+   "answer": "B",
+   "help": "把王博的每条理由和选项逐个对。",
+   "explain": "Dogs are too big for small flats. 王博说了噪音、掉毛、攻击和花钱，唯独没说个头问题。",
+   "wrong_feedback": {
+    "A": "这条他说了：bark loudly at night 是他的第一条。",
+    "C": "这条他也说了：costs a lot of money。",
+    "D": "这条他说了：Some dogs even attack people。"
+   },
+   "audio_id": "u8r5-v08",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 养了多年",
+   "scene": "回锅完成时：我从它小时候就养着它。",
+   "stem": "I ___ this dog since it was a puppy. (keep)",
+   "task": "只写空里的部分。",
+   "answer_text": "have kept",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have kept"
+     ],
+     "olds": [
+      "keeps",
+      "have keep"
+     ],
+     "cn": [
+      "养（完成时）"
+     ]
+    }
+   ],
+   "help": "since + 过去的时间点，是现在完成时的信号。",
+   "explain": "I have kept this dog since it was a puppy. 现在完成时：have + 过去分词 kept。",
+   "common_errors": [
+    {
+     "when": "写了 keeps",
+     "say": "主语是 I 不能用 keeps；而且有 since，要用完成时。"
+    },
+    {
+     "when": "写了 kept",
+     "say": "只有 kept 是一般过去时；since 要求 have kept。"
+    },
+    {
+     "when": "写了 have keep",
+     "say": "have 后面要用过去分词 kept，不是原形。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "耐心地等",
+   "scene": "小狗在车站耐心地等主人。",
+   "stem": "The little dog waited ___ for its owner at the station. (patient)",
+   "task": "只写空里的部分。",
+   "answer_text": "patiently",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "patiently"
+     ],
+     "olds": [
+      "patient",
+      "patientlys"
+     ],
+     "cn": [
+      "耐心地"
+     ]
+    }
+   ],
+   "help": "waited 是动作；patient 变副词。",
+   "explain": "The little dog waited patiently. patient + ly = patiently。",
+   "common_errors": [
+    {
+     "when": "写了 patient",
+     "say": "patient 是形容词；描绘动作 waited 用副词 patiently。"
+    },
+    {
+     "when": "写了 patientlys",
+     "say": "副词不加 s。"
+    },
+    {
+     "when": "写了 patienty",
+     "say": "拼写少了 l：patiently = patient + ly。"
+    }
+   ],
+   "audio_id": "u8r5-v09",
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 除非有时间",
+   "scene": "收官产出：除非你有时间，否则养不好狗。",
+   "stem": "You cannot keep a dog well ___ you have time for it. (unless)",
+   "task": "只写空里的部分。",
+   "answer_text": "unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "unlesss"
+     ],
+     "cn": [
+      "除非"
+     ]
+    }
+   ],
+   "help": "先想意思：有时间才能养好——空里是 if 还是 unless？",
+   "explain": "You cannot keep a dog well unless you have time for it. unless = if...not。",
+   "common_errors": [
+    {
+     "when": "写了 if",
+     "say": "意思反了：if you have time 是'如果有时间'，和前半句'养不好'接不上；unless 才对。"
+    },
+    {
+     "when": "写了 unlesss",
+     "say": "拼写：unless 词尾两个 s 已经够了。"
+    },
+    {
+     "when": "写了 if not",
+     "say": "这个空用 unless 最合适；if not 需要重新组句。"
+    }
+   ],
+   "reading": "Dear new dog owners, welcome! First, walk your dog every morning and evening. A dog that runs freely in the park sleeps most quietly at night. Second, feed it carefully and take it to the vet if it gets ill. Third, train it patiently — a well-trained dog hardly ever causes trouble. If you do these things, your dog will grow up happily and healthily. — From the Pet Club"
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：毕业压轴",
+   "teach_html": "<p>最后五道是全单元的毕业压轴：最高级、比较级产出、被动语态、事实与观点辨析、辩论写作收尾句。把这一单元的功夫全亮出来。</p>",
+   "audio_id": "u8r5-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "毕业题：只有一句全对。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Of all the boys, he speaks English better.",
+    "Of all the boys, he speaks English wellest.",
+    "Of all the boys, he speak English best.",
+    "Of all the boys, he speaks English best."
+   ],
+   "answer": "D",
+   "help": "逐句查：最高级形式、三单。",
+   "explain": "Of all the boys, he speaks English best. 形式和三单都对。",
+   "wrong_feedback": {
+    "A": "of all 用最高级 best，不用比较级 better。",
+    "B": "没有 wellest 这个词；well 的最高级是 best。",
+    "C": "主语 he 是第三人称单数，动词要加 s：speaks。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 学说话更快",
+   "scene": "鹦鹉学说话比狗快。",
+   "stem": "Dogs learn fast, but parrots learn to speak ___ than dogs. (fast)",
+   "task": "只写空里的部分。",
+   "answer_text": "faster",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "faster"
+     ],
+     "olds": [
+      "more fast",
+      "fastest"
+     ],
+     "cn": [
+      "更快"
+     ]
+    }
+   ],
+   "help": "有 than；fast 的比较级？",
+   "explain": "Parrots learn to speak faster than dogs. 两者比较用比较级 faster。",
+   "common_errors": [
+    {
+     "when": "写了 more fast",
+     "say": "fast 的比较级加 -er，不用 more。"
+    },
+    {
+     "when": "写了 fastest",
+     "say": "有 than 用比较级；fastest 是最高级。"
+    },
+    {
+     "when": "写了 fast",
+     "say": "有 than 必须用比较级。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 被善待",
+   "scene": "毕业题：被动语态收官。",
+   "stem": "The street dogs ___ kindly by the people in this town. (treat)",
+   "task": "只写空里的部分。",
+   "answer_text": "are treated",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are treated"
+     ],
+     "olds": [
+      "treat",
+      "are treat"
+     ],
+     "cn": [
+      "被对待"
+     ]
+    }
+   ],
+   "help": "街上的狗是被人们善待的；主语是复数。",
+   "explain": "The street dogs are treated kindly by the people. 被动语态：复数用 are + 过去分词 treated。注意 kindly 也是副词。",
+   "common_errors": [
+    {
+     "when": "写了 treat",
+     "say": "treat 是主动；狗是被对待的对象，要用被动。"
+    },
+    {
+     "when": "写了 are treat",
+     "say": "被动要用过去分词 treated，不是原形。"
+    },
+    {
+     "when": "写了 is treated",
+     "say": "主语 dogs 是复数，be 动词用 are。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 事实还是观点",
+   "scene": "课本同款题型：哪一句是观点（opinion），不是事实？",
+   "stem": "Which sentence is an opinion, not a fact?",
+   "options": [
+    "Dogs are the best pets in the world.",
+    "Dogs have four legs.",
+    "Some dogs bark at night.",
+    "A dog sleeps about ten hours a day."
+   ],
+   "answer": "A",
+   "help": "观点是个人看法，常有 best、I think 这类信号；事实能验证。",
+   "explain": "Dogs are the best pets in the world. 这是个人观点（opinion）；其余三句都是可验证的事实。",
+   "wrong_feedback": {
+    "B": "这是能验证的事实（fact），不是观点。",
+    "C": "这是可以观察到的事实。",
+    "D": "这是数据型的事实陈述，可以查证。"
+   }
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 写作收尾",
+   "scene": "辩论文的收尾句：总之，我相信狗让生活更美好。",
+   "stem": "In ___, I believe dogs make our lives better. (short)",
+   "task": "只写空里的部分。",
+   "answer_text": "short",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "short"
+     ],
+     "olds": [
+      "shortly",
+      "shorts"
+     ],
+     "cn": [
+      "总之"
+     ]
+    }
+   ],
+   "help": "收尾短语 in ___：里面是哪个词？",
+   "explain": "In short, I believe dogs make our lives better. in short 是收尾总结的固定短语。",
+   "common_errors": [
+    {
+     "when": "写了 shortly",
+     "say": "shortly 是'不久'；收尾短语是 in short。"
+    },
+    {
+     "when": "写了 shorts",
+     "say": "shorts 是'短裤'，意思全错了。"
+    },
+    {
+     "when": "写了 shortness",
+     "say": "没有这种用法；记住 in short 两个词就够。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "收官：把这一单元带走",
+   "teach_html": "<p>Unit 8 全部结束。盘点一下你的收获：副词的构成和位置、比较级和最高级、19 个新词加 9 个短语，还有辩论文的读法——找观点、分论据、辨事实与观点。</p><p>站长最后一句：学英语和养宠物一样，靠的是每天一点耐心——train yourself patiently, and you will speak better and better. 下一站见！</p>",
+   "audio_id": "u8r5-ending"
+  }
+ ],
+ "title": "宠物大直播：综合复习",
+ "unit": "Unit 8 Pets and us",
+ "version": 1
+}
