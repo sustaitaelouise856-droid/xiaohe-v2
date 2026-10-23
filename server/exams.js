@@ -65,7 +65,8 @@ function getExamList() {
 // ===== 单题判分核心（2026-10-22 抽出，整卷判分与课程式逐题判分共用同一逻辑，保证口径一致）=====
 // 计分口径与 2026-10-12 原 gradeExam 逐字一致：
 // - choice：选项索引（或选项文本）与 q.answer 比对
-// - fill：normalize（去首尾空格/转小写/折叠空白）后与 q.answer 比对；
+// - fill：normalize（转小写/去标点/折叠空白）后比对：与 answer/accept 全等给满分；
+//   整句作答按词边界包含 answer/accept 的归一形也给满分（2026-10-23 宽容口径，见 gradeQuestion）；
 //   2026-10-22 起（Elouise 授权"发现问题直接解决"）：q.accept（等价答案列表）一并参与判分，
 //   学生写出任一等价写法（如 Sat. / book sale / 2.5 hours）同样给分。此前 accept 根本不被判分认，
 //   五卷共有数十条等价写法会被判错（统计见 exams-full-audit-report.md）。
@@ -80,12 +81,24 @@ function gradeQuestion(q, given) {
     return { got, pending: false, objective: true };
   }
   if (q.type === 'fill') {
-    const norm = s => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
-    const cands = [];
-    (Array.isArray(q.answer) ? q.answer : [q.answer]).forEach(a => cands.push(a));
-    if (Array.isArray(q.accept)) q.accept.forEach(a => cands.push(a));
+    // 2026-10-23 宽容判分（简答只看关键信息，项目既定口径）：normalize 转小写、去标点、折叠空白后
+    // ① 与 answer/accept 全等 → 满分；② 整句作答按词边界包含 answer/accept 的归一形 → 满分
+    // （如问 When 答 "By Zhang Heng in 132 AD."、问 What for 答整句，均含关键信息，不再判 0）。
+    // 防误判：归一形长度 <2 的候选（单个字母/数字）只允许全等，不走包含。
+    const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g, ' ').replace(/\s+/g, ' ').trim();
     const g = norm(given);
-    if (g !== '' && cands.some(a => g === norm(a))) got = q.score;
+    if (g !== '') {
+      const cands = [];
+      (Array.isArray(q.answer) ? q.answer : [q.answer]).forEach(a => cands.push(norm(a)));
+      if (Array.isArray(q.accept)) q.accept.forEach(a => cands.push(norm(a)));
+      const list = cands.filter(a => a !== '');
+      if (list.some(a => g === a)) {
+        got = q.score;
+      } else {
+        const padded = ' ' + g + ' ';
+        if (list.some(a => a.length >= 2 && padded.includes(' ' + a + ' '))) got = q.score;
+      }
+    }
     return { got, pending: false, objective: true };
   }
   if (q.type === 'speak' || q.type === 'writing') {
@@ -116,7 +129,8 @@ function gradeExam(exam_id, answers) {
           total_objective += q.score;
         }
         score += r.got;
-        detail.push({ qid, num: q.num, type: q.type, given: given ?? null, got: r.got, max: q.score, status });
+        // 2026-10-23：detail 附 answer（正确答案展示文本），供交卷后逐题回顾；判分完成后才生成，不泄未答题
+        detail.push({ qid, num: q.num, type: q.type, given: given ?? null, got: r.got, max: q.score, status, answer: r.pending ? null : answerDisplay(q) });
       });
     }));
     return { ok: true, score, total_objective, pending, detail };
@@ -153,7 +167,29 @@ function initTable() {
     `);
     // 2026-10-12加：存原始答案
     try { db.exec(`ALTER TABLE exam_scores ADD COLUMN answers_json TEXT`); } catch {}
+    regradeStoredScores();
   } catch (e) { console.error('[exams] initTable', e.message); }
+}
+
+// 已存成绩按当前判分规则回算（2026-10-23，Elouise 批准）：判分口径修订后，
+// 用存档的原始答案重新判分，分数/detail 与现行 gradeExam 不一致才更新；幂等，判分确定性保证收敛。
+function regradeStoredScores() {
+  try {
+    const rows = db.prepare(`SELECT id, exam_id, score, detail_json, answers_json FROM exam_scores`).all();
+    for (const row of rows) {
+      if (!row.answers_json) continue;
+      let answers = null;
+      try { answers = JSON.parse(row.answers_json); } catch { continue; }
+      const r = gradeExam(row.exam_id, answers);
+      if (!r.ok) continue;
+      const newDetail = JSON.stringify(r.detail || []);
+      if (r.score !== row.score || newDetail !== (row.detail_json || '')) {
+        db.prepare(`UPDATE exam_scores SET score = ?, detail_json = ? WHERE id = ?`)
+          .run(r.score, newDetail, row.id);
+        console.log('[exams] regrade', row.exam_id, 'id=' + row.id, row.score, '->', r.score);
+      }
+    }
+  } catch (e) { console.error('[exams] regradeStoredScores', e.message); }
 }
 
 // ===== 课程式（一题一屏）支持（2026-10-22，Elouise 拍板：立即反馈，先只转 exam-u2 试水）=====
