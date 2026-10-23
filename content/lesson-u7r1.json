@@ -1,0 +1,1454 @@
+{
+ "lesson_id": "u7r1",
+ "practice_end": 27,
+ "home_subtitle": "第一课 · 记忆开场",
+ "part1_desc": "第 1–27 步：跟站长学条件句（2）——谈必然结果；本课新词 mentally、maintain、diet 等；练习里掺着挑战题，边学边闯。",
+ "part2_desc": "第 28–50 步：独立判断林老师的班级小测试，课尾压轴：条件句综合、被动与比较级回锅、unless 预告。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：条件句（2）（谈必然结果，If+一般现在时/主句一般现在时）、第三人称单数、if 从句位置；挑战段回锅被动语态、比较级、现在完成时。Unit 7 The secret of memory 主题，核心词 mentally/maintain/diet/especially/nut/relax/stressed/tend/normal/loss/regularly。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新系列：记忆的秘密",
+   "teach_html": "<p>交流节目和古代故事都讲完了。站长说：新系列来了——<strong>记忆的秘密 (The secret of memory)</strong>！</p><p>这一单元我们聊<strong>记忆</strong>：为什么有的人背单词快，有的人转头就忘？先送你一句本课的钥匙句：<strong>If you use it often, it gets stronger.</strong>（如果你经常用它，它就会变得更强。）这句话里藏着本单元的大语法：<strong>条件句</strong>。</p>",
+   "audio_id": "u7r1-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "条件句：说“一定会发生的结果”",
+   "teach_html": "<p>条件句用来谈条件和结果。这一课的条件句专门谈<strong>一定会发生的结果</strong>（科学事实、自然规律、生活常识）：</p><p><strong>If you heat ice, it melts.</strong>（如果你加热冰，它就融化。）——这不是猜测，是<strong>必然</strong>。</p><p>结构是：<strong>If + 一般现在时，主句一般现在时</strong>。两边都用一般现在时。</p>",
+   "audio_id": "u7r1-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "先看三个必然结果",
+   "teach_html": "<p><strong>If you mix blue and yellow, you get green.</strong>（蓝加黄，得到绿。）</p><p><strong>If you drop a glass, it breaks.</strong>（杯子掉地上，就碎了。）</p><p><strong>If you put salt into water, it disappears.</strong>（盐放进水里，就消失了。）</p><p>注意动词：mix / get / drop / breaks / put / disappears——全是<strong>一般现在时</strong>，没有 will。</p>",
+   "audio_id": "u7r1-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "条件句也能谈记忆",
+   "teach_html": "<p>把条件句用在记忆上：</p><p><strong>If you sleep well, you remember things better.</strong>（睡得好，就记得牢。）</p><p><strong>If you do not use your brain, it gets weaker.</strong>（不用脑，脑子就变弱。）</p><p>否定就加 <strong>do not / does not</strong>：主语是 it / he / she 用 <strong>does not</strong>，其他用 <strong>do not</strong>。</p>",
+   "audio_id": "u7r1-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "if 从句可以搬到后面",
+   "teach_html": "<p>if 从句可以放在主句<strong>后面</strong>，意思不变：</p><p><strong>Ice melts if you heat it.</strong>（冰遇到热就化。）</p><p>标点跟着位置走：if 从句在<strong>前面</strong>，中间加<strong>逗号</strong>；if 从句搬到<strong>后面</strong>，<strong>不用逗号</strong>。</p>",
+   "audio_id": "u7r1-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词一：mentally 和 maintain",
+   "teach_html": "<p><strong>mentally</strong> /ˈmentəli/ 是“精神上”：live a <strong>mentally</strong> active life（过精神上活跃的生活），就是多动脑。</p><p><strong>maintain</strong> /meɪnˈteɪn/ 是“维持；保持”：<strong>maintain</strong> a good memory（保持好记性）。</p><p>If you live a mentally active life, you maintain a good memory. 两句合成一句，条件句就出来了。</p>",
+   "audio_id": "u7r1-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词二：diet、especially、nut",
+   "teach_html": "<p><strong>diet</strong> /ˈdaɪət/ 是“日常饮食”：a healthy <strong>diet</strong>（健康的饮食）。</p><p><strong>especially</strong> /ɪˈspeʃəli/ 是“尤其”：green vegetables and nuts are <strong>especially</strong> good for your memory.</p><p><strong>nut</strong> /nʌt/ 是“坚果”。</p>",
+   "audio_id": "u7r1-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "生词三：relax、stressed、tend、normal、loss",
+   "teach_html": "<p><strong>relax</strong> /rɪˈlæks/“放松”；<strong>stressed</strong> /strest/“焦虑不安的”：If you get too <strong>stressed</strong>, your memory becomes less sharp.</p><p><strong>tend</strong> /tend/ 是“往往会”：Memory <strong>tends</strong> to decline with age.（记忆往往会随着年龄增长而衰退。）</p><p><strong>normal</strong> /ˈnɔːml/“正常的”；<strong>loss</strong> /lɒs/“丧失”：memory <strong>loss</strong>（记忆丧失）。偶尔忘事是 normal 的，不用慌。</p>",
+   "audio_id": "u7r1-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "易混点：两个坑",
+   "teach_html": "<p>练之前提醒两个坑：</p><p>坑一：if 从句里<strong>不用 will</strong>。谈必然结果，if 后面直接用一般现在时：If you heat water, it boils.（不是 If you will heat…）</p><p>坑二：主语是第三人称单数（it / he / she / 名字），主句动词记得<strong>加 s</strong>：It <strong>gets</strong> weaker. / He <strong>remembers</strong> more.</p>",
+   "audio_id": "u7r1-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "先看资料",
+   "teach_html": "<p>这是站长贴在公告栏上的<strong>记忆小贴士</strong>。做题时对照着看：记忆像肌肉，用进废退；学新东西、睡好觉，记忆都会变好。</p><p>下面站长带着你练条件句。</p>",
+   "audio_id": "u7r1-prac-01",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "冰遇到热",
+   "scene": "冰加热后会怎样？",
+   "stem": "If you heat ice, it ___.",
+   "options": [
+    "melts",
+    "melt",
+    "will melt",
+    "is melt"
+   ],
+   "answer": "A",
+   "help": "主语是 it（它），动词要变成什么样？",
+   "explain": "If you heat ice, it melts. 谈必然结果，主句用一般现在时；主语 it 是第三人称单数，melt 要加 s。",
+   "wrong_feedback": {
+    "B": "主语是 it（第三人称单数），动词要加 s：melts。",
+    "C": "谈必然结果不用 will，两边都用一般现在时。",
+    "D": "is melt 不是正确的动词形式；一般现在时直接用 melts。"
+   },
+   "audio_id": "u7r1-q01",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "红加白",
+   "scene": "红色加白色得到粉色。",
+   "stem": "If you mix red and white, you ___ pink.",
+   "options": [
+    "gets",
+    "get",
+    "will get",
+    "got"
+   ],
+   "answer": "B",
+   "help": "主语是 you，动词用原形还是加 s？",
+   "explain": "If you mix red and white, you get pink. 主语 you 用动词原形 get。",
+   "wrong_feedback": {
+    "A": "主语是 you，不用加 s；gets 是给 it / he / she 用的。",
+    "C": "必然结果不用 will，用一般现在时 get。",
+    "D": "got 是过去式；这句话谈的是规律，用一般现在时。"
+   },
+   "audio_id": "u7r1-q02",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 植物缺水",
+   "scene": "植物得不到水就会死。",
+   "stem": "Plants ___ if they do not get water. (die)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "die",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "die"
+     ],
+     "olds": [
+      "dies",
+      "died"
+     ],
+     "cn": [
+      "死（主语是复数 plants）"
+     ]
+    }
+   ],
+   "help": "先看主语：plants 是一棵还是一片？再想时态：说的是规律，还是过去的事？",
+   "explain": "Plants die if they do not get water. 主语 plants 是复数，动词用原形 die；谈规律用一般现在时。",
+   "common_errors": [
+    {
+     "when": "写了 dies",
+     "say": "dies 是给单数主语用的（The plant dies）；这里主语 plants 是复数，用原形 die。"
+    },
+    {
+     "when": "写了 died",
+     "say": "died 是过去式；这句话说的是普遍规律，要用一般现在时 die。"
+    },
+    {
+     "when": "写了 will die",
+     "say": "谈必然结果，两边都是一般现在时，不加 will。"
+    }
+   ],
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "不用脑",
+   "scene": "不用脑，脑子就变弱。",
+   "stem": "If you do not use your brain, it ___ weaker.",
+   "options": [
+    "get",
+    "will get",
+    "gets",
+    "got"
+   ],
+   "answer": "C",
+   "help": "主语是 it，动词记得要发生什么变化？",
+   "explain": "If you do not use your brain, it gets weaker. 主语 it 是第三人称单数，get 加 s。",
+   "wrong_feedback": {
+    "A": "主语 it 是第三人称单数，动词要加 s：gets。",
+    "B": "必然结果不用 will，用一般现在时。",
+    "D": "got 是过去式；谈规律要用一般现在时。"
+   },
+   "audio_id": "u7r1-q03",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "睡得好",
+   "scene": "睡得好，就记得牢。",
+   "stem": "You remember things better if you ___ well.",
+   "options": [
+    "sleeps",
+    "slept",
+    "will sleep",
+    "sleep"
+   ],
+   "answer": "D",
+   "help": "if 从句搬到后面了，主语还是 you，动词用什么形式？",
+   "explain": "You remember things better if you sleep well. if 从句在后面不用逗号；主语 you 用原形 sleep。",
+   "wrong_feedback": {
+    "A": "主语是 you，动词不加 s；sleeps 是给 he / she 用的。",
+    "B": "slept 是过去式；谈规律用一般现在时。",
+    "C": "if 从句里不用 will，用一般现在时。"
+   },
+   "audio_id": "u7r1-q04",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 按下按钮",
+   "scene": "按下这个按钮，灯就亮了。",
+   "stem": "If you ___ (press) this button, the light ___ (go) on.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "press goes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "press"
+     ],
+     "olds": [
+      "presses"
+     ],
+     "cn": [
+      "按下（主语是 you）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "goes"
+     ],
+     "olds": [
+      "go",
+      "went"
+     ],
+     "cn": [
+      "亮起来（主语是 the light）"
+     ]
+    }
+   ],
+   "help": "两个空的主语不一样：第一个空主语是 you，第二个空主语是 the light（一个东西）。",
+   "explain": "If you press this button, the light goes on. you 用原形 press；the light 是第三人称单数，go 变 goes。",
+   "common_errors": [
+    {
+     "when": "写了 presses",
+     "say": "第一个空的主语是 you，不加 s；presses 是给 he / she 用的。"
+    },
+    {
+     "when": "第二个空写了 go",
+     "say": "the light 是一个东西（第三人称单数），go 要变 goes。"
+    },
+    {
+     "when": "写了 will go",
+     "say": "必然结果不用 will；主句也是一般现在时：goes。"
+    }
+   ],
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "保持好记性",
+   "scene": "健康的饮食帮你保持好记性。",
+   "stem": "A healthy diet helps you ___ a good memory.",
+   "options": [
+    "make",
+    "maintain",
+    "relax",
+    "tend"
+   ],
+   "answer": "B",
+   "help": "哪个词是“维持；保持”的意思？刚学的生词。",
+   "explain": "A healthy diet helps you maintain a good memory. maintain 是“维持；保持”。",
+   "wrong_feedback": {
+    "A": "make 是“制作”，和“保持记性”不搭。",
+    "C": "relax 是“放松”，说的是休息，不是“保持”。",
+    "D": "tend 是“往往会”，后面不能这样直接跟名词。"
+   },
+   "audio_id": "u7r1-q05",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "杯子落地",
+   "scene": "玻璃杯掉到地上，通常会碎。",
+   "stem": "If you drop a glass on the floor, it usually ___.",
+   "options": [
+    "breaks",
+    "break",
+    "will break",
+    "broke"
+   ],
+   "answer": "A",
+   "help": "主语是 it，动词要加什么？",
+   "explain": "If you drop a glass on the floor, it usually breaks. 主语 it 是第三人称单数，break 加 s。",
+   "wrong_feedback": {
+    "B": "主语 it 是第三人称单数，动词要加 s：breaks。",
+    "C": "谈规律不用 will，用一般现在时。",
+    "D": "broke 是过去式；这是每次都会发生的事，用一般现在时。"
+   },
+   "audio_id": "u7r1-q06",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 没写下来",
+   "scene": "他没把单词写下来，就很快忘了。",
+   "stem": "If a student does not write the words down, he ___ them quickly. (forget)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "forgets",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "forgets"
+     ],
+     "olds": [
+      "forget",
+      "forgot"
+     ],
+     "cn": [
+      "忘记（主语是 he）"
+     ]
+    }
+   ],
+   "help": "先找主语：he。第三人称单数的动词要有什么变化？",
+   "explain": "If a student does not write the words down, he forgets them quickly. 主语 he 是第三人称单数，forget 加 s。",
+   "common_errors": [
+    {
+     "when": "写了 forget",
+     "say": "主语是 he（第三人称单数），动词要加 s：forgets。"
+    },
+    {
+     "when": "写了 forgot",
+     "say": "forgot 是过去式；整句谈的是规律，用一般现在时 forgets。"
+    },
+    {
+     "when": "写了 will forget",
+     "say": "必然结果不用 will，主句用一般现在时。"
+    }
+   ],
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "雨里没伞",
+   "scene": "没伞站在雨里，就会淋湿。",
+   "stem": "You get wet if you ___ in the rain without an umbrella.",
+   "options": [
+    "walks",
+    "walked",
+    "walk",
+    "will walk"
+   ],
+   "answer": "C",
+   "help": "主语是 you，动词用什么形式？",
+   "explain": "You get wet if you walk in the rain without an umbrella. 主语 you 用原形 walk。",
+   "wrong_feedback": {
+    "A": "主语是 you，动词不加 s。",
+    "B": "walked 是过去式；谈规律用一般现在时。",
+    "D": "if 从句里不用 will。"
+   },
+   "audio_id": "u7r1-q07",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 睡不好就记不住",
+   "scene": "睡不好，就记不住东西。",
+   "stem": "If you do not sleep well, you ___ things well. (not remember)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "do not remember",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "do not remember",
+      "don't remember"
+     ],
+     "olds": [
+      "does not remember",
+      "will not remember"
+     ],
+     "cn": [
+      "记不住（否定）"
+     ]
+    }
+   ],
+   "help": "否定句缺了什么？想想谈条件句时否定是怎么搭的：do not / does not + 动词原形。",
+   "explain": "If you do not sleep well, you do not remember things well. 主语 you 的否定是 do not remember。",
+   "common_errors": [
+    {
+     "when": "只写了 not remember",
+     "say": "少了 do。主语 you 的否定要说 do not remember，不能只写 not。"
+    },
+    {
+     "when": "写了 does not remember",
+     "say": "does not 是给 he / she / it 用的；主语是 you，用 do not。"
+    },
+    {
+     "when": "写了 will not remember",
+     "say": "这句谈的是规律性的结果，用一般现在时 do not remember，不用 will。"
+    }
+   ],
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "maintain 的中文",
+   "scene": "写出 maintain 的中文意思。",
+   "stem": "写出 maintain 的中文意思。",
+   "task": "写中文。",
+   "answer_text": "维持；保持",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "维持",
+      "保持",
+      "维持；保持"
+     ],
+     "olds": [],
+     "cn": [
+      "维持；保持"
+     ]
+    }
+   ],
+   "help": "回想生词课：maintain a good memory 是什么意思？",
+   "explain": "maintain 的中文是“维持；保持”。",
+   "common_errors": [
+    {
+     "when": "写了“修理”",
+     "say": "“修理”是 repair。maintain 是让好状态一直保持下去：维持；保持。"
+    },
+    {
+     "when": "写了“得到”",
+     "say": "“得到”是 get。maintain 是“保持住已有的东西”，比如保持好记性。"
+    },
+    {
+     "when": "写了“主要的”",
+     "say": "那是 main 的意思。maintain 虽然长得像 main，但它是动词：维持；保持。"
+    }
+   ],
+   "audio_id": "u7r1-q08",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "title": "句首的条件",
+   "scene": "水烧到 100 度就会开。",
+   "stem": "___ you heat water to 100°C, it boils.",
+   "task": "只写空里的一个词（首字母大写）。",
+   "answer_text": "If",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "If",
+      "if"
+     ],
+     "olds": [
+      "When",
+      "Because"
+     ],
+     "cn": [
+      "如果（条件句开头）"
+     ]
+    }
+   ],
+   "help": "这句话前半是条件，后半是结果。条件句开头的词是哪个？",
+   "explain": "If you heat water to 100°C, it boils. 条件句用 If 开头，后面记得有逗号。",
+   "common_errors": [
+    {
+     "when": "写了 When",
+     "say": "When 是“当……的时候”，说时间；这里是“如果……就……”，用 If。"
+    },
+    {
+     "when": "写了 Because",
+     "say": "Because 是“因为”，说原因；这里前半是条件，用 If。"
+    },
+    {
+     "when": "写了 Unless",
+     "say": "Unless 是“除非”，意思会反过来；这里是正面的条件“如果”，用 If。"
+    }
+   ],
+   "audio_id": "u7r1-q09",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 累了就去散步",
+   "scene": "我觉得累了，就去散散步放松一下。",
+   "stem": "If I ___ (feel) stressed, I ___ (go) for a walk to relax.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "feel go",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "feel"
+     ],
+     "olds": [
+      "feels"
+     ],
+     "cn": [
+      "觉得（主语是 I）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "go"
+     ],
+     "olds": [
+      "goes"
+     ],
+     "cn": [
+      "去（主语是 I）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是 I。I 跟动词原形还是加 s 的形式？",
+   "explain": "If I feel stressed, I go for a walk to relax. 主语 I 用动词原形：feel、go 都不加 s。",
+   "common_errors": [
+    {
+     "when": "写了 feels",
+     "say": "feels 是给 he / she 用的；主语是 I，用原形 feel。"
+    },
+    {
+     "when": "第二个空写了 goes",
+     "say": "主语还是 I，go 不加 es，用原形 go。"
+    },
+    {
+     "when": "写了 felt",
+     "say": "felt 是过去式；这句谈习惯和规律，用一般现在时。"
+    }
+   ],
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "short",
+   "title": "水变冰",
+   "scene": "把水放进冰箱几小时，它就变成冰。",
+   "stem": "Water ___ ice if you put it in the fridge for a few hours. (become)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "becomes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "becomes"
+     ],
+     "olds": [
+      "become",
+      "became"
+     ],
+     "cn": [
+      "变成（主语是 water）"
+     ]
+    }
+   ],
+   "help": "主语 water 是“一个东西”，算第三人称单数。",
+   "explain": "Water becomes ice if you put it in the fridge for a few hours. 主语 water 是第三人称单数，become 加 s。",
+   "common_errors": [
+    {
+     "when": "写了 become",
+     "say": "主语 water 算第三人称单数，动词要加 s：becomes。"
+    },
+    {
+     "when": "写了 became",
+     "say": "became 是过去式；谈规律用一般现在时 becomes。"
+    },
+    {
+     "when": "写了 will become",
+     "say": "谈自然规律不用 will；从句和主句都用一般现在时：becomes。"
+    }
+   ],
+   "audio_id": "u7r1-q10",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 读小贴士",
+   "scene": "根据公告栏上的记忆小贴士回答。",
+   "stem": "According to the notes, what happens if you do not use your brain?",
+   "options": [
+    "It gets stronger.",
+    "It thanks you.",
+    "You sleep early.",
+    "It gets weaker."
+   ],
+   "answer": "D",
+   "help": "回到资料里找：If you do not use it, it gets ...？资料在上面。",
+   "explain": "It gets weaker. 资料原话：If you do not use it, it gets weaker.（不用，它就变弱。）",
+   "wrong_feedback": {
+    "A": "gets stronger 的前提是“经常用它”；不用它，结果正好相反。",
+    "B": "“Your memory will thank you”是资料最后一句的玩笑话，不是“不用脑”的结果。",
+    "C": "sleep early 是资料给的建议，不是“不用脑”会发生的事。"
+   },
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "玩文字游戏",
+   "scene": "玩文字游戏就是在锻炼大脑。",
+   "stem": "If you ___ word games, you exercise your brain. (play)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "play",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "play"
+     ],
+     "olds": [
+      "plays",
+      "played"
+     ],
+     "cn": [
+      "玩（主语是 you）"
+     ]
+    }
+   ],
+   "help": "主语是 you，动词用原形。",
+   "explain": "If you play word games, you exercise your brain. 主语 you 用原形 play。",
+   "common_errors": [
+    {
+     "when": "写了 plays",
+     "say": "plays 是给 he / she 用的；主语 you 用原形 play。"
+    },
+    {
+     "when": "写了 played",
+     "say": "played 是过去式；谈规律用一般现在时。"
+    },
+    {
+     "when": "写了 playing",
+     "say": "if 从句里用动词原形 play；playing 前面要有 be 才能用，这里没有。"
+    }
+   ],
+   "audio_id": "u7r1-q11",
+   "reading": "Your memory is like a muscle. If you use it often, it gets stronger. If you do not use it, it gets weaker. Scientists say: if you learn something new, your brain works hard. If you sleep well, you remember things better. So try new things, play word games and sleep early. Your memory will thank you!"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "新任务：独立判断",
+   "teach_html": "<p>新任务：林老师在班里做了一个<strong>小测试</strong>，资料在上面。这次你自己看、自己答，站长不提示了。</p><p>记住：谈必然结果，<strong>If + 一般现在时，主句一般现在时</strong>；第三人称单数动词加 s。</p>",
+   "audio_id": "u7r1-v-intro",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "只读一遍",
+   "scene": "只读一遍单词表，一小时后还记得一半。",
+   "stem": "If students read a word list once, they ___ about half of it after one hour.",
+   "options": [
+    "forgets",
+    "remember",
+    "remembers",
+    "remembering"
+   ],
+   "answer": "B",
+   "help": "主语是 students（他们），动词用原形还是加 s？",
+   "explain": "If students read a word list once, they remember about half of it after one hour. 主语 they 用原形 remember。",
+   "wrong_feedback": {
+    "A": "forgets 说反了：资料说的是“还记得一半”，是 remember；而且主语是复数，不用加 s 的形式。",
+    "C": "remembers 是给单数主语用的；主语是 students / they，用原形。",
+    "D": "remembering 是 -ing 形式，不能单独做谓语。"
+   },
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 大声读出来",
+   "scene": "把单词大声读出来，记得更多。",
+   "stem": "If they ___ the words aloud, they remember more. (say)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "say",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "say"
+     ],
+     "olds": [
+      "says",
+      "said"
+     ],
+     "cn": [
+      "说（主语是 they）"
+     ]
+    }
+   ],
+   "help": "主语是 they，动词用原形还是加 s？",
+   "explain": "If they say the words aloud, they remember more. 主语 they 用原形 say。",
+   "common_errors": [
+    {
+     "when": "写了 says",
+     "say": "says 是给 he / she 用的；主语 they 用原形 say。"
+    },
+    {
+     "when": "写了 said",
+     "say": "said 是过去式；资料讲的是规律，用一般现在时。"
+    },
+    {
+     "when": "写了 will say",
+     "say": "条件句谈规律，两边都用一般现在时，不用 will：say。"
+    }
+   ],
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "写下来记得更多",
+   "scene": "把单词写进笔记本，比只读一遍记得多。",
+   "stem": "Writing the words in a notebook helps you remember ___ than reading once.",
+   "options": [
+    "more",
+    "most",
+    "much",
+    "many"
+   ],
+   "answer": "A",
+   "help": "后面有 than，是比较：记得“更多”。",
+   "explain": "Writing the words in a notebook helps you remember more than reading once. 有 than 用比较级 more。",
+   "wrong_feedback": {
+    "B": "most 是最高级，要有 the 和范围；这里有 than，是两者比较，用 more。",
+    "C": "much 不能这样放在 remember 后面表示“记得多”；“记得更多”是 remember more。",
+    "D": "many 是“许多（个）”，修饰可数名词，不能修饰 remember。"
+   },
+   "audio_id": "u7r1-v02",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 他不写下来",
+   "scene": "他不把单词写下来，就忘得快。",
+   "stem": "If a student ___ the words down, he forgets them quickly. (not write)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "does not write",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "does not write",
+      "doesn't write"
+     ],
+     "olds": [
+      "do not write",
+      "will not write"
+     ],
+     "cn": [
+      "不写（否定，主语是 a student）"
+     ]
+    }
+   ],
+   "help": "主语是 a student（一个人）。他的否定用 do not 还是 does not？",
+   "explain": "If a student does not write the words down, he forgets them quickly. 主语 a student 是第三人称单数，否定用 does not write。",
+   "common_errors": [
+    {
+     "when": "写了 do not write",
+     "say": "do not 是给 I / you / they 用的；a student 是一个学生，用 does not。"
+    },
+    {
+     "when": "只写了 not write",
+     "say": "少了 does。第三人称单数的否定是 does not write。"
+    },
+    {
+     "when": "写了 does not writes",
+     "say": "有了 does，后面的动词要变回原形：does not write，writes 多了 s。"
+    }
+   ],
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪句是对的",
+   "scene": "下面哪一句条件句写对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Ice melts if you will heat it.",
+    "If you heat ice, it will melts.",
+    "Ice melts if you heat it.",
+    "If you heat ice, it melt."
+   ],
+   "answer": "C",
+   "help": "一条一条查：if 从句里有没有 will？主句动词加 s 了吗？",
+   "explain": "Ice melts if you heat it. if 从句搬到后面不用逗号；谈必然结果不用 will；主语 ice 的动词是 melts。",
+   "wrong_feedback": {
+    "A": "if 从句里不能用 will；谈必然结果两边都用一般现在时。",
+    "B": "will 后面不能再跟 melts，而且必然结果根本不用 will：it melts。",
+    "D": "主语 ice 是第三人称单数，melt 要加 s：melts。"
+   },
+   "audio_id": "u7r1-v03",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "stressed 的意思",
+   "scene": "stressed 意思是？",
+   "stem": "The word \"stressed\" means ___.",
+   "options": [
+    "焦虑不安的",
+    "放松的",
+    "正常的",
+    "有规律的"
+   ],
+   "answer": "A",
+   "help": "想想课上那句：If you get too stressed, your memory becomes less sharp.",
+   "explain": "stressed 意思是“焦虑不安的”。",
+   "wrong_feedback": {
+    "B": "“放松的”是 relaxed。stressed 正好相反，是压力大、焦虑。",
+    "C": "“正常的”是 normal。stressed 说的是状态不好、很紧张。",
+    "D": "“有规律的”是 regularly。stressed 是“焦虑不安的”。"
+   },
+   "audio_id": "u7r1-v04",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 睡不够，脑子不转",
+   "scene": "睡不够，你的记忆就不好使。",
+   "stem": "If you ___ (not get) enough sleep, your memory ___ (not work) well.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "do not get does not work",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "do not get",
+      "don't get"
+     ],
+     "olds": [
+      "does not get"
+     ],
+     "cn": [
+      "得不到（主语是 you）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "does not work",
+      "doesn't work"
+     ],
+     "olds": [
+      "do not work",
+      "will not work"
+     ],
+     "cn": [
+      "不好使（主语是 your memory）"
+     ]
+    }
+   ],
+   "help": "两个空主语不同：第一个是 you，第二个是 your memory（一个东西），否定形式不一样。",
+   "explain": "If you do not get enough sleep, your memory does not work well. you 用 do not get；your memory 是第三人称单数，用 does not work。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 does not get",
+     "say": "主语是 you，用 do not get；does not 是给单数第三人称的。"
+    },
+    {
+     "when": "第二个空写了 do not work",
+     "say": "主语 your memory 是一个东西（第三人称单数），用 does not work。"
+    },
+    {
+     "when": "写了 will not work",
+     "say": "谈规律用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "学新语言",
+   "scene": "学一门新语言，就是在锻炼大脑。",
+   "stem": "If you learn a new language, you ___ your brain.",
+   "options": [
+    "exercises",
+    "exerciseing",
+    "relax",
+    "exercise"
+   ],
+   "answer": "D",
+   "help": "主语是 you，exercise 用什么形式？",
+   "explain": "If you learn a new language, you exercise your brain. 主语 you 用原形 exercise。",
+   "wrong_feedback": {
+    "A": "exercises 是给 he / she 用的；主语 you 不加 s。",
+    "B": "exerciseing 拼错了，而且 -ing 不能单独做谓语。",
+    "C": "relax 是“放松”；学语言是“锻炼”大脑，用 exercise。"
+   },
+   "audio_id": "u7r1-v05",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "经常用就变强",
+   "scene": "经常用它，它就变强。",
+   "stem": "Your brain gets stronger if you ___ it often. (use)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "use",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "use"
+     ],
+     "olds": [
+      "uses",
+      "used"
+     ],
+     "cn": [
+      "用（主语是 you）"
+     ]
+    }
+   ],
+   "help": "主语是 you。",
+   "explain": "Your brain gets stronger if you use it often. 主语 you 用原形 use；if 从句在后面不用逗号。",
+   "common_errors": [
+    {
+     "when": "写了 uses",
+     "say": "uses 是给 he / she 用的；主语 you 用原形 use。"
+    },
+    {
+     "when": "写了 used",
+     "say": "used 是过去式；谈规律用一般现在时。"
+    },
+    {
+     "when": "写了 will use",
+     "say": "谈规律不用 will；if 从句用一般现在时：use。"
+    }
+   ],
+   "audio_id": "u7r1-v06",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "石头沉下去",
+   "scene": "把石头扔进水里，它就沉下去。",
+   "stem": "If you ___ a stone into the water, it sinks.",
+   "options": [
+    "dropped",
+    "drop",
+    "drops",
+    "will drop"
+   ],
+   "answer": "B",
+   "help": "if 从句的主语是 you，动词用原形。",
+   "explain": "If you drop a stone into the water, it sinks. 主语 you 用原形 drop。",
+   "wrong_feedback": {
+    "A": "dropped 是过去式；谈规律用一般现在时。",
+    "C": "drops 是给 he / she 用的；主语 you 用原形。",
+    "D": "if 从句里不用 will。"
+   },
+   "audio_id": "u7r1-v07",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "蓝加红",
+   "scene": "蓝色加红色，得到紫色。",
+   "stem": "If you mix blue and red, you ___ purple.",
+   "task": "只写空里的一个词。",
+   "answer_text": "get",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "get"
+     ],
+     "olds": [
+      "gets",
+      "got"
+     ],
+     "cn": [
+      "得到（主语是 you）"
+     ]
+    }
+   ],
+   "help": "主语是 you。",
+   "explain": "If you mix blue and red, you get purple. 主语 you 用原形 get。",
+   "common_errors": [
+    {
+     "when": "写了 gets",
+     "say": "gets 是给 he / she 用的；主语 you 用原形 get。"
+    },
+    {
+     "when": "写了 got",
+     "say": "got 是过去式；谈颜色混合的规律用一般现在时。"
+    },
+    {
+     "when": "写了 will get",
+     "say": "谈规律不用 will；主句也是一般现在时：get。"
+    }
+   ],
+   "audio_id": "u7r1-v08",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 哪句对",
+   "scene": "下面哪一句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "If you will relax, your brain works better.",
+    "Your brain work better if you relax.",
+    "Your brain works better if you relax.",
+    "If you relax, your brain will works better."
+   ],
+   "answer": "C",
+   "help": "查三点：will 能不能进条件句？主语 your brain 的动词加 s 了吗？will 后面能跟 works 吗？",
+   "explain": "Your brain works better if you relax. 主句动词 works 加 s；不用 will。",
+   "wrong_feedback": {
+    "A": "if 从句里不用 will；直接 If you relax 就可以了。",
+    "B": "主语 your brain 是第三人称单数，work 要加 s：works。",
+    "D": "谈必然结果不用 will，而且 will 后面要用原形，不能写 will works。"
+   },
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "不焦虑记得牢",
+   "scene": "人不焦虑的时候，记得更牢。",
+   "stem": "People remember things better if they ___ not stressed. (be)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "are",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "are"
+     ],
+     "olds": [
+      "is",
+      "was"
+     ],
+     "cn": [
+      "是（主语是 they）"
+     ]
+    }
+   ],
+   "help": "主语是 they（人们），be 动词选哪个？",
+   "explain": "People remember things better if they are not stressed. 主语 they 用 are。",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "is 是给单数主语用的；they 是复数，用 are。"
+    },
+    {
+     "when": "写了 was",
+     "say": "was 是过去式单数；谈规律用一般现在时 are。"
+    },
+    {
+     "when": "写了 be",
+     "say": "be 是原形，不能直接跟在 they 后面；they 后面要用 are。"
+    }
+   ],
+   "audio_id": "u7r1-v09",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "规律锻炼",
+   "scene": "经常锻炼，身体就保持健康。",
+   "stem": "___ you exercise regularly, your body stays healthy.",
+   "task": "只写空里的一个词（首字母大写）。",
+   "answer_text": "If",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "If",
+      "if"
+     ],
+     "olds": [
+      "Unless",
+      "When"
+     ],
+     "cn": [
+      "如果（条件句开头）"
+     ]
+    }
+   ],
+   "help": "前半是条件还是时间？这句话是“如果……就……”。",
+   "explain": "If you exercise regularly, your body stays healthy. 条件句用 If 开头。regularly 是“有规律地”。",
+   "common_errors": [
+    {
+     "when": "写了 When",
+     "say": "When 说的是时间“当……时”；这里是条件“如果”，用 If。"
+    },
+    {
+     "when": "写了 Unless",
+     "say": "Unless 是“除非”，意思会反过来：除非你锻炼……不对，用 If。"
+    },
+    {
+     "when": "写了 Because",
+     "say": "Because 是“因为”，说原因；这里前半句是条件“如果”，用 If。"
+    }
+   ],
+   "audio_id": "u7r1-v10",
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 糖吃多了",
+   "scene": "他糖吃多了，上课就犯困。",
+   "stem": "If he ___ (eat) too much sugar, he ___ (feel) sleepy in class.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "eats feels",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "eats"
+     ],
+     "olds": [
+      "eat"
+     ],
+     "cn": [
+      "吃（主语是 he）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "feels"
+     ],
+     "olds": [
+      "feel"
+     ],
+     "cn": [
+      "觉得（主语是 he）"
+     ]
+    }
+   ],
+   "help": "两个空的主语都是 he，动词要有什么变化？",
+   "explain": "If he eats too much sugar, he feels sleepy in class. 主语 he 是第三人称单数，eat 和 feel 都加 s。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 eat",
+     "say": "主语是 he，动词要加 s：eats。"
+    },
+    {
+     "when": "第二个空写了 feel",
+     "say": "主语还是 he，feel 也要加 s：feels。"
+    },
+    {
+     "when": "写了 will feel",
+     "say": "谈规律用一般现在时，不用 will。"
+    }
+   ],
+   "reading": "Miss Lin did a small test in our class. If students read a word list once, they remember about half of it after one hour. If they say the words aloud, they remember more. If they write the words in a notebook, they remember even more. Reading once is not enough!"
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "挑战预告：老朋友回锅",
+   "teach_html": "<p>独立判断过关！接下来是<strong>挑战关</strong>：条件句换上新面孔，还有几位“老朋友”回锅——被动语态、比较级、现在完成时。站长只给方向提示，看看你还认不认得它们。</p>",
+   "audio_id": "u7r1-c-intro"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 单词被写下来",
+   "scene": "昨天，学生们把单词写在了笔记本上。",
+   "stem": "The words ___ in the notebook by the students yesterday.",
+   "options": [
+    "are written",
+    "were written",
+    "written",
+    "write"
+   ],
+   "answer": "B",
+   "help": "先想：单词是写人的，还是被写的？再看 yesterday 是过去还是现在。",
+   "explain": "The words were written in the notebook by the students yesterday. 单词是被写下来的，用被动；yesterday 是过去，用 were written。",
+   "wrong_feedback": {
+    "A": "are written 是现在的被动；yesterday 说明是昨天的事，用 were。",
+    "C": "只写 written 少了 be 动词；被动 = be 动词 + 过去分词。",
+    "D": "write 是主动的原形；单词是被写的，要用被动。"
+   }
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 睡好记得更好",
+   "scene": "睡个好觉，比熬夜记得更好。",
+   "stem": "Sleeping well helps you remember ___ than staying up late. (well)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "better",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "better"
+     ],
+     "olds": [
+      "weller",
+      "more well"
+     ],
+     "cn": [
+      "更好（well 的比较级）"
+     ]
+    }
+   ],
+   "help": "空后面有 than，是比较。well 的比较级是不规则的，想想 good 变 better 的那一家。",
+   "explain": "Sleeping well helps you remember better than staying up late. well 的比较级是不规则形式 better。",
+   "common_errors": [
+    {
+     "when": "写了 weller",
+     "say": "well 的比较级不规则，是 better，不能加 er。"
+    },
+    {
+     "when": "写了 more well",
+     "say": "well 变比较级不用 more，是 better。"
+    },
+    {
+     "when": "写了 best",
+     "say": "best 是最高级，要配 the 和范围；这里有 than，是比较级 better。"
+    }
+   ]
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 读了三遍",
+   "scene": "这一页我读了三遍，可还是记不住。",
+   "stem": "I ___ this page three times, but I still can't remember it. (read)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "have read",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "have read"
+     ],
+     "olds": [
+      "has read",
+      "readed"
+     ],
+     "cn": [
+      "读过（现在完成时）"
+     ]
+    }
+   ],
+   "help": "“读了三遍”是已经完成的经历，和现在的结果（还是记不住）连着。用完成时：have/has + 过去分词。",
+   "explain": "I have read this page three times, but I still can't remember it. 主语 I 用 have；read 的过去分词还是 read（拼写不变，读音变）。",
+   "common_errors": [
+    {
+     "when": "写了 has read",
+     "say": "主语是 I，用 have，不用 has。"
+    },
+    {
+     "when": "写了 readed",
+     "say": "read 是不规则动词，过去分词还是 read，不能加 ed。"
+    },
+    {
+     "when": "只写了 read",
+     "say": "少了 have。表示“已经读过三遍”要用完成时 have read。"
+    }
+   ]
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "挑战 · 除非写下来",
+   "scene": "不把单词写下来，你是记不住的。",
+   "stem": "You won't remember the words ___ you write them down.",
+   "options": [
+    "if",
+    "when",
+    "because",
+    "unless"
+   ],
+   "answer": "D",
+   "help": "这句话的意思是“除非你写下来”。哪个词等于 if...not？站长先剧透：下一课细讲它。",
+   "explain": "You won't remember the words unless you write them down. unless = if...not（除非；如果不）。",
+   "wrong_feedback": {
+    "A": "if 是“如果”，放进去意思反了：如果你写下来就记不住？不对。",
+    "B": "when 是“当……时”，说时间；这里要的是“除非”。",
+    "C": "because 是“因为”，说原因，不对。"
+   }
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "挑战 · 天天复习",
+   "scene": "每天复习单词，你就不会忘。",
+   "stem": "If you ___ (review) the words every day, you ___ (not forget) them.",
+   "task": "两个空都用所给词的正确形式填，只写两个空里的部分，中间空一格。",
+   "answer_text": "review do not forget",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "review"
+     ],
+     "olds": [
+      "reviews"
+     ],
+     "cn": [
+      "复习（主语是 you）"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "do not forget",
+      "don't forget"
+     ],
+     "olds": [
+      "does not forget",
+      "will not forget"
+     ],
+     "cn": [
+      "不会忘（否定，主语是 you）"
+     ]
+    }
+   ],
+   "help": "两个空主语都是 you。第二个空是一般现在时的否定，想想 do not 的位置。",
+   "explain": "If you review the words every day, you do not forget them. 否定结果也用一般现在时：do not forget。",
+   "common_errors": [
+    {
+     "when": "第一个空写了 reviews",
+     "say": "主语是 you，动词用原形 review，不加 s。"
+    },
+    {
+     "when": "第二个空只写了 not forget",
+     "say": "少了 do：you 的否定是 do not forget。"
+    },
+    {
+     "when": "写了 will not forget",
+     "say": "本课条件句谈规律和习惯，结果也用一般现在时，不用 will。"
+    }
+   ]
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "节目预告",
+   "teach_html": "<p>记忆系列第一课讲完了：条件句谈“必然结果”已经上手——两边一般现在时、第三人称单数加 s、if 从句可前可后。</p><p>下一课，站长带你看一条神奇的曲线：学完一小时，忘掉一大半？敬请期待。</p>",
+   "audio_id": "u7r1-ending"
+  }
+ ],
+ "title": "记忆开场：条件句（2）入门",
+ "unit": "Unit 7 The secret of memory",
+ "version": 1
+}
