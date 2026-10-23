@@ -1544,6 +1544,7 @@ exams.setDb(db);
 exams.initTable();
 exams.initProgressTable();
 exams.initSpeechTable();
+exams.initWritingTable();
 app.get('/api/exams', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, exams: exams.getExamList() });
@@ -1579,7 +1580,22 @@ app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
   if (!g.ok) return res.status(400).json({ ok: false, error: g.error });
   const ok = exams.saveScore(String(exam_id), g.score, g.detail, finalAnswers);
   if (ok && exams.isCourseStyle(String(exam_id))) exams.clearProgress(String(exam_id));
-  res.json({ ok, score: g.score, total_objective: g.total_objective, pending: g.pending, detail: g.detail });
+  // 2026-10-23：主观题若在交卷前已被批改（录音先批、或重交），落库后立刻回填，响应以存档成绩为准；
+  // 无批改时回填重算结果与 gradeExam 完全一致，applied=false，响应不变。
+  let outScore = g.score, outDetail = g.detail, outPending = g.pending;
+  if (ok) {
+    const ap = exams.applySubjectiveGrades(String(exam_id));
+    if (ap && ap.applied) {
+      const latest = exams.getLatestScore(String(exam_id));
+      if (latest && latest.ok) {
+        outScore = latest.score;
+        outDetail = latest.detail;
+        outPending = latest.detail.filter(d => d.status === 'pending')
+          .map(d => ({ qid: d.qid, type: d.type, max: d.max, num: d.num }));
+      }
+    }
+  }
+  res.json({ ok, score: outScore, total_objective: g.total_objective, pending: outPending, detail: outDetail });
 });
 // 课程式逐题作答（2026-10-22，仅 exam-u2）：答完一题立即判分并存档，支撑立即反馈与中途续答
 app.post('/api/exam/answer', auth.requireAuth, (req, res) => {
@@ -1642,7 +1658,7 @@ app.get('/api/admin/speech/:id/audio', (req, res) => {
   res.set('Content-Type', r.mime);
   res.send(Buffer.from(r.audio));
 });
-// 管理：给一段录音写批改分数与评语（分期批改的落点；分数暂存 exam_speech，未并入交卷总分）
+// 管理：给一段录音写批改分数与评语（分期批改的落点；给分后经 applySubjectiveGrades 回填卷面总分）
 app.post('/api/admin/speech/grade', (req, res) => {
   const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
   if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
@@ -1650,6 +1666,28 @@ app.post('/api/admin/speech/grade', (req, res) => {
   }
   const b = req.body || {};
   const r = exams.gradeSpeech(b.id, b.score, b.note);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+// 管理：待批改作文列表（各卷最新成绩行里的 writing 题，带作文全文，未批排前）。鉴权同 speech：备份 token。
+app.get('/api/admin/writing/pending', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  const r = exams.listWritingPending();
+  if (!r.ok) return res.status(500).json(r);
+  res.json(r);
+});
+// 管理：给一篇作文写批改分数与评语（分期批改的落点；给分后回填卷面总分，不开页面录分入口）
+app.post('/api/admin/writing/grade', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  const b = req.body || {};
+  const r = exams.gradeWriting(String(b.exam_id || ''), String(b.qid || ''), b.score, b.note);
   if (!r.ok) return res.status(400).json(r);
   res.json(r);
 });
