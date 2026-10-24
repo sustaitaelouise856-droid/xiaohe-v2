@@ -2153,8 +2153,15 @@ function whenAllows(when, say, given, vals, step, detail) {
   }
   m = /^(?:漏了|漏)(.+)$/.exec(w);
   if (m) {
-    const ds = dimed(m[1]);
+    const rest0 = m[1].trim();
+    const ds = dimed(rest0);
     if (ds.length) return ds.every(d => d.status === 'missing');
+    // 2026-10-24 修（反馈 id=21）：对不上维度标签时，看作答里有没有 X——
+    // 写了就是没漏，"漏了 X"不成立；没写才是真漏了。之前默认 return true 会
+    // 在孩子明明写了 X（只是别的维度错了）时硬说"你漏了 X"。
+    const rest = rest0.toLowerCase();
+    const toks = rest.split(/[，,、\s]+/).filter(Boolean);
+    if (toks.length && toks.every(t => textHit(t, givenLow, givenNorm))) return false;
     return true;
   }
   m = /^(写了|答|写成)\s*(.+)$/.exec(w);
@@ -2201,7 +2208,10 @@ function whenAllows(when, say, given, vals, step, detail) {
 
 function dimLabel(step, id) {
   const dh = (step && step.dim_help) || {};
-  return (dh[id] && dh[id].label) || id;
+  // 2026-10-24 修：没有 dim_help 时用 expects 的中文标签兜底，不直接露英文 id（如 time）
+  const e = (step && step.expects || []).find(x => x.id === id);
+  const cn0 = e && Array.isArray(e.cn) && e.cn[0];
+  return (dh[id] && dh[id].label) || cn0 || id;
 }
 
 // 只保留"针对她实际写的内容"的 common_errors：
@@ -2937,9 +2947,25 @@ app.get('/api/feedback/mine', auth.requireAuth, (req, res) => {
   try {
     const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, lesson_id, text,
       CASE WHEN image_b64 IS NOT NULL AND image_b64 != '' THEN 1 ELSE 0 END AS has_image,
-      status, reply FROM student_feedback ORDER BY id DESC LIMIT 20`).all();
+      status, reply FROM student_feedback WHERE COALESCE(student_deleted,0)=0 ORDER BY id DESC LIMIT 20`).all();
     res.json({ ok: true, list: rows });
   } catch { res.json({ ok: true, list: [] }); }
+});
+// 学生删除自己的反馈历史（2026-10-24 Elouise 批准，反馈 id=22 诉求）：软删除——
+// 学生端不再显示；后台列表与反馈巡检仍可见，避免未处理反馈被删丢。
+app.post('/api/feedback/delete', auth.requireAuth, (req, res) => {
+  try {
+    const id = Number((req.body || {}).id) || 0;
+    if (!id) return res.status(400).json({ ok: false, error: 'bad_id' });
+    const r = db.prepare(`UPDATE student_feedback SET student_deleted=1 WHERE id=?`).run(id);
+    res.json({ ok: true, changed: r.changes });
+  } catch { res.status(500).json({ ok: false, error: 'delete_failed' }); }
+});
+app.post('/api/feedback/clear', auth.requireAuth, (req, res) => {
+  try {
+    const r = db.prepare(`UPDATE student_feedback SET student_deleted=1 WHERE COALESCE(student_deleted,0)=0`).run();
+    res.json({ ok: true, changed: r.changes });
+  } catch { res.status(500).json({ ok: false, error: 'delete_failed' }); }
 });
 // 管理：看全部反馈（含图）
 app.get('/api/admin/feedback', (req, res) => {
