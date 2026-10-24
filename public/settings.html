@@ -331,6 +331,18 @@ document.getElementById('fbSubmit').addEventListener('click', async () => {
     } else hint.textContent = '发送失败，再点一次试试。';
   } catch { hint.textContent = '网络不好，稍后再试。'; }
 });
+async function fbDelete(id, ev) {
+  if (ev) { ev.preventDefault(); ev.stopPropagation(); }
+  if (!confirm('删除这条反馈记录？')) return;
+  try { await fetch('/api/feedback/delete', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) }); } catch {}
+  loadFbList();
+}
+async function fbClearAll(ev) {
+  if (ev) { ev.preventDefault(); ev.stopPropagation(); }
+  if (!confirm('把反馈历史全部清空？')) return;
+  try { await fetch('/api/feedback/clear', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }); } catch {}
+  loadFbList();
+}
 async function loadFbList() {
   const box = document.getElementById('fbList');
   try {
@@ -339,7 +351,9 @@ async function loadFbList() {
     const list = (d && d.list) || [];
     if (!list.length) { box.innerHTML = '<div style="color:#999;">还没有反馈记录。</div>'; return; }
     const safe = s => String(s || '').replace(/</g, '&lt;');
-    box.innerHTML = list.map((f, idx) => {
+    const btnStyle = 'font-size:12px;padding:4px 10px;border:1px solid #ddd;border-radius:6px;background:#fff;color:#888;cursor:pointer;';
+    const header = '<div style="text-align:right;margin-bottom:6px;"><button onclick="fbClearAll(event)" style="' + btnStyle + '">🗑 清空全部记录</button></div>';
+    box.innerHTML = header + list.map((f, idx) => {
       const st = f.status === 'replied' ? '✅ 老师已回复' : '⏳ 老师处理中';
       const raw = String(f.text || '');
       const head = raw.length > 24 ? raw.slice(0, 24) + '…' : raw;
@@ -347,6 +361,7 @@ async function loadFbList() {
         + '<summary style="cursor:pointer;color:#999;font-size:12px;list-style:none;">' + safe(f.t) + ' · ' + st + ' · ' + safe(head) + '</summary>'
         + '<div style="margin-top:4px;">' + safe(f.text) + '</div>'
         + (f.reply ? '<div style="margin-top:6px;background:#f0f7ff;border-radius:6px;padding:8px;">👩‍🏫 老师回复：' + safe(f.reply) + '</div>' : '')
+        + '<div style="text-align:right;margin-top:6px;"><button onclick="fbDelete(' + f.id + ',event)" style="' + btnStyle + '">删除这条</button></div>'
         + '</details>';
     }).join('');
   } catch { box.innerHTML = '<div style="color:#999;">加载失败。</div>'; }
