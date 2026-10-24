@@ -488,6 +488,18 @@ function gradeShort(rawAnswer, spec) {
   const hasMath = expects.some(e => e.type === 'math');
   // 数学题不走"中文提示英文重写"分支（数学答案无中英文之分）
   if (hasChinese && allOk && !hasMath) {
+    // 2026-10-24 修（反馈 id=23/24）：题目本身要求写中文（如"写出 since 的中文意思"）时，
+    // 孩子写中文就是正确答案，不能再说"请用英文写一遍"——否则题干让写中文、反馈让写英文，自相矛盾。
+    const expectsChinese = expects.length > 0 && expects.every(e =>
+      Array.isArray(e.answers) && e.answers.length > 0 &&
+      e.answers.every(a => /[\u4e00-\u9fff]/.test(String(a))));
+    if (expectsChinese) {
+      return {
+        verdict: 'correct',
+        items: items.map(it => ({ id: it.id, status: 'ok', matched: it.matched || 'cn' })),
+        note: '',
+      };
+    }
     return {
       verdict: 'chinese',
       items: items.map(it => ({ id: it.id, status: 'ok', matched: it.matched || 'cn' })),
