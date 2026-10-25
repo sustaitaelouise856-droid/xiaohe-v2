@@ -525,7 +525,7 @@
    "title": "挑战 · 他去哪儿了",
    "scene": "王小明不在教室，同学说他刚出门去河边看龙舟赛了，还没回来。",
    "stem": "— Where is Wang Xiaoming? — He ___ to the river to watch the dragon boat race.",
-   "task": "只写空里的一个词。",
+   "task": "写出空里的词（这里要两个词）。",
    "answer_text": "has gone",
    "expects": [
     {
@@ -802,7 +802,7 @@
      ]
     }
    ],
-   "help": "两个空分开判：第一个空有 since 1975；第二个空主语是照片，照片是“被展示”，时间是每个月（现在）。",
+   "help": "两个空分开判：第一个空有 since 1975；第二个空主语是照片，照片是“被展示”，被动要加 be 动词 are 再加 shown，时间是每个月（现在）。",
    "explain": "The library has kept the photos since 1975, and the photos are shown to visitors every month.",
    "common_errors": [
     {
@@ -1318,5 +1318,5 @@
  ],
  "title": "多久了：How long 提问",
  "unit": "Unit 6 Ancient stories",
- "version": 3
+ "version": 4
 }
