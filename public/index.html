@@ -791,37 +791,43 @@ fetch('/api/titles').then(r => r.json()).then(t => {
 <div style="margin:12px 0;">
   <a href="/words.html" style="display:block;background:linear-gradient(135deg,#e8f0fe,#f3e5f5);border:2px solid #1a73e8;border-radius:16px;padding:16px;text-decoration:none;">
     <div style="font-size:17px;font-weight:800;color:#1a73e8;">📚 单词学习</div>
-    <div style="font-size:13px;color:#5f6368;margin-top:6px;">按课本单元背单词 · 卡片记忆 + 拼写练习 · Unit 3-6 共350词（含短语）</div>
-    <div id="wordsProgress" style="margin-top:10px;display:flex;gap:8px;"></div>
+    <div style="font-size:13px;color:#5f6368;margin-top:6px;">按课本单元背单词 · 卡片记忆 + 拼写练习 · Unit 1-8 共505词（含短语）</div>
+    <div id="wordsProgress" style="margin-top:10px;display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:2px;"></div>
   </a>
 </div>
 <script>
 // 首页单词进度看板（2026-10-16）
-// 2026-10-16修：按固定顺序渲染，不随网络时序乱序
+// 2026-10-25：补齐 Unit 1–8，横向滑动；掌握度改从后端 /api/words/mastery 取（5级制，4级=掌握）。
+// 旧 localStorage xh_words_mastery 自 10-17 起单词页已不再写，继续读它会永远显示 0。
 (function() {
-  const units = ['unit3','unit4','unit5','unit6'];
-  const names = { unit3:'U3', unit4:'U4', unit5:'U5', unit6:'U6' };
-  const mastery = JSON.parse(localStorage.getItem('xh_words_mastery') || '{}');
+  const units = ['unit1','unit2','unit3','unit4','unit5','unit6','unit7','unit8'];
+  const names = { unit1:'U1', unit2:'U2', unit3:'U3', unit4:'U4', unit5:'U5', unit6:'U6', unit7:'U7', unit8:'U8' };
   const box = document.getElementById('wordsProgress');
   if (!box) return;
   // 先占位，保证顺序
   const holders = {};
   units.forEach(uid => {
     const d = document.createElement('div');
-    d.style.cssText = 'flex:1;background:#fff;border-radius:10px;padding:8px 6px;text-align:center;';
+    d.style.cssText = 'flex:0 0 76px;scroll-snap-align:start;background:#fff;border-radius:10px;padding:8px 6px;text-align:center;';
     d.innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div><div style="font-size:11px;color:#5f6368;">加载中…</div>`;
     box.appendChild(d);
     holders[uid] = d;
   });
-  units.forEach(uid => {
-    fetch(`/words/${uid}.json`).then(r => r.json()).then(j => {
-      const total = j.words.length;
-      const m = j.words.filter(w => (mastery[uid+':'+w.en]||{}).count >= 3).length;
-      const pct = Math.round(m/total*100);
-      holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div>
-        <div style="height:6px;background:#f1f3f4;border-radius:999px;margin:6px 0;overflow:hidden;"><div style="height:100%;width:${pct}%;background:#1a73e8;border-radius:999px;"></div></div>
-        <div style="font-size:11px;color:#5f6368;">${m}/${total}</div>`;
-    }).catch(()=>{ holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;">${names[uid]}</div><div style="font-size:11px;color:#999;">--</div>`; });
+  // 掌握度统一从后端取（与单词页同口径：4级=掌握）
+  fetch('/api/words/mastery').then(r => r.json()).then(d => {
+    const mastery = (d && d.mastery) || {};
+    units.forEach(uid => {
+      fetch(`/words/${uid}.json`).then(r => r.json()).then(j => {
+        const total = j.words.length;
+        const m = j.words.filter(w => ((mastery[w.en] || {}).level || 0) >= 4).length;
+        const pct = total ? Math.round(m/total*100) : 0;
+        holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;color:#1a73e8;">${names[uid]}</div>
+          <div style="height:6px;background:#f1f3f4;border-radius:999px;margin:6px 0;overflow:hidden;"><div style="height:100%;width:${pct}%;background:#1a73e8;border-radius:999px;"></div></div>
+          <div style="font-size:11px;color:#5f6368;">${m}/${total}</div>`;
+      }).catch(()=>{ holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;">${names[uid]}</div><div style="font-size:11px;color:#999;">--</div>`; });
+    });
+  }).catch(() => {
+    units.forEach(uid => { holders[uid].innerHTML = `<div style="font-size:12px;font-weight:800;">${names[uid]}</div><div style="font-size:11px;color:#999;">--</div>`; });
   });
 })();
 
