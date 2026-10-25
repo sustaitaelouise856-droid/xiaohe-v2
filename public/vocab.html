@@ -248,13 +248,13 @@ document.getElementById('revClose').onclick = () => {
 };
 // ---- 拼写模式（2026-10-12加）：听音/看中文，打英文 ----
 // 站长剧情：这是"广播站拼写大赛"，站长报中文，你打出英文
-let spellQueue = [], spellQi = 0, spellScore = 0;
+let spellQueue = [], spellQi = 0, spellScore = 0, spellLock = false;
 document.getElementById('btnSpell').onclick = () => {
   const v = getVocab();
   const words = Object.keys(v);
   if (!words.length) { toast('生词本还是空的，先去课程里点单词加进来吧'); return; }
   spellQueue = words.sort(() => Math.random() - 0.5); // 随机顺序
-  spellQi = 0; spellScore = 0;
+  spellQi = 0; spellScore = 0; spellLock = false;
   showSpell();
   document.getElementById('revOverlay').style.display = 'flex';
 };
@@ -281,6 +281,7 @@ function showSpell() {
     return;
   }
   const w = spellQueue[spellQi], e = v[w] || {};
+  spellLock = false; // 新词解锁提交（防重复提交多计分、答错后看答案再提交刷分）
   document.getElementById('revProg').textContent = `拼写 ${spellQi+1} / ${spellQueue.length} · 得分 ${spellScore}`;
   document.getElementById('revWord').textContent = '🔊 听发音';
   document.getElementById('revWord').style.fontSize = '24px';
@@ -313,6 +314,10 @@ function showSpell() {
   setTimeout(() => input.focus(), 300);
 }
 function checkSpell() {
+  // 2026-10-24 修（反馈 id=25）：同一词只计一次分。之前提交后 600/1800ms 内按钮仍可点，
+  // 重复提交会多计分；答错后答案自动填入输入框，再提交还会把错题刷成对分、并跳过下一词。
+  if (spellLock) return;
+  spellLock = true;
   const v = getVocab();
   const w = spellQueue[spellQi];
   const input = document.getElementById('spellInput');
@@ -346,13 +351,13 @@ function checkSpell() {
 }
 // ---- 单词消消乐（2026-10-12加）：英文配中文，连连看 ----
 // 站长剧情：这是"广播站连连看"，把英文和中文配成对消掉
-let matchFirst = null, matchDone = 0, matchTotal = 0;
+let matchFirst = null, matchDone = 0, matchTotal = 0, matchWrong = 0;
 document.getElementById('btnMatch').onclick = () => {
   const v = getVocab();
   let words = Object.keys(v).filter(w => v[w].zh);
   if (words.length < 2) { prettyAlert('生词太少，先去课程里加点词吧', '📖'); return; }
   words = words.sort(() => Math.random() - 0.5).slice(0, 6);
-  matchTotal = words.length; matchDone = 0; matchFirst = null;
+  matchTotal = words.length; matchDone = 0; matchFirst = null; matchWrong = 0;
   const cards = [];
   words.forEach(w => {
     cards.push({ word: w, text: w, type: 'en' });
@@ -400,15 +405,23 @@ function matchClick(card) {
         setTimeout(() => {
           document.getElementById('matchGrid').style.display = 'none';
           document.getElementById('revProg').textContent = '🎉 全部配对成功！';
-          document.getElementById('revWord').textContent = `✅ ${matchTotal}组全对`;
+          // 2026-10-24 修（反馈 id=25）：配错过的局不能再说"全对"——之前错配不计数，
+          // 错再多次结尾也显示"全对"，孩子说得对。
+          document.getElementById('revWord').textContent = matchWrong === 0
+            ? `✅ ${matchTotal}组全对`
+            : `✅ ${matchTotal}组配对完成，配错了${matchWrong}次`;
           const done = document.getElementById('revDone');
           done.style.display = 'block';
-          done.innerHTML = `太棒了！${matchTotal}组单词全部配对<br><button onclick="document.getElementById('revOverlay').style.display='none'" style="margin-top:12px;padding:10px 24px;border-radius:10px;border:0;background:#7b1fa2;color:#fff;font-size:16px;">再来一局</button>`;
+          done.innerHTML = (matchWrong === 0
+            ? `太棒了！${matchTotal}组单词全部配对`
+            : `${matchTotal}组单词全部配对，配错了${matchWrong}次，再练一次争取全对吧`)
+            + `<br><button onclick="document.getElementById('revOverlay').style.display='none'" style="margin-top:12px;padding:10px 24px;border-radius:10px;border:0;background:#7b1fa2;color:#fff;font-size:16px;">再来一局</button>`;
         }, 400);
       }
     }, 300);
   } else {
     const f = matchFirst; matchFirst = null;
+    matchWrong++; // 错配计一次，结尾不再谎报"全对"
     setTimeout(() => {
       f.classList.add('wrong'); card.classList.add('wrong');
       setTimeout(() => {
