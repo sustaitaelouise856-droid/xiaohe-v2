@@ -3,7 +3,7 @@
   "title": "导语写作",
   "home_subtitle": "见习记者第三课：第一句定生死",
   "unit": "第一单元·新闻",
-  "version": 1,
+  "version": 2,
   "practice_end": 16,
   "part1_desc": "头条阅读量只有3——导语写作",
   "part2_desc": "独立评价和改写导语",
@@ -412,13 +412,23 @@
       "answer_text": "运动会开幕了",
       "expects": [
         {
-          "id": "fill",
+          "id": "fill1",
           "type": "word",
           "answers": [
-            "运动会开幕"
+            "运动会"
           ],
           "cn": [
-            "运动会开幕"
+            "运动会"
+          ]
+        },
+        {
+          "id": "fill2",
+          "type": "word",
+          "answers": [
+            "开幕"
+          ],
+          "cn": [
+            "开幕"
           ]
         }
       ],
