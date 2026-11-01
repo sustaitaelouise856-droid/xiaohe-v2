@@ -1349,8 +1349,7 @@ function wireQuestion(s) {
     if (!btn) return;
     // 2026-10-13修：孩子手动点且在冷却中则不响应；系统自动触发（连错2次，force=true）不受冷却限制
     if (!force && btn.disabled) return;
-    var isPractice = (s.phase || 'practice') === 'practice';
-    if (!isPractice) lvl = 1;
+    // 2026-11-01 Elouise 定：验证阶段多次点也升级（L1→L2→L3），不再钳制为 1。
     lvl = Math.min(Math.max(lvl || 1, 1), 3);
     if (lvl > 1 && lvl <= (helpLv[s.item_id] || 0)) return;
     btn.disabled = true;
@@ -1397,8 +1396,8 @@ function wireQuestion(s) {
       } else {
         // L1：苏格拉底式引导，先问问题，不直接给提示
         hb.innerHTML = '别急，我们一步步来：<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
-        helpBtnLabel = isPractice ? '再帮我一点' : '';
-        btn.textContent = isPractice ? '再帮我一点' : '老师教我';
+        helpBtnLabel = '再帮我一点';
+        btn.textContent = '再帮我一点';
       }
       // 2026-10-13修：冷却还没走完就不提前解禁按钮（系统自动触发的帮助不打破冷却）
       if (Date.now() >= helpCooldownUntil) btn.disabled = false;
@@ -1440,8 +1439,7 @@ function wireQuestion(s) {
     }, 1000);
   })();
   $('btnHelp').onclick = function () {
-    var isPractice = (s.phase || 'practice') === 'practice';
-    var lvl = isPractice ? Math.min((helpLv[s.item_id] || 0) + 1, 3) : 1;
+    var lvl = Math.min((helpLv[s.item_id] || 0) + 1, 3);
     triggerHelp(lvl);
   };
   // L2 高亮：同屏材料块（.reading-pane pre）里的 help_line 原句；找不到返回 false
