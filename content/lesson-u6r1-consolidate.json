@@ -1,0 +1,680 @@
+{
+  "lesson_id": "u6r1-consolidate",
+  "version": 1,
+  "unit": "Unit 6 Ancient stories",
+  "title": "巩固练：since 和 for",
+  "home_subtitle": "since 和 for · 可反复做",
+  "part1_desc": "先练基本功：since 和 for、完成时、被动语态、比较级。",
+  "part2_desc": "独立过关：不看提示，自己判断，难题一路跟到最后。",
+  "practice_end": 10,
+  "note": "巩固练：变式新题，可反复做；只练已学内容，不讲新知识。错题进错题本，不影响正课完成状态。",
+  "steps": [
+    {
+      "step": 1,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "茶馆开了二十年",
+      "scene": "林阿姨开了这家茶馆二十年，到今天还在开。",
+      "stem": "Mrs Lin has kept the tea house ___ twenty years.",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "at"
+      ],
+      "answer": "B",
+      "help": "“二十年”是时间段，还是时间点？",
+      "explain": "Mrs Lin has kept the tea house for twenty years.",
+      "wrong_feedback": {
+        "A": "since 后面跟时间点；“二十年”是时间段，用 for。",
+        "C": "from 只说起点，不能表示“持续了多久”，用 for。",
+        "D": "at 后面跟具体时刻，这里用 for。"
+      }
+    },
+    {
+      "step": 2,
+      "phase": "practice",
+      "kind": "short",
+      "title": "王老师教书",
+      "scene": "王老师从 2012 年起在我们学校教英语，一直教到现在。",
+      "stem": "Ms Wang ___ English at our school since 2012. (teach)",
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "answer_text": "has taught",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "has taught"
+          ],
+          "olds": [
+            "has teach",
+            "have taught"
+          ],
+          "cn": [
+            "从那时一直教到现在（现在完成时）"
+          ]
+        }
+      ],
+      "help": "从 2012 年到现在；主语 Ms Wang 是一位老师（她）。",
+      "explain": "Ms Wang has taught English at our school since 2012. teach 的过去分词是 taught。",
+      "common_errors": [
+        {
+          "when": "写了 taught",
+          "say": "taught 是过去式，像是“以前教过”；从 2012 年教到现在，要用 has taught。"
+        },
+        {
+          "when": "写了 has teach",
+          "say": "has 后面要跟过去分词 taught，不能用原形 teach。"
+        },
+        {
+          "when": "写了 have taught",
+          "say": "主语 Ms Wang 是第三人称单数（她），用 has，不用 have。"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "图书馆工作",
+      "scene": "周叔叔从 2005 年起在镇图书馆工作，到现在还在。",
+      "stem": "Mr Zhou has worked at the town library ___ 2005.",
+      "options": [
+        "for",
+        "from",
+        "in",
+        "since"
+      ],
+      "answer": "D",
+      "help": "2005 年是时间点，还是时间段？",
+      "explain": "Mr Zhou has worked at the town library since 2005.",
+      "wrong_feedback": {
+        "A": "for 跟时间段；2005 是年份（时间点），用 since。",
+        "B": "from 只说起点，不表示一直持续到现在，用 since。",
+        "C": "in 2005 是“在2005年”，那是过去时的说法；一直干到现在用 since。"
+      }
+    },
+    {
+      "step": 4,
+      "phase": "practice",
+      "kind": "short",
+      "title": "住在这里",
+      "scene": "他们从 2020 年起住在这里，一直住到现在。",
+      "stem": "___ 2020, they have lived in this town.",
+      "task": "只写 since 或 for。",
+      "answer_text": "Since",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "since",
+            "Since"
+          ],
+          "olds": [
+            "for"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ]
+        }
+      ],
+      "help": "2020 年是时间点。",
+      "explain": "Since 2020, they have lived in this town.",
+      "common_errors": [
+        {
+          "when": "写了 for",
+          "say": "2020 是时间点，时间点用 since；for 只跟时间段。"
+        },
+        {
+          "when": "写了 from",
+          "say": "from 只说“从哪年起”，不表示一直持续到现在；句首要用 Since。"
+        },
+        {
+          "when": "写了 in",
+          "say": "in 2020 是“在2020年”，那是过去时的说法；“自从2020年起”用 Since。"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "老街保留很久",
+      "scene": "古镇的老街保留了很久，到今天还在。",
+      "stem": "The old town has kept its old streets ___ a long time.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "answer": "A",
+      "help": "a long time 是一段时间，还是一个时间点？",
+      "explain": "The old town has kept its old streets for a long time.",
+      "wrong_feedback": {
+        "B": "since 跟时间点；a long time 是时间段，用 for。",
+        "C": "from 只说起点，这里是“保留了很久”，用 for。",
+        "D": "in 不能表示持续，用 for。"
+      }
+    },
+    {
+      "step": 6,
+      "phase": "practice",
+      "kind": "short",
+      "title": "问她留了多久",
+      "scene": "问：那张老地图，她留了多久了？",
+      "stem": "___ long has she kept the old map?",
+      "task": "只写句首的那个词。",
+      "answer_text": "How",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "How"
+          ],
+          "olds": [
+            "How many"
+          ],
+          "cn": [
+            "问“多久”（时间长度）"
+          ]
+        }
+      ],
+      "help": "问的是“多长时间”，不是“多少张”。",
+      "explain": "How long has she kept the old map? 问持续了多久，用 How long。",
+      "common_errors": [
+        {
+          "when": "写了 How many",
+          "say": "How many 问数量（多少张）；问“留了多久”要用 How long。"
+        },
+        {
+          "when": "写了 How often",
+          "say": "How often 问多久一次（频率）；这里问总共多久，用 How long。"
+        },
+        {
+          "when": "写了 How far",
+          "say": "How far 问多远；问时间长度用 How long。"
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "八岁起集车票",
+      "scene": "他从八岁起收集车票，一直收到现在。",
+      "stem": "He has collected bus tickets ___ he was eight.",
+      "options": [
+        "for",
+        "from",
+        "since",
+        "in"
+      ],
+      "answer": "C",
+      "help": "since 后面还能跟什么？看空后面的句子。",
+      "explain": "He has collected bus tickets since he was eight.",
+      "wrong_feedback": {
+        "A": "for 后面跟时间段；he was eight 是“他八岁时”这个时间点（句子），用 since。",
+        "B": "from 后面不能这样跟句子表示“自从”，用 since。",
+        "D": "in 不能跟句子，用 since。"
+      }
+    },
+    {
+      "step": 8,
+      "phase": "practice",
+      "kind": "short",
+      "title": "老照片天天给人看",
+      "scene": "这些老照片每天都拿给参观的人看。",
+      "stem": "The old photos ___ to visitors every day. (show)",
+      "task": "用所给词的正确形式填空，只写空里的两个词（be 动词 + 过去分词）。",
+      "answer_text": "are shown",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "are shown"
+          ],
+          "olds": [
+            "are show",
+            "is shown"
+          ],
+          "cn": [
+            "被展示（现在被动）"
+          ]
+        }
+      ],
+      "help": "先想：照片是自己看别人，还是被别人看？再数主语是单数还是复数。",
+      "explain": "The old photos are shown to visitors every day. show 的过去分词是 shown。",
+      "common_errors": [
+        {
+          "when": "写了 is shown",
+          "say": "主语 photos 是复数（一组照片），be 动词用 are。"
+        },
+        {
+          "when": "写了 are show",
+          "say": "被动语态要用过去分词：show → shown，不能用原形 show。"
+        },
+        {
+          "when": "只写了 show",
+          "say": "照片是“被展示”，要用被动 are shown；只写 show 是主动，意思反了。"
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "phase": "practice",
+      "kind": "mcq",
+      "title": "老钟还没修好",
+      "scene": "那座老钟还没修好，还停着。",
+      "stem": "The old clock hasn't worked ___.",
+      "options": [
+        "already",
+        "yet",
+        "ever",
+        "just"
+      ],
+      "answer": "B",
+      "help": "这句话是肯定句还是否定句？yet 一般站在哪种句子末尾？",
+      "explain": "The old clock hasn't worked yet. 否定句句末用 yet，表示“还没”。",
+      "wrong_feedback": {
+        "A": "already 用在肯定句里（“已经”）；这是 hasn't 否定句，句末用 yet。",
+        "C": "ever 用在疑问句里问经历；否定句句末用 yet。",
+        "D": "just 是“刚刚”，放在 has 和动词中间，不能放在这个句末。"
+      }
+    },
+    {
+      "step": 10,
+      "phase": "practice",
+      "kind": "short",
+      "title": "两座桥比一比",
+      "scene": "石桥比木桥老，石桥是镇上最老的桥。",
+      "stem": "The stone bridge is ___ than the wooden one, and it is the ___ bridge in the town. (old)",
+      "task": "写出两个空的词，中间空一格；第二个空要带 the。",
+      "answer_text": "older the oldest",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "older"
+          ],
+          "olds": [
+            "more older"
+          ],
+          "cn": [
+            "更老（比较级）"
+          ]
+        },
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "the oldest",
+            "oldest"
+          ],
+          "olds": [
+            "more oldest",
+            "most oldest"
+          ],
+          "cn": [
+            "最老的（最高级）"
+          ]
+        }
+      ],
+      "help": "先分清：第一个空后面有 than，是两座桥比；第二个空是全镇范围里的“最”。",
+      "explain": "The stone bridge is older than the wooden one, and it is the oldest bridge in the town.",
+      "common_errors": [
+        {
+          "when": "第一个空写了 oldest",
+          "say": "第一个空后面有 than，是两座桥比长短，用比较级 older；最高级留给第二个空。"
+        },
+        {
+          "when": "第二个空写了 older",
+          "say": "第二个空是“镇上最老的桥”，要用最高级 the oldest。"
+        },
+        {
+          "when": "写了 more older 或 more oldest",
+          "say": "old 是单音节词，直接加 er/est：older、oldest，前面不加 more。"
+        },
+        {
+          "when": "第二个空漏了 the",
+          "say": "最高级前面一般加 the：the oldest。"
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "上周日关门",
+      "scene": "这家老书店从上周日起关门休息，到现在还没开。",
+      "stem": "The old bookshop has been closed ___ last Sunday.",
+      "options": [
+        "for",
+        "from",
+        "since",
+        "in"
+      ],
+      "answer": "C",
+      "help": "last Sunday 是“上周日那一天”，是时间点，还是一段时间？",
+      "explain": "The old bookshop has been closed since last Sunday.",
+      "wrong_feedback": {
+        "A": "for 跟时间段；last Sunday 是时间点，用 since。",
+        "B": "from 只说起点，不表示持续到现在，用 since。",
+        "D": "in 不能跟 last Sunday 这样用；自从上周日用 since last Sunday。"
+      }
+    },
+    {
+      "step": 12,
+      "phase": "validate",
+      "kind": "short",
+      "title": "留了四十年",
+      "scene": "这些古钱币，他留了四十年了。",
+      "stem": "He has kept the old coins ___ forty years.",
+      "task": "只写 since 或 for。",
+      "answer_text": "for",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "for",
+            "For"
+          ],
+          "cn": [
+            "持续（时间段）"
+          ]
+        }
+      ],
+      "help": "四十年是时间段。",
+      "explain": "He has kept the old coins for forty years.",
+      "common_errors": [
+        {
+          "when": "写了 since",
+          "say": "四十年是时间段，时间段用 for；since 只跟时间点。"
+        },
+        {
+          "when": "写了 from",
+          "say": "from 只表示起点，不能表示“持续了多久”，用 for。"
+        },
+        {
+          "when": "写了 in",
+          "say": "in 不能表示持续，这里用 for + 时间段。"
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "古塔建于何时",
+      "scene": "这座古塔建于 1680 年，现在还在。",
+      "stem": "The old tower ___ in 1680.",
+      "options": [
+        "was built",
+        "is built",
+        "built",
+        "was build"
+      ],
+      "answer": "A",
+      "help": "先想：古塔是自己长出来的，还是被人建的？再看 1680 年是过去还是现在。",
+      "explain": "The old tower was built in 1680.",
+      "wrong_feedback": {
+        "B": "1680 年是过去的时间，要用 was built，不用现在时的 is built。",
+        "C": "少了 be 动词。被动语态 = be 动词 + 过去分词：was built。",
+        "D": "被动语态要用过去分词：build 的过去分词是 built，不能用原形 build。"
+      }
+    },
+    {
+      "step": 14,
+      "phase": "validate",
+      "kind": "short",
+      "title": "阁楼里找到邮票",
+      "scene": "孩子们在阁楼里找到了一盒旧邮票。",
+      "stem": "The children have ___ a box of old stamps in the attic. (find)",
+      "task": "写出 find 的正确形式。",
+      "answer_text": "found",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "found"
+          ],
+          "olds": [
+            "finded",
+            "founded",
+            "find"
+          ],
+          "cn": [
+            "找到（过去分词）"
+          ]
+        }
+      ],
+      "help": "have 后面要用动词的哪种形式？find 是不规则动词。",
+      "explain": "The children have found a box of old stamps in the attic.",
+      "common_errors": [
+        {
+          "when": "写了 finded",
+          "say": "find 是不规则动词，过去分词是 found，不能加 ed。"
+        },
+        {
+          "when": "写了 find（原形）",
+          "say": "have 后面要用过去分词，find 的过去分词是 found。"
+        },
+        {
+          "when": "写了 founded",
+          "say": "founded 是“建立（城市、学校）”的意思；这里是“找到”，过去分词是 found。"
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "已经读完了",
+      "scene": "她已经读完了这本关于古城的书。",
+      "stem": "She has ___ finished the book about the old town.",
+      "options": [
+        "yet",
+        "ever",
+        "just",
+        "already"
+      ],
+      "answer": "D",
+      "help": "这句话是肯定句；“已经”放在 has 和动词中间，用哪个词？",
+      "explain": "She has already finished the book about the old town. already 用在肯定句里，表示“已经”。",
+      "wrong_feedback": {
+        "A": "yet 用在疑问句和否定句句末；这是肯定句，“已经”用 already。",
+        "B": "ever 用在疑问句里问经历；“已经读完”用 already。",
+        "C": "just 是“刚刚”，不是“已经”；这里是“已经读完”，用 already。"
+      }
+    },
+    {
+      "step": 16,
+      "phase": "validate",
+      "kind": "short",
+      "title": "弟弟爬过古塔吗",
+      "scene": "问：你弟弟爬过那座古塔吗？",
+      "stem": "___ your brother ever climbed the old tower?",
+      "task": "只写句首的那个词。",
+      "answer_text": "Has",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "Has"
+          ],
+          "olds": [
+            "Have",
+            "have"
+          ],
+          "cn": [
+            "（句首助动词）"
+          ]
+        }
+      ],
+      "help": "先数一数：主语是一个人，还是多个人。",
+      "explain": "Has your brother ever climbed the old tower?",
+      "common_errors": [
+        {
+          "when": "写了 Have",
+          "say": "主语 your brother 是一人（第三人称单数），疑问句句首用 Has，不用 Have。"
+        },
+        {
+          "when": "写了 Is",
+          "say": "Is 不能和 climbed 组成现在完成时；问“爬过没有”要用 Has。"
+        },
+        {
+          "when": "写了 Does",
+          "say": "Does 后面要跟动词原形，跟不了 climbed；表示经历要用 Has。"
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "认识李老师多久",
+      "scene": "问：你认识李老师多久了？",
+      "stem": "___ have you known Mr Li?",
+      "options": [
+        "How many",
+        "How long",
+        "How often",
+        "How far"
+      ],
+      "answer": "B",
+      "help": "问的是“多长时间”，还是“多少人”“多久一次”“多远”。",
+      "explain": "How long have you known Mr Li? 问持续了多久，用 How long。",
+      "wrong_feedback": {
+        "A": "How many 问数量（多少人/多少个），问“认识多久”要用 How long。",
+        "C": "How often 问频率（多久一次），这里问总共持续多久，用 How long。",
+        "D": "How far 问距离（多远），问时间长度用 How long。"
+      }
+    },
+    {
+      "step": 18,
+      "phase": "validate",
+      "kind": "short",
+      "title": "十岁起集邮",
+      "scene": "她从十岁起集邮，一直集到现在。",
+      "stem": "She has collected stamps since she ___ ten. (be)",
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "answer_text": "was",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "was"
+          ],
+          "olds": [
+            "is"
+          ],
+          "cn": [
+            "十岁时（过去）"
+          ]
+        }
+      ],
+      "help": "since 后面的句子说的是小时候的事，用过去时。",
+      "explain": "She has collected stamps since she was ten. since 后面的从句用过去时。",
+      "common_errors": [
+        {
+          "when": "写了 is",
+          "say": "“她十岁时”是过去的事，since 后面的从句要用过去时 was，不用 is。"
+        },
+        {
+          "when": "写了 were",
+          "say": "主语 she 是一人，过去时 be 动词用 was，不用 were。"
+        },
+        {
+          "when": "写了 has been",
+          "say": "空里只要一个过去时的 was；“自从她十岁时”不用完成时。"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "phase": "validate",
+      "kind": "mcq",
+      "title": "城里最老的茶馆",
+      "scene": "这是城里最老的一家茶馆。",
+      "stem": "This is the ___ tea house in our city.",
+      "options": [
+        "older",
+        "more old",
+        "oldest",
+        "most oldest"
+      ],
+      "answer": "C",
+      "help": "句子里有 the，又是“全城最……”，要用哪个级别？",
+      "explain": "This is the oldest tea house in our city.",
+      "wrong_feedback": {
+        "A": "older 是比较级，要跟 than 连用；这里有 the + 全城范围，用最高级 oldest。",
+        "B": "old 是单音节词，最高级直接加 est 变 oldest，不用 more。",
+        "D": "oldest 本身已经是最高级，前面不能再加 most。"
+      }
+    },
+    {
+      "step": 20,
+      "phase": "validate",
+      "kind": "short",
+      "title": "陈师傅在博物馆",
+      "scene": "陈师傅从 2009 年起在博物馆工作，到现在还在。",
+      "stem": "Mr Chen ___ (work) at the museum ___ 2009.",
+      "task": "两个空都填，只写两个空里的部分，中间空一格。",
+      "answer_text": "has worked since",
+      "expects": [
+        {
+          "id": "w1",
+          "type": "word",
+          "answers": [
+            "has worked"
+          ],
+          "olds": [
+            "has work",
+            "have worked"
+          ],
+          "cn": [
+            "一直在工作（现在完成时）"
+          ]
+        },
+        {
+          "id": "w2",
+          "type": "word",
+          "answers": [
+            "since"
+          ],
+          "olds": [
+            "for"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ]
+        }
+      ],
+      "help": "两个空分开想：第一个空看“从 2009 年到现在”；第二个空看 2009 年是时间点，还是一段时间。",
+      "explain": "Mr Chen has worked at the museum since 2009.",
+      "common_errors": [
+        {
+          "when": "第一个空写了 worked",
+          "say": "只写 worked 是过去式，像是“以前干过”；从 2009 年干到现在，要用 has worked。"
+        },
+        {
+          "when": "第二个空写了 for",
+          "say": "2009 是时间点，时间点用 since；for 只跟时间段。"
+        },
+        {
+          "when": "第一个空写了 have worked",
+          "say": "主语 Mr Chen 是第三人称单数（他），用 has worked，不用 have worked。"
+        }
+      ]
+    }
+  ]
+}
