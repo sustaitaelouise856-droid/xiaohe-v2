@@ -1,0 +1,706 @@
+{
+  "home_subtitle": "现在完成时 + 被动 + 最高级独立过关",
+  "lesson_id": "u6r4-consolidate",
+  "note": "巩固练，题目为新变式，覆盖 u6r4 的 since/for、完成时、被动和最高级。",
+  "part1_desc": "第 1–10 步：先练基本功——since/for、过去时和完成时、被动、最高级，句子骨架拆开练。",
+  "part2_desc": "第 11–20 步：独立过关——不看提示自己写，最后写一段柳树镇的故事，三件事一件都不能少。",
+  "practice_end": 10,
+  "steps": [
+    {
+      "answer": "B",
+      "explain": "The Zhang family has lived in Willow Town since 2005.",
+      "help": "2005 是时间点，再看 has lived 是完成时。",
+      "kind": "mcq",
+      "options": [
+        "for",
+        "since",
+        "last",
+        "ago"
+      ],
+      "phase": "practice",
+      "scene": "张家从2005年起住在柳树镇，现在还住在那里。",
+      "stem": "The Zhang family has lived in Willow Town ___ 2005.",
+      "step": 1,
+      "title": "从2005年起",
+      "wrong_feedback": {
+        "A": "for 后面跟一段时间；2005 是时间点，用 since。",
+        "C": "last 是过去时的标志；这里是完成时，用 since。",
+        "D": "ago 是过去时的标志；这里讲从过去到现在，用 since。"
+      }
+    },
+    {
+      "answer_text": "Grandma has lived in Willow Town since 2008.",
+      "common_errors": [
+        {
+          "say": "lived 是过去时，只说过去住过；从2008年住到现在要用 has lived。",
+          "when": "只写了 lived"
+        },
+        {
+          "say": "2008 是时间点，用 since；for 后面跟一段时间。",
+          "when": "写了 for 2008"
+        },
+        {
+          "say": "has 后面要用过去分词 lived，不是原形 live。",
+          "when": "写了 has live"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "has lived"
+          ],
+          "cn": [
+            "一直住（完成时）"
+          ],
+          "id": "w1",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "since 2008"
+          ],
+          "cn": [
+            "从2008年起"
+          ],
+          "id": "w2",
+          "type": "word"
+        }
+      ],
+      "explain": "Grandma has lived in Willow Town since 2008.",
+      "help": "骨架是 has lived + since + 年份。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "奶奶从2008年起住在柳树镇。先搭骨架：主语 + has + 过去分词 + since + 年份。",
+      "stem": "写完整句子：奶奶从2008年起住在柳树镇。",
+      "step": 2,
+      "task": "写英文完整句子。",
+      "title": "奶奶住在柳树镇"
+    },
+    {
+      "answer": "D",
+      "explain": "Her grandpa has kept old letters for over 30 years.",
+      "help": "三十多年是一段时间。",
+      "kind": "mcq",
+      "options": [
+        "since",
+        "in",
+        "ago",
+        "for"
+      ],
+      "phase": "practice",
+      "scene": "爷爷把旧信存了三十多年了。",
+      "stem": "Her grandpa has kept old letters ___ over 30 years.",
+      "step": 3,
+      "title": "存了三十多年",
+      "wrong_feedback": {
+        "A": "since 后面跟时间点；over 30 years 是一段时间，用 for。",
+        "B": "in over 30 years 不对；持续三十多年用 for。",
+        "C": "ago 说的是过去的某个时刻；持续到现在用 for。"
+      }
+    },
+    {
+      "answer_text": "Mr. Chen has taught at the village school for 20 years.",
+      "common_errors": [
+        {
+          "say": "has 后面要用过去分词：teach 的过去分词是 taught，写 has taught。",
+          "when": "写了 has teach"
+        },
+        {
+          "say": "20 years 是一段时间，用 for；since 后面跟时间点。",
+          "when": "写了 since 20 years"
+        },
+        {
+          "say": "主语 Mr. Chen 是一人，用 has；have 是给多人主语的。",
+          "when": "主语用了 have"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "has taught"
+          ],
+          "cn": [
+            "一直教（完成时）"
+          ],
+          "id": "w1",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "for 20 years",
+            "for twenty years"
+          ],
+          "cn": [
+            "持续二十年"
+          ],
+          "id": "w2",
+          "type": "word"
+        }
+      ],
+      "explain": "Mr. Chen has taught at the village school for 20 years.",
+      "help": "骨架是 has taught + for + 时间段；teach 的过去分词是 taught。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "陈老师在村里的学校教了二十年书。先搭骨架：主语 + has + 过去分词 + for + 时间段。",
+      "stem": "写完整句子：陈老师在村里的学校教了二十年书。",
+      "step": 4,
+      "task": "写英文完整句子。",
+      "title": "教了二十年书"
+    },
+    {
+      "answer": "A",
+      "explain": "The clock tower in Willow Town was built in 1920.",
+      "help": "先想：钟楼是自己建自己的，还是被建成的？再看是1920年还是现在。",
+      "kind": "mcq",
+      "options": [
+        "was built",
+        "built",
+        "has built",
+        "is building"
+      ],
+      "phase": "practice",
+      "scene": "柳树镇的钟楼是1920年建成的。",
+      "stem": "The clock tower in Willow Town ___ in 1920.",
+      "step": 5,
+      "title": "钟楼建于1920年",
+      "wrong_feedback": {
+        "B": "built 是主动，意思是钟楼自己建自己；钟楼是被建成的，要用被动 was built。",
+        "C": "has built 还是主动；而且1920年是过去的时间点，被动要用 was built。",
+        "D": "is building 是正在建，主动而且是现在；1920年建成的事要用过去被动 was built。"
+      }
+    },
+    {
+      "answer_text": "The old school was built in 1988. The children in the village have studied there since then.",
+      "common_errors": [
+        {
+          "say": "built 是主动；学校是被建成的，要写 was built。",
+          "when": "第一个空写了 built"
+        },
+        {
+          "say": "有 since then，一直上学到现在，用 have studied。",
+          "when": "第二个空写了 studied"
+        },
+        {
+          "say": "主语 the children 是多人，完成时用 have studied，不用 has。",
+          "when": "第二个空写了 has studied"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "was built"
+          ],
+          "cn": [
+            "被建成（过去被动）"
+          ],
+          "id": "w1",
+          "olds": [
+            "is built"
+          ],
+          "type": "word"
+        },
+        {
+          "answers": [
+            "have studied"
+          ],
+          "cn": [
+            "一直在上学（完成时）"
+          ],
+          "id": "w2",
+          "olds": [
+            "has studied"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The old school was built in 1988. The children in the village have studied there since then.",
+      "help": "第一个空是1988年的事，学校是被建的；第二个空有 since then，主语是孩子们。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "村里的老学校是1988年建的，孩子们从那时起一直在那里上学。两个空，两个时代。",
+      "stem": "The old school ___ in 1988. The children in the village ___ there since then. (build; study)",
+      "step": 6,
+      "task": "两个空都写，只写空里的部分，中间空一格。",
+      "title": "老学校和孩子们"
+    },
+    {
+      "answer": "C",
+      "explain": "Aunt Li was born in this town in 1978.",
+      "help": "1978 年是过去。",
+      "kind": "mcq",
+      "options": [
+        "is",
+        "has been",
+        "was",
+        "be"
+      ],
+      "phase": "practice",
+      "scene": "李阿姨1978年出生在这个镇上。",
+      "stem": "Aunt Li ___ born in this town in 1978.",
+      "step": 7,
+      "title": "1978年出生",
+      "wrong_feedback": {
+        "A": "is 是现在时；1978 年出生是过去的事，用 was。",
+        "B": "has been born 不对；出生是一次性的过去动作，用 was born。",
+        "D": "be 是原形，不能直接放进句子；出生要用 was。"
+      }
+    },
+    {
+      "answer_text": "the most famous",
+      "common_errors": [
+        {
+          "say": "more famous 是比较级，跟一个地方比才用；全镇最有名的要用最高级 the most famous。",
+          "when": "写了 more famous"
+        },
+        {
+          "say": "famous 是多音节词，最高级在前面加 most，不能在词尾加 est。",
+          "when": "写了 famousest"
+        },
+        {
+          "say": "最高级前面要加 the：the most famous。",
+          "when": "漏了 the"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "the most famous",
+            "most famous"
+          ],
+          "cn": [
+            "最有名的（最高级）"
+          ],
+          "id": "w1",
+          "olds": [
+            "more famous"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The tea house is the most famous place in Willow Town.",
+      "help": "先看范围：全镇里最……；famous 是长词还是短词？",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "写家乡：茶馆是我们镇上最有名的地方。",
+      "stem": "The tea house is ______ place in Willow Town.",
+      "step": 8,
+      "task": "写出空里的词。",
+      "title": "镇上最有名的茶馆"
+    },
+    {
+      "answer": "A",
+      "explain": "I love the old town because it is quiet and beautiful.",
+      "help": "表示原因。",
+      "kind": "mcq",
+      "options": [
+        "because",
+        "but",
+        "so",
+        "and"
+      ],
+      "phase": "practice",
+      "scene": "我爱这个老镇，因为它安静又美丽。",
+      "stem": "I love the old town ___ it is quiet and beautiful.",
+      "step": 9,
+      "title": "因为安静美丽",
+      "wrong_feedback": {
+        "B": "but 是转折；这里是说爱它的原因，用 because。",
+        "C": "so 是所以，方向反了；说原因用 because。",
+        "D": "and 只是并列，不表示原因；说原因要用 because。"
+      }
+    },
+    {
+      "answer_text": "has become",
+      "common_errors": [
+        {
+          "say": "became 只讲过去变过；变到现在这个样子，结果在现在，用 has become。",
+          "when": "写了 became"
+        },
+        {
+          "say": "becomes 是一般现在时；这里说的是这几年的变化，要用完成时。",
+          "when": "写了 becomes"
+        },
+        {
+          "say": "has 后面用过去分词：become 的过去分词还是 become，写 has become。",
+          "when": "写了 has became"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "has become"
+          ],
+          "cn": [
+            "已经变得（现在完成时）"
+          ],
+          "id": "w1",
+          "olds": [
+            "became",
+            "has became"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The old street has become cleaner and busier in the last few years.",
+      "help": "时间是 in the last few years（最近几年，一直到现在）；become 的过去分词和原形长得一样。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "写家乡的变化：这些年老街变得更干净、更热闹了。",
+      "stem": "The old street ______ in the last few years. (become)",
+      "step": 10,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "老街变了"
+    },
+    {
+      "answer_text": "Has",
+      "common_errors": [
+        {
+          "say": "主语 your uncle 是一人，疑问句句首要用 Has，不用 Have。",
+          "when": "写了 Have"
+        },
+        {
+          "say": "Did 后面要跟动词原形 visit，跟不了 visited；表示去过没有用 Has。",
+          "when": "写了 Did"
+        },
+        {
+          "say": "Is 后面跟不了 visited 组成完成时；问去过没有要用 Has 开头。",
+          "when": "写了 Is"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "Has"
+          ],
+          "cn": [
+            "（句首助动词）"
+          ],
+          "id": "w1",
+          "type": "word"
+        }
+      ],
+      "explain": "Has your uncle ever visited the old clock tower?",
+      "help": "先看主语 your uncle 是一个还是多个，再看 visited 是什么形式。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "问：你叔叔去过那座老钟楼吗？",
+      "stem": "______ your uncle ever visited the old clock tower?",
+      "step": 11,
+      "task": "只写句首的那个词。",
+      "title": "叔叔去过钟楼吗"
+    },
+    {
+      "answer": "B",
+      "explain": "My parents have lived in this town since 1995.",
+      "help": "先数主语是几个人。",
+      "kind": "mcq",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "are"
+      ],
+      "phase": "validate",
+      "scene": "我爸爸妈妈从1995年起住在这个镇上。",
+      "stem": "My parents ___ lived in this town since 1995.",
+      "step": 12,
+      "title": "爸爸妈妈住在这里",
+      "wrong_feedback": {
+        "A": "主语 My parents 是两个人，完成时用 have，不用 has。",
+        "C": "is 后面跟不了 lived 组成完成时；从1995年住到现在用 have lived。",
+        "D": "are 后面跟不了 lived 组成完成时；这里要用 have lived。"
+      }
+    },
+    {
+      "answer_text": "has been repaired",
+      "common_errors": [
+        {
+          "say": "桥不会自己修自己，它是被修的，has 后面要加 been：has been repaired。",
+          "when": "写了 has repaired"
+        },
+        {
+          "say": "was repaired 是过去某一次；这里是从2010年到现在修过两次，用 has been repaired。",
+          "when": "写了 was repaired"
+        },
+        {
+          "say": "been 后面要用过去分词：repair 的过去分词是 repaired。",
+          "when": "写了 has been repair"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "has been repaired"
+          ],
+          "cn": [
+            "被修过（现在完成时被动）"
+          ],
+          "id": "w1",
+          "olds": [
+            "has repaired",
+            "was repaired"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The stone bridge has been repaired twice since 2010. 现在完成时被动：has been + 过去分词。",
+      "help": "主语是桥，它是被修的；时间是 since 2010 到现在——被动和完成时要同时出现。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "村口的石桥从2010年到现在修过两次了，现在还好好的。",
+      "stem": "The stone bridge ______ twice since 2010. (repair)",
+      "step": 13,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "石桥修过两次"
+    },
+    {
+      "answer": "C",
+      "explain": "She has kept the old map since she was a little girl.",
+      "help": "空后面跟的是一个起点句子，还是一段时间？",
+      "kind": "mcq",
+      "options": [
+        "for",
+        "from",
+        "since",
+        "when"
+      ],
+      "phase": "validate",
+      "scene": "她从小时候起就一直留着那张旧地图。",
+      "stem": "She has kept the old map ___ she was a little girl.",
+      "step": 14,
+      "title": "从小时候起",
+      "wrong_feedback": {
+        "A": "for 后面跟一段时间；空后面是起点句子，用 since。",
+        "B": "from 不能这样带出一个起点句子；自从……用 since。",
+        "D": "when 只是“在……时候”；一直留到现在是持续到现在，用 since。"
+      }
+    },
+    {
+      "answer_text": "has kept",
+      "common_errors": [
+        {
+          "say": "has 后面要用过去分词：keep 的过去分词是 kept，写 has kept。",
+          "when": "写了 has keep"
+        },
+        {
+          "say": "keep 是不规则动词，过去分词是 kept，不能加 ed。",
+          "when": "写了 keeped"
+        },
+        {
+          "say": "主语 The Wang family 是一家人，作单数主语，用 has kept。",
+          "when": "写了 have kept"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "has kept"
+          ],
+          "cn": [
+            "一直留着（现在完成时）"
+          ],
+          "id": "w1",
+          "olds": [
+            "has keep",
+            "keeped"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The Wang family has kept the old house for over 30 years.",
+      "help": "have/has 后面用过去分词；keep 是不规则动词，先想它的过去分词。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "王家把老房子留了三十多年了。",
+      "stem": "The Wang family ___ (keep) the old house for over 30 years.",
+      "step": 15,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "王家留着老房子"
+    },
+    {
+      "answer": "D",
+      "explain": "The new library is bigger than the old one.",
+      "help": "后面有 than，是两个比。",
+      "kind": "mcq",
+      "options": [
+        "the biggest",
+        "big",
+        "biggest",
+        "bigger"
+      ],
+      "phase": "validate",
+      "scene": "新图书馆比旧的大。",
+      "stem": "The new library is ___ than the old one.",
+      "step": 16,
+      "title": "新图书馆更大",
+      "wrong_feedback": {
+        "A": "the biggest 是最高级，后面不能跟 than；两个比用比较级 bigger。",
+        "B": "big 是原级；有 than，要用比较级 bigger。",
+        "C": "biggest 是最高级；后面有 than，用比较级 bigger。"
+      }
+    },
+    {
+      "answer_text": "I love Willow Town because it is quiet and old.",
+      "common_errors": [
+        {
+          "say": "so 是“所以”，方向反了；这里是给出爱它的原因，用 because。",
+          "when": "写了 so"
+        },
+        {
+          "say": "because 后面要把原因说全：because it is quiet and old。",
+          "when": "because 后面没写原因"
+        },
+        {
+          "say": "句子要先说爱它：I love Willow Town，再用 because 说原因。",
+          "when": "漏了 love"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "love"
+          ],
+          "cn": [
+            "爱"
+          ],
+          "id": "w1",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "because"
+          ],
+          "cn": [
+            "因为"
+          ],
+          "id": "w2",
+          "type": "word"
+        }
+      ],
+      "explain": "I love Willow Town because it is quiet and old.",
+      "help": "骨架是 I love … because …，原因放在 because 后面。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "写结尾：我爱柳树镇，因为它安静又古老。先搭骨架：I love … because …",
+      "stem": "写完整句子：我爱柳树镇，因为它安静又古老。",
+      "step": 17,
+      "task": "写英文完整句子。",
+      "title": "我爱柳树镇"
+    },
+    {
+      "answer": "A",
+      "explain": "The old well is the deepest well in our village.",
+      "help": "范围是全村的井；deep 是短词还是长词？",
+      "kind": "mcq",
+      "options": [
+        "the deepest",
+        "deeper",
+        "the most deep",
+        "deep"
+      ],
+      "phase": "validate",
+      "scene": "村口的老井是我们村里最深的井。",
+      "stem": "The old well is ___ well in our village.",
+      "step": 18,
+      "title": "村里最深的井",
+      "wrong_feedback": {
+        "B": "deeper 是比较级，跟一口井比才用；全村最深的要用最高级 the deepest。",
+        "C": "deep 是单音节词，最高级直接加 est：the deepest，不用 most。",
+        "D": "deep 是原级；全村最深的要用最高级 the deepest。"
+      }
+    },
+    {
+      "answer": "C",
+      "explain": "Mr. Chen was born in this village in 1980, and he has lived here since then.",
+      "help": "先分两个空：第一个是1980年一次性的事，第二个是从那时一直到现在。",
+      "kind": "mcq",
+      "options": [
+        "is born; lives",
+        "was born; lived",
+        "was born; has lived",
+        "born; has lived"
+      ],
+      "phase": "validate",
+      "scene": "陈老师1980年出生在这个村子，从那时起一直住在这里。",
+      "stem": "Mr. Chen ___ in this village in 1980, and he ___ here since then.",
+      "step": 19,
+      "title": "陈老师的一生",
+      "wrong_feedback": {
+        "A": "is born 不对：出生是1980年的事，要用 was born；从那时起一直住要用完成时 has lived，不用 lives。",
+        "B": "第一个空对了。第二个空 lived 是过去时，只说过去住过；since then 是一直到现在，要用 has lived。",
+        "D": "第一个空少了 was：出生要说 was born；第二个空 has lived 是对的。"
+      }
+    },
+    {
+      "answer_text": "Willow Town is a small town. The old clock tower was built in 1920. The town has become more beautiful these years. I love Willow Town because it is quiet and old.",
+      "common_errors": [
+        {
+          "say": "三件事少了第一件：补一句 The old clock tower was built in 1920. 或者 My family has lived here since 2005。",
+          "when": "没写建筑是哪年建的、也没写从何时起住在这里"
+        },
+        {
+          "say": "三件事少了第二件：补一句变化，如 The town has become more beautiful.（has become + 变得怎么样）。",
+          "when": "没写柳树镇的变化"
+        },
+        {
+          "say": "三件事少了第三件：结尾补一句 I love Willow Town because …，把原因说出来。",
+          "when": "没写喜欢柳树镇的原因"
+        },
+        {
+          "say": "讲过去的事用过去时没问题，但“变化”和“从那时到现在”要用完成时：has become、has lived since…。",
+          "when": "全篇只用了过去时"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "was built",
+            "has lived",
+            "have lived",
+            "since"
+          ],
+          "cn": [
+            "建于何时 / 从何时起住在这里"
+          ],
+          "id": "built",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "has changed",
+            "has become",
+            "have changed",
+            "have become"
+          ],
+          "cn": [
+            "柳树镇的一个变化"
+          ],
+          "id": "change",
+          "type": "word"
+        },
+        {
+          "answers": [
+            "because"
+          ],
+          "cn": [
+            "喜欢柳树镇的原因"
+          ],
+          "id": "feeling",
+          "type": "word"
+        }
+      ],
+      "explain": "范文：Willow Town is a small town. The old clock tower was built in 1920. The town has become more beautiful these years. I love Willow Town because it is quiet and old.",
+      "help": "一句一句来：先写老建筑是哪年建的，再写柳树镇的一个变化，最后一句写你为什么喜欢它。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "轮到你写一段柳树镇的故事（3–4 句），交给站长。",
+      "stem": "写一段介绍柳树镇的短文，3–4 句，写全这三点：① 镇上的一样老东西是什么时候建的，或者你家里人从哪一年起住在镇上（was built in … / has lived … since …）；② 镇上这几年有什么变化（has changed / has become …）；③ 你为什么喜欢这里（I love … because …）。",
+      "step": 20,
+      "task": "写 3–4 句英文，三件事一件都不能少。",
+      "title": "写一段：柳树镇的故事"
+    }
+  ],
+  "title": "Unit 6 巩固练：柳树镇的故事",
+  "unit": "Unit 6 Ancient stories",
+  "version": 1
+}
