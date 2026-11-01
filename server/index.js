@@ -2010,9 +2010,9 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
   const lid = lessonOf(item_id);
   const L = lid ? loadLesson(lid) : null;
   const step = L ? L.stepsByItem[String(item_id)] : null;
+  // 2026-11-01 Elouise 定：多次点“老师教我”要升级提示（L1→L2→L3），验证阶段同样升级；
+  // 求助记 help_events，答对记有帮助完成、不计独立完成，错题进错题本复测。
   let level = Math.min(Math.max(parseInt((req.body || {}).level, 10) || 1, 1), 3);
-  const phase = step ? (step.phase || 'practice') : 'practice';
-  if (phase !== 'practice') level = 1; // 验证阶段只指方向
   db.prepare('INSERT INTO help_events(item_id, session_id, level) VALUES(?,?,?)')
     .run(String(item_id), String(session_id || ''), level);
   if (level === 2 && step && step.help_line) {
