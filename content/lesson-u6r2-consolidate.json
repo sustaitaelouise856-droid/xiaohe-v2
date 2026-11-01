@@ -1,0 +1,628 @@
+{
+  "home_subtitle": "How long 提问、for/since、完成时与被动语态反复练",
+  "lesson_id": "u6r2-consolidate",
+  "note": "巩固练，对应正课 u6r2（How long 提问、for/since、现在完成时、被动语态、端午节与造纸术）。题目全部是新变式题，不重复正课原题。",
+  "part1_desc": "第 1–10 步：How long 提问、for/since、完成时练熟。",
+  "part2_desc": "第 11–20 步：独立做，混了被动语态、gone/been、最高级。",
+  "practice_end": 10,
+  "steps": [
+    {
+      "answer": "A",
+      "explain": "How long has Lin Tao collected old coins?",
+      "help": "问“多久”用哪两个词开头？",
+      "kind": "mcq",
+      "options": [
+        "How",
+        "How much",
+        "How many",
+        "How often"
+      ],
+      "phase": "practice",
+      "scene": "问林涛收藏旧硬币多久了。",
+      "stem": "___ long has Lin Tao collected old coins?",
+      "step": 1,
+      "title": "收藏了多久",
+      "wrong_feedback": {
+        "B": "How much 问“多少钱、多少量”，问“多久”用 How long。",
+        "C": "How many 问“多少个”，问“多久”用 How long。",
+        "D": "How often 问“多久一次”，问“持续了多久”用 How long。"
+      }
+    },
+    {
+      "answer_text": "have lived",
+      "common_errors": [
+        {
+          "say": "lived 是过去时，只讲过去；从 2010 年住到现在，用 have lived。",
+          "when": "写了 lived"
+        },
+        {
+          "say": "主语 They 是复数，完成时用 have，不用 has。",
+          "when": "写了 has lived"
+        },
+        {
+          "say": "have 后面要用过去分词 lived：have lived。",
+          "when": "写了 live"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "have lived"
+          ],
+          "cn": [
+            "一直住着（现在完成时）"
+          ],
+          "id": "w1",
+          "olds": [
+            "has lived"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "They have lived in this village since 2010.",
+      "help": "从 2010 年住到现在，用完成时；再看主语 They 是单数还是复数。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "他们从 2010 年起一直住在这个村子。",
+      "stem": "They ___ in this village since 2010. (live)",
+      "step": 2,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "住在这个村子"
+    },
+    {
+      "answer": "B",
+      "explain": "She has lived in this town since 2016.",
+      "help": "2016 是时间点，还是时间段？",
+      "kind": "mcq",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "phase": "practice",
+      "scene": "她从 2016 年起住在这个镇。",
+      "stem": "She has lived in this town ___ 2016.",
+      "step": 3,
+      "title": "住在这个镇",
+      "wrong_feedback": {
+        "A": "for 后面跟时间段；2016 是时间点，用 since。",
+        "C": "from 是“从”，“自从”用 since。",
+        "D": "in 2016 是“在 2016 年”，这里是“自从 2016 年起”，用 since。"
+      }
+    },
+    {
+      "answer_text": "taught",
+      "common_errors": [
+        {
+          "say": "teach 是不规则动词，过去分词是 taught，不能加 ed。",
+          "when": "写了 teached"
+        },
+        {
+          "say": "has 后面要用过去分词 taught，不能用原形。",
+          "when": "写了 teach"
+        },
+        {
+          "say": "teaching 是现在分词，has 后面用过去分词 taught。",
+          "when": "写了 teaching"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "taught"
+          ],
+          "cn": [
+            "教（过去分词）"
+          ],
+          "id": "w1",
+          "olds": [
+            "teached",
+            "teach",
+            "teaching"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "He has taught English in this school since 2018. teach 的过去分词是 taught。",
+      "help": "has 后面跟动词的哪种形式；teach 的变化是规则的还是不规则的？",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "他从 2018 年起在这所学校教英语。",
+      "stem": "He has ___ English in this school since 2018. (teach)",
+      "step": 4,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "教英语"
+    },
+    {
+      "answer": "C",
+      "explain": "They have waited for half an hour.",
+      "help": "“半小时”是时间段，还是时间点？",
+      "kind": "mcq",
+      "options": [
+        "since",
+        "from",
+        "for",
+        "at"
+      ],
+      "phase": "practice",
+      "scene": "他们等了半小时了。",
+      "stem": "They have waited ___ half an hour.",
+      "step": 5,
+      "title": "等了半小时",
+      "wrong_feedback": {
+        "A": "since 后面跟时间点；“半小时”是时间段，用 for。",
+        "B": "from 是“从”，表示“持续了半小时”用 for。",
+        "D": "at 后面跟时刻，跟不了“半小时”，这里用 for。"
+      }
+    },
+    {
+      "answer_text": "since",
+      "common_errors": [
+        {
+          "say": "last spring 是时间点，for 后面跟时间段；时间点用 since。",
+          "when": "写了 for"
+        },
+        {
+          "say": "from 只说“从”，“自从……起一直到现在”用 since。",
+          "when": "写了 from"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "since",
+            "Since"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ],
+          "id": "w1",
+          "olds": [
+            "for"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "They have planted trees here since last spring.",
+      "help": "last spring 是时间点，还是时间段？",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "他们从去年春天起在这里植树。",
+      "stem": "They have planted trees here ___ last spring.",
+      "step": 6,
+      "task": "只写 since 或 for。",
+      "title": "从去年春天植树"
+    },
+    {
+      "answer": "D",
+      "explain": "—When did the show start? —At seven o'clock.",
+      "help": "回答是七点这个时刻，问的是“何时”还是“多久”？",
+      "kind": "mcq",
+      "options": [
+        "How long",
+        "How",
+        "Where",
+        "When"
+      ],
+      "phase": "practice",
+      "scene": "问演出几点开始，回答七点。",
+      "stem": "—___ did the show start? —At seven o'clock.",
+      "step": 7,
+      "title": "演出几点开始",
+      "wrong_feedback": {
+        "A": "How long 问“多久”（一段时间）；问“几点开始”用 When。",
+        "B": "How 问“怎样”，问“何时”用 When。",
+        "C": "Where 问“哪里”，问“何时”用 When。"
+      }
+    },
+    {
+      "answer_text": "was built",
+      "common_errors": [
+        {
+          "say": "was 后面要用过去分词 built：was built。",
+          "when": "写了 was build"
+        },
+        {
+          "say": "少了 be 动词。被动语态 = be 动词 + 过去分词：was built。",
+          "when": "写了 built"
+        },
+        {
+          "say": "1980 年是过去的事，用 was built，不用 is built。",
+          "when": "写了 is built"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "was built"
+          ],
+          "cn": [
+            "被建造（过去被动）"
+          ],
+          "id": "w1",
+          "olds": [
+            "was build",
+            "is built"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "The first bridge here was built in 1980.",
+      "help": "桥是被人建造的；再看时间 1980 年，是现在还是过去。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "很久以前，这里第一座桥在 1980 年建成。",
+      "stem": "The first bridge here ___ in 1980. (build)",
+      "step": 8,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "第一座桥"
+    },
+    {
+      "answer": "B",
+      "explain": "Have your grandparents ever watched a dragon boat race?",
+      "help": "先数主语：grandparents 是一个，还是多个。",
+      "kind": "mcq",
+      "options": [
+        "Has",
+        "Have",
+        "Do",
+        "Did"
+      ],
+      "phase": "practice",
+      "scene": "问爷爷奶奶以前有没有看过龙舟赛。",
+      "stem": "___ your grandparents ever watched a dragon boat race?",
+      "step": 9,
+      "title": "爷爷奶奶看过龙舟赛吗",
+      "wrong_feedback": {
+        "A": "grandparents 是两个人（复数），完成时疑问句要用 Have 开头，不用 Has。",
+        "C": "Do 后面跟动词原形 watch，跟不了 watched；问经历用 Have。",
+        "D": "Did 后面跟动词原形 watch，跟不了 watched；问经历用 Have。"
+      }
+    },
+    {
+      "answer_text": "have been shown",
+      "common_errors": [
+        {
+          "say": "照片是被展示的对象，have 后面还要加 been 才是被动：have been shown。",
+          "when": "写了 have shown"
+        },
+        {
+          "say": "were shown 是过去被展出，和现在断开了；从去年到现在用 have been shown。",
+          "when": "写了 were shown"
+        },
+        {
+          "say": "are shown 只说现在被展出，没表示“从去年起一直”；用 have been shown。",
+          "when": "写了 are shown"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "have been shown"
+          ],
+          "cn": [
+            "一直被展出（完成时被动）"
+          ],
+          "id": "w1",
+          "olds": [
+            "have shown",
+            "were shown",
+            "are shown"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "These old photos have been shown in the museum since last year.",
+      "help": "照片是被展出的；再加上从去年到现在——被动和完成时要叠在一起。",
+      "kind": "short",
+      "phase": "practice",
+      "scene": "这些老照片从去年起一直在博物馆展出。",
+      "stem": "These old photos ___ in the museum since last year. (show)",
+      "step": 10,
+      "task": "用所给词的正确形式填空，只写空里的部分。",
+      "title": "老照片一直在展出"
+    },
+    {
+      "answer": "C",
+      "explain": "Tea is grown in many parts of China.",
+      "help": "先想：茶叶是自己种自己，还是被人种的。",
+      "kind": "mcq",
+      "options": [
+        "grows",
+        "is growing",
+        "is grown",
+        "grew"
+      ],
+      "phase": "validate",
+      "scene": "茶叶在中国很多地方都有种植。",
+      "stem": "Tea ___ in many parts of China.",
+      "step": 11,
+      "title": "茶叶产地",
+      "wrong_feedback": {
+        "A": "grows 是主动“生长”；这里说茶叶“被种植”，要用被动 is grown。",
+        "B": "is growing 是“正在生长”；这里说的是一般情况“被种植”，用 is grown。",
+        "D": "grew 是过去时；这里说的是一般情况，不用过去时，用 is grown。"
+      }
+    },
+    {
+      "answer_text": "How",
+      "common_errors": [
+        {
+          "say": "When 问“何时”，问“多久”用 How。",
+          "when": "写了 When"
+        },
+        {
+          "say": "What 问“什么”，问“多久”用 How。",
+          "when": "写了 What"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "How",
+            "how"
+          ],
+          "cn": [
+            "多久"
+          ],
+          "id": "w1",
+          "type": "word"
+        }
+      ],
+      "explain": "How long have they waited for the bus?",
+      "help": "“多久”用 How long。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "问“他们等车等了多久”。",
+      "stem": "___ long have they waited for the bus?",
+      "step": 12,
+      "task": "只写 How、What、When 中的一个。",
+      "title": "等车等了多久"
+    },
+    {
+      "answer": "D",
+      "explain": "Have you ever been to a dragon boat race?",
+      "help": "这句是在问“有没有过这个经历”。",
+      "kind": "mcq",
+      "options": [
+        "never",
+        "already",
+        "yet",
+        "ever"
+      ],
+      "phase": "validate",
+      "scene": "问对方有没有去看过龙舟赛。",
+      "stem": "Have you ___ been to a dragon boat race?",
+      "step": 13,
+      "title": "去看过龙舟赛吗",
+      "wrong_feedback": {
+        "A": "never 是“从不”，用在陈述句里表示否定；问经历要用 ever。",
+        "B": "already 多用在肯定句里表示“已经……”；问经历用 ever。",
+        "C": "yet 一般放在疑问句的最后（Have you been yet?），不放在 been 前面问经历。"
+      }
+    },
+    {
+      "answer_text": "since",
+      "common_errors": [
+        {
+          "say": "2021 是时间点，for 后面跟时间段；时间点用 since。",
+          "when": "写了 for"
+        },
+        {
+          "say": "from 只说“从”，“自从那时到现在”用 since。",
+          "when": "写了 from"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "since",
+            "Since"
+          ],
+          "cn": [
+            "自从（时间点）"
+          ],
+          "id": "w1",
+          "olds": [
+            "for"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "She has been at this school since 2021.",
+      "help": "空后面跟的 2021 是时间点，还是时间段？",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "她 2021 年来到这所学校，一直待到现在。",
+      "stem": "She came to this school in 2021. → She has been at this school ___ 2021.",
+      "step": 14,
+      "task": "只写 since 或 for。",
+      "title": "在这所学校好几年了"
+    },
+    {
+      "answer": "B",
+      "explain": "They visited the museum last Sunday.",
+      "help": "先找时间词：这件事发生在什么时候。",
+      "kind": "mcq",
+      "options": [
+        "visit",
+        "visited",
+        "have visited",
+        "are visiting"
+      ],
+      "phase": "validate",
+      "scene": "他们上周日参观了博物馆。",
+      "stem": "They ___ the museum last Sunday.",
+      "step": 15,
+      "title": "上周日参观博物馆",
+      "wrong_feedback": {
+        "A": "visit 是原形，主语 They 是复数但时间是过去，要用 visited。",
+        "C": "have visited 是完成时，不能和 last Sunday 这种明确的过去时间连用；这里用 visited。",
+        "D": "are visiting 是现在进行时“正在参观”；上周日的事，用 visited。"
+      }
+    },
+    {
+      "answer_text": "already",
+      "common_errors": [
+        {
+          "say": "yet 用在问句和否定句里；肯定句说“已经”用 already。",
+          "when": "写了 yet"
+        },
+        {
+          "say": "ever 是问“曾经有没有”；肯定句说“已经做完”用 already。",
+          "when": "写了 ever"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "already"
+          ],
+          "cn": [
+            "已经"
+          ],
+          "id": "w1",
+          "olds": [
+            "yet",
+            "ever"
+          ],
+          "type": "word"
+        }
+      ],
+      "explain": "I have already finished my homework.",
+      "help": "这句是肯定句，说“已经做完了”。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "我的作业已经做完了。",
+      "stem": "I have ___ finished my homework.",
+      "step": 16,
+      "task": "只写一个英文单词。",
+      "title": "作业已经做完"
+    },
+    {
+      "answer": "C",
+      "explain": "ancient 意思是“古代的、很久以前的”。",
+      "help": "ancient times 是什么时候？",
+      "kind": "mcq",
+      "options": [
+        "现代的",
+        "新的",
+        "很久以前的",
+        "小的"
+      ],
+      "phase": "validate",
+      "scene": "ancient 在课里是“古代的”。",
+      "stem": "The word \"ancient\" means ___.",
+      "step": 17,
+      "title": "ancient 的意思",
+      "wrong_feedback": {
+        "A": "“现代的”是 modern，不是 ancient。",
+        "B": "“新的”是 new，不是 ancient。",
+        "D": "“小的”是 small，不是 ancient。"
+      }
+    },
+    {
+      "answer_text": "庆祝",
+      "common_errors": [
+        {
+          "say": "“发明”是 invent。celebrate 是“庆祝”。",
+          "when": "写了“发明”"
+        },
+        {
+          "say": "“纪念”是 remember。celebrate 是“庆祝”。",
+          "when": "写了“纪念”"
+        },
+        {
+          "say": "“发现”是 discover。celebrate 是“庆祝”。",
+          "when": "写了“发现”"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "庆祝"
+          ],
+          "cn": [
+            "庆祝"
+          ],
+          "id": "w1",
+          "type": "word"
+        }
+      ],
+      "explain": "celebrate 的中文是“庆祝”。",
+      "help": "人们 celebrate 端午节。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "写出 celebrate 的中文。",
+      "stem": "写出 celebrate 的中文意思。",
+      "step": 18,
+      "task": "写中文。",
+      "title": "celebrate 的中文"
+    },
+    {
+      "answer": "A",
+      "explain": "She has gone to the market.（去了还没回来，所以不在这儿。）",
+      "help": "先看场景：人回来了没有，这决定选 been 还是 gone。",
+      "kind": "mcq",
+      "options": [
+        "gone",
+        "been",
+        "went",
+        "visited"
+      ],
+      "phase": "validate",
+      "scene": "梅姨不在这儿，她去市场了，还没回来。",
+      "stem": "—Where is Aunt Mei? —She has ___ to the market.",
+      "step": 19,
+      "title": "梅姨去市场了",
+      "wrong_feedback": {
+        "B": "been to 是“去过，已经回来了”；梅姨还没回来，人不在这儿，要用 gone to。",
+        "C": "went 是过去式，不能跟在 has 后面；has 后面要用过去分词 gone。",
+        "D": "visit 后面直接跟地点（visit the market），不能加 to；这里要用 gone。"
+      }
+    },
+    {
+      "answer_text": "the deepest",
+      "common_errors": [
+        {
+          "say": "deeper 是比较级，只能比两者高低；这里四个湖相比，要用最高级 the deepest。",
+          "when": "写了 deeper"
+        },
+        {
+          "say": "deep 是短单词，最高级直接加 est：the deepest，不用 most deep。",
+          "when": "写了 most deep"
+        },
+        {
+          "say": "原形 deep 不能表示“最深”，要用 the deepest。",
+          "when": "写了 deep"
+        }
+      ],
+      "expects": [
+        {
+          "answers": [
+            "the deepest",
+            "deepest"
+          ],
+          "cn": [
+            "最深的（最高级）"
+          ],
+          "id": "w1",
+          "type": "word"
+        }
+      ],
+      "explain": "Of the four lakes, this one is the deepest.",
+      "help": "先数一数：一共比了几个湖。",
+      "kind": "short",
+      "phase": "validate",
+      "scene": "四个湖里，这个湖最深。",
+      "stem": "Of the four lakes, this one is ___ (deep).",
+      "step": 20,
+      "task": "写出空里的词。",
+      "title": "最深的湖"
+    }
+  ],
+  "title": "Unit 6 巩固练：问多久",
+  "unit": "Unit 6 Ancient stories",
+  "version": 1
+}
