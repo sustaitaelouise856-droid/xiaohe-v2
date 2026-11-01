@@ -1264,6 +1264,7 @@
     }
    ],
    "help": "到短文里找 From that day on 开头的那一句，看 stopped 后面跟的是哪个词，就填那个词。",
+   "help_line": "From that day on, he stopped working.",
    "explain": "短文原句：From that day on, he stopped working.",
    "common_errors": [
     {
