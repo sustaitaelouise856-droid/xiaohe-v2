@@ -85,9 +85,11 @@ const NUDGE_MS = 5000;
 const LESSON_CACHE = {};
 // 练习课（练习模式）：正课全部学完后开放，可反复练（豁免防重做）
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
+// 每课巩固练（u6r1-consolidate 等）：可反复练（豁免防重做），错题进错题本，不计入每日 10 道门禁（2026-11-01）
+function isConsolidateLesson(lid) { return /^u[2-8]r\d+-consolidate$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u[2-8]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
+  if (!/^(?:u[2-8]r\d+-consolidate|u[2-8]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -1401,6 +1403,8 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     kicker_story: L.lesson.kicker_story || '',
     kicker_teach: L.lesson.kicker_teach || '',
     answer_placeholder: L.lesson.answer_placeholder || '',
+    // 2026-11-01：正课有无对应巩固练（前端完成页显示入口）
+    has_consolidate: /^(u[2-8]r\d+)$/.test(lid) ? fs.existsSync(path.join(seed.contentDir(), `lesson-${lid}-consolidate.json`)) : false,
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
     // 2026-10-14：u3-consolidate 过关状态（供前端显示"重新挑战"）
     consolidation_passed: lid === 'u3-consolidate' ? (() => {
@@ -1533,9 +1537,15 @@ app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
 app.post('/api/consolidation/retry', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id='u3-consolidate'").run();
-    db.prepare("DELETE FROM progress WHERE lesson_id='u3-consolidate'").run();
-    startConsolidationSession();
+    // 2026-11-01：支持每课巩固练（body.lesson_id），缺省仍为 u3-consolidate（兼容旧前端调用）
+    const body = req.body || {};
+    const target = body.lesson_id ? String(body.lesson_id) : 'u3-consolidate';
+    if (target !== 'u3-consolidate' && !isConsolidateLesson(target)) {
+      return res.json({ ok: false, error: 'bad_lesson' });
+    }
+    db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id=?").run(target);
+    db.prepare("DELETE FROM progress WHERE lesson_id=?").run(target);
+    if (target === 'u3-consolidate') startConsolidationSession();
     res.json({ ok: true });
   } catch (e) { res.json({ ok: false, error: e.message }); }
 });
@@ -2452,8 +2462,9 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
       && db.prepare("SELECT COUNT(*) c FROM attempts WHERE item_id=? AND session_id=? AND correct=1")
         .get(itemId, sid).c === 0;
     // 练习课（review*）豁免防重做：练完一遍还能再练（2026-10-02 总任务书：练习模式可反复练）；
+    // 每课巩固练（*-consolidate）同样豁免：可反复练（2026-11-01）；
     // 正课防重做保持不变。
-    if (!isReviewLesson(lid) && !reviewRedo && ((phase === 'practice' && st.p1_done === 1) || (phase !== 'practice' && st.p2_done === 1))) {
+    if (!isReviewLesson(lid) && !isConsolidateLesson(lid) && !reviewRedo && ((phase === 'practice' && st.p1_done === 1) || (phase !== 'practice' && st.p2_done === 1))) {
       return res.status(403).json({ ok: false, error: 'part_done' });
     }
   }
@@ -2645,7 +2656,7 @@ function checkDailyMistakes() {
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
       WHERE a.correct=1 AND a.helped=0
       AND date(a.created_at, '+8 hours') = ?
-      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%' AND a.item_id NOT LIKE '%-consolidate-%'
       AND (
         EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
         OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
@@ -2675,7 +2686,7 @@ function getDailyMistakeProgress() {
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
       WHERE a.correct=1 AND a.helped=0
       AND date(a.created_at, '+8 hours') = ?
-      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%' AND a.item_id NOT LIKE '%-consolidate-%'
       AND (
         EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
         OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
