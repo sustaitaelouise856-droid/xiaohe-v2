@@ -587,6 +587,7 @@
     }
    ],
    "help": "三步走：骨架——She 后面是 has，住是 lived；挂时间——2023 是时间点，用 since；细节——here 放在 lived 后面。",
+   "help_alt": "换个想头：画时间线。2023 年钉一颗钉子，线从钉子拉到现在，意思是“从那时起一直住”。“一直住”用 have 或 has 加过去分词；主语是“她”，搭档用 has，不用 have。钉子那个点，前面跟表示“从某点起”的词。",
    "help_line": "She has lived here since 2023.",
    "explain": "She has lived here since 2023. 骨架 She has lived，时间 since 2023（时间点用 since）。主语是“她”，用 has。",
    "common_errors": [
@@ -648,6 +649,7 @@
     }
    ],
    "help": "三步走：骨架——We have + know 的过去分词（know–knew–?，分词以 n 结尾）；挂时间——“五年”是一段时间，用 for；细节——each other 是“互相”。",
+   "help_alt": "换个想头：“认识”这件事从五年前开始，一直延续到现在，像一条拉了五年的线。“五年”是一段绳子，有长度；绳子这么长的“一段”，前面跟的词和时间点那个不一样。know 的过去分词，词尾多个 n，你在不规则变化表里背过，先想想那个表。",
    "help_line": "We have known each other for five years.",
    "explain": "We have known each other for five years. know 的三态是 know–knew–known，过去分词是 known。时间 for five years（一段时间用 for）。",
    "common_errors": [
