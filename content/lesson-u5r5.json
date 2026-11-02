@@ -886,6 +886,7 @@
     }
    ],
    "help": "五年是一段时间还是时间点？先想这个，再选词。",
+   "help_alt": "换个想头：“五年”是一段绳子，有长度，能量出来；时间点（比如 2020 年）是一颗钉子，只有一个点。“五年”是绳子还是钉子？先定这个，前面跟哪个词就定了。",
    "explain": "They have worked here for five years.（for + 一段时间 five years）",
    "common_errors": [
     {
