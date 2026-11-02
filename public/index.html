@@ -777,9 +777,9 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   </button>
 </div>
 
-<!-- 今日学习计划（2026-10-15 Elouise：孩子一打开就知道先做什么） -->
+<!-- 今天就做 3 件事（2026-10-15 Elouise：孩子一打开就知道先做什么；2026-11-02 改：只留错题/新课/巩固练 3 件，闯关由上方 dailyCard 单独显示） -->
 <div id="dailyPlan" style="display:none;background:#fff;border:2px solid #e8eaed;border-radius:16px;padding:16px;margin:12px 0;">
-  <div style="font-size:16px;font-weight:800;margin-bottom:10px;">📋 今日学习计划</div>
+  <div style="font-size:16px;font-weight:800;margin-bottom:10px;">📋 今天就做 3 件事</div>
   <div id="planList" style="display:flex;flex-direction:column;gap:8px;"></div>
 </div>
 
@@ -1245,38 +1245,40 @@ async function renderDailyPlan(dailyStatus) {
       if (d && d.ok && d.dailyMistakes) dm = d.dailyMistakes;
     } catch {}
     const steps = [];
-    // 第1步：今日闯关
-    const dailyDone = dailyStatus && (dailyStatus.checked_in || !dailyStatus.has_questions);
-    steps.push({
-      done: dailyDone,
-      text: dailyDone ? '今日闯关：已完成 ✅' : `今日闯关：${dailyStatus ? dailyStatus.question_count : 8}道题`,
-      link: dailyDone ? null : '/lesson?lesson=daily-retest',
-      btn: dailyDone ? null : '去闯关 →'
-    });
-    // 第2步：今日错题
+    // 第1件：今日错题（每天10道，解锁新课的要求；2026-11-02：闯关改由上方 dailyCard 单独显示，这里只留 3 件）
     const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
     const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
     steps.push({
       done: mOk,
-      text: mOk ? `今日错题：已完成 ✅` : `今日错题：${mDone}/${mTarget}道`,
+      text: mOk ? '今日错题：已完成 ✅' : `今日错题：${mDone}/${mTarget}道`,
       link: mOk ? null : '/progress.html',
       btn: mOk ? null : '去做错题 →'
     });
-    // 第3步：新课学习（2026-10-16修：动态取当前可上课程，不再硬编码u4r1）
+    // 第2件：今天的新课（2026-10-16修：动态取当前可上课程，不再硬编码u4r1）
     const curLesson = (typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null;
     if (curLesson) {
       steps.push({
         done: false,
-        text: `新课学习：${curLesson.name}`,
+        text: `今天的新课：${curLesson.name}`,
         link: `/lesson?lesson=${curLesson.id}`,
         btn: '开始上课 →'
       });
     } else {
       steps.push({
         done: true,
-        text: '新课学习：本单元已学完 🎉',
+        text: '今天的新课：本单元已学完 🎉',
         link: null,
         btn: null
+      });
+    }
+    // 第3件：巩固练（可反复做；优先推荐还没练过的，练过的也可以再练一次）
+    const con = await pickConsolidate();
+    if (con) {
+      steps.push({
+        done: con.done,
+        text: con.done ? `巩固练：${con.label} · 已练过，可再练一次` : `巩固练：${con.label} · 可反复做`,
+        link: `/lesson?lesson=${con.id}`,
+        btn: '去练 →'
       });
     }
     listEl.innerHTML = steps.map((s, i) =>
@@ -1287,6 +1289,23 @@ async function renderDailyPlan(dailyStatus) {
     ).join('');
     planEl.style.display = 'block';
   } catch (e) { /* 静默失败 */ }
+}
+
+// 挑一节巩固练（2026-11-02）：按单元顺序取第一个有文件且没练过的；都练过就回第一个（可反复做）
+async function pickConsolidate() {
+  try {
+    const [r1, r2] = await Promise.all([fetch('/api/lessons'), fetch('/api/done-lessons')]);
+    const d1 = await r1.json();
+    const d2 = await r2.json();
+    const ids = ((d1 && d1.lessons) || []).map(l => l.lesson_id).filter(id => /-consolidate$/.test(id));
+    if (!ids.length) return null;
+    const done = new Set((d2 && (d2.completed || d2.lessons)) || []);
+    const rank = id => { const m = /^u(\d+)r(\d+)-consolidate$/.exec(id); return m ? (+m[1] * 10 + (+m[2])) : 35; };
+    ids.sort((a, b) => rank(a) - rank(b));
+    const label = id => { const m = /^u(\d+)r(\d+)-consolidate$/.exec(id); return m ? ('Unit ' + m[1] + ' 第 ' + m[2] + ' 课') : 'Unit 3 专项巩固'; };
+    const first = ids.find(id => !done.has(id)) || ids[0];
+    return { id: first, label: label(first), done: done.has(first) };
+  } catch { return null; }
 }
 
 // 继续学习按钮
