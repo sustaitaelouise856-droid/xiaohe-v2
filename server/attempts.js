@@ -1,13 +1,15 @@
 'use strict';
-// 作答提交与判分规则（Elouise 2026-09-29 确认，2026-09-29 晚补充）：
-// - 练习阶段：反馈可以讲清楚；但看过反馈/帮助后答对 -> helped=1（有帮助完成），independent=0
+// 作答提交与判分规则（Elouise 2026-09-29 确认，2026-09-29 晚补充，2026-10-14 重构）：
+// - 练习阶段：反馈可以讲清楚；但点了"老师教我"（help_events 有记录）后答对 -> helped=1（有帮助完成），independent=0
 // - 验证阶段：只以第一次作答判定；重答 -> verdict 为 correct_retry/wrong_retry，不计独立完成
-// - "看过反馈后重答"靠客户端上报 saw_feedback=1；同一 session 内按 (session_id, item_id) 判定重答
+// - 2026-10-14重构：不再信任客户端 saw_feedback（多个 bug 污染），helped 只认服务端 help_events 表
+//   答错后"再想一想"不算帮助；只有点了"老师教我"才算
 // - 中文作答（verdict=chinese）：内容理解记 independent=1（独立完成），英文书写记 helped=1
 //   （有帮助完成），并记一条弱点事件 tag='英文书写'，供下节课复习
 // - 每次作答记录 elapsed_ms（客户端上报：题目出现到提交的毫秒数），供后台判断是否猜题
 const db = require('./db');
 const grade = require('./grade');
+const retest = require('./retest');
 
 function contentVerdict(item, answer) {
   if (item.kind === 'mcq') {
@@ -18,26 +20,34 @@ function contentVerdict(item, answer) {
     let spec = {};
     try { spec = JSON.parse(item.grading_json || '{}'); } catch { spec = {}; }
     const g = grade.gradeShort(answer, spec);
-    // 语文课豁免（2026-10-18）：yw- 课程答案本就是中文，中文答对直接算对，
-    // 不走"意思对了，请用英文写一遍"分支（那是英语课的逻辑）
-    if (g && g.verdict === 'chinese' && /^yw-/.test(item.lesson_id || '')) {
-      g.verdict = 'correct';
-      g.note = '';
-    }
     return { verdict: g.verdict, detail: g };
   }
   return null;
 }
 
-function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, copied, predicted }) {
+function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, copied, predicted, pasted }) {
   const item = db.prepare('SELECT * FROM items WHERE item_id=?').get(String(item_id || ''));
   if (!item) return { error: 'no_item' };
   const sid = String(session_id || '');
   const phase = item.phase || 'practice';
 
+  // 2026-10-14彻底重构（Elouise要求）：helped 只认服务端记录，不再信任客户端 saw_feedback
+  // 原因：saw_feedback 是前端上报的布尔值，被多个 bug 污染（答错反馈误置、session_id 复用等），不可靠
+  // 新规则：
+  // 1. help_events 表有记录（点了"老师教我"）→ helped=1
+  // 2. verdict='copied'（看了答案照抄）→ helped=1（在下面的 copied 分支已处理）
+  // 3. verdict='chinese'（中文作答）→ helped=1（在下面的 chinese 分支已处理）
+  // 4. 其他情况 → helped=0（答错后"再想一想"不算帮助）
+  let helpEventCutoff = '2000-01-01';
+  try {
+    if (item.item_id && item.item_id.startsWith('u3-consolidate')) {
+      const sr = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_session'").get();
+      if (sr && sr.value) helpEventCutoff = sr.value;
+    }
+  } catch {}
   const helped = (
-    db.prepare('SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=?')
-      .get(item.item_id, sid).c > 0 || saw_feedback
+    db.prepare('SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=? AND created_at >= ?')
+      .get(item.item_id, sid, helpEventCutoff).c > 0
   ) ? 1 : 0;
   const prior = db.prepare('SELECT COUNT(*) AS c FROM attempts WHERE item_id=? AND session_id=?')
     .get(item.item_id, sid).c;
@@ -50,12 +60,25 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
       .run(item.item_id, sid, '拼写');
   }
+  // 不规则变化/比较级答错：记专项弱点标签（2026-10-14补画像，供每日闯关优先抽题）
+  if (r.verdict === 'wrong' || r.verdict === 'wrong_retry') {
+    try {
+      let tag = null;
+      if (retest.IRREGULAR_ITEMS.has(item.item_id)) tag = '不规则变化';
+      else if (retest.COMPARATIVE_ITEMS.has(item.item_id)) tag = '比较级';
+      if (tag) {
+        db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
+          .run(item.item_id, sid, tag);
+      }
+    } catch {}
+  }
 
   let verdict = r.verdict;
   let independent = 0;
   let finalHelped = helped;
-  if (copied && contentOk) {
-    // 抄写（g 版保底）：看过答案后照着写对——记有帮助完成，不计独立完成，记"看答案过"弱点；
+  if (copied) {
+    // 抄写（g 版保底）：看过答案后照着写——直接放行，不卡孩子（2026-10-12修：之前要求完全一致，标点差一个都卡死）
+    // 记有帮助完成，不计独立完成，记"看答案过"弱点；
     // detail 用最近一次 wrong 的明细（items 原样带上，供复盘归因）再加 copied:true
     let d = null;
     try {
@@ -84,10 +107,10 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
       }
       const kps = dims.length ? dims : ['general'];
       for (const kp of kps) {
-        // 去重：同一题同一知识点 pending 只留一条
+        // 去重：同一题 pending 只留一条（2026-10-18修：不按knowledge_point区分，否则重复）
         const ex = db.prepare(
-          "SELECT id FROM retest_queue WHERE item_id=? AND knowledge_point=? AND status='pending'"
-        ).get(item.item_id, kp);
+          "SELECT id FROM retest_queue WHERE item_id=? AND status='pending'"
+        ).get(item.item_id);
         if (!ex) {
           db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, source_session)
             VALUES(?,?, 'pending', ?)`)
@@ -107,7 +130,8 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     independent = 0;
   } else {
     // 练习阶段：看过反馈/帮助后答对 = 有帮助完成；验证阶段首次答对 = 独立完成
-    independent = (contentOk && !helped) ? 1 : 0;
+    // 2026-10-12：粘贴作答不算独立完成
+    independent = (contentOk && !helped && !pasted) ? 1 : 0;
   }
   // 预判错法记入明细（只在判 wrong 时，供反馈首句与复盘归因）
   if (predicted && r.detail && typeof r.detail === 'object'
@@ -116,14 +140,16 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   }
 
   const ms = Number(elapsed_ms);
+  const pastedFlag = pasted ? 1 : 0;
   db.prepare(
-    'INSERT INTO attempts(item_id, session_id, helped, correct, independent, answer_given, verdict, detail_json, elapsed_ms) VALUES(?,?,?,?,?,?,?,?,?)'
+    'INSERT INTO attempts(item_id, session_id, helped, correct, independent, answer_given, verdict, detail_json, elapsed_ms, pasted) VALUES(?,?,?,?,?,?,?,?,?,?)'
   ).run(item.item_id, sid, finalHelped, contentOk, independent, String(answer ?? ''), verdict, JSON.stringify(r.detail),
-    Number.isFinite(ms) && ms >= 0 ? Math.round(ms) : null);
+    Number.isFinite(ms) && ms >= 0 ? Math.round(ms) : null, pastedFlag);
 
   // 复测闭环（2026-10-03）：零帮助独立答对 → 解决待复测
-  // verdict=correct 且 independent=1（无帮助）时，清除该题所有 pending 复测
-  if (verdict === 'correct' && independent === 1) {
+  // verdict=correct/correct_retry 且 independent=1（无帮助）时，清除该题所有 pending 复测
+  // 2026-10-16修：加 correct_retry——重做时答对 verdict 是 correct_retry，不是 correct（Elouise报告阻塞性bug）
+  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1) {
     try {
       db.prepare(`
         UPDATE retest_queue SET status='resolved', resolved_at=datetime('now')
@@ -132,8 +158,41 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     } catch {}
   }
 
-  return { ok: true, verdict, correct: contentOk, helped: finalHelped, independent,
+  // “自己做出来的时刻”（2026-11-02 Elouise 定）：独立答对，且 30 分钟前有过挣扎史
+  // （答错 / 看答案 / 求助），就回一个 conquered 原因，让前端告诉孩子这是他自己攻克的。
+  // 30 分钟间隔：同一轮里错了马上改对不算“攻克”，隔了一段回来做对才算。
+  // 只在攻克时回这个字段，平时响应形状不变。
+  let conquered = null;
+  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1 && finalHelped === 0) {
+    try {
+      const CUT = "datetime('now','-30 minutes')";
+      const oldCopied = db.prepare(
+        `SELECT 1 AS x FROM attempts WHERE item_id=? AND verdict='copied' AND created_at <= ${CUT} LIMIT 1`
+      ).get(item.item_id);
+      let oldHelped = null;
+      if (!oldCopied) {
+        oldHelped = db.prepare(
+          `SELECT 1 AS x FROM help_events WHERE item_id=? AND created_at <= ${CUT} LIMIT 1`
+        ).get(item.item_id)
+          || db.prepare(
+            `SELECT 1 AS x FROM attempts WHERE item_id=? AND helped=1 AND created_at <= ${CUT} LIMIT 1`
+          ).get(item.item_id);
+      }
+      const oldWrong = (!oldCopied && !oldHelped)
+        ? db.prepare(
+          `SELECT 1 AS x FROM attempts WHERE item_id=? AND correct=0 AND verdict IN ('wrong','wrong_retry') AND created_at <= ${CUT} LIMIT 1`
+        ).get(item.item_id)
+        : null;
+      if (oldCopied) conquered = 'copied';
+      else if (oldHelped) conquered = 'helped';
+      else if (oldWrong) conquered = 'wrong';
+    } catch {}
+  }
+
+  const out = { ok: true, verdict, correct: contentOk, helped: finalHelped, independent,
     detail: r.detail, first_try: prior === 0 };
+  if (conquered) out.conquered = conquered;
+  return out;
 }
 
 module.exports = { submitAttempt };
