@@ -1403,7 +1403,10 @@ function wireQuestion(s) {
         }
       } else {
         // L1：苏格拉底式引导，先问问题，不直接给提示
-        hb.innerHTML = '别急，我们一步步来：<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
+        // 2026-11-02 “记住、换个方法教”：服务端发了第二种讲法（method=alt）时，开头点明换方法，
+        // 让孩子知道系统记得他以前听过第一种讲法。
+        var l1open = (b.method === 'alt') ? '这道题以前讲过，我们换个方法来讲：' : '别急，我们一步步来：';
+        hb.innerHTML = l1open + '<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
         helpBtnLabel = '再帮我一点';
         btn.textContent = '再帮我一点';
       }
