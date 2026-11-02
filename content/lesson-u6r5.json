@@ -1264,6 +1264,7 @@
     }
    ],
    "help": "到短文里找 From that day on 开头的那一句，看 stopped 后面跟的是哪个词，就填那个词。",
+   "help_alt": "换个想头：stopped 后面要跟“正在做的事”，那件事要用 doing 的样子。想一想：farmer 停下的是什么？是他一直在做的那件事。中文说“停止耕种”，“耕种”就是那个“正在做的事”。先想通“停下的是正在做的事”，再去短文里找那件事是哪个词。",
    "help_line": "From that day on, he stopped working.",
    "explain": "短文原句：From that day on, he stopped working.",
    "common_errors": [
