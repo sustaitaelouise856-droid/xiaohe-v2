@@ -514,6 +514,29 @@ app.post('/api/complete', auth.requireAuth, (req, res) => {
   res.json({ ok: true, consolidationPassed, newTitles });
 });
 
+// 2026-11-02 Elouise：U7/U8 单词称号——词表以 public/words/unit7.json、unit8.json 的 en 字段为准
+// 词表稳定，硬编码防漂移；改词表时须同步此处，否则称号计数会漏词。
+const UNIT7_WORDS = ['regularly', 'repeat', 'note', 'visual', 'mentally', 'link', 'list', 'especially', 'diet', 'maintain', 'nut', 'relax', 'stressed', 'tend', 'normal', 'loss', 'fork', 'onion', 'ant', 'context', 'image', 'sense', 'summary', 'contain', 'particular', 'chemistry', 'flash card', 'make a point of doing something', 'last but not least', 'natural disaster', 'figure out'];
+const UNIT8_WORDS = ['attack', 'faithful', 'hold', 'responsible', 'awake', 'flat', 'choice', 'advise', 'cause', 'complain', 'litter', 'unlikely', 'relieve', 'indoors', 'magical', 'wealth', 'queen', 'servant', 'pride', 'among', 'relationship', 'grow up', 'care for', 'in short', 'have no choice but to do', 'run free', 'lie around', 'complain about', 'in addition', 'catch the eye of somebody'];
+const UNIT78_WORDS = [...UNIT7_WORDS, ...UNIT8_WORDS];
+
+// 达到掌握级（4级）的词数（word_mastery.word 与词表 en 字段原文比对，含短语）
+function countMasteredUnitWords(words) {
+  try {
+    const placeholders = words.map(() => '?').join(',');
+    const r = db.prepare(`SELECT COUNT(*) c FROM word_mastery WHERE level>=4 AND word IN (${placeholders})`).get(...words);
+    return r ? r.c : 0;
+  } catch { return 0; }
+}
+
+// 已完成某单元的巩固练节数（巩固课未上线时为 0，不触发）
+function countDoneConsolidate(unit) {
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE ?").get(`u${unit}r%-consolidate`);
+    return r ? r.c : 0;
+  } catch { return 0; }
+}
+
 // 称号列表：返回全部称号定义 + 已获得状态
 // 2026-10-18 史诗级：称号进度计算（供 /api/titles 和 checkTitles 共用）
 function getTitleProgressMap() {
@@ -583,6 +606,11 @@ function getTitleProgressMap() {
     'minutes_900': { current: Math.floor(progressData.minutes || 0), target: 900 },
     'minutes_1800': { current: Math.floor(progressData.minutes || 0), target: 1800 },
     'minutes_3600': { current: Math.floor(progressData.minutes || 0), target: 3600 },
+    'word_u7_master': { current: countMasteredUnitWords(UNIT7_WORDS), target: 31 },
+    'word_u8_master': { current: countMasteredUnitWords(UNIT8_WORDS), target: 30 },
+    'word_u78_master': { current: countMasteredUnitWords(UNIT78_WORDS), target: 61 },
+    'unit7_consolidation': { current: countDoneConsolidate(7), target: 5 },
+    'unit8_consolidation': { current: countDoneConsolidate(8), target: 5 },
   };
 }
 
@@ -767,6 +795,43 @@ const TITLE_DEFS = [
   {
     id: 'unit6_conqueror', name: 'Unit 6 征服者', icon: '🏛️',
     desc: 'u6r1-u6r5全部完成，平均正确率≥80%', cat: '学业', rarity: '史诗' },
+  // 2026-11-02 Elouise要求：U7/U8 称号（课程+单词+巩固练）
+  {
+    id: 'conditional_master', name: '条件句高手', icon: '🔀',
+    desc: 'u7r1-u7r5全部完成，平均正确率≥80%', cat: '学业', rarity: '稀有' },
+  {
+    id: 'unit7_conqueror', name: 'Unit 7 征服者', icon: '🧠',
+    desc: '完成 Unit 7 全部课程（记忆主题）', cat: '学业', rarity: '史诗' },
+  {
+    id: 'adverb_master', name: '副词达人', icon: '🌀',
+    desc: 'u8r1-u8r5全部完成，平均正确率≥80%', cat: '学业', rarity: '稀有' },
+  {
+    id: 'unit8_conqueror', name: 'Unit 8 征服者', icon: '🐾',
+    desc: '完成 Unit 8 全部课程（宠物主题）', cat: '学业', rarity: '史诗' },
+  {
+    id: 'units78_conqueror', name: '双单元征服者', icon: '👑',
+    desc: 'u7r1-u7r5 与 u8r1-u8r5 全部完成，平均正确率≥80%', cat: '学业', rarity: '史诗' },
+  {
+    id: 'word_u7_master', name: 'U7 单词通', icon: '📝',
+    desc: 'Unit 7 全部 31 个词达到掌握级', cat: '探索', rarity: '稀有' },
+  {
+    id: 'word_u8_master', name: 'U8 单词通', icon: '📝',
+    desc: 'Unit 8 全部 30 个词达到掌握级', cat: '探索', rarity: '稀有' },
+  {
+    id: 'word_u78_master', name: '单词双通', icon: '📚',
+    desc: 'Unit 7 + Unit 8 共 61 个词全部达到掌握级', cat: '探索', rarity: '史诗' },
+  {
+    id: 'unit7_consolidation', name: 'U7 巩固达人', icon: '🔄',
+    desc: '完成 Unit 7 全部 5 节巩固练', cat: '学业', rarity: '普通' },
+  {
+    id: 'unit7_consolidation_master', name: 'U7 巩固高手', icon: '🏅',
+    desc: 'Unit 7 巩固练平均独立正确率≥85% 且零求助', cat: '突破', rarity: '稀有' },
+  {
+    id: 'unit8_consolidation', name: 'U8 巩固达人', icon: '🔄',
+    desc: '完成 Unit 8 全部 5 节巩固练', cat: '学业', rarity: '普通' },
+  {
+    id: 'unit8_consolidation_master', name: 'U8 巩固高手', icon: '🏅',
+    desc: 'Unit 8 巩固练平均独立正确率≥85% 且零求助', cat: '突破', rarity: '稀有' },
   // 2026-10-14 Elouise要求：错题成就（2026-10-14 19:05加难度：太容易，提10-20倍）
   {
     id: 'mistake_slayer', name: '错题克星', icon: '🗡️',
@@ -980,6 +1045,47 @@ function checkTitles() {
   unitConqueror(5, 'present_perfect_master');
   unitConqueror(5, 'unit5_conqueror');
   unitConqueror(6, 'unit6_conqueror');
+  // 2026-11-02 Elouise要求：U7/U8 课程称号（与 U4/U5/U6 同口径：五节全完成 + 平均独立正确率≥80%）
+  unitConqueror(7, 'conditional_master');
+  unitConqueror(7, 'unit7_conqueror');
+  unitConqueror(8, 'adverb_master');
+  unitConqueror(8, 'unit8_conqueror');
+  // 双单元征服者：U7+U8 十课全完成，平均独立正确率≥80%
+  try {
+    const lids = [1, 2, 3, 4, 5].flatMap(i => [`u7r${i}`, `u8r${i}`]);
+    if (lids.every(lessonDone)) {
+      let sum = 0, n = 0;
+      for (const lid of lids) {
+        const s = lessonIndependentRate(lid);
+        if (s.count > 0) { sum += s.rate; n++; }
+      }
+      if (n > 0 && sum / n >= 0.80) grant('units78_conqueror');
+    }
+  } catch {}
+  // U7/U8 单词：全部达到掌握级（4级）
+  try {
+    if (countMasteredUnitWords(UNIT7_WORDS) >= 31) grant('word_u7_master');
+    if (countMasteredUnitWords(UNIT8_WORDS) >= 30) grant('word_u8_master');
+    if (countMasteredUnitWords(UNIT78_WORDS) >= 61) grant('word_u78_master');
+  } catch {}
+  // U7/U8 巩固练：5 节全完成 / 平均独立正确率≥85% 且零求助（巩固课未上线时自然不触发）
+  const consolidateMaster = (unit, titleId) => {
+    try {
+      const lids = [1, 2, 3, 4, 5].map(i => `u${unit}r${i}-consolidate`);
+      if (!lids.every(lessonDone)) return;
+      let sum = 0, n = 0, helpedAny = false;
+      for (const lid of lids) {
+        const s = lessonIndependentRate(lid);
+        if (s.count > 0) { sum += s.rate; n++; }
+        helpedAny = helpedAny || s.helpedAny;
+      }
+      if (n > 0 && !helpedAny && sum / n >= 0.85) grant(titleId);
+    } catch {}
+  };
+  try { if (countDoneConsolidate(7) >= 5) grant('unit7_consolidation'); } catch {}
+  try { if (countDoneConsolidate(8) >= 5) grant('unit8_consolidation'); } catch {}
+  consolidateMaster(7, 'unit7_consolidation_master');
+  consolidateMaster(8, 'unit8_consolidation_master');
   // 2026-10-14 Elouise要求：错题成就
   // 1. 错题克星：累计 resolved 100道待复测（零帮助独立答对才会计入 resolved）——2026-10-14 19:05加难度（10倍）
   try {
