@@ -189,6 +189,7 @@
   .fb.info::before { content:"📢"; }
   .tag { display:inline-block; font-size:calc(17px * var(--fs)); background:linear-gradient(180deg,#f5f7fb,#e9edf3); border:1px solid #dde2ea; border-radius:999px; padding:4px 15px; margin-left:10px; color:var(--muted); box-shadow:inset 0 1px 0 rgba(255,255,255,.9); }
   .nudge { color:var(--muted); font-size:var(--fs-scene); line-height:1.6; }
+  .conquered { margin-top:8px; padding:8px 10px; border-left:3px solid #f5a623; background:#fff8e6; color:#7a5200; font-size:var(--fs-scene); line-height:1.6; font-weight:700; }
   .helprule { color:var(--muted); font-size:12px; line-height:1.6; margin:8px 2px 0; }
   /* 首页 */
   .partcard { background:#fff; border:1px solid rgba(225,229,235,.6); border-radius:var(--radius-lg); padding:32px; margin:18px 0; box-shadow:var(--shadow-sm); transition:box-shadow .25s ease; }
@@ -1556,7 +1557,15 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
       }
     }
     fb.className = 'fb ok';
-    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml;
+    // “自己做出来的时刻”（2026-11-02）：服务端确认是隔了一段回来独立攻克的，才显示专属一句；
+    // 有帮助完成时不显示（b.helped 为真时服务端本就不回 conquered，这里再守一道）。
+    const conqueredTxt = (!b.helped && b.conquered) ? {
+      copied: '上次这道题你看了答案，这次是你自己做出来的。',
+      helped: '上次这道题你用了提示，这次是你自己做出来的。',
+      wrong: '这道题你以前答错过，这次自己做对了。'
+    }[b.conquered] : null;
+    const conqueredHtml = conqueredTxt ? `<div class="conquered">🏅 ${conqueredTxt}</div>` : '';
+    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml + conqueredHtml;
     nextrow.style.display = 'flex';
     $('btnNext').onclick = () => advance();
     if (s.kind === 'mcq') wrap.querySelectorAll('.opt').forEach(x => x.disabled = true);
