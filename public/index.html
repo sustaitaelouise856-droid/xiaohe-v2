@@ -363,7 +363,7 @@ document.getElementById('btnTitles').onclick = async () => {
     let tier = 'bronze', tierName = '青铜', nextTip = '', msg = '';
     // 2026-10-18 Elouise：段位改称号点制
     const points = getTitlePoints(list);
-    const tierInfo = getTierByPoints(points);
+    const tierInfo = getTierByPoints(points, getTotalTitlePoints(list));
     tier = tierInfo.tier; tierName = tierInfo.name; nextTip = tierInfo.nextTip; msg = tierInfo.msg;
     wall.className = 'tier-' + tier;
     document.getElementById('titleTierMini').textContent = '· ' + tierName;
@@ -388,7 +388,7 @@ function renderTitlesGrouped(list, page) {
   const colors = { '传说': '#e65100', '史诗': '#bf360c', '稀有': '#4a148c', '普通': '#0d47a1' };
   // 2026-10-18 Elouise：每页12个，共7页，按稀有度排序（普通→稀有→史诗→传说）
   const PER_PAGE = 12;
-  const totalPages = 7;
+  const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
   const order = { '普通': 0, '稀有': 1, '史诗': 2, '传说': 3 };
   const sorted = [...list].sort((a, b) => (order[a.rarity || '普通'] || 0) - (order[b.rarity || '普通'] || 0));
   const items = sorted.slice(page * PER_PAGE, (page + 1) * PER_PAGE);
@@ -420,7 +420,8 @@ function rarityPageTurn(d) {
   const list = window._modalTitles || [];
   let p = (window._rarityPage || 0) + d;
   if (p < 0) p = 0;
-  if (p > 6) p = 6;
+  const totalPages = Math.max(1, Math.ceil(list.length / 12));
+  if (p > totalPages - 1) p = totalPages - 1;
   window._rarityPage = p;
   document.getElementById('titleWallGrouped').innerHTML = renderTitlesGrouped(list, p);
 }
@@ -457,31 +458,38 @@ function getTitlePoints(list) {
   const pts = { '普通': 1, '稀有': 2, '史诗': 4, '传说': 8 };
   return list.filter(x => x.earned).reduce((s, x) => s + (pts[x.rarity || '普通'] || 1), 0);
 }
-function getTierByPoints(points) {
+// 2026-11-02 Elouise：段位按集齐称号点的百分率计算（8 档，每档 12.5%）；总点数随称号总数动态变化，不再写死 160 点
+function tierThresholds(totalPoints) {
+  const total = totalPoints || 160;
+  return [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875].map(f => Math.ceil(f * total));
+}
+function getTotalTitlePoints(list) {
+  const pts = { '普通': 1, '稀有': 2, '史诗': 4, '传说': 8 };
+  return list.reduce((s, x) => s + (pts[x.rarity || '普通'] || 1), 0);
+}
+function getTierByPoints(points, totalPoints) {
+  const mins = tierThresholds(totalPoints);
   const tiers = [
-    { min: 140, tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
-    { min: 120, tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
-    { min: 100, tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！' },
-    { min: 80, tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！' },
-    { min: 60, tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！' },
-    { min: 40, tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！' },
-    { min: 20, tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！' },
-    { min: 0, tier: 'bronze', name: '青铜', msg: '“千里之行，始于足下。”加油！' },
+    { tier: 'bronze', name: '青铜', msg: '“千里之行，始于足下。”加油！' },
+    { tier: 'silver', name: '白银', msg: '“银鞍照白马，飒沓如流星。”继续努力！' },
+    { tier: 'gold', name: '黄金', msg: '“金子总会发光。”铂金段位在向你招手！' },
+    { tier: 'platinum', name: '铂金', msg: '“铂金璀璨，光芒初现。”钻石在招手！' },
+    { tier: 'diamond', name: '钻石', msg: '“钻石恒久远，一颗永流传。”继续闪耀吧！' },
+    { tier: 'master', name: '大师', msg: '“大师出手，不同凡响。”继续冲！' },
+    { tier: 'grandmaster', name: '宗师', msg: '“宗师风范，睥睨群雄。”离王者一步之遥！' },
+    { tier: 'king', name: '王者', msg: '“会当凌绝顶，一览众山小。”你是传奇！' },
   ];
-  for (let i = 0; i < tiers.length; i++) {
-    if (points >= tiers[i].min) {
-      const t = tiers[i];
-      let nextTip = '';
-      if (i > 0) {
-        const need = Math.max(1, tiers[i-1].min - points);
-        nextTip = `距离${tiers[i-1].name}还差 ${need} 称号点`;
-      } else {
-        nextTip = '已达最高段位！';
-      }
-      return { tier: t.tier, name: t.name, nextTip, msg: t.msg, points };
-    }
+  let idx = 0;
+  for (let i = 0; i < tiers.length; i++) { if (points >= mins[i]) idx = i; }
+  const t = tiers[idx];
+  let nextTip = '';
+  if (idx < tiers.length - 1) {
+    const need = Math.max(1, mins[idx + 1] - points);
+    nextTip = `距离${tiers[idx + 1].name}还差 ${need} 称号点`;
+  } else {
+    nextTip = '已达最高段位！';
   }
-  return { tier: 'bronze', name: '青铜', nextTip: '', msg: '', points };
+  return { tier: t.tier, name: t.name, nextTip, msg: t.msg, points };
 }
 function getTierByRatio(ratio, total, earned) {
 // 旧百分比制保留（已废弃，改用getTierByPoints）
@@ -574,19 +582,29 @@ function showTitleCelebration(title) {
   // 3秒后自动关闭（传说5秒）
   setTimeout(() => { const el = document.getElementById('titleCelebOv'); if (el) el.remove(); }, rarity === '传说' ? 5000 : 3000);
 }
-function showTitleGuide() {
+async function showTitleGuide() {
   const old = document.getElementById('titleGuideOv');
   if (old) old.remove();
+  let list = window._modalTitles || [];
+  if (!list.length) {
+    try { const t = await (await fetch('/api/titles')).json(); list = t.titles || []; } catch {}
+  }
+  const total = list.length || 0;
+  const totalPoints = list.length ? getTotalTitlePoints(list) : 0;
+  const mins = tierThresholds(totalPoints);
+  const tierNames = ['青铜', '白银', '黄金', '铂金', '钻石', '大师', '宗师', '王者'];
+  const rangeLines = tierNames.map((n, i) => '· ' + n + '：' + mins[i] + '-' + (i < 7 ? (mins[i + 1] - 1) : totalPoints) + '点').join('<br>');
+  const pages = Math.max(1, Math.ceil(total / 12));
   const ov = document.createElement('div');
   ov.id = 'titleGuideOv';
   ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:400;display:flex;align-items:center;justify-content:center;padding:20px;';
   ov.innerHTML = '<div style="background:#fff;border-radius:16px;padding:24px;max-width:420px;width:100%;max-height:85vh;overflow-y:auto;">'
     + '<h3 style="margin:0 0 16px;text-align:center;">📖 称号墙使用须知</h3>'
     + '<div style="font-size:14px;line-height:1.8;color:#333;">'
-    + '<p><b>一、什么是称号点？</b><br>每个称号按稀有度折算成点数：<br>· 普通称号 = 1点<br>· 稀有称号 = 2点<br>· 史诗称号 = 4点<br>· 传说称号 = 8点<br>共80个称号，满分160点。</p>'
-    + '<p><b>二、段位怎么算？</b><br>按你的总称号点确定段位，共8个段位：<br>· 青铜：0-19点<br>· 白银：20-39点<br>· 黄金：40-59点<br>· 铂金：60-79点<br>· 钻石：80-99点<br>· 大师：100-119点<br>· 宗师：120-139点<br>· 王者：140-160点</p>'
+    + '<p><b>一、什么是称号点？</b><br>每个称号按稀有度折算成点数：<br>· 普通称号 = 1点<br>· 稀有称号 = 2点<br>· 史诗称号 = 4点<br>· 传说称号 = 8点<br>共' + total + '个称号，满分' + totalPoints + '点。</p>'
+    + '<p><b>二、段位怎么算？</b><br>按你集齐的称号点占满分的百分率确定段位，共8个段位，每档 12.5%：<br>' + rangeLines + '</p>'
     + '<p><b>三、怎么获得称号？</b><br>完成学习任务自动获得，比如：做对题目、连续学习、完成课程、消灭错题等。点击任意称号可查看获得方法。</p>'
-    + '<p><b>四、页面怎么翻？</b><br>共80个称号，按稀有度排序（普通→稀有→史诗→传说），每页显示12个，一共7页。用"上一页/下一页"按钮翻页。</p>'
+    + '<p><b>四、页面怎么翻？</b><br>共' + total + '个称号，按稀有度排序（普通→稀有→史诗→传说），每页显示12个，一共' + pages + '页。用"上一页/下一页"按钮翻页。</p>'
     + '<p><b>五、段位徽章可以点</b><br>点击顶部的段位徽章（如"白银"），可预览8个段位的点数区间。</p>'
     + '<p><b>六、未获得的称号</b><br>显示为黑色卡片，名字是"???"，点击可查看如何获得。已获得的会显示彩色。</p>'
     + '</div>'
@@ -607,45 +625,51 @@ function showTierPreview() {
       desc: '起步阶段，继续加油！',
       motto: '千里之行，始于足下。',
       tip: '每天打开小禾10分钟，先从普通称号开始收集。别怕慢，怕的是停。',
-      story: '每一个传奇都从青铜开始。就像学走路的孩子，摇摇晃晃但从不停下。青铜不是弱小，而是无限可能的起点。在这里，你学会了第一个单词，答对了第一道题，点亮了第一个称号。别小看这19点——这是你英语之路的第一块基石。' },
+      story: '每一个传奇都从青铜开始。就像学走路的孩子，摇摇晃晃但从不停下。青铜不是弱小，而是无限可能的起点。在这里，你学会了第一个单词，答对了第一道题，点亮了第一个称号。别小看这第一段路——这是你英语之路的第一块基石。' },
     { name: '白银', range: '20 - 39点', min: 20, color: '#78909c', bg: '#b0bec5', border: '#455a64', txt: '#37474f',
       desc: '已有进步，再接再厉！',
       motto: '银鞍照白马，飒沓如流星。',
       tip: '坚持每天做10道错题，连续一周就能看到变化。白银到黄金是最快的爬坡期。',
-      story: '白银，是坚持的证明。你已经不是当初那个看到英语就头疼的自己了。20点，意味着你至少拿下了20个普通称号，或者几个稀有称号。你的词汇量在涨，语感在形成。就像银器需要打磨，你的英语也在一天天被打磨得发亮。' },
+      story: '白银，是坚持的证明。你已经不是当初那个看到英语就头疼的自己了。这个段位，意味着你已经拿下了不少普通称号，或者几个稀有称号。你的词汇量在涨，语感在形成。就像银器需要打磨，你的英语也在一天天被打磨得发亮。' },
     { name: '黄金', range: '40 - 59点', min: 40, color: '#ff8f00', bg: '#ffd54f', border: '#bf360c', txt: '#4e342e',
       desc: '稳步上升，铂金在望！',
       motto: '金子总会发光。',
       tip: '开始挑战稀有称号，它们2点一个，性价比高。每天多拿1-2个稀有，涨分飞快。',
-      story: '黄金，是实力的象征。40点，你已经超越了大部分初学者。比较级、最高级、被动语态——这些曾经的拦路虎，现在都是你的手下败将。金子总会发光，而你的光芒，来自每一天不间断的积累。继续，铂金在向你招手。' },
+      story: '黄金，是实力的象征。到了这个段位，你已经超越了大部分初学者。比较级、最高级、被动语态——这些曾经的拦路虎，现在都是你的手下败将。金子总会发光，而你的光芒，来自每一天不间断的积累。继续，铂金在向你招手。' },
     { name: '铂金', range: '60 - 79点', min: 60, color: '#00acc1', bg: '#80deea', border: '#006064', txt: '#004d40',
       desc: '过半在即，钻石招手！',
       motto: '不积跬步，无以至千里。',
       tip: '把弱点清单清零。每消灭一个弱点，就离钻石近一步。铂金是耐心的考验。',
-      story: '铂金，比黄金更稀有，比钻石更低调。60点，你已经走完了三分之一的路。错题本越来越薄，弱点越来越少。你开始享受英语了——读懂一篇短文的成就感，听懂一句对话的小确幸。钻石就在前方，保持这个节奏。' },
+      story: '铂金，比黄金更稀有，比钻石更低调。到了这个段位，你已经走完了超过三分之一的路。错题本越来越薄，弱点越来越少。你开始享受英语了——读懂一篇短文的成就感，听懂一句对话的小确幸。钻石就在前方，保持这个节奏。' },
     { name: '钻石', range: '80 - 99点', min: 80, color: '#0288d1', bg: '#81d4fa', border: '#01579b', txt: '#01579b',
       desc: '已过半，大师不远了！',
       motto: '钻石恒久远，一颗永流传。',
       tip: '冲刺史诗称号，4点一个！拿下3-4个史诗，直接起飞。别怕难，史诗称号都有攻略。',
-      story: '钻石，是压力与时间雕刻出的奇迹。80点，满分160的一半，你做到了！现在的你，英语已经不是"学科"，而是"工具"——你能用它看世界、用它思考。就像钻石的每一面都折射光芒，你的每一个称号都在诉说一个故事。大师，不远了。' },
+      story: '钻石，是压力与时间雕刻出的奇迹。集齐了一半的称号点，你做到了！现在的你，英语已经不是"学科"，而是"工具"——你能用它看世界、用它思考。就像钻石的每一面都折射光芒，你的每一个称号都在诉说一个故事。大师，不远了。' },
     { name: '大师', range: '100 - 119点', min: 100, color: '#7b1fa2', bg: '#ce93d8', border: '#4a148c', txt: '#fff',
       desc: '高手风范，宗师可期！',
       motto: '山外有山，人外有人。',
       tip: '系统复习语法体系，把知识点连成网。大师靠的不是刷题量，是理解深度。',
-      story: '大师，是从"学会"到"精通"的跨越。100点，你已经站在了高处。现在完成时、被动语态、从句——这些语法点在你眼里都是老朋友。你开始追求的不是"做对"，而是"优雅"。你的目标，是中考140分里的100+，而你离它越来越近。' },
+      story: '大师，是从"学会"到"精通"的跨越。到了这个段位，你已经站在了高处。现在完成时、被动语态、从句——这些语法点在你眼里都是老朋友。你开始追求的不是"做对"，而是"优雅"。你的目标，是中考140分里的100+，而你离它越来越近。' },
     { name: '宗师', range: '120 - 139点', min: 120, color: '#d81b60', bg: '#f48fb1', border: '#880e4f', txt: '#fff',
       desc: '睥睨群雄，王者一步之遥！',
       motto: '会当凌绝顶，一览众山小。',
       tip: '冲击传说称号，8点一个！这是最后的爆发点。每个传说背后都是一个传奇故事。',
-      story: '宗师，开宗立派的人。120点，你的英语水平已经可以"教别人"了。你总结的方法、避过的坑，都成了后来者的路标。在这个段位，称号对你来说不只是荣誉，更是责任——你证明了普通人通过努力，也能把英语学到这个高度。王者，只差一步。' },
+      story: '宗师，开宗立派的人。到了这个段位，你的英语水平已经可以"教别人"了。你总结的方法、避过的坑，都成了后来者的路标。在这个段位，称号对你来说不只是荣誉，更是责任——你证明了普通人通过努力，也能把英语学到这个高度。王者，只差一步。' },
     { name: '王者', range: '140 - 160点', min: 140, color: '#ff6f00', bg: '#ffcc80', border: '#bf360c', txt: '#4e342e',
       desc: '最高荣誉，你是传奇！',
       motto: '你是传奇！',
       tip: '保持热爱。把你的方法分享给更多人，让更多孩子爱上英语。王者不是终点，是新的起点。',
-      story: '王者，160点的满分传奇。5个传说、10个史诗、15个稀有、50个普通——全部集齐。这不是终点，而是新的起点。你的故事会激励更多人：英语没有什么天赋论，只有"每天多学10分钟"的坚持。你，就是传奇本身。' },
+      story: '王者，满分传奇。传说、史诗、稀有、普通——全部集齐。这不是终点，而是新的起点。你的故事会激励更多人：英语没有什么天赋论，只有"每天多学10分钟"的坚持。你，就是传奇本身。' },
   ];
   const points = getTitlePoints(list);
-  const current = getTierByPoints(points).name;
+  const totalPoints = getTotalTitlePoints(list);
+  const mins = tierThresholds(totalPoints);
+  tiers.forEach((t, i) => {
+    t.min = mins[i];
+    t.range = i < tiers.length - 1 ? (mins[i] + ' - ' + (mins[i + 1] - 1) + '点') : (mins[i] + ' - ' + totalPoints + '点');
+  });
+  const current = getTierByPoints(points, totalPoints).name;
   const curIdx = tiers.findIndex(t => t.name === current);
   const ov = document.createElement('div');
   ov.id = 'tierPreviewOv';
@@ -743,7 +767,7 @@ function showTitleModalDetail(i) {
 fetch('/api/titles').then(r => r.json()).then(t => {
   const list = t.titles || [];
   const points = getTitlePoints(list);
-  const name = getTierByPoints(points).name;
+  const name = getTierByPoints(points, getTotalTitlePoints(list)).name;
   document.getElementById('titleTierMini').textContent = '· ' + name;
   // 找下一个最接近的称号（有progress的优先，只看未获得且进度未达标的）
   const unobtained = list.filter(x => !x.earned && x.progress && x.progress.current < x.progress.target);
