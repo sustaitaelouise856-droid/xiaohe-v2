@@ -1455,6 +1455,7 @@
     }
    ],
    "help": "一句一句来：先写老建筑是哪年建的，再写家乡的一个变化，最后一句写你为什么喜欢它。",
+   "help_alt": "换个想头：这段话像三节火车。第一节是“老底子”：老建筑哪年建的（过去的事），或者家里人从哪年起住在这里（从那时起的长线）；第二节是“变化”：家乡这几年变了什么；第三节是“心里话”：为什么喜欢。先挂好第一节，再一节一节往后挂，别三节一起想。",
    "explain": "范文：My hometown is a small village. The old bridge was built in 1930. Our village has become more beautiful these years. I love my hometown because it is old and quiet.",
    "common_errors": [
     {
