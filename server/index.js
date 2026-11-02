@@ -2032,7 +2032,26 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
     }
   }
   // level=1，或 2/3 无对应内容时回退到 1
-  res.json({ ok: true, level: 1, help: step ? step.help : '' });
+  // 2026-11-02 “记住、换个方法教”（Elouise 定）：30 分钟前给过提示或看过答案（以前讲过），
+  // 且这道题配了第二种讲法 help_alt，就发第二种讲法，不再重复第一种；没配则照旧。
+  // 只在平时不回 method 字段，响应形状不变。
+  let helpText = step ? step.help : '';
+  let method = null;
+  if (step && step.help_alt) {
+    try {
+      const CUT = "datetime('now','-30 minutes')";
+      const taught = db.prepare(
+        `SELECT 1 AS x FROM help_events WHERE item_id=? AND created_at <= ${CUT} LIMIT 1`
+      ).get(String(item_id))
+        || db.prepare(
+          `SELECT 1 AS x FROM attempts WHERE item_id=? AND verdict='copied' AND created_at <= ${CUT} LIMIT 1`
+        ).get(String(item_id));
+      if (taught) { helpText = step.help_alt; method = 'alt'; }
+    } catch {}
+  }
+  const out = { ok: true, level: 1, help: helpText };
+  if (method) out.method = method;
+  res.json(out);
 });
 
 // 故事选择持久化（2026-10-02 总指挥补充条款）：剧情里的学生选择（如点播哪首歌），
