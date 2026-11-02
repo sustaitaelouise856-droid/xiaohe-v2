@@ -189,6 +189,7 @@
   .fb.info::before { content:"📢"; }
   .tag { display:inline-block; font-size:calc(17px * var(--fs)); background:linear-gradient(180deg,#f5f7fb,#e9edf3); border:1px solid #dde2ea; border-radius:999px; padding:4px 15px; margin-left:10px; color:var(--muted); box-shadow:inset 0 1px 0 rgba(255,255,255,.9); }
   .nudge { color:var(--muted); font-size:var(--fs-scene); line-height:1.6; }
+  .helprule { color:var(--muted); font-size:12px; line-height:1.6; margin:8px 2px 0; }
   /* 首页 */
   .partcard { background:#fff; border:1px solid rgba(225,229,235,.6); border-radius:var(--radius-lg); padding:32px; margin:18px 0; box-shadow:var(--shadow-sm); transition:box-shadow .25s ease; }
   .partcard:hover { box-shadow:var(--shadow-md); }
@@ -937,7 +938,7 @@ function renderStep() {
       html += s.options.map((o, i) =>
         `<button class="opt" data-k="${'ABCD'[i]}"><span class="k">${'ABCD'[i]}</span><span>${escapeHtml(o)}</span></button>`).join('');
       html += `<div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub" disabled>回答</button></div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub" disabled>回答</button></div><div class="helprule">不会就点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else if (s.kind === 'chunk') {
       // 拼句（2026-10-14）：点词块拼句子，点击顺序即答案顺序；data-i 区分重复词块
@@ -945,13 +946,13 @@ function renderStep() {
       html += `<div class="chunk-picked" id="chunkPicked"></div>
         <div class="chunk-pool" id="chunkPool">${chunks.map((c, i) => `<button class="chunkbtn" data-i="${i}">${escapeHtml(c)}</button>`).join('')}</div>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnClearChunk">清空重拼</button><button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub">提交</button></div><div class="helprule">不会就点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else {
       const ph = (LESSON && LESSON.answer_placeholder) || '在这里写英文答案';
       html += `<textarea id="answerInput" placeholder="${ph}" autocomplete="off" rows="2"></textarea>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub">提交</button></div><div class="helprule">不会就点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     }
     html += `</div></div></div>`;
@@ -996,6 +997,7 @@ function renderStep() {
     wrap.querySelectorAll('.chunkbtn').forEach(x => { x.disabled = true; });
     const bcc = $('btnClearChunk'); if (bcc) bcc.style.display = 'none';
     const bh = $('btnHelp'); if (bh) bh.style.display = 'none';
+    const hr = $('helprule'); if (hr) hr.style.display = 'none';
     const bs = $('btnSub'); if (bs) bs.style.display = 'none';
     const fb = $('fb');
     const rd = (s && s.item_id && reviewData[s.item_id]) || null;
@@ -1317,8 +1319,9 @@ function wireQuestion(s) {
       return t == null ? '' : String(t);
     }).join(' ');
   }
-  // 三级提示，永不卡死（2026-10-02）：练习阶段按点击次数 L1→L2→L3，验证阶段只 L1
+  // 三级提示，永不卡死（2026-10-02 建；2026-11-01 Elouise 定：验证阶段多次点也升级，不再只 L1）
   var helpLv = wireQuestion.helpLv || (wireQuestion.helpLv = {});
+  var hasTried = false; // 本题是否已交过答案（2026-11-02：连点 2 次帮助还没交题时推他先试一次）
   // "再看材料"按钮：点开看原文，再点收起
   (function () {
     var saBtns = wrap.querySelectorAll('[data-sa]');
@@ -1380,7 +1383,7 @@ function wireQuestion(s) {
         // L3：真人老师式讲解（2026-10-11 Elouise：像真人老师一样一步步教）
         hb.innerHTML = '我们一起来看：<b>' + escapeHtml(b.answer) + '</b>' +
           (b.explain ? '<br><br>为什么是这个答案？' + escapeHtml(b.explain) : '') +
-          '<br><br>你再自己说一遍答案，然后提交。';
+          '<br><br>你再自己说一遍答案，然后提交。记住这个方法，下次遇到一样的题，要自己写出来。';
         helpBtnLabel = '';
         btn.textContent = '老师教我';
       } else if (got >= 2 && b.help_line) {
@@ -1393,6 +1396,10 @@ function wireQuestion(s) {
         }
         helpBtnLabel = '还是不会，直接告诉我';
         btn.textContent = helpBtnLabel;
+        // 2026-11-02：看了两遍提示还没交过题（s48 式卡住），推他先试一次，而不是再给提示
+        if (lvl === 2 && !hasTried) {
+          hb.innerHTML += '<div class="nudge">看了两遍提示了，试着写一个答案，错了也没关系，我会讲给你听。</div>';
+        }
       } else {
         // L1：苏格拉底式引导，先问问题，不直接给提示
         hb.innerHTML = '别急，我们一步步来：<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
@@ -1471,6 +1478,7 @@ function wireQuestion(s) {
     if (s.kind === 'short') given = $('answerInput').value;
     if (s.kind === 'chunk') given = getChunkAnswer();
     if (!String(given).trim()) { err.textContent = s.kind === 'chunk' ? '先拼出句子再提交。' : '先写出答案再提交。'; return; }
+    hasTried = true;
     err.textContent = ''; $('btnSub').disabled = true;
     const elapsed_ms = Date.now() - qT0;
     let r, b;
@@ -1600,6 +1608,14 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
         wrongCt[s.item_id] = (wrongCt[s.item_id] || 0) + 1;
         if (wrongCt[s.item_id] === 2 && autoHelp) autoHelp(2, true);
       }
+      // 2026-11-02：主动告诉孩子出口规则（不用他自己撞见）：练习答错 3 次、验证答错 2 次会直接给答案
+      var _wc = wrongCt[s.item_id] || 0;
+      var _left = isPractice ? (3 - _wc) : 1;
+      if (_left > 0) {
+        fb.innerHTML += '<div class="nudge">' + (isPractice
+          ? '不会就点“老师教我”，点 3 次就直接讲答案；这道题再答错 ' + _left + ' 次也会直接给你看答案和原因。'
+          : '再答错 1 次就直接给你看答案和原因，也可以点“老师教我”直接讲答案。') + '</div>';
+      }
     }
   }
   qT0 = Date.now(); // 重新计时：反馈出现后到下一次提交
@@ -1722,6 +1738,7 @@ function showAnswerCopy(s, sa) {
   var isMcq = s.kind === 'mcq';
   var html = '<div class="sabox"><div>正确答案是：<b>' + escapeHtml(sa.answer) + '</b></div>'
     + (sa.reason ? '<div>原因：' + escapeHtml(sa.reason) + '</div>' : '')
+    + '<div class="nudge">这道题会进错题本，以后再考你一次。</div>'
     + '<div class="nudge">照着写一遍，提交就能继续。</div>';
   if (isMcq) {
     html += '<div class="btnrow">' + s.options.map(function (o, i) {
