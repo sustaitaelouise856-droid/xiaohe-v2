@@ -169,6 +169,7 @@
     }
    ],
    "help": "两个空的主语都是 she。if 从句搬到后面了，但动词的规矩一点没变。",
+   "help_alt": "把 she 换成‘她一个人’来想：一个人做事，动词后面要带个 s 小尾巴。两个空都是她当家，两个动词都要带尾巴；if 从句搬到句尾，尾巴不搬家，还是各跟各的动词。先定主语是一个人，再看两个动词。",
    "explain": "She remembers them well if she reads her notes at night. 主语 she 是第三人称单数，remember 和 read 都加 s。",
    "common_errors": [
     {
@@ -259,6 +260,7 @@
     }
    ],
    "help": "主语是 he。他的否定用 do not 还是 does not？有了它，后面的 review 还加 s 吗？",
+   "help_alt": "数一数 s：否定句里 s 只能出现一次。he 是第三人称，否定词要带 s，动词就光着身子不带 s；要是动词带了 s，否定词就不能再带。先看 s 长在谁身上，再写另一半。",
    "explain": "If he does not review his notes, he forgets them quickly. 主语 he 用 does not，后面的动词变回原形 review。",
    "common_errors": [
     {
@@ -435,6 +437,7 @@
     }
    ],
    "help": "第一个空主语是 your memory（一个东西），第二个空在 if 从句里，主语是 you，而且是否定。",
+   "help_alt": "主语换人法：第一个空主语是 your memory，把它换成 it 来想——it 做事，动词带 s；第二个空主语是 you，把它换成‘你们一群人’来想——一群人做事，动词不带 s，否定词也不带 s。两个空各换各的人，别串了。",
    "explain": "Your memory gets weaker if you do not use it. memory 是第三人称单数用 gets；you 的否定是 do not use。",
    "common_errors": [
     {
@@ -571,6 +574,7 @@
     }
    ],
    "help": "两个空主语都是 she，但第一个空是否定：有了 does，look 还加不加 s？第二个空没有 does，又该怎么样？",
+   "help_alt": "两空对照法：第一个空是否定，s 已经长在否定词身上了，look 就不用再长；第二个空是肯定，s 没地方长，只能长在动词身上。先分清哪个空是否定、哪个空是肯定，再决定 s 长在哪。",
    "explain": "If she does not look at the list tonight, she forgets most of it. 否定用 does not look（动词回原形）；主句主语 she 用 forgets。",
    "common_errors": [
     {
@@ -753,6 +757,7 @@
     }
    ],
    "help": "if 从句在后面，主语是 he，动词要有什么变化？miss 的结尾还要多加一个 e。",
+   "help_alt": "结尾发音法：这个动词结尾已经是 s 的音，单加一个 s 念不出来，要加一整个 es 才念得顺。先把这个动词念三遍，听听结尾要补几个音，再写。",
    "explain": "He forgets some words quickly if he misses a review. 主语 he 是第三人称单数，miss 变 misses。",
    "common_errors": [
     {
@@ -830,6 +835,7 @@
     }
    ],
    "help": "第一个空主语是 a student（一个人），第二个空主语是 he。否定那空有了 does，动词要变回原形。",
+   "help_alt": "换人法：a student 就是‘一个学生’，先把它换成 he 来想——he 的否定，否定词带 s，动词回原形；第二个空主语本来就是 he，肯定句，动词自己带 s。先把 a student 换成 he，两个空就都好想了。",
    "explain": "If a student does not make a list, he forgets the words easily. a student 用 does not make；he 用 forgets。",
    "common_errors": [
     {
@@ -1219,6 +1225,7 @@
     }
    ],
    "help": "两个空主语都是 they。they 的否定用 do not 还是 does not？",
+   "help_alt": "对照法：they 是‘他们一群人’，不是一个人。‘一个学生’那道题用带 s 的否定，今天一群人，否定词不带 s，动词也不带 s。先看主语是一个人还是一群人，再选否定词。",
    "explain": "If they do not repeat the words, they do not remember them. 主语 they 用 do not，动词用原形。",
    "common_errors": [
     {
