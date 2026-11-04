@@ -86,7 +86,9 @@ const LESSON_CACHE = {};
 // 练习课（练习模式）：正课全部学完后开放，可反复练（豁免防重做）
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 // 每课巩固练（u6r1-consolidate 等）：可反复练（豁免防重做），错题进错题本，不计入每日 10 道门禁（2026-11-01）
-function isConsolidateLesson(lid) { return /^u[2-8]r\d+-consolidate$/.test(String(lid || '')); }
+// 2026-11-04 补：u3-consolidate 同属巩固练，lessonOf 修好后它的步骤能被找到，
+// 防重做豁免必须同样覆盖它，否则学完一轮后无法再练（此前步骤找不到、检查被跳过才没暴露）。
+function isConsolidateLesson(lid) { return /^(u[2-8]r\d+-consolidate|u3-consolidate)$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
   if (!/^(?:u[2-8]r\d+-consolidate|u[2-8]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
@@ -103,8 +105,12 @@ function loadLesson(lessonId) {
   return LESSON_CACHE[lid];
 }
 // 从 item_id 反查 lesson_id（格式如 u2r2-v1-s10）
+// 2026-11-04 修：旧正则 [a-z0-9]+ 含不了连字符，u*-consolidate / yw-* 的题号
+// 全部返回 null，导致这些课的 /api/help 与 /api/attempt 拿不到步骤、帮助与反馈全空
+// （隔离验证发现：孩子 11-03 在 u6r1-consolidate s2 点帮助只拿到空）。改贪婪 .+，
+// 取最后一个 -v<版>-s<步> 之前的全部当前缀，与 1430/1464 行的解析口径一致。
 function lessonOf(itemId) {
-  const m = /^([a-z0-9]+)-v\d+-s\d+$/i.exec(String(itemId || ''));
+  const m = /^(.+)-v\d+-s\d+$/i.exec(String(itemId || ''));
   return m ? m[1] : null;
 }
 // 逻辑题号：去掉 -v<版本>-，同一道题跨版本算同一题（u2r2-v1-s5 与 u2r2-v3-s5 同题）。
