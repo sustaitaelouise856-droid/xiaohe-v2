@@ -57,6 +57,7 @@
         }
       ],
       "help": "从 2012 年到现在；主语 Ms Wang 是一位老师（她）。",
+      "help_alt": "taught 是不规则的，要整个记住：t-a-u-g-h-t，里面没有 -en。has 后面跟的是 taught 这个词，不是 teach 后面加 -en。先把 t-a-u-g-h-t 念三遍，再填空。",
       "explain": "Ms Wang has taught English at our school since 2012. teach 的过去分词是 taught。",
       "common_errors": [
         {
@@ -70,6 +71,14 @@
         {
           "when": "写了 have taught",
           "say": "主语 Ms Wang 是第三人称单数（她），用 has，不用 have。"
+        },
+        {
+          "when": "写了 teachen",
+          "say": "teach 的过去分词不是加 -en，是整个换成 taught，拼法 t-a-u-g-h-t，里面没有 -en。"
+        },
+        {
+          "when": "写了 teachenp",
+          "say": "teach 的过去分词不是加 -en，是整个换成 taught，拼法 t-a-u-g-h-t，里面没有 -en。"
         }
       ]
     },
