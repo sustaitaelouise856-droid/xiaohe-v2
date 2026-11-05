@@ -1054,21 +1054,34 @@ function renderStep() {
   window.scrollTo(0, 0);
 }
 // ---- 点词查词 + 生词本（2026-10-08） ----
+// 不规则词形 -> 原形（2026-11-05 反馈 id=30：ECDICT exchange 提取，只含课文里出现的词形）
+const XH_IRREG = {"kept":"keep","rings":"ring","became":"become","owners":"owner","told":"tell","worked":"work","pets":"pet","stood":"stand","held":"hold","ideas":"idea","took":"take","ages":"age","powers":"power","farms":"farm","problems":"problem","ran":"run","began":"begin","circles":"circle","forgot":"forget","grew":"grow","mountains":"mountain","scars":"scar","jumped":"jump","trees":"tree","vets":"vet","birds":"bird","caught":"catch","follows":"follow","happened":"happen","woke":"wake","came":"come","taught":"teach","thought":"think","coins":"coin","bought":"buy","countries":"country","fell":"fall","gave":"give","stamps":"stamp","stopped":"stop","hopes":"hope","said":"say","sat":"sit","grandparents":"grandparent","plants":"plant","champions":"champion","cuts":"cut","eyes":"eye","families":"family","farmers":"farmer","flew":"fly","fought":"fight","girls":"girl","harder":"hard","jokes":"joke","kites":"kite","listeners":"listener","parents":"parent","puppies":"puppy","shown":"show","sinks":"sink","soldiers":"soldier","stays":"stay","stones":"stone","streets":"street","studies":"study","towers":"tower","walked":"walk"};
 function lookupWord(w) {
   const D = window.XH_DICT || {};
   w = String(w || '').toLowerCase().replace(/^[^a-z]+|[^a-z]+$/g, '');
   if (!w) return null;
-  if (D[w]) return { word: w, hit: D[w] };
-  // 简单还原：复数/过去式/进行时
+  if (D[w]) {
+    // 旧词典里只有"X的过去式"这类互见条目时，改取原形的释义（went -> go）
+    const m = /([a-z]+)的(过去式|过去分词|现在分词|第三人称单数|复数形式|复数)/.exec(D[w]);
+    if (m && D[m[1]]) return { word: m[1], hit: D[m[1]], orig: w };
+    return { word: w, hit: D[w] };
+  }
+  // 不规则还原
+  if (XH_IRREG[w] && D[XH_IRREG[w]]) return { word: XH_IRREG[w], hit: D[XH_IRREG[w]], orig: w };
+  // 缩略：don't -> do, isn't -> is, I'm -> I（can't/won't 例外：去 n't 剩 ca/wo，不对）
+  const contr = w === "can't" ? 'can' : w === "won't" ? 'will' : w.replace(/n't$/, '').replace(/'(m|re|ve|ll|d|s)$/, '');
+  if (contr && contr !== w && D[contr]) return { word: contr, hit: D[contr], orig: w };
+  // 简单还原：复数/过去式/进行时（+双写辅音：stopped -> stop, bigger -> big）
   const cands = [];
+  const pushDbl = c => { cands.push(c); const d = c.replace(/([bcdfghjklmnpqrstvwxz])\1$/, '$1'); if (d !== c) cands.push(d); };
   if (/ies$/.test(w)) cands.push(w.replace(/ies$/, 'y'));
   if (/es$/.test(w)) cands.push(w.slice(0, -2));
   if (/s$/.test(w)) cands.push(w.slice(0, -1));
   if (/ied$/.test(w)) cands.push(w.replace(/ied$/, 'y'));
-  if (/ed$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
-  if (/ing$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -3) + 'e');
-  if (/er$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
-  if (/est$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -2));
+  if (/ed$/.test(w)) { pushDbl(w.slice(0, -2)); pushDbl(w.slice(0, -1)); }
+  if (/ing$/.test(w)) { pushDbl(w.slice(0, -3)); cands.push(w.slice(0, -3) + 'e'); }
+  if (/er$/.test(w)) { pushDbl(w.slice(0, -2)); pushDbl(w.slice(0, -1)); }
+  if (/est$/.test(w)) { pushDbl(w.slice(0, -3)); pushDbl(w.slice(0, -2)); }
   if (/ly$/.test(w)) cands.push(w.slice(0, -2));
   for (const c of cands) if (D[c]) return { word: c, hit: D[c], orig: w };
   return { word: w, hit: null };
@@ -1186,13 +1199,50 @@ function showWordPop(raw, x, y, el) {
   pop.style.left = Math.max(8, Math.min(window.innerWidth - pw - 8, x - pw / 2)) + 'px';
   pop.style.top = Math.max(8, Math.min(window.innerHeight - ph2 - 8, y + 12)) + 'px';
 }
+// 单词读音（2026-11-05 反馈 id=30）：优先放预录 MP3（iOS 上 speechSynthesis 经常无声，
+// words.html 2026-10-16 已是同一做法），缺录音再回退浏览器朗读并预热 voices
+let _wordUnitIdx = null, _wordUnitLoading = false;
+function wordAudioUnit(w, cb) {
+  if (_wordUnitIdx) return cb(_wordUnitIdx[w] || null);
+  if (_wordUnitLoading) return setTimeout(() => wordAudioUnit(w, cb), 100);
+  _wordUnitLoading = true;
+  fetch('/words/word-units.json').then(r => r.json()).then(j => {
+    _wordUnitIdx = j || {}; _wordUnitLoading = false; cb(_wordUnitIdx[w] || null);
+  }).catch(() => { _wordUnitLoading = false; cb(null); });
+}
+function playWordTTS(text) {
+  try {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.85; u.volume = 1;
+    const voices = speechSynthesis.getVoices();
+    const enVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+    if (enVoice) u.voice = enVoice;
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+function playWordAudio(text) {
+  const word = String(text || '').toLowerCase().replace(/[^a-z]+/g, '');
+  if (!word) { playWordTTS(text); return; }
+  wordAudioUnit(word, unit => {
+    if (!unit) { playWordTTS(text); return; }
+    try {
+      const url = '/audio/words/' + unit + '/' + word + '.mp3';
+      const audio = new Audio(url);
+      let done = false;
+      const timer = setTimeout(() => { if (!done) { done = true; try { audio.pause(); } catch (e) {} playWordTTS(text); } }, 2000);
+      audio.oncanplaythrough = () => { try { audio.play(); } catch (e) {} };
+      audio.onplay = () => { done = true; clearTimeout(timer); };
+      audio.onerror = () => { if (!done) { done = true; clearTimeout(timer); playWordTTS(text); } };
+      audio.load();
+    } catch (e) { playWordTTS(text); }
+  });
+}
+try { if ('speechSynthesis' in window) speechSynthesis.getVoices(); } catch (e) {}
 document.getElementById('wpSay').onclick = () => {
   if (!curWord) return;
-  try {
-    const u = new SpeechSynthesisUtterance(curWord.word);
-    u.lang = 'en-US'; u.rate = 0.85;
-    speechSynthesis.cancel(); speechSynthesis.speak(u);
-  } catch (e) {}
+  playWordAudio(curWord.word);
 };
 document.getElementById('wpAdd').onclick = () => {
   if (!curWord) return;
