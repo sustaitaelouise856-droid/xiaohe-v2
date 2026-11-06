@@ -139,7 +139,10 @@ function autoSeed() {
       const lesson = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
       const expected = gradableSteps(lesson).length;
       const row = db.prepare('SELECT lesson_id FROM lessons WHERE lesson_id=?').get(lid);
-      const have = db.prepare('SELECT COUNT(*) c FROM items WHERE lesson_id=?').get(lid).c;
+      // 2026-11-06：按当前版本计数。旧版题永不删除，升版后总数 = 旧版 + 新版；
+      // 只按总数比，题数不变的升版（如 u7r3 v1→v2 纯调序）永远走不到 seedLesson，
+      // 新版题入不了库、判分仍用旧版题库。
+      const have = db.prepare('SELECT COUNT(*) c FROM items WHERE lesson_id=? AND version=?').get(lid, lesson.version).c;
       if (!row || have !== expected) {
         const { n, version } = seedLesson(lid, lesson, /^sx\\d+$/.test(lid) ? 'draft' : undefined);
         out.push({ lesson_id: lid, seeded: n, version });
