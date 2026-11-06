@@ -846,12 +846,12 @@ const TITLE_DEFS = [
     id: 'comeback_kid', name: '知错就改', icon: '💪',
     desc: '从错题本重做20道题并答对', cat: '探索', rarity: '普通' },
   {
-    id: 'daily_challenger', name: '闯关达人', icon: '🎯',
-    desc: '完成3次每日闯关', cat: '坚持', rarity: '普通' },
+    id: 'daily_challenger', name: '追剧达人', icon: '🎯',
+    desc: '完成3集今晚的剧情', cat: '坚持', rarity: '普通' },
   // 2026-10-15 Elouise要求：连闯/签到系列称号
   {
-    id: 'challenge_streak_7', name: '连闯七天', icon: '🔥',
-    desc: '连续7天完成今日闯关', cat: '坚持', rarity: '稀有' },
+    id: 'challenge_streak_7', name: '连追七天', icon: '🔥',
+    desc: '连续7天追完今晚的剧情', cat: '坚持', rarity: '稀有' },
   {
     id: 'signin_14', name: '半月坚持', icon: '📅',
     desc: '连续签到14天', cat: '坚持', rarity: '普通' },
@@ -872,10 +872,10 @@ const TITLE_DEFS = [
     desc: '不规则变化6道题全部独立答对', cat: '突破', rarity: '普通' },
   // 2026-10-16 Elouise要求：加20个成就（连胜闯关/单词学习/错题累积/做题数/课程数）
   // ——— 每天连胜闯关（4） ———
-  { id: 'challenge_streak_3', name: '连闯三天', icon: '🔥', desc: '连续3天完成今日闯关', cat: '坚持', rarity: '普通' },
-  { id: 'challenge_streak_14', name: '连闯两周', icon: '🌟', desc: '连续14天完成今日闯关', cat: '坚持', rarity: '史诗' },
-  { id: 'challenge_streak_30', name: '月度闯关王', icon: '👑', desc: '连续30天完成今日闯关', cat: '坚持', rarity: '史诗' },
-  { id: 'challenge_streak_60', name: '闯关传奇', icon: '💎', desc: '连续60天完成今日闯关', cat: '传奇', rarity: '传说' },
+  { id: 'challenge_streak_3', name: '连追三天', icon: '🔥', desc: '连续3天追完今晚的剧情', cat: '坚持', rarity: '普通' },
+  { id: 'challenge_streak_14', name: '连追两周', icon: '🌟', desc: '连续14天追完今晚的剧情', cat: '坚持', rarity: '史诗' },
+  { id: 'challenge_streak_30', name: '月度追剧王', icon: '👑', desc: '连续30天追完今晚的剧情', cat: '坚持', rarity: '史诗' },
+  { id: 'challenge_streak_60', name: '追剧传奇', icon: '💎', desc: '连续60天追完今晚的剧情', cat: '传奇', rarity: '传说' },
   // ——— 单词学习（4） ———
   { id: 'word_50', name: '单词新秀', icon: '📝', desc: '单词学习累计掌握50个词', cat: '探索', rarity: '稀有' },
   { id: 'word_150', name: '单词能手', icon: '📚', desc: '单词学习累计掌握150个词', cat: '探索', rarity: '史诗' },
@@ -908,7 +908,7 @@ const TITLE_DEFS = [
   { id: 'streak_15', name: '连对高手', icon: '🔥', desc: '连续答对15道题（零求助）', cat: '突破', rarity: '普通' },
   { id: 'retry_10', name: '知错能改', icon: '🔄', desc: '重做答对10道题', cat: '探索', rarity: '普通' },
   { id: 'vocab_30', name: '生词收藏家', icon: '📚', desc: '生词本收藏30个词', cat: '探索', rarity: '普通' },
-  { id: 'perfect_1', name: '满分闯关', icon: '💯', desc: '每日闯关获得满分', cat: '突破', rarity: '普通' },
+  { id: 'perfect_1', name: '满分剧集', icon: '💯', desc: '今晚的剧情获得满分', cat: '突破', rarity: '普通' },
   { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成一节课', cat: '坚持', rarity: '普通' },
   { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成一节课', cat: '坚持', rarity: '普通' },
   { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50节课', cat: '坚持', rarity: '普通' },
@@ -922,13 +922,13 @@ const TITLE_DEFS = [
   { id: 'review_10', name: '复习专家', icon: '🔄', desc: '完成10节复习课', cat: '学业', rarity: '普通' },
   { id: 'independent_10', name: '独立大师', icon: '💪', desc: '零求助完成10节课', cat: '突破', rarity: '普通' },
   { id: 'retry_30', name: '知错能改·金', icon: '🛠️', desc: '重做答对30道', cat: '探索', rarity: '普通' },
-  { id: 'perfect_3', name: '满分常客', icon: '💯', desc: '每日闯关满分3次', cat: '突破', rarity: '普通' },
+  { id: 'perfect_3', name: '满分常客', icon: '💯', desc: '今晚的剧情满分3次', cat: '突破', rarity: '普通' },
   { id: 'vocab_master_50', name: '词汇小成', icon: '📖', desc: '50个单词达到掌握级', cat: '探索', rarity: '普通' },
   { id: 'vocab_master_100', name: '词汇大师', icon: '👑', desc: '100个单词达到掌握级', cat: '探索', rarity: '普通' },
   { id: 'morning_7', name: '早起习惯', icon: '🌅', desc: '7天早上7点前学习', cat: '坚持', rarity: '普通' },
   { id: 'night_7', name: '夜读习惯', icon: '🌙', desc: '7天晚上22点后学习', cat: '坚持', rarity: '普通' },
-  { id: 'daily_7', name: '闯关一周', icon: '🎯', desc: '完成7天每日闯关', cat: '坚持', rarity: '普通' },
-  { id: 'daily_30', name: '闯关一月', icon: '🏆', desc: '完成30天每日闯关', cat: '坚持', rarity: '普通' },
+  { id: 'daily_7', name: '追剧一周', icon: '🎯', desc: '完成7天今晚的剧情', cat: '坚持', rarity: '普通' },
+  { id: 'daily_30', name: '追剧一月', icon: '🏆', desc: '完成30天今晚的剧情', cat: '坚持', rarity: '普通' },
   { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无错误', cat: '突破', rarity: '普通' },
   { id: 'help_free_20', name: '独立20连', icon: '🚀', desc: '连续20道零求助', cat: '突破', rarity: '普通' },
   { id: 'weekend_100', name: '周末战神', icon: '⚔️', desc: '周末累计完成100节课', cat: '坚持', rarity: '普通' },
@@ -1418,8 +1418,10 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
       return pub;
     });
     return res.json({
-      lesson_id: 'daily-retest', version: 1, title: '今日闯关',
-      home_subtitle: '每天开始先闯关，补上昨天的短板',
+      lesson_id: 'daily-retest', version: 1,
+      title: (gen.serialTitle || '时空裂缝') + ' · 第 ' + gen.episode + ' 集：' + (gen.episodeTitle || ''),
+      home_subtitle: gen.serialSubtitle || '每晚一集：把断掉的线索接上，剧情就往下走',
+      kicker_teach: gen.serialTitle || '时空裂缝',
       practice_end: steps.length, part1_desc: '', part2_desc: '',
       steps, daily_retest: true,
     });
@@ -1580,7 +1582,7 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
   try {
     retest.backfillWrongToRetest();
     retest.normalizeRetestQueueVersions();
-    const items = retest.selectDailyRetestItems(8);
+    const items = retest.selectDailyRetestItems(10);
     const today = shanghaiDay();
     // 今日是否已通关：checkins 有今天，且今天做过 daily-retest 的题
     const checked = db.prepare("SELECT 1 FROM checkins WHERE day=? AND kind='challenge'").get(today);
@@ -1605,6 +1607,7 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
       }
     } catch {}
     res.json({ ok: true, today, question_count: items.length,
+      episode: retest.serialEpisodeNumber(),
       checked_in: !!checked, streak,
       has_questions: items.length > 0 });
   } catch (e) { res.json({ ok: false, error: e.message }); }
@@ -1623,7 +1626,9 @@ app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
     if (!ansCount || ansCount.c === 0) {
       return res.json({ ok: false, error: 'no_answers_today' });
     }
-    db.prepare("INSERT OR IGNORE INTO checkins(day, kind, created_at) VALUES(?, 'challenge', datetime('now'))").run(today);
+    const ins = db.prepare("INSERT OR IGNORE INTO checkins(day, kind, created_at) VALUES(?, 'challenge', datetime('now'))").run(today);
+    // 2026-11-06连续剧：当天第一次通关，剧情推进到下一集
+    if (ins.changes === 1) { try { retest.advanceSerialEpisode(); } catch {} }
     // 2026-10-14：记录每日闯关完成次数（供"闯关达人"称号）
     try {
       const cur = db.prepare("SELECT value FROM app_state WHERE key='daily_retest_count'").get();
