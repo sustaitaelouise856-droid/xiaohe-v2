@@ -262,17 +262,53 @@ function loadOriginalStep(itemId) {
 }
 
 // 生成每日闯关的步骤列表（供 /api/lesson?lesson=daily-retest）
+// 连续剧《时空裂缝》（2026-11-06 Elouise：错题改成故事连续剧；每晚一集＝当晚要做的全部错题）
+// 剧情只是外壳：选题、判分、门禁计数一律不动；剧情句不含任何题目内容，绝不泄题。
+let SERIAL = null;
+function loadSerial() {
+  if (SERIAL) return SERIAL;
+  try {
+    SERIAL = JSON.parse(fs.readFileSync(path.join(__dirname, 'serial.json'), 'utf-8'));
+  } catch { SERIAL = { title: '时空裂缝', subtitle: '', episodes: [], fallback: null }; }
+  return SERIAL;
+}
+function serialEpisodeNumber() {
+  try {
+    const r = db.prepare("SELECT value FROM app_state WHERE key='serial_episode'").get();
+    const n = r ? parseInt(r.value, 10) : 1;
+    return Number.isFinite(n) && n >= 1 ? n : 1;
+  } catch { return 1; }
+}
+function serialEpisode(n) {
+  const s = loadSerial();
+  const eps = s.episodes || [];
+  let ep = eps.find(e => e.n === n);
+  if (!ep) {
+    if (n > eps.length && s.fallback) ep = Object.assign({}, s.fallback, { n });
+    else ep = eps[eps.length - 1];
+  }
+  if (!ep) ep = { n, title: '', opening: '', mids: [], boss: '', cliffhanger: '' };
+  return { serial: s, ep };
+}
+function advanceSerialEpisode() {
+  try {
+    const n = serialEpisodeNumber();
+    db.prepare("INSERT OR REPLACE INTO app_state(key, value) VALUES('serial_episode', ?)").run(String(n + 1));
+  } catch {}
+}
+
 function generateDailyRetest() {
-  const items = selectDailyRetestItems(8);
-  const steps = [];
-  let n = 0;
+  const items = selectDailyRetestItems(10);
+  const { serial, ep } = serialEpisode(serialEpisodeNumber());
+  const qs = [];
+  let qn = 0;
   for (const it of items) {
     const orig = loadOriginalStep(it.item_id);
     if (!orig) continue;
-    n++;
+    qn++;
     // 复用原始 step，但标为复习题，step 序号重排为闯关序号
     const s = Object.assign({}, orig.step, {
-      step: n,
+      step: 0, // 下面与剧情段落一起重排
       item_step: orig.step.step,  // 保留原始题号用于 item_id 生成
       review: true,
       daily_retest: true,
@@ -284,7 +320,7 @@ function generateDailyRetest() {
       if (words.length >= 4) {
         // 洗牌（固定种子保证同一天同一题顺序一致，避免孩子背位置）
         const shuffled = words.slice();
-        const seedNum = n * 7919 + it.item_id.length;
+        const seedNum = qn * 7919 + it.item_id.length;
         for (let i = shuffled.length - 1; i > 0; i--) {
           const j = (seedNum * (i + 1) + i * 13) % (i + 1);
           [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -298,10 +334,32 @@ function generateDailyRetest() {
         s.task = '点词块拼出英文句子。';
       }
     }
-    steps.push({ origLessonId: orig.lessonId, origVersion: orig.version, step: s,
+    qs.push({ origLessonId: orig.lessonId, origVersion: orig.version, step: s,
       knowledge_point: it.knowledge_point });
   }
-  return { steps, total: steps.length };
+  // 剧情穿插：开场 + 约 1/3、2/3 处 + 最后一道前的 boss 段 + 结尾悬念
+  const steps = [];
+  let n = 0;
+  const pushBeat = (html, title) => {
+    if (!html) return;
+    n++;
+    steps.push({ origLessonId: 'daily-retest', origVersion: 1,
+      step: { step: n, kind: 'teach', phase: 'teach', title: title || '', teach_html: html },
+      knowledge_point: 'serial' });
+  };
+  const pushQ = (q) => { n++; q.step.step = n; steps.push(q); };
+  pushBeat(ep.opening, '第 ' + ep.n + ' 集：' + (ep.title || ''));
+  const total = qs.length;
+  const mids = ep.mids || [];
+  for (let i = 0; i < qs.length; i++) {
+    if (i === total - 1 && total >= 2) pushBeat(ep.boss, '最后一道裂缝');
+    pushQ(qs[i]);
+    if (mids[0] && i === Math.ceil(total / 3) - 1) pushBeat(mids[0], '');
+    else if (mids[1] && i === Math.ceil(total * 2 / 3) - 1) pushBeat(mids[1], '');
+  }
+  pushBeat(ep.cliffhanger, '明晚继续');
+  return { steps, total: qs.length, episode: ep.n, serialTitle: serial.title || '时空裂缝',
+    serialSubtitle: serial.subtitle || '', episodeTitle: ep.title || '' };
 }
 
-module.exports = { backfillFromHistory, backfillWrongToRetest, normalizeRetestQueueVersions, getPending, resolveRetest, isPendingRetest, IRREGULAR_ITEMS, COMPARATIVE_ITEMS, classifyKnowledgePoint, selectDailyRetestItems, generateDailyRetest, loadOriginalStep };
+module.exports = { backfillFromHistory, backfillWrongToRetest, normalizeRetestQueueVersions, getPending, resolveRetest, isPendingRetest, IRREGULAR_ITEMS, COMPARATIVE_ITEMS, classifyKnowledgePoint, selectDailyRetestItems, generateDailyRetest, loadOriginalStep, serialEpisodeNumber, serialEpisode, advanceSerialEpisode };
