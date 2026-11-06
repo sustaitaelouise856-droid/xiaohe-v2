@@ -570,7 +570,7 @@ function partCard(n, title, desc, state) {
   if (n === 1) {
     if (state.p1_done) action = `<p class="done-line">已完成</p>`;
     // 2026-10-15修：虚拟课（每日闯关/批量重做）不显示"继续"，直接开始（防续课状态损坏卡死）
-    else if (LID === 'daily-retest' || LID === 'batch-retry') action = `<button class="big" data-go="1">${LID === 'daily-retest' ? '开始闯关' : '开始重做'}</button>`;
+    else if (LID === 'daily-retest' || LID === 'batch-retry') action = `<button class="big" data-go="1">${LID === 'daily-retest' ? '开始追剧' : '开始重做'}</button>`;
     else if (hasResume(1)) action = `<button class="big" data-go="1">继续：第 ${posLabel(1)} 步</button>`;
     else action = `<button class="big" data-go="1">开始上课</button>`;
   } else {
@@ -613,7 +613,7 @@ async function renderHome() {
     const html = `<div class="card" style="text-align:center;">
       <div style="font-size:48px;">✅</div>
       <h2 class="stem">这道题重做完了！</h2>
-      <p class="scene">答对的话，错题本里它就消掉了。</p>
+      <p class="scene">答对的话，这条线索就接上了。</p>
       <div class="btnrow" style="justify-content:center;">
         <button class="big" onclick="location.href='/progress.html'" style="font-size:18px;padding:14px 40px;">← 返回错题本</button>
       </div></div>`;
@@ -631,7 +631,7 @@ async function renderHome() {
     const html = `<div class="card" style="text-align:center;">
       <div style="font-size:48px;">✅</div>
       <h2 class="stem">批量重做完成！</h2>
-      <p class="scene">共 ${total} 道，答对的已从错题本消掉。</p>
+      <p class="scene">共 ${total} 道，答对的线索已经接上了。</p>
       <div class="btnrow" style="justify-content:center;">
         <button class="big" onclick="location.href='/progress.html'" style="font-size:18px;padding:14px 40px;">← 返回错题本</button>
       </div></div>`;
@@ -639,16 +639,16 @@ async function renderHome() {
     window.scrollTo(0, 0);
     return;
   }
-  // 每日闯关通关庆祝（2026-10-14）：仪式感
+  // 连续剧通关庆祝（2026-11-06）：仪式感
   if (LID === 'daily-retest' && window._dailyStreak !== undefined) {
     const streak = window._dailyStreak;
     window._dailyStreak = undefined;
     const html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回首页</button></div>
     <div class="card" style="text-align:center;background:linear-gradient(135deg,#fff8e1,#ffecb3);border:2px solid #ffb300;">
       <div style="font-size:64px;">🎉</div>
-      <h2 class="stem" style="font-size:24px;color:#e65100;">今日闯关成功！</h2>
-      <p class="scene" style="font-size:16px;">短板补上了，明天继续！</p>
-      ${streak > 0 ? `<div style="font-size:20px;font-weight:800;color:#ff8f00;margin:12px 0;">🔥 连续闯关 ${streak} 天</div>` : ''}
+      <h2 class="stem" style="font-size:24px;color:#e65100;">这一集追完了！</h2>
+      <p class="scene" style="font-size:16px;">线索都接上了，明晚继续！</p>
+      ${streak > 0 ? `<div style="font-size:20px;font-weight:800;color:#ff8f00;margin:12px 0;">🔥 已连续追剧 ${streak} 天</div>` : ''}
       <div class="btnrow" style="justify-content:center;"><button class="big" onclick="location.href='/'" style="font-size:18px;padding:14px 40px;">继续学习 →</button></div>
     </div>`;
     wrap.innerHTML = html;
@@ -1800,7 +1800,7 @@ function showAnswerCopy(s, sa) {
   var isMcq = s.kind === 'mcq';
   var html = '<div class="sabox"><div>正确答案是：<b>' + escapeHtml(sa.answer) + '</b></div>'
     + (sa.reason ? '<div>原因：' + escapeHtml(sa.reason) + '</div>' : '')
-    + '<div class="nudge">这道题会进错题本，以后再考你一次。</div>'
+    + '<div class="nudge">这道题会留到今晚的剧情里，以后再考你一次。</div>'
     + '<div class="nudge">照着写一遍，提交就能继续。</div>';
   if (isMcq) {
     html += '<div class="btnrow">' + s.options.map(function (o, i) {
@@ -1900,9 +1900,9 @@ async function submitCopy(s, answer) {
       wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
         <div style="font-size:48px;margin-bottom:16px;">🔒</div>
         <h2 class="stem">这门新课还没开</h2>
-        <p class="scene">每天开始新课前，先独立做完今天的 10 道错题（不点老师教我），新课就自动开。</p>
+        <p class="scene">新课开之前，先去追完今晚那集剧情，把断掉的线索都接上（不点老师教我），新课就自动开。</p>
         <p class="scene" id="lockDaily" style="display:none;"></p>
-        <button class="btn btn-primary" onclick="location.href='/progress.html'">去做今日错题 →</button>
+        <button class="btn btn-primary" onclick="location.href='/lesson?lesson=daily-retest'">去追今晚的剧情 →</button>
         <button class="btn ghost" onclick="location.href='/'" style="margin-left:8px;">返回首页</button>
       </div>`;
       try {
@@ -1910,7 +1910,7 @@ async function submitCopy(s, answer) {
         const dd = await dr.json().catch(() => null);
         if (dd && dd.ok && dd.dailyMistakes) {
           const el = document.getElementById('lockDaily');
-          if (el) { el.textContent = '今日错题 ' + (dd.dailyMistakes.done || 0) + '/' + (dd.dailyMistakes.target || 10); el.style.display = ''; }
+          if (el) { el.textContent = '今晚的剧情 ' + (dd.dailyMistakes.done || 0) + '/' + (dd.dailyMistakes.target || 10) + ' 条线索'; el.style.display = ''; }
         }
       } catch {}
       return;
