@@ -138,50 +138,6 @@
   {
    "step": 13,
    "phase": "practice",
-   "kind": "short",
-   "title": "挑战 · 一个词改写",
-   "scene": "不把词串进故事里，词就忘得快。",
-   "stem": "You forget the words quickly if you do not link them in a story. = You forget the words quickly ___ you link them in a story.",
-   "task": "只写空里的一个词。",
-   "answer_text": "unless",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "unless"
-     ],
-     "olds": [
-      "if",
-      "if not",
-      "unless not"
-     ],
-     "cn": [
-      "除非（= if...not）"
-     ]
-    }
-   ],
-   "help": "空前面是结果，后面原来是 if you do not link。把它压缩成一个词。",
-   "explain": "You forget the words quickly unless you link them in a story. unless = if...not，从句搬到后面不用逗号。",
-   "common_errors": [
-    {
-     "when": "写了 if",
-     "say": "if 是“如果”，意思反了：if you link them 是“串进故事就忘”？这里要的是“除非”，用 unless。"
-    },
-    {
-     "when": "写了 if not",
-     "say": "两个词太啰嗦，而且位置不对；一个词 unless 就顶 if...not。"
-    },
-    {
-     "when": "写了 unless not",
-     "say": "unless 里已经藏着 not，再写 not 就成了双重否定。"
-    }
-   ],
-   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
-  },
-  {
-   "step": 14,
-   "phase": "practice",
    "kind": "mcq",
    "title": "哪句是对的",
    "scene": "下面哪一句 unless 句子写对了？",
@@ -204,7 +160,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 15,
+   "step": 14,
    "phase": "practice",
    "kind": "short",
    "title": "吃沙拉的工具",
@@ -248,51 +204,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 16,
-   "phase": "practice",
-   "kind": "short",
-   "title": "挑战 · s 要还回去",
-   "scene": "他不把词写进清单，就记不住。",
-   "stem": "If he does not write the words in a list, he forgets them. = Unless he ___ the words in a list, he forgets them. (write)",
-   "task": "用所给词的正确形式填空，只写空里的部分。",
-   "answer_text": "writes",
-   "expects": [
-    {
-     "id": "w1",
-     "type": "word",
-     "answers": [
-      "writes"
-     ],
-     "olds": [
-      "write",
-      "will write",
-      "writed"
-     ],
-     "cn": [
-      "写（主语是 he，does not 删掉后 s 还给动词）"
-     ]
-    }
-   ],
-   "help": "原句是 does not write。does 没了以后，被它拿走的 s 应该回到谁身上？",
-   "explain": "Unless he writes the words in a list, he forgets them. 删掉 does not 后，动词 write 加回 s。",
-   "common_errors": [
-    {
-     "when": "写了 write",
-     "say": "少了 s。主语 he 是第三人称单数，does not 删掉后要写 writes。"
-    },
-    {
-     "when": "写了 will write",
-     "say": "谈必然结果不用 will；而且 unless 从句里就用一般现在时 writes。"
-    },
-    {
-     "when": "写了 writed",
-     "say": "write 的形式变化不是加 ed；这里是一般现在时第三人称单数 writes。"
-    }
-   ],
-   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
-  },
-  {
-   "step": 17,
+   "step": 15,
    "phase": "practice",
    "kind": "mcq",
    "title": "onion 的意思",
@@ -316,7 +228,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 18,
+   "step": 16,
    "phase": "practice",
    "kind": "short",
    "title": "靠上下文猜词",
@@ -360,30 +272,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 19,
-   "phase": "practice",
-   "kind": "mcq",
-   "title": "挑战 · 揪出双重否定",
-   "scene": "下面哪一句是对的？",
-   "stem": "Which sentence is right?",
-   "options": [
-    "Unless you repeat the words, you forget them.",
-    "Unless you do not repeat the words, you forget them.",
-    "You forget them unless you repeats the words.",
-    "If you repeat the words, you forget them."
-   ],
-   "answer": "A",
-   "help": "一条一条查：unless 后有没有 not？主语 you 的动词加 s 了吗？意思有没有反？",
-   "explain": "Unless you repeat the words, you forget them. unless 后不加 not，主语 you 用原形 repeat。",
-   "wrong_feedback": {
-    "B": "unless 后面又加了 do not，是双重否定，错。",
-    "C": "主语是 you，动词用原形 repeat，不能写 repeats。",
-    "D": "意思反了：这句是“如果你重复，你就忘”，和原意正好相反。"
-   },
-   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
-  },
-  {
-   "step": 20,
+   "step": 17,
    "phase": "practice",
    "kind": "short",
    "title": "弄懂这个词",
@@ -427,7 +316,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 21,
+   "step": 18,
    "phase": "practice",
    "kind": "mcq",
    "title": "从句在后面",
@@ -451,7 +340,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 22,
+   "step": 19,
    "phase": "practice",
    "kind": "mcq",
    "title": "挑战 · 安娜为什么记得多",
@@ -474,7 +363,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 23,
+   "step": 20,
    "phase": "practice",
    "kind": "short",
    "title": "识字卡片",
@@ -518,7 +407,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 24,
+   "step": 21,
    "phase": "practice",
    "kind": "short",
    "title": "挑战 · 两个空改写",
@@ -574,7 +463,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 25,
+   "step": 22,
    "phase": "practice",
    "kind": "mcq",
    "title": "sense 的意思",
@@ -598,7 +487,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 26,
+   "step": 23,
    "phase": "practice",
    "kind": "mcq",
    "title": "挑战 · 把词和图连起来",
@@ -621,7 +510,7 @@
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
-   "step": 27,
+   "step": 24,
    "phase": "practice",
    "kind": "short",
    "title": "小小的昆虫",
@@ -662,6 +551,117 @@
     }
    ],
    "audio_id": "u7r3-q11",
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · 一个词改写",
+   "scene": "不把词串进故事里，词就忘得快。",
+   "stem": "You forget the words quickly if you do not link them in a story. = You forget the words quickly ___ you link them in a story.",
+   "task": "只写空里的一个词。",
+   "answer_text": "unless",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "unless"
+     ],
+     "olds": [
+      "if",
+      "if not",
+      "unless not"
+     ],
+     "cn": [
+      "除非（= if...not）"
+     ]
+    }
+   ],
+   "help": "空前面是结果，后面原来是 if you do not link。把它压缩成一个词。",
+   "explain": "You forget the words quickly unless you link them in a story. unless = if...not，从句搬到后面不用逗号。",
+   "common_errors": [
+    {
+     "when": "写了 if",
+     "say": "if 是“如果”，意思反了：if you link them 是“串进故事就忘”？这里要的是“除非”，用 unless。"
+    },
+    {
+     "when": "写了 if not",
+     "say": "两个词太啰嗦，而且位置不对；一个词 unless 就顶 if...not。"
+    },
+    {
+     "when": "写了 unless not",
+     "say": "unless 里已经藏着 not，再写 not 就成了双重否定。"
+    }
+   ],
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "挑战 · s 要还回去",
+   "scene": "他不把词写进清单，就记不住。",
+   "stem": "If he does not write the words in a list, he forgets them. = Unless he ___ the words in a list, he forgets them. (write)",
+   "task": "用所给词的正确形式填空，只写空里的部分。",
+   "answer_text": "writes",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "writes"
+     ],
+     "olds": [
+      "write",
+      "will write",
+      "writed"
+     ],
+     "cn": [
+      "写（主语是 he，does not 删掉后 s 还给动词）"
+     ]
+    }
+   ],
+   "help": "原句是 does not write。does 没了以后，被它拿走的 s 应该回到谁身上？",
+   "explain": "Unless he writes the words in a list, he forgets them. 删掉 does not 后，动词 write 加回 s。",
+   "common_errors": [
+    {
+     "when": "写了 write",
+     "say": "少了 s。主语 he 是第三人称单数，does not 删掉后要写 writes。"
+    },
+    {
+     "when": "写了 will write",
+     "say": "谈必然结果不用 will；而且 unless 从句里就用一般现在时 writes。"
+    },
+    {
+     "when": "写了 writed",
+     "say": "write 的形式变化不是加 ed；这里是一般现在时第三人称单数 writes。"
+    }
+   ],
+   "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "挑战 · 揪出双重否定",
+   "scene": "下面哪一句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Unless you repeat the words, you forget them.",
+    "Unless you do not repeat the words, you forget them.",
+    "You forget them unless you repeats the words.",
+    "If you repeat the words, you forget them."
+   ],
+   "answer": "A",
+   "help": "一条一条查：unless 后有没有 not？主语 you 的动词加 s 了吗？意思有没有反？",
+   "explain": "Unless you repeat the words, you forget them. unless 后不加 not，主语 you 用原形 repeat。",
+   "wrong_feedback": {
+    "B": "unless 后面又加了 do not，是双重否定，错。",
+    "C": "主语是 you，动词用原形 repeat，不能写 repeats。",
+    "D": "意思反了：这句是“如果你重复，你就忘”，和原意正好相反。"
+   },
    "reading": "Our radio station held a Memory Challenge today. Each student looked at ten words for thirty seconds: fork, February, onion, river, ant, monkey, window, computer, soldier and mountain. Then they closed their books and wrote the words from memory. Most students remembered only four or five. Anna grouped the words and linked them in a funny story, so she remembered nine. Unless you use tricks like grouping and stories, you forget the words quickly."
   },
   {
@@ -1449,5 +1449,5 @@
  ],
  "title": "unless 登场：if...not 改写",
  "unit": "Unit 7 The secret of memory",
- "version": 1
+ "version": 2
 }
