@@ -603,7 +603,7 @@ async function showTitleGuide() {
     + '<div style="font-size:14px;line-height:1.8;color:#333;">'
     + '<p><b>一、什么是称号点？</b><br>每个称号按稀有度折算成点数：<br>· 普通称号 = 1点<br>· 稀有称号 = 2点<br>· 史诗称号 = 4点<br>· 传说称号 = 8点<br>共' + total + '个称号，满分' + totalPoints + '点。</p>'
     + '<p><b>二、段位怎么算？</b><br>按你集齐的称号点占满分的百分率确定段位，共8个段位，每档 12.5%：<br>' + rangeLines + '</p>'
-    + '<p><b>三、怎么获得称号？</b><br>完成学习任务自动获得，比如：做对题目、连续学习、完成课程、追完每晚的剧情等。点击任意称号可查看获得方法。</p>'
+    + '<p><b>三、怎么获得称号？</b><br>完成学习任务自动获得，比如：做对题目、连续学习、完成课程、消灭错题等。点击任意称号可查看获得方法。</p>'
     + '<p><b>四、页面怎么翻？</b><br>共' + total + '个称号，按稀有度排序（普通→稀有→史诗→传说），每页显示12个，一共' + pages + '页。用"上一页/下一页"按钮翻页。</p>'
     + '<p><b>五、段位徽章可以点</b><br>点击顶部的段位徽章（如"白银"），可预览8个段位的点数区间。</p>'
     + '<p><b>六、未获得的称号</b><br>显示为黑色卡片，名字是"???"，点击可查看如何获得。已获得的会显示彩色。</p>'
@@ -629,7 +629,7 @@ function showTierPreview() {
     { name: '白银', range: '20 - 39点', min: 20, color: '#78909c', bg: '#b0bec5', border: '#455a64', txt: '#37474f',
       desc: '已有进步，再接再厉！',
       motto: '银鞍照白马，飒沓如流星。',
-      tip: '坚持每天追完一集，连续一周就能看到变化。白银到黄金是最快的爬坡期。',
+      tip: '坚持每天做10道错题，连续一周就能看到变化。白银到黄金是最快的爬坡期。',
       story: '白银，是坚持的证明。你已经不是当初那个看到英语就头疼的自己了。这个段位，意味着你已经拿下了不少普通称号，或者几个稀有称号。你的词汇量在涨，语感在形成。就像银器需要打磨，你的英语也在一天天被打磨得发亮。' },
     { name: '黄金', range: '40 - 59点', min: 40, color: '#ff8f00', bg: '#ffd54f', border: '#bf360c', txt: '#4e342e',
       desc: '稳步上升，铂金在望！',
@@ -640,7 +640,7 @@ function showTierPreview() {
       desc: '过半在即，钻石招手！',
       motto: '不积跬步，无以至千里。',
       tip: '把弱点清单清零。每消灭一个弱点，就离钻石近一步。铂金是耐心的考验。',
-      story: '铂金，比黄金更稀有，比钻石更低调。到了这个段位，你已经走完了超过三分之一的路。断掉的线索越来越少，剧情越追越顺。你开始享受英语了——读懂一篇短文的成就感，听懂一句对话的小确幸。钻石就在前方，保持这个节奏。' },
+      story: '铂金，比黄金更稀有，比钻石更低调。到了这个段位，你已经走完了超过三分之一的路。错题本越来越薄，弱点越来越少。你开始享受英语了——读懂一篇短文的成就感，听懂一句对话的小确幸。钻石就在前方，保持这个节奏。' },
     { name: '钻石', range: '80 - 99点', min: 80, color: '#0288d1', bg: '#81d4fa', border: '#01579b', txt: '#01579b',
       desc: '已过半，大师不远了！',
       motto: '钻石恒久远，一颗永流传。',
@@ -789,11 +789,11 @@ fetch('/api/titles').then(r => r.json()).then(t => {
 </script>
 
 <div class="continue-wrap">
-  <!-- 今晚的剧情（2026-11-06连续剧《时空裂缝》：每日闯关改成故事连续剧，每晚一集） -->
+  <!-- 每日闯关（2026-10-14）：每天开始前先复测，画像驱动补短板 -->
   <div id="dailyCard" style="display:none;background:linear-gradient(135deg,#fff8e1,#ffecb3);border:2px solid #ffb300;border-radius:16px;padding:16px;margin-bottom:12px;text-align:center;">
-    <div style="font-size:17px;font-weight:800;color:#e65100;" id="dailyTitle">📖 今晚的剧情</div>
+    <div style="font-size:17px;font-weight:800;color:#e65100;" id="dailyTitle">🔥 今日闯关</div>
     <div style="font-size:13px;color:#795548;margin:6px 0;" id="dailyDesc">加载中…</div>
-    <button id="btnDaily" style="display:none;margin-top:8px;padding:12px 32px;border:0;border-radius:12px;background:linear-gradient(135deg,#ff8f00,#ffb300);color:#fff;font-size:16px;font-weight:800;cursor:pointer;">开始追剧 →</button>
+    <button id="btnDaily" style="display:none;margin-top:8px;padding:12px 32px;border:0;border-radius:12px;background:linear-gradient(135deg,#ff8f00,#ffb300);color:#fff;font-size:16px;font-weight:800;cursor:pointer;">开始闯关 →</button>
   </div>
   <button class="btn-continue" id="btnContinue">
     📍 继续学习
@@ -1213,11 +1213,11 @@ async function showLockedDialog(lessonId) {
         if (/^u4r\d+$/.test(lessonId) && dailyMistakes) {
           const dm = dailyMistakes;
           const doneTxt = `${dm.done}/${dm.target}`;
-          btn = `<div style="margin-top:8px;font-size:13px;color:#5f6368;">今晚已接上 <b style="color:#1a73e8;">${doneTxt}</b> 条线索（独立完成，不点"老师教我"）。</div>`
-            + `<button onclick="location.href='/lesson?lesson=daily-retest'" style="margin-top:8px;padding:10px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;font-size:14px;font-weight:700;cursor:pointer;">去追剧情 →</button>`;
-          return `<div style="background:#f8f9fa;border-radius:12px;padding:14px;margin-bottom:10px;"><div style="font-weight:700;font-size:15px;">📖 今晚的剧情 ${doneTxt} 条线索</div>${btn}</div>`;
+          btn = `<div style="margin-top:8px;font-size:13px;color:#5f6368;">今日已完成 <b style="color:#1a73e8;">${doneTxt}</b> 道（独立完成，不点"老师教我"）。</div>`
+            + `<button onclick="location.href='/progress.html'" style="margin-top:8px;padding:10px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;font-size:14px;font-weight:700;cursor:pointer;">去错题本 →</button>`;
+          return `<div style="background:#f8f9fa;border-radius:12px;padding:14px;margin-bottom:10px;"><div style="font-weight:700;font-size:15px;">📝 今日错题 ${doneTxt} 道</div>${btn}</div>`;
         }
-        btn = '<div style="margin-top:8px;font-size:13px;color:#5f6368;">断掉的线索会在剧情里出现，跟着接上就行。</div>';
+        btn = '<div style="margin-top:8px;font-size:13px;color:#5f6368;">错题会在上课时自动出现，跟着做完就行。</div>';
       }
       return `<div style="background:#f8f9fa;border-radius:12px;padding:14px;margin-bottom:10px;"><div style="font-weight:700;font-size:15px;">📝 ${label}</div>${btn}</div>`;
     }).join('');
@@ -1237,24 +1237,24 @@ async function showLockedDialog(lessonId) {
     const d = await r.json();
     if (!d.ok) return;
     card.style.display = 'block';
-    const streakTxt = d.streak > 0 ? ` · 🔥连追${d.streak}天` : '';
+    const streakTxt = d.streak > 0 ? ` · 🔥连闯${d.streak}天` : '';
     if (!d.has_questions) {
       // 无待复测：今日无短板
-      title.textContent = '🎉 今晚没有断掉的线索';
-      desc.textContent = '剧情都接上了，继续保持！' + streakTxt;
+      title.textContent = '🎉 今日状态极佳';
+      desc.textContent = '没有待补的短板，继续保持！' + streakTxt;
       btn.style.display = 'none';
     } else if (d.checked_in) {
       // 已通关
-      title.textContent = '✅ 今晚这集追完了';
-      desc.textContent = `线索都接上了，明晚继续！` + streakTxt;
+      title.textContent = '✅ 今日已通关';
+      desc.textContent = `短板补完了，明天继续！` + streakTxt;
       btn.style.display = 'none';
       card.style.background = 'linear-gradient(135deg,#e8f5e9,#c8e6c9)';
       card.style.borderColor = '#4caf50';
       title.style.color = '#2e7d32';
     } else {
       // 待闯关
-      title.textContent = '📖 今晚的剧情';
-      desc.textContent = `第 ${d.episode || 1} 集 · ${d.question_count} 条线索等你接上` + streakTxt;
+      title.textContent = '🔥 今日闯关';
+      desc.textContent = `${d.question_count}道错题等你补 · 先闯关再上新课` + streakTxt;
       btn.style.display = 'inline-block';
       btn.onclick = () => { location.href = '/lesson?lesson=daily-retest'; };
     }
@@ -1277,14 +1277,14 @@ async function renderDailyPlan(dailyStatus) {
       if (d && d.ok && d.dailyMistakes) dm = d.dailyMistakes;
     } catch {}
     const steps = [];
-    // 第1件：今晚的剧情（2026-11-06连续剧：错题改成故事连续剧，每晚一集；每天10道，解锁新课的要求）
+    // 第1件：今日错题（每天10道，解锁新课的要求；2026-11-02：闯关改由上方 dailyCard 单独显示，这里只留 3 件）
     const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
     const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
     steps.push({
       done: mOk,
-      text: mOk ? '今晚的剧情：已追完 ✅' : `今晚的剧情：${mDone}/${mTarget} 条线索`,
-      link: mOk ? null : '/lesson?lesson=daily-retest',
-      btn: mOk ? null : '开始追剧 →'
+      text: mOk ? '今日错题：已完成 ✅' : `今日错题：${mDone}/${mTarget}道`,
+      link: mOk ? null : '/progress.html',
+      btn: mOk ? null : '去做错题 →'
     });
     // 第2件：今天的新课（2026-10-16修：动态取当前可上课程，不再硬编码u4r1）
     const curLesson = (typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null;
@@ -1377,16 +1377,16 @@ async function pickConsolidate() {
       const rname = rid === 'u3-consolidate' ? 'Unit 3 专项巩固' : rid;
       // 2026-10-15：错题提示改成今日进度，不说"另有53道"
       const mistakeTxt = (hasMistake && dailyMistakes && dailyMistakes.target > 0)
-        ? `（今晚的剧情 ${dailyMistakes.done}/${dailyMistakes.target} 条线索）`
-        : (hasMistake ? `（还有${mistakeCount}条线索没接）` : '');
+        ? `（今日错题 ${dailyMistakes.done}/${dailyMistakes.target}）`
+        : (hasMistake ? `（另有${mistakeCount}道错题）` : '');
       sub.textContent = "去做复习：" + rname + mistakeTxt;
       btn.onclick = () => { location.href = "/lesson?lesson=" + rid; };
     } else {
       // 无待办复习但有错题 → 显示今日错题进度（2026-10-15 Elouise：解锁要求是每天10道，不是清完53道）
       if (dailyMistakes && dailyMistakes.target > 0) {
-        sub.textContent = `今晚的剧情：已接 ${dailyMistakes.done}/${dailyMistakes.target} 条线索`;
+        sub.textContent = `今日错题：已做 ${dailyMistakes.done}/${dailyMistakes.target} 道`;
       } else {
-        sub.textContent = `还剩${mistakeCount}条线索没接`;
+        sub.textContent = `去消错题：还有${mistakeCount}道`;
       }
       btn.onclick = () => { location.href = "/progress.html"; };
     }
