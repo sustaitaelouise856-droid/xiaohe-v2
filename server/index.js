@@ -24,6 +24,7 @@ const attempts = require('./attempts');
 const review = require('./review');
 const retest = require('./retest');
 const exams = require('./exams');
+const weakness = require('./weakness');
 const seed = require('./seed');
 const { shanghaiDay } = require('./time');
 
@@ -434,6 +435,20 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
     independent: agg.independent, helped: agg.helped, items: agg.items,
     weaknesses: weaknesses.slice(0, 3), minutes, sentence,
   });
+});
+
+// 课末弱点小结（2026-11-09，Idea：每节课末说清哪一点没学会）：
+// 只用当节课自己的答错和求助记录；无错漏时 points 为空，前端不写弱点。
+app.get('/api/lesson-weakness', auth.requireAuth, (req, res) => {
+  const lid = String(req.query.lesson || '');
+  if (!lid || !validLesson(lid)) return badLesson(res);
+  try {
+    const out = weakness.computeLessonWeakness({ db, lid, loadLesson, contentDir: seed.contentDir() });
+    res.json({ ok: true, lesson: out.lesson, title: out.title, points: out.points, total_weak_items: out.total_weak_items });
+  } catch (e) {
+    console.log('[lesson-weakness] error:', e && e.message);
+    res.status(500).json({ ok: false, error: 'weakness_error' });
+  }
 });
 
 // 改访问码（需已登录 + 现码验证）：换码同时轮换 Cookie 签名密钥，老 Cookie 立即失效，
