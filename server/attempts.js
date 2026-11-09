@@ -158,6 +158,11 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     } catch {}
   }
 
+  // 课末弱点小结（2026-11-09）：独立答对 → 该知识点消退，后面课里不再重复出现
+  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1) {
+    try { require('./weakness').resolvePointOnClean(item); } catch {}
+  }
+
   // “自己做出来的时刻”（2026-11-02 Elouise 定）：独立答对，且 30 分钟前有过挣扎史
   // （答错 / 看答案 / 求助），就回一个 conquered 原因，让前端告诉孩子这是他自己攻克的。
   // 30 分钟间隔：同一轮里错了马上改对不算“攻克”，隔了一段回来做对才算。
