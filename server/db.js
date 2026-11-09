@@ -151,7 +151,22 @@ CREATE TABLE IF NOT EXISTS weakness_events (
   session_id TEXT NOT NULL DEFAULT '',
   tag        TEXT NOT NULL,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
-);`);
+);
+`);
+// 课末弱点小结（2026-11-09）：跨课记住已点出的弱点；同一知识点在后一课再出现标"还没学会"；独立答对后消退
+db.exec(`
+CREATE TABLE IF NOT EXISTS weak_point_notes (
+  point_key    TEXT PRIMARY KEY,
+  label        TEXT NOT NULL DEFAULT '',
+  first_lesson TEXT NOT NULL DEFAULT '',
+  last_lesson  TEXT NOT NULL DEFAULT '',
+  status       TEXT NOT NULL DEFAULT 'open',
+  times_seen   INTEGER NOT NULL DEFAULT 0,
+  first_seen_at TEXT NOT NULL DEFAULT (datetime('now')),
+  last_seen_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  resolved_at   TEXT
+);
+`);
 // 称号系统（2026-10-12 Elouise：mastery-based，不是打卡）：孩子凭真实掌握度获得
 db.exec(`
 CREATE TABLE IF NOT EXISTS titles (
