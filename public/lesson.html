@@ -597,6 +597,26 @@ async function parentReport(lid) {
     return await r.json();
   } catch { return null; }
 }
+// 课末弱点小结（2026-11-09）：只读当节课自己的答错和求助记录；无错漏时返回 null，不写弱点
+async function lessonWeakness(lid) {
+  if (!/^(u[2-8]r\d+(-consolidate)?|u3-consolidate)$/.test(lid || '')) return null;
+  try {
+    const r = await fetch('/api/lesson-weakness?lesson=' + encodeURIComponent(lid || LID));
+    const d = await r.json();
+    return (d && d.ok && d.points && d.points.length) ? d : null;
+  } catch { return null; }
+}
+function weaknessHtml(wk) {
+  if (!wk || !wk.points || !wk.points.length) return '';
+  const lines = wk.points.map(p => {
+    const ex = (p.example && p.example.stem) ? `比如“${escapeHtml(p.example.stem)}”，答案是 ${escapeHtml(p.example.answer || '')}。` : '';
+    const rec = (p.recurring && p.first_lesson) ? `（之前《${escapeHtml(p.first_lesson.title)}》那节也卡过，还没学会）` : '';
+    const link = (p.link && p.link.url) ? ` <a href="${escapeHtml(p.link.url)}" style="color:#1a73e8;font-weight:700;">${escapeHtml(p.link.label)} →</a>` : '';
+    return `<p class="scene" style="margin:6px 0;">• <b>${escapeHtml(p.label)}</b>（${p.count} 道题${rec}）${ex}${link}</p>`;
+  }).join('');
+  const total = (wk.total_weak_items != null) ? wk.total_weak_items : wk.points.reduce((n, q) => n + (q.count || 0), 0);
+  return `<div class="task" style="text-align:left;"><div style="font-weight:800;margin-bottom:4px;">这节课还没学会（${total} 道题）：</div>${lines}</div>`;
+}
 async function renderHome() {
   topbar.style.display = 'none'; au.pause();
   try { $('btnSeeReading').style.display = 'none'; } catch {}
@@ -689,8 +709,8 @@ async function renderHome() {
     const ind = sum.independent, helped = sum.helped;
     const total = sum.items || (ind + helped) || 1;
     const rate = Math.round(ind / total * 100);
-    const weak = [...new Set(sum.weaknesses || [])];
     const pr = await parentReport(LID);
+    const wk = await lessonWeakness(LID);
     // 2026-10-14：u3-consolidate 没过关时显示"重新挑战"按钮（替代自动重置）
     // 2026-11-01：每课巩固练（*-consolidate）做完显示"再练一次"按钮；正课做完且有对应巩固练时显示入口
     const isConsLid = /-consolidate$/.test(LID);
@@ -704,7 +724,7 @@ async function renderHome() {
       </div>
       <p class="scene">独立正确率 = 独立完成的题 ÷ 总题数。答错后只显示"再想一想"不算求助；只有点了"老师教我"才算。</p>
       <p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>
-      ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
+      ${wk ? weaknessHtml(wk) : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
       ${showRetry ? (LID === 'u3-consolidate' ? `<p class="scene" style="color:#e65100;font-weight:700;">还没过关（需要零求助、独立正确率≥85%才能解锁 Unit 4）。</p>
       <div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 重新挑战</button></div>` : `<div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 再练一次</button></div>`) : `<p class="scene">做完的课程不能重做。下一课见。</p>`}
