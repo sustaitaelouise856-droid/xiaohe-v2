@@ -251,6 +251,10 @@ function computeLessonWeakness(opts) {
     }
   }
   // 跨课记忆：按成员键逐个记；组里任一成员之前在别的课出现过 → 整组标"还没学会"
+  // 顺序门（2026-11-09 修）：first_lesson 必须是按课程序最早的那节，不是第一次算的那节。
+  // 旧课完成页重算时，若记录的首课比当前课晚，只把首课往前纠正，不标"还没学会"、不重复计数；
+  // 只有首课严格早于当前课，才标"还没学会"。
+  const curOrd = lessonOrder(lid);
   for (const p of points) {
     p.recurring = false;
     p.first_lesson = null;
@@ -260,13 +264,18 @@ function computeLessonWeakness(opts) {
         if (!row) {
           db.prepare(`INSERT INTO weak_point_notes(point_key,label,first_lesson,last_lesson,status,times_seen,first_seen_at,last_seen_at)
             VALUES(?, ?, ?, ?, 'open', 1, datetime('now'), datetime('now'))`).run(mk, p.label, lid, lid);
-        } else if (row.last_lesson !== lid) {
-          db.prepare(`UPDATE weak_point_notes SET times_seen=times_seen+1, last_lesson=?, label=?, status='open', last_seen_at=datetime('now'), resolved_at=NULL WHERE point_key=?`).run(lid, p.label, mk);
+        } else if (curOrd < lessonOrder(row.first_lesson)) {
+          // 当前课比记录的首课更早：纠正首课（自愈），不标、不计数
+          db.prepare(`UPDATE weak_point_notes SET first_lesson=?, label=?, status='open', last_seen_at=datetime('now'), resolved_at=NULL WHERE point_key=?`).run(lid, p.label, mk);
+        } else if (curOrd === lessonOrder(row.first_lesson)) {
+          // 当前课就是首课：幂等重算，不写、不标
+        } else {
+          // 首课严格早于当前课：真复发
           p.recurring = true;
           if (!p.first_lesson) p.first_lesson = { id: row.first_lesson, title: lessonTitleOf(loadLesson, row.first_lesson) };
-        } else if (row.first_lesson !== lid) {
-          p.recurring = true;
-          if (!p.first_lesson) p.first_lesson = { id: row.first_lesson, title: lessonTitleOf(loadLesson, row.first_lesson) };
+          if (row.last_lesson !== lid) {
+            db.prepare(`UPDATE weak_point_notes SET times_seen=times_seen+1, last_lesson=?, label=?, status='open', last_seen_at=datetime('now'), resolved_at=NULL WHERE point_key=?`).run(lid, p.label, mk);
+          }
         }
       } catch {}
     }
@@ -276,6 +285,16 @@ function computeLessonWeakness(opts) {
     delete p.minStep;
   }
   return { lesson: lid, title, points, total_weak_items: weakItems.length };
+}
+
+
+// 课程序：u{单元}r{课} → 单元*100+课；巩固练算本单元最后（u3-consolidate=399）
+function lessonOrder(lid) {
+  if (!lid) return 0;
+  if (lid === 'u3-consolidate') return 399;
+  const m = /^u(\d+)r(\d+)(-consolidate)?$/.exec(lid);
+  if (!m) return 0;
+  return parseInt(m[1], 10) * 100 + (m[3] ? 99 : parseInt(m[2], 10));
 }
 
 // ---- 独立答对 → 该知识点消退（在 attempts.js 独立答对分支后调用） ----
