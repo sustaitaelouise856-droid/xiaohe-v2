@@ -63,6 +63,7 @@ function backfillWrongToRetest() {
       LEFT JOIN retest_queue q ON q.item_id = a.item_id
       WHERE a.verdict IN ('wrong', 'wrong_retry') AND q.id IS NULL
       AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
+      AND a.session_id NOT LIKE '%quick-drill%'
       GROUP BY a.item_id
       HAVING c >= 2
     `).all();
@@ -261,47 +262,114 @@ function loadOriginalStep(itemId) {
   } catch { return null; }
 }
 
+// 由原始 step 拼出一个复习步骤（每日闯关与 5 分钟快练共用）：
+// 复用原始 step，标为复习题，step 序号重排；句子级 short 题转点词块拼句（2026-10-14）。
+// salt 决定词块洗牌种子：每日闯关用固定盐（同一天同一题顺序一致），快练用随机盐（每组都不同）。
+function buildReviewStep(it, n, salt) {
+  const orig = loadOriginalStep(it.item_id);
+  if (!orig) return null;
+  const s = Object.assign({}, orig.step, {
+    step: n,
+    item_step: orig.step.step,  // 保留原始题号用于 item_id 生成
+    review: true,
+    daily_retest: false,
+  });
+  if (s.kind === 'short' && s.answer_text) {
+    const words = String(s.answer_text).trim().split(/\s+/);
+    if (words.length >= 4) {
+      const shuffled = words.slice();
+      const seedNum = salt;
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = (seedNum * (i + 1) + i * 13) % (i + 1);
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      if (shuffled.join(' ') === words.join(' ') && shuffled.length > 1) {
+        [shuffled[0], shuffled[1]] = [shuffled[1], shuffled[0]];
+      }
+      s.kind = 'chunk';
+      s.chunks = shuffled;
+      s.task = '点词块拼出英文句子。';
+    }
+  }
+  return { origLessonId: orig.lessonId, origVersion: orig.version, step: s,
+    knowledge_point: it.knowledge_point };
+}
+
 // 生成每日闯关的步骤列表（供 /api/lesson?lesson=daily-retest）
 function generateDailyRetest() {
   const items = selectDailyRetestItems(8);
   const steps = [];
   let n = 0;
   for (const it of items) {
-    const orig = loadOriginalStep(it.item_id);
-    if (!orig) continue;
-    n++;
-    // 复用原始 step，但标为复习题，step 序号重排为闯关序号
-    const s = Object.assign({}, orig.step, {
-      step: n,
-      item_step: orig.step.step,  // 保留原始题号用于 item_id 生成
-      review: true,
-      daily_retest: true,
-    });
-    // 拼句转换（2026-10-14学句乐部）：句子级 short 题转成点词块拼句，治中式英语
-    // 条件：答案是完整句子（4+词），不是单个词
-    if (s.kind === 'short' && s.answer_text) {
-      const words = String(s.answer_text).trim().split(/\s+/);
-      if (words.length >= 4) {
-        // 洗牌（固定种子保证同一天同一题顺序一致，避免孩子背位置）
-        const shuffled = words.slice();
-        const seedNum = n * 7919 + it.item_id.length;
-        for (let i = shuffled.length - 1; i > 0; i--) {
-          const j = (seedNum * (i + 1) + i * 13) % (i + 1);
-          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        // 如果洗完和原序一样，强制换一下
-        if (shuffled.join(' ') === words.join(' ') && shuffled.length > 1) {
-          [shuffled[0], shuffled[1]] = [shuffled[1], shuffled[0]];
-        }
-        s.kind = 'chunk';
-        s.chunks = shuffled;
-        s.task = '点词块拼出英文句子。';
-      }
-    }
-    steps.push({ origLessonId: orig.lessonId, origVersion: orig.version, step: s,
-      knowledge_point: it.knowledge_point });
+    const built = buildReviewStep(it, ++n, n * 7919 + it.item_id.length);
+    if (!built) { n--; continue; }
+    built.step.daily_retest = true;
+    steps.push(built);
   }
   return { steps, total: steps.length };
 }
 
-module.exports = { backfillFromHistory, backfillWrongToRetest, normalizeRetestQueueVersions, getPending, resolveRetest, isPendingRetest, IRREGULAR_ITEMS, COMPARATIVE_ITEMS, classifyKnowledgePoint, selectDailyRetestItems, generateDailyRetest, loadOriginalStep };
+// 5 分钟快练（2026-11-11 Elouise 批准，试 3–4 晚）：10 道题，错题 + 复习题混着来。
+// 复习题只取"已学过、已答过"的英语正课题（有作答记录才入选），保证两点：
+// ① 不剧透未开的新课（u7r5 这类没做过的课没有作答记录，天然进不来）；② 题目是复习，不是新学。
+// 今天已做过的题、待复测队列里的题不再重复出；每组现取现洗，同一天两组题目也不同。
+function selectQuickDrillReviewItems(need, excludeIds) {
+  const n = Math.min(Math.max(Number(need) || 0, 0), 10);
+  if (!n) return [];
+  try {
+    const rows = db.prepare(`
+      SELECT i.item_id, MAX(a.created_at) AS last_at
+      FROM items i JOIN attempts a ON a.item_id = i.item_id
+      WHERE i.kind IN ('mcq', 'short')
+      AND i.lesson_id GLOB 'u[2-8]r[0-9]'
+      AND i.item_id NOT IN (SELECT item_id FROM retest_queue WHERE status = 'pending')
+      AND NOT EXISTS (
+        SELECT 1 FROM attempts b WHERE b.item_id = i.item_id
+        AND date(b.created_at, '+8 hours') = date('now', '+8 hours')
+      )
+      GROUP BY i.item_id
+      ORDER BY last_at ASC
+    `).all();
+    const excluded = excludeIds || new Set();
+    const pool = rows.filter(r => !excluded.has(r.item_id));
+    // Fisher-Yates 洗牌（每组随机取，不按时间全取最旧的，避免天天同一批）
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    return pool.slice(0, n).map(r => ({ item_id: r.item_id,
+      knowledge_point: classifyKnowledgePoint(r.item_id) }));
+  } catch { return []; }
+}
+
+function generateQuickDrill() {
+  const mistakes = selectDailyRetestItems(5);
+  const used = new Set(mistakes.map(m => m.item_id));
+  let review = selectQuickDrillReviewItems(10 - mistakes.length, used);
+  let picked = mistakes.concat(review);
+  if (picked.length < 10) {
+    // 错题不够 5 道、复习题也不够时，再从当日的错题候选里补（不重复）
+    const more = selectDailyRetestItems(10).filter(m => !used.has(m.item_id));
+    for (const m of more) {
+      if (picked.length >= 10) break;
+      picked.push(m);
+      used.add(m.item_id);
+    }
+  }
+  // 错题与复习题打散混排，不让孩子一眼看出哪几道是错题
+  for (let i = picked.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [picked[i], picked[j]] = [picked[j], picked[i]];
+  }
+  const steps = [];
+  let n = 0;
+  for (const it of picked) {
+    const built = buildReviewStep(it, ++n, Math.floor(Math.random() * 1000000000));
+    if (!built) { n--; continue; }
+    built.step.quick_drill = true;
+    steps.push(built);
+  }
+  return { steps, total: steps.length };
+}
+
+module.exports = { backfillFromHistory, backfillWrongToRetest, normalizeRetestQueueVersions, getPending, resolveRetest, isPendingRetest, IRREGULAR_ITEMS, COMPARATIVE_ITEMS, classifyKnowledgePoint, selectDailyRetestItems, generateDailyRetest, generateQuickDrill, loadOriginalStep };
