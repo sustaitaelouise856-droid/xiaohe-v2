@@ -2816,6 +2816,22 @@ function hasPendingReviews() { return getPendingReviews().length > 0; }
 // 规则：每天从错题本做10道，完全独立完成、不点老师教我；不足10道做完为止
 // 2026-10-15修：目标数按"今日开始时的待复测数"算，即 当前剩余 + 今日已完成，
 // 避免"越做目标越小"的 bug（之前用 Math.min(10, 当前剩余)，做3道后目标从10变7）
+// 每日错题目标冻结（2026-11-11修，反馈 id=34）：目标按“今日开始时的可做错题数”算，
+// 当天第一次算出后存 app_state（key 带日期），后面只读不重算——
+// 做题中新错的题不再把目标顶上去，否则孩子会觉得“每日闯关每次都会重置”。
+// doneToday 仍 live 计数；pending 仍 live 显示；只冻 target。
+function frozenDailyTarget(pending, doneToday) {
+  try {
+    const today = shanghaiDay();
+    const key = 'daily_target_' + today;
+    const row = db.prepare('SELECT value FROM app_state WHERE key=?').get(key);
+    if (row && /^\d+$/.test(String(row.value))) return parseInt(row.value, 10);
+    const target = Math.min(10, pending + doneToday);
+    db.prepare('INSERT OR REPLACE INTO app_state(key, value) VALUES(?, ?)').run(key, String(target));
+    return target;
+  } catch { return Math.min(10, pending + doneToday); }
+}
+
 function checkDailyMistakes() {
   try {
     retest.normalizeRetestQueueVersions();
@@ -2843,9 +2859,11 @@ function checkDailyMistakes() {
       const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
       pending = pr ? pr.c : 0;
     } catch {}
-    // 目标 = 今日开始时的可做错题数（当前剩余 + 今日已完成），最多10道
+    // 目标 = 今日开始时的可做错题数（当前剩余 + 今日已完成），最多10道；
+    // 2026-11-11修（反馈 id=34）：当天第一次算出后冻结，见 frozenDailyTarget——
+    // 做题中新错的题不再把目标顶上去（之前 7→8 就是这么涨的，孩子觉得“每日闯关每次都会重置”）。
     // 例：开始有8道，做3道后剩5道，目标仍是8（不是5），需做完8道
-    const target = Math.min(10, pending + doneToday);
+    const target = frozenDailyTarget(pending, doneToday);
     if (target <= 0) return true; // 没错题了，直接过
     return doneToday >= target;
   } catch { return false; }
@@ -2874,7 +2892,7 @@ function getDailyMistakeProgress() {
       const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
       pending = pr ? pr.c : 0;
     } catch {}
-    const target = Math.min(10, pending + done);
+    const target = frozenDailyTarget(pending, done);
     return { done, target, pending, ok: done >= target };
   } catch { return { done: 0, target: 10, pending: 0, ok: false }; }
 }
