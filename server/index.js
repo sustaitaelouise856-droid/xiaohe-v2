@@ -2932,7 +2932,22 @@ function lessonOpen(lid) {
   if (/^u[2-8]r\d+$/.test(lid) && !isReviewLesson(lid)) {
     try {
       const st = lessonState(lid);
-      const started = st && (st.p1_done === 1 || st.p2_done === 1);
+      let started = st && (st.p1_done === 1 || st.p2_done === 1);
+      // 2026-11-11修（反馈 id=33）：课上到一半不能再锁。抄答案（保底出口）会当场新增一条待复测，
+      // 当天目标 live+1（7→8），doneToday 不变，门禁会在下一题提交时把正在上的课重新锁死。
+      // “已开”认当天真实进度：p1/p2 完成，或今天已有作答/进度；只点开过（0/0、无进度无作答）仍算未开；
+      // 跨天续课仍走门禁（2026-10-13 只认 p1/p2 的口径不变，只补当天课中这一档）。
+      if (!started) {
+        try {
+          const today = shanghaiDay();
+          const at = db.prepare("SELECT 1 FROM attempts WHERE item_id LIKE ? AND date(created_at, '+8 hours')=? LIMIT 1").get(lid + '-v%', today);
+          if (at) started = true;
+          else {
+            const pr = db.prepare("SELECT 1 FROM progress WHERE lesson_id=? AND date(updated_at, '+8 hours')=? LIMIT 1").get(lid, today);
+            if (pr) started = true;
+          }
+        } catch {}
+      }
       if (!started) {
         // 2026-10-18修：错题门禁按"每天10道"（Elouise 10-15定），不是清完所有待复测；
         // 之前用 hasPendingReviews()（待复测>0就锁），导致 u5r1 被幽灵错题永久锁死（当晚事故）。
