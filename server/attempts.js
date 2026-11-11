@@ -29,6 +29,9 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   const item = db.prepare('SELECT * FROM items WHERE item_id=?').get(String(item_id || ''));
   if (!item) return { error: 'no_item' };
   const sid = String(session_id || '');
+  // 5 分钟快练（2026-11-11）：只练不记——快练会话只写 attempts 行，不进错题本、
+  // 不消错题、不动弱点小结（否则 copied 会经 backfillFromHistory 入队，门禁目标会被撑大）。
+  const isQuickDrill = sid.includes('quick-drill');
   const phase = item.phase || 'practice';
 
   // 2026-10-14彻底重构（Elouise要求）：helped 只认服务端记录，不再信任客户端 saw_feedback
@@ -93,31 +96,34 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
     r.detail = d;
     verdict = 'copied';
     finalHelped = 1;
-    db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
-      .run(item.item_id, sid, '看答案过');
-    // 复测闭环（2026-10-03）：copied 入复测队列，按失败维度记录知识点
-    try {
-      const dims = [];
-      if (d && Array.isArray(d.items)) {
-        for (const it of d.items) {
-          if (it.status === 'contradiction' || it.status === 'missing') {
-            dims.push(String(it.id || 'general'));
+    // 快练除外（见本函数顶部的 isQuickDrill）：看答案过不记弱点事件、不入复测队列
+    if (!isQuickDrill) {
+      db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
+        .run(item.item_id, sid, '看答案过');
+      // 复测闭环（2026-10-03）：copied 入复测队列，按失败维度记录知识点
+      try {
+        const dims = [];
+        if (d && Array.isArray(d.items)) {
+          for (const it of d.items) {
+            if (it.status === 'contradiction' || it.status === 'missing') {
+              dims.push(String(it.id || 'general'));
+            }
           }
         }
-      }
-      const kps = dims.length ? dims : ['general'];
-      for (const kp of kps) {
-        // 去重：同一题 pending 只留一条（2026-10-18修：不按knowledge_point区分，否则重复）
-        const ex = db.prepare(
-          "SELECT id FROM retest_queue WHERE item_id=? AND status='pending'"
-        ).get(item.item_id);
-        if (!ex) {
-          db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, source_session)
-            VALUES(?,?, 'pending', ?)`)
-            .run(item.item_id, kp, sid);
+        const kps = dims.length ? dims : ['general'];
+        for (const kp of kps) {
+          // 去重：同一题 pending 只留一条（2026-10-18修：不按knowledge_point区分，否则重复）
+          const ex = db.prepare(
+            "SELECT id FROM retest_queue WHERE item_id=? AND status='pending'"
+          ).get(item.item_id);
+          if (!ex) {
+            db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, source_session)
+              VALUES(?,?, 'pending', ?)`)
+              .run(item.item_id, kp, sid);
+          }
         }
-      }
-    } catch {}
+      } catch {}
+    }
   } else if (r.verdict === 'chinese') {
     // 中文答对：内容理解独立完成，英文书写记有帮助完成，并记弱点
     independent = 1;
@@ -149,7 +155,8 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   // 复测闭环（2026-10-03）：零帮助独立答对 → 解决待复测
   // verdict=correct/correct_retry 且 independent=1（无帮助）时，清除该题所有 pending 复测
   // 2026-10-16修：加 correct_retry——重做时答对 verdict 是 correct_retry，不是 correct（Elouise报告阻塞性bug）
-  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1) {
+  // 2026-11-11：快练除外——快练答对不消错题本（只练不记）。
+  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1 && !isQuickDrill) {
     try {
       db.prepare(`
         UPDATE retest_queue SET status='resolved', resolved_at=datetime('now')
@@ -159,7 +166,8 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   }
 
   // 课末弱点小结（2026-11-09）：独立答对 → 该知识点消退，后面课里不再重复出现
-  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1) {
+  // 2026-11-11：快练除外——快练答对不消弱点（只练不记）。
+  if ((verdict === 'correct' || verdict === 'correct_retry') && independent === 1 && !isQuickDrill) {
     try { require('./weakness').resolvePointOnClean(item); } catch {}
   }
 
