@@ -24,10 +24,13 @@ const attempts = require('./attempts');
 const review = require('./review');
 const retest = require('./retest');
 const exams = require('./exams');
+const weakness = require('./weakness');
 const seed = require('./seed');
 const { shanghaiDay } = require('./time');
 
 const app = express();
+app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
+app.use('/api/exam/speech', express.json({ limit: '6mb' })); // 2026-10-23：口语录音 base64 上传（单段上限 4MB），同上
 app.use(express.json({ limit: '256kb' }));
 app.set('trust proxy', false);
 
@@ -83,9 +86,13 @@ const NUDGE_MS = 5000;
 const LESSON_CACHE = {};
 // 练习课（练习模式）：正课全部学完后开放，可反复练（豁免防重做）
 function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
+// 每课巩固练（u6r1-consolidate 等）：可反复练（豁免防重做），错题进错题本，不计入每日 10 道门禁（2026-11-01）
+// 2026-11-04 补：u3-consolidate 同属巩固练，lessonOf 修好后它的步骤能被找到，
+// 防重做豁免必须同样覆盖它，否则学完一轮后无法再练（此前步骤找不到、检查被跳过才没暴露）。
+function isConsolidateLesson(lid) { return /^(u[2-8]r\d+-consolidate|u3-consolidate)$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u[2-6]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
+  if (!/^(?:u[2-8]r\d+-consolidate|u[2-8]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -99,8 +106,12 @@ function loadLesson(lessonId) {
   return LESSON_CACHE[lid];
 }
 // 从 item_id 反查 lesson_id（格式如 u2r2-v1-s10）
+// 2026-11-04 修：旧正则 [a-z0-9]+ 含不了连字符，u*-consolidate / yw-* 的题号
+// 全部返回 null，导致这些课的 /api/help 与 /api/attempt 拿不到步骤、帮助与反馈全空
+// （隔离验证发现：孩子 11-03 在 u6r1-consolidate s2 点帮助只拿到空）。改贪婪 .+，
+// 取最后一个 -v<版>-s<步> 之前的全部当前缀，与 1430/1464 行的解析口径一致。
 function lessonOf(itemId) {
-  const m = /^([a-z0-9]+)-v\d+-s\d+$/i.exec(String(itemId || ''));
+  const m = /^(.+)-v\d+-s\d+$/i.exec(String(itemId || ''));
   return m ? m[1] : null;
 }
 // 逻辑题号：去掉 -v<版本>-，同一道题跨版本算同一题（u2r2-v1-s5 与 u2r2-v3-s5 同题）。
@@ -149,7 +160,7 @@ function lessonAgg(lid) {
   let weak = db.prepare(
     'SELECT DISTINCT tag FROM weakness_events WHERE item_id LIKE ?'
   ).all(lid + '-%').map(r => r.tag);
-  // 语文课过滤（2026-11-10）：英文书写/分清新旧通知/把时间地点写全是英语课概念
+  // 语文课过滤（2026-11-10）：英文书写/分清新旧通知/把时间地点写全是英语课概念，语文课总结里不显示
   if (/^yw-/.test(lid)) weak = weak.filter(t => !['英文书写', '分清新旧通知', '把时间地点写全', 'old_info', 'omission'].includes(t));
   const totalMs = db.prepare(
     'SELECT COALESCE(SUM(elapsed_ms),0) AS ms FROM attempts WHERE item_id LIKE ?'
@@ -376,6 +387,8 @@ app.get('/api/summary', auth.requireAuth, (req, res) => {
 // 学会了什么（独立/有帮助完成数）、哪里还弱（弱点译成给家长看的话）、用了多久。
 // 聚合口径与 /api/summary?lesson= 一致（版本归一化）。
 const WEAK_PARENT = { old_info: '分清新旧通知', spelling: '单词拼写', omission: '把时间地点写全' };
+const WEAK_PARENT_SX = { old_info: '审题看条件', spelling: '计算准确性', omission: '步骤写完整' };
+const WEAK_PARENT_YW = { old_info: '分清新旧信息', spelling: '字词书写', omission: '要点写全' };
 app.get('/api/parent-report', auth.requireAuth, (req, res) => {
   const lid = String(req.query.lesson || '');
   if (!lid || !validLesson(lid)) return badLesson(res);
@@ -396,10 +409,9 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
     if (w in byWeak) byWeak[w]++;
   }
   const weaknesses = [];
+  const WP = /^sx-/.test(lid) ? WEAK_PARENT_SX : (/^yw-/.test(lid) ? WEAK_PARENT_YW : WEAK_PARENT);
   for (const w of ['old_info', 'spelling', 'omission']) {
-    // 语文课过滤（2026-10-19）：old_info(分清新旧通知)/omission(把时间地点写全)是英语课概念
-    if (/^yw-/.test(lid) && (w === 'old_info' || w === 'omission')) continue;
-    if (byWeak[w] > 0) weaknesses.push(WEAK_PARENT[w]);
+    if (byWeak[w] > 0) weaknesses.push(WP[w]);
   }
   for (const t of agg.weaknesses) {
     // 语文课过滤（2026-10-18）："英文书写"是英语课概念，yw- 课不显示
@@ -428,6 +440,20 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
     independent: agg.independent, helped: agg.helped, items: agg.items,
     weaknesses: weaknesses.slice(0, 3), minutes, sentence,
   });
+});
+
+// 课末弱点小结（2026-11-09，Idea：每节课末说清哪一点没学会）：
+// 只用当节课自己的答错和求助记录；无错漏时 points 为空，前端不写弱点。
+app.get('/api/lesson-weakness', auth.requireAuth, (req, res) => {
+  const lid = String(req.query.lesson || '');
+  if (!lid || !validLesson(lid)) return badLesson(res);
+  try {
+    const out = weakness.computeLessonWeakness({ db, lid, loadLesson, contentDir: seed.contentDir() });
+    res.json({ ok: true, lesson: out.lesson, title: out.title, points: out.points, total_weak_items: out.total_weak_items });
+  } catch (e) {
+    console.log('[lesson-weakness] error:', e && e.message);
+    res.status(500).json({ ok: false, error: 'weakness_error' });
+  }
 });
 
 // 改访问码（需已登录 + 现码验证）：换码同时轮换 Cookie 签名密钥，老 Cookie 立即失效，
@@ -514,6 +540,29 @@ app.post('/api/complete', auth.requireAuth, (req, res) => {
   res.json({ ok: true, consolidationPassed, newTitles });
 });
 
+// 2026-11-02 Elouise：U7/U8 单词称号——词表以 public/words/unit7.json、unit8.json 的 en 字段为准
+// 词表稳定，硬编码防漂移；改词表时须同步此处，否则称号计数会漏词。
+const UNIT7_WORDS = ['regularly', 'repeat', 'note', 'visual', 'mentally', 'link', 'list', 'especially', 'diet', 'maintain', 'nut', 'relax', 'stressed', 'tend', 'normal', 'loss', 'fork', 'onion', 'ant', 'context', 'image', 'sense', 'summary', 'contain', 'particular', 'chemistry', 'flash card', 'make a point of doing something', 'last but not least', 'natural disaster', 'figure out'];
+const UNIT8_WORDS = ['attack', 'faithful', 'hold', 'responsible', 'awake', 'flat', 'choice', 'advise', 'cause', 'complain', 'litter', 'unlikely', 'relieve', 'indoors', 'magical', 'wealth', 'queen', 'servant', 'pride', 'among', 'relationship', 'grow up', 'care for', 'in short', 'have no choice but to do', 'run free', 'lie around', 'complain about', 'in addition', 'catch the eye of somebody'];
+const UNIT78_WORDS = [...UNIT7_WORDS, ...UNIT8_WORDS];
+
+// 达到掌握级（4级）的词数（word_mastery.word 与词表 en 字段原文比对，含短语）
+function countMasteredUnitWords(words) {
+  try {
+    const placeholders = words.map(() => '?').join(',');
+    const r = db.prepare(`SELECT COUNT(*) c FROM word_mastery WHERE level>=4 AND word IN (${placeholders})`).get(...words);
+    return r ? r.c : 0;
+  } catch { return 0; }
+}
+
+// 已完成某单元的巩固练节数（巩固课未上线时为 0，不触发）
+function countDoneConsolidate(unit) {
+  try {
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE ?").get(`u${unit}r%-consolidate`);
+    return r ? r.c : 0;
+  } catch { return 0; }
+}
+
 // 称号列表：返回全部称号定义 + 已获得状态
 // 2026-10-18 史诗级：称号进度计算（供 /api/titles 和 checkTitles 共用）
 function getTitleProgressMap() {
@@ -525,7 +574,7 @@ function getTitleProgressMap() {
     progressData.questions = qCount ? qCount.c : 0;
     const qcCount = db.prepare("SELECT COUNT(*) as c FROM attempts WHERE correct=1").get();
     progressData.correct = qcCount ? qcCount.c : 0;
-    const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+    const cCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%'").get();
     progressData.courses = cCount ? cCount.c : 0;
     const wCount = db.prepare("SELECT COUNT(*) as c FROM word_mastery WHERE level>=4").get();
     progressData.words = wCount ? wCount.c : 0;
@@ -535,7 +584,7 @@ function getTitleProgressMap() {
     progressData.challenge = chCount ? chCount.c : 0;
     const rCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id LIKE '%review%'").get();
     progressData.review = rCount ? rCount.c : 0;
-    const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
+    const weCount = db.prepare("SELECT COUNT(*) as c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0', '6')").get();
     progressData.weekend = weCount ? weCount.c : 0;
     progressData.minutes = (progressData.questions || 0) * 1.5;
   } catch (e) {}
@@ -583,6 +632,11 @@ function getTitleProgressMap() {
     'minutes_900': { current: Math.floor(progressData.minutes || 0), target: 900 },
     'minutes_1800': { current: Math.floor(progressData.minutes || 0), target: 1800 },
     'minutes_3600': { current: Math.floor(progressData.minutes || 0), target: 3600 },
+    'word_u7_master': { current: countMasteredUnitWords(UNIT7_WORDS), target: 31 },
+    'word_u8_master': { current: countMasteredUnitWords(UNIT8_WORDS), target: 30 },
+    'word_u78_master': { current: countMasteredUnitWords(UNIT78_WORDS), target: 61 },
+    'unit7_consolidation': { current: countDoneConsolidate(7), target: 5 },
+    'unit8_consolidation': { current: countDoneConsolidate(8), target: 5 },
   };
 }
 
@@ -767,6 +821,43 @@ const TITLE_DEFS = [
   {
     id: 'unit6_conqueror', name: 'Unit 6 征服者', icon: '🏛️',
     desc: 'u6r1-u6r5全部完成，平均正确率≥80%', cat: '学业', rarity: '史诗' },
+  // 2026-11-02 Elouise要求：U7/U8 称号（课程+单词+巩固练）
+  {
+    id: 'conditional_master', name: '条件句高手', icon: '🔀',
+    desc: 'u7r1-u7r5全部完成，平均正确率≥80%', cat: '学业', rarity: '稀有' },
+  {
+    id: 'unit7_conqueror', name: 'Unit 7 征服者', icon: '🧠',
+    desc: '完成 Unit 7 全部课程（记忆主题）', cat: '学业', rarity: '史诗' },
+  {
+    id: 'adverb_master', name: '副词达人', icon: '🌀',
+    desc: 'u8r1-u8r5全部完成，平均正确率≥80%', cat: '学业', rarity: '稀有' },
+  {
+    id: 'unit8_conqueror', name: 'Unit 8 征服者', icon: '🐾',
+    desc: '完成 Unit 8 全部课程（宠物主题）', cat: '学业', rarity: '史诗' },
+  {
+    id: 'units78_conqueror', name: '双单元征服者', icon: '👑',
+    desc: 'u7r1-u7r5 与 u8r1-u8r5 全部完成，平均正确率≥80%', cat: '学业', rarity: '史诗' },
+  {
+    id: 'word_u7_master', name: 'U7 单词通', icon: '📝',
+    desc: 'Unit 7 全部 31 个词达到掌握级', cat: '探索', rarity: '稀有' },
+  {
+    id: 'word_u8_master', name: 'U8 单词通', icon: '📝',
+    desc: 'Unit 8 全部 30 个词达到掌握级', cat: '探索', rarity: '稀有' },
+  {
+    id: 'word_u78_master', name: '单词双通', icon: '📚',
+    desc: 'Unit 7 + Unit 8 共 61 个词全部达到掌握级', cat: '探索', rarity: '史诗' },
+  {
+    id: 'unit7_consolidation', name: 'U7 巩固达人', icon: '🔄',
+    desc: '完成 Unit 7 全部 5 节巩固练', cat: '学业', rarity: '普通' },
+  {
+    id: 'unit7_consolidation_master', name: 'U7 巩固高手', icon: '🏅',
+    desc: 'Unit 7 巩固练平均独立正确率≥85% 且零求助', cat: '突破', rarity: '稀有' },
+  {
+    id: 'unit8_consolidation', name: 'U8 巩固达人', icon: '🔄',
+    desc: '完成 Unit 8 全部 5 节巩固练', cat: '学业', rarity: '普通' },
+  {
+    id: 'unit8_consolidation_master', name: 'U8 巩固高手', icon: '🏅',
+    desc: 'Unit 8 巩固练平均独立正确率≥85% 且零求助', cat: '突破', rarity: '稀有' },
   // 2026-10-14 Elouise要求：错题成就（2026-10-14 19:05加难度：太容易，提10-20倍）
   {
     id: 'mistake_slayer', name: '错题克星', icon: '🗡️',
@@ -776,7 +867,7 @@ const TITLE_DEFS = [
     desc: '从错题本重做20道题并答对', cat: '探索', rarity: '普通' },
   {
     id: 'daily_challenger', name: '闯关达人', icon: '🎯',
-    desc: '完成3次每日闯关', cat: '坚持', rarity: '稀有' },
+    desc: '完成3次每日闯关', cat: '坚持', rarity: '普通' },
   // 2026-10-15 Elouise要求：连闯/签到系列称号
   {
     id: 'challenge_streak_7', name: '连闯七天', icon: '🔥',
@@ -823,8 +914,8 @@ const TITLE_DEFS = [
   // ——— 做完课程数（4） ———
   { id: 'courses_5', name: '初涉课堂', icon: '🚪', desc: '累计完成5节课', cat: '学业', rarity: '普通' },
   { id: 'courses_10', name: '学有所成', icon: '📖', desc: '累计完成10节课', cat: '学业', rarity: '稀有' },
-  { id: 'courses_15', name: '学富五车', icon: '🎒', desc: '累计完成15节课', cat: '学业', rarity: '史诗' },
-  { id: 'courses_20', name: '全部征服', icon: '🏆', desc: '累计完成20节课', cat: '传奇', rarity: '传说' },
+  { id: 'courses_15', name: '学富五车', icon: '🎒', desc: '累计完成15节课', cat: '学业', rarity: '稀有' },
+  { id: 'courses_20', name: '全部征服', icon: '🏆', desc: '累计完成20节课', cat: '传奇', rarity: '史诗' },
   // 2026-10-16 Elouise要求：加4个累计学习分钟数成就 + 10个其他新成就
   // ——— 累计学习分钟数（4） ———
   { id: 'minutes_60', name: '初涉学海', icon: '⏱️', desc: '累计学习60分钟', cat: '坚持', rarity: '普通' },
@@ -841,7 +932,7 @@ const TITLE_DEFS = [
   { id: 'morning_1', name: '早起鸟', icon: '🌅', desc: '早上7点前完成一节课', cat: '坚持', rarity: '普通' },
   { id: 'night_1', name: '夜读星', icon: '🌙', desc: '晚上22点后完成一节课', cat: '坚持', rarity: '普通' },
   { id: 'weekend_50', name: '周末学霸', icon: '📅', desc: '周末累计完成50节课', cat: '坚持', rarity: '普通' },
-  { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无拼写错误', cat: '突破', rarity: '普通' },
+  { id: 'no_typo_50', name: '火眼金睛', icon: '👁️', desc: '连续50道题无错误', cat: '突破', rarity: '普通' },
 
   // 2026-10-17 Elouise：补齐到80个——等级制+新类别
   { id: 'streak_30', name: '连对大师', icon: '🔥', desc: '连续答对30道（零求助）', cat: '突破', rarity: '普通' },
@@ -858,7 +949,7 @@ const TITLE_DEFS = [
   { id: 'night_7', name: '夜读习惯', icon: '🌙', desc: '7天晚上22点后学习', cat: '坚持', rarity: '普通' },
   { id: 'daily_7', name: '闯关一周', icon: '🎯', desc: '完成7天每日闯关', cat: '坚持', rarity: '普通' },
   { id: 'daily_30', name: '闯关一月', icon: '🏆', desc: '完成30天每日闯关', cat: '坚持', rarity: '普通' },
-  { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无拼写错误', cat: '突破', rarity: '普通' },
+  { id: 'no_typo_100', name: '火眼金睛·金', icon: '👁️', desc: '连续100道无错误', cat: '突破', rarity: '普通' },
   { id: 'help_free_20', name: '独立20连', icon: '🚀', desc: '连续20道零求助', cat: '突破', rarity: '普通' },
   { id: 'weekend_100', name: '周末战神', icon: '⚔️', desc: '周末累计完成100节课', cat: '坚持', rarity: '普通' },
   { id: 'midnight_oil', name: '夜猫子', icon: '🦉', desc: '凌晨0-5点完成学习（隐藏）', cat: '传奇', rarity: '普通' },
@@ -869,7 +960,7 @@ const TITLE_DEFS = [
   { id: 'explorer', name: '探索者', icon: '🧭', desc: '使用过全部4种单词模式', cat: '探索', rarity: '普通' },
   { id: 'social', name: '分享达人', icon: '💌', desc: '分享学习报告给家长（隐藏）', cat: '传奇', rarity: '普通' },
   { id: 'lucky_7', name: '幸运七', icon: '🍀', desc: '7月7日完成学习（隐藏）', cat: '传奇', rarity: '普通' },
-  { id: 'century', name: '百年大计', icon: '💯', desc: '累计答对1000道题', cat: '学业', rarity: '普通' },
+  { id: 'century', name: '百年大计', icon: '💯', desc: '累计答对1000道题', cat: '学业', rarity: '传说' },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -980,6 +1071,47 @@ function checkTitles() {
   unitConqueror(5, 'present_perfect_master');
   unitConqueror(5, 'unit5_conqueror');
   unitConqueror(6, 'unit6_conqueror');
+  // 2026-11-02 Elouise要求：U7/U8 课程称号（与 U4/U5/U6 同口径：五节全完成 + 平均独立正确率≥80%）
+  unitConqueror(7, 'conditional_master');
+  unitConqueror(7, 'unit7_conqueror');
+  unitConqueror(8, 'adverb_master');
+  unitConqueror(8, 'unit8_conqueror');
+  // 双单元征服者：U7+U8 十课全完成，平均独立正确率≥80%
+  try {
+    const lids = [1, 2, 3, 4, 5].flatMap(i => [`u7r${i}`, `u8r${i}`]);
+    if (lids.every(lessonDone)) {
+      let sum = 0, n = 0;
+      for (const lid of lids) {
+        const s = lessonIndependentRate(lid);
+        if (s.count > 0) { sum += s.rate; n++; }
+      }
+      if (n > 0 && sum / n >= 0.80) grant('units78_conqueror');
+    }
+  } catch {}
+  // U7/U8 单词：全部达到掌握级（4级）
+  try {
+    if (countMasteredUnitWords(UNIT7_WORDS) >= 31) grant('word_u7_master');
+    if (countMasteredUnitWords(UNIT8_WORDS) >= 30) grant('word_u8_master');
+    if (countMasteredUnitWords(UNIT78_WORDS) >= 61) grant('word_u78_master');
+  } catch {}
+  // U7/U8 巩固练：5 节全完成 / 平均独立正确率≥85% 且零求助（巩固课未上线时自然不触发）
+  const consolidateMaster = (unit, titleId) => {
+    try {
+      const lids = [1, 2, 3, 4, 5].map(i => `u${unit}r${i}-consolidate`);
+      if (!lids.every(lessonDone)) return;
+      let sum = 0, n = 0, helpedAny = false;
+      for (const lid of lids) {
+        const s = lessonIndependentRate(lid);
+        if (s.count > 0) { sum += s.rate; n++; }
+        helpedAny = helpedAny || s.helpedAny;
+      }
+      if (n > 0 && !helpedAny && sum / n >= 0.85) grant(titleId);
+    } catch {}
+  };
+  try { if (countDoneConsolidate(7) >= 5) grant('unit7_consolidation'); } catch {}
+  try { if (countDoneConsolidate(8) >= 5) grant('unit8_consolidation'); } catch {}
+  consolidateMaster(7, 'unit7_consolidation_master');
+  consolidateMaster(8, 'unit8_consolidation_master');
   // 2026-10-14 Elouise要求：错题成就
   // 1. 错题克星：累计 resolved 100道待复测（零帮助独立答对才会计入 resolved）——2026-10-14 19:05加难度（10倍）
   try {
@@ -1051,7 +1183,7 @@ function checkTitles() {
   } catch {}
   // ——— 做完课程数 ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%'").get();
     const cc = r ? r.c : 0;
     if (cc >= 5) grant('courses_5');
     if (cc >= 10) grant('courses_10');
@@ -1111,17 +1243,17 @@ function checkTitles() {
   // ——— 早起鸟：早上7点前完成学习 ———
   // ——— 早起鸟：早上7点前完成一节课（2026-10-17 Elouise：按完成课程数） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r && r.c >= 1) grant('morning_1');
   } catch {}
   // ——— 夜读星：晚上22点后完成一节课 ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r && r.c >= 1) grant('night_1');
   } catch {}
   // ——— 周末学霸：周末累计完成50节课（2026-10-17 Elouise：按完成课程数，不是答题数） ———
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
     if (r && r.c >= 50) grant('weekend_50');
   } catch {}
   // ——— 火眼金睛：连续50道题无拼写错误 ———
@@ -1183,9 +1315,9 @@ function checkTitles() {
   } catch {}
   // 早起7次/夜读7次（按天去重，2026-10-17：按完成课程数）
   try {
-    const r1 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
+    const r1 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) < 7").get();
     if (r1 && r1.c >= 7) grant('morning_7');
-    const r2 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
+    const r2 = db.prepare("SELECT COUNT(DISTINCT date(updated_at, '+8 hours')) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) >= 22").get();
     if (r2 && r2.c >= 7) grant('night_7');
   } catch {}
   // 闯关7/30天
@@ -1210,17 +1342,17 @@ function checkTitles() {
   } catch {}
   // 周末100次
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND strftime('%w', datetime(updated_at, '+8 hours')) IN ('0','6')").get();
     if (r && r.c >= 100) grant('weekend_100');
   } catch {}
   // 凌晨0-5点（隐藏，2026-10-17：按完成课程数）
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 0 AND 4").get();
     if (r && r.c >= 1) grant('midnight_oil');
   } catch {}
   // 早上5-6点（隐藏）
   try {
-    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
+    const r = db.prepare("SELECT COUNT(*) c FROM lesson_state WHERE p1_done=1 AND p2_done=1 AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%' AND CAST(strftime('%H', datetime(updated_at, '+8 hours')) AS INTEGER) BETWEEN 5 AND 5").get();
     if (r && r.c >= 1) grant('first_light');
   } catch {}
   // 单日120分钟
@@ -1291,6 +1423,27 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
   // 以后更新孩子直接刷新页面就行，永远不需要清缓存/强制刷新
   res.set('Cache-Control', 'no-store');
   const qlid = String(req.query.lesson || 'u2r1');
+  // 5 分钟快练（2026-11-11 Elouise 批准，试 3–4 晚）：虚拟课程，10 道题，
+  // 错题 + 复习题混着来，每组现取现洗；只练不记——不走门禁、不调 /api/complete、
+  // 不写打卡、不判称号、不动错题本（隔离见 attempts.js 与门禁查询的 quick-drill 排除）。
+  if (qlid === 'quick-drill') {
+    const gen = retest.generateQuickDrill();
+    if (!gen.steps.length) return res.status(404).json({ ok: false, error: 'no_items' });
+    const choices = {};
+    const steps = gen.steps.map((g, idx) => {
+      const pub = publicStep(g.step, g.origLessonId, g.origVersion, choices);
+      pub.step = idx + 1;
+      pub.quick_drill = true;
+      pub.knowledge_point = g.knowledge_point;
+      return pub;
+    });
+    return res.json({
+      lesson_id: 'quick-drill', version: 1, title: '5 分钟快练',
+      home_subtitle: '10 道题，5 分钟，做完立刻看到分',
+      practice_end: steps.length, part1_desc: '', part2_desc: '',
+      steps, quick_drill: true,
+    });
+  }
   // 每日闯关（2026-10-14）：虚拟课程，画像驱动动态选题，不走文件和门禁
   if (qlid === 'daily-retest') {
     // 回填漏网错题，保证选题池最新
@@ -1403,6 +1556,8 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     kicker_story: L.lesson.kicker_story || '',
     kicker_teach: L.lesson.kicker_teach || '',
     answer_placeholder: L.lesson.answer_placeholder || '',
+    // 2026-11-01：正课有无对应巩固练（前端完成页显示入口）
+    has_consolidate: /^(u[2-8]r\d+)$/.test(lid) ? fs.existsSync(path.join(seed.contentDir(), `lesson-${lid}-consolidate.json`)) : false,
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
     // 2026-10-14：u3-consolidate 过关状态（供前端显示"重新挑战"）
     consolidation_passed: lid === 'u3-consolidate' ? (() => {
@@ -1454,6 +1609,7 @@ app.post('/api/progress', auth.requireAuth, (req, res) => {
 // 复测闭环（2026-10-03）：待复测列表与解决
 app.get('/api/retest/pending', auth.requireAuth, (req, res) => {
   // 每次查询时顺带回填历史，确保 h 上线前的"看答案过"记录可被读取
+  retest.normalizeRetestQueueVersions();
   retest.backfillFromHistory();
   // 2026-10-14补画像：多次答错（2+次）但未进队列的也回填
   retest.backfillWrongToRetest();
@@ -1464,6 +1620,7 @@ app.get('/api/daily-retest/status', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     retest.backfillWrongToRetest();
+    retest.normalizeRetestQueueVersions();
     const items = retest.selectDailyRetestItems(8);
     const today = shanghaiDay();
     // 今日是否已通关：checkins 有今天，且今天做过 daily-retest 的题
@@ -1533,15 +1690,24 @@ app.post('/api/daily-retest/complete', auth.requireAuth, (req, res) => {
 app.post('/api/consolidation/retry', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
-    db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id='u3-consolidate'").run();
-    db.prepare("DELETE FROM progress WHERE lesson_id='u3-consolidate'").run();
-    startConsolidationSession();
+    // 2026-11-01：支持每课巩固练（body.lesson_id），缺省仍为 u3-consolidate（兼容旧前端调用）
+    const body = req.body || {};
+    const target = body.lesson_id ? String(body.lesson_id) : 'u3-consolidate';
+    if (target !== 'u3-consolidate' && !isConsolidateLesson(target)) {
+      return res.json({ ok: false, error: 'bad_lesson' });
+    }
+    db.prepare("UPDATE lesson_state SET p1_done=0, p2_done=0, updated_at=datetime('now') WHERE lesson_id=?").run(target);
+    db.prepare("DELETE FROM progress WHERE lesson_id=?").run(target);
+    if (target === 'u3-consolidate') startConsolidationSession();
     res.json({ ok: true });
   } catch (e) { res.json({ ok: false, error: e.message }); }
 });
 // 单元测验卷（2026-10-12）：广州新中考140分制
 exams.setDb(db);
 exams.initTable();
+exams.initProgressTable();
+exams.initSpeechTable();
+exams.initWritingTable();
 app.get('/api/exams', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, exams: exams.getExamList() });
@@ -1567,10 +1733,126 @@ app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
   // 2026-10-12改：服务端判分，不再信任前端传来的score
   const { exam_id, answers } = req.body || {};
   if (!exam_id) return res.status(400).json({ ok: false, error: 'no_exam_id' });
-  const g = exams.gradeExam(String(exam_id), answers || {});
+  const finalAnswers = Object.assign({}, answers || {});
+  // 2026-10-22：课程式卷子（exam-u2）交卷时以服务端逐题存档为准合并，防止前端状态丢失漏题；其他卷无存档、行为不变
+  if (exams.isCourseStyle(String(exam_id))) {
+    const saved = exams.getProgressAnswers(String(exam_id));
+    Object.keys(saved).forEach(k => { finalAnswers[k] = saved[k]; });
+  }
+  const g = exams.gradeExam(String(exam_id), finalAnswers);
   if (!g.ok) return res.status(400).json({ ok: false, error: g.error });
-  const ok = exams.saveScore(String(exam_id), g.score, g.detail, answers || {});
-  res.json({ ok, score: g.score, total_objective: g.total_objective, pending: g.pending, detail: g.detail });
+  const ok = exams.saveScore(String(exam_id), g.score, g.detail, finalAnswers);
+  if (ok && exams.isCourseStyle(String(exam_id))) exams.clearProgress(String(exam_id));
+  // 2026-10-23：主观题若在交卷前已被批改（录音先批、或重交），落库后立刻回填，响应以存档成绩为准；
+  // 无批改时回填重算结果与 gradeExam 完全一致，applied=false，响应不变。
+  let outScore = g.score, outDetail = g.detail, outPending = g.pending;
+  if (ok) {
+    const ap = exams.applySubjectiveGrades(String(exam_id));
+    if (ap && ap.applied) {
+      const latest = exams.getLatestScore(String(exam_id));
+      if (latest && latest.ok) {
+        outScore = latest.score;
+        outDetail = latest.detail;
+        outPending = latest.detail.filter(d => d.status === 'pending')
+          .map(d => ({ qid: d.qid, type: d.type, max: d.max, num: d.num }));
+      }
+    }
+  }
+  res.json({ ok, score: outScore, total_objective: g.total_objective, pending: outPending, detail: outDetail });
+});
+// 课程式逐题作答（2026-10-22，仅 exam-u2）：答完一题立即判分并存档，支撑立即反馈与中途续答
+app.post('/api/exam/answer', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const { exam_id, qid, given, elapsed } = req.body || {};
+  if (!exam_id || !qid) return res.status(400).json({ ok: false, error: 'bad_request' });
+  if (!exams.isCourseStyle(String(exam_id))) return res.status(400).json({ ok: false, error: 'not_course_style' });
+  const m = String(exam_id).match(/exam-u(\d)/);
+  if (m && !exams.isUnitDone(parseInt(m[1]))) return res.status(403).json({ ok: false, error: 'locked' });
+  const r = exams.saveAnswer(String(exam_id), String(qid), given, elapsed);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+// 课程式进度读取（续答用）
+app.get('/api/exam/progress/:id', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const r = exams.getProgress(req.params.id);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+
+// 口语录音留存（2026-10-23）：录音本体以 BLOB 存库，跟着数据库一起被备份链带走。
+// 学生录完一段就立刻上传存好，服务器确认后前端才标"已录音"；同题重录覆盖并清空旧批改。
+app.post('/api/exam/speech', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const b = req.body || {};
+  const exam_id = String(b.exam_id || ''), qid = String(b.qid || '');
+  let b64 = String(b.audio_b64 || '');
+  const di = b64.indexOf('base64,');
+  if (di >= 0) b64 = b64.slice(di + 7); // 兼容 data URL 前缀（前端一般已剥掉）
+  if (!exam_id || !qid || !b64) return res.status(400).json({ ok: false, error: 'bad_request' });
+  if (b64.length > 4 * 1024 * 1024) return res.status(413).json({ ok: false, error: 'too_large' });
+  const buf = Buffer.from(b64, 'base64');
+  if (!buf.length) return res.status(400).json({ ok: false, error: 'empty_audio' });
+  const dur = Number(b.duration_sec);
+  const r = exams.saveSpeech(exam_id, qid, String(b.mime || '').slice(0, 128) || null, buf, isFinite(dur) && dur > 0 ? dur : null);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+// 管理：口语录音列表（不含录音本体，未批改排前面）。鉴权照 /api/admin/feedback：备份 token。
+app.get('/api/admin/speech', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  const r = exams.listSpeech();
+  if (!r.ok) return res.status(500).json(r);
+  res.json(r);
+});
+// 管理：试听一段录音（按存档 mime 返回 BLOB 本体）
+app.get('/api/admin/speech/:id/audio', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  const r = exams.getSpeechAudio(req.params.id);
+  if (!r.ok) return res.status(404).json(r);
+  res.set('Content-Type', r.mime);
+  res.send(Buffer.from(r.audio));
+});
+// 管理：给一段录音写批改分数与评语（分期批改的落点；给分后经 applySubjectiveGrades 回填卷面总分）
+app.post('/api/admin/speech/grade', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  const b = req.body || {};
+  const r = exams.gradeSpeech(b.id, b.score, b.note);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
+});
+// 管理：待批改作文列表（各卷最新成绩行里的 writing 题，带作文全文，未批排前）。鉴权同 speech：备份 token。
+app.get('/api/admin/writing/pending', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  const r = exams.listWritingPending();
+  if (!r.ok) return res.status(500).json(r);
+  res.json(r);
+});
+// 管理：给一篇作文写批改分数与评语（分期批改的落点；给分后回填卷面总分，不开页面录分入口）
+app.post('/api/admin/writing/grade', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  const b = req.body || {};
+  const r = exams.gradeWriting(String(b.exam_id || ''), String(b.qid || ''), b.score, b.note);
+  if (!r.ok) return res.status(400).json(r);
+  res.json(r);
 });
 // 真正的错题本（2026-10-12）：返回每道错题的原题、孩子答案、正确答案
 app.get('/api/mistakes', auth.requireAuth, (req, res) => {
@@ -1579,16 +1861,21 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
     // 取最近答错的题（含看答案过、粘贴等）
     // 2026-10-13修：items表没有question_json列，改用prompt/answer列
     // 2026-10-15 Elouise：去重，同一题（忽略版本号）只留最后一次答错
-    // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取100条再 JS 去重
+    // 2026-10-15修：按 logicalItemId 去重（v1/v2 算同一题），SQL 取500条再 JS 去重
+    // 2026-10-20修：items表没有 knowledge_point 列（之前 i.knowledge_point 导致整端点抛错、错题本一直显示空），改从 retest_queue 取
+    // 2026-10-20 Elouise：做错过的永久保留不消失，每条带 status（pending 待复测 / resolved 已掌握），pending 在前
+    // 2026-10-20 Elouise 学科分离：错题本只显示英语题，排除 yw-（语文）/sx（数学）
     const rows = db.prepare(`
       SELECT a.item_id, a.answer_given, a.verdict, a.created_at, a.detail_json,
-             i.prompt, i.answer, i.lesson_id, i.knowledge_point,
+             i.prompt, i.answer, i.lesson_id,
+             (SELECT q.knowledge_point FROM retest_queue q WHERE q.item_id=a.item_id ORDER BY q.id DESC LIMIT 1) as knowledge_point,
              (SELECT COUNT(*) FROM attempts a2 WHERE a2.item_id=a.item_id AND a2.correct=0) as wrong_count
       FROM attempts a
       LEFT JOIN items i ON a.item_id = i.item_id
       WHERE a.correct = 0
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
       ORDER BY a.created_at DESC
-      LIMIT 100
+      LIMIT 500
     `).all();
     // 按 logicalItemId 去重，只保留每题最新的一条
     const seen = new Set();
@@ -1598,7 +1885,6 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
       if (seen.has(key)) continue;
       seen.add(key);
       deduped.push(r);
-      if (deduped.length >= 50) break;
     }
     const mistakes = deduped.map(r => {
       let detail = null;
@@ -1622,27 +1908,33 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         wrong_count: r.wrong_count || 1,
       };
     });
-    // 2026-10-14：过滤掉已解决的（retest_queue.status='resolved'），它们进"最近拿下"
-    // 2026-10-15修：只有"无 pending 记录"的才算真正攻克；有 pending 的（即使也有 resolved）仍留在"正在攻克"
-    let filtered = mistakes;
+    // 2026-10-20 Elouise：保留不消失。做错过的都在 mistakes 里，每条带 status：
+    //   pending=待复测（含未进复测队列的错题），resolved=已攻克（重做答对进队列 resolved 且无 pending）
     let resolvedList = [];
     try {
-      const pendingIds = new Set(
-        db.prepare("SELECT item_id FROM retest_queue WHERE status='pending'").all().map(r => r.item_id)
-      );
-      // 正在攻克：mistakes 里去掉"已解决且无待处理"的
+      // 只有"无 pending 记录"的才算真正攻克；有 pending 的（即使也有 resolved）仍算待复测
       const fullyResolvedIds = new Set(
         db.prepare(`
           SELECT item_id FROM retest_queue WHERE status='resolved'
           AND item_id NOT IN (SELECT item_id FROM retest_queue WHERE status='pending')
         `).all().map(r => r.item_id)
       );
-      filtered = mistakes.filter(m => !fullyResolvedIds.has(m.item_id));
+      const resolvedAtMap = new Map(
+        db.prepare("SELECT item_id, MAX(resolved_at) AS ra FROM retest_queue WHERE status='resolved' GROUP BY item_id")
+          .all().map(r => [r.item_id, r.ra])
+      );
+      for (const m of mistakes) {
+        m.status = fullyResolvedIds.has(m.item_id) ? 'resolved' : 'pending';
+        if (m.status === 'resolved') m.resolved_at = resolvedAtMap.get(m.item_id) || '';
+      }
+      // pending 在前，resolved 在后；组内保持最近答错优先
+      mistakes.sort((a, b) => (a.status === b.status ? 0 : a.status === 'pending' ? -1 : 1));
       // 已攻克列表：有 resolved 且无 pending 的，按 resolved_at 倒序，取最近20
       const rRows = db.prepare(`
         SELECT q.item_id, MAX(q.resolved_at) as resolved_at, i.prompt, i.answer, q.knowledge_point
         FROM retest_queue q LEFT JOIN items i ON q.item_id=i.item_id
         WHERE q.status='resolved'
+        AND q.item_id NOT LIKE 'yw-%' AND q.item_id NOT LIKE 'sx%'
         AND q.item_id NOT IN (SELECT item_id FROM retest_queue WHERE status='pending')
         GROUP BY q.item_id
         ORDER BY resolved_at DESC LIMIT 20
@@ -1655,10 +1947,10 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
         knowledge_point: r.knowledge_point || '',
       }));
     } catch {}
-    res.json({ ok: true, mistakes: filtered, resolved: resolvedList });
+    res.json({ ok: true, mistakes, resolved: resolvedList });
   } catch (e) {
     console.error('[mistakes]', e.message);
-    res.json({ ok: false, mistakes: [] });
+    res.json({ ok: false, mistakes: [], resolved: [] });
   }
 });
 app.post('/api/retest/resolve', auth.requireAuth, (req, res) => {
@@ -1796,15 +2088,23 @@ app.get('/api/words/mastery', auth.requireAuth, (req, res) => {
 });
 
 // 更新单词掌握度：correct=1答对+1级，0答错-1级（0-4钳制）
+// 按来源封顶（2026-10-23晚修，学生实测卡片狂点"认识"可刷满）：
+// 卡片自报/听音辨义本质是"认"，最高升到2会认；中英测试最高3会拼；只有拼写答对能到4掌握。
+// 没带 source 的老调用默认按 card 封顶2（最严防刷）。封顶只限制上升、绝不压低已有等级；答错照旧-1不受封顶影响。
+const MASTERY_CAPS = { card: 2, listen: 2, test: 3, spell: 4 };
 app.post('/api/words/mastery', auth.requireAuth, (req, res) => {
   try {
-    const { word, correct } = req.body || {};
+    const { word, correct, source } = req.body || {};
     if (!word) return res.json({ ok: false, error: 'no_word' });
     const cur = db.prepare('SELECT level, correct_n, wrong_n FROM word_mastery WHERE word=?').get(word);
     let level = cur ? cur.level : 0;
     let cn = cur ? cur.correct_n : 0;
     let wn = cur ? cur.wrong_n : 0;
-    if (correct) { level = Math.min(4, level + 1); cn++; }
+    if (correct) {
+      const cap = MASTERY_CAPS[String(source || 'card')] != null ? MASTERY_CAPS[String(source || 'card')] : 2;
+      level = Math.min(4, Math.min(level + 1, Math.max(cap, level)));
+      cn++;
+    }
     else { level = Math.max(0, level - 1); wn++; }
     db.prepare(`INSERT INTO word_mastery(word, level, correct_n, wrong_n, last_at, updated_at)
       VALUES(?, ?, ?, ?, datetime('now'), datetime('now'))
@@ -1863,9 +2163,9 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
   const lid = lessonOf(item_id);
   const L = lid ? loadLesson(lid) : null;
   const step = L ? L.stepsByItem[String(item_id)] : null;
+  // 2026-11-01 Elouise 定：多次点“老师教我”要升级提示（L1→L2→L3），验证阶段同样升级；
+  // 求助记 help_events，答对记有帮助完成、不计独立完成，错题进错题本复测。
   let level = Math.min(Math.max(parseInt((req.body || {}).level, 10) || 1, 1), 3);
-  const phase = step ? (step.phase || 'practice') : 'practice';
-  if (phase !== 'practice') level = 1; // 验证阶段只指方向
   db.prepare('INSERT INTO help_events(item_id, session_id, level) VALUES(?,?,?)')
     .run(String(item_id), String(session_id || ''), level);
   if (level === 2 && step && step.help_line) {
@@ -1885,7 +2185,26 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
     }
   }
   // level=1，或 2/3 无对应内容时回退到 1
-  res.json({ ok: true, level: 1, help: step ? step.help : '' });
+  // 2026-11-02 “记住、换个方法教”（Elouise 定）：30 分钟前给过提示或看过答案（以前讲过），
+  // 且这道题配了第二种讲法 help_alt，就发第二种讲法，不再重复第一种；没配则照旧。
+  // 只在平时不回 method 字段，响应形状不变。
+  let helpText = step ? step.help : '';
+  let method = null;
+  if (step && step.help_alt) {
+    try {
+      const CUT = "datetime('now','-30 minutes')";
+      const taught = db.prepare(
+        `SELECT 1 AS x FROM help_events WHERE item_id=? AND created_at <= ${CUT} LIMIT 1`
+      ).get(String(item_id))
+        || db.prepare(
+          `SELECT 1 AS x FROM attempts WHERE item_id=? AND verdict='copied' AND created_at <= ${CUT} LIMIT 1`
+        ).get(String(item_id));
+      if (taught) { helpText = step.help_alt; method = 'alt'; }
+    } catch {}
+  }
+  const out = { ok: true, level: 1, help: helpText };
+  if (method) out.method = method;
+  res.json(out);
 });
 
 // 故事选择持久化（2026-10-02 总指挥补充条款）：剧情里的学生选择（如点播哪首歌），
@@ -2016,8 +2335,15 @@ function whenAllows(when, say, given, vals, step, detail) {
   }
   m = /^(?:漏了|漏)(.+)$/.exec(w);
   if (m) {
-    const ds = dimed(m[1]);
+    const rest0 = m[1].trim();
+    const ds = dimed(rest0);
     if (ds.length) return ds.every(d => d.status === 'missing');
+    // 2026-10-24 修（反馈 id=21）：对不上维度标签时，看作答里有没有 X——
+    // 写了就是没漏，"漏了 X"不成立；没写才是真漏了。之前默认 return true 会
+    // 在孩子明明写了 X（只是别的维度错了）时硬说"你漏了 X"。
+    const rest = rest0.toLowerCase();
+    const toks = rest.split(/[，,、\s]+/).filter(Boolean);
+    if (toks.length && toks.every(t => textHit(t, givenLow, givenNorm))) return false;
     return true;
   }
   m = /^(写了|答|写成)\s*(.+)$/.exec(w);
@@ -2064,7 +2390,10 @@ function whenAllows(when, say, given, vals, step, detail) {
 
 function dimLabel(step, id) {
   const dh = (step && step.dim_help) || {};
-  return (dh[id] && dh[id].label) || id;
+  // 2026-10-24 修：没有 dim_help 时用 expects 的中文标签兜底，不直接露英文 id（如 time）
+  const e = (step && step.expects || []).find(x => x.id === id);
+  const cn0 = e && Array.isArray(e.cn) && e.cn[0];
+  return (dh[id] && dh[id].label) || cn0 || id;
 }
 
 // 只保留"针对她实际写的内容"的 common_errors：
@@ -2224,6 +2553,28 @@ function conflictFeedback(step, detail) {
 }
 
 // 挑出给学生看的反馈语（选择题：答对讲原因；答错给针对性提示；简答题：常见错误提示）
+// 错维直说（2026-10-23）：上面几路反馈都没说中时，直接点名判分明细里真实没写对的维度。
+// 只用 detail.items 的实际状态（missing=漏写、contradiction=写了旧值/反了、typo=拼写差一点），
+// 严禁提及写对的维度；标签取 dim_help，其次 expects.cn，都没有就跳过该维度。最多 2 个。
+function dimWrongLines(step, detail) {
+  const items = ((detail && detail.items) || [])
+    .filter(i => i.status === 'missing' || i.status === 'contradiction' || i.status === 'typo');
+  const out = [];
+  for (const it of items) {
+    if (out.length >= 2) break;
+    const e = (step.expects || []).find(x => x.id === it.id);
+    if (!e) continue;
+    const dh = (step.dim_help || {})[it.id] || {};
+    const label = dh.label || (Array.isArray(e.cn) && e.cn[0]) || '';
+    if (!label) continue;
+    const want = it.want || (Array.isArray(e.answers) && e.answers[0]) || '';
+    if (it.status === 'missing') out.push('「' + label + '」还没写' + (want ? '，这里应写 ' + want : '') + '。');
+    else if (it.status === 'typo') out.push('「' + label + '」拼写差一点' + (want ? '，应写 ' + want : '') + '。');
+    else out.push('「' + label + '」写得不对' + (want ? '，应写 ' + want : '') + '。');
+  }
+  return out;
+}
+
 function feedbackFor(step, verdict, given, detail) {
   if (!step) return '';
   if (step.kind === 'mcq') {
@@ -2244,6 +2595,13 @@ function feedbackFor(step, verdict, given, detail) {
   for (let i = 0; i < aff.length; i++) parts.push(aff[i]);
   const gs = groundedSays(step, given, detail);
   for (let i = 0; i < gs.length; i++) parts.push(gs[i]);
+  // 2026-10-23：冲突/预判/接地反馈都没说中时补"错维直说"，不再只剩"再想一想"
+  // （affirm 部分对肯定不算"说中"，只有它时也要补）
+  const explanatory = parts.filter(x => x && aff.indexOf(x) < 0);
+  if (!explanatory.length) {
+    const dims = dimWrongLines(step, detail);
+    for (let i = 0; i < dims.length; i++) parts.push(dims[i]);
+  }
   const fb = parts.filter(Boolean).join('\n');
   return fb || ((detail && detail.note) || '再想一想。');
 }
@@ -2276,8 +2634,9 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
       && db.prepare("SELECT COUNT(*) c FROM attempts WHERE item_id=? AND session_id=? AND correct=1")
         .get(itemId, sid).c === 0;
     // 练习课（review*）豁免防重做：练完一遍还能再练（2026-10-02 总任务书：练习模式可反复练）；
+    // 每课巩固练（*-consolidate）同样豁免：可反复练（2026-11-01）；
     // 正课防重做保持不变。
-    if (!isReviewLesson(lid) && !reviewRedo && ((phase === 'practice' && st.p1_done === 1) || (phase !== 'practice' && st.p2_done === 1))) {
+    if (!isReviewLesson(lid) && !isConsolidateLesson(lid) && !reviewRedo && ((phase === 'practice' && st.p1_done === 1) || (phase !== 'practice' && st.p2_done === 1))) {
       return res.status(403).json({ ok: false, error: 'part_done' });
     }
   }
@@ -2315,25 +2674,6 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
   }
   if (r.error === 'bad_kind') return res.status(400).json({ ok: false, error: 'bad_kind' });
   r.feedback = feedbackFor(step, r.verdict, body.answer, r.detail);
-  // 最终兜底（2026-10-19）：若反馈仍是通用语，直接从文件读 wrong_feedback
-  if ((r.verdict === 'wrong' || r.verdict === 'wrong_retry') &&
-      (!r.feedback || r.feedback === '再想一想。' || r.feedback === '再看一看通知。')) {
-    try {
-      const lid2 = lessonOf(itemId);
-      const fp2 = path.join(seed.contentDir(), `lesson-${lid2}.json`);
-      if (fs.existsSync(fp2)) {
-        const lj = JSON.parse(fs.readFileSync(fp2, 'utf-8'));
-        const m2 = /^(.+)-v\d+-s(\d+)$/.exec(itemId);
-        if (m2) {
-          const st2 = lj.steps.find(x => String(x.step) === m2[2] && x.kind === 'mcq');
-          const g2 = String(body.answer || '').trim().toUpperCase();
-          if (st2 && st2.wrong_feedback && st2.wrong_feedback[g2]) {
-            r.feedback = st2.wrong_feedback[g2];
-          }
-        }
-      }
-    } catch {}
-  }
   // 真人老师式纠错（g 版）：带着做 + 保底出口
   if (step && (r.verdict === 'wrong' || r.verdict === 'wrong_retry')) {
     if (step.kind === 'short' && phase === 'practice' && guidedTrigger(itemId, sid)) {
@@ -2368,14 +2708,14 @@ function orderedLessons() {
       const ids = rows.map(r => r.lesson_id);
       // 主线：u2r1-u6r5 按教学顺序（2026-10-10 修复：原按 lesson_id 字母排序，deep1 会排到 u2r1 前面）
       const mainOrder = [];
-      for (let u = 2; u <= 6; u++) {
+      for (let u = 2; u <= 8; u++) {
         for (let r = 1; r <= 5; r++) {
           const lid = `u${u}r${r}`;
           if (ids.includes(lid)) mainOrder.push(lid);
         }
       }
       // 加餐/学科课（deep/moon/sx/yw）：不参与英语主线，排在主线后面
-      const extras = ids.filter(id => /^(deep|moon)\d+$/.test(id) || /^(sx\d+|yw)/.test(id));
+      const extras = ids.filter(id => /^(deep|moon|dict|write)\d+$/.test(id) || /^(sx\d+|yw)/.test(id));
       // 练习课最后（保持现有逻辑）
       const reviews = ids.filter(id => isReviewLesson(id));
       return [...mainOrder, ...extras, ...reviews];
@@ -2411,8 +2751,8 @@ function currentLesson() {
 function getPendingReviews() {
   const pending = [];
   try {
-    // ① 待复测错题（一直算）
-    const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending'").get();
+    // ① 待复测错题（一直算；2026-10-20 Elouise 学科分离：只算英语，排除 yw-/sx）
+    const rc = db.prepare("SELECT COUNT(*) as c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
     if (rc && rc.c > 0) pending.push({ type: 'retest', count: rc.c, label: `待复测错题 ${rc.c} 道` });
     // ② review课：只看当前单元（2026-10-13 Elouise定：旧单元的加练课不算，不永久锁课）
     // 2026-10-13补（Elouise要求）：单元的5节课没学完，它的复习就不算待办。
@@ -2478,23 +2818,29 @@ function hasPendingReviews() { return getPendingReviews().length > 0; }
 // 避免"越做目标越小"的 bug（之前用 Math.min(10, 当前剩余)，做3道后目标从10变7）
 function checkDailyMistakes() {
   try {
+    retest.normalizeRetestQueueVersions();
     // 今天独立完成的错题数（上海日期）
-    // 条件：correct=1, helped=0, independent=1，且这道题曾经错过（是错题本里的）
+    // 条件：correct=1, helped=0，且这道题曾经错过（是错题本里的）。
+    // 2026-10-22修：去掉 independent=1——Elouise 口径是"答对且零求助就计数、重做第二次答对也算"，
+    // independent=1 会把 correct_retry 全部排除，与口径矛盾（孩子 id=8 反馈实锤）。
+    // 2026-11-11：5 分钟快练不计门禁——快练会话（session_id 含 quick-drill）的作答不计入。
     const today = shanghaiDay();
     const r = db.prepare(`
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
-      WHERE a.correct=1 AND a.helped=0 AND a.independent=1
+      WHERE a.correct=1 AND a.helped=0
       AND date(a.created_at, '+8 hours') = ?
+      AND a.session_id NOT LIKE '%quick-drill%'
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%' AND a.item_id NOT LIKE '%-consolidate-%'
       AND (
         EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
         OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
       )
     `).get(today);
     const doneToday = r ? r.c : 0;
-    // 当前待复测错题数
+    // 当前待复测错题数（2026-10-20 学科分离：只算英语）
     let pending = 0;
     try {
-      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
       pending = pr ? pr.c : 0;
     } catch {}
     // 目标 = 今日开始时的可做错题数（当前剩余 + 今日已完成），最多10道
@@ -2506,13 +2852,17 @@ function checkDailyMistakes() {
 }
 
 // 今日错题进度（供弹窗显示）：{done, target, pending}
+// 2026-11-11：5 分钟快练不计门禁（同 checkDailyMistakes，快练会话排除）。
 function getDailyMistakeProgress() {
   try {
+    retest.normalizeRetestQueueVersions();
     const today = shanghaiDay();
     const r = db.prepare(`
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
-      WHERE a.correct=1 AND a.helped=0 AND a.independent=1
+      WHERE a.correct=1 AND a.helped=0
       AND date(a.created_at, '+8 hours') = ?
+      AND a.session_id NOT LIKE '%quick-drill%'
+      AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%' AND a.item_id NOT LIKE '%-consolidate-%'
       AND (
         EXISTS (SELECT 1 FROM retest_queue q WHERE q.item_id=a.item_id)
         OR EXISTS (SELECT 1 FROM attempts b WHERE b.item_id=a.item_id AND b.correct=0 AND b.rowid < a.rowid)
@@ -2521,7 +2871,7 @@ function getDailyMistakeProgress() {
     const done = r ? r.c : 0;
     let pending = 0;
     try {
-      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending'").get();
+      const pr = db.prepare("SELECT COUNT(*) c FROM retest_queue WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get();
       pending = pr ? pr.c : 0;
     } catch {}
     const target = Math.min(10, pending + done);
@@ -2532,10 +2882,12 @@ function getDailyMistakeProgress() {
 // 某课是否已开放：正课看它前面的正课是否全部学完（第 1 课永远开放）；
 // 练习课在正课全部学完后开放。学会马上往下学，不看日期（2026-10-02 总任务书）。
 function lessonOpen(lid) {
-  // 深海/登月加餐课永远开放（补充课不阻塞主线）
-  if (/^(deep|moon)\d+$/.test(lid)) return true;
+  // 深海/登月加餐课、精听听写试点课（dict）永远开放（补充课不阻塞主线、不被每日复习门锁）
+  if (/^(deep|moon|dict|write)\d+$/.test(lid)) return true;
   // review3 是针对性干预复习课（2026-10-11），随时可进，不等主线学完
   if (lid === 'review3') return true;
+  // review5 是 Unit 4 综合复习加练课（2026-10-21），Unit 4 已学完，直接开放，不设新门
+  if (lid === 'review5') return true;
   // u3-consolidate 是 Unit 3 专项巩固课（2026-10-11 踩刹车），随时可进
   if (lid === 'u3-consolidate') return true;
   // Unit 3 专项巩固课（2026-10-11 Elouise：严禁盲目赶进度），随时可进
@@ -2546,6 +2898,11 @@ function lessonOpen(lid) {
   // 没完成复习就不解锁新的
   if (/^u4r\d+$/.test(lid)) {
     try {
+      // 2026-10-20修：已开的课保持开放（Elouise 10-12 定：门禁只锁未开始的新课）。
+      // u4 分支之前漏了这条豁免，导致已学完的 u4 课在当天没做满10道错题时也 403，
+      // 与 u5/u6 通用分支的 started 豁免不一致。冒烟检查发现后补齐。
+      const selfSt = lessonState(lid);
+      if (selfSt && (selfSt.p1_done === 1 || selfSt.p2_done === 1)) return true;
       const done = db.prepare("SELECT value FROM app_state WHERE key='u3_consolidation_done'").get();
       if (!done || done.value !== '1') return false;
       const r3 = db.prepare("SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id='review3'").get();
@@ -2572,7 +2929,7 @@ function lessonOpen(lid) {
   // 复习课本身、已开的课（有真实进度的）不受影响
   // 2026-10-13修："已开"只认 p1_done/p2_done=1 的真实进度，单纯点开过（0/0）的
   // 不算已开，否则 u5/u6 的 0/0 打开记录会绕过门禁。
-  if (/^u[2-6]r\d+$/.test(lid) && !isReviewLesson(lid)) {
+  if (/^u[2-8]r\d+$/.test(lid) && !isReviewLesson(lid)) {
     try {
       const st = lessonState(lid);
       const started = st && (st.p1_done === 1 || st.p2_done === 1);
@@ -2589,7 +2946,7 @@ function lessonOpen(lid) {
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   // 主线只算 u2r-u6r（排除 review、deep、moon、sx、yw）
-  const isMainline = id => /^(u[2-6]r\d+|review\d+)$/.test(id);
+  const isMainline = id => /^(u[2-8]r\d+|review\d+)$/.test(id);
   const regular = ids.filter(id => isMainline(id) && !isReviewLesson(id));
   const allRegularDone = regular.every(id => {
     const st = lessonState(id);
@@ -2746,6 +3103,87 @@ app.post('/api/admin/set-profile', (req, res) => {
   } catch (e) {
     res.status(500).json({ ok: false, error: 'save_failed' });
   }
+});
+
+// 2026-10-19：学生问题反馈（Elouise：学生端截图+文字入口，反馈直达老师）
+app.post('/api/feedback', auth.requireAuth, (req, res) => {
+  try {
+    const b = req.body || {};
+    const text = String(b.text || '').trim().slice(0, 2000);
+    // 2026-10-23：多张截图（最多4张，每张前端已压缩）；未传 images_b64 时兼容旧单图
+    let imgs = [];
+    if (Array.isArray(b.images_b64)) imgs = b.images_b64.filter(x => typeof x === 'string' && x).slice(0, 4).map(x => x.slice(0, 2000000));
+    if (!imgs.length && b.image_b64) imgs = [String(b.image_b64).slice(0, 2000000)];
+    if (!text && !imgs.length) return res.status(400).json({ ok: false, error: 'empty' });
+    const img = imgs[0] || '';
+    const r = db.prepare(`INSERT INTO student_feedback
+      (lesson_id, step_no, item_id, text, image_b64, images_json, url, user_agent)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`)
+      .run(String(b.lesson_id || '').slice(0, 64) || null,
+            Number(b.step_no) || null,
+            String(b.item_id || '').slice(0, 64) || null,
+            text || null, img || null, imgs.length ? JSON.stringify(imgs) : null,
+            String(b.url || '').slice(0, 256) || null,
+            String(req.headers['user-agent'] || '').slice(0, 256));
+    res.json({ ok: true, id: r.lastInsertRowid });
+  } catch (e) { res.status(500).json({ ok: false, error: 'save_failed' }); }
+});
+// 学生看自己的反馈和老师的回复
+app.get('/api/feedback/mine', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, lesson_id, text,
+      CASE WHEN image_b64 IS NOT NULL AND image_b64 != '' THEN 1 ELSE 0 END AS has_image,
+      status, reply FROM student_feedback WHERE COALESCE(student_deleted,0)=0 ORDER BY id DESC LIMIT 20`).all();
+    res.json({ ok: true, list: rows });
+  } catch { res.json({ ok: true, list: [] }); }
+});
+// 学生删除自己的反馈历史（2026-10-24 Elouise 批准，反馈 id=22 诉求）：软删除——
+// 学生端不再显示；后台列表与反馈巡检仍可见，避免未处理反馈被删丢。
+app.post('/api/feedback/delete', auth.requireAuth, (req, res) => {
+  try {
+    const id = Number((req.body || {}).id) || 0;
+    if (!id) return res.status(400).json({ ok: false, error: 'bad_id' });
+    const r = db.prepare(`UPDATE student_feedback SET student_deleted=1 WHERE id=?`).run(id);
+    res.json({ ok: true, changed: r.changes });
+  } catch { res.status(500).json({ ok: false, error: 'delete_failed' }); }
+});
+app.post('/api/feedback/clear', auth.requireAuth, (req, res) => {
+  try {
+    const r = db.prepare(`UPDATE student_feedback SET student_deleted=1 WHERE COALESCE(student_deleted,0)=0`).run();
+    res.json({ ok: true, changed: r.changes });
+  } catch { res.status(500).json({ ok: false, error: 'delete_failed' }); }
+});
+// 管理：看全部反馈（含图）
+app.get('/api/admin/feedback', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  try {
+    const rows = db.prepare(`SELECT * FROM student_feedback ORDER BY id DESC LIMIT 50`).all()
+      .map(r => { // 2026-10-23：多图解析成 images 数组（旧数据回退到 image_b64 单图）
+        let images = [];
+        try { images = r.images_json ? JSON.parse(r.images_json) : []; } catch {}
+        if (!Array.isArray(images) || !images.length) images = r.image_b64 ? [r.image_b64] : [];
+        return Object.assign({}, r, { images });
+      });
+    res.json({ ok: true, list: rows });
+  } catch { res.json({ ok: true, list: [] }); }
+});
+// 管理：回复学生
+app.post('/api/admin/feedback/reply', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const b = req.body || {};
+    db.prepare(`UPDATE student_feedback SET status='replied', reply=?, replied_at=datetime('now')
+      WHERE id=?`).run(String(b.reply || '').slice(0, 2000), Number(b.id) || 0);
+    res.json({ ok: true });
+  } catch { res.status(500).json({ ok: false, error: 'save_failed' }); }
 });
 
 app.post('/api/admin/cleanup-retest', (req, res) => {
