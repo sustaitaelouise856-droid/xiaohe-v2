@@ -200,6 +200,8 @@
   .fb.info::before { content:"📢"; }
   .tag { display:inline-block; font-size:calc(17px * var(--fs)); background:linear-gradient(180deg,#f5f7fb,#e9edf3); border:1px solid #dde2ea; border-radius:999px; padding:4px 15px; margin-left:10px; color:var(--muted); box-shadow:inset 0 1px 0 rgba(255,255,255,.9); }
   .nudge { color:var(--muted); font-size:var(--fs-scene); line-height:1.6; }
+  .conquered { margin-top:8px; padding:8px 10px; border-left:3px solid #f5a623; background:#fff8e6; color:#7a5200; font-size:var(--fs-scene); line-height:1.6; font-weight:700; }
+  .helprule { color:var(--muted); font-size:12px; line-height:1.6; margin:8px 2px 0; }
   /* 首页 */
   .partcard { background:#fff; border:1px solid rgba(225,229,235,.6); border-radius:var(--radius-lg); padding:32px; margin:18px 0; box-shadow:var(--shadow-sm); transition:box-shadow .25s ease; }
   .partcard:hover { box-shadow:var(--shadow-md); }
@@ -259,6 +261,7 @@
     box-shadow:0 6px 18px rgba(26,115,232,.4), inset 0 1px 0 rgba(255,255,255,.25); cursor:pointer;
     transition:transform .15s, box-shadow .2s, filter .2s; }
   #btnSeeReading:hover { filter:brightness(1.08); transform:translateY(-2px); box-shadow:0 8px 22px rgba(26,115,232,.5), inset 0 1px 0 rgba(255,255,255,.25); }
+  /* 反馈入口已移到设置页（2026-10-19） */
   #btnSeeReading:active { transform:scale(.96); }
   /* 点词查词：阅读材料里的英文单词可点 */
   .reading-pane pre .w { cursor:pointer; border-bottom:1px dotted var(--blue); }
@@ -326,6 +329,7 @@
 </div>
 <div id="wrap"></div>
 <button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
+<!-- 反馈入口已移到设置页（2026-10-19：浮动按钮挡做题按钮） -->
 <div id="wordPop">
   <button class="wp-close" onclick="document.getElementById('wordPop').style.display='none'">×</button>
   <div class="wp-word" id="wpWord"></div>
@@ -376,8 +380,8 @@ function progressId(s) {
 }
 let PROG = { p1: null, p2: null }; // 服务端进度 {p1: item_id, p2: item_id}
 async function loadProg() {
-  // 2026-10-15修：虚拟课（每日闯关/批量重做）不加载服务端进度——题目每次动态生成，旧进度无效且导致白屏
-  if (LID === 'daily-retest' || LID === 'batch-retry') { PROG = { p1: null, p2: null }; return; }
+  // 2026-10-15修：虚拟课（每日闯关/批量重做/5 分钟快练）不加载服务端进度——题目每次动态生成，旧进度无效且导致白屏
+  if (LID === 'daily-retest' || LID === 'batch-retry' || LID === 'quick-drill') { PROG = { p1: null, p2: null }; return; }
   try {
     const r = await fetch('/api/progress?lesson=' + encodeURIComponent(LID));
     if (r.ok) { const b = await r.json(); if (b && b.progress) PROG = b.progress; }
@@ -446,6 +450,8 @@ async function apiFetch(url, opts, maxWaitMs) {
   throw lastErr || new Error('network');
 }
 
+// 反馈入口已移到设置页（2026-10-19：浮动按钮挡做题按钮）
+
 const stepsOf = part => { const pe = (LESSON && LESSON.practice_end) || 22; return LESSON.steps.filter(s => part === 1 ? s.step <= pe : s.step > pe); };
 
 /* ---------- 音频 ---------- */
@@ -479,12 +485,12 @@ function setAudio(audioId, itemId) {
   setRate(getPlaySpeed());
   if (!audioId) { $('player').style.display = 'none'; $('bigplay').classList.remove('show'); return; }
   $('player').style.display = '';
-  // 2026-10-15修：虚拟课（daily-retest/batch-retry）的题目来自原课，音频路径用 audio_id 前缀解析原课目录
+  // 2026-10-15修：虚拟课（daily-retest/batch-retry/quick-drill）的题目来自原课，音频路径用 audio_id 前缀解析原课目录
   // 如 review3-q01 → /audio/review3/，u3-consolidate-q11 → /audio/u3-consolidate/
   // 2026-10-17修：原课题目还有 u3r3-v01 这类 -vNN 命名（254/568 道题），旧正则解析不到，
   // 指向 /audio/daily-retest/… 404。改从 item_id（如 u3r3-v1-s26）解析原课目录，正则兜底保留。
   let audioLid = LID;
-  if (LID === 'daily-retest' || LID === 'batch-retry') {
+  if (LID === 'daily-retest' || LID === 'batch-retry' || LID === 'quick-drill') {
     const im = /^([a-z0-9-]+)-v\d+-s\d+$/i.exec(itemId || '');
     const qm = /^(.+)-q\d+$/i.exec(audioId || '');
     if (im) audioLid = im[1];
@@ -602,6 +608,26 @@ async function parentReport(lid) {
     return await r.json();
   } catch { return null; }
 }
+// 课末弱点小结（2026-11-09）：只读当节课自己的答错和求助记录；无错漏时返回 null，不写弱点
+async function lessonWeakness(lid) {
+  if (!/^(u[2-8]r\d+(-consolidate)?|u3-consolidate)$/.test(lid || '')) return null;
+  try {
+    const r = await fetch('/api/lesson-weakness?lesson=' + encodeURIComponent(lid || LID));
+    const d = await r.json();
+    return (d && d.ok && d.points && d.points.length) ? d : null;
+  } catch { return null; }
+}
+function weaknessHtml(wk) {
+  if (!wk || !wk.points || !wk.points.length) return '';
+  const lines = wk.points.map(p => {
+    const ex = (p.example && p.example.stem) ? `比如“${escapeHtml(p.example.stem)}”，答案是 ${escapeHtml(p.example.answer || '')}。` : '';
+    const rec = (p.recurring && p.first_lesson) ? `（之前《${escapeHtml(p.first_lesson.title)}》那节也卡过，还没学会）` : '';
+    const link = (p.link && p.link.url) ? ` <a href="${escapeHtml(p.link.url)}" style="color:#1a73e8;font-weight:700;">${escapeHtml(p.link.label)} →</a>` : '';
+    return `<p class="scene" style="margin:6px 0;">• <b>${escapeHtml(p.label)}</b>（${p.count} 道题${rec}）${ex}${link}</p>`;
+  }).join('');
+  const total = (wk.total_weak_items != null) ? wk.total_weak_items : wk.points.reduce((n, q) => n + (q.count || 0), 0);
+  return `<div class="task" style="text-align:left;"><div style="font-weight:800;margin-bottom:4px;">这节课还没学会（${total} 道题）：</div>${lines}</div>`;
+}
 async function renderHome() {
   topbar.style.display = 'none'; au.pause();
   try { $('btnSeeReading').style.display = 'none'; } catch {}
@@ -639,6 +665,29 @@ async function renderHome() {
       <p class="scene">共 ${total} 道，答对的已从错题本消掉。</p>
       <div class="btnrow" style="justify-content:center;">
         <button class="big" onclick="location.href='/progress.html'" style="font-size:18px;padding:14px 40px;">← 返回错题本</button>
+      </div></div>`;
+    wrap.innerHTML = html;
+    window.scrollTo(0, 0);
+    return;
+  }
+  // 5 分钟快练（2026-11-11）：虚拟课，不走 /api/complete、不写打卡、不判称号；
+  // 答完显示即时得分（一次答对数 / 总题数），“再来一组”重载即换新题。
+  if (LESSON && LESSON.quick_drill) {
+    if (!window._quickDrillDone) {
+      window._quickScore = { first: 0, seen: {} };
+      startPart(1);
+      return;
+    }
+    const total = (LESSON.steps || []).length;
+    const sc = window._quickScore || { first: 0 };
+    const html = `<div class="card" style="text-align:center;">
+      <div style="font-size:48px;">⚡</div>
+      <h2 class="stem">5 分钟快练完成！</h2>
+      <p class="scene" style="font-size:20px;">这次一次答对 ${sc.first} / ${total} 道</p>
+      <p class="scene">不计门禁、不进错题本，练完就歇一会儿。明天再来一组新的。</p>
+      <div class="btnrow" style="justify-content:center;">
+        <button class="big" onclick="location.reload()" style="font-size:18px;padding:14px 40px;">再来一组 →</button>
+        <button class="big" onclick="location.href='/'" style="font-size:18px;padding:14px 40px;">返回首页</button>
       </div></div>`;
     wrap.innerHTML = html;
     window.scrollTo(0, 0);
@@ -694,10 +743,13 @@ async function renderHome() {
     const ind = sum.independent, helped = sum.helped;
     const total = sum.items || (ind + helped) || 1;
     const rate = Math.round(ind / total * 100);
-    const weak = [...new Set(sum.weaknesses || [])];
     const pr = await parentReport(LID);
+    const wk = await lessonWeakness(LID);
     // 2026-10-14：u3-consolidate 没过关时显示"重新挑战"按钮（替代自动重置）
-    const showRetry = LID === 'u3-consolidate' && LESSON && LESSON.consolidation_passed === false;
+    // 2026-11-01：每课巩固练（*-consolidate）做完显示"再练一次"按钮；正课做完且有对应巩固练时显示入口
+    const isConsLid = /-consolidate$/.test(LID);
+    const showRetry = (LID === 'u3-consolidate' && LESSON && LESSON.consolidation_passed === false) || (isConsLid && LID !== 'u3-consolidate');
+    const showConsLink = LESSON && LESSON.has_consolidate;
     html += `<div class="card"><h2 class="stem">两部分都完成了</h2>
       <div class="stats">
         <div class="stat"><b>${rate}%</b><span>独立正确率</span></div>
@@ -706,10 +758,11 @@ async function renderHome() {
       </div>
       <p class="scene">独立正确率 = 独立完成的题 ÷ 总题数。答错后只显示"再想一想"不算求助；只有点了"老师教我"才算。</p>
       ${window.XH_SUBJECT === 'yuwen' ? '' : '<p class="scene">同一题可同时计入两边：内容理解独立完成，英文书写用了帮助。</p>'}
-      ${weak.length ? `<p class="scene">下节课多练：${weak.map(escapeHtml).join('、')}</p>` : ''}
+      ${wk ? weaknessHtml(wk) : ''}
       ${pr && pr.sentence ? `<div class="task">给爸爸妈妈的话：${escapeHtml(pr.sentence)}</div>` : ''}
-      ${showRetry ? `<p class="scene" style="color:#e65100;font-weight:700;">还没过关（需要零求助、独立正确率≥85%才能解锁 Unit 4）。</p>
-      <div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 重新挑战</button></div>` : `<p class="scene">做完的课程不能重做。下一课见。</p>`}
+      ${showRetry ? (LID === 'u3-consolidate' ? `<p class="scene" style="color:#e65100;font-weight:700;">还没过关（需要零求助、独立正确率≥85%才能解锁 Unit 4）。</p>
+      <div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 重新挑战</button></div>` : `<div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 再练一次</button></div>`) : `<p class="scene">做完的课程不能重做。下一课见。</p>`}
+      ${!isConsLid && showConsLink ? `<div class="btnrow"><button class="big" id="btnCons" style="background:linear-gradient(135deg,#ff8f00,#ffb300);" onclick="location.href='/lesson?lesson=${LID}-consolidate'">📚 去做巩固练（可反复做）</button></div>` : ''}
       <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">返回首页 →</button></div></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
@@ -721,12 +774,12 @@ async function renderHome() {
   const btnRetry = document.getElementById('btnRetry');
   if (btnRetry) {
     btnRetry.onclick = async () => {
-      if (!await prettyConfirm('重新挑战会清空当前进度，开始新一轮。确定吗？', {icon:'🔄'})) return;
+      if (!await prettyConfirm(LID === 'u3-consolidate' ? '重新挑战会清空当前进度，开始新一轮。确定吗？' : '再练一次会清空当前进度，开始新一轮。确定吗？', {icon:'🔄'})) return;
       try {
-        await fetch('/api/consolidation/retry', { method: 'POST' });
+        await fetch('/api/consolidation/retry', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ lesson_id: LID }) });
       } catch {}
       // 2026-10-14修：清掉本地 ST（含旧 sid），否则旧 help_events 会污染新一轮（session_id 复用 bug）
-      try { localStorage.removeItem('xh2-u3-consolidate'); } catch {}
+      try { localStorage.removeItem(LID === 'u2r1' ? 'xh2u2r1' : 'xh2-' + LID); } catch {}
       location.reload();
     };
   }
@@ -774,7 +827,12 @@ async function renderHome() {
 async function startPart(n) {
   PART = n; const st = ST['p' + n];
   const isDaily = (typeof LID !== 'undefined' && LID === 'daily-retest');
-  if (!st.sid || (isDaily && !String(st.sid).includes('daily-retest'))) {
+  const isQuick = (typeof LID !== 'undefined' && LID === 'quick-drill');
+  // 2026-11-11：快练每组都是新会话（“再来一组”必须换 sid，否则同一题的 first_try 会被旧作答污染）
+  if (isQuick) {
+    st.sid = 'quick-drill-' + uuid();
+    store.save(ST);
+  } else if (!st.sid || (isDaily && !String(st.sid).includes('daily-retest'))) {
     // 2026-10-18修：每日闯关的sid带daily-retest标记，供后端计数
     const base = uuid();
     st.sid = isDaily ? 'daily-retest-' + base : base;
@@ -940,7 +998,7 @@ function renderStep() {
       html += s.options.map((o, i) =>
         `<button class="opt" data-k="${'ABCD'[i]}"><span class="k">${'ABCD'[i]}</span><span>${escapeHtml(o)}</span></button>`).join('');
       html += `<div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub" disabled>回答</button></div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub" disabled>回答</button></div><div class="helprule">不会就点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else if (s.kind === 'chunk') {
       // 拼句（2026-10-14）：点词块拼句子，点击顺序即答案顺序；data-i 区分重复词块
@@ -948,13 +1006,13 @@ function renderStep() {
       html += `<div class="chunk-picked" id="chunkPicked"></div>
         <div class="chunk-pool" id="chunkPool">${chunks.map((c, i) => `<button class="chunkbtn" data-i="${i}">${escapeHtml(c)}</button>`).join('')}</div>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnClearChunk">清空重拼</button><button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub">提交</button></div><div class="helprule">不会就点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else {
       const ph = (LESSON && LESSON.answer_placeholder) || '在这里写英文答案';
       html += `<textarea id="answerInput" placeholder="${ph}" autocomplete="off" rows="2"></textarea>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub">提交</button></div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub">提交</button></div><div class="helprule">不会就点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none">${backBtnHtml}<button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     }
     html += `</div></div></div>`;
@@ -999,6 +1057,7 @@ function renderStep() {
     wrap.querySelectorAll('.chunkbtn').forEach(x => { x.disabled = true; });
     const bcc = $('btnClearChunk'); if (bcc) bcc.style.display = 'none';
     const bh = $('btnHelp'); if (bh) bh.style.display = 'none';
+    const hr = $('helprule'); if (hr) hr.style.display = 'none';
     const bs = $('btnSub'); if (bs) bs.style.display = 'none';
     const fb = $('fb');
     const rd = (s && s.item_id && reviewData[s.item_id]) || null;
@@ -1054,21 +1113,34 @@ function renderStep() {
   window.scrollTo(0, 0);
 }
 // ---- 点词查词 + 生词本（2026-10-08） ----
+// 不规则词形 -> 原形（2026-11-05 反馈 id=30：ECDICT exchange 提取，只含课文里出现的词形）
+const XH_IRREG = {"kept":"keep","rings":"ring","became":"become","owners":"owner","told":"tell","worked":"work","pets":"pet","stood":"stand","held":"hold","ideas":"idea","took":"take","ages":"age","powers":"power","farms":"farm","problems":"problem","ran":"run","began":"begin","circles":"circle","forgot":"forget","grew":"grow","mountains":"mountain","scars":"scar","jumped":"jump","trees":"tree","vets":"vet","birds":"bird","caught":"catch","follows":"follow","happened":"happen","woke":"wake","came":"come","taught":"teach","thought":"think","coins":"coin","bought":"buy","countries":"country","fell":"fall","gave":"give","stamps":"stamp","stopped":"stop","hopes":"hope","said":"say","sat":"sit","grandparents":"grandparent","plants":"plant","champions":"champion","cuts":"cut","eyes":"eye","families":"family","farmers":"farmer","flew":"fly","fought":"fight","girls":"girl","harder":"hard","jokes":"joke","kites":"kite","listeners":"listener","parents":"parent","puppies":"puppy","shown":"show","sinks":"sink","soldiers":"soldier","stays":"stay","stones":"stone","streets":"street","studies":"study","towers":"tower","walked":"walk"};
 function lookupWord(w) {
   const D = window.XH_DICT || {};
   w = String(w || '').toLowerCase().replace(/^[^a-z]+|[^a-z]+$/g, '');
   if (!w) return null;
-  if (D[w]) return { word: w, hit: D[w] };
-  // 简单还原：复数/过去式/进行时
+  if (D[w]) {
+    // 旧词典里只有"X的过去式"这类互见条目时，改取原形的释义（went -> go）
+    const m = /([a-z]+)的(过去式|过去分词|现在分词|第三人称单数|复数形式|复数)/.exec(D[w]);
+    if (m && D[m[1]]) return { word: m[1], hit: D[m[1]], orig: w };
+    return { word: w, hit: D[w] };
+  }
+  // 不规则还原
+  if (XH_IRREG[w] && D[XH_IRREG[w]]) return { word: XH_IRREG[w], hit: D[XH_IRREG[w]], orig: w };
+  // 缩略：don't -> do, isn't -> is, I'm -> I（can't/won't 例外：去 n't 剩 ca/wo，不对）
+  const contr = w === "can't" ? 'can' : w === "won't" ? 'will' : w.replace(/n't$/, '').replace(/'(m|re|ve|ll|d|s)$/, '');
+  if (contr && contr !== w && D[contr]) return { word: contr, hit: D[contr], orig: w };
+  // 简单还原：复数/过去式/进行时（+双写辅音：stopped -> stop, bigger -> big）
   const cands = [];
+  const pushDbl = c => { cands.push(c); const d = c.replace(/([bcdfghjklmnpqrstvwxz])\1$/, '$1'); if (d !== c) cands.push(d); };
   if (/ies$/.test(w)) cands.push(w.replace(/ies$/, 'y'));
   if (/es$/.test(w)) cands.push(w.slice(0, -2));
   if (/s$/.test(w)) cands.push(w.slice(0, -1));
   if (/ied$/.test(w)) cands.push(w.replace(/ied$/, 'y'));
-  if (/ed$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
-  if (/ing$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -3) + 'e');
-  if (/er$/.test(w)) cands.push(w.slice(0, -2), w.slice(0, -1));
-  if (/est$/.test(w)) cands.push(w.slice(0, -3), w.slice(0, -2));
+  if (/ed$/.test(w)) { pushDbl(w.slice(0, -2)); pushDbl(w.slice(0, -1)); }
+  if (/ing$/.test(w)) { pushDbl(w.slice(0, -3)); cands.push(w.slice(0, -3) + 'e'); }
+  if (/er$/.test(w)) { pushDbl(w.slice(0, -2)); pushDbl(w.slice(0, -1)); }
+  if (/est$/.test(w)) { pushDbl(w.slice(0, -3)); pushDbl(w.slice(0, -2)); }
   if (/ly$/.test(w)) cands.push(w.slice(0, -2));
   for (const c of cands) if (D[c]) return { word: c, hit: D[c], orig: w };
   return { word: w, hit: null };
@@ -1186,13 +1258,50 @@ function showWordPop(raw, x, y, el) {
   pop.style.left = Math.max(8, Math.min(window.innerWidth - pw - 8, x - pw / 2)) + 'px';
   pop.style.top = Math.max(8, Math.min(window.innerHeight - ph2 - 8, y + 12)) + 'px';
 }
+// 单词读音（2026-11-05 反馈 id=30）：优先放预录 MP3（iOS 上 speechSynthesis 经常无声，
+// words.html 2026-10-16 已是同一做法），缺录音再回退浏览器朗读并预热 voices
+let _wordUnitIdx = null, _wordUnitLoading = false;
+function wordAudioUnit(w, cb) {
+  if (_wordUnitIdx) return cb(_wordUnitIdx[w] || null);
+  if (_wordUnitLoading) return setTimeout(() => wordAudioUnit(w, cb), 100);
+  _wordUnitLoading = true;
+  fetch('/words/word-units.json').then(r => r.json()).then(j => {
+    _wordUnitIdx = j || {}; _wordUnitLoading = false; cb(_wordUnitIdx[w] || null);
+  }).catch(() => { _wordUnitLoading = false; cb(null); });
+}
+function playWordTTS(text) {
+  try {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.85; u.volume = 1;
+    const voices = speechSynthesis.getVoices();
+    const enVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+    if (enVoice) u.voice = enVoice;
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+function playWordAudio(text) {
+  const word = String(text || '').toLowerCase().replace(/[^a-z]+/g, '');
+  if (!word) { playWordTTS(text); return; }
+  wordAudioUnit(word, unit => {
+    if (!unit) { playWordTTS(text); return; }
+    try {
+      const url = '/audio/words/' + unit + '/' + word + '.mp3';
+      const audio = new Audio(url);
+      let done = false;
+      const timer = setTimeout(() => { if (!done) { done = true; try { audio.pause(); } catch (e) {} playWordTTS(text); } }, 2000);
+      audio.oncanplaythrough = () => { try { audio.play(); } catch (e) {} };
+      audio.onplay = () => { done = true; clearTimeout(timer); };
+      audio.onerror = () => { if (!done) { done = true; clearTimeout(timer); playWordTTS(text); } };
+      audio.load();
+    } catch (e) { playWordTTS(text); }
+  });
+}
+try { if ('speechSynthesis' in window) speechSynthesis.getVoices(); } catch (e) {}
 document.getElementById('wpSay').onclick = () => {
   if (!curWord) return;
-  try {
-    const u = new SpeechSynthesisUtterance(curWord.word);
-    u.lang = 'en-US'; u.rate = 0.85;
-    speechSynthesis.cancel(); speechSynthesis.speak(u);
-  } catch (e) {}
+  playWordAudio(curWord.word);
 };
 document.getElementById('wpAdd').onclick = () => {
   if (!curWord) return;
@@ -1225,8 +1334,10 @@ document.addEventListener('click', e => {
 async function advance() {
   const arr = stepsOf(PART);
   if (POS + 1 >= arr.length) {
-    // 每日闯关（2026-10-14）：虚拟课程不走 /api/complete（lessons 表无此课），只走专用通关接口
-    if (LID === 'daily-retest') {
+    // 5 分钟快练（2026-11-11）：虚拟课程不走 /api/complete，只记已答完，由 renderHome 显示得分
+    if (LID === 'quick-drill') {
+      window._quickDrillDone = true;
+    } else if (LID === 'daily-retest') {
       try {
         const r2 = await fetch('/api/daily-retest/complete', { method: 'POST' });
         const d2 = await r2.json().catch(() => ({}));
@@ -1320,8 +1431,9 @@ function wireQuestion(s) {
       return t == null ? '' : String(t);
     }).join(' ');
   }
-  // 三级提示，永不卡死（2026-10-02）：练习阶段按点击次数 L1→L2→L3，验证阶段只 L1
+  // 三级提示，永不卡死（2026-10-02 建；2026-11-01 Elouise 定：验证阶段多次点也升级，不再只 L1）
   var helpLv = wireQuestion.helpLv || (wireQuestion.helpLv = {});
+  var hasTried = false; // 本题是否已交过答案（2026-11-02：连点 2 次帮助还没交题时推他先试一次）
   // "再看材料"按钮：点开看原文，再点收起
   (function () {
     var saBtns = wrap.querySelectorAll('[data-sa]');
@@ -1352,8 +1464,7 @@ function wireQuestion(s) {
     if (!btn) return;
     // 2026-10-13修：孩子手动点且在冷却中则不响应；系统自动触发（连错2次，force=true）不受冷却限制
     if (!force && btn.disabled) return;
-    var isPractice = (s.phase || 'practice') === 'practice';
-    if (!isPractice) lvl = 1;
+    // 2026-11-01 Elouise 定：验证阶段多次点也升级（L1→L2→L3），不再钳制为 1。
     lvl = Math.min(Math.max(lvl || 1, 1), 3);
     if (lvl > 1 && lvl <= (helpLv[s.item_id] || 0)) return;
     btn.disabled = true;
@@ -1384,7 +1495,7 @@ function wireQuestion(s) {
         // L3：真人老师式讲解（2026-10-11 Elouise：像真人老师一样一步步教）
         hb.innerHTML = '我们一起来看：<b>' + escapeHtml(b.answer) + '</b>' +
           (b.explain ? '<br><br>为什么是这个答案？' + escapeHtml(b.explain) : '') +
-          '<br><br>你再自己说一遍答案，然后提交。';
+          '<br><br>你再自己说一遍答案，然后提交。记住这个方法，下次遇到一样的题，要自己写出来。';
         helpBtnLabel = '';
         btn.textContent = '老师教我';
       } else if (got >= 2 && b.help_line) {
@@ -1397,11 +1508,18 @@ function wireQuestion(s) {
         }
         helpBtnLabel = '还是不会，直接告诉我';
         btn.textContent = helpBtnLabel;
+        // 2026-11-02：看了两遍提示还没交过题（s48 式卡住），推他先试一次，而不是再给提示
+        if (lvl === 2 && !hasTried) {
+          hb.innerHTML += '<div class="nudge">看了两遍提示了，试着写一个答案，错了也没关系，我会讲给你听。</div>';
+        }
       } else {
         // L1：苏格拉底式引导，先问问题，不直接给提示
-        hb.innerHTML = '别急，我们一步步来：<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
-        helpBtnLabel = isPractice ? '再帮我一点' : '';
-        btn.textContent = isPractice ? '再帮我一点' : '老师教我';
+        // 2026-11-02 “记住、换个方法教”：服务端发了第二种讲法（method=alt）时，开头点明换方法，
+        // 让孩子知道系统记得他以前听过第一种讲法。
+        var l1open = (b.method === 'alt') ? '这道题以前讲过，我们换个方法来讲：' : '别急，我们一步步来：';
+        hb.innerHTML = l1open + '<br><br>' + escapeHtml(b.help || '先把题目再读一遍，圈出关键词。') + '<br><br>想好了吗？再试一次，不行我再帮你。';
+        helpBtnLabel = '再帮我一点';
+        btn.textContent = '再帮我一点';
       }
       // 2026-10-13修：冷却还没走完就不提前解禁按钮（系统自动触发的帮助不打破冷却）
       if (Date.now() >= helpCooldownUntil) btn.disabled = false;
@@ -1443,8 +1561,7 @@ function wireQuestion(s) {
     }, 1000);
   })();
   $('btnHelp').onclick = function () {
-    var isPractice = (s.phase || 'practice') === 'practice';
-    var lvl = isPractice ? Math.min((helpLv[s.item_id] || 0) + 1, 3) : 1;
+    var lvl = Math.min((helpLv[s.item_id] || 0) + 1, 3);
     triggerHelp(lvl);
   };
   // L2 高亮：同屏材料块（.reading-pane pre）里的 help_line 原句；找不到返回 false
@@ -1476,6 +1593,7 @@ function wireQuestion(s) {
     if (s.kind === 'short') given = $('answerInput').value;
     if (s.kind === 'chunk') given = getChunkAnswer();
     if (!String(given).trim()) { err.textContent = s.kind === 'chunk' ? '先拼出句子再提交。' : '先写出答案再提交。'; return; }
+    hasTried = true;
     err.textContent = ''; $('btnSub').disabled = true;
     const elapsed_ms = Date.now() - qT0;
     let r, b;
@@ -1485,7 +1603,7 @@ function wireQuestion(s) {
         body: JSON.stringify({ item_id: s.item_id, answer: given,
           session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms,
           pasted: window._pastedAnswer ? 1 : 0,
-          is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest")) ? 1 : 0 }) }); // 2026-10-12：粘贴标记；2026-10-15：重做豁免防重做
+          is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest" || LID === "quick-drill")) ? 1 : 0 }) }); // 2026-10-12：粘贴标记；2026-10-15：重做豁免防重做
     } catch { err.textContent = '服务器正在重启，答案已保留，等几秒再点一次提交。'; $('btnSub').disabled = false; return; }
     // h 版：先读响应体再按 error 分流，不能只看 HTTP 状态码——
     // 403 有两种：retry_exhausted（留本页看答案抄写）和 part_done（真做完，回首页）
@@ -1531,6 +1649,14 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
   const fb = $('fb'), nextrow = $('nextrow');
   const v = b.verdict;
   const good = (v === 'correct' || v === 'correct_retry');
+  // 5 分钟快练即时得分（2026-11-11）：每道题只记第一次提交，一次答对且零求助才算分
+  if (LID === 'quick-drill' && s.item_id) {
+    window._quickScore = window._quickScore || { first: 0, seen: {} };
+    if (!window._quickScore.seen[s.item_id]) {
+      window._quickScore.seen[s.item_id] = true;
+      if (good && b.first_try && !b.helped) window._quickScore.first++;
+    }
+  }
   const isPractice = (s.phase || 'practice') === 'practice';
   const nudgeHtml = b.nudge ? `<div class="nudge">${escapeHtml(b.nudge)}</div>` : '';
   if (good) {
@@ -1553,7 +1679,15 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
       }
     }
     fb.className = 'fb ok';
-    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml;
+    // “自己做出来的时刻”（2026-11-02）：服务端确认是隔了一段回来独立攻克的，才显示专属一句；
+    // 有帮助完成时不显示（b.helped 为真时服务端本就不回 conquered，这里再守一道）。
+    const conqueredTxt = (!b.helped && b.conquered) ? {
+      copied: '上次这道题你看了答案，这次是你自己做出来的。',
+      helped: '上次这道题你用了提示，这次是你自己做出来的。',
+      wrong: '这道题你以前答错过，这次自己做对了。'
+    }[b.conquered] : null;
+    const conqueredHtml = conqueredTxt ? `<div class="conquered">🏅 ${conqueredTxt}</div>` : '';
+    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml + conqueredHtml;
     nextrow.style.display = 'flex';
     $('btnNext').onclick = () => advance();
     if (s.kind === 'mcq') wrap.querySelectorAll('.opt').forEach(x => x.disabled = true);
@@ -1588,13 +1722,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
     // 2026-10-14修：答错后的"再想一想"反馈不算帮助，不置 sawFb（否则重试会被误记为用了提示）
     fastStreak.n = 0;
     fb.className = 'fb no';
-    // 前端兜底（2026-10-19）：若服务端没返回针对性反馈，用步骤自带的 wrong_feedback
-    let fbText = b.feedback;
-    if ((!fbText || fbText === '再想一想。' || fbText === '再看一看通知。') && s && s.wrong_feedback && s.kind === 'mcq') {
-      const g = String(givenAnswer || '').trim().toUpperCase();
-      if (s.wrong_feedback[g]) fbText = s.wrong_feedback[g];
-    }
-    fb.innerHTML = escapeHtml(fbText || '再想一想。') + nudgeHtml;
+    fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
     $('btnSub').disabled = false;
     // 保底出口优先（2026-10-13）：第3次错后直接给"先看答案，继续往下"，不再进带着做。
     // 之前是先进带着做小步、把保底按钮挤到下面，孩子被困在小步里出不来。
@@ -1610,6 +1738,14 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
       if (isPractice) {
         wrongCt[s.item_id] = (wrongCt[s.item_id] || 0) + 1;
         if (wrongCt[s.item_id] === 2 && autoHelp) autoHelp(2, true);
+      }
+      // 2026-11-02：主动告诉孩子出口规则（不用他自己撞见）：练习答错 3 次、验证答错 2 次会直接给答案
+      var _wc = wrongCt[s.item_id] || 0;
+      var _left = isPractice ? (3 - _wc) : 1;
+      if (_left > 0) {
+        fb.innerHTML += '<div class="nudge">' + (isPractice
+          ? '不会就点“老师教我”，点 3 次就直接讲答案；这道题再答错 ' + _left + ' 次也会直接给你看答案和原因。'
+          : '再答错 1 次就直接给你看答案和原因，也可以点“老师教我”直接讲答案。') + '</div>';
       }
     }
   }
@@ -1696,15 +1832,44 @@ function renderShowAnswerBtn(s, sa) {
   var bh = $('btnHelp'); if (bh) bh.disabled = false;
   fb.className = 'fb no';
   fb.innerHTML = '<div>这道题先看答案，抄一遍，我们继续往下。</div>'
-    + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div>';
+    + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div><div id="remedialBox"></div>';
   $('btnShowAns').onclick = function () { showAnswerCopy(s, sa); };
+  maybeShowRemedial();
   showInView($('btnShowAns'));
+}
+/* 补救地图（2026-10-21）：保底出口处给出"先回头补哪一步"。数学 sx 课用 public/math-remedial.json，英语 U3–U6 语法课用 public/english-remedial.json */
+var __remedialCache = {};
+function maybeShowRemedial() {
+  var box = $('remedialBox');
+  if (!box) return;
+  var lid = LESSON_PARAM || '';
+  var file = null;
+  if (lid.indexOf('sx') === 0) file = '/math-remedial.json';
+  else if (/^(u[3-6]r[1-5]|u3-consolidate|review3|review5)$/.test(lid)) file = '/english-remedial.json';
+  if (!file) return;
+  var render = function (data) {
+    var entry = data && data.lessons && data.lessons[lid];
+    if (!entry || !entry.items || !entry.items.length) return;
+    var h = '<div class="sabox" style="margin-top:10px;"><div>卡住不一定是这道题难，可能是前面有一步还没练熟。按顺序回头补，补完再回来就顺了：</div>';
+    entry.items.forEach(function (it, i) {
+      h += '<div style="margin-top:8px;line-height:1.6;">' + (i + 1) + '. <b>' + escapeHtml(it.name) + '</b>'
+        + (it.desc ? '<div style="color:#5f6368;font-size:14px;">' + escapeHtml(it.desc) + '</div>' : '')
+        + (it.tip ? '<div style="color:#b06000;font-size:14px;">老师提醒：' + escapeHtml(it.tip) + '</div>' : '')
+        + (it.sx ? '<div class="btnrow"><a class="opt" style="text-decoration:none;" href="/lesson?lesson=' + it.sx + '"><span>去补这一课 →</span></a></div>' : '')
+        + '</div>';
+    });
+    h += '<div style="margin-top:8px;color:#999;font-size:12px;">补救路线参考开源知识图谱 cn-math-taxonomy（CC BY-NC 4.0）</div></div>';
+    box.innerHTML = h;
+  };
+  if (__remedialCache[file]) { render(__remedialCache[file]); return; }
+  fetch(file).then(function (r) { return r.json(); }).then(function (d) { __remedialCache[file] = d; render(d); }).catch(function () {});
 }
 function showAnswerCopy(s, sa) {
   var box = $('saBox'); if (!box) return;
   var isMcq = s.kind === 'mcq';
   var html = '<div class="sabox"><div>正确答案是：<b>' + escapeHtml(sa.answer) + '</b></div>'
     + (sa.reason ? '<div>原因：' + escapeHtml(sa.reason) + '</div>' : '')
+    + '<div class="nudge">这道题会进错题本，以后再考你一次。</div>'
     + '<div class="nudge">照着写一遍，提交就能继续。</div>';
   if (isMcq) {
     html += '<div class="btnrow">' + s.options.map(function (o, i) {
@@ -1739,7 +1904,7 @@ async function submitCopy(s, answer) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ item_id: s.item_id, answer: answer,
         session_id: ST['p' + PART].sid, saw_feedback: 1, elapsed_ms: 0, copied: 1,
-        is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest")) ? 1 : 0 }) });
+        is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest" || LID === "quick-drill")) ? 1 : 0 }) });
     b = await r.json();
   } catch (e) { b = null; }
   if (!b || !b.ok) {
@@ -1797,6 +1962,28 @@ async function submitCopy(s, answer) {
     const r = await apiFetch(lessonUrl);
     if (r.status === 401) { location.href = '/verify.html'; return; }
     LESSON = await r.json();
+    // 2026-10-23修：被锁课程先分流。原 lesson_locked 分支在 steps 校验之后，
+    // 锁定时 steps 不合法先抛 lesson_empty 进"打不开了"，锁页永远显示不出来（孩子误以为页面坏了）
+    if (LESSON && LESSON.error === 'lesson_locked') {
+      document.title = (window.XH_BRAND||'小禾英语') + ' · 课程未解锁';
+      wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
+        <div style="font-size:48px;margin-bottom:16px;">🔒</div>
+        <h2 class="stem">这门新课还没开</h2>
+        <p class="scene">每天开始新课前，先独立做完今天的 10 道错题（不点老师教我），新课就自动开。</p>
+        <p class="scene" id="lockDaily" style="display:none;"></p>
+        <button class="btn btn-primary" onclick="location.href='/progress.html'">去做今日错题 →</button>
+        <button class="btn ghost" onclick="location.href='/'" style="margin-left:8px;">返回首页</button>
+      </div>`;
+      try {
+        const dr = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
+        const dd = await dr.json().catch(() => null);
+        if (dd && dd.ok && dd.dailyMistakes) {
+          const el = document.getElementById('lockDaily');
+          if (el) { el.textContent = '今日错题 ' + (dd.dailyMistakes.done || 0) + '/' + (dd.dailyMistakes.target || 10); el.style.display = ''; }
+        }
+      } catch {}
+      return;
+    }
     if (!LESSON || !Array.isArray(LESSON.steps) || LESSON.steps.length === 0) {
       throw new Error('lesson_empty');
     }
@@ -1838,18 +2025,6 @@ async function submitCopy(s, answer) {
         store.save(ST);
       } catch {}
     }
-    // 2026-10-12：课程被锁定（如 Unit 4），显示明确提示而不是空白页
-    if (LESSON && LESSON.error === 'lesson_locked') {
-      document.title = (window.XH_BRAND||'小禾英语') + ' · 课程未解锁';
-      wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px 20px;">
-        <div style="font-size:48px;margin-bottom:16px;">🔒</div>
-        <h2 class="stem">这门课还没解锁</h2>
-        <p class="scene">进入 Unit 4 需要同时满足：<br>①「Unit 3 专项巩固」过关（零求助、独立正确率≥85%）<br>② review3 学完<br>③ 今天从错题本做10道（独立完成、不点老师教我，不足10道做完为止）<br><br>加油，把基础打牢！</p>
-        <button class="btn btn-primary" onclick="location.href='/'">返回首页</button>
-        <button class="btn ghost" onclick="location.href='/lesson?lesson=u3-consolidate'" style="margin-left:8px;">去专项巩固</button>
-      </div>`;
-      return;
-    }
     await loadProg(); // 续课进度（服务端，按题目ID）
     document.title = (window.XH_BRAND||'小禾英语') + ' · ' + (LESSON.home_subtitle || LESSON.title || '');
     const brandSmall = document.querySelector('#brand small');
@@ -1862,6 +2037,33 @@ async function submitCopy(s, answer) {
       <p class="scene">检查一下网络，再刷新试试。</p>
       <button class="btn btn-primary" onclick="location.reload()">重新加载本题</button></div>`;
   }
+})();
+
+// ---------- 老师回复提醒（2026-10-20 Elouise：老师一回复，页面弹窗提醒） ----------
+(function() {
+  const KEY = 'xh_fb_seen_reply_id';
+  async function checkFbReplies() {
+    try {
+      const r = await fetch('/api/feedback/mine', { cache: 'no-store' });
+      const d = await r.json().catch(() => ({}));
+      const list = (d && d.list) || [];
+      const replied = list.filter(f => f.reply && f.status === 'replied');
+      if (!replied.length) return;
+      const maxId = Math.max.apply(null, replied.map(f => f.id));
+      const seen = parseInt(localStorage.getItem(KEY) || '0', 10) || 0;
+      if (!seen) { localStorage.setItem(KEY, String(maxId)); return; }
+      if (maxId <= seen) return;
+      localStorage.setItem(KEY, String(maxId));
+      const tip = document.createElement('div');
+      tip.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#1a73e8;color:#fff;padding:14px 20px;border-radius:14px;font-size:15px;z-index:9999;max-width:86%;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer;text-align:center;';
+      tip.innerHTML = '👩‍🏫 老师回复了你的反馈，点这里去看看 →';
+      tip.onclick = () => { location.href = '/settings.html#fbList'; };
+      document.body.appendChild(tip);
+      setTimeout(() => tip.remove(), 8000);
+    } catch {}
+  }
+  checkFbReplies();
+  setInterval(checkFbReplies, 120000);
 })();
 </script>
 <script src="/modal.js"></script>
