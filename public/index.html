@@ -795,6 +795,11 @@ fetch('/api/titles').then(r => r.json()).then(t => {
     <div style="font-size:13px;color:#795548;margin:6px 0;" id="dailyDesc">加载中…</div>
     <button id="btnDaily" style="display:none;margin-top:8px;padding:12px 32px;border:0;border-radius:12px;background:linear-gradient(135deg,#ff8f00,#ffb300);color:#fff;font-size:16px;font-weight:800;cursor:pointer;">开始闯关 →</button>
   </div>
+  <!-- 5 分钟快练（2026-11-11 Elouise 批准，试 3–4 晚）：10 道题，5 分钟，做完立刻看到分；不计门禁、不进错题本 -->
+  <a href="/lesson?lesson=quick-drill" style="display:block;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border:2px solid #43a047;border-radius:16px;padding:16px;margin-bottom:12px;text-align:center;text-decoration:none;">
+    <div style="font-size:17px;font-weight:800;color:#2e7d32;">⚡ 5 分钟快练</div>
+    <div style="font-size:13px;color:#5f6368;margin-top:6px;">10 道题，5 分钟，做完立刻看到分 · 不计门禁，想练就练</div>
+  </a>
   <button class="btn-continue" id="btnContinue">
     📍 继续学习
     <small id="continueSub">点我进入下一课</small>
