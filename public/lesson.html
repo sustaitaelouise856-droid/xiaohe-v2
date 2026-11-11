@@ -1620,8 +1620,14 @@ function wireQuestion(s) {
       if (b.show_answer) { renderShowAnswerBtn(s, b.show_answer); return; }
       setTimeout(advance, 1800); return;
     }
-    if (r.status === 403 || errCode === 'part_done') {
+    if (errCode === 'part_done') {
       err.textContent = '这部分已经完成了，不能重做。';
+      setTimeout(renderHome, 1500); return;
+    }
+    if (r.status === 403) {
+      // 2026-11-11修（反馈 id=33）：403 不都是 part_done，lesson_locked 也会走到这里；
+      // 别再跟孩子说“已完成”，说清是锁住了、回首页做错题就能回来。
+      err.textContent = '这门课现在锁住了：先回首页把今天的错题做完，再回来继续。';
       setTimeout(renderHome, 1500); return;
     }
     // 2026-09-30 二审三9：提交失败显示错误码（如 no_item），方便定位；
