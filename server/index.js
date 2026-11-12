@@ -411,6 +411,9 @@ app.get('/api/parent-report', auth.requireAuth, (req, res) => {
   const weaknesses = [];
   const WP = /^sx-/.test(lid) ? WEAK_PARENT_SX : (/^yw-/.test(lid) ? WEAK_PARENT_YW : WEAK_PARENT);
   for (const w of ['old_info', 'spelling', 'omission']) {
+    // 语文课跳过 old_info（2026-11-12）："分清新旧信息"是英语阅读课概念（用错旧通知的信息），
+    // 语文选择题答错并不代表这个弱点；review.classify 对所有 mcq 都返回 old_info，语文课上是误报
+    if (/^yw-/.test(lid) && w === 'old_info') continue;
     if (byWeak[w] > 0) weaknesses.push(WP[w]);
   }
   for (const t of agg.weaknesses) {
