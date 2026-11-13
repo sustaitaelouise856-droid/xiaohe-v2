@@ -1,0 +1,1314 @@
+{
+ "lesson_id": "u1r3",
+ "practice_end": 27,
+ "home_subtitle": "第三课 · 恐龙条目",
+ "part1_desc": "第 1–27 步：跟着苏文读恐龙的百科条目——认 dinosaur、prehistoric 这些词，学扫描找数字和 as...as...，练恐龙数字 245、180、66 和 1,000。",
+ "part2_desc": "第 28–50 步：再读一篇恐龙短文独立验证，练 either...or...、some...others... 和 so...that...，学列数字、作比较的写作方法，练写恐龙介绍。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：恐龙条目信息查找（扫描找数字）、必记词汇 dinosaur/prehistoric/completely/ancestor/fossil、句式 as...as.../either...or.../some...others.../so...that...、数字 245/180/66/1,000、写作方法列数字与作比较、主题分类 The living world。Unit 1 Look it up! 主题，核心内容恐龙（约 2.45 亿年前出现、统治地球 1.8 亿多年、约 6,600 万年前灭绝）。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮·广播站：翻开恐龙条目",
+   "teach_html": "<p>广播站继续翻儿童百科全书：苏文翻到了“生物世界”这个主题，找到一篇关于<strong>恐龙</strong>的条目。</p><p>读之前先想好：你要找什么？恐龙什么时候出现？统治地球多久？什么时候灭绝？大的有多大，小的有多小？带着问题去读，读得更快。</p><p>这一课我们就读这篇条目，学着用扫描找数字。</p>",
+   "audio_id": "u1r3-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮·必记词汇（一）",
+   "teach_html": "<p>先认四个词，都是恐龙条目里要用的：</p><p><strong>dinosaur</strong> /ˈdaɪnəsɔː(r)/ <em>n.</em> 恐龙。The word “dinosaur” means “terrible lizard”. dinosaur 这个词的意思是“恐怖的蜥蜴”。</p><p><strong>prehistoric</strong> /ˌpriːhɪˈstɒrɪk/ <em>adj.</em> 史前的。Dinosaurs are prehistoric animals. 恐龙是史前动物。</p><p><strong>terrible</strong> /ˈterəb(ə)l/ <em>adj.</em> 恐怖的；可怕的。</p><p><strong>lizard</strong> /ˈlɪzəd/ <em>n.</em> 蜥蜴。</p><p>顺带记构词：<strong>pre-</strong> 是“在……之前”的意思，historic 是“有历史记载的”，合起来 prehistoric 就是“史前的”。</p>",
+   "audio_id": "u1r3-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮·必记词汇（二）",
+   "teach_html": "<p>再认四个词：</p><p><strong>ancestor</strong> /ˈænsestə(r)/ <em>n.</em> （动物的）原始种型；祖先。Dinosaurs are the ancestors of today's birds. 恐龙是今天鸟类的祖先。</p><p><strong>fossil</strong> /ˈfɒsl/ <em>n.</em> 化石。Scientists learn about dinosaurs by studying fossils. 科学家通过研究化石了解恐龙。</p><p><strong>die out</strong> 灭绝：Dinosaurs died out about 66 million years ago. 恐龙大约在 6600 万年前灭绝。</p><p><strong>completely</strong> /kəmˈpliːtli/ <em>adv.</em> 完全地；彻底地。Scientists are not completely sure why. 科学家并不完全确定为什么。</p>",
+   "audio_id": "u1r3-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·阅读策略：扫描找数字",
+   "teach_html": "<p>要找数字，不用逐字读完全文。先想好找哪个数字，再快速扫文章，看到数字就停下来，读那一句。</p><p>比如找“恐龙什么时候灭绝”，扫到 <strong>66 million years ago</strong> 就停住；找“统治多久”，扫到 <strong>more than 180 million years</strong> 就停住。</p><p>数字是最容易扫到的东西：眼睛一扫，数字马上跳出来。</p>",
+   "audio_id": "u1r3-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·句式：as...as...",
+   "teach_html": "<p><strong>as + 形容词/副词原形 + as</strong>，表示“和……一样”。</p><p>Some were <strong>as small as</strong> chickens. 有些恐龙像鸡一样小。</p><p>Others were <strong>as big as</strong> ten elephants. 另一些像十头大象一样大。</p><p>记住：两个 as 中间放形容词或副词原形，后面跟比较的对象。否定是 not as...as...，表示“不如……”。</p>",
+   "audio_id": "u1r3-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·句式：either...or... / some...others...",
+   "teach_html": "<p><strong>either...or...</strong> 要么……要么……；或者……或者……：Dinosaurs walked on <strong>either</strong> two <strong>or</strong> four legs. 恐龙用两条腿或者四条腿走路。</p><p><strong>some...others...</strong> 一些……另一些……：<strong>Some</strong> dinosaurs ate plants, and <strong>others</strong> ate meat. 有些恐龙吃植物，另一些吃肉。</p><p>others 在这里是代词，指“另外的一部分”，前面不用再加 the。</p>",
+   "audio_id": "u1r3-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·数字读法：million 与 1,000",
+   "teach_html": "<p>英语里的大数字：<strong>million</strong> 是“百万”。245 million years ago 是“2.45 亿年前”；180 million years 是“1.8 亿年”；66 million years ago 是“6600 万年前”。</p><p><strong>1,000</strong> 读 one thousand，是“一千”：more than 1,000 kinds of dinosaurs 是“1000 多种恐龙”。</p><p>记住：million 前面有数字时不加 s，245 million 不是 245 millions。</p>",
+   "audio_id": "u1r3-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "写作帮·写作方法：列数字、作比较",
+   "teach_html": "<p>介绍事物，两个办法最管用：<strong>列数字</strong>和<strong>作比较</strong>。</p><p>列数字：不说“恐龙生活了很久”，说“恐龙统治地球 1.8 亿多年”——数字一出来，时间多长马上就清楚了。</p><p>作比较：不说“恐龙有大有小”，说“有些像鸡一样小，另一些像十头大象一样大”——一比，大小差别马上就看出来了。</p><p>以后写介绍动物的文章，也可以用这两个办法：先给数字，再做比较。</p>",
+   "audio_id": "u1r3-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "练习帮·做笔记：恐龙笔记五项",
+   "teach_html": "<p>读完一篇动物条目，随手记五项：生存时期 Time period、体型 Size、饮食 Diets、近亲动物 Animals related to it、科学家不确定的事 Things scientists are not sure about。</p><p>恐龙的五项是：约 2.45 亿年前出现、约 6600 万年前灭绝 / 小得像鸡、大得像十头大象 / 有些吃植物、有些吃肉 / 鳄鱼、蛇、蜥蜴和今天的鸟 / 为什么突然灭绝。读的时候就按这五项去扫。</p>",
+   "audio_id": "u1r3-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮·阅读材料：恐龙",
+   "teach_html": "<p>下面是一篇儿童百科全书里的条目，介绍恐龙。读两遍，记住关键数字：恐龙第一次出现是什么时候？统治地球多久？什么时候灭绝？大的有多大，小的有多小？</p><p>再用一次扫描的方法：问题问数字，就去找数字；问题问大小，就去找 as...as...。</p>",
+   "audio_id": "u1r3-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "恐龙第一次出现",
+   "scene": "恐龙最早是什么时候出现的？",
+   "stem": "When did dinosaurs first appear?",
+   "options": [
+    "about 245 million years ago",
+    "about 180 million years ago",
+    "about 66 million years ago",
+    "about 1,000 years ago"
+   ],
+   "answer": "A",
+   "help": "到恐龙条目里找“第一次”那个句子，里面有个年份。",
+   "explain": "Dinosaurs first appeared about 245 million years ago. 第一条恐龙大约在 2.45 亿年前出现。",
+   "wrong_feedback": {
+    "B": "180 million 是恐龙统治地球的时间，不是第一次出现的时间。",
+    "C": "66 million 是恐龙灭绝的时间，不是第一次出现的时间。",
+    "D": "1,000 年太短了，恐龙是几亿年前的动物。"
+   },
+   "audio_id": "u1r3-q01",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "统治地球多久",
+   "scene": "恐龙在地球上称霸了多长时间？",
+   "stem": "Dinosaurs lived on the Earth for more than ___ million years.",
+   "task": "只写空里的部分。",
+   "answer_text": "180",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "180"
+     ],
+     "olds": [
+      "66",
+      "245"
+     ]
+    }
+   ],
+   "help": "条目里说“1.8 亿多年”，那个数字是多少？",
+   "explain": "Dinosaurs lived on the Earth for more than 180 million years. 恐龙在地球上生活了 1.8 亿多年。",
+   "common_errors": [
+    {
+     "when": "写了 66",
+     "say": "66 是灭绝的时间，不是统治的时间，再找找“more than”那句。"
+    },
+    {
+     "when": "写了 245",
+     "say": "245 是第一次出现的时间，不是统治的时间，再找找“more than”那句。"
+    }
+   ],
+   "audio_id": "u1r3-q02",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "恐龙什么时候灭绝",
+   "scene": "恐龙大约在多少万年前灭绝？",
+   "stem": "Dinosaurs died out about ___ million years ago.",
+   "options": [
+    "180",
+    "245",
+    "66",
+    "1,000"
+   ],
+   "answer": "C",
+   "help": "条目里“died out”那句，数字是多少？",
+   "explain": "Dinosaurs died out about 66 million years ago. 恐龙大约在 6600 万年前灭绝。",
+   "wrong_feedback": {
+    "A": "180 是统治的时间，不是灭绝的时间。",
+    "B": "245 是第一次出现的时间，不是灭绝的时间。",
+    "D": "1,000 是另一种恐龙的数量，不是灭绝的时间。"
+   },
+   "audio_id": "u1r3-q03",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "小得像鸡",
+   "scene": "最小的恐龙有多小？",
+   "stem": "Some dinosaurs were as small as ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "chickens",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "chickens"
+     ],
+     "olds": [
+      "chicken",
+      "chiken"
+     ],
+     "cn": [
+      "鸡"
+     ]
+    }
+   ],
+   "help": "条目里说“有些像鸡一样小”，空里填什么动物？",
+   "explain": "Some dinosaurs were as small as chickens. 有些恐龙像鸡一样小。",
+   "common_errors": [
+    {
+     "when": "写了 chicken",
+     "say": "这里说的是很多只鸡，要用复数 chickens。"
+    },
+    {
+     "when": "写了 chiken",
+     "say": "拼写注意：chicken 是 c-h-i-c-k-e-n，别丢了 c。"
+    }
+   ],
+   "audio_id": "u1r3-q04",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "be related to 是什么意思",
+   "scene": "恐龙和鳄鱼“有亲缘关系”是什么意思？",
+   "stem": "What does “Dinosaurs are related to crocodiles” mean?",
+   "options": [
+    "They are friends.",
+    "They are in the same family.",
+    "They live in the same house.",
+    "They eat the same food."
+   ],
+   "answer": "B",
+   "help": "related 是“有关系的、有亲缘的”，想想它在说什么关系。",
+   "explain": "It means they are in the same family. related 是“有亲缘关系”，就是说它们属于同一个大家族。",
+   "wrong_feedback": {
+    "A": "朋友是 friends，亲缘关系不是交朋友。",
+    "C": "住在一起是 live together，亲缘关系不是住同一间房子。",
+    "D": "吃同样的食物是 eat the same food，亲缘关系不是吃的一样。"
+   },
+   "audio_id": "u1r3-q05",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "今天鸟类的祖先",
+   "scene": "今天的鸟类是从谁演变来的？",
+   "stem": "Dinosaurs are the ___ of today's birds.",
+   "task": "只写空里的部分。",
+   "answer_text": "ancestors",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "ancestors"
+     ],
+     "olds": [
+      "ancestor",
+      "ancester"
+     ],
+     "cn": [
+      "祖先"
+     ]
+    }
+   ],
+   "help": "条目里说恐龙是今天鸟类的什么？那个词是“祖先”。",
+   "explain": "Dinosaurs are the ancestors of today's birds. 恐龙是今天鸟类的祖先。",
+   "common_errors": [
+    {
+     "when": "写了 ancestor",
+     "say": "这里说的是恐龙这个群体，要用复数 ancestors。"
+    },
+    {
+     "when": "写了 ancester",
+     "say": "拼写注意：ancestor 是 a-n-c-e-s-t-o-r，别写成 ancester。"
+    }
+   ],
+   "audio_id": "u1r3-q06",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "哪个 as...as... 是对的",
+   "scene": "下面哪个句子里的 as...as... 用对了？",
+   "stem": "Which sentence uses “as...as...” correctly?",
+   "options": [
+    "He is as tall than me.",
+    "She is as tall so her sister.",
+    "They are as smart that monkeys.",
+    "This dinosaur is as big as an elephant."
+   ],
+   "answer": "D",
+   "help": "as...as... 两个 as 中间放形容词原形，后面跟比较对象，逐个检查。",
+   "explain": "“This dinosaur is as big as an elephant.” is correct. as...as... 中间是形容词原形 big，后面是比较对象 an elephant。",
+   "wrong_feedback": {
+    "A": "than 是比较级用的词，as...as... 里不能有 than。",
+    "B": "so 不能放在 as...as... 里，两个 as 之间只放形容词。",
+    "C": "that 不能放在 as...as... 里，第二个 as 后面直接跟比较对象。"
+   },
+   "audio_id": "u1r3-q07",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "吃植物还是吃肉",
+   "scene": "大多数恐龙吃什么？",
+   "stem": "Many dinosaurs ate ___, but some ate meat.",
+   "task": "只写空里的部分。",
+   "answer_text": "plants",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "plants"
+     ],
+     "olds": [
+      "plant",
+      "plans"
+     ],
+     "cn": [
+      "植物"
+     ]
+    }
+   ],
+   "help": "条目里说“许多恐龙吃……，但有些吃肉”，空里填什么？",
+   "explain": "Many dinosaurs ate plants, but some ate meat. 许多恐龙吃植物，但有些吃肉。",
+   "common_errors": [
+    {
+     "when": "写了 plant",
+     "say": "这里说的是很多植物，要用复数 plants。"
+    },
+    {
+     "when": "写了 plans",
+     "say": "plans 是“计划”，这里要填 plants“植物”，注意拼写。"
+    }
+   ],
+   "audio_id": "u1r3-q08",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "completely 是什么意思",
+   "scene": "completely 和哪个词意思最接近？",
+   "stem": "Which word is closest in meaning to “completely”?",
+   "options": [
+    "fully",
+    "quickly",
+    "slowly",
+    "never"
+   ],
+   "answer": "A",
+   "help": "completely 是“完全地、彻底地”，哪个选项也是这个意思？",
+   "explain": "Completely means fully. completely 是“完全地”，和 fully 意思最接近。",
+   "wrong_feedback": {
+    "B": "quickly 是“很快地”，说的是速度，不是程度。",
+    "C": "slowly 是“慢慢地”，说的是速度，不是程度。",
+    "D": "never 是“从不”，意思和 completely 正好相反。"
+   },
+   "audio_id": "u1r3-q09",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "die out 是什么意思",
+   "scene": "die out 是什么意思？",
+   "stem": "What does “die out” mean?",
+   "options": [
+    "sleep well",
+    "disappear for ever",
+    "eat a lot",
+    "run fast"
+   ],
+   "answer": "B",
+   "help": "die 是“死”，out 是“出去、没了”，合起来是什么？",
+   "explain": "Die out means disappear for ever. die out 是“灭绝”，就是永远消失了。",
+   "wrong_feedback": {
+    "A": "sleep well 是“睡得好”，和灭绝没关系。",
+    "C": "eat a lot 是“吃很多”，和灭绝没关系。",
+    "D": "run fast 是“跑得快”，和灭绝没关系。"
+   },
+   "audio_id": "u1r3-q10",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "short",
+   "title": "两条腿还是四条腿",
+   "scene": "恐龙用几条腿走路？",
+   "stem": "Dinosaurs walked on either two or ___ legs.",
+   "task": "只写空里的部分。",
+   "answer_text": "four",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "four"
+     ],
+     "olds": [
+      "for",
+      "fore"
+     ],
+     "cn": [
+      "四"
+     ]
+    }
+   ],
+   "help": "either two or ___，要么两条，要么几条？",
+   "explain": "Dinosaurs walked on either two or four legs. 恐龙用两条腿或者四条腿走路。",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "for 是介词“为了”；这里要填数字 four“四”，发音一样拼写不一样。"
+    },
+    {
+     "when": "写了 fore",
+     "say": "fore 是“前面的”；这里要填数字 four“四”。"
+    }
+   ],
+   "audio_id": "u1r3-q11",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "哪句关于恐龙是对的",
+   "scene": "下面哪句话和条目里说的一致？",
+   "stem": "Which sentence is TRUE about dinosaurs?",
+   "options": [
+    "All dinosaurs ate meat.",
+    "All dinosaurs lived in the water.",
+    "Some dinosaurs were as big as ten elephants.",
+    "Dinosaurs died out 1,000 years ago."
+   ],
+   "answer": "C",
+   "help": "逐句对照条目：吃什么？住哪？多大？什么时候灭绝？",
+   "explain": "Some dinosaurs were as big as ten elephants. 条目里说有些恐龙像十头大象一样大。",
+   "wrong_feedback": {
+    "A": "条目里说许多恐龙吃植物，不是所有恐龙都吃肉。",
+    "B": "条目里说恐龙生活在陆地上，不是水里。",
+    "D": "条目里说恐龙大约在 6600 万年前灭绝，不是 1000 年前。"
+   },
+   "audio_id": "u1r3-q12",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "short",
+   "title": "dinosaur 这个词的意思",
+   "scene": "dinosaur 这个词从希腊语来，意思是“什么样的蜥蜴”？",
+   "stem": "The word “dinosaur” means “___ lizard”.",
+   "task": "只写空里的部分。",
+   "answer_text": "terrible",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "terrible"
+     ],
+     "olds": [
+      "terible",
+      "terribel"
+     ],
+     "cn": [
+      "恐怖的"
+     ]
+    }
+   ],
+   "help": "dinosaur 是“恐怖的蜥蜴”，填哪个形容词？",
+   "explain": "The word “dinosaur” means “terrible lizard”. dinosaur 这个词的意思是“恐怖的蜥蜴”。",
+   "common_errors": [
+    {
+     "when": "写了 terible",
+     "say": "拼写注意：terrible 是 t-e-r-r-i-b-l-e，有两个 r。"
+    },
+    {
+     "when": "写了 terribel",
+     "say": "拼写注意：terrible 结尾是 -ble，不是 -bel。"
+    }
+   ],
+   "audio_id": "u1r3-q13",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "科学家怎么了解恐龙",
+   "scene": "科学家靠研究什么了解恐龙？",
+   "stem": "Scientists learn more about dinosaurs by studying their ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "fossils",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "fossils"
+     ],
+     "olds": [
+      "fossil",
+      "fossilse"
+     ],
+     "cn": [
+      "化石"
+     ]
+    }
+   ],
+   "help": "条目最后一句：科学家研究什么了解恐龙？",
+   "explain": "Scientists learn more about dinosaurs by studying their fossils. 科学家通过研究化石了解恐龙。",
+   "common_errors": [
+    {
+     "when": "写了 fossil",
+     "say": "这里说的是很多化石，要用复数 fossils。"
+    },
+    {
+     "when": "写了 fossilse",
+     "say": "拼写注意：fossils 是 f-o-s-s-i-l-s，别多加 e。"
+    }
+   ],
+   "audio_id": "u1r3-q14",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "short",
+   "title": "统治地球",
+   "scene": "恐龙统治地球多长时间？",
+   "stem": "Dinosaurs ___ the Earth for more than 180 million years.",
+   "task": "只写空里的部分。",
+   "answer_text": "ruled",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "ruled"
+     ],
+     "olds": [
+      "rule",
+      "ruld"
+     ],
+     "cn": [
+      "统治"
+     ]
+    }
+   ],
+   "help": "“统治地球”，这里要用 rule 的什么形式？讲的是过去的事。",
+   "explain": "Dinosaurs ruled the Earth for more than 180 million years. 恐龙统治地球 1.8 亿多年。",
+   "common_errors": [
+    {
+     "when": "写了 rule",
+     "say": "这里讲的是过去的事，rule 要用过去式 ruled。"
+    },
+    {
+     "when": "写了 ruld",
+     "say": "拼写注意：ruled 是 r-u-l-e-d，rule 后面加 d。"
+    }
+   ],
+   "audio_id": "u1r3-q15",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "哪个句子用了数字",
+   "scene": "下面哪个句子用了数字来介绍事物？",
+   "stem": "Which sentence uses a number to describe something?",
+   "options": [
+    "Dinosaurs are animals.",
+    "Dinosaurs ate plants.",
+    "Dinosaurs lived on land.",
+    "Scientists know more than 1,000 kinds of dinosaurs."
+   ],
+   "answer": "D",
+   "help": "列数字就是句子里出现具体的数字，哪个选项里有数字？",
+   "explain": "“Scientists know more than 1,000 kinds of dinosaurs.” uses a number. 只有 D 里有具体数字 1,000。",
+   "wrong_feedback": {
+    "A": "这句只说了恐龙是动物，没有数字。",
+    "B": "这句只说了恐龙吃什么，没有数字。",
+    "C": "这句只说了恐龙住哪，没有数字。"
+   },
+   "audio_id": "u1r3-q16",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "大得像十头大象",
+   "scene": "最大的恐龙有多大？",
+   "stem": "Some dinosaurs were as big as ten ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "elephants",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "elephants"
+     ],
+     "olds": [
+      "elephant",
+      "elefants"
+     ],
+     "cn": [
+      "大象"
+     ]
+    }
+   ],
+   "help": "“像十头大象一样大”，空里填什么动物？",
+   "explain": "Some dinosaurs were as big as ten elephants. 有些恐龙像十头大象一样大。",
+   "common_errors": [
+    {
+     "when": "写了 elephant",
+     "say": "这里说的是十头大象，要用复数 elephants。"
+    },
+    {
+     "when": "写了 elefants",
+     "say": "拼写注意：elephants 是 e-l-e-p-h-a-n-t-s，别写成 elefants。"
+    }
+   ],
+   "audio_id": "u1r3-q17",
+   "reading": "Dinosaurs were animals from a very long time ago. They were a type of prehistoric animal. They were related to crocodiles, snakes and lizards, and they were the ancestors of today's birds. The first dinosaurs lived about 245 million years ago. They lived on land and walked on either two or four legs. Many of them ate plants, but some of them ate meat. Dinosaurs were not all the same size. Some were as small as chickens, and others were as big as ten elephants. For more than 180 million years, dinosaurs ruled the Earth. Then, about 66 million years ago, they died out. Scientists are not completely sure why. They study fossils, and every year they learn more about dinosaurs."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮·阅读材料：科学家怎样了解恐龙",
+   "teach_html": "<p>第二篇短文还是讲恐龙，这次讲科学家是怎么了解恐龙的。读两遍，记住：科学家知道多少种恐龙？他们靠研究什么了解恐龙？恐龙为什么灭绝，科学家确定吗？</p><p>这篇是新的短文，答案不能照抄上一篇，要在这篇里找。</p>",
+   "audio_id": "u1r3-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "科学家知道多少种恐龙",
+   "scene": "科学家已经发现了多少种恐龙？",
+   "stem": "How many kinds of dinosaurs do scientists know?",
+   "options": [
+    "about 100",
+    "more than 1,000",
+    "about 66",
+    "about 180"
+   ],
+   "answer": "B",
+   "help": "到这篇短文第一句找数字。",
+   "explain": "Scientists know more than 1,000 kinds of dinosaurs. 科学家已经知道 1000 多种恐龙。",
+   "wrong_feedback": {
+    "A": "100 太少了，短文说超过 1000 种。",
+    "C": "66 是恐龙灭绝的时间，不是恐龙的种数。",
+    "D": "180 是恐龙统治地球的时间，不是恐龙的种数。"
+   },
+   "audio_id": "u1r3-q18",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "1000 多种恐龙",
+   "scene": "科学家知道的恐龙种类有多少？",
+   "stem": "Scientists know more than ___ kinds of dinosaurs.",
+   "task": "只写空里的部分。",
+   "answer_text": "1,000",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "1000",
+      "1 000"
+     ]
+    }
+   ],
+   "help": "短文第一句：超过多少种？",
+   "explain": "Scientists know more than 1,000 kinds of dinosaurs. 科学家已经知道 1000 多种恐龙。",
+   "common_errors": [
+    {
+     "when": "写了 100",
+     "say": "100 太少了，短文说的是超过 1000 种，再看第一句。"
+    },
+    {
+     "when": "写了 180",
+     "say": "180 是统治地球的时间，不是恐龙的种数。"
+    }
+   ],
+   "audio_id": "u1r3-q19",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "科学家靠什么了解恐龙",
+   "scene": "科学家研究什么了解恐龙？",
+   "stem": "What do scientists study to learn about dinosaurs?",
+   "options": [
+    "fossils",
+    "old books",
+    "big rocks from space",
+    "today's birds"
+   ],
+   "answer": "A",
+   "help": "短文里说：他们研究什么了解恐龙？",
+   "explain": "Scientists study fossils to learn about dinosaurs. 科学家通过研究化石了解恐龙。",
+   "wrong_feedback": {
+    "B": "短文没说研究旧书，说的是研究化石。",
+    "C": "从太空来的大石头只是灭绝原因的一种猜测，不是科学家研究的东西。",
+    "D": "今天的鸟是恐龙的后代，不是科学家研究恐龙的办法。"
+   },
+   "audio_id": "u1r3-q20",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "恐龙生活在陆地上",
+   "scene": "恐龙生活在哪里？",
+   "stem": "Dinosaurs lived on ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "land",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "land"
+     ],
+     "olds": [
+      "lands",
+      "landed"
+     ],
+     "cn": [
+      "陆地"
+     ]
+    }
+   ],
+   "help": "“恐龙生活在……上”，空里填哪个词？",
+   "explain": "Dinosaurs lived on land. 恐龙生活在陆地上。",
+   "common_errors": [
+    {
+     "when": "写了 lands",
+     "say": "land 在这里是不可数名词“陆地”，不用加 s。"
+    },
+    {
+     "when": "写了 landed",
+     "say": "landed 是动词“登陆”；这里要填名词 land“陆地”。"
+    }
+   ],
+   "audio_id": "u1r3-q21",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个 so...that... 是对的",
+   "scene": "下面哪个句子的 so...that... 用对了？",
+   "stem": "Which sentence uses “so...that...” correctly?",
+   "options": [
+    "Dinosaurs were so big so people are surprised.",
+    "Dinosaurs were such big that people are surprised.",
+    "Dinosaurs were too big that people are surprised.",
+    "Dinosaurs were so big that people are surprised."
+   ],
+   "answer": "D",
+   "help": "so 后面跟形容词，that 后面跟完整句子，逐个检查。",
+   "explain": "“Dinosaurs were so big that people are surprised.” is correct. so 后面是形容词 big，that 后面是完整句子。",
+   "wrong_feedback": {
+    "A": "so 后面不能再跟 so，that 后面才是结果。",
+    "B": "such 后面要跟名词，big 是形容词，这里该用 so。",
+    "C": "too...that 不是这个结构，too 后面一般跟 to，不跟 that 从句。"
+   },
+   "audio_id": "u1r3-q22",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "许多恐龙吃植物",
+   "scene": "这篇短文里，大多数恐龙吃什么？",
+   "stem": "Many dinosaurs ate ___, but some ate meat.",
+   "task": "只写空里的部分。",
+   "answer_text": "plants",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "plants"
+     ],
+     "olds": [
+      "plant",
+      "plans"
+     ],
+     "cn": [
+      "植物"
+     ]
+    }
+   ],
+   "help": "“许多恐龙吃……，但有些吃肉”，空里填什么？",
+   "explain": "Many dinosaurs ate plants, but some ate meat. 许多恐龙吃植物，但有些吃肉。",
+   "common_errors": [
+    {
+     "when": "写了 plant",
+     "say": "这里说的是很多植物，要用复数 plants。"
+    },
+    {
+     "when": "写了 plans",
+     "say": "plans 是“计划”，这里要填 plants“植物”，注意拼写。"
+    }
+   ],
+   "audio_id": "u1r3-q23",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个 either...or... 是对的",
+   "scene": "下面哪个句子的 either...or... 用对了？",
+   "stem": "Which sentence uses “either...or...” correctly?",
+   "options": [
+    "Dinosaurs walked on either two and four legs.",
+    "Dinosaurs walked on either two or four legs.",
+    "Dinosaurs walked on neither two or four legs.",
+    "Dinosaurs walked on either two nor four legs."
+   ],
+   "answer": "B",
+   "help": "either 后面跟 or，逐个检查。",
+   "explain": "“Dinosaurs walked on either two or four legs.” is correct. either...or... 是固定搭配：要么……要么……",
+   "wrong_feedback": {
+    "A": "either 后面要跟 or，不能跟 and。",
+    "C": "neither 要和 nor 搭配，不能和 or 搭配。",
+    "D": "either 要和 or 搭配，不能和 nor 搭配。"
+   },
+   "audio_id": "u1r3-q24",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "有些恐龙吃肉",
+   "scene": "不是所有恐龙都吃植物，有些吃什么？",
+   "stem": "Many dinosaurs ate plants, but some ate ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "meat",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "meat"
+     ],
+     "olds": [
+      "meet",
+      "meats"
+     ],
+     "cn": [
+      "肉"
+     ]
+    }
+   ],
+   "help": "“但有些吃……”，和 plants 相对的是什么？",
+   "explain": "Many dinosaurs ate plants, but some ate meat. 许多恐龙吃植物，但有些吃肉。",
+   "common_errors": [
+    {
+     "when": "写了 meet",
+     "say": "meet 是“见面”；这里要填 meat“肉”，发音一样拼写不一样。"
+    },
+    {
+     "when": "写了 meats",
+     "say": "meat 在这里是不可数名词，不用加 s。"
+    }
+   ],
+   "audio_id": "u1r3-q25",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "突然灭绝",
+   "scene": "恐龙是什么时候、怎么灭绝的？",
+   "stem": "About 66 million years ago, dinosaurs ___ died out.",
+   "task": "只写空里的部分。",
+   "answer_text": "suddenly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "suddenly"
+     ],
+     "olds": [
+      "sudden",
+      "suddenlly"
+     ],
+     "cn": [
+      "突然"
+     ]
+    }
+   ],
+   "help": "“大约 6600 万年前，恐龙……灭绝了”，填哪个副词？",
+   "explain": "About 66 million years ago, dinosaurs suddenly died out. 大约 6600 万年前，恐龙突然灭绝了。",
+   "common_errors": [
+    {
+     "when": "写了 sudden",
+     "say": "sudden 是形容词“突然的”；这里要填副词 suddenly“突然地”。"
+    },
+    {
+     "when": "写了 suddenlly",
+     "say": "拼写注意：suddenly 是 s-u-d-d-e-n-l-y，sudden 后面加 ly。"
+    }
+   ],
+   "audio_id": "u1r3-q26",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "恐龙为什么灭绝",
+   "scene": "恐龙为什么灭绝，科学家知道吗？",
+   "stem": "Why did dinosaurs die out?",
+   "options": [
+    "Because they ate meat.",
+    "Because they lived in the sea.",
+    "Scientists are not completely sure why.",
+    "Because a big rock hit the Earth — scientists are sure."
+   ],
+   "answer": "C",
+   "help": "短文最后一段：科学家对灭绝原因确定吗？",
+   "explain": "Scientists are not completely sure why dinosaurs died out. 科学家并不完全确定恐龙为什么灭绝。",
+   "wrong_feedback": {
+    "A": "短文没说吃肉导致灭绝。",
+    "B": "短文说恐龙生活在陆地上，不是在海里。",
+    "D": "大石头撞地球只是一种猜测（Perhaps），科学家并不完全确定。"
+   },
+   "audio_id": "u1r3-q27",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "也许是大石头撞了地球",
+   "scene": "关于恐龙灭绝，有一种猜测是什么？",
+   "stem": "___ a big rock from space hit the Earth.",
+   "task": "只写空里的部分。",
+   "answer_text": "Perhaps",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "perhaps"
+     ],
+     "olds": [
+      "But",
+      "And"
+     ],
+     "cn": [
+      "也许"
+     ]
+    }
+   ],
+   "help": "句首填哪个表示猜测的词？前面讲过的 perhaps 是什么意思？",
+   "explain": "Perhaps a big rock from space hit the Earth. 也许一块从太空来的大石头撞上了地球。",
+   "common_errors": [
+    {
+     "when": "写了 But",
+     "say": "But 是“但是”，表示转折；这里要填表示猜测的副词 perhaps“也许”。"
+    },
+    {
+     "when": "写了 And",
+     "say": "And 是“和”，不能放在句首表示猜测；这里要填 perhaps“也许”。"
+    }
+   ],
+   "audio_id": "u1r3-q28",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪句关于恐龙是对的",
+   "scene": "下面哪句话和这篇短文说的一致？",
+   "stem": "Which sentence is TRUE about dinosaurs?",
+   "options": [
+    "Some dinosaurs were as small as chickens.",
+    "All dinosaurs were as big as elephants.",
+    "Dinosaurs lived in the sea.",
+    "Dinosaurs died out 1,000 years ago."
+   ],
+   "answer": "A",
+   "help": "逐句对照短文：多大多小？住哪？什么时候灭绝？",
+   "explain": "Some dinosaurs were as small as chickens. 短文里说有些恐龙像鸡一样小。",
+   "wrong_feedback": {
+    "B": "短文说有些像鸡一样小，不是所有恐龙都像大象一样大。",
+    "C": "短文说恐龙生活在陆地上，不是在海里。",
+    "D": "短文说恐龙大约在 6600 万年前灭绝，不是 1000 年前。"
+   },
+   "audio_id": "u1r3-q29",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "今天鸟类的祖先",
+   "scene": "今天的鸟类是从谁演变来的？",
+   "stem": "Dinosaurs are the ancestors of today's ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "birds",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "birds"
+     ],
+     "olds": [
+      "bird",
+      "birdds"
+     ],
+     "cn": [
+      "鸟"
+     ]
+    }
+   ],
+   "help": "“今天的……的祖先”，空里填什么动物？",
+   "explain": "Dinosaurs are the ancestors of today's birds. 恐龙是今天鸟类的祖先。",
+   "common_errors": [
+    {
+     "when": "写了 bird",
+     "say": "这里说的是很多只鸟，要用复数 birds。"
+    },
+    {
+     "when": "写了 birdds",
+     "say": "拼写注意：birds 是 b-i-r-d-s，别多写一个 d。"
+    }
+   ],
+   "audio_id": "u1r3-q30",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "恐龙的近亲",
+   "scene": "恐龙和哪些动物有亲缘关系？",
+   "stem": "Dinosaurs are related to ___, snakes and lizards.",
+   "task": "只写空里的部分。",
+   "answer_text": "crocodiles",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "crocodiles"
+     ],
+     "olds": [
+      "crocodile",
+      "crocodille"
+     ],
+     "cn": [
+      "鳄鱼"
+     ]
+    }
+   ],
+   "help": "“恐龙和……、蛇、蜥蜴有亲缘关系”，第一个动物是什么？",
+   "explain": "Dinosaurs are related to crocodiles, snakes and lizards. 恐龙与鳄鱼、蛇和蜥蜴有亲缘关系。",
+   "common_errors": [
+    {
+     "when": "写了 crocodile",
+     "say": "这里说的是很多条鳄鱼，要用复数 crocodiles。"
+    },
+    {
+     "when": "写了 crocodille",
+     "say": "拼写注意：crocodile 是 c-r-o-c-o-d-i-l-e，别多写一个 l。"
+    }
+   ],
+   "audio_id": "u1r3-q31",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "也许是天气变了",
+   "scene": "关于恐龙灭绝，还有一种猜测是什么？",
+   "stem": "Perhaps the ___ changed.",
+   "task": "只写空里的部分。",
+   "answer_text": "weather",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "weather"
+     ],
+     "olds": [
+      "whether",
+      "wether"
+     ],
+     "cn": [
+      "天气"
+     ]
+    }
+   ],
+   "help": "“也许是……变了”，填哪个词？",
+   "explain": "Perhaps the weather changed. 也许是天气变了。",
+   "common_errors": [
+    {
+     "when": "写了 whether",
+     "say": "whether 是“是否”；这里要填 weather“天气”，发音一样拼写不一样。"
+    },
+    {
+     "when": "写了 wether",
+     "say": "拼写注意：weather 是 w-e-a-t-h-e-r，别写成 wether。"
+    }
+   ],
+   "audio_id": "u1r3-q32",
+   "reading": "Scientists know more than 1,000 kinds of dinosaurs. How do they know so much about animals that lived so long ago? They study fossils. Fossils are old bones and footprints left in rocks. Dinosaurs lived on land. Some were as small as chickens. Others were as big as ten elephants. Many dinosaurs ate plants, but some ate meat. Dinosaurs are related to crocodiles, snakes and lizards. They are also the ancestors of today's birds. About 66 million years ago, dinosaurs suddenly died out. Scientists are not completely sure why. Perhaps a big rock from space hit the Earth. Perhaps the weather changed. Every year, scientists find new fossils, and they learn more and more about dinosaurs."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮·用列数字、作比较写一段恐龙介绍",
+   "teach_html": "<p>写一段恐龙介绍，两个办法一起用：</p><p>先列数字：<strong>Dinosaurs first appeared about 245 million years ago. They ruled the Earth for more than 180 million years.</strong></p><p>再作比较：<strong>Some were as small as chickens, and others were as big as ten elephants.</strong></p><p>最后收一句：<strong>About 66 million years ago, they suddenly died out.</strong></p><p>数字说清时间多长，比较说清大小差别——这样写，介绍就清楚又具体。</p>",
+   "audio_id": "u1r3-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个句子用了数字",
+   "scene": "下面哪个句子用了数字来介绍恐龙？",
+   "stem": "Which sentence uses a number to describe dinosaurs?",
+   "options": [
+    "Dinosaurs are animals.",
+    "Dinosaurs ate plants.",
+    "Dinosaurs were as small as chickens.",
+    "Dinosaurs ruled the Earth for more than 180 million years."
+   ],
+   "answer": "D",
+   "help": "列数字就是句子里出现具体的数字，哪个选项里有数字？",
+   "explain": "“Dinosaurs ruled the Earth for more than 180 million years.” uses a number. 只有 D 里有具体数字 180 million。",
+   "wrong_feedback": {
+    "A": "这句只说了恐龙是动物，没有数字。",
+    "B": "这句只说了恐龙吃什么，没有数字。",
+    "C": "这句用了 as...as... 作比较，没有数字。"
+   },
+   "audio_id": "u1r3-q33"
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写一句话：用 as...as... 比较恐龙大小",
+   "scene": "用 as...as... 写一句话，说有些恐龙像鸡一样小。",
+   "stem": "Write one sentence to say some dinosaurs were as small as chickens. (Use “as small as” and “chickens”.)",
+   "task": "写一整句话。",
+   "answer_text": "Some dinosaurs were as small as chickens.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as small as"
+     ],
+     "cn": [
+      "像……一样小"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "chickens"
+     ],
+     "cn": [
+      "鸡"
+     ]
+    }
+   ],
+   "help": "一句话里要出现 as small as 和 chickens。",
+   "explain": "Some dinosaurs were as small as chickens. 用 as...as... 一比，小到什么程度马上就清楚了。",
+   "common_errors": [
+    {
+     "when": "只写了 small",
+     "say": "光写 small 不够，要写完整的 as small as“像……一样小”。"
+    },
+    {
+     "when": "写了 chicken",
+     "say": "这里说的是很多只鸡，要用复数 chickens。"
+    }
+   ],
+   "audio_id": "u1r3-q34"
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "恐龙第一次出现",
+   "scene": "恐龙最早是什么时候出现的？",
+   "stem": "Dinosaurs first appeared about ___ million years ago.",
+   "task": "只写空里的部分。",
+   "answer_text": "245",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "245"
+     ],
+     "olds": [
+      "254",
+      "180"
+     ]
+    }
+   ],
+   "help": "“大约……百万年前”，那个数字是多少？",
+   "explain": "Dinosaurs first appeared about 245 million years ago. 恐龙大约在 2.45 亿年前出现。",
+   "common_errors": [
+    {
+     "when": "写了 254",
+     "say": "254 不对，再看一眼条目里的数字，是 245。"
+    },
+    {
+     "when": "写了 180",
+     "say": "180 是统治的时间，不是第一次出现的时间。"
+    }
+   ],
+   "audio_id": "u1r3-q35"
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个 as...as... 是对的",
+   "scene": "下面哪个句子里的 as...as... 用对了？",
+   "stem": "Which sentence uses “as...as...” correctly?",
+   "options": [
+    "He is as tall than me.",
+    "She is as tall so her sister.",
+    "This dinosaur is as big as an elephant.",
+    "They are as smart that monkeys."
+   ],
+   "answer": "C",
+   "help": "as...as... 两个 as 中间放形容词原形，后面跟比较对象，逐个检查。",
+   "explain": "“This dinosaur is as big as an elephant.” is correct. as...as... 中间是形容词原形 big，后面是比较对象 an elephant。",
+   "wrong_feedback": {
+    "A": "than 是比较级用的词，as...as... 里不能有 than。",
+    "B": "so 不能放在 as...as... 里，两个 as 之间只放形容词。",
+    "D": "that 不能放在 as...as... 里，第二个 as 后面直接跟比较对象。"
+   },
+   "audio_id": "u1r3-q36"
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个 some...others... 是对的",
+   "scene": "下面哪个句子的 some...others... 用对了？",
+   "stem": "Which sentence uses “some...others...” correctly?",
+   "options": [
+    "Some dinosaur ate plants, and others ate meat.",
+    "Some dinosaurs ate plants, and others ate meat.",
+    "Some dinosaurs ate plants, and other ate meat.",
+    "Some dinosaurs ate plant, and others ate meat."
+   ],
+   "answer": "B",
+   "help": "some 后面跟复数名词，others 是代词，逐个检查。",
+   "explain": "“Some dinosaurs ate plants, and others ate meat.” is correct. some 后面是复数名词 dinosaurs，others 指另外的一部分。",
+   "wrong_feedback": {
+    "A": "some 后面要跟复数名词，dinosaur 是单数，不对。",
+    "C": "other 是形容词，不能单独做主语；这里该用代词 others。",
+    "D": "eat 后面要跟复数名词 plants，plant 是单数，不对。"
+   },
+   "audio_id": "u1r3-q37"
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>这一课我们学了：</p><p>1. <strong>恐龙</strong>：约 2.45 亿年前出现，统治地球 1.8 亿多年，约 6600 万年前突然灭绝；小的像鸡，大的像十头大象；有些吃植物，有些吃肉；近亲是鳄鱼、蛇、蜥蜴和今天的鸟；科学家靠化石了解它们，但并不完全确定灭绝原因。</p><p>2. <strong>扫描找数字</strong>：问题问数字，就去文章里扫数字。</p><p>3. <strong>句式</strong>：as...as...（和……一样）、either...or...（要么……要么……）、some...others...（一些……另一些……）、so...that...（如此……以至于……）。</p><p>4. <strong>写作方法</strong>：列数字、作比较——数字说清时间数量，比较说清大小差别。</p><p>5. <strong>做笔记</strong>：动物条目记五项——生存时期、体型、饮食、近亲、未解之谜；恐龙归“生物世界”主题。</p><p>下节课精讲本课词汇和句式：look through、die out、intelligent、talented 这些词的用法。</p>",
+   "audio_id": "u1r3-t10"
+  }
+ ],
+ "title": "恐龙条目",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
