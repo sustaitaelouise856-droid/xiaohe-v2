@@ -1,0 +1,1323 @@
+{
+ "lesson_id": "u1r12",
+ "practice_end": 27,
+ "home_subtitle": "写作 · 写百科条目",
+ "part1_desc": "第 1–27 步：翻译帮学百科条目三部分与袁隆平事实，教材帮学写条目三步法，练习帮读自编小传练写。",
+ "part2_desc": "第 28–50 步：读聂耳条目范文，练检查清单与词形辨析，写作帮分句写袁隆平条目。",
+ "note": "本课为 Unit 1 Section 3 写作，阅读材料为教研自编，非课本原文。考查能力：百科条目三部分（基本信息/主要成就/奖项头衔）、写条目三步法与检查清单、袁隆平事实（1930–2021、生于北京、杂交水稻、2019 共和国勋章、“杂交水稻之父”）、death/die/dead/dying、whole 与 all、分句写袁隆平条目。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新一站：写作——写百科条目",
+   "teach_html": "<p>广播站的写作站开播：<strong>Section 3 写作：写一个百科条目 Writing an encyclopaedia entry</strong>。站长苏文说：今天的主角是<strong>袁隆平 Yuan Longping</strong>，“杂交水稻之父”。</p><p>这一课学两件事：<strong>怎么写百科条目</strong>，还有<strong>按思维导图写袁隆平</strong>。写条目不靠编，要靠查到的事实。</p><p>先记住写条目最重要的一句话：<strong>条目里写事实，不写观点。</strong></p>",
+   "audio_id": "u1r12-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：百科条目写什么",
+   "teach_html": "<p>百科条目写的是<strong>事实 facts</strong>，不是<strong>观点 opinions</strong>。事实是能查到的：他生于哪一年、做了什么、得了什么奖。观点是你的感觉：“我觉得他最好”，这种话不写进条目。</p><p>写一个人物，条目分三部分：</p><p><strong>（1）Basic information 基本信息</strong>：他是谁，生于哪一年、哪里，是什么职业。</p><p><strong>（2）Main achievements 主要成就</strong>：他做了什么了不起的事。</p><p><strong>（3）Awards and titles 奖项和头衔</strong>：他得了什么奖，人们叫他什么。</p>",
+   "audio_id": "u1r12-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：袁隆平——基本信息",
+   "teach_html": "<p>先看袁隆平的基本信息：</p><p><strong>Yuan Longping (1930–2021)</strong> was a Chinese <strong>agricultural scientist</strong>. 袁隆平（1930–2021）是一位中国农业科学家。</p><p><strong>He was born in Beijing.</strong> 他生于北京。</p><p>写基本信息就用这两句：他是谁（职业），生于哪一年、哪里。年份写在名字后面的括号里：Yuan Longping (1930–2021)。</p>",
+   "audio_id": "u1r12-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：袁隆平——主要成就",
+   "teach_html": "<p>再看他的主要成就：</p><p><strong>He spent his whole life developing hybrid rice.</strong> 他把一生都花在培育杂交水稻上。whole life 就是“一生”。</p><p>他培育的新水稻产量高得多：<strong>These new types of rice can produce much more rice than traditional ones.</strong></p><p>他的工作养活了很多人：<strong>His work helped feed people in China and many other parts of the world.</strong> 现在很多国家的农民都在种他的杂交水稻。</p>",
+   "audio_id": "u1r12-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：袁隆平——奖项和头衔",
+   "teach_html": "<p>最后看他的奖项和头衔：</p><p><strong>He won many awards for his research.</strong> 他的研究得了很多奖。</p><p><strong>In 2019, he received the Medal of the Republic, one of China's highest honours.</strong> 2019 年，他获得了共和国勋章，这是中国的最高荣誉之一。</p><p><strong>People call him the “Father of Hybrid Rice”.</strong> 人们叫他“杂交水稻之父”。</p><p>注意：Medal of the Republic 是奖项的名字，要写全；年份 2019 也要写上。</p>",
+   "audio_id": "u1r12-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：写条目三步法",
+   "teach_html": "<p>写条目有三步：</p><p><strong>Step 1 Plan 构思：Draw your own mind map.</strong> 先画自己的思维导图，把基本信息、主要成就、奖项头衔三栏想好。</p><p><strong>Step 2 Write 写作：Write an encyclopaedia entry about the person you admire.</strong> 按思维导图写条目，还可以找一张他的照片贴在文章里。</p><p><strong>Step 3 Check and revise 检查和修改：Tick the boxes to check your writing, and then revise it.</strong> 对照清单打勾检查，再修改。</p>",
+   "audio_id": "u1r12-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：检查清单四条",
+   "teach_html": "<p>写完对照这四条打勾检查：</p><p>1. <strong>I included important information about this person.</strong> 我把关于这个人的重要信息都写进去了。</p><p>2. <strong>I used facts instead of opinions in the encyclopaedia entry.</strong> 我在条目里用的是事实，不是观点。</p><p>3. <strong>I used the words and expressions I learnt in this unit.</strong> 我用了本单元学过的单词和表达。</p><p>4. <strong>I used correct spelling, grammar and punctuation.</strong> 我的拼写、语法和标点都正确。</p><p>四条都打勾了，这篇条目才算写好。</p>",
+   "audio_id": "u1r12-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：写条目常用句式",
+   "teach_html": "<p>写人物条目，这几个句式最常用：</p><p><strong>be born in</strong> 出生于：He was born in Beijing. 他生于北京。</p><p><strong>spent his whole life doing sth.</strong> 把一生花在做某事上：He spent his whole life developing hybrid rice.</p><p><strong>was awarded / received</strong> 获得：He received the Medal of the Republic in 2019.</p><p><strong>is called...</strong> 被称为……：He is called the “Father of Hybrid Rice”.</p><p><strong>one of the + 最高级</strong>：It is one of China's highest honours. 这是中国的最高荣誉之一。</p>",
+   "audio_id": "u1r12-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：death、die、dead、dying",
+   "teach_html": "<p>写生卒年要分清这四个词：</p><p><strong>death</strong> <em>n.</em> 死；死亡：People were sad to hear about his death. 听到他去世的消息，人们很难过。</p><p><strong>die</strong> <em>v.</em> 死：He died in 2021. 他于 2021 年去世。die 是非延续性动词，不能和一段时间连用。</p><p><strong>dead</strong> <em>adj.</em> 死的：His grandfather has been dead for three years. 他的爷爷去世三年了。</p><p><strong>dying</strong> <em>adj.</em> 临终的：the dying 临终者。</p><p>再记一对：<strong>whole</strong> 在限定词后面（his whole life、the whole day），<strong>all</strong> 在限定词前面（all my friends、all the students）。</p>",
+   "audio_id": "u1r12-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——袁隆平小传",
+   "teach_html": "<p>下面是一段自编小传，讲袁隆平的一生。读两遍，记住：他是谁、生于哪里、做了什么、得了什么奖、人们叫他什么。</p><p>读的时候对照思维导图的三栏：基本信息、主要成就、奖项和头衔，看看每句话属于哪一栏。</p>",
+   "audio_id": "u1r12-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：袁隆平是什么人",
+   "scene": "袁隆平是什么人？",
+   "stem": "Who was Yuan Longping?",
+   "options": [
+    "a Chinese musician",
+    "an American writer of many famous novels",
+    "a French painter",
+    "a Chinese agricultural scientist"
+   ],
+   "answer": "D",
+   "help": "回到短文第一句找：He was a Chinese...",
+   "explain": "Yuan Longping was a Chinese agricultural scientist. 袁隆平是一位中国农业科学家。",
+   "wrong_feedback": {
+    "A": "聂耳才是音乐家。",
+    "B": "马克·吐温才是美国作家。",
+    "C": "短文没说他是法国画家。"
+   },
+   "audio_id": "u1r12-q01",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：农业科学家",
+   "scene": "袁隆平（1930–2021）是一位中国农业科学家。",
+   "stem": "Yuan Longping (1930-2021) was a Chinese agricultural ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "scientist",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "scientist"
+     ],
+     "olds": [
+      "science",
+      "scientists"
+     ],
+     "cn": [
+      "科学家"
+     ]
+    }
+   ],
+   "help": "“科学家”这个词怎么拼？",
+   "explain": "Yuan Longping (1930-2021) was a Chinese agricultural scientist. 袁隆平是一位中国农业科学家。",
+   "common_errors": [
+    {
+     "when": "写了 science",
+     "say": "science 是“科学”；“科学家”是 scientist。"
+    },
+    {
+     "when": "写了 scientists",
+     "say": "这里说的是“一位科学家”，用单数 scientist。"
+    }
+   ],
+   "audio_id": "u1r12-q02",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：袁隆平生在哪里",
+   "scene": "袁隆平出生在哪里？",
+   "stem": "Where was Yuan Longping born?",
+   "options": [
+    "in Kunming",
+    "in Florida",
+    "in Paris",
+    "in Beijing"
+   ],
+   "answer": "D",
+   "help": "回到短文里找：He was born in...",
+   "explain": "He was born in Beijing. 他生于北京。",
+   "wrong_feedback": {
+    "A": "生于昆明的是聂耳，不是袁隆平。",
+    "B": "生于佛罗里达的是马克·吐温，不是袁隆平。",
+    "C": "短文没说他生于巴黎。"
+   },
+   "audio_id": "u1r12-q03",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：生于北京",
+   "scene": "他生于北京。",
+   "stem": "He was ___ in Beijing.",
+   "task": "只写空里的部分。",
+   "answer_text": "born",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "born"
+     ],
+     "olds": [
+      "bornd",
+      "borne"
+     ],
+     "cn": [
+      "出生"
+     ]
+    }
+   ],
+   "help": "be ___ in，“出生于”，空里填哪个词？",
+   "explain": "He was born in Beijing. 他生于北京。",
+   "common_errors": [
+    {
+     "when": "写了 bornd",
+     "say": "拼写注意：born 是 b-o-r-n，别写成 bornd。"
+    }
+   ],
+   "audio_id": "u1r12-q04",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：他把一生花在什么上",
+   "scene": "袁隆平把一生花在什么上？",
+   "stem": "What did Yuan spend his whole life on?",
+   "options": [
+    "writing novels",
+    "painting pictures",
+    "developing hybrid rice",
+    "playing the piano"
+   ],
+   "answer": "C",
+   "help": "回到短文里找：All his life, he worked to...",
+   "explain": "He spent his whole life developing hybrid rice. 他把一生都花在培育杂交水稻上。",
+   "wrong_feedback": {
+    "A": "写小说的是马克·吐温，不是袁隆平。",
+    "B": "画画的是毕加索，不是袁隆平。",
+    "D": "短文没说他弹钢琴。"
+   },
+   "audio_id": "u1r12-q05",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：他的一生",
+   "scene": "他把一生都花在培育杂交水稻上。",
+   "stem": "He spent his ___ life developing hybrid rice.",
+   "task": "只写空里的部分。",
+   "answer_text": "whole",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "whole"
+     ],
+     "olds": [
+      "hole",
+      "whol"
+     ],
+     "cn": [
+      "全部的"
+     ]
+    }
+   ],
+   "help": "“一生的、全部的”，填哪个词？",
+   "explain": "He spent his whole life developing hybrid rice. 他把一生都花在培育杂交水稻上。",
+   "common_errors": [
+    {
+     "when": "写了 hole",
+     "say": "hole 是“洞”，这里要填 whole“全部的”，发音一样拼写不一样。"
+    },
+    {
+     "when": "写了 whol",
+     "say": "拼写注意：whole 是 w-h-o-l-e，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r12-q06",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：新水稻的好处",
+   "scene": "他培育的新水稻有什么好处？",
+   "stem": "What can the new kinds of rice do?",
+   "options": [
+    "grow only in Beijing",
+    "need no water at all",
+    "produce much more rice",
+    "grow in one day"
+   ],
+   "answer": "C",
+   "help": "回到短文里找：The new rice he made gives farmers...",
+   "explain": "The new rice gives farmers much more rice from the same fields. 新水稻让农民从同样的田里收获多得多的稻米。",
+   "wrong_feedback": {
+    "A": "短文说很多国家的农民都种他的水稻，不只在北京。",
+    "B": "短文没说新水稻不需要水。",
+    "D": "短文没说新水稻一天就能长成。"
+   },
+   "audio_id": "u1r12-q07",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：产量多得多",
+   "scene": "这些新型水稻比传统水稻产量高得多。",
+   "stem": "These new types of rice can produce much ___ rice than traditional ones.",
+   "task": "只写空里的部分。",
+   "answer_text": "more",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "more"
+     ],
+     "olds": [
+      "many",
+      "most"
+     ],
+     "cn": [
+      "更多"
+     ]
+    }
+   ],
+   "help": "much 后面接比较级，空里填哪个词？",
+   "explain": "These new types of rice can produce much more rice than traditional ones. 这些新型水稻比传统水稻产量高得多。",
+   "common_errors": [
+    {
+     "when": "写了 many",
+     "say": "many 是原级；这里 much 后面要接比较级 more。"
+    },
+    {
+     "when": "写了 most",
+     "say": "most 是最高级；这里 much 后面要接比较级 more。"
+    }
+   ],
+   "audio_id": "u1r12-q08",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：他的工作帮助了谁",
+   "scene": "袁隆平的工作帮助了谁？",
+   "stem": "Who did Yuan's work help feed?",
+   "options": [
+    "people in China and many other parts of the world",
+    "only his family",
+    "only people in Beijing and in a few other big cities",
+    "only scientists"
+   ],
+   "answer": "A",
+   "help": "回到短文里找：Thanks to his work, many more people...",
+   "explain": "His work helped feed people in China and many other parts of the world. 他的工作养活了中国和世界很多其他地方的人。",
+   "wrong_feedback": {
+    "B": "短文说他帮助了很多人，不只他的家人。",
+    "C": "短文说他帮助了中国和世界很多地方的人，不只北京。",
+    "D": "短文没说他只帮助科学家。"
+   },
+   "audio_id": "u1r12-q09",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：养活了很多人",
+   "scene": "他的工作养活了很多人。",
+   "stem": "His work helped ___ people in China and many other parts of the world.",
+   "task": "只写空里的部分。",
+   "answer_text": "feed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "feed"
+     ],
+     "olds": [
+      "feeds",
+      "fed"
+     ],
+     "cn": [
+      "养活"
+     ]
+    }
+   ],
+   "help": "helped 后面动词用什么形式？",
+   "explain": "His work helped feed people in China and many other parts of the world. 他的工作养活了中国和世界很多其他地方的人。",
+   "common_errors": [
+    {
+     "when": "写了 feeds",
+     "say": "helped 后面动词用原形 feed。"
+    },
+    {
+     "when": "写了 fed",
+     "say": "helped 后面动词用原形 feed，不用过去式 fed。"
+    }
+   ],
+   "audio_id": "u1r12-q10",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：2019 年的奖",
+   "scene": "2019 年袁隆平获得了什么？",
+   "stem": "What did Yuan receive in 2019?",
+   "options": [
+    "the Nobel Prize",
+    "the Medal of the Republic",
+    "a gold medal in running",
+    "a new car"
+   ],
+   "answer": "B",
+   "help": "回到短文里找：In 2019, China gave him...",
+   "explain": "In 2019, he received the Medal of the Republic. 2019 年，他获得了共和国勋章。",
+   "wrong_feedback": {
+    "A": "短文没说他得了诺贝尔奖。",
+    "C": "短文没说他得了跑步金牌。",
+    "D": "短文没说他得了新车。"
+   },
+   "audio_id": "u1r12-q11",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：共和国勋章",
+   "scene": "2019 年，他获得了共和国勋章。",
+   "stem": "In 2019, he received the Medal of the ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "Republic",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Republic"
+     ],
+     "olds": [
+      "Repubic",
+      "Republics"
+     ],
+     "cn": [
+      "共和国"
+     ]
+    }
+   ],
+   "help": "“共和国”这个词怎么拼？",
+   "explain": "In 2019, he received the Medal of the Republic. 2019 年，他获得了共和国勋章。",
+   "common_errors": [
+    {
+     "when": "写了 Repubic",
+     "say": "拼写注意：Republic 是 R-e-p-u-b-l-i-c，别丢了 l。"
+    },
+    {
+     "when": "写了 Republics",
+     "say": "奖项的名字是 Medal of the Republic，Republic 用单数。"
+    }
+   ],
+   "audio_id": "u1r12-q12",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：杂交水稻之父",
+   "scene": "人们叫袁隆平什么？",
+   "stem": "What do people call Yuan Longping?",
+   "options": [
+    "the People's Musician",
+    "the Father of Hybrid Rice",
+    "the Father of Modern Art",
+    "the Greatest Painter"
+   ],
+   "answer": "B",
+   "help": "回到短文最后一句找：People call him...",
+   "explain": "People call him the 'Father of Hybrid Rice'. 人们叫他“杂交水稻之父”。",
+   "wrong_feedback": {
+    "A": "“人民音乐家”是聂耳的称号。",
+    "C": "短文没说他是现代艺术之父。",
+    "D": "短文没说他是最伟大的画家。"
+   },
+   "audio_id": "u1r12-q13",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：水稻",
+   "scene": "人们叫他“杂交水稻之父”。",
+   "stem": "People call him the 'Father of Hybrid ___'.",
+   "task": "只写空里的部分。",
+   "answer_text": "Rice",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Rice"
+     ],
+     "olds": [
+      "Rices",
+      "Rise"
+     ],
+     "cn": [
+      "水稻"
+     ]
+    }
+   ],
+   "help": "“水稻”这个词怎么拼？",
+   "explain": "People call him the 'Father of Hybrid Rice'. 人们叫他“杂交水稻之父”。",
+   "common_errors": [
+    {
+     "when": "写了 Rices",
+     "say": "Rice 是不可数名词，不用复数。"
+    },
+    {
+     "when": "写了 Rise",
+     "say": "rise 是“上升”；这里是 Rice“水稻”。"
+    }
+   ],
+   "audio_id": "u1r12-q14",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：条目的第一部分",
+   "scene": "写一个人物，条目的第一部分是什么？",
+   "stem": "What is the first part of an encyclopaedia entry about a person?",
+   "options": [
+    "Awards and titles",
+    "Main achievements",
+    "Your opinion",
+    "Basic information"
+   ],
+   "answer": "D",
+   "help": "想想条目的三部分，哪部分放在最前面？",
+   "explain": "The first part is Basic information. 条目的第一部分是基本信息。",
+   "wrong_feedback": {
+    "A": "奖项和头衔是第三部分。",
+    "B": "主要成就是第二部分。",
+    "C": "条目里不写你的观点。"
+   },
+   "audio_id": "u1r12-q15",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：得了很多奖",
+   "scene": "袁隆平因研究得了很多奖。",
+   "stem": "Yuan won many ___ for his research.",
+   "task": "只写空里的部分。",
+   "answer_text": "awards",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "awards"
+     ],
+     "olds": [
+      "award",
+      "awrads"
+     ],
+     "cn": [
+      "奖项"
+     ]
+    }
+   ],
+   "help": "many 后面的名词用什么数？",
+   "explain": "Yuan won many awards for his research. 袁隆平因研究得了很多奖。",
+   "common_errors": [
+    {
+     "when": "写了 award",
+     "say": "many 后面名词用复数 awards。"
+    },
+    {
+     "when": "写了 awrads",
+     "say": "拼写注意：awards 是 a-w-a-r-d-s，别写错顺序。"
+    }
+   ],
+   "audio_id": "u1r12-q16",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：杂交水稻",
+   "scene": "现在很多国家的农民都种他的杂交水稻。",
+   "stem": "Farmers in a lot of countries now grow his ___ rice.",
+   "task": "只写空里的部分。",
+   "answer_text": "hybrid",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hybrid"
+     ],
+     "olds": [
+      "hybird",
+      "hybride"
+     ],
+     "cn": [
+      "杂交的"
+     ]
+    }
+   ],
+   "help": "“杂交的”这个词怎么拼？",
+   "explain": "Farmers in a lot of countries now grow his hybrid rice. 现在很多国家的农民都种他的杂交水稻。",
+   "common_errors": [
+    {
+     "when": "写了 hybird",
+     "say": "拼写注意：hybrid 是 h-y-b-r-i-d，别写成 hybird。"
+    }
+   ],
+   "audio_id": "u1r12-q17",
+   "reading": "Yuan Longping lived from 1930 to 2021. He was a Chinese scientist, and he worked on farming. He was born in Beijing. All his life, he worked to make better rice. The new rice he made gives farmers much more rice from the same fields. Thanks to his work, many more people in China and around the world had enough to eat. Today, farmers in a lot of countries plant the rice he made. Yuan won many awards. In 2019, China gave him the Medal of the Republic, one of the highest honours in the country. People call him the 'Father of Hybrid Rice'."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——百科条目范文",
+   "teach_html": "<p>第二段短文是一篇自编的百科条目范文，写的是聂耳，分三部分标了出来。读两遍，记住：三部分各讲什么？每个部分用了哪几句？</p><p>读的时候想一想：这篇范文哪一句是基本信息，哪一句是主要成就，哪一句是奖项和头衔。</p>",
+   "audio_id": "u1r12-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：范文第一部分",
+   "scene": "范文的第一部分讲什么？",
+   "stem": "What does part (1) of the model entry talk about?",
+   "options": [
+    "How to sing his song",
+    "Basic information about Nie Er",
+    "The history of Kunming from long ago to today",
+    "Your opinion of him"
+   ],
+   "answer": "B",
+   "help": "范文第（1）部分标题是什么？",
+   "explain": "Part (1) is Basic information about Nie Er. 第一部分是聂耳的基本信息。",
+   "wrong_feedback": {
+    "A": "范文没教怎么唱他的歌。",
+    "C": "范文没讲昆明的历史。",
+    "D": "条目里不写你的观点。"
+   },
+   "audio_id": "u1r12-q18",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：聂耳的原名",
+   "scene": "聂耳的原名是聂守信。",
+   "stem": "Nie Er's ___ name was Nie Shouxin.",
+   "task": "只写空里的部分。",
+   "answer_text": "original",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "original"
+     ],
+     "olds": [
+      "orginal"
+     ],
+     "cn": [
+      "原名"
+     ]
+    }
+   ],
+   "help": "“原来的”这个词怎么拼？",
+   "explain": "Nie Er's original name was Nie Shouxin. 聂耳的原名是聂守信。",
+   "common_errors": [
+    {
+     "when": "写了 orginal",
+     "say": "拼写注意：original 是 o-r-i-g-i-n-a-l，别丢了 i。"
+    }
+   ],
+   "audio_id": "u1r12-q19",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：范文第二部分",
+   "scene": "范文的第二部分讲什么？",
+   "stem": "What does part (2) of the model entry talk about?",
+   "options": [
+    "His favourite food",
+    "His school teachers",
+    "The weather in Kunming",
+    "His main achievements"
+   ],
+   "answer": "D",
+   "help": "范文第（2）部分标题是什么？",
+   "explain": "Part (2) is Main achievements. 第二部分是主要成就。",
+   "wrong_feedback": {
+    "A": "范文没讲他最爱吃什么。",
+    "B": "范文没讲他的老师。",
+    "C": "范文没讲昆明的天气。"
+   },
+   "audio_id": "u1r12-q20",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：志愿军进行曲",
+   "scene": "他写了《义勇军进行曲》。",
+   "stem": "He wrote the March of the ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "Volunteers",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Volunteers"
+     ],
+     "olds": [
+      "Volunteer",
+      "Volunter"
+     ],
+     "cn": [
+      "志愿军"
+     ]
+    }
+   ],
+   "help": "书名是 March of the Volunteers，空里填哪个词？",
+   "explain": "He wrote the March of the Volunteers. 他写了《义勇军进行曲》。",
+   "common_errors": [
+    {
+     "when": "写了 Volunteer",
+     "say": "书名是 March of the Volunteers，Volunteers 用复数。"
+    },
+    {
+     "when": "写了 Volunter",
+     "say": "拼写注意：Volunteers 是 V-o-l-u-n-t-e-e-r-s。"
+    }
+   ],
+   "audio_id": "u1r12-q21",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：写条目的第一步",
+   "scene": "写条目的第一步是什么？",
+   "stem": "What is Step 1 of writing an entry?",
+   "options": [
+    "Plan: draw your own mind map",
+    "Write the entry at once",
+    "Check spelling first",
+    "Find a photo first"
+   ],
+   "answer": "A",
+   "help": "想想三步法，第一步是 Plan，要干什么？",
+   "explain": "Step 1 is Plan: draw your own mind map. 第一步是构思：画自己的思维导图。",
+   "wrong_feedback": {
+    "B": "没画思维导图就动笔写，容易漏掉重要信息。",
+    "C": "检查拼写是第三步，不是第一步。",
+    "D": "找照片是第二步写的时候做的事，不是第一步。"
+   },
+   "audio_id": "u1r12-q22",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：画思维导图",
+   "scene": "第一步：画你自己的思维导图。",
+   "stem": "Step 1 Plan: Draw your own mind ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "map",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "map"
+     ],
+     "olds": [
+      "maps",
+      "mapp"
+     ],
+     "cn": [
+      "导图"
+     ]
+    }
+   ],
+   "help": "mind ___，“思维导图”，空里填哪个词？",
+   "explain": "Step 1 Plan: Draw your own mind map. 第一步：画你自己的思维导图。",
+   "common_errors": [
+    {
+     "when": "写了 maps",
+     "say": "mind map 是固定说法，用单数 map。"
+    },
+    {
+     "when": "写了 mapp",
+     "say": "拼写注意：map 是 m-a-p，别写成 mapp。"
+    }
+   ],
+   "audio_id": "u1r12-q23",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：检查清单里没有哪条",
+   "scene": "下面哪一条不在检查清单上？",
+   "stem": "Which is NOT on the check list?",
+   "options": [
+    "I included important information",
+    "I used facts instead of opinions",
+    "I wrote my opinions, not facts",
+    "I used correct spelling, grammar and punctuation"
+   ],
+   "answer": "C",
+   "help": "检查清单要求写事实还是观点？",
+   "explain": "The check list asks for facts, not opinions. 检查清单要求写事实，不是观点。",
+   "wrong_feedback": {
+    "A": "这条在清单上：重要信息都写进去了。",
+    "B": "这条在清单上：用事实，不用观点。",
+    "D": "这条在清单上：拼写、语法、标点都正确。"
+   },
+   "audio_id": "u1r12-q24",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：事实不是观点",
+   "scene": "百科条目里应该写事实，而不是观点。",
+   "stem": "Encyclopaedia entries should contain ___ instead of opinions.",
+   "task": "只写空里的部分。",
+   "answer_text": "facts",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "facts"
+     ],
+     "olds": [
+      "fact",
+      "facks"
+     ],
+     "cn": [
+      "事实"
+     ]
+    }
+   ],
+   "help": "条目里写的是什么？",
+   "explain": "Encyclopaedia entries should contain facts instead of opinions. 百科条目里应该写事实，而不是观点。",
+   "common_errors": [
+    {
+     "when": "写了 fact",
+     "say": "instead of opinions 前面，facts 用复数。"
+    },
+    {
+     "when": "写了 facks",
+     "say": "拼写注意：facts 是 f-a-c-t-s。"
+    }
+   ],
+   "audio_id": "u1r12-q25",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：写条目的第二步",
+   "scene": "写条目的第二步是什么？",
+   "stem": "What is Step 2 of writing an entry?",
+   "options": [
+    "Write an entry about the person you admire",
+    "Draw a mind map",
+    "Tick the boxes",
+    "Find more opinions about him from your friends"
+   ],
+   "answer": "A",
+   "help": "想想三步法，第二步是 Write，要干什么？",
+   "explain": "Step 2 is Write: write an entry about the person you admire. 第二步是写作：写一篇关于你钦佩的人的条目。",
+   "wrong_feedback": {
+    "B": "画思维导图是第一步。",
+    "C": "打勾检查是第三步。",
+    "D": "条目里不写观点，找观点也没用。"
+   },
+   "audio_id": "u1r12-q26",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用了本单元学过的表达",
+   "scene": "我用了本单元学过的单词和表达。",
+   "stem": "I used the words and expressions I ___ in this unit.",
+   "task": "只写空里的部分。",
+   "answer_text": "learnt",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "learnt",
+      "learned"
+     ],
+     "olds": [
+      "learn"
+     ],
+     "cn": [
+      "学过"
+     ]
+    }
+   ],
+   "help": "“学过”这里是过去时，填哪个词？",
+   "explain": "I used the words and expressions I learnt in this unit. 我用了本单元学过的单词和表达。",
+   "common_errors": [
+    {
+     "when": "写了 learn",
+     "say": "这里是过去时，learnt/learned 才是过去式。"
+    }
+   ],
+   "audio_id": "u1r12-q27",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：death 是什么词性",
+   "scene": "death、die、dead、dying 里，哪个是名词“死；死亡”？",
+   "stem": "Which word is a noun meaning 'death'?",
+   "options": [
+    "die",
+    "death",
+    "dead",
+    "dying"
+   ],
+   "answer": "B",
+   "help": "四个词里，哪个是名词？",
+   "explain": "Death is a noun meaning 'death'. death 是名词，意思是“死；死亡”。",
+   "wrong_feedback": {
+    "A": "die 是动词“死”。",
+    "C": "dead 是形容词“死的”。",
+    "D": "dying 是形容词“临终的”。"
+   },
+   "audio_id": "u1r12-q28",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：去世三年了",
+   "scene": "他的爷爷去世三年了。",
+   "stem": "Jim's grandfather has been ___ for three years.",
+   "task": "只写空里的部分。",
+   "answer_text": "dead",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "dead"
+     ],
+     "olds": [
+      "died",
+      "die"
+     ],
+     "cn": [
+      "去世的"
+     ]
+    }
+   ],
+   "help": "has been 后面接什么词，表示“去世三年了”这种状态？",
+   "explain": "Jim's grandfather has been dead for three years. 他的爷爷去世三年了。",
+   "common_errors": [
+    {
+     "when": "写了 died",
+     "say": "has been 后面接形容词 dead 表示状态；died 是动词过去式，不能这样用。"
+    },
+    {
+     "when": "写了 die",
+     "say": "has been 后面接形容词 dead；die 是动词原形，不能这样用。"
+    }
+   ],
+   "audio_id": "u1r12-q29",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：whole 的位置",
+   "scene": "下面哪个句子是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "He spent his whole life on rice.",
+    "He spent his all life on rice.",
+    "He spent whole his life on rice.",
+    "He spent all his whole life on rice."
+   ],
+   "answer": "A",
+   "help": "whole 放在限定词 his 的前面还是后面？",
+   "explain": "Whole comes after his: his whole life. whole 放在限定词 his 的后面：his whole life。",
+   "wrong_feedback": {
+    "B": "all 要放在限定词前面，应该是 all his life，不是 his all life。",
+    "C": "whole 不能放在 his 前面，应该是 his whole life。",
+    "D": "all 和 whole 不能叠在一起用。"
+   },
+   "audio_id": "u1r12-q30",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：所有的学生",
+   "scene": "所有的学生都通过了考试，哪句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "All a students passed the exam.",
+    "All the students passed the exam.",
+    "All students the passed the exam.",
+    "The all students passed the exam."
+   ],
+   "answer": "B",
+   "help": "all 放在哪里？the 放在哪里？",
+   "explain": "All the students passed the exam. all 放在限定词 the 前面：all + the + 名词。",
+   "wrong_feedback": {
+    "A": "all 后面不能直接接 a，要接 the、my 这类限定词。",
+    "C": "the 的位置不对，应该是 all the students。",
+    "D": "all 不能放在 the 后面，要放在前面。"
+   },
+   "audio_id": "u1r12-q31",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：整个教室",
+   "scene": "整个教室里充满了欢笑声。",
+   "stem": "The ___ classroom is full of laughter.",
+   "task": "只写空里的部分。",
+   "answer_text": "whole",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "whole"
+     ],
+     "olds": [
+      "hole",
+      "all"
+     ],
+     "cn": [
+      "整个"
+     ]
+    }
+   ],
+   "help": "“整个教室”，填哪个词？",
+   "explain": "The whole classroom is full of laughter. 整个教室里充满了欢笑声。",
+   "common_errors": [
+    {
+     "when": "写了 hole",
+     "say": "hole 是“洞”，这里要填 whole“整个的”。"
+    },
+    {
+     "when": "写了 all",
+     "say": "all 要放在限定词前面，all the classroom；the whole classroom 才对。"
+    }
+   ],
+   "audio_id": "u1r12-q32",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮：分句写袁隆平",
+   "teach_html": "<p>现在按思维导图，分句写袁隆平的条目，一句只写一件事：</p><p>第 1 句（基本信息）：<strong>Yuan Longping (1930–2021) was a Chinese agricultural scientist.</strong></p><p>第 2 句（基本信息）：<strong>He was born in Beijing.</strong></p><p>第 3 句（主要成就）：<strong>He spent his whole life developing hybrid rice.</strong></p><p>第 4 句（奖项和头衔）：<strong>In 2019, he received the Medal of the Republic, and people call him the “Father of Hybrid Rice”.</strong></p><p>写的时候注意：用一般过去时；写事实，不写观点；写完对照四条清单检查。</p>",
+   "audio_id": "u1r12-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪句是事实",
+   "scene": "写条目时，下面哪句是事实、可以写？",
+   "stem": "Which sentence is a fact you can write in an entry?",
+   "options": [
+    "Yuan Longping was the best man in the world.",
+    "I think Yuan Longping was very nice.",
+    "Yuan Longping was born in Beijing in 1930.",
+    "Yuan Longping was my favourite person."
+   ],
+   "answer": "C",
+   "help": "事实是能查到的，观点是你的感觉，哪句是事实？",
+   "explain": "Yuan Longping was born in Beijing in 1930 is a fact. 袁隆平 1930 年生于北京，这是能查到的事实。",
+   "wrong_feedback": {
+    "A": "“世界上最好的人”是观点，不是事实。",
+    "B": "“我觉得他很好”是观点，不是事实。",
+    "D": "“我最喜欢的人”是观点，不是事实。"
+   },
+   "audio_id": "u1r12-q33",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 be born in 写袁隆平",
+   "scene": "用 be born in 写一句关于袁隆平的话。",
+   "stem": "Use 'be born in' to write one sentence about Yuan Longping.",
+   "task": "写一整句话。",
+   "answer_text": "Yuan Longping was born in Beijing.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "born in"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "Beijing"
+     ]
+    }
+   ],
+   "help": "句子里必须有 born in，还要说清他生在哪里。",
+   "explain": "Yuan Longping was born in Beijing. 袁隆平生于北京。",
+   "common_errors": [
+    {
+     "when": "没有写 born in",
+     "say": "题目要求用 be born in，句子里必须有 born in。"
+    },
+    {
+     "when": "写了 born at Beijing",
+     "say": "出生在某个城市用 born in，不用 born at。"
+    }
+   ],
+   "audio_id": "u1r12-q34",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 spent his whole life 写袁隆平",
+   "scene": "用 spent his whole life 写一句关于袁隆平的话。",
+   "stem": "Use 'spent his whole life' to write one sentence about Yuan Longping.",
+   "task": "写一整句话。",
+   "answer_text": "Yuan Longping spent his whole life developing hybrid rice.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "spent"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "whole life"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "hybrid rice"
+     ]
+    }
+   ],
+   "help": "句子里必须有 spent his whole life，还要说清他把一生花在什么上。",
+   "explain": "Yuan Longping spent his whole life developing hybrid rice. 袁隆平把一生都花在培育杂交水稻上。",
+   "common_errors": [
+    {
+     "when": "没有写 whole life",
+     "say": "题目要求写 spent his whole life，whole life 不能少。"
+    },
+    {
+     "when": "写了 spend",
+     "say": "这里是过去时，spend 要用过去式 spent。"
+    }
+   ],
+   "audio_id": "u1r12-q35",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 received 写得奖",
+   "scene": "用 received 写一句关于共和国勋章的话。",
+   "stem": "Use 'received' to write one sentence about the Medal of the Republic.",
+   "task": "写一整句话。",
+   "answer_text": "In 2019, Yuan Longping received the Medal of the Republic.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was awarded",
+      "received"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "Medal of the Republic"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "2019"
+     ]
+    }
+   ],
+   "help": "句子里要有 received、Medal of the Republic，还要写上年份 2019。",
+   "explain": "In 2019, Yuan Longping received the Medal of the Republic. 2019 年，袁隆平获得了共和国勋章。",
+   "common_errors": [
+    {
+     "when": "没有写 Medal of the Republic",
+     "say": "奖项的名字要写全：Medal of the Republic。"
+    },
+    {
+     "when": "没有写 2019",
+     "say": "哪一年得的奖要写上：in 2019。"
+    }
+   ],
+   "audio_id": "u1r12-q36",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 is called 写称号",
+   "scene": "用 is called 写一句关于袁隆平称号的话。",
+   "stem": "Use 'is called' to write one sentence about Yuan Longping.",
+   "task": "写一整句话。",
+   "answer_text": "Yuan Longping is called the Father of Hybrid Rice.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is called"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "Father of Hybrid Rice"
+     ]
+    }
+   ],
+   "help": "句子里必须有 is called，还要写出他的称号。",
+   "explain": "Yuan Longping is called the Father of Hybrid Rice. 袁隆平被称为“杂交水稻之父”。",
+   "common_errors": [
+    {
+     "when": "没有写 is called",
+     "say": "题目要求用 is called，句子里必须有它。"
+    },
+    {
+     "when": "写了 call him",
+     "say": "call him 是主动语态；这里要用被动 is called。"
+    }
+   ],
+   "audio_id": "u1r12-q37",
+   "reading": "Here is an entry about a famous musician. Read it and see the three parts. (1) Basic information. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. (2) Main achievements. He wrote the March of the Volunteers. It is the national anthem of China. (3) Awards and titles. People call him the People's Musician. His name is still known by people all over China today."
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>这一课我们学了：</p><p>1. <strong>翻译帮</strong>：百科条目三部分——基本信息、主要成就、奖项和头衔；写事实，不写观点。</p><p>2. <strong>袁隆平</strong>：1930–2021，中国农业科学家，生于北京；一生培育杂交水稻；2019 年获共和国勋章；被称为“杂交水稻之父”。</p><p>3. <strong>教材帮</strong>：写条目三步法（构思、写作、检查修改）+ 检查清单四条；death、die、dead、dying 的区别；whole 在限定词后，all 在限定词前。</p><p>下节课 u1r13：Section 4 文化，讲百科全书的历史。</p>",
+   "audio_id": "u1r12-t10"
+  }
+ ],
+ "title": "写百科条目：袁隆平",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
