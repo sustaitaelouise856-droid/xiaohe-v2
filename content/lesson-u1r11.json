@@ -1,0 +1,1286 @@
+{
+ "lesson_id": "u1r11",
+ "practice_end": 27,
+ "home_subtitle": "口语 · 谈论钦佩的人",
+ "part1_desc": "第 1–27 步：翻译帮学谈论钦佩的人的问答句式，教材帮学句子重音规则，练习帮读自编对话练口语表达。",
+ "part2_desc": "第 28–50 步：听聂耳短文填空（听力 8 空），练重音判断与钦佩句式，写作帮小结谈人三步。",
+ "note": "本课为 Unit 1 Section 3 口语，阅读材料为教研自编，非课本原文。考查能力：谈论钦佩的人的问答句式（Who do you admire? / What did he do? / Can you give some examples?）、one of the + 最高级、句子重音规则（实词重读、虚词轻读）、职业词、聂耳四条事实（原名聂守信、生于昆明 1912、《义勇军进行曲》、“人民音乐家”）。听力填空 8 空（聂耳短文）为 Elouise 授权自编，非书上原文；改名原因按“耳朵灵”编写（爱音乐、能听清每一个音符），一生 37 首已核实（维基百科、新华网）。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新一站：口语——谈论钦佩的人",
+   "teach_html": "<p>广播站的新一站开播：<strong>Section 3 口语：谈论钦佩的人 Talking about someone you admire</strong>。站长苏文先问大家一个问题：<strong>你钦佩谁？</strong>一个画家？一个音乐家？一个科学家？</p><p>这一课学两件事：<strong>怎么用英语谈论钦佩的人</strong>，还有<strong>句子重音</strong>——说话时哪些词要读得重、读得清楚。</p><p>先想好你的答案：你钦佩谁？他做了什么？为什么钦佩他？</p>",
+   "audio_id": "u1r11-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：问“你钦佩谁”",
+   "teach_html": "<p>谈论钦佩的人，先问“钦佩谁”：</p><p><strong>Which person in history do you admire?</strong> 你钦佩历史上的哪一个人？</p><p><strong>Who do you admire?</strong> 你钦佩谁？</p><p>回答用 <strong>admire</strong>（钦佩）：<strong>I admire Pablo Picasso.</strong> 我钦佩巴勃罗·毕加索。<strong>I admire Nie Er.</strong> 我钦佩聂耳。</p><p>再加一句介绍他是谁：<strong>He was one of the greatest painters of the 20th century.</strong> 他是 20 世纪最伟大的画家之一。</p>",
+   "audio_id": "u1r11-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：追问“他做了什么”",
+   "teach_html": "<p>光说名字不够，还要追问他做了什么：</p><p><strong>What did he do?</strong> 他做了什么？</p><p>回答说他的成就：<strong>He created many new styles of painting.</strong> 他创造了许多新的绘画风格。<strong>He wrote the March of the Volunteers.</strong> 他写了《义勇军进行曲》。</p><p>想听例子就追问：<strong>Can you give some examples?</strong> 你能举些例子吗？</p><p>再问为什么钦佩：<strong>Why do you admire him?</strong> 你为什么钦佩他？回答：<strong>Because he was not afraid to try new things.</strong> 因为他不怕尝试新事物。</p>",
+   "audio_id": "u1r11-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：查百科，先找三类信息",
+   "teach_html": "<p>谈一个人之前，先去百科全书里查他，找三类信息：</p><p><strong>Life and works</strong> 生平与作品：他是谁，出生在哪一年，做了哪些作品。</p><p><strong>Main achievements</strong> 主要成就：他最了不起的成就是什么。</p><p><strong>Influence</strong> 影响：他的作品影响了谁、影响了什么。</p><p>查到了再说，说出来的才是真的，不是猜的。</p>",
+   "audio_id": "u1r11-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：句子重音规则",
+   "teach_html": "<p>英语说话时，不是每个词都一样重。我们<strong>重读关键词</strong>，轻读小词：</p><p>重读的词（实词）：<strong>名词 nouns、动词 verbs、形容词 adjectives、副词 adverbs、数词 numbers</strong>。</p><p>轻读的词（虚词）：<strong>冠词 a / the、连词 and / but、介词 of / in、人称代词 he / I、助动词 can / do、情态动词肯定式</strong>。</p><p>记住一句话：<strong>重要的词读得重，不重要的词读得轻。</strong></p>",
+   "audio_id": "u1r11-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：重音举例",
+   "teach_html": "<p>看两个例子，重读的词用大写标出来：</p><p><strong>I can SING, but I CAN'T DANCE.</strong> 我会唱歌，但我不会跳舞。sing、can't、dance 要重读——can't 是否定，更要读得清楚。</p><p><strong>Does he LIKE geography?</strong> 他喜欢地理吗？<strong>NO, he DOESN'T.</strong> 不，他不喜欢。like、no、doesn't 要重读。</p><p>否定词 can't、doesn't 一定要重读，听的人一下子就抓住你的意思。</p>",
+   "audio_id": "u1r11-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：职业词认一认",
+   "teach_html": "<p>谈论钦佩的人，常说到他的职业，这些词要认得：</p><p><strong>artist</strong> 艺术家（尤指画家）、<strong>painter</strong> 画家、<strong>musician</strong> 音乐家、<strong>scientist</strong> 科学家、<strong>inventor</strong> 发明家、<strong>writer</strong> 作家、<strong>physicist</strong> 物理学家、<strong>designer</strong> 设计师、<strong>mathematician</strong> 数学家。</p><p>看后缀认职业：<strong>-ist</strong>（artist、scientist）、<strong>-ian</strong>（musician、mathematician）、<strong>-er</strong>（writer、painter）、<strong>-or</strong>（inventor）。</p>",
+   "audio_id": "u1r11-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：聂耳的四条事实",
+   "teach_html": "<p>这一课我们要认识一位中国音乐家：<strong>聂耳 Nie Er</strong>。记住关于他的四条事实：</p><p>1. 他的<strong>原名</strong>是 <strong>Nie Shouxin 聂守信</strong>，original name 就是“原来的名字”。</p><p>2. 他<strong>生于昆明</strong>，<strong>1912 年</strong>出生：He was born in Kunming in 1912.</p><p>3. 他写了<strong>《义勇军进行曲》March of the Volunteers</strong>，这是中国的<strong>国歌 national anthem</strong>。</p><p>4. 人们叫他<strong>“人民音乐家” the People's Musician</strong>。</p>",
+   "audio_id": "u1r11-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：one of the + 最高级",
+   "teach_html": "<p>介绍“最……之一”，用这个句式：</p><p><strong>one of the + 形容词最高级 + 可数名词复数</strong></p><p><strong>He was one of the greatest painters of the 20th century.</strong> 他是 20 世纪最伟大的画家之一。</p><p>注意两点：最高级前面有 the；one of the 后面的名词一定用<strong>复数</strong>，painters 不能写成 painter。</p><p>再练一句：Nie Er was one of the most famous musicians in China. 聂耳是中国最著名的音乐家之一。</p>",
+   "audio_id": "u1r11-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——谈论钦佩的人",
+   "teach_html": "<p>下面是一段自编对话：梅和林涛谈论各自钦佩的人。读两遍，记住：林涛钦佩谁？他做了什么？梅钦佩谁？</p><p>读的时候注意：对话里的问句 Which person do you admire?、What did he do?、Can you give some examples? 都是本课要学的句式。</p>",
+   "audio_id": "u1r11-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：林涛钦佩谁",
+   "scene": "对话里林涛说他钦佩谁？",
+   "stem": "Who does Lin Tao admire in the dialogue?",
+   "options": [
+    "Nie Er",
+    "Pablo Picasso",
+    "Leonardo da Vinci",
+    "Yuan Longping"
+   ],
+   "answer": "B",
+   "help": "回到对话第一句找，林涛说 I admire...",
+   "explain": "Lin Tao says, 'I admire Pablo Picasso.' 林涛说他钦佩毕加索。",
+   "wrong_feedback": {
+    "A": "Nie Er 是梅说的她钦佩的人，不是林涛说的。",
+    "C": "对话里没提到达·芬奇，他是 Section 1 的人物。",
+    "D": "袁隆平是写作课的人物，对话里林涛钦佩的是毕加索。"
+   },
+   "audio_id": "u1r11-q01",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：毕加索的名字",
+   "scene": "林涛钦佩巴勃罗·毕加索。",
+   "stem": "Lin Tao admires Pablo ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "Picasso",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Picasso"
+     ],
+     "olds": [
+      "Picaso"
+     ],
+     "cn": [
+      "毕加索"
+     ]
+    }
+   ],
+   "help": "“毕加索”这个姓怎么拼？",
+   "explain": "Lin Tao admires Pablo Picasso. 林涛钦佩巴勃罗·毕加索。",
+   "common_errors": [
+    {
+     "when": "写了 Picaso",
+     "say": "拼写注意：Picasso 是 P-i-c-a-s-s-o，有两个 s。"
+    }
+   ],
+   "audio_id": "u1r11-q02",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：毕加索做了什么",
+   "scene": "林涛说毕加索做了什么？",
+   "stem": "What did Picasso do, according to Lin Tao?",
+   "options": [
+    "He wrote the national anthem",
+    "He wrote many novels",
+    "He created new styles of painting",
+    "He studied dinosaurs"
+   ],
+   "answer": "C",
+   "help": "回到对话里找：What did he do? 后面那句说什么？",
+   "explain": "Lin Tao says Picasso created new styles of painting. 林涛说毕加索创造了新的绘画风格。",
+   "wrong_feedback": {
+    "A": "写国歌的是聂耳，不是毕加索。",
+    "B": "写小说的是马克·吐温，不是毕加索。",
+    "D": "研究恐龙是 Section 1 的内容，和毕加索没关系。"
+   },
+   "audio_id": "u1r11-q03",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：最伟大的画家之一",
+   "scene": "他是 20 世纪最伟大的画家之一。",
+   "stem": "He was one of the ___ painters of the 20th century.",
+   "task": "只写空里的部分。",
+   "answer_text": "greatest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "greatest"
+     ],
+     "olds": [
+      "great",
+      "greater"
+     ],
+     "cn": [
+      "最伟大的"
+     ]
+    }
+   ],
+   "help": "one of the 后面要接什么形式的形容词？",
+   "explain": "He was one of the greatest painters of the 20th century. 他是 20 世纪最伟大的画家之一。",
+   "common_errors": [
+    {
+     "when": "写了 great",
+     "say": "one of the 后面要接最高级，great 的最高级是 greatest。"
+    },
+    {
+     "when": "写了 greater",
+     "say": "greater 是比较级；one of the 后面要接最高级 greatest。"
+    }
+   ],
+   "audio_id": "u1r11-q04",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：举些例子",
+   "scene": "梅问“你能举些例子吗”，她想要什么？",
+   "stem": "In the dialogue, Mei asks, 'Can you give some examples?' What does she want?",
+   "options": [
+    "Lin Tao to stop talking",
+    "Lin Tao to sing a song",
+    "Lin Tao to go home",
+    "Lin Tao to give some examples"
+   ],
+   "answer": "D",
+   "help": "give some examples 是“举些例子”，她想让林涛干什么？",
+   "explain": "She wants Lin Tao to give some examples. 她想让林涛举些例子。",
+   "wrong_feedback": {
+    "A": "她没让林涛停下，是想让他多说一点。",
+    "B": "她没让林涛唱歌，是想让他举例子。",
+    "C": "她没让林涛回家，是想让他举例子。"
+   },
+   "audio_id": "u1r11-q05",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：问“哪一个人”",
+   "scene": "你钦佩历史上的哪一个人？",
+   "stem": "___ person in history do you admire?",
+   "task": "只写空里的部分。",
+   "answer_text": "Which",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Which"
+     ],
+     "olds": [
+      "What",
+      "Who"
+     ],
+     "cn": [
+      "哪一个"
+     ]
+    }
+   ],
+   "help": "问“哪一个人”，用哪个疑问词开头？",
+   "explain": "Which person in history do you admire? 你钦佩历史上的哪一个人？",
+   "common_errors": [
+    {
+     "when": "写了 What",
+     "say": "问“哪一个人”用 Which，不用 What。"
+    },
+    {
+     "when": "写了 Who",
+     "say": "Who 问的是“谁”，这里问“历史上的哪一个人”，用 Which person。"
+    }
+   ],
+   "audio_id": "u1r11-q06",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：为什么钦佩毕加索",
+   "scene": "林涛为什么钦佩毕加索？",
+   "stem": "Why does Lin Tao admire Picasso?",
+   "options": [
+    "Because he was a rich and famous man all his life",
+    "Because he was a singer",
+    "Because he was not afraid to try new things",
+    "Because he lived in China"
+   ],
+   "answer": "C",
+   "help": "回到对话里找：Why do you admire him? 后面那句说什么？",
+   "explain": "Lin Tao admires Picasso because he was not afraid to try new things. 林涛钦佩毕加索，因为他不怕尝试新事物。",
+   "wrong_feedback": {
+    "A": "对话里没说毕加索有钱。",
+    "B": "毕加索是画家，不是歌手。",
+    "D": "对话里没说毕加索住在中国。"
+   },
+   "audio_id": "u1r11-q07",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：现代艺术",
+   "scene": "他的作品改变了现代艺术。",
+   "stem": "His works changed ___ art.",
+   "task": "只写空里的部分。",
+   "answer_text": "modern",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "modern"
+     ],
+     "olds": [
+      "modren",
+      "morden"
+     ],
+     "cn": [
+      "现代的"
+     ]
+    }
+   ],
+   "help": "“现代的”这个词怎么拼？",
+   "explain": "His works changed modern art. 他的作品改变了现代艺术。",
+   "common_errors": [
+    {
+     "when": "写了 modren",
+     "say": "拼写注意：modern 是 m-o-d-e-r-n。"
+    }
+   ],
+   "audio_id": "u1r11-q08",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：哪类词重读",
+   "scene": "说话时，哪类词通常要重读？",
+   "stem": "Which kind of word do we usually stress in a sentence?",
+   "options": [
+    "a noun",
+    "an article like 'the'",
+    "a preposition like 'of'",
+    "a pronoun like 'he'"
+   ],
+   "answer": "A",
+   "help": "想想重音规则：实词重读，虚词轻读，哪类是实词？",
+   "explain": "We usually stress nouns. 名词是实词，说话时要重读。",
+   "wrong_feedback": {
+    "B": "the 是冠词，轻读。",
+    "C": "of 是介词，轻读。",
+    "D": "he 是人称代词，轻读。"
+   },
+   "audio_id": "u1r11-q09",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：重读关键词",
+   "scene": "说话时我们通常重读关键词。",
+   "stem": "We usually stress ___ in a sentence.",
+   "task": "只写空里的部分。",
+   "answer_text": "key words",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "key words"
+     ],
+     "olds": [
+      "small words"
+     ],
+     "cn": [
+      "关键词"
+     ]
+    }
+   ],
+   "help": "说话时要重读的是什么词？",
+   "explain": "We usually stress key words in a sentence. 说话时我们通常重读关键词。",
+   "common_errors": [
+    {
+     "when": "写了 small words",
+     "say": "small words 是小词，要轻读；要重读的是 key words 关键词。"
+    }
+   ],
+   "audio_id": "u1r11-q10",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：can't 要重读",
+   "scene": "“I can sing, but I can't dance.”哪个词必须重读？",
+   "stem": "In 'I can sing, but I can't dance', which word must be stressed?",
+   "options": [
+    "can",
+    "I",
+    "but",
+    "can't"
+   ],
+   "answer": "D",
+   "help": "否定词要重读，哪个词是否定？",
+   "explain": "Can't must be stressed. can't 是否定词，一定要重读。",
+   "wrong_feedback": {
+    "A": "can 是助动词，轻读；can't 是否定，要重读。",
+    "B": "I 是人称代词，轻读。",
+    "C": "but 是连词，轻读。"
+   },
+   "audio_id": "u1r11-q11",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：小词轻读",
+   "scene": "我们不重读 the、and 这样的小词。",
+   "stem": "We do not stress small words like 'the' and '___'.",
+   "task": "只写空里的部分。",
+   "answer_text": "and",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "and"
+     ],
+     "olds": [
+      "sing",
+      "dance"
+     ],
+     "cn": [
+      "和"
+     ]
+    }
+   ],
+   "help": "the 和 and 都是小词，空里填哪个连词？",
+   "explain": "We do not stress small words like 'the' and 'and'. 我们不重读 the、and 这样的小词。",
+   "common_errors": [
+    {
+     "when": "写了 sing",
+     "say": "sing 是动词，要重读；这里列的是轻读的小词。"
+    },
+    {
+     "when": "写了 dance",
+     "say": "dance 是动词，要重读；这里列的是轻读的小词。"
+    }
+   ],
+   "audio_id": "u1r11-q12",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：musician 是什么人",
+   "scene": "musician 是什么职业的人？",
+   "stem": "What is a musician?",
+   "options": [
+    "a person who makes music",
+    "a person who paints pictures",
+    "a person who writes books",
+    "a person who studies science"
+   ],
+   "answer": "A",
+   "help": "musician 和哪个词是亲戚？想想 music 的意思。",
+   "explain": "A musician is a person who makes music. musician 是做音乐的人，就是音乐家。",
+   "wrong_feedback": {
+    "B": "画画的人是 painter。",
+    "C": "写书的人是 writer。",
+    "D": "研究科学的人是 scientist。"
+   },
+   "audio_id": "u1r11-q13",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我们的国歌",
+   "scene": "聂耳写了我们的国歌。",
+   "stem": "Nie Er wrote our national ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "anthem",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anthem"
+     ],
+     "olds": [
+      "anthems",
+      "anthemn"
+     ],
+     "cn": [
+      "国歌"
+     ]
+    }
+   ],
+   "help": "“国歌”这个词怎么拼？",
+   "explain": "Nie Er wrote our national anthem. 聂耳写了我们的国歌。",
+   "common_errors": [
+    {
+     "when": "写了 anthems",
+     "say": "这里说的是“我们的一首国歌”，用单数 anthem。"
+    },
+    {
+     "when": "写了 anthemn",
+     "say": "拼写注意：anthem 是 a-n-t-h-e-m，别写成 anthemn。"
+    }
+   ],
+   "audio_id": "u1r11-q14",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：梅钦佩谁",
+   "scene": "对话里梅说她钦佩谁？",
+   "stem": "Who does Mei admire?",
+   "options": [
+    "Pablo Picasso",
+    "Nie Er",
+    "Leonardo da Vinci",
+    "Mark Twain"
+   ],
+   "answer": "B",
+   "help": "回到对话后面找，梅说 I admire...",
+   "explain": "Mei says, 'I admire Nie Er.' 梅说她钦佩聂耳。",
+   "wrong_feedback": {
+    "A": "毕加索是林涛钦佩的人。",
+    "C": "对话里没提到达·芬奇。",
+    "D": "对话里没提到马克·吐温。"
+   },
+   "audio_id": "u1r11-q15",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：课后去查百科",
+   "scene": "课后他们要去百科全书里查聂耳。",
+   "stem": "Lin Tao and Mei will look him up in the ___ after class.",
+   "task": "只写空里的部分。",
+   "answer_text": "encyclopaedia",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "encyclopaedia"
+     ],
+     "olds": [
+      "encyclopedia"
+     ],
+     "cn": [
+      "百科全书"
+     ]
+    }
+   ],
+   "help": "“百科全书”这个词，课本用哪种拼写？",
+   "explain": "Lin Tao and Mei will look him up in the encyclopaedia after class. 课后林涛和梅要去百科全书里查聂耳。",
+   "common_errors": [
+    {
+     "when": "写了 encyclopedia",
+     "say": "课本用英式拼写 encyclopaedia，注意中间是 ae。"
+    }
+   ],
+   "audio_id": "u1r11-q16",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：他一生努力工作",
+   "scene": "他一生努力工作。",
+   "stem": "He worked hard all his ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "life",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "life"
+     ],
+     "olds": [
+      "live",
+      "lives"
+     ],
+     "cn": [
+      "一生"
+     ]
+    }
+   ],
+   "help": "“一生”这个名词怎么拼？",
+   "explain": "He worked hard all his life. 他一生努力工作。",
+   "common_errors": [
+    {
+     "when": "写了 live",
+     "say": "live 是动词“生活”；这里要填名词 life“一生”。"
+    },
+    {
+     "when": "写了 lives",
+     "say": "lives 是 life 的复数；all his life 是固定搭配，用单数。"
+    }
+   ],
+   "audio_id": "u1r11-q17",
+   "reading": "Mei: Which person in history do you admire, Lin Tao?\nLin Tao: I admire Pablo Picasso. He was one of the greatest painters of the 20th century.\nMei: What did he do?\nLin Tao: He painted in many new ways. He created new styles of painting, and his works changed modern art.\nMei: Can you give some examples?\nLin Tao: His paintings look very different from old paintings. You can see new shapes and strong colours in them.\nMei: Why do you admire him?\nLin Tao: Because he was not afraid to try new things. He worked hard all his life.\nMei: I see. I admire Nie Er. He wrote our national anthem.\nLin Tao: Yes! He was a great musician. Let us look him up in the encyclopaedia after class."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "听力：聂耳——人民音乐家",
+   "teach_html": "<p>第二段换成听力：听一篇关于聂耳的短文，填出 (1)–(8) 空。先读一遍短文，记住问题：原名？出生地？出生年？为什么改名？1930 年代人们的生活？一生写了多少首歌？</p><p>Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician.</p><p>听完想一想：为什么人们叫他“人民音乐家”？因为他的歌给受苦的人们带来希望和力量。</p>",
+   "audio_id": "u1r11-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：重读哪些词",
+   "scene": "说话时，我们通常重读哪些词？",
+   "stem": "Which words do we usually stress when we speak English?",
+   "options": [
+    "articles, prepositions, pronouns and conjunctions",
+    "all the words the same way",
+    "only the first word",
+    "nouns, verbs, adjectives, adverbs and numbers"
+   ],
+   "answer": "D",
+   "help": "想想重音规则：实词重读，哪些是实词？",
+   "explain": "We stress nouns, verbs, adjectives, adverbs and numbers. 我们重读名词、动词、形容词、副词和数词。",
+   "wrong_feedback": {
+    "A": "冠词、介词、代词都是小词，轻读。",
+    "B": "不是每个词都一样重，关键词才重读。",
+    "C": "不只第一个词重读，句中每个关键词都重读。"
+   },
+   "audio_id": "u1r11-q18",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（1）：聂耳的原名",
+   "scene": "听短文：聂耳的原名是什么？",
+   "stem": "His original name was ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "Nie Shouxin",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Nie Shouxin",
+      "Nie Shou Xin"
+     ],
+     "olds": [
+      "Nie Shousin",
+      "Nie Shouxing"
+     ],
+     "cn": [
+      "聂守信"
+     ]
+    }
+   ],
+   "help": "短文第一句：他的原名是什么？",
+   "explain": "His original name was Nie Shouxin. 他的原名是聂守信。",
+   "common_errors": [
+    {
+     "when": "写了 Nie Shousin",
+     "say": "拼写注意：Shouxin 是 S-h-o-u-x-i-n，别丢了 x。"
+    }
+   ],
+   "audio_id": "u1r11-q19",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：like 为什么重读",
+   "scene": "“Does he like geography?”里 like 为什么重读？",
+   "stem": "In 'Does he like geography?', why is 'like' stressed?",
+   "options": [
+    "It is the first word",
+    "It is a pronoun",
+    "It is an article",
+    "It is a verb, a key word"
+   ],
+   "answer": "D",
+   "help": "like 是什么词性的词？",
+   "explain": "Like is a verb, a key word, so we stress it. like 是动词，是关键词，所以重读。",
+   "wrong_feedback": {
+    "A": "like 不是句中第一个词，Does 才是。",
+    "B": "like 不是代词，是动词。",
+    "C": "like 不是冠词，是动词。"
+   },
+   "audio_id": "u1r11-q20",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（2）：聂耳生在哪里",
+   "scene": "听短文：聂耳生在哪里？",
+   "stem": "He was born in ___ in 1912.",
+   "task": "只写空里的部分。",
+   "answer_text": "Kunming",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Kunming"
+     ],
+     "olds": [
+      "Kunmin",
+      "Kunmingg"
+     ],
+     "cn": [
+      "昆明"
+     ]
+    }
+   ],
+   "help": "短文说他出生在哪里？",
+   "explain": "He was born in Kunming in 1912. 他 1912 年生于昆明。",
+   "common_errors": [
+    {
+     "when": "写了 Kunmin",
+     "say": "拼写注意：Kunming 是 K-u-n-m-i-n-g，别丢了 g。"
+    }
+   ],
+   "audio_id": "u1r11-q21",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：聂耳的原名",
+   "scene": "聂耳的原名是什么？",
+   "stem": "What was Nie Er's original name?",
+   "options": [
+    "Nie Erduo",
+    "Nie Shouxin",
+    "Yuan Longping",
+    "Pablo Picasso"
+   ],
+   "answer": "B",
+   "help": "回到短文里找：His original name was...",
+   "explain": "His original name was Nie Shouxin. 他的原名是聂守信。",
+   "wrong_feedback": {
+    "A": "Erduo 是他的绰号，不是原名。",
+    "C": "袁隆平是杂交水稻之父，不是聂耳的原名。",
+    "D": "毕加索是画家，不是聂耳的原名。"
+   },
+   "audio_id": "u1r11-q22",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（3）：聂耳生于哪一年",
+   "scene": "听短文：聂耳生于哪一年？",
+   "stem": "He was born in Kunming in ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "1912",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "1912"
+     ],
+     "olds": [
+      "1921",
+      "1913"
+     ],
+     "cn": [
+      "1912 年"
+     ]
+    }
+   ],
+   "help": "他是哪一年出生的？数字别写反。",
+   "explain": "He was born in Kunming in 1912. 他 1912 年生于昆明。",
+   "common_errors": [
+    {
+     "when": "写了 1921",
+     "say": "1912 和 1921 数字别写反：他生于 1912 年。"
+    }
+   ],
+   "audio_id": "u1r11-q23",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：聂耳生在哪里",
+   "scene": "聂耳出生在哪里？",
+   "stem": "Where was Nie Er born?",
+   "options": [
+    "in Beijing",
+    "in Florida",
+    "in Kunming",
+    "in France"
+   ],
+   "answer": "C",
+   "help": "回到短文里找：He was born in...",
+   "explain": "He was born in Kunming in 1912. 他 1912 年生于昆明。",
+   "wrong_feedback": {
+    "A": "生于北京的是袁隆平，不是聂耳。",
+    "B": "生于佛罗里达乡下的是马克·吐温，不是聂耳。",
+    "D": "短文没说聂耳生于法国。"
+   },
+   "audio_id": "u1r11-q24",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（4）：为什么改名（一）",
+   "scene": "听短文：他为什么改名？",
+   "stem": "Because he ___ music, his friends called him 'Erduo'.",
+   "task": "只写空里的部分。",
+   "answer_text": "loved",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "loved"
+     ],
+     "olds": [
+      "love",
+      "loves"
+     ],
+     "cn": [
+      "热爱"
+     ]
+    }
+   ],
+   "help": "因为他怎么音乐？用过去式。",
+   "explain": "Because he loved music, his friends called him 'Erduo'. 因为他热爱音乐，朋友们叫他“耳朵”。",
+   "common_errors": [
+    {
+     "when": "写了 love",
+     "say": "短文讲的是过去的事，动词用过去式 loved。"
+    },
+    {
+     "when": "写了 loves",
+     "say": "主语是 he，过去式用 loved，不用 loves。"
+    }
+   ],
+   "audio_id": "u1r11-q25",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：聂耳写了什么",
+   "scene": "聂耳写了什么？",
+   "stem": "What did Nie Er write?",
+   "options": [
+    "the March of the Volunteers",
+    "The Adventures of Tom Sawyer",
+    "the Mona Lisa",
+    "the Yongle Dadian"
+   ],
+   "answer": "A",
+   "help": "回到短文里找：He wrote...",
+   "explain": "He wrote the March of the Volunteers. 他写了《义勇军进行曲》。",
+   "wrong_feedback": {
+    "B": "《汤姆·索亚历险记》是马克·吐温写的。",
+    "C": "《蒙娜丽莎》是达·芬奇画的。",
+    "D": "《永乐大典》是中国古代的百科全书，不是聂耳写的。"
+   },
+   "audio_id": "u1r11-q26",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（5）：为什么改名（二）",
+   "scene": "听短文：他的耳朵有多灵？",
+   "stem": "He could ___ , so his friends called him 'Erduo'.",
+   "task": "只写空里的部分。",
+   "answer_text": "hear every note clearly",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hear every note clearly"
+     ],
+     "olds": [
+      "heard every note clearly",
+      "hear every notes clearly"
+     ],
+     "cn": [
+      "听清每一个音符"
+     ]
+    }
+   ],
+   "help": "他能怎么？耳朵灵到什么程度？",
+   "explain": "He could hear every note clearly, so his friends called him 'Erduo'. 他能听清每一个音符，所以朋友们叫他“耳朵”。",
+   "common_errors": [
+    {
+     "when": "写了 heard every note clearly",
+     "say": "could 后面跟动词原形 hear，不用 heard。"
+    },
+    {
+     "when": "写了 hear very well",
+     "say": "短文里说的是 hear every note clearly，听写要按听到的写。"
+    }
+   ],
+   "audio_id": "u1r11-q27",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：人民音乐家",
+   "scene": "人们叫聂耳什么？",
+   "stem": "What do people call Nie Er?",
+   "options": [
+    "the Father of Hybrid Rice",
+    "the People's Musician",
+    "the King of Pop",
+    "the Father of Modern Art"
+   ],
+   "answer": "B",
+   "help": "回到短文最后一句找：People call him...",
+   "explain": "People call him the People's Musician. 人们叫他“人民音乐家”。",
+   "wrong_feedback": {
+    "A": "“杂交水稻之父”是袁隆平的称号。",
+    "C": "短文里没说聂耳是流行音乐之王。",
+    "D": "短文里没说聂耳是现代艺术之父。"
+   },
+   "audio_id": "u1r11-q28",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（6）：1930 年代",
+   "scene": "听短文：1930 年代是什么样的年代？",
+   "stem": "The 1930s were ___ for people in China.",
+   "task": "只写空里的部分。",
+   "answer_text": "hard years",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "hard years"
+     ],
+     "olds": [
+      "hard year",
+      "hard time"
+     ],
+     "cn": [
+      "艰难的岁月"
+     ]
+    }
+   ],
+   "help": "1930 年代对中国人民来说是什么样的年代？",
+   "explain": "The 1930s were hard years for people in China. 1930 年代对中国人民来说是艰难的岁月。",
+   "common_errors": [
+    {
+     "when": "写了 hard year",
+     "say": "这里说的是好多年的岁月，用复数 years。"
+    },
+    {
+     "when": "写了 difficult years",
+     "say": "短文里说的是 hard years，听写要按听到的写。"
+    }
+   ],
+   "audio_id": "u1r11-q29",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：重读哪些词",
+   "scene": "“I admire Nie Er.”里哪些词要重读？",
+   "stem": "In 'I admire Nie Er', which words do we stress?",
+   "options": [
+    "admire, Nie and Er",
+    "I and Nie",
+    "I, do and Er",
+    "the and Er"
+   ],
+   "answer": "A",
+   "help": "admire 是动词，Nie 和 Er 是名字，I 是什么词？",
+   "explain": "We stress admire, Nie and Er. admire 是动词，Nie 和 Er 是名字里的实词，都要重读。",
+   "wrong_feedback": {
+    "B": "I 是人称代词，轻读。",
+    "C": "这句话里没有 do，也没有 the。",
+    "D": "这句话里没有 the。"
+   },
+   "audio_id": "u1r11-q30",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（7）：人们的生活",
+   "scene": "听短文：当时人们过着什么样的生活？",
+   "stem": "People were ___ , and Nie Er wanted his songs to give them hope.",
+   "task": "只写空里的部分。",
+   "answer_text": "in great suffering",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "in great suffering"
+     ],
+     "olds": [
+      "in great suffer",
+      "in great sufferings"
+     ],
+     "cn": [
+      "在巨大的苦难中"
+     ]
+    }
+   ],
+   "help": "人们处在什么样的境况里？",
+   "explain": "People were in great suffering, and Nie Er wanted his songs to give them hope. 人们生活在巨大的苦难中，聂耳想用他的歌给人们带来希望。",
+   "common_errors": [
+    {
+     "when": "写了 in great suffer",
+     "say": "suffering 是名词，“在苦难中”是 in great suffering。"
+    },
+    {
+     "when": "写了 suffering a lot",
+     "say": "短文里说的是 in great suffering，听写要按听到的写。"
+    }
+   ],
+   "audio_id": "u1r11-q31",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "听力填空（8）：一生写了多少首歌",
+   "scene": "听短文：聂耳一生写了多少首歌？",
+   "stem": "In his short life, he wrote ___ songs.",
+   "task": "只写空里的部分。",
+   "answer_text": "37",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "37"
+     ],
+     "olds": [
+      "73",
+      "27"
+     ],
+     "cn": [
+      "37 首"
+     ]
+    }
+   ],
+   "help": "短文里说：他一生写了多少首歌？",
+   "explain": "In his short life, he wrote 37 songs. 他短暂的一生写了 37 首歌。",
+   "common_errors": [
+    {
+     "when": "写了 73",
+     "say": "37 和 73 数字别写反：他一生写了 37 首歌。"
+    }
+   ],
+   "audio_id": "u1r11-q32",
+   "reading": "Nie Er was a great Chinese musician. His original name was (1) ___. He was born in (2) ___ in (3) ___. Because he (4) ___ music, and he could (5) ___, his friends called him 'Erduo', which means 'ears' in Chinese. The 1930s were (6) ___ for people in China. People were (7) ___, and Nie Er wanted his songs to give them hope and strength. In his short life, he wrote (8) ___ songs. His most famous song is March of the Volunteers, the national anthem of China. That is why people call him the People's Musician."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮：谈一个人，三步就够",
+   "teach_html": "<p>想把钦佩的人讲清楚，三步就够：</p><p><strong>第一步：选一个人。</strong>想好你钦佩谁，比如聂耳、毕加索、袁隆平。</p><p><strong>第二步：查三类信息。</strong>去百科全书里查他的生平与作品、主要成就、影响，记下关键事实。</p><p><strong>第三步：用问答句式说出来。</strong>Who do you admire? What did he do? Can you give some examples? Why do you admire him? 一问一答，说的时候重读关键词。</p><p>说之前先在心里打个草稿：他是谁、做了什么、为什么值得钦佩。</p>",
+   "audio_id": "u1r11-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：谈人先做什么",
+   "scene": "想谈论钦佩的人，第一步做什么？",
+   "stem": "You want to talk about a person you admire. What do you do first?",
+   "options": [
+    "Copy his name ten times",
+    "Find facts about him in an encyclopaedia",
+    "Guess his life story without looking anything up",
+    "Sing a song about him"
+   ],
+   "answer": "B",
+   "help": "谈之前要先查到真的信息，去哪里查？",
+   "explain": "Find facts about him in an encyclopaedia first. 先去百科全书里查到关于他的事实。",
+   "wrong_feedback": {
+    "A": "抄十遍名字不能帮你了解他。",
+    "C": "猜出来的生平可能是错的，要查真的信息。",
+    "D": "唱歌不是谈论他的方法。"
+   },
+   "audio_id": "u1r11-q33",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：最伟大的画家之一",
+   "scene": "我钦佩毕加索，因为他是 20 世纪最伟大的画家之一。",
+   "stem": "I admire Pablo Picasso because he was one of the ___ painters of the 20th century.",
+   "task": "只写空里的部分。",
+   "answer_text": "greatest",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "greatest"
+     ],
+     "olds": [
+      "great"
+     ],
+     "cn": [
+      "最伟大的"
+     ]
+    }
+   ],
+   "help": "one of the 后面要接什么形式的形容词？",
+   "explain": "I admire Pablo Picasso because he was one of the greatest painters of the 20th century. 我钦佩毕加索，因为他是 20 世纪最伟大的画家之一。",
+   "common_errors": [
+    {
+     "when": "写了 great",
+     "say": "one of the 后面要接最高级，great 的最高级是 greatest。"
+    }
+   ],
+   "audio_id": "u1r11-q34",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪个词是关键词",
+   "scene": "“He wrote the March of the Volunteers.”里哪个词是关键词？",
+   "stem": "In 'He wrote the March of the Volunteers', which word is a key word?",
+   "options": [
+    "he",
+    "the",
+    "wrote",
+    "of"
+   ],
+   "answer": "C",
+   "help": "wrote 是什么词性的词？he、the、of 是什么词？",
+   "explain": "Wrote is a verb, a key word. wrote 是动词，是关键词，要重读。",
+   "wrong_feedback": {
+    "A": "he 是人称代词，轻读。",
+    "B": "the 是冠词，轻读。",
+    "D": "of 是介词，轻读。"
+   },
+   "audio_id": "u1r11-q35",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：新的绘画风格",
+   "scene": "他创造了许多新的绘画风格。",
+   "stem": "He created many new ___ of painting.",
+   "task": "只写空里的部分。",
+   "answer_text": "styles",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "styles"
+     ],
+     "olds": [
+      "style",
+      "styls"
+     ],
+     "cn": [
+      "风格"
+     ]
+    }
+   ],
+   "help": "many 后面的名词用什么数？",
+   "explain": "He created many new styles of painting. 他创造了许多新的绘画风格。",
+   "common_errors": [
+    {
+     "when": "写了 style",
+     "say": "many 后面名词用复数 styles。"
+    },
+    {
+     "when": "写了 styls",
+     "say": "拼写注意：styles 是 s-t-y-l-e-s，别写成 styls。"
+    }
+   ],
+   "audio_id": "u1r11-q36",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：举些例子",
+   "scene": "你能举些例子吗？",
+   "stem": "Can you give some ___?",
+   "task": "只写空里的部分。",
+   "answer_text": "examples",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "examples"
+     ],
+     "olds": [
+      "example",
+      "exampels"
+     ],
+     "cn": [
+      "例子"
+     ]
+    }
+   ],
+   "help": "some 后面的名词用什么数？",
+   "explain": "Can you give some examples? 你能举些例子吗？",
+   "common_errors": [
+    {
+     "when": "写了 example",
+     "say": "some 后面名词用复数 examples。"
+    },
+    {
+     "when": "写了 exampels",
+     "say": "拼写注意：examples 是 e-x-a-m-p-l-e-s，别写错顺序。"
+    }
+   ],
+   "audio_id": "u1r11-q37",
+   "reading": "When we speak English, we stress the important words. We stress nouns, verbs, adjectives, adverbs and numbers. We do not stress small words like a, the, and, of, he, or can. Listen to these two sentences. I can SING, but I CAN'T DANCE. The words sing, can't and dance are loud and clear. Does he LIKE geography? NO, he DOESN'T. The words like, no and doesn't are loud and clear. Now read about a man we admire. Nie Er was a famous Chinese musician. His original name was Nie Shouxin. He was born in Kunming in 1912. He wrote the March of the Volunteers. It is the national anthem of China. People call him the People's Musician. When you talk about him, stress the important words in each sentence."
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>这一课我们学了：</p><p>1. <strong>翻译帮</strong>：谈论钦佩的人的问答句式——Which person in history do you admire? / What did he do? / Can you give some examples? / Why do you admire him?</p><p>2. <strong>教材帮</strong>：句子重音——实词（名词、动词、形容词、副词、数词）重读，虚词（冠词、连词、介词、代词、助动词）轻读；one of the + 最高级 + 可数名词复数。</p><p>3. <strong>聂耳四条事实</strong>：原名聂守信、生于昆明 1912 年、写了《义勇军进行曲》、被称为“人民音乐家”。</p><p>下节课 u1r12：Section 3 写作，学写百科条目，写袁隆平。</p>",
+   "audio_id": "u1r11-t10"
+  }
+ ],
+ "title": "谈论钦佩的人",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
