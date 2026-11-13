@@ -1,0 +1,1333 @@
+{
+ "lesson_id": "u1r5",
+ "practice_end": 27,
+ "home_subtitle": "Section 1 词汇句式下 · 出生与比较",
+ "part1_desc": "第 1–27 步：be born、as 时间状语从句、as...as...、perhaps、a type of、be related to、either...or...；读《小村庄里的小发明家》，练习帮做题过关。",
+ "part2_desc": "第 28–50 步：读《恐龙一家》，独立验证本课词汇句式；写作帮学写人物小传两句。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：be born（be born in + 地点/年份；be born with）、as 引导时间状语从句、as...as...、perhaps、a type of、be related to、either...or...（就近原则）。Unit 1 Look it up! 主题，核心句 As he grew older... / Dinosaurs walked on either two or four legs. / Some were as small as chickens, and others were as big as ten elephants.",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "广播站新任务：出生与比较",
+   "teach_html": "<p>广播站今天讲两个人的故事：一位出生在小村庄的发明家，和一群生活在远古的恐龙。</p><p>这一课讲六个新点：<strong>be born</strong>（出生）、<strong>as</strong>（当……时；随着）、<strong>as...as...</strong>（和……一样）、<strong>perhaps</strong>（也许）、<strong>a type of</strong>（一种）、<strong>be related to</strong>（与……有关系）、<strong>either...or...</strong>（要么……要么……）。</p>",
+   "audio_id": "u1r5-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：be born 出生",
+   "teach_html": "<p><strong>be born</strong> 出生。常与一般过去时连用，后面接 <strong>in/on + 时间</strong>或 <strong>in + 地点</strong>，表示“出生于某时／某地”。</p><p>Leonardo da Vinci was born in the countryside in Italy. 列奥纳多·达·芬奇出生于意大利的乡村。</p><p>Albert Einstein was born in Germany in 1879. 阿尔伯特·爱因斯坦 1879 年出生在德国。</p><p>顺带记：<strong>be born with</strong> 天生具有……：Everyone is born with the ability to learn. 每个人天生都有学习的能力。注意拼写：born 不是 burn（燃烧）。</p>",
+   "audio_id": "u1r5-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：as 引导时间状语从句",
+   "teach_html": "<p><strong>as</strong> 作连词，引导时间状语从句，意思是“当……时；随着”，强调主句和从句动作同时发生，或主句动作随着从句动作的变化而变化。</p><p>As he grew older, he learnt to do many different things. 随着年龄的增长，他学会了做许多不同的事情。</p><p>As I walked home, I saw a big dog. 在我走回家的路上，我看到一只大狗。</p><p>As the weather becomes warmer, the flowers start to come out. 随着天气变暖，花儿开始绽放。</p><p>顺带记：as 作连词还可以表示“因为；由于”，引导原因状语从句：As you were out, I left a note. 因为你不在，所以我留了个便条。</p>",
+   "audio_id": "u1r5-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：as...as... 和……一样",
+   "teach_html": "<p><strong>as + 形容词／副词 + as</strong> 表示“和……一样”。</p><p>Some were as small as chickens, and others were as big as ten elephants. 有些恐龙像鸡一样小，另一些则有十头大象那么大。</p><p>否定是 <strong>not as...as...</strong> 表示“不如……”：This dinosaur is not as big as that one. 这只恐龙不如那只大。</p><p>记住口诀：as...as，前后两个 as 一个都不能少。</p>",
+   "audio_id": "u1r5-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：perhaps 也许",
+   "teach_html": "<p><strong>perhaps</strong> /pəˈhæps/ <em>adv.</em> 可能；大概；也许。相当于 <strong>maybe</strong>，常用于句首，也可用于句中。</p><p>Perhaps it will rain tomorrow. Take an umbrella. 也许明天会下雨，带把伞。</p><p>He was perhaps the most talented singer in our school. 他也许是我们学校最有才华的歌手。</p><p>perhaps 说的是不确定的事，别把它和 always（总是）这种肯定的词弄混。</p>",
+   "audio_id": "u1r5-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：a type of 一种",
+   "teach_html": "<p><strong>a type of</strong> 一种，相当于 <strong>a kind of</strong>。type 在这里是名词，意思是“类型；种类”。</p><p>Dinosaurs are a type of prehistoric animal. 恐龙是一种史前动物。</p><p>A radio is a type of machine. 收音机是一种机器。</p><p>顺带记：<strong>all types/kinds of</strong> 各种各样的；<strong>different types/kinds of</strong> 不同种类的：There are all types of books in the shop. 书店里有各种各样的书。</p>",
+   "audio_id": "u1r5-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：be related to 与……有关系",
+   "teach_html": "<p><strong>be related to</strong> 与……有亲缘关系；与……有关系。</p><p>Dinosaurs are related to crocodiles, snakes, lizards and today's birds. 恐龙与鳄鱼、蛇、蜥蜴和今天的鸟类有亲缘关系。</p><p>Dolphins are related to whales. 海豚和鲸有亲缘关系。</p><p>词族一起记：<strong>relation</strong>（<em>n.</em> 关系；联系）、<strong>relate</strong>（<em>v.</em> 把……联系起来）、<strong>related</strong>（<em>adj.</em> 相关的；有关系的）、<strong>relationship</strong>（<em>n.</em> 关系；联系）、<strong>relative</strong>（<em>n.</em> 亲戚；亲属）。</p>",
+   "audio_id": "u1r5-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：either...or... 要么……要么……",
+   "teach_html": "<p><strong>either...or...</strong> 要么……要么……；或者……或者……。用来连接两个并列成分，可以在句中作主语、宾语、表语、状语等等。</p><p>Dinosaurs lived on land and walked on either two or four legs. 恐龙生活在陆地上，用两条或四条腿行走。</p><p>You can either buy or borrow the book for your research. 你可以买或者借这本书用于研究。</p><p>注意就近原则：当 either...or... 连接两个并列成分作主语时，谓语动词要与 or 后的成分在人称和数上保持一致：Either you or Tom is allowed to go to the cinema. 要么是你，要么是汤姆被允许去看电影。</p>",
+   "audio_id": "u1r5-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：易混点总汇",
+   "teach_html": "<p>上题之前，先把容易混的四组分清楚：</p><p><strong>be born</strong> 是“出生”，别丢了 be；<strong>birth</strong> 是名词“出生”，下节课细讲。</p><p><strong>as</strong> 引导时间状语从句（As he grew older...）— <strong>as...as...</strong> 是比较（as big as...）。</p><p><strong>perhaps</strong> 是“也许”，说不确定的事；<strong>a type of</strong> 后面跟单数名词（a type of animal）。</p><p><strong>either...or...</strong> 是二选一；<strong>both...and...</strong> 是两者都，别弄混。</p>",
+   "audio_id": "u1r5-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——小村庄里的小发明家",
+   "teach_html": "<p>下面是一段自编短文，讲王先生这位小发明家。读两遍，找一找：他出生在哪里？他长大后学会了什么？他的工作和什么有关系？</p><p>读的时候用扫描的方法：先看问题，再到文章里找答案。</p>",
+   "audio_id": "u1r5-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：be born 是什么意思",
+   "scene": "王先生出生在一个小村庄。",
+   "stem": "What does “be born” mean?",
+   "options": [
+    "grow up fast",
+    "go to school",
+    "come into the world as a baby",
+    "start to work"
+   ],
+   "answer": "C",
+   "help": "born 和“出生”有关，哪个选项是这个意思？",
+   "explain": "Be born means come into the world as a baby. be born 是“出生”。",
+   "wrong_feedback": {
+    "A": "grow up fast 是“长得快”，不是出生。",
+    "B": "go to school 是“上学”，不是出生。",
+    "D": "start to work 是“开始工作”，不是出生。"
+   },
+   "audio_id": "u1r5-q01",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：出生在小村庄",
+   "scene": "王先生 1960 年出生在一个小村庄。",
+   "stem": "Mr Wang was ___ in a small village in 1960.",
+   "task": "只写空里的部分。",
+   "answer_text": "born",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "born"
+     ],
+     "olds": [
+      "burn",
+      "borne"
+     ],
+     "cn": [
+      "出生"
+     ]
+    }
+   ],
+   "help": "be ___ in，填哪个词？注意拼写。",
+   "explain": "Mr Wang was born in a small village in 1960. 王先生 1960 年出生在一个小村庄。",
+   "common_errors": [
+    {
+     "when": "写了 burn",
+     "say": "born 是“出生”，burn 是“燃烧”，拼写不一样。"
+    },
+    {
+     "when": "写了 borne",
+     "say": "be born 里用 born，别写成 borne。"
+    }
+   ],
+   "audio_id": "u1r5-q02",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：be born in + 年份",
+   "scene": "爱因斯坦 1879 年出生在德国。",
+   "stem": "Albert Einstein was born in Germany ___ 1879.",
+   "options": [
+    "on",
+    "in",
+    "at",
+    "of"
+   ],
+   "answer": "B",
+   "help": "年份前面用哪个介词？be born in + 年份。",
+   "explain": "He was born in Germany in 1879. 年份前面用 in。",
+   "wrong_feedback": {
+    "A": "on 用在具体某一天前面，不用在年份前面。",
+    "C": "at 用在具体时刻前面，不用在年份前面。",
+    "D": "of 不是这里的搭配。"
+   },
+   "audio_id": "u1r5-q03",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：随着年龄增长",
+   "scene": "随着年龄增长，他学会了做收音机和钟表。",
+   "stem": "___ he grew older, he learnt to make radios and clocks.",
+   "task": "只写空里的部分。",
+   "answer_text": "As",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as"
+     ],
+     "olds": [
+      "so",
+      "but"
+     ],
+     "cn": [
+      "当……时；随着"
+     ]
+    }
+   ],
+   "help": "“随着年龄增长”，用哪个词引导时间状语从句？",
+   "explain": "As he grew older, he learnt to make radios and clocks. 随着年龄增长，他学会了做收音机和钟表。",
+   "common_errors": [
+    {
+     "when": "写了 so",
+     "say": "so 是“所以”，这里要填 as，表示“随着”。"
+    },
+    {
+     "when": "写了 but",
+     "say": "but 是“但是”，这里要填 as，表示“随着”。"
+    }
+   ],
+   "audio_id": "u1r5-q04",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：as small as a chicken",
+   "scene": "像鸡一样小，是多大？",
+   "stem": "“As small as a chicken” means ___.",
+   "options": [
+    "the same size as a chicken",
+    "bigger than a chicken",
+    "smaller than an egg",
+    "as big as an elephant"
+   ],
+   "answer": "A",
+   "help": "as...as... 是“和……一样”，哪个选项是这个意思？",
+   "explain": "As small as a chicken means the same size as a chicken. 像鸡一样小，就是和鸡一样大。",
+   "wrong_feedback": {
+    "B": "bigger than a chicken 是“比鸡大”，意思反了。",
+    "C": "smaller than an egg 是“比蛋还小”，不是这个意思。",
+    "D": "as big as an elephant 是“像大象一样大”，那是另一头恐龙。"
+   },
+   "audio_id": "u1r5-q05",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：像鸡一样小",
+   "scene": "有些恐龙像鸡一样小。",
+   "stem": "Some dinosaurs were ___ small ___ chickens.",
+   "task": "只写空里的部分。",
+   "answer_text": "as small as",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as small as"
+     ],
+     "olds": [
+      "so small as"
+     ],
+     "cn": [
+      "和……一样小"
+     ]
+    }
+   ],
+   "help": "“和……一样小”，前后两个词都要填。",
+   "explain": "Some dinosaurs were as small as chickens. 有些恐龙像鸡一样小。",
+   "common_errors": [
+    {
+     "when": "写了 so small as",
+     "say": "as...as... 结构是“和……一样”，前面用 as，不用 so。"
+    },
+    {
+     "when": "只写了 as small",
+     "say": "as...as... 前后两个 as 一个都不能少。"
+    }
+   ],
+   "audio_id": "u1r5-q06",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：perhaps 是什么意思",
+   "scene": "perhaps 和哪个词意思最接近？",
+   "stem": "Which word is closest in meaning to “perhaps”?",
+   "options": [
+    "always",
+    "never",
+    "quickly",
+    "maybe"
+   ],
+   "answer": "D",
+   "help": "perhaps 是“可能、也许”，哪个选项也是这个意思？",
+   "explain": "Perhaps means maybe. perhaps 是“可能、也许”，和 maybe 意思一样。",
+   "wrong_feedback": {
+    "A": "always 是“总是”，意思是肯定的，不是“可能”。",
+    "B": "never 是“从不”，意思和 perhaps 正好相反。",
+    "C": "quickly 是“很快地”，说的是速度，不是“可能”。"
+   },
+   "audio_id": "u1r5-q07",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：也许明天会下雨",
+   "scene": "也许明天会下雨，带把伞。",
+   "stem": "___ it will rain tomorrow. Take an umbrella.",
+   "task": "只写空里的部分。",
+   "answer_text": "Perhaps",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "perhaps"
+     ],
+     "olds": [
+      "always",
+      "never"
+     ],
+     "cn": [
+      "也许"
+     ]
+    }
+   ],
+   "help": "“也许”明天会下雨，填哪个词？",
+   "explain": "Perhaps it will rain tomorrow. 也许明天会下雨。",
+   "common_errors": [
+    {
+     "when": "写了 always",
+     "say": "always 是“总是”，太肯定了；这里是“也许”，用 perhaps。"
+    },
+    {
+     "when": "写了 never",
+     "say": "never 是“从不”，意思正好相反；这里是“也许”，用 perhaps。"
+    }
+   ],
+   "audio_id": "u1r5-q08",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：a type of 是什么意思",
+   "scene": "a type of 和哪个短语意思一样？",
+   "stem": "Which phrase means the same as “a type of”?",
+   "options": [
+    "a kind of",
+    "a lot of",
+    "a piece of",
+    "a pair of"
+   ],
+   "answer": "A",
+   "help": "type 是“种类”，a type of 就是“一种”，哪个选项也是这个意思？",
+   "explain": "A type of means a kind of. a type of 是“一种”，和 a kind of 意思一样。",
+   "wrong_feedback": {
+    "B": "a lot of 是“许多”，说的是数量，不是种类。",
+    "C": "a piece of 是“一片/一件”，说的是单位，不是种类。",
+    "D": "a pair of 是“一双/一对”，说的是成双的东西，不是种类。"
+   },
+   "audio_id": "u1r5-q09",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：收音机是一种机器",
+   "scene": "收音机是一种机器。",
+   "stem": "A radio is ___ machine.",
+   "task": "只写空里的部分。",
+   "answer_text": "a type of",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "a type of"
+     ],
+     "olds": [
+      "a piece of"
+     ],
+     "cn": [
+      "一种"
+     ]
+    }
+   ],
+   "help": "“一种机器”，填哪个短语？",
+   "explain": "A radio is a type of machine. 收音机是一种机器。",
+   "common_errors": [
+    {
+     "when": "写了 a piece of",
+     "say": "a piece of 是“一件/一片”，这里是“一种”，用 a type of。"
+    },
+    {
+     "when": "写了 a lot of",
+     "say": "a lot of 是“许多”；这里是“一种”，用 a type of。"
+    }
+   ],
+   "audio_id": "u1r5-q10",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：恐龙与鳄鱼有亲缘关系",
+   "scene": "恐龙和鳄鱼有亲缘关系。",
+   "stem": "Dinosaurs are related to crocodiles. What does “be related to” mean here?",
+   "options": [
+    "eat the same food as",
+    "live in the same place as",
+    "have the same family history as",
+    "look the same as"
+   ],
+   "answer": "C",
+   "help": "related to 是说有亲缘关系，哪个选项是这个意思？",
+   "explain": "Be related to means have the same family history. be related to 是“与……有亲缘关系”。",
+   "wrong_feedback": {
+    "A": "eat the same food as 是“吃同样的食物”，不是亲缘关系。",
+    "B": "live in the same place as 是“住在同一个地方”，不是亲缘关系。",
+    "D": "look the same as 是“长得一样”，不是亲缘关系。"
+   },
+   "audio_id": "u1r5-q11",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：与鳄鱼有亲缘关系",
+   "scene": "恐龙与鳄鱼、蛇和蜥蜴有亲缘关系。",
+   "stem": "Dinosaurs are ___ to crocodiles, snakes and lizards.",
+   "task": "只写空里的部分。",
+   "answer_text": "related",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "related"
+     ],
+     "olds": [
+      "relate",
+      "relatd"
+     ],
+     "cn": [
+      "有关系的"
+     ]
+    }
+   ],
+   "help": "be ___ to 是“与……有亲缘关系”，空里填哪个词？",
+   "explain": "Dinosaurs are related to crocodiles, snakes and lizards. 恐龙与鳄鱼、蛇和蜥蜴有亲缘关系。",
+   "common_errors": [
+    {
+     "when": "写了 relate",
+     "say": "be related to 是固定搭配，这里要用过去分词 related，不是原形 relate。"
+    },
+    {
+     "when": "写了 relatd",
+     "say": "拼写注意：related 是 r-e-l-a-t-e-d，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r5-q12",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：要么用旧零件，要么买新的",
+   "scene": "他可以用旧零件，也可以买新的。",
+   "stem": "He can ___ use old parts ___ buy new ones.",
+   "options": [
+    "both ... and",
+    "either ... or",
+    "neither ... nor",
+    "not only ... but"
+   ],
+   "answer": "B",
+   "help": "二选一，用哪个关联词？",
+   "explain": "He can either use old parts or buy new ones. 要么用旧零件，要么买新的。",
+   "wrong_feedback": {
+    "A": "both...and... 是“既……又……”，两者都要，不是二选一。",
+    "C": "neither...nor... 是“既不……也不……”，意思正好相反。",
+    "D": "not only...but... 是“不但……而且……”，不是二选一。"
+   },
+   "audio_id": "u1r5-q13",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：用两条或四条腿走路",
+   "scene": "恐龙用两条或四条腿走路。",
+   "stem": "Dinosaurs walked on ___ two or four legs.",
+   "task": "只写空里的部分。",
+   "answer_text": "either",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "either"
+     ],
+     "olds": [
+      "neither",
+      "both"
+     ],
+     "cn": [
+      "要么"
+     ]
+    }
+   ],
+   "help": "“要么两条、要么四条”，填哪个词？",
+   "explain": "Dinosaurs walked on either two or four legs. 恐龙用两条或四条腿走路。",
+   "common_errors": [
+    {
+     "when": "写了 neither",
+     "say": "neither...nor... 是“既不……也不……”；这里是“要么两条、要么四条”，用 either。"
+    },
+    {
+     "when": "写了 both",
+     "say": "both...and... 是“既……又……”；这里只能二选一，用 either...or...。"
+    }
+   ],
+   "audio_id": "u1r5-q14",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：天生具有学习的能力",
+   "scene": "每个人天生都有学习的能力。",
+   "stem": "Everyone is born ___ the ability to learn.",
+   "options": [
+    "in",
+    "at",
+    "for",
+    "with"
+   ],
+   "answer": "D",
+   "help": "be born 后面接哪个介词表示“天生具有”？",
+   "explain": "Everyone is born with the ability to learn. be born with 是“天生具有……”。",
+   "wrong_feedback": {
+    "A": "be born with 用 with，不用 in。",
+    "B": "be born with 用 with，不用 at。",
+    "C": "be born with 用 with，不用 for。"
+   },
+   "audio_id": "u1r5-q15",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：和那个箱子一样大",
+   "scene": "这个箱子和那个箱子一样大。",
+   "stem": "This box is ___ big ___ that one.",
+   "task": "只写空里的部分。",
+   "answer_text": "as big as",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as big as"
+     ],
+     "olds": [
+      "so big as"
+     ],
+     "cn": [
+      "和……一样大"
+     ]
+    }
+   ],
+   "help": "“和……一样大”，前后两个词都要填。",
+   "explain": "This box is as big as that one. 这个箱子和那个箱子一样大。",
+   "common_errors": [
+    {
+     "when": "写了 so big as",
+     "say": "as...as... 前后都用 as：as big as。"
+    },
+    {
+     "when": "只写了 as big",
+     "say": "as...as... 前后两个 as 一个都不能少。"
+    }
+   ],
+   "audio_id": "u1r5-q16",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：哪个句子是对的",
+   "scene": "下面哪个句子写对了 be born？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "He was born at Italy in 1452.",
+    "He was born in Italy on 1452.",
+    "He was born in Italy in 1452.",
+    "He born in Italy in 1452."
+   ],
+   "answer": "C",
+   "help": "be born in + 地点 + in + 年份，哪个句子全写对了？",
+   "explain": "He was born in Italy in 1452. 出生在意大利用 in，1452 年前面也用 in。",
+   "wrong_feedback": {
+    "A": "出生在意大利用 in，不用 at。",
+    "B": "1452 年前面用 in，不用 on。",
+    "D": "be born 里 be 不能丢，要说 was born。"
+   },
+   "audio_id": "u1r5-q17",
+   "reading": "Mr Wang was born in a small village in 1960. As a boy, he loved making things with his hands. As he grew older, he learnt to make radios and clocks. Perhaps he was born with a talent for machines. A radio is a type of machine. A clock is a type of machine, too. His work is related to science. He says, 'Science is related to our life.' Every day, he works in his small room. He either reads books or makes new things. He can either use old parts or buy new ones. His neighbours say he is very clever. He says, 'Perhaps I am just a hard-working man.'"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——恐龙一家",
+   "teach_html": "<p>第二段短文讲恐龙一家。这次没有提示带着走，题目都要你自己判断。短文会留在屏幕上，读不懂的句子可以回看。</p><p>注意找一找：恐龙有多大？它们怎么走路？它们和哪些动物有亲缘关系？它们为什么灭绝？</p>",
+   "audio_id": "u1r5-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：as 在这里是什么意思",
+   "scene": "恐龙长大后变得更大更强壮。",
+   "stem": "“As they grew older, they became bigger.” What does “as” mean here?",
+   "options": [
+    "when / as time went by",
+    "because they ate a lot",
+    "so they were big",
+    "if they were big"
+   ],
+   "answer": "A",
+   "help": "as 引导时间状语从句，这里是“当……时；随着”，哪个选项是这个意思？",
+   "explain": "As they grew older means when / as time went by. as 在这里是“随着”。",
+   "wrong_feedback": {
+    "B": "because they ate a lot 是“因为吃得多”，as 在这里不是“因为”。",
+    "C": "so they were big 是“所以它们很大”，as 不是“所以”。",
+    "D": "if they were big 是“如果它们很大”，as 不是“如果”。"
+   },
+   "audio_id": "u1r5-q18",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：出生在温暖的地方",
+   "scene": "恐龙出生在温暖的地方。",
+   "stem": "They were ___ in warm places.",
+   "task": "只写空里的部分。",
+   "answer_text": "born",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "born"
+     ],
+     "olds": [
+      "burn"
+     ],
+     "cn": [
+      "出生"
+     ]
+    }
+   ],
+   "help": "be ___ in，填哪个词？",
+   "explain": "They were born in warm places. 它们出生在温暖的地方。",
+   "common_errors": [
+    {
+     "when": "写了 burn",
+     "say": "born 是“出生”，burn 是“燃烧”，拼写不一样。"
+    },
+    {
+     "when": "写了 birth",
+     "say": "birth 是名词“出生”；be born 里用 born。"
+    }
+   ],
+   "audio_id": "u1r5-q19",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪个句子用对了 perhaps",
+   "scene": "下面哪个句子里 perhaps 用对了？",
+   "stem": "Which sentence uses “perhaps” correctly?",
+   "options": [
+    "Perhaps it will rain yesterday.",
+    "Perhaps it will rain tomorrow.",
+    "Perhaps will rain tomorrow.",
+    "Perhaps rain tomorrow will it."
+   ],
+   "answer": "B",
+   "help": "perhaps 是“也许”，后面要跟完整的句子，哪个句子是对的？",
+   "explain": "Perhaps it will rain tomorrow. 也许明天会下雨。",
+   "wrong_feedback": {
+    "A": "yesterday 是昨天，和 will 搭配不对。",
+    "C": "Perhaps will rain tomorrow 缺了主语 it。",
+    "D": "Perhaps rain tomorrow will it 语序不对。"
+   },
+   "audio_id": "u1r5-q20",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：恐龙是一种史前动物",
+   "scene": "恐龙是一种史前动物。",
+   "stem": "A dinosaur is ___ prehistoric animal.",
+   "task": "只写空里的部分。",
+   "answer_text": "a type of",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "a type of"
+     ],
+     "olds": [
+      "a lot of"
+     ],
+     "cn": [
+      "一种"
+     ]
+    }
+   ],
+   "help": "“一种史前动物”，填哪个短语？",
+   "explain": "A dinosaur is a type of prehistoric animal. 恐龙是一种史前动物。",
+   "common_errors": [
+    {
+     "when": "写了 a lot of",
+     "say": "a lot of 是“许多”；这里是“一种”，用 a type of。"
+    },
+    {
+     "when": "写了 a piece of",
+     "say": "a piece of 是“一件/一片”；这里是“一种”，用 a type of。"
+    }
+   ],
+   "audio_id": "u1r5-q21",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：be related to 后面接什么",
+   "scene": "恐龙与鳄鱼有亲缘关系。",
+   "stem": "Dinosaurs are related ___ crocodiles.",
+   "options": [
+    "with",
+    "in",
+    "for",
+    "to"
+   ],
+   "answer": "D",
+   "help": "be related 后面接哪个介词？",
+   "explain": "Dinosaurs are related to crocodiles. be related to 是固定搭配。",
+   "wrong_feedback": {
+    "A": "be related to 用 to，不用 with。",
+    "B": "be related to 用 to，不用 in。",
+    "C": "be related to 用 to，不用 for。"
+   },
+   "audio_id": "u1r5-q22",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：要么两条，要么四条",
+   "scene": "恐龙用两条或四条腿走路。",
+   "stem": "They walked on either two ___ four legs.",
+   "task": "只写空里的部分。",
+   "answer_text": "or",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "or"
+     ],
+     "olds": [
+      "and"
+     ],
+     "cn": [
+      "或者"
+     ]
+    }
+   ],
+   "help": "either...___... 是固定搭配，中间填哪个词？",
+   "explain": "They walked on either two or four legs. 恐龙用两条或四条腿走路。",
+   "common_errors": [
+    {
+     "when": "写了 and",
+     "say": "either...or... 是固定搭配，中间用 or，不用 and。"
+    },
+    {
+     "when": "写了 nor",
+     "say": "nor 是 neither...nor... 的搭配；这里是 either...or...。"
+    }
+   ],
+   "audio_id": "u1r5-q23",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：恐龙的大小",
+   "scene": "有些恐龙像鸡一样小，另一些像十头大象那么大。",
+   "stem": "Some dinosaurs were as small as chickens. Others were as big as ten elephants. What do we know?",
+   "options": [
+    "all dinosaurs were small",
+    "dinosaurs came in different sizes",
+    "all dinosaurs were big",
+    "dinosaurs were as big as chickens"
+   ],
+   "answer": "B",
+   "help": "有的小、有的大，说明恐龙怎么样？",
+   "explain": "Dinosaurs came in different sizes. 恐龙有各种不同的大小。",
+   "wrong_feedback": {
+    "A": "all dinosaurs were small 不对，有的恐龙很大。",
+    "C": "all dinosaurs were big 不对，有的恐龙很小。",
+    "D": "dinosaurs were as big as chickens 不对，是 as small as chickens。"
+   },
+   "audio_id": "u1r5-q24",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：随着天气变暖",
+   "scene": "随着天气变暖，花儿开始绽放。",
+   "stem": "___ the weather becomes warmer, the flowers start to come out.",
+   "task": "只写空里的部分。",
+   "answer_text": "As",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as"
+     ],
+     "olds": [
+      "so"
+     ],
+     "cn": [
+      "随着"
+     ]
+    }
+   ],
+   "help": "“随着天气变暖”，用哪个词引导时间状语从句？",
+   "explain": "As the weather becomes warmer, the flowers start to come out. 随着天气变暖，花儿开始绽放。",
+   "common_errors": [
+    {
+     "when": "写了 so",
+     "say": "so 是“所以”；这里是“随着”，用 as。"
+    },
+    {
+     "when": "写了 when",
+     "say": "when 也可以表时间，但这道题练的是 as 引导的时间状语从句。"
+    }
+   ],
+   "audio_id": "u1r5-q25",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：出生在意大利",
+   "scene": "达·芬奇出生在意大利。",
+   "stem": "Leonardo da Vinci was born ___ Italy.",
+   "options": [
+    "in",
+    "on",
+    "at",
+    "to"
+   ],
+   "answer": "A",
+   "help": "出生在某地，用哪个介词？",
+   "explain": "He was born in Italy. 出生在某地用 in。",
+   "wrong_feedback": {
+    "B": "出生在某地用 in，不用 on。",
+    "C": "出生在某地用 in，不用 at。",
+    "D": "出生在某地用 in，不用 to。"
+   },
+   "audio_id": "u1r5-q26",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：也许是最有才华的画家",
+   "scene": "他也许是他那个时代最有才华的画家。",
+   "stem": "He was ___ the most talented painter of his time.",
+   "task": "只写空里的部分。",
+   "answer_text": "perhaps",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "perhaps"
+     ],
+     "olds": [
+      "always"
+     ],
+     "cn": [
+      "也许"
+     ]
+    }
+   ],
+   "help": "“也许”，填哪个词？这个词也可以放在句中。",
+   "explain": "He was perhaps the most talented painter of his time. 他也许是他那个时代最有才华的画家。",
+   "common_errors": [
+    {
+     "when": "写了 always",
+     "say": "always 太肯定了；这里是“也许”，用 perhaps。"
+    },
+    {
+     "when": "写了 maybe",
+     "say": "maybe 意思也对，但这道题练的是 perhaps。"
+    }
+   ],
+   "audio_id": "u1r5-q27",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：蝴蝶是一种昆虫",
+   "scene": "蝴蝶是一种昆虫。",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Butterflies are a type of insects.",
+    "Butterflies are a types of insect.",
+    "Butterflies are type of insect.",
+    "Butterflies are a type of insect."
+   ],
+   "answer": "D",
+   "help": "a type of 后面跟单数名词，哪个句子写对了？",
+   "explain": "Butterflies are a type of insect. a type of 后面跟单数名词 insect。",
+   "wrong_feedback": {
+    "A": "a type of 后面跟单数名词，不用 insects。",
+    "B": "type 前面有 a，要用单数 a type of。",
+    "C": "a type of 里 a 不能丢。"
+   },
+   "audio_id": "u1r5-q28",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：音乐品味与个性有关",
+   "scene": "你的音乐品味与你的个性有关。",
+   "stem": "Your taste in music is ___ to your personality.",
+   "task": "只写空里的部分。",
+   "answer_text": "related",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "related"
+     ],
+     "olds": [
+      "relate"
+     ],
+     "cn": [
+      "有关系的"
+     ]
+    }
+   ],
+   "help": "be ___ to 是“与……有关系”，填哪个词？",
+   "explain": "Your taste in music is related to your personality. 你的音乐品味与你的个性有关。",
+   "common_errors": [
+    {
+     "when": "写了 relate",
+     "say": "be related to 固定搭配，用 related。"
+    },
+    {
+     "when": "写了 relating",
+     "say": "这里要用过去分词 related，不用 relating。"
+    }
+   ],
+   "audio_id": "u1r5-q29",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：要么是你，要么是汤姆",
+   "scene": "要么是你，要么是汤姆被允许去看电影。",
+   "stem": "___ you or Tom is allowed to go to the cinema.",
+   "task": "只写空里的部分。",
+   "answer_text": "Either",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "either"
+     ],
+     "olds": [
+      "neither"
+     ],
+     "cn": [
+      "要么"
+     ]
+    }
+   ],
+   "help": "“要么你、要么汤姆”，填哪个词？注意就近原则，动词用 is。",
+   "explain": "Either you or Tom is allowed to go to the cinema. 要么是你，要么是汤姆被允许去看电影。",
+   "common_errors": [
+    {
+     "when": "写了 neither",
+     "say": "neither 是“两者都不”；这里是“要么……要么……”，用 Either。"
+    },
+    {
+     "when": "写了 both",
+     "say": "both 是“两者都”；这里是二选一，用 Either。"
+    }
+   ],
+   "audio_id": "u1r5-q30",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：不如那只大",
+   "scene": "这只恐龙不如那只大。",
+   "stem": "This dinosaur is not ___ big ___ that one.",
+   "task": "只写空里的部分。",
+   "answer_text": "as big as",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as big as"
+     ],
+     "olds": [
+      "so big as"
+     ],
+     "cn": [
+      "不如……大"
+     ]
+    }
+   ],
+   "help": "not ___ big ___，“不如……”，前后两个词都要填。",
+   "explain": "This dinosaur is not as big as that one. 这只恐龙不如那只大。",
+   "common_errors": [
+    {
+     "when": "写了 so big as",
+     "say": "not as...as... 表示“不如……”，前后都用 as。"
+    },
+    {
+     "when": "只写了 as big",
+     "say": "as...as... 前后两个 as 一个都不能少。"
+    }
+   ],
+   "audio_id": "u1r5-q31",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：爱因斯坦出生在德国",
+   "scene": "爱因斯坦 1879 年出生在德国。",
+   "stem": "Albert Einstein ___ born in Germany in 1879.",
+   "task": "只写空里的部分。",
+   "answer_text": "was",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was"
+     ],
+     "olds": [
+      "is",
+      "were"
+     ],
+     "cn": [
+      "是"
+     ]
+    }
+   ],
+   "help": "1879 年是过去，主语是单数，be 用什么形式？",
+   "explain": "Albert Einstein was born in Germany in 1879. 爱因斯坦 1879 年出生在德国。",
+   "common_errors": [
+    {
+     "when": "写了 is",
+     "say": "1879 年是过去，用 was born，不用 is born。"
+    },
+    {
+     "when": "写了 were",
+     "say": "主语 Einstein 是单数，用 was，不用 were。"
+    }
+   ],
+   "audio_id": "u1r5-q32",
+   "reading": "Dinosaurs lived on land long ago. Some were as small as chickens, and others were as big as ten elephants. They walked on either two or four legs. They ate plants or meat. A dinosaur is a type of prehistoric animal. Dinosaurs are related to crocodiles, snakes, lizards and today's birds. Perhaps they were the most interesting animals in history. They were born in warm places. As they grew older, they became bigger and stronger. Then, about 66 million years ago, they died out. Scientists are still not sure why. Perhaps the weather changed. Perhaps a big rock fell from the sky. We still want to know."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮：写人物小传两句",
+   "teach_html": "<p>写人物小传，两句就够：</p><p>第一句写出生：<strong>be born in + 地点 + in + 年份</strong>。Albert Einstein was born in Germany in 1879.</p><p>第二句写长大后：<strong>As he grew older, ...</strong> As he grew older, he showed a strong love for science.</p><p>范文两句记下来：<strong>Albert Einstein was born in Germany in 1879. As he grew older, he showed a strong love for science.</strong></p>",
+   "audio_id": "u1r5-t10"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：人物小传的正确顺序",
+   "scene": "写人物小传，应该按什么顺序写？",
+   "stem": "Which order is right for a short life story?",
+   "options": [
+    "what he did first, then his birth",
+    "his death first, then his birth",
+    "birth, then what he did as he grew older",
+    "his favourite food first, then his birth"
+   ],
+   "answer": "C",
+   "help": "先写出生，再写长大后做了什么，哪个选项是这个顺序？",
+   "explain": "Birth first, then what he did as he grew older. 先写出生，再写长大后的事。",
+   "wrong_feedback": {
+    "A": "先写做的事、再写出生，顺序反了。",
+    "B": "先写去世、再写出生，顺序反了。",
+    "D": "最爱吃的食物不是人物小传的开头。"
+   },
+   "audio_id": "u1r5-q33"
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 be born 写一句话",
+   "scene": "用 be born 写一句话：爱因斯坦 1879 年出生在德国。",
+   "stem": "写一句话，用上 be born。",
+   "task": "写一整句话。",
+   "answer_text": "Albert Einstein was born in Germany in 1879.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was born in"
+     ],
+     "olds": [
+      "is born in"
+     ],
+     "cn": [
+      "出生于"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "1879"
+     ],
+     "olds": [
+      "1878"
+     ],
+     "cn": [
+      "1879 年"
+     ]
+    }
+   ],
+   "help": "先想好整句话：主语爱因斯坦，1879 年是过去，用 was born，在德国用 in Germany。",
+   "explain": "Albert Einstein was born in Germany in 1879. 爱因斯坦 1879 年出生在德国。",
+   "common_errors": [
+    {
+     "when": "写了 is born",
+     "say": "1879 年是过去，要用 was born。"
+    },
+    {
+     "when": "只写了 born，没有写完整句子",
+     "say": "这道题要写一整句话。"
+    }
+   ],
+   "audio_id": "u1r5-q34"
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 as 写一句话",
+   "scene": "用 as 写一句话：随着年龄增长，他学会了很多事。",
+   "stem": "写一句话，用上 as。",
+   "task": "写一整句话。",
+   "answer_text": "As he grew older, he learnt to do many different things.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "as he grew older"
+     ],
+     "olds": [
+      "so he grew older"
+     ],
+     "cn": [
+      "随着年龄增长"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "learnt"
+     ],
+     "olds": [
+      "learn"
+     ],
+     "cn": [
+      "学会"
+     ]
+    }
+   ],
+   "help": "先想好整句话：as 引导时间状语从句，grew 是过去式，后面也要用过去式 learnt。",
+   "explain": "As he grew older, he learnt to do many different things. 随着年龄增长，他学会了做许多不同的事情。",
+   "common_errors": [
+    {
+     "when": "写了 learn",
+     "say": "grew 是过去式，这里也要用过去式 learnt。"
+    },
+    {
+     "when": "只写了 learnt，没有写完整句子",
+     "say": "这道题要写一整句话。"
+    }
+   ],
+   "audio_id": "u1r5-q35"
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：本课学了什么",
+   "scene": "这一课我们学了什么？",
+   "stem": "What did we learn in this lesson?",
+   "options": [
+    "be born, as, perhaps, a type of, be related to and either...or...",
+    "some and any",
+    "the look family",
+    "how to write a play"
+   ],
+   "answer": "A",
+   "help": "回想一下本课的六个新点。",
+   "explain": "We learnt be born, as, perhaps, a type of, be related to and either...or.... 这一课讲 be born、as、perhaps、a type of、be related to、either...or...。",
+   "wrong_feedback": {
+    "B": "some 和 any 是 Section 2 的语法，下一节才讲。",
+    "C": "look 家族是上一课的内容。",
+    "D": "怎么写戏剧是本单元最后的 Project。"
+   },
+   "audio_id": "u1r5-q36"
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用两条或四条腿走路",
+   "scene": "恐龙用两条或四条腿走路。",
+   "stem": "Dinosaurs walked on ___ two or four legs.",
+   "task": "只写空里的部分。",
+   "answer_text": "either",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "either"
+     ],
+     "olds": [
+      "neither",
+      "both"
+     ],
+     "cn": [
+      "要么"
+     ]
+    }
+   ],
+   "help": "“要么两条、要么四条”，填哪个词？",
+   "explain": "Dinosaurs walked on either two or four legs. 恐龙用两条或四条腿走路。",
+   "common_errors": [
+    {
+     "when": "写了 neither",
+     "say": "neither...nor... 是“既不……也不……”；这里用 either...or...。"
+    },
+    {
+     "when": "写了 both",
+     "say": "both...and... 是“两者都”；这里是二选一，用 either。"
+    }
+   ],
+   "audio_id": "u1r5-q37"
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>本课收官：<strong>be born</strong> 出生（be born in + 地点／年份）；<strong>as</strong> 引导时间状语从句（As he grew older...）；<strong>as...as...</strong> 和……一样；<strong>perhaps</strong> 也许；<strong>a type of</strong> 一种；<strong>be related to</strong> 与……有关系；<strong>either...or...</strong> 要么……要么……。</p><p>下一课讲句式精讲：some...others...、so...that...、completely、original、birth、sound。站长先卖个关子。</p>",
+   "audio_id": "u1r5-ending"
+  }
+ ],
+ "title": "词汇句式下：出生与比较",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
