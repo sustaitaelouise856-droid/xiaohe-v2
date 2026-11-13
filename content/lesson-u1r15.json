@@ -1,0 +1,1300 @@
+{
+ "lesson_id": "u1r15",
+ "practice_end": 27,
+ "home_subtitle": "单元提升 · 语法写作阅读",
+ "part1_desc": "第 1–27 步：翻译帮学 some/any，教材帮学复合不定代词，练习帮读自编精讲短文练语法。",
+ "part2_desc": "第 28–50 步：读马克·吐温小传与短文填空短文，练写作方法与固定结构法，写作帮练写人物条目。",
+ "note": "本课为 Unit 1 单元提升，阅读材料为教研自编，非课本原文。考查能力：some/any 与复合不定代词（some-类/any-类/no(-)类/every-类、主语单数、定语后置、部分否定）、写作方法（介绍人物四步、第三人称、一般过去时）、中考短文填空固定结构法（be supposed to、be proud of、one of the + 最高级、is/the/of 固定搭配）、马克·吐温事实（1835 年生于佛罗里达乡下、4 岁搬进城、12 岁父亲去世、从小工作、《汤姆·索亚历险记》、作品取材个人经历）。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "最后一站：单元提升",
+   "teach_html": "<p>广播站的单元提升站开播：<strong>Unit 1 单元提升</strong>。站长苏文说：这一单元我们走了四站——阅读、语法、口语、文化。这一课把语法、写作、中考阅读三件事收一收。</p><p>先记住本单元的大问题：<strong>What can we learn from encyclopaedias? 我们能从百科全书中学到什么？</strong>学会查它，就是学会自己找答案。</p>",
+   "audio_id": "u1r15-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：some 与 any（一）",
+   "teach_html": "<p><strong>some</strong> 和 <strong>any</strong> 都表示“一些”，都可以修饰可数名词复数和不可数名词。不同点是用的句子不一样：</p><p><strong>some 用于肯定句</strong>：There are some people in the room. 房间里有一些人。</p><p><strong>any 用于否定句和疑问句</strong>：I don't have any money. 我没有钱。Do you have any chocolate cakes? 你有巧克力蛋糕吗？</p><p>记住：肯定句里一般用 some，否定句和疑问句里一般用 any。</p>",
+   "audio_id": "u1r15-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：some 与 any（二）",
+   "teach_html": "<p>两个特别用法要记牢：</p><p>1. <strong>some 也用于提出建议或请求的疑问句</strong>，表示希望得到对方的肯定答复：Would you like some rice? 你想来点米饭吗？Can I have some milk, Mum? 妈妈，我能喝点牛奶吗？</p><p>2. <strong>any 在肯定句里强调“任何一个”</strong>：You can take any box on the table. 你可以拿桌上的任何一个盒子。</p><p>还有一条：如果含有 some 的肯定句变成否定句或疑问句，一般要把 some 换成 any。</p>",
+   "audio_id": "u1r15-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词一张表",
+   "teach_html": "<p>复合不定代词是由 some、any、no、every 加上 -body、(-)one、-thing 构成的：</p><p><strong>-body</strong>：somebody 某人、anybody 任何人、nobody 没有人、everybody 每人。</p><p><strong>(-)one</strong>：someone 某人、anyone 任何人、no one 没有人、everyone 每人。</p><p><strong>-thing</strong>：something 某事、anything 任何东西、nothing 没有什么、everything 每件事、一切。</p><p>它们都有名词的性质，在句中可以作主语、宾语或表语，但不能作定语——不能放在名词前面修饰名词。</p>",
+   "audio_id": "u1r15-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词用法（一）",
+   "teach_html": "<p><strong>some-类</strong>复合不定代词常用于肯定句：There is something wrong with my bike. 我的自行车出问题了。</p><p><strong>any-类</strong>常用于否定句和疑问句：The old lady couldn't see anything at all. 那位老太太什么都看不见。Is there anyone at home? 家里有人吗？</p><p>在表示请求、邀请、建议并希望得到对方肯定回答的疑问句中，要用 <strong>some-类</strong>：Would you like something to drink? 你想喝点什么吗？</p><p>anything 表示“任何事物”、anyone/anybody 表示“无论谁，任何人”时，也可以用在肯定句里：You can buy anything you want. 你可以买任何你想要的东西。</p>",
+   "audio_id": "u1r15-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词用法（二）",
+   "teach_html": "<p>三条注意事项：</p><p>1. <strong>作主语时，谓语动词用单数</strong>：Everyone wants to have a long holiday. 人人都想有一个长假期。</p><p>2. <strong>定语要后置</strong>：被形容词、不定式、else 等修饰时，定语放在后面：I want to buy something special for my grandmother. 我想给奶奶买些特别的东西。Ask somebody else to help you. 请别人来帮你吧。</p><p>3. <strong>every-类 + 否定 = 部分否定</strong>：Not everyone knows her. 不是所有人都认识她。全部否定要用 no(-)类，或在否定句中用 any-类：Nobody knows her. 没有人认识她。There isn't anyone in the classroom. 教室里没有人。</p>",
+   "audio_id": "u1r15-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：写作方法——介绍人物四步",
+   "teach_html": "<p>写介绍人物、动物、景观的文章，可以按这几方面展开。介绍某位名人：</p><p><strong>① 简要介绍基本信息</strong>：出生年份、出生地、职业。</p><p><strong>② 详细介绍生平、主要成就</strong>：他经历了什么，做了什么了不起的事。</p><p><strong>③ 表达个人观点及感受</strong>：你为什么钦佩他，他给你什么启发。</p><p>审题记住四点：以第三人称写为主；时态以一般过去时为主；体裁是百科全书条目；要点是名字、职业、人物生平及成就。</p>",
+   "audio_id": "u1r15-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：写人物常用句式",
+   "teach_html": "<p>写人物条目，这些句式可以直接用：</p><p><strong>基本信息</strong>：Mark Twain was one of the great American writers in the 19th century. 马克·吐温是 19 世纪伟大的美国作家之一。</p><p><strong>生平经历</strong>：He was born in... and moved to... 他出生在……，后来搬到……。When he was... years old, he... 当他……岁时，他……。He had to start working from an early age and tried many different kinds of jobs. 他不得不从很小的时候就开始工作，尝试过许多不同种类的工作。</p><p><strong>主要成就</strong>：He wrote many great novels and one of the most famous ones is... 他写过许多伟大的小说，其中最著名的一部是……。Most of his writings were based on his personal experiences. 他的大部分作品都基于个人经历。</p>",
+   "audio_id": "u1r15-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：中考短文填空固定结构法",
+   "teach_html": "<p>英语短文填空题常考固定短语、句型或搭配。做题方法：</p><p><strong>第一步：通读全文，理解大意</strong>，判断空处所在句子要表达的意思。</p><p><strong>第二步：锁定固定搭配的类型</strong>，再根据时态、人称填合适的形式。</p><p>三个固定结构要记牢：<strong>be 动词作谓语</strong>（it is important to tell the truth 说真话很重要）；<strong>最高级前加 the</strong>（the most famous story 最有名的故事）；<strong>be proud of</strong>（为……自豪）。</p>",
+   "audio_id": "u1r15-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——some/any 精讲短文",
+   "teach_html": "<p>下面是一段自编短文，把 some、any 和复合不定代词的规则讲全了。读两遍，记住：some 用在哪？any 用在哪？复合不定代词作主语，谓语用什么数？定语放在哪里？</p><p>读的时候把规则和例句对上：每个规则后面都跟了一个例句。</p>",
+   "audio_id": "u1r15-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：some 用在哪里",
+   "scene": "some 通常用在哪里？",
+   "stem": "Where do we usually use 'some'?",
+   "options": [
+    "in positive sentences",
+    "in negative sentences",
+    "in questions",
+    "nowhere"
+   ],
+   "answer": "A",
+   "help": "想想规则：some 用于肯定句，还是否定句？",
+   "explain": "We usually use 'some' in positive sentences. some 通常用于肯定句。",
+   "wrong_feedback": {
+    "B": "否定句里一般用 any，不用 some。",
+    "C": "一般疑问句里一般用 any，不用 some。",
+    "D": "some 是常用词，不是从来不用。"
+   },
+   "audio_id": "u1r15-q01",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：房间里有一些人",
+   "scene": "房间里有一些人。",
+   "stem": "There are ___ people in the room.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "肯定句里填 some 还是 any？",
+   "explain": "There are some people in the room. 房间里有一些人。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "肯定句里一般用 some，不用 any。"
+    }
+   ],
+   "audio_id": "u1r15-q02",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：any 用在哪里",
+   "scene": "any 通常用在哪里？",
+   "stem": "Where do we usually use 'any'?",
+   "options": [
+    "in negative sentences and questions",
+    "in positive sentences with a lot of people",
+    "only after 'the'",
+    "only before 'I'"
+   ],
+   "answer": "A",
+   "help": "想想规则：any 用于否定句和疑问句，还是肯定句？",
+   "explain": "We usually use 'any' in negative sentences and questions. any 通常用于否定句和疑问句。",
+   "wrong_feedback": {
+    "B": "肯定句里一般用 some，不用 any。",
+    "C": "any 的用法和 the 没关系。",
+    "D": "any 的用法和 I 没关系。"
+   },
+   "audio_id": "u1r15-q03",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我没有钱",
+   "scene": "我没有钱。",
+   "stem": "I don't have ___ money.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "否定句里填 some 还是 any？",
+   "explain": "I don't have any money. 我没有钱。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "否定句里一般用 any，不用 some。"
+    }
+   ],
+   "audio_id": "u1r15-q04",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：为什么用 some",
+   "scene": "“Can I have some milk, Mum?”为什么用 some 不用 any？",
+   "stem": "Why do we use 'some' in 'Can I have some milk, Mum?'?",
+   "options": [
+    "It is a negative sentence with not in it somewhere",
+    "Milk is a countable noun",
+    "Mum likes any better",
+    "It is a request and we hope the answer is yes"
+   ],
+   "answer": "D",
+   "help": "这句话是在请求什么？希望对方怎么回答？",
+   "explain": "It is a request and we hope the answer is yes. 这是在请求，希望得到肯定的答复，所以用 some。",
+   "wrong_feedback": {
+    "A": "这句话不是否定句，是请求。",
+    "B": "milk 是不可数名词，而且这不是用 some 的原因。",
+    "C": "短文没说妈妈更喜欢 any。"
+   },
+   "audio_id": "u1r15-q05",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：你想来点米饭吗",
+   "scene": "你想来点米饭吗？",
+   "stem": "Would you like ___ rice?",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是提出建议的疑问句，希望对方肯定回答，填 some 还是 any？",
+   "explain": "Would you like some rice? 你想来点米饭吗？",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "提出建议、希望对方肯定回答的疑问句里用 some，不用 any。"
+    }
+   ],
+   "audio_id": "u1r15-q06",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：any 在肯定句里的意思",
+   "scene": "“You can take any box on the table.”这里 any 是什么意思？",
+   "stem": "What does 'any' mean in 'You can take any box on the table'?",
+   "options": [
+    "some boxes only",
+    "no boxes at all",
+    "the biggest box",
+    "any one you like"
+   ],
+   "answer": "D",
+   "help": "肯定句里的 any 强调“任何一个”，哪个选项是这个意思？",
+   "explain": "Any means 'any one you like' here. 这里 any 是“任何一个，你喜欢哪个拿哪个”。",
+   "wrong_feedback": {
+    "A": "some boxes only 是“只有一些盒子”，不是 any 的意思。",
+    "B": "no boxes at all 是“一个盒子也没有”，意思正好相反。",
+    "C": "the biggest box 是“最大的盒子”，any 不是这个意思。"
+   },
+   "audio_id": "u1r15-q07",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：任何一个盒子",
+   "scene": "你可以拿桌上的任何一个盒子。",
+   "stem": "You can take ___ box on the table.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何一个"
+     ]
+    }
+   ],
+   "help": "肯定句里强调“任何一个”，填 some 还是 any？",
+   "explain": "You can take any box on the table. 你可以拿桌上的任何一个盒子。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这里强调“任何一个”，用 any，不用 some。"
+    }
+   ],
+   "audio_id": "u1r15-q08",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：somebody 怎么构成",
+   "scene": "somebody 是怎么构成的？",
+   "stem": "How is 'somebody' made?",
+   "options": [
+    "some + -body",
+    "some + -thing",
+    "any + -body",
+    "every + -thing"
+   ],
+   "answer": "A",
+   "help": "somebody 是 some 加上什么？",
+   "explain": "Somebody is made of some + -body. somebody 是 some 加 -body 构成的。",
+   "wrong_feedback": {
+    "B": "some + -thing 是 something，不是 somebody。",
+    "C": "any + -body 是 anybody，不是 somebody。",
+    "D": "every + -thing 是 everything，不是 somebody。"
+   },
+   "audio_id": "u1r15-q09",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：有人在等你",
+   "scene": "有人在等你。",
+   "stem": "___ is waiting for you.",
+   "task": "只写空里的部分。",
+   "answer_text": "Someone",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Someone"
+     ],
+     "olds": [
+      "Anyone",
+      "No one"
+     ],
+     "cn": [
+      "有人"
+     ]
+    }
+   ],
+   "help": "肯定句里“有人”填哪个词？",
+   "explain": "Someone is waiting for you. 有人在等你。",
+   "common_errors": [
+    {
+     "when": "写了 Anyone",
+     "say": "肯定句里“有人”用 Someone；Anyone 一般用于疑问句和否定句。"
+    },
+    {
+     "when": "写了 No one",
+     "say": "No one 是“没有人”，意思正好相反。"
+    }
+   ],
+   "audio_id": "u1r15-q10",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：主语是单数还是复数",
+   "scene": "复合不定代词作主语，谓语动词用什么数？",
+   "stem": "When a compound indefinite pronoun is the subject, what form is the verb?",
+   "options": [
+    "plural",
+    "singular",
+    "past tense",
+    "future tense"
+   ],
+   "answer": "B",
+   "help": "Everyone wants... 里的 wants 是单数还是复数？",
+   "explain": "The verb is singular. 谓语动词用单数。",
+   "wrong_feedback": {
+    "A": "不是复数，Everyone wants 用 wants，不用 want。",
+    "C": "单复数和过去时是两回事。",
+    "D": "单复数和将来时是两回事。"
+   },
+   "audio_id": "u1r15-q11",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：人人都想放长假",
+   "scene": "人人都想有一个长假期。",
+   "stem": "Everyone ___ to have a long holiday.",
+   "task": "只写空里的部分。",
+   "answer_text": "wants",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "wants"
+     ],
+     "olds": [
+      "want",
+      "wanted"
+     ],
+     "cn": [
+      "想要"
+     ]
+    }
+   ],
+   "help": "Everyone 作主语，谓语动词用什么形式？",
+   "explain": "Everyone wants to have a long holiday. 人人都想有一个长假期。",
+   "common_errors": [
+    {
+     "when": "写了 want",
+     "say": "Everyone 作主语，谓语用单数 wants。"
+    },
+    {
+     "when": "写了 wanted",
+     "say": "这里是一般现在时，不用过去式 wanted。"
+    }
+   ],
+   "audio_id": "u1r15-q12",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：定语放在哪里",
+   "scene": "下面哪个句子的定语位置是对的？",
+   "stem": "Which sentence puts the adjective in the right place?",
+   "options": [
+    "I want to buy special something.",
+    "I want to buy something specially.",
+    "I want to buy something special.",
+    "I want to buy special some things."
+   ],
+   "answer": "C",
+   "help": "修饰 something 的形容词 special 放在 something 前面还是后面？",
+   "explain": "The adjective goes after something: something special. 修饰 something 的形容词放在后面：something special。",
+   "wrong_feedback": {
+    "A": "special 不能放在 something 前面。",
+    "B": "specially 是副词，不能这样修饰 something。",
+    "D": "some things 不能这样用。"
+   },
+   "audio_id": "u1r15-q13",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：买些特别的东西",
+   "scene": "我想给奶奶买些特别的东西。",
+   "stem": "I want to buy something ___ for my grandmother.",
+   "task": "只写空里的部分。",
+   "answer_text": "special",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "special"
+     ],
+     "olds": [
+      "specially",
+      "specials"
+     ],
+     "cn": [
+      "特别的"
+     ]
+    }
+   ],
+   "help": "修饰 something 的形容词 special 放在哪里？填哪个词？",
+   "explain": "I want to buy something special for my grandmother. 我想给奶奶买些特别的东西。",
+   "common_errors": [
+    {
+     "when": "写了 specially",
+     "say": "specially 是副词；这里修饰 something，要用形容词 special，放在 something 后面。"
+    }
+   ],
+   "audio_id": "u1r15-q14",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：Is there anyone at home?",
+   "scene": "“Is there anyone at home?”是什么句？",
+   "stem": "What kind of sentence is 'Is there anyone at home?'?",
+   "options": [
+    "a positive sentence",
+    "a negative sentence with not in it somewhere",
+    "an order",
+    "a question, so we use 'anyone'"
+   ],
+   "answer": "D",
+   "help": "这句话是疑问句还是肯定句？疑问句里用什么词？",
+   "explain": "It is a question, so we use 'anyone'. 这是疑问句，所以用 anyone。",
+   "wrong_feedback": {
+    "A": "这不是肯定句，是疑问句。",
+    "B": "这不是否定句，是疑问句。",
+    "C": "这不是命令，是疑问句。"
+   },
+   "audio_id": "u1r15-q15",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我没什么可说的",
+   "scene": "我没什么可说的。",
+   "stem": "I have ___ to say.",
+   "task": "只写空里的部分。",
+   "answer_text": "nothing",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nothing"
+     ],
+     "olds": [
+      "something",
+      "anything"
+     ],
+     "cn": [
+      "没什么"
+     ]
+    }
+   ],
+   "help": "“没什么”填哪个词？",
+   "explain": "I have nothing to say. 我没什么可说的。",
+   "common_errors": [
+    {
+     "when": "写了 something",
+     "say": "something 是“某事”，这里是“没什么”，用 nothing。"
+    },
+    {
+     "when": "写了 anything",
+     "say": "anything 是“任何东西”；“没什么可说的”用 nothing。"
+    }
+   ],
+   "audio_id": "u1r15-q16",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：一切都准备好了",
+   "scene": "一切都准备好了。",
+   "stem": "___ is ready.",
+   "task": "只写空里的部分。",
+   "answer_text": "Everything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Everything"
+     ],
+     "olds": [
+      "Something",
+      "Anything"
+     ],
+     "cn": [
+      "一切"
+     ]
+    }
+   ],
+   "help": "“一切”填哪个词？",
+   "explain": "Everything is ready. 一切都准备好了。",
+   "common_errors": [
+    {
+     "when": "写了 Something",
+     "say": "Something 是“某事”；“一切”用 Everything。"
+    },
+    {
+     "when": "写了 Anything",
+     "say": "Anything 是“任何东西”；“一切”用 Everything。"
+    }
+   ],
+   "audio_id": "u1r15-q17",
+   "reading": "Some and any both mean '一些'. We use some in positive sentences. There are some people in the room. We use any in negative sentences and questions. I don't have any money. Do you have any chocolate cakes? We also use some in questions when we ask for something and we hope the answer is yes. Can I have some milk, Mum? Would you like some rice? In positive sentences, any can mean '任何一个'. You can take any box on the table. Now look at compound indefinite pronouns. We make them with some, any, no and every plus -body, -one or -thing. Somebody is waiting for you. Is there anyone at home? I have nothing to say. Everything is ready. These words are pronouns. They can be the subject or the object of a sentence, but they cannot be used before a noun. When they are the subject, the verb is singular. Everyone wants to have a long holiday. When an adjective comes after them, it goes after the word. I want to buy something special for my grandmother."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——马克·吐温小传",
+   "teach_html": "<p>第二段短文分两部分：前面是自编的马克·吐温小传，后面是一段自编的中考短文填空练习短文《龟兔赛跑》。读两遍，记住：马克·吐温生于哪一年、哪里？4 岁、12 岁发生了什么？他最著名的小说是什么？</p><p>读短文填空那段时，先通读全文理解大意，再看三个空分别要填什么固定结构。</p>",
+   "audio_id": "u1r15-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：马克·吐温是什么人",
+   "scene": "马克·吐温是什么人？",
+   "stem": "Who was Mark Twain?",
+   "options": [
+    "a Chinese scientist who worked on hybrid rice",
+    "a great American writer in the 19th century",
+    "a French painter",
+    "an English singer"
+   ],
+   "answer": "B",
+   "help": "回到小传第一句找：He was a great...",
+   "explain": "Mark Twain was a great American writer in the 19th century. 马克·吐温是 19 世纪伟大的美国作家。",
+   "wrong_feedback": {
+    "A": "中国科学家是袁隆平，不是马克·吐温。",
+    "C": "法国画家不是马克·吐温。",
+    "D": "英国歌手不是马克·吐温。"
+   },
+   "audio_id": "u1r15-q18",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：生于佛罗里达",
+   "scene": "他 1835 年生于佛罗里达乡下。",
+   "stem": "Mark Twain was born in the countryside of ___ in 1835.",
+   "task": "只写空里的部分。",
+   "answer_text": "Florida",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "Florida"
+     ],
+     "olds": [
+      "Floride",
+      "Floridia"
+     ],
+     "cn": [
+      "佛罗里达"
+     ]
+    }
+   ],
+   "help": "“佛罗里达”这个地名怎么拼？",
+   "explain": "Mark Twain was born in the countryside of Florida in 1835. 马克·吐温 1835 年生于佛罗里达乡下。",
+   "common_errors": [
+    {
+     "when": "写了 Floride",
+     "say": "拼写注意：Florida 是 F-l-o-r-i-d-a，别写成 Floride。"
+    }
+   ],
+   "audio_id": "u1r15-q19",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：几岁搬进城",
+   "scene": "马克·吐温几岁时全家搬进城？",
+   "stem": "How old was Mark Twain when his family moved to the city?",
+   "options": [
+    "twelve years old",
+    "four years old",
+    "nineteen years old",
+    "sixty-seven years old"
+   ],
+   "answer": "B",
+   "help": "回到小传里找：When he was four...",
+   "explain": "When he was four, his family moved to the city. 他 4 岁时，全家搬进了城里。",
+   "wrong_feedback": {
+    "A": "12 岁是他父亲去世的时候，不是搬家的时候。",
+    "C": "小传没说他 19 岁搬家。",
+    "D": "67 岁是达·芬奇去世的年纪，不是马克·吐温。"
+   },
+   "audio_id": "u1r15-q20",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：搬进城里",
+   "scene": "他 4 岁时，全家搬进了城里。",
+   "stem": "When he was four years old, his family moved to the ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "city",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "city"
+     ],
+     "olds": [
+      "citys",
+      "countryside"
+     ],
+     "cn": [
+      "城里"
+     ]
+    }
+   ],
+   "help": "moved to the ___，“搬进城里”，空里填哪个词？",
+   "explain": "When he was four years old, his family moved to the city. 他 4 岁时，全家搬进了城里。",
+   "common_errors": [
+    {
+     "when": "写了 countryside",
+     "say": "他 4 岁时全家搬进城里，填 city，不是 countryside。"
+    }
+   ],
+   "audio_id": "u1r15-q21",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：父亲什么时候去世",
+   "scene": "马克·吐温的父亲什么时候去世？",
+   "stem": "When did Mark Twain's father die?",
+   "options": [
+    "when Mark Twain was four",
+    "when Mark Twain was nineteen",
+    "when Mark Twain was only twelve",
+    "when Mark Twain was sixty-seven"
+   ],
+   "answer": "C",
+   "help": "回到小传里找：When he was twelve...",
+   "explain": "His father died when Mark Twain was only twelve. 他父亲在他只有 12 岁时去世。",
+   "wrong_feedback": {
+    "A": "4 岁是全家搬进城的时候。",
+    "B": "小传没说他 19 岁时父亲去世。",
+    "D": "67 岁是达·芬奇去世的年纪。"
+   },
+   "audio_id": "u1r15-q22",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：很小就开始工作",
+   "scene": "他很小就开始工作。",
+   "stem": "He started to work when he was very ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "young",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "young"
+     ],
+     "olds": [
+      "younger",
+      "old"
+     ],
+     "cn": [
+      "小"
+     ]
+    }
+   ],
+   "help": "“很小”填哪个词？",
+   "explain": "He started to work when he was very young. 他很小就开始工作。",
+   "common_errors": [
+    {
+     "when": "写了 old",
+     "say": "他很小就开始工作，填 young，不是 old。"
+    },
+    {
+     "when": "写了 younger",
+     "say": "very 后面接原级 young，不用比较级 younger。"
+    }
+   ],
+   "audio_id": "u1r15-q23",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：最著名的小说",
+   "scene": "他最著名的小说之一是哪部？",
+   "stem": "Which is one of his most famous novels?",
+   "options": [
+    "The Ugly Duckling",
+    "The March of the Volunteers",
+    "The Adventures of Tom Sawyer",
+    "The Battle of Anghiari"
+   ],
+   "answer": "C",
+   "help": "回到小传里找：One of the most famous is...",
+   "explain": "One of the most famous is The Adventures of Tom Sawyer. 其中最著名的一部是《汤姆·索亚历险记》。",
+   "wrong_feedback": {
+    "A": "《丑小鸭》是短文填空练习里提到的故事，不是他的小说。",
+    "B": "《义勇军进行曲》是聂耳写的歌，不是他的小说。",
+    "D": "《安吉里之战》是达·芬奇的画，不是他的小说。"
+   },
+   "audio_id": "u1r15-q24",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：自己的生活",
+   "scene": "他的大部分故事都来自自己的生活。",
+   "stem": "Most of his stories came from his own ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "life",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "life"
+     ],
+     "olds": [
+      "live",
+      "lives"
+     ],
+     "cn": [
+      "生活"
+     ]
+    }
+   ],
+   "help": "his own ___，“自己的生活”，空里填哪个名词？",
+   "explain": "Most of his stories came from his own life. 他的大部分故事都来自自己的生活。",
+   "common_errors": [
+    {
+     "when": "写了 live",
+     "say": "live 是动词“生活”；这里要填名词 life“生活”。"
+    },
+    {
+     "when": "写了 lives",
+     "say": "his own life 是固定搭配，用单数 life。"
+    }
+   ],
+   "audio_id": "u1r15-q25",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：每年多少人读他的书",
+   "scene": "每年有多少人读马克·吐温的书？",
+   "stem": "How many people read his books every year?",
+   "options": [
+    "only his family",
+    "millions of people",
+    "only a few people",
+    "nobody"
+   ],
+   "answer": "B",
+   "help": "回到小传最后一句找：Millions of people...",
+   "explain": "Millions of people read his books every year. 每年有数百万人读他的书。",
+   "wrong_feedback": {
+    "A": "不只他的家人读。",
+    "C": "不只几个人读，是数百万人。",
+    "D": "很多人读，不是没人读。"
+   },
+   "audio_id": "u1r15-q26",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：数百万人",
+   "scene": "每年有数百万人读他的书。",
+   "stem": "His stories are read by ___ of people every year.",
+   "task": "只写空里的部分。",
+   "answer_text": "millions",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "millions"
+     ],
+     "olds": [
+      "million",
+      "millon"
+     ],
+     "cn": [
+      "数百万"
+     ]
+    }
+   ],
+   "help": "millions of 是固定搭配，空里填哪个词？",
+   "explain": "His stories are read by millions of people every year. 每年有数百万人读他的书。",
+   "common_errors": [
+    {
+     "when": "写了 million",
+     "say": "millions of 是固定搭配，million 用复数。"
+    },
+    {
+     "when": "写了 millon",
+     "say": "拼写注意：millions 是 m-i-l-l-i-o-n-s。"
+    }
+   ],
+   "audio_id": "u1r15-q27",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：be supposed to",
+   "scene": "“We are ___ to learn from it.”空里填哪个词？",
+   "stem": "Which word goes in 'We are ___ to learn from it'?",
+   "options": [
+    "suppose",
+    "supposed",
+    "supposes",
+    "supposing"
+   ],
+   "answer": "B",
+   "help": "be ___ to 是固定搭配，“应该做某事”，填哪个形式？",
+   "explain": "We are supposed to learn from it. 我们应该从中学到东西。",
+   "wrong_feedback": {
+    "A": "suppose 是动词原形，不能这样用。",
+    "C": "supposes 是第三人称单数，不能这样用。",
+    "D": "supposing 是 -ing 形式，不能这样用。"
+   },
+   "audio_id": "u1r15-q28",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：应该",
+   "scene": "我们应该从中学到东西。",
+   "stem": "We are ___ to learn from it.",
+   "task": "只写空里的部分。",
+   "answer_text": "supposed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "supposed"
+     ],
+     "olds": [
+      "suppose",
+      "supposes"
+     ],
+     "cn": [
+      "应该"
+     ]
+    }
+   ],
+   "help": "be ___ to，“应该做某事”，空里填哪个词？",
+   "explain": "We are supposed to learn from it. 我们应该从中学到东西。",
+   "common_errors": [
+    {
+     "when": "写了 suppose",
+     "say": "be supposed to 是固定搭配，supposed 不能写成 suppose。"
+    },
+    {
+     "when": "写了 supposes",
+     "say": "be supposed to 是固定搭配，supposed 不能写成 supposes。"
+    }
+   ],
+   "audio_id": "u1r15-q29",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：最高级前加 the",
+   "scene": "“This might be ___ most famous animal story of all.”空里填哪个词？",
+   "stem": "Which word goes before 'most famous'?",
+   "options": [
+    "a",
+    "an",
+    "no word",
+    "the"
+   ],
+   "answer": "D",
+   "help": "形容词最高级前面一般加哪个词？",
+   "explain": "This might be the most famous animal story of all. 这可能是所有动物故事中最有名的一个。",
+   "wrong_feedback": {
+    "A": "最高级前面一般用 the，不用 a。",
+    "B": "最高级前面一般用 the，不用 an。",
+    "C": "最高级前面一般要加 the，不能空着。"
+   },
+   "audio_id": "u1r15-q30",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：最有名的故事",
+   "scene": "这可能是所有动物故事中最有名的一个。",
+   "stem": "This might be ___ most famous animal story of all.",
+   "task": "只写空里的部分。",
+   "answer_text": "the",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "the"
+     ],
+     "olds": [
+      "a",
+      "an"
+     ],
+     "cn": [
+      "这个"
+     ]
+    }
+   ],
+   "help": "形容词最高级前面一般加哪个词？",
+   "explain": "This might be the most famous animal story of all. 这可能是所有动物故事中最有名的一个。",
+   "common_errors": [
+    {
+     "when": "写了 a",
+     "say": "形容词最高级前面一般要加定冠词 the。"
+    },
+    {
+     "when": "写了 an",
+     "say": "形容词最高级前面一般要加定冠词 the。"
+    }
+   ],
+   "audio_id": "u1r15-q31",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：为自己自豪",
+   "scene": "我们应该为自己感到自豪。",
+   "stem": "We should be proud ___ who we are.",
+   "task": "只写空里的部分。",
+   "answer_text": "of",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "of"
+     ],
+     "olds": [
+      "for",
+      "in"
+     ],
+     "cn": [
+      "为"
+     ]
+    }
+   ],
+   "help": "be proud ___，“为……自豪”，空里填哪个介词？",
+   "explain": "We should be proud of who we are. 我们应该为自己感到自豪。",
+   "common_errors": [
+    {
+     "when": "写了 for",
+     "say": "be proud of 是固定搭配“为……自豪”，用 of，不用 for。"
+    },
+    {
+     "when": "写了 in",
+     "say": "be proud of 是固定搭配，用 of，不用 in。"
+    }
+   ],
+   "audio_id": "u1r15-q32",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮：介绍人物四步 + 范文要点",
+   "teach_html": "<p>写介绍人物的条目，按这四步走：</p><p><strong>第 1 步：基本信息</strong>。Mark Twain was one of the great American writers in the 19th century. He was born in the countryside of Florida in 1835.</p><p><strong>第 2 步：生平经历</strong>。When he was four years old, his family moved to the city. When he was twelve, his father died. He had to start working from an early age and tried many different kinds of jobs.</p><p><strong>第 3 步：主要成就</strong>。He wrote many great novels and one of the most famous ones is The Adventures of Tom Sawyer. Most of his writings were based on his personal experiences.</p><p><strong>第 4 步：个人感受</strong>。His stories are read by millions of people every year. I admire him because his stories are full of real feelings.</p><p>注意：以第三人称写为主，时态以一般过去时为主，100 词左右。</p>",
+   "audio_id": "u1r15-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：写人物先写什么",
+   "scene": "写介绍人物的条目，第一步写什么？",
+   "stem": "What do you write first in an entry about a person?",
+   "options": [
+    "Your feelings only",
+    "A very long list of opinions about his whole life story",
+    "Basic information: year of birth, birthplace and job",
+    "The ending first"
+   ],
+   "answer": "C",
+   "help": "介绍人物四步，第一步是什么？",
+   "explain": "First, write basic information: year of birth, birthplace and job. 先写基本信息：出生年份、出生地、职业。",
+   "wrong_feedback": {
+    "A": "个人感受是第四步，不是第一步。",
+    "B": "条目里写事实，不写一长串观点。",
+    "D": "结尾不能先写。"
+   },
+   "audio_id": "u1r15-q33",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 was born in 写马克·吐温",
+   "scene": "用 was born in 写一句关于马克·吐温的话。",
+   "stem": "Use 'was born in' to write one sentence about Mark Twain.",
+   "task": "写一整句话。",
+   "answer_text": "Mark Twain was born in the countryside of Florida in 1835.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "was born in"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "Florida"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "1835"
+     ]
+    }
+   ],
+   "help": "句子里必须有 was born in，还要说清他生在哪里、哪一年。",
+   "explain": "Mark Twain was born in the countryside of Florida in 1835. 马克·吐温 1835 年生于佛罗里达乡下。",
+   "common_errors": [
+    {
+     "when": "没有写 was born in",
+     "say": "题目要求用 was born in，句子里必须有它。"
+    },
+    {
+     "when": "没有写 1835",
+     "say": "出生年份要写上：in 1835。"
+    }
+   ],
+   "audio_id": "u1r15-q34",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 one of the most famous 写小说",
+   "scene": "用 one of the most famous 写一句关于《汤姆·索亚历险记》的话。",
+   "stem": "Use 'one of the most famous' to write one sentence about The Adventures of Tom Sawyer.",
+   "task": "写一整句话。",
+   "answer_text": "The Adventures of Tom Sawyer is one of the most famous novels by Mark Twain.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "one of the most famous"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "Tom Sawyer"
+     ]
+    }
+   ],
+   "help": "句子里必须有 one of the most famous，还要写出书名。",
+   "explain": "The Adventures of Tom Sawyer is one of the most famous novels by Mark Twain. 《汤姆·索亚历险记》是马克·吐温最著名的小说之一。",
+   "common_errors": [
+    {
+     "when": "没有写 one of the most famous",
+     "say": "题目要求用 one of the most famous，句子里必须有它。"
+    },
+    {
+     "when": "没有写 Tom Sawyer",
+     "say": "书名要写全：The Adventures of Tom Sawyer。"
+    }
+   ],
+   "audio_id": "u1r15-q35",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：短文填空第一步",
+   "scene": "做短文填空固定结构法，第一步做什么？",
+   "stem": "What is the first step of the fixed-structure method for short-passage cloze?",
+   "options": [
+    "Read the whole passage and understand the main idea",
+    "Fill in any word at once without reading the passage",
+    "Look at the answers first",
+    "Guess without reading"
+   ],
+   "answer": "A",
+   "help": "固定结构法的第一步是什么？",
+   "explain": "First, read the whole passage and understand the main idea. 先通读全文，理解大意。",
+   "wrong_feedback": {
+    "B": "没读懂全文就填空，容易填错。",
+    "C": "先看答案不是方法。",
+    "D": "不读文章就猜，猜不对。"
+   },
+   "audio_id": "u1r15-q36",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：坚持下去很重要",
+   "scene": "坚持下去、永不放弃很重要。",
+   "stem": "It ___ important to keep going and never give up.",
+   "task": "只写空里的部分。",
+   "answer_text": "is",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "is"
+     ],
+     "olds": [
+      "are",
+      "was"
+     ],
+     "cn": [
+      "是"
+     ]
+    }
+   ],
+   "help": "主语是 it，be 动词用什么形式？",
+   "explain": "It is important to keep going and never give up. 坚持下去、永不放弃很重要。",
+   "common_errors": [
+    {
+     "when": "写了 are",
+     "say": "主语是 it，be 动词用 is，不用 are。"
+    },
+    {
+     "when": "写了 was",
+     "say": "这里是一般现在时，用 is，不用 was。"
+    }
+   ],
+   "audio_id": "u1r15-q37",
+   "reading": "Mark Twain was a great American writer. He lived in the 19th century, and he was one of the best writers of his time. He was born in 1835, in the countryside of Florida. When he was four, his family moved to the city. When he was twelve, his father died. He started to work when he was very young, and he tried many different jobs. He wrote many famous novels. One of the most famous is The Adventures of Tom Sawyer. Most of his stories came from his own life, so they feel real. Millions of people read his books every year. Now read a short passage about a story. The Tortoise and the Hare. This is a wonderful story everyone should know. We are supposed to learn from it. It tells us that slow and steady wins the race. This might be the most famous animal story of all. It tells us that we should be proud of who we are, even if we are not the fastest. The hare is fast, but he is not the winner. The tortoise is slow, but he keeps going. In the end, the tortoise wins. It is important to keep going and never give up."
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>这一课我们学了：</p><p>1. <strong>翻译帮</strong>：some 用于肯定句，any 用于否定句和疑问句；some-类、any-类、no(-)类、every-类复合不定代词；作主语谓语用单数，定语后置。</p><p>2. <strong>写作帮</strong>：介绍人物四步——基本信息、生平经历、主要成就、个人感受；第三人称、一般过去时为主。</p><p>3. <strong>教材帮</strong>：中考短文填空固定结构法——先通读全文，再锁定固定搭配：be 动词作谓语、最高级前加 the、be proud of。</p><p>Unit 1 学完了：Section 1 阅读、Section 2 语法、Section 3 口语写作、Section 4 文化跨学科。下个单元，继续查下去！</p>",
+   "audio_id": "u1r15-t10"
+  }
+ ],
+ "title": "单元提升：语法·写作·阅读",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
