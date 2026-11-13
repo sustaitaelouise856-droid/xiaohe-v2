@@ -1,0 +1,1251 @@
+{
+ "lesson_id": "u1r10",
+ "practice_end": 27,
+ "home_subtitle": "Section 2 练 · 语法综合 + Let me sum up",
+ "part1_desc": "第 1–27 步：教材帮快问快答 some/any 四条规则与复合不定代词快表、易错四点，翻译帮读图书馆综合对话，练习帮做题过关。",
+ "part2_desc": "第 28–50 步：读改错短文逐句改错独立验证，44 步 Let me sum up 总表，课尾小结。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：some/any 与复合不定代词综合运用（肯定 some、否定疑问 any、期待 Yes 用 some、any 表“任何一个”、作主语动词单数、后置定语、部分否定、nothing/nobody 不再加 not）、改错。Unit 1 Look it up! 主题，核心词 some/any/somebody/anybody/nobody/everybody/something/anything/nothing/everything/someone/anyone/no one/everyone。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新课：Section 2 练 语法综合",
+   "teach_html": "<p>广播站站长苏文总结：Section 2 的两节语法课学完了，今天混在一起练：<strong>some / any</strong> 加上<strong>复合不定代词</strong>。</p><p>最后还有 Let me sum up：一张总表，把两节课的规则都收进来。</p>",
+   "audio_id": "u1r10-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some / any 快问快答",
+   "teach_html": "<p>some / any 四条规则，快问快答：</p><p>肯定句用什么？<strong>some</strong>。I have some books.</p><p>否定句和疑问句用什么？<strong>any</strong>。I don't have any books. / Do you have any books?</p><p>希望对方说 Yes 的疑问句用什么？<strong>some</strong>。Would you like some tea?</p><p>“任何一个”用什么？<strong>any</strong>。You can take any box.</p>",
+   "audio_id": "u1r10-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词快表",
+   "teach_html": "<p>复合不定代词快表：</p><p><strong>人</strong>：somebody / someone；anybody / anyone；nobody / no one；everybody / everyone。</p><p><strong>物</strong>：something；anything；nothing；everything。</p><p>口诀：<strong>人 -body / -one，物 -thing</strong>。</p>",
+   "audio_id": "u1r10-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：易错 1 否定句",
+   "teach_html": "<p><strong>易错 1：否定句用 any- 类，不用 some- 类。</strong></p><p>I don't have any money.（不说 I don't have some money.）</p><p>There isn't anything in the bag.（不说 There isn't something in the bag.）</p><p><strong>nothing、nobody、no one 本身就是否定，别再加 not</strong>：Nobody knows.（不说 Nobody doesn't know.）</p>",
+   "audio_id": "u1r10-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：易错 2 动词单数",
+   "teach_html": "<p><strong>易错 2：复合不定代词作主语，动词用单数。</strong></p><p>Somebody is waiting for you.（不说 Somebody are...）</p><p>Nobody knows his name.（不说 Nobody know...）</p><p>Everything is ready.（不说 Everything are...）</p>",
+   "audio_id": "u1r10-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：易错 3 后置定语",
+   "teach_html": "<p><strong>易错 3：形容词和不定式放在复合不定代词后面。</strong></p><p>something special 特别的东西（不说 special something）。</p><p>anything to buy 要买的东西（不说 to buy anything）。</p><p>somebody else 别人（不说 else somebody）。</p>",
+   "audio_id": "u1r10-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：易错 4 部分否定",
+   "teach_html": "<p><strong>易错 4：部分否定 not everyone / not everything ≠ nobody / nothing。</strong></p><p>Not everybody likes dinosaurs. 不是每个人都喜欢恐龙。（有人喜欢，有人不喜欢。）</p><p>Nobody likes dinosaurs. 没有人喜欢恐龙。（一个人都不喜欢。）</p>",
+   "audio_id": "u1r10-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：改错怎么做",
+   "teach_html": "<p>改错三步：</p><p>第一步，找 <strong>some / any</strong>：否定句、疑问句里是不是用了 some？</p><p>第二步，找<strong>动词单复数</strong>：somebody、nobody、everything 后面的动词是不是单数？</p><p>第三步，找<strong>否定</strong>：nothing、nobody 后面是不是又加了 not？not 后面是不是跟了 nobody？</p>",
+   "audio_id": "u1r10-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some... others... 与 any“任何”回顾",
+   "teach_html": "<p>最后回顾两个点：</p><p><strong>some... the others...</strong> 一些……其余的……：Some are singing and the others are dancing.</p><p><strong>any 表“任何一个”</strong>可以进肯定句：You can take any book. / Any book can help you.</p>",
+   "audio_id": "u1r10-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——图书馆里的对话",
+   "teach_html": "<p>下面是一段自编对话：苏文和林涛在图书馆里，some / any 和复合不定代词混在一起。读两遍，每看到一个 some、any、somebody、anything，就停一下，想想它为什么用在这里。</p><p>注意看：Is there anything...? 是疑问句；There is something... 是肯定句；Not everybody likes... 是部分否定。</p>",
+   "audio_id": "u1r10-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：书架里有什么吗",
+   "scene": "苏文问书架里有什么东西吗。",
+   "stem": "Is there ___ in the bookcase?",
+   "options": [
+    "something",
+    "nothing",
+    "anything",
+    "everything"
+   ],
+   "answer": "C",
+   "help": "这是疑问句，问“有什么东西吗”，填哪个词？",
+   "explain": "Is there anything in the bookcase? 疑问句用 any- 类：anything。",
+   "wrong_feedback": {
+    "A": "something 用在肯定句里；这是疑问句，用 anything。",
+    "B": "nothing 是“没有什么”，放在疑问句里意思不对。",
+    "D": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r10-q01",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：书架里有一些书",
+   "scene": "林涛说书架里有一些书。",
+   "stem": "Yes, there are ___ books in it.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "There are some books in it. 书架里有一些书。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r10-q02",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：图书馆里有植物吗",
+   "scene": "苏文问图书馆里有没有植物。",
+   "stem": "Are there ___ plants in the library?",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "the"
+   ],
+   "answer": "B",
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Are there any plants in the library? 一般疑问句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句或希望对方答应的请求里；这是一般疑问句，用 any。",
+    "C": "a plants 不对，a 后面跟单数名词，plants 是复数。",
+    "D": "the plants 是“那些植物”，意思不对。"
+   },
+   "audio_id": "u1r10-q03",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：窗边有一些植物",
+   "scene": "苏文说窗边有一些植物。",
+   "stem": "Yes, there are ___ plants near the window.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "There are some plants near the window. 窗边有一些植物。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r10-q04",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：现在图书馆里有人吗",
+   "scene": "苏文问现在图书馆里有没有人，她想问他一个问题。",
+   "stem": "Is there ___ in the library now? I want to ask him a question.",
+   "options": [
+    "somebody",
+    "nothing",
+    "everything",
+    "something"
+   ],
+   "answer": "A",
+   "help": "“图书馆里有人吗，我想问他一个问题”，问的是人，填哪个词？",
+   "explain": "Is there somebody in the library now? 现在图书馆里有人吗？问的是人，用 somebody。",
+   "wrong_feedback": {
+    "B": "nothing 是“没有什么”，说的是东西，不是人。",
+    "C": "everything 是“每件事”，说的是东西，不是人。",
+    "D": "something 是“某物”，说的是东西，不是人。"
+   },
+   "audio_id": "u1r10-q05",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：这里没有人",
+   "scene": "林涛说这里没有人。",
+   "stem": "No, there is ___ here.",
+   "task": "只写空里的部分。",
+   "answer_text": "nobody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nobody"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "没有人"
+     ]
+    }
+   ],
+   "help": "“这里没有人”，填哪个词？",
+   "explain": "There is nobody here. 这里没有人。nobody 是“没有人”。",
+   "common_errors": [
+    {
+     "when": "写了 anybody",
+     "say": "anybody 是“任何人”，放在肯定句里意思不对；这里要填 nobody“没有人”。"
+    }
+   ],
+   "audio_id": "u1r10-q06",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：每个人都在上课",
+   "scene": "每个人都在上课。",
+   "stem": "___ is in class.",
+   "options": [
+    "Somebody",
+    "Nobody",
+    "Anybody",
+    "Everybody"
+   ],
+   "answer": "D",
+   "help": "“每个人都在上课”，填哪个词？注意动词 is 是单数。",
+   "explain": "Everybody is in class. 每个人都在上课。everybody 作主语，动词用单数 is。",
+   "wrong_feedback": {
+    "A": "Somebody 是“某人”，不是“每个人”。",
+    "B": "Nobody 是“没有人”，和“都在上课”意思正好反了。",
+    "C": "Anybody 是“任何人”，放在肯定句里意思不对。"
+   },
+   "audio_id": "u1r10-q07",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我想借一些书",
+   "scene": "苏文说她想借一些书。",
+   "stem": "I want to borrow ___ books.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "I want to borrow some books. 我想借一些书。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r10-q08",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：你有关于恐龙的书吗",
+   "scene": "苏文问林涛有没有关于恐龙的书。",
+   "stem": "Do you have ___ books about dinosaurs?",
+   "options": [
+    "some",
+    "a",
+    "any",
+    "the"
+   ],
+   "answer": "C",
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Do you have any books about dinosaurs? 一般疑问句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句或希望对方答应的请求里；这是一般疑问句，用 any。",
+    "B": "a books 不对，a 后面跟单数名词，books 是复数。",
+    "D": "the books 是“那些书”，意思不对。"
+   },
+   "audio_id": "u1r10-q09",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我没有任何恐龙书",
+   "scene": "林涛说他没有任何关于恐龙的书。",
+   "stem": "Sorry, I don't have ___ books about dinosaurs.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 don't，填哪个词？",
+   "explain": "I don't have any books about dinosaurs. 否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r10-q10",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：我有好东西给你",
+   "scene": "林涛说他有好东西给苏文。",
+   "stem": "I have ___ nice for you.",
+   "options": [
+    "something",
+    "anything",
+    "nothing",
+    "everything"
+   ],
+   "answer": "A",
+   "help": "“有好东西给你”，肯定句，填什么？注意 nice 放后面。",
+   "explain": "I have something nice for you. 我有好东西给你。肯定句用 something，nice 放后面。",
+   "wrong_feedback": {
+    "B": "anything 用在否定句和疑问句里；这是肯定句，用 something。",
+    "C": "nothing 是“没有什么”，和“有好东西”意思正好反了。",
+    "D": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r10-q11",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：还有别的东西吗",
+   "scene": "苏文问还有别的东西吗。",
+   "stem": "Is there ___ else? I want to read something special.",
+   "task": "只写空里的部分。",
+   "answer_text": "anything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anything"
+     ],
+     "olds": [
+      "something"
+     ],
+     "cn": [
+      "任何东西"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，“还有别的东西吗”，填哪个词？",
+   "explain": "Is there anything else? 还有别的东西吗？疑问句用 any- 类。",
+   "common_errors": [
+    {
+     "when": "写了 something",
+     "say": "这是一般疑问句，不是邀请；按分工，疑问句用 any- 类 anything。"
+    }
+   ],
+   "audio_id": "u1r10-q12",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：这里没别的东西了",
+   "scene": "林涛说这里没别的东西了。",
+   "stem": "There is ___ else here.",
+   "options": [
+    "something",
+    "nothing",
+    "anything",
+    "everything"
+   ],
+   "answer": "B",
+   "help": "“这里没别的东西了”，填哪个词？",
+   "explain": "There is nothing else here. 这里没别的东西了。nothing 是“没有什么”。",
+   "wrong_feedback": {
+    "A": "something 是“有东西”，和“没别的东西”意思正好反了。",
+    "C": "anything 是“任何东西”，放在肯定句里意思不对。",
+    "D": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r10-q13",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：这个书架上的任何一本书",
+   "scene": "林涛说这个书架上的任何一本书她都可以拿。",
+   "stem": "You can take ___ book on this shelf.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何一本"
+     ]
+    }
+   ],
+   "help": "这里的空是“任何一本”的意思，用哪个词？",
+   "explain": "You can take any book on this shelf. any 在这里是“任何一个”，可以用在肯定句里。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这里是“任何一本”的意思，要用 any，不是用 some。"
+    }
+   ],
+   "audio_id": "u1r10-q14",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：不是每个人都喜欢恐龙",
+   "scene": "不是每个人都喜欢恐龙，但我喜欢。",
+   "stem": "Not ___ likes dinosaurs, but I love them.",
+   "options": [
+    "nobody",
+    "somebody",
+    "anybody",
+    "everybody"
+   ],
+   "answer": "D",
+   "help": "“不是每个人都……”，部分否定，填哪个词？",
+   "explain": "Not everybody likes dinosaurs. 不是每个人都喜欢恐龙。not + everybody 是部分否定。",
+   "wrong_feedback": {
+    "A": "Not nobody 意思不对，nobody 本身就是否定，不能再加 not。",
+    "B": "Not somebody 意思不对，部分否定要用 not + every- 类。",
+    "C": "Not anybody 意思不对，部分否定要用 not + every- 类。"
+   },
+   "audio_id": "u1r10-q15",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：有什么喝的吗",
+   "scene": "有什么喝的吗？我渴了。",
+   "stem": "Is there ___ to drink? I am thirsty.",
+   "task": "只写空里的部分。",
+   "answer_text": "anything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anything"
+     ],
+     "olds": [
+      "something"
+     ],
+     "cn": [
+      "任何东西"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Is there anything to drink? 有什么喝的吗？疑问句用 any- 类。",
+   "common_errors": [
+    {
+     "when": "写了 something",
+     "say": "这是一般疑问句，不是邀请；按分工，疑问句用 any- 类 anything。"
+    }
+   ],
+   "audio_id": "u1r10-q16",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我没有任何钱",
+   "scene": "我没有任何钱，你能借我一些吗？",
+   "stem": "I don't have ___ money. Can you lend me some?",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 don't，填哪个词？",
+   "explain": "I don't have any money. 我没有任何钱。否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r10-q17",
+   "reading": "Su Wen: Is there anything in the bookcase?\nLin Tao: Yes, there are some books in it. Are there any plants in the library?\nSu Wen: Yes, there are some plants near the window. Is there somebody in the library now? I want to ask him a question.\nLin Tao: No, there is nobody here. Everybody is in class.\nSu Wen: I want to borrow some books. Do you have any books about dinosaurs?\nLin Tao: Sorry, I don't have any books about dinosaurs, but I have something nice for you — a book about birds!\nSu Wen: Great! Is there anything else? I want to read something special.\nLin Tao: There is nothing else here. But you can take any book on this shelf.\nSu Wen: Thank you! Not everybody likes dinosaurs, but I love them."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——一篇要改错的短文",
+   "teach_html": "<p>第二段短文是一篇要改错的日记：昨天去图书馆，里面有五处错误，每句一个。</p><p>读两遍，先自己找错：some / any 用错了？动词单复数错了？否定加多了？后面的题一题改一处。</p>",
+   "audio_id": "u1r10-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "改错：我没有任何恐龙书",
+   "scene": "改错：昨天我去图书馆，我没有任何关于恐龙的书。",
+   "stem": "I didn't have ___ books about dinosaurs.",
+   "options": [
+    "some",
+    "a",
+    "any",
+    "the"
+   ],
+   "answer": "C",
+   "help": "句子里有 didn't，是肯定句还是否定句？",
+   "explain": "I didn't have any books. 否定句用 any，所以 some 是错的，要改成 any。",
+   "wrong_feedback": {
+    "A": "some 是错的：否定句里不能用 some，要改成 any。",
+    "B": "a books 不对，a 后面跟单数名词，books 是复数。",
+    "D": "the books 是“那些书”，意思不对。"
+   },
+   "audio_id": "u1r10-q18",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "改错：你有霸王龙的书吗",
+   "scene": "改错：你有关于霸王龙的书吗？",
+   "stem": "Do you have ___ books about the T-Rex?",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，some 用错了，要改成什么？",
+   "explain": "Do you have any books about the T-Rex? 一般疑问句用 any，所以 some 是错的。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "some 就是错的地方：一般疑问句要用 any，不用 some。"
+    }
+   ],
+   "audio_id": "u1r10-q19",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "改错：图书馆里没有人",
+   "scene": "改错：图书馆里没有人。",
+   "stem": "___ in the library.",
+   "options": [
+    "Somebody was",
+    "Nobody was",
+    "Nobody were",
+    "Everybody were"
+   ],
+   "answer": "B",
+   "help": "“没有人”用哪个词？nobody 作主语，动词用什么数？",
+   "explain": "Nobody was in the library. nobody 是“没有人”，作主语动词用单数 was。",
+   "wrong_feedback": {
+    "A": "Somebody was 是“有人在”，和“没有人”意思正好反了。",
+    "C": "Nobody were 不对，nobody 作主语，动词要用单数 was。",
+    "D": "Everybody were 不对，everybody 作主语，动词也要用单数 was。"
+   },
+   "audio_id": "u1r10-q20",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "改错：我想买点好东西",
+   "scene": "改错：我想买点好东西，但没什么可买的。",
+   "stem": "I wanted to buy ___ nice, but there was nothing to buy.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某物"
+     ]
+    }
+   ],
+   "help": "这是肯定句，“买点好东西”，填哪个词？",
+   "explain": "I wanted to buy something nice. 肯定句用 something，nice 放后面。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something。"
+    }
+   ],
+   "audio_id": "u1r10-q21",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "改错：不是每个人都喜欢阅读",
+   "scene": "改错：不是每个人都喜欢阅读，但我喜欢。",
+   "stem": "___ likes reading, but I love it.",
+   "options": [
+    "Not everybody",
+    "Not nobody",
+    "Nobody not",
+    "Everybody not"
+   ],
+   "answer": "A",
+   "help": "“不是每个人都……”是部分否定，用什么开头？",
+   "explain": "Not everybody likes reading. 不是每个人都喜欢阅读。部分否定用 not + everybody。",
+   "wrong_feedback": {
+    "B": "Not nobody 不对，nobody 本身就是否定，不能再加 not。",
+    "C": "Nobody not 语序是错的，not 不能放在 nobody 后面。",
+    "D": "Everybody not 语序是错的，not 不能放在 everybody 后面。"
+   },
+   "audio_id": "u1r10-q22",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "改错：有什么新消息吗",
+   "scene": "新同学问有什么新消息吗。",
+   "stem": "He said, “Is there ___ new?”",
+   "task": "只写空里的部分。",
+   "answer_text": "anything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anything"
+     ],
+     "olds": [
+      "something"
+     ],
+     "cn": [
+      "任何东西"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Is there anything new? 有什么新消息吗？疑问句用 any- 类。",
+   "common_errors": [
+    {
+     "when": "写了 something",
+     "say": "这是一般疑问句，不是邀请；按分工，疑问句用 any- 类 anything。"
+    }
+   ],
+   "audio_id": "u1r10-q23",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "改错：想告诉大家一件特别的事",
+   "scene": "新同学想告诉大家一件特别的事。",
+   "stem": "I want to tell everybody ___.",
+   "options": [
+    "anything special",
+    "nothing special",
+    "everything special",
+    "something special"
+   ],
+   "answer": "D",
+   "help": "“一件特别的事”，something 后面的形容词放哪里？",
+   "explain": "I want to tell everybody something special. 形容词 special 放在 something 后面。",
+   "wrong_feedback": {
+    "A": "anything special 是“任何特别的东西”，放在肯定句里意思不对。",
+    "B": "nothing special 是“没什么特别的”，和“想告诉”意思正好反了。",
+    "C": "everything special 搭配不对，everything 后面不这样加形容词。"
+   },
+   "audio_id": "u1r10-q24",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "改错：书架里有东西给我",
+   "scene": "改错：书架里有东西给我。",
+   "stem": "There is ___ in the bookcase for me.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某物"
+     ]
+    }
+   ],
+   "help": "这是肯定句，“书架里有东西”，anything 用错了，要改成什么？",
+   "explain": "There is something in the bookcase for me. 肯定句用 something，所以 anything 是错的。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "anything 就是错的地方：肯定句要用 something，不用 anything。"
+    }
+   ],
+   "audio_id": "u1r10-q25",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "改错：我看见一个特别的人",
+   "scene": "我看见一个特别的人——一个新同学。",
+   "stem": "I saw ___ — a new student.",
+   "options": [
+    "anybody special",
+    "nothing special",
+    "somebody special",
+    "everything special"
+   ],
+   "answer": "C",
+   "help": "“一个特别的人”，肯定句，填什么？",
+   "explain": "I saw somebody special. 我看见一个特别的人。肯定句用 somebody，special 放后面。",
+   "wrong_feedback": {
+    "A": "anybody special 用在否定句和疑问句里；这是肯定句，用 somebody special。",
+    "B": "nothing special 是“没什么特别的”，和“看见一个特别的人”意思正好反了。",
+    "D": "everything special 搭配不对，everything 后面不这样加形容词。"
+   },
+   "audio_id": "u1r10-q26",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：昨天我去了图书馆",
+   "scene": "昨天我去了图书馆。",
+   "stem": "Yesterday I went to the ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "library",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "library"
+     ],
+     "olds": [
+      "libary",
+      "librarian"
+     ],
+     "cn": [
+      "图书馆"
+     ]
+    }
+   ],
+   "help": "“昨天我去了……”，填哪个地方？",
+   "explain": "Yesterday I went to the library. 昨天我去了图书馆。",
+   "common_errors": [
+    {
+     "when": "写了 librarian",
+     "say": "librarian 是“图书管理员”，是人；这里要填地方 library“图书馆”。"
+    },
+    {
+     "when": "写了 libary",
+     "say": "拼写注意：library 是 l-i-b-r-a-r-y，别写成 libary。"
+    }
+   ],
+   "audio_id": "u1r10-q27",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪句是对的",
+   "scene": "下面哪句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Nobody is in the library.",
+    "Nobody are in the library.",
+    "Nobody don't know.",
+    "Nobody doesn't knows."
+   ],
+   "answer": "A",
+   "help": "nobody 作主语，动词用单数；nobody 本身就是否定，哪句符合？",
+   "explain": "Nobody is in the library. 没有人在图书馆里。nobody 作主语，动词用单数 is。",
+   "wrong_feedback": {
+    "B": "Nobody are 不对，nobody 作主语，动词要用单数 is。",
+    "C": "Nobody don't know 不对，nobody 本身就是否定，不能再加 don't。",
+    "D": "doesn't knows 不对，doesn't 后面跟动词原形 know。"
+   },
+   "audio_id": "u1r10-q28",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：这个书架上的任何一本书",
+   "scene": "管理员说这个书架上的任何一本书他都可以拿。",
+   "stem": "The librarian said, “You can take ___ book on this shelf.”",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何一本"
+     ]
+    }
+   ],
+   "help": "这里的空是“任何一本”的意思，用哪个词？",
+   "explain": "You can take any book on this shelf. any 在这里是“任何一个”，可以用在肯定句里。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这里是“任何一本”的意思，要用 any，不是用 some。"
+    }
+   ],
+   "audio_id": "u1r10-q29",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 any 写一句",
+   "scene": "用 any 写一句：我没有任何关于恐龙的书。",
+   "stem": "I don't have ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "any books about dinosaurs",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any books"
+     ],
+     "olds": [
+      "some books"
+     ],
+     "cn": [
+      "任何书"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "dinosaurs"
+     ],
+     "olds": [
+      "dinosaur"
+     ],
+     "cn": [
+      "恐龙"
+     ]
+    }
+   ],
+   "help": "“我没有任何关于恐龙的书”，否定句里填什么？",
+   "explain": "I don't have any books about dinosaurs. 我没有任何关于恐龙的书。否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some books",
+     "say": "这是否定句，按规则 2，否定句用 any，不用 some。"
+    },
+    {
+     "when": "写了 any book",
+     "say": "books 是复数，别丢了 s。"
+    }
+   ],
+   "audio_id": "u1r10-q30",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 everybody 写一句",
+   "scene": "用 everybody 写一句：每个人都喜欢广播节目。",
+   "stem": "___ likes the radio show.",
+   "task": "只写空里的部分。",
+   "answer_text": "Everybody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "everybody"
+     ],
+     "olds": [
+      "everybodies"
+     ],
+     "cn": [
+      "每个人"
+     ]
+    }
+   ],
+   "help": "“每个人都喜欢”，填哪个词？注意动词 likes 是单数。",
+   "explain": "Everybody likes the radio show. 每个人都喜欢广播节目。everybody 作主语，动词用单数 likes。",
+   "common_errors": [
+    {
+     "when": "写了 Everybodies",
+     "say": "everybody 没有复数形式，别加 s。"
+    }
+   ],
+   "audio_id": "u1r10-q31",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 something special 写一句",
+   "scene": "用 something special 写一句：我有件特别的东西给你。",
+   "stem": "I have ___ for you.",
+   "task": "只写空里的部分。",
+   "answer_text": "something special",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something special"
+     ],
+     "olds": [
+      "anything special"
+     ],
+     "cn": [
+      "一件特别的东西"
+     ]
+    }
+   ],
+   "help": "“一件特别的东西”，填什么？注意 special 放后面。",
+   "explain": "I have something special for you. 我有件特别的东西给你。",
+   "common_errors": [
+    {
+     "when": "写了 anything special",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something special。"
+    },
+    {
+     "when": "写了 special something",
+     "say": "形容词要放在复合不定代词后面，要写 something special。"
+    }
+   ],
+   "audio_id": "u1r10-q32",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "Let me sum up：some / any + 复合不定代词总表",
+   "teach_html": "<p><strong>Let me sum up! 我们总结一下：</strong></p><p><strong>some / any</strong>：肯定句用 some；否定句和疑问句用 any；希望对方说 Yes 的疑问句用 some；any 表“任何一个”可用在肯定句。</p><p><strong>复合不定代词</strong>：人用 -body / -one，物用 -thing。some- 类：somebody / someone / something；any- 类：anybody / anyone / anything；no- 类：nobody / no one / nothing；every- 类：everybody / everyone / everything。</p><p><strong>三提醒</strong>：作主语动词用单数（Nobody is...）；形容词、不定式放后面（something special）；部分否定 not everyone 不是 nobody；nothing、nobody 本身就是否定，别再加 not。</p>",
+   "audio_id": "u1r10-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：综合选句",
+   "scene": "下面哪句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "I have any questions.",
+    "She doesn't have some friends.",
+    "Nobody are here.",
+    "Somebody is waiting for you."
+   ],
+   "answer": "D",
+   "help": "肯定句用 some，否定句用 any；somebody 作主语动词用单数，哪句符合？",
+   "explain": "Somebody is waiting for you. 有人在等你。somebody 作主语，动词用单数 is，是对的。",
+   "wrong_feedback": {
+    "A": "肯定句里不能用 any（“任何一个”除外），要说 I have some questions。",
+    "B": "否定句里不能用 some，要说 She doesn't have any friends。",
+    "C": "Nobody are 不对，nobody 作主语，动词要用单数 is。"
+   },
+   "audio_id": "u1r10-q33",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：图书馆里没有人",
+   "scene": "——图书馆里有谁？——没有人，空无一人。",
+   "stem": "—Who is in the library? —___. It is empty.",
+   "task": "只写空里的部分。",
+   "answer_text": "Nobody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nobody"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "没有人"
+     ]
+    }
+   ],
+   "help": "“没有人”，填哪个词？",
+   "explain": "Nobody is in the library. 图书馆里没有人。nobody 是“没有人”。",
+   "common_errors": [
+    {
+     "when": "写了 Anybody",
+     "say": "anybody 是“任何人”，放在这里意思不对；这里要填 nobody“没有人”。"
+    }
+   ],
+   "audio_id": "u1r10-q34",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：想喝点东西吗",
+   "scene": "你想喝点东西吗？（希望对方说好。）",
+   "stem": "Would you like ___ to drink?",
+   "options": [
+    "anything",
+    "something",
+    "nothing",
+    "everything"
+   ],
+   "answer": "B",
+   "help": "这是邀请、希望对方说 Yes，填哪个词？",
+   "explain": "Would you like something to drink? 邀请、希望对方答应用 some- 类。",
+   "wrong_feedback": {
+    "A": "anything 用在一般疑问句里；这是邀请、希望对方答应，用 something。",
+    "C": "nothing 是“没有什么”，放在这里意思不对。",
+    "D": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r10-q35",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：我想读点关于动物的有趣东西",
+   "scene": "我想读点关于动物的有趣东西。",
+   "stem": "I want to read ___ interesting about animals.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某物"
+     ]
+    }
+   ],
+   "help": "这是肯定句，“读点有趣的东西”，填哪个词？注意 interesting 放后面。",
+   "explain": "I want to read something interesting about animals. 我想读点关于动物的有趣东西。肯定句用 something，interesting 放后面。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something。"
+    }
+   ],
+   "audio_id": "u1r10-q36",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：这里的一切都很美",
+   "scene": "我也是第一次来东营度假。这里的一切都很美，我喜欢这座城市。",
+   "stem": "___ here is so nice. I love the city.",
+   "options": [
+    "Nothing",
+    "Anything",
+    "Everything",
+    "Something"
+   ],
+   "answer": "C",
+   "help": "“这里的一切都很美”，填哪个词？",
+   "explain": "Everything here is so nice. 这里的一切都很美。everything 是“一切”。",
+   "wrong_feedback": {
+    "A": "Nothing 是“没有什么”，和“我喜欢这座城市”意思正好反了。",
+    "B": "Anything 是“任何东西”，放在肯定句里意思不对。",
+    "D": "Something 是“某物”，不是“一切”，意思不对。"
+   },
+   "audio_id": "u1r10-q37",
+   "reading": "Yesterday I went to the library. I didn't have some books about dinosaurs. I asked the librarian, “Do you have some books about the T-Rex?” She said no. Nobody were in the library. I wanted to buy something nice, but there was nothing to buy. Not nobody likes reading, but I love it. I saw somebody special — a new student. He said, “Is there anything new? I want to tell everybody something special.” I was happy. There is anything in the bookcase for me."
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "小结：Section 2 完成",
+   "teach_html": "<p>Section 2 学完了：</p><p><strong>some / any</strong>：肯定 some，否定疑问 any；想要 Yes 用 some；“任何” any 也进肯定句。</p><p><strong>复合不定代词</strong>：人 -body / -one，物 -thing；作主语动词用单数；形容词、不定式放后面；not everyone 不是 nobody。</p><p>下节课进 Section 3，学口语：谈论你钦佩的人。</p>",
+   "audio_id": "u1r10-t10"
+  }
+ ],
+ "title": "Section 2 练：语法综合 + Let me sum up",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
