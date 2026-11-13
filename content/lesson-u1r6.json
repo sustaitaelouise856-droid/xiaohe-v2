@@ -1,0 +1,1331 @@
+{
+ "lesson_id": "u1r6",
+ "practice_end": 27,
+ "home_subtitle": "Section 1 句式精讲 · 有些……如此……",
+ "part1_desc": "第 1–27 步：some...others...、so...that...、completely、original、birth、sound；读《我们班》，练习帮做题过关。",
+ "part2_desc": "第 28–50 步：读《出生与原名》，独立验证本课句式；写作帮用 so...that... 写一句话。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：some...others... 与 some...the others... 的区别、so...that...（与 such...that... 的区别、与 too...to... / not...enough to... 的互换）、completely、original（原名/独创的/原件）、birth（year/date/place of birth）、sound（形容词合理的）。Unit 1 Look it up! 主题，核心句 Some were as small as chickens, and others were as big as ten elephants. / They are so smart that they can be trained to understand some human language.",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "广播站新任务：有些……如此……",
+   "teach_html": "<p>广播站今天讲“对比”和“结果”：有些人喜欢读书，另一些人喜欢运动；一本书有趣到什么程度，才会让全班都喜欢它？</p><p>这一课讲六个新点：<strong>some...others...</strong>（一些……另一些……）、<strong>so...that...</strong>（如此……以至于……）、<strong>completely</strong>（完全地）、<strong>original</strong>（原来的）、<strong>birth</strong>（出生）、<strong>sound</strong>（合理的；正确的）。</p>",
+   "audio_id": "u1r6-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some...others... 一些……另一些……",
+   "teach_html": "<p><strong>some...others...</strong> 一些……另一些……。others 在这里表示泛指，表示另外的一部分。</p><p>Some were as small as chickens, and others were as big as ten elephants. 有些恐龙像鸡一样小，另一些则有十头大象那么大。</p><p>Some students like English, and others like maths. 有些学生喜欢英语，另一些喜欢数学。</p><p>记住：others 是代词，后面不加名词；other 是形容词，后面要加名词。</p>",
+   "audio_id": "u1r6-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some...the others... 一些……其余的……",
+   "teach_html": "<p><strong>some...the others...</strong> 表示“一些……其余的……”，the others 表示一定范围内除去一部分后剩下的全部。</p><p>There are thirty students in our class. Some like reading, and the others like sports. 我们班有三十个学生，有些喜欢读书，其余的喜欢运动。</p><p>对比一下：some...others... 是“一些……另外一些……”；some...the others... 是“一些……其余的（全部）……”。看清说的是不是“剩下的人全都”。</p>",
+   "audio_id": "u1r6-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：so...that... 如此……以至于……",
+   "teach_html": "<p><strong>so...that...</strong> 如此……以至于……，引导结果状语从句。so 是副词，后接形容词或副词。</p><p>They are so smart that they can be trained to understand some human language. 它们十分聪明，以至于能够被训练来理解一些人类语言。</p><p>This book is so interesting that we all like it. 这本书如此有趣，以至于我们都喜欢它。</p><p>和它长得很像的是 <strong>such...that...</strong>：such 是限定词，后接名词（短语）。This is such an interesting book that we all like it. 这本书如此有趣，以至于我们都喜欢它。</p>",
+   "audio_id": "u1r6-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：so...that... 换说法",
+   "teach_html": "<p>so...that... 可以换成另外两种说法，意思一样：</p><p>The man is so weak that he can't swim across the river. 这个人如此虚弱，以至于不能游过那条河。</p><p>= The man is too weak to swim across the river.（too...to... 太……而不能……）</p><p>= The man is not strong enough to swim across the river.（not...enough to... 不够……而不能……）</p><p>换的时候注意：too...to... 用“弱”本身；not...enough to... 要换成反义词“强壮”。考试常考这个互换。</p>",
+   "audio_id": "u1r6-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：completely 完全地；彻底地",
+   "teach_html": "<p><strong>completely</strong> /kəmˈpliːtli/ <em>adv.</em> 完全地；彻底地。由 <strong>complete</strong>（<em>adj.</em> 完全的；彻底的）+ <strong>-ly</strong>（副词后缀）构成。</p><p>Scientists are not completely sure why. 科学家们并不完全确定其中的原因。</p><p>Turn the lights completely off before you leave. 离开之前把灯完全关掉。</p><p>记住：complete 是形容词，修饰名词；completely 是副词，修饰动词或形容词。</p>",
+   "audio_id": "u1r6-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：original 原来的；起初的",
+   "teach_html": "<p><strong>original</strong> /əˈrɪdʒənl/ <em>adj.</em> 原来的；起初的。由 <strong>origin</strong>（<em>n.</em> 起源；起因）+ <strong>-al</strong>（形容词后缀）构成，通常用于名词前作定语。</p><p><strong>original name</strong> 原名：Her original name was Lin Xiaohua. 她的原名是林小华。</p><p>The original idea of forming a band was to make music class interesting. 组建乐队的最初想法是为了让音乐课变得有趣。</p><p>original 还有两个意思：(1) 独创的；新颖的：That's not a very original suggestion. 那个建议没什么新意。(2) 原件；原作（名词）：This painting is a copy, and the original is in the Louvre. 这幅画是复制品，原作在卢浮宫。</p>",
+   "audio_id": "u1r6-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：birth 出生",
+   "teach_html": "<p><strong>birth</strong> /bɜːθ/ <em>n.</em> 出生。常用搭配：<strong>year/date/place of birth</strong> 出生年／出生日期／出生地；<strong>at birth</strong> 出生时；<strong>give birth to</strong> 生（孩子）。</p><p>The year of his birth was 1452. 他出生的年份是 1452 年。</p><p>分清一组词：<strong>birth</strong> 是名词“出生”；<strong>born</strong> 是 be born 的一部分；<strong>death</strong> 是名词“死；死亡”；<strong>die</strong> 是动词“死”；<strong>dead</strong> 是形容词“死的”；<strong>dying</strong> 是形容词“临终的”。</p>",
+   "audio_id": "u1r6-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：sound 合理的；正确的；可靠的",
+   "teach_html": "<p><strong>sound</strong> /saʊnd/ <em>adj.</em> 合理的；正确的；可靠的。</p><p>He gave me some very sound advice. 他给了我一些非常合理的建议。</p><p>What he said about the new project seems quite sound. 他对这个新项目的看法似乎很合理。</p><p>sound 还是个多义词：作名词是“声音；响声”（make a sound 发出声音）；作动词是“听起来；好像”，后常接形容词作表语（The music sounds too noisy. 音乐听起来太吵了。）；作形容词还有“完好的；健康的”（safe and sound 安然无恙）。</p>",
+   "audio_id": "u1r6-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——我们班",
+   "teach_html": "<p>下面是一段自编短文，讲我们班。读两遍，找一找：班里有些人喜欢什么、另一些人喜欢什么？那本恐龙书写得有多有趣？科学家们对恐龙灭绝的原因确定吗？</p><p>读的时候用扫描的方法：先看问题，再到文章里找答案。</p>",
+   "audio_id": "u1r6-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：others 是什么意思",
+   "scene": "班里有些人喜欢读书，另一些人喜欢运动。",
+   "stem": "“Some like reading, and others like sports.” What does “others” mean here?",
+   "options": [
+    "all the students",
+    "the teacher",
+    "students in another school",
+    "other students in the class"
+   ],
+   "answer": "D",
+   "help": "others 指的是班里另外的一部分人，哪个选项是这个意思？",
+   "explain": "Others means other students in the class. others 是“班里另外一些学生”。",
+   "wrong_feedback": {
+    "A": "all the students 是“所有学生”，some 和 others 加起来才是全部。",
+    "B": "the teacher 是“老师”，others 说的是学生。",
+    "C": "students in another school 是“别的学校的学生”，others 说的是本班学生。"
+   },
+   "audio_id": "u1r6-q01",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：另一些人读太空书",
+   "scene": "有些人读动物书，另一些人读太空书。",
+   "stem": "Some read books about animals, and ___ read books about space.",
+   "task": "只写空里的部分。",
+   "answer_text": "others",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "others"
+     ],
+     "olds": [
+      "other"
+     ],
+     "cn": [
+      "另外一些人"
+     ]
+    }
+   ],
+   "help": "“另外一些人”，填哪个代词？后面不加名词。",
+   "explain": "Some read books about animals, and others read books about space. 有些人读动物书，另一些人读太空书。",
+   "common_errors": [
+    {
+     "when": "写了 other",
+     "say": "others 是代词“另外一些人”；other 是形容词，后面要加名词。"
+    },
+    {
+     "when": "写了 another",
+     "say": "another 是“另一个”，这里是“另外一些人”，用 others。"
+    }
+   ],
+   "audio_id": "u1r6-q02",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：the others 是什么意思",
+   "scene": "房间里有许多人，有些在唱歌，其余的在跳舞。",
+   "stem": "“Some are singing, and the others are dancing.” What does “the others” mean?",
+   "options": [
+    "some other people outside",
+    "one more person",
+    "all the rest of the people in the room",
+    "people in another room"
+   ],
+   "answer": "C",
+   "help": "the others 是“其余的人”，指的是房间里剩下的人，哪个选项是这个意思？",
+   "explain": "The others means all the rest of the people in the room. the others 是“房间里其余的人”。",
+   "wrong_feedback": {
+    "A": "some other people outside 是“外面的另外一些人”，不是房间里剩下的。",
+    "B": "one more person 是“再一个人”，the others 说的是一群人。",
+    "D": "people in another room 是“另一个房间的人”，不是这个房间剩下的。"
+   },
+   "audio_id": "u1r6-q03",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：另一些恐龙很小",
+   "scene": "有些恐龙很大，另一些很小，能藏在草里。",
+   "stem": "Some dinosaurs were so big that they could not run fast. ___ were so small that they could hide in the grass.",
+   "task": "只写空里的部分。",
+   "answer_text": "Others",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "others"
+     ],
+     "olds": [
+      "other"
+     ],
+     "cn": [
+      "另外一些"
+     ]
+    }
+   ],
+   "help": "句首“另外一些（恐龙）”，填哪个词？",
+   "explain": "Others were so small that they could hide in the grass. 另一些恐龙很小，能藏在草里。",
+   "common_errors": [
+    {
+     "when": "写了 other",
+     "say": "句首要填代词 Others“另外一些（恐龙）”，other 后面要加名词。"
+    },
+    {
+     "when": "写了 another",
+     "say": "another 是“另一个”，这里是“另外一些（恐龙）”，用 Others。"
+    }
+   ],
+   "audio_id": "u1r6-q04",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：so...that... 告诉了我们什么",
+   "scene": "这本书如此有趣，我们都喜欢它。",
+   "stem": "“The book is so interesting that we all like it.” What does this sentence tell us?",
+   "options": [
+    "the book is not interesting",
+    "the book is very interesting, so we all like it",
+    "we do not like the book",
+    "the book is too long"
+   ],
+   "answer": "B",
+   "help": "so...that... 是“如此……以至于……”，前因后果是什么？",
+   "explain": "The book is so interesting that we all like it. 书很有趣，所以我们都喜欢它。",
+   "wrong_feedback": {
+    "A": "the book is not interesting 意思反了，书是很有趣。",
+    "C": "we do not like the book 意思反了，我们都喜欢它。",
+    "D": "the book is too long 说的是书太长，句子里没提。"
+   },
+   "audio_id": "u1r6-q05",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：这本书如此有趣",
+   "scene": "这本书如此有趣，我们都喜欢它。",
+   "stem": "The book was ___ interesting ___ we all liked it.",
+   "task": "只写空里的部分。",
+   "answer_text": "so interesting that",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "so interesting that"
+     ],
+     "olds": [
+      "such interesting that"
+     ],
+     "cn": [
+      "如此有趣，以至于"
+     ]
+    }
+   ],
+   "help": "so + 形容词 + that，三个词都要填。",
+   "explain": "The book was so interesting that we all liked it. 这本书如此有趣，以至于我们都喜欢它。",
+   "common_errors": [
+    {
+     "when": "写了 such interesting that",
+     "say": "so + 形容词 + that：so interesting that；such 后面要加名词。"
+    },
+    {
+     "when": "只写了 so interesting",
+     "say": "so...that... 要写完整，后面还要有 that 从句。"
+    }
+   ],
+   "audio_id": "u1r6-q06",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：such an interesting book",
+   "scene": "这是一本如此有趣的书，我们都喜欢它。",
+   "stem": "This is ___ interesting book that we all like it.",
+   "options": [
+    "such an",
+    "so an",
+    "such a",
+    "so a"
+   ],
+   "answer": "A",
+   "help": "such 后面接名词短语，interesting 开头是元音，前面用什么？",
+   "explain": "This is such an interesting book that we all like it. such + a/an + 形容词 + 名词 + that。",
+   "wrong_feedback": {
+    "B": "so an 不对，so 后面直接接形容词，不接 a/an + 名词。",
+    "C": "such a 不对，interesting 开头是元音，要用 an。",
+    "D": "so a 不对，so 后面不接 a/an + 名词。"
+   },
+   "audio_id": "u1r6-q07",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：并不完全确定",
+   "scene": "我们并不完全确定它们为什么灭绝。",
+   "stem": "We are not ___ sure why they died out.",
+   "task": "只写空里的部分。",
+   "answer_text": "completely",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "completely"
+     ],
+     "olds": [
+      "complete",
+      "completly"
+     ],
+     "cn": [
+      "完全地"
+     ]
+    }
+   ],
+   "help": "修饰 sure，要填形容词还是副词？",
+   "explain": "We are not completely sure why they died out. 我们并不完全确定它们为什么灭绝。",
+   "common_errors": [
+    {
+     "when": "写了 complete",
+     "say": "complete 是形容词；这里要填副词 completely 修饰 sure。"
+    },
+    {
+     "when": "写了 completly",
+     "say": "拼写注意：completely 是 complete + ly，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r6-q08",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：completely 是什么意思",
+   "scene": "completely 和哪个词意思最接近？",
+   "stem": "Which word is closest in meaning to “completely”?",
+   "options": [
+    "quickly",
+    "totally",
+    "almost",
+    "hardly"
+   ],
+   "answer": "B",
+   "help": "completely 是“完全地”，哪个选项意思最接近？",
+   "explain": "Completely means totally. completely 是“完全地”，和 totally 意思最接近。",
+   "wrong_feedback": {
+    "A": "quickly 是“很快地”，说的是速度，不是程度。",
+    "C": "almost 是“几乎”，意思是“差一点”，不是“完全”。",
+    "D": "hardly 是“几乎不”，意思正好相反。"
+   },
+   "audio_id": "u1r6-q09",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：箱子太重了，搬不动",
+   "scene": "箱子太重了，他搬不动。",
+   "stem": "The box is so heavy that he can't carry it. = The box is ___ heavy ___ carry.",
+   "task": "只写空里的部分。",
+   "answer_text": "too heavy to",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "too heavy to"
+     ],
+     "olds": [
+      "so heavy to"
+     ],
+     "cn": [
+      "太重而不能"
+     ]
+    }
+   ],
+   "help": "换成 too...to... 结构：太……而不能……。",
+   "explain": "The box is too heavy to carry. 箱子太重了，搬不动。",
+   "common_errors": [
+    {
+     "when": "写了 so heavy to",
+     "say": "too...to... 结构是“太……而不能……”：too heavy to carry。"
+    },
+    {
+     "when": "写了 too heavy that",
+     "say": "too...to... 后面跟动词原形，不用 that。"
+    }
+   ],
+   "audio_id": "u1r6-q10",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：original name 是什么意思",
+   "scene": "她的原名是林小华。",
+   "stem": "What does “original” mean in “original name”?",
+   "options": [
+    "new and strange",
+    "famous and rich",
+    "big and strong",
+    "first; at the beginning"
+   ],
+   "answer": "D",
+   "help": "original name 是“原名”，original 在这里是什么意思？",
+   "explain": "Original means first; at the beginning. original 在原名里是“原来的；起初的”。",
+   "wrong_feedback": {
+    "A": "new and strange 是“新奇的”，那是 original 的另一个意思。",
+    "B": "famous and rich 是“有名又有钱”，和原名没关系。",
+    "C": "big and strong 是“又大又强壮”，和原名没关系。"
+   },
+   "audio_id": "u1r6-q11",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：她的原名",
+   "scene": "她的原名是林小华。",
+   "stem": "Her ___ name was Lin Xiaohua.",
+   "task": "只写空里的部分。",
+   "answer_text": "original",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "original"
+     ],
+     "olds": [
+      "origin",
+      "originally"
+     ],
+     "cn": [
+      "原来的"
+     ]
+    }
+   ],
+   "help": "“原来的名字”，填哪个形容词？",
+   "explain": "Her original name was Lin Xiaohua. 她的原名是林小华。",
+   "common_errors": [
+    {
+     "when": "写了 origin",
+     "say": "origin 是名词“起源”；这里要填形容词 original 修饰 name。"
+    },
+    {
+     "when": "写了 originally",
+     "say": "originally 是副词；修饰名词 name 要用形容词 original。"
+    }
+   ],
+   "audio_id": "u1r6-q12",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：birth 是什么意思",
+   "scene": "birth 是什么意思？",
+   "stem": "What does “birth” mean?",
+   "options": [
+    "the time when a person dies",
+    "the time when a person grows up",
+    "the time when a baby is born",
+    "the time when a person goes to school"
+   ],
+   "answer": "C",
+   "help": "birth 是“出生”，哪个选项是这个意思？",
+   "explain": "Birth means the time when a baby is born. birth 是“出生”。",
+   "wrong_feedback": {
+    "A": "the time when a person dies 是“死亡”，那是 death。",
+    "B": "the time when a person grows up 是“长大”，不是出生。",
+    "D": "the time when a person goes to school 是“上学”，不是出生。"
+   },
+   "audio_id": "u1r6-q13",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：他出生的年份",
+   "scene": "他出生的年份是 1452 年。",
+   "stem": "The year of his ___ was 1452.",
+   "task": "只写空里的部分。",
+   "answer_text": "birth",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "birth"
+     ],
+     "olds": [
+      "born",
+      "birthday"
+     ],
+     "cn": [
+      "出生"
+     ]
+    }
+   ],
+   "help": "year of ___，填哪个名词？",
+   "explain": "The year of his birth was 1452. 他出生的年份是 1452 年。",
+   "common_errors": [
+    {
+     "when": "写了 born",
+     "say": "birth 是名词“出生”；born 是 be born 的一部分，这里要填名词 birth。"
+    },
+    {
+     "when": "写了 birthday",
+     "say": "birthday 是“生日”；年份用 year of birth。"
+    }
+   ],
+   "audio_id": "u1r6-q14",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：sound advice 是什么意思",
+   "scene": "他给了我一些非常合理的建议。",
+   "stem": "“He gave me some very sound advice.” What does “sound” mean here?",
+   "options": [
+    "good and right",
+    "loud and noisy",
+    "soft and quiet",
+    "new and strange"
+   ],
+   "answer": "A",
+   "help": "sound advice 是“合理的建议”，哪个选项是这个意思？",
+   "explain": "Sound means good and right. sound 在这里是“合理的；正确的”。",
+   "wrong_feedback": {
+    "B": "loud and noisy 是“又响又吵”，那是声音大，不是合理。",
+    "C": "soft and quiet 是“又轻又安静”，和合理没关系。",
+    "D": "new and strange 是“又新又怪”，那是 original 的意思。"
+   },
+   "audio_id": "u1r6-q15",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：他的看法似乎很合理",
+   "scene": "他对这个新项目的看法似乎很合理。",
+   "stem": "What he said about the new project seems quite ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "sound",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "sound"
+     ],
+     "olds": [
+      "sounds",
+      "sounded"
+     ],
+     "cn": [
+      "合理的"
+     ]
+    }
+   ],
+   "help": "seems 后面接什么词作表语？",
+   "explain": "What he said about the new project seems quite sound. 他对这个新项目的看法似乎很合理。",
+   "common_errors": [
+    {
+     "when": "写了 sounds",
+     "say": "seems 后面接形容词 sound 作表语，不用 sounds。"
+    },
+    {
+     "when": "写了 sounded",
+     "say": "这里要填形容词 sound，不是动词 sounded。"
+    }
+   ],
+   "audio_id": "u1r6-q16",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：哪个句子是对的",
+   "scene": "下面哪个句子写对了 some...others...？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Some like tea, and the others likes coffee.",
+    "Some like tea, and other like coffee.",
+    "Some likes tea, and others like coffee.",
+    "Some like tea, and others like coffee."
+   ],
+   "answer": "D",
+   "help": "some...others... 里 others 是代词，动词用什么形式？",
+   "explain": "Some like tea, and others like coffee. others 后面动词用复数 like。",
+   "wrong_feedback": {
+    "A": "the others likes 动词错了，the others 后面动词用复数 like。",
+    "B": "other 是形容词，后面要加名词，不能直接作主语。",
+    "C": "some 后面动词用复数 like，不用 likes。"
+   },
+   "audio_id": "u1r6-q17",
+   "reading": "Our class has thirty students. Some like reading, and others like sports. Some read books about animals, and others read books about space. Last week, we read about dinosaurs. The book was so interesting that we all liked it. Some dinosaurs were so big that they could not run fast. Others were so small that they could hide in the grass. Our teacher says, 'Dinosaurs are so interesting that scientists still study them today.' We are not completely sure why they died out. Some scientists think the weather changed completely. Others think a big rock fell from the sky. We all want to know the answer."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——出生与原名",
+   "teach_html": "<p>第二段短文讲达·芬奇的出生和林老师的原名。这次没有提示带着走，题目都要你自己判断。短文会留在屏幕上，读不懂的句子可以回看。</p><p>注意找一找：达·芬奇出生在哪一年？他的画为什么那么有名？林老师的原名是什么？什么是 sound advice？</p>",
+   "audio_id": "u1r6-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：他出生的年份",
+   "scene": "达·芬奇出生的年份是 1452 年。",
+   "stem": "Leonardo da Vinci was born in Italy in 1452. The year of his ___ was 1452.",
+   "options": [
+    "born",
+    "birth",
+    "birthday",
+    "death"
+   ],
+   "answer": "B",
+   "help": "year of ___，填哪个名词？",
+   "explain": "The year of his birth was 1452. 出生年份用 year of birth。",
+   "wrong_feedback": {
+    "A": "born 是 be born 的一部分，这里要填名词 birth。",
+    "C": "birthday 是“生日”，年份用 year of birth。",
+    "D": "death 是“死亡”，1452 年是他出生的年份。"
+   },
+   "audio_id": "u1r6-q18",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：他的画非常有名",
+   "scene": "他的画非常有名，全世界的人都知道它。",
+   "stem": "His painting is ___ famous ___ people all over the world know it.",
+   "task": "只写空里的部分。",
+   "answer_text": "so famous that",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "so famous that"
+     ],
+     "olds": [
+      "such famous that"
+     ],
+     "cn": [
+      "如此有名，以至于"
+     ]
+    }
+   ],
+   "help": "so + 形容词 + that，三个词都要填。",
+   "explain": "His painting is so famous that people all over the world know it. 他的画非常有名，全世界的人都知道它。",
+   "common_errors": [
+    {
+     "when": "写了 such famous that",
+     "say": "so + 形容词 + that：so famous that；such 后面要加名词。"
+    },
+    {
+     "when": "只写了 so famous",
+     "say": "so...that... 要写完整，后面还要有 that 从句。"
+    }
+   ],
+   "audio_id": "u1r6-q19",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：林老师的原名",
+   "scene": "林老师的原名是林小华。",
+   "stem": "Miss Lin's original name was Lin Xiaohua. What is her original name?",
+   "options": [
+    "Lin Xiaohua",
+    "Lin Xiaoya",
+    "Miss Lin",
+    "Lin Xiaohua's mother"
+   ],
+   "answer": "A",
+   "help": "原名是她一开始的名字，短文里怎么说的？",
+   "explain": "Her original name was Lin Xiaohua. 她的原名是林小华。",
+   "wrong_feedback": {
+    "B": "Lin Xiaoya 是她改名后的新名字，不是原名。",
+    "C": "Miss Lin 是大家对她的称呼，不是原名。",
+    "D": "Lin Xiaohua's mother 是她的妈妈，不是她的原名。"
+   },
+   "audio_id": "u1r6-q20",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：出生与去世",
+   "scene": "他去世的年份是 1519 年，出生的年份是 1452 年。",
+   "stem": "The year of his death was 1519. The year of his ___ was 1452.",
+   "task": "只写空里的部分。",
+   "answer_text": "birth",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "birth"
+     ],
+     "olds": [
+      "born"
+     ],
+     "cn": [
+      "出生"
+     ]
+    }
+   ],
+   "help": "year of ___，填哪个名词？",
+   "explain": "The year of his birth was 1452. 他出生的年份是 1452 年。",
+   "common_errors": [
+    {
+     "when": "写了 born",
+     "say": "year of birth 是固定搭配，birth 是名词。"
+    },
+    {
+     "when": "写了 death",
+     "say": "death 是“死亡”；1452 年是他出生的年份，用 birth。"
+    }
+   ],
+   "audio_id": "u1r6-q21",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪个句子里的 sound 是“合理的”",
+   "scene": "sound 作形容词时是“合理的；正确的”。",
+   "stem": "Which sentence uses “sound” as an adjective meaning “good and right”?",
+   "options": [
+    "The music sounds too noisy.",
+    "I can hear a sound.",
+    "Her advice is always sound.",
+    "The bell sounds nice."
+   ],
+   "answer": "C",
+   "help": "哪个句子里的 sound 是形容词“合理的”？",
+   "explain": "Her advice is always sound. 她的建议总是合理的，这里的 sound 是形容词。",
+   "wrong_feedback": {
+    "A": "The music sounds too noisy 里 sounds 是动词“听起来”。",
+    "B": "I can hear a sound 里 sound 是名词“声音”。",
+    "D": "The bell sounds nice 里 sounds 是动词“听起来”。"
+   },
+   "audio_id": "u1r6-q22",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：她的作品在当时完全是新的",
+   "scene": "她的作品在当时完全是新的。",
+   "stem": "Her work was ___ new in its time.",
+   "task": "只写空里的部分。",
+   "answer_text": "completely",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "completely"
+     ],
+     "olds": [
+      "complete"
+     ],
+     "cn": [
+      "完全地"
+     ]
+    }
+   ],
+   "help": "修饰形容词 new，要填形容词还是副词？",
+   "explain": "Her work was completely new in its time. 她的作品在当时完全是新的。",
+   "common_errors": [
+    {
+     "when": "写了 complete",
+     "say": "修饰形容词 new，要用副词 completely。"
+    },
+    {
+     "when": "写了 completly",
+     "say": "拼写注意：completely 是 complete + ly，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r6-q23",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：so young that 换说法",
+   "scene": "莫莉太小了，不能自己穿衣服。",
+   "stem": "“Molly is so young that she can't dress herself.” Which sentence means the same?",
+   "options": [
+    "Molly is old enough to dress herself.",
+    "Molly is too young to dress herself.",
+    "Molly is so young to dress herself.",
+    "Molly is young enough to dress herself."
+   ],
+   "answer": "B",
+   "help": "so...that... 换成 too...to...，哪个句子意思一样？",
+   "explain": "Molly is too young to dress herself. 太小而不能自己穿衣服。",
+   "wrong_feedback": {
+    "A": "old enough 是“够大了”，意思正好相反。",
+    "C": "so young to 搭配不对，so...that... 里 that 不能丢。",
+    "D": "young enough 是“够大了”，意思正好相反。"
+   },
+   "audio_id": "u1r6-q24",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：其余的人喜欢运动",
+   "scene": "班里三十个学生，有些喜欢读书，其余的喜欢运动。",
+   "stem": "There are thirty students in our class. Some like reading, and the ___ like sports.",
+   "task": "只写空里的部分。",
+   "answer_text": "others",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "others"
+     ],
+     "olds": [
+      "other"
+     ],
+     "cn": [
+      "其余的人"
+     ]
+    }
+   ],
+   "help": "the ___，“其余的人”，填哪个词？",
+   "explain": "Some like reading, and the others like sports. 有些喜欢读书，其余的喜欢运动。",
+   "common_errors": [
+    {
+     "when": "写了 other",
+     "say": "the others 是“其余的人”，这里 others 前有 the，要填 others。"
+    },
+    {
+     "when": "写了 another",
+     "say": "another 是“另一个”，这里是“其余的人”，用 others。"
+    }
+   ],
+   "audio_id": "u1r6-q25",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：没什么新意的建议",
+   "scene": "那个建议没什么新意。",
+   "stem": "“That's not a very original suggestion.” What does “original” mean here?",
+   "options": [
+    "first and old",
+    "right and good",
+    "big and strong",
+    "new and different"
+   ],
+   "answer": "D",
+   "help": "original 在这里是“独创的、新颖的”，哪个选项是这个意思？",
+   "explain": "Original means new and different. 这里的 original 是“独创的；新颖的”。",
+   "wrong_feedback": {
+    "A": "first and old 是“最初的、古老的”，不是“新颖的”。",
+    "B": "right and good 是“正确的、好的”，那是 sound 的意思。",
+    "C": "big and strong 是“又大又强壮”，和新意没关系。"
+   },
+   "audio_id": "u1r6-q26",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：这幅画是复制品，原作在卢浮宫",
+   "scene": "这幅画是复制品，原作在卢浮宫。",
+   "stem": "This painting is a copy, and the ___ is in the Louvre.",
+   "task": "只写空里的部分。",
+   "answer_text": "original",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "original"
+     ],
+     "olds": [
+      "origin"
+     ],
+     "cn": [
+      "原件"
+     ]
+    }
+   ],
+   "help": "“原作”，填哪个词？这里 original 作名词。",
+   "explain": "This painting is a copy, and the original is in the Louvre. 这幅画是复制品，原作在卢浮宫。",
+   "common_errors": [
+    {
+     "when": "写了 origin",
+     "say": "这里 original 作名词“原件”，origin 是“起源”，意思不对。"
+    },
+    {
+     "when": "写了 copy",
+     "say": "copy 是“复制品”；原作是 original。"
+    }
+   ],
+   "audio_id": "u1r6-q27",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：出生地怎么说",
+   "scene": "“出生地”用英语怎么说？",
+   "stem": "Which phrase means “出生地”?",
+   "options": [
+    "place of birth",
+    "year of birth",
+    "date of birth",
+    "at birth"
+   ],
+   "answer": "A",
+   "help": "place 是“地方”，哪个短语是“出生地”？",
+   "explain": "Place of birth means “出生地”。",
+   "wrong_feedback": {
+    "B": "year of birth 是“出生年份”，不是出生地。",
+    "C": "date of birth 是“出生日期”，不是出生地。",
+    "D": "at birth 是“出生时”，说的是时间，不是地点。"
+   },
+   "audio_id": "u1r6-q28",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：不够强壮，游不过河",
+   "scene": "这个人不够强壮，游不过那条河。",
+   "stem": "The man is so weak that he can't swim across the river. = The man is not ___ enough to swim across the river.",
+   "task": "只写空里的部分。",
+   "answer_text": "strong",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "strong"
+     ],
+     "olds": [
+      "weak"
+     ],
+     "cn": [
+      "强壮的"
+     ]
+    }
+   ],
+   "help": "not...enough to... 要用反义词：不够……而不能……。",
+   "explain": "The man is not strong enough to swim across the river. 这个人不够强壮，游不过那条河。",
+   "common_errors": [
+    {
+     "when": "写了 weak",
+     "say": "not...enough to... 要用反义词：not strong enough。"
+    },
+    {
+     "when": "写了 strongly",
+     "say": "enough 前面接形容词 strong，不用副词 strongly。"
+    }
+   ],
+   "audio_id": "u1r6-q29",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：离开前把灯完全关掉",
+   "scene": "离开之前把灯完全关掉。",
+   "stem": "Turn the lights ___ off before you leave.",
+   "task": "只写空里的部分。",
+   "answer_text": "completely",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "completely"
+     ],
+     "olds": [
+      "complete"
+     ],
+     "cn": [
+      "完全地"
+     ]
+    }
+   ],
+   "help": "修饰 off，要填形容词还是副词？",
+   "explain": "Turn the lights completely off before you leave. 离开之前把灯完全关掉。",
+   "common_errors": [
+    {
+     "when": "写了 complete",
+     "say": "修饰 off，要用副词 completely。"
+    },
+    {
+     "when": "写了 completly",
+     "say": "拼写注意：completely 是 complete + ly，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r6-q30",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：音乐听起来太吵了",
+   "scene": "音乐听起来太吵了，请把音量调低。",
+   "stem": "The music ___ too noisy. Please turn it down.",
+   "task": "只写空里的部分。",
+   "answer_text": "sounds",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "sounds"
+     ],
+     "olds": [
+      "sound"
+     ],
+     "cn": [
+      "听起来"
+     ]
+    }
+   ],
+   "help": "主语 music 是单数，动词“听起来”用什么形式？",
+   "explain": "The music sounds too noisy. 音乐听起来太吵了。",
+   "common_errors": [
+    {
+     "when": "写了 sound",
+     "say": "主语 music 是单数，动词用 sounds。"
+    },
+    {
+     "when": "写了 sounding",
+     "say": "这里是一般现在时，不用 sounding。"
+    }
+   ],
+   "audio_id": "u1r6-q31",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：听到他去世的消息很难过",
+   "scene": "听到他去世的消息，全国人民都很难过。",
+   "stem": "People were sad to hear about his ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "death",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "death"
+     ],
+     "olds": [
+      "die",
+      "dead"
+     ],
+     "cn": [
+      "死亡"
+     ]
+    }
+   ],
+   "help": "hear about his 后面要填什么词性的词？",
+   "explain": "People were sad to hear about his death. 听到他去世的消息，人们很难过。",
+   "common_errors": [
+    {
+     "when": "写了 die",
+     "say": "die 是动词；hear about his 后面要填名词 death。"
+    },
+    {
+     "when": "写了 dead",
+     "say": "dead 是形容词；这里要填名词 death。"
+    }
+   ],
+   "audio_id": "u1r6-q32",
+   "reading": "Leonardo da Vinci was born in Italy in 1452. The year of his birth was 1452, and the year of his death was 1519. He was a painter, an inventor, a musician, an engineer and a scientist. His most famous painting is the Mona Lisa. It is so famous that people all over the world know it. Our music teacher, Miss Lin, has a story too. Her original name was Lin Xiaohua. When she was young, she changed it to Lin Xiaoya. 'My original name was nice,' she says, 'but my new name sounds better.' She gives us sound advice about music. A sound idea is a good idea. It is right, and it works. Her advice is always sound, so we listen to her."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮：用 so...that... 写一句话",
+   "teach_html": "<p>用 so...that... 写一句话，三步就够：</p><p>先说“有多……”：<strong>so + 形容词</strong>，比如 so interesting、so tired。</p><p>再说结果：<strong>that + 从句</strong>，比如 that we all like it、that he cannot walk any more。</p><p>范文两句记下来：<strong>The book is so interesting that we all like it.</strong> / <strong>The music was so loud that we could not hear each other.</strong></p>",
+   "audio_id": "u1r6-t10"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪个 so...that... 句子是对的",
+   "scene": "下面哪个 so...that... 句子写对了？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "The music was such loud that we could not hear each other.",
+    "The music was so loudly that we could not hear each other.",
+    "The music was so loud that we could not hear each other.",
+    "The music was so loud so we could not hear each other."
+   ],
+   "answer": "C",
+   "help": "so 后面接形容词 loud，that 从句不能丢，哪个句子全写对了？",
+   "explain": "The music was so loud that we could not hear each other. so + 形容词 + that 从句。",
+   "wrong_feedback": {
+    "A": "such loud 不对，such 后面要加名词。",
+    "B": "so loudly 不对，so 后面接形容词 loud，不用副词 loudly。",
+    "D": "so loud so 不对，结果从句前面是 that，不是 so。"
+   },
+   "audio_id": "u1r6-q33"
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 so...that... 写一句话",
+   "scene": "用 so...that... 写一句话：这本书太有趣了，我们都喜欢它。",
+   "stem": "写一句话，用上 so...that...。",
+   "task": "写一整句话。",
+   "answer_text": "The book is so interesting that we all like it.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "so interesting that"
+     ],
+     "olds": [
+      "such interesting that"
+     ],
+     "cn": [
+      "如此有趣，以至于"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "we all like it"
+     ],
+     "olds": [
+      "we all likes it"
+     ],
+     "cn": [
+      "我们都喜欢它"
+     ]
+    }
+   ],
+   "help": "先想好整句话：so + 形容词 interesting，再说结果 that we all like it。",
+   "explain": "The book is so interesting that we all like it. 这本书如此有趣，我们都喜欢它。",
+   "common_errors": [
+    {
+     "when": "写了 such interesting that",
+     "say": "so + 形容词 + that：so interesting that；such 后面要加名词。"
+    },
+    {
+     "when": "只写了 so interesting，没有写 that 从句",
+     "say": "so...that... 要写完整：so interesting that we all like it。"
+    }
+   ],
+   "audio_id": "u1r6-q34"
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写作帮：用 so...that... 写一句话",
+   "scene": "用 so...that... 写一句话：他太累了，不能再走了。",
+   "stem": "写一句话，用上 so...that...。",
+   "task": "写一整句话。",
+   "answer_text": "He is so tired that he cannot walk any more.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "so tired that"
+     ],
+     "olds": [
+      "too tired to"
+     ],
+     "cn": [
+      "如此累，以至于"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "cannot walk"
+     ],
+     "olds": [
+      "can walk"
+     ],
+     "cn": [
+      "不能走"
+     ]
+    }
+   ],
+   "help": "先想好整句话：so + 形容词 tired，再说结果 that he cannot walk any more。",
+   "explain": "He is so tired that he cannot walk any more. 他太累了，不能再走了。",
+   "common_errors": [
+    {
+     "when": "写了 can walk",
+     "say": "结果是从句是否定的：cannot walk。"
+    },
+    {
+     "when": "写了 too tired to",
+     "say": "这道题练的是 so...that...：He is so tired that he cannot walk any more。"
+    }
+   ],
+   "audio_id": "u1r6-q35"
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：本课学了什么",
+   "scene": "这一课我们学了什么？",
+   "stem": "What did we learn in this lesson?",
+   "options": [
+    "be born and as",
+    "some...others..., so...that..., completely, original, birth and sound",
+    "the look family",
+    "some and any"
+   ],
+   "answer": "B",
+   "help": "回想一下本课的六个新点。",
+   "explain": "We learnt some...others..., so...that..., completely, original, birth and sound. 这一课讲 some...others...、so...that...、completely、original、birth、sound。",
+   "wrong_feedback": {
+    "A": "be born 和 as 是上一课的内容。",
+    "C": "look 家族是 u1r4 的内容。",
+    "D": "some 和 any 是 Section 2 的语法，下一节才讲。"
+   },
+   "audio_id": "u1r6-q36"
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：它们十分聪明",
+   "scene": "它们十分聪明，以至于能够被训练来理解一些人类语言。",
+   "stem": "They are ___ smart ___ they can be trained to understand some human language.",
+   "task": "只写空里的部分。",
+   "answer_text": "so smart that",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "so smart that"
+     ],
+     "olds": [
+      "such smart that"
+     ],
+     "cn": [
+      "如此聪明，以至于"
+     ]
+    }
+   ],
+   "help": "so + 形容词 + that，三个词都要填。",
+   "explain": "They are so smart that they can be trained to understand some human language. 它们十分聪明，以至于能够被训练来理解一些人类语言。",
+   "common_errors": [
+    {
+     "when": "写了 such smart that",
+     "say": "so + 形容词 + that：so smart that。"
+    },
+    {
+     "when": "只写了 so smart",
+     "say": "so...that... 要写完整，后面还要有 that 从句。"
+    }
+   ],
+   "audio_id": "u1r6-q37"
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>本课收官：<strong>some...others...</strong> 一些……另一些……，<strong>some...the others...</strong> 一些……其余的……；<strong>so...that...</strong> 如此……以至于……，可以换成 too...to... 和 not...enough to...；<strong>completely</strong> 完全地；<strong>original</strong> 原来的（还有“独创的”“原件”）；<strong>birth</strong> 出生（year of birth）；<strong>sound</strong> 合理的、正确的。</p><p>下一课是 Section 1 综合练：把达·芬奇和恐龙的故事放在一起考一考。站长先卖个关子。</p>",
+   "audio_id": "u1r6-ending"
+  }
+ ],
+ "title": "句式精讲：有些……如此……",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
