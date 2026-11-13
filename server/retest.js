@@ -321,7 +321,7 @@ function selectQuickDrillReviewItems(need, excludeIds) {
       SELECT i.item_id, MAX(a.created_at) AS last_at
       FROM items i JOIN attempts a ON a.item_id = i.item_id
       WHERE i.kind IN ('mcq', 'short')
-      AND i.lesson_id GLOB 'u[2-8]r[0-9]'
+      AND (i.lesson_id GLOB 'u[1-8]r[0-9]' OR i.lesson_id GLOB 'u[1-8]r[0-9][0-9]')
       AND i.item_id NOT IN (SELECT item_id FROM retest_queue WHERE status = 'pending')
       AND NOT EXISTS (
         SELECT 1 FROM attempts b WHERE b.item_id = i.item_id
