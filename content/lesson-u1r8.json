@@ -1,0 +1,1302 @@
+{
+ "lesson_id": "u1r8",
+ "practice_end": 27,
+ "home_subtitle": "Section 2 语法上 · some 和 any",
+ "part1_desc": "第 1–27 步：教材帮讲 some/any 四条规则（肯定 some、否定疑问 any、期待 Yes 用 some、“任何” any），翻译帮读查恐龙对话，练习帮做题过关。",
+ "part2_desc": "第 28–50 步：读去图书馆借书短文独立验证，44 步四条规则一张表，课尾小结。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：some/any 四条规则（肯定句 some、否定句和疑问句 any、期望肯定回答的疑问句 some、any 表“任何一个”进肯定句）、some...others...、肯定句变否定句/疑问句时 some→any。Unit 1 Look it up! 主题，核心词 some/any，短语 sound proof。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新课：Section 2 语法上 some 和 any",
+   "teach_html": "<p>广播站站长苏文今天要采访一位恐龙专家：苏文问，专家答。采访里 <strong>some</strong> 和 <strong>any</strong> 到处都是。</p><p>some 和 any 都是“一些”的意思，但用的地方不一样。今天学四条规则，分清它们。</p>",
+   "audio_id": "u1r8-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some 和 any 是什么",
+   "teach_html": "<p>some 和 any 是<strong>限定词</strong>，放在名词前面说数量；也可以作<strong>不定代词</strong>，代替人或东西。</p><p><strong>some</strong> 一些：some questions 一些问题；some books 一些书。</p><p><strong>any</strong> 一些；任何一个：any questions 一些问题；any box 任何一个盒子。</p><p>它们后面可以跟可数名词复数，也可以跟不可数名词：some rice 一些米饭；any money 一些钱。</p>",
+   "audio_id": "u1r8-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：规则 1 肯定句用 some",
+   "teach_html": "<p><strong>规则 1：肯定句用 some。</strong></p><p>I have some questions. 我有一些问题。</p><p>There are some books in my bag. 我的包里有一些书。</p><p>Some scientists think the world became too cold. 一些科学家认为世界变得太冷了。</p><p>记住：句子是肯定的，就用 some。</p>",
+   "audio_id": "u1r8-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：规则 2 否定句和疑问句用 any",
+   "teach_html": "<p><strong>规则 2：否定句和疑问句用 any。</strong></p><p>I don't have any money. 我没有钱。</p><p>Do you have any questions? 你有什么问题吗？</p><p>There aren't any fossils here. 这里没有任何化石。</p><p>记住：句子里有 not、n't，或者是个问句，就用 any。</p>",
+   "audio_id": "u1r8-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：规则 3 期待肯定回答用 some",
+   "teach_html": "<p><strong>规则 3：希望对方说 Yes 的疑问句，用 some。</strong></p><p>Would you like some tea? 你想来点茶吗？（希望对方说好。）</p><p>Can I ask you some questions? 我能问你一些问题吗？（希望对方答应。）</p><p>Can I have some milk, Mum? 妈妈，我能喝点牛奶吗？（希望妈妈答应。）</p><p>记住：问句是请求、邀请，希望对方答应，就用 some。</p>",
+   "audio_id": "u1r8-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：规则 4 any 表“任何一个”",
+   "teach_html": "<p><strong>规则 4：any 表“任何一个”时，可以用在肯定句。</strong></p><p>You can take any box on the table. 桌上的任何一个盒子你都可以拿。</p><p>You can read any book on that shelf. 那个书架上的任何一本书你都可以读。</p><p>记住：any 在这里不是“一些”，是“任何一个”，意思变了，用法也变了。</p>",
+   "audio_id": "u1r8-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some... others... 与 some 作代词",
+   "teach_html": "<p><strong>some... the others...</strong> 一些……其余的……：There are many people in the room. Some are singing and the others are dancing. 房间里有很多人。一些在唱歌，其余的在跳舞。</p><p>some 还可以<strong>单独作代词</strong>，不跟名词：Some think the world became too cold. 一些人认为世界变得太冷了。</p>",
+   "audio_id": "u1r8-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮：肯定句变否定句、疑问句",
+   "teach_html": "<p>肯定句变否定句或疑问句，some 一般要变成 any：</p><p>I have some books. → I don't have any books. / Do you have any books?</p><p>There is some orange juice. → There isn't any orange juice. / Is there any orange juice?</p><p>记住：变句先变 some，再变动词：have → don't have，is → isn't。</p>",
+   "audio_id": "u1r8-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：易错三点",
+   "teach_html": "<p>易错 1：否定句里别用 some：不说 I don't have some money，要说 I don't have any money。</p><p>易错 2：一般疑问句别乱用 some：Do you have any questions? 除非你是请求、希望对方答应。</p><p>易错 3：any 表“任何一个”才能进肯定句：You can take any box. 别把“我有一些书”写成 I have any books。</p>",
+   "audio_id": "u1r8-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——在百科全书里查恐龙",
+   "teach_html": "<p>下面是一段自编对话：苏文和林涛在百科全书里查恐龙。读两遍，把所有的 some 和 any 圈出来，想想每处为什么用它。</p><p>注意看：Can I ask you some questions? 是请求，所以用 some；Do you have any books? 是一般疑问句，所以用 any。</p>",
+   "audio_id": "u1r8-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：问一些问题",
+   "scene": "苏文想问林涛一些关于恐龙的问题。",
+   "stem": "Can I ask you ___ questions about dinosaurs?",
+   "options": [
+    "any",
+    "no",
+    "none",
+    "some"
+   ],
+   "answer": "D",
+   "help": "这是请求，希望对方答应，疑问句里用什么？",
+   "explain": "Can I ask you some questions? 这是请求、希望对方答应，所以疑问句里用 some。",
+   "wrong_feedback": {
+    "A": "any 用在一般疑问句里；这是请求、希望对方答应，用 some。",
+    "B": "no 是“没有”，放在这里意思不对。",
+    "C": "none 是“没有一个”，放在这里意思不对。"
+   },
+   "audio_id": "u1r8-q01",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：你有关于恐龙的书吗",
+   "scene": "苏文问林涛有没有关于恐龙的书。",
+   "stem": "Do you have ___ books about dinosaurs?",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，不是否定句也不是请求，填哪个词？",
+   "explain": "Do you have any books about dinosaurs? 你有关于恐龙的书吗？一般疑问句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是一般疑问句，不是请求；按规则 2，疑问句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q02",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：我没有时间喝茶",
+   "scene": "苏文说她没有时间喝茶。",
+   "stem": "I don't have ___ time for tea.",
+   "options": [
+    "any",
+    "some",
+    "a",
+    "the"
+   ],
+   "answer": "A",
+   "help": "句子里有 don't，是肯定句还是否定句？",
+   "explain": "I don't have any time. 否定句用 any。",
+   "wrong_feedback": {
+    "B": "some 用在肯定句里；这里是否定句，要用 any。",
+    "C": "a time 在这里意思不对，time 是不可数名词。",
+    "D": "the time 是“那个时间”，意思不对。"
+   },
+   "audio_id": "u1r8-q03",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我需要一些资料",
+   "scene": "苏文说她需要一些做课题的资料。",
+   "stem": "I need ___ facts for my project.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "I need some facts for my project. 我需要一些做课题的资料。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q04",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：想来点茶吗",
+   "scene": "林涛问苏文想不想来点茶。",
+   "stem": "Would you like ___ tea?",
+   "options": [
+    "any",
+    "no",
+    "some",
+    "many"
+   ],
+   "answer": "C",
+   "help": "Would you like...? 是邀请，希望对方说 Yes，用哪个词？",
+   "explain": "Would you like some tea? 邀请、希望对方答应用 some。",
+   "wrong_feedback": {
+    "A": "any 用在一般疑问句里；这是邀请、希望对方答应，用 some。",
+    "B": "no 是“没有”，放在这里意思不对。",
+    "D": "many 后面跟可数名词复数，tea 是不可数名词，不能用 many。"
+   },
+   "audio_id": "u1r8-q05",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：书里有一些恐龙图片",
+   "scene": "书里有一些恐龙的图片。",
+   "stem": "There are ___ pictures of dinosaurs in this book.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "There are some pictures of dinosaurs in this book. 书里有一些恐龙的图片。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q06",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：图书馆里有化石吗",
+   "scene": "苏文问学校图书馆里有没有化石。",
+   "stem": "Are there ___ fossils in our school library?",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "the"
+   ],
+   "answer": "B",
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Are there any fossils? 一般疑问句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句或希望对方答应的请求里；这是一般疑问句，用 any。",
+    "C": "a fossils 不对，a 后面跟单数名词，fossils 是复数。",
+    "D": "the fossils 是“那些化石”，意思不对。"
+   },
+   "audio_id": "u1r8-q07",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：那里没有任何化石",
+   "scene": "林涛说那里没有任何化石。",
+   "stem": "There aren't ___ fossils there.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 aren't，是肯定句还是否定句？",
+   "explain": "There aren't any fossils there. 那里没有任何化石。否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q08",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：任何一个盒子都可以拿",
+   "scene": "桌上的任何一个盒子你都可以拿。",
+   "stem": "You can take ___ box on the table.",
+   "options": [
+    "some",
+    "a",
+    "the",
+    "any"
+   ],
+   "answer": "D",
+   "help": "这里的空是“任何一个”的意思，用哪个词？",
+   "explain": "You can take any box. any 在这里是“任何一个”，可以用在肯定句里。",
+   "wrong_feedback": {
+    "A": "some 是“一些”，不能说“拿一些盒子”表示任何一个。",
+    "B": "a box 是“一个盒子”，没有“任何一个”的意思。",
+    "C": "the box 是“那个盒子”，没有“任何一个”的意思。"
+   },
+   "audio_id": "u1r8-q09",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：我能借一些模型吗",
+   "scene": "苏文问能不能借一些恐龙模型。",
+   "stem": "Can I borrow ___ models?",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是请求，希望对方答应，填哪个词？",
+   "explain": "Can I borrow some models? 这是请求、希望对方答应，所以用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是请求、希望对方答应，按规则 3，疑问句里用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q10",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：没有任何可靠的证据",
+   "scene": "邢博士说目前还没有任何可靠的证据证明他的理论。",
+   "stem": "I have my own theory, but there isn't ___ sound proof for it yet.",
+   "options": [
+    "some",
+    "a",
+    "any",
+    "many"
+   ],
+   "answer": "C",
+   "help": "句子里有 isn't，是肯定句还是否定句？",
+   "explain": "There isn't any sound proof. 否定句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句里；这里是否定句，要用 any。",
+    "B": "a sound proof 不对，proof 是不可数名词。",
+    "D": "many 后面跟可数名词复数，proof 是不可数名词，不能用 many。"
+   },
+   "audio_id": "u1r8-q11",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：还需要找更多化石",
+   "scene": "我们仍然需要找到更多的化石。",
+   "stem": "We still need to find ___ more fossils.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "We still need to find some more fossils. 我们仍然需要找到更多的化石。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q12",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：需要帮忙吗",
+   "scene": "林涛问苏文需不需要帮忙。",
+   "stem": "Do you need ___ help?",
+   "options": [
+    "any",
+    "some",
+    "a",
+    "the"
+   ],
+   "answer": "A",
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Do you need any help? 一般疑问句用 any。",
+   "wrong_feedback": {
+    "B": "some 用在肯定句或希望对方答应的请求里；这是一般疑问句，用 any。",
+    "C": "a help 不对，help 在这里是不可数名词。",
+    "D": "the help 是“那个帮助”，意思不对。"
+   },
+   "audio_id": "u1r8-q13",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：图书馆里有一些模型",
+   "scene": "图书馆里有一些恐龙模型。",
+   "stem": "There are ___ models of dinosaurs in the library.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "There are some models of dinosaurs in the library. 图书馆里有一些恐龙模型。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q14",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：哪句是对的",
+   "scene": "下面哪句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "I don't have some money.",
+    "I don't have any money.",
+    "I have any books.",
+    "There isn't some water."
+   ],
+   "answer": "B",
+   "help": "否定句用 any，肯定句用 some，哪句符合？",
+   "explain": "I don't have any money. 否定句用 any，是对的。",
+   "wrong_feedback": {
+    "A": "否定句里不能用 some，要说 I don't have any money。",
+    "C": "肯定句里不能用 any（“任何一个”除外），要说 I have some books。",
+    "D": "否定句里不能用 some，要说 There isn't any water。"
+   },
+   "audio_id": "u1r8-q15",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：一些科学家认为",
+   "scene": "一些科学家认为世界对恐龙来说变得太冷了。",
+   "stem": "___ scientists think the world became too cold for dinosaurs.",
+   "task": "只写空里的部分。",
+   "answer_text": "Some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "句首的“一些科学家”，填哪个词？",
+   "explain": "Some scientists think the world became too cold. 一些科学家认为世界变得太冷了。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 Any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q16",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：没有任何可靠的证据",
+   "scene": "目前还没有任何可靠的证据证明它。",
+   "stem": "There isn't ___ sound proof for it yet.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 isn't，填哪个词？",
+   "explain": "There isn't any sound proof for it yet. 目前还没有任何可靠的证据证明它。否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q17",
+   "reading": "Su Wen: Hi, Lin Tao! Can I ask you some questions about dinosaurs?\nLin Tao: Of course! What do you want to know?\nSu Wen: Do you have any books about dinosaurs?\nLin Tao: Yes, I have some books in my bag. Would you like some tea first?\nSu Wen: No, thank you. I don't have any time for tea. I need some facts for my project.\nLin Tao: Look, there are some pictures of dinosaurs in this book. Do you need any help?\nSu Wen: Yes. Are there any fossils in our school library?\nLin Tao: I don't think so. There aren't any fossils there, but there are some models of dinosaurs.\nSu Wen: Great! Can I borrow some models?\nLin Tao: Sorry, you can't take any models home. But you can look at any model here."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——去图书馆借书",
+   "teach_html": "<p>第二段短文讲去图书馆借书。读两遍，记住：他想借什么书？哪本书图书馆没有？管理员让他读哪个书架上的书？</p><p>注意看：I want to borrow some books 是肯定句；Do you want any books? 是一般疑问句；You can read any book 是“任何一本”。</p>",
+   "audio_id": "u1r8-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：想借一些恐龙书",
+   "scene": "他想借一些关于恐龙的书。",
+   "stem": "I want to borrow ___ books about dinosaurs.",
+   "options": [
+    "any",
+    "no",
+    "much",
+    "some"
+   ],
+   "answer": "D",
+   "help": "这是肯定句，填哪个词？",
+   "explain": "I want to borrow some books. 肯定句用 some。",
+   "wrong_feedback": {
+    "A": "any 用在否定句和疑问句里；这是肯定句，用 some。",
+    "B": "no 是“没有”，放在这里意思不对。",
+    "C": "much 后面跟不可数名词，books 是可数名词复数，不能用 much。"
+   },
+   "audio_id": "u1r8-q18",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：你还想要动物的书吗",
+   "scene": "管理员问他还想不想要关于动物的书。",
+   "stem": "Do you want ___ books about animals, too?",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Do you want any books about animals? 一般疑问句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是一般疑问句，不是请求；按规则 2，疑问句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q19",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：我想要一些鸟类的书",
+   "scene": "他说他想要一些关于鸟类的书。",
+   "stem": "I want ___ books about birds.",
+   "options": [
+    "some",
+    "any",
+    "no",
+    "a"
+   ],
+   "answer": "A",
+   "help": "这是肯定句，填哪个词？",
+   "explain": "I want some books about birds. 肯定句用 some。",
+   "wrong_feedback": {
+    "B": "any 用在否定句和疑问句里；这是肯定句，用 some。",
+    "C": "no 是“没有”，放在这里意思不对。",
+    "D": "a books 不对，a 后面跟单数名词，books 是复数。"
+   },
+   "audio_id": "u1r8-q20",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：找不到任何霸王龙的书",
+   "scene": "他在书架上找不到任何关于霸王龙的书。",
+   "stem": "I can't find ___ books about the T-Rex.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 can't，填哪个词？",
+   "explain": "I can't find any books about the T-Rex. 否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q21",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：这里没有任何霸王龙的书",
+   "scene": "管理员说这里没有任何关于霸王龙的书。",
+   "stem": "There aren't ___ books about the T-Rex here.",
+   "options": [
+    "some",
+    "the",
+    "any",
+    "one"
+   ],
+   "answer": "C",
+   "help": "句子里有 aren't，填哪个词？",
+   "explain": "There aren't any books about the T-Rex here. 否定句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句里；这里是否定句，要用 any。",
+    "B": "the books 是“那些书”，意思不对。",
+    "D": "one books 不对，one 后面跟单数名词，books 是复数。"
+   },
+   "audio_id": "u1r8-q22",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：那个书架上的任何一本书",
+   "scene": "管理员说那个书架上的任何一本书他都可以读。",
+   "stem": "You can read ___ book on that shelf.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何一本"
+     ]
+    }
+   ],
+   "help": "这里的空是“任何一本”的意思，用哪个词？",
+   "explain": "You can read any book on that shelf. any 在这里是“任何一个”，可以用在肯定句里。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这里是“任何一本”的意思，要用 any，不是用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q23",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：今晚没有任何作业",
+   "scene": "他今晚没有任何作业。",
+   "stem": "I don't have ___ homework tonight.",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "many"
+   ],
+   "answer": "B",
+   "help": "句子里有 don't，填哪个词？",
+   "explain": "I don't have any homework tonight. 否定句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句里；这里是否定句，要用 any。",
+    "C": "a homework 不对，homework 是不可数名词。",
+    "D": "many 后面跟可数名词复数，homework 是不可数名词，不能用 many。"
+   },
+   "audio_id": "u1r8-q24",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：找到一些有趣的书",
+   "scene": "他找到了一些关于鸟类的有趣的书。",
+   "stem": "I find ___ interesting books about birds.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "I find some interesting books about birds. 肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是肯定句，按规则 1，肯定句用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q25",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：想来点米饭吗",
+   "scene": "你想来点米饭吗？（希望对方说好。）",
+   "stem": "Would you like ___ rice?",
+   "options": [
+    "some",
+    "any",
+    "no",
+    "many"
+   ],
+   "answer": "A",
+   "help": "Would you like...? 是邀请，希望对方说 Yes，用哪个词？",
+   "explain": "Would you like some rice? 邀请、希望对方答应用 some。",
+   "wrong_feedback": {
+    "B": "any 用在一般疑问句里；这是邀请、希望对方答应，用 some。",
+    "C": "no 是“没有”，放在这里意思不对。",
+    "D": "many 后面跟可数名词复数，rice 是不可数名词，不能用 many。"
+   },
+   "audio_id": "u1r8-q26",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：家里没有任何糖果",
+   "scene": "妈妈说家里现在没有任何糖果。",
+   "stem": "Sorry, I don't have ___ sweets at home now.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 don't，填哪个词？",
+   "explain": "Sorry, I don't have any sweets at home now. 否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q27",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪个 any 是“任何一个”",
+   "scene": "下面哪句里的 any 是“任何一个”的意思？",
+   "stem": "Which sentence uses “any” to mean “any one”?",
+   "options": [
+    "I don't have any pens.",
+    "Do you have any pens?",
+    "I have some pens.",
+    "You can take any pen."
+   ],
+   "answer": "D",
+   "help": "前三句里的 any 都是“一些”，哪句的 any 是“任何一个”？",
+   "explain": "You can take any pen. 这里的 any 是“任何一个”，所以可以用在肯定句里。",
+   "wrong_feedback": {
+    "A": "I don't have any pens. 这里的 any 是“一些”，在否定句里。",
+    "B": "Do you have any pens? 这里的 any 是“一些”，在疑问句里。",
+    "C": "这句里没有 any，用的是 some。"
+   },
+   "audio_id": "u1r8-q28",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：我能喝点牛奶吗",
+   "scene": "孩子问妈妈能不能喝点牛奶。（希望妈妈答应。）",
+   "stem": "Can I have ___ milk, Mum?",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是请求，希望对方答应，填哪个词？",
+   "explain": "Can I have some milk, Mum? 请求、希望对方答应用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是请求、希望对方答应，按规则 3，疑问句里用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q29",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 some 写一句",
+   "scene": "用 some 写一句：我有一些关于恐龙的问题。",
+   "stem": "I have ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "some questions about dinosaurs",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "questions"
+     ],
+     "olds": [
+      "question"
+     ],
+     "cn": [
+      "问题"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "dinosaurs"
+     ],
+     "olds": [
+      "dinosaur"
+     ],
+     "cn": [
+      "恐龙"
+     ]
+    }
+   ],
+   "help": "“我有一些关于恐龙的问题”，some 后面跟什么？",
+   "explain": "I have some questions about dinosaurs. 我有一些关于恐龙的问题。肯定句用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any questions",
+     "say": "这是肯定句，按规则 1，肯定句用 some，不用 any。"
+    },
+    {
+     "when": "写了 some question",
+     "say": "questions 是复数，别丢了 s。"
+    }
+   ],
+   "audio_id": "u1r8-q30",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 any 写一句",
+   "scene": "用 any 写一句：我没有任何钱。",
+   "stem": "I don't have ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "any money",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "money"
+     ],
+     "olds": [
+      "moneys"
+     ],
+     "cn": [
+      "钱"
+     ]
+    }
+   ],
+   "help": "“我没有任何钱”，否定句里填哪个词？",
+   "explain": "I don't have any money. 我没有任何钱。否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some money",
+     "say": "这是否定句，按规则 2，否定句用 any，不用 some。"
+    },
+    {
+     "when": "写了 any moneys",
+     "say": "money 是不可数名词，没有复数形式。"
+    }
+   ],
+   "audio_id": "u1r8-q31",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 any 写一句",
+   "scene": "用 any 写一句：桌上的任何一个盒子你都可以拿。",
+   "stem": "You can take ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "any box on the table",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何一个"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "box"
+     ],
+     "olds": [
+      "boxs"
+     ],
+     "cn": [
+      "盒子"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "table"
+     ],
+     "olds": [
+      "tables"
+     ],
+     "cn": [
+      "桌子"
+     ]
+    }
+   ],
+   "help": "“任何一个盒子”，any 后面跟单数名词，填什么？",
+   "explain": "You can take any box on the table. 桌上的任何一个盒子你都可以拿。",
+   "common_errors": [
+    {
+     "when": "写了 some box",
+     "say": "这里是“任何一个”的意思，要用 any，不是用 some。"
+    },
+    {
+     "when": "写了 any boxes",
+     "say": "any 表“任何一个”时，后面跟单数名词 box。"
+    }
+   ],
+   "audio_id": "u1r8-q32",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "教材帮：some / any 四条规则一张表",
+   "teach_html": "<p>some / any 四条规则，记一张表：</p><p><strong>规则 1</strong>：肯定句用 some。I have some books.</p><p><strong>规则 2</strong>：否定句和疑问句用 any。I don't have any books. / Do you have any books?</p><p><strong>规则 3</strong>：希望对方说 Yes 的疑问句用 some。Would you like some tea?</p><p><strong>规则 4</strong>：any 表“任何一个”可用在肯定句。You can take any box.</p><p>口诀：<strong>肯定 some，否定疑问 any；想要 Yes 用 some；“任何” any 也进肯定句。</strong></p>",
+   "audio_id": "u1r8-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：综合选句",
+   "scene": "下面哪句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "I have any friends.",
+    "I have some friends.",
+    "She doesn't have some pens.",
+    "There are any books."
+   ],
+   "answer": "B",
+   "help": "肯定句用 some，否定句用 any，哪句符合？",
+   "explain": "I have some friends. 肯定句用 some，是对的。",
+   "wrong_feedback": {
+    "A": "肯定句里不能用 any（“任何一个”除外），要说 I have some friends。",
+    "C": "否定句里不能用 some，要说 She doesn't have any pens。",
+    "D": "肯定句里不能用 any，要说 There are some books。"
+   },
+   "audio_id": "u1r8-q33",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：想喝点果汁吗",
+   "scene": "你想喝点果汁吗，爱丽丝？——好的，我很想喝。",
+   "stem": "—Would you like ___ juice, Alice? —Yes, I'd love to.",
+   "task": "只写空里的部分。",
+   "answer_text": "some",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "some"
+     ],
+     "olds": [
+      "any"
+     ],
+     "cn": [
+      "一些"
+     ]
+    }
+   ],
+   "help": "这是邀请，对方回答 Yes，希望对方答应，填哪个词？",
+   "explain": "Would you like some juice? 邀请、希望对方答应用 some。",
+   "common_errors": [
+    {
+     "when": "写了 any",
+     "say": "这是邀请、希望对方答应，按规则 3，疑问句里用 some。"
+    }
+   ],
+   "audio_id": "u1r8-q34",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：玻璃杯里没有任何果汁",
+   "scene": "玻璃杯里没有任何果汁，空了。",
+   "stem": "I can't find ___ in the glass. It's empty.",
+   "options": [
+    "some juice",
+    "many juice",
+    "any juice",
+    "the juice"
+   ],
+   "answer": "C",
+   "help": "句子里有 can't，填哪个词？",
+   "explain": "I can't find any juice in the glass. 否定句用 any。",
+   "wrong_feedback": {
+    "A": "some 用在肯定句里；这里是否定句，要用 any。",
+    "B": "many juice 不对，many 后面跟可数名词复数，juice 是不可数名词。",
+    "D": "the juice 是“那个果汁”，意思不对。"
+   },
+   "audio_id": "u1r8-q35",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：瓶里没有任何橙汁",
+   "scene": "瓶里没有任何橙汁了。",
+   "stem": "There is not ___ orange juice in the bottle.",
+   "task": "只写空里的部分。",
+   "answer_text": "any",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "any"
+     ],
+     "olds": [
+      "some"
+     ],
+     "cn": [
+      "任何"
+     ]
+    }
+   ],
+   "help": "句子里有 not，填哪个词？",
+   "explain": "There is not any orange juice in the bottle. 瓶里没有任何橙汁了。否定句用 any。",
+   "common_errors": [
+    {
+     "when": "写了 some",
+     "say": "这是否定句，按规则 2，否定句用 any。"
+    }
+   ],
+   "audio_id": "u1r8-q36",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：任何一本书都能帮你",
+   "scene": "任何一本书都能帮你了解恐龙。",
+   "stem": "___ book can help you learn about dinosaurs.",
+   "options": [
+    "Any",
+    "Some",
+    "No",
+    "A"
+   ],
+   "answer": "A",
+   "help": "“任何一本书”，用哪个词开头？",
+   "explain": "Any book can help you. any 表“任何一个”，可以用在肯定句里。",
+   "wrong_feedback": {
+    "B": "Some book 在这里意思不对，some 是“一些”，后面一般跟复数或不可数名词。",
+    "C": "No book 是“没有一本书”，意思正好反了。",
+    "D": "A book 是“一本书”，没有“任何一本”的意思。"
+   },
+   "audio_id": "u1r8-q37",
+   "reading": "Today I go to the school library. I want to borrow some books about dinosaurs. The librarian asks, “Do you want any books about animals, too?” I say, “Yes, I want some books about birds.” I look for books on the shelf, but I can't find any books about the T-Rex. The librarian says, “Sorry, there aren't any books about the T-Rex here. But you can read any book on that shelf.” I find some interesting books about birds and take them home. I don't have any homework tonight, so I can read them all."
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "小结：some 和 any",
+   "teach_html": "<p>今天学了 some / any 四条规则：</p><p><strong>肯定 some，否定疑问 any；想要 Yes 用 some；“任何” any 也进肯定句。</strong></p><p>下节课学复合不定代词：somebody、anybody、nobody、everybody，还有 something、anything、nothing、everything。</p>",
+   "audio_id": "u1r8-t10"
+  }
+ ],
+ "title": "Section 2 语法上：some 和 any",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
