@@ -1,0 +1,1229 @@
+{
+ "lesson_id": "u1r9",
+ "practice_end": 27,
+ "home_subtitle": "Section 2 语法下 · 复合不定代词",
+ "part1_desc": "第 1–27 步：教材帮讲复合不定代词构成、分类表、作主语单数、后置定语、部分否定，翻译帮读找笔记本对话，练习帮做题过关。",
+ "part2_desc": "第 28–50 步：读学校的一天短文独立验证，44 步复合不定代词小结表，课尾小结。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：复合不定代词构成（some/any/no/every + -body/-one/-thing）、分类、作主语动词单数、后置定语（something special/anything to buy/somebody else）、部分否定（not everyone ≠ nobody）、nothing/nobody/no one 不再加 not。Unit 1 Look it up! 主题，核心词 somebody/anybody/nobody/everybody/something/anything/nothing/everything/someone/anyone/no one/everyone。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "新课：Section 2 语法下 复合不定代词",
+   "teach_html": "<p>广播站站长苏文今天在图书馆找东西：笔记本丢了，书架里有什么？有人看见了吗？</p><p>找东西要用到一串新词：<strong>somebody、anybody、nobody、everybody</strong>，还有 <strong>something、anything、nothing、everything</strong>。它们叫复合不定代词。</p>",
+   "audio_id": "u1r9-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词怎么构成",
+   "teach_html": "<p>复合不定代词 = <strong>some / any / no / every</strong> + <strong>-body / -one / -thing</strong>：</p><p><strong>-body、-one</strong> 指人：somebody 某人；someone 某人。</p><p><strong>-thing</strong> 指东西、事情：something 某事；anything 任何东西。</p><p>记住口诀：<strong>人用 -body / -one，物用 -thing</strong>。</p>",
+   "audio_id": "u1r9-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词分类表",
+   "teach_html": "<p>四列三行，记住这张表：</p><p><strong>some- 类</strong>：somebody / someone 某人；something 某事。</p><p><strong>any- 类</strong>：anybody / anyone 任何人；anything 任何东西。</p><p><strong>no- 类</strong>：nobody / no one 没有人；nothing 没有什么。</p><p><strong>every- 类</strong>：everybody / everyone 每人；everything 每件事、一切。</p>",
+   "audio_id": "u1r9-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：作主语动词用单数",
+   "teach_html": "<p><strong>复合不定代词作主语，动词用单数。</strong></p><p>Somebody is waiting for you. 有人在等你。（is，不是 are。）</p><p>Nobody knows his name. 没有人知道他的名字。（knows，不是 know。）</p><p>Everything is ready. 一切都准备好了。（is，不是 are。）</p><p>记住：词里带着 every、some、any、no，看着像很多人、很多东西，动词还是用单数。</p>",
+   "audio_id": "u1r9-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：后置定语",
+   "teach_html": "<p><strong>形容词和不定式要放在复合不定代词后面。</strong></p><p>something special 特别的东西；anything to buy 要买的东西；somebody else 别人。</p><p>不说 special something，要说 something special；不说 to buy anything，要说 anything to buy。</p><p>记住：修饰复合不定代词的词，一律放后面。</p>",
+   "audio_id": "u1r9-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：部分否定",
+   "teach_html": "<p><strong>部分否定：not everyone ≠ nobody。</strong></p><p>Not everybody likes sport. 不是每个人都喜欢运动。（有人喜欢，有人不喜欢。）</p><p>Nobody likes sport. 没有人喜欢运动。（一个人都不喜欢。）</p><p>Not everything is true. 不是每件事都是真的。Nothing is true. 没有一件事是真的。</p><p>记住：not + every- 是“不是所有”，no- 是“一个都没有”，意思差很多。</p>",
+   "audio_id": "u1r9-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：nothing / nobody 不再加 not",
+   "teach_html": "<p><strong>nothing、nobody、no one 本身就是否定的，别再加 not。</strong></p><p>Nothing is in the bag. 包里什么都没有。（不说 Nothing isn't...）</p><p>Nobody knows. 没有人知道。（不说 Nobody doesn't know.）</p><p>记住：一个句子里，一个否定就够了。</p>",
+   "audio_id": "u1r9-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：some- 类和 any- 类分工",
+   "teach_html": "<p>分工和 some / any 一样：</p><p><strong>肯定句多用 some- 类</strong>：There is something in the bookcase. 书架里有东西。</p><p><strong>否定句和疑问句多用 any- 类</strong>：Is there anything in the bookcase? 书架里有什么吗？I don't see anything. 我什么也没看见。</p><p><strong>希望对方说 Yes 的疑问句用 some- 类</strong>：Would you like something to eat? 你想吃点东西吗？</p>",
+   "audio_id": "u1r9-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮：somebody = someone",
+   "teach_html": "<p>最后记两个等式：<strong>somebody = someone</strong>；<strong>everybody = everyone</strong>。意思一样，哪个顺手用哪个。</p><p>口诀收一遍：<strong>人 -body / -one，物 -thing；主语单数、定语后置、not every 不是 nobody</strong>。</p>",
+   "audio_id": "u1r9-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——笔记本丢了",
+   "teach_html": "<p>下面是一段自编对话：小梅的笔记本丢了，林涛帮她找。读两遍，把所有的复合不定代词圈出来，想想每处为什么用它。</p><p>注意看：Is there anything...? 是疑问句，用 any- 类；There is something... 是肯定句，用 some- 类；Nobody has seen it. 本身就是否定，不再加 not。</p>",
+   "audio_id": "u1r9-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：书架里有什么吗",
+   "scene": "小梅问书架里有什么东西吗。",
+   "stem": "Is there ___ in the bookcase?",
+   "options": [
+    "anything",
+    "something",
+    "nothing",
+    "everything"
+   ],
+   "answer": "A",
+   "help": "这是疑问句，问“有什么东西吗”，填哪个词？",
+   "explain": "Is there anything in the bookcase? 疑问句用 any- 类：anything。",
+   "wrong_feedback": {
+    "B": "something 用在肯定句里；这是疑问句，用 anything。",
+    "C": "nothing 是“没有什么”，放在疑问句里意思不对。",
+    "D": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r9-q01",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：书架里有东西",
+   "scene": "林涛说书架里有东西。",
+   "stem": "There is ___ in the bookcase.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某物"
+     ]
+    }
+   ],
+   "help": "这是肯定句，填哪个词？",
+   "explain": "There is something in the bookcase. 书架里有东西。肯定句用 some- 类。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something。"
+    }
+   ],
+   "audio_id": "u1r9-q02",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：有人看见我的笔记本吗",
+   "scene": "小梅问有没有人看见她的笔记本。",
+   "stem": "Has ___ seen my notebook?",
+   "options": [
+    "somebody",
+    "nobody",
+    "anybody",
+    "everybody"
+   ],
+   "answer": "C",
+   "help": "这是疑问句，问“有人吗”，填哪个词？",
+   "explain": "Has anybody seen my notebook? 疑问句用 any- 类：anybody。",
+   "wrong_feedback": {
+    "A": "somebody 用在肯定句里；这是疑问句，用 anybody。",
+    "B": "nobody 是“没有人”，放在疑问句里意思不对。",
+    "D": "everybody 是“每人”，放在这里意思不对。"
+   },
+   "audio_id": "u1r9-q03",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：没有人看见它",
+   "scene": "林涛说没有人看见笔记本。",
+   "stem": "___ has seen it.",
+   "task": "只写空里的部分。",
+   "answer_text": "Nobody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nobody"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "没有人"
+     ]
+    }
+   ],
+   "help": "“没有人看见它”，填哪个词？注意动词用单数。",
+   "explain": "Nobody has seen it. 没有人看见它。nobody 本身就是否定，动词用单数 has。",
+   "common_errors": [
+    {
+     "when": "写了 Anybody",
+     "say": "anybody 是“任何人”，放在肯定句里意思不对；这里要填 nobody“没有人”。"
+    }
+   ],
+   "audio_id": "u1r9-q04",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：我问了班上每个人",
+   "scene": "小梅说她问了班上的每个人。",
+   "stem": "I asked ___ in our class, but no one saw it.",
+   "options": [
+    "somebody",
+    "everybody",
+    "anybody",
+    "nobody"
+   ],
+   "answer": "B",
+   "help": "“问了班上的……”，每个人都问了，填哪个词？",
+   "explain": "I asked everybody in our class. 我问了班上的每个人。everybody 是“每人”。",
+   "wrong_feedback": {
+    "A": "somebody 是“某人”，不是“每个人”。",
+    "C": "anybody 是“任何人”，放在肯定句里意思不对。",
+    "D": "nobody 是“没有人”，和“我问了”意思正好反了。"
+   },
+   "audio_id": "u1r9-q05",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：包里有好吃的",
+   "scene": "小梅说包里有好吃的东西。",
+   "stem": "There is ___ nice in my bag.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某物"
+     ]
+    }
+   ],
+   "help": "这是肯定句，“好吃的东西”，填哪个词？注意 nice 放在后面。",
+   "explain": "There is something nice in my bag. 包里有好吃的东西。肯定句用 something，nice 放后面。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something。"
+    }
+   ],
+   "audio_id": "u1r9-q06",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：想吃点东西吗",
+   "scene": "小梅问林涛想不想吃点东西。（希望他说好。）",
+   "stem": "Would you like ___ to eat?",
+   "options": [
+    "anything",
+    "nothing",
+    "everything",
+    "something"
+   ],
+   "answer": "D",
+   "help": "这是邀请、希望对方说 Yes，填哪个词？",
+   "explain": "Would you like something to eat? 希望对方说 Yes 的疑问句用 some- 类。",
+   "wrong_feedback": {
+    "A": "anything 用在一般疑问句里；这是邀请、希望对方答应，用 something。",
+    "B": "nothing 是“没有什么”，放在这里意思不对。",
+    "C": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r9-q07",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：有什么吃的吗",
+   "scene": "林涛问有什么吃的吗，他饿了。",
+   "stem": "Is there ___ to eat? I am hungry.",
+   "task": "只写空里的部分。",
+   "answer_text": "anything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anything"
+     ],
+     "olds": [
+      "something"
+     ],
+     "cn": [
+      "任何东西"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Is there anything to eat? 有什么吃的吗？疑问句用 any- 类。",
+   "common_errors": [
+    {
+     "when": "写了 something",
+     "say": "这是一般疑问句，不是邀请；按分工，疑问句用 any- 类 anything。"
+    }
+   ],
+   "audio_id": "u1r9-q08",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：有人在等你",
+   "scene": "有人在等你。",
+   "stem": "___ waiting for you.",
+   "options": [
+    "Someone is",
+    "Someone are",
+    "Somebody are",
+    "Everybody are"
+   ],
+   "answer": "A",
+   "help": "复合不定代词作主语，动词用什么数？",
+   "explain": "Someone is waiting for you. 有人在等你。someone 作主语，动词用单数 is。",
+   "wrong_feedback": {
+    "B": "Someone are 不对，someone 作主语，动词要用单数 is。",
+    "C": "Somebody are 不对，somebody 作主语，动词要用单数 is。",
+    "D": "Everybody are 不对，everybody 作主语，动词也要用单数 is。"
+   },
+   "audio_id": "u1r9-q09",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：没有人知道答案",
+   "scene": "没有人知道答案。",
+   "stem": "___ knows the answer.",
+   "task": "只写空里的部分。",
+   "answer_text": "Nobody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nobody"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "没有人"
+     ]
+    }
+   ],
+   "help": "“没有人知道答案”，填哪个词？",
+   "explain": "Nobody knows the answer. 没有人知道答案。nobody 作主语，动词用单数 knows。",
+   "common_errors": [
+    {
+     "when": "写了 Anybody",
+     "say": "anybody 是“任何人”，放在肯定句里意思不对；这里要填 nobody“没有人”。"
+    }
+   ],
+   "audio_id": "u1r9-q10",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：一切都准备好了",
+   "scene": "一切都准备好了。",
+   "stem": "___ is ready.",
+   "options": [
+    "All things",
+    "Everything",
+    "Somethings",
+    "Everythings"
+   ],
+   "answer": "B",
+   "help": "“一切都准备好了”，填哪个词？注意动词是 is。",
+   "explain": "Everything is ready. 一切都准备好了。everything 是“一切”，动词用单数 is。",
+   "wrong_feedback": {
+    "A": "All things is 不对，all things 是复数，动词不能用 is。",
+    "C": "Somethings 这个词不存在，something 没有复数形式。",
+    "D": "Everythings 这个词不存在，everything 没有复数形式。"
+   },
+   "audio_id": "u1r9-q11",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：聚会上没遇到特别的人",
+   "scene": "我在聚会上没遇到特别的人。",
+   "stem": "I didn't meet ___ special at the party.",
+   "task": "只写空里的部分。",
+   "answer_text": "anybody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anybody"
+     ],
+     "olds": [
+      "somebody"
+     ],
+     "cn": [
+      "任何人"
+     ]
+    }
+   ],
+   "help": "这是带 n't 的否定句，“特别的人”，填哪个词？注意 special 放后面。",
+   "explain": "I didn't meet anybody special at the party. 我在聚会上没遇到特别的人。否定句用 any- 类，special 放后面。",
+   "common_errors": [
+    {
+     "when": "写了 somebody",
+     "say": "这是否定句，按分工，否定句用 any- 类 anybody。"
+    }
+   ],
+   "audio_id": "u1r9-q12",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：我想喝点好喝的",
+   "scene": "我想喝点好喝的东西。",
+   "stem": "I want ___ nice to drink.",
+   "options": [
+    "anything",
+    "nothing",
+    "something",
+    "everything"
+   ],
+   "answer": "C",
+   "help": "这是肯定句，“好喝的东西”，填哪个词？",
+   "explain": "I want something nice to drink. 我想喝点好喝的东西。肯定句用 something，nice 放后面。",
+   "wrong_feedback": {
+    "A": "anything 用在否定句和疑问句里；这是肯定句，用 something。",
+    "B": "nothing 是“没有什么”，和“我想喝”意思正好反了。",
+    "D": "everything 是“每件事”，放在这里意思不对。"
+   },
+   "audio_id": "u1r9-q13",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：这家店没什么可买的",
+   "scene": "这家店没什么可买的。",
+   "stem": "There is ___ to buy in this shop.",
+   "task": "只写空里的部分。",
+   "answer_text": "nothing",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nothing"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "没有什么"
+     ]
+    }
+   ],
+   "help": "“没什么可买的”，填哪个词？",
+   "explain": "There is nothing to buy in this shop. 这家店没什么可买的。nothing 是“没有什么”。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "anything 是“任何东西”，放在肯定句里意思不对；这里要填 nothing“没有什么”。"
+    }
+   ],
+   "audio_id": "u1r9-q14",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "练习帮：不是每个人都喜欢数学",
+   "scene": "不是每个人都喜欢数学。",
+   "stem": "Not ___ likes maths.",
+   "options": [
+    "nobody",
+    "somebody",
+    "anybody",
+    "everyone"
+   ],
+   "answer": "D",
+   "help": "“不是每个人都……”，部分否定，填哪个词？",
+   "explain": "Not everyone likes maths. 不是每个人都喜欢数学。not + everyone 是部分否定。",
+   "wrong_feedback": {
+    "A": "Not nobody 意思不对，nobody 本身就是否定，不能再加 not。",
+    "B": "Not somebody 意思不对，部分否定要用 not + every- 类。",
+    "C": "Not anybody 意思不对，部分否定要用 not + every- 类。"
+   },
+   "audio_id": "u1r9-q15",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：房间里每个人都很高兴",
+   "scene": "房间里的每个人今天都很高兴。",
+   "stem": "___ in the room is happy today.",
+   "task": "只写空里的部分。",
+   "answer_text": "Everybody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "everybody"
+     ],
+     "olds": [
+      "everybodies"
+     ],
+     "cn": [
+      "每个人"
+     ]
+    }
+   ],
+   "help": "“房间里的每个人”，填哪个词？注意动词 is 是单数。",
+   "explain": "Everybody in the room is happy today. 房间里的每个人今天都很高兴。everybody 作主语，动词用单数 is。",
+   "common_errors": [
+    {
+     "when": "写了 Everybodies",
+     "say": "everybody 没有复数形式，别加 s。"
+    }
+   ],
+   "audio_id": "u1r9-q16",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "练习帮：今天没什么事可做",
+   "scene": "我今天没什么事可做，我有空。",
+   "stem": "I have ___ to do today. I am free.",
+   "task": "只写空里的部分。",
+   "answer_text": "nothing",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nothing"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "没有什么"
+     ]
+    }
+   ],
+   "help": "“没什么事可做”，填哪个词？",
+   "explain": "I have nothing to do today. 我今天没什么事可做。nothing 是“没有什么”。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "anything 是“任何东西”，放在肯定句里意思不对；这里要填 nothing“没有什么”。"
+    }
+   ],
+   "audio_id": "u1r9-q17",
+   "reading": "Mei: I lost my notebook! Is there anything in the bookcase?\nLin: Let me look. There is something in the bookcase. Is this your notebook?\nMei: No. Has anybody seen my notebook?\nLin: Nobody has seen it. Did you look in the classroom?\nMei: Yes. I asked everybody in our class, but no one saw it.\nLin: Is there anything else in your bag? Maybe there is something special in it.\nMei: Let me see... Oh! Here it is! It was in my bag all the time.\nLin: Great! Is there anything to eat? I am hungry.\nMei: Yes, there is something nice in my bag. Would you like something to eat?\nLin: Yes, please!"
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮：阅读材料——学校的一天",
+   "teach_html": "<p>第二段短文讲学校的一天：广播站的苏文、新来的同学、大家喜欢的节目。读两遍，记住：每天早上谁读新闻？谁不知道新同学的名字？班上的人都喜欢什么？</p><p>注意看：Not everybody likes sport 是部分否定；There is nothing new 里 nothing 本身就是否定。</p>",
+   "audio_id": "u1r9-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：学校里每个人都认识苏文",
+   "scene": "在我们学校，每个人都认识苏文。",
+   "stem": "___ knows Su Wen at our school.",
+   "options": [
+    "Everybody",
+    "Somebody",
+    "Anybody",
+    "Nobody"
+   ],
+   "answer": "A",
+   "help": "“学校里的每个人”，填哪个词？",
+   "explain": "Everybody knows Su Wen. 学校里每个人都认识苏文。everybody 是“每人”。",
+   "wrong_feedback": {
+    "B": "Somebody 是“某人”，不是“每个人”。",
+    "C": "Anybody 是“任何人”，放在肯定句里意思不对。",
+    "D": "Nobody 是“没有人”，和“都认识”意思正好反了。"
+   },
+   "audio_id": "u1r9-q18",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：每天早上有人读新闻",
+   "scene": "每天早上，有人读新闻。",
+   "stem": "Every morning, ___ reads the news.",
+   "task": "只写空里的部分。",
+   "answer_text": "somebody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "somebody"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "有人"
+     ]
+    }
+   ],
+   "help": "“每天早上有人读新闻”，填哪个词？注意动词 reads 是单数。",
+   "explain": "Every morning, somebody reads the news. 每天早上，有人读新闻。somebody 作主语，动词用单数 reads。",
+   "common_errors": [
+    {
+     "when": "写了 anybody",
+     "say": "anybody 是“任何人”，放在肯定句里意思不对；这里要填 somebody“有人”。"
+    }
+   ],
+   "audio_id": "u1r9-q19",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：没有人知道他的名字",
+   "scene": "没有人知道新同学的名字。",
+   "stem": "___ knows his name.",
+   "options": [
+    "Somebody",
+    "Everybody",
+    "Nobody",
+    "Anybody"
+   ],
+   "answer": "C",
+   "help": "“没有人知道”，填哪个词？",
+   "explain": "Nobody knows his name. 没有人知道他的名字。nobody 本身就是否定。",
+   "wrong_feedback": {
+    "A": "Somebody 是“有人”，和“没有人”意思正好反了。",
+    "B": "Everybody 是“每人”，放在这里意思不对。",
+    "D": "Anybody 是“任何人”，放在肯定句里意思不对。"
+   },
+   "audio_id": "u1r9-q20",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：班里有人来自他的家乡吗",
+   "scene": "班里有人来自他的家乡吗？",
+   "stem": "Is there ___ in the class from his town?",
+   "task": "只写空里的部分。",
+   "answer_text": "anybody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anybody"
+     ],
+     "olds": [
+      "somebody"
+     ],
+     "cn": [
+      "任何人"
+     ]
+    }
+   ],
+   "help": "这是疑问句，问“有人吗”，填哪个词？",
+   "explain": "Is there anybody in the class from his town? 班里有人来自他的家乡吗？疑问句用 any- 类。",
+   "common_errors": [
+    {
+     "when": "写了 somebody",
+     "say": "这是一般疑问句，不是邀请；按分工，疑问句用 any- 类 anybody。"
+    }
+   ],
+   "audio_id": "u1r9-q21",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：不是班上每个人都喜欢运动",
+   "scene": "不是班上每个人都喜欢运动。",
+   "stem": "Not ___ in our class likes sport.",
+   "options": [
+    "nobody",
+    "everybody",
+    "somebody",
+    "anybody"
+   ],
+   "answer": "B",
+   "help": "“不是每个人都……”，部分否定，填哪个词？",
+   "explain": "Not everybody in our class likes sport. 不是班上每个人都喜欢运动。not + everybody 是部分否定。",
+   "wrong_feedback": {
+    "A": "Not nobody 意思不对，nobody 本身就是否定，不能再加 not。",
+    "C": "Not somebody 意思不对，部分否定要用 not + every- 类。",
+    "D": "Not anybody 意思不对，部分否定要用 not + every- 类。"
+   },
+   "audio_id": "u1r9-q22",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：每个人都喜欢广播节目",
+   "scene": "但是每个人都喜欢广播节目。",
+   "stem": "But ___ likes the radio show.",
+   "task": "只写空里的部分。",
+   "answer_text": "everyone",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "everyone"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "每个人"
+     ]
+    }
+   ],
+   "help": "“每个人都喜欢”，填哪个词？",
+   "explain": "But everyone likes the radio show. 但是每个人都喜欢广播节目。everyone 是“每人”。",
+   "common_errors": [
+    {
+     "when": "写了 anybody",
+     "say": "anybody 是“任何人”，放在肯定句里意思不对；这里要填 everyone“每个人”。"
+    }
+   ],
+   "audio_id": "u1r9-q23",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：想告诉大家一件特别的事",
+   "scene": "苏文想告诉大家一件特别的事。",
+   "stem": "I want to tell everybody ___.",
+   "options": [
+    "anything special",
+    "nothing special",
+    "everything special",
+    "something special"
+   ],
+   "answer": "D",
+   "help": "“一件特别的事”，something 后面的形容词放哪里？",
+   "explain": "I want to tell everybody something special. 我想告诉大家一件特别的事。形容词 special 放在 something 后面。",
+   "wrong_feedback": {
+    "A": "anything special 是“任何特别的东西”，放在肯定句里意思不对。",
+    "B": "nothing special 是“没什么特别的”，和“想告诉”意思正好反了。",
+    "C": "everything special 搭配不对，everything 后面不这样加形容词。"
+   },
+   "audio_id": "u1r9-q24",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：今天有什么新消息吗",
+   "scene": "苏文问今天有什么新消息吗。",
+   "stem": "Is there ___ new today?",
+   "task": "只写空里的部分。",
+   "answer_text": "anything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "anything"
+     ],
+     "olds": [
+      "something"
+     ],
+     "cn": [
+      "任何东西"
+     ]
+    }
+   ],
+   "help": "这是一般疑问句，填哪个词？",
+   "explain": "Is there anything new today? 今天有什么新消息吗？疑问句用 any- 类。",
+   "common_errors": [
+    {
+     "when": "写了 something",
+     "say": "这是一般疑问句，不是邀请；按分工，疑问句用 any- 类 anything。"
+    }
+   ],
+   "audio_id": "u1r9-q25",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：没什么新消息",
+   "scene": "老师说没什么新消息。",
+   "stem": "There is ___ new, but you can talk about anything you like.",
+   "options": [
+    "something",
+    "nothing",
+    "everything",
+    "somebody"
+   ],
+   "answer": "B",
+   "help": "“没什么新消息”，填哪个词？",
+   "explain": "There is nothing new. 没什么新消息。nothing 是“没有什么”。",
+   "wrong_feedback": {
+    "A": "something 是“有东西”，和“没什么”意思正好反了。",
+    "C": "everything 是“每件事”，放在这里意思不对。",
+    "D": "somebody 是“某人”，说的是人，不是消息。"
+   },
+   "audio_id": "u1r9-q26",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：有人在门口等你",
+   "scene": "有人在门口等你。",
+   "stem": "___ is waiting for you at the door.",
+   "task": "只写空里的部分。",
+   "answer_text": "Someone",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "someone"
+     ],
+     "olds": [
+      "anyone"
+     ],
+     "cn": [
+      "有人"
+     ]
+    }
+   ],
+   "help": "“有人在门口等你”，填哪个词？注意动词 is 是单数。",
+   "explain": "Someone is waiting for you at the door. 有人在门口等你。someone 作主语，动词用单数 is。",
+   "common_errors": [
+    {
+     "when": "写了 Anyone",
+     "say": "anyone 是“任何人”，放在肯定句里意思不对；这里要填 someone“有人”。"
+    }
+   ],
+   "audio_id": "u1r9-q27",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：哪句是对的",
+   "scene": "下面哪句是对的？",
+   "stem": "Which sentence is right?",
+   "options": [
+    "Not everyone likes football.",
+    "Not nobody likes football.",
+    "Nobody doesn't like football.",
+    "Not everybody don't like football."
+   ],
+   "answer": "A",
+   "help": "部分否定用 not + every- 类；nobody 本身就是否定，哪句符合？",
+   "explain": "Not everyone likes football. 不是每个人都喜欢足球。部分否定是对的。",
+   "wrong_feedback": {
+    "B": "Not nobody 不对，nobody 本身就是否定，不能再加 not。",
+    "C": "Nobody doesn't like 不对，nobody 本身就是否定，不能再加 doesn't。",
+    "D": "Not everybody don't like 不对，everybody 作主语，动词要用单数 doesn't。"
+   },
+   "audio_id": "u1r9-q28",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：她想给妈妈买点东西",
+   "scene": "她想给妈妈买点东西。",
+   "stem": "She wants to buy ___ for her mum.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某物"
+     ]
+    }
+   ],
+   "help": "这是肯定句，“买点东西”，填哪个词？",
+   "explain": "She wants to buy something for her mum. 她想给妈妈买点东西。肯定句用 something。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something。"
+    }
+   ],
+   "audio_id": "u1r9-q29",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 somebody 写一句",
+   "scene": "用 somebody 写一句：有人在等你。",
+   "stem": "___ is waiting for you.",
+   "task": "只写空里的部分。",
+   "answer_text": "Somebody",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "somebody"
+     ],
+     "olds": [
+      "anybody"
+     ],
+     "cn": [
+      "有人"
+     ]
+    }
+   ],
+   "help": "“有人在等你”，填哪个词？",
+   "explain": "Somebody is waiting for you. 有人在等你。肯定句用 somebody。",
+   "common_errors": [
+    {
+     "when": "写了 Anybody",
+     "say": "anybody 是“任何人”，放在肯定句里意思不对；这里要填 somebody“有人”。"
+    }
+   ],
+   "audio_id": "u1r9-q30",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 nothing 写一句",
+   "scene": "用 nothing 写一句：我什么也没看见。",
+   "stem": "I saw ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "nothing",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "nothing"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "什么也没"
+     ]
+    }
+   ],
+   "help": "“我什么也没看见”，填哪个词？",
+   "explain": "I saw nothing. 我什么也没看见。nothing 是“没有什么”，本身就是否定。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "anything 是“任何东西”，放在肯定句里意思不对；这里要填 nothing“没有什么”。"
+    }
+   ],
+   "audio_id": "u1r9-q31",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：用 something special 写一句",
+   "scene": "用 something special 写一句：我想告诉你一件特别的事。",
+   "stem": "I want to tell you ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "something special",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something special"
+     ],
+     "olds": [
+      "anything special"
+     ],
+     "cn": [
+      "一件特别的事"
+     ]
+    }
+   ],
+   "help": "“一件特别的事”，填什么？注意 special 放后面。",
+   "explain": "I want to tell you something special. 我想告诉你一件特别的事。",
+   "common_errors": [
+    {
+     "when": "写了 anything special",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something special。"
+    },
+    {
+     "when": "写了 special something",
+     "say": "形容词要放在复合不定代词后面，要写 something special。"
+    }
+   ],
+   "audio_id": "u1r9-q32",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "教材帮：复合不定代词小结表",
+   "teach_html": "<p>复合不定代词小结表：</p><p><strong>some- 类</strong>：somebody / someone；something。肯定句用。</p><p><strong>any- 类</strong>：anybody / anyone；anything。否定句和疑问句用。</p><p><strong>no- 类</strong>：nobody / no one；nothing。本身就是否定，别再加 not。</p><p><strong>every- 类</strong>：everybody / everyone；everything。</p><p>三提醒：<strong>作主语动词用单数；形容词、不定式放后面；not everyone 不是 nobody</strong>。</p>",
+   "audio_id": "u1r9-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：谁帮你打扫了房间",
+   "scene": "——谁帮你打扫了房间？——没有人，我一个人打扫的。",
+   "stem": "—Who helped you clean the room? —___. I cleaned it all by myself.",
+   "options": [
+    "Everybody",
+    "Somebody",
+    "Nobody",
+    "Anybody"
+   ],
+   "answer": "C",
+   "help": "“没有人帮我，我一个人打扫的”，填哪个词？",
+   "explain": "Nobody helped me. I cleaned it all by myself. 没有人帮我，我一个人打扫的。",
+   "wrong_feedback": {
+    "A": "Everybody 是“每人”，和“一个人打扫”意思正好反了。",
+    "B": "Somebody 是“有人”，和“没有人帮我”意思正好反了。",
+    "D": "Anybody 是“任何人”，放在这里意思不对。"
+   },
+   "audio_id": "u1r9-q33",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：这里的一切都很美",
+   "scene": "我也是第一次来东营度假。这里的一切都很美，我喜欢这座城市。",
+   "stem": "—It is my first time taking a vacation in Dongying. —Me too. ___ here is so nice. I love the city.",
+   "task": "只写空里的部分。",
+   "answer_text": "Everything",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "everything"
+     ],
+     "olds": [
+      "nothing"
+     ],
+     "cn": [
+      "一切"
+     ]
+    }
+   ],
+   "help": "“这里的一切都很美”，填哪个词？",
+   "explain": "Everything here is so nice. 这里的一切都很美。everything 是“一切”。",
+   "common_errors": [
+    {
+     "when": "写了 Nothing",
+     "say": "nothing 是“没有什么”，和“我喜欢这座城市”意思正好反了。"
+    }
+   ],
+   "audio_id": "u1r9-q34",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：吃点好吃的怎么样",
+   "scene": "我们饿了。吃点好吃的怎么样？",
+   "stem": "We are hungry. How about getting ___ to eat?",
+   "options": [
+    "anything nice",
+    "something nice",
+    "nothing nice",
+    "everything nice"
+   ],
+   "answer": "B",
+   "help": "“吃点好吃的东西”，肯定句，填什么？注意 nice 放后面。",
+   "explain": "How about getting something nice to eat? 吃点好吃的东西怎么样？肯定句用 something，nice 放后面。",
+   "wrong_feedback": {
+    "A": "anything nice 用在否定句和疑问句里；这是肯定句，用 something nice。",
+    "C": "nothing nice 是“没什么好吃的”，和“我们饿了”意思正好反了。",
+    "D": "everything nice 搭配不对，everything 后面不这样加形容词。"
+   },
+   "audio_id": "u1r9-q35",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "short",
+   "title": "练习帮：我有事要告诉你",
+   "scene": "我有事要告诉你，请听我说。",
+   "stem": "I have ___ to tell you. Please listen.",
+   "task": "只写空里的部分。",
+   "answer_text": "something",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "something"
+     ],
+     "olds": [
+      "anything"
+     ],
+     "cn": [
+      "某事"
+     ]
+    }
+   ],
+   "help": "这是肯定句，“有事要告诉你”，填哪个词？",
+   "explain": "I have something to tell you. 我有事要告诉你。肯定句用 something。",
+   "common_errors": [
+    {
+     "when": "写了 anything",
+     "say": "这是肯定句，按分工，肯定句用 some- 类 something。"
+    }
+   ],
+   "audio_id": "u1r9-q36",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "练习帮：没有人能帮你",
+   "scene": "没有人能帮你，你必须自己做。",
+   "stem": "___ can help you. You must do it by yourself.",
+   "options": [
+    "Somebody",
+    "Everybody",
+    "Anybody",
+    "Nobody"
+   ],
+   "answer": "D",
+   "help": "“没有人能帮你”，填哪个词？",
+   "explain": "Nobody can help you. 没有人能帮你。nobody 本身就是否定。",
+   "wrong_feedback": {
+    "A": "Somebody 是“有人”，和“没有人”意思正好反了。",
+    "B": "Everybody 是“每人”，放在这里意思不对。",
+    "C": "Anybody 是“任何人”，放在肯定句里意思不对。"
+   },
+   "audio_id": "u1r9-q37",
+   "reading": "At our school, everybody knows Su Wen. She is the star of the school radio station. Every morning, somebody reads the news, and everybody listens. Today, something interesting happens. A new student comes to our school. Nobody knows his name. Is there anybody in the class from his town? No one knows. Not everybody in our class likes sport, but everyone likes the radio show. After school, Su Wen says, “Is there anything new today? I want to tell everybody something special.” A teacher says, “There is nothing new, but you can talk about anything you like.”"
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "小结：复合不定代词",
+   "teach_html": "<p>今天学了复合不定代词：</p><p><strong>人 -body / -one，物 -thing；肯定 some-，否定疑问 any-；no- 本身就是否定；作主语动词用单数；形容词、不定式放后面；not everyone 不是 nobody。</strong></p><p>下节课是 Section 2 练：some / any 和复合不定代词混在一起练，最后还有 Let me sum up 一张总表。</p>",
+   "audio_id": "u1r9-t10"
+  }
+ ],
+ "title": "Section 2 语法下：复合不定代词",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
