@@ -1,0 +1,1327 @@
+{
+ "lesson_id": "u1r2",
+ "practice_end": 27,
+ "home_subtitle": "第二课 · 达·芬奇条目",
+ "part1_desc": "第 1–27 步：跟着苏文读达·芬奇的百科条目——认 intelligent、talented 这些词，学扫描找信息和 as 时间状语，练小测三题和条目笔记。",
+ "part2_desc": "第 28–50 步：再读一篇达·芬奇短文独立验证，练 so...that...、look up 和词典与百科全书的区别，学着把条目写成五项笔记。",
+ "note": "本课阅读材料为教研自编，非课本原文。考查能力：达·芬奇条目信息查找（扫描）、必记词汇 intelligent/talented/artistic/perhaps/notebook/vehicle/genius、句式 as 时间状语从句/so...that...、短语 look through/look up/be famous for、主题分类 Culture and arts、词典与百科全书的区别。Unit 1 Look it up! 主题，核心人物达·芬奇（1452–1519，意大利，《蒙娜丽莎》）。",
+ "steps": [
+  {
+   "step": 1,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮·广播站：翻开达·芬奇条目",
+   "teach_html": "<p>广播站继续翻儿童百科全书：苏文翻到了“文化与艺术”这个主题，找到一篇关于<strong>达·芬奇</strong>的条目。</p><p>读之前先想好：你要找什么？他是哪国人？什么时候出生、去世？会做什么？最有名的画是哪幅？带着问题去读，读得更快。</p><p>这一课我们就读这篇条目，学着用扫描找信息。</p>",
+   "audio_id": "u1r2-story-01"
+  },
+  {
+   "step": 2,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮·必记词汇（一）",
+   "teach_html": "<p>先认四个词，都是达·芬奇条目里要用的：</p><p><strong>intelligent</strong> /ɪnˈtelɪdʒənt/ <em>adj.</em> 有才智的；聪明的。Da Vinci was extremely intelligent. 达·芬奇非常聪明。</p><p><strong>talented</strong> /ˈtæləntɪd/ <em>adj.</em> 有才华的；天才的。He was unusually talented in many different fields. 他在很多不同领域都非常有才华。</p><p><strong>artistic</strong> /ɑːˈtɪstɪk/ <em>adj.</em> 有艺术天赋的。He showed artistic talent from an early age. 他从小就显露出艺术天赋。</p><p><strong>perhaps</strong> /pəˈhæps/ <em>adv.</em> 可能；大概；也许。The Mona Lisa is perhaps the most famous painting in the world. 《蒙娜丽莎》也许是世界上最有名的画。</p>",
+   "audio_id": "u1r2-t01"
+  },
+  {
+   "step": 3,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "翻译帮·必记词汇（二）",
+   "teach_html": "<p>再认四个词：</p><p><strong>notebook</strong> /ˈnəʊtbʊk/ <em>n.</em> 笔记本。His notebooks include drawings of flying machines. 他的笔记本里有飞行器的图画。</p><p><strong>vehicle</strong> /ˈviːəkl/ <em>n.</em> 交通工具；车辆。A bus is a vehicle. 公共汽车是一种交通工具。</p><p><strong>genius</strong> /ˈdʒiːniəs/ <em>n.</em> 天才。He was a true genius. 他是真正的天才。</p><p><strong>famous</strong> /ˈfeɪməs/ <em>adj.</em> 有名的。He is famous for the Mona Lisa. 他以《蒙娜丽莎》闻名。</p><p>顺带记短语：<strong>be famous for</strong> 以……闻名。</p>",
+   "audio_id": "u1r2-t02"
+  },
+  {
+   "step": 4,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·阅读策略：扫描找信息",
+   "teach_html": "<p>读百科条目有个好办法，叫 <strong>scanning 扫描</strong>：要找某个信息，不用逐字读完全文。</p><p>做法：先想好你要找什么（比如“达·芬奇是哪国人”），然后眼睛快速扫过文章，看到相关的词就停下来，仔细读那一句。</p><p>找年份就扫数字，找人名就扫大写字母开头的词，找国家就扫地名。比如找“达·芬奇是哪国人”，扫到 <strong>Italy</strong> 就停住，答案就在那句里。</p>",
+   "audio_id": "u1r2-t03"
+  },
+  {
+   "step": 5,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·句式：as 引导时间状语从句",
+   "teach_html": "<p><strong>As he grew older</strong>, he learnt to do many different things. 随着他长大，他学会了做很多不同的事。</p><p>这里的 <strong>as</strong> 是“当……时；随着……”，后面跟一个完整的句子，说的是时间。as + 句子放在句首，中间用逗号隔开。</p><p>别和 as...as... 弄混：as...as... 是“和……一样”，中间夹形容词；这里的 as 后面直接跟句子。</p>",
+   "audio_id": "u1r2-t04"
+  },
+  {
+   "step": 6,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·句式：so...that...",
+   "teach_html": "<p><strong>so + 形容词/副词 + that + 结果</strong>，表示“如此……以至于……”</p><p>They are <strong>so smart that</strong> they can be trained to understand some human language. 它们如此聪明，以至于能被训练来理解一些人类语言。</p><p>so 后面跟形容词或副词，that 后面跟一个完整的句子，说结果。别把 so 和 such 弄混：such 后面跟名词，so 后面不跟名词。</p>",
+   "audio_id": "u1r2-t05"
+  },
+  {
+   "step": 7,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·短语：look through / look up",
+   "teach_html": "<p><strong>look through</strong> 快速查看；浏览：Su Wen is looking through a children's encyclopaedia. 苏文正在翻一本儿童百科全书。</p><p><strong>look up</strong> 查阅：You can look up a word in a dictionary. 你可以在词典里查一个词。</p><p>look through 是“翻着看”，look up 是“查东西”，别弄混。</p>",
+   "audio_id": "u1r2-t06"
+  },
+  {
+   "step": 8,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "练习帮·做笔记：条目笔记五项",
+   "teach_html": "<p>读完一篇人物条目，随手记五项，以后复习一眼就能想起来：出生年份 Year of birth、去世年份 Year of death、出生国家 Country of birth、职业 Profession(s)、最有名的作品 Most famous artwork。</p><p>达·芬奇的五项是：1452 / 1519 / Italy / painter, inventor, musician, engineer, scientist / the Mona Lisa。读的时候就按这五项去扫。</p>",
+   "audio_id": "u1r2-t07"
+  },
+  {
+   "step": 9,
+   "phase": "teach",
+   "kind": "teach",
+   "title": "教材帮·主题分类：Culture and arts",
+   "teach_html": "<p>同一本百科全书里的条目分属不同主题：画家莫奈、节日、音乐家贝多芬，都归“文化与艺术” <strong>Culture and arts</strong>；昆虫、大熊猫、植物种类，都归“生物世界” <strong>The living world</strong>。</p><p>分类看的是“这个条目讲的是什么”，不是它有多长。达·芬奇是画家、发明家，归文化与艺术。</p>",
+   "audio_id": "u1r2-t08"
+  },
+  {
+   "step": 10,
+   "phase": "practice",
+   "kind": "teach",
+   "title": "翻译帮·阅读材料：达·芬奇",
+   "teach_html": "<p>下面是一篇儿童百科全书里的条目，介绍达·芬奇。读两遍，记住关键信息：他是哪国人？什么时候出生、去世？会做什么？最有名的画是哪幅？</p><p>读的时候用扫描的方法：先看问题，再到文章里找答案。</p>",
+   "audio_id": "u1r2-read-01"
+  },
+  {
+   "step": 11,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "小测：达·芬奇是哪国人",
+   "scene": "达·芬奇来自哪个国家？",
+   "stem": "Where was Leonardo da Vinci from?",
+   "options": [
+    "France",
+    "Italy",
+    "the UK",
+    "China"
+   ],
+   "answer": "B",
+   "help": "回到条目第一句找：他来自哪个国家？",
+   "explain": "Leonardo da Vinci was from Italy. 条目里说他来自意大利（He came from Italy）。",
+   "wrong_feedback": {
+    "A": "条目里说他来自意大利，不是法国。",
+    "C": "条目里说他来自意大利，不是英国。",
+    "D": "条目里说他来自意大利，不是中国。"
+   },
+   "audio_id": "u1r2-q01",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "short",
+   "title": "画家、发明家和科学家",
+   "scene": "达·芬奇会做很多种工作。",
+   "stem": "Da Vinci was a painter, an inventor and a ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "scientist",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "scientist"
+     ],
+     "olds": [
+      "science",
+      "scientific"
+     ],
+     "cn": [
+      "科学家"
+     ]
+    }
+   ],
+   "help": "条目里列了他做的五种工作，最后一种是什么？",
+   "explain": "Da Vinci was a painter, an inventor and a scientist. 条目里说他画画、做机器、写音乐、盖东西，还研究科学。",
+   "common_errors": [
+    {
+     "when": "写了 science",
+     "say": "science 是名词“科学”；这里要填表示人的词 scientist“科学家”。"
+    },
+    {
+     "when": "写了 scientific",
+     "say": "scientific 是形容词“科学的”；这里要填名词 scientist“科学家”。"
+    }
+   ],
+   "audio_id": "u1r2-q02",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "short",
+   "title": "最有名的画",
+   "scene": "《蒙娜丽莎》有多有名？",
+   "stem": "The Mona Lisa is perhaps the most ___ painting in the world.",
+   "task": "只写空里的部分。",
+   "answer_text": "famous",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "famous"
+     ],
+     "olds": [
+      "fame",
+      "famouse"
+     ],
+     "cn": [
+      "著名的"
+     ]
+    }
+   ],
+   "help": "条目里说《蒙娜丽莎》“也许是世界上最……的画”，那个词是什么？",
+   "explain": "The Mona Lisa is perhaps the most famous painting in the world. 条目里说它也许是世界上最有名的画。",
+   "common_errors": [
+    {
+     "when": "写了 fame",
+     "say": "fame 是名词“名声”；这里要填形容词 famous“有名的”。"
+    },
+    {
+     "when": "写了 famouse",
+     "say": "拼写注意：famous 是 f-a-m-o-u-s，没有 e。"
+    }
+   ],
+   "audio_id": "u1r2-q03",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "小测：达·芬奇不擅长什么",
+   "scene": "三样里哪样他不擅长？",
+   "stem": "Which of the following was Leonardo da Vinci NOT good at?",
+   "options": [
+    "music",
+    "engineering",
+    "sailing",
+    "painting"
+   ],
+   "answer": "C",
+   "help": "条目列了他会的五种工作，哪样不在里面？",
+   "explain": "Da Vinci was not good at sailing. 条目里说他会画画、做机器、写音乐、盖东西、研究科学，没说他会航行。",
+   "wrong_feedback": {
+    "A": "条目里说他会写音乐，music 在他会做的事里。",
+    "B": "条目里说他会做机器、盖东西，engineering 在他会做的事里。",
+    "D": "条目里说他画画，painting 是他最有名的本事。"
+   },
+   "audio_id": "u1r2-q04",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 15,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "intelligent 是什么意思",
+   "scene": "intelligent 和哪个词意思最接近？",
+   "stem": "Which word is closest in meaning to “intelligent”?",
+   "options": [
+    "clever",
+    "strong",
+    "famous",
+    "quiet"
+   ],
+   "answer": "A",
+   "help": "想想 intelligent 的中文意思，再看哪个选项意思一样。",
+   "explain": "Intelligent means clever. intelligent 是“聪明的”，和 clever 意思最接近。",
+   "wrong_feedback": {
+    "B": "strong 是“强壮的”，说的是力气，不是聪明。",
+    "C": "famous 是“有名的”，说的是名气，不是聪明。",
+    "D": "quiet 是“安静的”，说的是性格，不是聪明。"
+   },
+   "audio_id": "u1r2-q05",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "多方面有才华",
+   "scene": "达·芬奇在很多不同领域都有天赋。",
+   "stem": "Da Vinci was unusually ___ in many different fields.",
+   "task": "只写空里的部分。",
+   "answer_text": "talented",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "talented"
+     ],
+     "olds": [
+      "talent",
+      "talanted"
+     ],
+     "cn": [
+      "有才华的"
+     ]
+    }
+   ],
+   "help": "“在很多不同领域有天赋”，填哪个形容词？",
+   "explain": "Da Vinci was unusually talented in many different fields. 他在很多不同领域都非常有才华。",
+   "common_errors": [
+    {
+     "when": "写了 talent",
+     "say": "talent 是名词“才华”；这里要填形容词 talented“有才华的”。"
+    },
+    {
+     "when": "写了 talanted",
+     "say": "拼写注意：talented 是 t-a-l-e-n-t-e-d，中间没有 a。"
+    }
+   ],
+   "audio_id": "u1r2-q06",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 17,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "artistic 是什么意思",
+   "scene": "artistic 是说在哪方面有天赋？",
+   "stem": "What does “artistic” mean?",
+   "options": [
+    "good at sports",
+    "good at music",
+    "good at maths",
+    "good at art"
+   ],
+   "answer": "D",
+   "help": "artistic 和哪个词是亲戚？想想 art 的意思。",
+   "explain": "Artistic means good at art. artistic 是“有艺术天赋的”，和 art“艺术”是亲戚。",
+   "wrong_feedback": {
+    "A": "good at sports 是“擅长运动”，那是 athletic，不是 artistic。",
+    "B": "good at music 是“擅长音乐”，那是 musical，不是 artistic。",
+    "C": "good at maths 是“擅长数学”，和艺术没关系。"
+   },
+   "audio_id": "u1r2-q07",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 18,
+   "phase": "practice",
+   "kind": "short",
+   "title": "笔记本里的飞行器",
+   "scene": "达·芬奇的笔记本里画了什么？",
+   "stem": "His notebooks have drawings of flying ___ and other vehicles.",
+   "task": "只写空里的部分。",
+   "answer_text": "machines",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "machines"
+     ],
+     "olds": [
+      "machine",
+      "machin"
+     ],
+     "cn": [
+      "机器"
+     ]
+    }
+   ],
+   "help": "条目最后一句：笔记本里有飞行什么和别的交通工具的图？",
+   "explain": "His notebooks have drawings of flying machines and other vehicles. 他的笔记本里有飞行器和其他交通工具的图画。",
+   "common_errors": [
+    {
+     "when": "写了 machine",
+     "say": "这里说的是很多张图、好几种飞行器，要用复数 machines。"
+    },
+    {
+     "when": "写了 machin",
+     "say": "拼写注意：machine 是 m-a-c-h-i-n-e，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r2-q08",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 19,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "画家归哪个主题",
+   "scene": "莫奈是画家，他的条目归哪个主题？",
+   "stem": "Claude Monet was a painter. Under which subject in an encyclopaedia should we put an entry about him?",
+   "options": [
+    "Culture and arts",
+    "The living world",
+    "Sports and games",
+    "Food and cooking"
+   ],
+   "answer": "A",
+   "help": "画家是搞艺术的，百科全书里艺术属于哪个主题？",
+   "explain": "An entry about a painter goes under Culture and arts. 画家属于“文化与艺术”这个主题。记住分类：文化与艺术下面有画家、音乐家、节日；生物世界下面有昆虫、大熊猫、植物种类。",
+   "wrong_feedback": {
+    "B": "The living world 是讲动植物的，画家不是动植物。",
+    "C": "画家和运动没关系，Sports and games 是体育。",
+    "D": "画家和食物没关系，Food and cooking 是饮食。"
+   },
+   "audio_id": "u1r2-q09",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 20,
+   "phase": "practice",
+   "kind": "short",
+   "title": "生卒年份",
+   "scene": "达·芬奇活了多少年？先看年份。",
+   "stem": "Da Vinci lived from 1452 to ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "1519",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "1519"
+     ],
+     "olds": [
+      "1915",
+      "1452"
+     ]
+    }
+   ],
+   "help": "条目第一句给了两个年份，第二个是去世的年份。",
+   "explain": "Da Vinci lived from 1452 to 1519. 他 1452 年出生，1519 年去世。",
+   "common_errors": [
+    {
+     "when": "写了 1915",
+     "say": "1915 不对，条目里写的是 1519，再看一眼第一句。"
+    },
+    {
+     "when": "写了 1452",
+     "say": "1452 是出生的年份，空里要填去世的年份 1519。"
+    }
+   ],
+   "audio_id": "u1r2-q10",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 21,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "perhaps 是什么意思",
+   "scene": "perhaps 和哪个词意思最接近？",
+   "stem": "Which word is closest in meaning to “perhaps”?",
+   "options": [
+    "always",
+    "quickly",
+    "maybe",
+    "never"
+   ],
+   "answer": "C",
+   "help": "perhaps 是“可能、也许”，哪个选项也是这个意思？",
+   "explain": "Perhaps means maybe. perhaps 是“可能、也许”，和 maybe 意思一样。",
+   "wrong_feedback": {
+    "A": "always 是“总是”，意思是肯定的，不是“可能”。",
+    "B": "quickly 是“很快地”，说的是速度，不是“可能”。",
+    "D": "never 是“从不”，意思和 perhaps 正好相反。"
+   },
+   "audio_id": "u1r2-q11",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 22,
+   "phase": "practice",
+   "kind": "short",
+   "title": "越长大越会得多",
+   "scene": "随着年龄增长，他学会的东西越来越多。",
+   "stem": "He learnt to do many different things as he ___ older.",
+   "task": "只写空里的部分。",
+   "answer_text": "grew",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "grew"
+     ],
+     "olds": [
+      "grow",
+      "grows"
+     ],
+     "cn": [
+      "长大"
+     ]
+    }
+   ],
+   "help": "as he ___ older，“随着他长大”，这里要用 grow 的过去式。",
+   "explain": "He learnt to do many different things as he grew older. 随着年龄增长，他学会了做很多不同的事。",
+   "common_errors": [
+    {
+     "when": "写了 grow",
+     "say": "这里讲的是过去的事，grow 要用过去式 grew。"
+    },
+    {
+     "when": "写了 grows",
+     "say": "grows 是现在时第三人称；这里讲过去，要用 grew。"
+    }
+   ],
+   "audio_id": "u1r2-q12",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 23,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "哪个是 notebook",
+   "scene": "notebook 是什么东西？",
+   "stem": "What is a notebook?",
+   "options": [
+    "a kind of music",
+    "a book for writing notes",
+    "a kind of food",
+    "a kind of animal"
+   ],
+   "answer": "B",
+   "help": "note 和 book 合起来，是用来做什么的本子？",
+   "explain": "A notebook is a book for writing notes. notebook 是记笔记的本子。",
+   "wrong_feedback": {
+    "A": "音乐是用来听的，不是本子。",
+    "C": "食物是用来吃的，不是本子。",
+    "D": "动物是活的，不是本子。"
+   },
+   "audio_id": "u1r2-q13",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 24,
+   "phase": "practice",
+   "kind": "short",
+   "title": "真正的天才",
+   "scene": "人们叫达·芬奇什么？",
+   "stem": "Da Vinci was a true ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "genius",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "genius"
+     ],
+     "olds": [
+      "geniuse",
+      "genious"
+     ],
+     "cn": [
+      "天才"
+     ]
+    }
+   ],
+   "help": "条目里说人们叫他 a true ___，那个词是“天才”。",
+   "explain": "Da Vinci was a true genius. 人们叫他真正的天才。",
+   "common_errors": [
+    {
+     "when": "写了 geniuse",
+     "say": "拼写注意：genius 是 g-e-n-i-u-s，结尾没有 e。"
+    },
+    {
+     "when": "写了 genious",
+     "say": "拼写注意：genius 中间是 i-u，不是 i-o。"
+    }
+   ],
+   "audio_id": "u1r2-q14",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 25,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "look through 是什么意思",
+   "scene": "look through a book 是做什么？",
+   "stem": "What does “look through a book” mean?",
+   "options": [
+    "look for something lost",
+    "look after a baby",
+    "look at the sky",
+    "read it quickly"
+   ],
+   "answer": "D",
+   "help": "look through 是“快速查看、浏览”，哪个选项是这个意思？",
+   "explain": "To look through a book means to read it quickly. look through 一本书，就是快速翻看它。",
+   "wrong_feedback": {
+    "A": "look for something lost 是“找丢失的东西”，那是 look for，不是 look through。",
+    "B": "look after a baby 是“照顾婴儿”，那是 look after，不是 look through。",
+    "C": "look at the sky 是“看天空”，那是 look at，不是 look through。"
+   },
+   "audio_id": "u1r2-q15",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 26,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "小测：达·芬奇出生在哪里",
+   "scene": "达·芬奇小时候住在哪里？",
+   "stem": "Where was Leonardo da Vinci born?",
+   "options": [
+    "in the countryside in Italy",
+    "in a big city in France",
+    "in a small town in the UK",
+    "in the mountains in China"
+   ],
+   "answer": "A",
+   "help": "条目里说他出生在意大利的什么地方？",
+   "explain": "Da Vinci was born in the countryside in Italy. 条目里说他出生在意大利的乡村。",
+   "wrong_feedback": {
+    "B": "条目里说他出生在意大利，不是在法国的大城市。",
+    "C": "条目里说他出生在意大利，不是在英国的小镇。",
+    "D": "条目里说他出生在意大利的乡村，不是在中国的山里。"
+   },
+   "audio_id": "u1r2-q16",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 27,
+   "phase": "practice",
+   "kind": "short",
+   "title": "世界上最有名的画",
+   "scene": "《蒙娜丽莎》在世界范围有多有名？",
+   "stem": "The Mona Lisa is perhaps the most famous painting in the ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "world",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "world"
+     ],
+     "olds": [
+      "word",
+      "worl"
+     ],
+     "cn": [
+      "世界"
+     ]
+    }
+   ],
+   "help": "“世界上最有名的画”，空里填哪个词？",
+   "explain": "The Mona Lisa is perhaps the most famous painting in the world. 《蒙娜丽莎》也许是世界上最有名的画。",
+   "common_errors": [
+    {
+     "when": "写了 word",
+     "say": "word 是“单词”，这里要填 world“世界”，多了一个 l。"
+    },
+    {
+     "when": "写了 worl",
+     "say": "拼写注意：world 是 w-o-r-l-d，别丢了 d。"
+    }
+   ],
+   "audio_id": "u1r2-q17",
+   "reading": "Leonardo da Vinci lived from 1452 to 1519. He came from Italy. In his life, he did many kinds of work. He painted pictures, made new machines, wrote music, built things, and studied science. People call him a true genius. He was very intelligent, and he had a great talent for art. When he was young, he already showed his talent. As he grew older, he learnt to do more and more things. His pictures are very famous. One of them, the Mona Lisa, is perhaps the most famous painting in the world. Da Vinci also had many inventions. In his notebooks, you can find drawings of flying machines and other vehicles. His work gave people new ideas about art and science."
+  },
+  {
+   "step": 28,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "翻译帮·阅读材料：达·芬奇的笔记本与《蒙娜丽莎》",
+   "teach_html": "<p>第二篇短文还是讲达·芬奇，这次换个角度：他的笔记本和他最有名的画。读两遍，记住：他出生在哪里？笔记本里有什么？最有名的画是哪幅？他的工作给人们带来了什么？</p><p>这篇是新的短文，答案不能照抄上一篇，要在这篇里找。</p>",
+   "audio_id": "u1r2-read-02"
+  },
+  {
+   "step": 29,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "笔记本里有什么",
+   "scene": "达·芬奇的笔记本里画了什么？",
+   "stem": "What can you find in Leonardo da Vinci's notebooks?",
+   "options": [
+    "many old books about music",
+    "drawings of famous buildings only",
+    "drawings of flying machines and other vehicles",
+    "many letters to his friends"
+   ],
+   "answer": "C",
+   "help": "到这篇短文里找 notebooks 那句。",
+   "explain": "His notebooks have drawings of flying machines and other vehicles. 他的笔记本里有飞行器和其他交通工具的图画。",
+   "wrong_feedback": {
+    "A": "短文里没说笔记本里有音乐书，说的是飞行器的图画。",
+    "B": "短文说笔记本里有飞行器和其他交通工具的图，不只是建筑。",
+    "D": "短文没说笔记本里有信，说的是图画。"
+   },
+   "audio_id": "u1r2-q18",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 30,
+   "phase": "validate",
+   "kind": "short",
+   "title": "出生在意大利乡村",
+   "scene": "达·芬奇出生在哪里？",
+   "stem": "Leonardo da Vinci was born in the ___ in Italy.",
+   "task": "只写空里的部分。",
+   "answer_text": "countryside",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "countryside"
+     ],
+     "olds": [
+      "city",
+      "town"
+     ],
+     "cn": [
+      "乡村"
+     ]
+    }
+   ],
+   "help": "短文第一句：他出生在意大利的什么地方？",
+   "explain": "Leonardo da Vinci was born in the countryside in Italy. 达·芬奇出生在意大利的乡村。",
+   "common_errors": [
+    {
+     "when": "写了 city",
+     "say": "短文说他出生在乡村，不是在城市里。"
+    },
+    {
+     "when": "写了 town",
+     "say": "短文说他出生在乡村，不是在镇上。"
+    }
+   ],
+   "audio_id": "u1r2-q19",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 31,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "as 在这里是什么意思",
+   "scene": "As he grew older，他学会了更多东西。",
+   "stem": "In “As he grew older, he learnt to do many different things”, what does “as” mean?",
+   "options": [
+    "because",
+    "when",
+    "but",
+    "so"
+   ],
+   "answer": "B",
+   "help": "as 后面跟一个完整的句子，说的是时间，想想是哪个意思。",
+   "explain": "Here “as” means “when”. as 引导时间状语从句，表示“当……时；随着……”。",
+   "wrong_feedback": {
+    "A": "because 是“因为”，这里说的不是原因，是时间。",
+    "C": "but 是“但是”，表示转折，这里没有转折。",
+    "D": "so 是“所以”，表示结果，这里说的是时间。"
+   },
+   "audio_id": "u1r2-q20",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 32,
+   "phase": "validate",
+   "kind": "short",
+   "title": "也许是最有名的画",
+   "scene": "《蒙娜丽莎》有多有名？",
+   "stem": "The Mona Lisa is ___ the most famous painting in the world.",
+   "task": "只写空里的部分。",
+   "answer_text": "perhaps",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "perhaps"
+     ],
+     "olds": [
+      "possible",
+      "probable"
+     ],
+     "cn": [
+      "也许"
+     ]
+    }
+   ],
+   "help": "“也许是世界上最有名的画”，填哪个副词？",
+   "explain": "The Mona Lisa is perhaps the most famous painting in the world. 《蒙娜丽莎》也许是世界上最有名的画。",
+   "common_errors": [
+    {
+     "when": "写了 possible",
+     "say": "possible 是形容词“可能的”；这里要填副词 perhaps“也许”。"
+    },
+    {
+     "when": "写了 probable",
+     "say": "probable 是形容词“很可能的”；这里要填副词 perhaps“也许”。"
+    }
+   ],
+   "audio_id": "u1r2-q21",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 33,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个 so...that... 是对的",
+   "scene": "下面哪个句子的 so...that... 用对了？",
+   "stem": "Which sentence uses “so...that...” correctly?",
+   "options": [
+    "They are so smart so they can learn fast.",
+    "They are such smart that they can learn fast.",
+    "They are too smart that they can learn fast.",
+    "They are so smart that they can learn fast."
+   ],
+   "answer": "D",
+   "help": "so 后面跟形容词，that 后面跟完整句子，逐个检查。",
+   "explain": "“They are so smart that they can learn fast.” is correct. so 后面是形容词 smart，that 后面是完整句子。",
+   "wrong_feedback": {
+    "A": "so 后面不能再跟 so，that 后面才是结果。",
+    "B": "such 后面要跟名词，smart 是形容词，这里该用 so。",
+    "C": "too...that 不是这个结构，too 后面一般跟 to，不跟 that 从句。"
+   },
+   "audio_id": "u1r2-q22",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 34,
+   "phase": "validate",
+   "kind": "short",
+   "title": "真正的天才",
+   "scene": "人们为什么叫他天才？",
+   "stem": "People call Da Vinci a true ___ because his work changed how people think about art and science.",
+   "task": "只写空里的部分。",
+   "answer_text": "genius",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "genius"
+     ],
+     "olds": [
+      "geniuse",
+      "genious"
+     ],
+     "cn": [
+      "天才"
+     ]
+    }
+   ],
+   "help": "“真正的天才”，那个词是什么？",
+   "explain": "People call Da Vinci a true genius. 人们叫达·芬奇真正的天才。",
+   "common_errors": [
+    {
+     "when": "写了 geniuse",
+     "say": "拼写注意：genius 是 g-e-n-i-u-s，结尾没有 e。"
+    },
+    {
+     "when": "写了 genious",
+     "say": "拼写注意：genius 中间是 i-u，不是 i-o。"
+    }
+   ],
+   "audio_id": "u1r2-q23",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 35,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪句关于达·芬奇是对的",
+   "scene": "下面哪句话和短文说的一致？",
+   "stem": "Which sentence is TRUE about Leonardo da Vinci?",
+   "options": [
+    "His paintings and inventions changed the way we think about art and science.",
+    "He was born in France.",
+    "He was only a painter.",
+    "His paintings are not famous."
+   ],
+   "answer": "A",
+   "help": "逐句对照短文：他出生在哪？只会画画吗？他的画有名吗？",
+   "explain": "His paintings and inventions changed the way we think about art and science. 短文里说他的画和发明改变了人们思考艺术和科学的方式。",
+   "wrong_feedback": {
+    "B": "短文说他出生在意大利的乡村，不是在法国。",
+    "C": "短文说他是画家、发明家、音乐家、工程师和科学家，不只会画画。",
+    "D": "短文说他的画非常有名，《蒙娜丽莎》也许是世界上最有名的画。"
+   },
+   "audio_id": "u1r2-q24",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 36,
+   "phase": "validate",
+   "kind": "short",
+   "title": "从小显露才华",
+   "scene": "达·芬奇小时候就显露出才华。",
+   "stem": "When he was a boy, he already ___ great intelligence and a talent for art.",
+   "task": "只写空里的部分。",
+   "answer_text": "showed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "showed"
+     ],
+     "olds": [
+      "show",
+      "shows"
+     ],
+     "cn": [
+      "显露"
+     ]
+    }
+   ],
+   "help": "“他已经显露出 great intelligence”，这里讲的是小时候，要用 show 的过去式。",
+   "explain": "When he was a boy, he already showed great intelligence and a talent for art. 他小时候就已经显露出极大的智慧和艺术天赋。",
+   "common_errors": [
+    {
+     "when": "写了 show",
+     "say": "这里讲的是过去的事，show 要用过去式 showed。"
+    },
+    {
+     "when": "写了 shows",
+     "say": "shows 是现在时第三人称；这里讲过去，要用 showed。"
+    }
+   ],
+   "audio_id": "u1r2-q25",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 37,
+   "phase": "validate",
+   "kind": "short",
+   "title": "新的思考方式",
+   "scene": "他的工作给人们带来了什么？",
+   "stem": "His work gave people new ___ to think about art and science.",
+   "task": "只写空里的部分。",
+   "answer_text": "ways",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "ways"
+     ],
+     "olds": [
+      "way",
+      "waies"
+     ],
+     "cn": [
+      "方式"
+     ]
+    }
+   ],
+   "help": "“新的……思考艺术和科学的方式”，空里填哪个词？注意复数。",
+   "explain": "His work gave people new ways to think about art and science. 他的工作给人们带来了思考艺术和科学的新方式。",
+   "common_errors": [
+    {
+     "when": "写了 way",
+     "say": "这里说的是很多种新的思考方式，要用复数 ways。"
+    },
+    {
+     "when": "写了 waies",
+     "say": "拼写注意：ways 是 w-a-y-s，y 前面不用变 i。"
+    }
+   ],
+   "audio_id": "u1r2-q26",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 38,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "look up 是什么意思",
+   "scene": "在词典里 look up 一个词是做什么？",
+   "stem": "What does “look up a word in a dictionary” mean?",
+   "options": [
+    "read it quickly",
+    "find its meaning in a dictionary",
+    "write it in a notebook",
+    "say it loudly"
+   ],
+   "answer": "B",
+   "help": "look up 是“查阅”，查词是查什么？",
+   "explain": "To look up a word means to find its meaning in a dictionary. look up 一个词，就是在词典里查它的意思。",
+   "wrong_feedback": {
+    "A": "read it quickly 是“快速读”，那是 look through，不是 look up。",
+    "C": "write it in a notebook 是“写进笔记本”，不是查词。",
+    "D": "say it loudly 是“大声说出来”，不是查词。"
+   },
+   "audio_id": "u1r2-q27",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 39,
+   "phase": "validate",
+   "kind": "short",
+   "title": "以《蒙娜丽莎》闻名",
+   "scene": "达·芬奇以哪幅画闻名？",
+   "stem": "Da Vinci is famous ___ the Mona Lisa.",
+   "task": "只写空里的部分。",
+   "answer_text": "for",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "for"
+     ],
+     "olds": [
+      "of",
+      "with"
+     ]
+    }
+   ],
+   "help": "be famous ___，“以……闻名”，空里填哪个介词？",
+   "explain": "Da Vinci is famous for the Mona Lisa. 达·芬奇以《蒙娜丽莎》闻名。",
+   "common_errors": [
+    {
+     "when": "写了 of",
+     "say": "be famous of 不对，固定搭配是 be famous for“以……闻名”。"
+    },
+    {
+     "when": "写了 with",
+     "say": "be famous with 不对，固定搭配是 be famous for。"
+    }
+   ],
+   "audio_id": "u1r2-q28",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 40,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "词典和百科全书有什么不同",
+   "scene": "查词和查知识，用的书一样吗？",
+   "stem": "What is the difference between a dictionary and an encyclopaedia?",
+   "options": [
+    "A dictionary gives facts about many subjects.",
+    "An encyclopaedia tells you how to say a word.",
+    "Both books do the same job.",
+    "A dictionary tells you the meaning of words; an encyclopaedia gives facts about subjects."
+   ],
+   "answer": "D",
+   "help": "想想：词典告诉你什么？百科全书告诉你什么？",
+   "explain": "A dictionary tells you the meaning of words, while an encyclopaedia gives facts about subjects. 词典告诉你词的意思，百科全书告诉你关于不同主题的事实和详细信息。",
+   "wrong_feedback": {
+    "A": "给很多主题的事实和详细信息的是百科全书，不是词典。",
+    "B": "告诉你一个词怎么说的是词典（发音），不是百科全书。",
+    "C": "两本书做的事不一样：词典查词，百科全书查知识。"
+   },
+   "audio_id": "u1r2-q29",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 41,
+   "phase": "validate",
+   "kind": "short",
+   "title": "其他交通工具",
+   "scene": "笔记本里除了飞行器还有什么？",
+   "stem": "His notebooks have drawings of flying machines and other ___.",
+   "task": "只写空里的部分。",
+   "answer_text": "vehicles",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "vehicles"
+     ],
+     "olds": [
+      "vehicle",
+      "vehicels"
+     ],
+     "cn": [
+      "交通工具"
+     ]
+    }
+   ],
+   "help": "“飞行器和其他……”，那个词是“交通工具”，注意复数。",
+   "explain": "His notebooks have drawings of flying machines and other vehicles. 他的笔记本里有飞行器和其他交通工具的图画。",
+   "common_errors": [
+    {
+     "when": "写了 vehicle",
+     "say": "这里说的是很多种交通工具，要用复数 vehicles。"
+    },
+    {
+     "when": "写了 vehicels",
+     "say": "拼写注意：vehicles 是 v-e-h-i-c-l-e-s，别写成 vehicels。"
+    }
+   ],
+   "audio_id": "u1r2-q30",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 42,
+   "phase": "validate",
+   "kind": "short",
+   "title": "艺术天赋",
+   "scene": "他从小显露出什么天赋？",
+   "stem": "He showed great intelligence and ___ talent from an early age.",
+   "task": "只写空里的部分。",
+   "answer_text": "artistic",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "artistic"
+     ],
+     "olds": [
+      "art",
+      "artist"
+     ],
+     "cn": [
+      "有艺术天赋的"
+     ]
+    }
+   ],
+   "help": "“艺术天赋”，填哪个形容词？",
+   "explain": "He showed great intelligence and artistic talent from an early age. 他从小就显露出极大的智慧和艺术天赋。",
+   "common_errors": [
+    {
+     "when": "写了 art",
+     "say": "art 是名词“艺术”；这里要填形容词 artistic“有艺术天赋的”。"
+    },
+    {
+     "when": "写了 artist",
+     "say": "artist 是名词“艺术家”；这里要填形容词 artistic。"
+    }
+   ],
+   "audio_id": "u1r2-q31",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 43,
+   "phase": "validate",
+   "kind": "short",
+   "title": "改变了思考方式",
+   "scene": "他的工作给人们带来了什么？",
+   "stem": "His work ___ how people think about art and science.",
+   "task": "只写空里的部分。",
+   "answer_text": "changed",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "changed"
+     ],
+     "olds": [
+      "change",
+      "changd"
+     ]
+    }
+   ],
+   "help": "“改变了人们思考艺术和科学的方式”，这里讲的是过去的事。",
+   "explain": "His work changed how people think about art and science. 他的工作改变了人们思考艺术和科学的方式。",
+   "common_errors": [
+    {
+     "when": "写了 change",
+     "say": "这里讲的是过去的事，change 要用过去式 changed。"
+    },
+    {
+     "when": "写了 changd",
+     "say": "拼写注意：changed 是 c-h-a-n-g-e-d，change 后面加 d。"
+    }
+   ],
+   "audio_id": "u1r2-q32",
+   "reading": "Leonardo da Vinci was born in a small village in the countryside of Italy. When he was a boy, he already showed great intelligence and a talent for art. As the years went by, he learnt more and more new skills. In his life he worked as a painter, an inventor, a musician, an engineer and a scientist. His best-known painting is the Mona Lisa. Many people say it is the most famous painting in the world. Da Vinci also filled his notebooks with drawings. In them you can find flying machines and other vehicles. Even today, people still open his notebooks and learn from them. His work gave people new ways to think about art and science. That is why people call him a true genius."
+  },
+  {
+   "step": 44,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "写作帮·写笔记：把条目写成五项笔记",
+   "teach_html": "<p>读完人物条目，别只合上书——写五项笔记：出生年份、去世年份、出生国家、职业、最有名的作品。</p><p>达·芬奇的笔记这样写：<strong>Year of birth: 1452. Year of death: 1519. Country of birth: Italy. Professions: painter, inventor, musician, engineer, scientist. Most famous artwork: the Mona Lisa.</strong></p><p>以后读任何人物条目，都按这五项记，复习时一眼就能想起来。</p>",
+   "audio_id": "u1r2-t09"
+  },
+  {
+   "step": 45,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪项笔记写对了",
+   "scene": "下面哪项达·芬奇的笔记写对了？",
+   "stem": "Which note about Leonardo da Vinci is correct?",
+   "options": [
+    "Year of birth: 1519",
+    "Country of birth: France",
+    "Year of birth: 1452",
+    "Most famous artwork: Sunflowers"
+   ],
+   "answer": "C",
+   "help": "对照五项笔记：出生年份是哪年？出生国家是哪里？最有名的作品是哪幅？",
+   "explain": "“Year of birth: 1452” is correct. 达·芬奇 1452 年出生，1519 年去世，出生在意大利，最有名的作品是《蒙娜丽莎》。",
+   "wrong_feedback": {
+    "A": "1519 是去世的年份，不是出生的年份。",
+    "B": "他的出生国家是意大利，不是法国。",
+    "D": "他最有名的作品是《蒙娜丽莎》，不是《向日葵》。"
+   },
+   "audio_id": "u1r2-q33"
+  },
+  {
+   "step": 46,
+   "phase": "validate",
+   "kind": "short",
+   "title": "写一句话：介绍达·芬奇的职业",
+   "scene": "用一句话介绍达·芬奇是做什么的。",
+   "stem": "Write one sentence to say what Leonardo da Vinci was. (Use “painter”, “inventor” and “scientist”.)",
+   "task": "写一整句话。",
+   "answer_text": "Leonardo da Vinci was a painter, an inventor and a scientist.",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "painter"
+     ],
+     "cn": [
+      "画家"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "inventor"
+     ],
+     "cn": [
+      "发明家"
+     ]
+    },
+    {
+     "id": "w3",
+     "type": "word",
+     "answers": [
+      "scientist"
+     ],
+     "cn": [
+      "科学家"
+     ]
+    }
+   ],
+   "help": "一句话里要出现 painter、inventor 和 scientist 三个词。",
+   "explain": "Leonardo da Vinci was a painter, an inventor and a scientist. 一句话里把他的三个职业都说全了。",
+   "common_errors": [
+    {
+     "when": "只写了两个职业",
+     "say": "三个职业都要写：painter、inventor、scientist，一个不能少。"
+    },
+    {
+     "when": "写了 science",
+     "say": "science 是“科学”；这里要填表示人的词 scientist“科学家”。"
+    }
+   ],
+   "audio_id": "u1r2-q34"
+  },
+  {
+   "step": 47,
+   "phase": "validate",
+   "kind": "short",
+   "title": "笔记本值得研究",
+   "scene": "他的笔记本很有意思，科学家到现在还在研究。",
+   "stem": "His notebooks are so ___ that scientists still study them today.",
+   "task": "只写空里的部分。",
+   "answer_text": "interesting",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "interesting"
+     ],
+     "olds": [
+      "interested",
+      "intresting"
+     ],
+     "cn": [
+      "有趣的"
+     ]
+    }
+   ],
+   "help": "so ___ that，“如此……以至于……”，笔记本怎么样，科学家才到现在还在研究？",
+   "explain": "His notebooks are so interesting that scientists still study them today. 他的笔记本如此有趣，以至于科学家到今天还在研究它们。",
+   "common_errors": [
+    {
+     "when": "写了 interested",
+     "say": "interested 是“感到有趣的”，说人的感受；这里修饰笔记本，要用 interesting“有趣的”。"
+    },
+    {
+     "when": "写了 intresting",
+     "say": "拼写注意：interesting 是 i-n-t-e-r-e-s-t-i-n-g，别丢了 e。"
+    }
+   ],
+   "audio_id": "u1r2-q35"
+  },
+  {
+   "step": 48,
+   "phase": "validate",
+   "kind": "mcq",
+   "title": "哪个 as 是“当……时”",
+   "scene": "下面哪个句子里的 as 表示“当……时”？",
+   "stem": "In which sentence does “as” mean “when”?",
+   "options": [
+    "He is as tall as his brother.",
+    "As he grew older, he learnt to do many different things.",
+    "Some were as small as chickens.",
+    "He was as smart as a scientist."
+   ],
+   "answer": "B",
+   "help": "as 表示“当……时”时，后面跟一个完整的句子；as...as... 中间夹的是形容词。",
+   "explain": "In “As he grew older, he learnt to do many different things”, “as” means “when”. 另外三句里的 as...as... 都是“和……一样”的意思。",
+   "wrong_feedback": {
+    "A": "这句是 as...as...，“和他哥哥一样高”，as 表示比较。",
+    "C": "这句是 as...as...，“像鸡一样小”，as 表示比较。",
+    "D": "这句是 as...as...，“和科学家一样聪明”，as 表示比较。"
+   },
+   "audio_id": "u1r2-q36"
+  },
+  {
+   "step": 49,
+   "phase": "validate",
+   "kind": "short",
+   "title": "笔记本里有图画",
+   "scene": "笔记本里有什么？",
+   "stem": "Da Vinci's notebooks ___ drawings of flying machines.",
+   "task": "只写空里的部分。",
+   "answer_text": "include",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "include"
+     ],
+     "olds": [
+      "includes",
+      "including"
+     ],
+     "cn": [
+      "包括"
+     ]
+    }
+   ],
+   "help": "notebooks 是复数，主语是“它们”，动词该用什么形式？",
+   "explain": "Da Vinci's notebooks include drawings of flying machines. 达·芬奇的笔记本里有飞行器的图画。主语 notebooks 是复数，动词用 include。",
+   "common_errors": [
+    {
+     "when": "写了 includes",
+     "say": "主语 notebooks 是复数，动词不用加 s，用 include。"
+    },
+    {
+     "when": "写了 including",
+     "say": "这里要填动词 include；including 是动名词，不能直接做谓语。"
+    }
+   ],
+   "audio_id": "u1r2-q37"
+  },
+  {
+   "step": 50,
+   "phase": "validate",
+   "kind": "teach",
+   "title": "本课小结",
+   "teach_html": "<p>这一课我们学了：</p><p>1. <strong>达·芬奇</strong>：1452 年生于意大利乡村，1519 年去世；画家、发明家、音乐家、工程师、科学家；最有名的画是《蒙娜丽莎》；笔记本里有飞行器和其他交通工具的图画。</p><p>2. <strong>扫描找信息</strong>：先想好找什么，再快速扫文章，看到相关词就停下来。</p><p>3. <strong>句式</strong>：as 引导时间状语从句（As he grew older...）；so...that...（如此……以至于……）。</p><p>4. <strong>短语</strong>：look through（快速翻看）、look up（查阅）、be famous for（以……闻名）。</p><p>5. <strong>做笔记</strong>：人物条目记五项——出生年、去世年、出生国、职业、最有名的作品；词典查词，百科全书查知识。</p><p>下节课读恐龙的条目，练 as...as...、either...or... 和列数字、作比较的写法。</p>",
+   "audio_id": "u1r2-t10"
+  }
+ ],
+ "title": "达·芬奇条目",
+ "unit": "Unit 1 Look it up!",
+ "version": 1
+}
