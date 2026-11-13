@@ -13,7 +13,7 @@ const db = require('./db');
 
 const CLEAN_VERDICTS = new Set(['correct', 'correct_retry', 'typo']);
 const STRUGGLE_VERDICTS = new Set(['wrong', 'wrong_retry', 'copied', 'chinese']);
-const ENGLISH_LESSON = /^(u[2-8]r\d+(-consolidate)?|u3-consolidate)$/;
+const ENGLISH_LESSON = /^(u[1-8]r\d+(-consolidate)?|u3-consolidate)$/;
 const IRREGULAR_PP = new Set(('taught bought sold broken grown written taken given seen done made read cut put brought caught thought found left felt kept spent sent built chosen driven eaten fallen forgotten hidden spoken stolen woken worn begun drunk rung sung swum been gone known shown flown drawn slept paid meant met won lost heard held kept sold told understood').split(' '));
 
 function logicalItemId(itemId) {
