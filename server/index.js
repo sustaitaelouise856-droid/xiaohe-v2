@@ -2956,8 +2956,8 @@ function lessonOpen(lid) {
       let started = st && (st.p1_done === 1 || st.p2_done === 1);
       // 2026-11-11修（反馈 id=33）：课上到一半不能再锁。抄答案（保底出口）会当场新增一条待复测，
       // 当天目标 live+1（7→8），doneToday 不变，门禁会在下一题提交时把正在上的课重新锁死。
-      // “已开”认当天真实进度：p1/p2 完成，或今天已有作答/进度；只点开过（0/0、无进度无作答）仍算未开；
-      // 跨天续课仍走门禁（2026-10-13 只认 p1/p2 的口径不变，只补当天课中这一档）。
+      // “已开”认真实进度：p1/p2 完成，或今天已有作答/进度；只点开过（0/0、无进度无作答）仍算未开；
+      // 2026-11-13修：跨天续课也算已开（有任何历史作答即已开），不再走门禁——见下方。
       if (!started) {
         try {
           const today = shanghaiDay();
@@ -2966,6 +2966,15 @@ function lessonOpen(lid) {
           else {
             const pr = db.prepare("SELECT 1 FROM progress WHERE lesson_id=? AND date(updated_at, '+8 hours')=? LIMIT 1").get(lid, today);
             if (pr) started = true;
+          }
+          // 2026-11-13修（17:00 健康检查发现）：跨天续课也算已开。u8r1 昨晚已做到第 19 步
+          // （14 次作答、progress 到 s20），今天还没做错题就被重新锁死，与 Elouise
+          // “门禁只锁未开始的新英语正课”硬规则冲突。只认真实作答（attempts），单纯点开
+          // （0/0、无作答）仍算未开，10-13 的防绕过口径不变；11-11“跨天续课仍走门禁”
+          // 的注释就此作废。
+          if (!started) {
+            const ever = db.prepare("SELECT 1 FROM attempts WHERE item_id LIKE ? LIMIT 1").get(lid + '-v%');
+            if (ever) started = true;
           }
         } catch {}
       }
