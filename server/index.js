@@ -89,10 +89,10 @@ function isReviewLesson(lid) { return /^review\d+$/.test(String(lid || '')); }
 // 每课巩固练（u6r1-consolidate 等）：可反复练（豁免防重做），错题进错题本，不计入每日 10 道门禁（2026-11-01）
 // 2026-11-04 补：u3-consolidate 同属巩固练，lessonOf 修好后它的步骤能被找到，
 // 防重做豁免必须同样覆盖它，否则学完一轮后无法再练（此前步骤找不到、检查被跳过才没暴露）。
-function isConsolidateLesson(lid) { return /^(u[2-8]r\d+-consolidate|u3-consolidate)$/.test(String(lid || '')); }
+function isConsolidateLesson(lid) { return /^(u[1-8]r\d+-consolidate|u3-consolidate)$/.test(String(lid || '')); }
 function loadLesson(lessonId) {
   const lid = String(lessonId || 'u2r1');
-  if (!/^(?:u[2-8]r\d+-consolidate|u[2-8]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
+  if (!/^(?:u[1-8]r\d+-consolidate|u[1-8]r\d+|review\d+|u3-consolidate|deep\d+|moon\d+|sx\d+|dict\d+|write\d+|yw-[a-z0-9]+|yw\d+-[a-z]+)$/.test(lid)) return null;
   if (!LESSON_CACHE[lid]) {
     const fp = path.join(seed.contentDir(), `lesson-${lid}.json`);
     if (!fs.existsSync(fp)) return null;
@@ -1560,7 +1560,7 @@ app.get('/api/lesson', auth.requireAuth, (req, res) => {
     kicker_teach: L.lesson.kicker_teach || '',
     answer_placeholder: L.lesson.answer_placeholder || '',
     // 2026-11-01：正课有无对应巩固练（前端完成页显示入口）
-    has_consolidate: /^(u[2-8]r\d+)$/.test(lid) ? fs.existsSync(path.join(seed.contentDir(), `lesson-${lid}-consolidate.json`)) : false,
+    has_consolidate: /^(u[1-8]r\d+)$/.test(lid) ? fs.existsSync(path.join(seed.contentDir(), `lesson-${lid}-consolidate.json`)) : false,
     steps: steps.map(s => publicStep(s, lid, L.lesson.version, choices)),
     // 2026-10-14：u3-consolidate 过关状态（供前端显示"重新挑战"）
     consolidation_passed: lid === 'u3-consolidate' ? (() => {
@@ -2950,7 +2950,7 @@ function lessonOpen(lid) {
   // 复习课本身、已开的课（有真实进度的）不受影响
   // 2026-10-13修："已开"只认 p1_done/p2_done=1 的真实进度，单纯点开过（0/0）的
   // 不算已开，否则 u5/u6 的 0/0 打开记录会绕过门禁。
-  if (/^u[2-8]r\d+$/.test(lid) && !isReviewLesson(lid)) {
+  if (/^u[1-8]r\d+$/.test(lid) && !isReviewLesson(lid)) {
     try {
       const st = lessonState(lid);
       let started = st && (st.p1_done === 1 || st.p2_done === 1);
@@ -2991,7 +2991,7 @@ function lessonOpen(lid) {
   const ids = orderedLessons();
   if (!ids.includes(lid)) return true; // 未入库的 id 由各调用点的白名单先拦，这里保持旧行为
   // 主线只算 u2r-u6r（排除 review、deep、moon、sx、yw）
-  const isMainline = id => /^(u[2-8]r\d+|review\d+)$/.test(id);
+  const isMainline = id => /^(u[1-8]r\d+|review\d+)$/.test(id);
   const regular = ids.filter(id => isMainline(id) && !isReviewLesson(id));
   const allRegularDone = regular.every(id => {
     const st = lessonState(id);
