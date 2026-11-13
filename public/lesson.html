@@ -610,7 +610,7 @@ async function parentReport(lid) {
 }
 // 课末弱点小结（2026-11-09）：只读当节课自己的答错和求助记录；无错漏时返回 null，不写弱点
 async function lessonWeakness(lid) {
-  if (!/^(u[2-8]r\d+(-consolidate)?|u3-consolidate)$/.test(lid || '')) return null;
+  if (!/^(u[1-8]r\d+(-consolidate)?|u3-consolidate)$/.test(lid || '')) return null;
   try {
     const r = await fetch('/api/lesson-weakness?lesson=' + encodeURIComponent(lid || LID));
     const d = await r.json();
