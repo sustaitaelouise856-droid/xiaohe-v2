@@ -19,7 +19,7 @@
    "phase": "teach",
    "kind": "teach",
    "title": "翻译帮·必记词汇（一）",
-   "teach_html": "<p>先认四个词，都是达·芬奇条目里要用的：</p><p><strong>intelligent</strong> /ɪnˈtelɪdʒənt/ <em>adj.</em> 有才智的；聪明的。Da Vinci was extremely intelligent. 达·芬奇非常聪明。</p><p><strong>talented</strong> /ˈtæləntɪd/ <em>adj.</em> 有才华的；天才的。He was unusually talented in many different fields. 他在很多不同领域都非常有才华。</p><p><strong>artistic</strong> /ɑːˈtɪstɪk/ <em>adj.</em> 有艺术天赋的。He showed artistic talent from an early age. 他从小就显露出艺术天赋。</p><p><strong>perhaps</strong> /pəˈhæps/ <em>adv.</em> 可能；大概；也许。The Mona Lisa is perhaps the most famous painting in the world. 《蒙娜丽莎》也许是世界上最有名的画。</p>",
+   "teach_html": "<p>先认五个词，都是达·芬奇条目里要用的：</p><p><strong>intelligent</strong> /ɪnˈtelɪdʒənt/ <em>adj.</em> 有才智的；聪明的。Da Vinci was extremely intelligent. 达·芬奇非常聪明。</p><p><strong>talented</strong> /ˈtæləntɪd/ <em>adj.</em> 有才华的；天才的。He was unusually talented in many different fields. 他在很多不同领域都非常有才华。</p><p><strong>artistic</strong> /ɑːˈtɪstɪk/ <em>adj.</em> 有艺术天赋的。He showed artistic talent from an early age. 他从小就显露出艺术天赋。</p><p><strong>show</strong> /ʃəʊ/ <em>v.</em> 显露；展示。He showed artistic talent from an early age. 他从小就显露出艺术天赋。showed 是 show 的过去式。</p><p><strong>perhaps</strong> /pəˈhæps/ <em>adv.</em> 可能；大概；也许。The Mona Lisa is perhaps the most famous painting in the world. 《蒙娜丽莎》也许是世界上最有名的画。</p>",
    "audio_id": "u1r2-t01"
   },
   {
@@ -1323,5 +1323,5 @@
  ],
  "title": "达·芬奇条目",
  "unit": "Unit 1 Look it up!",
- "version": 1
+ "version": 2
 }
