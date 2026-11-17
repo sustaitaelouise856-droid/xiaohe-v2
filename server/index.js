@@ -3159,18 +3159,35 @@ app.post('/api/feedback', auth.requireAuth, (req, res) => {
     let imgs = [];
     if (Array.isArray(b.images_b64)) imgs = b.images_b64.filter(x => typeof x === 'string' && x).slice(0, 4).map(x => x.slice(0, 2000000));
     if (!imgs.length && b.image_b64) imgs = [String(b.image_b64).slice(0, 2000000)];
-    if (!text && !imgs.length) return res.status(400).json({ ok: false, error: 'empty' });
+    // 2026-11-18：跟老师说语音留言（30秒内，base64 走现有 12mb body；本体 BLOB 存库、随备份走，
+    // 沿用 2026-10-23 口语录音做法，不只记一个 recorded 标志；单段上限 4MB 字符，同 /api/exam/speech）
+    let audioBuf = null, audioMime = null, audioDur = null;
+    let a64 = String(b.audio_b64 || '');
+    if (a64) {
+      const di = a64.indexOf('base64,');
+      if (di >= 0) a64 = a64.slice(di + 7);
+      if (a64.length > 4 * 1024 * 1024) return res.status(413).json({ ok: false, error: 'audio_too_large' });
+      const buf = Buffer.from(a64, 'base64');
+      if (buf.length) {
+        audioBuf = buf;
+        audioMime = String(b.audio_mime || '').slice(0, 128) || null;
+        const dur = Number(b.audio_duration_sec);
+        audioDur = (isFinite(dur) && dur > 0) ? Math.min(30, Math.round(dur)) : null;
+      }
+    }
+    if (!text && !imgs.length && !audioBuf) return res.status(400).json({ ok: false, error: 'empty' });
     const img = imgs[0] || '';
     const r = db.prepare(`INSERT INTO student_feedback
-      (lesson_id, step_no, item_id, text, image_b64, images_json, url, user_agent)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`)
+      (lesson_id, step_no, item_id, text, image_b64, images_json, url, user_agent, audio_blob, audio_mime, audio_duration_s)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
       .run(String(b.lesson_id || '').slice(0, 64) || null,
             Number(b.step_no) || null,
             String(b.item_id || '').slice(0, 64) || null,
             text || null, img || null, imgs.length ? JSON.stringify(imgs) : null,
             String(b.url || '').slice(0, 256) || null,
-            String(req.headers['user-agent'] || '').slice(0, 256));
-    res.json({ ok: true, id: r.lastInsertRowid });
+            String(req.headers['user-agent'] || '').slice(0, 256),
+            audioBuf, audioMime, audioDur);
+    res.json({ ok: true, id: r.lastInsertRowid, has_audio: !!audioBuf });
   } catch (e) { res.status(500).json({ ok: false, error: 'save_failed' }); }
 });
 // 学生看自己的反馈和老师的回复
@@ -3179,6 +3196,7 @@ app.get('/api/feedback/mine', auth.requireAuth, (req, res) => {
   try {
     const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, lesson_id, text,
       CASE WHEN image_b64 IS NOT NULL AND image_b64 != '' THEN 1 ELSE 0 END AS has_image,
+      CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END AS has_audio,
       status, reply FROM student_feedback WHERE COALESCE(student_deleted,0)=0 ORDER BY id DESC LIMIT 20`).all();
     res.json({ ok: true, list: rows });
   } catch { res.json({ ok: true, list: [] }); }
@@ -3212,7 +3230,9 @@ app.get('/api/admin/feedback', (req, res) => {
         let images = [];
         try { images = r.images_json ? JSON.parse(r.images_json) : []; } catch {}
         if (!Array.isArray(images) || !images.length) images = r.image_b64 ? [r.image_b64] : [];
-        return Object.assign({}, r, { images });
+        // 2026-11-18：列表不带语音本体（本体走 /api/admin/feedback/:id/audio 单取），只给标志
+        const { audio_blob, ...rest } = r;
+        return Object.assign({}, rest, { images, has_audio: audio_blob ? 1 : 0 });
       });
     res.json({ ok: true, list: rows });
   } catch { res.json({ ok: true, list: [] }); }
@@ -3229,6 +3249,20 @@ app.post('/api/admin/feedback/reply', (req, res) => {
       WHERE id=?`).run(String(b.reply || '').slice(0, 2000), Number(b.id) || 0);
     res.json({ ok: true });
   } catch { res.status(500).json({ ok: false, error: 'save_failed' }); }
+});
+// 管理：听一段反馈语音（2026-11-18：跟老师说语音留言，按存档 mime 返回 BLOB 本体；鉴权同 /api/admin/feedback）
+app.get('/api/admin/feedback/:id/audio', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  try {
+    const r = db.prepare(`SELECT audio_blob, audio_mime FROM student_feedback WHERE id=?`).get(Number(req.params.id) || 0);
+    if (!r || !r.audio_blob) return res.status(404).json({ ok: false, error: 'no_audio' });
+    res.set('Content-Type', r.audio_mime || 'audio/webm');
+    res.send(Buffer.from(r.audio_blob));
+  } catch { res.status(500).json({ ok: false, error: 'failed' }); }
 });
 
 app.post('/api/admin/cleanup-retest', (req, res) => {
