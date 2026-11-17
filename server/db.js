@@ -217,6 +217,9 @@ CREATE TABLE IF NOT EXISTS student_feedback (
 );`);
 ensureColumn('student_feedback', 'images_json', 'TEXT'); // 2026-10-23：多张截图（JSON 数组）；image_b64 保留首图兼容
 ensureColumn('student_feedback', 'student_deleted', 'INTEGER NOT NULL DEFAULT 0'); // 2026-10-24：学生端删除历史（软删除，仅学生端隐藏，后台保留）
+ensureColumn('student_feedback', 'audio_blob', 'BLOB'); // 2026-11-18：跟老师说语音留言本体（30秒内，随库备份走；沿用口语录音 BLOB 存库做法）
+ensureColumn('student_feedback', 'audio_mime', 'TEXT'); // 2026-11-18：语音 mime，如 audio/webm、audio/mp4
+ensureColumn('student_feedback', 'audio_duration_s', 'INTEGER'); // 2026-11-18：语音时长（秒，上限30）
 // 摸底诊断（2026-10-03 P2）：广播站"新人能力检测"
 // 3段×15-20分钟，自适应（连错3停），两套平行卷A/B
 db.exec(`
