@@ -314,6 +314,7 @@
 <div id="topbar" style="display:none">
   <button id="btnBack" onclick="location.href='/'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">← 课程</button>
   <button onclick="location.href='/vocab.html'" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;">📖 生词本</button>
+  <button data-talk-teacher type="button" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:15px;flex:none;">💬 跟老师说</button>
   <div id="brand">小禾英语<small>第一课 · 新播音员上岗</small></div>
   <div id="player">
     <button id="btnPlay" class="paused" aria-label="播放"></button>
@@ -2044,6 +2045,13 @@ async function submitCopy(s, answer) {
       <p class="scene">检查一下网络，再刷新试试。</p>
       <button class="btn btn-primary" onclick="location.reload()">重新加载本题</button></div>`;
   }
+  // 跟老师说直连（2026-11-18）：面板自动带当前课与当前题（LID/cur 只在主 IIFE 内可见，必须写在这里）
+  window.__talkTeacherContext = function () {
+    try {
+      var s = (typeof cur === 'function') ? cur() : null;
+      return { lesson_id: (typeof LID !== 'undefined') ? LID : '', step_no: s ? s.step : null, item_id: (s && s.item_id) || '' };
+    } catch (e) { return {}; }
+  };
 })();
 
 // ---------- 老师回复提醒（2026-10-20 Elouise：老师一回复，页面弹窗提醒） ----------
@@ -2073,6 +2081,7 @@ async function submitCopy(s, answer) {
   setInterval(checkFbReplies, 120000);
 })();
 </script>
+<script src="/talk-to-teacher.js"></script>
 <script src="/modal.js"></script>
 </body>
 </html>
