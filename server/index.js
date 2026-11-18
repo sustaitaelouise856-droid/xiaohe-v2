@@ -964,6 +964,10 @@ const TITLE_DEFS = [
   { id: 'social', name: '分享达人', icon: '💌', desc: '分享学习报告给家长（隐藏）', cat: '传奇', rarity: '普通' },
   { id: 'lucky_7', name: '幸运七', icon: '🍀', desc: '7月7日完成学习（隐藏）', cat: '传奇', rarity: '普通' },
   { id: 'century', name: '百年大计', icon: '💯', desc: '累计答对1000道题', cat: '学业', rarity: '传说' },
+  // 2026-11-18 Elouise：新增三个掌握型称号（先教再考/产出/复述）
+  { id: 'true_mastery', name: '真学会', icon: '✅', desc: '同一错题点三次隔日新变式都过，且能讲出为什么', cat: '突破', rarity: '稀有' },
+  { id: 'write_it_myself', name: '自己写出来', icon: '✍️', desc: '新课产出题一次答对率达到 70%', cat: '突破', rarity: '稀有' },
+  { id: 'story_reteller', name: '故事复述者', icon: '📖', desc: '听完故事能用句框复述三句，且能讲出寓意', cat: '探索', rarity: '普通' },
 ];
 
 // 计算某课程的独立正确率（每题取最后一次作答，helped=0才算独立）
@@ -1367,6 +1371,51 @@ function checkTitles() {
   try {
     const r = db.prepare("SELECT COUNT(*) c FROM attempts WHERE correct=1").get();
     if (r && r.c >= 1000) grant('century');
+  } catch {}
+  // 2026-11-18：三个新称号（先教再考/产出/复述）
+  // 真学会：retest_passes 里某错题点攒够 3 个不同通过日期（隔日）即颁发。
+  // 复测在纸上做，不在 attempts 表里，靠 Elouise 确认后由 /api/admin/record-retest-pass 填表；
+  // checkTitles 只读表，绝不直接往 titles 表手写 INSERT。
+  try {
+    const r = db.prepare(
+      "SELECT point, COUNT(DISTINCT pass_date) c FROM retest_passes GROUP BY point HAVING c >= 3"
+    ).all();
+    if (r && r.length > 0) grant('true_mastery');
+  } catch {}
+  // 故事复述者：story_retells 里有一次经确认的完整复述（三句框全带对词 + 能讲寓意）即颁发；
+  // 记录由 /api/admin/record-retell 填表（Elouise 确认）。
+  try {
+    const r = db.prepare('SELECT COUNT(*) c FROM story_retells').get();
+    if (r && r.c >= 1) grant('story_reteller');
+  } catch {}
+  // 自己写出来：最近一节已完成的英语正课（u1r1-u8r5），产出题首次答对率 >= 70%。
+  // 口径（2026-11-18 定）：产出题 = items.kind='short'（lesson JSON 没有 type 字段，kind 即题型）；
+  // 只计该课当前最高版本的题；首次作答 = 每题 MIN(attempts.id)，答对须 correct=1 且 helped=0；
+  // 已尝试的当前版本产出题 < 该课产出题总数一半时不判定（防升版后只做了几道就误判）。
+  // 上线前核查（2026-11-18）：最近已完成课 u1r2 产出首次答对率 v1 40.0%（8/20）、v2 0%（0/3），
+  // u1r1 60.0%（12/20），均 <70%，上线后不会立即误颁；u1r3 完成后才首次有机会触发。
+  try {
+    const last = db.prepare(`
+      SELECT lesson_id FROM lesson_state
+      WHERE p1_done=1 AND p2_done=1 AND lesson_id GLOB 'u[1-8]r[1-5]'
+      ORDER BY updated_at DESC LIMIT 1
+    `).get();
+    if (last) {
+      const lid = last.lesson_id;
+      const total = db.prepare(
+        "SELECT COUNT(*) c FROM items WHERE lesson_id=? AND kind='short' AND version=(SELECT MAX(version) FROM items WHERE lesson_id=?)"
+      ).get(lid, lid);
+      const r = db.prepare(`
+        SELECT COUNT(*) n,
+               SUM(CASE WHEN a.correct=1 AND a.helped=0 THEN 1 ELSE 0 END) ok
+        FROM (SELECT item_id, MIN(id) AS first_id FROM attempts GROUP BY item_id) f
+        JOIN attempts a ON a.id = f.first_id
+        JOIN items i ON i.item_id = a.item_id
+        WHERE i.lesson_id=? AND i.kind='short'
+          AND i.version=(SELECT MAX(version) FROM items WHERE lesson_id=?)
+      `).get(lid, lid);
+      if (r && total && total.c > 0 && r.n >= Math.ceil(total.c / 2) && r.ok / r.n >= 0.70) grant('write_it_myself');
+    }
   } catch {}
   // 2026-10-18修：进度条类称号，进度达标自动颁发（防"934/300还未获得"bug）
   try {
@@ -3110,6 +3159,52 @@ app.post('/api/admin/revoke-title', (req, res) => {
     const r = db.prepare('DELETE FROM titles WHERE title_id=?').run(title_id);
     console.log('[admin] revoke-title:', title_id, 'deleted:', r.changes);
     res.json({ ok: true, revoked: title_id, deleted: r.changes });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
+// 管理员：记一次复测通过（2026-11-18：真学会颁发依据）
+// 复测在纸上做，网站看不到，Elouise 确认后由 Muse 填表；checkTitles() 读表颁发。
+// 鉴权同 /api/admin/revoke-title：备份 token。
+app.post('/api/admin/record-retest-pass', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const { point, pass_date, source, note } = req.body || {};
+    if (!point || typeof point !== 'string') return res.json({ ok: false, error: 'no_point' });
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(pass_date || '')) return res.json({ ok: false, error: 'bad_pass_date' });
+    if (!source || typeof source !== 'string') return res.json({ ok: false, error: 'no_source' });
+    const r = db.prepare(
+      'INSERT INTO retest_passes(point, pass_date, source, note) VALUES(?,?,?,?)'
+    ).run(point.trim(), pass_date, source.trim(), (note || '').trim());
+    const newly = checkTitles();
+    console.log('[admin] record-retest-pass:', point, pass_date, source, 'newly:', newly);
+    res.json({ ok: true, id: r.lastInsertRowid, newly });
+  } catch (e) {
+    res.json({ ok: false, error: e.message });
+  }
+});
+// 管理员：记一次完整故事复述（2026-11-18：故事复述者颁发依据）
+// 复述在纸上/语音里，Elouise 确认"三句框全带对词 + 能讲寓意"后由 Muse 填表；checkTitles() 读表颁发。
+// 鉴权同 /api/admin/revoke-title：备份 token。
+app.post('/api/admin/record-retell', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try {
+    const { story, retell_date, source, note } = req.body || {};
+    if (!story || typeof story !== 'string') return res.json({ ok: false, error: 'no_story' });
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(retell_date || '')) return res.json({ ok: false, error: 'bad_retell_date' });
+    if (!source || typeof source !== 'string') return res.json({ ok: false, error: 'no_source' });
+    const r = db.prepare(
+      'INSERT INTO story_retells(story, retell_date, source, note) VALUES(?,?,?,?)'
+    ).run(story.trim(), retell_date, source.trim(), (note || '').trim());
+    const newly = checkTitles();
+    console.log('[admin] record-retell:', story, retell_date, source, 'newly:', newly);
+    res.json({ ok: true, id: r.lastInsertRowid, newly });
   } catch (e) {
     res.json({ ok: false, error: e.message });
   }
