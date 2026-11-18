@@ -173,6 +173,30 @@ CREATE TABLE IF NOT EXISTS titles (
   title_id   TEXT PRIMARY KEY,
   earned_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
+// 复测通过记录（2026-11-18：真学会颁发依据；纸上复测不在 attempts 表里，靠 Elouise 确认后填表）
+// point：错题点，如 u1r2-s43 / unless；pass_date：上海自然日 YYYY-MM-DD（隔日计数按此去重）；
+// source：Elouise 口头 | 纸单 | 语音留言
+db.exec(`
+CREATE TABLE IF NOT EXISTS retest_passes (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  point      TEXT NOT NULL,
+  pass_date  TEXT NOT NULL,
+  source     TEXT NOT NULL,
+  note       TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+`);
+// 故事复述记录（2026-11-18：故事复述者颁发依据；纸上句框或语音留言，经确认后填表）
+db.exec(`
+CREATE TABLE IF NOT EXISTS story_retells (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  story       TEXT NOT NULL,
+  retell_date TEXT NOT NULL,
+  source      TEXT NOT NULL,
+  note        TEXT NOT NULL DEFAULT '',
+  created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+);
+`);
 // 复测队列表（2026-10-03）：copied/看答案过 → 待复测 → 下次学习自动出同一知识点换材料复测题
 // 零帮助独立答对才算解决。h 上线前的历史"看答案过"记录从 weakness_events 回填。
 db.exec(`
