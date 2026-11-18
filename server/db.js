@@ -307,3 +307,21 @@ CREATE TABLE IF NOT EXISTS word_mastery (
   last_at    TEXT,
   updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
+// 今晚先练作答（2026-11-18：纸上教法单搬到平板，替代手抄；只练，不计门禁、不清错题本、不颁称号）
+// section: s43|s49|s12|king；field: think|explained|variant1|variant2|mnemonic|mnemonic_audio|cloze|cloze_why|retell1|retell2|retell3|retell_audio|moral
+// correct: 闭卷变式/完形由服务端判 1/0；开放题（想一想/口诀/复述）为 NULL，等 Muse 事后判
+// 语音本体 BLOB 存库，随库备份走（沿用 /api/feedback 语音做法）
+db.exec(`
+CREATE TABLE IF NOT EXISTS tonight_practice (
+  id               INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at       TEXT NOT NULL DEFAULT (datetime('now')),
+  date             TEXT NOT NULL,
+  section          TEXT NOT NULL,
+  field            TEXT NOT NULL,
+  answer_text      TEXT,
+  correct          INTEGER,
+  audio_blob       BLOB,
+  audio_mime       TEXT,
+  audio_duration_s INTEGER,
+  user_agent       TEXT
+);`);
