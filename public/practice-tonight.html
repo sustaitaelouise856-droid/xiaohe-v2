@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今晚先练 · 11月18日</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #f6f8f6; color: #222; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px 16px 60px; }
+h1 { font-size: 24px; margin: 8px 0; }
+h2 { font-size: 20px; margin-top: 30px; border-left: 6px solid #43a047; padding-left: 10px; }
+h3 { font-size: 17px; margin: 6px 0; }
+p { line-height: 1.65; }
+.usage { background: #fff8e1; border: 1px solid #ffe082; border-radius: 12px; padding: 12px; font-size: 15px; }
+.item { background: #fff; border: 1px solid #e0e0e0; border-radius: 14px; padding: 14px; margin: 14px 0; }
+.step { border-top: 1px dashed #ddd; padding: 12px 0; }
+.step:first-of-type { border-top: 0; }
+.stept { font-weight: 800; margin-bottom: 6px; }
+.ex { background: #e8f5e9; padding: 10px; border-radius: 8px; font-size: 17px; }
+textarea, input[type=text] { width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; margin: 4px 0; }
+input.inline { width: 120px; display: inline-block; }
+.btn { padding: 10px 18px; font-size: 15px; border-radius: 999px; border: 0; background: #43a047; color: #fff; font-weight: 700; cursor: pointer; margin-top: 8px; min-height: 44px; }
+.btn.big { display: inline-block; background: #2e7d32; margin: 6px 10px 6px 0; text-decoration: none; }
+.btn:disabled { background: #bbb; cursor: default; }
+.ok { color: #2e7d32; font-weight: 700; margin-left: 8px; }
+.fb { margin-top: 8px; font-size: 15px; min-height: 20px; line-height: 1.6; }
+.fb.good { color: #2e7d32; font-weight: 700; }
+.fb.bad { color: #c62828; }
+.mcq button { display: block; width: 100%; text-align: left; margin: 6px 0; padding: 12px; font-size: 16px; border: 2px solid #ccc; border-radius: 10px; background: #fff; cursor: pointer; min-height: 48px; }
+.mcq button.picked { border-color: #43a047; background: #e8f5e9; }
+.mcq button.wrong-pick { border-color: #c62828; background: #ffebee; }
+.bank { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.chip { padding: 10px 16px; font-size: 16px; border-radius: 999px; border: 2px solid #7b1fa2; background: #f3e5f5; cursor: pointer; min-height: 44px; }
+.chip.sel { background: #7b1fa2; color: #fff; }
+.chip.used { opacity: .35; }
+.story { font-size: 18px; line-height: 2.2; background: #fff; padding: 14px; border-radius: 12px; border: 1px solid #e0e0e0; }
+.blank { display: inline-block; min-width: 92px; border-bottom: 2px solid #7b1fa2; text-align: center; color: #7b1fa2; font-weight: 700; cursor: pointer; padding: 0 6px; }
+.blank.filled { background: #f3e5f5; border-radius: 6px; }
+.blank.right { border-color: #2e7d32; color: #2e7d32; background: #e8f5e9; }
+.rec { background: #fafafa; border: 1px dashed #ccc; border-radius: 10px; padding: 10px; margin-top: 8px; }
+.rec-timer { color: #d93025; font-weight: 700; margin-left: 10px; }
+.rec-note { font-size: 13px; color: #666; margin-top: 6px; }
+.done { background: #e8f5e9; border: 2px solid #43a047; border-radius: 14px; padding: 16px; margin-top: 28px; }
+a.home { color: #2e7d32; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>📝 今晚先练 · 11月18日</h1>
+<p class="usage">先在平板上练，练对了再去做网站上的三道原题。做错了会有提示，不直接给答案。<br>这页只练：不计闯关、不清错题本、不颁称号。纸上两遍还错就先放下，不堵新课。</p>
+
+<h2>第一部分：三道错题教法单</h2>
+
+<div class="item" data-section="s43">
+  <h3>第1道：过去式 changed（u1r2 s43）</h3>
+  <div class="step">
+    <div class="stept">① 先想一想</div>
+    <p>我当时是怎么想的？当时填了什么，为什么那样填？</p>
+    <textarea id="s43-think" rows="2" placeholder="打一句就行"></textarea><br>
+    <button type="button" class="btn" data-save="s43|think|#s43-think">保存</button><span class="ok"></span>
+  </div>
+  <div class="step">
+    <div class="stept">② 看例题，自讲一遍为什么</div>
+    <p class="ex">His work changed how people think about art and science.</p>
+    <ol>
+      <li>讲的是过去的事（他的工作已经改变了人们的想法），动词要用过去式。</li>
+      <li>change 以字母 e 结尾，变过去式只加 d：change → changed，e 不能丢。</li>
+      <li>错的样子长这样——change 是现在时，这里讲过去不能用；changd 拼写错了，e 丢了。</li>
+    </ol>
+    <button type="button" class="btn" data-tap="s43|explained">我自讲了一遍，明白了</button><span class="ok"></span>
+  </div>
+  <div class="step">
+    <div class="stept">③ 遮住答案，做新变式</div>
+    <p>变式题1：He <input type="text" class="inline" id="s43-v1" autocomplete="off"> (live) in Shanghai ten years ago.</p>
+    <button type="button" class="btn" data-check="s43|variant1|#s43-v1">对一下</button>
+    <div class="fb" id="fb-s43-variant1"></div>
+    <p>变式题2：Yesterday, the new phone ___ the way we talk to friends.</p>
+    <div class="mcq" data-mcq="s43|variant2">
+      <button type="button" data-opt="A">A. change</button>
+      <button type="button" data-opt="B">B. changes</button>
+      <button type="button" data-opt="C">C. changed</button>
+      <button type="button" data-opt="D">D. changing</button>
+    </div>
+    <div class="fb" id="fb-s43-variant2"></div>
+    <p>写完后用自己的话讲一遍：以 e 结尾的动词变过去式要怎么变？怎么知道这里该用过去式？（讲出声来就行，不用写）</p>
+  </div>
+  <div class="step">
+    <div class="stept">④ 口诀：自己写一句</div>
+    <input type="text" id="s43-mn" placeholder="我的口诀：……" autocomplete="off">
+    <button type="button" class="btn" data-save="s43|mnemonic|#s43-mn">保存口诀</button><span class="ok"></span>
+    <div class="rec" id="rec-s43-mnemonic"></div>
+  </div>
+</div>
+
+<div class="item" data-section="s49">
+  <h3>第2道：复数主语用 include（u1r2 s49）</h3>
+  <div class="step">
+    <div class="stept">① 先想一想</div>
+    <p>我当时是怎么想的？当时填了什么，为什么那样填？</p>
+    <textarea id="s49-think" rows="2" placeholder="打一句就行"></textarea><br>
+    <button type="button" class="btn" data-save="s49|think|#s49-think">保存</button><span class="ok"></span>
+  </div>
+  <div class="step">
+    <div class="stept">② 看例题，自讲一遍为什么</div>
+    <p class="ex">Da Vinci's notebooks include drawings of flying machines.</p>
+    <ol>
+      <li>主语 notebooks 是复数，是“它们”，动词用原形 include，不加 s。</li>
+      <li>includes 是单数主语用的，这里主语是复数，不能用。</li>
+      <li>including 是 -ing 形式，不能单独做谓语，这里要填动词。</li>
+    </ol>
+    <button type="button" class="btn" data-tap="s49|explained">我自讲了一遍，明白了</button><span class="ok"></span>
+  </div>
+  <div class="step">
+    <div class="stept">③ 遮住答案，做新变式</div>
+    <p>变式题1：The books on the desk ___ many old photos.</p>
+    <input type="text" class="inline" id="s49-v1" autocomplete="off" placeholder="填空里那个词">
+    <button type="button" class="btn" data-check="s49|variant1|#s49-v1">对一下</button>
+    <div class="fb" id="fb-s49-variant1"></div>
+    <p>变式题2：Look, the two boxes ___ many old books.</p>
+    <div class="mcq" data-mcq="s49|variant2">
+      <button type="button" data-opt="A">A. includes</button>
+      <button type="button" data-opt="B">B. include</button>
+      <button type="button" data-opt="C">C. including</button>
+      <button type="button" data-opt="D">D. included</button>
+    </div>
+    <div class="fb" id="fb-s49-variant2"></div>
+    <p>写完后用自己的话讲一遍：主语是复数时，动词要怎么变？怎么一眼看出主语是单数还是复数？（讲出声来就行，不用写）</p>
+  </div>
+  <div class="step">
+    <div class="stept">④ 口诀：自己写一句</div>
+    <input type="text" id="s49-mn" placeholder="我的口诀：……" autocomplete="off">
+    <button type="button" class="btn" data-save="s49|mnemonic|#s49-mn">保存口诀</button><span class="ok"></span>
+    <div class="rec" id="rec-s49-mnemonic"></div>
+  </div>
+</div>
+
+<div class="item" data-section="s12">
+  <h3>第3道：三个数字别搞混（u1r3 s12）</h3>
+  <div class="step">
+    <div class="stept">① 先想一想</div>
+    <p>我当时是怎么想的？当时填了什么，为什么那样填？</p>
+    <textarea id="s12-think" rows="2" placeholder="打一句就行"></textarea><br>
+    <button type="button" class="btn" data-save="s12|think|#s12-think">保存</button><span class="ok"></span>
+  </div>
+  <div class="step">
+    <div class="stept">② 看例题，自讲一遍为什么</div>
+    <p class="ex">Dinosaurs lived on the Earth for more than 180 million years.</p>
+    <ol>
+      <li>先在心里画一条时间线：245 是第一次出现，180 是统治了多久，66 是灭绝。</li>
+      <li>这句问的是“统治了多久”，找 for more than ___ million years 那句，答案是 180。</li>
+      <li>错的样子长这样——66 是灭绝的时间，不是统治的时间；245 是第一次出现的时间，也不是统治的时间。</li>
+    </ol>
+    <button type="button" class="btn" data-tap="s12|explained">我自讲了一遍，明白了</button><span class="ok"></span>
+  </div>
+  <div class="step">
+    <div class="stept">③ 遮住答案，做新变式</div>
+    <p>变式题1：Dinosaurs died out about ___ million years ago.</p>
+    <div class="mcq" data-mcq="s12|variant1">
+      <button type="button" data-opt="A">A. 180</button>
+      <button type="button" data-opt="B">B. 66</button>
+      <button type="button" data-opt="C">C. 245</button>
+      <button type="button" data-opt="D">D. 300</button>
+    </div>
+    <div class="fb" id="fb-s12-variant1"></div>
+    <p>变式题2：Dinosaurs lived on the Earth for more than <input type="text" class="inline" id="s12-v2" autocomplete="off"> million years, not 66 and not 245.</p>
+    <button type="button" class="btn" data-check="s12|variant2|#s12-v2">对一下</button>
+    <div class="fb" id="fb-s12-variant2"></div>
+    <p>写完后用自己的话讲一遍：245、180、66 各是什么意思？做题时先找哪句话？（讲出声来就行，不用写）</p>
+  </div>
+  <div class="step">
+    <div class="stept">④ 口诀：自己写一句</div>
+    <input type="text" id="s12-mn" placeholder="我的口诀：……" autocomplete="off">
+    <button type="button" class="btn" data-save="s12|mnemonic|#s12-mn">保存口诀</button><span class="ok"></span>
+    <div class="rec" id="rec-s12-mnemonic"></div>
+  </div>
+</div>
+
+<h2>第二部分：国王故事完形变式</h2>
+<div class="item">
+  <p>先把故事读两遍，第一遍抓大意——国王想变强，结果怎么样？第二遍再做题。<br>寓意先记住一句话：小事不做，大事必败。</p>
+  <p>词库（每个词只用一次）：点一个词，再点一个空。</p>
+  <div class="bank" id="bank"></div>
+  <p class="story" id="story">A king wanted to be <span class="blank" data-blank="1">___</span> than all the other kings. He made a <span class="blank" data-blank="2">___</span> to build a big castle in one day. He was too <span class="blank" data-blank="3">___</span> to wait. He did not <span class="blank" data-blank="4">___</span> to check the small stones. One small <span class="blank" data-blank="5">___</span> <span class="blank" data-blank="6">___</span> the whole castle to fall down.</p>
+  <button type="button" class="btn" id="cloze-check">对一下</button>
+  <div class="fb" id="fb-cloze"></div>
+  <p>每空为什么这样填？一句话讲讲：</p>
+  <textarea id="king-why" rows="2" placeholder="比如：第一空是因为……"></textarea><br>
+  <button type="button" class="btn" data-save="king|cloze_why|#king-why">保存</button><span class="ok"></span>
+  <h3>复述（说出来，不用写全篇）</h3>
+  <p>用三句话讲这个故事，每句都要带一个刚才填的词：</p>
+  <p>句框1：The king wanted to be <input type="text" class="inline" id="king-r1" autocomplete="off">.</p>
+  <button type="button" class="btn" data-save="king|retell1|#king-r1">保存第一句</button><span class="ok"></span>
+  <p>句框2：He was too <input type="text" class="inline" id="king-r2a" autocomplete="off"> to <input type="text" class="inline" id="king-r2b" autocomplete="off">.</p>
+  <button type="button" class="btn" data-save="king|retell2|#king-r2a,#king-r2b">保存第二句</button><span class="ok"></span>
+  <p>句框3：One small <input type="text" class="inline" id="king-r3a" autocomplete="off"> caused <input type="text" class="inline" id="king-r3b" autocomplete="off">.</p>
+  <button type="button" class="btn" data-save="king|retell3|#king-r3a,#king-r3b">保存第三句</button><span class="ok"></span>
+  <p>把三句话和寓意一起说出来（30 秒）：</p>
+  <div class="rec" id="rec-king-retell"></div>
+  <p>这个故事告诉我们什么？一句话：</p>
+  <input type="text" id="king-moral" placeholder="小事不做，……" autocomplete="off">
+  <button type="button" class="btn" data-save="king|moral|#king-moral">保存</button><span class="ok"></span>
+</div>
+
+<div class="done">
+  <h2 style="border:0;margin-top:0;padding-left:0;">练完了，去做网站上的三道原题</h2>
+  <p>答对且零求助才清错题本，今日闯关 3/3。做完再续 u1r3 从第18步往下。</p>
+  <a class="btn big" href="/lesson?lesson=u1r2">去做 u1r2 原题（s43、s49）</a>
+  <a class="btn big" href="/lesson?lesson=u1r3">去做 u1r3 原题（s12）</a>
+  <p><a class="home" href="/">← 回首页</a></p>
+</div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  function $(s) { return document.querySelector(s); }
+  function $all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
+  function okEl(btn) { var n = btn.nextElementSibling; return (n && n.classList && n.classList.contains('ok')) ? n : null; }
+  function postAnswer(section, field, text, audio) {
+    var body = { section: section, field: field, answer_text: text || '' };
+    if (audio) { body.audio_b64 = audio.b64; body.audio_mime = audio.mime; body.audio_duration_sec = audio.dur; }
+    return fetch('/api/practice-tonight/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(function (r) { return r.json(); });
+  }
+  function blobToDataURL(blob) {
+    return new Promise(function (resolve, reject) {
+      var fr = new FileReader();
+      fr.onload = function () { resolve(fr.result); };
+      fr.onerror = reject;
+      fr.readAsDataURL(blob);
+    });
+  }
+  function showSaved(btn) { var o = okEl(btn); if (o) o.textContent = '已保存 ✓'; }
+
+  // ---- 文字保存（想一想 / 口诀 / 复述句 / 寓意）----
+  $all('[data-save]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var parts = btn.getAttribute('data-save').split('|');
+      var section = parts[0], field = parts[1];
+      var sels = parts[2].split(',');
+      var vals = sels.map(function (s) { var el = $(s); return el ? el.value.trim() : ''; });
+      var text = vals.join(' / ');
+      if (!text) { var o = okEl(btn); if (o) o.textContent = '先写一句再保存'; return; }
+      btn.disabled = true;
+      postAnswer(section, field, text, null).then(function (d) {
+        btn.disabled = false;
+        if (d && d.ok) showSaved(btn); else { var o2 = okEl(btn); if (o2) o2.textContent = '没发出去，再点一次'; }
+      }).catch(function () { btn.disabled = false; var o3 = okEl(btn); if (o3) o3.textContent = '没发出去，检查网络再点一次'; });
+    });
+  });
+
+  // ---- 自讲确认 ----
+  $all('[data-tap]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var parts = btn.getAttribute('data-tap').split('|');
+      btn.disabled = true;
+      postAnswer(parts[0], parts[1], 'yes', null).then(function (d) {
+        btn.disabled = false;
+        if (d && d.ok) showSaved(btn);
+      }).catch(function () { btn.disabled = false; });
+    });
+  });
+
+  // ---- 填空对一下 ----
+  $all('[data-check]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var parts = btn.getAttribute('data-check').split('|');
+      var section = parts[0], field = parts[1];
+      var el = $(parts[2]);
+      var val = el ? el.value.trim() : '';
+      var fb = $('#fb-' + section + '-' + field);
+      if (!val) { if (fb) { fb.className = 'fb bad'; fb.textContent = '先填上再对一下'; } return; }
+      btn.disabled = true;
+      postAnswer(section, field, val, null).then(function (d) {
+        btn.disabled = false;
+        if (!fb) return;
+        if (d && d.ok && d.correct === 1) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+        else if (d && d.ok) { fb.className = 'fb bad'; fb.textContent = '不对，再想想：' + (d.hint || ''); }
+        else { fb.className = 'fb bad'; fb.textContent = '没发出去，再点一次'; }
+      }).catch(function () { btn.disabled = false; if (fb) { fb.className = 'fb bad'; fb.textContent = '没发出去，检查网络再点一次'; } });
+    });
+  });
+
+  // ---- 选择题：点选项即提交，可重试 ----
+  $all('[data-mcq]').forEach(function (box) {
+    var parts = box.getAttribute('data-mcq').split('|');
+    var section = parts[0], field = parts[1];
+    var fb = $('#fb-' + section + '-' + field);
+    box.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        box.querySelectorAll('button').forEach(function (x) { x.classList.remove('picked', 'wrong-pick'); });
+        b.classList.add('picked');
+        postAnswer(section, field, b.getAttribute('data-opt'), null).then(function (d) {
+          if (!fb) return;
+          if (d && d.ok && d.correct === 1) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+          else if (d && d.ok) { b.classList.remove('picked'); b.classList.add('wrong-pick'); fb.className = 'fb bad'; fb.textContent = '不对，再想想：' + (d.hint || ''); }
+          else { fb.className = 'fb bad'; fb.textContent = '没发出去，再点一次'; }
+        }).catch(function () { if (fb) { fb.className = 'fb bad'; fb.textContent = '没发出去，检查网络再点一次'; } });
+      });
+    });
+  });
+
+  // ---- 完形：词库点选填空 ----
+  var WORDS = ['impatient', 'plan', 'stop', 'caused', 'stronger', 'mistake'];
+  var bank = $('#bank');
+  var selected = null;
+  var fills = { 1: '', 2: '', 3: '', 4: '', 5: '', 6: '' };
+  var locked = {};
+  WORDS.forEach(function (w) {
+    var c = document.createElement('button');
+    c.type = 'button'; c.className = 'chip'; c.textContent = w; c.setAttribute('data-word', w);
+    c.addEventListener('click', function () {
+      if (c.classList.contains('used')) return;
+      $all('.chip').forEach(function (x) { x.classList.remove('sel'); });
+      if (selected === w) { selected = null; return; }
+      selected = w; c.classList.add('sel');
+    });
+    bank.appendChild(c);
+  });
+  function chipFor(w) { return bank.querySelector('[data-word="' + w + '"]'); }
+  $all('.blank').forEach(function (sp) {
+    sp.addEventListener('click', function () {
+      var n = sp.getAttribute('data-blank');
+      if (locked[n]) return;
+      if (fills[n]) { // 点已填的空：清空，词回词库
+        var old = fills[n]; fills[n] = '';
+        sp.textContent = '___'; sp.classList.remove('filled');
+        var ch = chipFor(old); if (ch) ch.classList.remove('used');
+        return;
+      }
+      if (!selected) return;
+      fills[n] = selected;
+      sp.textContent = selected; sp.classList.add('filled');
+      var ch2 = chipFor(selected); if (ch2) { ch2.classList.add('used'); ch2.classList.remove('sel'); }
+      selected = null;
+    });
+  });
+  $('#cloze-check').addEventListener('click', function () {
+    var fb = $('#fb-cloze');
+    var arr = [1, 2, 3, 4, 5, 6].map(function (n) { return fills[n] || ''; });
+    if (arr.indexOf('') >= 0) { fb.className = 'fb bad'; fb.textContent = '还有空没填，6 个空都要填上。'; return; }
+    var btn = this; btn.disabled = true;
+    postAnswer('king', 'cloze', JSON.stringify(arr), null).then(function (d) {
+      btn.disabled = false;
+      if (!d || !d.ok || !d.per_blank) { fb.className = 'fb bad'; fb.textContent = '没发出去，再点一次'; return; }
+      var wrongHints = [];
+      d.per_blank.forEach(function (pb) {
+        var sp = document.querySelector('.blank[data-blank="' + pb.blank + '"]');
+        if (pb.correct) { locked[pb.blank] = true; if (sp) sp.classList.add('right'); }
+        else {
+          wrongHints.push('第' + pb.blank + '空：' + (pb.hint || ''));
+          var old = fills[pb.blank]; fills[pb.blank] = '';
+          if (sp) { sp.textContent = '___'; sp.classList.remove('filled'); }
+          var ch = chipFor(old); if (ch) ch.classList.remove('used');
+        }
+      });
+      if (wrongHints.length === 0) { fb.className = 'fb good'; fb.textContent = '6 空全对 ✓ 再讲讲每空为什么，往下做复述。'; }
+      else { fb.className = 'fb bad'; fb.textContent = '有 ' + wrongHints.length + ' 空不对，已清空重填：' + wrongHints.join(' '); }
+    }).catch(function () { btn.disabled = false; fb.className = 'fb bad'; fb.textContent = '没发出去，检查网络再点一次'; });
+  });
+
+  // ---- 语音：MediaRecorder，30 秒自动停；可试听、可重录 ----
+  function makeRecorder(box, section, field) {
+    if (!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder)) {
+      box.innerHTML = '<div class="rec-note">这台平板不支持录音，打字就行。</div>';
+      return;
+    }
+    box.innerHTML =
+      '<div><span>🎤 语音（30 秒以内，可不录）</span></div>' +
+      '<div style="margin-top:6px"><button type="button" class="btn rec-btn">● 开始录音</button><span class="rec-timer"></span></div>' +
+      '<div style="margin-top:8px;display:none" class="rec-preview"><audio controls style="width:100%"></audio></div>' +
+      '<div style="margin-top:6px"><button type="button" class="btn rec-save" disabled>保存这段语音</button><span class="ok"></span></div>' +
+      '<div class="rec-note"></div>';
+    var recBtn = box.querySelector('.rec-btn');
+    var saveBtn = box.querySelector('.rec-save');
+    var timerEl = box.querySelector('.rec-timer');
+    var prevWrap = box.querySelector('.rec-preview');
+    var audioEl = box.querySelector('audio');
+    var noteEl = box.querySelector('.rec-note');
+    var okSpan = box.querySelector('.ok');
+    var mediaStream = null, mediaRec = null, chunks = [];
+    var audioBlob = null, audioMime = '', audioDur = 0, timerId = null, secs = 0, recording = false;
+    function fmt(s) { return '0:' + (s < 10 ? '0' : '') + s + ' / 0:30'; }
+    function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
+    function stopRec() { if (mediaRec && recording) { try { mediaRec.stop(); } catch (e) {} } }
+    recBtn.addEventListener('click', async function () {
+      if (recording) { stopRec(); return; }
+      try { mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+      catch (e) { noteEl.textContent = '录不到声音：请允许麦克风，再试一次。'; return; }
+      chunks = [];
+      try { mediaRec = new MediaRecorder(mediaStream); }
+      catch (e) { noteEl.textContent = '这台平板不支持录音，打字就行。'; return; }
+      audioMime = mediaRec.mimeType || 'audio/webm';
+      mediaRec.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
+      mediaRec.onstop = function () {
+        recording = false; stopTimer();
+        if (mediaStream) { mediaStream.getTracks().forEach(function (t) { t.stop(); }); mediaStream = null; }
+        audioBlob = new Blob(chunks, { type: audioMime });
+        audioDur = secs;
+        audioEl.src = URL.createObjectURL(audioBlob);
+        prevWrap.style.display = 'block';
+        saveBtn.disabled = false;
+        recBtn.textContent = '● 重新录';
+        timerEl.textContent = '录好了，' + secs + ' 秒，可以先听一遍。';
+        okSpan.textContent = '';
+      };
+      mediaRec.start();
+      recording = true; secs = 0;
+      saveBtn.disabled = true; prevWrap.style.display = 'none'; okSpan.textContent = '';
+      recBtn.textContent = '■ 停';
+      timerEl.textContent = '正在录音… ' + fmt(0);
+      timerId = setInterval(function () {
+        secs++;
+        timerEl.textContent = '正在录音… ' + fmt(secs);
+        if (secs >= 30) stopRec();
+      }, 1000);
+    });
+    saveBtn.addEventListener('click', function () {
+      if (!audioBlob) return;
+      saveBtn.disabled = true;
+      blobToDataURL(audioBlob).then(function (durl) {
+        return postAnswer(section, field, '', { b64: durl, mime: audioMime, dur: audioDur });
+      }).then(function (d) {
+        saveBtn.disabled = false;
+        if (d && d.ok) okSpan.textContent = '语音已保存 ✓';
+        else okSpan.textContent = '没发出去，再点一次';
+      }).catch(function () { saveBtn.disabled = false; okSpan.textContent = '没发出去，检查网络再点一次'; });
+    });
+  }
+  makeRecorder($('#rec-s43-mnemonic'), 's43', 'mnemonic_audio');
+  makeRecorder($('#rec-s49-mnemonic'), 's49', 'mnemonic_audio');
+  makeRecorder($('#rec-s12-mnemonic'), 's12', 'mnemonic_audio');
+  makeRecorder($('#rec-king-retell'), 'king', 'retell_audio');
+})();
+</script>
+</body>
+</html>
