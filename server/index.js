@@ -31,6 +31,7 @@ const { shanghaiDay } = require('./time');
 const app = express();
 app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
 app.use('/api/exam/speech', express.json({ limit: '6mb' })); // 2026-10-23：口语录音 base64 上传（单段上限 4MB），同上
+app.use('/api/practice-tonight', express.json({ limit: '12mb' })); // 2026-11-18：今晚先练作答+语音（30秒内），同 /api/feedback
 app.use(express.json({ limit: '256kb' }));
 app.set('trust proxy', false);
 
@@ -3245,6 +3246,126 @@ app.post('/api/admin/set-profile', (req, res) => {
   }
 });
 
+// 今晚先练（2026-11-18 Elouise：纸上教法单搬到平板，今晚就用）
+// 只练：不计门禁、不清错题本、不颁称号、不写 attempts。变式/完形对错由服务端判，
+// 答案只在服务端出现，绝不下发到页面；错了只给提示，不给答案。开放题（想一想/口诀/复述）
+// 存下来等 Muse 事后判。语音本体 BLOB 存库，随库备份走（沿用 /api/feedback 做法）。
+const PRACTICE_TONIGHT_KEY = {
+  // section -> { field: kind }，kind: 'open' 开放题 | 'check' 服务端判对错
+  s43: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check', mnemonic: 'open', mnemonic_audio: 'open' },
+  s49: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check', mnemonic: 'open', mnemonic_audio: 'open' },
+  s12: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check', mnemonic: 'open', mnemonic_audio: 'open' },
+  king: { cloze: 'check', cloze_why: 'open', retell1: 'open', retell2: 'open', retell3: 'open', retell_audio: 'open', moral: 'open' },
+};
+// 变式/完形正确答案（只在服务端，不下发页面；归一化后比对）
+const PRACTICE_TONIGHT_ANSWERS = {
+  s43: { variant1: ['lived'], variant2: ['c', 'changed'] },
+  s49: { variant1: ['include'], variant2: ['b', 'include'] },
+  s12: { variant1: ['b', '66'], variant2: ['180'] },
+  king: { cloze: ['stronger', 'plan', 'impatient', 'stop', 'mistake', 'caused'] },
+};
+// 错了只给提示，不给答案（提示措辞与纸单一致：先问这句讲的是什么）
+const PRACTICE_TONIGHT_HINTS = {
+  s43: {
+    variant1: '先问：这句讲的是现在还是过去？ten years ago 是什么时间？',
+    variant2: 'Yesterday 是什么时间标志？动词该用什么时态？',
+  },
+  s49: {
+    variant1: '先看主语：books 是单数还是复数？复数主语，动词用什么形式？',
+    variant2: 'Look 是现在。主语 boxes 是单数还是复数？',
+  },
+  s12: {
+    variant1: 'died out 是什么意思？这句问的是出现、统治还是灭绝？',
+    variant2: 'lived for more than 问的是什么？先画时间线：245、180、66 各是什么意思？',
+  },
+  king: {
+    cloze: ['国王想比别的国王更……？后面有个 than。', '建城堡之前，他先得做一个什么？', '他等不及了，是太……？', '他没有停下来做什么？check 前面少了哪个动词？', '一个小什么，让整座城堡塌了？', '这个小错误让城堡塌了，是“导致”的意思，哪个词是导致？'],
+  },
+};
+function practiceTonightNorm(s) {
+  return String(s || '').trim().toLowerCase().replace(/[.,!?;:\s]+$/g, '').replace(/\s+/g, ' ');
+}
+app.post('/api/practice-tonight/submit', auth.requireAuth, (req, res) => {
+  try {
+    const b = req.body || {};
+    const section = String(b.section || '');
+    const field = String(b.field || '');
+    const spec = PRACTICE_TONIGHT_KEY[section];
+    if (!spec || !spec[field]) return res.status(400).json({ ok: false, error: 'bad_field' });
+    const text = String(b.answer_text || '').trim().slice(0, 2000);
+    // 语音（30秒内，base64 走 12mb body；本体 BLOB 存库；单段上限 4MB 字符，同 /api/feedback）
+    let audioBuf = null, audioMime = null, audioDur = null;
+    let a64 = String(b.audio_b64 || '');
+    if (a64) {
+      const di = a64.indexOf('base64,');
+      if (di >= 0) a64 = a64.slice(di + 7);
+      if (a64.length > 4 * 1024 * 1024) return res.status(413).json({ ok: false, error: 'audio_too_large' });
+      const buf = Buffer.from(a64, 'base64');
+      if (buf.length) {
+        audioBuf = buf;
+        audioMime = String(b.audio_mime || '').slice(0, 128) || null;
+        const dur = Number(b.audio_duration_sec);
+        audioDur = (isFinite(dur) && dur > 0) ? Math.min(30, Math.round(dur)) : null;
+      }
+    }
+    if (!text && !audioBuf) return res.status(400).json({ ok: false, error: 'empty' });
+    let correct = null, perBlank = null;
+    if (spec[field] === 'check') {
+      if (field === 'cloze') {
+        let words = [];
+        try { words = JSON.parse(text); } catch {}
+        if (!Array.isArray(words) || words.length !== 6) return res.status(400).json({ ok: false, error: 'bad_cloze' });
+        const want = PRACTICE_TONIGHT_ANSWERS.king.cloze;
+        perBlank = want.map((w, i) => {
+          const ok = practiceTonightNorm(words[i]) === w;
+          return { blank: i + 1, correct: ok, hint: ok ? null : PRACTICE_TONIGHT_HINTS.king.cloze[i] };
+        });
+        correct = perBlank.every(x => x.correct) ? 1 : 0;
+      } else {
+        const want = PRACTICE_TONIGHT_ANSWERS[section][field];
+        correct = want.indexOf(practiceTonightNorm(text)) >= 0 ? 1 : 0;
+      }
+    }
+    const r = db.prepare(`INSERT INTO tonight_practice
+      (date, section, field, answer_text, correct, audio_blob, audio_mime, audio_duration_s, user_agent)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+      .run(shanghaiDay(), section, field, text || null, correct, audioBuf, audioMime, audioDur,
+            String(req.headers['user-agent'] || '').slice(0, 256));
+    const out = { ok: true, id: r.lastInsertRowid, correct };
+    if (perBlank) out.per_blank = perBlank;
+    else if (correct === 0) out.hint = PRACTICE_TONIGHT_HINTS[section][field];
+    res.json(out);
+  } catch (e) { res.status(500).json({ ok: false, error: 'save_failed' }); }
+});
+// 管理：看今晚先练作答（不含语音本体，只给标志；鉴权同 /api/admin/feedback：备份 token）
+app.get('/api/admin/practice-tonight', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  try {
+    const date = /^\d{4}-\d{2}-\d{2}$/.test(String(req.query.date || '')) ? req.query.date : shanghaiDay();
+    const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, date, section, field, answer_text, correct,
+      CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END AS has_audio, audio_mime, audio_duration_s
+      FROM tonight_practice WHERE date=? ORDER BY id ASC`).all(date);
+    res.json({ ok: true, date, list: rows });
+  } catch { res.json({ ok: true, list: [] }); }
+});
+// 管理：听一段今晚先练语音（按存档 mime 返回 BLOB 本体；鉴权同上）
+app.get('/api/admin/practice-tonight/:id/audio', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  res.set('Cache-Control', 'no-store');
+  try {
+    const r = db.prepare(`SELECT audio_blob, audio_mime FROM tonight_practice WHERE id=?`).get(Number(req.params.id) || 0);
+    if (!r || !r.audio_blob) return res.status(404).json({ ok: false, error: 'no_audio' });
+    res.set('Content-Type', r.audio_mime || 'audio/webm');
+    res.send(Buffer.from(r.audio_blob));
+  } catch { res.status(500).json({ ok: false, error: 'failed' }); }
+});
 // 2026-10-19：学生问题反馈（Elouise：学生端截图+文字入口，反馈直达老师）
 app.post('/api/feedback', auth.requireAuth, (req, res) => {
   try {
