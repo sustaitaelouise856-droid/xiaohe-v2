@@ -27,6 +27,7 @@ const exams = require('./exams');
 const weakness = require('./weakness');
 const seed = require('./seed');
 const { shanghaiDay } = require('./time');
+const map = require('./map'); // 2026-11-18：知识点地图（DeepTutor 借鉴）
 
 const app = express();
 app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
@@ -975,13 +976,14 @@ const TITLE_DEFS = [
 function lessonIndependentRate(lidPrefix) {
   try {
     const rows = db.prepare(
-      "SELECT item_id, correct, helped FROM attempts WHERE item_id LIKE ?"
+      "SELECT item_id, correct, helped, pasted FROM attempts WHERE item_id LIKE ?"
     ).all(lidPrefix + '%');
     if (rows.length === 0) return { rate: 0, count: 0, helpedAny: false };
     const last = {};
     for (const r of rows) last[r.item_id] = r;
     const ids = Object.keys(last);
-    const correct = ids.filter(id => last[id].correct === 1).length;
+    // 2026-11-18：粘贴答对不算独立正确（pasted=1 的 correct 不计入分子）
+    const correct = ids.filter(id => last[id].correct === 1 && last[id].pasted !== 1).length;
     const helpedAny = ids.some(id => last[id].helped === 1);
     // 也查 help_events 表（旧数据可能只记在这里）
     let he = { c: 0 };
@@ -1027,11 +1029,12 @@ function checkTitles() {
   // 3. 拼写小能手：连续20道拼写题全对且零求助（按时间顺序）
   try {
     const rows = db.prepare(
-      "SELECT correct, helped FROM attempts ORDER BY id DESC LIMIT 60"
+      "SELECT correct, helped, pasted FROM attempts ORDER BY id DESC LIMIT 60"
     ).all();
     let streak = 0;
     for (const r of rows) {
-      if (r.correct === 1 && r.helped === 0) streak++;
+      // 2026-11-18：粘贴答对不断连对——粘贴的 correct 不计入连胜
+      if (r.correct === 1 && r.helped === 0 && r.pasted !== 1) streak++;
       else break;
     }
     if (streak >= 20) grant('spelling_star');
@@ -1147,8 +1150,9 @@ function checkTitles() {
     const irregularIds = ['u3-consolidate-v1-s3','u3-consolidate-v1-s6','u3r2-v1-s20','u3r2-v1-s19','review3-v1-s5','review3-v1-s10','review3-v1-s1'];
     let okCount = 0;
     for (const iid of irregularIds) {
-      const r = db.prepare("SELECT correct, helped FROM attempts WHERE item_id=? ORDER BY rowid DESC LIMIT 1").get(iid);
-      if (r && r.correct === 1 && r.helped === 0) okCount++;
+      const r = db.prepare("SELECT correct, helped, pasted FROM attempts WHERE item_id=? ORDER BY rowid DESC LIMIT 1").get(iid);
+      // 2026-11-18：粘贴答对不算独立答对
+      if (r && r.correct === 1 && r.helped === 0 && r.pasted !== 1) okCount++;
     }
     if (okCount >= 6) grant('irregular_slayer');
   } catch {}
@@ -1220,22 +1224,24 @@ function checkTitles() {
       WHERE ls.p1_done=1 AND ls.p2_done=1
       AND NOT EXISTS (SELECT 1 FROM attempts a WHERE a.item_id LIKE ls.lesson_id || '%' AND a.helped=1)
       AND NOT EXISTS (SELECT 1 FROM help_events h WHERE h.item_id LIKE ls.lesson_id || '%')
+      AND NOT EXISTS (SELECT 1 FROM attempts a WHERE a.item_id LIKE ls.lesson_id || '%' AND a.pasted=1)
     `).get();
     if (r && r.c >= 5) grant('independent_5');
   } catch {}
   // ——— 连对高手：连续答对15道题（零求助） ———
   try {
-    const rows = db.prepare("SELECT correct, helped FROM attempts ORDER BY id DESC LIMIT 30").all();
+    const rows = db.prepare("SELECT correct, helped, pasted FROM attempts ORDER BY id DESC LIMIT 30").all();
     let streak = 0;
     for (const r of rows) {
-      if (r.correct === 1 && r.helped === 0) streak++;
+      // 2026-11-18：粘贴答对不计入连胜
+      if (r.correct === 1 && r.helped === 0 && r.pasted !== 1) streak++;
       else break;
     }
     if (streak >= 15) grant('streak_15');
   } catch {}
   // ——— 知错能改：重做答对10道题 ———
   try {
-    const r = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE verdict='correct_retry'").get();
+    const r = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE verdict='correct_retry' AND pasted=0").get();
     if (r && r.c >= 10) grant('retry_10');
   } catch {}
   // ——— 生词收藏家：生词本收藏30个词 ———
@@ -1266,10 +1272,11 @@ function checkTitles() {
   } catch {}
   // ——— 火眼金睛：连续50道题无拼写错误 ———
   try {
-    const rows = db.prepare("SELECT verdict FROM attempts ORDER BY id DESC LIMIT 60").all();
+    const rows = db.prepare("SELECT verdict, pasted FROM attempts ORDER BY id DESC LIMIT 60").all();
     let streak = 0;
     for (const r of rows) {
-      if (r.verdict !== 'typo') streak++;
+      // 2026-11-18：粘贴的答案没有拼写可言，不计入"无拼写错误"连胜
+      if (r.verdict !== 'typo' && r.pasted !== 1) streak++;
       else break;
     }
     if (streak >= 50) grant('no_typo_50');
@@ -1277,9 +1284,10 @@ function checkTitles() {
   // ——— 2026-10-17新增26个：等级制 ———
   // 连对30/50
   try {
-    const rows = db.prepare("SELECT correct, helped FROM attempts ORDER BY id DESC LIMIT 60").all();
+    const rows = db.prepare("SELECT correct, helped, pasted FROM attempts ORDER BY id DESC LIMIT 60").all();
     let s = 0;
-    for (const r of rows) { if (r.correct === 1 && r.helped === 0) s++; else break; }
+    // 2026-11-18：粘贴答对不计入连胜
+    for (const r of rows) { if (r.correct === 1 && r.helped === 0 && r.pasted !== 1) s++; else break; }
     if (s >= 30) grant('streak_30');
     if (s >= 50) grant('streak_50');
   } catch {}
@@ -1307,7 +1315,7 @@ function checkTitles() {
   } catch {}
   // 重做30道
   try {
-    const r = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE verdict='correct_retry'").get();
+    const r = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM attempts WHERE verdict='correct_retry' AND pasted=0").get();
     if (r && r.c >= 30) grant('retry_30');
   } catch {}
   // 满分3次
@@ -1391,32 +1399,36 @@ function checkTitles() {
   } catch {}
   // 自己写出来：最近一节已完成的英语正课（u1r1-u8r5），产出题首次答对率 >= 70%。
   // 口径（2026-11-18 定）：产出题 = items.kind='short'（lesson JSON 没有 type 字段，kind 即题型）；
-  // 只计该课当前最高版本的题；首次作答 = 每题 MIN(attempts.id)，答对须 correct=1 且 helped=0；
+  // 只计该课当前最高版本的题；首次作答 = 每题 MIN(attempts.id)，答对须 correct=1 且 helped=0 且 pasted=0；
   // 已尝试的当前版本产出题 < 该课产出题总数一半时不判定（防升版后只做了几道就误判）。
   // 上线前核查（2026-11-18）：最近已完成课 u1r2 产出首次答对率 v1 40.0%（8/20）、v2 0%（0/3），
   // u1r1 60.0%（12/20），均 <70%，上线后不会立即误颁；u1r3 完成后才首次有机会触发。
-  try {
-    const last = db.prepare(`
-      SELECT lesson_id FROM lesson_state
-      WHERE p1_done=1 AND p2_done=1 AND lesson_id GLOB 'u[1-8]r[1-5]'
-      ORDER BY updated_at DESC LIMIT 1
-    `).get();
-    if (last) {
+  function checkWriteItMyself(lidGlob) {
+    try {
+      const last = db.prepare(`
+        SELECT lesson_id FROM lesson_state
+        WHERE p1_done=1 AND p2_done=1 AND lesson_id GLOB ?
+        ORDER BY updated_at DESC LIMIT 1
+      `).get(lidGlob);
+      if (!last) return false;
       const lid = last.lesson_id;
       const total = db.prepare(
         "SELECT COUNT(*) c FROM items WHERE lesson_id=? AND kind='short' AND version=(SELECT MAX(version) FROM items WHERE lesson_id=?)"
       ).get(lid, lid);
       const r = db.prepare(`
         SELECT COUNT(*) n,
-               SUM(CASE WHEN a.correct=1 AND a.helped=0 THEN 1 ELSE 0 END) ok
+               SUM(CASE WHEN a.correct=1 AND a.helped=0 AND a.pasted=0 THEN 1 ELSE 0 END) ok
         FROM (SELECT item_id, MIN(id) AS first_id FROM attempts GROUP BY item_id) f
         JOIN attempts a ON a.id = f.first_id
         JOIN items i ON i.item_id = a.item_id
         WHERE i.lesson_id=? AND i.kind='short'
           AND i.version=(SELECT MAX(version) FROM items WHERE lesson_id=?)
       `).get(lid, lid);
-      if (r && total && total.c > 0 && r.n >= Math.ceil(total.c / 2) && r.ok / r.n >= 0.70) grant('write_it_myself');
-    }
+      return !!(r && total && total.c > 0 && r.n >= Math.ceil(total.c / 2) && r.ok / r.n >= 0.70);
+    } catch { return false; }
+  }
+  try {
+    if (checkWriteItMyself('u[1-8]r[1-5]')) grant('write_it_myself');
   } catch {}
   // 2026-10-18修：进度条类称号，进度达标自动颁发（防"934/300还未获得"bug）
   try {
@@ -1444,7 +1456,7 @@ function checkConsolidationPass() {
     const timeFilter = sessStart ? `AND created_at >= '${sessStart}'` : '';
     // 取本轮的作答
     const attempts = db.prepare(
-      `SELECT item_id, correct FROM attempts WHERE item_id LIKE 'u3-consolidate%' ${timeFilter}`
+      `SELECT item_id, correct, pasted FROM attempts WHERE item_id LIKE 'u3-consolidate%' ${timeFilter}`
     ).all();
     if (attempts.length === 0) return false;
     // 检查本轮是否有求助记录
@@ -1453,8 +1465,9 @@ function checkConsolidationPass() {
     ).get();
     if (helps && helps.c > 0) return false; // 本轮用过求助，不算过关
     // 计算独立正确率（每题取最后一次作答）
+    // 2026-11-18：粘贴答对不算掌握——最后一次作答是粘贴的，该题按未掌握计
     const lastAttempt = {};
-    for (const a of attempts) lastAttempt[a.item_id] = a.correct;
+    for (const a of attempts) lastAttempt[a.item_id] = (a.correct === 1 && a.pasted !== 1) ? 1 : 0;
     const ids = Object.keys(lastAttempt);
     const correct = ids.filter(id => lastAttempt[id] === 1).length;
     const rate = ids.length > 0 ? correct / ids.length : 0;
@@ -2009,8 +2022,65 @@ app.get('/api/mistakes', auth.requireAuth, (req, res) => {
 app.post('/api/retest/resolve', auth.requireAuth, (req, res) => {
   const { item_id, knowledge_point } = req.body || {};
   if (!item_id) return res.status(400).json({ ok: false, error: 'no_item_id' });
+  // 2026-11-18：粘贴答对不消错题——只认最近一次作答是手打答对。
+  // 前端在单题/批量重做与每日闯关里答对就调本接口，不加这道关，粘贴会绕过 attempts.js 的
+  // independent=1 判定直接清掉 pending（今晚 s12/s16 就是这么被粘贴清掉的）。
+  // 帮助仍按 2026-10-18 口径：有帮助答对也可以消，只拦粘贴；copied（看答案抄）也不消，
+  // 与 attempts.js 一致（copied 是重新入队，不是清掉）。
+  try {
+    const last = db.prepare(
+      "SELECT verdict, correct, pasted FROM attempts WHERE item_id=? ORDER BY id DESC LIMIT 1"
+    ).get(String(item_id));
+    const okVerdict = last && ['correct', 'correct_retry', 'typo', 'chinese'].includes(last.verdict);
+    if (!last || !okVerdict || last.correct !== 1 || last.pasted === 1) {
+      return res.json({ ok: false, error: 'not_independently_correct' });
+    }
+  } catch { return res.json({ ok: false, error: 'check_failed' }); }
   const ok = retest.resolveRetest(String(item_id), String(knowledge_point || 'general'));
   res.json({ ok: true, resolved: ok });
+});
+
+// ---- 知识点地图 + 练完自评（2026-11-18，DeepTutor 借鉴）----
+// GET /api/map：只读，状态现算（口径见 server/map.js）；不写数据。
+app.get('/api/map', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(map.getMapData(db)); }
+  catch (e) { res.status(500).json({ ok: false, error: 'map_failed' }); }
+});
+// 上海日 +N 天（YYYY-MM-DD），只做日期加法，不依赖服务器时区
+function addDays(dayStr, n) {
+  const parts = String(dayStr || '').split('-').map(Number);
+  const t = new Date(Date.UTC(parts[0] || 1970, (parts[1] || 1) - 1, (parts[2] || 1) + n));
+  const p = x => String(x).padStart(2, '0');
+  return t.getUTCFullYear() + '-' + p(t.getUTCMonth() + 1) + '-' + p(t.getUTCDate());
+}
+// POST /api/recall-rate：复测/变式答对后一键自评。rating 1=一下就想起来了，
+// 2=想了一会儿，3=差点忘了。只记自评 + 写下次复测日期 next_due：
+// 1→NULL（按原 1/3/7 计划，不覆盖老师排的时间）；2→今天+2 天；3→明天。
+// 门禁 pending 计数不读 next_due（见部署清单），所以这里只写日期、不改门禁。
+// 粘贴答对不调本接口（前端只在非粘贴答对时出自评）；copied 出口也不出自评。
+app.post('/api/recall-rate', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const b = req.body || {};
+  const itemId = String(b.item_id || '').slice(0, 128);
+  const source = String(b.source || '');
+  const rating = Number(b.rating);
+  if (!itemId || (source !== 'retest' && source !== 'practice') || ![1, 2, 3].includes(rating)) {
+    return res.status(400).json({ ok: false, error: 'bad_request' });
+  }
+  const today = shanghaiDay();
+  let nextDue = null, nextLabel = '按原计划';
+  // next_label 只给时间词（明天/后天/按原计划），前端再拼“再练这道”；别在这里带“再练”，会叠词。
+  if (rating === 3) { nextDue = addDays(today, 1); nextLabel = '明天'; }
+  else if (rating === 2) { nextDue = addDays(today, 2); nextLabel = '后天'; }
+  try {
+    db.prepare('INSERT INTO recall_rating(item_id, source, rating) VALUES(?,?,?)').run(itemId, source, rating);
+    // 1 也写 NULL：清掉之前自评留下的 next_due，回到老师的原计划。
+    // 不限 status='pending'：复测答对会先 resolve 掉这行（旧行为），自评点在它之后；
+    // 不限状态，next_due 才能留在行上，老师下次重排（UPDATE 回 pending）时它还在。
+    const r = db.prepare('UPDATE retest_queue SET recall_rating=?, next_due=? WHERE item_id=?').run(rating, nextDue, itemId);
+    res.json({ ok: true, next_due: nextDue, next_label: nextLabel, queue_updated: r.changes > 0 });
+  } catch (e) { res.status(500).json({ ok: false, error: 'rate_failed' }); }
 });
 
 // ---- 摸底诊断 API（2026-10-03 P2）----
@@ -2893,10 +2963,11 @@ function checkDailyMistakes() {
     // 2026-10-22修：去掉 independent=1——Elouise 口径是"答对且零求助就计数、重做第二次答对也算"，
     // independent=1 会把 correct_retry 全部排除，与口径矛盾（孩子 id=8 反馈实锤）。
     // 2026-11-11：5 分钟快练不计门禁——快练会话（session_id 含 quick-drill）的作答不计入。
+    // 2026-11-18：粘贴作答不计——pasted=1 的答对不算今日完成（复测也不清，见 attempts.js）。
     const today = shanghaiDay();
     const r = db.prepare(`
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
-      WHERE a.correct=1 AND a.helped=0
+      WHERE a.correct=1 AND a.helped=0 AND a.pasted=0
       AND date(a.created_at, '+8 hours') = ?
       AND a.session_id NOT LIKE '%quick-drill%'
       AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%' AND a.item_id NOT LIKE '%-consolidate-%'
@@ -2930,7 +3001,7 @@ function getDailyMistakeProgress() {
     const today = shanghaiDay();
     const r = db.prepare(`
       SELECT COUNT(DISTINCT a.item_id) c FROM attempts a
-      WHERE a.correct=1 AND a.helped=0
+      WHERE a.correct=1 AND a.helped=0 AND a.pasted=0
       AND date(a.created_at, '+8 hours') = ?
       AND a.session_id NOT LIKE '%quick-drill%'
       AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%' AND a.item_id NOT LIKE '%-consolidate-%'
@@ -3250,36 +3321,58 @@ app.post('/api/admin/set-profile', (req, res) => {
 // 只练：不计门禁、不清错题本、不颁称号、不写 attempts。变式/完形对错由服务端判，
 // 答案只在服务端出现，绝不下发到页面；错了只给提示，不给答案。开放题（想一想/口诀/复述）
 // 存下来等 Muse 事后判。语音本体 BLOB 存库，随库备份走（沿用 /api/feedback 做法）。
+// 2026-11-20:复测单上平板——s43/s49/s12 换第 2 次变式,新增 unless/cond/adv 第 3 次复测与 sam 第 2 篇故事;king 答案保留(语文补丁 v3 锚点)。
 const PRACTICE_TONIGHT_KEY = {
   // section -> { field: kind }，kind: 'open' 开放题 | 'check' 服务端判对错
   s43: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check', mnemonic: 'open', mnemonic_audio: 'open' },
   s49: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check', mnemonic: 'open', mnemonic_audio: 'open' },
   s12: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check', mnemonic: 'open', mnemonic_audio: 'open' },
   king: { cloze: 'check', cloze_why: 'open', retell1: 'open', retell2: 'open', retell3: 'open', retell_audio: 'open', moral: 'open' },
+  unless: { think: 'open', explained: 'open', variant1: 'check' },
+  cond: { think: 'open', explained: 'open', variant1: 'check', variant2: 'check' },
+  adv: { think: 'open', explained: 'open', variant1: 'check' },
+  sam: { cloze: 'check', cloze_why: 'open', retell1: 'open', retell2: 'open', retell3: 'open', retell_audio: 'open', moral: 'open' },
 };
 // 变式/完形正确答案（只在服务端，不下发页面；归一化后比对）
 const PRACTICE_TONIGHT_ANSWERS = {
-  s43: { variant1: ['lived'], variant2: ['c', 'changed'] },
-  s49: { variant1: ['include'], variant2: ['b', 'include'] },
-  s12: { variant1: ['b', '66'], variant2: ['180'] },
+  s43: { variant1: ['danced'], variant2: ['c', 'changed'] },
+  s49: { variant1: ['b', 'include'], variant2: ['b', 'include'] },
+  s12: { variant1: ['c', 'more than 180 million years'], variant2: ['180'] },
   king: { cloze: ['stronger', 'plan', 'impatient', 'stop', 'mistake', 'caused'] },
+  unless: { variant1: ['a'] },
+  cond: { variant1: ['studies'], variant2: ['does not find'] },
+  adv: { variant1: ['b'] },
+  sam: { cloze: ['plan', 'stronger', 'impatient', 'stop', 'mistake', 'caused'] },
 };
 // 错了只给提示，不给答案（提示措辞与纸单一致：先问这句讲的是什么）
 const PRACTICE_TONIGHT_HINTS = {
   s43: {
-    variant1: '先问：这句讲的是现在还是过去？ten years ago 是什么时间？',
+    variant1: '先问：这句讲的是现在还是过去？last night 是什么时间？',
     variant2: 'Yesterday 是什么时间标志？动词该用什么时态？',
   },
   s49: {
-    variant1: '先看主语：books 是单数还是复数？复数主语，动词用什么形式？',
+    variant1: '先看主语：children 是单数还是复数？every day 是现在还是过去？',
     variant2: 'Look 是现在。主语 boxes 是单数还是复数？',
   },
   s12: {
-    variant1: 'died out 是什么意思？这句问的是出现、统治还是灭绝？',
+    variant1: '这句问的是统治了多久，还是灭绝？先画时间线：245、180、66 各是什么意思？',
     variant2: 'lived for more than 问的是什么？先画时间线：第一次出现、统治多久、灭绝，各是哪个数字？',
   },
   king: {
     cloze: ['国王想比别的国王更……？后面有个 than。', '建城堡之前，他先得做一个什么？', '他等不及了，是太……？', '他没有停下来做什么？check 前面少了哪个动词？', '一个小什么，让整座城堡塌了？', '这个小错误让城堡塌了，是“导致”的意思，哪个词是导致？'],
+  },
+  unless: {
+    variant1: 'unless 本身就带“不”的意思，后面再加 not 会怎么样？',
+  },
+  cond: {
+    variant1: 'Anna 是 she，study 加 s 要注意什么？辅音 + y 结尾怎么变？',
+    variant2: 'she 的否定用什么？does 后面的动词加不加 s？',
+  },
+  adv: {
+    variant1: '有宾语的时候，副词站在哪里？能不能插在动词和宾语中间？',
+  },
+  sam: {
+    cloze: ['Sam 每天早上跑步之前，先得做一个什么？', '他的腿想比以前更……？后面有个 than before。', '他等不及雨停，是太……？', '他没有停下来做什么？check 前面少了哪个动词？', '一个小什么，让他摔倒、错过比赛了？', '这个小错误让他摔倒、错过比赛，是“导致”的意思，哪个词是导致？'],
   },
 };
 function practiceTonightNorm(s) {
@@ -3315,21 +3408,24 @@ app.post('/api/practice-tonight/submit', auth.requireAuth, (req, res) => {
         let words = [];
         try { words = JSON.parse(text); } catch {}
         if (!Array.isArray(words) || words.length !== 6) return res.status(400).json({ ok: false, error: 'bad_cloze' });
-        const want = PRACTICE_TONIGHT_ANSWERS.king.cloze;
+        const want = PRACTICE_TONIGHT_ANSWERS[section].cloze;
         perBlank = want.map((w, i) => {
           const ok = practiceTonightNorm(words[i]) === w;
-          return { blank: i + 1, correct: ok, hint: ok ? null : PRACTICE_TONIGHT_HINTS.king.cloze[i] };
+          return { blank: i + 1, correct: ok, hint: ok ? null : PRACTICE_TONIGHT_HINTS[section].cloze[i] };
         });
         correct = perBlank.every(x => x.correct) ? 1 : 0;
       } else {
         const want = PRACTICE_TONIGHT_ANSWERS[section][field];
-        correct = want.indexOf(practiceTonightNorm(text)) >= 0 ? 1 : 0;
+        const norm = practiceTonightNorm(text);
+        correct = want.indexOf(norm) >= 0 ? 1 : 0;
       }
     }
+    // 2026-11-18：粘贴留痕——页面在有粘贴时上报 pasted=1，只记录、不拦不改判分
+    const pasted = b.pasted ? 1 : 0;
     const r = db.prepare(`INSERT INTO tonight_practice
-      (date, section, field, answer_text, correct, audio_blob, audio_mime, audio_duration_s, user_agent)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`)
-      .run(shanghaiDay(), section, field, text || null, correct, audioBuf, audioMime, audioDur,
+      (date, section, field, answer_text, correct, pasted, audio_blob, audio_mime, audio_duration_s, user_agent)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+      .run(shanghaiDay(), section, field, text || null, correct, pasted, audioBuf, audioMime, audioDur,
             String(req.headers['user-agent'] || '').slice(0, 256));
     const out = { ok: true, id: r.lastInsertRowid, correct };
     if (perBlank) out.per_blank = perBlank;
@@ -3346,7 +3442,7 @@ app.get('/api/admin/practice-tonight', (req, res) => {
   res.set('Cache-Control', 'no-store');
   try {
     const date = /^\d{4}-\d{2}-\d{2}$/.test(String(req.query.date || '')) ? req.query.date : shanghaiDay();
-    const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, date, section, field, answer_text, correct,
+    const rows = db.prepare(`SELECT id, datetime(created_at,'+8 hours') AS t, date, section, field, answer_text, correct, pasted,
       CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END AS has_audio, audio_mime, audio_duration_s
       FROM tonight_practice WHERE date=? ORDER BY id ASC`).all(date);
     res.json({ ok: true, date, list: rows });
