@@ -2026,16 +2026,22 @@ app.post('/api/retest/resolve', auth.requireAuth, (req, res) => {
   // 2026-11-18：粘贴答对不消错题——只认最近一次作答是手打答对。
   // 前端在单题/批量重做与每日闯关里答对就调本接口，不加这道关，粘贴会绕过 attempts.js 的
   // independent=1 判定直接清掉 pending（今晚 s12/s16 就是这么被粘贴清掉的）。
-  // 帮助仍按 2026-10-18 口径：有帮助答对也可以消，只拦粘贴；copied（看答案抄）也不消，
-  // 与 attempts.js 一致（copied 是重新入队，不是清掉）。
+  // 帮助按 2026-10-18 口径：L1/L2 提示后答对也可以消，只拦粘贴；
+  // 2026-11-20 求助梯子规则 3：L3 给过答案（本会话 help_events level=3），照着答案
+  // 做对不算会，不消错题。复测会话是新 sid，旧课的 L3 不影响复测独立做对。
+  // copied（看答案抄）也不消，与 attempts.js 一致（copied 是重新入队，不是清掉）。
   try {
     const last = db.prepare(
-      "SELECT verdict, correct, pasted FROM attempts WHERE item_id=? ORDER BY id DESC LIMIT 1"
+      "SELECT verdict, correct, pasted, session_id FROM attempts WHERE item_id=? ORDER BY id DESC LIMIT 1"
     ).get(String(item_id));
     const okVerdict = last && ['correct', 'correct_retry', 'typo', 'chinese'].includes(last.verdict);
     if (!last || !okVerdict || last.correct !== 1 || last.pasted === 1) {
       return res.json({ ok: false, error: 'not_independently_correct' });
     }
+    const l3 = db.prepare(
+      'SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=? AND level>=3'
+    ).get(String(item_id), String(last.session_id || '')).c;
+    if (l3 > 0) return res.json({ ok: false, error: 'answer_was_given' });
   } catch { return res.json({ ok: false, error: 'check_failed' }); }
   const ok = retest.resolveRetest(String(item_id), String(knowledge_point || 'general'));
   res.json({ ok: true, resolved: ok });
@@ -2293,6 +2299,27 @@ app.get('/api/diagnostic/report', auth.requireAuth, (req, res) => {
   res.json({ ok: true, form: f, sections: allStatus });
 });
 
+// 2026-11-20 求助梯子规则 3：L3 给了答案，这题不算过——强制进错题本待复测，
+// 与 copied（看答案抄）同口径：记“看答案过”弱点、入 pending 队列（去重：已有 pending 不重复）。
+// 变式说明：代码库里没有通用真变式机制（retest_queue.variant_item_id 是空占位、
+// 唯一手写变式是练习页 6 个专项的题面在练习页里），故全题型走规则 3 的兜底：
+// 强制待复测，独立复测过了才销号；L3 后照着答案做对不消错题（见 /api/retest/resolve 守门）。
+// 快练除外（只练不记，与 attempts.js 的 copied 口径一致）。
+function enqueueSeenAnswer(itemId, sid) {
+  try {
+    if (String(sid || '').includes('quick-drill')) return;
+    db.prepare('INSERT INTO weakness_events(item_id, session_id, tag) VALUES(?,?,?)')
+      .run(itemId, sid, '看答案过');
+    const ex = db.prepare("SELECT id FROM retest_queue WHERE item_id=? AND status='pending'").get(itemId);
+    if (!ex) {
+      let kp = 'general';
+      try { kp = retest.classifyKnowledgePoint(itemId); } catch {}
+      db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, source_session)
+        VALUES(?,?, 'pending', ?)`).run(itemId, kp, sid);
+    }
+  } catch {}
+}
+
 app.post('/api/help', auth.requireAuth, (req, res) => {
   const { item_id, session_id } = req.body || {};
   if (!item_id) return res.status(400).json({ ok: false, error: 'no_item_id' });
@@ -2301,9 +2328,23 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
   const step = L ? L.stepsByItem[String(item_id)] : null;
   // 2026-11-01 Elouise 定：多次点“老师教我”要升级提示（L1→L2→L3），验证阶段同样升级；
   // 求助记 help_events，答对记有帮助完成、不计独立完成，错题进错题本复测。
+  // 2026-11-20 求助梯子（Elouise 定，按真人老师的办法）：提示是试出来的，不是点出来的。
+  // 服务端守门（与前端同规则，防绕过）：本次求助前，本会话里作答数必须 ≥ 已给提示数 + 1。
+  // L1：作答 ≥1（先自己试一次）；L2：作答 ≥2（L1 后再试一次）；L3：作答 ≥3（L2 后再试一次）。
+  // 带着做（guided）记的 level=1 ping 在连错 2 次后才发、自动二级提示在连错 2 次后触发，
+  // 作答数都已够，不受影响。
   let level = Math.min(Math.max(parseInt((req.body || {}).level, 10) || 1, 1), 3);
-  db.prepare('INSERT INTO help_events(item_id, session_id, level) VALUES(?,?,?)')
-    .run(String(item_id), String(session_id || ''), level);
+  try {
+    const sid = String(session_id || '');
+    const attN = db.prepare('SELECT COUNT(*) AS c FROM attempts WHERE item_id=? AND session_id=?').get(String(item_id), sid).c;
+    const helpN = db.prepare('SELECT COUNT(*) AS c FROM help_events WHERE item_id=? AND session_id=?').get(String(item_id), sid).c;
+    if (attN < helpN + 1) {
+      return res.status(400).json({ ok: false, error: attN === 0 ? 'try_first' : 'retry_first' });
+    }
+  } catch { return res.status(500).json({ ok: false, error: 'gate_check_failed' }); }
+  const stuckNote = String((req.body || {}).stuck_note || '').slice(0, 100);
+  db.prepare('INSERT INTO help_events(item_id, session_id, level, stuck_note) VALUES(?,?,?,?)')
+    .run(String(item_id), String(session_id || ''), level, stuckNote || null);
   if (level === 2 && step && step.help_line) {
     return res.json({ ok: true, level: 2, help_line: step.help_line });
   }
@@ -2312,10 +2353,12 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
       const idx = 'ABCD'.indexOf(String(step.answer || '').toUpperCase());
       const opt = (idx >= 0 && step.options) ? step.options[idx] : '';
       if (step.answer && opt) {
+        enqueueSeenAnswer(String(item_id), String(session_id || ''));
         return res.json({ ok: true, level: 3, answer: `正确答案是${String(step.answer).toUpperCase()}：${opt}`, explain: step.explain || '' });
       }
     } else if (step.kind === 'short') {
       if (step.answer_text) {
+        enqueueSeenAnswer(String(item_id), String(session_id || ''));
         return res.json({ ok: true, level: 3, answer: step.answer_text, explain: step.explain || '' });
       }
     }
@@ -2713,6 +2756,9 @@ function dimWrongLines(step, detail) {
 
 function feedbackFor(step, verdict, given, detail) {
   if (!step) return '';
+  // 2026-11-20 修：copied（看答案抄）须先于题型分支返回——之前只在 short 分支里处理，
+  // 选择题 copied 会掉进 wrong_feedback 查表，回“再看一看通知。”（错反馈）。
+  if (verdict === 'copied') return '好的，记为看答案过，不算你自己会——这道题进了错题本，独立复测过了才销号。';
   if (step.kind === 'mcq') {
     if (verdict === 'correct' || verdict === 'correct_retry') return step.explain || '';
     const fb = (step.wrong_feedback || {})[String(given || '').trim().toUpperCase()];
@@ -2720,7 +2766,6 @@ function feedbackFor(step, verdict, given, detail) {
   }
   // short
   if (verdict === 'correct' || verdict === 'correct_retry') return step.explain || '';
-  if (verdict === 'copied') return '好的，记为有帮助完成，下次换道题再考这个知识点。';
   if (verdict === 'typo' || verdict === 'chinese') return (detail && detail.note) || '';
   // wrong / wrong_retry：反馈只针对她实际写的内容
   // 顺序：判分冲突针对性反馈（最前面）→ 预判错法 say → 部分对肯定 → 接地后的 common_errors
