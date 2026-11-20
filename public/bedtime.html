@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>睡前故事</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #141432; color: #eee; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px 16px 60px; }
+h1 { font-size: 24px; margin: 8px 0; }
+h2 { font-size: 20px; margin-top: 30px; border-left: 6px solid #7e57c2; padding-left: 10px; }
+p { line-height: 1.65; }
+a { color: #b39ddb; }
+.usage { background: #1e1e4a; border: 1px solid #5c6bc0; border-radius: 12px; padding: 12px; font-size: 15px; line-height: 1.7; }
+.tonight { background: #1e1e4a; border: 1px solid #5c6bc0; border-radius: 12px; padding: 10px 12px; font-size: 15px; margin-top: 10px; }
+.item { background: #23234d; border: 1px solid #5c6bc0; border-radius: 14px; padding: 14px; margin: 14px 0; }
+.item h3 { margin: 0 0 6px; font-size: 18px; }
+.item .en { color: #b39ddb; font-size: 14px; }
+.item .meta { color: #aaa; font-size: 14px; margin-top: 6px; }
+.btn { padding: 12px 22px; font-size: 16px; border-radius: 999px; border: 0; background: #7e57c2; color: #fff; font-weight: 700; cursor: pointer; margin-top: 10px; min-height: 48px; }
+.btn:disabled { background: #555; cursor: default; }
+.btn.ghost { background: transparent; border: 2px solid #7e57c2; color: #d1c4e9; }
+.player { background: #23234d; border: 1px solid #7e57c2; border-radius: 14px; padding: 14px; margin: 14px 0; }
+.player h3 { margin: 0 0 4px; font-size: 19px; }
+.player .en { color: #b39ddb; font-size: 14px; margin-bottom: 10px; }
+audio { width: 100%; margin: 8px 0; }
+.story { font-size: 18px; line-height: 2.1; background: #1b1b40; padding: 14px; border-radius: 12px; border: 1px solid #444; margin-top: 12px; }
+.story p { margin: 0 0 14px; }
+.story p:last-child { margin-bottom: 0; }
+.moral { background: #2e2e5e; border-radius: 10px; padding: 12px; font-size: 15px; line-height: 1.7; margin-top: 12px; }
+.note { font-size: 13px; color: #999; margin-top: 8px; }
+.back { display: inline-block; margin-top: 24px; color: #b39ddb; text-decoration: none; font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🌙 睡前故事</h1>
+<div class="usage">睡前 10 分钟，听一个英文故事。没有题目，不用做题，不计分。听完就睡觉。<br>音频是英文原声（Warm Pebble），状态 UNVERIFIED（发音未人耳验证）。故事下面有文字，边听边看。</div>
+<div class="tonight" id="tonight">今晚已听：正在看……（单独记，不进学习分钟）</div>
+
+<h2>选一个故事</h2>
+<div class="item" id="card-king">
+  <h3>国王和大城堡</h3>
+  <div class="en">The King and the Big Castle</div>
+  <div class="meta">约 10 分钟 · 小事不做，大事必败</div>
+  <button class="btn" data-story="king">▶ 听这个故事</button>
+</div>
+<div class="item" id="card-sam">
+  <h3>Sam 和跑步比赛</h3>
+  <div class="en">Sam and the School Race</div>
+  <div class="meta">约 10 分钟 · 小事不做，大事必败</div>
+  <button class="btn" data-story="sam">▶ 听这个故事</button>
+</div>
+
+<div class="player" id="playerBox" style="display:none">
+  <h3 id="playTitle"></h3>
+  <div class="en" id="playTitleEn"></div>
+  <audio id="player" controls preload="metadata"></audio>
+  <div><button class="btn ghost" id="replayBtn">🔁 再听一遍</button></div>
+  <div class="story" id="storyText"></div>
+  <div class="moral">这个故事告诉我们：<b>小事不做，大事必败。</b><br>Small things matter. If you do not do the small things well, the big things will fail.<br><span style="opacity:.8">（matter = 要紧、有关系）</span></div>
+  <div class="note">听了多久只单独记在睡前故事里，不算学习分钟，不影响门禁和称号。</div>
+</div>
+
+<a class="back" href="/">← 回首页</a>
+</div>
+<script>
+(function () {
+  var STORIES = {
+    king: { title: '国王和大城堡', title_en: 'The King and the Big Castle', audio: '/audio/bedtime/king.mp3', html: "<p>Long ago, there was a king. He lived in a big country. He had a big house, many servants, and a lot of gold. But he was not happy.</p><p>Every morning, the king stood by the window of his house and looked at the castles of the other kings. The king of the north had a tall castle. The king of the south had a big castle. The king of the east had a beautiful castle. Their castles were big and tall and strong.</p><p>The king looked at his own house. It was big, but it was not a castle. &quot;I want a castle, too,&quot; he said. &quot;No. I want the biggest castle in the world. I want the strongest castle in the world. I want to be stronger than all the other kings!&quot;</p><p>So the king called the best builder in the country. The builder was an old man. His hair was white, and his hands were strong from many years of work. He had built many houses and many walls. All the people in the country knew him, and they all said, &quot;He is the best builder. His houses never fall down.&quot;</p><p>&quot;Old man,&quot; said the king, &quot;build me a big castle. The biggest castle in the world. The strongest castle in the world.&quot;</p><p>The old man looked at the king. &quot;My king,&quot; he said, &quot;a strong castle needs time. A big castle needs ten days. You must wait ten days.&quot;</p><p>&quot;Ten days?&quot; said the king. &quot;No! Ten days is too long. I want it in one day!&quot;</p><p>&quot;My king,&quot; said the old man, &quot;one day is not enough. Listen. A strong castle needs strong stones. The big stones make the walls. The small stones fill the small holes between the big stones. Every stone is important. We must check every stone, big and small. That needs time. Ten days is not long for a strong castle.&quot;</p><p>But the king was too impatient to wait. &quot;Do it in one day!&quot; he said. &quot;That is my plan. One day. No more! I am the king, and you must do what I say.&quot;</p><p>The old man made a plan. The plan was simple: one hundred workers, big stones and small stones, work from morning to night, no rest. It was not a good plan. The old man knew it was not a good plan. But it was the king&#x27;s plan, and the old man had to follow it.</p><p>Early the next morning, the workers came. They carried big stones. They carried small stones. They worked fast. The walls went up, up, up. At noon, the walls were as tall as a man. In the afternoon, the walls were as tall as a tree. The king stood and watched. He was happy.</p><p>&quot;Go on!&quot; he said. &quot;Faster! Faster! I want my castle today!&quot;</p><p>A young worker found a small stone. The stone had a crack in it. A crack is a small line. The stone was not strong. The young worker showed the stone to the old builder.</p><p>&quot;Look,&quot; he said. &quot;This small stone is not good. It has a crack. We must stop and check the stones. If we use this stone, the wall will not be strong.&quot;</p><p>The old builder looked at the stone. &quot;You are right,&quot; he said. &quot;We must stop. We must check every stone.&quot;</p><p>The young worker and the old builder ran to the king. &quot;My king!&quot; said the young worker. &quot;This small stone is not good. It has a crack. We must stop and check the stones.&quot;</p><p>The king looked at the stone. It was very small. &quot;It is only a small stone,&quot; he said. &quot;Do not stop! Put it in the wall! Go on! We have no time!&quot;</p><p>So the young worker put the small stone in the wall. He did not stop. No one stopped. The workers went on, fast, fast, fast.</p><p>In the evening, the castle was finished. It was big. It was tall. It was beautiful. The king stood in front of his new castle and smiled.</p><p>&quot;Look!&quot; he said. &quot;The biggest castle in the world! The strongest castle in the world! I am stronger than all the other kings!&quot;</p><p>The people came to see the castle. &quot;Beautiful!&quot; they said. &quot;So big! So tall!&quot; A little girl asked, &quot;Is it strong, my king?&quot; &quot;The strongest!&quot; said the king. The king was very happy. That night, he had a big dinner in his new castle. He ate good food. He went to bed happy.</p><p>But in the night, it rained. It was only a small rain. A little water ran down the walls. The water found the small stone with the crack. The stone moved, just a little. Then a small line appeared on the wall. A crack. A servant heard a small noise in the night. Crack. Crack. He ran to the king. &quot;My king! I hear a noise in the wall!&quot;</p><p>&quot;It is only the rain,&quot; said the king. &quot;Go back to bed.&quot;</p><p>But the crack grew bigger and bigger in the night. In the morning, the people heard a big noise. Crack! The walls fell down. The whole castle fell down. The biggest castle in the world was now only a pile of stones.</p><p>The people ran to the castle. They saw the pile of stones. &quot;The castle is gone!&quot; they said. &quot;It fell down in the night!&quot; The king&#x27;s servants ran, too. No one could speak. It was very quiet.</p><p>The king ran out of his house. He looked at the pile of stones. He could not speak. His beautiful castle was gone.</p><p>The old builder came to the king. &quot;My king,&quot; he said, &quot;I told you. A strong castle needs time. Small stones matter. One small mistake can break a big plan.&quot;</p><p>The king looked at the stones for a long time. Then he said, &quot;You are right. I was too impatient. I did not stop to check the small stones. One small mistake caused the whole castle to fall down.&quot;</p><p>From that day on, the king was different. He asked the old builder to build a new castle. This time, the plan was different: ten days, not one day. Every morning, the workers came. They checked every stone, big and small. When they found a bad stone, they stopped and took it away. The king watched every day. He did not say, &quot;Faster! Faster!&quot; He said, &quot;Take your time. Check every stone.&quot; And after ten days, the new castle stood up, big and tall and strong. It stood for many, many years. And the people said, &quot;This is a strong castle. It will never fall down.&quot;</p><p>Small things matter. If you do not do the small things well, the big things will fail.</p>" },
+    sam: { title: 'Sam 和跑步比赛', title_en: 'Sam and the School Race', audio: '/audio/bedtime/sam.mp3', html: "<p>Sam was a school boy. He liked to run. Every morning before school, he ran to the park and back. He ran fast. He wanted to be faster than his friend Tom. Tom was the fastest boy in the school. Every year, Tom won the school race.</p><p>This year, Sam wanted to win. &quot;I want my legs to be stronger than before,&quot; he said. &quot;I want to run faster in the school race. I want to win!&quot;</p><p>Tom was Sam&#x27;s friend. Tom was tall, and his legs were long. Every year, Tom ran the fastest in the school race. Every year, Tom won. Sam watched Tom run. &quot;One day,&quot; Sam thought, &quot;I will run as fast as Tom. One day, I will win.&quot;</p><p>The school race was in two weeks. Sam made a plan. The plan was simple: run every morning for ten days. Run a little more every day. Then rest one day. Then run the race.</p><p>His mother smiled. &quot;Good plan,&quot; she said. &quot;Run a little every day, and your legs will be stronger. But remember: rest is important, too. And always check the small things.&quot;</p><p>On the first day, Sam ran to the park and back. His legs hurt a little. But he was happy. On the second day, he ran a little more. On the third day, a little more. Every day, he ran a little more than the day before.</p><p>On the fourth day, it rained. Sam looked at the rain. &quot;I will wait,&quot; he said. &quot;I will wait for the rain to stop, and then I will run.&quot; The rain stopped after one hour. Sam ran. He was wet, but he was happy.</p><p>Day after day, Sam ran. Five days later, a small dog ran with him to the park. The next day, Sam ran to the big tree and back without stopping. His legs got stronger. He could run faster than before.</p><p>Then Tom ran with Sam. &quot;You are faster now,&quot; said Tom. &quot;Your legs are stronger than before. You can win this year!&quot; Sam smiled. &quot;I think so,&quot; he said.</p><p>After that, Sam&#x27;s mother said, &quot;Your shoes are old. I will buy new shoes for the race.&quot; &quot;Good!&quot; said Sam. &quot;New shoes are fast!&quot;</p><p>The next morning, Sam ran to the park and back in seven minutes. &quot;I am ready,&quot; he said. &quot;I can win the race!&quot;</p><p>The day before the race, Sam rested. He did not run. He stayed at home. His legs were not tired. &quot;Tomorrow is the race,&quot; he said. &quot;I am ready!&quot;</p><p>&quot;Look, Mum!&quot; he said one morning. &quot;Last week, I ran to the park in ten minutes. This week, I run in eight minutes! I am ready. I can win the race!&quot;</p><p>The night before the race, Sam checked his shoes. He checked his clothes. Everything was good. He went to bed early. He dreamed about the race. In his dream, he ran fast, faster than Tom, and he won! All the boys said, &quot;Sam! Sam! You are the fastest!&quot;</p><p>In the morning, Sam woke up early. He looked out of the window. Rain! Big rain! The sky was dark. The rain was heavy.</p><p>&quot;The race is at nine,&quot; said Sam. &quot;It is eight now. I cannot wait for the rain to stop. I must go to school now!&quot;</p><p>His mother said, &quot;Wait a little. The rain will stop soon. You waited on the fourth day, and that was good.&quot;</p><p>But Sam was too impatient to wait. &quot;No, Mum! The race will start in one hour. I must go now!&quot;</p><p>Sam ran to school in the rain. On the way, a small stone got into his shoe. It hurt a little. Sam thought, &quot;Should I stop and check my shoe? No time! The race will start soon. I must go on!&quot;</p><p>He did not stop to check the small stone. He ran on to school. The rain was heavy. His clothes were wet. His shoes were wet. At school, he saw Tom. &quot;Sam!&quot; said Tom. &quot;You are wet! Are you OK?&quot; &quot;I am OK,&quot; said Sam. &quot;Let&#x27;s go! The race will start soon!&quot; His shoe hurt more and more. But Sam did not stop.</p><p>At nine, the race started. &quot;Go!&quot; said the teacher. Sam ran fast. Sam&#x27;s mother stood and watched. His friends watched, too. He was first! He was faster than Tom! The other boys ran after him. Sam smiled. &quot;I can win!&quot;</p><p>Then the stone hurt more. It hurt a lot. Sam&#x27;s foot hurt. He could not run fast. He fell down. Tom ran past him. All the other boys ran past him. Sam sat down. His foot hurt. &quot;I cannot run,&quot; he thought.</p><p>Sam got up. He tried to run again. But his foot hurt too much. He walked to the end of the race. He was last. He missed the race. He did not win.</p><p>Tom helped Sam up. &quot;Are you OK?&quot; he asked. &quot;You ran very fast at first!&quot;</p><p>Sam took off his shoe. There it was. One small stone. One very small stone.</p><p>&quot;One small mistake caused me to fall and miss the race,&quot; said Sam. &quot;I did not stop to check the small stone in my shoe.&quot;</p><p>The teacher came to Sam. &quot;Sam, you ran well,&quot; he said. &quot;You trained every day. Your legs are stronger than before. But small things matter. Next time, stop and check.&quot;</p><p>Sam looked at the small stone in his hand. &quot;Next time,&quot; he said, &quot;I will stop. I will check the small things first.&quot;</p><p>Tom walked home with Sam. &quot;You will win next time,&quot; said Tom. &quot;Your legs are strong. You only need to check the small things.&quot; Sam smiled. &quot;Yes,&quot; he said. &quot;Next time, I will check.&quot;</p><p>The next week, there was a small race in the park. Sam made a new plan: run every morning, and check his shoes before every race. This time, he stopped. He checked his shoes. Then he ran. He ran fast, and this time, he won.</p><p>Tom smiled. &quot;You did it, Sam!&quot; he said. Sam smiled, too. &quot;Yes,&quot; he said. &quot;Small things matter. I stopped, I checked, and I won.&quot;</p><p>Small things matter. If you do not do the small things well, the big things will fail.</p>" }
+  };
+  var player = document.getElementById('player');
+  var box = document.getElementById('playerBox');
+  var currentStory = null, sessionId = null, timer = null;
+
+  function newSession() {
+    if (window.crypto && crypto.randomUUID) sessionId = crypto.randomUUID();
+    else sessionId = 's' + Date.now() + '-' + Math.floor(Math.random() * 1e9);
+  }
+  function report(completed) {
+    if (!currentStory || !sessionId) return;
+    var secs = Math.floor(player.currentTime || 0);
+    fetch('/api/story-listen', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ session: sessionId, story_id: currentStory, seconds: secs, completed: completed ? 1 : 0 }) })
+      .then(function () { refreshTonight(); }).catch(function () {});
+  }
+  function refreshTonight() {
+    fetch('/api/bedtime/today').then(function (r) { return r.json(); }).then(function (d) {
+      var el = document.getElementById('tonight');
+      if (d && d.ok) el.textContent = '今晚已听：' + (d.minutes || 0) + ' 分钟（单独记，不进学习分钟）';
+    }).catch(function () {});
+  }
+  function loadStory(id) {
+    var s = STORIES[id];
+    if (!s) return;
+    if (currentStory && !player.paused) { player.pause(); }
+    if (currentStory) report(false);
+    currentStory = id;
+    newSession();
+    document.getElementById('playTitle').textContent = '🌙 ' + s.title;
+    document.getElementById('playTitleEn').textContent = s.title_en;
+    document.getElementById('storyText').innerHTML = s.html;
+    box.style.display = 'block';
+    player.src = s.audio;
+    player.load();
+    box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    player.play().catch(function () {});
+  }
+  document.querySelectorAll('[data-story]').forEach(function (b) {
+    b.addEventListener('click', function () { loadStory(b.getAttribute('data-story')); });
+  });
+  document.getElementById('replayBtn').addEventListener('click', function () {
+    if (!currentStory) return;
+    report(false);
+    newSession();
+    player.currentTime = 0;
+    player.play().catch(function () {});
+  });
+  player.addEventListener('play', function () {
+    if (!sessionId) newSession();
+    if (timer) clearInterval(timer);
+    timer = setInterval(function () { report(false); }, 30000);
+  });
+  player.addEventListener('pause', function () {
+    if (timer) { clearInterval(timer); timer = null; }
+    report(false);
+  });
+  player.addEventListener('ended', function () {
+    if (timer) { clearInterval(timer); timer = null; }
+    report(true);
+  });
+  refreshTonight();
+})();
+</script>
+</body>
+</html>
