@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>知识点地图</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #f6f8f6; color: #222; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px 16px 60px; }
+h1 { font-size: 24px; margin: 8px 0; }
+h2 { font-size: 20px; margin-top: 30px; border-left: 6px solid #43a047; padding-left: 10px; }
+p { line-height: 1.65; }
+a.home { color: #2e7d32; }
+.summary { background: #fff; border: 1px solid #e0e0e0; border-radius: 14px; padding: 14px; margin: 14px 0; font-size: 16px; line-height: 1.8; }
+.legend { background: #fff8e1; border: 1px solid #ffe082; border-radius: 12px; padding: 12px; font-size: 14px; line-height: 1.9; }
+.chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 800; margin-right: 4px; }
+.st-weak { background: #ffebee; color: #c62828; }
+.st-not_started { background: #f5f5f5; color: #616161; }
+.st-learning { background: #e3f2fd; color: #1565c0; }
+.st-mastered { background: #e8f5e9; color: #2e7d32; }
+.st-review { background: #fff3e0; color: #e65100; }
+.point { background: #fff; border: 1px solid #e0e0e0; border-radius: 14px; padding: 14px; margin: 12px 0; }
+.point h3 { font-size: 17px; margin: 0 0 6px; }
+.point .teach { font-size: 15px; color: #444; margin: 6px 0; }
+.point .pend { font-size: 14px; color: #c62828; margin: 6px 0; }
+.point .nopend { font-size: 14px; color: #888; margin: 6px 0; }
+.btn { display: inline-block; padding: 10px 18px; font-size: 15px; border-radius: 999px; border: 0; background: #43a047; color: #fff; font-weight: 700; cursor: pointer; margin-top: 8px; min-height: 44px; text-decoration: none; }
+.note { font-size: 13px; color: #888; margin-top: 28px; line-height: 1.8; }
+.err { background: #ffebee; border: 1px solid #ef9a9a; border-radius: 12px; padding: 14px; font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🗺️ 知识点地图</h1>
+<p><a class="home" href="/">← 回首页</a> · <a class="home" href="/growth.html">成长页</a></p>
+<div class="summary" id="summary">正在加载…</div>
+<div class="legend">
+<b>颜色是什么意思：</b><br>
+<span class="chip st-mastered">已掌握</span>课学完了，没待复测的题，巩固过了或三次复测都过了（或从没错过）。<br>
+<span class="chip st-review">待巩固</span>课学完了，错题清过一次，还没攒够三次复测通过。<br>
+<span class="chip st-learning">学习中</span>课开了，还没学完。<br>
+<span class="chip st-weak">易错</span>这块有待复测的题，先练这几道。<br>
+<span class="chip st-not_started">未学</span>课还没开。
+</div>
+<div id="units"></div>
+<p class="note">状态每天按真实作答算：课开没开、做没做完、错题本里有没有待复测的题、巩固练过没过、三次复测通过没通过。粘贴答对不算。弱点那组是按它涉及的课来算的，是课级别的口径——每点下面列出了是哪几道待复测的题，点进去就是错题本里那道题。</p>
+</div>
+<script>
+(function () {
+  'use strict';
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  var sumEl = document.getElementById('summary');
+  var unitsEl = document.getElementById('units');
+  fetch('/api/map').then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok || !d.units) {
+      sumEl.className = 'err';
+      sumEl.textContent = '地图打不开了，刷新试试。';
+      return;
+    }
+    var s = d.summary;
+    sumEl.innerHTML = '一共 ' + s.total + ' 个点：'
+      + '<span class="chip st-mastered">已掌握 ' + s.mastered + '</span>'
+      + '<span class="chip st-review">待巩固 ' + s.review + '</span>'
+      + '<span class="chip st-learning">学习中 ' + s.learning + '</span>'
+      + '<span class="chip st-weak">易错 ' + s.weak + '</span>'
+      + '<span class="chip st-not_started">未学 ' + s.not_started + '</span>';
+    var html = '';
+    d.units.forEach(function (u) {
+      html += '<h2>' + esc(u.name) + '</h2>';
+      u.points.forEach(function (p) {
+        html += '<div class="point"><h3>' + esc(p.title) + ' <span class="chip st-' + esc(p.status) + '">' + esc(p.status_label) + '</span></h3>';
+        if (p.teach) html += '<p class="teach">' + esc(p.teach) + '</p>';
+        if (p.pending && p.pending.length) {
+          var items = p.pending.map(function (it) {
+            return esc(it.short) + '（下次：' + esc(it.next_label) + '）';
+          }).join('、');
+          html += '<p class="pend">待复测 ' + p.pending.length + ' 道：' + items + '</p>';
+        } else {
+          html += '<p class="nopend">现在没有待复测的题。</p>';
+        }
+        if (p.practice) html += '<a class="btn" href="' + esc(p.practice.url) + '">' + esc(p.practice.label) + ' →</a>';
+        html += '</div>';
+      });
+    });
+    unitsEl.innerHTML = html;
+  }).catch(function () {
+    sumEl.className = 'err';
+    sumEl.textContent = '地图打不开了，检查网络再刷新试试。';
+  });
+})();
+</script>
+</body>
+</html>
