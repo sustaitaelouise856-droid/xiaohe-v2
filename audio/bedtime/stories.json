@@ -1,0 +1,18 @@
+{
+ "king": {
+  "title": "The King and the Big Castle",
+  "audio": "audio/bedtime/king.mp3",
+  "words": 1133,
+  "duration_sec": 543.4,
+  "wpm": 125,
+  "status": "UNVERIFIED"
+ },
+ "sam": {
+  "title": "Sam and the School Race",
+  "audio": "audio/bedtime/sam.mp3",
+  "words": 1045,
+  "duration_sec": 501.1,
+  "wpm": 125,
+  "status": "UNVERIFIED"
+ }
+}
