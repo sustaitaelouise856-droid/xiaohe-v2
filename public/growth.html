@@ -457,5 +457,66 @@ loadCheckin();
   setInterval(checkFbReplies, 120000);
 })();
 </script>
+<script>
+// 续听（2026-11-20 Elouise：没听完下次接着听）：每期播放位置记在本机 localStorage，
+// 下次点开同一期从上次停的地方接着放；播完清掉位置；“从头听”随时可以从头放。
+(function () {
+  var EPS = ['ep01', 'ep02', 'ep03', 'ep04', 'ep05', 'ep06', 'ep07'];
+  function fmtT(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+  function key(ep) { return 'xiaohe-pod-pos-' + ep; }
+  function getPos(ep) { try { var v = parseFloat(localStorage.getItem(key(ep))); return (isFinite(v) && v > 0) ? v : 0; } catch (e) { return 0; } }
+  function savePos(ep, sec) { try { if (sec > 5) localStorage.setItem(key(ep), String(Math.floor(sec))); else localStorage.removeItem(key(ep)); } catch (e) {} }
+  function clearPos(ep) { try { localStorage.removeItem(key(ep)); } catch (e) {} }
+  EPS.forEach(function (ep, i) {
+    var audio = document.getElementById('growthPodAudio' + (i + 1));
+    if (!audio) return;
+    var resumed = false;
+    var note = document.createElement('div');
+    note.className = 'pod-resume';
+    note.style.cssText = 'font-size:13px;color:#7b1fa2;margin-top:8px;display:none;';
+    audio.parentNode.insertBefore(note, audio);
+    function showNote(sec) {
+      note.style.display = 'block';
+      note.innerHTML = '';
+      note.appendChild(document.createTextNode('上次听到 ' + fmtT(sec) + '，接着听'));
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = '从头听';
+      b.style.cssText = 'margin-left:8px;padding:4px 12px;border:1px solid #7b1fa2;border-radius:16px;background:#fff;color:#7b1fa2;font-size:12px;cursor:pointer;';
+      b.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        clearPos(ep);
+        resumed = true;
+        note.style.display = 'none';
+        try { audio.currentTime = 0; audio.play(); } catch (e) {}
+      });
+      note.appendChild(b);
+    }
+    function hideNote() { note.style.display = 'none'; }
+    function maybeResume() {
+      if (resumed) return;
+      resumed = true;
+      var saved = getPos(ep);
+      if (!saved) return;
+      if (!isFinite(audio.duration) || audio.duration <= 0) return;
+      if (saved < audio.duration - 10) {
+        try { audio.currentTime = saved; } catch (e) {}
+        showNote(saved);
+      } else {
+        clearPos(ep);
+      }
+    }
+    audio.addEventListener('loadedmetadata', maybeResume);
+    if (audio.readyState >= 1) maybeResume();
+    var lastSave = 0;
+    audio.addEventListener('timeupdate', function () {
+      var t = audio.currentTime || 0;
+      if (t - lastSave >= 5) { lastSave = t; savePos(ep, t); }
+    });
+    audio.addEventListener('pause', function () { savePos(ep, audio.currentTime || 0); });
+    audio.addEventListener('ended', function () { clearPos(ep); hideNote(); });
+  });
+})();
+</script>
 </body>
 </html>
