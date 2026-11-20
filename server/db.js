@@ -86,6 +86,7 @@ ensureColumn('attempts', 'session_id', "TEXT DEFAULT ''");     // 同一次走�
 ensureColumn('attempts', 'independent', 'INTEGER DEFAULT 0');  // 1=独立完成（练习：答对且无帮助；验证：首次答对）
 ensureColumn('attempts', 'elapsed_ms', 'INTEGER');             // 本次作答用时（毫秒）：从题目出现到提交
 ensureColumn('attempts', 'pasted', 'INTEGER DEFAULT 0');       // 2026-10-12：1=粘贴作答（不算独立完成）
+ensureColumn('tonight_practice', 'pasted', 'INTEGER DEFAULT 0'); // 2026-11-18：1=粘贴作答（只留痕、不改判分）
 ensureColumn('vocab_words', 'sent', 'TEXT');                  // 2026-10-12：生词带原句
 ensureColumn('items', 'grading_json', 'TEXT');                // 简答题判分规格
 ensureColumn('items', 'phase', "TEXT DEFAULT 'practice'");     // practice|validate|teach
@@ -210,6 +211,19 @@ CREATE TABLE IF NOT EXISTS retest_queue (
   created_at       TEXT NOT NULL DEFAULT (datetime('now')),
   resolved_at      TEXT
 );`);
+// 练完自评（2026-11-18，DeepTutor 借鉴）：复测/变式答对后一键自评记得牢不牢。
+// recall_rating 是历史记录（每点一次自评一行）；retest_queue 上的 next_due/recall_rating
+// 是最新一次自评算出来的下次复测日期，供老师排 1/3/7 时参考。门禁计数不读 next_due（见部署清单）。
+db.exec(`
+CREATE TABLE IF NOT EXISTS recall_rating (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  item_id    TEXT NOT NULL,
+  source     TEXT NOT NULL,
+  rating     INTEGER NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
+ensureColumn('retest_queue', 'next_due', 'TEXT'); // 下次复测日期 YYYY-MM-DD（上海日）；NULL=按原 1/3/7 计划
+ensureColumn('retest_queue', 'recall_rating', 'INTEGER'); // 最新一次自评 1|2|3
 // 客户端错误日志表（2026-10-03 k包）
 db.exec(`
 CREATE TABLE IF NOT EXISTS client_errors (
@@ -311,6 +325,7 @@ CREATE TABLE IF NOT EXISTS word_mastery (
 // section: s43|s49|s12|king；field: think|explained|variant1|variant2|mnemonic|mnemonic_audio|cloze|cloze_why|retell1|retell2|retell3|retell_audio|moral
 // correct: 闭卷变式/完形由服务端判 1/0；开放题（想一想/口诀/复述）为 NULL，等 Muse 事后判
 // 语音本体 BLOB 存库，随库备份走（沿用 /api/feedback 语音做法）
+// pasted 列（2026-11-18）：1=粘贴作答，只留痕、不改判分；旧库由 ensureColumn 补列
 db.exec(`
 CREATE TABLE IF NOT EXISTS tonight_practice (
   id               INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -320,6 +335,7 @@ CREATE TABLE IF NOT EXISTS tonight_practice (
   field            TEXT NOT NULL,
   answer_text      TEXT,
   correct          INTEGER,
+  pasted           INTEGER NOT NULL DEFAULT 0,
   audio_blob       BLOB,
   audio_mime       TEXT,
   audio_duration_s INTEGER,
