@@ -86,7 +86,6 @@ ensureColumn('attempts', 'session_id', "TEXT DEFAULT ''");     // 同一次走�
 ensureColumn('attempts', 'independent', 'INTEGER DEFAULT 0');  // 1=独立完成（练习：答对且无帮助；验证：首次答对）
 ensureColumn('attempts', 'elapsed_ms', 'INTEGER');             // 本次作答用时（毫秒）：从题目出现到提交
 ensureColumn('attempts', 'pasted', 'INTEGER DEFAULT 0');       // 2026-10-12：1=粘贴作答（不算独立完成）
-ensureColumn('tonight_practice', 'pasted', 'INTEGER DEFAULT 0'); // 2026-11-18：1=粘贴作答（只留痕、不改判分）
 ensureColumn('vocab_words', 'sent', 'TEXT');                  // 2026-10-12：生词带原句
 ensureColumn('items', 'grading_json', 'TEXT');                // 简答题判分规格
 ensureColumn('items', 'phase', "TEXT DEFAULT 'practice'");     // practice|validate|teach
@@ -340,4 +339,21 @@ CREATE TABLE IF NOT EXISTS tonight_practice (
   audio_mime       TEXT,
   audio_duration_s INTEGER,
   user_agent       TEXT
+);`);
+// 2026-11-20 修：这行原来在文件头（表还没建），新库启动会崩（no such table: tonight_practice）。
+// 生产库表已存在所以没爆；移到建表之后，新库和旧库都通。
+ensureColumn('tonight_practice', 'pasted', 'INTEGER DEFAULT 0'); // 2026-11-18：1=粘贴作答（只留痕、不改判分）
+// 睡前故事收听（2026-11-20：睡前 21:30 左右一篇约 10 分钟，单独计时，绝不混进学习分钟）
+// session_id：客户端一次播放的随机 id；同一 session 多次上报只更新一行（UPSERT）。
+// seconds_listened：本次播放累计听到的秒数（audio.currentTime 下限）；completed：1=播完。
+// 学习分钟只读 attempts 表，故事行永远加不进去；夜画像另从本表汇总“睡前故事 X 分钟”。
+db.exec(`
+CREATE TABLE IF NOT EXISTS story_listens (
+  id               INTEGER PRIMARY KEY AUTOINCREMENT,
+  session_id       TEXT NOT NULL UNIQUE,
+  story_id         TEXT NOT NULL,
+  seconds_listened INTEGER NOT NULL DEFAULT 0,
+  completed        INTEGER NOT NULL DEFAULT 0,
+  started_at       TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at       TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
