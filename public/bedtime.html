@@ -57,6 +57,7 @@ audio { width: 100%; margin: 8px 0; }
   <h3 id="playTitle"></h3>
   <div class="en" id="playTitleEn"></div>
   <audio id="player" controls preload="metadata"></audio>
+  <div id="resumeNote" style="display:none;margin-top:6px;font-size:15px;color:#d1c4e9;"></div>
   <div><button class="btn ghost" id="replayBtn">🔁 再听一遍</button></div>
   <div class="story" id="storyText"></div>
   <div class="moral">这个故事告诉我们：<b>小事不做，大事必败。</b><br>Small things matter. If you do not do the small things well, the big things will fail.<br><span style="opacity:.8">（matter = 要紧、有关系）</span></div>
@@ -74,6 +75,55 @@ audio { width: 100%; margin: 8px 0; }
   var player = document.getElementById('player');
   var box = document.getElementById('playerBox');
   var currentStory = null, sessionId = null, timer = null;
+  var lastState = null, pendingResume = 0;
+  function fmtTime(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+  // 续听（2026-11-20 Elouise：没听完下次接着听）：上次位置取服务端 last（跨天），打开故事时接着放。
+  function fetchLastState() {
+    if (lastState) return Promise.resolve(lastState);
+    return fetch('/api/bedtime/today').then(function (r) { return r.json(); }).then(function (d) {
+      lastState = (d && d.ok && d.last) ? d.last : {};
+      return lastState;
+    }).catch(function () { lastState = {}; return lastState; });
+  }
+  function showResumeNote(secs) {
+    var n = document.getElementById('resumeNote');
+    if (!n) return;
+    n.style.display = 'block';
+    n.innerHTML = '';
+    n.appendChild(document.createTextNode('上次听到 ' + fmtTime(secs) + '，接着听'));
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'btn ghost';
+    b.style.cssText = 'margin:0 0 0 10px;padding:6px 14px;font-size:14px;min-height:0;';
+    b.textContent = '从头听';
+    b.addEventListener('click', function () {
+      pendingResume = 0;
+      hideResumeNote();
+      player.currentTime = 0;
+      player.play().catch(function () {});
+    });
+    n.appendChild(b);
+  }
+  function hideResumeNote() { var n = document.getElementById('resumeNote'); if (n) { n.style.display = 'none'; n.innerHTML = ''; } }
+  function trySeek() {
+    if (!pendingResume) return;
+    if (player.readyState < 1 || !isFinite(player.duration) || player.duration <= 0) return;
+    if (pendingResume < player.duration - 2) { player.currentTime = pendingResume; }
+    else { hideResumeNote(); }
+    pendingResume = 0;
+  }
+  function updateCardResume(last) {
+    ['king', 'sam'].forEach(function (id) {
+      var card = document.getElementById('card-' + id);
+      if (!card) return;
+      var meta = card.querySelector('.meta');
+      if (!meta) return;
+      if (!meta.getAttribute('data-base')) meta.setAttribute('data-base', meta.textContent);
+      var base = meta.getAttribute('data-base');
+      var l = last && last[id];
+      if (l && !l.completed && l.seconds > 5) meta.textContent = base + ' · 上次听到 ' + fmtTime(l.seconds) + '，接着听';
+      else meta.textContent = base;
+    });
+  }
 
   function newSession() {
     if (window.crypto && crypto.randomUUID) sessionId = crypto.randomUUID();
@@ -82,6 +132,7 @@ audio { width: 100%; margin: 8px 0; }
   function report(completed) {
     if (!currentStory || !sessionId) return;
     var secs = Math.floor(player.currentTime || 0);
+    if (lastState) lastState[currentStory] = { seconds: secs, completed: completed ? 1 : 0 };
     fetch('/api/story-listen', { method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ session: sessionId, story_id: currentStory, seconds: secs, completed: completed ? 1 : 0 }) })
       .then(function () { refreshTonight(); }).catch(function () {});
@@ -89,7 +140,11 @@ audio { width: 100%; margin: 8px 0; }
   function refreshTonight() {
     fetch('/api/bedtime/today').then(function (r) { return r.json(); }).then(function (d) {
       var el = document.getElementById('tonight');
-      if (d && d.ok) el.textContent = '今晚已听：' + (d.minutes || 0) + ' 分钟（单独记，不进学习分钟）';
+      if (d && d.ok) {
+        el.textContent = '今晚已听：' + (d.minutes || 0) + ' 分钟（单独记，不进学习分钟）';
+        lastState = d.last || {};
+        updateCardResume(lastState);
+      }
     }).catch(function () {});
   }
   function loadStory(id) {
@@ -99,6 +154,8 @@ audio { width: 100%; margin: 8px 0; }
     if (currentStory) report(false);
     currentStory = id;
     newSession();
+    pendingResume = 0;
+    hideResumeNote();
     document.getElementById('playTitle').textContent = '🌙 ' + s.title;
     document.getElementById('playTitleEn').textContent = s.title_en;
     document.getElementById('storyText').innerHTML = s.html;
@@ -106,7 +163,18 @@ audio { width: 100%; margin: 8px 0; }
     player.src = s.audio;
     player.load();
     box.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    player.play().catch(function () {});
+    var played = false;
+    function startPlay() { if (played) return; played = true; player.play().catch(function () {}); }
+    fetchLastState().then(function (last) {
+      var l = last && last[id];
+      if (l && !l.completed && l.seconds > 5) {
+        pendingResume = Math.floor(l.seconds);
+        showResumeNote(pendingResume);
+        trySeek();
+      }
+      startPlay();
+    });
+    setTimeout(startPlay, 1500);
   }
   document.querySelectorAll('[data-story]').forEach(function (b) {
     b.addEventListener('click', function () { loadStory(b.getAttribute('data-story')); });
@@ -115,9 +183,12 @@ audio { width: 100%; margin: 8px 0; }
     if (!currentStory) return;
     report(false);
     newSession();
+    pendingResume = 0;
+    hideResumeNote();
     player.currentTime = 0;
     player.play().catch(function () {});
   });
+  player.addEventListener('loadedmetadata', trySeek);
   player.addEventListener('play', function () {
     if (!sessionId) newSession();
     if (timer) clearInterval(timer);
