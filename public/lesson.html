@@ -201,6 +201,14 @@
   .tag { display:inline-block; font-size:calc(17px * var(--fs)); background:linear-gradient(180deg,#f5f7fb,#e9edf3); border:1px solid #dde2ea; border-radius:999px; padding:4px 15px; margin-left:10px; color:var(--muted); box-shadow:inset 0 1px 0 rgba(255,255,255,.9); }
   .nudge { color:var(--muted); font-size:var(--fs-scene); line-height:1.6; }
   .conquered { margin-top:8px; padding:8px 10px; border-left:3px solid #f5a623; background:#fff8e6; color:#7a5200; font-size:var(--fs-scene); line-height:1.6; font-weight:700; }
+  .pasted-note { margin-top:8px; padding:8px 10px; border-left:3px solid #e6a817; background:#fff8e6; color:#7a5200; font-size:var(--fs-scene); line-height:1.6; font-weight:700; }
+  /* 练完自评（2026-11-18）：复测答对后问一句记得牢不牢 */
+  .recall-box { margin-top:10px; padding:10px; border:1px dashed #a5d6a7; border-radius:10px; background:#f1f8e9; }
+  .recall-q { font-size:var(--fs-scene); font-weight:700; color:#2e7d32; margin-bottom:8px; }
+  .recall-btn { display:block; width:100%; text-align:left; margin:6px 0; padding:10px 12px; font-size:var(--fs-scene); border:2px solid #a5d6a7; border-radius:10px; background:#fff; cursor:pointer; min-height:44px; }
+  .recall-btn:disabled { opacity:.6; cursor:default; }
+  .recall-skip { margin-top:4px; padding:6px 14px; font-size:14px; border:0; border-radius:999px; background:transparent; color:#666; cursor:pointer; }
+  .recall-done { margin-top:10px; font-size:var(--fs-scene); color:#2e7d32; font-weight:700; }
   .helprule { color:var(--muted); font-size:12px; line-height:1.6; margin:8px 2px 0; }
   /* 首页 */
   .partcard { background:#fff; border:1px solid rgba(225,229,235,.6); border-radius:var(--radius-lg); padding:32px; margin:18px 0; box-shadow:var(--shadow-sm); transition:box-shadow .25s ease; }
@@ -1599,12 +1607,13 @@ function wireQuestion(s) {
     err.textContent = ''; $('btnSub').disabled = true;
     const elapsed_ms = Date.now() - qT0;
     let r, b;
+    const wasPasted = window._pastedAnswer ? 1 : 0; // 2026-11-18：与提交的 pasted 标志同一值，反馈里的粘贴提示句以它为准
     try {
       // 2026-10-18韧性：提交走 apiFetch，服务端重启时自动重试，答案不丢、孩子不卡
       r = await apiFetch('/api/attempt', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ item_id: s.item_id, answer: given,
           session_id: ST['p' + PART].sid, saw_feedback: sawFb[s.item_id] ? 1 : 0, elapsed_ms,
-          pasted: window._pastedAnswer ? 1 : 0,
+          pasted: wasPasted,
           is_retry: (LESSON && (LESSON.single_retry || LESSON.batch_retry || LID === "daily-retest" || LID === "quick-drill")) ? 1 : 0 }) }); // 2026-10-12：粘贴标记；2026-10-15：重做豁免防重做
     } catch { err.textContent = '服务器正在重启，答案已保留，等几秒再点一次提交。'; $('btnSub').disabled = false; return; }
     // h 版：先读响应体再按 error 分流，不能只看 HTTP 状态码——
@@ -1639,7 +1648,7 @@ function wireQuestion(s) {
       err.textContent = `提交没成功${code}，再点一次试试。`;
       $('btnSub').disabled = false; return;
     }
-    handleVerdict(s, b, elapsed_ms, given);
+    handleVerdict(s, b, elapsed_ms, given, wasPasted);
   };
 }
 
@@ -1653,7 +1662,7 @@ function doSkip(s) {
   advance();
 }
 
-function handleVerdict(s, b, elapsedMs, givenAnswer) {
+function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
   const fb = $('fb'), nextrow = $('nextrow');
   const v = b.verdict;
   const good = (v === 'correct' || v === 'correct_retry');
@@ -1670,8 +1679,8 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
   if (good) {
     sawFb[s.item_id] = true;
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
-    // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）
-    if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。'), correct: true, helped: !!b.helped };
+    // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）；粘贴的题回看时也要写明不算数
+    if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。') + (wasPasted ? ' 这是粘贴的，不算你自己做对，这题还得自己打一遍。' : ''), correct: true, helped: !!b.helped };
     // 单题重做（2026-10-14）：答对 → 调接口消掉复测项
     // 批量重做（2026-10-16修：之前漏了，批量重做的题答对也要消掉——Elouise报告阻塞性bug）
     // 2026-10-18修：不管有没有用帮助，答对就消掉（helped只影响每日10道计数，不影响消错题）
@@ -1695,7 +1704,15 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
       wrong: '这道题你以前答错过，这次自己做对了。'
     }[b.conquered] : null;
     const conqueredHtml = conqueredTxt ? `<div class="conquered">🏅 ${conqueredTxt}</div>` : '';
-    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml + conqueredHtml;
+    // 2026-11-18：粘贴答对要当面说清楚——不算自己做对，这题还得自己打一遍（只说结果，不拦、不清空输入）
+    const pastedHtml = wasPasted ? '<div class="pasted-note">这是粘贴的，不算你自己做对，这题还得自己打一遍。</div>' : '';
+    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml + conqueredHtml + pastedHtml;
+    // 2026-11-18 练完自评：复测场合（单题/批量重做/每日闯关）答对且非粘贴，问一句记得牢不牢；
+    // 点一下就行，可跳过，不挡下一题。快练（quick-drill）不是复测场合，不出自评；
+    // copied 出口走不到答对分支，也不出自评。
+    if (LESSON && (LESSON.single_retry || LESSON.batch_retry || LESSON.daily_retest) && !wasPasted) {
+      showRecallRating(fb, s.item_id);
+    }
     nextrow.style.display = 'flex';
     $('btnNext').onclick = () => advance();
     if (s.kind === 'mcq') wrap.querySelectorAll('.opt').forEach(x => x.disabled = true);
@@ -1760,6 +1777,43 @@ function handleVerdict(s, b, elapsedMs, givenAnswer) {
   qT0 = Date.now(); // 重新计时：反馈出现后到下一次提交
   // 反馈出现在首屏外时自动滚入视野（C10 横屏 800px 高下选项区较长）
   try { fb.scrollIntoView({ block: 'nearest' }); } catch (e) {}
+}
+
+/* ---------- 练完自评（2026-11-18）：复测答对后问一句记得牢不牢 ---------- */
+function postRecallRating(itemId, rating, box) {
+  fetch('/api/recall-rate', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ item_id: itemId, source: 'retest', rating: rating }) })
+    .then(function (r) { return r.json().catch(function () { return null; }); })
+    .then(function (d) {
+      if (!box || !box.isConnected) return;
+      box.className = 'recall-done';
+      box.textContent = (d && d.ok) ? ((d.next_label === '按原计划') ? '记下了，按原计划来。' : ('记下了，' + (d.next_label || '按原计划') + '再练这道。')) : '没记下来，没关系，继续往下。';
+    })
+    .catch(function () {
+      if (!box || !box.isConnected) return;
+      box.className = 'recall-done';
+      box.textContent = '没记下来，没关系，继续往下。';
+    });
+}
+function showRecallRating(fb, itemId) {
+  if (!fb || !itemId) return;
+  if (fb.querySelector('.recall-box, .recall-done')) return; // 同一题只问一次
+  var box = document.createElement('div');
+  box.className = 'recall-box';
+  box.innerHTML = '<div class="recall-q">这道题记得牢不牢？点一下就行，可以跳过。</div>'
+    + '<button type="button" class="recall-btn" data-rating="1">一下就想起来了</button>'
+    + '<button type="button" class="recall-btn" data-rating="2">想了一会儿</button>'
+    + '<button type="button" class="recall-btn" data-rating="3">差点忘了</button>'
+    + '<button type="button" class="recall-skip">跳过</button>';
+  fb.appendChild(box);
+  box.querySelectorAll('.recall-btn').forEach(function (b) {
+    b.onclick = function () {
+      box.querySelectorAll('button').forEach(function (x) { x.disabled = true; });
+      postRecallRating(itemId, Number(b.dataset.rating), box);
+    };
+  });
+  var sk = box.querySelector('.recall-skip');
+  if (sk) sk.onclick = function () { box.remove(); };
 }
 
 /* ---------- 带着做（guided）+ 保底（先看答案/抄写），g 版 2026-10-02 ---------- */
@@ -1928,7 +1982,7 @@ async function submitCopy(s, answer) {
     setTimeout(advance, 1500);
   } else {
     // 抄写还写错：走正常 wrong 路径（反馈、保底按钮都在）
-    handleVerdict(s, b, 0, answer);
+    handleVerdict(s, b, 0, answer, 0); // copied 出口：看答案抄一遍，粘贴提示不适用
   }
 }
 
