@@ -28,6 +28,7 @@ const weakness = require('./weakness');
 const seed = require('./seed');
 const { shanghaiDay } = require('./time');
 const map = require('./map'); // 2026-11-18：知识点地图（DeepTutor 借鉴）
+const bedtime = require('./bedtime'); // 2026-11-20：睡前故事（只听、不判分、单独计时）
 
 const app = express();
 app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
@@ -2046,6 +2047,18 @@ app.get('/api/map', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   try { res.json(map.getMapData(db)); }
   catch (e) { res.status(500).json({ ok: false, error: 'map_failed' }); }
+});
+// ---- 睡前故事（2026-11-20）：只听故事，不做题、不判分、不进门禁、不颁称号 ----
+// POST /api/story-listen：播放心跳（每 30 秒）+ 暂停/播完上报，同一 session 只更新一行。
+// GET /api/bedtime/today：今日收听汇总（只读 story_listens，不读 attempts）。
+app.post('/api/story-listen', auth.requireAuth, (req, res) => {
+  try { res.json(bedtime.recordListen(db, req.body || {})); }
+  catch (e) { res.status(400).json({ ok: false, error: 'bad_listen' }); }
+});
+app.get('/api/bedtime/today', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(bedtime.todaySummary(db)); }
+  catch (e) { res.status(500).json({ ok: false, error: 'bedtime_failed' }); }
 });
 // 上海日 +N 天（YYYY-MM-DD），只做日期加法，不依赖服务器时区
 function addDays(dayStr, n) {
