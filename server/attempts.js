@@ -203,7 +203,7 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   }
 
   const out = { ok: true, verdict, correct: contentOk, helped: finalHelped, independent,
-    detail: r.detail, first_try: prior === 0 };
+    detail: r.detail, first_try: prior === 0 && !pastedFlag }; // 2026-11-18：粘贴的首答不算 first_try（否则 5 分钟快练即时分会把粘贴算进去）
   if (conquered) out.conquered = conquered;
   return out;
 }
