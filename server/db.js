@@ -97,6 +97,7 @@ CREATE TABLE IF NOT EXISTS help_events (
 );`);
 ensureColumn('help_events', 'session_id', "TEXT DEFAULT ''");
 ensureColumn('help_events', 'level', 'INTEGER DEFAULT 1'); // 三级提示（2026-10-02）：1 指方向，2 高亮原句，3 给答案讲原因
+ensureColumn('help_events', 'stuck_note', 'TEXT'); // 2026-11-20 求助梯子：L1 前孩子说的卡点（选填，如“看不懂题目”）
 // 课程进度（服务端记录，防重做）：单课单行；p1_started_day 为上海自然日 YYYY-MM-DD
 db.exec(`
 CREATE TABLE IF NOT EXISTS lesson_state (
