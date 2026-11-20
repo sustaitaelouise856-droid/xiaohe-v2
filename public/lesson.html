@@ -1008,7 +1008,7 @@ function renderStep() {
       html += s.options.map((o, i) =>
         `<button class="opt" data-k="${'ABCD'[i]}"><span class="k">${'ABCD'[i]}</span><span>${escapeHtml(o)}</span></button>`).join('');
       html += `<div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub" disabled>回答</button></div><div class="helprule">不会就等 30 秒，点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub" disabled>回答</button></div><div class="helprule">先自己试一次，再点“老师教我”。每级提示后要再试一次才能要下一级；看到答案做对的不算会。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none"><button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else if (s.kind === 'chunk') {
       // 拼句（2026-10-14）：点词块拼句子，点击顺序即答案顺序；data-i 区分重复词块
@@ -1016,13 +1016,13 @@ function renderStep() {
       html += `<div class="chunk-picked" id="chunkPicked"></div>
         <div class="chunk-pool" id="chunkPool">${chunks.map((c, i) => `<button class="chunkbtn" data-i="${i}">${escapeHtml(c)}</button>`).join('')}</div>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnClearChunk">清空重拼</button><button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub">提交</button></div><div class="helprule">不会就等 30 秒，点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub">提交</button></div><div class="helprule">先自己试一次，再点“老师教我”。每级提示后要再试一次才能要下一级；看到答案做对的不算会。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none"><button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     } else {
       const ph = (LESSON && LESSON.answer_placeholder) || '在这里写英文答案';
       html += `<textarea id="answerInput" placeholder="${ph}" autocomplete="off" rows="2"></textarea>
         <div class="btnrow">${backBtnHtml}<button class="ghost" id="btnHelp">老师教我</button>
-        <button class="big" id="btnSub">提交</button></div><div class="helprule">不会就等 30 秒，点“老师教我”，点 3 次就直接讲答案。</div><div class="fb" id="fb"></div>
+        <button class="big" id="btnSub">提交</button></div><div class="helprule">先自己试一次，再点“老师教我”。每级提示后要再试一次才能要下一级；看到答案做对的不算会。</div><div class="fb" id="fb"></div>
         <div class="btnrow" id="nextrow" style="display:none"><button class="big" id="btnNext">下一题</button><button class="ghost" id="btnSkip" style="display:none">这类题都会了，跳过后面同类练习题</button></div>`;
     }
     html += `</div></div></div>`;
@@ -1441,9 +1441,12 @@ function wireQuestion(s) {
       return t == null ? '' : String(t);
     }).join(' ');
   }
-  // 三级提示，永不卡死（2026-10-02 建；2026-11-01 Elouise 定：验证阶段多次点也升级，不再只 L1）
+  // 三级提示，永不卡死（2026-10-02 建；2026-11-01 Elouise 定：验证阶段多次点也升级，不再只 L1；
+  // 2026-11-20 求助梯子：先试再求助、每级提示后须再试一次、L3 给答案不算过）
   var helpLv = wireQuestion.helpLv || (wireQuestion.helpLv = {});
-  var hasTried = false; // 本题是否已交过答案（2026-11-02：连点 2 次帮助还没交题时推他先试一次）
+  var hasTriedByItem = wireQuestion.hasTriedByItem || (wireQuestion.hasTriedByItem = {});
+  var triesSinceHelp = wireQuestion.triesSinceHelp || (wireQuestion.triesSinceHelp = {});
+  var stuckAskedByItem = wireQuestion.stuckAskedByItem || (wireQuestion.stuckAskedByItem = {});
   // "再看材料"按钮：点开看原文，再点收起
   (function () {
     var saBtns = wrap.querySelectorAll('[data-sa]');
@@ -1468,7 +1471,15 @@ function wireQuestion(s) {
   })();
   // 触发一次"老师教我"：按钮点击和自动升级（练习连错 2 次自动给二级）共用。
   // 成功才升级（helpLv 记请求等级），失败不消耗次数；已给到更高等级时不重复低等级请求。
-  function triggerHelp(lvl, force) {
+  // 2026-11-20 求助梯子守门（与服务端同一规则）：返回 null 表示可求助，否则返回要显示的提示语。
+  // L1 须先试过一次；L2/L3 须在上一级看完后再试过一次。系统自动触发（force=true）不走这里，
+  // 服务端另有同一规则守门（自动触发时孩子已连错 2 次，作答数已够）。
+  function helpGateMsg(lvl) {
+    if (!hasTriedByItem[s.item_id]) return '先自己试一次——写一个答案提交，错了也没关系，再来找我。';
+    if (lvl > 1 && (triesSinceHelp[s.item_id] || 0) === 0) return '先按刚才的提示试一次，试过才能再要提示。';
+    return null;
+  }
+  function triggerHelp(lvl, force, stuckNote) {
     var btn = $('btnHelp');
     var hb = $('helpbox');
     if (!btn) return;
@@ -1477,6 +1488,10 @@ function wireQuestion(s) {
     // 2026-11-01 Elouise 定：验证阶段多次点也升级（L1→L2→L3），不再钳制为 1。
     lvl = Math.min(Math.max(lvl || 1, 1), 3);
     if (lvl > 1 && lvl <= (helpLv[s.item_id] || 0)) return;
+    if (!force) {
+      var gm = helpGateMsg(lvl);
+      if (gm) { hb.style.display = 'block'; hb.innerHTML = gm; showInView(hb); return; }
+    }
     btn.disabled = true;
     err.textContent = '';
     hb.style.display = 'block';
@@ -1489,7 +1504,7 @@ function wireQuestion(s) {
     var req = apiFetch('/api/help', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ item_id: s.item_id, session_id: ST['p' + PART].sid, level: lvl })
+      body: JSON.stringify({ item_id: s.item_id, session_id: ST['p' + PART].sid, level: lvl, stuck_note: stuckNote || undefined })
     }, 15000).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (b) {
         if (!r.ok || !b || b.ok !== true) throw new Error((b && b.error) || ('http_' + r.status));
@@ -1499,12 +1514,15 @@ function wireQuestion(s) {
     Promise.race([req, timeout]).then(function (b) {
       clearTimeout(timer);
       helpLv[s.item_id] = lvl; // 成功才升级，失败不消耗次数
+      triesSinceHelp[s.item_id] = 0; // 2026-11-20：看完这级提示，下一级须再试一次才能要
       sawFb[s.item_id] = true; // 照着提示答对记有帮助完成（现有 helped 机制）
       var got = b.level || 1;
       if (got >= 3 && b.answer) {
         // L3：真人老师式讲解（2026-10-11 Elouise：像真人老师一样一步步教）
+        // 2026-11-20 求助梯子规则 3：L3 给了答案，这题不算过——当面说清楚，错题本留着待复测。
         hb.innerHTML = '我们一起来看：<b>' + escapeHtml(b.answer) + '</b>' +
           (b.explain ? '<br><br>为什么是这个答案？' + escapeHtml(b.explain) : '') +
+          '<br><br>这是看答案做对的，不算你自己会——这道题已经进了错题本，明天独立做对了才算会。' +
           '<br><br>你再自己说一遍答案，然后提交。记住这个方法，下次遇到一样的题，要自己写出来。';
         helpBtnLabel = '';
         btn.textContent = '老师教我';
@@ -1518,10 +1536,6 @@ function wireQuestion(s) {
         }
         helpBtnLabel = '还是不会，直接告诉我';
         btn.textContent = helpBtnLabel;
-        // 2026-11-02：看了两遍提示还没交过题（s48 式卡住），推他先试一次，而不是再给提示
-        if (lvl === 2 && !hasTried) {
-          hb.innerHTML += '<div class="nudge">看了两遍提示了，试着写一个答案，错了也没关系，我会讲给你听。</div>';
-        }
       } else {
         // L1：苏格拉底式引导，先问问题，不直接给提示
         // 2026-11-02 “记住、换个方法教”：服务端发了第二种讲法（method=alt）时，开头点明换方法，
@@ -1536,11 +1550,20 @@ function wireQuestion(s) {
       showInView(hb);
     }).catch(function (e) {
       clearTimeout(timer);
-      hb.style.display = 'none';
       var code = (e && e.message) ? e.message : 'unknown';
-      err.textContent = (code === 'timeout')
-        ? '老师提示加载太慢了，再点一次试试。（timeout）'
-        : '老师提示没加载出来，再点一次试试。（' + code + '）';
+      // 2026-11-20 求助梯子：服务端守门拦下的，在帮助面板里说清原因（不是网络错）。
+      if (code === 'try_first' || code === 'retry_first') {
+        hb.style.display = 'block';
+        hb.innerHTML = (code === 'try_first')
+          ? '先自己试一次——写一个答案提交，错了也没关系，再来找我。'
+          : '先按刚才的提示试一次，试过才能再要提示。';
+        showInView(hb);
+      } else {
+        hb.style.display = 'none';
+        err.textContent = (code === 'timeout')
+          ? '老师提示加载太慢了，再点一次试试。（timeout）'
+          : '老师提示没加载出来，再点一次试试。（' + code + '）';
+      }
       if (Date.now() >= helpCooldownUntil) btn.disabled = false;
     });
   }
@@ -1570,8 +1593,55 @@ function wireQuestion(s) {
       }
     }, 1000);
   })();
+  // 2026-11-20 求助梯子：L1 之前问一句卡在哪一步（选填，点一下就行，可跳过）。
+  // 选中的卡点随 L1 请求一起发给服务端，记在 help_events.stuck_note 里，供老师复盘。
+  function showStuckPicker(done) {
+    var btn = $('btnHelp');
+    var hb = $('helpbox');
+    if (!hb) { done(null); return; }
+    if (btn) btn.disabled = true;
+    var picked = '';
+    hb.style.display = 'block';
+    hb.innerHTML = '<div style="margin-bottom:8px;">先说一句：你卡在哪一步？点一个就行，也可以不说。</div>'
+      + '<div class="btnrow" id="stuckRow">'
+      + '<button type="button" class="opt" data-stuck="看不懂题目">看不懂题目</button>'
+      + '<button type="button" class="opt" data-stuck="知道方法，不会做">知道方法，不会做</button>'
+      + '<button type="button" class="opt" data-stuck="写不出来">写不出来</button>'
+      + '</div>'
+      + '<input id="stuckText" placeholder="或者自己写一句（可以不写）" autocomplete="off" style="margin-top:8px;">'
+      + '<div class="btnrow" style="margin-top:8px;"><button type="button" class="big" id="stuckGo">就这样，教我吧</button>'
+      + '<button type="button" class="ghost" id="stuckSkip">跳过，直接要提示</button></div>';
+    hb.querySelectorAll('[data-stuck]').forEach(function (b) {
+      b.onclick = function () {
+        picked = b.getAttribute('data-stuck');
+        hb.querySelectorAll('[data-stuck]').forEach(function (x) { x.classList.remove('sel'); });
+        b.classList.add('sel');
+      };
+    });
+    var finish = function (note) {
+      if (btn) btn.disabled = false;
+      done(note);
+    };
+    $('stuckGo').onclick = function () {
+      var t = $('stuckText') ? $('stuckText').value.trim() : '';
+      finish(picked ? (t ? picked + '：' + t : picked) : (t || null));
+    };
+    $('stuckSkip').onclick = function () { finish(null); };
+    showInView(hb);
+  }
   $('btnHelp').onclick = function () {
     var lvl = Math.min((helpLv[s.item_id] || 0) + 1, 3);
+    var gm = helpGateMsg(lvl);
+    if (gm) {
+      var hb0 = $('helpbox');
+      if (hb0) { hb0.style.display = 'block'; hb0.innerHTML = gm; showInView(hb0); }
+      return;
+    }
+    if (lvl === 1 && !stuckAskedByItem[s.item_id]) {
+      stuckAskedByItem[s.item_id] = true;
+      showStuckPicker(function (note) { triggerHelp(1, false, note); });
+      return;
+    }
     triggerHelp(lvl);
   };
   // L2 高亮：同屏材料块（.reading-pane pre）里的 help_line 原句；找不到返回 false
@@ -1603,7 +1673,8 @@ function wireQuestion(s) {
     if (s.kind === 'short') given = $('answerInput').value;
     if (s.kind === 'chunk') given = getChunkAnswer();
     if (!String(given).trim()) { err.textContent = s.kind === 'chunk' ? '先拼出句子再提交。' : '先写出答案再提交。'; return; }
-    hasTried = true;
+    hasTriedByItem[s.item_id] = true; // 2026-11-20 求助梯子：交过答案才能点“老师教我”（按题记，回去再看也不丢）
+    triesSinceHelp[s.item_id] = (triesSinceHelp[s.item_id] || 0) + 1; // 每级提示后须再试一次才能要下一级
     err.textContent = ''; $('btnSub').disabled = true;
     const elapsed_ms = Date.now() - qT0;
     let r, b;
@@ -1685,12 +1756,14 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     // 批量重做（2026-10-16修：之前漏了，批量重做的题答对也要消掉——Elouise报告阻塞性bug）
     // 2026-10-18修：不管有没有用帮助，答对就消掉（helped只影响每日10道计数，不影响消错题）
     // 2026-10-18补：每日闯关答对也要消错题（根因：daily-retest从不调resolve，导致题目永远卡住）
+    // 2026-11-20 求助梯子规则 3：L3 给过答案的不调 resolve——照着答案做对不算会，
+    // 错题本留着待复测；服务端 /api/retest/resolve 另有同一守门，双保险。
     if (LESSON) {
       let resolveId = null;
       if (LESSON.single_retry && LESSON.retry_item) resolveId = LESSON.retry_item;
       else if (LESSON.batch_retry && s.retry_item) resolveId = s.retry_item;
       else if (LESSON.daily_retest && s.item_id) resolveId = s.item_id;
-      if (resolveId) {
+      if (resolveId && ((wireQuestion.helpLv || {})[s.item_id] || 0) < 3) {
         fetch('/api/retest/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ item_id: resolveId }) }).catch(() => {});
       }
@@ -1706,11 +1779,15 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     const conqueredHtml = conqueredTxt ? `<div class="conquered">🏅 ${conqueredTxt}</div>` : '';
     // 2026-11-18：粘贴答对要当面说清楚——不算自己做对，这题还得自己打一遍（只说结果，不拦、不清空输入）
     const pastedHtml = wasPasted ? '<div class="pasted-note">这是粘贴的，不算你自己做对，这题还得自己打一遍。</div>' : '';
-    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '') + nudgeHtml + conqueredHtml + pastedHtml;
+    // 2026-11-20 求助梯子规则 3：L3 看答案后做对的，当面说清不算会。
+    const l3seen = ((wireQuestion.helpLv || {})[s.item_id] || 0) >= 3;
+    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '')
+      + (l3seen ? '\n（这是看答案后做对的，不算你自己会，错题本里还留着，明天再考一次。）' : '')
+      + nudgeHtml + conqueredHtml + pastedHtml;
     // 2026-11-18 练完自评：复测场合（单题/批量重做/每日闯关）答对且非粘贴，问一句记得牢不牢；
     // 点一下就行，可跳过，不挡下一题。快练（quick-drill）不是复测场合，不出自评；
-    // copied 出口走不到答对分支，也不出自评。
-    if (LESSON && (LESSON.single_retry || LESSON.batch_retry || LESSON.daily_retest) && !wasPasted) {
+    // copied 出口走不到答对分支，也不出自评。2026-11-20：L3 看答案后做对的不出自评（题还没过）。
+    if (LESSON && (LESSON.single_retry || LESSON.batch_retry || LESSON.daily_retest) && !wasPasted && !l3seen) {
       showRecallRating(fb, s.item_id);
     }
     nextrow.style.display = 'flex';
@@ -1769,8 +1846,8 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
       var _left = isPractice ? (3 - _wc) : 1;
       if (_left > 0) {
         fb.innerHTML += '<div class="nudge">' + (isPractice
-          ? '不会就等 30 秒点“老师教我”，点 3 次就直接讲答案；这道题再答错 ' + _left + ' 次也会直接给你看答案和原因。'
-          : '再答错 1 次就直接给你看答案和原因，也可以等 30 秒点“老师教我”直接讲答案。') + '</div>';
+          ? '先自己试一次再点“老师教我”；每级提示后要再试一次才能要下一级；这道题再答错 ' + _left + ' 次也会直接给你看答案和原因，看答案做对的不算会。'
+          : '再答错 1 次就直接给你看答案和原因；也可以先自己试一次再点“老师教我”。') + '</div>';
       }
     }
   }
@@ -1893,7 +1970,7 @@ function renderShowAnswerBtn(s, sa) {
   var bs = $('btnSub'); if (bs) bs.style.display = '';
   var bh = $('btnHelp'); if (bh) bh.disabled = false;
   fb.className = 'fb no';
-  fb.innerHTML = '<div>这道题先看答案，抄一遍，我们继续往下。</div>'
+  fb.innerHTML = '<div>这道题先看答案，抄一遍，我们继续往下。看答案过的不算会，进错题本待复测。</div>'
     + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div><div id="remedialBox"></div>';
   $('btnShowAns').onclick = function () { showAnswerCopy(s, sa); };
   maybeShowRemedial();
@@ -1931,7 +2008,7 @@ function showAnswerCopy(s, sa) {
   var isMcq = s.kind === 'mcq';
   var html = '<div class="sabox"><div>正确答案是：<b>' + escapeHtml(sa.answer) + '</b></div>'
     + (sa.reason ? '<div>原因：' + escapeHtml(sa.reason) + '</div>' : '')
-    + '<div class="nudge">这道题会进错题本，以后再考你一次。</div>'
+    + '<div class="nudge">这道题会进错题本，以后再考你一次；看答案过的不算你自己会，独立做对了才销号。</div>'
     + '<div class="nudge">照着写一遍，提交就能继续。</div>';
   if (isMcq) {
     html += '<div class="btnrow">' + s.options.map(function (o, i) {
@@ -1975,7 +2052,7 @@ async function submitCopy(s, answer) {
   }
   if (b.verdict === 'copied') {
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
-    if (s.item_id) reviewData[s.item_id] = { answer: String(answer || ''), feedback: String(b.feedback || '好的，记为有帮助完成。'), correct: true, helped: true };
+    if (s.item_id) reviewData[s.item_id] = { answer: String(answer || ''), feedback: String(b.feedback || '好的，记为看答案过，不算你自己会。'), correct: true, helped: true };
     var fb = $('fb');
     fb.className = 'fb ok';
     fb.innerHTML = escapeHtml(b.feedback || '好的，记为有帮助完成。');
