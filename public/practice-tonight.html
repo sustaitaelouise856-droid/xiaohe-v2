@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>今晚先练 · 11月18日</title>
+<title>今晚先练 · 11月20日</title>
 <style>
 * { box-sizing: border-box; }
 body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #f6f8f6; color: #222; }
@@ -41,171 +41,183 @@ input.inline { width: 120px; display: inline-block; }
 .rec { background: #fafafa; border: 1px dashed #ccc; border-radius: 10px; padding: 10px; margin-top: 8px; }
 .rec-timer { color: #d93025; font-weight: 700; margin-left: 10px; }
 .rec-note { font-size: 13px; color: #666; margin-top: 6px; }
+/* 练完自评（2026-11-18）：变式/完形答对后问一句记得牢不牢 */
+.recall-box { margin-top:10px; padding:10px; border:1px dashed #a5d6a7; border-radius:10px; background:#f1f8e9; }
+.recall-q { font-size:15px; font-weight:700; color:#2e7d32; margin-bottom:8px; }
+.recall-btn { display:block; width:100%; text-align:left; margin:6px 0; padding:10px 12px; font-size:15px; border:2px solid #a5d6a7; border-radius:10px; background:#fff; cursor:pointer; min-height:44px; }
+.recall-btn:disabled { opacity:.6; cursor:default; }
+.recall-skip { margin-top:4px; padding:6px 14px; font-size:14px; border:0; border-radius:999px; background:transparent; color:#666; cursor:pointer; }
+.recall-done { margin-top:10px; font-size:15px; color:#2e7d32; font-weight:700; }
 .done { background: #e8f5e9; border: 2px solid #43a047; border-radius: 14px; padding: 16px; margin-top: 28px; }
 a.home { color: #2e7d32; }
 </style>
 </head>
 <body>
 <div class="wrap">
-<h1>📝 今晚先练 · 11月18日</h1>
-<p class="usage">先在平板上练，练对了再去做网站上的三道原题。做错了会有提示，不直接给答案。<br>这页只练：不计闯关、不清错题本、不颁称号。纸上两遍还错就先放下，不堵新课。</p>
+<h1>📝 今晚先练 · 11月20日</h1>
+<p class="usage">先在平板上练，练对了再去做网站上的 4 道待复测。做错了会有提示，不直接给答案。<br>这页只练：不计闯关、不清错题本、不颁称号。纸上两遍还错就先放下，不堵新课。纸单是备用，今晚以这页为准。</p>
 
-<h2>第一部分：三道错题教法单</h2>
+<h2>第一部分：第 2 次复测——s43 / s49 / s12（三道新变式）</h2>
+<p>11 月 18 日第一次之后隔两天再测一次。不是把 18 号那三道再抄一遍，是三道新的。这三道不计入门禁、不消错题，只看是不是真会了。选完、写完讲一句为什么。</p>
 
 <div class="item" data-section="s43">
-  <h3>第1道：过去式 changed（u1r2 s43）</h3>
-  <div class="step">
-    <div class="stept">① 先想一想</div>
-    <p>我当时是怎么想的？当时填了什么，为什么那样填？</p>
-    <textarea id="s43-think" rows="2" placeholder="打一句就行"></textarea><br>
-    <button type="button" class="btn" data-save="s43|think|#s43-think">保存</button><span class="ok"></span>
-  </div>
-  <div class="step">
-    <div class="stept">② 看例题，自讲一遍为什么</div>
-    <p class="ex">His work changed how people think about art and science.</p>
-    <ol>
-      <li>讲的是过去的事（他的工作已经改变了人们的想法），动词要用过去式。</li>
-      <li>change 以字母 e 结尾，变过去式只加 d：change → changed，e 不能丢。</li>
-      <li>错的样子长这样——change 是现在时，这里讲过去不能用；changd 拼写错了，e 丢了。</li>
-    </ol>
-    <button type="button" class="btn" data-tap="s43|explained">我自讲了一遍，明白了</button><span class="ok"></span>
-  </div>
-  <div class="step">
-    <div class="stept">③ 遮住答案，做新变式</div>
-    <p>变式题1：He <input type="text" class="inline" id="s43-v1" autocomplete="off"> (live) in Shanghai ten years ago.</p>
-    <button type="button" class="btn" data-check="s43|variant1|#s43-v1">对一下</button>
-    <div class="fb" id="fb-s43-variant1"></div>
-    <p>变式题2：Yesterday, the new phone ___ the way we talk to friends.</p>
-    <div class="mcq" data-mcq="s43|variant2">
-      <button type="button" data-opt="A">A. change</button>
-      <button type="button" data-opt="B">B. changes</button>
-      <button type="button" data-opt="C">C. changed</button>
-      <button type="button" data-opt="D">D. changing</button>
-    </div>
-    <div class="fb" id="fb-s43-variant2"></div>
-    <p>写完后用自己的话讲一遍：以 e 结尾的动词变过去式要怎么变？怎么知道这里该用过去式？（讲出声来就行，不用写）</p>
-  </div>
-  <div class="step">
-    <div class="stept">④ 口诀：自己写一句</div>
-    <input type="text" id="s43-mn" placeholder="我的口诀：……" autocomplete="off">
-    <button type="button" class="btn" data-save="s43|mnemonic|#s43-mn">保存口诀</button><span class="ok"></span>
-    <div class="rec" id="rec-s43-mnemonic"></div>
-  </div>
+  <h3>第 1 道：过去式</h3>
+  <p>自己写（只写空里的部分）</p>
+  <p>She <input type="text" class="inline" id="s43-v1" autocomplete="off"> (dance) at the party last night.</p>
+  <button type="button" class="btn" data-check="s43|variant1|#s43-v1">对一下</button>
+  <div class="fb" id="fb-s43-variant1"></div>
+  <p>讲一讲：怎么知道这里该用过去式？dance 变过去式要注意什么？（一句话就行）</p>
+  <textarea id="s43-why" rows="2" placeholder="打一句就行"></textarea><br>
+  <button type="button" class="btn" data-save="s43|think|#s43-why">保存</button><span class="ok"></span>
 </div>
 
 <div class="item" data-section="s49">
-  <h3>第2道：复数主语用 include（u1r2 s49）</h3>
-  <div class="step">
-    <div class="stept">① 先想一想</div>
-    <p>我当时是怎么想的？当时填了什么，为什么那样填？</p>
-    <textarea id="s49-think" rows="2" placeholder="打一句就行"></textarea><br>
-    <button type="button" class="btn" data-save="s49|think|#s49-think">保存</button><span class="ok"></span>
+  <h3>第 2 道：复数主语</h3>
+  <p>选一个</p>
+  <p>The children ___ many good questions every day.</p>
+  <div class="mcq" data-mcq="s49|variant1">
+    <button type="button" data-opt="A">A. includes</button>
+    <button type="button" data-opt="B">B. include</button>
+    <button type="button" data-opt="C">C. including</button>
+    <button type="button" data-opt="D">D. included</button>
   </div>
-  <div class="step">
-    <div class="stept">② 看例题，自讲一遍为什么</div>
-    <p class="ex">Da Vinci's notebooks include drawings of flying machines.</p>
-    <ol>
-      <li>主语 notebooks 是复数，是“它们”，动词用原形 include，不加 s。</li>
-      <li>includes 是单数主语用的，这里主语是复数，不能用。</li>
-      <li>including 是 -ing 形式，不能单独做谓语，这里要填动词。</li>
-    </ol>
-    <button type="button" class="btn" data-tap="s49|explained">我自讲了一遍，明白了</button><span class="ok"></span>
-  </div>
-  <div class="step">
-    <div class="stept">③ 遮住答案，做新变式</div>
-    <p>变式题1：The books on the desk <input type="text" class="inline" id="s49-v1" autocomplete="off" placeholder="填空里那个词"> many old photos.</p>
-    <button type="button" class="btn" data-check="s49|variant1|#s49-v1">对一下</button>
-    <div class="fb" id="fb-s49-variant1"></div>
-    <p>变式题2：Look, the two boxes ___ many old books.</p>
-    <div class="mcq" data-mcq="s49|variant2">
-      <button type="button" data-opt="A">A. includes</button>
-      <button type="button" data-opt="B">B. include</button>
-      <button type="button" data-opt="C">C. including</button>
-      <button type="button" data-opt="D">D. included</button>
-    </div>
-    <div class="fb" id="fb-s49-variant2"></div>
-    <p>写完后用自己的话讲一遍：主语是复数时，动词要怎么变？怎么一眼看出主语是单数还是复数？（讲出声来就行，不用写）</p>
-  </div>
-  <div class="step">
-    <div class="stept">④ 口诀：自己写一句</div>
-    <input type="text" id="s49-mn" placeholder="我的口诀：……" autocomplete="off">
-    <button type="button" class="btn" data-save="s49|mnemonic|#s49-mn">保存口诀</button><span class="ok"></span>
-    <div class="rec" id="rec-s49-mnemonic"></div>
-  </div>
+  <div class="fb" id="fb-s49-variant1"></div>
+  <p>讲一讲：主语是单数还是复数？为什么选这个？（一句话就行）</p>
+  <textarea id="s49-why" rows="2" placeholder="打一句就行"></textarea><br>
+  <button type="button" class="btn" data-save="s49|think|#s49-why">保存</button><span class="ok"></span>
 </div>
 
 <div class="item" data-section="s12">
-  <h3>第3道：三个数字别搞混（u1r3 s12）</h3>
-  <div class="step">
-    <div class="stept">① 先想一想</div>
-    <p>我当时是怎么想的？当时填了什么，为什么那样填？</p>
-    <textarea id="s12-think" rows="2" placeholder="打一句就行"></textarea><br>
-    <button type="button" class="btn" data-save="s12|think|#s12-think">保存</button><span class="ok"></span>
+  <h3>第 3 道：三个数字</h3>
+  <p>选一个</p>
+  <p>How long did dinosaurs live on the Earth?</p>
+  <div class="mcq" data-mcq="s12|variant1">
+    <button type="button" data-opt="A">A. About 66 million years.</button>
+    <button type="button" data-opt="B">B. About 245 million years.</button>
+    <button type="button" data-opt="C">C. More than 180 million years.</button>
+    <button type="button" data-opt="D">D. About 100 million years.</button>
   </div>
+  <div class="fb" id="fb-s12-variant1"></div>
+  <p>讲一讲：66、245、180 各是什么意思？（一句话就行）</p>
+  <textarea id="s12-why" rows="2" placeholder="打一句就行"></textarea><br>
+  <button type="button" class="btn" data-save="s12|think|#s12-why">保存</button><span class="ok"></span>
+</div>
+
+<h2>第二部分：第 3 次复测——unless / 条件句 / 副词（三道新变式）</h2>
+<p>11 月 16 日第 2 次复测隔四天再测一次。不是把前两次那三道再抄一遍，是三道新的。这三道不计入门禁、不消错题，只看是不是真会了。选完、写完讲一句为什么。这次错了不加题，第 3 次还错就停刷、回课本重讲、标水蛭题，一周后全新变式再测。</p>
+
+<div class="item">
+  <h3>先看一眼例题，再做题</h3>
+  <p>做题之前，先看一遍下面三道例题，每道自己讲一遍为什么，再往下做。</p>
   <div class="step">
-    <div class="stept">② 看例题，自讲一遍为什么</div>
-    <p class="ex">Dinosaurs lived on the Earth for more than 180 million years.</p>
+    <div class="stept">例题 1：unless</div>
+    <p class="ex">Unless you read every day, your English gets worse.</p>
     <ol>
-      <li>先在心里画一条时间线：245 是第一次出现，180 是统治了多久，66 是灭绝。</li>
-      <li>这句问的是“统治了多久”，找 for more than ___ million years 那句，答案是 180。</li>
-      <li>错的样子长这样——66 是灭绝的时间，不是统治的时间；245 是第一次出现的时间，也不是统治的时间。</li>
+      <li>unless = 如果……不，意思里已经带了一个“不”。</li>
+      <li>这句是说“如果你不每天读英语，英语就变差”，意思和形式都对。</li>
+      <li>错的样子长这样——Unless you do not read every day（多了一个 not，双重否定，意思反了）；Unless you will read every day（unless 从句里不用 will）。</li>
     </ol>
-    <button type="button" class="btn" data-tap="s12|explained">我自讲了一遍，明白了</button><span class="ok"></span>
+    <button type="button" class="btn" data-tap="unless|explained">我自讲了一遍，明白了</button><span class="ok"></span>
   </div>
   <div class="step">
-    <div class="stept">③ 遮住答案，做新变式</div>
-    <p>变式题1：Dinosaurs died out about ___ million years ago.</p>
-    <div class="mcq" data-mcq="s12|variant1">
-      <button type="button" data-opt="A">A. 180</button>
-      <button type="button" data-opt="B">B. 66</button>
-      <button type="button" data-opt="C">C. 245</button>
-      <button type="button" data-opt="D">D. 300</button>
-    </div>
-    <div class="fb" id="fb-s12-variant1"></div>
-    <p>变式题2：Dinosaurs lived on the Earth for more than <input type="text" class="inline" id="s12-v2" autocomplete="off"> million years.</p>
-    <button type="button" class="btn" data-check="s12|variant2|#s12-v2">对一下</button>
-    <div class="fb" id="fb-s12-variant2"></div>
-    <p>写完后用自己的话讲一遍：245、180、66 各是什么意思？做题时先找哪句话？（讲出声来就行，不用写）</p>
+    <div class="stept">例题 2：条件句写句</div>
+    <p class="ex">If you read the map every morning, you do not get lost easily.</p>
+    <ol>
+      <li>主语是 you，肯定句动词用原形 read，不加 s。</li>
+      <li>否定句是 do not + 原形：do not get lost。don't 就是 do not。</li>
+      <li>does not 是给 he / she 用的，主语是 you 不能用；谈规律用一般现在时，不用 will。</li>
+    </ol>
+    <button type="button" class="btn" data-tap="cond|explained">我自讲了一遍，明白了</button><span class="ok"></span>
   </div>
   <div class="step">
-    <div class="stept">④ 口诀：自己写一句</div>
-    <input type="text" id="s12-mn" placeholder="我的口诀：……" autocomplete="off">
-    <button type="button" class="btn" data-save="s12|mnemonic|#s12-mn">保存口诀</button><span class="ok"></span>
-    <div class="rec" id="rec-s12-mnemonic"></div>
+    <div class="stept">例题 3：副词的位置</div>
+    <p class="ex">She reads the book carefully.</p>
+    <ol>
+      <li>先找动词和宾语——动词是 reads，宾语是 the book。</li>
+      <li>carefully 是副词，修饰动词 reads。</li>
+      <li>动词有宾语，副词站宾语后面：reads the book carefully。</li>
+      <li>错的样子长这样——She reads carefully the book（副词插在动词和宾语中间）；She reads the book careful（careful 是形容词，修饰动词要用副词 carefully）。</li>
+    </ol>
+    <button type="button" class="btn" data-tap="adv|explained">我自讲了一遍，明白了</button><span class="ok"></span>
   </div>
 </div>
 
-<h2>第二部分：国王故事完形变式</h2>
+<div class="item" data-section="unless">
+  <h3>第 1 道：unless</h3>
+  <p>选一个</p>
+  <p>Which sentence is right?</p>
+  <div class="mcq" data-mcq="unless|variant1">
+    <button type="button" data-opt="A">A. Unless you practice every day, you cannot play the piano well.</button>
+    <button type="button" data-opt="B">B. Unless you do not practice every day, you cannot play the piano well.</button>
+    <button type="button" data-opt="C">C. Unless you will practice every day, you cannot play the piano well.</button>
+    <button type="button" data-opt="D">D. You will play the piano well unless you practice every day.</button>
+  </div>
+  <div class="fb" id="fb-unless-variant1"></div>
+  <p>讲一讲：unless 后面为什么不能再加 not？（一句话就行）</p>
+  <textarea id="unless-why" rows="2" placeholder="打一句就行"></textarea><br>
+  <button type="button" class="btn" data-save="unless|think|#unless-why">保存</button><span class="ok"></span>
+</div>
+
+<div class="item" data-section="cond">
+  <h3>第 2 道：条件句写句</h3>
+  <p>自己写（两个空都填，只写两个空里的部分，中间空一格）</p>
+  <p>If Anna <input type="text" class="inline" id="cond-v1" autocomplete="off"> (study) hard every day, she <input type="text" class="inline" id="cond-v2" autocomplete="off"> (not find) English difficult.</p>
+  <button type="button" class="btn" data-check="cond|variant1|#cond-v1">对一下第一个空</button>
+  <div class="fb" id="fb-cond-variant1"></div>
+  <button type="button" class="btn" data-check="cond|variant2|#cond-v2">对一下第二个空</button>
+  <div class="fb" id="fb-cond-variant2"></div>
+  <p>讲一讲：Anna 是 she，动词和否定要怎么变？（一句话就行）</p>
+  <textarea id="cond-why" rows="2" placeholder="打一句就行"></textarea><br>
+  <button type="button" class="btn" data-save="cond|think|#cond-why">保存</button><span class="ok"></span>
+</div>
+
+<div class="item" data-section="adv">
+  <h3>第 3 道：副词的位置</h3>
+  <p>选一个</p>
+  <p>Which sentence is right?</p>
+  <div class="mcq" data-mcq="adv|variant1">
+    <button type="button" data-opt="A">A. He read carefully the book.</button>
+    <button type="button" data-opt="B">B. He read the book carefully.</button>
+    <button type="button" data-opt="C">C. He read the book careful.</button>
+    <button type="button" data-opt="D">D. He careful read the book.</button>
+  </div>
+  <div class="fb" id="fb-adv-variant1"></div>
+  <p>讲一讲：副词站在哪里？为什么不能站在动词和宾语中间？（一句话就行）</p>
+  <textarea id="adv-why" rows="2" placeholder="打一句就行"></textarea><br>
+  <button type="button" class="btn" data-save="adv|think|#adv-why">保存</button><span class="ok"></span>
+</div>
+
+<h2>第三部分：故事完形变式（第 2 篇）——Sam 跑步比赛</h2>
 <div class="item">
-  <p>先把故事读两遍，第一遍抓大意——国王想变强，结果怎么样？第二遍再做题。<br>寓意先记住一句话：小事不做，大事必败。</p>
+  <p>先把故事读两遍，第一遍抓大意——Sam 想参加跑步比赛，结果怎么样？第二遍再做题。<br>寓意先记住一句话：小事不做，大事必败。</p>
   <p>词库（每个词只用一次）：点一个词，再点一个空。</p>
   <div class="bank" id="bank"></div>
-  <p class="story" id="story">A king wanted to be <span class="blank" data-blank="1">___</span> than all the other kings. He made a <span class="blank" data-blank="2">___</span> to build a big castle in one day. He was too <span class="blank" data-blank="3">___</span> to wait. He did not <span class="blank" data-blank="4">___</span> to check the small stones. One small <span class="blank" data-blank="5">___</span> <span class="blank" data-blank="6">___</span> the whole castle to fall down.</p>
+  <p class="story" id="story">Sam made a <span class="blank" data-blank="1">___</span> to run every morning before school. He wanted his legs to be <span class="blank" data-blank="2">___</span> than before, so he could run faster in the school race. One rainy morning, he was too <span class="blank" data-blank="3">___</span> to wait for the rain to stop. He did not <span class="blank" data-blank="4">___</span> to check the small stone in his shoe. One small <span class="blank" data-blank="5">___</span> <span class="blank" data-blank="6">___</span> him to fall and miss the race.</p>
   <button type="button" class="btn" id="cloze-check">对一下</button>
   <div class="fb" id="fb-cloze"></div>
   <p>每空为什么这样填？一句话讲讲：</p>
-  <textarea id="king-why" rows="2" placeholder="比如：第一空是因为……"></textarea><br>
-  <button type="button" class="btn" data-save="king|cloze_why|#king-why">保存</button><span class="ok"></span>
+  <textarea id="sam-why" rows="2" placeholder="比如：第一空是因为……"></textarea><br>
+  <button type="button" class="btn" data-save="sam|cloze_why|#sam-why">保存</button><span class="ok"></span>
   <h3>复述（说出来，不用写全篇）</h3>
   <p>用三句话讲这个故事，每句都要带一个刚才填的词：</p>
-  <p>句框1：The king wanted to be <input type="text" class="inline" id="king-r1" autocomplete="off">.</p>
-  <button type="button" class="btn" data-save="king|retell1|#king-r1">保存第一句</button><span class="ok"></span>
-  <p>句框2：He was too <input type="text" class="inline" id="king-r2a" autocomplete="off"> to <input type="text" class="inline" id="king-r2b" autocomplete="off">.</p>
-  <button type="button" class="btn" data-save="king|retell2|#king-r2a,#king-r2b">保存第二句</button><span class="ok"></span>
-  <p>句框3：One small <input type="text" class="inline" id="king-r3a" autocomplete="off"> caused <input type="text" class="inline" id="king-r3b" autocomplete="off">.</p>
-  <button type="button" class="btn" data-save="king|retell3|#king-r3a,#king-r3b">保存第三句</button><span class="ok"></span>
+  <p>句框1：Sam wanted his legs to be <input type="text" class="inline" id="sam-r1" autocomplete="off">.</p>
+  <button type="button" class="btn" data-save="sam|retell1|#sam-r1">保存第一句</button><span class="ok"></span>
+  <p>句框2：He was too <input type="text" class="inline" id="sam-r2a" autocomplete="off"> to <input type="text" class="inline" id="sam-r2b" autocomplete="off">.</p>
+  <button type="button" class="btn" data-save="sam|retell2|#sam-r2a,#sam-r2b">保存第二句</button><span class="ok"></span>
+  <p>句框3：One small <input type="text" class="inline" id="sam-r3a" autocomplete="off"> caused <input type="text" class="inline" id="sam-r3b" autocomplete="off">.</p>
+  <button type="button" class="btn" data-save="sam|retell3|#sam-r3a,#sam-r3b">保存第三句</button><span class="ok"></span>
   <p>把三句话和寓意一起说出来（30 秒）：</p>
-  <div class="rec" id="rec-king-retell"></div>
+  <div class="rec" id="rec-sam-retell"></div>
   <p>这个故事告诉我们什么？一句话：</p>
-  <input type="text" id="king-moral" placeholder="小事不做，……" autocomplete="off">
-  <button type="button" class="btn" data-save="king|moral|#king-moral">保存</button><span class="ok"></span>
+  <input type="text" id="sam-moral" placeholder="小事不做，……" autocomplete="off">
+  <button type="button" class="btn" data-save="sam|moral|#sam-moral">保存</button><span class="ok"></span>
 </div>
 
 <div class="done">
-  <h2 style="border:0;margin-top:0;padding-left:0;">练完了，去做网站上的三道原题</h2>
-  <p>答对且零求助才清错题本，今日闯关 3/3。做完再续 u1r3 从第18步往下。</p>
+  <h2 style="border:0;margin-top:0;padding-left:0;">练完了，去做网站上的 4 道待复测</h2>
+  <p>今晚先清 4 道：s43、s49，和昨晚新进的两道恐龙题 s22、s25。s25 和今天这张的 s12 是同一句的另一半（一个考数字，一个考动词）。答对且零求助才清错题本，今日闯关 4/4。做完再续 u1r3 从第 18 步往下，u8r1 比较级回头补。</p>
   <a class="btn big" href="/lesson?lesson=u1r2">去做 u1r2 原题（s43、s49）</a>
-  <a class="btn big" href="/lesson?lesson=u1r3">去做 u1r3 原题（s12）</a>
+  <a class="btn big" href="/lesson?lesson=u1r3">去做 u1r3 原题（s22、s25）</a>
   <p><a class="home" href="/">← 回首页</a></p>
 </div>
 </div>
@@ -216,8 +228,71 @@ a.home { color: #2e7d32; }
   function $(s) { return document.querySelector(s); }
   function $all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
   function okEl(btn) { var n = btn.nextElementSibling; return (n && n.classList && n.classList.contains('ok')) ? n : null; }
-  function postAnswer(section, field, text, audio) {
+  // ---- 粘贴留痕（2026-11-18：沿用 lesson.html 做法）----
+  // 只提示一次、不硬拦、不清空输入；哪个输入框粘贴过就记在它身上，提交时带 pasted 标志。
+  var _ptPasteWarned = false;
+  function _ptMarkPasted(el) {
+    if (!el) return;
+    el.setAttribute('data-pasted', '1');
+    if (!_ptPasteWarned) {
+      _ptPasteWarned = true;
+      var tip = document.createElement('div');
+      tip.style.cssText = 'position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);background:#333;color:#fff;padding:12px 20px;border-radius:12px;font-size:15px;z-index:9999;max-width:80%;text-align:center;';
+      tip.textContent = '自己打一遍记得更牢哦 💪';
+      document.body.appendChild(tip);
+      setTimeout(function () { tip.remove(); }, 2000);
+    }
+  }
+  document.addEventListener('paste', function (ev) {
+    var t = ev.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA')) _ptMarkPasted(t);
+  }, true);
+  function _ptPastedOf(sels) {
+    return sels.some(function (s) { var el = $(s); return !!(el && el.getAttribute('data-pasted') === '1'); }) ? 1 : 0;
+  }
+  // ---- 练完自评（2026-11-18）：变式/完形答对后问一句记得牢不牢 ----
+  // 只对今晚三道错题的变式（s43/s49/s12，映射到原题号）和 Sam 故事完形出自评；
+  // 数学区（m1/m2/m3/mx）不在这张表里，以后数学练习页复用本文件也不会误触发。
+  // 粘贴答对不出自评（调用处已拦）；只练不记——自评只写下次复测日期，不清错题、不颁称号。
+  var PT_ITEM = { s43: 'u1r2-v2-s43', s49: 'u1r2-v2-s49', s12: 'u1r3-v1-s12' };
+  function postPtRecall(itemId, rating, box) {
+    fetch('/api/recall-rate', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: itemId, source: 'practice', rating: rating }) })
+      .then(function (r) { return r.json().catch(function () { return null; }); })
+      .then(function (d) {
+        if (!box || !box.isConnected) return;
+        box.className = 'recall-done';
+        box.textContent = (d && d.ok) ? ((d.next_label === '按原计划') ? '记下了，按原计划来。' : ('记下了，' + (d.next_label || '按原计划') + '再练这道。')) : '没记下来，没关系，继续往下。';
+      })
+      .catch(function () {
+        if (!box || !box.isConnected) return;
+        box.className = 'recall-done';
+        box.textContent = '没记下来，没关系，继续往下。';
+      });
+  }
+  function showRecallRating(fb, itemId) {
+    if (!fb || !itemId) return;
+    if (fb.querySelector('.recall-box, .recall-done')) return; // 同一题只问一次
+    var box = document.createElement('div');
+    box.className = 'recall-box';
+    box.innerHTML = '<div class="recall-q">这道题记得牢不牢？点一下就行，可以跳过。</div>'
+      + '<button type="button" class="recall-btn" data-rating="1">一下就想起来了</button>'
+      + '<button type="button" class="recall-btn" data-rating="2">想了一会儿</button>'
+      + '<button type="button" class="recall-btn" data-rating="3">差点忘了</button>'
+      + '<button type="button" class="recall-skip">跳过</button>';
+    fb.appendChild(box);
+    box.querySelectorAll('.recall-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        box.querySelectorAll('button').forEach(function (x) { x.disabled = true; });
+        postPtRecall(itemId, Number(b.getAttribute('data-rating')), box);
+      });
+    });
+    var sk = box.querySelector('.recall-skip');
+    if (sk) sk.addEventListener('click', function () { box.remove(); });
+  }
+  function postAnswer(section, field, text, audio, pasted) {
     var body = { section: section, field: field, answer_text: text || '' };
+    if (pasted) body.pasted = 1;
     if (audio) { body.audio_b64 = audio.b64; body.audio_mime = audio.mime; body.audio_duration_sec = audio.dur; }
     return fetch('/api/practice-tonight/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(function (r) { return r.json(); });
   }
@@ -241,7 +316,7 @@ a.home { color: #2e7d32; }
       var text = vals.join(' / ');
       if (!text) { var o = okEl(btn); if (o) o.textContent = '先写一句再保存'; return; }
       btn.disabled = true;
-      postAnswer(section, field, text, null).then(function (d) {
+      postAnswer(section, field, text, null, _ptPastedOf(sels)).then(function (d) {
         btn.disabled = false;
         if (d && d.ok) showSaved(btn); else { var o2 = okEl(btn); if (o2) o2.textContent = '没发出去，再点一次'; }
       }).catch(function () { btn.disabled = false; var o3 = okEl(btn); if (o3) o3.textContent = '没发出去，检查网络再点一次'; });
@@ -270,10 +345,12 @@ a.home { color: #2e7d32; }
       var fb = $('#fb-' + section + '-' + field);
       if (!val) { if (fb) { fb.className = 'fb bad'; fb.textContent = '先填上再对一下'; } return; }
       btn.disabled = true;
-      postAnswer(section, field, val, null).then(function (d) {
+      var pasted = _ptPastedOf([parts[2]]);
+      postAnswer(section, field, val, null, pasted).then(function (d) {
         btn.disabled = false;
         if (!fb) return;
-        if (d && d.ok && d.correct === 1) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+        // 2026-11-18：粘贴答对要当面说清楚——不算自己做对，得自己打一遍（只说结果，不拦、不清空输入）
+        if (d && d.ok && d.correct === 1) { fb.className = 'fb good'; fb.textContent = pasted ? '对了 ✓，但这是粘贴的，不算你自己做对，得自己打一遍。' : '对了 ✓'; if (!pasted && PT_ITEM[section]) showRecallRating(fb, PT_ITEM[section]); }
         else if (d && d.ok) { fb.className = 'fb bad'; fb.textContent = '不对，再想想：' + (d.hint || ''); }
         else { fb.className = 'fb bad'; fb.textContent = '没发出去，再点一次'; }
       }).catch(function () { btn.disabled = false; if (fb) { fb.className = 'fb bad'; fb.textContent = '没发出去，检查网络再点一次'; } });
@@ -291,7 +368,7 @@ a.home { color: #2e7d32; }
         b.classList.add('picked');
         postAnswer(section, field, b.getAttribute('data-opt'), null).then(function (d) {
           if (!fb) return;
-          if (d && d.ok && d.correct === 1) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+          if (d && d.ok && d.correct === 1) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; if (PT_ITEM[section]) showRecallRating(fb, PT_ITEM[section]); }
           else if (d && d.ok) { b.classList.remove('picked'); b.classList.add('wrong-pick'); fb.className = 'fb bad'; fb.textContent = '不对，再想想：' + (d.hint || ''); }
           else { fb.className = 'fb bad'; fb.textContent = '没发出去，再点一次'; }
         }).catch(function () { if (fb) { fb.className = 'fb bad'; fb.textContent = '没发出去，检查网络再点一次'; } });
@@ -339,7 +416,7 @@ a.home { color: #2e7d32; }
     var arr = [1, 2, 3, 4, 5, 6].map(function (n) { return fills[n] || ''; });
     if (arr.indexOf('') >= 0) { fb.className = 'fb bad'; fb.textContent = '还有空没填，6 个空都要填上。'; return; }
     var btn = this; btn.disabled = true;
-    postAnswer('king', 'cloze', JSON.stringify(arr), null).then(function (d) {
+    postAnswer('sam', 'cloze', JSON.stringify(arr), null).then(function (d) {
       btn.disabled = false;
       if (!d || !d.ok || !d.per_blank) { fb.className = 'fb bad'; fb.textContent = '没发出去，再点一次'; return; }
       var wrongHints = [];
@@ -353,7 +430,7 @@ a.home { color: #2e7d32; }
           var ch = chipFor(old); if (ch) ch.classList.remove('used');
         }
       });
-      if (wrongHints.length === 0) { fb.className = 'fb good'; fb.textContent = '6 空全对 ✓ 再讲讲每空为什么，往下做复述。'; }
+      if (wrongHints.length === 0) { fb.className = 'fb good'; fb.textContent = '6 空全对 ✓ 再讲讲每空为什么，往下做复述。'; showRecallRating(fb, 'sam-story'); }
       else { fb.className = 'fb bad'; fb.textContent = '有 ' + wrongHints.length + ' 空不对，已清空重填：' + wrongHints.join(' '); }
     }).catch(function () { btn.disabled = false; fb.className = 'fb bad'; fb.textContent = '没发出去，检查网络再点一次'; });
   });
@@ -426,10 +503,7 @@ a.home { color: #2e7d32; }
       }).catch(function () { saveBtn.disabled = false; okSpan.textContent = '没发出去，检查网络再点一次'; });
     });
   }
-  makeRecorder($('#rec-s43-mnemonic'), 's43', 'mnemonic_audio');
-  makeRecorder($('#rec-s49-mnemonic'), 's49', 'mnemonic_audio');
-  makeRecorder($('#rec-s12-mnemonic'), 's12', 'mnemonic_audio');
-  makeRecorder($('#rec-king-retell'), 'king', 'retell_audio');
+  makeRecorder($('#rec-sam-retell'), 'sam', 'retell_audio');
 })();
 </script>
 </body>
