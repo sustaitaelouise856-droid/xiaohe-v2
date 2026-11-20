@@ -54,7 +54,17 @@ function todaySummary(db) {
     cur.completed = Math.max(cur.completed, r.completed || 0);
     stories[r.story_id] = cur;
   }
-  return { ok: true, day, minutes: Math.floor(total / 60), seconds: total, sessions: rows.length, stories };
+  // 续听（2026-11-20）：每篇故事上次听到哪（跨天，取最新一行），供故事页打开时接着放。只读，不改计时口径。
+  const last = {};
+  for (const id of Object.keys(STORIES)) {
+    const r = db.prepare(
+      `SELECT seconds_listened, completed, updated_at FROM story_listens
+       WHERE story_id = ? ORDER BY updated_at DESC, id DESC LIMIT 1`
+    ).get(id);
+    last[id] = r ? { seconds: r.seconds_listened || 0, completed: r.completed || 0, updated_at: r.updated_at || null }
+                 : { seconds: 0, completed: 0, updated_at: null };
+  }
+  return { ok: true, day, minutes: Math.floor(total / 60), seconds: total, sessions: rows.length, stories, last };
 }
 
 module.exports = { STORIES, recordListen, todaySummary };
