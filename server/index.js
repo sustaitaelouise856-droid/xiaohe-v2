@@ -31,6 +31,7 @@ const map = require('./map'); // 2026-11-18：知识点地图（DeepTutor 借鉴
 const bedtime = require('./bedtime'); // 2026-11-20：睡前故事（只听、不判分、单独计时）
 
 const app = express();
+require('./sync-upload')(app, db);
 app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
 app.use('/api/exam/speech', express.json({ limit: '6mb' })); // 2026-10-23：口语录音 base64 上传（单段上限 4MB），同上
 app.use('/api/practice-tonight', express.json({ limit: '12mb' })); // 2026-11-18：今晚先练作答+语音（30秒内），同 /api/feedback
