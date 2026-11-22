@@ -1009,6 +1009,8 @@ UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
 // 读完成状态：优先用服务器真实进度（lesson_state表），本地做兜底
 let serverDone = new Set();
 let serverCurrent = null;   // 服务器判定的"当前在学"课程 id
+let planCurrent = null;     // 当天计划指定的课（2026-11-22：计划驱动首页）
+let planThird = null;       // 当天计划第三项：practice=今晚先练，consolidate=巩固练
 let serverStarted = [];     // [{id, updated_at}] 学过但没学完
 let lockedSet = new Set();  // 服务端判定的未解锁课程（2026-10-12：Unit 4锁死）
 let pendingReviewIds = []; // 待办的复习课id（2026-10-13：无正课可上时继续按钮指向这里）
@@ -1020,6 +1022,8 @@ async function loadServerProgress() {
       const doneList = d.completed || d.lessons || [];
       serverDone = new Set(doneList);
       serverCurrent = d.current || null;
+      planCurrent = d.plan_current || null;
+      planThird = d.plan_third || null;
       serverStarted = Array.isArray(d.started) ? d.started : [];
     }
   } catch {}
@@ -1061,6 +1065,11 @@ function computeCurrent() {
     }
     if (manual && (isDone(manual) || isLocked(manual))) localStorage.removeItem('manual_current');
   } catch {}
+  // 0.5) 当天计划指定的课（2026-11-22：计划驱动首页；只在没学完、没锁定时生效，
+  // 学完自动失效、指针自己往下走；孩子长按的 manual_current 仍优先）
+  if (planCurrent && ORDER.some(l => l.id === planCurrent) && !isDone(planCurrent) && !isLocked(planCurrent)) {
+    return ORDER.findIndex(l => l.id === planCurrent);
+  }
   // 1) 服务器直接给的当前课（且在地图里；复习课不劫持主线；锁定的跳过）
   if (serverCurrent && ORDER.some(l => l.id === serverCurrent) && !isReviewId(serverCurrent) && !isLocked(serverCurrent)) {
     return ORDER.findIndex(l => l.id === serverCurrent);
@@ -1310,6 +1319,18 @@ async function renderDailyPlan(dailyStatus) {
       if (d && d.ok && d.dailyMistakes) dm = d.dailyMistakes;
     } catch {}
     const steps = [];
+    // 当天计划（2026-11-22）：现取一次 /api/done-lessons——initDailyCard 与 loadServerProgress
+    // 有竞态，直接取最稳；计划指定的课优先于 currentIdx，第三项 practice 指今晚先练页。
+    let planLesson = null, planThirdNow = null;
+    try {
+      const rp = await fetch('/api/done-lessons');
+      const dp = await rp.json();
+      if (dp && dp.ok && dp.plan_current && ORDER.some(l => l.id === dp.plan_current)
+          && !isDone(dp.plan_current) && !isLocked(dp.plan_current)) {
+        planLesson = ORDER.find(l => l.id === dp.plan_current);
+      }
+      planThirdNow = (dp && dp.ok) ? (dp.plan_third || null) : null;
+    } catch {}
     // 第1件：今日错题（每天10道，解锁新课的要求；2026-11-02：闯关改由上方 dailyCard 单独显示，这里只留 3 件）
     const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
     const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
@@ -1319,8 +1340,9 @@ async function renderDailyPlan(dailyStatus) {
       link: mOk ? null : '/progress.html',
       btn: mOk ? null : '去做错题 →'
     });
-    // 第2件：今天的新课（2026-10-16修：动态取当前可上课程，不再硬编码u4r1）
-    const curLesson = (typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null;
+    // 第2件：今天的新课（2026-10-16修：动态取当前可上课程，不再硬编码u4r1；
+    // 2026-11-22：当天计划指定的课优先）
+    const curLesson = planLesson || ((typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null);
     if (curLesson) {
       steps.push({
         done: false,
@@ -1336,15 +1358,25 @@ async function renderDailyPlan(dailyStatus) {
         btn: null
       });
     }
-    // 第3件：巩固练（可反复做；优先推荐还没练过的，练过的也可以再练一次）
-    const con = await pickConsolidate();
-    if (con) {
+    // 第3件：计划指定了今晚先练就指过去（重教+复习），否则按旧口径推巩固练
+    if (planThirdNow === 'practice') {
       steps.push({
-        done: con.done,
-        text: con.done ? `巩固练：${con.label} · 已练过，可再练一次` : `巩固练：${con.label} · 可反复做`,
-        link: `/lesson?lesson=${con.id}`,
+        done: false,
+        text: '今晚先练：重教与复习',
+        link: '/practice-tonight.html',
         btn: '去练 →'
       });
+    } else {
+      // 巩固练（可反复做；优先推荐还没练过的，练过的也可以再练一次）
+      const con = await pickConsolidate();
+      if (con) {
+        steps.push({
+          done: con.done,
+          text: con.done ? `巩固练：${con.label} · 已练过，可再练一次` : `巩固练：${con.label} · 可反复做`,
+          link: `/lesson?lesson=${con.id}`,
+          btn: '去练 →'
+        });
+      }
     }
     listEl.innerHTML = steps.map((s, i) =>
       `<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:10px;background:${s.done ? '#f1f8e9' : '#fff8e1'};border:1px solid ${s.done ? '#c8e6c9' : '#ffe0b2'};">`
