@@ -342,6 +342,38 @@ app.post('/api/admin/plan', (req, res) => {
   res.json({ ok: true, plan: { day, focus_lesson: focus, third_item: third } });
 });
 
+// ---- 老师的话（2026-11-22：监督闭环的最后一环——核查发现落下时，直接在孩子平板首页上提醒他本人）----
+// 存 app_state key='teacher_note'，值 JSON {day:'YYYY-MM-DD'(上海), text}。一天一条，写了就覆盖。
+// GET 公开只读（只返回当天）；POST 须 BACKUP_TOKEN。day 可显式指定（22:00 核查可预写明天的）。
+function readTeacherNote() {
+  try {
+    const row = db.prepare("SELECT value FROM app_state WHERE key='teacher_note'").get();
+    if (!row || !row.value) return null;
+    const n = JSON.parse(row.value);
+    if (!n || typeof n !== 'object' || n.day !== shanghaiToday() || typeof n.text !== 'string' || !n.text) return null;
+    return n;
+  } catch { return null; }
+}
+// 孩子端：读今天老师的话
+app.get('/api/teacher-note', (req, res) => {
+  const n = readTeacherNote();
+  res.json({ ok: true, text: n ? n.text : null });
+});
+// 管理端：写/清老师的话（text 空串=清除；day 默认今天）
+app.post('/api/admin/teacher-note', (req, res) => {
+  if (!checkBackupToken(req)) return res.status(403).json({ ok: false, error: 'forbidden' });
+  const b = req.body || {};
+  const day = String(b.day || shanghaiToday());
+  const text = b.text == null ? '' : String(b.text);
+  const dm = /^(\d{4})-(\d{2})-(\d{2})$/.exec(day);
+  const realDay = dm && new Date(Date.UTC(+dm[1], +dm[2] - 1, +dm[3])).toISOString().slice(0, 10) === day;
+  if (!realDay) return res.status(400).json({ ok: false, error: 'bad_day' });
+  if (text.length > 200) return res.status(400).json({ ok: false, error: 'text_too_long' });
+  db.prepare("INSERT INTO app_state(key, value) VALUES('teacher_note', ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    .run(JSON.stringify({ day, text }));
+  res.json({ ok: true, note: { day, text } });
+});
+
 // ---- 每日签到（2026-10-11 Elouise 要加）：上海自然日，一天一行，服务端落盘 ----
 function addDaysStr(dayStr, n) {
   const parts = String(dayStr).split('-').map(Number);
