@@ -1331,6 +1331,13 @@ async function renderDailyPlan(dailyStatus) {
       }
       planThirdNow = (dp && dp.ok) ? (dp.plan_third || null) : null;
     } catch {}
+    // 老师的话（2026-11-22）：核查发现落下时，Muse 直接在首页上提醒他本人
+    let teacherNote = null;
+    try {
+      const rn = await fetch('/api/teacher-note');
+      const dn = await rn.json();
+      if (dn && dn.ok && dn.text) teacherNote = dn.text;
+    } catch {}
     // 第1件：今日错题（每天10道，解锁新课的要求；2026-11-02：闯关改由上方 dailyCard 单独显示，这里只留 3 件）
     const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
     const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
@@ -1384,6 +1391,13 @@ async function renderDailyPlan(dailyStatus) {
       + (s.link ? `<button onclick="location.href='${s.link}'" style="padding:8px 16px;border:0;border-radius:8px;background:#1a73e8;color:#fff;font-size:13px;font-weight:700;cursor:pointer;">${s.btn}</button>` : '<span style="color:#4caf50;font-size:20px;">✓</span>')
       + `</div>`
     ).join('');
+    const oldBar = document.getElementById('teacherNoteBar');
+    if (oldBar) oldBar.remove();
+    if (teacherNote) {
+      const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      planEl.insertAdjacentHTML('afterbegin',
+        `<div id="teacherNoteBar" style="margin-bottom:10px;padding:12px;border-radius:10px;background:#fff8e1;border:1px solid #ffe0b2;font-size:14px;line-height:1.6;">💬 <b>老师说：</b>${esc(teacherNote)}</div>`);
+    }
     planEl.style.display = 'block';
   } catch (e) { /* 静默失败 */ }
 }
