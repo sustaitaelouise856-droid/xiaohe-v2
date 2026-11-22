@@ -288,11 +288,58 @@ app.get('/api/done-lessons', auth.requireAuth, (req, res) => {
       }
     } catch (e2) { console.error('[done-lessons] attempts 兜底失败:', e2.message); }
     completed.sort(); started.sort((a, b) => (a.updated_at < b.updated_at ? -1 : 1));
-    res.json({ ok: true, completed, started, current, lessons: completed });
+    const plan = readDailyPlan();
+    res.json({ ok: true, completed, started, current, lessons: completed,
+      plan_current: plan ? (plan.focus_lesson || null) : null,
+      plan_third: plan ? (plan.third_item || null) : null });
   } catch (e) {
     console.error('[done-lessons]', e.message);
-    res.json({ ok: false, error: 'db_error', completed: [], started: [], current: null, lessons: [] });
+    res.json({ ok: false, error: 'db_error', completed: [], started: [], current: null, lessons: [], plan_current: null, plan_third: null });
   }
+});
+
+// ---- 当天计划（2026-11-22：首页改由当天计划驱动，不再只按“最近学过”排）----
+// 存 app_state key='daily_plan'，值 JSON {day:'YYYY-MM-DD'(上海), focus_lesson, third_item}。
+// 只允许管理端（BACKUP_TOKEN）写入；孩子端页面只读 plan_current/plan_third。
+// 生效判断（课“没学完、没锁定”才指向）在前端 computeCurrent()/renderDailyPlan() 里做，
+// 计划课一旦学完指针自动失效、往下走，不留僵尸指向。
+function shanghaiToday() {
+  return new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+}
+function readDailyPlan() {
+  try {
+    const row = db.prepare("SELECT value FROM app_state WHERE key='daily_plan'").get();
+    if (!row || !row.value) return null;
+    const p = JSON.parse(row.value);
+    if (!p || typeof p !== 'object' || p.day !== shanghaiToday()) return null;
+    return p;
+  } catch { return null; }
+}
+function checkBackupToken(req) {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  return !!process.env.BACKUP_TOKEN && token === process.env.BACKUP_TOKEN;
+}
+// 管理端：读当天计划（核查任务只读，不写）
+app.get('/api/admin/plan', (req, res) => {
+  if (!checkBackupToken(req)) return res.status(403).json({ ok: false, error: 'forbidden' });
+  const row = db.prepare("SELECT value FROM app_state WHERE key='daily_plan'").get();
+  let plan = null;
+  try { plan = row && row.value ? JSON.parse(row.value) : null; } catch { plan = null; }
+  res.json({ ok: true, plan });
+});
+// 管理端：写当天计划（Muse 每天早上写当天计划；day 默认今天上海日期）
+app.post('/api/admin/plan', (req, res) => {
+  if (!checkBackupToken(req)) return res.status(403).json({ ok: false, error: 'forbidden' });
+  const b = req.body || {};
+  const day = String(b.day || shanghaiToday());
+  const focus = b.focus_lesson == null ? null : String(b.focus_lesson);
+  const third = b.third_item == null ? null : String(b.third_item);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return res.status(400).json({ ok: false, error: 'bad_day' });
+  if (focus && !/^[a-z]+\d+r\d+$/.test(focus)) return res.status(400).json({ ok: false, error: 'bad_focus_lesson' });
+  if (third && !['practice', 'consolidate'].includes(third)) return res.status(400).json({ ok: false, error: 'bad_third_item' });
+  db.prepare("INSERT INTO app_state(key, value) VALUES('daily_plan', ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    .run(JSON.stringify({ day, focus_lesson: focus, third_item: third }));
+  res.json({ ok: true, plan: { day, focus_lesson: focus, third_item: third } });
 });
 
 // ---- 每日签到（2026-10-11 Elouise 要加）：上海自然日，一天一行，服务端落盘 ----
