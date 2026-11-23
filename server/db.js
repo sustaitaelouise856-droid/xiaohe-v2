@@ -98,6 +98,16 @@ CREATE TABLE IF NOT EXISTS help_events (
 ensureColumn('help_events', 'session_id', "TEXT DEFAULT ''");
 ensureColumn('help_events', 'level', 'INTEGER DEFAULT 1'); // 三级提示（2026-10-02）：1 指方向，2 高亮原句，3 给答案讲原因
 ensureColumn('help_events', 'stuck_note', 'TEXT'); // 2026-11-20 求助梯子：L1 前孩子说的卡点（选填，如“看不懂题目”）
+// 看答案前的猜测（2026-11-21 先看答案三道关 Gate 2）：点开答案前必须先写一句自己的想法，
+// 蒙一个也行。只记猜测，不记作答；判分/门禁不读本表。
+db.exec(`
+CREATE TABLE IF NOT EXISTS answer_guesses (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  item_id    TEXT NOT NULL,
+  session_id TEXT NOT NULL DEFAULT '',
+  guess      TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
 // 课程进度（服务端记录，防重做）：单课单行；p1_started_day 为上海自然日 YYYY-MM-DD
 db.exec(`
 CREATE TABLE IF NOT EXISTS lesson_state (
