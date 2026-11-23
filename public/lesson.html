@@ -2273,6 +2273,43 @@ async function submitCopy(s, answer) {
   }
   checkFbReplies();
   setInterval(checkFbReplies, 120000);
+  // 老师轻推（2026-11-23 实时监督）：卡住/发呆时，老师的话直接弹在做题页上。
+  // 与老师回复 toast 共用这个 IIFE 和 2 分钟节奏；金底样式照抄首页老师的话横幅。
+  const NUDGE_KEY = 'xh_nudge_dismissed_at';
+  function escHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function removeNudgeToast() {
+    const old = document.getElementById('teacherNudgeToast');
+    if (old) old.remove();
+  }
+  async function checkTeacherNudge() {
+    try {
+      const r = await fetch('/api/teacher-nudge', { cache: 'no-store' });
+      const d = await r.json().catch(() => ({}));
+      if (!d || !d.ok || !d.text) { removeNudgeToast(); return; }
+      const dismissed = localStorage.getItem(NUDGE_KEY) || '';
+      if (d.created_at && d.created_at === dismissed) { removeNudgeToast(); return; }
+      const old = document.getElementById('teacherNudgeToast');
+      if (old) {
+        if (old.dataset.createdAt === (d.created_at || '')) return;
+        old.remove();
+      }
+      const tip = document.createElement('div');
+      tip.id = 'teacherNudgeToast';
+      tip.dataset.createdAt = d.created_at || '';
+      tip.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#fff8e1;color:#202124;border:1px solid #ffe0b2;padding:14px 20px;border-radius:14px;font-size:15px;line-height:1.6;z-index:9999;max-width:86%;box-shadow:0 8px 24px rgba(0,0,0,.25);text-align:center;';
+      tip.innerHTML = '💡 <b>老师说：</b>' + escHtml(d.text)
+        + ' <span id="teacherNudgeClose" style="cursor:pointer;font-weight:800;margin-left:8px;">×</span>';
+      tip.querySelector('#teacherNudgeClose').onclick = () => {
+        try { if (d.created_at) localStorage.setItem(NUDGE_KEY, d.created_at); } catch {}
+        removeNudgeToast();
+      };
+      document.body.appendChild(tip);
+    } catch {}
+  }
+  checkTeacherNudge();
+  setInterval(checkTeacherNudge, 120000);
 })();
 </script>
 <script src="/talk-to-teacher.js"></script>
