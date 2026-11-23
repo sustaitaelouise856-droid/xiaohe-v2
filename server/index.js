@@ -378,6 +378,75 @@ app.post('/api/admin/teacher-note', (req, res) => {
   res.json({ ok: true, note: { day, text } });
 });
 
+// ---- 实时监督：最近活动（2026-11-23：值班表每 5 分钟读一次，判断他卡没卡住）----
+// 只读。attempts 表没有 lesson_id 列，lesson_id 经 items JOIN 取；时间列全是 UTC。
+app.get('/api/admin/recent-activity', (req, res) => {
+  if (!checkBackupToken(req)) return res.status(403).json({ ok: false, error: 'forbidden' });
+  try {
+    const attempts = db.prepare(`
+      SELECT a.id, a.item_id, i.lesson_id, a.created_at, a.verdict, a.pasted, a.independent, a.session_id, a.correct, a.answer_given
+      FROM attempts a LEFT JOIN items i ON i.item_id = a.item_id
+      ORDER BY a.id DESC LIMIT 40`).all();
+    const helps = db.prepare(`
+      SELECT id, item_id, session_id, level, created_at FROM help_events
+      ORDER BY id DESC LIMIT 20`).all();
+    const reveals = db.prepare(`
+      SELECT id, item_id, session_id, created_at FROM answer_guesses
+      ORDER BY id DESC LIMIT 10`).all();
+    res.json({ ok: true, now_utc: new Date().toISOString(),
+      last_attempt_at: attempts.length ? attempts[0].created_at : null,
+      attempts, helps, reveals, plan: readDailyPlan(),
+      daily: { pending: getPendingReviews(), dailyMistakes: getDailyMistakeProgress() } });
+  } catch (e) {
+    console.error('[recent-activity]', e.message);
+    res.status(500).json({ ok: false, error: 'db_error' });
+  }
+});
+
+// ---- 老师轻推（2026-11-23：实时监督——卡住/发呆时直接在做题页上弹一句老师的话）----
+// 与 teacher_note 同款做法，独立 key='teacher_nudge'，绝不能覆盖 teacher_note。
+// 值 {day, text, reason, created_at(ISO UTC), expires_at(ISO UTC)}；有效期只认 expires_at，不按 day 过滤。
+function readTeacherNudge() {
+  try {
+    const row = db.prepare("SELECT value FROM app_state WHERE key='teacher_nudge'").get();
+    if (!row || !row.value) return null;
+    const n = JSON.parse(row.value);
+    if (!n || typeof n !== 'object' || typeof n.text !== 'string' || !n.text) return null;
+    const exp = n.expires_at ? Date.parse(n.expires_at) : NaN;
+    if (!isFinite(exp) || Date.now() > exp) return null;
+    return n;
+  } catch { return null; }
+}
+// 孩子端：读当前轻推（无记录/已过期 → text:null）
+app.get('/api/teacher-nudge', (req, res) => {
+  const n = readTeacherNudge();
+  res.json({ ok: true, text: n ? n.text : null, created_at: n ? n.created_at : null,
+    reason: n ? (n.reason || null) : null, expires_at: n ? n.expires_at : null });
+});
+// 管理端：写/清轻推（text 空串=清除；day 默认今天；expires_in_minutes 默认 30、上限 120）
+app.post('/api/admin/teacher-nudge', (req, res) => {
+  if (!checkBackupToken(req)) return res.status(403).json({ ok: false, error: 'forbidden' });
+  const b = req.body || {};
+  const day = String(b.day || shanghaiToday());
+  const text = b.text == null ? '' : String(b.text);
+  const dm = /^(\d{4})-(\d{2})-(\d{2})$/.exec(day);
+  const realDay = dm && new Date(Date.UTC(+dm[1], +dm[2] - 1, +dm[3])).toISOString().slice(0, 10) === day;
+  if (!realDay) return res.status(400).json({ ok: false, error: 'bad_day' });
+  if (text.length > 200) return res.status(400).json({ ok: false, error: 'text_too_long' });
+  let minutes = b.expires_in_minutes == null ? 30 : Number(b.expires_in_minutes);
+  if (!isFinite(minutes) || minutes <= 0) return res.status(400).json({ ok: false, error: 'bad_expires' });
+  minutes = Math.min(minutes, 120);
+  const reason = b.reason == null ? '' : String(b.reason).slice(0, 64);
+  const now = new Date();
+  const expiresAt = new Date(now.getTime() + minutes * 60000).toISOString();
+  const value = text
+    ? JSON.stringify({ day, text, reason, created_at: now.toISOString(), expires_at: expiresAt })
+    : JSON.stringify({ day, text: '' });
+  db.prepare("INSERT INTO app_state(key, value) VALUES('teacher_nudge', ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    .run(value);
+  res.json({ ok: true, nudge: text ? { day, text, reason, created_at: now.toISOString(), expires_at: expiresAt } : { day, text: '' } });
+});
+
 // ---- 每日签到（2026-10-11 Elouise 要加）：上海自然日，一天一行，服务端落盘 ----
 function addDaysStr(dayStr, n) {
   const parts = String(dayStr).split('-').map(Number);
