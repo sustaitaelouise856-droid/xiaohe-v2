@@ -1,0 +1,26 @@
+{
+ "friend": {
+  "title": "My Best Friend",
+  "audio": "audio/writing/friend.mp3",
+  "words": 87,
+  "duration_sec": 43.6,
+  "wpm": 120,
+  "status": "UNVERIFIED"
+ },
+ "school": {
+  "title": "My School Life",
+  "audio": "audio/writing/school.mp3",
+  "words": 86,
+  "duration_sec": 42.1,
+  "wpm": 123,
+  "status": "UNVERIFIED"
+ },
+ "memory": {
+  "title": "An Unforgettable Experience",
+  "audio": "audio/writing/memory.mp3",
+  "words": 85,
+  "duration_sec": 39.6,
+  "wpm": 129,
+  "status": "UNVERIFIED"
+ }
+}
