@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>月度限时模考</title>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
+<script src="/client-error.js"></script>
+<style>
+  :root { --blue:#1a73e8; --green:#1e8e3e; --orange:#e8710a; --red:#d93025; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:#f0f4fa; margin:0; padding:0; }
+  #topbar { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); border-bottom:1px solid #e1e5eb; padding:12px 16px; display:flex; align-items:center; gap:12px; }
+  #topbar .back { font-size:20px; text-decoration:none; color:var(--blue); }
+  #topbar .title { flex:1; font-weight:700; font-size:18px; }
+  #timer { font-weight:700; color:var(--red); font-size:16px; }
+  #wrap { max-width:800px; margin:0 auto; padding:20px 16px 120px; }
+  .section { background:#fff; border-radius:20px; padding:24px; margin-bottom:20px; box-shadow:0 1px 3px rgba(60,64,67,.08); }
+  .section h2 { margin:0 0 6px; font-size:22px; color:var(--blue); }
+  .section .sub { color:#5f6368; font-size:14px; margin-bottom:16px; }
+  .q { border-top:1px solid #f0f0f0; padding:18px 0; }
+  .q:first-of-type { border-top:0; }
+  .q-num { font-weight:700; color:var(--blue); margin-bottom:8px; }
+  .q-stem { font-size:17px; line-height:1.7; margin-bottom:12px; }
+  .opt { display:block; width:100%; text-align:left; background:#f8f9fa; border:2px solid #e1e5eb; border-radius:12px; padding:12px 16px; margin:8px 0; font-size:16px; cursor:pointer; transition:all .15s; }
+  .opt.sel { background:#e8f0fe; border-color:var(--blue); }
+  .opt .k { display:inline-block; width:28px; height:28px; line-height:28px; text-align:center; background:#fff; border-radius:50%; margin-right:10px; font-weight:700; }
+  .opt.sel .k { background:var(--blue); color:#fff; }
+  input[type=text], textarea { width:100%; border:2px solid #e1e5eb; border-radius:12px; padding:12px; font-size:16px; font-family:inherit; }
+  input[type=text]:focus, textarea:focus { outline:none; border-color:var(--blue); }
+  textarea { min-height:120px; resize:vertical; line-height:1.7; }
+  .audio-btn { background:var(--blue); color:#fff; border:0; border-radius:12px; padding:10px 20px; font-size:16px; cursor:pointer; margin:8px 0; }
+  .audio-btn:disabled { background:#c6d4ea; cursor:default; }
+  .rec-btn { background:var(--red); color:#fff; border:0; border-radius:12px; padding:10px 20px; font-size:16px; cursor:pointer; margin:8px 4px 8px 0; }
+  .rec-btn.stop { background:#5f6368; }
+  .rec-status { color:var(--red); font-size:14px; margin:8px 0; }
+  #submitBar { position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,.95); backdrop-filter:blur(12px); border-top:1px solid #e1e5eb; padding:12px 16px; display:flex; gap:12px; z-index:30; }
+  #submitBar button { flex:1; padding:14px; border-radius:14px; font-size:17px; font-weight:700; border:0; cursor:pointer; }
+  #btnSubmit { background:linear-gradient(135deg,#1a73e8,#4a8ef7); color:#fff; box-shadow:0 4px 14px rgba(26,115,232,.35); }
+  #result { display:none; }
+  #result.show { display:block; }
+  .score-big { text-align:center; padding:30px 0; }
+  .score-big .num { font-size:64px; font-weight:800; color:var(--blue); }
+  .score-big .total { font-size:20px; color:#5f6368; }
+  .score-bar { height:12px; background:#f0f0f0; border-radius:6px; overflow:hidden; margin:16px 0; }
+  .score-fill { height:100%; background:linear-gradient(90deg,#1a73e8,#6c3fd4); border-radius:6px; transition:width 1s ease; }
+  .sec-row { display:flex; align-items:center; gap:10px; margin:10px 0; font-size:15px; }
+  .sec-row .nm { width:90px; font-weight:700; text-align:right; }
+  .sec-row .bar { flex:1; height:10px; background:#f0f0f0; border-radius:5px; overflow:hidden; }
+  .sec-row .fill { height:100%; background:linear-gradient(90deg,#1a73e8,#6c3fd4); }
+  .sec-row .sc { width:70px; text-align:right; color:#5f6368; }
+  .review-row { border-top:1px solid #f0f0f0; padding:10px 0; font-size:14px; line-height:1.7; }
+  .review-row:first-of-type { border-top:0; }
+  html[data-theme="dark"] .section { background:#2d2d2d !important; border-color:#555 !important; }
+  html[data-theme="dark"] .section h2, html[data-theme="dark"] .section h3 { color:#f0f0f0 !important; }
+  html[data-theme="dark"] .section .sub { color:#aaa !important; }
+  html[data-theme="dark"] .q { background:#333 !important; border-color:#555 !important; }
+  html[data-theme="dark"] .q-num { color:#7ab8ff !important; }
+  html[data-theme="dark"] .q-stem { color:#f0f0f0 !important; }
+  html[data-theme="dark"] .opt { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
+  html[data-theme="dark"] input[type=text], html[data-theme="dark"] textarea { background:#3a3a3a !important; border-color:#555 !important; color:#f0f0f0 !important; }
+</style>
+</head>
+<body>
+<div id="topbar">
+  <a class="back" href="/">←</a>
+  <div class="title" id="mockTitle">月度限时模考</div>
+  <div id="timer">75:00</div>
+</div>
+<div id="wrap">
+  <div id="mockBody"><div style="text-align:center;padding:60px;color:#999;">加载中…</div></div>
+  <div id="result"></div>
+</div>
+<div id="submitBar" style="display:none">
+  <button id="btnSubmit" onclick="submitMock(false)">交卷</button>
+</div>
+<script>
+let MOCK = null;
+let ANSWERS = {};
+let ATTEMPT_ID = null;
+let TIME_LEFT = 4500; // 75分钟
+let timerInt = null;
+let SUBMITTED = false;
+const PLAY_COUNT = {}; // 每段听力最多播放 2 次（中考听力只放两遍）
+
+async function load() {
+  try {
+    const r = await fetch('/api/mock/start', { method: 'POST' });
+    const d = await r.json();
+    if (!d.ok) {
+      document.getElementById('mockBody').innerHTML = '<div style="text-align:center;padding:60px;color:#666;">试卷加载失败，请稍后再试</div>';
+      return;
+    }
+    MOCK = d.mock;
+    ATTEMPT_ID = d.attempt_id;
+    TIME_LEFT = Math.max(0, d.time_limit_minutes * 60 - (d.elapsed_sec || 0));
+    document.getElementById('mockTitle').textContent = MOCK.title;
+    render(d.resumed);
+    document.getElementById('submitBar').style.display = 'flex';
+    startTimer();
+  } catch (e) {
+    document.getElementById('mockBody').innerHTML = '<div style="text-align:center;padding:60px;color:#666;">网络不太好，刷新页面重试</div>';
+  }
+}
+
+function render(resumed) {
+  let html = '';
+  if (resumed) html += '<div class="section" style="text-align:center;color:#1e8e3e;">上次做到一半，接着做，计时继续走。</div>';
+  html += `<div class="section" style="text-align:center;"><div style="font-size:16px;line-height:1.8;">${MOCK.subtitle || ''}</div><div style="font-size:14px;color:#5f6368;margin-top:6px;">限时 ${MOCK.time_limit_minutes} 分钟 · 满分 ${MOCK.total_score} 分 · 时间到自动交卷<br>模考是测量：不计门禁、不消错题、不颁称号；作文和口语由老师批改后计入总分</div></div>`;
+  MOCK.sections.forEach(sec => {
+    html += `<div class="section"><h2>${sec.title}</h2><div class="sub">满分 ${sec.score} 分</div>`;
+    sec.parts.forEach(part => {
+      if (part.title) html += `<h3 style="margin:16px 0 8px;font-size:18px;">${part.title}</h3>`;
+      if (part.instruction) html += `<div style="color:#5f6368;font-size:14px;margin:8px 0;line-height:1.7;">${part.instruction}</div>`;
+      if (part.passage) html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;">${part.passage}</div>`;
+      let lastPass = '';
+      part.questions.forEach((q, qi) => {
+        const qid = sec.id + '-' + part.id + '-' + qi;
+        html += `<div class="q"><div class="q-num">${q.num || (qi+1)}. (${q.score}分)</div>`;
+        if (q.audio) html += `<button class="audio-btn" id="ab-${qid}" onclick="playAudio('${q.audio}','${qid}',this)">🔊 播放 <span id="pc-${qid}"></span></button>`;
+        if (q.type !== 'speak' && q.passage && q.passage !== lastPass) {
+          lastPass = q.passage;
+          html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;white-space:pre-wrap;">${q.passage}</div>`;
+        }
+        if (q.stem) html += `<div class="q-stem">${q.stem}</div>`;
+        if (q.prompt) html += `<div class="q-stem">${q.prompt}</div>`;
+        if (q.hint && q.type !== 'writing') {
+          if (q.hint.length > 120) html += `<div style="background:#f8f9fa;border-radius:12px;padding:16px;margin:12px 0;line-height:1.8;white-space:pre-wrap;">${q.hint}</div>`;
+          else html += `<div style="font-size:13px;color:#999;margin:6px 0;">💡 ${q.hint}</div>`;
+        }
+        if (q.type === 'choice') {
+          q.options.forEach((op, oi) => {
+            html += `<button class="opt" data-qid="${qid}" data-oi="${oi}" onclick="selectOpt('${qid}',${oi})"><span class="k">${'ABCD'[oi]}</span>${op}</button>`;
+          });
+        } else if (q.type === 'writing') {
+          html += `<textarea data-qid="${qid}" placeholder="${q.hint || '请作答'}" oninput="ANSWERS['${qid}']=this.value;wordCount('${qid}',this)"></textarea>`;
+          html += `<div style="font-size:13px;color:#999;margin-top:6px;"><span id="wc-${qid}">已写 0 词</span>${q.min_words ? ' · 不少于 ' + q.min_words + ' 词' : ''}</div>`;
+        } else if (q.type === 'speak') {
+          const material = q.text || q.passage;
+          if (material) html += `<div style="background:#f0f7ff;border-radius:12px;padding:16px;margin:12px 0;line-height:1.9;font-size:16px;">${material}</div>`;
+          html += `<div style="margin:8px 0;"><button class="rec-btn" onclick="toggleRec('${qid}',this)">🎤 开始录音</button><span class="rec-status" id="st-${qid}"></span></div>`;
+          html += `<div style="font-size:13px;color:#999;">${q.speak_hint || '录音完成后由老师批改计分'}</div>`;
+        }
+        html += `</div>`;
+      });
+    });
+    html += `</div>`;
+  });
+  document.getElementById('mockBody').innerHTML = html;
+}
+
+function selectOpt(qid, oi) {
+  ANSWERS[qid] = oi;
+  document.querySelectorAll(`[data-qid="${qid}"]`).forEach(b => b.classList.remove('sel'));
+  document.querySelector(`[data-qid="${qid}"][data-oi="${oi}"]`).classList.add('sel');
+}
+
+function wordCount(qid, ta) {
+  const n = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+  const el = document.getElementById('wc-' + qid);
+  if (el) el.textContent = '已写 ' + n + ' 词';
+}
+
+function playAudio(url, qid, btn) {
+  const n = (PLAY_COUNT[url] || 0) + 1;
+  if (n > 2) return;
+  PLAY_COUNT[url] = n;
+  const pc = document.getElementById('pc-' + qid);
+  if (pc) pc.textContent = '（已播放 ' + n + '/2 次）';
+  if (n >= 2 && btn) btn.disabled = true;
+  const a = new Audio(url);
+  a.play().catch(e => prettyAlert('音频播放失败', '🔇'));
+}
+
+// 口语录音留存（沿用测验卷做法：录完立刻上传存服务器，确认存好才标"已录音"）
+const SPEECH_OK = {};
+async function uploadSpeechAudio(qid, blob, durationSec) {
+  const b64 = await new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => { const t = String(fr.result || ''); const i = t.indexOf('base64,'); resolve(i >= 0 ? t.slice(i + 7) : t); };
+    fr.onerror = reject;
+    fr.readAsDataURL(blob);
+  });
+  const resp = await fetch('/api/exam/speech', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ exam_id: 'mock-202611', qid, audio_b64: b64, mime: blob.type || '', duration_sec: durationSec || null })
+  });
+  const d = await resp.json().catch(() => null);
+  if (!resp.ok || !d || !d.ok) throw new Error('speech upload failed');
+  SPEECH_OK[qid] = true;
+  return d;
+}
+
+let mediaRec = null, recChunks = [], recStartTs = 0;
+async function toggleRec(qid, btn) {
+  const st = document.getElementById('st-' + qid);
+  if (mediaRec && mediaRec.state === 'recording') {
+    mediaRec.stop();
+    btn.textContent = '🎤 开始录音';
+    btn.classList.remove('stop');
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRec = new MediaRecorder(stream);
+    const recMime = mediaRec.mimeType || 'audio/webm';
+    recChunks = [];
+    recStartTs = Date.now();
+    mediaRec.ondataavailable = e => recChunks.push(e.data);
+    mediaRec.onstop = async () => {
+      stream.getTracks().forEach(t => t.stop());
+      const dur = Math.max(1, Math.round((Date.now() - recStartTs) / 1000));
+      const blob = new Blob(recChunks, { type: recMime });
+      st.textContent = '⏳ 录音保存中…';
+      btn.disabled = true;
+      try {
+        await uploadSpeechAudio(qid, blob, dur);
+        st.textContent = '✅ 已录音';
+        ANSWERS[qid] = 'recorded';
+      } catch (e) {
+        st.textContent = SPEECH_OK[qid]
+          ? '⚠️ 这次没存上，还是上一段录音。可以再录一次'
+          : '⚠️ 录音没存上，再录一次';
+      }
+      btn.disabled = false;
+    };
+    mediaRec.start();
+    btn.textContent = '⏹ 停止';
+    btn.classList.add('stop');
+    st.textContent = '🔴 录音中…';
+  } catch (e) {
+    prettyAlert('无法访问麦克风', '🎤');
+  }
+}
+
+function fmtTime(sec) {
+  const m = Math.floor(sec / 60), s = sec % 60;
+  return m + ':' + String(s).padStart(2, '0');
+}
+function startTimer() {
+  document.getElementById('timer').textContent = fmtTime(TIME_LEFT);
+  timerInt = setInterval(() => {
+    TIME_LEFT--;
+    document.getElementById('timer').textContent = fmtTime(Math.max(0, TIME_LEFT));
+    if (TIME_LEFT <= 0) { clearInterval(timerInt); submitMock(true); }
+  }, 1000);
+}
+
+function elapsedSec() {
+  return (MOCK.time_limit_minutes * 60) - Math.max(0, TIME_LEFT);
+}
+
+async function submitMock(auto) {
+  if (SUBMITTED) return;
+  if (!auto) {
+    if (!await prettyConfirm('确定交卷吗？交卷后就能看到成绩报告。', { icon: '📝' })) return;
+  } else {
+    prettyAlert('时间到，自动交卷', '⏰');
+  }
+  SUBMITTED = true;
+  clearInterval(timerInt);
+  document.getElementById('submitBar').style.display = 'none';
+  document.getElementById('mockBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">判分中…</div>';
+  try {
+    const resp = await fetch('/api/mock/submit', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ attempt_id: ATTEMPT_ID, answers: ANSWERS, elapsed_sec: elapsedSec() })
+    });
+    const data = await resp.json();
+    if (!data.ok) throw new Error('submit failed');
+    showResult(data);
+  } catch (e) {
+    document.getElementById('mockBody').innerHTML = '<div class="section" style="text-align:center;padding:40px;">提交失败，请刷新页面重试。计时已从服务端恢复，不会丢进度。</div>';
+    SUBMITTED = false;
+  }
+}
+
+function showResult(data) {
+  const score = data.score, total = data.total;
+  const pending = data.pending || [];
+  const pendingScore = pending.reduce((s, p) => s + p.max, 0);
+  const pct = total > 0 ? Math.round(score / total * 100) : 0;
+  const mins = Math.floor((data.elapsed_sec || 0) / 60);
+  document.getElementById('mockBody').style.display = 'none';
+  const r = document.getElementById('result');
+  r.className = 'show';
+  const escHtml = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const flatQ = {};
+  MOCK.sections.forEach(sec => sec.parts.forEach(part => {
+    part.questions.forEach((q, qi) => { flatQ[sec.id + '-' + part.id + '-' + qi] = q; });
+  }));
+  const TYPE_NAME = { choice: '选择题', speak: '口语题', writing: '写作题' };
+  // 分题型得分
+  let secHtml = '';
+  (data.sections || []).forEach(s => {
+    const w = s.max > 0 ? Math.round(s.got / s.max * 100) : 0;
+    const pend = s.pending > 0 ? `（待批改 ${s.pending} 分）` : '';
+    secHtml += `<div class="sec-row"><div class="nm">${escHtml(s.name)}</div><div class="bar"><div class="fill" style="width:${w}%"></div></div><div class="sc">${s.got}/${s.max} 分${pend}</div></div>`;
+  });
+  let pendingHtml = '';
+  if (pending.length > 0) {
+    const names = pending.map(p => (p.type === 'speak' ? '口语' : '写作') + p.num + '题(' + p.max + '分)').join('、');
+    pendingHtml = `<div style="font-size:14px;color:#b7791f;margin-top:12px;background:#fff8e1;border-radius:8px;padding:10px;">⏳ ${names}待老师批改（共${pendingScore}分），批改后计入总分</div>`;
+  }
+  const overHtml = data.overtime ? `<div style="font-size:14px;color:#d93025;margin-top:12px;">⏰ 这次超时了（用时 ${mins} 分钟），下次注意时间分配。</div>` : '';
+  // 逐题回顾
+  let rows = '';
+  (data.detail || []).forEach((d, i) => {
+    const q = flatQ[d.qid] || {};
+    const stemRaw = String(q.stem || q.prompt || '');
+    const stem = stemRaw.length > 60 ? stemRaw.slice(0, 60) + '…' : stemRaw;
+    let head = `<b>第 ${i + 1} 题</b>（${TYPE_NAME[d.type] || ''} ${d.max} 分）`;
+    let body = '';
+    if (d.status === 'pending') {
+      head += ' ⏳ 待批改';
+      if (d.type === 'writing') {
+        body = String(d.given || '').trim()
+          ? '你写的内容：<br><span style="white-space:pre-wrap;">' + escHtml(d.given) + '</span>'
+          : '未作答';
+      } else {
+        body = d.given === 'recorded' ? '已录音，待老师批改' : '未录音，待老师批改';
+      }
+    } else if (d.status === 'graded') {
+      head += ' ✅ 已批改（' + d.got + ' 分）';
+      if (d.type === 'writing') {
+        body = String(d.given || '').trim()
+          ? '你写的内容：<br><span style="white-space:pre-wrap;">' + escHtml(d.given) + '</span>'
+          : '未作答';
+      } else {
+        body = d.given === 'recorded' ? '已录音，已批改' : '未录音，已批改';
+      }
+      if (d.note) body += '<br>老师评语：' + escHtml(d.note);
+    } else {
+      head += d.got === d.max ? ' ✅ 答对' : ' ❌ 答错';
+      if (d.type === 'choice') {
+        const opts = q.options || [];
+        let gi = Number(d.given);
+        if ((d.given === null || isNaN(gi)) && typeof d.given === 'string') gi = opts.indexOf(d.given);
+        const mine = (d.given === null || d.given === '' || isNaN(gi) || gi < 0 || gi >= opts.length)
+          ? '未答' : 'ABCD'[gi] + '「' + escHtml(opts[gi]) + '」';
+        body = '你的答案：' + mine;
+        if (d.answer) body += '<br>正确答案：' + (d.answer.letter || '') + '「' + escHtml(d.answer.text || '') + '」';
+        const dlg = (data.dialogues || {})[d.qid];
+        if (dlg) body += '<br>听力原文：' + escHtml(dlg);
+      } else {
+        body = '你的答案：「' + escHtml(d.given == null ? '' : d.given) + '」';
+        if (d.answer) body += '<br>正确答案：「' + escHtml(d.answer.text || '') + '」';
+      }
+    }
+    rows += `<div class="review-row">${head}${stem ? '<br><span style="color:#5f6368;">' + escHtml(stem) + '</span>' : ''}<br>${body}</div>`;
+  });
+  r.innerHTML = `<div class="section"><div class="score-big">
+    <div class="num">${score}</div><div class="total">/ ${total} 分</div>
+    <div class="score-bar"><div class="score-fill" style="width:${pct}%"></div></div>
+    <div style="font-size:16px;color:#5f6368;">用时 ${mins} 分钟 · 客观题得分率 ${data.total_objective > 0 ? Math.round(score / data.total_objective * 100) : 0}%（按客观题算）</div>
+    ${pendingHtml}${overHtml}
+  </div>
+  <div style="text-align:left;margin-top:20px;"><div style="font-weight:700;font-size:17px;margin-bottom:8px;">分题型得分</div>${secHtml}</div>
+  <div style="text-align:left;margin-top:16px;background:#f0f7ff;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.8;">💡 ${escHtml(data.weakness || '')}</div>
+  </div>
+  <div class="section"><h2 style="font-size:19px;margin:0 0 8px;">逐题回顾</h2>${rows}</div>
+  <div class="section" style="text-align:center;">
+    <button onclick="location.reload()" style="padding:12px 28px;border-radius:12px;border:0;font-size:16px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;">再考一次</button>
+    <div style="margin-top:14px;"><a href="/" style="color:var(--blue);text-decoration:none;font-size:17px;">← 返回首页</a></div>
+  </div>`;
+  window.scrollTo(0, 0);
+}
+
+load();
+</script>
+<script src="/modal.js"></script>
+</body>
+</html>
