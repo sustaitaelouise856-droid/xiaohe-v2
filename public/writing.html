@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>整篇写作 · 小禾英语</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #fff8e1; color: #333; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 16px 16px 48px; }
+  .back { display: inline-block; margin: 4px 0 8px; color: #bf360c; text-decoration: none; font-size: 14px; }
+  h1 { margin: 4px 0; font-size: 24px; }
+  .sub { color: #666; font-size: 14px; margin: 4px 0 16px; }
+  .card { background: #fff; border: 2px solid #ffe0b2; border-radius: 16px; padding: 16px; margin: 12px 0; }
+  .topic { cursor: pointer; }
+  .topic:hover { border-color: #e65100; }
+  .topic h3 { margin: 0 0 4px; font-size: 18px; }
+  .topic p { margin: 4px 0; color: #666; font-size: 14px; }
+  .topic .en { color: #333; font-size: 15px; }
+  .steps { display: flex; gap: 4px; margin: 12px 0; }
+  .step { flex: 1; text-align: center; font-size: 12px; padding: 8px 2px; border-radius: 10px; background: #fff3e0; color: #999; border: 1px solid #ffe0b2; }
+  .step.on { background: #e65100; color: #fff; border-color: #e65100; font-weight: 800; }
+  .step.done { background: #fff; color: #e65100; border-color: #e65100; }
+  h2 { font-size: 18px; margin: 4px 0 8px; }
+  .prompt-en { font-size: 19px; font-weight: 700; line-height: 1.5; }
+  .prompt-cn { color: #666; margin: 6px 0; }
+  .think li, .compare li { margin: 6px 0; line-height: 1.6; }
+  .frame { background: #fff3e0; border-radius: 12px; padding: 12px; margin: 10px 0; }
+  .frame .cn { font-weight: 800; }
+  .frame .en { font-size: 16px; margin: 4px 0; }
+  .frame .tip { color: #666; font-size: 13px; }
+  .frame input { width: 100%; margin-top: 8px; padding: 10px; font-size: 15px; border: 1px solid #ccc; border-radius: 10px; }
+  textarea { width: 100%; min-height: 220px; padding: 12px; font-size: 16px; line-height: 1.7; border: 2px solid #ccc; border-radius: 12px; font-family: inherit; }
+  .wc { margin: 6px 0; font-size: 14px; color: #666; }
+  .wc b.ok { color: #2e7d32; }
+  .wc b.low { color: #e65100; }
+  .check { margin: 12px 0; }
+  .check label { display: block; padding: 8px 0; font-size: 15px; line-height: 1.5; }
+  .check input { transform: scale(1.4); margin-right: 8px; }
+  .btn { display: inline-block; background: #e65100; color: #fff; border: none; border-radius: 999px; padding: 12px 28px; font-size: 16px; font-weight: 800; cursor: pointer; margin: 8px 8px 0 0; }
+  .btn.ghost { background: #fff; color: #e65100; border: 2px solid #e65100; }
+  .btn:disabled { background: #ccc; cursor: default; }
+  .model { background: #e8f5e9; border-radius: 12px; padding: 14px; font-size: 16px; line-height: 1.8; }
+  .model-cn { color: #555; font-size: 14px; line-height: 1.7; margin-top: 10px; }
+  .mine { background: #f5f5f5; border-radius: 12px; padding: 12px; font-size: 15px; line-height: 1.7; white-space: pre-wrap; }
+  .essay { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 12px; margin: 10px 0; }
+  .essay .meta { font-size: 14px; color: #666; }
+  .essay .score { font-size: 16px; font-weight: 800; color: #2e7d32; margin-top: 4px; }
+  .essay .note { background: #fffde7; border-radius: 8px; padding: 10px; margin-top: 8px; }
+  .msg { padding: 12px; border-radius: 12px; margin: 10px 0; font-size: 15px; }
+  .msg.ok { background: #e8f5e9; }
+  .msg.err { background: #ffebee; }
+  .hint { font-size: 13px; color: #888; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← 回首页</a>
+  <h1>✍️ 整篇写作</h1>
+  <p class="sub">审题 → 列提纲 → 写 → 对照范文 → 改写 · 只练不判分，写完等老师批改</p>
+  <div id="topics"></div>
+  <div id="flow" style="display:none">
+    <div class="steps" id="steps"></div>
+    <div id="stepBody"></div>
+  </div>
+  <h2 style="margin-top:28px;">📮 我的作文</h2>
+  <div id="mine"><p class="sub">写完交上去的作文都在这里。老师批改后，分数和评语会出现在这里。</p></div>
+</div>
+<script>
+(function () {
+  var STEP_NAMES = ['1 审题', '2 列提纲', '3 写', '4 对范文', '5 改写'];
+  var sessionId = localStorage.getItem('writing_session');
+  if (!sessionId) {
+    sessionId = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+      : 'w' + Date.now() + '-' + Math.floor(Math.random() * 1e9);
+    localStorage.setItem('writing_session', sessionId);
+  }
+  var DATA = null, TOPIC = null, step = 1;
+  var outline = ['', '', '', '', ''], draftText = '', submissionId = null, rewriteText = '';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function wordCount(t) { return String(t || '').trim().split(/\s+/).filter(Boolean).length; }
+  function post(path, body) {
+    return fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().then(function (b) { return { status: r.status, body: b }; }); });
+  }
+  function $(id) { return document.getElementById(id); }
+
+  function renderSteps() {
+    $('steps').innerHTML = STEP_NAMES.map(function (n, i) {
+      var cls = (i + 1 === step) ? 'on' : ((i + 1 < step) ? 'done' : '');
+      return '<div class="step ' + cls + '">' + n + '</div>';
+    }).join('');
+  }
+
+  function renderTopics() {
+    $('topics').innerHTML = DATA.topics.map(function (t) {
+      return '<div class="card topic" data-id="' + t.id + '"><h3>' + esc(t.title_cn) + '</h3>' +
+        '<p class="en">' + esc(t.title_en) + '</p><p>' + esc(t.prompt_cn) + '</p></div>';
+    }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('.topic'), function (el) {
+      el.addEventListener('click', function () { startTopic(el.getAttribute('data-id')); });
+    });
+  }
+
+  function startTopic(id) {
+    TOPIC = null;
+    DATA.topics.forEach(function (t) { if (t.id === id) TOPIC = t; });
+    if (!TOPIC) return;
+    step = 1; outline = ['', '', '', '', '']; draftText = ''; submissionId = null; rewriteText = '';
+    $('flow').style.display = 'block';
+    window.scrollTo(0, 0);
+    renderStep();
+  }
+
+  function checklistHtml(prefix) {
+    return '<div class="check">' + DATA.checklist.map(function (c, i) {
+      return '<label><input type="checkbox" class="ck-' + prefix + '" data-i="' + i + '"> ' + esc(c.text) + '</label>';
+    }).join('') + '</div>';
+  }
+  function uncheckedCount(prefix) {
+    var n = 0;
+    Array.prototype.forEach.call(document.querySelectorAll('.ck-' + prefix), function (c) { if (!c.checked) n++; });
+    return n;
+  }
+
+  function renderStep() {
+    renderSteps();
+    var b = $('stepBody'), h = '';
+    if (step === 1) {
+      h = '<div class="card"><h2>第 1 步：审题</h2>' +
+        '<p class="prompt-en">' + esc(TOPIC.prompt_en) + '</p>' +
+        '<p class="prompt-cn">' + esc(TOPIC.prompt_cn) + ' 词数：' + DATA.word_min + '–' + DATA.word_max + ' 词。</p>' +
+        '<p>先想清楚这三个问题，再往下走：</p><ol class="think">' +
+        TOPIC.think.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ol>' +
+        '<button class="btn" id="to2">想清楚了，去列提纲 →</button></div>';
+      b.innerHTML = h;
+      $('to2').onclick = function () { step = 2; renderStep(); };
+    } else if (step === 2) {
+      h = '<div class="card"><h2>第 2 步：列提纲</h2>' +
+        '<p>作文拆成 5 句，一句一个要点。每句先写个关键词，不用写整句。</p>';
+      TOPIC.frames.forEach(function (f, i) {
+        h += '<div class="frame"><div class="cn">第 ' + f.n + ' 句：' + esc(f.cn) + '</div>' +
+          '<div class="en">' + esc(f.en) + '</div><div class="tip">' + esc(f.tip) + '</div>' +
+          '<input data-i="' + i + '" value="' + esc(outline[i]) + '" placeholder="写个关键词，如：Li Lei / football"></div>';
+      });
+      h += '<button class="btn" id="to3">提纲列好了，去写 →</button></div>';
+      b.innerHTML = h;
+      Array.prototype.forEach.call(b.querySelectorAll('.frame input'), function (inp) {
+        inp.addEventListener('input', function () { outline[Number(inp.getAttribute('data-i'))] = inp.value; });
+      });
+      $('to3').onclick = function () { step = 3; renderStep(); };
+    } else if (step === 3) {
+      h = '<div class="card"><h2>第 3 步：写</h2>' +
+        '<p>按提纲写 5 句，写完先自己查一遍，再交。</p>' +
+        '<div class="hint">句框（点开看看，写的时候照着搭）：' +
+        TOPIC.frames.map(function (f) { return esc(f.en); }).join(' ') + '</div>' +
+        '<textarea id="draft" placeholder="在这里写你的作文……">' + esc(draftText) + '</textarea>' +
+        '<div class="wc" id="wc"></div>' + checklistHtml('w') +
+        '<button class="btn" id="submit">交上去，等老师批改</button>' +
+        '<div id="submitMsg"></div>' +
+        '<p class="hint">写完点“交上去”才存下来。交了不算分、不进错题本，老师批改后分数和评语会出现在下面“我的作文”里。</p></div>';
+      b.innerHTML = h;
+      var ta = $('draft');
+      var updateWc = function () {
+        var n = wordCount(ta.value);
+        $('wc').innerHTML = '已写 <b class="' + (n >= DATA.word_min && n <= DATA.word_max ? 'ok' : 'low') + '">' + n + ' 词</b>（目标 ' + DATA.word_min + '–' + DATA.word_max + ' 词）';
+      };
+      ta.addEventListener('input', function () { draftText = ta.value; updateWc(); });
+      updateWc();
+      $('submit').onclick = function () {
+        draftText = ta.value;
+        if (wordCount(draftText) < 10) { $('submitMsg').innerHTML = '<div class="msg err">写得太短了，先写几句再交。</div>'; return; }
+        if (uncheckedCount('w') > 0 && !confirm('自查清单还有没打勾的，确定现在就交吗？')) return;
+        $('submit').disabled = true;
+        post('/api/writing/submit', { topic_id: TOPIC.id, session: sessionId, outline: outline, draft: draftText })
+          .then(function (r) {
+            if (r.status === 200 && r.body.ok) {
+              submissionId = r.body.id;
+              $('submitMsg').innerHTML = '<div class="msg ok">交上去了！（' + r.body.word_count + ' 词）老师会批改，批完分数和评语出现在下面“我的作文”里。先去对范文，再改一版。</div>' +
+                '<button class="btn" id="to4">去对范文 →</button>';
+              $('to4').onclick = function () { step = 4; renderStep(); };
+              loadMine();
+            } else {
+              $('submit').disabled = false;
+              $('submitMsg').innerHTML = '<div class="msg err">没交上去，再点一次试试。（' + esc((r.body && r.body.error) || 'unknown') + '）</div>';
+            }
+          });
+      };
+    } else if (step === 4) {
+      if (!submissionId) { step = 3; renderStep(); return; }
+      h = '<div class="card"><h2>第 4 步：对照范文</h2>' +
+        '<p>先看你自己写的，再看范文。找一找：范文哪句比你写得好？</p>' +
+        '<p><b>你写的：</b></p><div class="mine">' + esc(draftText) + '</div>' +
+        '<p><b>范文：' + esc(TOPIC.model_title) + '</b> <audio controls preload="none" src="' + esc(TOPIC.model_audio) + '" style="vertical-align:middle;max-width:100%;"></audio></p>' +
+        '<div class="model">' + esc(TOPIC.model) + '</div>' +
+        '<div class="model-cn">范文大意：' + esc(TOPIC.model_cn) + '</div>' +
+        '<ol class="compare">' + TOPIC.compare.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ol>' +
+        '<button class="btn" id="to5">看完了，去改写 →</button></div>';
+      b.innerHTML = h;
+      $('to5').onclick = function () { step = 5; renderStep(); };
+    } else if (step === 5) {
+      h = '<div class="card"><h2>第 5 步：改写</h2>' +
+        '<p>照着范文的好句子，把你的作文改一版。改完再交一次。</p>' +
+        '<textarea id="rw">' + esc(rewriteText || draftText) + '</textarea>' +
+        '<div class="wc" id="wc2"></div>' + checklistHtml('r') +
+        '<button class="btn" id="submitRw">改好了，再交一次</button>' +
+        '<div id="rwMsg"></div></div>';
+      b.innerHTML = h;
+      var ta2 = $('rw');
+      var upd2 = function () {
+        var n = wordCount(ta2.value);
+        $('wc2').innerHTML = '已写 <b class="' + (n >= DATA.word_min && n <= DATA.word_max ? 'ok' : 'low') + '">' + n + ' 词</b>（目标 ' + DATA.word_min + '–' + DATA.word_max + ' 词）';
+      };
+      ta2.addEventListener('input', function () { rewriteText = ta2.value; upd2(); });
+      upd2();
+      $('submitRw').onclick = function () {
+        rewriteText = ta2.value;
+        if (wordCount(rewriteText) < 10) { $('rwMsg').innerHTML = '<div class="msg err">改写太短了，先写几句再交。</div>'; return; }
+        if (uncheckedCount('r') > 0 && !confirm('自查清单还有没打勾的，确定现在就交吗？')) return;
+        $('submitRw').disabled = true;
+        post('/api/writing/rewrite', { id: submissionId, session: sessionId, rewrite_text: rewriteText })
+          .then(function (r) {
+            if (r.status === 200 && r.body.ok) {
+              $('rwMsg').innerHTML = '<div class="msg ok">改好了，也交上去了！老师批改的是你最新这一版。批完分数和评语出现在下面“我的作文”里。</div>' +
+                '<button class="btn ghost" id="again">再写一篇</button>';
+              $('again').onclick = function () { $('flow').style.display = 'none'; window.scrollTo(0, 0); };
+              loadMine();
+            } else {
+              $('submitRw').disabled = false;
+              $('rwMsg').innerHTML = '<div class="msg err">没交上去，再点一次试试。（' + esc((r.body && r.body.error) || 'unknown') + '）</div>';
+            }
+          });
+      };
+    }
+  }
+
+  function loadMine() {
+    fetch('/api/writing/my?session=' + encodeURIComponent(sessionId))
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d.ok || !d.essays || d.essays.length === 0) return;
+        $('mine').innerHTML = d.essays.map(function (e) {
+          var h = '<div class="essay"><div class="meta">' + esc(e.topic_cn) + ' · ' + esc(e.created_at) + ' · ' + e.word_count + ' 词</div>';
+          if (e.status === 'graded') {
+            h += '<div class="score">✅ 老师已批改：' + e.score + ' / 25 分</div>';
+            if (e.note) h += '<div class="note">老师评语：' + esc(e.note) + '</div>';
+          } else {
+            h += '<div class="meta">⏳ 待批改：老师还没批，批完这里会显示分数和评语。</div>';
+          }
+          h += '<div style="margin-top:8px;"><b>初稿：</b></div><div class="mine">' + esc(e.draft) + '</div>';
+          if (e.rewrite_text) h += '<div style="margin-top:8px;"><b>改写：</b></div><div class="mine">' + esc(e.rewrite_text) + '</div>';
+          return h + '</div>';
+        }).join('');
+      })
+      .catch(function () { /* 我的作文加载失败不挡主流程 */ });
+  }
+
+  fetch('/api/writing/topics')
+    .then(function (r) { return r.json(); })
+    .then(function (d) { DATA = d; renderTopics(); loadMine(); })
+    .catch(function () { $('topics').innerHTML = '<div class="msg err">话题没加载出来，刷新一下再试。</div>'; });
+})();
+</script>
+</body>
+</html>
