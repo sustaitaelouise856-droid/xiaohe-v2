@@ -1,0 +1,346 @@
+{
+  "id": "mock-202611",
+  "title": "月度限时模考 · 2026年11月",
+  "subtitle": "中考题型全覆盖 · 听说读写 · 限时75分钟 · 满分100分",
+  "total_score": 100,
+  "time_limit_minutes": 75,
+  "sections": [
+    {
+      "id": "listening",
+      "title": "一、听说部分",
+      "score": 20,
+      "parts": [
+        {
+          "id": "read-aloud",
+          "title": "1. 模仿朗读（8分）",
+          "instruction": "听录音，模仿朗读下面的短文，注意语音语调。录音由老师批改计分。",
+          "questions": [
+            {
+              "num": 1,
+              "type": "speak",
+              "score": 8,
+              "stem": "请认真听并模仿朗读下面的短文，注意语音语调。",
+              "passage": "Good morning, everyone. Welcome to our school English show. Today, some students will read their favourite stories for us. First, Lin Tao will read a story about a clever boy. Then, Meimei will sing an English song for us. We hope you will enjoy the show. Thank you for coming, and have a good time!",
+              "audio": "/audio/mock-202611/read-aloud.mp3"
+            }
+          ]
+        },
+        {
+          "id": "listen-choose",
+          "title": "2. 听对话选答案（12分，每题3分）",
+          "instruction": "听下面的对话，选出正确答案。每段对话可播放两次。",
+          "questions": [
+            {
+              "num": 2,
+              "type": "choice",
+              "score": 3,
+              "stem": "When will the football match start?",
+              "options": ["At 4:00 p.m.", "At 3:30 p.m.", "At 4:30 p.m.", "At 5:00 p.m."],
+              "answer": 0,
+              "audio": "/audio/mock-202611/listening-1.mp3",
+              "dialogue": "W: Hi, Tom. The football match is on Friday. Do you know what time it starts? M: Yes. It starts at four in the afternoon. We will meet on the playground at half past three."
+            },
+            {
+              "num": 3,
+              "type": "choice",
+              "score": 3,
+              "stem": "Where did Lily's father buy her new bike?",
+              "options": ["In a shop near her home", "In a shop near her school", "On the Internet", "In a supermarket"],
+              "answer": 1,
+              "audio": "/audio/mock-202611/listening-2.mp3",
+              "dialogue": "M: Lily, I like your new bike. Where did you buy it? W: My father bought it for me in a shop near our school. It was not expensive, only 500 yuan."
+            },
+            {
+              "num": 4,
+              "type": "choice",
+              "score": 3,
+              "stem": "What will Jack do on Sunday?",
+              "options": ["Play football", "Watch a film", "Go to the library", "Visit his grandparents"],
+              "answer": 2,
+              "audio": "/audio/mock-202611/listening-3.mp3",
+              "dialogue": "W: What will you do on Sunday, Jack? M: I will go to the library with my friends. We will read books about space there."
+            },
+            {
+              "num": 5,
+              "type": "choice",
+              "score": 3,
+              "stem": "How will Mrs. Wang go to work today?",
+              "options": ["By bus", "By bike", "On foot", "By car"],
+              "answer": 3,
+              "audio": "/audio/mock-202611/listening-4.mp3",
+              "dialogue": "M: How will you go to work today, Mrs. Wang? W: I usually take the bus, but today it is raining, so I will drive my car."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "二、阅读理解",
+      "score": 24,
+      "parts": [
+        {
+          "id": "reading1",
+          "title": "A. 阅读短文一（12分，每题3分）",
+          "questions": [
+            {
+              "num": 6,
+              "type": "choice",
+              "score": 3,
+              "stem": "What does Li Ming like doing after school?",
+              "options": ["Reading books", "Playing basketball", "Playing football", "Watching TV"],
+              "answer": 1,
+              "passage": "Li Ming is a student in Grade Eight. He is tall and strong, and he likes playing basketball after school. One Monday morning, Li Ming saw an old man on his way to school. The old man was carrying a big bag of apples, and he looked very tired. 'Let me help you,' Li Ming said. He took the bag and walked with the old man to his home. The old man thanked him again and again. 'You are a kind boy,' he said. Li Ming was late for school that day, but his teacher did not blame him. When the teacher knew what happened, he said to the class, 'Li Ming did a good thing. We should all learn from him.' From then on, more and more students in the class began to help others."
+            },
+            {
+              "num": 7,
+              "type": "choice",
+              "score": 3,
+              "stem": "Why did the old man look tired?",
+              "options": ["He was carrying a big bag of apples", "He was ill", "He walked too fast", "He lost his way"],
+              "answer": 0,
+              "passage": "Li Ming is a student in Grade Eight. He is tall and strong, and he likes playing basketball after school. One Monday morning, Li Ming saw an old man on his way to school. The old man was carrying a big bag of apples, and he looked very tired. 'Let me help you,' Li Ming said. He took the bag and walked with the old man to his home. The old man thanked him again and again. 'You are a kind boy,' he said. Li Ming was late for school that day, but his teacher did not blame him. When the teacher knew what happened, he said to the class, 'Li Ming did a good thing. We should all learn from him.' From then on, more and more students in the class began to help others."
+            },
+            {
+              "num": 8,
+              "type": "choice",
+              "score": 3,
+              "stem": "What did the teacher say about Li Ming?",
+              "options": ["He was late for school", "He should study hard", "He was a good player", "He did a good thing"],
+              "answer": 3,
+              "passage": "Li Ming is a student in Grade Eight. He is tall and strong, and he likes playing basketball after school. One Monday morning, Li Ming saw an old man on his way to school. The old man was carrying a big bag of apples, and he looked very tired. 'Let me help you,' Li Ming said. He took the bag and walked with the old man to his home. The old man thanked him again and again. 'You are a kind boy,' he said. Li Ming was late for school that day, but his teacher did not blame him. When the teacher knew what happened, he said to the class, 'Li Ming did a good thing. We should all learn from him.' From then on, more and more students in the class began to help others."
+            },
+            {
+              "num": 9,
+              "type": "choice",
+              "score": 3,
+              "stem": "What can we learn from the story?",
+              "options": ["We should be strong", "We should play basketball", "We should help others", "We should be on time"],
+              "answer": 2,
+              "passage": "Li Ming is a student in Grade Eight. He is tall and strong, and he likes playing basketball after school. One Monday morning, Li Ming saw an old man on his way to school. The old man was carrying a big bag of apples, and he looked very tired. 'Let me help you,' Li Ming said. He took the bag and walked with the old man to his home. The old man thanked him again and again. 'You are a kind boy,' he said. Li Ming was late for school that day, but his teacher did not blame him. When the teacher knew what happened, he said to the class, 'Li Ming did a good thing. We should all learn from him.' From then on, more and more students in the class began to help others."
+            }
+          ]
+        },
+        {
+          "id": "reading2",
+          "title": "B. 阅读短文二（12分，每题3分）",
+          "questions": [
+            {
+              "num": 10,
+              "type": "choice",
+              "score": 3,
+              "stem": "What do bees make from the juice of flowers?",
+              "options": ["Honey", "Milk", "Juice", "Sugar"],
+              "answer": 0,
+              "passage": "Bees are small, but they are very important to us. In spring, bees fly from flower to flower. They take the sweet juice from the flowers and make honey. Honey is good for us, and many people like eating it. Bees also help plants make seeds. When a bee flies from one flower to another, it carries pollen on its body. The pollen helps the flower make seeds. Without bees, many plants would not grow well, and we would have less food to eat. But now, the number of bees is becoming smaller. Some people use too many chemicals on farms, and this is bad for bees. We should protect bees, because protecting bees is protecting ourselves."
+            },
+            {
+              "num": 11,
+              "type": "choice",
+              "score": 3,
+              "stem": "How do bees help plants make seeds?",
+              "options": ["They eat the flowers", "They make the flowers grow tall", "They carry pollen on their bodies", "They drink water for plants"],
+              "answer": 2,
+              "passage": "Bees are small, but they are very important to us. In spring, bees fly from flower to flower. They take the sweet juice from the flowers and make honey. Honey is good for us, and many people like eating it. Bees also help plants make seeds. When a bee flies from one flower to another, it carries pollen on its body. The pollen helps the flower make seeds. Without bees, many plants would not grow well, and we would have less food to eat. But now, the number of bees is becoming smaller. Some people use too many chemicals on farms, and this is bad for bees. We should protect bees, because protecting bees is protecting ourselves."
+            },
+            {
+              "num": 12,
+              "type": "choice",
+              "score": 3,
+              "stem": "Why is the number of bees becoming smaller?",
+              "options": ["Bees are too small", "People use too many chemicals on farms", "Bees do not like flowers", "The weather is too cold"],
+              "answer": 1,
+              "passage": "Bees are small, but they are very important to us. In spring, bees fly from flower to flower. They take the sweet juice from the flowers and make honey. Honey is good for us, and many people like eating it. Bees also help plants make seeds. When a bee flies from one flower to another, it carries pollen on its body. The pollen helps the flower make seeds. Without bees, many plants would not grow well, and we would have less food to eat. But now, the number of bees is becoming smaller. Some people use too many chemicals on farms, and this is bad for bees. We should protect bees, because protecting bees is protecting ourselves."
+            },
+            {
+              "num": 13,
+              "type": "choice",
+              "score": 3,
+              "stem": "What is the main idea of the passage?",
+              "options": ["Bees are small animals", "Honey is good for us", "Spring is the best season", "Bees are important and we should protect them"],
+              "answer": 3,
+              "passage": "Bees are small, but they are very important to us. In spring, bees fly from flower to flower. They take the sweet juice from the flowers and make honey. Honey is good for us, and many people like eating it. Bees also help plants make seeds. When a bee flies from one flower to another, it carries pollen on its body. The pollen helps the flower make seeds. Without bees, many plants would not grow well, and we would have less food to eat. But now, the number of bees is becoming smaller. Some people use too many chemicals on farms, and this is bad for bees. We should protect bees, because protecting bees is protecting ourselves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloze",
+      "title": "三、完形填空",
+      "score": 24,
+      "parts": [
+        {
+          "id": "cloze1",
+          "title": "完形填空（24分，每题3分）",
+          "instruction": "先通读短文，再选出最佳答案。",
+          "questions": [
+            {
+              "num": 14,
+              "type": "choice",
+              "score": 3,
+              "stem": "(1)",
+              "options": ["bought", "sold", "borrowed", "made"],
+              "answer": 0,
+              "hint": "When I was eight years old, my father ____(1)____ me a bike. It was red, and I ____(2)____ it very much. On Sunday morning, my father took me to the park to learn to ride it. At first, I was ____(3)____. I held the bike and I could not ride well. I fell ____(4)____ the bike many times, and my knees hurt. 'Don't ____(5)____ up,' my father said. 'Try again, and you will learn it.' I got on the bike again. This time, my father ____(6)____ the back of the bike and ran after me. Slowly, I could ride ____(7)____ myself. I was so happy. Now, I ride my bike to school every day. I think learning to ride a bike is like learning many things in life. If you don't give up, you will ____(8)____ it in the end."
+            },
+            {
+              "num": 15,
+              "type": "choice",
+              "score": 3,
+              "stem": "(2)",
+              "options": ["hated", "liked", "lost", "forgot"],
+              "answer": 1
+            },
+            {
+              "num": 16,
+              "type": "choice",
+              "score": 3,
+              "stem": "(3)",
+              "options": ["happy", "angry", "tired", "afraid"],
+              "answer": 3
+            },
+            {
+              "num": 17,
+              "type": "choice",
+              "score": 3,
+              "stem": "(4)",
+              "options": ["on", "in", "off", "of"],
+              "answer": 2
+            },
+            {
+              "num": 18,
+              "type": "choice",
+              "score": 3,
+              "stem": "(5)",
+              "options": ["get", "give", "put", "take"],
+              "answer": 1
+            },
+            {
+              "num": 19,
+              "type": "choice",
+              "score": 3,
+              "stem": "(6)",
+              "options": ["washed", "pushed", "found", "held"],
+              "answer": 3
+            },
+            {
+              "num": 20,
+              "type": "choice",
+              "score": 3,
+              "stem": "(7)",
+              "options": ["by", "with", "for", "to"],
+              "answer": 0
+            },
+            {
+              "num": 21,
+              "type": "choice",
+              "score": 3,
+              "stem": "(8)",
+              "options": ["lose", "miss", "make", "forget"],
+              "answer": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar",
+      "title": "四、语法选择",
+      "score": 16,
+      "parts": [
+        {
+          "id": "grammar1",
+          "title": "语法选择（16分，每题2分）",
+          "questions": [
+            {
+              "num": 22,
+              "type": "choice",
+              "score": 2,
+              "stem": "— ____ you ever been to Beijing? — Yes, I went there last year.",
+              "options": ["Did", "Do", "Are", "Have"],
+              "answer": 3
+            },
+            {
+              "num": 23,
+              "type": "choice",
+              "score": 2,
+              "stem": "This book is ____ than that one.",
+              "options": ["more interesting", "interesting", "most interesting", "interestinger"],
+              "answer": 0
+            },
+            {
+              "num": 24,
+              "type": "choice",
+              "score": 2,
+              "stem": "He ____ his homework when his mother came home.",
+              "options": ["does", "is doing", "was doing", "did"],
+              "answer": 2
+            },
+            {
+              "num": 25,
+              "type": "choice",
+              "score": 2,
+              "stem": "— Whose bag is this? — It's ____.",
+              "options": ["me", "mine", "my", "I"],
+              "answer": 1
+            },
+            {
+              "num": 26,
+              "type": "choice",
+              "score": 2,
+              "stem": "We should protect the environment, ____ we?",
+              "options": ["shouldn't", "should", "don't", "do"],
+              "answer": 0
+            },
+            {
+              "num": 27,
+              "type": "choice",
+              "score": 2,
+              "stem": "The teacher told us ____ in class.",
+              "options": ["don't talk", "not talk", "to not talk", "not to talk"],
+              "answer": 3
+            },
+            {
+              "num": 28,
+              "type": "choice",
+              "score": 2,
+              "stem": "— How long have you lived here? — ____ 2019.",
+              "options": ["For", "Since", "In", "From"],
+              "answer": 1
+            },
+            {
+              "num": 29,
+              "type": "choice",
+              "score": 2,
+              "stem": "Neither Tom nor his friends ____ here now.",
+              "options": ["is", "was", "are", "be"],
+              "answer": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "title": "五、书面表达",
+      "score": 16,
+      "parts": [
+        {
+          "id": "writing1",
+          "title": "书面表达（16分）",
+          "questions": [
+            {
+              "num": 30,
+              "type": "writing",
+              "score": 16,
+              "stem": "请以 'My Favourite Season' 为题，写一篇不少于 60 词的短文。内容包括：1. 你最喜欢哪个季节；2. 为什么喜欢它；3. 你在这个季节里常做什么。",
+              "min_words": 60,
+              "hint": "可参考句型：My favourite season is ... because ... / In this season, I often ... / I like ... best."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
