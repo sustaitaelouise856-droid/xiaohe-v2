@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "note": "听说模拟 4 套：每套=模仿朗读(含金句跟读)+信息获取(2选择+1听写)+信息转述及询问(复述+提问)。用词控制在 U1-U8 词表 + 基础功能词内；音频 Warm Pebble，状态 UNVERIFIED。",
+  "sets": [
+    {
+      "id": "ls1",
+      "title": "The School Race",
+      "title_zh": "学校跑步比赛",
+      "topic_zh": "运动 · 过去时",
+      "read": {
+        "text": "Sam is a good runner. Every morning, he runs in the park near his school. He runs fast, and he never stops. Last Friday, Sam ran in the school race. Five boys ran in the race. Sam ran fast at first, but Tom ran faster. At the end, Tom was first and Sam was second. Sam was sad, but he did not stop. He said, \"I will run again next time. I will be faster.\"",
+        "audio": "/audio/speaking/ls1-read.mp3",
+        "golden": "Sam ran fast, but he did not stop.",
+        "golden_audio": "/audio/speaking/ls1-golden.mp3"
+      },
+      "listen": {
+        "audio": "/audio/speaking/ls1-listen.mp3",
+        "turns": [
+          {"who": "A", "line": "Hi, Sam. Did you run in the school race last Friday?"},
+          {"who": "B", "line": "Yes, I did. Five boys ran in the race."},
+          {"who": "A", "line": "Who was first?"},
+          {"who": "B", "line": "Tom was first. He ran very fast. I was second."},
+          {"who": "A", "line": "Were you sad?"},
+          {"who": "B", "line": "A little. But I will run again next time. I run in the park every morning."},
+          {"who": "A", "line": "Good! I will run with you tomorrow morning."}
+        ],
+        "tts_text": "Hi, Sam. Did you run in the school race last Friday? Yes, I did. Five boys ran in the race. Who was first? Tom was first. He ran very fast. I was second. Were you sad? A little. But I will run again next time. I run in the park every morning. Good! I will run with you tomorrow morning.",
+        "questions": [
+          {"qid": "ls1-q1", "kind": "mcq", "stem": "When was the school race?", "options": ["Last Monday", "Last Friday", "Tomorrow morning", "Next week"], "answer": "B", "explain": "对话里说：last Friday。"},
+          {"qid": "ls1-q2", "kind": "mcq", "stem": "Who was first in the race?", "options": ["Tom", "Sam", "Five boys", "The teacher"], "answer": "A", "explain": "Tom was first. He ran very fast."},
+          {"qid": "ls1-d1", "kind": "dictation", "sentence": "I run in the park every morning.", "audio": "/audio/speaking/ls1-dict.mp3", "explain": "每天早上在公园跑步。"}
+        ]
+      },
+      "retell": {
+        "text": "Last Friday, our school had a race day. Sam ran in the race. He was second, and Tom was first. Sam was a little sad, but he did not stop. He runs in the park every morning. He says he will run again next year, and he will be faster. Sam is a good runner, and he never gives up.",
+        "audio": "/audio/speaking/ls1-retell.mp3",
+        "points": ["什么时候、什么比赛：上周五，学校跑步比赛", "谁第几名：Tom 第一，Sam 第二", "Sam 之后怎么做：每天早上在公园跑步，明年再比"]
+      }
+    },
+    {
+      "id": "ls2",
+      "title": "My Cat Mimi",
+      "title_zh": "我的猫咪",
+      "topic_zh": "宠物 · 现在时",
+      "read": {
+        "text": "Mimi is my cat. She is small and white, with big eyes. She likes to sleep in the sun. In the morning, she sits by the window and looks at the birds. At night, she sleeps on my bed. Mimi is quiet, but she is a good friend. When I am sad, she comes to me and sits with me. I like my cat very much.",
+        "audio": "/audio/speaking/ls2-read.mp3",
+        "golden": "Mimi is quiet, but she is a good friend.",
+        "golden_audio": "/audio/speaking/ls2-golden.mp3"
+      },
+      "listen": {
+        "audio": "/audio/speaking/ls2-listen.mp3",
+        "turns": [
+          {"who": "A", "line": "Do you have a pet?"},
+          {"who": "B", "line": "Yes, I have a cat. Her name is Mimi."},
+          {"who": "A", "line": "What does she look like?"},
+          {"who": "B", "line": "She is small and white, with big eyes."},
+          {"who": "A", "line": "What does she like to do?"},
+          {"who": "B", "line": "She likes to sleep in the sun, and she sits by the window in the morning."},
+          {"who": "A", "line": "Is she a good pet?"},
+          {"who": "B", "line": "Yes. She is quiet, and she is a good friend."}
+        ],
+        "tts_text": "Do you have a pet? Yes, I have a cat. Her name is Mimi. What does she look like? She is small and white, with big eyes. What does she like to do? She likes to sleep in the sun, and she sits by the window in the morning. Is she a good pet? Yes. She is quiet, and she is a good friend.",
+        "questions": [
+          {"qid": "ls2-q1", "kind": "mcq", "stem": "What is the pet's name?", "options": ["Mimi", "Sam", "Tom", "Leo"], "answer": "A", "explain": "Her name is Mimi."},
+          {"qid": "ls2-q2", "kind": "mcq", "stem": "What does Mimi like to do?", "options": ["Run in the park", "Sleep in the sun", "Swim in the river", "Play with a ball"], "answer": "B", "explain": "She likes to sleep in the sun."},
+          {"qid": "ls2-d1", "kind": "dictation", "sentence": "She is small and white, with big eyes.", "audio": "/audio/speaking/ls2-dict.mp3", "explain": "又小又白，大眼睛。"}
+        ]
+      },
+      "retell": {
+        "text": "My friend has a cat. Her name is Mimi. She is small and white, with big eyes. In the morning, she sits by the window and looks at the birds. At night, she sleeps on the bed. Mimi is quiet, but she is a good friend. My friend likes her very much.",
+        "audio": "/audio/speaking/ls2-retell.mp3",
+        "points": ["猫叫什么、长什么样：Mimi，又小又白，大眼睛", "早上和晚上做什么：早上坐窗边看鸟，晚上睡在床上", "为什么是好朋友：很安静，常陪着主人"]
+      }
+    },
+    {
+      "id": "ls3",
+      "title": "A Day at the Museum",
+      "title_zh": "博物馆的一天",
+      "topic_zh": "参观 · 过去时",
+      "read": {
+        "text": "Last Sunday, we went to the museum. It was a big, old place. We saw many old things there. There were old books, old clothes, and old coins. The coins were from a long time ago. A man told us about the old days. He said people lived a very different life then. We had a good time, and we learned a lot.",
+        "audio": "/audio/speaking/ls3-read.mp3",
+        "golden": "We saw many old things in the museum.",
+        "golden_audio": "/audio/speaking/ls3-golden.mp3"
+      },
+      "listen": {
+        "audio": "/audio/speaking/ls3-listen.mp3",
+        "turns": [
+          {"who": "A", "line": "Where did you go last Sunday?"},
+          {"who": "B", "line": "We went to the museum."},
+          {"who": "A", "line": "What did you see there?"},
+          {"who": "B", "line": "We saw old books, old clothes, and old coins."},
+          {"who": "A", "line": "Were the coins new?"},
+          {"who": "B", "line": "No, they were from a long time ago. A man told us about the old days."},
+          {"who": "A", "line": "Did you have a good time?"},
+          {"who": "B", "line": "Yes. We learned a lot."}
+        ],
+        "tts_text": "Where did you go last Sunday? We went to the museum. What did you see there? We saw old books, old clothes, and old coins. Were the coins new? No, they were from a long time ago. A man told us about the old days. Did you have a good time? Yes. We learned a lot.",
+        "questions": [
+          {"qid": "ls3-q1", "kind": "mcq", "stem": "When did they go to the museum?", "options": ["Last Friday", "Last Sunday", "Tomorrow", "Next week"], "answer": "B", "explain": "对话里说：last Sunday。"},
+          {"qid": "ls3-q2", "kind": "mcq", "stem": "What did they see?", "options": ["Old coins", "New books", "A big ship", "A new school"], "answer": "A", "explain": "We saw old books, old clothes, and old coins."},
+          {"qid": "ls3-d1", "kind": "dictation", "sentence": "We saw old books, old clothes, and old coins.", "audio": "/audio/speaking/ls3-dict.mp3", "explain": "旧书、旧衣服、旧硬币。"}
+        ]
+      },
+      "retell": {
+        "text": "Last Sunday, we went to the museum. It is a big, old place. We saw old books, old clothes, and old coins. A man told us about the old days. People lived a very different life then. We had a good time, and we learned a lot.",
+        "audio": "/audio/speaking/ls3-retell.mp3",
+        "points": ["什么时候去了哪：上周日，博物馆", "看到了什么：旧书、旧衣服、旧硬币", "学到了什么：过去的人生活很不一样"]
+      }
+    },
+    {
+      "id": "ls4",
+      "title": "The New Phone",
+      "title_zh": "新电话",
+      "topic_zh": "发明 · 现在时",
+      "read": {
+        "text": "The telephone is a great invention. A long time ago, people wrote letters to talk to friends far away. It took a long time. Then the telephone came, and people could talk to each other in a minute. Today, we have phones in our hands. We can call, write, and take photos with them. Phones make our life easy, but we must use them well.",
+        "audio": "/audio/speaking/ls4-read.mp3",
+        "golden": "The telephone was invented a long time ago.",
+        "golden_audio": "/audio/speaking/ls4-golden.mp3"
+      },
+      "listen": {
+        "audio": "/audio/speaking/ls4-listen.mp3",
+        "turns": [
+          {"who": "A", "line": "What is that in your hand?"},
+          {"who": "B", "line": "It is my new phone."},
+          {"who": "A", "line": "What can you do with it?"},
+          {"who": "B", "line": "I can call my friends, write to them, and take photos."},
+          {"who": "A", "line": "Is it easy to use?"},
+          {"who": "B", "line": "Yes, very easy. But my mother says I must not use it too much."},
+          {"who": "A", "line": "Why not?"},
+          {"who": "B", "line": "She says I must read more books and play outside."}
+        ],
+        "tts_text": "What is that in your hand? It is my new phone. What can you do with it? I can call my friends, write to them, and take photos. Is it easy to use? Yes, very easy. But my mother says I must not use it too much. Why not? She says I must read more books and play outside.",
+        "questions": [
+          {"qid": "ls4-q1", "kind": "mcq", "stem": "What can the boy do with his new phone?", "options": ["Only call his friends", "Call, write, and take photos", "Only take photos", "Play games all day"], "answer": "B", "explain": "I can call my friends, write to them, and take photos."},
+          {"qid": "ls4-q2", "kind": "mcq", "stem": "What does his mother say?", "options": ["Read more books and play outside", "Use the phone all day", "Buy a new phone", "Call friends every day"], "answer": "A", "explain": "She says I must read more books and play outside."},
+          {"qid": "ls4-d1", "kind": "dictation", "sentence": "I can call my friends, write to them, and take photos.", "audio": "/audio/speaking/ls4-dict.mp3", "explain": "打电话、写信、拍照。"}
+        ]
+      },
+      "retell": {
+        "text": "Today, we have phones in our hands. We can call our friends, write to them, and take photos. Phones make our life easy. But we must use them well. We must read more books and play outside, too.",
+        "audio": "/audio/speaking/ls4-retell.mp3",
+        "points": ["手机能做什么：打电话、写信、拍照", "手机的好处：让生活更方便", "要注意什么：不能总玩手机，要多读书、多去外面玩"]
+      }
+    }
+  ]
+}
