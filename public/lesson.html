@@ -42,6 +42,22 @@
         document.head.appendChild(st);
         document.documentElement.setAttribute('data-subject', 'yuwen');
       });
+    } else if (/^sx\d/.test(lid)) {
+      // 数学课品牌适配（2026-11-21 反馈39）：?lesson=sx1..sx6 时把品牌换成小禾数学，返回数学学习地图
+      window.XH_SUBJECT = 'shuxue';
+      window.XH_BRAND = '小禾数学';
+      window.XH_HOME = '/math.html';
+      // 页面加载后替换品牌文字和返回链接
+      document.addEventListener('DOMContentLoaded', function(){
+        document.title = document.title.replace('小禾英语', '小禾数学');
+        var b = document.getElementById('brand');
+        if (b) b.innerHTML = b.innerHTML.replace('小禾英语', '小禾数学');
+        // 返回按钮改到数学学习地图
+        document.querySelectorAll('button[onclick*="location.href=\'/\'"]').forEach(function(btn){
+          btn.setAttribute('onclick', btn.getAttribute('onclick').replace("location.href='/'", "location.href='/math.html'"));
+        });
+        document.documentElement.setAttribute('data-subject', 'shuxue');
+      });
     } else {
       window.XH_SUBJECT = 'english';
       window.XH_BRAND = '小禾英语';
@@ -696,7 +712,7 @@ async function renderHome() {
       <p class="scene">不计门禁、不进错题本，练完就歇一会儿。明天再来一组新的。</p>
       <div class="btnrow" style="justify-content:center;">
         <button class="big" onclick="location.reload()" style="font-size:18px;padding:14px 40px;">再来一组 →</button>
-        <button class="big" onclick="location.href='/'" style="font-size:18px;padding:14px 40px;">返回首页</button>
+        <button class="big" onclick="location.href='${window.XH_HOME||'/'}'" style="font-size:18px;padding:14px 40px;">返回首页</button>
       </div></div>`;
     wrap.innerHTML = html;
     window.scrollTo(0, 0);
@@ -706,13 +722,13 @@ async function renderHome() {
   if (LID === 'daily-retest' && window._dailyStreak !== undefined) {
     const streak = window._dailyStreak;
     window._dailyStreak = undefined;
-    const html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回首页</button></div>
+    const html = `<div style="margin-bottom:12px;"><button onclick="location.href='${window.XH_HOME||'/'}'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回首页</button></div>
     <div class="card" style="text-align:center;background:linear-gradient(135deg,#fff8e1,#ffecb3);border:2px solid #ffb300;">
       <div style="font-size:64px;">🎉</div>
       <h2 class="stem" style="font-size:24px;color:#e65100;">今日闯关成功！</h2>
       <p class="scene" style="font-size:16px;">短板补上了，明天继续！</p>
       ${streak > 0 ? `<div style="font-size:20px;font-weight:800;color:#ff8f00;margin:12px 0;">🔥 连续闯关 ${streak} 天</div>` : ''}
-      <div class="btnrow" style="justify-content:center;"><button class="big" onclick="location.href='/'" style="font-size:18px;padding:14px 40px;">继续学习 →</button></div>
+      <div class="btnrow" style="justify-content:center;"><button class="big" onclick="location.href='${window.XH_HOME||'/'}'" style="font-size:18px;padding:14px 40px;">继续学习 →</button></div>
     </div>`;
     wrap.innerHTML = html;
     window.scrollTo(0, 0);
@@ -722,7 +738,7 @@ async function renderHome() {
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
   const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
-  let html = `<div style="margin-bottom:12px;"><button onclick="location.href='/'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>${window.XH_BRAND||'小禾英语'}</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
+  let html = `<div style="margin-bottom:12px;"><button onclick="location.href='${window.XH_HOME||'/'}'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>${window.XH_BRAND||'小禾英语'}</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
   if (isReview) {
     // 练习模式（2026-10-02 总任务书）：学完新课自动接着练；练完一遍可以再练一遍
     if (state.p1_done) {
@@ -773,7 +789,7 @@ async function renderHome() {
       <div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 重新挑战</button></div>` : `<div class="btnrow"><button class="big" id="btnRetry" style="background:linear-gradient(135deg,#ff8f00,#ffb300);">🔄 再练一次</button></div>`) : `<p class="scene">做完的课程不能重做。下一课见。</p>`}
       ${!isConsLid && showConsLink ? `<div class="btnrow"><button class="big" id="btnCons" style="background:linear-gradient(135deg,#ff8f00,#ffb300);" onclick="location.href='/lesson?lesson=${LID}-consolidate'">📚 去做巩固练（可反复做）</button></div>` : ''}
       ${window.XH_SUBJECT === 'english' ? `<div class="btnrow"><button class="big" style="background:linear-gradient(135deg,#43a047,#66bb6a);" onclick="location.href='/lesson?lesson=quick-drill'">⚡ 5 分钟快练（10 道题，5 分钟）</button></div>` : ''}
-      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='/'">← 返回课程</button></div></div>`;
+      <div class="btnrow"><button class="btn" style="margin-top:16px;font-size:20px;padding:16px 32px;" onclick="location.href='${window.XH_HOME||'/'}'">← 返回课程</button></div></div>`;
   } else {
     html += partCard(1, '第一部分：讲解 + 练习', LESSON.part1_desc || '', state);
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
@@ -1751,7 +1767,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     sawFb[s.item_id] = true;
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
     // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）；粘贴的题回看时也要写明不算数
-    if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。') + (wasPasted ? ' 这是粘贴的，不算你自己做对，这题还得自己打一遍。' : ''), correct: true, helped: !!b.helped };
+    if (s.item_id) reviewData[s.item_id] = { answer: String(givenAnswer || ''), feedback: String(b.feedback || '答对了。') + (wasPasted ? ' 这是粘贴的，不算你自己做对。这道题会进错题本，明天自己打一遍才算过。' : ''), correct: true, helped: !!b.helped };
     // 单题重做（2026-10-14）：答对 → 调接口消掉复测项
     // 批量重做（2026-10-16修：之前漏了，批量重做的题答对也要消掉——Elouise报告阻塞性bug）
     // 2026-10-18修：不管有没有用帮助，答对就消掉（helped只影响每日10道计数，不影响消错题）
@@ -1777,8 +1793,8 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
       wrong: '这道题你以前答错过，这次自己做对了。'
     }[b.conquered] : null;
     const conqueredHtml = conqueredTxt ? `<div class="conquered">🏅 ${conqueredTxt}</div>` : '';
-    // 2026-11-18：粘贴答对要当面说清楚——不算自己做对，这题还得自己打一遍（只说结果，不拦、不清空输入）
-    const pastedHtml = wasPasted ? '<div class="pasted-note">这是粘贴的，不算你自己做对，这题还得自己打一遍。</div>' : '';
+    // 2026-11-18：粘贴答对要当面说清楚——不算自己做对，这道题会进错题本，明天自己打一遍才算过（只说结果，不拦、不清空输入）
+    const pastedHtml = wasPasted ? '<div class="pasted-note">这是粘贴的，不算你自己做对。这道题会进错题本，明天自己打一遍才算过。</div>' : '';
     // 2026-11-20 求助梯子规则 3：L3 看答案后做对的，当面说清不算会。
     const l3seen = ((wireQuestion.helpLv || {})[s.item_id] || 0) >= 3;
     fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '')
@@ -1972,9 +1988,55 @@ function renderShowAnswerBtn(s, sa) {
   fb.className = 'fb no';
   fb.innerHTML = '<div>这道题先看答案，抄一遍，我们继续往下。看答案过的不算会，进错题本待复测。</div>'
     + '<div class="btnrow"><button class="big" id="btnShowAns">先看答案，继续往下</button></div><div id="saBox"></div><div id="remedialBox"></div>';
-  $('btnShowAns').onclick = function () { showAnswerCopy(s, sa); };
+  // 2026-11-21 先看答案三道关 Gate 2：点开先蒙一句，不写不给看。答案文本不在页面上，
+  // 要调 /api/reveal-answer、写了猜测才给（sa 如今只剩 { eligible: true }）。
+  $('btnShowAns').onclick = function () { showGuessBox(s); };
   maybeShowRemedial();
   showInView($('btnShowAns'));
+}
+// Gate 2 猜测框：先写一句自己的想法（蒙一个、写半句都行），不写不给看
+function showGuessBox(s) {
+  var box = $('saBox'); if (!box) return;
+  var btn = $('btnShowAns'); if (btn) btn.style.display = 'none';
+  box.innerHTML = '<div class="sabox"><div>先写一句你觉得答案是什么，蒙一个也行，写半句也行。不写不给看。</div>'
+    + '<input id="guessInput" placeholder="先写下你的想法" autocomplete="off">'
+    + '<div class="btnrow"><button class="big" id="btnGuessSub">我写好了，看答案</button></div>'
+    + '<div class="gfb" id="gfb2"></div></div>';
+  $('btnGuessSub').onclick = function () { submitGuess(s); };
+  showInView(box);
+  var gi = $('guessInput'); if (gi) gi.focus();
+}
+async function submitGuess(s) {
+  var guess = ($('guessInput') || {}).value || '';
+  var gfb = $('gfb2');
+  if (!String(guess).trim()) { if (gfb) gfb.textContent = '先写一句你的想法再看答案。'; return; }
+  var btn = $('btnGuessSub'); if (btn) btn.disabled = true;
+  var b = null;
+  try {
+    var r = await apiFetch('/api/reveal-answer', { method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: s.item_id, session_id: ST['p' + PART].sid,
+        guess: String(guess).slice(0, 200),
+        elapsed_ms: (typeof qT0 === 'number' ? Date.now() - qT0 : 0) }) });
+    b = await r.json();
+  } catch (e) { b = null; }
+  if (btn) btn.disabled = false;
+  if (!b) { if (gfb) gfb.textContent = '网络有点慢，再点一次试试。'; return; }
+  if (!b.ok) {
+    if (gfb) gfb.textContent = b.error === 'empty_guess' ? '先写一句你的想法再看答案。'
+      : b.error === 'try_first' ? '先自己试一次再点。'
+      : '没拿到答案，再点一次试试。';
+    return;
+  }
+  if (b.guessed_correct) {
+    // 蒙对了：直接算答对，不用看答案（服务端已记一次正常作答，
+    // 求助梯子的服务端 try_first 检查认这条记录；hasTriedByItem 是
+    // wireQuestion 里的局部变量，这里不能直接引用）
+    b.feedback = '蒙对了！就是这个答案。' + (b.feedback ? '\n' + b.feedback : '');
+    handleVerdict(s, b, Date.now() - qT0, guess, 0);
+    return;
+  }
+  showAnswerCopy(s, { answer: b.answer, reason: b.reason }, guess);
 }
 /* 补救地图（2026-10-21）：保底出口处给出"先回头补哪一步"。数学 sx 课用 public/math-remedial.json，英语 U3–U6 语法课用 public/english-remedial.json */
 var __remedialCache = {};
@@ -2003,10 +2065,11 @@ function maybeShowRemedial() {
   if (__remedialCache[file]) { render(__remedialCache[file]); return; }
   fetch(file).then(function (r) { return r.json(); }).then(function (d) { __remedialCache[file] = d; render(d); }).catch(function () {});
 }
-function showAnswerCopy(s, sa) {
+function showAnswerCopy(s, sa, guess) {
   var box = $('saBox'); if (!box) return;
   var isMcq = s.kind === 'mcq';
   var html = '<div class="sabox"><div>正确答案是：<b>' + escapeHtml(sa.answer) + '</b></div>'
+    + (guess ? '<div>你刚才写的是：' + escapeHtml(guess) + '</div>' : '')
     + (sa.reason ? '<div>原因：' + escapeHtml(sa.reason) + '</div>' : '')
     + '<div class="nudge">这道题会进错题本，以后再考你一次；看答案过的不算你自己会，独立做对了才销号。</div>'
     + '<div class="nudge">照着写一遍，提交就能继续。</div>';
@@ -2111,7 +2174,7 @@ async function submitCopy(s, answer) {
         <p class="scene">每天开始新课前，先独立做完今天的 10 道错题（不点老师教我），新课就自动开。</p>
         <p class="scene" id="lockDaily" style="display:none;"></p>
         <button class="btn btn-primary" onclick="location.href='/progress.html'">去做今日错题 →</button>
-        <button class="btn ghost" onclick="location.href='/'" style="margin-left:8px;">返回首页</button>
+        <button class="btn ghost" onclick="location.href='${window.XH_HOME||'/'}'" style="margin-left:8px;">返回首页</button>
       </div>`;
       try {
         const dr = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
