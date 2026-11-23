@@ -79,6 +79,11 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   let verdict = r.verdict;
   let independent = 0;
   let finalHelped = helped;
+  if (copied && prior < 1) {
+    // 2026-11-21 先看答案三道关 Gate 1：看答案抄必须先有过一次自己的作答（蒙也行）。
+    // 服务端守门，前端流程本就保证，但直接调接口也拦得住。
+    return { error: 'try_first' };
+  }
   if (copied) {
     // 抄写（g 版保底）：看过答案后照着写——直接放行，不卡孩子（2026-10-12修：之前要求完全一致，标点差一个都卡死）
     // 记有帮助完成，不计独立完成，记"看答案过"弱点；
@@ -152,6 +157,18 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   ).run(item.item_id, sid, finalHelped, contentOk, independent, String(answer ?? ''), verdict, JSON.stringify(r.detail),
     Number.isFinite(ms) && ms >= 0 ? Math.round(ms) : null, pastedFlag);
 
+// 2026-11-21：粘贴答对进错题本待复测——否则新课里第一次就粘贴对的题永远没机会自己打一遍，
+// 黄字“还得自己打一遍”就是空话。快练除外（只练不记）；已在 pending 的不重复插。
+if ((verdict === 'correct' || verdict === 'correct_retry') && pastedFlag && !isQuickDrill) {
+  try {
+    const ex = db.prepare("SELECT id FROM retest_queue WHERE item_id=? AND status='pending'").get(item.item_id);
+    if (!ex) {
+      db.prepare(`INSERT INTO retest_queue(item_id, knowledge_point, status, source_session)
+        VALUES(?, 'general', 'pending', ?)`).run(item.item_id, sid);
+    }
+  } catch {}
+}
+
   // 复测闭环（2026-10-03）：零帮助独立答对 → 解决待复测
   // verdict=correct/correct_retry 且 independent=1（无帮助）时，清除该题所有 pending 复测
   // 2026-10-16修：加 correct_retry——重做时答对 verdict 是 correct_retry，不是 correct（Elouise报告阻塞性bug）
@@ -208,4 +225,4 @@ function submitAttempt({ item_id, answer, session_id, saw_feedback, elapsed_ms, 
   return out;
 }
 
-module.exports = { submitAttempt };
+module.exports = { submitAttempt, contentVerdict };
