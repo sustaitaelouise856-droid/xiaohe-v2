@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>听说模拟</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #f2f5f9; color: #202124; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px 16px 60px; }
+h1 { font-size: 24px; margin: 8px 0; }
+h2 { font-size: 19px; margin: 26px 0 8px; border-left: 6px solid #0d47a1; padding-left: 10px; }
+p { line-height: 1.65; }
+a { color: #0d47a1; }
+.usage { background: #e3f2fd; border: 1px solid #90caf9; border-radius: 12px; padding: 12px; font-size: 15px; line-height: 1.7; }
+.card { background: #fff; border: 2px solid #dfe3ec; border-radius: 14px; padding: 14px; margin: 14px 0; }
+.card h3 { margin: 0 0 4px; font-size: 18px; }
+.card .en { color: #5f6368; font-size: 14px; }
+.card .meta { color: #5f6368; font-size: 14px; margin-top: 6px; }
+.btn { padding: 12px 22px; font-size: 16px; border-radius: 999px; border: 0; background: #0d47a1; color: #fff; font-weight: 700; cursor: pointer; margin-top: 10px; min-height: 48px; }
+.btn:disabled { background: #9aa0a6; cursor: default; }
+.btn.ghost { background: #fff; border: 2px solid #0d47a1; color: #0d47a1; }
+.btn.rec { background: #c62828; }
+audio { width: 100%; margin: 8px 0; }
+.passage { font-size: 18px; line-height: 2.0; background: #fff; padding: 14px; border-radius: 12px; border: 1px solid #dfe3ec; margin-top: 10px; }
+.passage p { margin: 0 0 12px; }
+.passage p:last-child { margin-bottom: 0; }
+.golden { background: #fff8e1; border: 1px solid #ffe082; border-radius: 12px; padding: 12px; font-size: 17px; margin-top: 10px; }
+.opt { display: block; width: 100%; text-align: left; background: #fff; border: 2px solid #dfe3ec; border-radius: 12px; padding: 12px; font-size: 16px; margin: 8px 0; cursor: pointer; }
+.opt.picked-correct { border-color: #2e7d32; background: #e8f5e9; }
+.opt.picked-wrong { border-color: #c62828; background: #fce8e6; }
+.fb { font-size: 15px; line-height: 1.7; margin-top: 8px; padding: 10px 12px; border-radius: 10px; }
+.fb.ok { background: #e8f5e9; border: 1px solid #a5d6a7; }
+.fb.no { background: #fce8e6; border: 1px solid #ef9a9a; }
+.fb.info { background: #e3f2fd; border: 1px solid #90caf9; }
+input[type=text] { width: 100%; font-size: 17px; padding: 12px; border: 2px solid #dfe3ec; border-radius: 12px; margin-top: 8px; }
+.recbox { background: #fff; border: 1px solid #dfe3ec; border-radius: 12px; padding: 12px; margin-top: 10px; }
+.recbox .status { font-size: 15px; margin-top: 8px; color: #5f6368; }
+.recbox .status.done { color: #2e7d32; }
+.script { background: #fff; border: 1px solid #dfe3ec; border-radius: 12px; padding: 12px; margin-top: 10px; font-size: 16px; line-height: 1.9; }
+.script b { color: #0d47a1; }
+.done-banner { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 14px; padding: 14px; font-size: 16px; line-height: 1.7; margin-top: 16px; }
+.back { display: inline-block; margin-top: 24px; color: #0d47a1; text-decoration: none; font-size: 15px; }
+.note { font-size: 13px; color: #80868b; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🎙️ 听说模拟</h1>
+<div class="usage">每周 4 套听说练习：先朗读，再听对话答题，最后听材料复述要点。录音发给老师听，等老师批，不计分、不进错题本、不颁称号。<br>音频是英文原声（Warm Pebble），状态 UNVERIFIED（发音未人耳验证）。</div>
+
+<div id="setList"></div>
+
+<div id="setView" style="display:none">
+  <button class="btn ghost" id="backBtn">← 回到套数列表</button>
+  <h1 id="setTitle"></h1>
+  <div id="setTopic" style="color:#5f6368;font-size:15px;"></div>
+
+  <h2>① 模仿朗读</h2>
+  <div>先听一遍原声，再跟着读，录下来发给老师。</div>
+  <div class="passage" id="readText"></div>
+  <audio id="readAudio" controls preload="metadata"></audio>
+  <div class="recbox" id="rec-read"></div>
+  <div class="golden">金句跟读：<span id="goldenText"></span></div>
+  <audio id="goldenAudio" controls preload="metadata"></audio>
+  <div class="recbox" id="rec-golden"></div>
+
+  <h2>② 信息获取</h2>
+  <div>听对话，回答问题。听写那句要一个词一个词写下来。可以重播。</div>
+  <audio id="listenAudio" controls preload="metadata"></audio>
+  <div id="questions"></div>
+  <div id="scriptBox" style="display:none">
+    <div class="fb info">三道题都答完了，对一下对话原文：</div>
+    <div class="script" id="scriptText"></div>
+  </div>
+
+  <h2>③ 信息转述及询问</h2>
+  <div>先听材料，再用自己的话复述要点，录下来；最后再录一个你想问老师的问题。</div>
+  <audio id="retellAudio" controls preload="metadata"></audio>
+  <div class="recbox" id="rec-retell"></div>
+  <div id="pointsBox" style="display:none">
+    <div class="fb info">对一下：你说到这三点了吗？
+      <div id="pointsList" style="margin-top:6px;"></div>
+    </div>
+  </div>
+  <div style="margin-top:14px;">提一个问题：关于这段材料，你想问老师什么？录下来。</div>
+  <div class="recbox" id="rec-question"></div>
+
+  <div class="done-banner" id="doneBanner" style="display:none">这套练完了！录音已经发给老师，等他听。选择和听写当场判了，复述和提问等老师批。</div>
+  <a class="back" href="/">← 回首页</a>
+</div>
+
+<a class="back" href="/" id="homeLink">← 回首页</a>
+</div>
+
+<script>
+var API = '';
+var curSet = null;
+var curAnswers = {};
+var curRecs = {};
+var PART_MAX = { read: 60, golden: 30, retell: 90, question: 30 };
+var PART_LABEL = { read: '模仿朗读', golden: '金句跟读', retell: '复述', question: '提问' };
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function post(url, body) {
+  return fetch(API + url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(function (r) { return r.json(); });
+}
+function get(url) {
+  return fetch(API + url).then(function (r) { return r.json(); });
+}
+function blobToDataUrl(blob) {
+  return new Promise(function (resolve, reject) {
+    var fr = new FileReader();
+    fr.onload = function () { resolve(fr.result); };
+    fr.onerror = reject;
+    fr.readAsDataURL(blob);
+  });
+}
+
+/* ---- 录音：MediaRecorder，超时自动停；不支援的浏览器只留提示 ---- */
+function recSupported() {
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+}
+function buildRecBox(el, part) {
+  var max = PART_MAX[part];
+  el.innerHTML =
+    '<div style="font-weight:700;">🎤 ' + PART_LABEL[part] + '录音（最多 ' + max + ' 秒）</div>' +
+    '<button class="btn" data-act="rec">🎤 开始录音</button> ' +
+    '<span class="timer" style="font-size:15px;color:#5f6368;"></span>' +
+    '<div class="status"></div>' +
+    '<audio class="mine" controls style="display:none;margin-top:8px;"></audio>';
+  var btn = el.querySelector('[data-act=rec]');
+  var timerEl = el.querySelector('.timer');
+  var statusEl = el.querySelector('.status');
+  var mineEl = el.querySelector('.mine');
+  var mediaRec = null, mediaStream = null, chunks = [], recSecs = 0, recTimer = null;
+
+  function fmt(s) { return '0:' + (s < 10 ? '0' : '') + s + ' / 0:' + (max < 10 ? '0' : '') + max; }
+  function stopRec() {
+    if (recTimer) { clearInterval(recTimer); recTimer = null; }
+    if (mediaRec && mediaRec.state === 'recording') { try { mediaRec.stop(); } catch (e) {} }
+    else if (mediaStream) { mediaStream.getTracks().forEach(function (t) { t.stop(); }); mediaStream = null; }
+  }
+  function setSaved(dur) {
+    statusEl.textContent = '已保存，等老师听。';
+    statusEl.className = 'status done';
+    btn.textContent = '🎤 重新录';
+  }
+  btn.addEventListener('click', async function () {
+    if (mediaRec && mediaRec.state === 'recording') { stopRec(); return; }
+    if (!recSupported()) { statusEl.textContent = '这个浏览器不能录音，换个浏览器再试。'; return; }
+    try { mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+    catch (e) { statusEl.textContent = '录音没打开权限，点一下地址栏的麦克风允许。'; return; }
+    chunks = [];
+    try { mediaRec = new MediaRecorder(mediaStream); }
+    catch (e) { statusEl.textContent = '这个浏览器不能录音，换个浏览器再试。'; return; }
+    mediaRec.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
+    mediaRec.onstop = async function () {
+      if (mediaStream) { mediaStream.getTracks().forEach(function (t) { t.stop(); }); mediaStream = null; }
+      var blob = new Blob(chunks, { type: (mediaRec && mediaRec.mimeType) || 'audio/webm' });
+      btn.textContent = '🎤 开始录音';
+      btn.classList.remove('rec');
+      timerEl.textContent = '';
+      if (!blob.size) { statusEl.textContent = '没录到声音，再试一次。'; return; }
+      statusEl.textContent = '正在发给老师……';
+      mineEl.src = URL.createObjectURL(blob);
+      mineEl.style.display = 'block';
+      try {
+        var b64 = await blobToDataUrl(blob);
+        var r = await post('/api/speaking/record', {
+          set_id: curSet.id, part: part,
+          audio_b64: b64, mime: blob.type || 'audio/webm', duration_sec: recSecs
+        });
+        if (r.ok) {
+          curRecs[part] = { duration_sec: recSecs };
+          setSaved(recSecs);
+          if (part === 'retell') showPoints();
+          refreshDone();
+        } else {
+          statusEl.textContent = '没发过去（' + esc(r.error || '失败') + '），再录一次。';
+        }
+      } catch (e) {
+        statusEl.textContent = '没发过去（网络问题），再录一次。';
+      }
+    };
+    recSecs = 0;
+    timerEl.textContent = fmt(0);
+    btn.textContent = '■ 停止';
+    btn.classList.add('rec');
+    statusEl.textContent = '正在录音…';
+    statusEl.className = 'status';
+    mediaRec.start(250);
+    recTimer = setInterval(function () {
+      recSecs++;
+      timerEl.textContent = fmt(Math.min(recSecs, max));
+      if (recSecs >= max) stopRec();
+    }, 1000);
+  });
+  // 已录过：恢复“已保存”状态
+  if (curRecs[part]) setSaved(curRecs[part].duration_sec);
+}
+
+/* ---- 套数列表 ---- */
+function loadSets() {
+  get('/api/speaking/sets').then(function (r) {
+    var box = document.getElementById('setList');
+    if (!r.ok) { box.innerHTML = '<div class="fb no">套数没拉到，刷新再试。</div>'; return; }
+    box.innerHTML = '';
+    r.sets.forEach(function (s) {
+      var done = s.answers_done + s.recordings_done;
+      var total = s.answers_total + s.recordings_total;
+      var card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML =
+        '<h3>' + esc(s.title_zh) + '</h3>' +
+        '<div class="en">' + esc(s.title) + ' · ' + esc(s.topic_zh) + '</div>' +
+        '<div class="meta">已练 ' + done + '/' + total + (s.done ? ' · 已完成' : '') +
+        (s.recordings_graded ? ' · 老师已批 ' + s.recordings_graded + ' 段录音' : '') + '</div>' +
+        '<button class="btn">' + (done ? '继续练' : '开始练') + '</button>';
+      card.querySelector('button').addEventListener('click', function () { openSet(s.id); });
+      box.appendChild(card);
+    });
+  });
+}
+
+/* ---- 打开一套 ---- */
+function openSet(id) {
+  get('/api/speaking/set/' + encodeURIComponent(id)).then(function (r) {
+    if (!r.ok) { alert('这套没打开，刷新再试。'); return; }
+    curSet = r.set;
+    curAnswers = {};
+    (r.answers || []).forEach(function (a) { curAnswers[a.qid] = a; });
+    curRecs = {};
+    (r.recordings || []).forEach(function (x) { curRecs[x.part] = x; });
+    document.getElementById('setList').style.display = 'none';
+    document.getElementById('homeLink').style.display = 'none';
+    document.getElementById('setView').style.display = 'block';
+    document.getElementById('setTitle').textContent = curSet.title_zh;
+    document.getElementById('setTopic').textContent = curSet.title + ' · ' + curSet.topic_zh;
+    document.getElementById('readText').textContent = curSet.read.text;
+    document.getElementById('readAudio').src = curSet.read.audio;
+    document.getElementById('goldenText').textContent = curSet.read.golden;
+    document.getElementById('goldenAudio').src = curSet.read.golden_audio;
+    document.getElementById('listenAudio').src = curSet.listen.audio;
+    document.getElementById('retellAudio').src = curSet.retell.audio;
+    buildRecBox(document.getElementById('rec-read'), 'read');
+    buildRecBox(document.getElementById('rec-golden'), 'golden');
+    buildRecBox(document.getElementById('rec-retell'), 'retell');
+    buildRecBox(document.getElementById('rec-question'), 'question');
+    renderQuestions();
+    document.getElementById('pointsBox').style.display = curRecs.retell ? 'block' : 'none';
+    if (curRecs.retell) showPoints();
+    refreshDone();
+    window.scrollTo(0, 0);
+  });
+}
+
+function showPoints() {
+  document.getElementById('pointsBox').style.display = 'block';
+  document.getElementById('pointsList').innerHTML =
+    curSet.retell.points.map(function (p) { return '<div>· ' + esc(p) + '</div>'; }).join('');
+}
+
+/* ---- 第二部分题目 ---- */
+function renderQuestions() {
+  var box = document.getElementById('questions');
+  box.innerHTML = '';
+  curSet.listen.questions.forEach(function (q, idx) {
+    var wrap = document.createElement('div');
+    wrap.className = 'card';
+    var prev = curAnswers[q.qid];
+    if (q.kind === 'mcq') {
+      wrap.innerHTML = '<div style="font-weight:700;">' + (idx + 1) + '. ' + esc(q.stem) + '</div><div class="opts"></div><div class="fb" style="display:none"></div>';
+      var optsBox = wrap.querySelector('.opts');
+      var fb = wrap.querySelector('.fb');
+      q.options.forEach(function (opt, i) {
+        var letter = String.fromCharCode(65 + i);
+        var b = document.createElement('button');
+        b.className = 'opt';
+        b.textContent = letter + '. ' + opt;
+        if (prev) {
+          if (prev.answer_text === letter) b.classList.add(prev.correct === 1 ? 'picked-correct' : 'picked-wrong');
+        }
+        b.addEventListener('click', function () {
+          post('/api/speaking/answer', { set_id: curSet.id, qid: q.qid, answer: letter }).then(function (r) {
+            if (!r.ok) { fb.style.display = 'block'; fb.className = 'fb no'; fb.textContent = '没交上去，再点一次。'; return; }
+            curAnswers[q.qid] = { answer_text: letter, correct: r.correct };
+            optsBox.querySelectorAll('.opt').forEach(function (o) { o.classList.remove('picked-correct', 'picked-wrong'); });
+            b.classList.add(r.correct === 1 ? 'picked-correct' : 'picked-wrong');
+            fb.style.display = 'block';
+            fb.className = 'fb ' + (r.correct === 1 ? 'ok' : 'no');
+            fb.textContent = (r.correct === 1 ? '对了。' : '不对。') + r.explain;
+            maybeShowScript();
+            refreshDone();
+          });
+        });
+        optsBox.appendChild(b);
+      });
+      if (prev) {
+        fb.style.display = 'block';
+        fb.className = 'fb ' + (prev.correct === 1 ? 'ok' : 'no');
+        fb.textContent = (prev.correct === 1 ? '对了。' : '不对。') + q.explain;
+      }
+    } else if (q.kind === 'dictation') {
+      wrap.innerHTML = '<div style="font-weight:700;">' + (idx + 1) + '. 听写：听这句话，一个词一个词写下来。</div>' +
+        '<audio controls preload="metadata" src="' + esc(q.audio) + '" style="width:100%;margin:8px 0;"></audio>' +
+        '<input type="text" placeholder="听到什么就写什么" value="' + esc(prev ? prev.answer_text : '') + '">' +
+        '<button class="btn">提交</button><div class="fb" style="display:none"></div>';
+      var input = wrap.querySelector('input');
+      var btn = wrap.querySelector('button');
+      var fb2 = wrap.querySelector('.fb');
+      btn.addEventListener('click', function () {
+        var v = input.value.trim();
+        if (!v) { fb2.style.display = 'block'; fb2.className = 'fb no'; fb2.textContent = '先写一句，蒙一个也行，不写不给判。'; return; }
+        post('/api/speaking/answer', { set_id: curSet.id, qid: q.qid, answer: v }).then(function (r) {
+          if (!r.ok) { fb2.style.display = 'block'; fb2.className = 'fb no'; fb2.textContent = '没交上去，再点一次。'; return; }
+          curAnswers[q.qid] = { answer_text: v, correct: r.correct };
+          fb2.style.display = 'block';
+          fb2.className = 'fb ' + (r.correct === 1 ? 'ok' : 'no');
+          if (r.correct === 1) {
+            fb2.textContent = '全对！' + r.explain;
+          } else {
+            var d = r.detail || {};
+            var wrong = (d.wrong_words || []).join(', ');
+            fb2.textContent = '写对了 ' + (d.correct_n || 0) + '/' + (d.total_n || 0) + ' 个词。' +
+              (wrong ? '没写对的词：' + wrong + '（已加入生词本）。' : '') +
+              '正确句子：' + (d.expected || '') + ' ' + r.explain;
+          }
+          maybeShowScript();
+          refreshDone();
+        });
+      });
+      if (prev) {
+        fb2.style.display = 'block';
+        fb2.className = 'fb ' + (prev.correct === 1 ? 'ok' : 'no');
+        var d = {};
+        try { d = JSON.parse(prev.detail_json || '{}'); } catch (e) {}
+        fb2.textContent = prev.correct === 1 ? '全对！' + q.explain
+          : '写对了 ' + (d.correct_n || 0) + '/' + (d.total_n || 0) + ' 个词。正确句子：' + (d.expected || '') + ' ' + q.explain;
+      }
+    }
+    box.appendChild(wrap);
+  });
+  maybeShowScript();
+}
+
+function maybeShowScript() {
+  var all = curSet.listen.questions.every(function (q) { return curAnswers[q.qid]; });
+  if (!all) return;
+  document.getElementById('scriptBox').style.display = 'block';
+  document.getElementById('scriptText').innerHTML =
+    curSet.listen.turns.map(function (t) { return '<div><b>' + esc(t.who) + ':</b> ' + esc(t.line) + '</div>'; }).join('');
+}
+
+function refreshDone() {
+  var totalQ = curSet.listen.questions.length;
+  var doneQ = curSet.listen.questions.filter(function (q) { return curAnswers[q.qid]; }).length;
+  var doneR = Object.keys(curRecs).length;
+  document.getElementById('doneBanner').style.display =
+    (doneQ >= totalQ && doneR >= 4) ? 'block' : 'none';
+}
+
+document.getElementById('backBtn').addEventListener('click', function () {
+  document.getElementById('setView').style.display = 'none';
+  document.getElementById('setList').style.display = 'block';
+  document.getElementById('homeLink').style.display = 'inline-block';
+  loadSets();
+});
+
+loadSets();
+</script>
+</body>
+</html>
