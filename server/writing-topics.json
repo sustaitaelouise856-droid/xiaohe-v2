@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "word_min": 80,
+  "word_max": 100,
+  "max_score": 25,
+  "checklist": [
+    {
+      "id": "subject_verb",
+      "text": "每句话都有主语和动词（每句都有“谁 + 做了什么”）"
+    },
+    {
+      "id": "tense",
+      "text": "时态一致：写过去的事全用过去式，写现在的事全用现在式"
+    },
+    {
+      "id": "five_sentences",
+      "text": "5 句都写了，一句一个要点"
+    },
+    {
+      "id": "word_count",
+      "text": "80–100 词（数一数再交）"
+    },
+    {
+      "id": "spelling",
+      "text": "难词拼写查一遍：不规则过去式 went / saw / gave / took 别写错"
+    }
+  ],
+  "topics": [
+    {
+      "id": "friend",
+      "title_cn": "我的好朋友",
+      "title_en": "My Best Friend",
+      "prompt_cn": "介绍你的好朋友。（80–100 词）",
+      "prompt_en": "Write about your best friend. (80–100 words)",
+      "think": [
+        "这篇作文要写谁？（一个人：你的好朋友）",
+        "要写哪几件事？（他长什么样、喜欢什么、你们一起做什么、为什么是最好的朋友）",
+        "用什么时态？（写现在的情况，用现在式：is / likes / plays）"
+      ],
+      "frames": [
+        {
+          "n": 1,
+          "cn": "介绍他是谁",
+          "en": "My best friend is ___.",
+          "tip": "写名字 + 和你的关系"
+        },
+        {
+          "n": 2,
+          "cn": "他长什么样、有什么特点",
+          "en": "He is ___ and ___. He has ___.",
+          "tip": "外貌 + 性格，各写一个词"
+        },
+        {
+          "n": 3,
+          "cn": "他喜欢什么",
+          "en": "He likes ___.",
+          "tip": "写一件他常做的事"
+        },
+        {
+          "n": 4,
+          "cn": "你们一起做过什么",
+          "en": "We often ___ together.",
+          "tip": "写一件你们一起做的事"
+        },
+        {
+          "n": 5,
+          "cn": "为什么他是最好的朋友",
+          "en": "He is my best friend because ___.",
+          "tip": "写一个原因"
+        }
+      ],
+      "model_title": "My Best Friend",
+      "model": "My best friend is Li Lei. He is in my class. He is tall and strong, and he has short black hair. He likes playing football. He plays football every Sunday morning. We often play football together after school. On Sunday, we play in the park near our school. He is kind and funny. When I am sad, he tells me a funny story. When I have a problem, he helps me. He is my best friend because he is kind, and I can tell him everything.",
+      "model_cn": "我的好朋友叫李磊，和我同班。他又高又壮，留着短黑发。他喜欢踢足球，每个星期天早上都踢。放学后我们经常一起踢球，星期天在学校附近的公园踢。他善良又幽默：我难过时他给我讲笑话，我遇到问题时他帮我。他是我最好的朋友，因为他很善良，我什么都可以告诉他。",
+      "model_audio": "/audio/writing/friend.mp3",
+      "compare": [
+        "范文第一句是怎么开头的？（先说“这是谁”，再慢慢展开）",
+        "你和范文哪一句最像？哪一句范文写得比你好？",
+        "范文里哪一句你可以直接学着用？（抄下来，改写时用上）"
+      ]
+    },
+    {
+      "id": "school",
+      "title_cn": "我的校园生活",
+      "title_en": "My School Life",
+      "prompt_cn": "介绍你的校园生活。（80–100 词）",
+      "prompt_en": "Write about your school life. (80–100 words)",
+      "think": [
+        "这篇作文要写什么？（你在学校的一天：上课、喜欢的课、放学后的活动）",
+        "要写哪几件事？（上几节课、最喜欢哪门课、放学后做什么、感觉怎么样）",
+        "用什么时态？（写每天的习惯，用现在式：have / read / play）"
+      ],
+      "frames": [
+        {
+          "n": 1,
+          "cn": "我在哪上学",
+          "en": "I study at ___.",
+          "tip": "学校 + 城市"
+        },
+        {
+          "n": 2,
+          "cn": "每天上什么课",
+          "en": "Every day, I have ___ lessons.",
+          "tip": "几节课 + 最喜欢哪门"
+        },
+        {
+          "n": 3,
+          "cn": "最喜欢的课和原因",
+          "en": "My favourite lesson is ___ because ___.",
+          "tip": "科目 + 一个原因"
+        },
+        {
+          "n": 4,
+          "cn": "放学后做什么",
+          "en": "After school, I ___ with my friends.",
+          "tip": "一项活动"
+        },
+        {
+          "n": 5,
+          "cn": "我对校园生活的感受",
+          "en": "I love my school life because ___.",
+          "tip": "一个感受词"
+        }
+      ],
+      "model_title": "My School Life",
+      "model": "I study at a middle school in Guangzhou. Every day, I have six lessons. My favourite lesson is English because it is fun. I read English books every day, and I speak English with my friends. After school, I play basketball with my friends in the playground. We play for one hour. Then I go home and do my homework. My teachers are kind, and my friends are nice. I love my school life. It is happy and fun, and I learn new things every day.",
+      "model_cn": "我在广州的一所中学上学。每天六节课，我最喜欢英语课，因为很有趣。我每天读英文书，和朋友们说英语。放学后，我和朋友们在操场打篮球，打一个小时，然后回家写作业。老师很亲切，朋友们都很好。我爱我的校园生活，每天都开心又有趣，还能学到新东西。",
+      "model_audio": "/audio/writing/school.mp3",
+      "compare": [
+        "范文是怎么把一天写清楚的？（按时间顺序：上课 → 放学后 → 回家）",
+        "你和范文哪一句最像？哪一句范文写得比你好？",
+        "范文里哪一句你可以直接学着用？（抄下来，改写时用上）"
+      ]
+    },
+    {
+      "id": "memory",
+      "title_cn": "一次难忘的经历",
+      "title_en": "An Unforgettable Experience",
+      "prompt_cn": "写一次难忘的经历。（80–100 词）",
+      "prompt_en": "Write about an unforgettable experience. (80–100 words)",
+      "think": [
+        "这篇作文要写什么？（过去发生的一件事：什么时候、和谁、发生了什么）",
+        "要写哪几件事？（事情的开头、经过、结果、你的感受）",
+        "用什么时态？（写过去的事，全用过去式：went / saw / gave / was）"
+      ],
+      "frames": [
+        {
+          "n": 1,
+          "cn": "什么时候、和谁、去哪",
+          "en": "Last ___, I went to ___ with ___.",
+          "tip": "时间 + 地点 + 人"
+        },
+        {
+          "n": 2,
+          "cn": "发生了什么",
+          "en": "We saw ___.",
+          "tip": "看到的东西或事"
+        },
+        {
+          "n": 3,
+          "cn": "我做了什么",
+          "en": "I ___.",
+          "tip": "一个动作，过去式"
+        },
+        {
+          "n": 4,
+          "cn": "结果怎么样",
+          "en": "Then ___.",
+          "tip": "事情的结果"
+        },
+        {
+          "n": 5,
+          "cn": "我学到了什么",
+          "en": "I learned ___.",
+          "tip": "一个道理或感受"
+        }
+      ],
+      "model_title": "An Unforgettable Experience",
+      "model": "Last Sunday, I went to the park with my family. It was a sunny day. We saw a little dog under a tree. It was wet and cold. I gave it some food and water. The dog ate the food and drank the water. Then it was happy. It followed us home and played with us. Now the dog lives with us, and we play together every day. It was a nice day. I learned to help others, and I will never forget that day.",
+      "model_cn": "上个星期天，我和家人去公园。那天阳光很好。我们看到树下有一只小狗，又湿又冷。我给了它一些食物和水，它吃完喝完就开心了，跟着我们回家和我们玩。现在这只狗和我们住在一起，每天一起玩。那是美好的一天，我学会了帮助别人，永远不会忘记。",
+      "model_audio": "/audio/writing/memory.mp3",
+      "compare": [
+        "范文是怎么把一件事讲清楚的？（按时间顺序：开头 → 经过 → 结果 → 感受）",
+        "你和范文哪一句最像？哪一句范文写得比你好？",
+        "范文里哪一句你可以直接学着用？（抄下来，改写时用上）"
+      ],
+      "audio_speed": 80
+    }
+  ]
+}
