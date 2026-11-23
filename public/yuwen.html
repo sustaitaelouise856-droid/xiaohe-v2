@@ -129,6 +129,7 @@
 <script src="/theme.js"></script>
 </head>
 <body>
+<div style="margin:14px 20px 0;"><a href="/settings.html" style="display:inline-block;background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;text-decoration:none;">← 返回小禾英语</a></div>
 <div class="hero">
   <h1>📚 小禾语文</h1>
   <p class="sub">小禾文史馆 · 跟着馆长学语文</p>
@@ -183,12 +184,6 @@ const UNITS = [
     { id: "yw-u3r3", name: "说明顺序", label: "第3课" },
     { id: "yw-u3r4", name: "第三单元复习", label: "第4课" },
   ]},
-  { name: "第四单元 · 小说", lessons: [
-    { id: "yw-u4r1", name: "小说三要素", label: "第1课" },
-    { id: "yw-u4r2", name: "人物形象分析", label: "第2课" },
-    { id: "yw-u4r3", name: "环境描写的作用", label: "第3课" },
-    { id: "yw-u4r4", name: "第四单元复习", label: "第4课" },
-  ]},
   { name: "文言文 · 古籍整理", lessons: [
     { id: "yw-wenyan1", name: "记承天寺夜游", label: "开馆第一课" },
   ]},
@@ -198,11 +193,18 @@ const UNITS = [
   { name: "字词 · 练字房", lessons: [
     { id: "yw-word1", name: "己已巳三兄弟", label: "字词第一课" },
   ]},
+  { name: "专项 · 名著与古诗词", lessons: [
+    { id: "yw-mingzhu1", name: "《红星照耀中国》名著阅读方法", label: "名著专项" },
+    { id: "yw-moxie1", name: "古诗词默写与鉴赏（一）", label: "默写专项" },
+    { id: "yw-moxie2", name: "古诗词默写与鉴赏（二）·课外诵读", label: "默写专项" },
+    { id: "yw-fanyi1", name: "古诗词翻译专项", label: "翻译专项" },
+    { id: "yw-fanyi2", name: "古诗词翻译专项（二）", label: "翻译专项" },
+  ]},
 ];
 const ORDER = [];
 UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
 
-// 微小版称号墙：本地判定，无服务端
+// 微小版称号墙：服务端优先口径判定（与地图同口径）
 const YW_TITLES = [
   { icon: '📜', name: '初入文史馆', cond: '完成任意 1 节语文课', check: () => ORDER.some(l => isDone(l.id)) },
   { icon: '🌙', name: '月下夜游人', cond: '学完《记承天寺夜游》', check: () => isDone('yw-wenyan1') },
@@ -229,51 +231,68 @@ function renderTitles() {
     grid.appendChild(d);
   });
 }
-renderTitles();
 
+// 完成状态：优先用服务器真实进度（lesson_state表），本地做兜底（与英语地图同口径）
+let serverDone = new Set();
+async function loadServerProgress() {
+  try {
+    const r = await fetch('/api/done-lessons');
+    const d = await r.json();
+    if (d.ok) {
+      const doneList = d.completed || d.lessons || [];
+      serverDone = new Set(doneList);
+    }
+  } catch {}
+}
 function isDone(id) {
+  if (serverDone.has(id)) return true;
   try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; }
 }
 
 const unitsEl = document.getElementById('units');
-let doneN = 0;
-let currentId = null;
 
-UNITS.forEach(unit => {
-  const div = document.createElement('div');
-  div.className = 'unit';
-  const doneInUnit = unit.lessons.filter(l => isDone(l.id)).length;
-  div.innerHTML = `<div class="unit-head"><h2>${unit.name}</h2><span class="count">${doneInUnit}/${unit.lessons.length}</span></div>`;
-  const nodes = document.createElement('div');
-  nodes.className = 'nodes';
-  unit.lessons.forEach(l => {
-    const done = isDone(l.id);
-    if (done) doneN++;
-    if (!done && !currentId) currentId = l.id;
-    const cls = done ? 'done' : (l.id === currentId ? 'current' : 'available');
-    const icon = done ? '✅' : (l.id === currentId ? '📍' : '📖');
-    const n = document.createElement('div');
-    n.className = 'node ' + cls;
-    n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
-    n.onclick = () => { location.href = '/lesson?lesson=' + l.id; };
-    nodes.appendChild(n);
+function renderAll() {
+  renderTitles();
+  unitsEl.innerHTML = '';
+  let doneN = 0;
+  let currentId = null;
+
+  UNITS.forEach(unit => {
+    const div = document.createElement('div');
+    div.className = 'unit';
+    const doneInUnit = unit.lessons.filter(l => isDone(l.id)).length;
+    div.innerHTML = `<div class="unit-head"><h2>${unit.name}</h2><span class="count">${doneInUnit}/${unit.lessons.length}</span></div>`;
+    const nodes = document.createElement('div');
+    nodes.className = 'nodes';
+    unit.lessons.forEach(l => {
+      const done = isDone(l.id);
+      if (done) doneN++;
+      if (!done && !currentId) currentId = l.id;
+      const cls = done ? 'done' : (l.id === currentId ? 'current' : 'available');
+      const icon = done ? '✅' : (l.id === currentId ? '📍' : '📖');
+      const n = document.createElement('div');
+      n.className = 'node ' + cls;
+      n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
+      n.onclick = () => { location.href = '/lesson?lesson=' + l.id; };
+      nodes.appendChild(n);
+    });
+    div.appendChild(nodes);
+    unitsEl.appendChild(div);
   });
-  div.appendChild(nodes);
-  unitsEl.appendChild(div);
-});
 
-// 顶部统计
-document.getElementById('doneCount').textContent = doneN;
-document.getElementById('totalCount').textContent = ORDER.length;
-document.getElementById('pct').textContent = Math.round(doneN / ORDER.length * 100) + '%';
-document.getElementById('pfill').style.width = (doneN / ORDER.length * 100) + '%';
+  // 顶部统计
+  document.getElementById('doneCount').textContent = doneN;
+  document.getElementById('totalCount').textContent = ORDER.length;
+  document.getElementById('pct').textContent = Math.round(doneN / ORDER.length * 100) + '%';
+  document.getElementById('pfill').style.width = (doneN / ORDER.length * 100) + '%';
 
-// 继续学习按钮
-(function () {
+  // 继续学习按钮
   const next = ORDER.find(l => !isDone(l.id)) || ORDER[0];
   document.getElementById('continueSub').textContent = '下一课：' + next.name;
   document.getElementById('btnContinue').onclick = () => { location.href = '/lesson?lesson=' + next.id; };
-})();
+}
+renderAll();
+loadServerProgress().then(renderAll);
 </script>
 </body>
 </html>
