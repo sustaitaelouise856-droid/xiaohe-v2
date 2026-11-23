@@ -1441,6 +1441,30 @@ async function renderDailyPlan(dailyStatus) {
       planEl.insertAdjacentHTML('afterbegin',
         `<div id="teacherNoteBar" style="margin-bottom:10px;padding:12px;border-radius:10px;background:#fff8e1;border:1px solid #ffe0b2;font-size:14px;line-height:1.6;">💬 <b>老师说：</b>${esc(teacherNote)}</div>`);
     }
+    // 老师轻推（2026-11-23 实时监督）：与老师的话并存，插在其下方；各自独立 fetch，互不挡路
+    let teacherNudge = null, nudgeCreatedAt = null;
+    try {
+      const rn2 = await fetch('/api/teacher-nudge');
+      const dn2 = await rn2.json();
+      if (dn2 && dn2.ok && dn2.text) { teacherNudge = dn2.text; nudgeCreatedAt = dn2.created_at || null; }
+    } catch {}
+    const oldNudge = document.getElementById('teacherNudgeBar');
+    if (oldNudge) oldNudge.remove();
+    let dismissedNudge = '';
+    try { dismissedNudge = localStorage.getItem('xh_nudge_dismissed_at') || ''; } catch {}
+    if (teacherNudge && !(nudgeCreatedAt && nudgeCreatedAt === dismissedNudge)) {
+      const esc2 = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      const anchor = document.getElementById('teacherNoteBar');
+      const html = `<div id="teacherNudgeBar" style="margin-bottom:10px;padding:12px;border-radius:10px;background:#fff8e1;border:1px solid #ffe0b2;font-size:14px;line-height:1.6;">💡 <b>老师轻推：</b>${esc2(teacherNudge)} <span id="teacherNudgeClose" style="cursor:pointer;font-weight:800;float:right;">×</span></div>`;
+      if (anchor) anchor.insertAdjacentHTML('afterend', html);
+      else planEl.insertAdjacentHTML('afterbegin', html);
+      const closer = document.getElementById('teacherNudgeClose');
+      if (closer) closer.onclick = () => {
+        try { if (nudgeCreatedAt) localStorage.setItem('xh_nudge_dismissed_at', nudgeCreatedAt); } catch {}
+        const bar = document.getElementById('teacherNudgeBar');
+        if (bar) bar.remove();
+      };
+    }
     planEl.style.display = 'block';
   } catch (e) { /* 静默失败 */ }
 }
