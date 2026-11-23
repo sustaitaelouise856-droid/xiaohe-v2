@@ -825,6 +825,22 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   </a>
 </div>
 
+<!-- 整篇写作（2026-11-21 Elouise：三块大件之一；审题→列提纲→写→对照范文→改写，只练不判分，写完等老师批改） -->
+<div style="margin:12px 0;">
+  <a href="/writing.html" style="display:block;background:linear-gradient(135deg,#e65100,#bf360c);border:2px solid #bf360c;border-radius:16px;padding:16px;text-decoration:none;">
+    <div style="font-size:17px;font-weight:800;color:#fff;">✍️ 整篇写作</div>
+    <div style="font-size:13px;color:#ffecb3;margin-top:6px;">审题 → 列提纲 → 写 → 对范文 → 改写 · 3 个中考话题 · 只练不判分，写完等老师批改</div>
+  </a>
+</div>
+
+<!-- 听说模拟（2026-11-21 Elouise：三块大件之一；只练，录音等老师听，不计分、不进门禁） -->
+<div style="margin:12px 0;">
+  <a href="/speaking.html" style="display:block;background:linear-gradient(135deg,#0d47a1,#00695c);border:2px solid #004d40;border-radius:16px;padding:16px;text-decoration:none;">
+    <div style="font-size:17px;font-weight:800;color:#fff;">🎙️ 听说模拟</div>
+    <div style="font-size:13px;color:#e0f2f1;margin-top:6px;">每周 4 套：朗读 + 听力 + 转述 · 录音等老师听，不计分</div>
+  </a>
+</div>
+
 <!-- 今天就做 3 件事（2026-10-15 Elouise：孩子一打开就知道先做什么；2026-11-02 改：只留错题/新课/巩固练 3 件，闯关由上方 dailyCard 单独显示） -->
 <div id="dailyPlan" style="display:none;background:#fff;border:2px solid #e8eaed;border-radius:16px;padding:16px;margin:12px 0;">
   <div style="font-size:16px;font-weight:800;margin-bottom:10px;">📋 今天就做 3 件事</div>
@@ -916,6 +932,13 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   <div class="unit-head"><h2>📝 单元测验卷</h2><span class="count" id="examCount"></span></div>
   <div class="sub" style="color:var(--muted);font-size:13px;margin:0 0 12px;">广州新中考标准 · 满分140分（听说30+笔试110）· 完成一个单元解锁对应测验卷</div>
   <div id="examList" style="display:grid;gap:12px;"><div style="color:#999;font-size:14px;">加载中…</div></div>
+</div>
+
+<!-- 月度限时模考（2026-11-21）：每月一套，中考题型全覆盖，限时75分钟，满分100分 -->
+<div class="units" style="margin-top:8px;">
+  <div class="unit-head"><h2>📅 月度限时模考</h2><span class="count" id="mockCount"></span></div>
+  <div class="sub" style="color:var(--muted);font-size:13px;margin:0 0 12px;">每月一套 · 中考题型全覆盖（听说读写）· 限时75分钟 · 满分100分 · 考完出成绩报告</div>
+  <div id="mockList" style="display:grid;gap:12px;"><div style="color:#999;font-size:14px;">加载中…</div></div>
 </div>
 
 <div class="tabbar">
@@ -1212,6 +1235,26 @@ async function loadExams() {
   } catch {}
 }
 loadExams();
+
+// 月度限时模考入口（2026-11-21）
+async function loadMock() {
+  try {
+    const d = await (await fetch('/api/mock/latest')).json();
+    if (!d.ok) return;
+    const el = document.getElementById('mockList');
+    document.getElementById('mockCount').textContent = d.taken > 0 ? '已考 ' + d.taken + ' 次' : '本月待考';
+    const score = d.live ? `<span style="color:var(--green);font-weight:700;">最新 ${d.live.score}分</span>` : '';
+    const btnText = d.taken > 0 ? '再考一次' : '开始考试';
+    el.innerHTML = `<div class="node" style="display:flex;align-items:center;gap:12px;padding:16px;">
+        <div style="font-size:32px;">📅</div>
+        <div style="flex:1;"><div style="font-weight:700;font-size:16px;">${d.title}</div>
+        <div style="font-size:12px;color:var(--muted);">限时${d.time_limit_minutes}分钟 · 满分${d.total}分 ${score}</div></div>
+        <button onclick="location.href='/mock.html'"
+          style="padding:10px 18px;border-radius:12px;border:0;font-size:14px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;">${btnText}</button>
+      </div>`;
+  } catch {}
+}
+loadMock();
 
 // 2026-10-13 Elouise要求：点锁定的新课，显示具体哪个复习没做完，带跳转按钮
 // 不再用写死的alert，而是拉取真实的待办列表
