@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>小禾数学 · 学习地图</title>
+<style>
+  :root {
+    --blue: #2471a3;
+    --blue-dark: #1a5276;
+    --green: #34a853;
+    --ink: #202124;
+    --muted: #5f6368;
+    --bg: #f4f8fb;
+    --card: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(60,64,67,.08), 0 1px 2px rgba(60,64,67,.06);
+    --shadow-blue: 0 8px 20px rgba(36,113,163,.35);
+    --radius-lg: 20px;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--ink);
+    min-height: 100vh; padding-bottom: 40px;
+  }
+  .backlink { display: inline-block; margin: 14px 20px 0; color: #1a73e8; font-size: 15px; font-weight: 700; text-decoration: none; background: #fff; border: 2px solid #c7cdd8; border-radius: 14px; padding: 10px 16px; }
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(150deg, #2471a3 0%, #2e86c1 55%, #5dade2 100%);
+    color: #fff; padding: 30px 22px 28px; margin-top: 14px;
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 8px 24px rgba(36,113,163,.28);
+  }
+  .hero h1 { margin: 0; font-size: 27px; font-weight: 800; letter-spacing: 4px; }
+  .hero .sub { margin: 10px 0 0; font-size: 13.5px; opacity: .92; letter-spacing: 1px; }
+  .hero .stats { display: flex; gap: 12px; margin-top: 18px; }
+  .stat { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.22); border-radius: 16px; padding: 10px 16px; font-size: 12.5px; letter-spacing: .5px; }
+  .stat b { font-size: 20px; font-weight: 800; display: block; letter-spacing: .5px; }
+  .progress-bar { height: 8px; background: rgba(255,255,255,.28); border-radius: 99px; margin-top: 16px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #ffffff, #aed6f1); border-radius: 99px; transition: width .6s ease; }
+  .continue-wrap { padding: 20px 20px 0; }
+  .btn-continue {
+    display: block; width: 100%;
+    background: linear-gradient(135deg, #2471a3 0%, #2e86c1 130%);
+    color: #fff; border: 0; border-radius: var(--radius-lg);
+    padding: 18px; font-size: 18.5px; font-weight: 800; letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: var(--shadow-blue), inset 0 1px 0 rgba(255,255,255,.28);
+  }
+  .btn-continue:active { transform: scale(.97); }
+  .btn-continue small { display: block; font-size: 13px; font-weight: 400; opacity: .93; margin-top: 6px; letter-spacing: 1px; }
+  .units { padding: 6px 20px 0; }
+  .unit { margin-top: 28px; }
+  .unit-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 0 6px; }
+  .unit-head h2 { margin: 0; font-size: 18px; font-weight: 800; letter-spacing: .5px; }
+  .unit-head .count { font-size: 12px; font-weight: 700; color: var(--muted); background: rgba(36,113,163,.08); padding: 4px 13px; border-radius: 99px; }
+  .nodes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .node {
+    background: var(--card); border-radius: var(--radius-lg);
+    padding: 15px 6px; text-align: center;
+    cursor: pointer; border: 2px solid transparent;
+    box-shadow: var(--shadow-sm);
+    min-height: 94px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+  }
+  .node:active { transform: scale(.93); }
+  .node .icon { font-size: 26px; margin-bottom: 6px; }
+  .node .name { font-size: 12.5px; font-weight: 700; line-height: 1.35; }
+  .node .label { font-size: 10.5px; color: var(--muted); margin-top: 3px; letter-spacing: .5px; }
+  .node.done { border-color: #b7e0c3; background: linear-gradient(180deg, #f5fbf6 0%, #e9f7ed 100%); }
+  .node.done .name { color: #1e7e34; }
+  .node.current {
+    border-color: var(--blue);
+    background: linear-gradient(180deg, #eaf2f8 0%, #d6eaf8 100%);
+    box-shadow: 0 0 0 4px rgba(36,113,163,.16), 0 6px 16px rgba(36,113,163,.22);
+  }
+  .shell-note { margin: 22px 20px 0; font-size: 12.5px; color: var(--muted); text-align: center; line-height: 1.8; }
+</style>
+<script>window.XH_SUBJECT = 'shuxue';</script>
+<script src="/theme.js"></script>
+</head>
+<body>
+<a class="backlink" href="/settings.html">← 返回小禾英语</a>
+<div class="hero">
+  <h1>🔢 小禾数学</h1>
+  <p class="sub">跟着小禾学数学 · 一步一步来</p>
+  <div class="stats">
+    <div class="stat"><b id="doneCount">0</b>已完成</div>
+    <div class="stat"><b id="totalCount">0</b>共多少课</div>
+    <div class="stat"><b id="pct">0%</b>进度</div>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="pfill" style="width:0%"></div></div>
+</div>
+
+<div class="continue-wrap">
+  <button class="btn-continue" id="btnContinue">▶ 继续学习<small id="continueSub"></small></button>
+</div>
+
+<div class="units" id="units"></div>
+
+<p class="shell-note">数学学习地图 · 更多课程陆续上线</p>
+
+<script>
+const UNITS = [
+  { name: "因式分解", lessons: [
+    { id: "sx1", name: "提公因式法", label: "第1课" },
+    { id: "sx2", name: "完全平方公式", label: "第2课" },
+    { id: "sx3", name: "平方差公式", label: "第3课" },
+  ]},
+  { name: "分式", lessons: [
+    { id: "sx4", name: "分式的概念", label: "第4课" },
+    { id: "sx5", name: "分式的约分", label: "第5课" },
+    { id: "sx6", name: "分式的乘除法", label: "第6课" },
+  ]},
+];
+const ORDER = [];
+UNITS.forEach(u => u.lessons.forEach(l => ORDER.push(l)));
+
+let serverDone = new Set();
+async function loadServerProgress() {
+  try {
+    const r = await fetch('/api/done-lessons');
+    const d = await r.json();
+    if (d.ok) {
+      const doneList = d.completed || d.lessons || [];
+      serverDone = new Set(doneList);
+    }
+  } catch {}
+}
+function isDone(id) {
+  if (serverDone.has(id)) return true;
+  try { return localStorage.getItem('xh_done_' + id) === '1'; } catch { return false; }
+}
+
+const unitsEl = document.getElementById('units');
+
+function renderAll() {
+  unitsEl.innerHTML = '';
+  let doneN = 0;
+  let currentId = null;
+
+  UNITS.forEach(unit => {
+    const div = document.createElement('div');
+    div.className = 'unit';
+    const doneInUnit = unit.lessons.filter(l => isDone(l.id)).length;
+    div.innerHTML = `<div class="unit-head"><h2>${unit.name}</h2><span class="count">${doneInUnit}/${unit.lessons.length}</span></div>`;
+    const nodes = document.createElement('div');
+    nodes.className = 'nodes';
+    unit.lessons.forEach(l => {
+      const done = isDone(l.id);
+      if (done) doneN++;
+      if (!done && !currentId) currentId = l.id;
+      const cls = done ? 'done' : (l.id === currentId ? 'current' : 'available');
+      const icon = done ? '✅' : (l.id === currentId ? '📍' : '📖');
+      const n = document.createElement('div');
+      n.className = 'node ' + cls;
+      n.innerHTML = `<div class="icon">${icon}</div><div class="name">${l.name}</div><div class="label">${l.label}</div>`;
+      n.onclick = () => { location.href = '/lesson?lesson=' + l.id; };
+      nodes.appendChild(n);
+    });
+    div.appendChild(nodes);
+    unitsEl.appendChild(div);
+  });
+
+  document.getElementById('doneCount').textContent = doneN;
+  document.getElementById('totalCount').textContent = ORDER.length;
+  document.getElementById('pct').textContent = Math.round(doneN / ORDER.length * 100) + '%';
+  document.getElementById('pfill').style.width = (doneN / ORDER.length * 100) + '%';
+
+  const next = ORDER.find(l => !isDone(l.id)) || ORDER[0];
+  document.getElementById('continueSub').textContent = '下一课：' + next.name;
+  document.getElementById('btnContinue').onclick = () => { location.href = '/lesson?lesson=' + next.id; };
+}
+renderAll();
+loadServerProgress().then(renderAll);
+</script>
+</body>
+</html>
