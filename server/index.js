@@ -29,12 +29,16 @@ const seed = require('./seed');
 const { shanghaiDay } = require('./time');
 const map = require('./map'); // 2026-11-18：知识点地图（DeepTutor 借鉴）
 const bedtime = require('./bedtime'); // 2026-11-20：睡前故事（只听、不判分、单独计时）
+const writing = require('./writing'); // 2026-11-21：整篇写作训练（五步流程，只练、不判分，等老师批改）
+const speaking = require('./speaking'); // 2026-11-21：听说模拟（三块大件之一；只练，录音等 Muse 判）
+const mock = require('./mock'); // 2026-11-21：月度限时模考
 
 const app = express();
 require('./sync-upload')(app, db);
 app.use('/api/feedback', express.json({ limit: '12mb' })); // 2026-10-23：反馈多图需大 body，先于全局解析
 app.use('/api/exam/speech', express.json({ limit: '6mb' })); // 2026-10-23：口语录音 base64 上传（单段上限 4MB），同上
 app.use('/api/practice-tonight', express.json({ limit: '12mb' })); // 2026-11-18：今晚先练作答+语音（30秒内），同 /api/feedback
+app.use('/api/speaking/record', express.json({ limit: '6mb' })); // 2026-11-21：听说录音 base64 上传（单段上限 4MB 字符），同 /api/exam/speech；必须在全局 256kb 之前，否则先被 256kb 拦掉
 app.use(express.json({ limit: '256kb' }));
 app.set('trust proxy', false);
 
@@ -1855,6 +1859,24 @@ exams.initTable();
 exams.initProgressTable();
 exams.initSpeechTable();
 exams.initWritingTable();
+writing.initWritingTable(db); // 2026-11-21：整篇写作 writing_answers 表
+// 月度限时模考（2026-11-21）：每月一套限时模拟卷，题型覆盖听说读写；
+// 模考是测量，不计门禁、不消错题、不颁称号；成绩存库，主观题走已有管理端回填
+mock.setDb(db);
+mock.initTable();
+app.post('/api/mock/start', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json(mock.startMock());
+});
+app.post('/api/mock/submit', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const { attempt_id, answers, elapsed_sec } = req.body || {};
+  res.json(mock.submitMock(attempt_id, answers, elapsed_sec));
+});
+app.get('/api/mock/latest', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json(mock.latestMock());
+});
 app.get('/api/exams', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, exams: exams.getExamList() });
@@ -2146,6 +2168,47 @@ app.get('/api/bedtime/today', auth.requireAuth, (req, res) => {
   try { res.json(bedtime.todaySummary(db)); }
   catch (e) { res.status(500).json({ ok: false, error: 'bedtime_failed' }); }
 });
+// ---- 整篇写作训练（2026-11-21）：五步流程，只练、不判分、不计门禁、不消错题、不颁称号 ----
+// 学生侧：取话题 / 交初稿 / 交改写 / 查自己的作文（含批改结果）。管理侧：待批列表 / 判分（备份 token）。
+app.get('/api/writing/topics', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(writing.getTopics()); }
+  catch (e) { res.status(500).json({ ok: false, error: 'writing_topics_failed' }); }
+});
+app.post('/api/writing/submit', auth.requireAuth, (req, res) => {
+  try { res.json(writing.submitEssay(db, req.body || {})); }
+  catch (e) { res.status(400).json({ ok: false, error: e.message || 'bad_essay' }); }
+});
+app.post('/api/writing/rewrite', auth.requireAuth, (req, res) => {
+  try { res.json(writing.rewriteEssay(db, req.body || {})); }
+  catch (e) { res.status(400).json({ ok: false, error: e.message || 'bad_rewrite' }); }
+});
+app.get('/api/writing/my', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(writing.getMyEssays(db, req.query || {})); }
+  catch (e) { res.status(400).json({ ok: false, error: e.message || 'bad_session' }); }
+});
+app.get('/api/admin/writing-essays/pending', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'];
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try { res.json(writing.listPending(db)); }
+  catch (e) { res.status(500).json({ ok: false, error: 'writing_pending_failed' }); }
+});
+app.post('/api/admin/writing-essays/grade', (req, res) => {
+  const token = req.query.token || req.headers['x-backup-token'] || (req.body || {}).token;
+  if (!process.env.BACKUP_TOKEN || token !== process.env.BACKUP_TOKEN) {
+    return res.status(403).json({ ok: false, error: 'forbidden' });
+  }
+  try { res.json(writing.gradeEssay(db, req.body || {})); }
+  catch (e) {
+    if (e.message === 'score_out_of_range') return res.status(400).json({ ok: false, error: 'score_out_of_range', max: e.max });
+    res.status(400).json({ ok: false, error: e.message || 'bad_grade' });
+  }
+});
+// ---- 听说模拟（2026-11-21）：朗读/信息获取/转述三部分，录音 BLOB 存库等 Muse 判；只练，不碰 attempts/错题本/称号 ----
+speaking.register(app, db);
 // 上海日 +N 天（YYYY-MM-DD），只做日期加法，不依赖服务器时区
 function addDays(dayStr, n) {
   const parts = String(dayStr || '').split('-').map(Number);
@@ -2466,6 +2529,50 @@ app.post('/api/help', auth.requireAuth, (req, res) => {
   res.json(out);
 });
 
+// POST /api/reveal-answer：先看答案三道关 Gate 2（2026-11-21，Elouise 定，按真人老师的办法）。
+// 点“先看答案”之前，先写一句自己的想法（蒙一个、写半句都行），不写不给看；
+// 猜对了直接算答对，不用看答案；猜错了才给答案，答案是反馈不是施舍。
+// 看到答案的瞬间即按 L3 同等待遇进错题本（Gate 3：enqueueSeenAnswer 在这里调，
+// 而不是只在抄写提交时——光看不抄也留了记录，不会白看）。
+// 答案文本只在这里返回；/api/attempt 的 show_answer 只发 { eligible: true }，不再带答案。
+app.post('/api/reveal-answer', auth.requireAuth, (req, res) => {
+  const b = req.body || {};
+  const itemId = String(b.item_id || '');
+  const sid = String(b.session_id || '');
+  if (!itemId) return res.status(400).json({ ok: false, error: 'no_item_id' });
+  const lid = lessonOf(itemId);
+  const L = lid ? loadLesson(lid) : null;
+  const step = L ? L.stepsByItem[itemId] : null;
+  if (!step) return res.status(404).json({ ok: false, error: 'no_item' });
+  // Gate 1：本会话里先有过一次自己的作答（蒙也行）
+  const attN = db.prepare('SELECT COUNT(*) AS c FROM attempts WHERE item_id=? AND session_id=?')
+    .get(itemId, sid).c;
+  if (attN < 1) return res.status(400).json({ ok: false, error: 'try_first' });
+  // Gate 2：猜测必填（去空白后至少 1 字，上限 200 字）
+  const guess = String(b.guess == null ? '' : b.guess).trim().slice(0, 200);
+  if (!guess) return res.status(400).json({ ok: false, error: 'empty_guess' });
+  // 先判猜测对不对（只判，不记作答）：蒙对了直接算答对，不用看答案
+  const item = db.prepare('SELECT * FROM items WHERE item_id=?').get(itemId);
+  const g = gradeGuess(step, item, guess);
+  db.prepare('INSERT INTO answer_guesses(item_id, session_id, guess) VALUES(?,?,?)')
+    .run(itemId, sid, guess);
+  if (g.correct) {
+    // 猜对了：按一次正常作答记（独立/有帮助按老规则算），前端按答对分支继续
+    const r = attempts.submitAttempt({ item_id: itemId, answer: g.answerToRecord,
+      session_id: sid, saw_feedback: 0, elapsed_ms: Number(b.elapsed_ms) || 0,
+      copied: 0, predicted: null, pasted: 0 });
+    if (r.error) return res.status(400).json({ ok: false, error: r.error });
+    r.feedback = feedbackFor(step, r.verdict, g.answerToRecord, r.detail);
+    r.guessed_correct = true;
+    return res.json(r);
+  }
+  // 猜错了：给答案。看到答案就算“看答案过”，与 L3 同等待遇进错题本待复测
+  enqueueSeenAnswer(itemId, sid);
+  const sa = showAnswerOf(step);
+  res.json({ ok: true, answer: sa.answer, reason: sa.reason });
+});
+
+
 // 故事选择持久化（2026-10-02 总指挥补充条款）：剧情里的学生选择（如点播哪首歌），
 // 供后续课程用 {{choice:key|默认文本}} 回调。选择不记作答、不判分、不写 attempts。
 app.post('/api/choice', auth.requireAuth, (req, res) => {
@@ -2709,6 +2816,27 @@ function matchPredicted(step, given) {
   return null;
 }
 
+// 猜测判分（2026-11-21 先看答案三道关 Gate 2：只判，不记作答）：
+// mcq 接受字母或选项原文；short 走正常判分，correct/typo 算蒙对。
+// 返回 { correct, answerToRecord }；蒙对时 answerToRecord 是要记的那次作答（mcq 记字母）。
+function gradeGuess(step, item, guess) {
+  const g = String(guess || '').trim();
+  if (step.kind === 'mcq') {
+    const letter = g.toUpperCase();
+    if (letter === String(step.answer || '').toUpperCase()) return { correct: true, answerToRecord: letter };
+    const idx = 'ABCD'.indexOf(String(step.answer || '').toUpperCase());
+    const opt = (idx >= 0 && step.options) ? String(step.options[idx] || '').trim() : '';
+    if (opt && g.toLowerCase() === opt.toLowerCase()) return { correct: true, answerToRecord: String(step.answer).toUpperCase() };
+    return { correct: false, answerToRecord: null };
+  }
+  if (step.kind === 'short' && item) {
+    const r = attempts.contentVerdict(item, g);
+    if (r && (r.verdict === 'correct' || r.verdict === 'typo')) return { correct: true, answerToRecord: g };
+  }
+  return { correct: false, answerToRecord: null };
+}
+
+
 // 保底答案：mcq 取正确选项文本，short 取 answer_text；原因取 explain
 function showAnswerOf(step) {
   if (!step) return { answer: '', reason: '' };
@@ -2922,6 +3050,7 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
     elapsed_ms: body.elapsed_ms, copied: body.copied ? 1 : 0, predicted,
     pasted: body.pasted ? 1 : 0 });
   if (r.error === 'no_item') return res.status(404).json({ ok: false, error: 'no_item' });
+  if (r.error === 'try_first') return res.status(400).json({ ok: false, error: 'try_first' });
   // h 版（2026-10-03）：验证阶段第 2 次答错 → 403 retry_exhausted + show_answer。
   // 先判分再拦：答对（correct_retry）照常放行，只有"又答错了"才给保底出口。
   if (step && phase !== 'practice' && !body.copied &&
@@ -2930,7 +3059,9 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
       `SELECT COUNT(*) c FROM attempts WHERE item_id=? AND session_id=? AND verdict IN ('wrong','wrong_retry')`
     ).get(itemId, sid).c;
     if (wrongs >= 2) {
-      return res.status(403).json({ ok: false, error: 'retry_exhausted', show_answer: showAnswerOf(step) });
+      // 2026-11-21 先看答案三道关 Gate 2：只发“可以看答案”的资格，不发答案文本；
+      // 答案文本要调 /api/reveal-answer、写了猜测才给。
+      return res.status(403).json({ ok: false, error: 'retry_exhausted', show_answer: { eligible: true } });
     }
   }
   if (r.error === 'bad_kind') return res.status(400).json({ ok: false, error: 'bad_kind' });
@@ -2945,7 +3076,8 @@ app.post('/api/attempt', auth.requireAuth, (req, res) => {
     const wrongs = db.prepare(
       `SELECT COUNT(*) c FROM attempts WHERE item_id=? AND session_id=? AND verdict IN ('wrong','wrong_retry')`
     ).get(itemId, sid).c;
-    if (wrongs >= 3 && phase === 'practice') r.show_answer = showAnswerOf(step);
+    // 2026-11-21 先看答案三道关 Gate 2：同上，只发资格，不发答案文本。
+    if (wrongs >= 3 && phase === 'practice') r.show_answer = { eligible: true };
   }
   // 用时过短的轻提醒：有阅读材料的题，首次作答几秒钟就交——只提醒，不扣分不批评
   const ms = Number(body.elapsed_ms);
