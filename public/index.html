@@ -843,8 +843,10 @@ fetch('/api/titles').then(r => r.json()).then(t => {
 
 <!-- 今天就做 3 件事（2026-10-15 Elouise：孩子一打开就知道先做什么；2026-11-02 改：只留错题/新课/巩固练 3 件，闯关由上方 dailyCard 单独显示） -->
 <div id="dailyPlan" style="display:none;background:#fff;border:2px solid #e8eaed;border-radius:16px;padding:16px;margin:12px 0;">
-  <div style="font-size:16px;font-weight:800;margin-bottom:10px;">📋 今天就做 3 件事</div>
+  <div style="font-size:16px;font-weight:800;margin-bottom:4px;">📋 今天就做 3 件事 <span id="planDonePill"></span></div>
+  <div id="planTodayLine" style="font-size:13px;color:#5f6368;margin-bottom:10px;"></div>
   <div id="planList" style="display:flex;flex-direction:column;gap:8px;"></div>
+  <div id="weekHistory" style="margin-top:12px;"></div>
 </div>
 
 <div style="text-align:center;margin:6px 0 2px;">
@@ -1353,18 +1355,32 @@ async function renderDailyPlan(dailyStatus) {
   const planEl = document.getElementById('dailyPlan');
   const listEl = document.getElementById('planList');
   if (!planEl || !listEl) return;
+  const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  // 状态药丸：done=绿“已完成”，否则红“还剩 X”
+  const pill = (txt, done) => '<span style="display:inline-block;font-size:12px;font-weight:800;padding:2px 10px;border-radius:999px;background:' + (done ? '#e6f4ea' : '#fce8e6') + ';color:' + (done ? '#137333' : '#c5221f') + ';margin-left:6px;vertical-align:2px;">' + esc(txt) + '</span>';
+  const bar = pct => '<div style="height:8px;border-radius:4px;background:#e8eaed;margin-top:8px;overflow:hidden;"><div style="height:100%;width:' + Math.max(0, Math.min(100, pct)) + '%;background:#1a73e8;"></div></div>';
+  // 一件任务的卡片：序号徽章 + 标题 + 详情 + 进度条 + 按钮/对勾
+  function itemHtml(num, title, lines, pillTxt, done, pct, link, btn) {
+    const bg = done ? '#f1f8e9' : '#fff8e1';
+    const bd = done ? '#c8e6c9' : '#ffe0b2';
+    const detail = (lines || []).filter(Boolean).map(l => '<div style="font-size:14px;line-height:1.7;">' + esc(l) + '</div>').join('');
+    const right = link
+      ? '<button onclick="location.href=\'' + link + '\'" style="flex:none;margin-left:10px;padding:10px 18px;border:0;border-radius:8px;background:#1a73e8;color:#fff;font-size:14px;font-weight:800;cursor:pointer;">' + esc(btn) + '</button>'
+      : '<span style="flex:none;margin-left:10px;color:#4caf50;font-size:24px;">✓</span>';
+    return '<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 12px;border-radius:12px;background:' + bg + ';border:1px solid ' + bd + ';">'
+      + '<div style="min-width:0;"><div style="font-size:15px;font-weight:800;"><span style="display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;background:#1a73e8;color:#fff;font-size:13px;margin-right:6px;">' + num + '</span>' + esc(title) + pill(pillTxt, done) + '</div>' + detail
+      + (pct != null ? bar(pct) : '') + '</div>' + right + '</div>';
+  }
   try {
-    // 拉取今日错题进度
-    let dm = null;
+    // 拉取今日错题进度（只算“今天这批”，见服务端 getTodayMistakes）
+    let dm = null, tm = null;
     try {
       const r = await fetch('/api/daily-reviews', { credentials: 'same-origin' });
       const d = await r.json();
-      if (d && d.ok && d.dailyMistakes) dm = d.dailyMistakes;
+      if (d && d.ok) { dm = d.dailyMistakes || null; tm = d.todayMistakes || null; }
     } catch {}
-    const steps = [];
-    // 当天计划（2026-11-22）：现取一次 /api/done-lessons——initDailyCard 与 loadServerProgress
-    // 有竞态，直接取最稳；计划指定的课优先于 currentIdx，第三项 practice 指今晚先练页。
-    let planLesson = null, planThirdNow = null;
+    // 当天计划（2026-11-22）：现取一次 /api/done-lessons；计划指定的课优先于 currentIdx，第三项 practice 指今晚先练页。
+    let planLesson = null, planThirdNow = null, planStepTarget = null, planThirdDesc = null;
     try {
       const rp = await fetch('/api/done-lessons');
       const dp = await rp.json();
@@ -1373,6 +1389,15 @@ async function renderDailyPlan(dailyStatus) {
         planLesson = ORDER.find(l => l.id === dp.plan_current);
       }
       planThirdNow = (dp && dp.ok) ? (dp.plan_third || null) : null;
+      planStepTarget = (dp && dp.ok) ? (dp.plan_step_target || null) : null;
+      planThirdDesc = (dp && dp.ok) ? (dp.plan_third_desc || null) : null;
+    } catch {}
+    // 本周记录（2026-11-24）：只显示他能控制的——分钟、学了什么、清了几道错题；不含首答正确率
+    let hist = null;
+    try {
+      const rh = await fetch('/api/study-history?days=7');
+      const dh = await rh.json();
+      if (dh && dh.ok) hist = dh;
     } catch {}
     // 老师的话（2026-11-22）：核查发现落下时，Muse 直接在首页上提醒他本人
     let teacherNote = null;
@@ -1381,65 +1406,128 @@ async function renderDailyPlan(dailyStatus) {
       const dn = await rn.json();
       if (dn && dn.ok && dn.text) teacherNote = dn.text;
     } catch {}
+    const steps = [];
     // 第1件：今日错题（每天10道，解锁新课的要求；2026-11-02：闯关改由上方 dailyCard 单独显示，这里只留 3 件）
-    const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
-    const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
-    steps.push({
-      done: mOk,
-      text: mOk ? '今日错题：已完成 ✅' : `今日错题：${mDone}/${mTarget}道`,
-      link: mOk ? null : '/progress.html',
-      btn: mOk ? null : '去做错题 →'
-    });
+    if (tm) {
+      const total = tm.target || 0, cleared = tm.cleared || 0, rem = tm.remaining || [];
+      const done = !!tm.done;
+      const names = rem.slice(0, 3).map(r => r.label).join('、') + (rem.length > 3 ? ' 等 ' + rem.length + ' 道' : '');
+      steps.push({
+        done,
+        html: itemHtml(1, '今日错题',
+          total > 0
+            ? (done ? ['今日 ' + total + ' 道，全部清完'] : ['今日 ' + total + ' 道，已清 ' + cleared + ' 道', rem.length ? '还剩 ' + rem.length + ' 道：' + names : ''])
+            : ['今天没有待复测的错题'],
+          done ? '已完成' : (total > 0 ? '还剩 ' + rem.length + ' 道' : '已完成'),
+          done, total > 0 ? Math.round(cleared / total * 100) : 100,
+          done ? null : '/progress.html', '去做错题 →')
+      });
+    } else {
+      const mDone = dm ? dm.done : 0, mTarget = dm ? dm.target : 10;
+      const mOk = mTarget > 0 ? (mDone >= mTarget) : true;
+      steps.push({
+        done: mOk,
+        html: itemHtml(1, '今日错题',
+          [mOk ? '今日错题：已完成' : '今日错题：' + mDone + '/' + mTarget + '道'],
+          mOk ? '已完成' : '还剩 ' + Math.max(0, mTarget - mDone) + ' 道',
+          mOk, mTarget > 0 ? Math.round(mDone / mTarget * 100) : 100,
+          mOk ? null : '/progress.html', '去做错题 →')
+      });
+    }
     // 第2件：今天的新课（2026-10-16修：动态取当前可上课程，不再硬编码u4r1；
-    // 2026-11-22：当天计划指定的课优先）
+    // 2026-11-22：当天计划指定的课优先；2026-11-24：写清从哪步续、做到哪步、还剩多少）
     const curLesson = planLesson || ((typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null);
     if (curLesson) {
-      steps.push({
-        done: false,
-        text: `今天的新课：${curLesson.name}`,
-        link: `/lesson?lesson=${curLesson.id}`,
-        btn: '开始上课 →'
-      });
+      let lp = null;
+      try {
+        const rl = await fetch('/api/lesson-progress?lesson=' + encodeURIComponent(curLesson.id));
+        const dl = await rl.json();
+        if (dl && dl.ok) lp = dl;
+      } catch {}
+      if (lp) {
+        const targetHit = planStepTarget && lp.next_step > planStepTarget;
+        const done = lp.done || !!targetHit;
+        const detail = lp.today_steps > 0
+          ? ['从第 ' + lp.today_min_step + ' 步续，已做到第 ' + lp.answered_step + ' 步，共 ' + lp.total_steps + ' 步', '今天做了 ' + lp.today_steps + ' 步']
+          : ['从第 ' + lp.next_step + ' 步续，共 ' + lp.total_steps + ' 步'];
+        steps.push({
+          done,
+          html: itemHtml(2, '今天的新课：' + curLesson.name,
+            detail,
+            done ? '已完成' : (lp.total_steps ? '还剩 ' + Math.max(0, lp.total_steps - lp.answered_step) + ' 步' : '还没做'),
+            done, lp.total_steps ? Math.round(lp.answered_step / lp.total_steps * 100) : 0,
+            done ? null : ('/lesson?lesson=' + curLesson.id), lp.today_steps > 0 ? '继续上课 →' : '开始上课 →')
+        });
+      } else {
+        steps.push({
+          done: false,
+          html: itemHtml(2, '今天的新课：' + curLesson.name, [], '还没做', false, null, '/lesson?lesson=' + curLesson.id, '开始上课 →')
+        });
+      }
     } else {
       steps.push({
         done: true,
-        text: '今天的新课：本单元已学完 🎉',
-        link: null,
-        btn: null
+        html: itemHtml(2, '今天的新课', ['本单元已学完 🎉'], '已完成', true, 100, null, '')
       });
     }
     // 第3件：计划指定了今晚先练就指过去（重教+复习），否则按旧口径推巩固练
     if (planThirdNow === 'practice') {
+      let pDone = false;
+      try {
+        const rp2 = await fetch('/api/practice-done/today');
+        const d2 = await rp2.json();
+        if (d2 && d2.ok) pDone = !!d2.done;
+      } catch {}
       steps.push({
-        done: false,
-        text: '今晚先练：重教与复习',
-        link: '/practice-tonight.html',
-        btn: '去练 →'
+        done: pDone,
+        html: itemHtml(3, '今晚先练',
+          [planThirdDesc || '重教与复习', pDone ? '' : '做完打勾，明天不重复'],
+          pDone ? '已完成' : '还没做', pDone, pDone ? 100 : 0,
+          pDone ? null : '/practice-tonight.html', '去练 →')
       });
     } else {
       // 巩固练（可反复做；优先推荐还没练过的，练过的也可以再练一次）
       const con = await pickConsolidate();
       if (con) {
         steps.push({
-          done: con.done,
-          text: con.done ? `巩固练：${con.label} · 已练过，可再练一次` : `巩固练：${con.label} · 可反复做`,
-          link: `/lesson?lesson=${con.id}`,
-          btn: '去练 →'
+          done: !!con.done,
+          html: itemHtml(3, '巩固练：' + con.label,
+            [con.done ? '已练过，可再练一次' : '可反复做'],
+            con.done ? '已完成' : '可再练', !!con.done, con.done ? 100 : 0,
+            '/lesson?lesson=' + con.id, '去练 →')
         });
       }
     }
-    listEl.innerHTML = steps.map((s, i) =>
-      `<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:10px;background:${s.done ? '#f1f8e9' : '#fff8e1'};border:1px solid ${s.done ? '#c8e6c9' : '#ffe0b2'};">`
-      + `<span style="font-size:14px;font-weight:600;">${i + 1}. ${s.text}</span>`
-      + (s.link ? `<button onclick="location.href='${s.link}'" style="padding:8px 16px;border:0;border-radius:8px;background:#1a73e8;color:#fff;font-size:13px;font-weight:700;cursor:pointer;">${s.btn}</button>` : '<span style="color:#4caf50;font-size:20px;">✓</span>')
-      + `</div>`
-    ).join('');
+    listEl.innerHTML = steps.map(s => s.html).join('');
+    // 顶栏：已做完 X/3 + 今天学了多久
+    const doneCount = steps.filter(s => s.done).length;
+    const allDone = steps.length > 0 && doneCount === steps.length;
+    const pillEl = document.getElementById('planDonePill');
+    if (pillEl) pillEl.innerHTML = pill('已做完 ' + doneCount + '/' + steps.length + ' 件', allDone);
+    const todayRow = hist ? hist.days[hist.days.length - 1] : null;
+    const lineEl = document.getElementById('planTodayLine');
+    if (lineEl && todayRow) lineEl.textContent = '⏱ 今天学了 ' + todayRow.minutes + ' 分钟 · ' + todayRow.attempts + ' 次作答';
+    // 本周记录
+    const whEl = document.getElementById('weekHistory');
+    if (whEl && hist) {
+      const rows = hist.days.map(dy => {
+        const finIds = {};
+        (dy.finished || []).forEach(f => { finIds[f.id] = true; });
+        let what = '';
+        if (dy.lessons.length) what = dy.lessons.filter(l => !finIds[l.id]).map(l => l.name + (l.range ? ' ' + l.range : '')).join('、');
+        if (dy.mistakes_cleared) what += (what ? ' · ' : '') + '清了 ' + dy.mistakes_cleared + ' 道错题';
+        if (dy.finished.length) what += (what ? ' · ' : '') + '学完' + dy.finished.map(f => f.name).join('、');
+        if (!what) what = '没学';
+        return '<div style="font-size:14px;line-height:2;">' + dy.weekday + ' ' + dy.day.slice(5) + '：' + (dy.minutes ? dy.minutes + ' 分钟 · ' + what : '没学') + '</div>';
+      }).join('');
+      whEl.innerHTML = '<div style="border-top:1px dashed #dadce0;padding-top:12px;"><div style="font-size:15px;font-weight:800;margin-bottom:6px;">📅 这周我学了什么</div>' + rows + '<div style="font-size:14px;font-weight:800;margin-top:6px;">本周合计：' + hist.week_minutes + ' 分钟</div></div>';
+    }
     const oldBar = document.getElementById('teacherNoteBar');
     if (oldBar) oldBar.remove();
     if (teacherNote) {
-      const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      const esc2 = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
       planEl.insertAdjacentHTML('afterbegin',
-        `<div id="teacherNoteBar" style="margin-bottom:10px;padding:12px;border-radius:10px;background:#fff8e1;border:1px solid #ffe0b2;font-size:14px;line-height:1.6;">💬 <b>老师说：</b>${esc(teacherNote)}</div>`);
+        `<div id="teacherNoteBar" style="margin-bottom:10px;padding:12px;border-radius:10px;background:#fff8e1;border:1px solid #ffe0b2;font-size:14px;line-height:1.6;">💬 <b>老师说：</b>${esc2(teacherNote)}</div>`);
     }
     // 老师轻推（2026-11-23 实时监督）：与老师的话并存，插在其下方；各自独立 fetch，互不挡路
     let teacherNudge = null, nudgeCreatedAt = null;
