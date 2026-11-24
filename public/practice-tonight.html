@@ -38,6 +38,7 @@ a.home { color: #2e7d32; }
 <body>
 <div class="wrap">
 <h1>📝 今晚先练 · 11月24日</h1>
+<div id="practiceDoneTag" style="font-size:15px;font-weight:800;color:#137333;min-height:22px;"></div>
 <p class="usage">今天是 s12 新变式复测（第 2 次）+ s43、s49 水蛭题重教。先自己写、再对一对，最后自己把为什么讲一遍。这页不判分、不计分、不进错题本、不写进网站记录，讲懂了、自己能讲出来就行。s43、s49 到 11 月 27 日再用全新变式测一次。</p>
 
 <h2>第一部分：重教 s43——过去式（changed）</h2>
@@ -121,8 +122,24 @@ a.home { color: #2e7d32; }
 'use strict';
 function $(s) { return document.querySelector(s); }
 function $all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
-// ---- 本页全部本地判对：不发请求、不写任何记录、不判分、不计门禁 ----
+// ---- 本页全部本地判对：不判分、不计门禁；答案不发请求（2026-11-24 唯一的例外：全部题答对过一次，只发一个“练完了”标记，让首页打勾） ----
 function norm(v) { return (v || '').trim().toLowerCase(); }
+// 练完标记：全部 data-local-check / data-local-mcq 答对过一次即记完成（只记完成，不发答案）
+var needIds = [];
+$all('[data-local-check]').forEach(function (b) { needIds.push(b.getAttribute('data-local-check').split('|')[0]); });
+$all('[data-local-mcq]').forEach(function (b) { needIds.push(b.getAttribute('data-local-mcq').split('|')[0]); });
+var gotIds = {}, postedDone = false;
+function markDone(id) {
+  gotIds[id] = true;
+  if (postedDone) return;
+  for (var i = 0; i < needIds.length; i++) { if (!gotIds[needIds[i]]) return; }
+  postedDone = true;
+  try {
+    fetch('/api/practice-done', { method: 'POST', credentials: 'same-origin' }).then(function (r) {
+      if (r && r.ok) { var t = document.getElementById('practiceDoneTag'); if (t) t.textContent = '今天练完了 ✓'; }
+    }).catch(function () {});
+  } catch (e) {}
+}
 $all('[data-local-check]').forEach(function (btn) {
   btn.addEventListener('click', function () {
     var parts = btn.getAttribute('data-local-check').split('|');
@@ -131,7 +148,7 @@ $all('[data-local-check]').forEach(function (btn) {
     var fb = document.getElementById('fb-' + id);
     if (!el || !fb) return;
     if (!el.value.trim()) { fb.className = 'fb bad'; fb.textContent = '先填上再对一下'; return; }
-    if (norm(el.value) === norm(answer)) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+    if (norm(el.value) === norm(answer)) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; markDone(id); }
     else { fb.className = 'fb bad'; fb.textContent = '不对，再想想：' + hint; }
   });
 });
@@ -144,7 +161,7 @@ $all('[data-local-mcq]').forEach(function (box) {
       box.querySelectorAll('button').forEach(function (x) { x.classList.remove('picked', 'wrong-pick'); });
       b.classList.add('picked');
       if (!fb) return;
-      if (b.getAttribute('data-opt') === answer) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+      if (b.getAttribute('data-opt') === answer) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; markDone(id); }
       else { b.classList.remove('picked'); b.classList.add('wrong-pick'); fb.className = 'fb bad'; fb.textContent = '不对，再想想：' + hint; }
     });
   });
