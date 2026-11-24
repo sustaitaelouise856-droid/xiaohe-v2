@@ -354,6 +354,11 @@ CREATE TABLE IF NOT EXISTS tonight_practice (
 // 2026-11-20 修：这行原来在文件头（表还没建），新库启动会崩（no such table: tonight_practice）。
 // 生产库表已存在所以没爆；移到建表之后，新库和旧库都通。
 ensureColumn('tonight_practice', 'pasted', 'INTEGER DEFAULT 0'); // 2026-11-18：1=粘贴作答（只留痕、不改判分）
+// 今晚先练完成标记（2026-11-24 首页清晰化：练习页全部题答对过一次即记“今天练完了”，只记完成、不发答案、不判分；一天一行，幂等）
+db.exec(`CREATE TABLE IF NOT EXISTS practice_done (
+  day              TEXT PRIMARY KEY,
+  done_at          TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
 // 睡前故事收听（2026-11-20：睡前 21:30 左右一篇约 10 分钟，单独计时，绝不混进学习分钟）
 // session_id：客户端一次播放的随机 id；同一 session 多次上报只更新一行（UPSERT）。
 // seconds_listened：本次播放累计听到的秒数（audio.currentTime 下限）；completed：1=播完。
