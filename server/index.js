@@ -295,7 +295,9 @@ app.get('/api/done-lessons', auth.requireAuth, (req, res) => {
     const plan = readDailyPlan();
     res.json({ ok: true, completed, started, current, lessons: completed,
       plan_current: plan ? (plan.focus_lesson || null) : null,
-      plan_third: plan ? (plan.third_item || null) : null });
+      plan_third: plan ? (plan.third_item || null) : null,
+      plan_step_target: plan ? (plan.focus_step_target || null) : null,
+      plan_third_desc: plan ? (plan.third_desc || null) : null });
   } catch (e) {
     console.error('[done-lessons]', e.message);
     res.json({ ok: false, error: 'db_error', completed: [], started: [], current: null, lessons: [], plan_current: null, plan_third: null });
@@ -338,12 +340,16 @@ app.post('/api/admin/plan', (req, res) => {
   const day = String(b.day || shanghaiToday());
   const focus = b.focus_lesson == null ? null : String(b.focus_lesson);
   const third = b.third_item == null ? null : String(b.third_item);
+  const stepTarget = b.focus_step_target == null ? null : Number(b.focus_step_target);
+  const thirdDesc = b.third_desc == null ? null : String(b.third_desc);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return res.status(400).json({ ok: false, error: 'bad_day' });
   if (focus && !/^[a-z]+\d+r\d+$/.test(focus)) return res.status(400).json({ ok: false, error: 'bad_focus_lesson' });
   if (third && !['practice', 'consolidate'].includes(third)) return res.status(400).json({ ok: false, error: 'bad_third_item' });
+  if (stepTarget != null && (!Number.isInteger(stepTarget) || stepTarget < 1 || stepTarget > 200)) return res.status(400).json({ ok: false, error: 'bad_step_target' });
+  if (thirdDesc != null && thirdDesc.length > 100) return res.status(400).json({ ok: false, error: 'bad_third_desc' });
   db.prepare("INSERT INTO app_state(key, value) VALUES('daily_plan', ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
-    .run(JSON.stringify({ day, focus_lesson: focus, third_item: third }));
-  res.json({ ok: true, plan: { day, focus_lesson: focus, third_item: third } });
+    .run(JSON.stringify({ day, focus_lesson: focus, third_item: third, focus_step_target: stepTarget, third_desc: thirdDesc }));
+  res.json({ ok: true, plan: { day, focus_lesson: focus, third_item: third, focus_step_target: stepTarget, third_desc: thirdDesc } });
 });
 
 // ---- 老师的话（2026-11-22：监督闭环的最后一环——核查发现落下时，直接在孩子平板首页上提醒他本人）----
@@ -1962,10 +1968,162 @@ app.get('/api/exam/:id', auth.requireAuth, (req, res) => {
   }
   res.json(r);
 });
+// 今日错题本口径（2026-11-24 首页清晰化：只算“今天这批”）
+// target=早上冻结的目标；cleared=今早之前建队、今天销号的英语错题；
+// remaining=今天到期的待复测英语错题（next_due<=今天，或 next_due 为空且今天之前建队）。
+// 今晚新添的错题（今天建队）不算今天的，是明天的。
+function mistakeLabel(itemId) {
+  const m = /^(.+)-v\d+-s(\d+)$/i.exec(String(itemId || ''));
+  if (!m) return String(itemId || '');
+  return m[1] + ' 第 ' + m[2] + ' 题';
+}
+function getTodayMistakes() {
+  try {
+    const today = shanghaiToday();
+    const dm = getDailyMistakeProgress();
+    const clearedRows = db.prepare(`
+      SELECT DISTINCT item_id FROM retest_queue
+      WHERE status='resolved' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'
+      AND date(resolved_at, '+8 hours') = ?
+      AND date(created_at, '+8 hours') < ?`).all(today, today);
+    const remRows = db.prepare(`
+      SELECT item_id FROM retest_queue
+      WHERE status='pending' AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'
+      AND ((next_due IS NOT NULL AND next_due <= ?) OR (next_due IS NULL AND date(created_at, '+8 hours') < ?))
+      ORDER BY COALESCE(next_due, '9999-99-99'), id`).all(today, today);
+    const cleared = clearedRows.length;
+    const remaining = remRows.map(r => ({ item_id: r.item_id, label: mistakeLabel(r.item_id) }));
+    const target = dm.target;
+    return { target, cleared, remaining, done: remaining.length === 0 && cleared >= target };
+  } catch { return { target: 0, cleared: 0, remaining: [], done: false }; }
+}
 // 每日待复习项（首页显示）
 app.get('/api/daily-reviews', auth.requireAuth, (req, res) => {
   res.set('Cache-Control', 'no-store');
-  res.json({ ok: true, pending: getPendingReviews(), dailyMistakes: getDailyMistakeProgress() });
+  res.json({ ok: true, pending: getPendingReviews(), dailyMistakes: getDailyMistakeProgress(), todayMistakes: getTodayMistakes() });
+});
+// 一课的学习进度（2026-11-24 首页清晰化：新课行要写清从哪步续、做到哪步、还剩多少）
+// total/answered 均按“步号”算（最大步号），不是可判题数——课里有讲课步，没有题号的不计入。
+app.get('/api/lesson-progress', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const lid = String(req.query.lesson || '');
+    const L = loadLesson(lid);
+    if (!L) return res.status(404).json({ ok: false, error: 'no_lesson' });
+    const stepNums = (L.lesson.steps || []).map(s => s.step || 0);
+    const total = stepNums.length ? Math.max.apply(null, stepNums) : 0;
+    const today = shanghaiToday();
+    const rows = db.prepare('SELECT item_id, created_at FROM attempts WHERE item_id LIKE ? ORDER BY created_at').all(lid + '-v%-s%');
+    let answered = 0, todaySteps = new Set(), todayMin = null;
+    for (const r of rows) {
+      const m = /-s(\d+)$/.exec(String(r.item_id || ''));
+      if (!m) continue;
+      const n = parseInt(m[1], 10);
+      if (n > answered) answered = n;
+      // created_at 是 UTC；上海日期用 +8 小时换算（与其它口径一致）
+      const shDay = new Date(new Date(String(r.created_at || '').replace(' ', 'T') + 'Z').getTime() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+      if (shDay === today) { todaySteps.add(n); if (todayMin == null || n < todayMin) todayMin = n; }
+    }
+    const nextStep = answered >= total ? total + 1 : (answered + 1);
+    // done 以 lesson_state 为准（课页自己调 /api/complete 上报；末步是纯讲课小结时，
+    // 步号永远到不了 total，但课已学完——2026-11-24 u1r3 实证：第 50 步是小结，p2_done 已置 1）
+    let done = answered >= total;
+    try {
+      const st = db.prepare('SELECT p1_done, p2_done FROM lesson_state WHERE lesson_id=?').get(lid);
+      if (st && st.p1_done === 1 && st.p2_done === 1) done = true;
+    } catch {}
+    res.json({ ok: true, lesson_id: lid, name: L.lesson.title || lid, total_steps: total,
+      answered_step: answered, next_step: nextStep,
+      today_steps: todaySteps.size, today_min_step: todayMin, done });
+  } catch { res.json({ ok: false, error: 'db_error' }); }
+});
+// 今晚先练完成标记（2026-11-24：练习页全部题答对过一次即记“今天练完了”，只记完成、不发答案、不判分；首页据此打 ✅，22:00 核查也认）
+app.post('/api/practice-done', (req, res) => {
+  try {
+    db.prepare('INSERT OR IGNORE INTO practice_done(day, done_at) VALUES(?, ?)').run(shanghaiToday(), new Date().toISOString());
+    res.json({ ok: true, done: true });
+  } catch { res.status(500).json({ ok: false, error: 'save_failed' }); }
+});
+app.get('/api/practice-done/today', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const r = db.prepare('SELECT day FROM practice_done WHERE day=?').get(shanghaiToday());
+    res.json({ ok: true, done: !!r });
+  } catch { res.json({ ok: true, done: false }); }
+});
+// 本周学习记录（2026-11-24：首页给孩子看每天学了多少、学了什么；不含首答正确率）
+// 分钟口径与夜画像一致：相邻作答间隔 >30 分钟算一段，分钟=各段跨度向下取整之和（不含故事）。
+// 只记英语（与画像口径一致；语文/数学的记录在各自的地图里）。
+// “学了什么”只列正课作答（错题本复测会话不列，由 mistakes_cleared 概括）。
+app.get('/api/study-history', auth.requireAuth, (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    let days = parseInt(String(req.query.days || '7'), 10);
+    if (!Number.isFinite(days) || days < 1) days = 7;
+    if (days > 14) days = 14;
+    const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    // 学完那天：lesson_state 已完，且 updated_at（最后一次调 /api/complete 的时间）落在那天
+    // （不用“最后一次作答”——错题复测会把旧课的最后作答拖到后面几天，11-20 曾因此误标 9 课；
+    // 2026-11-24 u1r3 实证：课页 21:37:55 自己调 /api/complete 报了 part 2 完成，第 50 步只是讲课小结）
+    const finMap = {};
+    try {
+      db.prepare(`
+        SELECT lesson_id, date(updated_at, '+8 hours') AS d FROM lesson_state
+        WHERE p1_done=1 AND p2_done=1
+        AND lesson_id NOT LIKE 'yw-%' AND lesson_id NOT LIKE 'sx%'`).all().forEach(r => { if (r && r.lesson_id && r.d) finMap[r.lesson_id] = r.d; });
+    } catch {}
+    const out = [];
+    let weekMinutes = 0, weekAttempts = 0;
+    for (let i = days - 1; i >= 0; i--) {
+      const d = new Date(Date.now() + 8 * 3600 * 1000 - i * 86400 * 1000).toISOString().slice(0, 10);
+      const rows = db.prepare(`
+        SELECT a.item_id, a.created_at, a.session_id, i.lesson_id FROM attempts a
+        LEFT JOIN items i ON i.item_id = a.item_id
+        WHERE date(a.created_at, '+8 hours') = ?
+        AND a.item_id NOT LIKE 'yw-%' AND a.item_id NOT LIKE 'sx%'
+        ORDER BY a.created_at`).all(d);
+      let minutes = 0;
+      if (rows.length) {
+        const times = rows.map(r => new Date(String(r.created_at || '').replace(' ', 'T') + 'Z').getTime());
+        let segStart = times[0], prev = times[0];
+        for (let k = 1; k < times.length; k++) {
+          if (times[k] - prev > 30 * 60 * 1000) { minutes += Math.floor((prev - segStart) / 60000); segStart = times[k]; }
+          prev = times[k];
+        }
+        minutes += Math.floor((prev - segStart) / 60000);
+      }
+      const byLesson = {};
+      for (const r of rows) {
+        const sid = String(r.session_id || '');
+        // 复测/快练会话不列入“学了什么”——快练是复习旧题（只练不记），错题复测由 mistakes_cleared 概括
+        const isRetest = sid.indexOf('daily-retest-') === 0 || sid.indexOf('retry-') === 0 || sid.indexOf('batch-retry-') === 0 || sid.indexOf('quick-drill') >= 0;
+        const lid = r.lesson_id || lessonOf(r.item_id);
+        if (!lid) continue;
+        const m = /-s(\d+)$/.exec(String(r.item_id || ''));
+        const n = m ? parseInt(m[1], 10) : null;
+        if (!byLesson[lid]) byLesson[lid] = { steps: new Set(), min: null, max: null, hasLesson: false };
+        if (!isRetest) byLesson[lid].hasLesson = true;
+        if (n != null) { byLesson[lid].steps.add(n); if (byLesson[lid].min == null || n < byLesson[lid].min) byLesson[lid].min = n; if (byLesson[lid].max == null || n > byLesson[lid].max) byLesson[lid].max = n; }
+      }
+      const lessons = [];
+      for (const lid of Object.keys(byLesson)) {
+        const b = byLesson[lid];
+        if (!b.hasLesson) continue; // 当天只碰过错题复测的旧课不列，由 mistakes_cleared 概括
+        const L = loadLesson(lid);
+        const name = (L && L.lesson.title) ? L.lesson.title : lid;
+        lessons.push({ id: lid, name, range: (b.min != null && b.max != null) ? (b.min === b.max ? '第 ' + b.min + ' 步' : '第 ' + b.min + '–' + b.max + ' 步') : '', steps_done: b.steps.size });
+      }
+      const finished = Object.keys(finMap).filter(lid => finMap[lid] === d).map(lid => {
+        const L = loadLesson(lid);
+        return { id: lid, name: (L && L.lesson.title) ? L.lesson.title : lid };
+      });
+      const mc = db.prepare("SELECT COUNT(DISTINCT item_id) c FROM retest_queue WHERE status='resolved' AND date(resolved_at, '+8 hours') = ? AND item_id NOT LIKE 'yw-%' AND item_id NOT LIKE 'sx%'").get(d);
+      const wd = weekdays[new Date(d + 'T00:00:00+08:00').getDay()];
+      out.push({ day: d, weekday: wd, minutes, attempts: rows.length, lessons, mistakes_cleared: mc ? mc.c : 0, finished });
+      weekMinutes += minutes; weekAttempts += rows.length;
+    }
+    res.json({ ok: true, days: out, week_minutes: weekMinutes, week_attempts: weekAttempts });
+  } catch { res.json({ ok: false, error: 'db_error' }); }
 });
 app.post('/api/exam/submit', auth.requireAuth, (req, res) => {
   // 2026-10-12改：服务端判分，不再信任前端传来的score
