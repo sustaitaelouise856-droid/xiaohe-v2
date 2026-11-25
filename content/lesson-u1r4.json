@@ -107,7 +107,8 @@
     "C": "loudly 是“大声地”，和翻书没关系。",
     "D": "never 是“从不”，她每天都翻新书。"
    },
-   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
+   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day.",
+   "audio_id": "u1r4-warm-01"
   },
   {
    "step": 12,
@@ -130,7 +131,8 @@
     "B": "river 是河，和查词没关系。",
     "C": "sea 是海，和查词没关系。"
    },
-   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
+   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day.",
+   "audio_id": "u1r4-warm-02"
   },
   {
    "step": 13,
@@ -153,7 +155,8 @@
     "C": "翻看书才是 look through；人不能“翻看”。",
     "D": "查词才是 look up；照顾弟弟是 look after。"
    },
-   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
+   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day.",
+   "audio_id": "u1r4-warm-03"
   },
   {
    "step": 14,
@@ -262,7 +265,8 @@
      "when": "只写了“找”，没写“查”",
      "say": "还差一半：look up 是在词典里查，加上“查”才完整。"
     }
-   ]
+   ],
+   "audio_id": "u1r4-apprentice-01"
   },
   {
    "step": 17,
@@ -1449,5 +1453,5 @@
  ],
  "title": "词汇精讲上：look 家族",
  "unit": "Unit 1 Look it up!",
- "version": 2
+ "version": 3
 }
