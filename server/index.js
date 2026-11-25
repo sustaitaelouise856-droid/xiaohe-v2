@@ -2051,6 +2051,40 @@ app.get('/api/practice-done/today', (req, res) => {
     res.json({ ok: true, done: !!r });
   } catch { res.json({ ok: true, done: false }); }
 });
+// 今晚先练逐题进度（2026-11-25：做完不显示/重开空白的修复；每道答对立刻记一题，打开先读当天进度恢复；
+// 只记完成、不判分、不计门禁、不进错题本、不写 attempts 表；按上海日期分天，第二天是新的 5 道）
+const PRACTICE_QIDS = ['s43-q1', 's43-q2', 's49-q1', 's36-q1', 's49-q2'];
+function maybeMarkPracticeDone(day) {
+  try {
+    const n = db.prepare('SELECT COUNT(*) AS n FROM practice_progress WHERE day=?').get(day).n;
+    if (n >= PRACTICE_QIDS.length) {
+      const have = new Set(db.prepare('SELECT qid FROM practice_progress WHERE day=?').all(day).map(r => r.qid));
+      if (PRACTICE_QIDS.every(q => have.has(q))) {
+        db.prepare('INSERT OR IGNORE INTO practice_done(day, done_at) VALUES(?, ?)').run(day, new Date().toISOString());
+        return true;
+      }
+    }
+  } catch {}
+  return false;
+}
+app.post('/api/practice-progress', (req, res) => {
+  try {
+    const qid = String((req.body && req.body.qid) || '').trim();
+    if (!qid || qid.length > 64 || !/^[A-Za-z0-9-]+$/.test(qid)) return res.status(400).json({ ok: false, error: 'bad_qid' });
+    const day = shanghaiToday();
+    db.prepare(`INSERT INTO practice_progress(day, qid, correct, updated_at) VALUES(?, ?, 1, datetime('now'))
+      ON CONFLICT(day, qid) DO UPDATE SET correct=1, updated_at=datetime('now')`).run(day, qid);
+    const done = maybeMarkPracticeDone(day);
+    res.json({ ok: true, done });
+  } catch { res.status(500).json({ ok: false, error: 'save_failed' }); }
+});
+app.get('/api/practice-progress/today', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const rows = db.prepare('SELECT qid FROM practice_progress WHERE day=? AND correct=1 ORDER BY qid').all(shanghaiToday());
+    res.json({ ok: true, qids: rows.map(r => r.qid) });
+  } catch { res.json({ ok: true, qids: [] }); }
+});
 // 本周学习记录（2026-11-24：首页给孩子看每天学了多少、学了什么；不含首答正确率）
 // 分钟口径与夜画像一致：相邻作答间隔 >30 分钟算一段，分钟=各段跨度向下取整之和（不含故事）。
 // 只记英语（与画像口径一致；语文/数学的记录在各自的地图里）。
