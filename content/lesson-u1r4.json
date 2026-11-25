@@ -1,9 +1,9 @@
 {
  "lesson_id": "u1r4",
- "practice_end": 27,
+ "practice_end": 31,
  "home_subtitle": "Section 1 词汇精讲上 · look 家族",
- "part1_desc": "第 1–27 步：翻译帮讲 look 家族五个短语，教材帮讲 die out、intelligent、talented 和 field；读《苏文查资料》，练习帮做题过关。",
- "part2_desc": "第 28–50 步：读《李博士的实验室》，独立验证 look 家族和本课词汇；写作帮学写“查资料”小段。",
+ "part1_desc": "第 1–31 步：翻译帮讲 look 家族五个短语，教材帮讲 die out、intelligent、talented 和 field；读《苏文查资料》，练习帮做题过关。",
+ "part2_desc": "第 32–54 步：读《李博士的实验室》，独立验证 look 家族和本课词汇；写作帮学写“查资料”小段。",
  "note": "本课阅读材料为教研自编，非课本原文。考查能力：look through/look up/look for/look after/look at 的区分、die out、intelligent、talented、in the field of 与 field 作场地。Unit 1 Look it up! 主题，核心词 intelligent/talented/field，短语 die out/look through/look up/look for/look after/look at。",
  "steps": [
   {
@@ -90,6 +90,75 @@
    "step": 11,
    "phase": "practice",
    "kind": "mcq",
+   "title": "热身：快速翻看新书",
+   "scene": "苏文每天早上翻看图书馆的新书。",
+   "stem": "Su Wen looks through the new books. She reads them ___.",
+   "options": [
+    "slowly",
+    "quickly",
+    "loudly",
+    "never"
+   ],
+   "answer": "B",
+   "help": "look through 是“快速翻看”，翻一遍，不是慢慢读。",
+   "explain": "She reads them quickly. look through 是快速翻看。",
+   "wrong_feedback": {
+    "A": "slowly 是“慢慢地”，look through 是快速翻看。",
+    "C": "loudly 是“大声地”，和翻书没关系。",
+    "D": "never 是“从不”，她每天都翻新书。"
+   },
+   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
+  },
+  {
+   "step": 12,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "热身：在词典里查词",
+   "scene": "有个生词不认识，要去词典里查。",
+   "stem": "Where do we look up new words?",
+   "options": [
+    "in a football field",
+    "in a river",
+    "in the sea",
+    "in a dictionary"
+   ],
+   "answer": "D",
+   "help": "查词用什么工具？第 3 步的例句就是答案。",
+   "explain": "We look up new words in a dictionary. 查词在词典里查。",
+   "wrong_feedback": {
+    "A": "football field 是足球场，不是查词的地方。",
+    "B": "river 是河，和查词没关系。",
+    "C": "sea 是海，和查词没关系。"
+   },
+   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
+  },
+  {
+   "step": 13,
+   "phase": "practice",
+   "kind": "mcq",
+   "title": "热身：照顾小弟弟",
+   "scene": "苏文在家照顾她的小弟弟。",
+   "stem": "Su Wen looks after her little brother. What does she do?",
+   "options": [
+    "She takes care of him.",
+    "She looks for him.",
+    "She reads him quickly.",
+    "She looks him up in a dictionary."
+   ],
+   "answer": "A",
+   "help": "look after 是“照顾”，第 3 步讲过。",
+   "explain": "She takes care of him. look after 是“照顾；照看”。",
+   "wrong_feedback": {
+    "B": "look for 是“寻找”，弟弟没丢，不用找。",
+    "C": "翻看书才是 look through；人不能“翻看”。",
+    "D": "查词才是 look up；照顾弟弟是 look after。"
+   },
+   "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
+  },
+  {
+   "step": 14,
+   "phase": "practice",
+   "kind": "mcq",
    "title": "练习帮：look through 是什么意思",
    "scene": "苏文每天翻看新书，她在做什么？",
    "stem": "What does “look through” mean?",
@@ -111,7 +180,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 12,
+   "step": 15,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：每天翻看新书",
@@ -150,7 +219,53 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 13,
+   "step": 16,
+   "phase": "practice",
+   "kind": "short",
+   "title": "教小徒弟：look up 和 look for 有什么不一样",
+   "scene": "小徒弟问：look up 和 look for，看着差不多，到底有什么不一样？",
+   "stem": "用你自己的话讲一句：look up 和 look for 有什么不一样？",
+   "task": "用中文写一句，讲清两者的区别。",
+   "answer_text": "look up 是在词典里查词，look for 是找丢了的东西。",
+   "expects": [
+    {
+     "id": "w1",
+     "type": "word",
+     "answers": [
+      "查"
+     ],
+     "olds": [],
+     "cn": [
+      "查阅"
+     ]
+    },
+    {
+     "id": "w2",
+     "type": "word",
+     "answers": [
+      "找"
+     ],
+     "olds": [],
+     "cn": [
+      "寻找"
+     ]
+    }
+   ],
+   "help": "一个是在词典里干什么？一个是东西丢了干什么？两个字就够：查和找。",
+   "explain": "look up 是在词典里查词，look for 是找丢了的东西。一个查，一个找。",
+   "common_errors": [
+    {
+     "when": "只写了“查”，没写“找”",
+     "say": "还差一半：look for 是找丢了的东西，加上“找”才完整。"
+    },
+    {
+     "when": "只写了“找”，没写“查”",
+     "say": "还差一半：look up 是在词典里查，加上“查”才完整。"
+    }
+   ]
+  },
+  {
+   "step": 17,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：查词用哪个短语",
@@ -174,7 +289,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 14,
+   "step": 18,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：在词典里查生词",
@@ -214,7 +329,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 15,
+   "step": 19,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：look after 是什么意思",
@@ -238,7 +353,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 16,
+   "step": 20,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：照顾小弟弟",
@@ -278,7 +393,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 17,
+   "step": 21,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：看图片用哪个短语",
@@ -302,7 +417,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 18,
+   "step": 22,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：恐龙灭绝",
@@ -342,7 +457,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 19,
+   "step": 23,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：intelligent 是什么意思",
@@ -366,7 +481,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 20,
+   "step": 24,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：有才华的歌手",
@@ -406,7 +521,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 21,
+   "step": 25,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：在哪方面有天赋",
@@ -430,7 +545,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 22,
+   "step": 26,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：在许多不同领域有天赋",
@@ -469,7 +584,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 23,
+   "step": 27,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：足球场",
@@ -493,7 +608,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 24,
+   "step": 28,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：阅读让人更聪明",
@@ -533,7 +648,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 25,
+   "step": 29,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：die out 是什么意思",
@@ -557,7 +672,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 26,
+   "step": 30,
    "phase": "practice",
    "kind": "short",
    "title": "练习帮：到处找笔记本",
@@ -597,7 +712,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 27,
+   "step": 31,
    "phase": "practice",
    "kind": "mcq",
    "title": "练习帮：哪个句子用对了 look through",
@@ -621,7 +736,7 @@
    "reading": "Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day."
   },
   {
-   "step": 28,
+   "step": 32,
    "phase": "validate",
    "kind": "teach",
    "title": "翻译帮：阅读材料——李博士的实验室",
@@ -629,7 +744,7 @@
    "audio_id": "u1r4-read-02"
   },
   {
-   "step": 29,
+   "step": 33,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：李博士在哪个领域工作",
@@ -653,7 +768,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 30,
+   "step": 34,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：李博士查新词",
@@ -693,7 +808,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 31,
+   "step": 35,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：talented 是什么意思",
@@ -717,7 +832,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 32,
+   "step": 36,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：如果什么都不做",
@@ -757,7 +872,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 33,
+   "step": 37,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：李博士每天早上做什么",
@@ -781,7 +896,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 34,
+   "step": 38,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：科学家们又聪明又有才华",
@@ -821,7 +936,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 35,
+   "step": 39,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：照顾老人和孩子",
@@ -845,7 +960,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 36,
+   "step": 40,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：在音乐方面有天赋",
@@ -885,7 +1000,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 37,
+   "step": 41,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：哪个句子用对了 in the field of",
@@ -909,7 +1024,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 38,
+   "step": 42,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：寻找帮助病人的新办法",
@@ -948,7 +1063,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 39,
+   "step": 43,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：die out 后面能接宾语吗",
@@ -972,7 +1087,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 40,
+   "step": 44,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：河边的田野",
@@ -1012,7 +1127,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 41,
+   "step": 45,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：做蛋糕很有天赋",
@@ -1051,7 +1166,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 42,
+   "step": 46,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：只读需要的部分",
@@ -1090,7 +1205,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 43,
+   "step": 47,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：只想查阅一些事实",
@@ -1129,7 +1244,7 @@
    "reading": "Dr Li is a scientist. She works in the field of medicine. Every morning, she looks through new reports about people's health. When she finds a new word, she looks it up on her computer. Her team looks for new ways to help sick people. They are all intelligent and talented. One of them is talented in maths. Another is talented in music. Dr Li says, 'We must look after old people and young children. They need us.' She also studies animals that died out long ago. She wants to know why they died out. 'If we understand the past, we can look after our world better,' she says. Her work is hard, but she loves it."
   },
   {
-   "step": 44,
+   "step": 48,
    "phase": "validate",
    "kind": "teach",
    "title": "写作帮：怎么写“查资料”小段",
@@ -1137,7 +1252,7 @@
    "audio_id": "u1r4-t10"
   },
   {
-   "step": 45,
+   "step": 49,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：查资料的正确顺序",
@@ -1160,7 +1275,7 @@
    "audio_id": "u1r4-q33"
   },
   {
-   "step": 46,
+   "step": 50,
    "phase": "validate",
    "kind": "short",
    "title": "写作帮：用 look up 写一句话",
@@ -1211,7 +1326,7 @@
    "audio_id": "u1r4-q34"
   },
   {
-   "step": 47,
+   "step": 51,
    "phase": "validate",
    "kind": "short",
    "title": "写作帮：用 look after 写一句话",
@@ -1262,7 +1377,7 @@
    "audio_id": "u1r4-q35"
   },
   {
-   "step": 48,
+   "step": 52,
    "phase": "validate",
    "kind": "mcq",
    "title": "练习帮：本课学了什么",
@@ -1285,7 +1400,7 @@
    "audio_id": "u1r4-q36"
   },
   {
-   "step": 49,
+   "step": 53,
    "phase": "validate",
    "kind": "short",
    "title": "练习帮：恐龙灭绝",
@@ -1324,7 +1439,7 @@
    "audio_id": "u1r4-q37"
   },
   {
-   "step": 50,
+   "step": 54,
    "phase": "validate",
    "kind": "teach",
    "title": "本课小结",
@@ -1334,5 +1449,5 @@
  ],
  "title": "词汇精讲上：look 家族",
  "unit": "Unit 1 Look it up!",
- "version": 1
+ "version": 2
 }
