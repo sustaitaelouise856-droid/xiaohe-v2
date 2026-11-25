@@ -1100,11 +1100,14 @@ function computeCurrent() {
     return ORDER.findIndex(l => l.id === serverCurrent);
   }
   // 2) 服务器 started 里最近学过、还没完成的那门（只看地图里的课；复习课不劫持主线；锁定的跳过）
+  // 2026-11-25修：有当天计划时，只看与计划课同一单元的课，避免计划课学完后指针跳到别的单元（u8r4 误指）
+  const planUnit = planCurrent ? (planCurrent.match(/^u(\d+)/) || [])[1] : null;
   const smap = new Map();
   for (const s of serverStarted) {
     const id = typeof s === 'string' ? s : s.id;
     const t = typeof s === 'string' ? '' : (s.updated_at || '');
-    if (id && ORDER.some(l => l.id === id) && !isDone(id) && !isReviewId(id) && !isLocked(id)) smap.set(id, t);
+    if (id && ORDER.some(l => l.id === id) && !isDone(id) && !isReviewId(id) && !isLocked(id)
+        && (!planUnit || (id.match(/^u(\d+)/) || [])[1] === planUnit)) smap.set(id, t);
   }
   let best = -1, bestT = '';
   ORDER.forEach((l, i) => {
@@ -1380,13 +1383,18 @@ async function renderDailyPlan(dailyStatus) {
       if (d && d.ok) { dm = d.dailyMistakes || null; tm = d.todayMistakes || null; }
     } catch {}
     // 当天计划（2026-11-22）：现取一次 /api/done-lessons；计划指定的课优先于 currentIdx，第三项 practice 指今晚先练页。
-    let planLesson = null, planThirdNow = null, planStepTarget = null, planThirdDesc = null;
+    let planLesson = null, planDoneLesson = null, planThirdNow = null, planStepTarget = null, planThirdDesc = null;
     try {
       const rp = await fetch('/api/done-lessons');
       const dp = await rp.json();
       if (dp && dp.ok && dp.plan_current && ORDER.some(l => l.id === dp.plan_current)
           && !isDone(dp.plan_current) && !isLocked(dp.plan_current)) {
         planLesson = ORDER.find(l => l.id === dp.plan_current);
+      }
+      // 2026-11-25修：计划课已学完时也记下来，第2件直接显示它已完成，不回落到 currentIdx（u8r4 误指）
+      if (dp && dp.ok && dp.plan_current && ORDER.some(l => l.id === dp.plan_current)
+          && isDone(dp.plan_current)) {
+        planDoneLesson = ORDER.find(l => l.id === dp.plan_current);
       }
       planThirdNow = (dp && dp.ok) ? (dp.plan_third || null) : null;
       planStepTarget = (dp && dp.ok) ? (dp.plan_step_target || null) : null;
@@ -1436,7 +1444,7 @@ async function renderDailyPlan(dailyStatus) {
     }
     // 第2件：今天的新课（2026-10-16修：动态取当前可上课程，不再硬编码u4r1；
     // 2026-11-22：当天计划指定的课优先；2026-11-24：写清从哪步续、做到哪步、还剩多少）
-    const curLesson = planLesson || ((typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null);
+    const curLesson = planDoneLesson || planLesson || ((typeof currentIdx !== 'undefined' && currentIdx !== -1 && ORDER[currentIdx]) ? ORDER[currentIdx] : null);
     if (curLesson) {
       let lp = null;
       try {
@@ -1455,7 +1463,7 @@ async function renderDailyPlan(dailyStatus) {
           html: itemHtml(2, '今天的新课：' + curLesson.name,
             detail,
             done ? '已完成' : (lp.total_steps ? '还剩 ' + Math.max(0, lp.total_steps - lp.answered_step) + ' 步' : '还没做'),
-            done, lp.total_steps ? Math.round(lp.answered_step / lp.total_steps * 100) : 0,
+            done, done ? 100 : (lp.total_steps ? Math.round(lp.answered_step / lp.total_steps * 100) : 0),
             done ? null : ('/lesson?lesson=' + curLesson.id), lp.today_steps > 0 ? '继续上课 →' : '开始上课 →')
         });
       } else {
