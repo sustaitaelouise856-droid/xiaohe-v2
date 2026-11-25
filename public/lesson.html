@@ -214,6 +214,22 @@
   .fb.no::before { content:"💡"; }
   .fb.info { display:block; background:linear-gradient(135deg,#eaf1fe 0%,#dbe8fd 100%); border:2px solid var(--blue); }
   .fb.info::before { content:"📢"; }
+  /* 提交动画试点（2026-11-25）：纯展示层，只挂在反馈卡片上，不动判分/求助/门禁/称号 */
+  .fb.ok, .fb.no, .fb.info { overflow:hidden; animation:fbFadeIn .35s ease-out; }
+  @keyframes fbFadeIn { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+  /* 答对：静态 ✅ 换成自己画出来的绿勾（描边动画，0.6 秒内画完） */
+  .fb.ok.anim-correct::before { content:''; }
+  .fb-check { position:absolute; left:14px; top:13px; width:28px; height:28px; pointer-events:none; }
+  .fb-check svg { width:28px; height:28px; display:block; }
+  .fb-check .ck-circle { fill:none; stroke:var(--green); stroke-width:2.4; stroke-dasharray:90; stroke-dashoffset:90; animation:ckDraw .45s ease-out forwards; }
+  .fb-check .ck-tick { fill:none; stroke:var(--green); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:24; stroke-dashoffset:24; animation:ckDraw .3s ease-out .3s forwards; }
+  @keyframes ckDraw { to { stroke-dashoffset:0; } }
+  html[data-theme="dark"] .fb-check .ck-circle, html[data-theme="dark"] .fb-check .ck-tick { stroke:#66bb6a; }
+  /* 彩带：十几片 CSS 小方块，0.85 秒内落下消失，不挡点击、不挡下一题 */
+  .confetti-piece { position:absolute; top:0; width:7px; height:10px; pointer-events:none; z-index:2; animation:confettiFall .85s ease-in forwards; }
+  @keyframes confettiFall { from { opacity:1; transform:translateY(-4px) rotate(0deg); } to { opacity:0; transform:translateY(64px) rotate(var(--rot,320deg)); } }
+  /* 连对 3 道：只多一行小字，不升级成别的奖励 */
+  .streak3 { margin-top:8px; font-size:15px; color:var(--green); font-weight:700; }
   .tag { display:inline-block; font-size:calc(17px * var(--fs)); background:linear-gradient(180deg,#f5f7fb,#e9edf3); border:1px solid #dde2ea; border-radius:999px; padding:4px 15px; margin-left:10px; color:var(--muted); box-shadow:inset 0 1px 0 rgba(255,255,255,.9); }
   .nudge { color:var(--muted); font-size:var(--fs-scene); line-height:1.6; }
   .conquered { margin-top:8px; padding:8px 10px; border-left:3px solid #f5a623; background:#fff8e6; color:#7a5200; font-size:var(--fs-scene); line-height:1.6; font-weight:700; }
@@ -381,6 +397,7 @@ let PART = 1, POS = 0;            // 当前部分与下标
 let sawFb = {};                   // item_id -> 看过反馈/帮助
 let wrongCt = {};                 // item_id -> 本次上课连错次数（练习连错 2 次自动给二级提示用）
 let fastStreak = { key: '', n: 0 }; // 连对又快的连续计数（key=部分:题型）
+let submitStreak = 0; // 提交动画试点（2026-11-25）：本部分内连续答对计数，满 3 道给一个小庆祝；答错/改错即清零
 let autoHelp = null;              // wireQuestion 赋值：程序触发"老师教我"的入口（自动升级用）
 let guidedState = null;           // 带着做状态：{item_id, steps:[{dim,label,ask,highlight}], idx, session}（g 版）
 let doneSet = {};                 // item_id -> 本页会话内已终局的题（答对/抄写过/用尽重试）；后退回看时只读，不可重答
@@ -852,6 +869,7 @@ async function renderHome() {
 /* ---------- 上课 ---------- */
 async function startPart(n) {
   PART = n; const st = ST['p' + n];
+  submitStreak = 0; // 提交动画试点：新一部分开始，连对计数清零
   const isDaily = (typeof LID !== 'undefined' && LID === 'daily-retest');
   const isQuick = (typeof LID !== 'undefined' && LID === 'quick-drill');
   // 2026-11-11：快练每组都是新会话（“再来一组”必须换 sid，否则同一题的 first_try 会被旧作答污染）
@@ -1749,6 +1767,24 @@ function doSkip(s) {
   advance();
 }
 
+/* ---------- 提交动画试点（2026-11-25）：纯展示层，只挂在 handleVerdict 的反馈渲染上 ---------- */
+const CHECK_SVG = '<span class="fb-check"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="ck-circle" cx="16" cy="16" r="13.5"/><path class="ck-tick" d="M9.5 16.5l4.5 4.5L23 11.5"/></svg></span>';
+const CONFETTI_COLORS = ['#1e8e3e', '#f2b01e', '#1a73e8', '#e8710a', '#34a853'];
+function burstConfetti(fb, n) {
+  if (!fb) return;
+  for (var i = 0; i < n; i++) {
+    var p = document.createElement('i');
+    p.className = 'confetti-piece';
+    p.style.left = (4 + Math.random() * 92) + '%';
+    p.style.background = CONFETTI_COLORS[i % CONFETTI_COLORS.length];
+    p.style.setProperty('--rot', Math.floor(Math.random() * 540 - 90) + 'deg');
+    p.style.animationDelay = (Math.random() * 0.12) + 's';
+    fb.appendChild(p);
+  }
+  // 1.1 秒后清掉彩带碎片；孩子已翻到下一题时 fb 已离线，守一道空判断
+  setTimeout(function () { try { fb.querySelectorAll('.confetti-piece').forEach(function (x) { x.remove(); }); } catch (e) {} }, 1100);
+}
+
 function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
   const fb = $('fb'), nextrow = $('nextrow');
   const v = b.verdict;
@@ -1764,6 +1800,10 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
   const isPractice = (s.phase || 'practice') === 'practice';
   const nudgeHtml = b.nudge ? `<div class="nudge">${escapeHtml(b.nudge)}</div>` : '';
   if (good) {
+    // 提交动画试点：连续答对计数，满 3 道给一个小庆祝，随即清零以便再攒
+    submitStreak++;
+    const streak3 = submitStreak >= 3;
+    if (streak3) submitStreak = 0;
     sawFb[s.item_id] = true;
     if (s.item_id) doneSet[s.item_id] = true; // 终局：后退回看时只读，不可重答刷分
     // 存回顾数据：后退翻看时显示当时的答案和反馈（2026-10-10）；粘贴的题回看时也要写明不算数
@@ -1784,7 +1824,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
           body: JSON.stringify({ item_id: resolveId }) }).catch(() => {});
       }
     }
-    fb.className = 'fb ok';
+    fb.className = 'fb ok anim-correct';
     // “自己做出来的时刻”（2026-11-02）：服务端确认是隔了一段回来独立攻克的，才显示专属一句；
     // 有帮助完成时不显示（b.helped 为真时服务端本就不回 conquered，这里再守一道）。
     const conqueredTxt = (!b.helped && b.conquered) ? {
@@ -1797,9 +1837,11 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     const pastedHtml = wasPasted ? '<div class="pasted-note">这是粘贴的，不算你自己做对。这道题会进错题本，明天自己打一遍才算过。</div>' : '';
     // 2026-11-20 求助梯子规则 3：L3 看答案后做对的，当面说清不算会。
     const l3seen = ((wireQuestion.helpLv || {})[s.item_id] || 0) >= 3;
-    fb.innerHTML = escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '')
+    fb.innerHTML = CHECK_SVG + escapeHtml(b.feedback || '答对了。') + (b.helped ? '\n（这次用了提示）' : '')
       + (l3seen ? '\n（这是看答案后做对的，不算你自己会，错题本里还留着，明天再考一次。）' : '')
-      + nudgeHtml + conqueredHtml + pastedHtml;
+      + nudgeHtml + conqueredHtml + pastedHtml
+      + (streak3 ? '<div class="streak3">连对 3 道</div>' : '');
+    burstConfetti(fb, streak3 ? 28 : 14);
     // 2026-11-18 练完自评：复测场合（单题/批量重做/每日闯关）答对且非粘贴，问一句记得牢不牢；
     // 点一下就行，可跳过，不挡下一题。快练（quick-drill）不是复测场合，不出自评；
     // copied 出口走不到答对分支，也不出自评。2026-11-20：L3 看答案后做对的不出自评（题还没过）。
@@ -1829,6 +1871,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     }
   } else if (v === 'typo' || v === 'chinese') {
     fastStreak.n = 0;
+    submitStreak = 0; // 提交动画试点：改错不算连对
     sawFb[s.item_id] = true;
     fb.className = 'fb info';
     fb.innerHTML = escapeHtml(b.feedback || ((b.detail && b.detail.note) || '')) + nudgeHtml;
@@ -1839,6 +1882,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     // wrong / wrong_retry：反馈只针对她实际写的内容，允许重答
     // 2026-10-14修：答错后的"再想一想"反馈不算帮助，不置 sawFb（否则重试会被误记为用了提示）
     fastStreak.n = 0;
+    submitStreak = 0; // 提交动画试点：答错即断连对
     fb.className = 'fb no';
     fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
     $('btnSub').disabled = false;
