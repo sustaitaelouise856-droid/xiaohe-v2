@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记忆宫殿 · 图书馆 — u1r4 look 家族</title>
+<style>
+:root{
+  --blue:#1a73e8; --blue-dark:#0d47a1; --green:#1e8e3e; --orange:#e8710a;
+  --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8f9fa;
+  --gold-bg:#fff8e1; --gold-line:#ffb300; --gold-text:#7a4a00;
+  --light-blue:#e3f2fd; --done-bg:#f1f8e9;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg); color:var(--ink); font-size:20px; line-height:1.7;
+  -webkit-font-smoothing:antialiased;}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 40px}
+#topbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid rgba(225,229,235,.8);
+  display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+#topbar a.back{color:var(--blue);text-decoration:none;font-size:18px;font-weight:700}
+#topbar h1{font-size:22px;margin:0;flex:1;min-width:200px}
+.mode{display:flex;gap:8px}
+.mode button{font-size:18px;font-weight:700;padding:10px 18px;border-radius:999px;
+  border:2px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;min-height:52px}
+.mode button.on{background:var(--blue);color:#fff}
+.sub{color:var(--muted);font-size:17px;margin:14px 4px 10px}
+.scene{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:16px;background:#fdf6e3}
+.spot{cursor:pointer}
+.spot .hit{fill:transparent}
+.spot .pulse{fill:none;stroke:var(--blue);stroke-width:3;opacity:.7;
+  transform-box:fill-box;transform-origin:center;animation:pulse 1.8s ease-out infinite}
+.spot .core{fill:var(--blue);stroke:#fff;stroke-width:3}
+.spot text{fill:#fff;font-size:22px;font-weight:700;text-anchor:middle;pointer-events:none}
+.spot .q{font-size:26px;display:none}
+.spot.visited .core{fill:var(--green)}
+.spot.visited .check{display:block}
+.spot .check{display:none}
+.spot.lit .core{fill:#ff8f00;stroke:#fff}
+.spot.lit .pulse{stroke:#ff8f00;animation-duration:1s}
+.spot.lit .num{display:none}
+.spot.lit .q{display:block}
+@keyframes pulse{0%{transform:scale(.7);opacity:.9}70%{transform:scale(1.25);opacity:0}100%{transform:scale(1.25);opacity:0}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:16px;min-height:150px}
+.card.show{animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.card .place{color:var(--muted);font-size:17px}
+.card .phrase{font-size:36px;font-weight:800;color:var(--blue);margin:2px 0}
+.card .zh{font-size:23px;font-weight:700}
+.card .en{font-family:Georgia,"Times New Roman",serif;font-size:21px;line-height:1.8;margin:12px 0 2px}
+.card .cn{color:var(--muted);font-size:19px}
+.card .extra{font-family:Georgia,"Times New Roman",serif;font-size:19px;color:#444;margin:10px 0 0}
+.card .tip{margin-top:12px;background:var(--gold-bg);border:1px solid var(--gold-line);
+  border-radius:10px;padding:10px 14px;font-size:18px;color:var(--gold-text)}
+.card .hint{font-size:20px;color:var(--muted)}
+.progress{margin-top:12px;font-size:18px;color:var(--muted)}
+.progress b{color:var(--ink)}
+.quizbar{display:none;margin-top:16px;background:var(--gold-bg);border:1px solid var(--gold-line);
+  border-radius:12px;padding:14px 18px;font-size:20px;color:var(--gold-text)}
+.quizbar.show{display:block}
+.judge{display:none;gap:12px;margin-top:16px}
+.judge.show{display:flex}
+.judge button{flex:1;font-size:20px;font-weight:700;min-height:60px;border-radius:12px;cursor:pointer;border:2px solid}
+.judge .yes{background:var(--done-bg);border-color:var(--green);color:var(--green)}
+.judge .no{background:#fff;border-color:var(--muted);color:var(--muted)}
+.bigbtn{display:block;width:100%;font-size:21px;font-weight:700;min-height:60px;margin-top:16px;
+  border-radius:12px;border:0;background:linear-gradient(135deg,#1a73e8,#4a8ef7);color:#fff;cursor:pointer}
+.bigbtn.ghost{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.summary{display:none;margin-top:16px;background:var(--done-bg);border:1px solid var(--green);
+  border-radius:12px;padding:16px 20px;font-size:22px;font-weight:700;text-align:center}
+.summary.show{display:block}
+.passage{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:24px}
+.passage h2{font-size:22px;margin:0 0 10px}
+.passage pre{font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.95;
+  margin:0;white-space:pre-wrap;color:#333}
+.foot{margin-top:16px;color:var(--muted);font-size:17px;text-align:center}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <!-- 接线：返回 u1r4 课程页（家长接线时再填链接） -->
+  <a class="back" href="/lesson?lesson=u1r4" id="backBtn">← 返回课程</a>
+  <h1>记忆宫殿 · 图书馆</h1>
+  <div class="mode">
+    <button id="modeExplore" class="on" type="button">逛一逛</button>
+    <button id="modeQuiz" type="button">考一考</button>
+  </div>
+</div>
+<div class="wrap">
+  <p class="sub">u1r4 · look 家族：五个短语住在这间图书馆里。点一个位置，看看它住在哪儿。</p>
+  <svg class="scene" viewBox="0 0 900 600" role="img" aria-label="图书馆场景：书架、桌子、词典、画和门">
+    <!-- 墙面与地板 -->
+    <rect x="0" y="0" width="900" height="470" fill="#f7ead0"/>
+    <rect x="0" y="470" width="900" height="130" fill="#d9b98a"/>
+    <g stroke="#c8a76e" stroke-width="2">
+      <line x1="0" y1="510" x2="900" y2="510"/><line x1="0" y1="550" x2="900" y2="550"/>
+    </g>
+    <!-- 地毯 -->
+    <ellipse cx="480" cy="540" rx="280" ry="34" fill="#e8a0a0" opacity="0.55"/>
+    <ellipse cx="480" cy="540" rx="220" ry="24" fill="#f2c14e" opacity="0.45"/>
+
+    <!-- 书架 -->
+    <g>
+      <rect x="30" y="60" width="300" height="410" rx="8" fill="#8d5a2b"/>
+      <rect x="44" y="74" width="272" height="382" fill="#a9713f"/>
+      <!-- 三层书 -->
+      <g>
+        <rect x="56" y="96" width="22" height="86" fill="#c62828"/><rect x="80" y="96" width="22" height="86" fill="#1a73e8"/>
+        <rect x="104" y="96" width="22" height="86" fill="#1e8e3e"/><rect x="128" y="96" width="22" height="86" fill="#e8710a"/>
+        <rect x="152" y="96" width="22" height="86" fill="#7b1fa2"/><rect x="176" y="96" width="22" height="86" fill="#00897b"/>
+        <rect x="200" y="96" width="22" height="86" fill="#c62828"/><rect x="224" y="96" width="22" height="86" fill="#1a73e8"/>
+        <rect x="248" y="96" width="22" height="86" fill="#f9a825"/><rect x="272" y="96" width="22" height="86" fill="#5d4037"/>
+        <rect x="44" y="182" width="272" height="12" fill="#8d5a2b"/>
+      </g>
+      <g>
+        <rect x="56" y="216" width="22" height="86" fill="#00897b"/><rect x="80" y="216" width="22" height="86" fill="#e8710a"/>
+        <rect x="104" y="216" width="22" height="86" fill="#1a73e8"/><rect x="128" y="216" width="22" height="86" fill="#c62828"/>
+        <!-- 丢了的笔记本：斜插在书架上，带问号 -->
+        <g transform="rotate(-14 215 260)">
+          <rect x="196" y="218" width="40" height="84" rx="4" fill="#fff" stroke="#5f6368" stroke-width="2"/>
+          <line x1="206" y1="232" x2="226" y2="232" stroke="#9e9e9e" stroke-width="2"/>
+          <line x1="206" y1="244" x2="226" y2="244" stroke="#9e9e9e" stroke-width="2"/>
+          <text x="216" y="282" text-anchor="middle" font-size="30" font-weight="800" fill="#e8710a">?</text>
+        </g>
+        <rect x="248" y="216" width="22" height="86" fill="#1e8e3e"/><rect x="272" y="216" width="22" height="86" fill="#7b1fa2"/>
+        <rect x="44" y="302" width="272" height="12" fill="#8d5a2b"/>
+      </g>
+      <g>
+        <rect x="56" y="336" width="22" height="86" fill="#5d4037"/><rect x="80" y="336" width="22" height="86" fill="#f9a825"/>
+        <rect x="104" y="336" width="22" height="86" fill="#1e8e3e"/><rect x="128" y="336" width="22" height="86" fill="#00897b"/>
+        <rect x="152" y="336" width="22" height="86" fill="#c62828"/><rect x="176" y="336" width="22" height="86" fill="#1a73e8"/>
+        <rect x="200" y="336" width="22" height="86" fill="#e8710a"/><rect x="224" y="336" width="22" height="86" fill="#7b1fa2"/>
+        <rect x="248" y="336" width="22" height="86" fill="#00897b"/><rect x="272" y="336" width="22" height="86" fill="#c62828"/>
+        <rect x="44" y="422" width="272" height="12" fill="#8d5a2b"/>
+      </g>
+    </g>
+
+    <!-- 墙上的画 -->
+    <g>
+      <rect x="560" y="60" width="220" height="140" rx="6" fill="#6d4c41"/>
+      <rect x="572" y="72" width="196" height="116" fill="#b3e5fc"/>
+      <circle cx="730" cy="100" r="18" fill="#fdd835"/>
+      <path d="M572 188 L640 130 L690 168 L730 138 L768 188 Z" fill="#66bb6a"/>
+      <path d="M572 188 L768 188 L768 160 Q670 150 572 172 Z" fill="#4fc3f7"/>
+      <rect x="560" y="60" width="220" height="140" rx="6" fill="none" stroke="#5d4037" stroke-width="4"/>
+    </g>
+
+    <!-- 门 -->
+    <g>
+      <rect x="800" y="150" width="90" height="320" rx="6" fill="#a9713f"/>
+      <rect x="812" y="166" width="66" height="120" rx="4" fill="#c89b6a"/>
+      <rect x="812" y="306" width="66" height="120" rx="4" fill="#c89b6a"/>
+      <circle cx="872" cy="300" r="7" fill="#ffd54f" stroke="#8d5a2b" stroke-width="2"/>
+    </g>
+
+    <!-- 小弟弟站在门口 -->
+    <g>
+      <circle cx="762" cy="360" r="22" fill="#ffccbc"/>
+      <path d="M740 356 Q762 336 784 356 L784 348 Q762 330 740 348 Z" fill="#5d4037"/>
+      <circle cx="754" cy="358" r="3" fill="#202124"/><circle cx="770" cy="358" r="3" fill="#202124"/>
+      <path d="M754 372 Q762 378 770 372" stroke="#202124" stroke-width="2" fill="none"/>
+      <path d="M738 388 Q762 380 786 388 L792 470 L732 470 Z" fill="#1a73e8"/>
+      <rect x="728" y="470" width="12" height="26" rx="4" fill="#5d4037"/>
+      <rect x="784" y="470" width="12" height="26" rx="4" fill="#5d4037"/>
+    </g>
+
+    <!-- 桌子 -->
+    <g>
+      <rect x="360" y="400" width="320" height="22" rx="8" fill="#b07d4f"/>
+      <rect x="380" y="422" width="18" height="96" fill="#8d5a2b"/>
+      <rect x="642" y="422" width="18" height="96" fill="#8d5a2b"/>
+      <!-- 桌上的新书（三本叠着） -->
+      <g>
+        <rect x="392" y="372" width="110" height="26" rx="3" fill="#1e8e3e"/>
+        <rect x="392" y="372" width="14" height="26" fill="#fff" opacity="0.85"/>
+        <rect x="400" y="348" width="100" height="24" rx="3" fill="#c62828"/>
+        <rect x="400" y="348" width="14" height="24" fill="#fff" opacity="0.85"/>
+        <rect x="408" y="326" width="90" height="22" rx="3" fill="#1a73e8"/>
+        <rect x="408" y="326" width="14" height="22" fill="#fff" opacity="0.85"/>
+      </g>
+      <!-- 桌上的词典（翻开的大词典） -->
+      <g>
+        <path d="M520 398 L520 344 Q560 330 600 344 L600 398 Q560 384 520 398 Z" fill="#fff" stroke="#5d4037" stroke-width="2"/>
+        <path d="M560 338 L560 392" stroke="#9e9e9e" stroke-width="2"/>
+        <path d="M528 356 Q544 350 552 356 M528 370 Q544 364 552 370 M568 356 Q584 350 592 356 M568 370 Q584 364 592 370" stroke="#bdbdbd" stroke-width="2" fill="none"/>
+        <rect x="516" y="394" width="88" height="8" rx="3" fill="#c62828"/>
+      </g>
+    </g>
+
+    <!-- 可点标记：1 look through 桌上的新书 -->
+    <g class="spot" data-key="through" transform="translate(447,348)">
+      <circle class="hit" r="48"/><circle class="pulse" r="30"/><circle class="core" r="24"/>
+      <text class="num" y="8">1</text><text class="q" y="9">?</text>
+      <g class="check"><circle cx="20" cy="-20" r="12" fill="#1e8e3e" stroke="#fff" stroke-width="2"/><text x="20" y="-15" font-size="15">✓</text></g>
+    </g>
+    <!-- 可点标记：2 look up 桌上的词典 -->
+    <g class="spot" data-key="up" transform="translate(560,352)">
+      <circle class="hit" r="48"/><circle class="pulse" r="30"/><circle class="core" r="24"/>
+      <text class="num" y="8">2</text><text class="q" y="9">?</text>
+      <g class="check"><circle cx="20" cy="-20" r="12" fill="#1e8e3e" stroke="#fff" stroke-width="2"/><text x="20" y="-15" font-size="15">✓</text></g>
+    </g>
+    <!-- 可点标记：3 look for 书架上丢了的笔记本 -->
+    <g class="spot" data-key="for" transform="translate(216,258)">
+      <circle class="hit" r="48"/><circle class="pulse" r="30"/><circle class="core" r="24"/>
+      <text class="num" y="8">3</text><text class="q" y="9">?</text>
+      <g class="check"><circle cx="20" cy="-20" r="12" fill="#1e8e3e" stroke="#fff" stroke-width="2"/><text x="20" y="-15" font-size="15">✓</text></g>
+    </g>
+    <!-- 可点标记：4 look after 门口的小弟弟 -->
+    <g class="spot" data-key="after" transform="translate(714,308)">
+      <circle class="hit" r="48"/><circle class="pulse" r="30"/><circle class="core" r="24"/>
+      <text class="num" y="8">4</text><text class="q" y="9">?</text>
+      <g class="check"><circle cx="20" cy="-20" r="12" fill="#1e8e3e" stroke="#fff" stroke-width="2"/><text x="20" y="-15" font-size="15">✓</text></g>
+    </g>
+    <!-- 可点标记：5 look at 墙上的画 -->
+    <g class="spot" data-key="at" transform="translate(670,130)">
+      <circle class="hit" r="48"/><circle class="pulse" r="30"/><circle class="core" r="24"/>
+      <text class="num" y="8">5</text><text class="q" y="9">?</text>
+      <g class="check"><circle cx="20" cy="-20" r="12" fill="#1e8e3e" stroke="#fff" stroke-width="2"/><text x="20" y="-15" font-size="15">✓</text></g>
+    </g>
+  </svg>
+  <div class="quizbar" id="quizBar"></div>
+
+  <div class="card" id="card">
+    <div class="hint" id="cardHint">点一个带数字的位置，看看这个短语住在哪儿。</div>
+    <div id="cardBody" style="display:none">
+      <div class="place" id="cardPlace"></div>
+      <div class="phrase" id="cardPhrase"></div>
+      <div class="zh" id="cardZh"></div>
+      <div class="en" id="cardEn"></div>
+      <div class="cn" id="cardCn"></div>
+      <div class="extra" id="cardExtra" style="display:none"></div>
+    </div>
+  </div>
+
+  <div class="judge" id="judge">
+    <button class="yes" id="btnRight" type="button">想对了 ✓</button>
+    <button class="no" id="btnWrong" type="button">没想对 ✗</button>
+  </div>
+
+  <div class="progress" id="progress">已逛过 <b>0 / 5</b> 个位置</div>
+
+  <button class="bigbtn" id="btnStartQuiz" type="button" style="display:none">开始考一考</button>
+  <button class="bigbtn ghost" id="btnAgain" type="button" style="display:none">再来一轮</button>
+
+  <div class="summary" id="summary"></div>
+
+  <div class="passage">
+    <h2>再读一遍：苏文查资料</h2>
+    <pre>Su Wen is a student at our school radio station. Every week, she looks through a children's encyclopaedia to find new stories. When she does not know a word, she looks it up in a dictionary. When she loses her notebook, she looks for it everywhere. She also looks after her little brother at home and looks at the pictures in the book with him. Last week, she read about dinosaurs. Dinosaurs died out about 66 million years ago, but they were not all the same. Some were as small as chickens. Others were as big as ten elephants. Su Wen thinks Leonardo da Vinci was very intelligent. He was also talented in many different fields: painting, music, science and more. She wants to be an intelligent student too, so she looks through her books every day.</pre>
+  </div>
+
+  <p class="foot">分清楚：look up 查阅（查词）— look for 寻找（找东西）；look after 照顾（照顾人）— look at 看（看东西）。</p>
+</div>
+<script>
+(function(){
+"use strict";
+var DATA = {
+  through:{n:1, phrase:"look through", zh:"快速查看；浏览；翻阅", place:"桌上的新书",
+    en:"Every morning, Su Wen looks through the new books in the library.",
+    cn:"苏文每天早上快速翻看图书馆的新书。",
+    extra:"look through 是翻一遍，不是一个字一个字地读。"},
+  up:{n:2, phrase:"look up", zh:"查阅（查词）", place:"桌上的词典",
+    en:"We look up new words in a dictionary.",
+    cn:"我们在词典里查生词。",
+    extra:"When she does not know a word, she looks it up in a dictionary."},
+  for:{n:3, phrase:"look for", zh:"寻找", place:"书架上丢了的笔记本",
+    en:"I look for my notebook everywhere.",
+    cn:"我到处找我的笔记本。",
+    extra:"When she loses her notebook, she looks for it everywhere."},
+  after:{n:4, phrase:"look after", zh:"照顾；照看", place:"门口的小弟弟",
+    en:"Su Wen looks after her little brother.",
+    cn:"苏文照顾她的小弟弟。",
+    extra:"She also looks after her little brother at home and looks at the pictures in the book with him."},
+  at:{n:5, phrase:"look at", zh:"看", place:"墙上的画",
+    en:"Look at the picture.",
+    cn:"看这张图片。",
+    extra:"She also looks after her little brother at home and looks at the pictures in the book with him."}
+};
+var ORDER = ["through","up","for","after","at"];
+var mode = "explore";
+var visited = {};
+var quizOrder = [], quizIdx = 0, quizRight = 0, quizAnswered = 0, litKey = null;
+
+var $ = function(id){ return document.getElementById(id); };
+var card = $("card"), cardHint = $("cardHint"), cardBody = $("cardBody"),
+    quizBar = $("quizBar"), judge = $("judge"), progress = $("progress"),
+    summary = $("summary"), btnStart = $("btnStartQuiz"), btnAgain = $("btnAgain");
+
+function showCard(key){
+  var d = DATA[key];
+  $("cardPlace").textContent = "住在：" + d.place;
+  $("cardPhrase").textContent = d.phrase;
+  $("cardZh").textContent = d.zh;
+  $("cardEn").textContent = d.en;
+  $("cardCn").textContent = d.cn;
+  var ex = $("cardExtra");
+  if(d.extra){ ex.style.display = "block"; ex.textContent = d.extra; }
+  else { ex.style.display = "none"; }
+  cardHint.style.display = "none";
+  cardBody.style.display = "block";
+  card.classList.remove("show");
+  void card.offsetWidth;
+  card.classList.add("show");
+}
+function showHint(text){
+  cardBody.style.display = "none";
+  cardHint.style.display = "block";
+  cardHint.textContent = text;
+  card.classList.remove("show");
+  void card.offsetWidth;
+  card.classList.add("show");
+}
+function updateProgress(){
+  if(mode === "explore"){
+    var n = Object.keys(visited).length;
+    progress.innerHTML = "已逛过 <b>" + n + " / 5</b> 个位置";
+  } else {
+    progress.innerHTML = "第 <b>" + (quizIdx + 1) + " / 5</b> 个 · 想对了 <b>" + quizRight + "</b> 个";
+  }
+}
+function clearLit(){
+  document.querySelectorAll(".spot.lit").forEach(function(el){ el.classList.remove("lit"); });
+  litKey = null;
+}
+function lightNext(){
+  clearLit();
+  judge.classList.remove("show");
+  if(quizIdx >= quizOrder.length){
+    quizBar.classList.remove("show");
+    summary.textContent = "这一轮想对了 " + quizRight + " / 5 个" + (quizRight === 5 ? "，全对！" : "，再逛一逛，下一轮争取全对。");
+    summary.classList.add("show");
+    btnAgain.style.display = "block";
+    progress.innerHTML = "本轮结束 · 想对了 <b>" + quizRight + " / 5</b> 个";
+    return;
+  }
+  litKey = quizOrder[quizIdx];
+  var spot = document.querySelector('.spot[data-key="' + litKey + '"]');
+  if(spot){ spot.classList.add("lit"); }
+  var d = DATA[litKey];
+  quizBar.textContent = "亮着的位置是：" + d.place + " —— 先在心里想一想，这是哪个短语？再点这个位置核对。";
+  quizBar.classList.add("show");
+  showHint("先在心里想出这个位置的短语，再点亮着的位置核对。");
+  updateProgress();
+}
+function startQuiz(){
+  quizOrder = ORDER.slice();
+  for(var i = quizOrder.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = quizOrder[i]; quizOrder[i] = quizOrder[j]; quizOrder[j] = t;
+  }
+  quizIdx = 0; quizRight = 0; quizAnswered = 0;
+  summary.classList.remove("show");
+  btnAgain.style.display = "none";
+  btnStart.style.display = "none";
+  lightNext();
+}
+function setMode(m){
+  mode = m;
+  $("modeExplore").classList.toggle("on", m === "explore");
+  $("modeQuiz").classList.toggle("on", m === "quiz");
+  clearLit();
+  judge.classList.remove("show");
+  summary.classList.remove("show");
+  btnAgain.style.display = "none";
+  if(m === "explore"){
+    quizBar.classList.remove("show");
+    btnStart.style.display = "none";
+    showHint("点一个带数字的位置，看看这个短语住在哪儿。");
+    updateProgress();
+  } else {
+    btnStart.style.display = "block";
+    quizBar.classList.remove("show");
+    showHint("点“开始考一考”，我会随机亮一个位置，你先在心里想，再点开核对。");
+    progress.innerHTML = "考一考：只记“想对了几个”，不判分、不进错题本。";
+  }
+}
+
+document.querySelectorAll(".spot").forEach(function(el){
+  el.addEventListener("click", function(){
+    var key = el.getAttribute("data-key");
+    if(mode === "explore"){
+      visited[key] = true;
+      el.classList.add("visited");
+      showCard(key);
+      updateProgress();
+    } else {
+      if(!litKey){
+        showHint("先点“开始考一考”。");
+        return;
+      }
+      if(key !== litKey){
+        showHint("先想一想亮着的那个位置，再点它核对。");
+        return;
+      }
+      showCard(key);
+      judge.classList.add("show");
+    }
+  });
+});
+$("btnRight").addEventListener("click", function(){
+  quizRight++; quizAnswered++; quizIdx++;
+  updateProgress();
+  lightNext();
+});
+$("btnWrong").addEventListener("click", function(){
+  quizAnswered++; quizIdx++;
+  updateProgress();
+  lightNext();
+});
+$("modeExplore").addEventListener("click", function(){ setMode("explore"); });
+$("modeQuiz").addEventListener("click", function(){ setMode("quiz"); });
+btnStart.addEventListener("click", startQuiz);
+btnAgain.addEventListener("click", startQuiz);
+$("backBtn").addEventListener("click", function(e){ e.preventDefault(); });
+updateProgress();
+})();
+</script>
+</body>
+</html>
