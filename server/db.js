@@ -359,6 +359,14 @@ db.exec(`CREATE TABLE IF NOT EXISTS practice_done (
   day              TEXT PRIMARY KEY,
   done_at          TEXT NOT NULL DEFAULT (datetime('now'))
 );`);
+// 今晚先练逐题进度（2026-11-25：做完不显示/重开空白的修复；每道答对立刻记一题，打开先读当天进度恢复；只记完成、不判分、不计门禁、不进错题本、不写 attempts 表）
+db.exec(`CREATE TABLE IF NOT EXISTS practice_progress (
+  day        TEXT NOT NULL,
+  qid        TEXT NOT NULL,
+  correct    INTEGER NOT NULL DEFAULT 1,
+  updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (day, qid)
+);`);
 // 睡前故事收听（2026-11-20：睡前 21:30 左右一篇约 10 分钟，单独计时，绝不混进学习分钟）
 // session_id：客户端一次播放的随机 id；同一 session 多次上报只更新一行（UPSERT）。
 // seconds_listened：本次播放累计听到的秒数（audio.currentTime 下限）；completed：1=播完。
