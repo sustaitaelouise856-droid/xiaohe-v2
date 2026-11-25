@@ -39,7 +39,8 @@ a.home { color: #2e7d32; }
 <div class="wrap">
 <h1>📝 今晚先练 · 11月24日</h1>
 <div id="practiceDoneTag" style="font-size:15px;font-weight:800;color:#137333;min-height:22px;"></div>
-<p class="usage">今天是 s36 同类变式复测（昨天看过答案）+ s43、s49 水蛭题重教。先自己写、再对一对，最后自己把为什么讲一遍。这页不判分、不计分、不进错题本、不写进网站记录，讲懂了、自己能讲出来就行。s43、s49 到 11 月 27 日再用全新变式测一次。</p>
+<button type="button" id="practiceRetryBtn" class="btn" style="display:none">没记上，点一下重记</button>
+<p class="usage">今天是 s36 同类变式复测（昨天看过答案）+ s43、s49 水蛭题重教。先自己写、再对一对，最后自己把为什么讲一遍。这页不判分、不计分、不进错题本，答案不发给网站；只记你做对了哪几道题，关了再打开接着做，讲懂了、自己能讲出来就行。s43、s49 到 11 月 27 日再用全新变式测一次。</p>
 
 <h2>第一部分：重教 s43——过去式（changed）</h2>
 <div class="item">
@@ -52,7 +53,7 @@ a.home { color: #2e7d32; }
     <p class="ex">例句（读一遍）：She lived in Beijing last year.</p>
     <p class="motto">口诀：看到过去时间，先想“这是过去的事”；动词尾巴是 e，加 d 就行。</p>
   </div>
-  <h3>练一练（只写空里的部分，对错只在这页上看，不发给网站）</h3>
+  <h3>练一练（只写空里的部分，对错只在这页上看）</h3>
   <p>1. She <input type="text" id="s43-q1" autocomplete="off"> (live) in Beijing last year.</p>
   <button type="button" class="btn" data-local-check="s43-q1|lived|live 的过去式是 lived，e 尾加 d">对一下</button>
   <div class="fb" id="fb-s43-q1"></div>
@@ -77,7 +78,7 @@ a.home { color: #2e7d32; }
     <p class="ex">对比：My friend likes music.（一个朋友，加 s）<br>My friends like music.（好多朋友，不加 s）</p>
     <p class="motto">口诀：先看主语单复数，复数动词用原形。</p>
   </div>
-  <h3>练一练（只写空里的部分，对错只在这页上看，不发给网站）</h3>
+  <h3>练一练（只写空里的部分，对错只在这页上看）</h3>
   <p>1. My friends <input type="text" id="s49-q1" autocomplete="off"> (like) music.</p>
   <button type="button" class="btn" data-local-check="s49-q1|like|主语 friends 是复数，动词用原形 like，不加 s">对一下</button>
   <div class="fb" id="fb-s49-q1"></div>
@@ -123,24 +124,145 @@ a.home { color: #2e7d32; }
 'use strict';
 function $(s) { return document.querySelector(s); }
 function $all(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
-// ---- 本页全部本地判对：不判分、不计门禁；答案不发请求（2026-11-24 唯一的例外：全部题答对过一次，只发一个“练完了”标记，让首页打勾） ----
+// ---- 本页本地判对：不判分、不计门禁；答案不发请求（2026-11-25修：每道答对立刻记一题到服务器，打开先读当天进度恢复；
+// 只记“做对了哪几道”，不记答案；完成仍只发一个“练完了”标记，让首页打勾） ----
 function norm(v) { return (v || '').trim().toLowerCase(); }
+function shanghaiTodayStr() { return new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10); }
+var TODAY = shanghaiTodayStr();
+var LS_KEY = 'xh_practice_' + TODAY + '_qids';
 // 练完标记：全部 data-local-check / data-local-mcq 答对过一次即记完成（只记完成，不发答案）
 var needIds = [];
 $all('[data-local-check]').forEach(function (b) { needIds.push(b.getAttribute('data-local-check').split('|')[0]); });
 $all('[data-local-mcq]').forEach(function (b) { needIds.push(b.getAttribute('data-local-mcq').split('|')[0]); });
-var gotIds = {}, postedDone = false;
-function markDone(id) {
-  gotIds[id] = true;
+var gotIds = {}, postedDone = false, donePosting = false;
+var pendingSaves = {}; // qid -> 已重试次数（断网时留着，联网后自动补记）
+function readLS() {
+  try { var a = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); return Array.isArray(a) ? a : []; }
+  catch (e) { return []; }
+}
+function writeLS() {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(Object.keys(gotIds))); } catch (e) {}
+}
+function showDoneTag() {
+  var t = document.getElementById('practiceDoneTag');
+  if (t) t.textContent = '今天练完了 ✓';
+  hideRetryBtn();
+}
+function showRetryBtn() {
+  var t = document.getElementById('practiceDoneTag');
+  if (t) t.textContent = '没记上，点下面重记';
+  var b = document.getElementById('practiceRetryBtn');
+  if (b) b.style.display = '';
+}
+function hideRetryBtn() {
+  var b = document.getElementById('practiceRetryBtn');
+  if (b) b.style.display = 'none';
+}
+// 每道答对立刻记服务器（keepalive：做完立刻关页面也能记上）；失败进重试队列，不悄悄吞掉
+function saveProgress(id) {
+  if (pendingSaves[id] !== undefined) return; // 已在重试队列里
+  pendingSaves[id] = 0;
+  var delays = [500, 1500, 3500, 7500];
+  function attempt() {
+    fetch('/api/practice-progress', { method: 'POST', credentials: 'same-origin', keepalive: true,
+      headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ qid: id }) }).then(function (r) {
+      if (r && r.ok) { delete pendingSaves[id]; }
+      else { schedule(); }
+    }).catch(function () { schedule(); });
+    function schedule() {
+      if (pendingSaves[id] === undefined) return;
+      var n = pendingSaves[id];
+      if (n < delays.length) { pendingSaves[id] = n + 1; setTimeout(attempt, delays[n]); }
+      // 次数用完仍留在队列里，等联网/下次答题/切回页面时再补记
+    }
+  }
+  attempt();
+}
+function flushPending() {
+  Object.keys(pendingSaves).forEach(function (id) { delete pendingSaves[id]; saveProgress(id); });
+}
+window.addEventListener('online', flushPending);
+document.addEventListener('visibilitychange', function () { if (!document.hidden) flushPending(); });
+// 完成信号带重试：5 道齐了才发；“今天练完了 ✓”只在服务器 ack 后显示；都失败就明说、给重记按钮
+function postDoneWithRetry() {
+  if (postedDone || donePosting) return;
+  donePosting = true;
+  var delays = [500, 1000, 2000];
+  var n = 0;
+  function attempt() {
+    fetch('/api/practice-done', { method: 'POST', credentials: 'same-origin', keepalive: true }).then(function (r) {
+      if (r && r.ok) { postedDone = true; donePosting = false; showDoneTag(); }
+      else { retryOrGiveUp(); }
+    }).catch(function () { retryOrGiveUp(); });
+    function retryOrGiveUp() {
+      if (n < delays.length) { setTimeout(attempt, delays[n]); n++; }
+      else { donePosting = false; showRetryBtn(); }
+    }
+  }
+  attempt();
+}
+function checkComplete() {
   if (postedDone) return;
   for (var i = 0; i < needIds.length; i++) { if (!gotIds[needIds[i]]) return; }
-  postedDone = true;
-  try {
-    fetch('/api/practice-done', { method: 'POST', credentials: 'same-origin' }).then(function (r) {
-      if (r && r.ok) { var t = document.getElementById('practiceDoneTag'); if (t) t.textContent = '今天练完了 ✓'; }
-    }).catch(function () {});
-  } catch (e) {}
+  postDoneWithRetry();
 }
+function markDone(id) {
+  gotIds[id] = true;
+  writeLS();
+  saveProgress(id);
+  checkComplete();
+}
+// 把一道题恢复成“对了 ✓”（打开页面时用，不重新记服务器）
+function restoreOne(id) {
+  var done = false;
+  $all('[data-local-check]').forEach(function (btn) {
+    var parts = btn.getAttribute('data-local-check').split('|');
+    if (parts[0] !== id) return;
+    var el = document.getElementById(id), fb = document.getElementById('fb-' + id);
+    if (el) el.value = parts[1];
+    if (fb) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+    done = true;
+  });
+  $all('[data-local-mcq]').forEach(function (box) {
+    var parts = box.getAttribute('data-local-mcq').split('|');
+    if (parts[0] !== id) return;
+    var fb = document.getElementById('fb-' + id);
+    box.querySelectorAll('button').forEach(function (b) {
+      b.classList.remove('picked', 'wrong-pick');
+      if (b.getAttribute('data-opt') === parts[1]) b.classList.add('picked');
+    });
+    if (fb) { fb.className = 'fb good'; fb.textContent = '对了 ✓'; }
+    done = true;
+  });
+  if (done) gotIds[id] = true;
+}
+// 打开先读服务器当天进度（服务器为准；读不到就用本机镜像顶着，联网后自动补记）
+function restoreProgress() {
+  readLS().forEach(function (id) { restoreOne(id); });
+  writeLS();
+  fetch('/api/practice-progress/today', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !Array.isArray(d.qids)) return;
+    d.qids.forEach(function (id) { restoreOne(id); });
+    writeLS();
+    flushPending();
+    checkComplete();
+  }).catch(function () {
+    // 读不到服务器：本机镜像已恢复显示；5 道齐了但没确认，就亮重记按钮
+    var all = needIds.every(function (id) { return gotIds[id]; });
+    if (all && !postedDone) showRetryBtn();
+  });
+  fetch('/api/practice-done/today', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (d) {
+    if (d && d.done) { postedDone = true; showDoneTag(); }
+  }).catch(function () {});
+}
+document.getElementById('practiceRetryBtn').addEventListener('click', function () {
+  hideRetryBtn();
+  var t = document.getElementById('practiceDoneTag');
+  if (t) t.textContent = '正在重记…';
+  flushPending();
+  postDoneWithRetry();
+});
+restoreProgress();
 $all('[data-local-check]').forEach(function (btn) {
   btn.addEventListener('click', function () {
     var parts = btn.getAttribute('data-local-check').split('|');
