@@ -348,6 +348,7 @@
 <script src="/dict.min.js"></script>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
+<script src="/fanfare.js"></script>
 <script src="/sent-audio-manifest.js"></script>
 </head>
 <body>
@@ -367,6 +368,7 @@
     <button id="btnNextStep" onclick="goNextStep()" title="看下一题" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;">下一题 ›</button>
   </div>
   <button id="btnCollapse" title="收起播放" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;flex:none;">收起播放</button>
+  <button id="btnSound" title="音效开/关" style="background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px;flex:none;">🔊</button>
 </div>
 <div id="wrap"></div>
 <button id="btnSeeReading" onclick="document.querySelector('.reading-pane')?.scrollIntoView({behavior:'smooth',block:'start'})">↑ 看原文</button>
@@ -387,6 +389,8 @@
 'use strict';
 const $ = id => document.getElementById(id);
 const wrap = $('wrap'), topbar = $('topbar');
+// 2026-11-27 fanfare 草稿：顶栏音效开关（默认开，存在本机）
+if (window.Fanfare) window.Fanfare.bindSoundButton($('btnSound'));
 const au = new Audio();
 // 不带 ?lesson= 直接打开一律回首页（首页会跳到当前进行中的课），防止默认进错课
 const LESSON_PARAM = new URLSearchParams(location.search).get('lesson');
@@ -754,6 +758,7 @@ async function renderHome() {
   let state = { p1_done: false, p2_done: false, p2_open: false, p2_note: '完成第一部分后，就可以学第二部分' };
   try { state = await (await fetch('/api/state?lesson=' + encodeURIComponent(LID))).json(); } catch {}
   const bothDone = state.p1_done && state.p2_done;
+  let freshDone = false; // 2026-11-27 fanfare 草稿：刚学完才放一次庆祝，重进已学完的课不放
   const isReview = /^review\d+$/.test(LID); // 练习课：单部分、可反复练
   let html = `<div style="margin-bottom:12px;"><button onclick="location.href='${window.XH_HOME||'/'}'" style="background:#fff;border:2px solid #c7cdd8;border-radius:14px;padding:12px 20px;font-size:17px;cursor:pointer;color:#1a73e8;font-weight:700;">← 返回课程</button></div><div id="homeHead"><h1>${window.XH_BRAND||'小禾英语'}</h1><p>${escapeHtml(LESSON.home_subtitle || LESSON.title || '')}</p></div>`;
   if (isReview) {
@@ -789,10 +794,13 @@ async function renderHome() {
     const wk = await lessonWeakness(LID);
     // 2026-10-14：u3-consolidate 没过关时显示"重新挑战"按钮（替代自动重置）
     // 2026-11-01：每课巩固练（*-consolidate）做完显示"再练一次"按钮；正课做完且有对应巩固练时显示入口
+    // 2026-11-27 fanfare 草稿：刚走完 /api/complete 才算新鲜学完
+    freshDone = (window._justCompletedLesson === LID);
+    if (freshDone) window._justCompletedLesson = null;
     const isConsLid = /-consolidate$/.test(LID);
     const showRetry = (LID === 'u3-consolidate' && LESSON && LESSON.consolidation_passed === false) || (isConsLid && LID !== 'u3-consolidate');
     const showConsLink = LESSON && LESSON.has_consolidate;
-    html += `<div class="card"><h2 class="stem">两部分都完成了</h2>
+    html += `<div class="card">${freshDone ? `<div style="text-align:center;padding:10px 0 2px;"><div style="font-size:44px;">🎉</div><div style="font-size:26px;font-weight:900;color:#e65100;">学完了！</div><p class="scene" style="margin:6px 0 0;">《${escapeHtml(LESSON.title || '')}》两部分都做完了，下一课见。</p></div>` : ''}<h2 class="stem">两部分都完成了</h2>
       <div class="stats">
         <div class="stat"><b>${rate}%</b><span>独立正确率</span></div>
         <div class="stat"><b>${ind}</b><span>独立完成（题）</span></div>
@@ -812,6 +820,8 @@ async function renderHome() {
     html += partCard(2, '第二部分：独立验证', LESSON.part2_desc || '', state);
   }
   wrap.innerHTML = html;
+  // 2026-11-27 fanfare 草稿：新鲜学完才放彩带雨 + 琶音（重进已学完的课不放）
+  if (freshDone && window.Fanfare) { setTimeout(function () { window.Fanfare.lessonComplete(); window.Fanfare.rain(50); }, 350); }
   wrap.querySelectorAll('[data-go]').forEach(b => b.onclick = () => startPart(+b.dataset.go));
   // 重新挑战按钮（2026-10-14）
   const btnRetry = document.getElementById('btnRetry');
@@ -848,18 +858,8 @@ async function renderHome() {
             <button onclick="this.closest('.title-celebrate').remove()">太棒了！</button>
           </div>`;
           document.body.appendChild(ov);
-          // 播放庆祝音效（Web Audio 简单琶音）
-          try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            [523, 659, 784, 1047].forEach((f, j) => {
-              const o = ctx.createOscillator(), g = ctx.createGain();
-              o.connect(g); g.connect(ctx.destination);
-              o.frequency.value = f; o.type = 'sine';
-              g.gain.setValueAtTime(0.25, ctx.currentTime + j * 0.12);
-              g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + j * 0.12 + 0.4);
-              o.start(ctx.currentTime + j * 0.12); o.stop(ctx.currentTime + j * 0.12 + 0.45);
-            });
-          } catch {}
+          // 2026-11-27 fanfare 草稿：称号音效走共享模块（同样 4 个音，支持静音），再撒一把彩带
+          if (window.Fanfare) { window.Fanfare.title(); window.Fanfare.rain(40); }
         }, i * 2500);
       });
     }).catch(() => {});
@@ -1404,6 +1404,8 @@ async function advance() {
         if (d && d.newTitles && d.newTitles.length) {
           window._newTitles = d.newTitles;
         }
+        // 2026-11-27 fanfare 草稿：标记新鲜学完，renderHome 完成页只放一次庆祝
+        window._justCompletedLesson = LID;
       } catch {}
     }
     ST['p' + PART].done = true; ST['p' + PART].pos = arr.length; store.save(ST); renderHome();
@@ -1842,6 +1844,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
       + nudgeHtml + conqueredHtml + pastedHtml
       + (streak3 ? '<div class="streak3">连对 3 道</div>' : '');
     burstConfetti(fb, streak3 ? 28 : 14);
+    if (window.Fanfare) window.Fanfare.correct(streak3);
     // 2026-11-18 练完自评：复测场合（单题/批量重做/每日闯关）答对且非粘贴，问一句记得牢不牢；
     // 点一下就行，可跳过，不挡下一题。快练（quick-drill）不是复测场合，不出自评；
     // copied 出口走不到答对分支，也不出自评。2026-11-20：L3 看答案后做对的不出自评（题还没过）。
@@ -1884,6 +1887,7 @@ function handleVerdict(s, b, elapsedMs, givenAnswer, wasPasted) {
     fastStreak.n = 0;
     submitStreak = 0; // 提交动画试点：答错即断连对
     fb.className = 'fb no';
+    if (window.Fanfare) window.Fanfare.wrong();
     fb.innerHTML = escapeHtml(b.feedback || '再想一想。') + nudgeHtml;
     $('btnSub').disabled = false;
     // 保底出口优先（2026-10-13）：第3次错后直接给"先看答案，继续往下"，不再进带着做。
