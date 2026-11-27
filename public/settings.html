@@ -101,6 +101,7 @@
 </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
+<script src="/fanfare.js"></script>
 </head>
 <body>
 <div class="top">
@@ -151,6 +152,18 @@
     <button data-tv="light">☀️ 日间</button>
     <button data-tv="warm">📖 护眼</button>
     <button data-tv="dark">🌙 夜间</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🔊 音效</h2>
+  <p>答对、学完一课、拿到称号时放一点小声音。关掉就安安静静，只有画面。</p>
+  <div class="speed-btns" id="soundBtns">
+    <button data-sound="on">🔊 开</button>
+    <button data-sound="off">🔇 关</button>
+  </div>
+  <div class="test-row">
+    <button id="btnSoundTest">🔊 试听一下</button>
   </div>
 </div>
 
@@ -265,6 +278,28 @@ document.querySelectorAll('[data-tv]').forEach(b => {
 // 初始化
 setFontSize(getFontSize());
 setTheme(getTheme());
+
+// ---- 音效开关（2026-11-27 fanfare 草稿） ----
+if (window.Fanfare) {
+  (function () {
+    function paintSoundBtns() {
+      var off = window.Fanfare.isMuted();
+      document.querySelectorAll('[data-sound]').forEach(function (b) {
+        b.classList.toggle('on', (b.dataset.sound === 'on') === !off);
+      });
+    }
+    document.querySelectorAll('[data-sound]').forEach(function (b) {
+      b.onclick = function () {
+        window.Fanfare.setMuted(b.dataset.sound !== 'on');
+        paintSoundBtns();
+      };
+    });
+    document.getElementById('btnSoundTest').onclick = function () {
+      window.Fanfare.correct(false);
+    };
+    paintSoundBtns();
+  })();
+}
 
 // ---------- 反馈问题（2026-10-19：从浮动按钮移到设置页） ----------
 let _fbImgsB64 = [];
