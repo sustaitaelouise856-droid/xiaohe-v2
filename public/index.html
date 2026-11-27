@@ -267,6 +267,7 @@
 </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
+<script src="/fanfare.js"></script>
 </head>
 <body>
 
@@ -772,6 +773,8 @@ fetch('/api/titles').then(r => r.json()).then(t => {
   const points = getTitlePoints(list);
   const name = getTierByPoints(points, getTotalTitlePoints(list)).name;
   document.getElementById('titleTierMini').textContent = '· ' + name;
+  // 2026-11-27 fanfare 草稿：段位升了才弹一次庆祝（第一次打开只记下当前段位，不庆祝）
+  if (window.Fanfare) window.Fanfare.checkTierUp(getTierByPoints(points, getTotalTitlePoints(list)));
   // 找下一个最接近的称号（有progress的优先，只看未获得且进度未达标的）
   const unobtained = list.filter(x => !x.earned && x.progress && x.progress.current < x.progress.target);
   if (unobtained.length) {
@@ -1512,6 +1515,8 @@ async function renderDailyPlan(dailyStatus) {
     const allDone = steps.length > 0 && doneCount === steps.length;
     const pillEl = document.getElementById('planDonePill');
     if (pillEl) pillEl.innerHTML = pill('已做完 ' + doneCount + '/' + steps.length + ' 件', allDone);
+    // 2026-11-27 fanfare 草稿：三件全做完，一天只庆祝一次（刷新不重放）
+    if (allDone && window.Fanfare) window.Fanfare.planAllDoneOnce(planEl);
     const todayRow = hist ? hist.days[hist.days.length - 1] : null;
     const lineEl = document.getElementById('planTodayLine');
     if (lineEl && todayRow) lineEl.textContent = '⏱ 今天学了 ' + todayRow.minutes + ' 分钟 · ' + todayRow.attempts + ' 次作答';
