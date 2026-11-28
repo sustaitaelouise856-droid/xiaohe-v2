@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>国王故事 · 一句一句听</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #141432; color: #eee; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px 16px 60px; }
+h1 { font-size: 24px; margin: 8px 0; }
+.usage { background: #1e1e4a; border: 1px solid #5c6bc0; border-radius: 12px; padding: 12px; font-size: 15px; line-height: 1.7; }
+.tonight { background: #1e1e4a; border: 1px solid #5c6bc0; border-radius: 12px; padding: 10px 12px; font-size: 15px; margin-top: 10px; }
+.speedrow { margin: 14px 0 4px; font-size: 15px; }
+.speedrow button { padding: 8px 16px; font-size: 15px; border-radius: 999px; border: 2px solid #7e57c2; background: transparent; color: #d1c4e9; cursor: pointer; margin-right: 8px; min-height: 44px; }
+.speedrow button.on { background: #7e57c2; color: #fff; }
+.card { background: #23234d; border: 1px solid #5c6bc0; border-radius: 14px; padding: 14px; margin: 14px 0; }
+.card.done { border-color: #4caf50; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: #b39ddb; }
+.card .en { font-size: 20px; line-height: 1.6; }
+.card .zh { font-size: 16px; line-height: 1.7; margin-top: 8px; color: #e8e8f2; }
+.card .words { font-size: 14px; line-height: 1.7; margin-top: 8px; color: #aaa; }
+.card .ask { font-size: 15px; line-height: 1.7; margin-top: 8px; color: #ffd54f; }
+.btn { padding: 12px 22px; font-size: 16px; border-radius: 999px; border: 0; background: #7e57c2; color: #fff; font-weight: 700; cursor: pointer; margin-top: 10px; min-height: 48px; }
+.btn.ghost { background: transparent; border: 2px solid #7e57c2; color: #d1c4e9; }
+.btn.playing { background: #4caf50; }
+.btn.donebtn { background: transparent; border: 2px solid #4caf50; color: #a5d6a7; }
+.textblock { display: none; }
+.textblock.show { display: block; }
+.btn[disabled] { opacity: .45; }
+.allrow { text-align: center; margin: 18px 0 4px; }
+.note { font-size: 13px; color: #999; margin-top: 8px; }
+.back { display: inline-block; margin-top: 24px; color: #b39ddb; text-decoration: none; font-size: 15px; margin-right: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🌙 国王故事 · 一句一句听</h1>
+<div class="usage">今晚只听前 4 句。先听一句——不看文字，听完再点开文字对一对，讲出是什么意思，再听下一句。听不懂就再点一次，还不行先看中文再听一遍。每句开头有个小声音，帮你猜这句是讲什么的：先猜，再听句子，听完看文字对答案。4 句都讲出来，今晚就算成了，不用再往下听。没有题目，不做题，不计分，不进学习分钟。</div>
+<div class="tonight" id="tonight">今晚已听：正在看……（单独记，不进学习分钟）</div>
+
+<div class="speedrow">语速：
+  <button id="spdNormal" class="on" type="button">正常</button>
+  <button id="spdSlow" type="button">慢一点</button>
+</div>
+
+<div class="card" id="card-0">
+  <h3>第 1 句</h3>
+  <div class="textblock" id="text-0">
+  <div class="en">Long ago, there was a king.</div>
+  <div class="zh">很久很久以前，有一位国王。</div>
+  <div class="words">Long ago 是很久以前；there was 是“有”。</div>
+  <div class="ask">问他一句：很久以前有什么？——有一位国王。</div>
+  </div>
+  <button class="btn" type="button" data-i="0">▶ 听这一句</button>
+  <button class="btn ghost" type="button" data-reveal="0" disabled>先听一句，再看文字</button>
+  <button class="btn ghost donebtn" type="button" data-done="0">✓ 我听懂了</button>
+</div>
+
+<div class="card" id="card-1">
+  <h3>第 2 句</h3>
+  <div class="textblock" id="text-1">
+  <div class="en">He lived in a big country.</div>
+  <div class="zh">他住在一个大国家里。</div>
+  <div class="words">lived 是住（live 的过去式）；country 是国家。</div>
+  <div class="ask">问他一句：他住在哪？——一个大国家。</div>
+  </div>
+  <button class="btn" type="button" data-i="1">▶ 听这一句</button>
+  <button class="btn ghost" type="button" data-reveal="1" disabled>先听一句，再看文字</button>
+  <button class="btn ghost donebtn" type="button" data-done="1">✓ 我听懂了</button>
+</div>
+
+<div class="card" id="card-2">
+  <h3>第 3 句</h3>
+  <div class="textblock" id="text-2">
+  <div class="en">He had a big house, many servants, and a lot of gold.</div>
+  <div class="zh">他有一座大房子、很多仆人和很多金子。</div>
+  <div class="words">had 是有（have 的过去式）；servants 是仆人；gold 是金子；a lot of 是很多。这句最长，可以断成两半听。</div>
+  <div class="ask">问他一句：他有什么？——大房子、很多仆人、很多金子。</div>
+  </div>
+  <button class="btn" type="button" data-i="2">▶ 听这一句</button>
+  <button class="btn ghost" type="button" data-reveal="2" disabled>先听一句，再看文字</button>
+  <button class="btn ghost donebtn" type="button" data-done="2">✓ 我听懂了</button>
+</div>
+
+<div class="card" id="card-3">
+  <h3>第 4 句</h3>
+  <div class="textblock" id="text-3">
+  <div class="en">But he was not happy.</div>
+  <div class="zh">但是他并不开心。</div>
+  <div class="words">but 是但是。</div>
+  <div class="ask">这句最关键：什么都有了，为什么还不开心？让他猜一猜——这是整个故事要讲的问题，明天接着听就知道。</div>
+  </div>
+  <button class="btn" type="button" data-i="3">▶ 听这一句</button>
+  <button class="btn ghost" type="button" data-reveal="3" disabled>先听一句，再看文字</button>
+  <button class="btn ghost donebtn" type="button" data-done="3">✓ 我听懂了</button>
+</div>
+
+<div class="allrow">
+  <button class="btn" id="playAll" type="button">▶ 4 句连起来听一遍</button>
+</div>
+<div class="note">音频是英文原声（Warm Pebble），状态 UNVERIFIED（发音未人耳验证），以文字为准。听了多久只单独记在睡前故事里，不算学习分钟，不影响门禁和称号。</div>
+
+<a class="back" href="/bedtime.html">← 睡前故事</a>
+<a class="back" href="/">← 回首页</a>
+</div>
+<audio id="player" src="/audio/bedtime/king.mp3" preload="metadata"></audio>
+<script>
+(function () {
+  var SENTS = [
+    { start: 0.20, end: 4.90 },
+    { start: 5.38, end: 7.20 },
+    { start: 7.92, end: 12.26 },
+    { start: 12.83, end: 14.19 }
+  ];
+  var ALL = { start: 0.20, end: 14.19 };
+  var player = document.getElementById('player');
+  var range = null;
+  var sessionId = null;
+  var timer = null;
+  var SLOW_RATE = 0.8;
+  var heard = [false, false, false, false];
+  // 意思锚点小声音（Readmio 的做法：故事关键处配声音帮孩子听出画面）。
+  // 每句单独听之前先响一声，帮他猜这句讲什么；4 句连听时不加（已逐句听过）。
+  // 全是现合成的 Web Audio 音，不用音频文件；没有 AudioContext 的环境直接跳过。
+  var CUES = [
+    [[523, 0.18, 'triangle', 0.12], [659, 0.22, 'triangle', 0.12]], // 第 1 句：国王出场，小号角
+    [[150, 0.12, 'sine', 0.15], [150, 0.12, 'sine', 0.15]],         // 第 2 句：住的地方，轻轻敲两下门
+    [[1318, 0.12, 'sine', 0.10], [1568, 0.16, 'sine', 0.10]],       // 第 3 句：金子，两声轻响
+    [[392, 0.25, 'triangle', 0.10], [330, 0.30, 'triangle', 0.10]]  // 第 4 句：不开心，低音往下走
+  ];
+  var cueCtx = null;
+  function playCue(idx) {
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      if (!cueCtx) cueCtx = new AC();
+      if (cueCtx.state === 'suspended') { cueCtx.resume().catch(function () {}); }
+      var notes = CUES[idx] || [];
+      var t = cueCtx.currentTime + 0.02;
+      for (var q = 0; q < notes.length; q++) {
+        var o = cueCtx.createOscillator(), g = cueCtx.createGain();
+        o.type = notes[q][2]; o.frequency.value = notes[q][0];
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.linearRampToValueAtTime(notes[q][3], t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + notes[q][1]);
+        o.connect(g); g.connect(cueCtx.destination);
+        o.start(t); o.stop(t + notes[q][1] + 0.05);
+        t += notes[q][1] + 0.06;
+      }
+    } catch (e) {}
+  }
+  function paintReveal() {
+    for (var j = 0; j < 4; j++) {
+      var rb = document.querySelector('[data-reveal="' + j + '"]');
+      var tb = document.getElementById('text-' + j);
+      if (!rb) continue;
+      if (heard[j]) {
+        rb.disabled = false;
+        rb.textContent = tb && tb.classList.contains('show') ? '收起文字' : '👀 看文字对答案';
+      } else {
+        rb.disabled = true;
+        rb.textContent = '先听一句，再看文字';
+      }
+    }
+  }
+
+  function newSession() {
+    if (window.crypto && crypto.randomUUID) sessionId = crypto.randomUUID();
+    else sessionId = 's' + Date.now() + '-' + Math.floor(Math.random() * 1e9);
+  }
+  function report() {
+    if (!sessionId) return;
+    var secs = Math.floor(player.currentTime || 0);
+    fetch('/api/story-listen', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ session: sessionId, story_id: 'king', seconds: secs, completed: 0 }) })
+      .then(function () { refreshTonight(); }).catch(function () {});
+  }
+  function refreshTonight() {
+    fetch('/api/bedtime/today').then(function (r) { return r.json(); }).then(function (d) {
+      var el = document.getElementById('tonight');
+      if (d && d.ok) el.textContent = '今晚已听：' + (d.minutes || 0) + ' 分钟（单独记，不进学习分钟）';
+    }).catch(function () {});
+  }
+  function markPlaying(idx) {
+    var btns = document.querySelectorAll('[data-i]');
+    for (var k = 0; k < btns.length; k++) {
+      var b = btns[k];
+      if (Number(b.getAttribute('data-i')) === idx && range) { b.textContent = '⏸ 正在放…'; b.classList.add('playing'); }
+      else { b.textContent = '▶ 听这一句'; b.classList.remove('playing'); }
+    }
+    var all = document.getElementById('playAll');
+    if (idx === -1 && range) { all.textContent = '⏸ 正在放…'; all.classList.add('playing'); }
+    else { all.textContent = '▶ 4 句连起来听一遍'; all.classList.remove('playing'); }
+  }
+  function playRange(r, idx) {
+    if (!sessionId) newSession();
+    if (idx >= 0) playCue(idx);
+    range = r;
+    try { player.currentTime = r.start; } catch (e) {}
+    markPlaying(idx);
+    player.play().catch(function () { var r = range; range = null; markPlaying(null); if (r === ALL) { for (var k = 0; k < 4; k++) heard[k] = true; } else if (r) { var ix = SENTS.indexOf(r); if (ix >= 0) heard[ix] = true; } paintReveal(); });
+  }
+  function stopRange() {
+    range = null;
+    player.pause();
+    markPlaying(null);
+    report();
+  }
+  player.addEventListener('timeupdate', function () {
+    if (range && player.currentTime >= range.end) {
+      var ended = range;
+      player.pause();
+      try { player.currentTime = range.start; } catch (e) {}
+      range = null;
+      markPlaying(null);
+      if (ended === ALL) { for (var k = 0; k < 4; k++) heard[k] = true; }
+      else { var ix = SENTS.indexOf(ended); if (ix >= 0) heard[ix] = true; }
+      paintReveal();
+      report();
+    }
+  });
+  player.addEventListener('play', function () {
+    if (!sessionId) newSession();
+    if (timer) clearInterval(timer);
+    timer = setInterval(function () { report(); }, 30000);
+  });
+  player.addEventListener('pause', function () {
+    if (timer) { clearInterval(timer); timer = null; }
+  });
+  var playBtns = document.querySelectorAll('[data-i]');
+  for (var i = 0; i < playBtns.length; i++) {
+    playBtns[i].addEventListener('click', function () {
+      var idx = Number(this.getAttribute('data-i'));
+      if (range && !player.paused && range === SENTS[idx]) { stopRange(); return; }
+      playRange(SENTS[idx], idx);
+    });
+  }
+  document.getElementById('playAll').addEventListener('click', function () {
+    if (range && !player.paused && range === ALL) { stopRange(); return; }
+    playRange(ALL, -1);
+  });
+  var spdN = document.getElementById('spdNormal');
+  var spdS = document.getElementById('spdSlow');
+  spdN.addEventListener('click', function () {
+    player.playbackRate = 1.0;
+    spdN.classList.add('on'); spdS.classList.remove('on');
+  });
+  spdS.addEventListener('click', function () {
+    player.playbackRate = SLOW_RATE;
+    spdS.classList.add('on'); spdN.classList.remove('on');
+  });
+  var KEY = 'bedtime-sentence-king';
+  function todayKey() {
+    var d = new Date();
+    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+  }
+  function loadDone() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return [false, false, false, false];
+      var o = JSON.parse(raw);
+      if (!o || o.day !== todayKey() || !o.done) return [false, false, false, false];
+      return o.done;
+    } catch (e) { return [false, false, false, false]; }
+  }
+  function saveDone(arr) {
+    try { localStorage.setItem(KEY, JSON.stringify({ day: todayKey(), done: arr })); } catch (e) {}
+  }
+  function paintDone(arr) {
+    for (var j = 0; j < 4; j++) {
+      var card = document.getElementById('card-' + j);
+      var btn = document.querySelector('[data-done="' + j + '"]');
+      if (arr[j]) { card.classList.add('done'); btn.textContent = '✓ 听懂了'; }
+      else { card.classList.remove('done'); btn.textContent = '✓ 我听懂了'; }
+    }
+  }
+  var doneArr = loadDone();
+  paintDone(doneArr);
+  var doneBtns = document.querySelectorAll('[data-done]');
+  for (var m = 0; m < doneBtns.length; m++) {
+    doneBtns[m].addEventListener('click', function () {
+      var idx = Number(this.getAttribute('data-done'));
+      doneArr[idx] = !doneArr[idx];
+      saveDone(doneArr);
+      paintDone(doneArr);
+    });
+  }
+  var revealBtns = document.querySelectorAll('[data-reveal]');
+  for (var n = 0; n < revealBtns.length; n++) {
+    revealBtns[n].addEventListener('click', function () {
+      var idx = Number(this.getAttribute('data-reveal'));
+      var tb = document.getElementById('text-' + idx);
+      if (!tb || !heard[idx]) return;
+      if (tb.classList.contains('show')) tb.classList.remove('show');
+      else tb.classList.add('show');
+      paintReveal();
+    });
+  }
+  paintReveal();
+  refreshTonight();
+})();
+</script>
+</body>
+</html>
